@@ -1,19 +1,22 @@
-import { MetaProvider, Title } from "@solidjs/meta";
-import Counter from "~/components/Counter";
+import { Title } from "@solidjs/meta";
 
-export default function Something() {
+export default function About() {
   return (
-    <main>
-      <Title>Helloo World</Title>
-      <h1>Hello world!</h1>
-      <Counter />
-      <p>
-        Visit{" "}
-        <a href="https://start.solidjs.com" target="_blank">
-          start.solidjs.com
-        </a>{" "}
-        to learn how to build SolidStart apps. $x$
-      </p>
-    </main>
+    <>
+      <div>
+        <p>
+          <a href="https://www.tu-chemnitz.de/informatik/theoretische-informatik/TI-2/index.html">
+            zur Kursübersicht
+          </a>
+        </p>
+      </div>
+      <main>
+        <Title>About</Title>
+        <h1>Table of Contents</h1>
+        <p>
+          <a href="/lecture-notes/01-00-BooleanCircuits">Lecture 1</a>
+        </p>
+      </main>
+    </>
   );
 }
