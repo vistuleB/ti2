@@ -1,4 +1,4 @@
-|> div
+|> Chapter
     |> div
         id link-to-toc
         |> p
@@ -47,10 +47,8 @@
                     auch _Gatter_ (englisch _gates_) genannt, die 
                     mehrere (typischerweise ein oder zwei) Signale zu 
                     einem Ausgabe-Signal kombinieren. Die Signale können 
-                    nur zwei Werte annehmen: wahr/falsch bzw. 1/0 bzw. 
-                    |> code
-
-                        true/false
+                    nur zwei Werte annehmen: wahr/falsch bzw. 1/0 bzw.
+                    `true/false`
                     . Hier sehen Sie die drei üblichsten Gatter:
 
                     |> figure

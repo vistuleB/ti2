@@ -3,7 +3,7 @@
 
 packages = [
   { name = "argv", version = "1.0.2", build_tools = ["gleam"], requirements = [], otp_app = "argv", source = "hex", outer_checksum = "BA1FF0929525DEBA1CE67256E5ADF77A7CDDFE729E3E3F57A5BDCAA031DED09D" },
-  { name = "blamedlines", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], source = "local", path = "../../blamedlines" },
+  { name = "blamedlines", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], source = "local", path = "../../../vistuleB/blamedlines" },
   { name = "filepath", version = "1.1.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "filepath", source = "hex", outer_checksum = "67A6D15FB39EEB69DD31F8C145BB5A421790581BD6AA14B33D64D5A55DBD6587" },
   { name = "gleam_erlang", version = "0.33.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_erlang", source = "hex", outer_checksum = "A1D26B80F01901B59AABEE3475DD4C18D27D58FA5C897D922FCB9B099749C064" },
   { name = "gleam_regexp", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_regexp", source = "hex", outer_checksum = "A3655FDD288571E90EE9C4009B719FEF59FA16AFCDF3952A76A125AF23CF1592" },
@@ -11,21 +11,23 @@ packages = [
   { name = "gleescript", version = "1.4.0", build_tools = ["gleam"], requirements = ["argv", "filepath", "gleam_erlang", "gleam_stdlib", "simplifile", "snag", "tom"], otp_app = "gleescript", source = "hex", outer_checksum = "8CDDD29F91064E69950A91A40061785F10275ADB70A0520075591F61A724C455" },
   { name = "gleeunit", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleeunit", source = "hex", outer_checksum = "F7A7228925D3EE7D0813C922E062BFD6D7E9310F0BEE585D3A42F3307E3CFD13" },
   { name = "lbp_desugaring", version = "1.0.0", build_tools = ["gleam"], requirements = ["argv", "gleam_regexp", "gleam_stdlib", "gleescript", "leptos_emitter", "simplifile", "vxml_parser", "writerly_parser"], source = "local", path = "../../../MrChaker/lbp_desugaring" },
-  { name = "leptos_emitter", version = "1.0.0", build_tools = ["gleam"], requirements = ["argv", "blamedlines", "gleam_stdlib", "shellout", "simplifile", "vxml_parser"], source = "local", path = "../../leptos_emitter" },
+  { name = "leptos_emitter", version = "1.0.0", build_tools = ["gleam"], requirements = ["argv", "blamedlines", "gleam_stdlib", "shellout", "simplifile", "vxml_parser"], source = "local", path = "../../../vistuleB/leptos_emitter" },
   { name = "shellout", version = "1.6.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "shellout", source = "hex", outer_checksum = "E2FCD18957F0E9F67E1F497FC9FF57393392F8A9BAEAEA4779541DE7A68DD7E0" },
   { name = "simplifile", version = "2.2.0", build_tools = ["gleam"], requirements = ["filepath", "gleam_stdlib"], otp_app = "simplifile", source = "hex", outer_checksum = "0DFABEF7DC7A9E2FF4BB27B108034E60C81BEBFCB7AB816B9E7E18ED4503ACD8" },
   { name = "snag", version = "1.1.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "snag", source = "hex", outer_checksum = "7E9F06390040EB5FAB392CE642771484136F2EC103A92AE11BA898C8167E6E17" },
   { name = "tom", version = "1.1.1", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "tom", source = "hex", outer_checksum = "0910EE688A713994515ACAF1F486A4F05752E585B9E3209D8F35A85B234C2719" },
-  { name = "vxml_parser", version = "1.0.0", build_tools = ["gleam"], requirements = ["blamedlines", "gleam_stdlib", "simplifile"], source = "local", path = "../../vxml_parser" },
-  { name = "writerly_parser", version = "1.0.0", build_tools = ["gleam"], requirements = ["blamedlines", "gleam_stdlib", "simplifile", "vxml_parser"], source = "local", path = "../../writerly_parser" },
+  { name = "vxml_parser", version = "1.0.0", build_tools = ["gleam"], requirements = ["blamedlines", "gleam_stdlib", "simplifile"], source = "local", path = "../../../vistuleB/vxml_parser" },
+  { name = "writerly_parser", version = "1.0.0", build_tools = ["gleam"], requirements = ["blamedlines", "gleam_stdlib", "simplifile", "vxml_parser"], source = "local", path = "../../../vistuleB/writerly_parser" },
 ]
 
 [requirements]
 argv = { version = ">= 1.0.2 and < 2.0.0" }
+blamedlines = { path = "../../../VistuleB/blamedlines" }
 gleam_stdlib = { version = ">= 0.34.0 and < 2.0.0" }
 gleeunit = { version = ">= 1.0.0 and < 2.0.0" }
 lbp_desugaring = { path = "../../../MrChaker/lbp_desugaring" }
-leptos_emitter = { path = "../../leptos_emitter" }
+leptos_emitter = { version = ">= 1.0.0 and < 2.0.0" }
 shellout = { version = ">= 1.6.0 and < 2.0.0" }
 simplifile = { version = ">= 2.2.0 and < 3.0.0" }
-writerly_parser = { path = "../../writerly_parser" }
+vxml_parser = { version = ">= 1.0.0 and < 2.0.0" }
+writerly_parser = { path = "../../../VistuleB/writerly_parser" }

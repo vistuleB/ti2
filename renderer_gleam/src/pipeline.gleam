@@ -1,59 +1,46 @@
-import argv
+import desugarers/absorb_next_sibling_while.{absorb_next_sibling_while}
+import desugarers/add_attributes.{add_attributes}
+import desugarers/add_counter_attributes.{add_counter_attributes}
+import desugarers/add_exercise_labels.{add_exercise_labels}
+import desugarers/add_spacer_divs_before.{add_spacer_divs_before}
+import desugarers/add_spacer_divs_between.{add_spacer_divs_between}
+import desugarers/add_title_counters_and_titles_with_handle_assignments.{
+  add_title_counters_and_titles_with_handle_assignments,
+}
+import desugarers/change_attribute_value.{change_attribute_value}
+import desugarers/concatenate_text_nodes.{concatenate_text_nodes}
+import desugarers/convert_int_attributes_to_float.{
+  convert_int_attributes_to_float,
+}
 import desugarers/counter.{counter_desugarer}
 import desugarers/counter_handles.{counter_handles_desugarer}
-import desugarers/counter_handles_dict_factory.{handles_dict_factory_desugarer}
-import desugarers/counter_handles_id_generator.{generate_id_for_handles}
-import desugarers/define_article_output_path.{define_article_output_path}
 import desugarers/fold_tag_contents_into_text
 import desugarers/fold_tags_into_text.{fold_tags_into_text}
+import desugarers/free_children.{free_children}
+import desugarers/generate_lbp_table_of_contents.{generate_lbp_table_of_contents}
 import desugarers/group_siblings_not_separated_by_blank_lines.{
   group_siblings_not_separated_by_blank_lines,
 }
+import desugarers/insert_indent.{insert_indent}
 import desugarers/pair_bookends.{pair_bookends}
+import desugarers/prepend_append_to_text_children_of
+import desugarers/reinsert_math_dolar.{reinsert_math_dolar}
+import desugarers/remove_empty_chunks.{remove_empty_chunks}
+import desugarers/remove_empty_lines.{remove_empty_lines}
 import desugarers/remove_vertical_chunks_with_no_text_child.{
   remove_vertical_chunks_with_no_text_child,
 }
-import desugarers/rename_tag.{rename_tag}
+import desugarers/rename_tag
+import desugarers/rename_when_child_of.{rename_when_child_of}
 import desugarers/split_by_indexed_regexes.{split_by_indexed_regexes}
 import desugarers/surround_elements_by.{surround_elements_by}
-import desugarers/unwrap_tag_when_child_of_tags.{unwrap_tag_when_child_of_tags}
+import desugarers/unwrap_tag_when_child_of_tags
 import desugarers/unwrap_tags.{unwrap_tags}
-import gleam/int
-import gleam/list
-import gleam/result
-import gleam/string
-import simplifile
-import solid
+import desugarers/wrap_math_with_no_break.{wrap_math_with_no_break}
+import gleam/option.{None, Some}
+import infrastructure.{type Pipe} as infra
 
-// import desugarers/remove_empty_lines.{remove_empty_lines}
-import desugarers/concatenate_text_nodes.{concatenate_text_nodes}
-import desugarers/prepend_append_to_text_children_of.{
-  prepend_append_to_text_children_of,
-}
-import gleam/io
-import infrastructure as infra
-import infrastructure.{type Pipe}
-import lbp_desugaring
-import leptos_emitter
-import shellout
-
-const ins = string.inspect
-
-fn dotdot(path: String) -> String {
-  path
-  |> string.split("/")
-  |> list.reverse()
-  |> list.drop(1)
-  |> list.reverse()
-  |> string.join("/")
-}
-
-fn root() {
-  let assert Ok(current_directory) = simplifile.current_directory()
-  dotdot(current_directory)
-}
-
-fn pipeline() -> List(Pipe) {
+pub fn our_pipeline() -> List(Pipe) {
   let double_dollar_indexed_regex =
     infra.unescaped_suffix_indexed_regex("\\$\\$")
 
@@ -209,7 +196,7 @@ fn pipeline() -> List(Pipe) {
     // ************************
     // cleanup $$, \(, \)
     // ************************
-    prepend_append_to_text_children_of([
+    prepend_append_to_text_children_of.prepend_append_to_text_children_of([
       #("$$", "$$", "MathBlock"),
       #("\\(", "\\)", "Math"),
     ]),
@@ -217,139 +204,17 @@ fn pipeline() -> List(Pipe) {
       "MathBlock", "Math",
     ]),
     counter_desugarer(),
-    generate_id_for_handles(),
-    define_article_output_path(#("Chapter", "/lecture-notes", "tsx", "path")),
-    handles_dict_factory_desugarer([#("Chapter", "path")]),
+    // generate_id_for_handles(),
+    // define_article_output_path(#("Chapter", "/lecture-notes", "tsx", "path")),
+    // handles_dict_factory_desugarer([#("Chapter", "path")]),
     counter_handles_desugarer(),
     // more
     concatenate_text_nodes(),
     // remove_empty_lines(),
     remove_vertical_chunks_with_no_text_child(),
-    rename_tag(#("VerticalChunk", "p")),
-    unwrap_tag_when_child_of_tags(#("p", ["span", "code", "tt", "figcaption"])),
+    rename_tag.rename_tag(#("VerticalChunk", "p")),
+    unwrap_tag_when_child_of_tags.unwrap_tag_when_child_of_tags(
+      #("p", ["span", "code", "tt", "figcaption"]),
+    ),
   ]
 }
-
-fn usage_message() {
-  io.println(
-    "usage: executable_file_name <input_file>
-    options:
-        <input_file> --debug : debug pipeline steps
-        <input_file> --debug-<start:int>-<end:int> : debug pipeline steps with start & stop indices
-        <input_file> --debug-<start:int> : shorthand for --debug-<start>-<start>
-        ",
-  )
-}
-
-pub fn run_prettier(in: String, path: String) -> Result(_, _) {
-  shellout.command(
-    run: "npx",
-    in: in,
-    with: ["prettier", "--write", path],
-    opt: [],
-  )
-}
-
-fn add_v1_boilerplate(output: String) -> String {
-  "export default function _() {
-  return <>" <> output <> "</>
-}
-"
-}
-
-pub fn write_v1_file(output: String, path: String) -> Nil {
-  output
-  |> add_v1_boilerplate
-  |> simplifile.write(path, _)
-  |> result.unwrap(Nil)
-}
-
-pub fn process_command_line_args(
-  args: List(String),
-  pipeline: List(Pipe),
-) -> Nil {
-  case args {
-    [path, "--debug"] -> {
-      lbp_desugaring.assemble_and_desugar_and_callback(
-        path,
-        pipeline,
-        0,
-        0,
-        fn(_) { Nil },
-      )
-    }
-    [path, "--emit"] -> {
-      lbp_desugaring.assemble_and_desugar_and_callback(
-        path,
-        pipeline,
-        -1,
-        -1,
-        fn(desugared) {
-          let path_out = string.drop_end(path, 4) <> ".tsx"
-          let path_out =
-            string.drop_start(path_out, string.length("../emu_content/"))
-          let path_out = "../src/routes/lecture-notes/" <> path_out
-          io.debug(path_out)
-          write_v1_file(solid.vxml_to_jsx(desugared, 0), path_out)
-          case run_prettier(".", path_out) {
-            Ok(_) -> Nil
-            Error(e) -> {
-              io.println("error running prettier: " <> ins(e))
-              io.println("path_out: " <> path_out <> "[END]")
-              Nil
-            }
-          }
-        },
-      )
-    }
-    [path, maybe_debug_range] -> {
-      case string.starts_with(maybe_debug_range, "--debug") {
-        False -> usage_message()
-        True -> {
-          let suffix = string.drop_start(maybe_debug_range, 7)
-          let pieces = string.split(suffix, "-")
-          case list.length(pieces) {
-            3 -> {
-              let assert [_, b, c] = pieces
-              case int.parse(b), int.parse(c) {
-                Ok(debug_start), Ok(debug_end) ->
-                  lbp_desugaring.assemble_and_desugar_and_callback(
-                    path,
-                    pipeline,
-                    debug_start,
-                    debug_end,
-                    fn(_) { Nil },
-                  )
-                _, _ -> usage_message()
-              }
-            }
-            2 -> {
-              let assert [_, b] = pieces
-              case int.parse(b) {
-                Ok(debug_start) ->
-                  lbp_desugaring.assemble_and_desugar_and_callback(
-                    path,
-                    pipeline,
-                    debug_start,
-                    debug_start,
-                    fn(_) { Nil },
-                  )
-                _ -> usage_message()
-              }
-            }
-            _ -> {
-              usage_message()
-            }
-          }
-        }
-      }
-    }
-    _ -> usage_message()
-  }
-}
-
-pub fn main() {
-  argv.load().arguments
-  |> process_command_line_args(pipeline())
-}
-// +18884039000
