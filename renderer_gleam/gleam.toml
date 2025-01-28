@@ -19,9 +19,8 @@ simplifile = ">= 2.2.0 and < 3.0.0"
 # shellout = ">= 1.6.0 and < 2.0.0"
 # gleam_regexp = ">= 1.0.0 and < 2.0.0"
 lbp_desugaring = { path = "../../../MrChaker/lbp_desugaring" }
-blamedlines = { path = "../../../VistuleB/blamedlines" }
-writerly_parser = { path = "../../../VistuleB/writerly_parser" }
-vxml_parser = ">= 1.0.0 and < 2.0.0"
+blamedlines = { path = "../../../vistuleB/blamedlines" }
+writerly_parser = { path = "../../../vistuleB/writerly_parser" }
 argv = ">= 1.0.2 and < 2.0.0"
 shellout = ">= 1.6.0 and < 2.0.0"
 
