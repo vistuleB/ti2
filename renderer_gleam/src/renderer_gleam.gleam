@@ -1,3 +1,4 @@
+import html_to_writerly
 import argv
 import blamedlines.{type Blame, type BlamedLine, Blame, BlamedLine}
 import gleam/io
@@ -285,49 +286,58 @@ fn cli_usage() {
 }
 
 pub fn main() {
-  use amendments <- infra.on_error_on_ok(
-    io.debug(
-      vr.process_command_line_arguments(argv.load().arguments, [
-        #("--prettier", True),
-      ]),
-    ),
-    fn(error) {
-      io.println("")
-      io.println("command line error: " <> ins(error))
-      io.println("")
-      cli_usage()
-    },
-  )
-
-  let renderer =
-    vr.Renderer(
-      assembler: wp.assemble_blamed_lines,
-      source_parser: wp.parse_blamed_lines,
-      parsed_source_converter: wp.writerlys_to_vxmls,
-      pipeline: pipeline.our_pipeline(),
-      splitter: ti2_splitter,
-      emitter: ti2_emitter,
-      prettifier: vr.prettier_prettifier,
-    )
-
-  let parameters =
-    vr.RendererParameters(
-      input_dir: "../emu_content",
-      output_dir: Some("../src"),
-      prettifying_option: False,
-    )
-    |> vr.amend_renderer_paramaters_by_command_line_amendment(amendments)
-
-  let debug_options =
-    vr.empty_renderer_debug_options("../renderer_artifacts")
-    |> vr.amend_renderer_debug_options_by_command_line_amendment(io.debug(
-      amendments,
-    ))
-
-  case vr.run_renderer(renderer, parameters, debug_options) {
-    Ok(Nil) -> {
-      Nil
+  // parse html first
+  case argv.load().arguments {
+    ["--parse-html", path] -> {
+      html_to_writerly.html_to_writerly(path)
     }
-    Error(error) -> io.println("\nrenderer error: " <> ins(error) <> "\n")
+    args -> {
+      use amendments <- infra.on_error_on_ok(
+        io.debug(
+          vr.process_command_line_arguments(args, [
+            #("--prettier", True),
+          ]),
+        ),
+        fn(error) {
+          io.println("")
+          io.println("command line error: " <> ins(error))
+          io.println("")
+          cli_usage()
+        },
+      )
+
+      let renderer =
+        vr.Renderer(
+          assembler: wp.assemble_blamed_lines,
+          source_parser: wp.parse_blamed_lines,
+          parsed_source_converter: wp.writerlys_to_vxmls,
+          pipeline: pipeline.our_pipeline(),
+          splitter: ti2_splitter,
+          emitter: ti2_emitter,
+          prettifier: vr.prettier_prettifier,
+        )
+
+      let parameters =
+        vr.RendererParameters(
+          input_dir: "../emu_content",
+          output_dir: Some("../src"),
+          prettifying_option: False,
+        )
+        |> vr.amend_renderer_paramaters_by_command_line_amendment(amendments)
+
+      let debug_options =
+        vr.empty_renderer_debug_options("../renderer_artifacts")
+        |> vr.amend_renderer_debug_options_by_command_line_amendment(io.debug(
+          amendments,
+        ))
+
+      case vr.run_renderer(renderer, parameters, debug_options) {
+        Ok(Nil) -> {
+          Nil
+        }
+        Error(error) -> io.println("\nrenderer error: " <> ins(error) <> "\n")
+      }
+    }
   }
+
 }
