@@ -4,7 +4,7 @@ import infrastructure.{type Pipe}
 
 pub fn html_pipeline() -> List(Pipe) {
   [
-    correct_parsed_html_tags(),
+    // correct_parsed_html_tags(),
     replace_text_parent_by_text_bookends(#("i", "_", "_")),
     replace_text_parent_by_text_bookends(#("b", "*", "*")),
     replace_text_parent_by_text_bookends(#("code", "`", "`")),
