@@ -1,7 +1,8 @@
+import gleam/list
 import gleam/option
 import html_pipeline.{html_pipeline}
 import gleam/io
-import vxml_parser.{htmgrrrl_based_html_parser, vxmls_to_string, type VXML} as vp
+import vxml_parser.{xmlm_based_html_parser, vxmls_to_string, type VXML} as vp
 import vxml_renderer as vr
 import writerly_parser as wp
 import blamedlines as bl
@@ -30,13 +31,15 @@ pub fn prettifier(
   Ok("")
 }
 
-pub fn html_to_writerly(file: String) {
-  
+pub fn html_to_writerly(file: String, amendments: vr.CommandLineAmendments(Bool)) {
+
   let renderer =
     vr.Renderer(
-      assembler: wp.assemble_blamed_lines,
-      source_parser: fn(bl){ Ok(bl.blamed_lines_to_string(bl)) },
-      parsed_source_converter: fn(_) { htmgrrrl_based_html_parser(file) },
+      assembler: fn(_) { Ok([]) },
+      source_parser: fn(_){ Ok("") },
+      parsed_source_converter: fn(_) { 
+        xmlm_based_html_parser(file)
+      },
       pipeline: html_pipeline.html_pipeline(),
       splitter: splitter,
       emitter: emitter,
@@ -49,13 +52,13 @@ pub fn html_to_writerly(file: String) {
       output_dir: option.Some("../emu_content"),
       prettifying_option: False,
     )
-    // |> vr.amend_renderer_paramaters_by_command_line_amendment(amendments)
+    |> vr.amend_renderer_paramaters_by_command_line_amendment(amendments)
 
   let debug_options =
     vr.empty_renderer_debug_options("../renderer_artifacts")
-    // |> vr.amend_renderer_debug_options_by_command_line_amendment(io.debug(
-    //   amendments,
-    // ))
+    |> vr.amend_renderer_debug_options_by_command_line_amendment(io.debug(
+      amendments,
+    ))
 
   case vr.run_renderer(renderer, parameters, debug_options) {
     Ok(Nil) -> {

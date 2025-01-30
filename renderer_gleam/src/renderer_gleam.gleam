@@ -287,11 +287,27 @@ fn cli_usage() {
 
 pub fn main() {
   // parse html first
-  case argv.load().arguments {
-    ["--parse-html", path] -> {
-      html_to_writerly.html_to_writerly(path)
+  let args = argv.load().arguments
+
+  case args {
+    ["--parse-html", path, ..rest] -> {
+      use amendments <- infra.on_error_on_ok(
+        io.debug(
+          vr.process_command_line_arguments(rest, [
+            #("--prettier", True),
+          ]),
+        ),
+        fn(error) {
+          io.println("")
+          io.println("command line error: " <> ins(error))
+          io.println("")
+          cli_usage()
+        },
+      )
+
+      html_to_writerly.html_to_writerly(path, amendments)
     }
-    args -> {
+    _ -> {
       use amendments <- infra.on_error_on_ok(
         io.debug(
           vr.process_command_line_arguments(args, [
@@ -305,7 +321,6 @@ pub fn main() {
           cli_usage()
         },
       )
-
       let renderer =
         vr.Renderer(
           assembler: wp.assemble_blamed_lines,
