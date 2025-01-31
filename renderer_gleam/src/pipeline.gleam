@@ -24,7 +24,6 @@ import desugarers/group_siblings_not_separated_by_blank_lines.{
 import desugarers/insert_indent.{insert_indent}
 import desugarers/pair_bookends.{pair_bookends}
 import desugarers/prepend_append_to_text_children_of
-import desugarers/reinsert_math_dolar.{reinsert_math_dolar}
 import desugarers/remove_empty_chunks.{remove_empty_chunks}
 import desugarers/remove_empty_lines.{remove_empty_lines}
 import desugarers/remove_vertical_chunks_with_no_text_child.{

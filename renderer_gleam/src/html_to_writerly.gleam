@@ -57,8 +57,7 @@ pub fn html_to_writerly(file: String, amendments: vr.CommandLineAmendments(Bool)
   let debug_options =
     vr.empty_renderer_debug_options("../renderer_artifacts")
     |> vr.amend_renderer_debug_options_by_command_line_amendment(io.debug(
-      amendments,
-    ))
+      amendments), html_pipeline.html_pipeline())
 
   case vr.run_renderer(renderer, parameters, debug_options) {
     Ok(Nil) -> {
