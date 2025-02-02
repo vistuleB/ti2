@@ -305,7 +305,8 @@ pub fn main() {
         },
       )
 
-      html_to_writerly.html_to_writerly(path, amendments)
+      let _ = html_to_writerly.html_to_writerly(path, amendments)
+      Nil
     }
     _ -> {
       use amendments <- infra.on_error_on_ok(
