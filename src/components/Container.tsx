@@ -3,23 +3,7 @@ import { createEffect, ParentProps, Suspense } from "solid-js";
 
 const Container = (props: ParentProps) => {
   createEffect(() => {
-    const existingScripts = [
-      document.querySelector('script[src="/mathjax_setup.js"]'),
-      document.getElementById("MathJax-script"),
-    ];
-    existingScripts.forEach((e) => e?.remove());
-
-    let script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "/mathjax_setup.js";
-    script.defer = true;
-    document.body.appendChild(script);
-
-    script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";
-    script.defer = true;
-    document.body.appendChild(script);
+    (window as any).MathJax.typesetPromise([document.body]);
   });
   return <>{props.children}</>;
 };
