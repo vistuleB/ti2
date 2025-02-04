@@ -730,98 +730,17 @@
                                 class centered-figure well container-fluid
 
                                 
-                                
-                                |> a
-                                    data-slide prev
-                                    href #all-monomials
-                                    class left carousel-control-prev-icon
-
-                                    
-                                    
-                                    |> div
-                                        class carousel-nav-icon
-
+                                |> Carousel        
                                         
-                                        
-                                        |> img
-                                            style height:10em
-                                            src ../img/circuits/all-monomials.svg
-                                        
-                                        
-                                    
-                                    
+                                    |> img
+                                        style width:100%
+                                        src ../img/circuits/all-monomials-1.svg
                                 
                                 
-                                |> a
-                                    data-slide next
-                                    href #all-monomials
-                                    class right carousel-control-next-icon
-
-                                    
-                                    
-                                    |> div
-                                        class carousel-nav-icon
-
-                                        
-                                        
-                                        |> img
-                                            style height:10em
-                                            src ../img/circuits/all-monomials.svg
-                                        
-                                        
-                                    
-                                    
                                 
-                                
-                                |> div
-                                    style display:inline-block
-                                    data-interval false
-                                    class carousel
-                                    id all-monomials
-
-                                    
-                                    
-                                    |> ol
-                                        class carousel-indicators
-
-                                        
-                                        
-                                        |> li
-                                            class active
-                                            data-slide-to 1
-                                            data-target #all-monomials
-                                        
-                                        
-                                        |> li
-                                            data-slide-to 2
-                                            data-target #all-monomials
-                                        
-                                        
-                                    
-                                    
-                                    |> div
-                                        style display:inline-block
-                                        class carousel-inner
-
-                                        
-                                        
-                                        |> div
-                                            class item active
-                                            |> img
-                                                style height:10em
-                                                src ../img/circuits/all-monomials.svg
-                                        
-                                        
-                                        |> div
-                                            class item
-                                            |> img
-                                                style height:10em
-                                                src ../img/circuits/all-monomials.svg
-                                        
-                                        
-                                    
-                                    
-                                
+                                    |> img
+                                        style width:100%
+                                        src ../img/circuits/all-monomials-2.svg
                                 
                             
                             Insgesamt erhalten wir $2^n$ Gates, von denen jedes gleichzeitig ein

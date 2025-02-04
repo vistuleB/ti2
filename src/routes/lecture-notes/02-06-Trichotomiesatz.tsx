@@ -1,6 +1,7 @@
 import Chapter from "~/components/Chapter";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
+import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>

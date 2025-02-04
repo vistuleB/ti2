@@ -138,6 +138,7 @@ fn ti2_chapter_bootcamp_common_emitter(
       [
         BlamedLine(blame_us("ti2_fragment_emitter"), 0, "import Paragraph from \"~/components/Paragraph\";"),
         BlamedLine(blame_us("ti2_fragment_emitter"), 0, "import Container from \"~/components/Container\";"),
+        BlamedLine(blame_us("ti2_fragment_emitter"), 0, "import Carousel from \"~/components/Carousel\";"),
         BlamedLine(blame_us("ti2_fragment_emitter"), 0, "const Article = () => {"),
         BlamedLine(blame_us("ti2_fragment_emitter"), 2, "return ("),
         BlamedLine(blame_us("ti2_fragment_emitter"), 4, "<Container>"),

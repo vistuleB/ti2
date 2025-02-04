@@ -1,6 +1,7 @@
 import Chapter from "~/components/Chapter";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
+import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
@@ -647,55 +648,14 @@ const Article = () => {
                       </Paragraph>
                     </Paragraph>
                     <figure class="centered-figure well container-fluid">
-                      <a
-                        data-slide="prev"
-                        href="#all-monomials"
-                        class="left carousel-control-prev-icon">
-                        <div class="carousel-nav-icon">
-                          <img
-                            style="height:10em"
-                            src="../img/circuits/all-monomials.svg" />
-                        </div>
-                      </a>
-                      <a
-                        data-slide="next"
-                        href="#all-monomials"
-                        class="right carousel-control-next-icon">
-                        <div class="carousel-nav-icon">
-                          <img
-                            style="height:10em"
-                            src="../img/circuits/all-monomials.svg" />
-                        </div>
-                      </a>
-                      <div
-                        style="display:inline-block"
-                        data-interval={false}
-                        class="carousel"
-                        id="all-monomials">
-                        <ol class="carousel-indicators">
-                          <li
-                            class="active"
-                            data-slide-to={1}
-                            data-target="#all-monomials" />
-                          <li
-                            data-slide-to={2}
-                            data-target="#all-monomials" />
-                        </ol>
-                        <div
-                          style="display:inline-block"
-                          class="carousel-inner">
-                          <div class="item active">
-                            <img
-                              style="height:10em"
-                              src="../img/circuits/all-monomials.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height:10em"
-                              src="../img/circuits/all-monomials.svg" />
-                          </div>
-                        </div>
-                      </div>
+                      <Carousel>
+                        <img
+                          style="width:100%"
+                          src="../img/circuits/all-monomials-1.svg" />
+                        <img
+                          style="width:100%"
+                          src="../img/circuits/all-monomials-2.svg" />
+                      </Carousel>
                     </figure>
                     <Paragraph>
                       Insgesamt erhalten wir $2^n$ Gates, von denen jedes gleichzeitig ein
