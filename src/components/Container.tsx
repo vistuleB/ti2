@@ -16,7 +16,7 @@ const Container = (props: ParentProps) => {
 
     script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";
+    script.src = "/tex-svg.js";
     script.async = true;
     document.body.appendChild(script);
   });
