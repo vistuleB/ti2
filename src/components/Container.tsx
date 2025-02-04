@@ -12,12 +12,13 @@ const Container = (props: ParentProps) => {
     let script = document.createElement("script");
     script.type = "text/javascript";
     script.src = "/mathjax_setup.js";
+    script.defer = true;
     document.body.appendChild(script);
 
     script = document.createElement("script");
     script.type = "text/javascript";
     script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";
-    script.async = true;
+    script.defer = true;
     document.body.appendChild(script);
   });
   return <>{props.children}</>;

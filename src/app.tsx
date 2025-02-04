@@ -18,12 +18,6 @@ export default function App() {
           <link rel="stylesheet" type="text/css" href="../TI.css" />
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-          <script type="text/javascript" src="/mathjax_setup.js"></script>
-          <script
-            type="text/javascript"
-            id="MathJax-script"
-            async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
           <div id="mathjax-definitions" style="display:none">
             \( \newcommand&#123;\floor&125;[1]&#123;\left\lfloor #1
             \right\rfloor&125; \newcommand&#123;\ceil&125;[1]&#123;\left\lceil
