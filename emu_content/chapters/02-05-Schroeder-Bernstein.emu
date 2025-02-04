@@ -1,0 +1,45 @@
+|> Chapter
+    |> div
+        id link-to-toc
+        |> a
+            href ../vorlesungsskript
+
+            Inhaltsverzeichnis
+        |> a
+            href 02-04-diagonalization
+
+            &lt;&lt; Kapitel 02.04
+    |> div
+        id link-to-overview
+        |> a
+            href /
+
+            zur Kursübersicht
+        |> a
+            href 02-06-Trichotomiesatz
+
+            Kapitel 02.06 &gt;&gt;
+    |> div
+        style display:none
+        id mathjax-definitions
+
+        
+        \(
+        \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+        \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+        
+        \newcommand{\R}{\mathbb{R}}
+        \newcommand{\Z}{\mathbb{Z}}
+        \newcommand{\N}{\mathbb{N}}
+        \newcommand{\Q}{\mathbb{Q}}
+        \newcommand{\cin}{c_{\rm in}}
+        \newcommand{\cout}{c_{\rm out}}
+        \newcommand{\maj}{\textnormal{Maj}}
+        \newcommand{\xor}{\oplus}
+        \newcommand{\depth}{\textnormal{depth}}
+        \newcommand{\poly}{\textnormal{poly}}
+        \newcommand{\pfrac}[2]{\left(\frac{#1}{#2}\right)}
+        \newcommand{\cube}{\{0,1\}}
+        \newcommand{\cuben}{\cube^{\N}}
+        \)
+        

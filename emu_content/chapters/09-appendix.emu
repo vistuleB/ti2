@@ -1,0 +1,18 @@
+|> Chapter
+    |> div
+        id link-to-toc
+        |> a
+            href ../vorlesungsskript
+
+            Inhaltsverzeichnis
+        |> a
+            href 08-01-Time-hierarchy-theorem
+
+            &lt;&lt; Kapitel 08.01
+    |> div
+        id link-to-overview
+        |> a
+            href /
+
+            zur Kursübersicht
+    |> div

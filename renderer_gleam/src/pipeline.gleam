@@ -211,9 +211,10 @@ pub fn our_pipeline() -> List(Pipe) {
     concatenate_text_nodes(),
     // remove_empty_lines(),
     remove_vertical_chunks_with_no_text_child(),
-    rename_tag.rename_tag(#("VerticalChunk", "p")),
+    rename_tag.rename_tag(#("VerticalChunk", "Paragraph")),
+    rename_tag.rename_tag(#("p", "Paragraph")),
     unwrap_tag_when_child_of_tags.unwrap_tag_when_child_of_tags(
-      #("p", ["span", "code", "tt", "figcaption"]),
+      #("Paragraph", ["span", "code", "tt", "figcaption", "em"]),
     ),
   ]
 }

@@ -1,0 +1,152 @@
+import Chapter from "~/components/Chapter";
+import Paragraph from "~/components/Paragraph";
+import Container from "~/components/Container";
+const Article = () => {
+  return (
+    <Container>
+      <Chapter number={15}>
+        <div id="link-to-toc">
+          <a href="../vorlesungsskript">
+            <Paragraph>
+              Inhaltsverzeichnis
+            </Paragraph>
+          </a>
+          <a href="02-06-Trichotomiesatz">
+            <Paragraph>
+              &lt;&lt; Kapitel 02.06
+            </Paragraph>
+          </a>
+        </div>
+        <div id="link-to-overview">
+          <a href="/">
+            <Paragraph>
+              zur Kursübersicht
+            </Paragraph>
+          </a>
+          <a href="03-01-primitive-recursion-definitions">
+            <Paragraph>
+              Kapitel 03.01 &gt;&gt;
+            </Paragraph>
+          </a>
+        </div>
+        <div id="rightSideWrapper">
+          <div class="content">
+            <div class="chapter">
+              <h1 class="hidden-title">
+                <span class="chapterTitle">
+                  3. Berechenbarkeit und natürliche Zahlen
+                </span>
+              </h1>
+              <Paragraph>
+                <Paragraph>
+                  Mit den Booleschen Schaltkreisen haben wir ein Modell kennengelernt, dass
+                  die Berechnung von Booleschen Funkionen \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) beschreibt.
+                  Wir haben mehrere Beweisen gesehen, dass es für jede Boolesche Funktion einen
+                  Schaltkreis gibt. Unsere Zielsetzung war durchweg{" "}
+                  <em>
+                    komplexitätstheoretisch
+                  </em>
+                  : wir
+                  wollten möglichst kleine Schaltkreise von möglichst geringer Tiefe entwerfen.
+                  Würden wir tiefer in die Schaltkreiskomplexität einsteigen, so würden wir uns fast
+                  ausschließlich mit{" "}
+                  <em>
+                    negativen
+                  </em>
+                  Zielen beschäftigen: zu zeigen, dass es zu bestimmten
+                  Funktionen eben nicht Schaltkreise mit \(S\) Gates und in Tiefe \(d\) gibt; wir
+                  würden uns zum Großteil mit{" "}
+                  <em>
+                    unteren Schranken
+                  </em>
+                  beschäftigen.
+                </Paragraph>
+              </Paragraph>
+              <Paragraph>
+                <Paragraph>
+                  Boolesche Funktionen sind immer{" "}
+                  <em>
+                    endliche
+                  </em>
+                  Objekte. In der Berechenbarkeitstheorie
+                  geht es im Grunde um die Frage: welche{" "}
+                  <em>
+                    unendlichen
+                  </em>
+                  Funktionen können wir überhaupt
+                  berechnen? Und was gilt denn überhaupt als zulässiges Modell für Berechenbarkeit?
+                </Paragraph>
+              </Paragraph>
+              <Paragraph>
+                <Paragraph>
+                  Wenn wir nun also über Funktionen \(f: X \rightarrow Y\) auf unendlichen Mengen sprechen und uns
+                  fragen,
+                  welche durch eine{" "}
+                  <em>
+                    endliche Rechenvorschrift
+                  </em>
+                  beschrieben werden können, dann
+                  müssen wir erst einmal entscheiden, mit welcher unendlichen Menge wir uns beschäftigen.
+                  Eine Bedingung sollte zum Beispiel sein, dass wir Input und Output vollständig hinschreiben können.
+                  (Denn wenn der Input bereits unendlich groß wäre, wie sollten wir überhaupt über Berechenbarkeit
+                  sprechen?)
+                  Für uns als Informatiker wäre doch folgende Menge am naheliegendsten:
+                  \begin&#123;align*&#125;
+                  \&#123;0,1\&#125;^* \ ,
+                  \end&#123;align*&#125;
+                  also die Menge aller beliebig langen aber endlichen Bit-Strings. Wir können alle möglichen Dinge
+                  (Wörter, Programme, Dateien, natürliche Zahlen, rationale Zahlen) als solche Bit-Strings codieren.
+                  Die ersten Wissenschaftler, die sich mit Berechenbarkeit beschäftigten, kamen allerdings
+                  aus der Mathematik und Logik, und ganz allgemeinen entstand die Berechenbarkeitstheorie
+                </Paragraph>
+                <Paragraph>
+                  <em>
+                    bevor
+                  </em>
+                  die ersten Rechner gebaut wurden. Daher beschäftigten sich die ersten Forscher auch mit einer
+                  anderen, uns sehr vertrauten Menge:
+                  \begin&#123;align*&#125;
+                  \mathbb&#123;N&#125; \ ,
+                  \end&#123;align*&#125;
+                  den natürlichen Zahlen. Im letzten Kapitel haben wir ja unter anderen bewiesen, dass diese
+                  gleichmächtig sind:
+                  \(\&#123;0,1\&#125;^* \cong \N\) und haben auch eine Bijektion kennengelernt, beispielsweise
+                  \begin&#123;align*&#125;
+                  f : \&#123;0,1\&#125;^
+                  <b>
+                    &amp;\rightarrow \N \\
+                    (x
+                    <i>
+                      1, \dots, x
+                    </i>
+                    n)&amp;\mapsto (1 x
+                    <i>
+                      1\dots x
+                    </i>
+                    n)_2 - 1\ ,
+                    \end&#123;align
+                  </b>
+                  &#125;
+                  wir stellen also dem Bitstring \(x_1,\dots,x_n\) eine 1 voran und interpretieren das Ergebnis als
+                  natürliche Zahl;
+                  dann ziehen wir 1 ab.
+                  Es ist also für die Entwicklung eines Berechenbarkeitsbegriffs mehr oder weniger egal, ob wir mit
+                  \(\N\) oder \(\&#123;0,1\&#125;^*\) arbeiten - sofern die obige Bijektion \(f\) selbst "berechenbar" ist.
+                </Paragraph>
+              </Paragraph>
+              <Paragraph>
+                <Paragraph>
+                  Wir werden in diesem Kapitel mehrere Berechenbarkeitsmodelle für Funktionen
+                  \(f: \N \rightarrow \N\) kennenlernen. Die beste Einstellung Ihrerseits ist, diese Modelle
+                  als primitive, sehr reduzierte Programmiersprachen zu betrachten.
+                </Paragraph>
+              </Paragraph>
+            </div>
+          </div>
+        </div>
+      </Chapter>
+    </Container>
+  );
+};
+
+export default Article;

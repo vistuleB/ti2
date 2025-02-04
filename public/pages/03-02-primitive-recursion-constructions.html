@@ -279,9 +279,9 @@ def choose2(t):
 <code class='pythonPrompt'>head(90537)</code>
 <code class='terminalOutput'>11</code>
 <code class='pythonPrompt'>head(tail(90537))</code>
-<code class='terminalOutput'>7</code></pre>
-                    <code class='pythonPrompt'>head(tail(tail(90537)))</code>
-                    <code class='terminalOutput'>5</code></pre>
+<code class='terminalOutput'>7</code>
+<code class='pythonPrompt'>head(tail(tail(90537)))</code>
+<code class='terminalOutput'>5</code></pre>
                     <p><strong>Native Implementierung.</strong> Die primitive Rekursion ist
                         ein theoretischer Berechenbarkeitsbegriff für Funktionen
                         auf natürlichen Zahlen. Es ist definitiv keine ernstzunehmende Programmiersprache.
@@ -295,9 +295,9 @@ def choose2(t):
                         sie <em>nativ</em> in Python zu implementieren, also beispielsweise in meiner
                         Datei <code>stockpile.py</code>:</p>
                     <pre class="listing">
-<code style='counter-set: listing 63;'>def pair(x,y):code>
+<code style='counter-set: listing 63;'>def pair(x,y):</code>
 <code>  return int(((x+y+1) * (x+y)) / 2 + x )</code>
-                        </pre>
+                    </pre>
 
 
 

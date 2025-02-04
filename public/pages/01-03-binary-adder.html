@@ -1,23 +1,3 @@
-<div id='mathjax-definitions' style="display:none">
-        \(
-        \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
-        \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
-
-        \newcommand{\R}{\mathbb{R}}
-        \newcommand{\Z}{\mathbb{Z}}
-        \newcommand{\N}{\mathbb{N}}
-        \newcommand{\Q}{\mathbb{Q}}
-        \newcommand{\cin}{c_{\rm in}}
-        \newcommand{\cout}{c_{\rm out}}
-        \newcommand{\maj}{\textnormal{Maj}}
-        \newcommand{\xor}{\oplus}
-        \newcommand{\depth}{\textnormal{depth}}
-        \newcommand{\poly}{\textnormal{poly}}
-        \)
-    </div id='mathjax-definitions'>
-
-
-
     <div id="rightSideWrapper">
 
 
@@ -240,7 +220,7 @@
                     <p>und hier ein Bild zur Illustration:</p>
                     <figure>
                         <img loading='lazy' src='../img/circuits/carry-generate-interval.svg' style='height:11em'>
-                        <br><br>
+                        <br></br>
                         <img loading='lazy' src='../img/circuits/carry-propagate-interval.svg' style='height:11em'>
                     </figure>
                     <p>
@@ -467,7 +447,7 @@
                             schlecht,
                             allerdings asymptotisch deutlich schlechter als der Ripple-Through-Addierer, und eben
                             auch nicht das, was wir im Lemma behaupten. </p>
-
+                        </p>
                         <p>Nein, es ist in der Tat viel einfacher. Schauen Sie, wir berechnen oben
                             zum Beispiel \(pg_{[0,29]}\), in dem wir
                             \(pg_{[28,29]}\) (was bereits als Input bereitgestellt wird, weil \([28,29]\) ein
@@ -481,9 +461,9 @@
                             Sogar weniger, weil wir gar kein Gate brauchen, wenn \([0,k]\) bereits ein Binärinterval
                             ist.
                             Hier ist die Konstruktion für \(n=16\):
-                        <figure>
-                            <img loading='lazy' src='../img/circuits/pg-prefices-16.svg' style='height:20em'>
-                        </figure>
+                            <figure>
+                                <img loading='lazy' src='../img/circuits/pg-prefices-16.svg' style='height:20em'>
+                            </figure>
                         </p>
                         <p>
                             Wir benötigen also (weniger als) \(n\) viele \(pg\)-Gates; jedes davon
@@ -493,10 +473,10 @@
                             brauchen wir ja \(p_{[0,k]}\) gar nicht. Auch, um
                             \(g_{[0,k]}\) aus \(pg_{[0,l]}\) und \(pg_{[l+1,k]}]\) zu berechnen,
                             brauchen wir \(p_{[0,l]}\) nicht:
-                        <figure>
-                            <img loading='lazy' src='../img/circuits/pg-gadget-no-need-p.svg' style='height:15em'>
-                        </figure>
-                        Es reichen also in der Tat \(2n\) Basis-Gates aus. <span class='qed'>\(\square\)</span>
+                            <figure>
+                                <img loading='lazy' src='../img/circuits/pg-gadget-no-need-p.svg' style='height:15em'>
+                            </figure>
+                            Es reichen also in der Tat \(2n\) Basis-Gates aus. <span class='qed'>\(\square\)</span>
                         </p>
                     </div>
 

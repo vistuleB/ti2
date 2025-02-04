@@ -194,6 +194,7 @@
                     <ul class="nested">
                         <li>Initialisiere für alle \(0 \leq i \lt n\) die Mengen \(N_{i,i+1} := \{X \in N \ | \ X
                             \step{} w_i \textnormal{ ist eine Produktion in $G$}\}\)
+                        </li>
                         <li><code>for l = 2 .. n</code>
                             <ol class="" type="I">
                                 <li> <code>for i = 0 .. n-l</code>
@@ -226,7 +227,7 @@
                         </li>
                         <li><code>end for i </code></li>
                         <li><code>return True if</code> \(S \in N_{0,n}\) <code>else return False</code></li>
-                        </ol>
+                    </ul>
                         <p>
                             Was ist die Laufzeit des Algorithmus? Sei \(g\) die Anzahl der Produktionen in \(G\) der
                             Form \(X \rightarrow YZ\). Die innerste Schleife, also Punkt a, wird jedes Mal \(g\) mal
@@ -262,7 +263,7 @@
                         <div class='well container theorem subtheorem'>
                             <span class='numbered-title'>Demo</span>
 
-                            Betrachten wir die Grammatik</p>
+                             <p>Betrachten wir die Grammatik</p>
                             \begin{align*}
                             S & \rightarrow AB \ | \ BC \ | \ AC \\
                             A & \rightarrow AC \ | \ x \ | \ z \\

@@ -51,7 +51,7 @@ fn construct_left_nav(prev_file: Option(String)) {
       [vp.V(
         blame_us("Prev chapter link"),
         "a",
-        [vp.BlamedAttribute(blame_us("Prev chapter attribute"), "href", ".." <> prev_file_name)], [vp.T(blame_us("Prev chapter text node"),
+        [vp.BlamedAttribute(blame_us("Prev chapter attribute"), "href", prev_file_name)], [vp.T(blame_us("Prev chapter text node"),
           [
             vp.BlamedContent(blame_us("Prev chapter content"), "&lt;&lt; Kapitel " <> prev_number)
           ]
@@ -70,7 +70,7 @@ fn construct_right_nav(next_file: Option(String)) {
  let overview_link = vp.V(
     blame_us("overview link"),
     "a",
-    [vp.BlamedAttribute(blame_us("overview link attribute"), "href", "..")], [vp.T(blame_us("overview link text node"),
+    [vp.BlamedAttribute(blame_us("overview link attribute"), "href", "/")], [vp.T(blame_us("overview link text node"),
       [
         vp.BlamedContent(blame_us("overview link content"), "zur Kursübersicht")
       ]
@@ -87,7 +87,7 @@ fn construct_right_nav(next_file: Option(String)) {
       [vp.V(
         blame_us("next chapter link"),
         "a",
-        [vp.BlamedAttribute(blame_us("next chapter attribute"), "href", ".." <> next_file_name)], [vp.T(blame_us("next chapter text node"),
+        [vp.BlamedAttribute(blame_us("next chapter attribute"), "href", next_file_name)], [vp.T(blame_us("next chapter text node"),
           [
             vp.BlamedContent(blame_us("next chapter content"), "Kapitel " <> next_number <> " &gt;&gt;")
           ]
@@ -99,7 +99,7 @@ fn construct_right_nav(next_file: Option(String)) {
   }
 
  
-  vp.V(blame_us("left nav div"), "div", [vp.BlamedAttribute(blame_us("left nav attribute"), "id", "link-to-toc")], list.flatten([[overview_link], next_chapter_link]))
+  vp.V(blame_us("right nav div"), "div", [vp.BlamedAttribute(blame_us("right nav attribute"), "id", "link-to-overview")], list.flatten([[overview_link], next_chapter_link]))
 }
 
 fn splitter(vxml: VXML, file: String) -> Result(List(#(String, VXML, Nil)), a) {
@@ -109,14 +109,16 @@ fn splitter(vxml: VXML, file: String) -> Result(List(#(String, VXML, Nil)), a) {
 
 fn emitter(pair: #(String, VXML, Nil), prev_file: Option(String), next_file: Option(String)) -> Result(#(String, List(bl.BlamedLine), Nil), String) {
   let #(path, vxml, Nil) = pair
+  let root = vp.V(blame_us("Root"), "Chapter", [], [
+    construct_left_nav(prev_file), 
+    construct_right_nav(next_file), 
+    vxml
+  ])
+  let writerlys = wp.vxmls_to_writerlys([root])
 
- 
+  Ok(#(path, wp.writerlys_to_blamed_lines(writerlys), Nil))
+  // Ok(#(path, vp.vxml_to_blamed_lines(vxml), Nil))
 
-  let root = vp.V(blame_us("Root"), "Chapter", [], [construct_left_nav(prev_file), construct_right_nav(next_file), vxml])
-
-  Ok(#(path, 
-  vp.vxml_to_blamed_lines(root)
-  , Nil))
 }
 
 pub fn prettifier(

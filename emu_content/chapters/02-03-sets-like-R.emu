@@ -1,0 +1,22 @@
+|> Chapter
+    |> div
+        id link-to-toc
+        |> a
+            href ../vorlesungsskript
+
+            Inhaltsverzeichnis
+        |> a
+            href 02-02-examples-of-equipotent-sets
+
+            &lt;&lt; Kapitel 02.02
+    |> div
+        id link-to-overview
+        |> a
+            href /
+
+            zur Kursübersicht
+        |> a
+            href 02-04-diagonalization
+
+            Kapitel 02.04 &gt;&gt;
+    |> div

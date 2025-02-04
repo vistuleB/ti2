@@ -1,0 +1,22 @@
+|> Chapter
+    |> div
+        id link-to-toc
+        |> a
+            href ../vorlesungsskript
+
+            Inhaltsverzeichnis
+        |> a
+            href 02-05-Schroeder-Bernstein
+
+            &lt;&lt; Kapitel 02.05
+    |> div
+        id link-to-overview
+        |> a
+            href /
+
+            zur Kursübersicht
+        |> a
+            href 03-00-Computability-NaturalNumbers
+
+            Kapitel 03.00 &gt;&gt;
+    |> div

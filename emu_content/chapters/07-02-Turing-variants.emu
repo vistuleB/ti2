@@ -1,0 +1,22 @@
+|> Chapter
+    |> div
+        id link-to-toc
+        |> a
+            href ../vorlesungsskript
+
+            Inhaltsverzeichnis
+        |> a
+            href 07-01-Turing-machines-examples
+
+            &lt;&lt; Kapitel 07.01
+    |> div
+        id link-to-overview
+        |> a
+            href /
+
+            zur Kursübersicht
+        |> a
+            href 07-03-Turing-encoding
+
+            Kapitel 07.03 &gt;&gt;
+    |> div

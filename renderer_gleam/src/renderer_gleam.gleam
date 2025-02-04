@@ -136,11 +136,16 @@ fn ti2_chapter_bootcamp_common_emitter(
         },
       ],
       [
+        BlamedLine(blame_us("ti2_fragment_emitter"), 0, "import Paragraph from \"~/components/Paragraph\";"),
+        BlamedLine(blame_us("ti2_fragment_emitter"), 0, "import Container from \"~/components/Container\";"),
         BlamedLine(blame_us("ti2_fragment_emitter"), 0, "const Article = () => {"),
         BlamedLine(blame_us("ti2_fragment_emitter"), 2, "return ("),
+        BlamedLine(blame_us("ti2_fragment_emitter"), 4, "<Container>"),
+
       ],
-      vxml_parser.vxml_to_jsx_blamed_lines(with_attribute, 4),
+      vxml_parser.vxml_to_jsx_blamed_lines(with_attribute, 6),
       [
+        BlamedLine(blame_us("ti2_fragment_emitter"), 4, "</Container>"),
         BlamedLine(blame_us("ti2_fragment_emitter"), 2, ");"),
         BlamedLine(blame_us("ti2_fragment_emitter"), 0, "};"),
         BlamedLine(blame_us("ti2_fragment_emitter"), 0, ""),
