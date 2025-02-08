@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        number={47}
+        title="undecidability"
+        number={7.5}
         path="/lecture-notes47.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">

@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        number={10}
+        title="examples of equipotent sets"
+        number={2.2}
         path="/lecture-notes10.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">

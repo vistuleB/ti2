@@ -1,4 +1,6 @@
 |> Chapter
+    title nfsm
+    number 4.3
     |> div
         id link-to-toc
         |> a

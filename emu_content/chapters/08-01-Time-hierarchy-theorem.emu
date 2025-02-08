@@ -1,4 +1,6 @@
 |> Chapter
+    title Time hierarchy theorem
+    number 8.1
     |> div
         id link-to-toc
         |> a

@@ -1,4 +1,6 @@
 |> Chapter
+    title formal languages
+    number 4.0
     |> div
         id link-to-toc
         |> a

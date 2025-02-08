@@ -17,6 +17,7 @@ const ins = string.inspect
 
 type FragmentType {
   Chapter(Int)
+  TOCAuthorSuppliedContent
 }
 
 type Ti2SplitterError {
@@ -39,15 +40,15 @@ fn ti2_splitter(
 ) -> Result(List(#(String, VXML, FragmentType)), Ti2SplitterError) {
   let chapter_vxmls = infra.children_with_tag(root, "Chapter")
   // let bootcamp_vxmls = infra.children_with_tag(root, "Bootcamp")
-  // use toc_vxml <- infra.on_error_on_ok(
-  //   infra.unique_child_with_tag(root, "TOCAuthorSuppliedContent"),
-  //   with_on_error: fn(error) {
-  //     case error {
-  //       infra.MoreThanOne -> Error(MoreThanOneTOCAuthorSuppliedContent)
-  //       infra.LessThanOne -> Error(NoTOCAuthorSuppliedContent)
-  //     }
-  //   },
-  // )
+  use toc_vxml <- infra.on_error_on_ok(
+    infra.unique_child_with_tag(root, "TOCAuthorSuppliedContent"),
+    with_on_error: fn(error) {
+      case error {
+        infra.MoreThanOne -> Error(MoreThanOneTOCAuthorSuppliedContent)
+        infra.LessThanOne -> Error(NoTOCAuthorSuppliedContent)
+      }
+    },
+  )
 
   // use panel_vxml <- infra.on_error_on_ok(
   //   infra.unique_child_with_tag(root, "PanelAuthorSuppliedContent"),
@@ -67,13 +68,13 @@ fn ti2_splitter(
 
   Ok(
     list.flatten([
-      // [
-      //   #(
-      //     "components/TOCAuthorSuppliedContent.tsx",
-      //     toc_vxml,
-      //     TOCAuthorSuppliedContent,
-      //   ),
-      // ],
+      [
+        #(
+          "components/TOCAuthorSuppliedContent.tsx",
+          toc_vxml,
+          TOCAuthorSuppliedContent,
+        ),
+      ],
       // [
       //   #(
       //     "components/PanelAuthorSuppliedContent.tsx",
@@ -106,15 +107,15 @@ fn ti2_chapter_bootcamp_common_emitter(
   fragment_type: FragmentType,
   number: Int,
 ) -> Result(#(String, List(BlamedLine), FragmentType), Ti2EmitterError) {
-  let blame =
-    BlamedAttribute(blame_us("ti2_fragment_emitterL65"), "number", ins(number))
+  // let blame =
+  //   BlamedAttribute(blame_us("ti2_fragment_emitterL65"), "number", ins(number))
 
-  use with_attribute <- infra.on_error_on_ok(
-    over: infra.prepend_unique_key_attribute(fragment, blame),
-    with_on_error: fn(_) {
-      Error(NumberAttributeAlreadyExists(fragment_type, number))
-    },
-  )
+  // use with_attribute <- infra.on_error_on_ok(
+  //   over: infra.prepend_unique_key_attribute(fragment, blame),
+  //   with_on_error: fn(_) {
+  //     Error(NumberAttributeAlreadyExists(fragment_type, number))
+  //   },
+  // )
 
   let lines =
     list.flatten([
@@ -144,7 +145,7 @@ fn ti2_chapter_bootcamp_common_emitter(
         BlamedLine(blame_us("ti2_fragment_emitter"), 4, "<Container>"),
 
       ],
-      vxml_parser.vxml_to_jsx_blamed_lines(with_attribute, 6),
+      vxml_parser.vxml_to_jsx_blamed_lines(fragment, 6),
       [
         BlamedLine(blame_us("ti2_fragment_emitter"), 4, "</Container>"),
         BlamedLine(blame_us("ti2_fragment_emitter"), 2, ");"),
@@ -161,98 +162,55 @@ fn ti2_chapter_bootcamp_common_emitter(
   Ok(#(path, lines, fragment_type))
 }
 
-// fn toc_emitter(
-//   path: String,
-//   fragment: VXML,
-//   fragment_type: FragmentType,
-// ) -> Result(#(String, List(BlamedLine), FragmentType), ti2EmitterError) {
-//   let lines =
-//     list.flatten([
-//       [
-//         BlamedLine(
-//           blame_us("toc_emitter"),
-//           0,
-//           "import TOCTitle from \"./TOCTitle\";",
-//         ),
-//         BlamedLine(
-//           blame_us("toc_emitter"),
-//           0,
-//           "import TOCItem from \"./TOCItem\";",
-//         ),
-//         BlamedLine(
-//           blame_us("toc_emitter"),
-//           0,
-//           "import Spacer from \"./Spacer\";",
-//         ),
-//         BlamedLine(blame_us("toc_emitter"), 0, ""),
-//         BlamedLine(
-//           blame_us("toc_emitter"),
-//           0,
-//           "const TOCAuthorSuppliedContent = () => {",
-//         ),
-//         BlamedLine(blame_us("toc_emitter"), 2, "return ("),
-//         BlamedLine(blame_us("toc_emitter"), 4, "<>"),
-//       ],
-//       vxml_parser.vxmls_to_jsx_blamed_lines(fragment |> infra.get_children, 6),
-//       [
-//         BlamedLine(blame_us("toc_emitter"), 4, "</>"),
-//         BlamedLine(blame_us("toc_emitter"), 2, ");"),
-//         BlamedLine(blame_us("toc_emitter"), 0, "};"),
-//         BlamedLine(blame_us("toc_emitter"), 0, ""),
-//         BlamedLine(
-//           blame_us("toc_emitter"),
-//           0,
-//           "export default TOCAuthorSuppliedContent;",
-//         ),
-//       ],
-//     ])
+fn toc_emitter(
+  path: String,
+  fragment: VXML,
+  fragment_type: FragmentType,
+) -> Result(#(String, List(BlamedLine), FragmentType), Ti2EmitterError) {
+  let lines =
+    list.flatten([
+      [
+        // BlamedLine(
+        //   blame_us("toc_emitter"),
+        //   0,
+        //   "import TOCTitle from \"./TOCTitle\";",
+        // ),
+        BlamedLine(
+          blame_us("toc_emitter"),
+          0,
+          "import TOCItem from \"./TOCItem\";",
+        ),
+        // BlamedLine(
+        //   blame_us("toc_emitter"),
+        //   0,
+        //   "import Spacer from \"./Spacer\";",
+        // ),
+        BlamedLine(blame_us("toc_emitter"), 0, ""),
+        BlamedLine(
+          blame_us("toc_emitter"),
+          0,
+          "const TOCAuthorSuppliedContent = () => {",
+        ),
+        BlamedLine(blame_us("toc_emitter"), 2, "return ("),
+        BlamedLine(blame_us("toc_emitter"), 4, "<>"),
+      ],
+      vxml_parser.vxmls_to_jsx_blamed_lines(fragment |> infra.get_children, 6),
+      [
+        BlamedLine(blame_us("toc_emitter"), 4, "</>"),
+        BlamedLine(blame_us("toc_emitter"), 2, ");"),
+        BlamedLine(blame_us("toc_emitter"), 0, "};"),
+        BlamedLine(blame_us("toc_emitter"), 0, ""),
+        BlamedLine(
+          blame_us("toc_emitter"),
+          0,
+          "export default TOCAuthorSuppliedContent;",
+        ),
+      ],
+    ])
 
-//   Ok(#(path, lines, fragment_type))
-// }
+  Ok(#(path, lines, fragment_type))
+}
 
-// fn panel_emitter(
-//   path: String,
-//   fragment: VXML,
-//   fragment_type: FragmentType,
-// ) -> Result(#(String, List(BlamedLine), FragmentType), ti2EmitterError) {
-//   let lines =
-//     list.flatten([
-//       [
-//         BlamedLine(
-//           blame_us("panel_emitter"),
-//           0,
-//           "import PanelTitle from \"./PanelTitle\";",
-//         ),
-//         BlamedLine(
-//           blame_us("panel_emitter"),
-//           0,
-//           "import PanelItem from \"./PanelItem\";",
-//         ),
-//         BlamedLine(blame_us("panel_emitter"), 0, ""),
-//         BlamedLine(
-//           blame_us("panel_emitter"),
-//           0,
-//           "const PanelAuthorSuppliedContent = () => {",
-//         ),
-//         BlamedLine(blame_us("panel_emitter"), 2, "return ("),
-//         BlamedLine(blame_us("panel_emitter"), 4, "<>"),
-//       ],
-//       vxml_parser.vxmls_to_jsx_blamed_lines(fragment |> infra.get_children, 6),
-//       [
-//         BlamedLine(blame_us("panel_emitter"), 4, "</>"),
-//         BlamedLine(blame_us("panel_emitter"), 2, ");"),
-//         BlamedLine(blame_us("panel_emitter"), 0, "};"),
-//         BlamedLine(blame_us("panel_emitter"), 0, ""),
-//         BlamedLine(
-//           blame_us("panel_emitter"),
-//           0,
-//           "export default PanelAuthorSuppliedContent;",
-//         ),
-//       ],
-//     ])
-
-//   Ok(#(path, lines, fragment_type))
-// }
 
 fn ti2_emitter(
   pair: #(String, VXML, FragmentType),
@@ -262,8 +220,8 @@ fn ti2_emitter(
     Chapter(n) ->
       ti2_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
     // Bootcamp(n) ->
-    //   ti2_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
-    // TOCAuthorSuppliedContent -> toc_emitter(path, vxml, fragment_type)
+      // ti2_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
+    TOCAuthorSuppliedContent -> toc_emitter(path, vxml, fragment_type)
     // PanelAuthorSuppliedContent -> panel_emitter(path, vxml, fragment_type)
   }
 }

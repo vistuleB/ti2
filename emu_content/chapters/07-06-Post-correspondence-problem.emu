@@ -1,4 +1,6 @@
 |> Chapter
+    title Post correspondence problem
+    number 7.6
     |> div
         id link-to-toc
         |> a

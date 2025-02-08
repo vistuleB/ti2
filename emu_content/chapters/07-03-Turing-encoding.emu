@@ -1,4 +1,6 @@
 |> Chapter
+    title Turing encoding
+    number 7.3
     |> div
         id link-to-toc
         |> a

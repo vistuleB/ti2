@@ -1,4 +1,6 @@
 |> Chapter
+    title majority
+    number 1.5
     |> div
         id link-to-toc
         |> a

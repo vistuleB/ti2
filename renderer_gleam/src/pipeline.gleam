@@ -1,3 +1,6 @@
+import desugarers/generate_ti2_table_of_contents
+import gleam/option
+import desugarers/generate_lbp_table_of_contents
 import desugarers/define_article_output_path
 import desugarers/handles_generate_dictionary
 import desugarers/handles_generate_ids
@@ -197,6 +200,9 @@ pub fn our_pipeline() -> List(Pipe) {
     rename_tag.rename_tag(#("p", "Paragraph")),
     unwrap_tag_when_child_of_tags.unwrap_tag_when_child_of_tags(
       #("Paragraph", ["span", "code", "tt", "figcaption", "em"]),
+    ),
+    generate_ti2_table_of_contents.generate_ti2_table_of_contents(
+      #("TOCAuthorSuppliedContent", "TOCItem", option.None),
     ),
   ]
 }

@@ -1,4 +1,6 @@
 |> Chapter
+    title cfg to pda
+    number 5.2
     |> div
         id link-to-toc
         |> a

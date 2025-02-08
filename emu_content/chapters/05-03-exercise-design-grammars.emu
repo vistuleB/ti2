@@ -1,4 +1,6 @@
 |> Chapter
+    title exercise design grammars
+    number 5.3
     |> div
         id link-to-toc
         |> a

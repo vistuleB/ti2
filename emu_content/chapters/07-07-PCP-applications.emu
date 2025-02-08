@@ -1,4 +1,6 @@
 |> Chapter
+    title PCP applications
+    number 7.7
     |> div
         id link-to-toc
         |> a

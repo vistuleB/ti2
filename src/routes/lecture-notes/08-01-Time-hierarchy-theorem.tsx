@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        number={51}
+        title="Time hierarchy theorem"
+        number={8.1}
         path="/lecture-notes51.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">

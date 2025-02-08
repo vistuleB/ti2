@@ -1,4 +1,6 @@
 |> Chapter
+    title c LR grammars
+    number 5.5
     |> div
         id link-to-toc
         |> a

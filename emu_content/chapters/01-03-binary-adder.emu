@@ -1,4 +1,6 @@
 |> Chapter
+    title binary adder
+    number 1.3
     |> div
         id link-to-toc
         |> a

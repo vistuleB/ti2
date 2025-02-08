@@ -1,4 +1,6 @@
 |> Chapter
+    title truth tables cnf dnf
+    number 1.2
     |> div
         id link-to-toc
         |> a

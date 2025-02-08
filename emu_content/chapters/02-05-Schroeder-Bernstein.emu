@@ -1,4 +1,6 @@
 |> Chapter
+    title Schroeder Bernstein
+    number 2.5
     |> div
         id link-to-toc
         |> a

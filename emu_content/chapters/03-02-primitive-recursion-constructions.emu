@@ -1,4 +1,6 @@
 |> Chapter
+    title primitive recursion constructions
+    number 3.2
     |> div
         id link-to-toc
         |> a

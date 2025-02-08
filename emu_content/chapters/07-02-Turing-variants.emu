@@ -1,4 +1,6 @@
 |> Chapter
+    title Turing variants
+    number 7.2
     |> div
         id link-to-toc
         |> a

@@ -1,4 +1,6 @@
 |> Chapter
+    title Turing universal
+    number 7.3
     |> div
         id link-to-toc
         |> a

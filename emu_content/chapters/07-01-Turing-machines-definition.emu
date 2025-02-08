@@ -1,4 +1,6 @@
 |> Chapter
+    title Turing machines definition
+    number 7.1
     |> div
         id link-to-toc
         |> a

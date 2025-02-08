@@ -118,7 +118,13 @@ fn splitter(vxml: VXML, file: String) -> Result(List(#(String, VXML, Nil)), a) {
 
 fn emitter(pair: #(String, VXML, Nil), prev_file: Option(String), next_file: Option(String)) -> Result(#(String, List(bl.BlamedLine), Nil), String) {
   let #(path, vxml, Nil) = pair
-  let root = vp.V(blame_us("Root"), "Chapter", [], [
+  let title = path |> string.drop_end(4) |> string.split("-") |> list.drop(2) |> string.join(" ")
+  let number = path |> string.split("-") |> list.take(2) |> list.map(remove_0_at_start) |> string.join(".")
+
+  let root = vp.V(blame_us("Root"), "Chapter", [
+    vp.BlamedAttribute(blame_us("Chapter title"), "title", title),
+    vp.BlamedAttribute(blame_us("Chapter number"), "number", number)
+  ], [
     construct_left_nav(prev_file), 
     construct_right_nav(next_file), 
     vxml

@@ -1,4 +1,6 @@
 |> Chapter
+    title limitations of regular grammars
+    number 4.6
     |> div
         id link-to-toc
         |> a

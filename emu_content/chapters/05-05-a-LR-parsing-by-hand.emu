@@ -1,4 +1,6 @@
 |> Chapter
+    title a LR parsing by hand
+    number 5.5
     |> div
         id link-to-toc
         |> a

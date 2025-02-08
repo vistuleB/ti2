@@ -1,4 +1,6 @@
 |> Chapter
+    title lower and upper bounds
+    number 1.6
     |> div
         id link-to-toc
         |> a

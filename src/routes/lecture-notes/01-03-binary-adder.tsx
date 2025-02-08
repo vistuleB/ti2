@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        number={4}
+        title="binary adder"
+        number={1.3}
         path="/lecture-notes4.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">

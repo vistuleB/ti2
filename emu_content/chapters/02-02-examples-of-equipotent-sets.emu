@@ -1,4 +1,6 @@
 |> Chapter
+    title examples of equipotent sets
+    number 2.2
     |> div
         id link-to-toc
         |> a

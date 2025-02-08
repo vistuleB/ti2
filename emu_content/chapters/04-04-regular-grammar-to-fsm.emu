@@ -1,4 +1,6 @@
 |> Chapter
+    title regular grammar to fsm
+    number 4.4
     |> div
         id link-to-toc
         |> a
