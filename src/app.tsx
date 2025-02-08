@@ -24,21 +24,6 @@ export default function App() {
             id="MathJax-script"
             async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-          <div id="mathjax-definitions" style="display:none">
-            \( \newcommand&#123;\floor&125;[1]&#123;\left\lfloor #1
-            \right\rfloor&125; \newcommand&#123;\ceil&125;[1]&#123;\left\lceil
-            #1 \right\rceil&125;
-            \newcommand&#123;\R&125;&#123;\mathbb&#123;R&125;&125;
-            \newcommand&#123;\Z&125;&#123;\mathbb&#123;Z&125;&125;
-            \newcommand&#123;\N&125;&#123;\mathbb&#123;N&125;&125;
-            \newcommand&#123;\Q&125;&#123;\mathbb&#123;Q&125;&125;
-            \newcommand&#123;\cin&125;&#123;c_&#123;\rm in&125;&125;
-            \newcommand&#123;\cout&125;&#123;c_&#123;\rm out&125;&125;
-            \newcommand&#123;\maj&125;&#123;\textnormal&#123;Maj&125;&125;
-            \newcommand&#123;\xor&125;&#123;\oplus&125;
-            \newcommand&#123;\depth&125;&#123;\textnormal&#123;depth&125;&125;
-            \newcommand&#123;\poly&125;&#123;\textnormal&#123;poly&125;&125; \)
-          </div>
           <Suspense>{props.children}</Suspense>
         </MetaProvider>
       )}>
