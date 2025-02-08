@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={11}>
+      <Chapter
+        number={11}
+        path="/lecture-notes11.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="02-02-examples-of-equipotent-sets">
-            <Paragraph>
-              &lt;&lt; Kapitel 02.02
-            </Paragraph>
+            &lt;&lt; Kapitel 2.2
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="02-04-diagonalization">
-            <Paragraph>
-              Kapitel 02.04 &gt;&gt;
-            </Paragraph>
+            Kapitel 2.4 &gt;&gt;
           </a>
         </div>
         <div />

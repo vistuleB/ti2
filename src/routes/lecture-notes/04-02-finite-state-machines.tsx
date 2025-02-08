@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={22}>
+      <Chapter
+        number={22}
+        path="/lecture-notes22.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="04-01-regular-grammars">
-            <Paragraph>
-              &lt;&lt; Kapitel 04.01
-            </Paragraph>
+            &lt;&lt; Kapitel 4.1
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="04-03-nfsm">
-            <Paragraph>
-              Kapitel 04.03 &gt;&gt;
-            </Paragraph>
+            Kapitel 4.3 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -42,21 +38,27 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Grammatiken erlauben es uns, gewisse Formate zu beschreiben. Das reicht uns aber nicht:
-                    wir wollen Daten{" "}
-                    <em>
+                    wir wollen Daten 
+                    {" "}
+                    <i>
                       parsen
-                    </em>
+                    </i>
+                    {" "}
                     , im engen Sinne also eine grammatische Ableitung rekonstruieren
                     und allgemein die Struktur eines gegebenen Wortes herausarbeiten. Ein bescheideneres Ziel
-                    ist es, für ein gegebenes Wort zu{" "}
-                    <em>
+                    ist es, für ein gegebenes Wort zu 
+                    {" "}
+                    <i>
                       entscheiden
-                    </em>
+                    </i>
+                    {" "}
                     , ob es sich überhaupt aus einer Grammatik
-                    ableiten lässt. Für reguläre Grammatiken gibt es hierfür die{" "}
-                    <em>
+                    ableiten lässt. Für reguläre Grammatiken gibt es hierfür die 
+                    {" "}
+                    <i>
                       endlichen Automaten
-                    </em>
+                    </i>
+                    {" "}
                     . Sie
                     können
                     endliche Automaten verstehen als ein eingeschränktes Modell eines Rechners;
@@ -71,15 +73,21 @@ const Article = () => {
                     Kreisen (den
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Zuständen
-                    </em>
+                    </i>
+                    {" "}
                     des Automaten) zeigen an, in welchen neuen Zustand beim Lesen eines Zeichen
                     gewechselt werden
-                    muss. Der Pfeil "aus dem Nichts", hier der von links nach \(S\), zeigt den{" "}
-                    <em>
+                    muss. Der Pfeil "aus dem Nichts", hier der von links nach \(S\), zeigt den 
+                    {" "}
+                    <i>
                       Startzustand
-                    </em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
                     an, in welchem
                     der Automat beginnt.
                   </Paragraph>
@@ -361,20 +369,28 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     In diesem Beispiel endet der Automat im Zustand \(Y\). Sie sehen, dass der Zustand \(X\)
-                    mit einem doppelten Rand markiert ist: dies symbolisiert, dass \(X\) ein{" "}
-                    <em>
+                    mit einem doppelten Rand markiert ist: dies symbolisiert, dass \(X\) ein 
+                    {" "}
+                    <i>
                       akzeptierender
-                    </em>
-                    Endzustand ist. Wenn der Automat ein Wort \(\alpha\) abgearbeitet hat,{" "}
-                    <em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    Endzustand ist. Wenn der Automat ein Wort \(\alpha\) abgearbeitet hat, 
+                    {" "}
+                    <i>
                       akzeptiert
-                    </em>
+                    </i>
+                    {" "}
                     er
                     es,
-                    wenn er in einem akzeptierenden Endzustand gelandet ist; ansonsten{" "}
-                    <em>
+                    wenn er in einem akzeptierenden Endzustand gelandet ist; ansonsten 
+                    {" "}
+                    <i>
                       lehnt er es ab
-                    </em>
+                    </i>
+                    {" "}
                     . In
                     unserem
                     Beispiel sehen wir also, dass der Automat das Eingabewort \(yxzxxyy\) ablehnt.
@@ -423,10 +439,14 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     {" "}
-                    Wenn das Wort zu Ende ist, dann{" "}
-                    <em>
+                    Wenn das Wort zu Ende ist, dann 
+                    {" "}
+                    <i>
                       akzeptiert
-                    </em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
                     der Automat, wenn er in einem akzeptierenden Zustand angekommen ist, also in \(F\).
                   </Paragraph>
                 </Paragraph>
@@ -536,10 +556,12 @@ const Article = () => {
                     {" "}
                     .
                     Für einen endlichen Automaten \((\Sigma, Q, \qstart, F, \delta)\) definieren wir
-                    die{" "}
-                    <em>
+                    die 
+                    {" "}
+                    <i>
                       erweiterte Zustandsübergangsfunktion
-                    </em>
+                    </i>
+                    {" "}
                     \(\hat&#123;\delta&#125;: Q \times \Sigma^* \rightarrow
                     Q\) rekursiv wie folgt:
                     \begin&#123;align*&#125;
@@ -606,11 +628,13 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Ändern Sie den Automaten aus dem letzten Beispiel so ab, dass die Bedingung{" "}
-                    <em>
+                    Ändern Sie den Automaten aus dem letzten Beispiel so ab, dass die Bedingung 
+                    {" "}
+                    <i>
                       "die auf \(x\)
                       enden"
-                    </em>
+                    </i>
+                    {" "}
                     entfällt, er also
                     alle Wörter akzeptiert, die die Folge \(xy\) nicht enthalten.
                   </Paragraph>
@@ -763,10 +787,14 @@ const Article = () => {
                           nun
                           \(q \Rightarrow^* \epsilon q'\) in \(G'\) gelten? Beachten Sie, dass jede Produktion in
                           \(G'\) ein Terminalsymbol
-                          erzeugt; \(q \Rightarrow^* \epsilon q'\) kann also nur gelten, wenn{" "}
-                          <em>
+                          erzeugt; \(q \Rightarrow^* \epsilon q'\) kann also nur gelten, wenn 
+                          {" "}
+                          <i>
                             keine
-                          </em>
+                          </i>
+                          {" "}{" "}
+                        </Paragraph>
+                        <Paragraph>
                           Produktion erfolgt ist und somit
                           \(q = q'\) gilt. Wir sehen: beide Aussagen sind äquivalent zu \(q = q'\) und somit auch
                           äquivalent zueinander.
@@ -790,14 +818,10 @@ const Article = () => {
                         </Paragraph>
                         <ol>
                           <li>
-                            <Paragraph>
-                              \(q \stackrel&#123;x \beta&#125;&#123;\rightarrow&#125; q'\) im endlichen Automaten \(M\),
-                            </Paragraph>
+                            \(q \stackrel&#123;x \beta&#125;&#123;\rightarrow&#125; q'\) im endlichen Automaten \(M\),
                           </li>
                           <li>
-                            <Paragraph>
-                              \(q \Rightarrow^* x \beta q'\) in der Grammatik \(G'\).
-                            </Paragraph>
+                            \(q \Rightarrow^* x \beta q'\) in der Grammatik \(G'\).
                           </li>
                         </ol>
                         <Paragraph>
@@ -918,14 +942,10 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        \(\qstart \stackrel&#123;\alpha&#125;&#123;\rightarrow&#125; q'\) für einen Zustand \(q' \in F\),
-                      </Paragraph>
+                      \(\qstart \stackrel&#123;\alpha&#125;&#123;\rightarrow&#125; q'\) für einen Zustand \(q' \in F\),
                     </li>
                     <li>
-                      <Paragraph>
-                        \(\qstart \Rightarrow^* \alpha\) in Grammatik \(G\).
-                      </Paragraph>
+                      \(\qstart \Rightarrow^* \alpha\) in Grammatik \(G\).
                     </li>
                   </ol>
                   <Paragraph>
@@ -1024,10 +1044,8 @@ const Article = () => {
                     </span>
                     Betrachten wir die{" "}
                     <a href="./04-01-regular-grammars.html#example-aaabb">
-                      <Paragraph>
-                        reguläre Grammatik aus
-                        dem vorherigen Kapitel 4.1
-                      </Paragraph>
+                      reguläre Grammatik aus
+                      dem vorherigen Kapitel 4.1
                     </a>
                     :
                     \begin&#123;align*&#125;
@@ -1060,18 +1078,22 @@ const Article = () => {
                       mal ein \(b\) vorgekommen ist,
                       eben kein \(a\) mehr vorkommen darf. Die Definition eines endlichen Automaten
                       verlangt aber, dass \(\delta\) eine Funktion ist, also für alle Eingabewerte definiert ist.
-                      Wir lösen das, indem wir einen sogenannten{" "}
-                      <em>
+                      Wir lösen das, indem wir einen sogenannten 
+                      {" "}
+                      <i>
                         Fehlerzustand (Trap State)
-                      </em>
+                      </i>
+                      {" "}
                       einführen,
                       der im Prinzip
                       den Zustand
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         lehne das Wort ab, egal, was noch kommt
-                      </em>
+                      </i>
+                      {" "}
                       versinnbildlicht:
                     </Paragraph>
                     <figure>
@@ -1092,11 +1114,9 @@ const Article = () => {
                     </span>
                     Betrachten wir die{" "}
                     <a href="./04-01-regular-grammars.html#example-xxx1yyy">
-                      <Paragraph>
-                        reguläre Grammatik
-                        aus
-                        dem vorherigen Kapitel 4.1
-                      </Paragraph>
+                      reguläre Grammatik
+                      aus
+                      dem vorherigen Kapitel 4.1
                     </a>
                     :
                     \begin&#123;align*&#125;
@@ -1123,9 +1143,11 @@ const Article = () => {
                       wird das Problem klarer: \(G\) erzeugt die Sprache aller Wörter über \(\&#123;0,1\&#125;\), deren
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         viertletztes
-                      </em>
+                      </i>
+                      {" "}
                       Zeichen
                       eine 1 ist. Die Herausforderung ist nun: wenn der Automat eine 1 liest, dann weiß er nicht,
                       ob das jetzt schon
@@ -1139,10 +1161,12 @@ const Article = () => {
                   <Paragraph>
                     Um mit Fällen wie dem eben geschilderten umgehen zu können, erweitern wir die Definition des
                     endlichen Automaten
-                    in nächsten Kapitel zu einem{" "}
-                    <em>
+                    in nächsten Kapitel zu einem 
+                    {" "}
+                    <i>
                       nichtdeterministischen
-                    </em>
+                    </i>
+                    {" "}
                     endlichen Automaten.
                   </Paragraph>
                 </Paragraph>

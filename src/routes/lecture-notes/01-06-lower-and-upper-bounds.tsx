@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={7}>
+      <Chapter
+        number={7}
+        path="/lecture-notes7.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="01-05-majority">
-            <Paragraph>
-              &lt;&lt; Kapitel 01.05
-            </Paragraph>
+            &lt;&lt; Kapitel 1.5
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="02-00-infinite-sets">
-            <Paragraph>
-              Kapitel 02.00 &gt;&gt;
-            </Paragraph>
+            Kapitel 2.0 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -35,7 +31,9 @@ const Article = () => {
             <div class="chapter">
               <div class="subChapter">
                 <h1 class="hidden-title">
-                  <span class="subChapterTitle" />
+                  <span class="subChapterTitle">
+                    1.6 Untere und obere Schranken
+                  </span>
                 </h1>
                 <Paragraph>
                   <Paragraph>
@@ -81,10 +79,12 @@ const Article = () => {
                     <Paragraph>
                       Die Beweismethode ist vielleicht neu für Sie, aber in der Komplexitätstheorie und
                       Kombinatorik
-                      sehr wichtig. Wir stellen uns zwei{" "}
-                      <em>
+                      sehr wichtig. Wir stellen uns zwei 
+                      {" "}
+                      <i>
                         Zählaufgaben
-                      </em>
+                      </i>
+                      {" "}
                       : (1) wie viele Boolesche
                       Funktion $f : \fcube$ gibt es? (2) Wie viele Boolesche Schaltkreise
                       mit $n$ Input-Variablen, Fan-in 2 und $s$ Gates gibt es?
@@ -134,57 +134,37 @@ const Article = () => {
                     </Paragraph>
                     <ol>
                       <li>
-                        <Paragraph>
-                          Für jedes der $s$ Gates, was es sein soll.
-                        </Paragraph>
+                        Für jedes der $s$ Gates, was es sein soll.
                         <ul>
                           <li>
-                            <Paragraph>
-                              Ein Input-Gate? Dann müssen wir es
-                              mit einer der $n$ Input-Variablen beschriften.
-                            </Paragraph>
+                            Ein Input-Gate? Dann müssen wir es
+                            mit einer der $n$ Input-Variablen beschriften.
                           </li>
                           <li>
-                            <Paragraph>
-                              Ein Not-Gate? Dann müssen wir eines der anderen Gates
-                              als Vorgänger-Gate wählen. Wir haben höchstens $s-1$ Möglichkeiten.
-                            </Paragraph>
+                            Ein Not-Gate? Dann müssen wir eines der anderen Gates
+                            als Vorgänger-Gate wählen. Wir haben höchstens $s-1$ Möglichkeiten.
                           </li>
                           <li>
-                            <Paragraph>
-                              Ein And-Gate? Dann müssen wir zwei der anderen Gates als
-                              Vorgänger-Gates wählen. Wir haben höchstesn $&#123;s-1 \choose 2&#125; =
-                              \frac&#123;(s-1)(s-2)&#125;&#123;2&#125;$ Möglichkeiten.
-                            </Paragraph>
+                            Ein And-Gate? Dann müssen wir zwei der anderen Gates als
+                            Vorgänger-Gates wählen. Wir haben höchstesn $&#123;s-1 \choose 2&#125; =
+                            \frac&#123;(s-1)(s-2)&#125;&#123;2&#125;$ Möglichkeiten.
                           </li>
                           <li>
-                            <Paragraph>
-                              Ein Or-Gate? Dann haben wir auch höchstens $&#123;s-1 \choose 2&#125;$ Möglichkeiten.
-                            </Paragraph>
+                            Ein Or-Gate? Dann haben wir auch höchstens $&#123;s-1 \choose 2&#125;$ Möglichkeiten.
                           </li>
                         </ul>
                         <Paragraph>
-                          <Paragraph>
-                            Insgesamt haben wir also
-                            {" "}
-                          </Paragraph>
-                          <Paragraph>
-                            $$
-                            n + (s-1) + 2&#123;s-1 \choose 2&#125; = n + s - 1 + (s-1)(s-2) =
-                            n + s^2 - 2s + 1 \leq s^2
-                            $$
-                          </Paragraph>
-                          <Paragraph>
-                            {" "}
-                            Möglichkeiten.
-                          </Paragraph>
+                          Insgesamt haben wir also
+                          $$
+                          n + (s-1) + 2&#123;s-1 \choose 2&#125; = n + s - 1 + (s-1)(s-2) =
+                          n + s^2 - 2s + 1 \leq s^2
+                          $$
+                          Möglichkeiten.
                         </Paragraph>
                       </li>
                       <li>
-                        <Paragraph>
-                          Für den gesamten Schaltkreis: welches Gate Output-Gate sein soll. Da haben
-                          wir $s$ Möglichkeiten.
-                        </Paragraph>
+                        Für den gesamten Schaltkreis: welches Gate Output-Gate sein soll. Da haben
+                        wir $s$ Möglichkeiten.
                       </li>
                     </ol>
                     <Paragraph>
@@ -257,19 +237,23 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Der obige Beweis sagt noch mehr: der Anteil Boolescher Funktionen, bei denen wir mit
-                    $\frac&#123;2^n&#125;&#123;2n&#125;$ Gates auskommen, ist verschwindend klein. Fast{" "}
-                    <em>
+                    $\frac&#123;2^n&#125;&#123;2n&#125;$ Gates auskommen, ist verschwindend klein. Fast 
+                    {" "}
+                    <i>
                       alle
-                    </em>
+                    </i>
+                    {" "}
                     Funktionen
                     brauchen also riesige Schaltkreise. In einem Gewissen Sinne haben wir also einfach Glück:
                     die Funktionen, die uns interessieren, wie $n$-Bit-Addition, Majority, Parity und so weiter,
                     haben einfach niedrige Komplexität. Das liegt wohl in der Natur der Sache: wir addieren,
                     multiplizieren,
-                    bauen Brücken, Häuser, Flugzeuge, Computer, weil wir es{" "}
-                    <em>
+                    bauen Brücken, Häuser, Flugzeuge, Computer, weil wir es 
+                    {" "}
+                    <i>
                       können
-                    </em>
+                    </i>
+                    {" "}
                     , weil also die dafür
                     benötigten Berechnungen effizient durchführbar sind.
                   </Paragraph>
@@ -406,30 +390,30 @@ const Article = () => {
                       $x^2$ und $x$ ergeben für alle $x \in \&#123;0,1\&#125;$ die gleichen Werte.
                       Wenn wir in $\F
                       <i>
-                        2$ rechnen, können wir uns also auf{" "}
-                        <em>
-                          multilineare
-                        </em>
-                        Polynome beschränken. Führen wir Polynome formal ein:
-                        wir haben eine Menge $x
+                        2$ rechnen, können wir uns also auf 
+                        {" "}
                       </i>
-                      1, \dots, x
+                      multilineare_
+                    </Paragraph>
+                    <Paragraph>
+                      Polynome beschränken. Führen wir Polynome formal ein:
+                      wir haben eine Menge $x
                       <i>
-                        n$ von Variablen;
-                        ein Monom in diesem Variablen ist ein Produkt aus Variablen, also
-                        $\prod
+                        1, \dots, x
                       </i>
-                      &#123;i \in I&#125; x
+                      n$ von Variablen;
+                      ein Monom in diesem Variablen ist ein Produkt aus Variablen, also
+                      $\prod
                       <i>
-                        i$ für eine Menge $I \subseteq [n]$.
-                        Wir schreiben das kurzerhand als $\x^I$. Ein Polynom ist nun eine
-                        Summe von Monomen: $\x^&#123;I
+                        &#123;i \in I&#125; x
                       </i>
-                      1&#125; + \x^&#123;I
+                      i$ für eine Menge $I \subseteq [n]$.
+                      Wir schreiben das kurzerhand als $\x^I$. Ein Polynom ist nun eine
+                      Summe von Monomen: $\x^&#123;I
                       <i>
-                        2&#125; + \dots + \x^&#123;I
+                        1&#125; + \x^&#123;I
                       </i>
-                      t&#125;$.
+                      2&#125; + \dots + \x^&#123;I_t&#125;$.
                       Beachten Sie, dass wir vor den Monomen keine Koeffizienten brauchen, da es
                       als Konstanten eh nur 0 und 1 gibt.
                       Ein Polynom $p(\x)$ berechnet eine Boolesche Funktion $\fcube$.
@@ -464,10 +448,12 @@ const Article = () => {
                       gleichen Koeffizienten, aber die spielen hier ja keine Rolle).
                       Wir würden also sagen, dass
                       $xyz + x$ und $x + yzx$ die gleichen Polynome sind.
-                      Dagegen wären $x^2yz + x$ und $xyz+x${" "}
-                      <em>
+                      Dagegen wären $x^2yz + x$ und $xyz+x$ 
+                      {" "}
+                      <i>
                         verschiedene
-                      </em>
+                      </i>
+                      {" "}
                       Polynome.
                       Da wir über $\F_2$ arbeiten, beschränken wir uns aber eh auf multilineare Polynome,
                       wo also alle Exponenten 1 sind.
@@ -479,10 +465,14 @@ const Article = () => {
                         <span class="numbered-title">
                           Übungsaufgabe
                         </span>
-                        Zeigen Sie, dass sich jede Funktion $f :\fcube${" "}
-                        <em>
+                        Zeigen Sie, dass sich jede Funktion $f :\fcube$ 
+                        {" "}
+                        <i>
                           eindeutig
-                        </em>
+                        </i>
+                        {" "}{" "}
+                      </Paragraph>
+                      <Paragraph>
                         als multilineares $\F_2$-Polynom schreiben lässt. In anderen Worten:
                         wenn $p$ und $q$ zwei verschiedene multilineare Polynome sind, dann
                         berechnen sie verschiedene Funktionen.
@@ -521,10 +511,14 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Gates. Allerdings ist das eine ungenaue Rechnung: Selbst wenn{" "}
-                      <em>
+                      Gates. Allerdings ist das eine ungenaue Rechnung: Selbst wenn 
+                      {" "}
+                      <i>
                         alle
-                      </em>
+                      </i>
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
                       $2^n$ Monome vertreten sind, bestehen nicht alle Monome aus $n$ Variablen.
                     </Paragraph>
                   </Paragraph>
@@ -604,10 +598,12 @@ const Article = () => {
                         </i>
                         2 x
                         <i>
-                          3$ eh berechnen, da wir ja{" "}
-                          <em>
-                            alle
-                          </em>
+                          3$ eh berechnen, da wir ja 
+                          {" "}
+                        </i>
+                        alle
+                        <i>
+                          {" "}
                           Monome
                           wollen. Wenn wir also einen Schaltkreis für $x
                         </i>
@@ -616,10 +612,12 @@ const Article = () => {
                           2 x
                         </i>
                         3$ haben,
-                        können wir daraus mit{" "}
-                        <em>
+                        können wir daraus mit 
+                        {" "}
+                        <i>
                           einem
-                        </em>
+                        </i>
+                        {" "}
                         zusätzlichen AND-Gate
                         $x
                         <i>
@@ -650,11 +648,11 @@ const Article = () => {
                     <figure class="centered-figure well container-fluid">
                       <Carousel>
                         <img
-                          style="width:100%"
-                          src="../img/circuits/all-monomials-1.svg" />
+                          style="height:10em"
+                          src="../img/circuits/all-monomials.svg" />
                         <img
-                          style="width:100%"
-                          src="../img/circuits/all-monomials-2.svg" />
+                          style="height:10em"
+                          src="../img/circuits/all-monomials.svg" />
                       </Carousel>
                     </figure>
                     <Paragraph>
@@ -735,10 +733,12 @@ const Article = () => {
                       </i>
                       A$ mehrfach
                       auftreten, und wir können sparen. Dafür berechnen wir
-                      vorsorglich{" "}
-                      <em>
+                      vorsorglich 
+                      {" "}
+                      <i>
                         alle
-                      </em>
+                      </i>
+                      {" "}
                       Funktionen in $z
                       <i>
                         1,\dots,z

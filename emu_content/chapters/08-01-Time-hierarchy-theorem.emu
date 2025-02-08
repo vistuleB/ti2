@@ -8,9 +8,10 @@
         |> a
             href 08-00-Complexity-Theory
 
-            &lt;&lt; Kapitel 08.00
+            &lt;&lt; Kapitel 8.0
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 09-appendix
 
-            Kapitel 09.appendix &gt;&gt;
+            Kapitel 9.appendix &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -78,14 +79,10 @@
                         von $M$
                         zu speichern; (4) und (5) um das Band von $M$ zu simulieren. Für letzteres hatten wir
                         
-                        |> em
-
-                            zwei
+                        _zwei_
                         Bänder
                         verwendet, weil das uns erlaubte, effizient Zeichen 
-                        |> em
-
-                            einzufügen
+                        _einzufügen_
                         statt einfach zu
                         überschreiben.
                         Wie wir aber gesehen hatten, können wir (4) und (5) mit einem Band bewältigen, indem wir zu
@@ -96,9 +93,7 @@
                         Markierung $\texttt{#}$. Auch das Band (3) können wir uns sparen: den akzeptierenden Zustand
                         von $M$ können wir gleich am Anfang von (1) schreiben, ohne das die Simulation dadurch
                         nennenswert teurer würde. Wir kommen also mit 
-                        |> em
-
-                            drei
+                        _drei_
                         Bändern aus.
                         Allerdings hatten wir uns nur überlegt, wie man
                         Einband-Turingmaschinen $M$ simuliert. Es ist aber ziemlich einfach zu sehen, dass man
@@ -154,9 +149,7 @@
 
                             
                             Schritten. Das $C$ ist hier eine 
-                            |> em
-
-                                absolute Konstante
+                            _absolute Konstante_
                             , hängt also weder von $M$ noch
                             von $\Sigma$ ab.
                             
@@ -232,10 +225,8 @@
                         Wir haben gesehen, dass $\negdiag$ nicht entscheidbar ist. Nun wollen
                         wir eine Version von $\negdiag$, die in $t$ Schritten entscheidbar ist,
                         aber nicht in sehr viel weniger. Dafür definieren wir uns ein 
-                        |> em
-
-                            Halteproblem mit
-                            Zeitbudget.
+                        _Halteproblem mit
+                        Zeitbudget._
                         
                         
                     
@@ -390,9 +381,7 @@
                                 Definition
                             Eine Funktion $t: \N \rightarrow \N$ heißt
                             
-                            |> em
-
-                                zeitkonstruierbar
+                            _zeitkonstruierbar_
                             , wenn es eine Turingmaschine gibt, die aus dem Eingabewort $1^n$
                             das Ausgabewort $1^{t(n)}$ berechnet und selbst maximal $O(t(n))$ Schritte läuft.
                             

@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={38}>
+      <Chapter
+        number={38}
+        path="/lecture-notes38.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="05-06-dk-automat">
-            <Paragraph>
-              &lt;&lt; Kapitel 05.06
-            </Paragraph>
+            &lt;&lt; Kapitel 5.6
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="05-10-not-context-free">
-            <Paragraph>
-              Kapitel 05.10 &gt;&gt;
-            </Paragraph>
+            Kapitel 5.10 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -45,25 +41,19 @@ const Article = () => {
                       Wir haben drei Methoden kennengelernt, kontextfreie Sprachen zu parsen:
                       rekursiver Abstieg (mit Demoseite{" "}
                       <a href="../../demos/drawManualGrammar.html">
-                        <Paragraph>
-                          drawManualGrammar.html
-                        </Paragraph>
+                        drawManualGrammar.html
                       </a>
                       ),
                       die LL-Parser (die die Mengen \(\First_k(X)\) berechnen, wie
                       auf{" "}
                       <a href="../../demos/drawFirstComputation.html">
-                        <Paragraph>
-                          drawFirstComputation.html
-                        </Paragraph>
+                        drawFirstComputation.html
                       </a>
                       demonstriert),
                       und die LR-Parser (die die Teilbäume auf den Stack legen und nach Blüten suchen,
                       hier die Demoseite{" "}
                       <a href="../../demos/drawLR0ParserPrefixArithmetic.html">
-                        <Paragraph>
-                          drawLR0ParserPrefixArithmetic
-                        </Paragraph>
+                        drawLR0ParserPrefixArithmetic
                       </a>
                       für arithmetische Ausdrücke).
                     </Paragraph>
@@ -94,22 +84,28 @@ const Article = () => {
                       \begin&#123;align*&#125;
                       L = \&#123; a^i b^j c^k \ | \ i = j \textnormal&#123; oder&#125; j = k \&#125;
                       \end&#123;align*&#125;
-                      Die Grammatik ist{" "}
-                      <em>
+                      Die Grammatik ist 
+                      {" "}
+                      <i>
                         mehrdeutig
-                      </em>
+                      </i>
+                      {" "}
                       , insbesondere kann jedes Wort der
                       Form \(a^i b^i c^i\) auf zwei Weisen abgeleitet werden: via \(AY\) und via \(XC\).
-                      Man kann sogar zeigen, dass{" "}
-                      <em>
+                      Man kann sogar zeigen, dass 
+                      {" "}
+                      <i>
                         jede
-                      </em>
+                      </i>
+                      {" "}
                       äquivalente Grammatik \(G'\), die also
                       die gleiche Sprache \(L\) erzeugt, mehrdeutig sein muss; man sagt, die Sprache
-                      \(L\) ist{" "}
-                      <em>
+                      \(L\) ist 
+                      {" "}
+                      <i>
                         inhärent mehrdeutig
-                      </em>
+                      </i>
+                      {" "}
                       .
                     </Paragraph>
                   </Paragraph>
@@ -119,10 +115,12 @@ const Article = () => {
                       unbrauchbar. Gibt es eine allgemeine Methode, die für alle Grammatiken funktioniert?
                       Ja, den sogenannten CYK-Algorithmus. Nur leider ist die nicht besonders schnell. Sie hat
                       kubische Laufzeit \(O(n^3)\), was zwar
-                      in der theoretischen Informatik als{" "}
-                      <em>
+                      in der theoretischen Informatik als 
+                      {" "}
+                      <i>
                         effizient
-                      </em>
+                      </i>
+                      {" "}
                       durchgeht, in der Praxis leider
                       meist unbrauchbar ist.
                     </Paragraph>
@@ -132,10 +130,12 @@ const Article = () => {
                       Chomsky-Normalform
                     </Paragraph>
                   </h3>
-                  Eine kontextfreie Grammatik ist in{" "}
-                  <em>
+                  Eine kontextfreie Grammatik ist in 
+                  {" "}
+                  <i>
                     Chomsky-Normalform
-                  </em>
+                  </i>
+                  {" "}
                   , wenn jede Produktion eine
                   der folgenden Formen hat:
                   \begin&#123;align*&#125;
@@ -187,23 +187,17 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        Für welche Nichtterminale gibt es \(U \Step&#123;&#125;^* V\)? Zeichnen Sie ein Bildchen mit all
-                        diesen \(\Step&#123;&#125;^*\)-Pfeilen.
-                      </Paragraph>
+                      Für welche Nichtterminale gibt es \(U \Step&#123;&#125;^* V\)? Zeichnen Sie ein Bildchen mit all
+                      diesen \(\Step&#123;&#125;^*\)-Pfeilen.
                     </li>
                     <li>
-                      <Paragraph>
-                        Von welchen Nichtterminalen können Sie überhaupt Wörter ableiten, also \(U \Step&#123;&#125;^* w
-                        \in \Sigma^*\)? Wie
-                        finden Sie das im Allgemeinen heraus?
-                      </Paragraph>
+                      Von welchen Nichtterminalen können Sie überhaupt Wörter ableiten, also \(U \Step&#123;&#125;^* w
+                      \in \Sigma^*\)? Wie
+                      finden Sie das im Allgemeinen heraus?
                     </li>
                     <li>
-                      <Paragraph>
-                        Welche Nichtterminale können \(\epsilon\) ableiten, also \(U \Step&#123;&#125;^* \epsilon\)? Wie
-                        finden Sie das im Allgemeinen heraus?
-                      </Paragraph>
+                      Welche Nichtterminale können \(\epsilon\) ableiten, also \(U \Step&#123;&#125;^* \epsilon\)? Wie
+                      finden Sie das im Allgemeinen heraus?
                     </li>
                   </ol>
                 </div>
@@ -218,10 +212,12 @@ const Article = () => {
                     haben muss, für \(w = uv\). Wenn wir die
                     Unterteilung von \(w\) in \(u\) und \(v\) kennen würden, so könnten wir rekursiv
                     fragen, wie man denn \(A \Step&#123;&#125;^* u\) und \(B \Step&#123;&#125;^* v\) ableitet. Da wir sie
-                    aber{" "}
-                    <em>
+                    aber 
+                    {" "}
+                    <i>
                       nicht
-                    </em>
+                    </i>
+                    {" "}
                     kennen, also konkret nicht wissen, wie lange \(u\) und \(v\) sind,
                     können wir alle Möglichkeiten durchprobieren. Da \(G\) in Chomsky-Normalform vorliegt, wissen
                     wir, dass \(|u| \geq 1\) und \(|v| \geq 1\), also \(1 \leq |u| \leq |w|-1\). Wir probieren also
@@ -241,32 +237,36 @@ const Article = () => {
                     Younger und Tadao Kasami).
                     Für die praktische Anwendung ist dieser weniger relevant. Dafür ist er ein wunderbares Beispiel
                     für einen
-                    Algorithmus, der auf dem Prinzip des{" "}
-                    <em>
+                    Algorithmus, der auf dem Prinzip des 
+                    {" "}
+                    <i>
                       Dynamic Programing
-                    </em>
+                    </i>
+                    {" "}
                     fußt, welches Sie in der
                     Vorlesung{" "}
                     <a href="../../AuK/index.html">
-                      <Paragraph>
-                        Algorithmen und Komplexität
-                      </Paragraph>
+                      Algorithmen und Komplexität
                     </a>
                     im dritten Semester
                     ausführlicher kennenlernen wollen. Wir beschränken uns bei dem folgenden Algorithmus
                     zunächst darauf, die Frage zu beantworten, ob den überhaupt \(S \Step&#123;&#125;^* w\) gilt,
                     und interessieren uns erst einmal nicht dafür eine solche Ableitung auch zu finden (in der
-                    Algorithmik versteht man das als{" "}
-                    <em>
+                    Algorithmik versteht man das als 
+                    {" "}
+                    <i>
                       Entscheidungsproblem
-                    </em>
+                    </i>
+                    {" "}
                     , im Gegensatz zu dem
                     allgemeinerin
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Suchproblem
-                    </em>
+                    </i>
+                    {" "}
                     ).
                   </Paragraph>
                 </Paragraph>
@@ -275,9 +275,11 @@ const Article = () => {
                     Der Entwurf eines Dynamic-Programming-Algorithmus beginnt oft mit der folgenden Frage:
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Was sind sinnvolle Zwischenergebnisse?
-                    </em>
+                    </i>
+                    {" "}
                     In unserem Falle sind Ableitungen der Form
                     \begin&#123;align*&#125;
                     X&amp;\Step&#123;&#125;^* u
@@ -348,10 +350,8 @@ const Article = () => {
                 </Paragraph>
                 <ul class="nested">
                   <li>
-                    <Paragraph>
-                      Initialisiere für alle \(0 \leq i \lt n\) die Mengen \(N_&#123;i,i+1&#125; := \&#123;X \in N \ | \ X
-                      \step&#123;&#125; w_i \textnormal&#123; ist eine Produktion in $G$&#125;\&#125;\)
-                    </Paragraph>
+                    Initialisiere für alle \(0 \leq i \lt n\) die Mengen \(N_&#123;i,i+1&#125; := \&#123;X \in N \ | \ X
+                    \step&#123;&#125; w_i \textnormal&#123; ist eine Produktion in $G$&#125;\&#125;\)
                   </li>
                   <li>
                     <code>
@@ -377,14 +377,10 @@ const Article = () => {
                             </span>
                           </li>
                           <li>
-                            <Paragraph>
-                              Berechne \(N_&#123;i,k&#125;\) wie in \((\ref&#123;equation-Nij&#125;)\). Konkret heißt das:
-                            </Paragraph>
+                            Berechne \(N_&#123;i,k&#125;\) wie in \((\ref&#123;equation-Nij&#125;)\). Konkret heißt das:
                           </li>
                           <li>
-                            <Paragraph>
-                              Initialisiere \(N_&#123;i,k&#125; := \emptyset\)
-                            </Paragraph>
+                            Initialisiere \(N_&#123;i,k&#125; := \emptyset\)
                           </li>
                           <li>
                             <code>
@@ -394,19 +390,15 @@ const Article = () => {
                               type={1}
                               class="">
                               <li>
-                                <Paragraph>
-                                  <code>
-                                    for all productions
-                                  </code>
-                                  \(X \rightarrow YZ\):
-                                </Paragraph>
+                                <code>
+                                  for all productions
+                                </code>
+                                \(X \rightarrow YZ\):
                                 <ol type="a">
                                   <li>
-                                    <Paragraph>
-                                      füge \(X\) zu \(N_&#123;i,k&#125;\) hinzu, falls \(Y \in N_&#123;i,j&#125;\) und
-                                      \(Z
-                                      \in N_&#123;j,k&#125;\) gilt.{" "}
-                                    </Paragraph>
+                                    füge \(X\) zu \(N_&#123;i,k&#125;\) hinzu, falls \(Y \in N_&#123;i,j&#125;\) und
+                                    \(Z
+                                    \in N_&#123;j,k&#125;\) gilt.{" "}
                                   </li>
                                 </ol>
                               </li>
@@ -437,15 +429,13 @@ const Article = () => {
                     </code>
                   </li>
                   <li>
-                    <Paragraph>
-                      <code>
-                        return True if
-                      </code>
-                      \(S \in N_&#123;0,n&#125;\){" "}
-                      <code>
-                        else return False
-                      </code>
-                    </Paragraph>
+                    <code>
+                      return True if
+                    </code>
+                    \(S \in N_&#123;0,n&#125;\){" "}
+                    <code>
+                      else return False
+                    </code>
                   </li>
                 </ul>
                 <Paragraph>

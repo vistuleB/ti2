@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={49}>
+      <Chapter
+        number={49}
+        path="/lecture-notes49.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="07-06-Post-correspondence-problem">
-            <Paragraph>
-              &lt;&lt; Kapitel 07.06
-            </Paragraph>
+            &lt;&lt; Kapitel 7.6
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="08-00-Complexity-Theory">
-            <Paragraph>
-              Kapitel 08.00 &gt;&gt;
-            </Paragraph>
+            Kapitel 8.0 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -49,9 +45,11 @@ const Article = () => {
                     hier
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Produktionen
-                    </em>
+                    </i>
+                    {" "}
                     genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
                     Alphabet
                     (hier: \(\&#123;a,b,c\&#125;\)) ableiten kann. Beispielsweise:
@@ -78,13 +76,17 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Formal gesehen müssten wir eine Codierung kontextfreier Grammatiken über einem festen
-                      Alphabet (zum Beispiel \(\&#123;0,1, \rightarrow, ;, \dots\&#125;\) angeben, um dann die{" "}
-                      <em>
+                      Alphabet (zum Beispiel \(\&#123;0,1, \rightarrow, ;, \dots\&#125;\) angeben, um dann die 
+                      {" "}
+                      <i>
                         Sprache
                         der
                         Codierungen all jener
                         kontextfreien Grammatik, die ein Palindromwort ableiten können
-                      </em>
+                      </i>
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
                       definieren zu können. Da wir aber mittlerweile verstanden haben, dass alle
                       "endlichen" Objekte irgendwie auf Turingmschinen-verträgliche Weise codiert werden können,
                       ersparen wir uns diese Formalitäten.
@@ -307,42 +309,36 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Es lohnt sich, an dieser Stelle zu pausieren. Was Sie gerade gesehen haben,
-                    ist eine{" "}
-                    <em>
+                    ist eine 
+                    {" "}
+                    <i>
                       Reduktion
-                    </em>
+                    </i>
+                    {" "}
                     . Im "echten" Leben verwenden wir Reduktionen,
                     um bereits gefundene Lösungen zu "recyceln". Beispielsweise:
                   </Paragraph>
                   <ul>
                     <li>
-                      <Paragraph>
-                        {" "}{" "}
-                        <b>
-                          Aufgabe:
-                        </b>
-                        {" "}
-                        Zeigen Sie, dass die Funktion
-                        \(n \mapsto n!\) im \(\lambda\)-Kalkül berechenbar ist.
-                      </Paragraph>
+                      {" "}{" "}
+                      <b>
+                        Aufgabe:
+                      </b>
+                      {" "}
+                      Zeigen Sie, dass die Funktion
+                      \(n \mapsto n!\) im \(\lambda\)-Kalkül berechenbar ist.
                     </li>
                     <li>
-                      <Paragraph>
-                        Wir wissen bereits, wie man \(n \mapsto n!\) als
-                        primitiv-rekursive Funktion schreibt.
-                      </Paragraph>
+                      Wir wissen bereits, wie man \(n \mapsto n!\) als
+                      primitiv-rekursive Funktion schreibt.
                     </li>
                     <li>
-                      <Paragraph>
-                        Wir wissen bereits, wie man eine allgemeine primitiv rekursive Funktion
-                        im \(\lambda\)-Kalkül implementiert.
-                      </Paragraph>
+                      Wir wissen bereits, wie man eine allgemeine primitiv rekursive Funktion
+                      im \(\lambda\)-Kalkül implementiert.
                     </li>
                     <li>
-                      <Paragraph>
-                        Wir schließen nun, dass \(n \mapsto n!\) im \(\lambda\)-Kalkül implementierbar ist,
-                        und ersparen uns die Details.
-                      </Paragraph>
+                      Wir schließen nun, dass \(n \mapsto n!\) im \(\lambda\)-Kalkül implementierbar ist,
+                      und ersparen uns die Details.
                     </li>
                   </ul>
                   <Paragraph>
@@ -356,10 +352,12 @@ const Article = () => {
                       Definition
                     </span>
                     Seien \(L_1 \subseteq \Sigma_1\) und \(L_2 \subseteq \Sigma_2\) zwei Sprachen.
-                    Eine{" "}
-                    <em>
+                    Eine 
+                    {" "}
+                    <i>
                       Reduktion von \(L_1\) nach \(L_2\)
-                    </em>
+                    </i>
+                    {" "}
                     ist eine Turing-berechenbare Funktion
                     \begin&#123;align*&#125;
                     f : \Sigma
@@ -445,16 +443,20 @@ const Article = () => {
                   Stellen Sie sich einfach vor, dass \(M_f\) der Code ist, den Sie selber schreiben müssen,
                   und \(M_2\) die "Bibliotheksfunktion" ist, die Sie ohne groß nachzudenken aufrufen,
                   weil sie ja bereist von anderen Leuten (hoffentlich korrekt) implementiert worden ist.
-                  Behauptung 4.6.8 zeigt also, das etwas{" "}
-                  <em>
+                  Behauptung 4.6.8 zeigt also, das etwas 
+                  {" "}
+                  <i>
                     möglich
-                  </em>
+                  </i>
+                  {" "}
                   ist.
                   In der Berechenbarkeitstheorie und Komplexitätstheorie sind wir eher daran interessiert,
-                  zu zeigen, was{" "}
-                  <em>
+                  zu zeigen, was 
+                  {" "}
+                  <i>
                     nicht möglich
-                  </em>
+                  </i>
+                  {" "}
                   ist, und wenden daher häufiger das Kontrapositiv
                   der Behauptung an:
                 </Paragraph>
@@ -490,19 +492,25 @@ const Article = () => {
                   auf das "Kann ein Palindrom abgeleitet werden"-Problem. Wir haben also eine ganze Kette
                   von Reduktionen bereits durchgeführt.
                   Für Neulinge ist diese Richtung oft inintuitiv und verwirrend. Dies spiegelt
-                  sich in der Verwendung des Konjunktivs{" "}
-                  <em>
+                  sich in der Verwendung des Konjunktivs 
+                  {" "}
+                  <i>
                     wäre / wäre
-                  </em>
+                  </i>
+                  {" "}
                   in Behauptung 4.6.9 wider.
-                  Auch ist es schlicht ungewohnt, ein{" "}
-                  <em>
+                  Auch ist es schlicht ungewohnt, ein 
+                  {" "}
+                  <i>
                     altes
-                  </em>
-                  Problem auf ein{" "}
-                  <em>
+                  </i>
+                  {" "}
+                  Problem auf ein 
+                  {" "}
+                  <i>
                     neues
-                  </em>
+                  </i>
+                  {" "}
                   zu reduzieren
                   statt umgekehrt.
                 </Paragraph>
@@ -535,10 +543,14 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Dieses Problem ist als{" "}
-                      <em>
+                      Dieses Problem ist als 
+                      {" "}
+                      <i>
                         Schnittproblem kontextfreier Sprachen
-                      </em>
+                      </i>
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
                       bekannt.
                     </Paragraph>
                   </Paragraph>
@@ -661,10 +673,12 @@ const Article = () => {
                     Wenn dem so wäre, dann würde bereits unsere Reduktion auf das Palindromwortproblem eine
                     mehrdeutige Grammatik erzeugen. Wir gehen einen anderen Weg.
                     Ich folge hier dem Tip in Exercise 5.21 aus
-                    Michael Sipsers Buch{" "}
-                    <em>
+                    Michael Sipsers Buch 
+                    {" "}
+                    <i>
                       Introduction to the Theory of Computation
-                    </em>
+                    </i>
+                    {" "}
                     , third edition.
                   </Paragraph>
                 </Paragraph>

@@ -8,9 +8,10 @@
         |> a
             href 02-00-infinite-sets
 
-            &lt;&lt; Kapitel 02.00
+            &lt;&lt; Kapitel 2.0
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,5 +19,5 @@
         |> a
             href 02-02-examples-of-equipotent-sets
 
-            Kapitel 02.02 &gt;&gt;
+            Kapitel 2.2 &gt;&gt;
     |> div

@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={40}>
+      <Chapter
+        number={40}
+        path="/lecture-notes40.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="05-10-not-context-free">
-            <Paragraph>
-              &lt;&lt; Kapitel 05.10
-            </Paragraph>
+            &lt;&lt; Kapitel 5.10
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="07-00-Turing-machines">
-            <Paragraph>
-              Kapitel 07.00 &gt;&gt;
-            </Paragraph>
+            Kapitel 7.0 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -49,25 +45,19 @@ const Article = () => {
                 </Paragraph>
                 <ol>
                   <li>
-                    <Paragraph>
-                      Wie mann man die Definition kontextfreier Grammatiken sinnvoll erweitern,
-                      so dass sie beispielsweise auch Sprachen wie
-                      \(\&#123;a^n b^n c^n \ | \ n \geq 0\&#125;\) umfassen?
-                    </Paragraph>
+                    Wie mann man die Definition kontextfreier Grammatiken sinnvoll erweitern,
+                    so dass sie beispielsweise auch Sprachen wie
+                    \(\&#123;a^n b^n c^n \ | \ n \geq 0\&#125;\) umfassen?
                   </li>
                   <li>
-                    <Paragraph>
-                      Gibt es eine natürliche Barriere, jenseits derer es
-                      keinen vernünftigen Begriff des "Beschreiben könnens" gibt?
-                      Oder kann man immer noch allgemeinere Regelwerke zulassen?
-                    </Paragraph>
+                    Gibt es eine natürliche Barriere, jenseits derer es
+                    keinen vernünftigen Begriff des "Beschreiben könnens" gibt?
+                    Oder kann man immer noch allgemeinere Regelwerke zulassen?
                   </li>
                   <li>
-                    <Paragraph>
-                      Gibt es für die (noch zu definierende) allgemeinere Art von
-                      Grammatiken auch eine Art Automat, so wie die endlichen Automaten
-                      für die regulären Grammatiken und die Kellerautomaten für die kontextfreien?
-                    </Paragraph>
+                    Gibt es für die (noch zu definierende) allgemeinere Art von
+                    Grammatiken auch eine Art Automat, so wie die endlichen Automaten
+                    für die regulären Grammatiken und die Kellerautomaten für die kontextfreien?
                   </li>
                 </ol>
                 <Paragraph>
@@ -92,15 +82,19 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     Eine formale Grammatik ist gegeben durch ein endliches Alphabet
-                    \(\Sigma\) aus{" "}
-                    <em>
+                    \(\Sigma\) aus 
+                    {" "}
+                    <i>
                       Terminalsymbolen
-                    </em>
+                    </i>
+                    {" "}
                     , einer endlichen Menge
-                    \(\N\) von{" "}
-                    <em>
+                    \(\N\) von 
+                    {" "}
+                    <i>
                       Nichtterminalen
-                    </em>
+                    </i>
+                    {" "}
                     , einem Startsymbol
                     \(S \in N\) und einer endlichen Menge an Produktionen
                     \begin&#123;align*&#125;
@@ -187,20 +181,24 @@ const Article = () => {
                     Die obige Beispielableitung illustriert, dass allgemeine formale Grammatiken
                     etwas können, das kontextfreie Grammatiken nicht bieten konnten:
                     das Vertauschen von Symbolen. Das mag nicht als besonders viel erscheinen,
-                    wird sich aber als{" "}
-                    <em>
+                    wird sich aber als 
+                    {" "}
+                    <i>
                       Game Changer
-                    </em>
+                    </i>
+                    {" "}
                     herausstellen.
                   </Paragraph>
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
                     Sobald wir eine Wortform erreicht haben, die nur aus Terminalsymbolen
-                    besteht (also ein{" "}
-                    <em>
+                    besteht (also ein 
+                    {" "}
+                    <i>
                       Wort
-                    </em>
+                    </i>
+                    {" "}
                     geworden ist), muss unsere Ableitung
                     aufhören: wir können keine weitere Produktion anwenden, da jede
                     linke Seite mindestens ein Nichtterminal enthält. Diese Einschränkung
@@ -295,37 +293,31 @@ const Article = () => {
                   </Paragraph>
                   <ul>
                     <li>
-                      <Paragraph>
-                        \(X\): will \(A\) in \(a\) umwandeln:
-                        \begin&#123;align*&#125;
-                        XA&amp;\step&#123;6&#125; aX
-                        \end&#123;align*&#125;
-                        Zu jedem Zeitpunkt können wir beschließen, nun keine
-                        \(A\) in \(a\) mehr umzuwandeln, sondern nun \(B\)-Symbole zu erwarten:
-                        \begin&#123;align*&#125;
-                        X&amp;\step&#123;7&#125; Y
-                        \end&#123;align*&#125;
-                      </Paragraph>
+                      \(X\): will \(A\) in \(a\) umwandeln:
+                      \begin&#123;align*&#125;
+                      XA&amp;\step&#123;6&#125; aX
+                      \end&#123;align*&#125;
+                      Zu jedem Zeitpunkt können wir beschließen, nun keine
+                      \(A\) in \(a\) mehr umzuwandeln, sondern nun \(B\)-Symbole zu erwarten:
+                      \begin&#123;align*&#125;
+                      X&amp;\step&#123;7&#125; Y
+                      \end&#123;align*&#125;
                     </li>
                     <li>
-                      <Paragraph>
-                        \(Y\): will \(B\) in \(b\) umwandeln oder mit \(C\) fortfahren:
-                        \begin&#123;align*&#125;
-                        YB&amp;\step&#123;8&#125; bY \\
-                        Y&amp;\step&#123;9&#125; Z
-                        \end&#123;align*&#125;
-                      </Paragraph>
+                      \(Y\): will \(B\) in \(b\) umwandeln oder mit \(C\) fortfahren:
+                      \begin&#123;align*&#125;
+                      YB&amp;\step&#123;8&#125; bY \\
+                      Y&amp;\step&#123;9&#125; Z
+                      \end&#123;align*&#125;
                     </li>
                     <li>
-                      <Paragraph>
-                        \(Z\): will \(C\) in \(c\) umwandeln. Wir
-                        können aber auch einfach aufhören, zum Beispiel
-                        wenn wir den rechten Rand erreicht haben:
-                        \begin&#123;align*&#125;
-                        ZC&amp;\step&#123;10&#125; cZ \\
-                        Z&amp;\step&#123;11&#125; \epsilon
-                        \end&#123;align*&#125;
-                      </Paragraph>
+                      \(Z\): will \(C\) in \(c\) umwandeln. Wir
+                      können aber auch einfach aufhören, zum Beispiel
+                      wenn wir den rechten Rand erreicht haben:
+                      \begin&#123;align*&#125;
+                      ZC&amp;\step&#123;10&#125; cZ \\
+                      Z&amp;\step&#123;11&#125; \epsilon
+                      \end&#123;align*&#125;
                     </li>
                   </ul>
                   <Paragraph>
@@ -370,33 +362,25 @@ const Article = () => {
                     </Paragraph>
                     <ol>
                       <li>
-                        <Paragraph>
-                          \(\#_&#123;A,a&#125;(\beta) = \#_&#123;B,b&#125;(\beta) = \#_&#123;C,c&#125;(\beta)\)
-                        </Paragraph>
+                        \(\#_&#123;A,a&#125;(\beta) = \#_&#123;B,b&#125;(\beta) = \#_&#123;C,c&#125;(\beta)\)
                       </li>
                       <li>
-                        <Paragraph>
-                          Außer \(A,a,B,b,C,c\) enthält \(\beta\) höchstens ein
-                          weiteres Symbol, und dies ist in \(\&#123;S,X,Y,Z\&#125;\).
-                        </Paragraph>
+                        Außer \(A,a,B,b,C,c\) enthält \(\beta\) höchstens ein
+                        weiteres Symbol, und dies ist in \(\&#123;S,X,Y,Z\&#125;\).
                       </li>
                       <li>
-                        <Paragraph>
-                          Wenn \(\beta\) das Symbol \(X\) enthält, dann ist
-                          \(\beta = a^* X \gamma \).
-                          Wenn es \(Y\) enthält, dann ist
-                          \(\beta = a^* b^* Y \gamma \).
-                          Wenn es \(Z\) enthält, dann ist es
-                          \(\beta = a^* b^* c^* Z \gamma\).
-                          In allen drei Fällen enthält \(\gamma\) keine Terminalsymbole.
-                        </Paragraph>
+                        Wenn \(\beta\) das Symbol \(X\) enthält, dann ist
+                        \(\beta = a^* X \gamma \).
+                        Wenn es \(Y\) enthält, dann ist
+                        \(\beta = a^* b^* Y \gamma \).
+                        Wenn es \(Z\) enthält, dann ist es
+                        \(\beta = a^* b^* c^* Z \gamma\).
+                        In allen drei Fällen enthält \(\gamma\) keine Terminalsymbole.
                       </li>
                       <li>
-                        <Paragraph>
-                          Wenn es kein Symbol in \(S,X,Y,Z\) enthält, dann ist es von
-                          der Form \(\beta = a^* b^* c^* \gamma\) und \(\gamma\) enthält
-                          keine Terminalsymbole.
-                        </Paragraph>
+                        Wenn es kein Symbol in \(S,X,Y,Z\) enthält, dann ist es von
+                        der Form \(\beta = a^* b^* c^* \gamma\) und \(\gamma\) enthält
+                        keine Terminalsymbole.
                       </li>
                     </ol>
                   </div>
@@ -436,16 +420,12 @@ const Article = () => {
                     </span>
                     Im{" "}
                     <a href="./05-10-not-context-free.html">
-                      <Paragraph>
-                        Teilkapitel 5.10
-                      </Paragraph>
+                      Teilkapitel 5.10
                     </a>
                     gab
                     es{" "}
                     <a href="./05-10-not-context-free.html#exericse-power-2">
-                      <Paragraph>
-                        Übungsaufgabe 5.10.2
-                      </Paragraph>
+                      Übungsaufgabe 5.10.2
                     </a>
                     ,
                     in der zu zeigen war, dass
@@ -493,10 +473,12 @@ const Article = () => {
                     Wagen wir ein letztes Beispiel: die Sprache aller Wörter,
                     deren Länge eine Quadratzahl ist. Spätestens dieses Beispiel sollte Sie
                     davon überzeugen, dass allgemeine formale Gramatiken, im Gegensatz zu
-                    kontextfreien und regulären, nicht nur{" "}
-                    <em>
+                    kontextfreien und regulären, nicht nur 
+                    {" "}
+                    <i>
                       Formate
-                    </em>
+                    </i>
+                    {" "}
                     syntaktisch
                     beschreiben, sondern komplizierte Rechnungen durchführen können.
                     Sie stellen somit ein völlig andersartiges Biest dar.
@@ -509,10 +491,12 @@ const Article = () => {
                     </span>
                     Sei \(L\) die Sprache aller Wörter über
                     \(\Sigma = \&#123;1\&#125;\), deren Länge eine Quadratzahl ist.
-                    Wir werden als erstes eine{" "}
-                    <em>
+                    Wir werden als erstes eine 
+                    {" "}
+                    <i>
                       Multiplikationsgrammatik
-                    </em>
+                    </i>
+                    {" "}
                     erzeugen.
                     Dies soll eine Menge von Produktionen sein, die Ableitungen der Form
                     \begin&#123;align*&#125;
@@ -575,43 +559,33 @@ const Article = () => {
                   </Paragraph>
                   <ul>
                     <li>
-                      <Paragraph>
-                        Wir können \(R\) nur loswerden, indem wir es in das
-                        Killersymbol \(K\) umwandeln. Das Killersymbol kann
-                        nur bei \(L\) verschwinden. Dazwischen kann es
-                        nur die Zeichen \(\tilde&#123;A&#125;, B, C\) passieren.
-                        Zum Zeitpunkt, wo wir \(R \rightarrow K\) anwenden,
-                        darf die Wortform also keine \(A\)-Symbole mehr enthalten.
-                      </Paragraph>
+                      Wir können \(R\) nur loswerden, indem wir es in das
+                      Killersymbol \(K\) umwandeln. Das Killersymbol kann
+                      nur bei \(L\) verschwinden. Dazwischen kann es
+                      nur die Zeichen \(\tilde&#123;A&#125;, B, C\) passieren.
+                      Zum Zeitpunkt, wo wir \(R \rightarrow K\) anwenden,
+                      darf die Wortform also keine \(A\)-Symbole mehr enthalten.
                     </li>
                     <li>
-                      <Paragraph>
-                        Wir können eine \(A\) nur verschwinden lassen
-                        durch \(A \rightarrow \tilde&#123;A&#125; X\) und \(X\) nur
-                        auf diese Weise entstehen lassen. Wir produzieren also,
-                        wenn wir mit \(L A^m B^n R\) beginnen, im Laufe der Ableitung genau
-                        \(m\) mal ein \(X\).
-                      </Paragraph>
+                      Wir können eine \(A\) nur verschwinden lassen
+                      durch \(A \rightarrow \tilde&#123;A&#125; X\) und \(X\) nur
+                      auf diese Weise entstehen lassen. Wir produzieren also,
+                      wenn wir mit \(L A^m B^n R\) beginnen, im Laufe der Ableitung genau
+                      \(m\) mal ein \(X\).
                     </li>
                     <li>
-                      <Paragraph>
-                        Um ein \(X\) wieder verschwinden zu lassen, muss es den ganzen
-                        \(B\)-Block durchlaufen und produziert damit insgesamt \(n\) viele
-                        (\tilde&#123;C&#125;\).
-                      </Paragraph>
+                      Um ein \(X\) wieder verschwinden zu lassen, muss es den ganzen
+                      \(B\)-Block durchlaufen und produziert damit insgesamt \(n\) viele
+                      (\tilde&#123;C&#125;\).
                     </li>
                     <li>
-                      <Paragraph>
-                        Da wir insgesamt \(m\) viele \(X\) produzieren und jedes
-                        \(X\) insgesamt \(n\) viele \(\tilde&#123;C&#125;\) produziert, werden
-                        insgesamt \(mn\) viele \(\tilde&#123;C&#125;\) erzeugt.
-                      </Paragraph>
+                      Da wir insgesamt \(m\) viele \(X\) produzieren und jedes
+                      \(X\) insgesamt \(n\) viele \(\tilde&#123;C&#125;\) produziert, werden
+                      insgesamt \(mn\) viele \(\tilde&#123;C&#125;\) erzeugt.
                     </li>
                     <li>
-                      <Paragraph>
-                        Jedes \(\tilde&#123;C&#125;\) kann nur in ein \(C\) umgewandelt werden.
-                        Es entstehen also insgesamt \(mn\) viele \(C\).
-                      </Paragraph>
+                      Jedes \(\tilde&#123;C&#125;\) kann nur in ein \(C\) umgewandelt werden.
+                      Es entstehen also insgesamt \(mn\) viele \(C\).
                     </li>
                   </ul>
                   <Paragraph>
@@ -625,10 +599,12 @@ const Article = () => {
                       \end&#123;align*&#125;
                       Wir können die Produktion \(R \step&#123;&#125; K\) zwar schon früher
                       anwenden; wenn da allerdings noch \(A\)- oder \(\tilde&#123;C&#125;\)-Symbole
-                      enthalten sind, ist es{" "}
-                      <em>
+                      enthalten sind, ist es 
+                      {" "}
+                      <i>
                         game over
-                      </em>
+                      </i>
+                      {" "}
                       : wir könnten die nie
                       mehr in Terminale umwandeln.
                     </Paragraph>
@@ -709,18 +685,22 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Sie haben sicherlich gemerkt, dass wir die Grammatikproduktionen nun nicht
-                    mehr nur zum{" "}
-                    <em>
+                    mehr nur zum 
+                    {" "}
+                    <i>
                       Erzeugen
-                    </em>
+                    </i>
+                    {" "}
                     verwenden wie bei kontextfreien Sprachen, sondern zum
                     Umformen, Rumschieben, Kopieren etc. Es ist nun an der Zeit, die
                     Welt der Grammatiken zu verlassen und zu formalisieren, was man
                     mit Umformen, Rumschieben, Kopieren erreichen kann. In anderen Worten:
-                    eine Formalisierung des Begriffs des{" "}
-                    <em>
+                    eine Formalisierung des Begriffs des 
+                    {" "}
+                    <i>
                       Berechnens
-                    </em>
+                    </i>
+                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>

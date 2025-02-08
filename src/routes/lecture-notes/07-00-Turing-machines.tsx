@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={41}>
+      <Chapter
+        number={41}
+        path="/lecture-notes41.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="06-00-general-grammars">
-            <Paragraph>
-              &lt;&lt; Kapitel 06.00
-            </Paragraph>
+            &lt;&lt; Kapitel 6.0
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="07-01-Turing-machines-definition">
-            <Paragraph>
-              Kapitel 07.01 &gt;&gt;
-            </Paragraph>
+            Kapitel 7.1 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -41,20 +37,24 @@ const Article = () => {
               <Paragraph>
                 <Paragraph>
                   Wir haben in den vorherigen Kapitel mit primitiver Rekursion und \(\lambda\)-Kalkül
-                  zwei Modelle kennengelernt, die den Begriff der{" "}
-                  <em>
+                  zwei Modelle kennengelernt, die den Begriff der 
+                  {" "}
+                  <i>
                     Berechnung
-                  </em>
+                  </i>
+                  {" "}
                   formalisieren.
                   Das \(\lambda\)-Kalkül ist im Prinzip eine reduktion funktionaler Programmiersprachen
                   auf das absolut essentielle. In diesem Kapitel lernen wir ein
                   weiteres Modell für Berechnung kennen, das im Allgemeinen als Standardmodell
                   gilt: die Turingmaschine. Anders als primitive Rekursion und \(\lambda\)-Kalkül
                   sind Turingmaschinen auch eng mit dem Begriff des Laufzeitkomplexität und Speicherplatzkomplexität
-                  verbunden und bilden somit das Fundament der{" "}
-                  <em>
+                  verbunden und bilden somit das Fundament der 
+                  {" "}
+                  <i>
                     Komplexitätstheorie
-                  </em>
+                  </i>
+                  {" "}
                   , die sich insbesondere
                   mit dem Resourcenverbrauch bei Rechenprozessen beschäftigt.
                 </Paragraph>

@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={33}>
+      <Chapter
+        number={33}
+        path="/lecture-notes33.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="05-04-LL1-grammars">
-            <Paragraph>
-              &lt;&lt; Kapitel 05.04
-            </Paragraph>
+            &lt;&lt; Kapitel 5.4
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="05-05-b-Parser-in-Java">
-            <Paragraph>
-              Kapitel 05.05 &gt;&gt;
-            </Paragraph>
+            Kapitel 5.5 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -116,12 +112,15 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       <Paragraph>
-                        also{" "}
-                        <em>
+                        also 
+                        {" "}
+                        <i>
                           beliebig viele $a$'s, gefolgt von gleich vielen oder weniger $b$'s (aber mindestens
                           einem), abgeschlossen
                           mit einem $c$
-                        </em>
+                          {" "}
+                        </i>
+                        {" "}
                         . Eine
                         Grammatik ist schnell geschrieben:
                       </Paragraph>
@@ -155,10 +154,12 @@ const Article = () => {
                     anzuwenden ist. Hierbei haben wir immer versucht, für das am weitesten
                     links stehende Nichtterminal eine Regel zu finden. Wir beschreiben nun ein ganz anderes
                     Vorgehen: wir lesen das Eingabewort $v$ von links nach rechts, unterhalten also
-                    einen{" "}
-                    <em>
+                    einen 
+                    {" "}
+                    <i>
                       Stack
-                    </em>
+                    </i>
+                    {" "}
                     , auf dem ein Präfix $\gamma$ von $v$ liegt,
                     bis wir am rechten Ende die rechte Seite einer Produktionsregel erkennen - bis also
                     $\gamma = \alpha \beta$ und es eine Produktion $X \rightarrow \beta$ gibt. Dann ersetzen
@@ -540,10 +541,12 @@ const Article = () => {
                       beginnen links (daher das L) und suchen eine Rechtsableitung (daher das R), allerdings in
                       umgekehrter
                       Reihenfolge. Statt von $S$ ausgehend $w$ abzuleiten, also $S \Step&#123;&#125;^* w$, versuchen
-                      wir $w$ zu $S$ zu{" "}
-                      <em>
+                      wir $w$ zu $S$ zu 
+                      {" "}
+                      <i>
                         reduzieren
-                      </em>
+                      </i>
+                      {" "}
                       , also $w \Pets&#123;&#125;^* S$.
                       Allerdings ist das nicht immer so einfach: manchmal ist nicht auf den ersten Blick erkennbar,
                       welche Produktionsregel wir (rückwärts) anwenden sollen. Hier ein etwas konstruiertes Beispiel:
@@ -633,10 +636,12 @@ const Article = () => {
                       $S \Step&#123;&#125;^* \alpha X w \Step&#123;&#125; \alpha \beta w$ in einer Rechtsableitung vorkommen kann.
                       Das hängt von der Grammatik ab. Aber selbst dann brauchen wir einen Algorithmus, der
                       uns sagen kann, ob $XYa \Pets&#123;&#125; XYY$ ein korrekter Reduktionsschritt ist. Dies scheint
-                      komplexer, als $w \stackrel&#123;?&#125;&#123;\in&#125; L$ zu entscheiden, ist aber{" "}
-                      <em>
+                      komplexer, als $w \stackrel&#123;?&#125;&#123;\in&#125; L$ zu entscheiden, ist aber 
+                      {" "}
+                      <i>
                         einfacher
-                      </em>
+                      </i>
+                      {" "}
                       !
                     </Paragraph>
                   </Paragraph>

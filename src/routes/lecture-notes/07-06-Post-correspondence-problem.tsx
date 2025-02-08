@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={48}>
+      <Chapter
+        number={48}
+        path="/lecture-notes48.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="07-05-undecidability">
-            <Paragraph>
-              &lt;&lt; Kapitel 07.05
-            </Paragraph>
+            &lt;&lt; Kapitel 7.5
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="07-07-PCP-applications">
-            <Paragraph>
-              Kapitel 07.07 &gt;&gt;
-            </Paragraph>
+            Kapitel 7.7 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -47,19 +43,23 @@ const Article = () => {
                     und der Mathematik auf, auch bei Fragestellungen, die
                     auf den ersten Blick nichts mit Turingmaschinen zu tun
                     haben und völlig harmlos wirken. Wie zum Beispiel
-                    das rein kombinatorische{" "}
-                    <em>
+                    das rein kombinatorische 
+                    {" "}
+                    <i>
                       Postsche Korrespondenzproblem.
-                    </em>
+                    </i>
+                    {" "}{" "}
                   </Paragraph>
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
                     Im Postschen Korrespondenzproblem haben wir endlich
-                    viele Kärtchen (auch{" "}
-                    <em>
+                    viele Kärtchen (auch 
+                    {" "}
+                    <i>
                       Kacheln
-                    </em>
+                    </i>
+                    {" "}
                     genannt) gegeben,
                     die oben und unten jeweils ein Wort haben. Wir müssen
                     die Kärtchen so nebeneinander legen, dass oben und unten
@@ -161,9 +161,7 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <a href="https://en.wikipedia.org/wiki/Post_correspondence_problem">
-                      <Paragraph>
-                        Wikipedia
-                      </Paragraph>
+                      Wikipedia
                     </a>
                     ;
                     die graphische Darstellung stammt von mir.)
@@ -382,87 +380,83 @@ const Article = () => {
                   </Paragraph>
                   <ul>
                     <li>
-                      <Paragraph>
-                        Eine
-                      </Paragraph>
-                      <Paragraph>
-                        <em>
-                          Kachel
-                        </em>
-                        (auch{" "}
-                        <em>
-                          Kärtchen
-                        </em>
-                        genannt) ist ein
-                        Paar \((\alpha : \beta) \in \Sigma^* \times \Sigma^*\).
-                        Hier bezeichnet \(\alpha\) das Wort auf der oberen Hälfte der Kachel
-                        und \(\beta\) das auf der unteren.
-                      </Paragraph>
+                      Eine
+                      {" "}
+                      <i>
+                        Kachel
+                      </i>
+                      {" "}
+                      (auch 
+                      {" "}
+                      <i>
+                        Kärtchen
+                      </i>
+                      {" "}
+                      genannt) ist ein
+                      Paar \((\alpha : \beta) \in \Sigma^* \times \Sigma^*\).
+                      Hier bezeichnet \(\alpha\) das Wort auf der oberen Hälfte der Kachel
+                      und \(\beta\) das auf der unteren.
                     </li>
                     <li>
-                      <Paragraph>
-                        Ein PCP-Puzzle (oder einfach nur Puzzle in diesem Zusammenhang)
-                        ist eine endliche Menge \(S\) von Kacheln.
-                      </Paragraph>
+                      Ein PCP-Puzzle (oder einfach nur Puzzle in diesem Zusammenhang)
+                      ist eine endliche Menge \(S\) von Kacheln.
                     </li>
                     <li>
-                      <Paragraph>
-                        Eine Kachelung ist eine Folge \(s\) von Kacheln aus \(S\), also
-                        \begin&#123;align*&#125;
-                        s = (\alpha
-                        <i>
-                          &#123;1&#125; : \beta
-                        </i>
-                        &#123;1&#125;) (\alpha
-                        <i>
-                          &#123;2&#125; : \beta
-                        </i>
-                        &#123;2&#125;) \dots
-                        (\alpha
-                        <i>
-                          &#123;m&#125; : \beta
-                        </i>
-                        &#123;m&#125;)
-                        \end&#123;align*&#125;
-                        Für eine Kachelung \(s\) definieren wir den
-                      </Paragraph>
-                      <Paragraph>
-                        <em>
-                          oberen Teil
-                        </em>
-                        \(\top(s)\) und den
-                      </Paragraph>
-                      <Paragraph>
-                        <em>
-                          unteren Teil
-                        </em>
-                        \(\bottom(s)\):
-                        \begin&#123;align*&#125;
-                        \top(s)&amp;:= \alpha
-                        <i>
-                          1 \alpha
-                        </i>
-                        2 \dots \alpha
-                        <i>
-                          m \\
-                          \bottom(s)&amp;:= \beta
-                        </i>
-                        1 \beta
-                        <i>
-                          2 \dots \beta
-                        </i>
+                      Eine Kachelung ist eine Folge \(s\) von Kacheln aus \(S\), also
+                      \begin&#123;align*&#125;
+                      s = (\alpha
+                      <i>
+                        &#123;1&#125; : \beta
+                      </i>
+                      &#123;1&#125;) (\alpha
+                      <i>
+                        &#123;2&#125; : \beta
+                      </i>
+                      &#123;2&#125;) \dots
+                      (\alpha
+                      <i>
+                        &#123;m&#125; : \beta
+                      </i>
+                      &#123;m&#125;)
+                      \end&#123;align*&#125;
+                      Für eine Kachelung \(s\) definieren wir den
+                      {" "}
+                      <i>
+                        oberen Teil
+                      </i>
+                      {" "}
+                      \(\top(s)\) und den
+                      {" "}
+                      <i>
+                        unteren Teil
+                      </i>
+                      {" "}
+                      \(\bottom(s)\):
+                      \begin&#123;align*&#125;
+                      \top(s)&amp;:= \alpha
+                      <i>
+                        1 \alpha
+                      </i>
+                      2 \dots \alpha
+                      <i>
                         m \\
-                        \end&#123;align*&#125;
-                      </Paragraph>
+                        \bottom(s)&amp;:= \beta
+                      </i>
+                      1 \beta
+                      <i>
+                        2 \dots \beta
+                      </i>
+                      m \\
+                      \end&#123;align*&#125;
                     </li>
                     <li>
-                      <Paragraph>
-                        Eine Kachelung \(s\) ist eine{" "}
-                        <em>
-                          Lösung
-                        </em>
-                        des Puzzles, wenn \(\top(s) = \bottom(s)\) gilt.
-                      </Paragraph>
+                      Eine Kachelung \(s\) ist eine 
+                      {" "}
+                      <i>
+                        Lösung
+                      </i>
+                      {" "}
+                      des Puzzles, wenn \(\top(s) = \bottom(s)\) gilt.
                     </li>
                   </ul>
                 </div>
@@ -531,14 +525,20 @@ const Article = () => {
                     {" "}{" "}
                   </Paragraph>
                   <Paragraph>
-                    Wir zeigen: wenn PCP entscheidbar{" "}
-                    <em>
+                    Wir zeigen: wenn PCP entscheidbar 
+                    {" "}
+                    <i>
                       wäre
-                    </em>
-                    , dann{" "}
-                    <em>
+                    </i>
+                    {" "}
+                    , dann 
+                    {" "}
+                    <i>
                       wäre
-                    </em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
                     auch \(\halt\) entscheidbar. Da letzteres jedoch unentscheidbar
                     ist, muss auch PCP unentscheidbar sein.
                   </Paragraph>
@@ -555,11 +555,14 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Wie so oft in ähnlichen Beweisen machen wir einen
-                      Zwischenschritt. Das{" "}
-                      <em>
+                      Zwischenschritt. Das 
+                      {" "}
+                      <i>
                         Modifizierte Postsche
                         Korrespondenzproblem (MPCP)
-                      </em>
+                        {" "}
+                      </i>
+                      {" "}
                       ist genau das gleiche wie das PCP,
                       nur dass es in \(S\) eine markierte Startkachel gibt
                       und jede Lösung mit dieser Startkachel beginnen muss.
@@ -663,10 +666,12 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>
-                        Erinneren wir uns: eine{" "}
-                        <em>
+                        Erinneren wir uns: eine 
+                        {" "}
+                        <i>
                           Konfiguration
-                        </em>
+                        </i>
+                        {" "}
                         einer
                         Turingmaschine ist eine Folge
                         \begin&#123;align*&#125;
@@ -687,21 +692,25 @@ const Article = () => {
                           dass auf dem Band das Wort \(w_1 w_2 \dots w_m\) steht,
                           die Turingmaschine im Zustand \(q\) ist und der
                           Schreib-Lese-Kopf über den Zeichen \(w_j\) steht.
-                          Wir schreiben also den Zustand unmittelbar{" "}
-                          <em>
-                            links
-                          </em>
-                          von dem Zeichen, über dem er steht.
-                          Wenn das Eingabewort \(x_1 \dots x_n\) und
-                          \(q_0 \in Q\) der Startzustand, dann ist
-                          \begin&#123;align*&#125;
-                          C
+                          Wir schreiben also den Zustand unmittelbar 
+                          {" "}
                         </i>
-                        0 := q
+                        links_
+                      </Paragraph>
+                      <Paragraph>
+                        von dem Zeichen, über dem er steht.
+                        Wenn das Eingabewort \(x_1 \dots x_n\) und
+                        \(q_0 \in Q\) der Startzustand, dann ist
+                        \begin&#123;align*&#125;
+                        C
                         <i>
-                          0 x
+                          0 := q
                         </i>
-                        1 \dots x_n
+                        0 x
+                        <i>
+                          1 \dots x
+                        </i>
+                        n
                         \end&#123;align*&#125;
                         die Startkonfiguration.
                         Die Berechnung einer Turingmaschine ist nun
@@ -910,9 +919,11 @@ const Article = () => {
                       Hier brauchen wir halt eine Kopfkachel \((q_2yz:yq_1x_2)\) für
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         jedes
-                      </em>
+                      </i>
+                      {" "}
                       Bandsymbol \(y\), da die Regel immer anzuwenden ist,
                       egal, welches Symbol \(y\) links vom Schreib-Lese-Kopf steht.
                     </Paragraph>

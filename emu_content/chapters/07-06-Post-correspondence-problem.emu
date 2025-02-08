@@ -8,9 +8,10 @@
         |> a
             href 07-05-undecidability
 
-            &lt;&lt; Kapitel 07.05
+            &lt;&lt; Kapitel 7.5
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 07-07-PCP-applications
 
-            Kapitel 07.07 &gt;&gt;
+            Kapitel 7.7 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -71,9 +72,7 @@
                         auf den ersten Blick nichts mit Turingmaschinen zu tun
                         haben und völlig harmlos wirken. Wie zum Beispiel
                         das rein kombinatorische 
-                        |> em
-
-                            Postsche Korrespondenzproblem.
+                        _Postsche Korrespondenzproblem._
                         
                         
                     
@@ -83,9 +82,7 @@
                         
                         Im Postschen Korrespondenzproblem haben wir endlich
                         viele Kärtchen (auch 
-                        |> em
-
-                            Kacheln
+                        _Kacheln_
                         genannt) gegeben,
                         die oben und unten jeweils ein Wort haben. Wir müssen
                         die Kärtchen so nebeneinander legen, dass oben und unten
@@ -698,13 +695,9 @@
 
                                 Eine
                                 
-                                |> em
-
-                                    Kachel
+                                _Kachel_
                                 (auch 
-                                |> em
-
-                                    Kärtchen
+                                _Kärtchen_
                                 genannt) ist ein
                                 Paar \((\alpha : \beta) \in \Sigma^* \times \Sigma^*\).
                                 Hier bezeichnet \(\alpha\) das Wort auf der oberen Hälfte der Kachel
@@ -729,14 +722,10 @@
                                 \end{align*}
                                 Für eine Kachelung \(s\) definieren wir den
                                 
-                                |> em
-
-                                    oberen Teil
+                                _oberen Teil_
                                 \(\top(s)\) und den
                                 
-                                |> em
-
-                                    unteren Teil
+                                _unteren Teil_
                                 \(\bottom(s)\):
                                 \begin{align*}
                                 \top(s)&amp;:= \alpha_1 \alpha_2 \dots \alpha_m \\
@@ -749,9 +738,7 @@
 
                                 
                                 Eine Kachelung \(s\) ist eine 
-                                |> em
-
-                                    Lösung
+                                _Lösung_
                                 
                                 des Puzzles, wenn \(\top(s) = \bottom(s)\) gilt.
                                 
@@ -842,13 +829,9 @@
                         *Beweis.*
                         
                         Wir zeigen: wenn PCP entscheidbar 
-                        |> em
-
-                            wäre
+                        _wäre_
                         , dann 
-                        |> em
-
-                            wäre
+                        _wäre_
                         
                         auch \(\halt\) entscheidbar. Da letzteres jedoch unentscheidbar
                         ist, muss auch PCP unentscheidbar sein.
@@ -870,11 +853,9 @@
                             
                             Wie so oft in ähnlichen Beweisen machen wir einen
                             Zwischenschritt. Das 
-                            |> em
-
-                                Modifizierte Postsche
-                                Korrespondenzproblem (MPCP)
-                                
+                            _Modifizierte Postsche
+                            Korrespondenzproblem (MPCP)
+                            _
                             ist genau das gleiche wie das PCP,
                             nur dass es in \(S\) eine markierte Startkachel gibt
                             und jede Lösung mit dieser Startkachel beginnen muss.
@@ -1013,9 +994,7 @@
 
                             
                             Erinneren wir uns: eine 
-                            |> em
-
-                                Konfiguration
+                            _Konfiguration_
                             einer
                             Turingmaschine ist eine Folge
                             \begin{align*}
@@ -1027,9 +1006,7 @@
                             die Turingmaschine im Zustand \(q\) ist und der
                             Schreib-Lese-Kopf über den Zeichen \(w_j\) steht.
                             Wir schreiben also den Zustand unmittelbar 
-                            |> em
-
-                                links
+                            _links_
                             
                             von dem Zeichen, über dem er steht.
                             Wenn das Eingabewort \(x_1 \dots x_n\) und
@@ -1386,9 +1363,7 @@
                             
                             Hier brauchen wir halt eine Kopfkachel \((q_2yz:yq_1x_2)\) für
                             
-                            |> em
-
-                                jedes
+                            _jedes_
                             Bandsymbol \(y\), da die Regel immer anzuwenden ist,
                             egal, welches Symbol \(y\) links vom Schreib-Lese-Kopf steht.
                             

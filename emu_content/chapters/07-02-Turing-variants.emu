@@ -8,9 +8,10 @@
         |> a
             href 07-01-Turing-machines-examples
 
-            &lt;&lt; Kapitel 07.01
+            &lt;&lt; Kapitel 7.1
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,5 +19,5 @@
         |> a
             href 07-03-Turing-encoding
 
-            Kapitel 07.03 &gt;&gt;
+            Kapitel 7.3 &gt;&gt;
     |> div

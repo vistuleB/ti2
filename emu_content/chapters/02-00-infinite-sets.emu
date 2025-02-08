@@ -8,9 +8,10 @@
         |> a
             href 01-06-lower-and-upper-bounds
 
-            &lt;&lt; Kapitel 01.06
+            &lt;&lt; Kapitel 1.6
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 02-01-comparing-sizes
 
-            Kapitel 02.01 &gt;&gt;
+            Kapitel 2.1 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -65,19 +66,13 @@
                     groß
                     Ihr Input ist; also wie vielen Input-Variablen $x_1, \dots, x_n$ Sie begegnen werden.
                     Für ein allgemeines Modell der Berechnung ist dies ungeeignet. Wir wollen ja 
-                    |> em
-
-                        ein
+                    _ein_
                     
                     Computerprogramm, das beliebig große Eingaben verkraften kann. Ein Computerprogramm
                     soll also 
-                    |> em
-
-                        endlich
+                    _endlich_
                     sein, aber für eine 
-                    |> em
-
-                        unendliche
+                    _unendliche_
                     Menge potentieller Eingaben
                     funktionieren.
                     

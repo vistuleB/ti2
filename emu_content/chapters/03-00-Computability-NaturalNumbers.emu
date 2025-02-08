@@ -8,9 +8,10 @@
         |> a
             href 02-06-Trichotomiesatz
 
-            &lt;&lt; Kapitel 02.06
+            &lt;&lt; Kapitel 2.6
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 03-01-primitive-recursion-definitions
 
-            Kapitel 03.01 &gt;&gt;
+            Kapitel 3.1 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -60,22 +61,16 @@
                     die Berechnung von Booleschen Funkionen \(f: \{0,1\}^n \rightarrow \{0,1\}\) beschreibt.
                     Wir haben mehrere Beweisen gesehen, dass es für jede Boolesche Funktion einen
                     Schaltkreis gibt. Unsere Zielsetzung war durchweg 
-                    |> em
-
-                        komplexitätstheoretisch
+                    _komplexitätstheoretisch_
                     : wir
                     wollten möglichst kleine Schaltkreise von möglichst geringer Tiefe entwerfen.
                     Würden wir tiefer in die Schaltkreiskomplexität einsteigen, so würden wir uns fast
                     ausschließlich mit 
-                    |> em
-
-                        negativen
+                    _negativen_
                     Zielen beschäftigen: zu zeigen, dass es zu bestimmten
                     Funktionen eben nicht Schaltkreise mit \(S\) Gates und in Tiefe \(d\) gibt; wir
                     würden uns zum Großteil mit 
-                    |> em
-
-                        unteren Schranken
+                    _unteren Schranken_
                     beschäftigen.
                     
                 
@@ -85,14 +80,10 @@
 
                     
                     Boolesche Funktionen sind immer 
-                    |> em
-
-                        endliche
+                    _endliche_
                     Objekte. In der Berechenbarkeitstheorie
                     geht es im Grunde um die Frage: welche 
-                    |> em
-
-                        unendlichen
+                    _unendlichen_
                     Funktionen können wir überhaupt
                     berechnen? Und was gilt denn überhaupt als zulässiges Modell für Berechenbarkeit?
                     
@@ -105,9 +96,7 @@
                     Wenn wir nun also über Funktionen \(f: X \rightarrow Y\) auf unendlichen Mengen sprechen und uns
                     fragen,
                     welche durch eine 
-                    |> em
-
-                        endliche Rechenvorschrift
+                    _endliche Rechenvorschrift_
                     beschrieben werden können, dann
                     müssen wir erst einmal entscheiden, mit welcher unendlichen Menge wir uns beschäftigen.
                     Eine Bedingung sollte zum Beispiel sein, dass wir Input und Output vollständig hinschreiben können.
@@ -122,9 +111,7 @@
                     Die ersten Wissenschaftler, die sich mit Berechenbarkeit beschäftigten, kamen allerdings
                     aus der Mathematik und Logik, und ganz allgemeinen entstand die Berechenbarkeitstheorie
                     
-                    |> em
-
-                        bevor
+                    _bevor_
                     
                     die ersten Rechner gebaut wurden. Daher beschäftigten sich die ersten Forscher auch mit einer
                     anderen, uns sehr vertrauten Menge:

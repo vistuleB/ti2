@@ -8,9 +8,10 @@
         |> a
             href 02-05-Schroeder-Bernstein
 
-            &lt;&lt; Kapitel 02.05
+            &lt;&lt; Kapitel 2.5
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,5 +19,5 @@
         |> a
             href 03-00-Computability-NaturalNumbers
 
-            Kapitel 03.00 &gt;&gt;
+            Kapitel 3.0 &gt;&gt;
     |> div

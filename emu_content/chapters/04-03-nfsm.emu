@@ -8,9 +8,10 @@
         |> a
             href 04-02-finite-state-machines
 
-            &lt;&lt; Kapitel 04.02
+            &lt;&lt; Kapitel 4.2
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,5 +19,5 @@
         |> a
             href 04-04-regular-grammar-to-fsm
 
-            Kapitel 04.04 &gt;&gt;
+            Kapitel 4.4 &gt;&gt;
     |> div

@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={36}>
+      <Chapter
+        number={36}
+        path="/lecture-notes36.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="05-05-c-LR-grammars">
-            <Paragraph>
-              &lt;&lt; Kapitel 05.05
-            </Paragraph>
+            &lt;&lt; Kapitel 5.5
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="05-06-dk-automat">
-            <Paragraph>
-              Kapitel 05.06 &gt;&gt;
-            </Paragraph>
+            Kapitel 5.6 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -65,10 +61,12 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph>
                       Zu jeder Ableitung \(S \Step&#123;&#125;^* w \in \Sigma^*\) können wir
-                      eindeutig einen{" "}
-                      <em>
+                      eindeutig einen 
+                      {" "}
+                      <i>
                         Ableitungsbaum
-                      </em>
+                      </i>
+                      {" "}
                       zeichnen. Wenn die Grammatik
                       eindeutig ist, so hängt auch der Baum nur vom Wort \(w \in L(G)\) ab und
                       nicht von der Ableitung \(S \Step&#123;&#125;^* w\).
@@ -208,30 +206,38 @@ const Article = () => {
                     Sei \(S \Step&#123;&#125;^* \gamma\) eine Rechtsableitung, \(\gamma\) also
                     eine gültige Wortform, und
                     \(\mathcal&#123;T&#125;\) der Ableitungsbaum von \(\gamma\).
-                    Der{" "}
-                    <em>
+                    Der 
+                    {" "}
+                    <i>
                       Stamm
-                    </em>
+                    </i>
+                    {" "}
                     ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
                     der von allen inneren Knoten, deren Kinder allesamt Blätter sind,
                     am weistesten links steht.
-                    Die Kinder von \(u\), per Definition alles Blätter, sind die{" "}
-                    <em>
+                    Die Kinder von \(u\), per Definition alles Blätter, sind die 
+                    {" "}
+                    <i>
                       Blüte
-                    </em>
+                    </i>
+                    {" "}
                     .
                     Die Menge der Knoten, die einen Stammknoten als rechtes Geschwister haben,
-                    heißt der{" "}
-                    <em>
+                    heißt der 
+                    {" "}
+                    <i>
                       linke Rand
-                    </em>
+                    </i>
+                    {" "}
                     . Jeder Knoten \(v\) im linken Rand
                     muss ein Blatt sein, ansonsten stünde er ja weiter links als \(u\);
                     die Menge der rechten Geschwisterkinder von Stammknoten sowie deren Nachkommen
-                    heißt der{" "}
-                    <em>
+                    heißt der 
+                    {" "}
+                    <i>
                       rechte Rand
-                    </em>
+                    </i>
+                    {" "}
                     .
                     Im rechten Rest ist jedes Blatt ein
                     Terminalsymbol, ansonsten wäre es keine Rechtsableitung.
@@ -250,20 +256,26 @@ const Article = () => {
                     S \Step&#123;R&#125;^* \alpha \beta w
                     \end&#123;align*&#125;
                     dar. Die Wortform $\alpha\beta$, also linker Rand plus Blüte, nennen wir
-                    die{" "}
-                    <em>
+                    die 
+                    {" "}
+                    <i>
                       Front
-                    </em>
+                    </i>
+                    {" "}
                     von $\mathcal&#123;T&#125;$ und schreiben sie als $\front(\mathcal&#123;T&#125;)$.
-                    Wir sagen auch, dass \(\beta\){" "}
-                    <em>
+                    Wir sagen auch, dass \(\beta\) 
+                    {" "}
+                    <i>
                       eine Blüte von \(\gamma\)
-                    </em>
+                    </i>
+                    {" "}
                     und
-                    $\alpha\beta$ die{" "}
-                    <em>
+                    $\alpha\beta$ die 
+                    {" "}
+                    <i>
                       Front
-                    </em>
+                    </i>
+                    {" "}
                     von $\gamma$ ist,
                     ohne über den Ableitungsbaum \(\mathcal&#123;T&#125;\) selbst zu reden.
                     Hierbei ist zu beachten, dass in einer mehrdeutigen Grammatik
@@ -452,10 +464,12 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Hier ist etwas Mentalgymnastik vonnöten: aus Sicht der Sprache
-                    $\Front(G)$ sind \(\Sigma \cup N\){" "}
-                    <em>
+                    $\Front(G)$ sind \(\Sigma \cup N\) 
+                    {" "}
+                    <i>
                       Terminalsymbole
-                    </em>
+                    </i>
+                    {" "}
                     . Sie können
                     ja schließlich in den Wörtern der Sprache auftauchen.
                     Die Grammatik \(\hat&#123;G&#125;\) hat also die Terminalsymbole
@@ -486,10 +500,12 @@ const Article = () => {
                     </span>
                     Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik. Die
                     Front-Grammatik oder DK-Grammatik von \(G\) ist
-                    die{" "}
-                    <em>
+                    die 
+                    {" "}
+                    <i>
                       erweitert reguläre
-                    </em>
+                    </i>
+                    {" "}
                     Grammatik \(\hat&#123;G&#125; = (\Sigma \cup N, \hat&#123;N&#125;, \hat&#123;S&#125;,
                     \hat&#123;P&#125;)\)
                     mit \(\hat&#123;N&#125; := \&#123;\hat&#123;X&#125; \ | \ X \in N\&#125;\), wobei
@@ -641,23 +657,19 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        Wenn \(\gamma \in \Front(G)\), dann
-                        betrachte die letzte angewandte \(\hat&#123;G&#125;\)-Produktion
-                        \(\hat&#123;X&#125; \rightarrow \beta\) und schreibe
-                        \(\gamma = \alpha\beta\). Wende die \(G\)-Produktion
-                        \(X \rightarrow \beta\) rückwärts an, reduziere also
-                        \begin&#123;align*&#125;
-                        \alpha \beta \rstep&#123;&#125; \alpha X
-                        \end&#123;align*&#125;
-                        Konkret: lösche \(\beta\) vom Stack und ersetze es durch \(A\).
-                      </Paragraph>
+                      Wenn \(\gamma \in \Front(G)\), dann
+                      betrachte die letzte angewandte \(\hat&#123;G&#125;\)-Produktion
+                      \(\hat&#123;X&#125; \rightarrow \beta\) und schreibe
+                      \(\gamma = \alpha\beta\). Wende die \(G\)-Produktion
+                      \(X \rightarrow \beta\) rückwärts an, reduziere also
+                      \begin&#123;align*&#125;
+                      \alpha \beta \rstep&#123;&#125; \alpha X
+                      \end&#123;align*&#125;
+                      Konkret: lösche \(\beta\) vom Stack und ersetze es durch \(A\).
                     </li>
                     <li>
-                      <Paragraph>
-                        Falls \(\gamma \not \in \Front(G)\),
-                        lies das nächste Eingabezeichen und lege es auf den Stack.
-                      </Paragraph>
+                      Falls \(\gamma \not \in \Front(G)\),
+                      lies das nächste Eingabezeichen und lege es auf den Stack.
                     </li>
                   </ol>
                   <Paragraph>
@@ -699,9 +711,11 @@ const Article = () => {
                       wenn man Ende $S$ steht, waren es auch alles
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         korrekte
-                      </em>
+                      </i>
+                      {" "}
                       Linksreduktionsschritte.
                     </Paragraph>
                   </Paragraph>
@@ -756,59 +770,57 @@ const Article = () => {
                     </Paragraph>
                     <ol>
                       <li>
-                        <Paragraph>
-                          Der Parser wendet Schritt 1 an, also \(\gamma \in \Front(G)\).
-                          Das heißt nach Definition von $\Front(G)$, dass es ein \(w' \in \Sigma^*\) gibt,
-                          so dass \(\gamma w'\) eine gültige Wortform ist
-                          und $\gamma = \front(\gamma w')$. Also
-                          \begin&#123;align*&#125;
-                          S \Step&#123;R&#125;^* \alpha A w' \Step&#123;R&#125;^* \alpha \beta w'
-                          \end&#123;align*&#125;
-                          mit $\gamma = \alpha \beta$. Es sind $\alpha$ und $\beta$ also
-                          linker Rand und Blüte von $\gamma w'$. Somit ist
-                          \begin&#123;align&#125;
-                          \alpha \beta w' \rstep&#123;&#125; \alpha' A w'
-                          \label&#123;left-reduction-w'&#125;
-                          \end&#123;align&#125;
-                          ein korrekter Linksreduktionsschritt.
-                          Die letzte $\dk&#123;G&#125;$-Produktion
-                          in der Ableitung von $\dk&#123;S&#125; \Step&#123;&#125;^* \gamma$ war somit
-                          $\dk&#123;A&#125; \rightarrow \beta$; somit ersetzt der Parser
-                          das $\beta$ auf dem Stack durch $A$; führt also die Linksreduktion
-                          \begin&#123;align&#125;
-                          \alpha \beta w \rstep&#123;&#125; \alpha A w
-                          \label&#123;left-reduction-w&#125;
-                          \end&#123;align&#125;
-                          an. Da (\ref&#123;left-reduction-w'&#125;) korrekt ist und
-                          $\alpha \beta w$ nach Invariante eine gültige Wortform ist, ist
-                          nach LR(0)-Bedingung auch (\ref&#123;left-reduction-w&#125;) ein korrekter
-                          Schritt; $\alpha Aw$ ist also auch eine gültige Wortform; somit
-                          gilt Teil (i) der Invariante.
-                          Um zu sehen, dass (ii) gilt, beachten Sie, dass nun
-                          auf dem Stack oben ein Nichtterminal liegt: \(A\);
-                          da rechts vom aktiven Teil nur Terminale stehen, muss
-                          \(\alpha A\) ein Präfix von $\front(\alpha A w)$ sein.
-                        </Paragraph>
+                        Der Parser wendet Schritt 1 an, also \(\gamma \in \Front(G)\).
+                        Das heißt nach Definition von $\Front(G)$, dass es ein \(w' \in \Sigma^*\) gibt,
+                        so dass \(\gamma w'\) eine gültige Wortform ist
+                        und $\gamma = \front(\gamma w')$. Also
+                        \begin&#123;align*&#125;
+                        S \Step&#123;R&#125;^* \alpha A w' \Step&#123;R&#125;^* \alpha \beta w'
+                        \end&#123;align*&#125;
+                        mit $\gamma = \alpha \beta$. Es sind $\alpha$ und $\beta$ also
+                        linker Rand und Blüte von $\gamma w'$. Somit ist
+                        \begin&#123;align&#125;
+                        \alpha \beta w' \rstep&#123;&#125; \alpha' A w'
+                        \label&#123;left-reduction-w'&#125;
+                        \end&#123;align&#125;
+                        ein korrekter Linksreduktionsschritt.
+                        Die letzte $\dk&#123;G&#125;$-Produktion
+                        in der Ableitung von $\dk&#123;S&#125; \Step&#123;&#125;^* \gamma$ war somit
+                        $\dk&#123;A&#125; \rightarrow \beta$; somit ersetzt der Parser
+                        das $\beta$ auf dem Stack durch $A$; führt also die Linksreduktion
+                        \begin&#123;align&#125;
+                        \alpha \beta w \rstep&#123;&#125; \alpha A w
+                        \label&#123;left-reduction-w&#125;
+                        \end&#123;align&#125;
+                        an. Da (\ref&#123;left-reduction-w'&#125;) korrekt ist und
+                        $\alpha \beta w$ nach Invariante eine gültige Wortform ist, ist
+                        nach LR(0)-Bedingung auch (\ref&#123;left-reduction-w&#125;) ein korrekter
+                        Schritt; $\alpha Aw$ ist also auch eine gültige Wortform; somit
+                        gilt Teil (i) der Invariante.
+                        Um zu sehen, dass (ii) gilt, beachten Sie, dass nun
+                        auf dem Stack oben ein Nichtterminal liegt: \(A\);
+                        da rechts vom aktiven Teil nur Terminale stehen, muss
+                        \(\alpha A\) ein Präfix von $\front(\alpha A w)$ sein.
                       </li>
                       <li>
-                        <Paragraph>
-                          Der Parser wendet Schritt 2 an, also \(w = cw'\), er liest
-                          \(c\) und legt es auf den Stack. Im nächsten Schritt
-                          ist der Stackinhalt \(\gamma' := \gamma c\) und das ungelesene Wort
-                          ist \(w'\).
-                          Teil (i) der Behauptung gilt offensichtlich, da \(\gamma' w' = \gamma w\)
-                          und somit immer noch eine gültige Wortform ist.
-                          Um zu sehen, dass Teil (ii) gilt, beachten Sie erstens,
-                          dass Teil (ii) vor dem Schritt galt, also $\gamma$ ein Präfix
-                          von $\front(\gamma w)$ ist; zweitens, dass
-                          \(\gamma \not \in \Front(G)\) ist (sonst hätte der Parser Schritt 1 angewandt); somit
-                          ist $\gamma$ ein{" "}
-                          <em>
-                            echter
-                          </em>
-                          Präfix von $\front(\gamma w)$ und somit
-                          ist $\gamma c$ immer noch ein Präfix von $\front(\gamma w)$.
-                        </Paragraph>
+                        Der Parser wendet Schritt 2 an, also \(w = cw'\), er liest
+                        \(c\) und legt es auf den Stack. Im nächsten Schritt
+                        ist der Stackinhalt \(\gamma' := \gamma c\) und das ungelesene Wort
+                        ist \(w'\).
+                        Teil (i) der Behauptung gilt offensichtlich, da \(\gamma' w' = \gamma w\)
+                        und somit immer noch eine gültige Wortform ist.
+                        Um zu sehen, dass Teil (ii) gilt, beachten Sie erstens,
+                        dass Teil (ii) vor dem Schritt galt, also $\gamma$ ein Präfix
+                        von $\front(\gamma w)$ ist; zweitens, dass
+                        \(\gamma \not \in \Front(G)\) ist (sonst hätte der Parser Schritt 1 angewandt); somit
+                        ist $\gamma$ ein 
+                        {" "}
+                        <i>
+                          echter
+                        </i>
+                        {" "}
+                        Präfix von $\front(\gamma w)$ und somit
+                        ist $\gamma c$ immer noch ein Präfix von $\front(\gamma w)$.
                       </li>
                     </ol>
                     <Paragraph>

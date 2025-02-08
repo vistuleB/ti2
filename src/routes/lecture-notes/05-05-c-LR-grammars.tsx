@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={35}>
+      <Chapter
+        number={35}
+        path="/lecture-notes35.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="05-05-b-Parser-in-Java">
-            <Paragraph>
-              &lt;&lt; Kapitel 05.05
-            </Paragraph>
+            &lt;&lt; Kapitel 5.5
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="05-05-d-linker-Rand-und-Bluete">
-            <Paragraph>
-              Kapitel 05.05 &gt;&gt;
-            </Paragraph>
+            Kapitel 5.5 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -87,10 +83,14 @@ const Article = () => {
                   <Paragraph>
                     Da aus der Sicht unseres neuen Parsers die Rückwärtsanwendung einer Produktion
                     \(X \rightarrow \beta\), also der Schritt \(\alpha X \gamma \Leftarrow \alpha \beta \gamma\)
-                    einen{" "}
-                    <em>
+                    einen 
+                    {" "}
+                    <i>
                       Fortschritt
-                    </em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
                     darstellt und zeitlich auch
                     nach vorne geht, verwende ich ab jetzt ein neues Pfeilsymbol, das
                     von links nach rechts geht und daher dem in Europa üblichen Gefühlt,
@@ -116,24 +116,30 @@ const Article = () => {
                     \begin&#123;align*&#125;
                     \alpha \beta \gamma \rstep&#123;&#125; \alpha X \gamma \ ,
                     \end&#123;align*&#125;
-                    und sagen{" "}
-                    <em>
+                    und sagen 
+                    {" "}
+                    <i>
                       \(\alpha \beta \gamma\) reduziert zu \(\alpha X \gamma\)
-                    </em>
+                    </i>
+                    {" "}
                     .
-                    Man nennt einen solchen Schritt auch einen{" "}
-                    <em>
+                    Man nennt einen solchen Schritt auch einen 
+                    {" "}
+                    <i>
                       Reduktionsschritt
-                    </em>
+                    </i>
+                    {" "}
                     .
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
                       <Paragraph>
-                        Wir nennen den Schritt einen{" "}
-                        <em>
+                        Wir nennen den Schritt einen 
+                        {" "}
+                        <i>
                           Linksreduktionsschritt
-                        </em>
+                        </i>
+                        {" "}
                         , wenn
                         rechts von \(\beta\) nur Terminale stehen. Wenn also
                         \(\gamma = w \in \Sigma^*\) und somit
@@ -145,13 +151,17 @@ const Article = () => {
                     Eine Folge von Linksreduktionsschritten nennen wir eine
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Linksreduktion
-                    </em>
-                    .{" "}
-                    <em>
+                    </i>
+                    {" "}
+                    . 
+                    {" "}
+                    <i>
                       Links
-                    </em>
+                    </i>
+                    {" "}
                     , weil wir uns
                     von links nach rechts in den terminalen Teil hineinarbeiten.
                     Wir werden im folgenden nur Linksreduktionsschritte betrachten und
@@ -227,10 +237,12 @@ const Article = () => {
                   <Paragraph>
                     ist inkorrekt. In unserer Java-Implementierung haben wir dieses Problem händisch gelöst, indem
                     wir der Regel $ND \rstep&#123;&#125; N$ den Vorzug vor $D \rstep&#123;&#125; N$ gegebene haben. Im allgemeinen
-                    müssen wir definieren, was ein{" "}
-                    <em>
+                    müssen wir definieren, was ein 
+                    {" "}
+                    <i>
                       korrekter
-                    </em>
+                    </i>
+                    {" "}
                     Linksreduktionsschritt ist. Und dann
                     überlegen, wie wir herausfinden, ob ein Linksreduktionsschritt korrekt ist. Diese Fragen
                     werden uns für den Rest dieses und des nächsten Teilkapitels beschäftigen.
@@ -248,10 +260,12 @@ const Article = () => {
                     {" "}{" "}
                   </Paragraph>
                   <Paragraph>
-                    Eine Wortform \(\gamma \in (\Sigma \cup N)^*\) heißt{" "}
-                    <em>
+                    Eine Wortform \(\gamma \in (\Sigma \cup N)^*\) heißt 
+                    {" "}
+                    <i>
                       gültig
-                    </em>
+                    </i>
+                    {" "}
                     ,
                     wenn es eine Rechtsableitung
                     \begin&#123;align*&#125;
@@ -261,10 +275,12 @@ const Article = () => {
                     \begin&#123;align*&#125;
                     \alpha \beta w \rstep&#123;&#125; \alpha X w
                     \end&#123;align*&#125;
-                    heißt{" "}
-                    <em>
+                    heißt 
+                    {" "}
+                    <i>
                       korrekt
-                    </em>
+                    </i>
+                    {" "}
                     , wenn \(\alpha X w\) gültig ist.
                     In diesem Fall ist natürlich $\alpha \beta w$ selbst gültig.
                   </Paragraph>
@@ -273,9 +289,11 @@ const Article = () => {
                       Den Präfix $\alpha$ nennen wir eine
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         Front
-                      </em>
+                      </i>
+                      {" "}
                       der gültigen Wortform $\alpha \beta w$.
                       Wenn die Grammatik eindeutig ist, dann hat
                       jede gültige Wortform $\gamma$ genau eine Front, die wir
@@ -314,17 +332,17 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <a href="../code/parsing/arithmetic-in-class/ArithmeticGrammar.java">
-                      <Paragraph>
-                        ArithmeticGrammar.java
-                      </Paragraph>
+                      ArithmeticGrammar.java
                     </a>
                     zum Beispiel
                     haben wir manchmal das erste Zeichen von $w$ betrachten müssen. Allerdings behalten wir erst
                     einmal obigen Wunsch als Idealziel.
-                    Um ihn zu formalisieren, fragen wir uns, wann es denn{" "}
-                    <em>
+                    Um ihn zu formalisieren, fragen wir uns, wann es denn 
+                    {" "}
+                    <i>
                       nicht
-                    </em>
+                    </i>
+                    {" "}
                     möglich ist,
                     ohne Betrachten von $w$ zu eintscheiden, ob
                     $\alpha \beta w \rstep&#123;&#125; \alpha X w$ gültig ist.
@@ -332,86 +350,80 @@ const Article = () => {
                 </Paragraph>
                 <ol>
                   <li>
+                    {" "}{" "}
+                    <b>
+                      Schlechter Fall 1:
+                    </b>
+                    {" "}
+                    Es gibt für eine Wortform \(\gamma\) zwei
+                    korrekte Linksreduktionsschritte:
+                    \(\gamma \rstep&#123;&#125; \gamma'\) und
+                    \(\gamma \rstep&#123;&#125; \gamma''\).
+                    In diesem Falle gäbe es 
+                    {" "}
+                    <i>
+                      zwei verschiedene
+                    </i>
+                    {" "}
+                    Rechtsableitungen
+                    \begin&#123;align*&#125;
+                    S \Steps&#123;R&#125; \gamma' \Step&#123;R&#125; \gamma \Steps&#123;R&#125; w \in \Sigma^* \\
+                    S \Steps&#123;R&#125; \gamma'' \Step&#123;R&#125; \gamma \Steps&#123;R&#125; w \in \Sigma^* \\
+                    \end&#123;align*&#125;
                     <Paragraph>
-                      {" "}{" "}
-                      <b>
-                        Schlechter Fall 1:
-                      </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
-                      Es gibt für eine Wortform \(\gamma\) zwei
-                      korrekte Linksreduktionsschritte:
-                      \(\gamma \rstep&#123;&#125; \gamma'\) und
-                      \(\gamma \rstep&#123;&#125; \gamma''\).
-                      In diesem Falle gäbe es{" "}
-                      <em>
-                        zwei verschiedene
-                      </em>
-                      Rechtsableitungen
-                      \begin&#123;align*&#125;
-                      S \Steps&#123;R&#125; \gamma' \Step&#123;R&#125; \gamma \Steps&#123;R&#125; w \in \Sigma^* \\
-                      S \Steps&#123;R&#125; \gamma'' \Step&#123;R&#125; \gamma \Steps&#123;R&#125; w \in \Sigma^* \\
-                      \end&#123;align*&#125;
-                    </Paragraph>
-                    <Paragraph>
-                      <Paragraph>
-                        (wir nehmen an, dass man aus jedem Nichtterminal
-                        mindestens ein Wort \(u \in \Sigma^*\) ableiten kann; andernfalls
-                        kann man solche{" "}
-                        <em>
-                          nutzlosen
-                        </em>
-                        Nichtterminale eliminieren).
-                        Das Wort \(w\) hat also zwei verschiedene Ableitungsbäume.
-                        Die Grammatik ist somit mehrdeutig.
-                        Mit uneindeutigen Grammatiken beschäftigen wir uns zunächst gar nicht;
-                        sie sind von einem praktischen Standpunkt aus auch
-                        unattraktiv: wenn z.B. eine Programmiersprache eine mehrdeutige Grammatik
-                        hätte, dann wäre ja für gewisse Programme nicht eindeutig
-                        festzustellen, was damit gemeint ist.
-                        Wir nehmen also an, dass die Grammatik \(G\) eindeutig ist und somit
-                        dieser Fall nicht eintreten kann.
-                      </Paragraph>
+                      (wir nehmen an, dass man aus jedem Nichtterminal
+                      mindestens ein Wort \(u \in \Sigma^*\) ableiten kann; andernfalls
+                      kann man solche 
+                      {" "}
+                      <i>
+                        nutzlosen
+                      </i>
+                      {" "}
+                      Nichtterminale eliminieren).
+                      Das Wort \(w\) hat also zwei verschiedene Ableitungsbäume.
+                      Die Grammatik ist somit mehrdeutig.
+                      Mit uneindeutigen Grammatiken beschäftigen wir uns zunächst gar nicht;
+                      sie sind von einem praktischen Standpunkt aus auch
+                      unattraktiv: wenn z.B. eine Programmiersprache eine mehrdeutige Grammatik
+                      hätte, dann wäre ja für gewisse Programme nicht eindeutig
+                      festzustellen, was damit gemeint ist.
+                      Wir nehmen also an, dass die Grammatik \(G\) eindeutig ist und somit
+                      dieser Fall nicht eintreten kann.
                     </Paragraph>
                   </li>
                   <li>
+                    {" "}{" "}
+                    <b>
+                      Schlechter Fall 2:
+                    </b>
+                    {" "}
+                    Der Linksreduktionsschritt
+                    \begin&#123;align*&#125;
+                    \alpha \beta w \rstep&#123;&#125; \alpha X w
+                    \end&#123;align*&#125;
+                    ist korrekt, aber für ein anderes $w' \in \Sigma^
+                    <b>
+                      $ ist
+                      \begin&#123;align
+                    </b>
+                    &#125;
+                    \alpha \beta w' \rstep&#123;&#125; \alpha X w'
+                    \end&#123;align*&#125;
                     <Paragraph>
                       {" "}{" "}
-                      <b>
-                        Schlechter Fall 2:
-                      </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
-                      Der Linksreduktionsschritt
-                      \begin&#123;align*&#125;
-                      \alpha \beta w \rstep&#123;&#125; \alpha X w
-                      \end&#123;align*&#125;
-                      ist korrekt, aber für ein anderes $w' \in \Sigma^
-                      <b>
-                        $ ist
-                        \begin&#123;align
-                      </b>
-                      &#125;
-                      \alpha \beta w' \rstep&#123;&#125; \alpha X w'
-                      \end&#123;align*&#125;
-                    </Paragraph>
-                    <Paragraph>
-                      <Paragraph>
-                        <em>
-                          nicht
-                        </em>
-                        korrekt, obwohl \(\alpha\beta w'\) eine
-                        gültige Wortform ist.
-                        Dieser Fall ist schlecht, weil der Parser nur
-                        $\alpha \beta$ gelesen hat und somit nicht
-                        weiß, ob es sich bei der gesamten Wortform
-                        um $\alpha \beta w$ oder um $\alpha \beta w'$
-                        handelt. Da beide gültig sind, können ja auch
-                        beide in einer Linksreduktion auftreten.
-                        Korrektheit hängt also davon ab, was weiter rechtskommt.
-                      </Paragraph>
+                      <i>
+                        nicht
+                      </i>
+                      {" "}
+                      korrekt, obwohl \(\alpha\beta w'\) eine
+                      gültige Wortform ist.
+                      Dieser Fall ist schlecht, weil der Parser nur
+                      $\alpha \beta$ gelesen hat und somit nicht
+                      weiß, ob es sich bei der gesamten Wortform
+                      um $\alpha \beta w$ oder um $\alpha \beta w'$
+                      handelt. Da beide gültig sind, können ja auch
+                      beide in einer Linksreduktion auftreten.
+                      Korrektheit hängt also davon ab, was weiter rechtskommt.
                     </Paragraph>
                   </li>
                 </ol>
@@ -511,23 +523,19 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        Falls $\alpha \beta = \alpha' \beta'$ dann
-                        auch $\beta = \beta'$ und $X= X'$; in Worten:
-                        wenn die Fronten identisch sind, dann auch die
-                        Reduktionsschritte.
-                      </Paragraph>
+                      Falls $\alpha \beta = \alpha' \beta'$ dann
+                      auch $\beta = \beta'$ und $X= X'$; in Worten:
+                      wenn die Fronten identisch sind, dann auch die
+                      Reduktionsschritte.
                     </li>
                     <li>
-                      <Paragraph>
-                        Wenn $\alpha' \beta' = \alpha \beta \varphi$ und
-                        $|\varphi| \geq 1$, dann
-                        $\varphi \not \in \Sigma^*$; in Worten: wenn
-                        $\front(\gamma)$ ein echter Präfix von $\front(\gamma')$
-                        ist, dann muss in dem überstehenden Teil von
-                        $\front(\gamma)$ mindestens ein
-                        Nichtterminal vorkommen.
-                      </Paragraph>
+                      Wenn $\alpha' \beta' = \alpha \beta \varphi$ und
+                      $|\varphi| \geq 1$, dann
+                      $\varphi \not \in \Sigma^*$; in Worten: wenn
+                      $\front(\gamma)$ ein echter Präfix von $\front(\gamma')$
+                      ist, dann muss in dem überstehenden Teil von
+                      $\front(\gamma)$ mindestens ein
+                      Nichtterminal vorkommen.
                     </li>
                   </ol>
                 </div>
@@ -816,29 +824,27 @@ const Article = () => {
                 </Paragraph>
                 <ol>
                   <li>
-                    <Paragraph>
-                      Wie können wir verifizieren, ob eine gegebene Grammatik
-                      die \(LR(0)\)-Bedingung erfüllt?
-                    </Paragraph>
+                    Wie können wir verifizieren, ob eine gegebene Grammatik
+                    die \(LR(0)\)-Bedingung erfüllt?
                   </li>
                   <li>
-                    <Paragraph>
-                      Falls sie es tut, wie können wir für eine gegebene gültige Wortform
-                      \(\gamma\) den korrekten Reduktionsschritt
-                      \begin&#123;align*&#125;
-                      \gamma = \alpha \beta w \rstep&#123;&#125; \alpha X w
-                      \end&#123;align*&#125;
-                      finden? Insbesondere die Zerlegung in
-                      \(\gamma = \alpha \beta w\)?
-                    </Paragraph>
+                    Falls sie es tut, wie können wir für eine gegebene gültige Wortform
+                    \(\gamma\) den korrekten Reduktionsschritt
+                    \begin&#123;align*&#125;
+                    \gamma = \alpha \beta w \rstep&#123;&#125; \alpha X w
+                    \end&#123;align*&#125;
+                    finden? Insbesondere die Zerlegung in
+                    \(\gamma = \alpha \beta w\)?
                   </li>
                 </ol>
                 <Paragraph>
                   <Paragraph>
-                    Beide Aufgaben können mit Hilfe eines{" "}
-                    <em>
+                    Beide Aufgaben können mit Hilfe eines 
+                    {" "}
+                    <i>
                       endlichen Automaten
-                    </em>
+                    </i>
+                    {" "}
                     ,
                     des DK-Automaten erledigt werden (DK steht als Abkürzung für Donald Knuth,
                     der als erstes diese Idee hatte).
@@ -856,9 +862,11 @@ const Article = () => {
                     das Kapitel 2.4 (Deterministic context free languages) im Lehrbuch
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Introduction to the Theory of Computing
-                    </em>
+                    </i>
+                    {" "}
                     von Michael Sipser.
                     Meine Darstellung des doch recht schwierigen Materials fußt auf diesem
                     Kapitel, weicht aber doch stark genug von Sipser ab, so dass es

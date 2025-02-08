@@ -8,9 +8,10 @@
         |> a
             href 03-01-primitive-recursion-definitions
 
-            &lt;&lt; Kapitel 03.01
+            &lt;&lt; Kapitel 3.1
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 03-03-ackermann
 
-            Kapitel 03.03 &gt;&gt;
+            Kapitel 3.3 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -390,9 +391,7 @@
                     
                     Eine recht stark anmutende Beschränkung primitiv rekursiver Funktionen ist
                     die Tatsache, dass wir in der Schleife nur 
-                    |> em
-
-                        eine
+                    _eine_
                     lokale Variable
                     führen dürfen, hier meistens 
                     |> code
@@ -439,9 +438,7 @@
                         fib
                     primitiv rekursiv zu implementieren.
                     Hauptzutat hierbei ist es, dass wir 
-                    |> em
-
-                        Paare
+                    _Paare_
                     als neue Datenstruktur
                     verwenden.
                     
@@ -453,9 +450,7 @@
                         nur die natürlichen Zahlen zur Verfügung. Alles andere müssen wir nach einem
                         selbst gewählten Schema codieren. Bei Booleschen Werten war es einfach.
                         Wie steht es mit 
-                        |> em
-
-                            Paaren
+                        _Paaren_
                         von natürlichen Zahlen?
                         In 
                         |> a
@@ -662,9 +657,7 @@
                         Python-Framework bin ich daher dazu übergegangen, dass ich, sobald
                         ich gezeigt habe, dass eine Funktion \(f\) primitiv rekursiv ist,
                         sie 
-                        |> em
-
-                            nativ
+                        _nativ_
                         in Python zu implementieren, also beispielsweise in meiner
                         Datei 
                         |> code

@@ -8,9 +8,10 @@
         |> a
             href 04-06-limitations-of-regular-grammars
 
-            &lt;&lt; Kapitel 04.06
+            &lt;&lt; Kapitel 4.6
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 05-00-context-free-languages
 
-            Kapitel 05.00 &gt;&gt;
+            Kapitel 5.0 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -81,9 +82,7 @@
                                 Kapitel 2.2
                             
                             als 
-                            |> em
-
-                                eine
+                            _eine_
                             natürliche Zahl $\bar{\alpha}$ codieren können.
                             Mittels dieser Codierung wird eine Sprache $L \subseteq \Sigma^*$
                             zu einer Funktion
@@ -187,9 +186,7 @@
                         
                         Betrachten wir eine Variante des endlichen Automaten, bei der
                         der Automat 
-                        |> em
-
-                            zurückspulen
+                        _zurückspulen_
                         kann. Der Automat hat also
                         einen "Lesekopf", mit dem er auf einem Zeichen des Eingabewortes steht
                         (anfangs auf dem ersten). In jedem Schritt kann er nach rechts oder links
@@ -205,12 +202,10 @@
 
                         
                         Wenn z.B. $\delta(q, x) = (r, L)$ ist, dann heißt das: 
-                        |> em
-
-                            wenn Du im
-                            Zustand $q$ bist und der Lesekopf ein $x$ liest, dann wechsle in den
-                            Zustand $r$ und gehe nach links.
-                            
+                        _wenn Du im
+                        Zustand $q$ bist und der Lesekopf ein $x$ liest, dann wechsle in den
+                        Zustand $r$ und gehe nach links.
+                        _
                         
                         
                     
@@ -225,9 +220,7 @@
                         die Menge aller Wörter $\alpha$, die $M$ in einen akzeptierenden
                         Zustand bringen. Beachten Sie, dass $M$ möglicherweise in eine Endlosschleife
                         geraten kann. In diesem Falle ist $\alpha$ 
-                        |> em
-
-                            kein
+                        _kein_
                         Wort in $L(M)$.
                         
                     

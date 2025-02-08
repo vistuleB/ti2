@@ -8,9 +8,10 @@
         |> a
             href 01-02-truth-tables-cnf-dnf
 
-            &lt;&lt; Kapitel 01.02
+            &lt;&lt; Kapitel 1.2
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 01-04-monotone-circuits
 
-            Kapitel 01.04 &gt;&gt;
+            Kapitel 1.4 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -73,9 +74,7 @@
                         höchstwahrscheinlich auch in Ihrem Blut). Grund genug, sich diese genauer anzuschauen.
                         Genau wie bei der Addition von Dezimalzahlen gibt es pro Stelle ein Ergebnis und einen
                         Übertrag (Englisch 
-                        |> em
-
-                            carry
+                        _carry_
                         ); beispielsweise ergibt
                         "sechs plus acht plus sieben = eins, zwei gemerkt", und die 2 muss dann zu den links daneben
                         stehenden Ziffern addiert werden. Binär ist alles viel einfacher, weil man sich nur 0 oder 1
@@ -97,9 +96,7 @@
 
                         Das Carry wird dann der eins weiter links stehenden Stelle zur Addition weitergegeben.
                         Aber halt! Das heißt doch, dass wir in der nächsten Stelle 
-                        |> em
-
-                            drei
+                        _drei_
                         Bits addieren
                         müssen:
                         das von \(x\), das von \(y\), und das eingehende Carry \(\cin\). Daraus berechnet
@@ -166,9 +163,7 @@
                     |> p
 
                         Wie groß ist dieser Schaltkreis? Wenn wir jedes \(\oplus\)- und \(M\)-Gate als 
-                        |> em
-
-                            ein
+                        _ein_
                         
                         Gate
                         zählen, so haben wir insgesamt \(2n\) innere Gates und \(2n\) Input-Gates.
@@ -239,9 +234,7 @@
                         im schlimmsten Fall von ganz rechts nach ganz links durchrasseln muss,
                         zum Beispiel wenn man \(11111111 + 00000001\) berechnet. So einen Addierer nennt man
                         
-                        |> em
-
-                            ripple-carry adder
+                        _ripple-carry adder_
                         .
                         
                     
@@ -249,9 +242,7 @@
                     |> p
 
                         Geringere Tiefe erreicht man mit 
-                        |> em
-
-                            Carry Lookahead
+                        _Carry Lookahead_
                         . Hier versuchen wir,
                         im Voraus bereits das Carry auf Position \(i\) zu berechnen, ohne erst das auf Position
                         \(i-1\) abzuwarten. Es lohnt, ein paar Dinge formaler zu definieren:
@@ -342,13 +333,9 @@
                         
                         Effizientere Lösungen beginnen oft mit einer guten Definition. In diesem Falle ist das die
                         Verallgemeinerung von 
-                        |> em
-
-                            Carry Generate \(g_i\)
+                        _Carry Generate \(g_i\)_
                         und 
-                        |> em
-
-                            Carry Propagate \(p_i\)
+                        _Carry Propagate \(p_i\)_
                         
                         von Indizes auf Intervalle. Für ein Interval
                         \([a,b] := \{a, a+1, \dots, b\}\) definieren wir Funktionen
@@ -513,9 +500,7 @@
                         \Theta(n^2)\) viele.
                         Der Trick: wir beschränken uns auf besonders schöne Intervalle, nämlich
                         
-                        |> em
-
-                            Binärintervalle
+                        _Binärintervalle_
                         .
                         
                     
@@ -548,9 +533,7 @@
                         Binärdarstellung
                         ist das \(1100, 1101, 1110, 1111\). Wir können es also auch mit
                         in 
-                        |> em
-
-                            Sternchennotation
+                        _Sternchennotation_
                         mit [11**] notieren.
                         
                     
@@ -691,9 +674,7 @@
                         Eine anschließende Bemerkung: der Schaltkreis
                         besteht ausschließlich aus AND- und OR-Gates; er enthält
                         keine NOT-Gates und ist somit ein 
-                        |> em
-
-                            monotoner Schaltkreis.
+                        _monotoner Schaltkreis._
                         
                         
                     
@@ -800,9 +781,7 @@
                                 ein genauerer Blick zeigt, dass sie sogar höchstens \(d-1\) ist: wäre sie genau \(d\),
                                 dann hätten wir es mit der Zahl \( (1^d)_2 = 2^d-1 \geq n-1 \) zu tun; da aber
                                 die Folge der Zahlen 
-                                |> em
-
-                                    abnimmt
+                                _abnimmt_
                                 , müsste bereits \(k = 2^d-1\) gelten, und wir
                                 wären in Fall 1, bzw. bereits fertig, weil \([0,k]\) bereits in Binärintervall wäre.
                                 Der Wert von \(b\), der Anzahl schließender 1en, kann also höchstens

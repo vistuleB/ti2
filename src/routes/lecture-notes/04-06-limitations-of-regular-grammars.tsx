@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={26}>
+      <Chapter
+        number={26}
+        path="/lecture-notes26.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="04-05-regular-expressions">
-            <Paragraph>
-              &lt;&lt; Kapitel 04.05
-            </Paragraph>
+            &lt;&lt; Kapitel 4.5
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="04-07-exercises">
-            <Paragraph>
-              Kapitel 04.07 &gt;&gt;
-            </Paragraph>
+            Kapitel 4.7 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -42,10 +38,12 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Noch spannender, als zu erkunden, was möglich ist, ist aus Sicht eines theoretischen
-                    Informatikers, zu erkunden, was{" "}
-                    <em>
+                    Informatikers, zu erkunden, was 
+                    {" "}
+                    <i>
                       nicht möglich
-                    </em>
+                    </i>
+                    {" "}
                     ist. Also Grenzen aufzuzeigen.
                     Wir haben in den letzten vier Teilkapiteln gezeigt, was man mit regulären Sprachen und endlichen
                     Automaten
@@ -106,32 +104,22 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        Reguläre Grammatiken.
-                      </Paragraph>
+                      Reguläre Grammatiken.
                     </li>
                     <li>
-                      <Paragraph>
-                        Erweitert reguläre Grammatiken, die also Produktionen wie \(X \rightarrow abY\)
-                        erlauben.
-                      </Paragraph>
+                      Erweitert reguläre Grammatiken, die also Produktionen wie \(X \rightarrow abY\)
+                      erlauben.
                     </li>
                     <li>
-                      <Paragraph>
-                        Vereinfachte reguläre Grammatiken, in denen Produktionen wie \(X \rightarrow a\) und \(X
-                        \rightarrow Y\) nicht vorkommen;
-                        wo also die rechte Seite nie aus einem einzelnen Zeichen besteht.
-                      </Paragraph>
+                      Vereinfachte reguläre Grammatiken, in denen Produktionen wie \(X \rightarrow a\) und \(X
+                      \rightarrow Y\) nicht vorkommen;
+                      wo also die rechte Seite nie aus einem einzelnen Zeichen besteht.
                     </li>
                     <li>
-                      <Paragraph>
-                        Endliche Automaten.
-                      </Paragraph>
+                      Endliche Automaten.
                     </li>
                     <li>
-                      <Paragraph>
-                        Nichtdeterministische endliche Automaten.
-                      </Paragraph>
+                      Nichtdeterministische endliche Automaten.
                     </li>
                   </ol>
                   <Paragraph>
@@ -141,13 +129,17 @@ const Article = () => {
                       das die erzeugte bzw. akzeptierte Sprache sich ändern. Wenn wir nun zeigen wollen:
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         \(L\) ist nicht regulär
-                      </em>
-                      , dann können wir das{" "}
-                      <em>
+                      </i>
+                      {" "}
+                      , dann können wir das 
+                      {" "}
+                      <i>
                         einfachste
-                      </em>
+                      </i>
+                      {" "}
                       Modell nehmen und
                       dagegen argumentieren. Nach meinem Darfürhalten sind endliche Automaten das einfachste der
                       fünf aufgeführten
@@ -255,26 +247,36 @@ const Article = () => {
                   <Paragraph>
                     Das Argument, dass die Sprache \(\&#123;a^nb^n \ | \ n \geq 0\&#125;\) nicht regulär ist, war nicht allzu
                     schwer, fühlt sich
-                    aber etwas{" "}
-                    <em>
+                    aber etwas 
+                    {" "}
+                    <i>
                       ad hoc
-                    </em>
+                    </i>
+                    {" "}
                     an, also für diesen Fall maßgeschneidert. Es stellt sich aber heraus,
                     dass man
-                    bei{" "}
-                    <em>
+                    bei 
+                    {" "}
+                    <i>
                       allen
-                    </em>
+                    </i>
+                    {" "}
                     nicht-regulären Sprachen ein solches Argument anführen kann. Die Hauptarbeit
-                    besteht nun darin, Konzepte wie{" "}
-                    <em>
+                    besteht nun darin, Konzepte wie 
+                    {" "}
+                    <i>
                       der Automat kann \(\alpha\) nicht von \(\alpha'\)
                       unterscheiden
-                    </em>
-                    und{" "}
-                    <em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    und 
+                    {" "}
+                    <i>
                       der Automat muss aber \(\gamma\) von \(\gamma'\) unterscheiden können
-                    </em>
+                    </i>
+                    {" "}
                     zu
                     formalisieren.
                   </Paragraph>
@@ -295,9 +297,11 @@ const Article = () => {
                     \(\alpha, \beta \in \Sigma^* \) sind
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       \(M\)-äquivalent
-                    </em>
+                    </i>
+                    {" "}
                     , geschrieben
                     \begin&#123;align*&#125;
                     \alpha \equiv_M \beta \ ,
@@ -338,9 +342,11 @@ const Article = () => {
                     Sei \(L \subseteq \Sigma^*\) eine Sprache. Zwei Wörter \(\alpha, \beta \in \Sigma^*\) sind
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       \(L\)-äquivalent
-                    </em>
+                    </i>
+                    {" "}
                     , geschrieben
                     \begin&#123;align*&#125;
                     \alpha \equiv_L \beta \ ,
@@ -384,13 +390,17 @@ const Article = () => {
                     Abhängig davon, ob \(q' \in F\) oder nicht, sind \(\alpha\gamma\) und \(\alpha\beta\) entweder
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       beide in \(L\)
-                    </em>
-                    oder{" "}
-                    <em>
+                    </i>
+                    {" "}
+                    oder 
+                    {" "}
+                    <i>
                       beide nicht in \(L\)
-                    </em>
+                    </i>
+                    {" "}
                     . In anderen Worten: \(\alpha \equiv_L
                     \beta\).
                   </Paragraph>
@@ -416,10 +426,12 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Sei \(L \subseteq \Sigma^*\). Der{" "}
-                    <em>
+                    Sei \(L \subseteq \Sigma^*\). Der 
+                    {" "}
+                    <i>
                       Index von \(L\)
-                    </em>
+                    </i>
+                    {" "}
                     ist die Anzahl von Äquivalenzklassen
                     der Relation
                     \(\equiv_L\), also die größtmögliche Anzahl gegenseitig nichtäquivalenter Wörter
@@ -520,10 +532,12 @@ const Article = () => {
                 </div>
                 <Paragraph>
                   <Paragraph>
-                    Wie mächtig ist diese "Index-Methode"? Es stellt sich heraus, dass sie{" "}
-                    <em>
+                    Wie mächtig ist diese "Index-Methode"? Es stellt sich heraus, dass sie 
+                    {" "}
+                    <i>
                       vollständig
-                    </em>
+                    </i>
+                    {" "}
                     ist:
                     wenn eine Sprache \(L\) endlichen Index hat, dann ist sie auch regulär.
                   </Paragraph>
@@ -607,20 +621,26 @@ const Article = () => {
                       ein, wenn es ein \(\alpha \in A_i\) mit \(\alpha x \in A_j\) gibt.
                       Sehen Sie nun: wenn wir ein anderes \(\alpha' \in A_i\) nehmen,
                       dann gilt \(\alpha' x \equiv_L \alpha x\), also ist auch \(\alpha' x \in A_j\). In anderen
-                      Worten: es gibt nur{" "}
-                      <em>
+                      Worten: es gibt nur 
+                      {" "}
+                      <i>
                         eine
-                      </em>
+                      </i>
+                      {" "}
                       Produktion der Form \(i \step&#123;x&#125; ...\), d.h. die
                       Produktionen
-                      sind in der Tat ein{" "}
-                      <em>
+                      sind in der Tat ein 
+                      {" "}
+                      <i>
                         Funktion
-                      </em>
-                      und der Automat ist{" "}
-                      <em>
+                      </i>
+                      {" "}
+                      und der Automat ist 
+                      {" "}
+                      <i>
                         determinisitsch
-                      </em>
+                      </i>
+                      {" "}
                       .
                       Als Anfangszustand wählen wir dasjenige \(i\), für das \(\epsilon \in A_i\) gilt.
                       Akzeptierende Zustände sind diejenigen \(j\), für die \(A_j \subseteq L\) gilt. Also:
@@ -697,10 +717,12 @@ const Article = () => {
                       Zeichen
                       von \(\alpha\gamma\) ist 0, das viertletzte Zeichen von \(\beta\gamma\) ist 1; also
                       gilt \(\alpha\gamma \in L, \beta\gamma\not \in L\), und somit \(\alpha \not \equiv \beta\).
-                      Der Index ist also{" "}
-                      <em>
+                      Der Index ist also 
+                      {" "}
+                      <i>
                         mindestens
-                      </em>
+                      </i>
+                      {" "}
                       16. Das er höchstens 16 ist, sehen wir, indem wir
                       einen
                       determinisitschen Automaten mit 16 Zuständen bauen.

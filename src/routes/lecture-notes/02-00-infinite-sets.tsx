@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={8}>
+      <Chapter
+        number={8}
+        path="/lecture-notes8.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="01-06-lower-and-upper-bounds">
-            <Paragraph>
-              &lt;&lt; Kapitel 01.06
-            </Paragraph>
+            &lt;&lt; Kapitel 1.6
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="02-01-comparing-sizes">
-            <Paragraph>
-              Kapitel 02.01 &gt;&gt;
-            </Paragraph>
+            Kapitel 2.1 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -51,19 +47,27 @@ const Article = () => {
                     1, \dots, x
                   </i>
                   n$ Sie begegnen werden.
-                  Für ein allgemeines Modell der Berechnung ist dies ungeeignet. Wir wollen ja{" "}
-                  <em>
+                  Für ein allgemeines Modell der Berechnung ist dies ungeeignet. Wir wollen ja 
+                  {" "}
+                  <i>
                     ein
-                  </em>
+                  </i>
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
                   Computerprogramm, das beliebig große Eingaben verkraften kann. Ein Computerprogramm
-                  soll also{" "}
-                  <em>
+                  soll also 
+                  {" "}
+                  <i>
                     endlich
-                  </em>
-                  sein, aber für eine{" "}
-                  <em>
+                  </i>
+                  {" "}
+                  sein, aber für eine 
+                  {" "}
+                  <i>
                     unendliche
-                  </em>
+                  </i>
+                  {" "}
                   Menge potentieller Eingaben
                   funktionieren.
                 </Paragraph>

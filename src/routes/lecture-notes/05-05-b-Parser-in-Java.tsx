@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={34}>
+      <Chapter
+        number={34}
+        path="/lecture-notes34.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="05-05-a-LR-parsing-by-hand">
-            <Paragraph>
-              &lt;&lt; Kapitel 05.05
-            </Paragraph>
+            &lt;&lt; Kapitel 5.5
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="05-05-c-LR-grammars">
-            <Paragraph>
-              Kapitel 05.05 &gt;&gt;
-            </Paragraph>
+            Kapitel 5.5 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -42,9 +38,7 @@ const Article = () => {
                     Den vollständigen Quelltext, den wir in der Vorlesung geschrieben haben,
                     finden Sie in der Datei{" "}
                     <a href="../code/parsing/arithmetic-in-class/ArithmeticGrammar.java">
-                      <Paragraph>
-                        ArithmeticGrammar.java
-                      </Paragraph>
+                      ArithmeticGrammar.java
                     </a>
                     .
                   </Paragraph>
@@ -88,9 +82,11 @@ const Article = () => {
                     Was soll nun unser Parser tun? Er soll, gegeben ein Eingabewort $w \in L$, den
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Ableitungsbaum
-                    </em>
+                    </i>
+                    {" "}
                     konstruieren, für{" "}
                     <tt>
                       ((31+402)*83)
@@ -109,9 +105,11 @@ const Article = () => {
                     Zuerst aber: wir wollen mit diesem Baum etwas Sinnvolles tun. Zum Beispiel
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       auswerten
-                    </em>
+                    </i>
+                    {" "}
                     , so dass am Ende eine Zahl rauskommt, im obigen Beispiel
                     also $(31 + 402) \cdot 83 = 35939$. Oder den Ausdruck umformen von
                     Infix-Notation zu Präfixnotation, also
@@ -139,152 +137,116 @@ const Article = () => {
                 </Paragraph>
                 <ul>
                   <li>
-                    <Paragraph>
-                      <tt>
-                        interface Expression
-                      </tt>
-                      wird implementiert von
-                    </Paragraph>
+                    <tt>
+                      interface Expression
+                    </tt>
+                    wird implementiert von
                     <ul>
                       <li>
-                        <Paragraph>
-                          <tt>
-                            class Sum
-                          </tt>
-                          , die als Klassenvariable{" "}
-                          <tt>
-                            Exrepssion e1, e2
-                          </tt>
-                          enthält,
-                        </Paragraph>
+                        <tt>
+                          class Sum
+                        </tt>
+                        , die als Klassenvariable{" "}
+                        <tt>
+                          Exrepssion e1, e2
+                        </tt>
+                        enthält,
                       </li>
                       <li>
-                        <Paragraph>
-                          <tt>
-                            class Product
-                          </tt>
-                          , die als Klassenvariable{" "}
-                          <tt>
-                            Exrepssion e1, e2
-                          </tt>
-                          enthält,
-                        </Paragraph>
+                        <tt>
+                          class Product
+                        </tt>
+                        , die als Klassenvariable{" "}
+                        <tt>
+                          Exrepssion e1, e2
+                        </tt>
+                        enthält,
                       </li>
                       <li>
-                        <Paragraph>
-                          <tt>
-                            class JustNumber
-                          </tt>
-                          , die als Klassenvariable nur eine{" "}
-                          <tt>
-                            Number number
-                          </tt>
-                          enthält;
-                        </Paragraph>
+                        <tt>
+                          class JustNumber
+                        </tt>
+                        , die als Klassenvariable nur eine{" "}
+                        <tt>
+                          Number number
+                        </tt>
+                        enthält;
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <Paragraph>
-                      <tt>
-                        interface Number
-                      </tt>
-                      wird implementiert von
-                    </Paragraph>
+                    <tt>
+                      interface Number
+                    </tt>
+                    wird implementiert von
                     <ul>
                       <li>
-                        <Paragraph>
-                          <tt>
-                            class MultiDigitNumber
-                          </tt>
-                          , die als Klassenvariable eine
-                        </Paragraph>
-                        <Paragraph>
-                          <tt>
-                            Number
-                          </tt>
-                          und eine{" "}
-                          <tt>
-                            Digit
-                          </tt>
-                          erhält und
-                        </Paragraph>
+                        <tt>
+                          class MultiDigitNumber
+                        </tt>
+                        , die als Klassenvariable eine
+                        <tt>
+                          Number
+                        </tt>
+                        und eine{" "}
+                        <tt>
+                          Digit
+                        </tt>
+                        erhält und
                       </li>
                       <li>
-                        <Paragraph>
-                          <tt>
-                            class SingleDigitNumber
-                          </tt>
-                          , die als Klassenvariable ein{" "}
-                          <tt>
-                            Digit
-                          </tt>
-                          enthält;
-                        </Paragraph>
+                        <tt>
+                          class SingleDigitNumber
+                        </tt>
+                        , die als Klassenvariable ein{" "}
+                        <tt>
+                          Digit
+                        </tt>
+                        enthält;
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <Paragraph>
-                      <tt>
-                        interface Digit
-                      </tt>
-                      wird implementiert von
-                    </Paragraph>
-                    <Paragraph>
-                      <tt>
-                        class DigitOne
-                      </tt>
-                      ,
-                    </Paragraph>
-                    <Paragraph>
-                      <tt>
-                        class DigitTwo
-                      </tt>
-                      ,
-                    </Paragraph>
-                    <Paragraph>
-                      <tt>
-                        class DigitThree
-                      </tt>
-                      ,
-                    </Paragraph>
-                    <Paragraph>
-                      <tt>
-                        class DigitFour
-                      </tt>
-                      ,
-                    </Paragraph>
-                    <Paragraph>
-                      <tt>
-                        class DigitFive
-                      </tt>
-                      ,
-                    </Paragraph>
-                    <Paragraph>
-                      <tt>
-                        class DigitSix
-                      </tt>
-                      ,
-                    </Paragraph>
-                    <Paragraph>
-                      <tt>
-                        class DigitSeven
-                      </tt>
-                      ,
-                    </Paragraph>
-                    <Paragraph>
-                      <tt>
-                        class DigitEight
-                      </tt>
-                      und
-                    </Paragraph>
-                    <Paragraph>
-                      <tt>
-                        class DigitNine
-                      </tt>
-                      .
-                    </Paragraph>
+                    <tt>
+                      interface Digit
+                    </tt>
+                    wird implementiert von
+                    <tt>
+                      class DigitOne
+                    </tt>
+                    ,
+                    <tt>
+                      class DigitTwo
+                    </tt>
+                    ,
+                    <tt>
+                      class DigitThree
+                    </tt>
+                    ,
+                    <tt>
+                      class DigitFour
+                    </tt>
+                    ,
+                    <tt>
+                      class DigitFive
+                    </tt>
+                    ,
+                    <tt>
+                      class DigitSix
+                    </tt>
+                    ,
+                    <tt>
+                      class DigitSeven
+                    </tt>
+                    ,
+                    <tt>
+                      class DigitEight
+                    </tt>
+                    und
+                    <tt>
+                      class DigitNine
+                    </tt>
+                    .
                   </li>
                 </ul>
                 <Paragraph>

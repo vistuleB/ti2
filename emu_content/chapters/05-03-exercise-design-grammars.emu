@@ -8,9 +8,10 @@
         |> a
             href 05-02-cfg-to-pda
 
-            &lt;&lt; Kapitel 05.02
+            &lt;&lt; Kapitel 5.2
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 05-04-LL1-grammars
 
-            Kapitel 05.04 &gt;&gt;
+            Kapitel 5.4 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -189,9 +190,7 @@
                         
                         Schreiben Sie eine kontextfreie Grammatik für die Sprache aller
                         "korrekten" URLs; also Folgen von mindestens zwei 
-                        |> em
-
-                            Labels
+                        _Labels_
                         , die
                         durch 
                         |> code
@@ -305,9 +304,7 @@
                         hat zwei
                         verschiedene Ableitungsbäume. Können Sie eine äquivalente
                         
-                        |> em
-
-                            eindeutige
+                        _eindeutige_
                         Grammatik schreiben?
                         
                     
@@ -327,9 +324,7 @@
                         *(Challenge)*
                         
                         Die folgende Grammatik hat User 
-                        |> em
-
-                            babou
+                        _babou_
                         
                         auf 
                         |> a
@@ -348,9 +343,7 @@
                         
                         Das ist aber keine Kunst, da die Grammatik uneindeutig ist.
                         Können Sie eine 
-                        |> em
-
-                            eindeutige
+                        _eindeutige_
                         Grammatik angebene, die ähnlich
                         exponentielles Verhalten zeigt? Exponentiell heißt: mit jedem
                         zusätlichen Zeichen des Eingabewortes kann die Größe des
@@ -373,9 +366,7 @@
                         *(Super-Challenge; ich hab selbst keine Lösung)*
                         .
                         Finden Sie eine kontextfreie Sprache \(L\), für die 
-                        |> em
-
-                            jede
+                        _jede_
                         Grammatik,
                         die \(L\) erzeugt, unter exponentiell großen Backtrack-Bäumen leidet.
                         

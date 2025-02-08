@@ -1,42 +1,22 @@
-import desugarers/absorb_next_sibling_while.{absorb_next_sibling_while}
-import desugarers/add_attributes.{add_attributes}
-import desugarers/add_counter_attributes.{add_counter_attributes}
-import desugarers/add_exercise_labels.{add_exercise_labels}
-import desugarers/add_spacer_divs_before.{add_spacer_divs_before}
-import desugarers/add_spacer_divs_between.{add_spacer_divs_between}
-import desugarers/add_title_counters_and_titles_with_handle_assignments.{
-  add_title_counters_and_titles_with_handle_assignments,
-}
-import desugarers/change_attribute_value.{change_attribute_value}
+import desugarers/define_article_output_path
+import desugarers/handles_generate_dictionary
+import desugarers/handles_generate_ids
+import desugarers/handles_substitute
+import desugarers/group_siblings_not_separated_by_blank_lines.{group_siblings_not_separated_by_blank_lines}
+import desugarers/counters_substitute_and_assign_handles.{counters_substitute_and_assign_handles}
 import desugarers/concatenate_text_nodes.{concatenate_text_nodes}
-import desugarers/convert_int_attributes_to_float.{
-  convert_int_attributes_to_float,
-}
-import desugarers/counter.{counter_desugarer}
-import desugarers/counter_handles.{counter_handles_desugarer}
 import desugarers/fold_tag_contents_into_text
 import desugarers/fold_tags_into_text.{fold_tags_into_text}
-import desugarers/free_children.{free_children}
-import desugarers/generate_lbp_table_of_contents.{generate_lbp_table_of_contents}
-import desugarers/group_siblings_not_separated_by_blank_lines.{
-  group_siblings_not_separated_by_blank_lines,
-}
-import desugarers/insert_indent.{insert_indent}
+
 import desugarers/pair_bookends.{pair_bookends}
 import desugarers/prepend_append_to_text_children_of
-import desugarers/remove_empty_chunks.{remove_empty_chunks}
-import desugarers/remove_empty_lines.{remove_empty_lines}
 import desugarers/remove_vertical_chunks_with_no_text_child.{
-  remove_vertical_chunks_with_no_text_child,
-}
+  remove_vertical_chunks_with_no_text_child}
 import desugarers/rename_tag
-import desugarers/rename_when_child_of.{rename_when_child_of}
 import desugarers/split_by_indexed_regexes.{split_by_indexed_regexes}
 import desugarers/surround_elements_by.{surround_elements_by}
 import desugarers/unwrap_tag_when_child_of_tags
 import desugarers/unwrap_tags.{unwrap_tags}
-import desugarers/wrap_math_with_no_break.{wrap_math_with_no_break}
-import gleam/option.{None, Some}
 import infrastructure.{type Pipe} as infra
 
 pub fn our_pipeline() -> List(Pipe) {
@@ -103,13 +83,13 @@ pub fn our_pipeline() -> List(Pipe) {
       [
         "div", "ol", "ul", "h1", "figure", "MathBlock", "Image", "Table",
         "Exercises", "Solution", "Example", "Section", "Exercise", "List",
-        "Grid", "ImageLeft", "ImageRight", "Pause",
+        "Grid", "ImageLeft", "ImageRight", "Pause"
       ],
       "WriterlyBlankLine",
       "WriterlyBlankLine",
     )),
     group_siblings_not_separated_by_blank_lines(
-      #("VerticalChunk", ["MathBlock"]),
+      #("VerticalChunk", ["MathBlock", "a", "figure", "li"]),
     ),
     unwrap_tags(["WriterlyBlankLine"]),
     concatenate_text_nodes(),
@@ -202,11 +182,13 @@ pub fn our_pipeline() -> List(Pipe) {
     fold_tag_contents_into_text.fold_tag_contents_into_text([
       "MathBlock", "Math",
     ]),
-    counter_desugarer(),
-    // generate_id_for_handles(),
-    // define_article_output_path(#("Chapter", "/lecture-notes", "tsx", "path")),
-    // handles_dict_factory_desugarer([#("Chapter", "path")]),
-    counter_handles_desugarer(),
+    counters_substitute_and_assign_handles(),
+    handles_generate_ids.handles_generate_ids(),
+    define_article_output_path.define_article_output_path(
+      #("Chapter", "/lecture-notes", "tsx", "path"),
+    ),
+    handles_generate_dictionary.handles_generate_dictionary([#("Chapter", "path")]),
+    handles_substitute.handles_substitute(),
     // more
     concatenate_text_nodes(),
     // remove_empty_lines(),

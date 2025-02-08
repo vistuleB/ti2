@@ -8,9 +8,10 @@
         |> a
             href 04-05-regular-expressions
 
-            &lt;&lt; Kapitel 04.05
+            &lt;&lt; Kapitel 4.5
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 04-07-exercises
 
-            Kapitel 04.07 &gt;&gt;
+            Kapitel 4.7 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -58,9 +59,7 @@
 
                         Noch spannender, als zu erkunden, was möglich ist, ist aus Sicht eines theoretischen
                         Informatikers, zu erkunden, was 
-                        |> em
-
-                            nicht möglich
+                        _nicht möglich_
                         ist. Also Grenzen aufzuzeigen.
                         Wir haben in den letzten vier Teilkapiteln gezeigt, was man mit regulären Sprachen und endlichen
                         Automaten
@@ -178,13 +177,9 @@
                             ohne
                             das die erzeugte bzw. akzeptierte Sprache sich ändern. Wenn wir nun zeigen wollen:
                             
-                            |> em
-
-                                \(L\) ist nicht regulär
+                            _\(L\) ist nicht regulär_
                             , dann können wir das 
-                            |> em
-
-                                einfachste
+                            _einfachste_
                             Modell nehmen und
                             dagegen argumentieren. Nach meinem Darfürhalten sind endliche Automaten das einfachste der
                             fünf aufgeführten
@@ -285,26 +280,18 @@
                         Das Argument, dass die Sprache \(\{a^nb^n \ | \ n \geq 0\}\) nicht regulär ist, war nicht allzu
                         schwer, fühlt sich
                         aber etwas 
-                        |> em
-
-                            ad hoc
+                        _ad hoc_
                         an, also für diesen Fall maßgeschneidert. Es stellt sich aber heraus,
                         dass man
                         bei 
-                        |> em
-
-                            allen
+                        _allen_
                         nicht-regulären Sprachen ein solches Argument anführen kann. Die Hauptarbeit
                         besteht nun darin, Konzepte wie 
-                        |> em
-
-                            der Automat kann \(\alpha\) nicht von \(\alpha'\)
-                            unterscheiden
+                        _der Automat kann \(\alpha\) nicht von \(\alpha'\)
+                        unterscheiden_
                         
                         und 
-                        |> em
-
-                            der Automat muss aber \(\gamma\) von \(\gamma'\) unterscheiden können
+                        _der Automat muss aber \(\gamma\) von \(\gamma'\) unterscheiden können_
                         zu
                         formalisieren.
                         
@@ -328,9 +315,7 @@
                         Sei \(M= (\Sigma, Q, \qstart, F, \delta\) ein (deterministischer) endlicher Automat. Zwei Wörter
                         \(\alpha, \beta \in \Sigma^* \) sind
                         
-                        |> em
-
-                            \(M\)-äquivalent
+                        _\(M\)-äquivalent_
                         , geschrieben
                         \begin{align*}
                         \alpha \equiv_M \beta \ ,
@@ -378,9 +363,7 @@
                         
                         Sei \(L \subseteq \Sigma^*\) eine Sprache. Zwei Wörter \(\alpha, \beta \in \Sigma^*\) sind
                         
-                        |> em
-
-                            \(L\)-äquivalent
+                        _\(L\)-äquivalent_
                         , geschrieben
                         \begin{align*}
                         \alpha \equiv_L \beta \ ,
@@ -429,13 +412,9 @@
                         \end{align*}
                         Abhängig davon, ob \(q' \in F\) oder nicht, sind \(\alpha\gamma\) und \(\alpha\beta\) entweder
                         
-                        |> em
-
-                            beide in \(L\)
+                        _beide in \(L\)_
                         oder 
-                        |> em
-
-                            beide nicht in \(L\)
+                        _beide nicht in \(L\)_
                         . In anderen Worten: \(\alpha \equiv_L
                         \beta\).
                         
@@ -474,9 +453,7 @@
                             Definition
                         
                         Sei \(L \subseteq \Sigma^*\). Der 
-                        |> em
-
-                            Index von \(L\)
+                        _Index von \(L\)_
                         ist die Anzahl von Äquivalenzklassen
                         der Relation
                         \(\equiv_L\), also die größtmögliche Anzahl gegenseitig nichtäquivalenter Wörter
@@ -610,9 +587,7 @@
                     |> p
 
                         Wie mächtig ist diese "Index-Methode"? Es stellt sich heraus, dass sie 
-                        |> em
-
-                            vollständig
+                        _vollständig_
                         ist:
                         wenn eine Sprache \(L\) endlichen Index hat, dann ist sie auch regulär.
                     
@@ -691,19 +666,13 @@
                             Sehen Sie nun: wenn wir ein anderes \(\alpha' \in A_i\) nehmen,
                             dann gilt \(\alpha' x \equiv_L \alpha x\), also ist auch \(\alpha' x \in A_j\). In anderen
                             Worten: es gibt nur 
-                            |> em
-
-                                eine
+                            _eine_
                             Produktion der Form \(i \step{x} ...\), d.h. die
                             Produktionen
                             sind in der Tat ein 
-                            |> em
-
-                                Funktion
+                            _Funktion_
                             und der Automat ist 
-                            |> em
-
-                                determinisitsch
+                            _determinisitsch_
                             .
                             Als Anfangszustand wählen wir dasjenige \(i\), für das \(\epsilon \in A_i\) gilt.
                             Akzeptierende Zustände sind diejenigen \(j\), für die \(A_j \subseteq L\) gilt. Also:
@@ -794,9 +763,7 @@
                             von \(\alpha\gamma\) ist 0, das viertletzte Zeichen von \(\beta\gamma\) ist 1; also
                             gilt \(\alpha\gamma \in L, \beta\gamma\not \in L\), und somit \(\alpha \not \equiv \beta\).
                             Der Index ist also 
-                            |> em
-
-                                mindestens
+                            _mindestens_
                             16. Das er höchstens 16 ist, sehen wir, indem wir
                             einen
                             determinisitschen Automaten mit 16 Zuständen bauen.

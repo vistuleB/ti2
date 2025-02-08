@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={43}>
+      <Chapter
+        number={43}
+        path="/lecture-notes43.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="07-01-Turing-machines-definition">
-            <Paragraph>
-              &lt;&lt; Kapitel 07.01
-            </Paragraph>
+            &lt;&lt; Kapitel 7.1
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="07-02-Turing-variants">
-            <Paragraph>
-              Kapitel 07.02 &gt;&gt;
-            </Paragraph>
+            Kapitel 7.2 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -99,41 +95,33 @@ const Article = () => {
                   </Paragraph>
                   <ul>
                     <li>
-                      <Paragraph>
-                        <tt>
-                          findA
-                        </tt>
-                        : gehe nach links, bis Du ein \(a\) findest, ersetze es durch \(X\) und
-                        wechsle dann
-                        in{" "}
-                        <tt>
-                          findB
-                        </tt>
-                        . Wenn Du allerdings in ein
-                        \(\square\) läufst, bist Du am linken Rand und es gibt keine \(a\) mehr; wechsle nach
-                      </Paragraph>
-                      <Paragraph>
-                        <tt>
-                          noA
-                        </tt>
-                        und gehe ein Feld nach rechts.
-                      </Paragraph>
+                      <tt>
+                        findA
+                      </tt>
+                      : gehe nach links, bis Du ein \(a\) findest, ersetze es durch \(X\) und
+                      wechsle dann
+                      in{" "}
+                      <tt>
+                        findB
+                      </tt>
+                      . Wenn Du allerdings in ein
+                      \(\square\) läufst, bist Du am linken Rand und es gibt keine \(a\) mehr; wechsle nach
+                      <tt>
+                        noA
+                      </tt>
+                      und gehe ein Feld nach rechts.
                     </li>
                     <li>
-                      <Paragraph>
-                        <tt>
-                          findB
-                        </tt>
-                        : gehe nach rechts, bis Du ein \(b\) gefunden hast; ignoriere
-                        auf dem Weg alle \(a\) und alle \(X\); wenn Du \(b\) liest, ersetze es durch \(X\) und
-                        gehe nach
-                      </Paragraph>
-                      <Paragraph>
-                        <tt>
-                          findC
-                        </tt>
-                        ;jedes andere Zeichen erzeugt einen Fehler.
-                      </Paragraph>
+                      <tt>
+                        findB
+                      </tt>
+                      : gehe nach rechts, bis Du ein \(b\) gefunden hast; ignoriere
+                      auf dem Weg alle \(a\) und alle \(X\); wenn Du \(b\) liest, ersetze es durch \(X\) und
+                      gehe nach
+                      <tt>
+                        findC
+                      </tt>
+                      ;jedes andere Zeichen erzeugt einen Fehler.
                     </li>
                     <Li>
                       <Paragraph>
@@ -150,26 +138,22 @@ const Article = () => {
                       </Paragraph>
                     </Li>
                     <li>
-                      <Paragraph>
-                        <tt>
-                          noA
-                        </tt>
-                        : wir stehen nun am Anfang des Bandinhalts und wissen,
-                        dass es kein \(a\) mehr gibt. Wir müssen jetzt überprüfen, dass es auch keine
-                        \(b,c\) mehr gibt. Also: gehe nach rechts, ignoriere alle \(X\). Wenn Du ein
-                        \(b\) oder \(c\) triffst, gehe nach{" "}
-                        <tt>
-                          reject
-                        </tt>
-                        . Wenn Du ein
-                        \(\square\) triffst, dann besteht das Wort nur noch aus \(X\). Wechsel nach
-                      </Paragraph>
-                      <Paragraph>
-                        <tt>
-                          accept
-                        </tt>
-                        .
-                      </Paragraph>
+                      <tt>
+                        noA
+                      </tt>
+                      : wir stehen nun am Anfang des Bandinhalts und wissen,
+                      dass es kein \(a\) mehr gibt. Wir müssen jetzt überprüfen, dass es auch keine
+                      \(b,c\) mehr gibt. Also: gehe nach rechts, ignoriere alle \(X\). Wenn Du ein
+                      \(b\) oder \(c\) triffst, gehe nach{" "}
+                      <tt>
+                        reject
+                      </tt>
+                      . Wenn Du ein
+                      \(\square\) triffst, dann besteht das Wort nur noch aus \(X\). Wechsel nach
+                      <tt>
+                        accept
+                      </tt>
+                      .
                     </li>
                   </ul>
                   <Paragraph>
@@ -204,16 +188,12 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph>
                       <a href="https://turingmachinesimulator.com">
-                        <Paragraph>
-                          turingmachinesimulator.com
-                        </Paragraph>
+                        turingmachinesimulator.com
                       </a>
                       können Sie Ihre Turingmaschine eingeben und simulieren. Den Text für
                       die gerade beschriebene finden in{" "}
                       <a href="../code/turing machines/aabbcc.txt">
-                        <Paragraph>
-                          aabbcc.txt
-                        </Paragraph>
+                        aabbcc.txt
                       </a>
                       .
                       Generell können Sie Regeln der Form
@@ -281,86 +261,74 @@ const Article = () => {
                   </Paragraph>
                   <ul>
                     <li>
-                      <Paragraph>
-                        <tt>
-                          next
-                        </tt>
-                        : ist der Anfangszustand. Die Maschine steht am linkesten Zeichen.
-                        Ist dieses \(\square\), so haben wir das "leere" Palindrom und wir wechseln
-                        nach{" "}
-                        <tt>
-                          accept
-                        </tt>
-                        . Ist es \(a\), wechseln wir nach{" "}
-                        <tt>
-                          readA
-                        </tt>
-                        und gehen
-                        einen Schritt nach rechts; ist es
-                        \(b\), wechseln wir nach{" "}
-                        <tt>
-                          readB
-                        </tt>
-                        und gehen nach rechts.
-                      </Paragraph>
+                      <tt>
+                        next
+                      </tt>
+                      : ist der Anfangszustand. Die Maschine steht am linkesten Zeichen.
+                      Ist dieses \(\square\), so haben wir das "leere" Palindrom und wir wechseln
+                      nach{" "}
+                      <tt>
+                        accept
+                      </tt>
+                      . Ist es \(a\), wechseln wir nach{" "}
+                      <tt>
+                        readA
+                      </tt>
+                      und gehen
+                      einen Schritt nach rechts; ist es
+                      \(b\), wechseln wir nach{" "}
+                      <tt>
+                        readB
+                      </tt>
+                      und gehen nach rechts.
                     </li>
                     <li>
-                      <Paragraph>
-                        <tt>
-                          readA, readB
-                        </tt>
-                        : wir gehen nach rechts, bis wir ein \(\square\) lesen,
-                        also den rechten Rand erreicht haben, und wechseln dann nach{" "}
-                        <tt>
-                          killA
-                        </tt>
-                        bzw.
-                      </Paragraph>
-                      <Paragraph>
-                        <tt>
-                          killB
-                        </tt>
-                        und gehen einen Schritt nach links.
-                      </Paragraph>
+                      <tt>
+                        readA, readB
+                      </tt>
+                      : wir gehen nach rechts, bis wir ein \(\square\) lesen,
+                      also den rechten Rand erreicht haben, und wechseln dann nach{" "}
+                      <tt>
+                        killA
+                      </tt>
+                      bzw.
+                      <tt>
+                        killB
+                      </tt>
+                      und gehen einen Schritt nach links.
                     </li>
                     <li>
-                      <Paragraph>
-                        <tt>
-                          killA, killB
-                        </tt>
-                        : hier weiß die Turingmaschine, was das linkeste Zeichen war,
-                        und dass dieses bereits gelöscht worden ist. Sie muss nun überprüfen, was
-                        das rechteste Zeichen ist. Wenn es "passt", löschen wir es und wechseln
-                        nach{" "}
-                        <tt>
-                          return
-                        </tt>
-                        ; wenn es "nicht passt", nach{" "}
-                        <tt>
-                          reject
-                        </tt>
-                        ; wenn es
-                        \(\square\) ist, dann haben wir das ganze Wort abgearbeitet und gehen nach
-                      </Paragraph>
-                      <Paragraph>
-                        <tt>
-                          accept
-                        </tt>
-                        .
-                      </Paragraph>
+                      <tt>
+                        killA, killB
+                      </tt>
+                      : hier weiß die Turingmaschine, was das linkeste Zeichen war,
+                      und dass dieses bereits gelöscht worden ist. Sie muss nun überprüfen, was
+                      das rechteste Zeichen ist. Wenn es "passt", löschen wir es und wechseln
+                      nach{" "}
+                      <tt>
+                        return
+                      </tt>
+                      ; wenn es "nicht passt", nach{" "}
+                      <tt>
+                        reject
+                      </tt>
+                      ; wenn es
+                      \(\square\) ist, dann haben wir das ganze Wort abgearbeitet und gehen nach
+                      <tt>
+                        accept
+                      </tt>
+                      .
                     </li>
                     <li>
-                      <Paragraph>
-                        <tt>
-                          return
-                        </tt>
-                        : gehe nach links, bis Du ein \(\square\) findest. Wechsle
-                        dann nach{" "}
-                        <tt>
-                          next
-                        </tt>
-                        .
-                      </Paragraph>
+                      <tt>
+                        return
+                      </tt>
+                      : gehe nach links, bis Du ein \(\square\) findest. Wechsle
+                      dann nach{" "}
+                      <tt>
+                        next
+                      </tt>
+                      .
                     </li>
                   </ul>
                   <figure>
@@ -379,9 +347,7 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <a href="https://turingmachinesimulator.com">
-                      <Paragraph>
-                        turingmachinesimulator.com
-                      </Paragraph>
+                      turingmachinesimulator.com
                     </a>
                     .
                   </Paragraph>
@@ -400,9 +366,7 @@ const Article = () => {
                     </span>
                     Schreiben Sie eine Turingmaschine (auf{" "}
                     <a href="https://turingmachinesimulator.com">
-                      <Paragraph>
-                        turingmachinesimulator.com
-                      </Paragraph>
+                      turingmachinesimulator.com
                     </a>
                     ),
                     die die folgende Sprache \(L \subseteq \&#123;a,b,c\&#125;\) entscheidet:
@@ -418,9 +382,7 @@ const Article = () => {
                     </span>
                     Schreiben Sie auf{" "}
                     <a href="https://turingmachinesimulator.com">
-                      <Paragraph>
-                        turingmachinesimulator.com
-                      </Paragraph>
+                      turingmachinesimulator.com
                     </a>
                     eine Turingmaschine für die Sprache
                     \begin&#123;align*&#125;

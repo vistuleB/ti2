@@ -8,9 +8,10 @@
         |> a
             href 01-04-monotone-circuits
 
-            &lt;&lt; Kapitel 01.04
+            &lt;&lt; Kapitel 1.4
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 01-06-lower-and-upper-bounds
 
-            Kapitel 01.06 &gt;&gt;
+            Kapitel 1.6 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -52,6 +53,8 @@
                         
                         |> span
                             class subChapterTitle
+
+                            1.5 Majority
                         
                         
                     
@@ -393,9 +396,7 @@
                     
                     der exponentielle Laufzeit aufweist, und der effizienten Implementierung mittels
                     
-                    |> em
-
-                        Dynamic Programming
+                    _Dynamic Programming_
                     , bei welchem wir uns die Zwischenergebnisse merken.
                     
                     
@@ -704,9 +705,7 @@
                         Fan-in 2 zu erreichen, müssen wir jedes \(\bigvee\)-Gate durch einen Binärbaum
                         aus normalen \(\vee\)-Gates von Fan-in 2 ersetzen. Dies gibt uns zusätzlich
                         Tiefe \(O(\log n)\) 
-                        |> em
-
-                            pro \(\bigvee\)-Gate
+                        _pro \(\bigvee\)-Gate_
                         ; wir erhalten also insgesamt
                         eine Tiefe von \(O(\log^2 n)\).
                         
@@ -759,9 +758,7 @@
                         
                         Die Beweismethode, die wir verwenden, ist womöglich neu für Sie. Wir verwenden
                         bei der Konstruktion des Schaltkreises 
-                        |> em
-
-                            Zufall
+                        _Zufall_
                         ; am Ende werden
                         wir zeigen, dass dieser zufällige Schaltkreis mit hoher Wahrscheinlichkeit
                         \(\maj_n\) auf allen möglichen \(2^n\) Inputs korrekt berechnen, und folgern
@@ -781,15 +778,11 @@
                             wir nehmen nicht an, dass die Inputs \(x \in \{0,1\}^n \) in irgendeiner
                             Weise zufällig sind. Wir verwenden also
                             
-                            |> em
-
-                                Wahrscheinlichkeitsverteilungen über Schaltkreisen
+                            _Wahrscheinlichkeitsverteilungen über Schaltkreisen_
                             , nicht
                             von über Inputs. Zuerst definieren wir
                             die 
-                            |> em
-
-                                Signalstärke
+                            _Signalstärke_
                             von Verteilungen über Schaltkreise.
                             
                         
@@ -806,9 +799,7 @@
                             
                             Sei \(\mathcal{C}\) eine Verteilung über Schaltkreise mit Input-Variablen
                             \(x_1,\dots,x_n\). Wir sagen, dass \(\mathcal{C}\) 
-                            |> em
-
-                                Signalstärke mindestens $\delta$
+                            _Signalstärke mindestens $\delta$_
                             
                             hat, wenn
                             $$
@@ -907,9 +898,7 @@
 
                             Um eine Analogie aus dem Alltag zu bemühen: wenn Sie für eine
                             Wahlprognose 
-                            |> em
-
-                                einen
+                            _einen_
                             zufällig ausgewählten Bürger befragen, so
                             ist das Ergebnis zwar nicht wirklich repräsentativ, aber immerhin leicht
                             besser, als wenn Sie einfach raten würden. Unser zufälliger
@@ -927,9 +916,7 @@
                             \Pr_{C \sim \mathcal{C}} [C(\x) = \maj_n(\x)] \geq \frac{1+\delta}{2} \ .
                             $$
                             Dann können wir 
-                            |> em
-
-                                drei
+                            _drei_
                             Schaltkreise
                             \(C_1, C_2, C_3 \sim \mathcal{C}\) unabhängig voneinander samplen und
                             einen neuen Schaltkreis bauen: \(C'(\x) := \maj_3 (C_1(\x), C_2(\x), C_3(\x))\). Dies gibt
@@ -998,9 +985,7 @@
                                 $C_1, C_2, C_3 \sim \mathcal{C}$ zufällige Schaltkreise sind, sind $U, V, W$
                                 Zufallsvariable
                                 über $\cube$, und zwar 
-                                |> em
-
-                                    unabhängig
+                                _unabhängig_
                                 , weil wir $C_1, C_2, C-3$ auch unabhängig
                                 gesampelt haben. Wir wissen: $\Pr[U=1] = \Pr[V=1] = \Pr[W=1] \geq \frac{1+\delta}{2} =:
                                 p$.
@@ -1067,9 +1052,7 @@
                             führen wir einen Parameterwechsel durch: eine Verteilung $\mathcal{C}$ von Schaltkreisen
                             mit Inputs $x_1,\dots,x_n$
                             hat 
-                            |> em
-
-                                Fehlerwahrscheinlichkeit $\epsilon$
+                            _Fehlerwahrscheinlichkeit $\epsilon$_
                             , wenn
                             
                         
@@ -1164,14 +1147,10 @@
                             Qualitativ sehen wir: solange $\delta_i \leq 1/2$ gilt, wächst die Signalstärke exponentiell
                             an. Dieses exponentielle Wachstum kann natürlich nicht beliebig weitergehen. Jenseits
                             $\delta_i \leq 1/2$ hört das auf, dafür 
-                            |> em
-
-                                fällt
+                            _fällt_
                             nun die Fehlerwahrscheinlichkeit
                             
-                            |> em
-
-                                doppelt exponentiell
+                            _doppelt exponentiell_
                             . Für $j^* := \log_{3/2} n$ gilt dann
                             
                         
@@ -1266,9 +1245,7 @@
                             Die Verteilung $\mathcal{C}_k$ existiert ja im Wahrscheinlichkeitsraum aller
                             Boolescher Schaltkreise mit Inputs $x_1,\dots, x_n$. Die Menge $E_{\b}$
                             ist somit ein 
-                            |> em
-
-                                Ereignis
+                            _Ereignis_
                             in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
                             
                         
@@ -1372,9 +1349,7 @@
                         
                         Wir könnten nun noch ehrgeiziger sein und einen monotonen Schaltkreis mit Fan-in 2,
                         Tiefe $O(\log n)$ und 
-                        |> em
-
-                            linearer
+                        _linearer_
                         Größe $O(n)$ anstreben.
                         
                     

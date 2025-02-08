@@ -8,9 +8,10 @@
         |> a
             href 07-02-Turing-variants
 
-            &lt;&lt; Kapitel 07.02
+            &lt;&lt; Kapitel 7.2
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 07-03-Turing-universal
 
-            Kapitel 07.03 &gt;&gt;
+            Kapitel 7.3 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -98,14 +99,10 @@
                         die Rechenvorschrift (das Programm) als Eingabe übergibt. Hätte man so eine Maschine, dann
                         müsste man nicht für jede neue Aufgabe
                         eine neue Maschine entwerfen; man könnte 
-                        |> em
-
-                            eine
+                        _eine_
                         Maschine bauen und sie für die jeweilige
                         Aufgabe 
-                        |> em
-
-                            programmieren
+                        _programmieren_
                         , indem
                         ihr auf einem separaten Eingabeband die Rechenvorschrift überreicht. Von heute aus gesehen ist
                         diese Idee nicht mehr allzu überraschend, weil
@@ -295,9 +292,7 @@
                         Zustandsmenge \(Q\) und
                         dem Bandalphabet \(\Gamma\) jeweils neue Alphabete. Wir wollen aber ein \(\Lambda\), da für
                         
-                        |> em
-
-                            alle
+                        _alle_
                         Turingmaschinen
                         mit Eingabealphabet \(\Sigma\) funktioniert.
                         
@@ -339,9 +334,7 @@
                     |> p
 
                         Wenn wir dies nun als 
-                        |> em
-
-                            ein
+                        _ein_
                         Wort in obigen Schema schreiben, können wir für eine
                         Tabellenzelle
                         \(\delta(q,x) = (r,y,R)\) nicht einfach \(qxryR\) schreiben, auch nicht einfach die Codierungen
@@ -391,9 +384,7 @@
 
                         
                         Wir können nun 
-                        |> em
-
-                            jede
+                        _jede_
                         Turingmaschine
                         über dem Alphabet
                         \(\Sigma\) codieren als Wort über dem Alphabet
@@ -416,9 +407,7 @@
                                 Definition/Beobachtung.
                             Zu einem Eingabealphabet
                             $\Sigma$ definieren wir das 
-                            |> em
-
-                                Codierungsalphabet
+                            _Codierungsalphabet_
                             
                             $\Lambda := \writelambda$,
                             wobei wir annehmen, dass $\texttt{#}, \texttt{,}, \texttt{L}, \texttt{S}, \texttt{R},
@@ -438,9 +427,7 @@
                         *Anmerkungen:*
                          
                         das Wort 
-                        |> em
-
-                            Codierung
+                        _Codierung_
                         suggeriert, dass wir, gegeben
                         den String $c = \enc(M)$ die
                         ursprüngliche Turingmaschine $M$ rekonstruieren können. Das gilt natürlich nur

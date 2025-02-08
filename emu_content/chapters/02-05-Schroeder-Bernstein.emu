@@ -8,9 +8,10 @@
         |> a
             href 02-04-diagonalization
 
-            &lt;&lt; Kapitel 02.04
+            &lt;&lt; Kapitel 2.4
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 02-06-Trichotomiesatz
 
-            Kapitel 02.06 &gt;&gt;
+            Kapitel 2.6 &gt;&gt;
     |> div
         style display:none
         id mathjax-definitions

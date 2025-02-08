@@ -8,9 +8,10 @@
         |> a
             href 07-07-PCP-applications
 
-            &lt;&lt; Kapitel 07.07
+            &lt;&lt; Kapitel 7.7
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 08-01-Time-hierarchy-theorem
 
-            Kapitel 08.01 &gt;&gt;
+            Kapitel 8.1 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -63,14 +64,10 @@
                         
                         Turingmaschinen erlauben uns, den Resourcenverbrauch einer Berechnung zu quantifizieren:
                         zum einen die 
-                        |> em
-
-                            Zeit
+                        _Zeit_
                         , also die Anzahl der Schritte, die die Turingmaschine
                         durchführt, bis sie anhält; zum anderen der 
-                        |> em
-
-                            Speicherplatz
+                        _Speicherplatz_
                         , also die Anzahl
                         der Zellen auf dem Band (oder den Bändern), die im Verlauf der Berechnung beschrieben werden.
                         Beides sind Maße, die tatsächlich im echten Leben relevant sind. Turingmaschinen erlauben uns,
@@ -105,9 +102,7 @@
                             Bei verteilten Anwendungen (Cloud Computing) ist
                             die limitierende Resource eventuell gar nicht die Rechenkapazität sondern das
                             
-                            |> em
-
-                                Netzwerk
+                            _Netzwerk_
                             , über
                             das die Daten ausgetauscht werden.
                             
@@ -121,9 +116,7 @@
                         Also: Turingmaschinen sind zwar universell in dem Sinne, dass sie wohl alle physikalisch
                         realisierbaren
                         Rechnermodelle simulieren können (ich sage 
-                        |> em
-
-                            wohl
+                        _wohl_
                         , weil wir nicht wissen, was alles
                         physikalisch realisierbar ist). Allerdings ist es möglich, dass Sie, abhängig von Ihrem
                         Anwendungsfeld, ein abgewandeltes oder völlig anderes Modell benötigen, um den
@@ -135,9 +128,7 @@
 
                         
                         Dennoch: in diesem Kapitel beschränken wir uns auf die Resource 
-                        |> em
-
-                            Zeit
+                        _Zeit_
                         , und daher
                         sind Turingmaschinen das Modell der Wahl.
                         
@@ -171,9 +162,7 @@
                             Sei $t: \N \rightarrow \N$. Eine
                             Turingmaschinen $M$
                             
-                            |> em
-
-                                entscheidet
+                            _entscheidet_
                             eine Sprache $L \subseteq \Sigma^*$ in Zeit $t$ wenn
                             
                         

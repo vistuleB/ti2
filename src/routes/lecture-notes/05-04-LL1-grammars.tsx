@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={32}>
+      <Chapter
+        number={32}
+        path="/lecture-notes32.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="05-03-exercise-design-grammars">
-            <Paragraph>
-              &lt;&lt; Kapitel 05.03
-            </Paragraph>
+            &lt;&lt; Kapitel 5.3
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="05-05-a-LR-parsing-by-hand">
-            <Paragraph>
-              Kapitel 05.05 &gt;&gt;
-            </Paragraph>
+            Kapitel 5.5 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -53,10 +49,12 @@ const Article = () => {
                   <Paragraph>
                     Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik.
                     Eine Wortform \(A \alpha\) - also eine Wortform, die mit einem Nichtterminal beginnt -
-                    heißt{" "}
-                    <em>
+                    heißt 
+                    {" "}
+                    <i>
                       Grenzform
-                    </em>
+                    </i>
+                    {" "}
                     , wenn es ein \(w \in \Sigma^*\) gibt, so dass
                     es eine Linksableitung
                     \begin&#123;align*&#125;
@@ -136,9 +134,13 @@ const Article = () => {
                     </span>
                     Negieren Sie die Definition, d.h., schreiben Sie eine Aussage der Form
                   </Paragraph>
-                  <em>
-                    Wenn \(G\) nicht LL(\(k\)) ist, dann gibt es...
-                  </em>
+                  <Paragraph>
+                    {" "}{" "}
+                    <i>
+                      Wenn \(G\) nicht LL(\(k\)) ist, dann gibt es...
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
                 </div>
                 <div class="well container theorem">
                   <Paragraph>
@@ -230,10 +232,12 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Wenn umgekehrt eine Grammatik{" "}
-                    <em>
+                    Wenn umgekehrt eine Grammatik 
+                    {" "}
+                    <i>
                       nicht
-                    </em>
+                    </i>
+                    {" "}
                     LL(\(k\)) ist, dann muss der Backtrack-Baum
                     beiden Ableitungen
                     \begin&#123;align*&#125;
@@ -250,10 +254,12 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    (Beispiel 5.3 aus{" "}
-                    <em>
+                    (Beispiel 5.3 aus 
+                    {" "}
+                    <i>
                       The Theory of Parsing, Translation, and Compiling
-                    </em>
+                    </i>
+                    {" "}
                     von Alfred V. Aho
                     und Jeffrey D. Ullman).
                     Betrachten wir die Grammatik
@@ -309,9 +315,11 @@ const Article = () => {
                     also Wörter, wo auf beliebig viele \(a\)'s eine Folge von
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       höchstens
-                    </em>
+                    </i>
+                    {" "}
                     so vielen \(b\)'s folgt.
                   </Paragraph>
                   <Paragraph>
@@ -320,9 +328,7 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph>
                       <a href="../../demos/drawManualGrammar.html">
-                        <Paragraph>
-                          Parser-Simulator
-                        </Paragraph>
+                        Parser-Simulator
                       </a>
                       ein und finden Wörter mit langen Sackgassen.
                     </Paragraph>
@@ -354,9 +360,7 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph>
                       <a href="../../demos/drawManualGrammar.html">
-                        <Paragraph>
-                          Parser-Simulator
-                        </Paragraph>
+                        Parser-Simulator
                       </a>
                       ein
                       und schauen, wie lang die Sackgassen werden können.
@@ -384,9 +388,11 @@ const Article = () => {
                   Verallgemeinerung von \(\first_k\) von Wörtern auf
                 </Paragraph>
                 <Paragraph>
-                  <em>
+                  {" "}{" "}
+                  <i>
                     Wortformen
-                  </em>
+                  </i>
+                  {" "}
                   (die also Nichtterminale beinhalten können).
                 </Paragraph>
                 <div class="well container theorem">
@@ -493,17 +499,21 @@ const Article = () => {
                     i \alpha)
                     \end&#123;align*&#125;
                     da ja nach obiger Beobachtung diese Mengen disjunkt sind. Wenn
-                    \(\first_k(y)\) in{" "}
-                    <em>
+                    \(\first_k(y)\) in 
+                    {" "}
+                    <i>
                       keiner
-                    </em>
+                    </i>
+                    {" "}
                     dieser Mengen enthalten ist, so
                     kann die Ableitung offensichtlich nicht vervollständigt werden, und wir schließen,
                     dass \(xy \not \in L(G)\) ist.
-                    Wenn es{" "}
-                    <em>
+                    Wenn es 
+                    {" "}
+                    <i>
                       genau ein
-                    </em>
+                    </i>
+                    {" "}
                     \(\beta_i\) gibt mit
                     \(\first_k(y) \in \first_k(\beta_i \alpha)\), dann ist
                     \(A \rightarrow \beta_i\) die "richtige" Produktion.
@@ -528,66 +538,46 @@ const Article = () => {
                   </Paragraph>
                   <ol class="nested">
                     <li>
-                      <Paragraph>
-                        Lege \(S\texttt&#123;\$&#125;\) auf den Stack.
-                      </Paragraph>
+                      Lege \(S\texttt&#123;\$&#125;\) auf den Stack.
                     </li>
                     <li>
-                      <Paragraph>
-                        <tt>
-                          while
-                        </tt>
-                        Stack nicht leer
-                      </Paragraph>
+                      <tt>
+                        while
+                      </tt>
+                      Stack nicht leer
                     </li>
                     <ol class="nested">
                       <li>
-                        <Paragraph>
-                          Sei \(y\) das Resteingabewort.
-                        </Paragraph>
+                        Sei \(y\) das Resteingabewort.
                       </li>
                       <li>
-                        <Paragraph>
-                          Wenn das oberste Symbol auf dem Stack ein Terminalsymbol \(c\) ist:
-                        </Paragraph>
+                        Wenn das oberste Symbol auf dem Stack ein Terminalsymbol \(c\) ist:
                         <ul>
                           <li>
-                            <Paragraph>
-                              Lies das nächste Eingabesymbol \(c'\).
-                            </Paragraph>
+                            Lies das nächste Eingabesymbol \(c'\).
                           </li>
                           <li>
-                            <Paragraph>
-                              Wenn \(c = c'\), poppe \(c\) vom Stack;
-                            </Paragraph>
+                            Wenn \(c = c'\), poppe \(c\) vom Stack;
                           </li>
                           <li>
-                            <Paragraph>
-                              ansonsten{" "}
-                              <tt>
-                                Reject
-                              </tt>
-                              .
-                            </Paragraph>
+                            ansonsten{" "}
+                            <tt>
+                              Reject
+                            </tt>
+                            .
                           </li>
                         </ul>
                       </li>
                       <li>
-                        <Paragraph>
-                          Wenn das oberste Symbol auf dem Stack ein Nichtterminalsymbol
-                          \(A\) ist:
-                        </Paragraph>
+                        Wenn das oberste Symbol auf dem Stack ein Nichtterminalsymbol
+                        \(A\) ist:
                         <ol class="nested">
                           <li>
-                            <Paragraph>
-                              Schreibe den Stack als \(A \alpha\)
-                            </Paragraph>
+                            Schreibe den Stack als \(A \alpha\)
                           </li>
                           <li>
-                            <Paragraph>
-                              Seien \(A \rightarrow \beta_1, \dots, A \rightarrow \beta_l\)
-                              alle Produktionen mit \(A\) auf der linken Seite.
-                            </Paragraph>
+                            Seien \(A \rightarrow \beta_1, \dots, A \rightarrow \beta_l\)
+                            alle Produktionen mit \(A\) auf der linken Seite.
                           </li>
                           <li>
                             <span style="color:red; font-weight: bold;">
@@ -596,44 +586,36 @@ const Article = () => {
                             </span>
                             <ul>
                               <li>
-                                <Paragraph>
-                                  Wenn es genau eine solche Produktion
-                                  \(A \rightarrow \beta_i\) gibt: wende Sie an; es ist die richtige
-                                  Produktion.
-                                </Paragraph>
+                                Wenn es genau eine solche Produktion
+                                \(A \rightarrow \beta_i\) gibt: wende Sie an; es ist die richtige
+                                Produktion.
                               </li>
                               <li>
-                                <Paragraph>
-                                  Wenn es keine gibt:{" "}
-                                  <tt>
-                                    Reject
-                                  </tt>
-                                  . Das Wort kann nicht
-                                  abgeleitet werden.
-                                </Paragraph>
+                                Wenn es keine gibt:{" "}
+                                <tt>
+                                  Reject
+                                </tt>
+                                . Das Wort kann nicht
+                                abgeleitet werden.
                               </li>
                               <li>
-                                <Paragraph>
-                                  Wenn es mehrere gibt: ende mit einem Laufzeitfehler;
-                                  die Grammatik ist nicht LL\((k)\).
-                                </Paragraph>
+                                Wenn es mehrere gibt: ende mit einem Laufzeitfehler;
+                                die Grammatik ist nicht LL\((k)\).
                               </li>
                             </ul>
                           </li>
                         </ol>
                       </li>
                       <li>
-                        <Paragraph>
-                          Wenn das oberste Symbol \(\texttt&#123;\$&#125;\) ist:
-                          wenn Eingabewort zu Ende{" "}
-                          <tt>
-                            Accept
-                          </tt>
-                          ansonsten{" "}
-                          <tt>
-                            Reject
-                          </tt>
-                        </Paragraph>
+                        Wenn das oberste Symbol \(\texttt&#123;\$&#125;\) ist:
+                        wenn Eingabewort zu Ende{" "}
+                        <tt>
+                          Accept
+                        </tt>
+                        ansonsten{" "}
+                        <tt>
+                          Reject
+                        </tt>
                       </li>
                     </ol>
                   </ol>
@@ -772,29 +754,23 @@ const Article = () => {
                   </Paragraph>
                   <ol class="nested">
                     <li>
-                      <Paragraph>
-                        Initialisiere \(K := \&#123;\epsilon\&#125;\)
-                      </Paragraph>
+                      Initialisiere \(K := \&#123;\epsilon\&#125;\)
                     </li>
                     <li>
-                      <Paragraph>
-                        <tt>
-                          for
-                        </tt>
-                        \(i=n\){" "}
-                        <tt>
-                          down to
-                        </tt>
-                        1{" "}
-                        <tt>
-                          do:
-                        </tt>
-                      </Paragraph>
+                      <tt>
+                        for
+                      </tt>
+                      \(i=n\){" "}
+                      <tt>
+                        down to
+                      </tt>
+                      1{" "}
+                      <tt>
+                        do:
+                      </tt>
                       <ul class="nested">
                         <li>
-                          <Paragraph>
-                            \(K := \First_k(\sigma_i) \circ_k K \)
-                          </Paragraph>
+                          \(K := \First_k(\sigma_i) \circ_k K \)
                           <span class="comment">
                             // \(K\) ist jetzt
                             \(\First_k(\sigma_i) \circ_k \dots \circ_k \First_k(\sigma_n)\)
@@ -803,12 +779,10 @@ const Article = () => {
                       </ul>
                     </li>
                     <li>
-                      <Paragraph>
-                        <tt>
-                          return
-                        </tt>
-                        \(K\)
-                      </Paragraph>
+                      <tt>
+                        return
+                      </tt>
+                      \(K\)
                     </li>
                   </ol>
                   <Paragraph>
@@ -876,16 +850,20 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     In solchen Situationen, wo sich "die Katze in den Schwanz beißt", hilft es oft, die Definition
-                    vorerst{" "}
-                    <em>
+                    vorerst 
+                    {" "}
+                    <i>
                       komplexere
-                    </em>
+                    </i>
+                    {" "}
                     un
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       genauer
-                    </em>
+                    </i>
+                    {" "}
                     zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
                     \(\First_k(\alpha)\), noch eine feinere
                     Unterteilung an:

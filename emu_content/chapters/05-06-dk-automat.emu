@@ -8,9 +8,10 @@
         |> a
             href 05-05-d-linker-Rand-und-Bluete
 
-            &lt;&lt; Kapitel 05.05
+            &lt;&lt; Kapitel 5.5
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,5 +19,5 @@
         |> a
             href 05-09-general-parsing
 
-            Kapitel 05.09 &gt;&gt;
+            Kapitel 5.9 &gt;&gt;
     |> div

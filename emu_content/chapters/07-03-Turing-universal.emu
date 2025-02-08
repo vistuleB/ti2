@@ -8,9 +8,10 @@
         |> a
             href 07-03-Turing-encoding
 
-            &lt;&lt; Kapitel 07.03
+            &lt;&lt; Kapitel 7.3
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 07-05-undecidability
 
-            Kapitel 07.05 &gt;&gt;
+            Kapitel 7.5 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -110,24 +111,16 @@
                         die Konfigurationen von $M$ darstellen können in dem Alphabet $\Lambda$,
                         das
                         
-                        |> em
-
-                            unabhängig
+                        _unabhängig_
                         von $M$ ist. Dass wir also 
-                        |> em
-
-                            jede
+                        _jede_
                         
                         Turingmaschine
                         $M$ mit Eingabealphabet $\Sigma$ und 
-                        |> em
-
-                            jede
+                        _jede_
                         ihrer Konfigurationen
                         als Strings über 
-                        |> em
-
-                            einem
+                        _einem_
                         festen Alphabet $\Lambda$ darstellen
                         können.
                         

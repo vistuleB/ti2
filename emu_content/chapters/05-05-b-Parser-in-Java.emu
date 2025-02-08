@@ -8,9 +8,10 @@
         |> a
             href 05-05-a-LR-parsing-by-hand
 
-            &lt;&lt; Kapitel 05.05
+            &lt;&lt; Kapitel 5.5
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 05-05-c-LR-grammars
 
-            Kapitel 05.05 &gt;&gt;
+            Kapitel 5.5 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -106,9 +107,7 @@
                         den einzelnen Produktionen Namen gegeben, bis auf die der Form $D \rightarrow i$.
                         Was soll nun unser Parser tun? Er soll, gegeben ein Eingabewort $w \in L$, den
                         
-                        |> em
-
-                            Ableitungsbaum
+                        _Ableitungsbaum_
                         konstruieren, für 
                         |> tt
 
@@ -134,9 +133,7 @@
                         Wie wir diesen Baum in Java repräsentieren, darüber sprechen wir in einer Minute.
                         Zuerst aber: wir wollen mit diesem Baum etwas Sinnvolles tun. Zum Beispiel
                         
-                        |> em
-
-                            auswerten
+                        _auswerten_
                         , so dass am Ende eine Zahl rauskommt, im obigen Beispiel
                         also $(31 + 402) \cdot 83 = 35939$. Oder den Ausdruck umformen von
                         Infix-Notation zu Präfixnotation, also

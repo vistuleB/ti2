@@ -8,9 +8,10 @@
         |> a
             href 05-04-LL1-grammars
 
-            &lt;&lt; Kapitel 05.04
+            &lt;&lt; Kapitel 5.4
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 05-05-b-Parser-in-Java
 
-            Kapitel 05.05 &gt;&gt;
+            Kapitel 5.5 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -123,12 +124,10 @@
 
                             
                             also 
-                            |> em
-
-                                beliebig viele $a$'s, gefolgt von gleich vielen oder weniger $b$'s (aber mindestens
-                                einem), abgeschlossen
-                                mit einem $c$
-                                
+                            _beliebig viele $a$'s, gefolgt von gleich vielen oder weniger $b$'s (aber mindestens
+                            einem), abgeschlossen
+                            mit einem $c$
+                            _
                             . Eine
                             Grammatik ist schnell geschrieben:
                             
@@ -169,9 +168,7 @@
                         links stehende Nichtterminal eine Regel zu finden. Wir beschreiben nun ein ganz anderes
                         Vorgehen: wir lesen das Eingabewort $v$ von links nach rechts, unterhalten also
                         einen 
-                        |> em
-
-                            Stack
+                        _Stack_
                         , auf dem ein Präfix $\gamma$ von $v$ liegt,
                         bis wir am rechten Ende die rechte Seite einer Produktionsregel erkennen - bis also
                         $\gamma = \alpha \beta$ und es eine Produktion $X \rightarrow \beta$ gibt. Dann ersetzen
@@ -859,9 +856,7 @@
                         umgekehrter
                         Reihenfolge. Statt von $S$ ausgehend $w$ abzuleiten, also $S \Step{}^* w$, versuchen
                         wir $w$ zu $S$ zu 
-                        |> em
-
-                            reduzieren
+                        _reduzieren_
                         , also $w \Pets{}^* S$.
                         Allerdings ist das nicht immer so einfach: manchmal ist nicht auf den ersten Blick erkennbar,
                         welche Produktionsregel wir (rückwärts) anwenden sollen. Hier ein etwas konstruiertes Beispiel:
@@ -965,9 +960,7 @@
                         Das hängt von der Grammatik ab. Aber selbst dann brauchen wir einen Algorithmus, der
                         uns sagen kann, ob $XYa \Pets{} XYY$ ein korrekter Reduktionsschritt ist. Dies scheint
                         komplexer, als $w \stackrel{?}{\in} L$ zu entscheiden, ist aber 
-                        |> em
-
-                            einfacher
+                        _einfacher_
                         !
                         
                     

@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={21}>
+      <Chapter
+        number={21}
+        path="/lecture-notes21.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="04-00-formal-languages">
-            <Paragraph>
-              &lt;&lt; Kapitel 04.00
-            </Paragraph>
+            &lt;&lt; Kapitel 4.0
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="04-02-finite-state-machines">
-            <Paragraph>
-              Kapitel 04.02 &gt;&gt;
-            </Paragraph>
+            Kapitel 4.2 &gt;&gt;
           </a>
         </div>
         <div />

@@ -8,9 +8,10 @@
         |> a
             href 05-03-exercise-design-grammars
 
-            &lt;&lt; Kapitel 05.03
+            &lt;&lt; Kapitel 5.3
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 05-05-a-LR-parsing-by-hand
 
-            Kapitel 05.05 &gt;&gt;
+            Kapitel 5.5 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -68,9 +69,7 @@
                         Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik.
                         Eine Wortform \(A \alpha\) - also eine Wortform, die mit einem Nichtterminal beginnt -
                         heißt 
-                        |> em
-
-                            Grenzform
+                        _Grenzform_
                         , wenn es ein \(w \in \Sigma^*\) gibt, so dass
                         es eine Linksableitung
                         \begin{align*}
@@ -163,9 +162,7 @@
                         
                         Negieren Sie die Definition, d.h., schreiben Sie eine Aussage der Form
                         
-                        |> em
-
-                            Wenn \(G\) nicht LL(\(k\)) ist, dann gibt es...
+                        _Wenn \(G\) nicht LL(\(k\)) ist, dann gibt es..._
                         
                         
                     
@@ -270,9 +267,7 @@
                     |> p
 
                         Wenn umgekehrt eine Grammatik 
-                        |> em
-
-                            nicht
+                        _nicht_
                         LL(\(k\)) ist, dann muss der Backtrack-Baum
                         beiden Ableitungen
                         \begin{align*}
@@ -298,9 +293,7 @@
                         
                         
                         (Beispiel 5.3 aus 
-                        |> em
-
-                            The Theory of Parsing, Translation, and Compiling
+                        _The Theory of Parsing, Translation, and Compiling_
                         von Alfred V. Aho
                         und Jeffrey D. Ullman).
                         Betrachten wir die Grammatik
@@ -369,9 +362,7 @@
                         \end{align*}
                         also Wörter, wo auf beliebig viele \(a\)'s eine Folge von
                         
-                        |> em
-
-                            höchstens
+                        _höchstens_
                         so vielen \(b\)'s folgt.
                         
                         
@@ -462,9 +453,7 @@
                     Wir tasten uns langsam voran. Wir beginnen mit einer
                     Verallgemeinerung von \(\first_k\) von Wörtern auf
                     
-                    |> em
-
-                        Wortformen
+                    _Wortformen_
                     (die also Nichtterminale beinhalten können).
                     
                     |> div
@@ -558,16 +547,12 @@
                         \end{align*}
                         da ja nach obiger Beobachtung diese Mengen disjunkt sind. Wenn
                         \(\first_k(y)\) in 
-                        |> em
-
-                            keiner
+                        _keiner_
                         dieser Mengen enthalten ist, so
                         kann die Ableitung offensichtlich nicht vervollständigt werden, und wir schließen,
                         dass \(xy \not \in L(G)\) ist.
                         Wenn es 
-                        |> em
-
-                            genau ein
+                        _genau ein_
                         \(\beta_i\) gibt mit
                         \(\first_k(y) \in \first_k(\beta_i \alpha)\), dann ist
                         \(A \rightarrow \beta_i\) die "richtige" Produktion.
@@ -986,14 +971,10 @@
                         
                         In solchen Situationen, wo sich "die Katze in den Schwanz beißt", hilft es oft, die Definition
                         vorerst 
-                        |> em
-
-                            komplexere
+                        _komplexere_
                         un
                         
-                        |> em
-
-                            genauer
+                        _genauer_
                         zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
                         \(\First_k(\alpha)\), noch eine feinere
                         Unterteilung an:

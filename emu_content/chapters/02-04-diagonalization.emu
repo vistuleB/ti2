@@ -8,9 +8,10 @@
         |> a
             href 02-03-sets-like-R
 
-            &lt;&lt; Kapitel 02.03
+            &lt;&lt; Kapitel 2.3
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,5 +19,5 @@
         |> a
             href 02-05-Schroeder-Bernstein
 
-            Kapitel 02.05 &gt;&gt;
+            Kapitel 2.5 &gt;&gt;
     |> div

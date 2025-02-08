@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={25}>
+      <Chapter
+        number={25}
+        path="/lecture-notes25.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="04-04-regular-grammar-to-fsm">
-            <Paragraph>
-              &lt;&lt; Kapitel 04.04
-            </Paragraph>
+            &lt;&lt; Kapitel 4.4
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="04-06-limitations-of-regular-grammars">
-            <Paragraph>
-              Kapitel 04.06 &gt;&gt;
-            </Paragraph>
+            Kapitel 4.6 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -42,18 +38,18 @@ const Article = () => {
                     Wir werden nun eine weitere Weise finden, reguläre Sprachen zu beschreiben: neben regulären
                     Grammatik (ob normal, erweitert, eingeschränkt),
                     endlichen Automaten und nichtdeterministischen endlichen Automaten
-                    gibt es noch die{" "}
-                    <em>
+                    gibt es noch die 
+                    {" "}
+                    <i>
                       regulären Ausdrücke
-                    </em>
+                    </i>
+                    {" "}
                     . Dies wird wahrscheinlich von allen
                     Beschreibungsweise die sein, mit der Sie in der Praxis
                     am ehesten in Berührung kommen.
                     Wir haben bereits in{" "}
                     <a href="./04-01-regular-grammars.html#baukasten">
-                      <Paragraph>
-                        Kapitel 4.1
-                      </Paragraph>
+                      Kapitel 4.1
                     </a>
                     das
                     Baukastenprinzip kennengelernt:
@@ -61,43 +57,37 @@ const Article = () => {
                 </Paragraph>
                 <ol>
                   <li>
-                    <Paragraph>
-                      Wenn \(L_1\) und \(L_2\) reguläre Sprachen sind, dann ist \(L_1 \cup L_2\) auch regulär;
-                    </Paragraph>
+                    Wenn \(L_1\) und \(L_2\) reguläre Sprachen sind, dann ist \(L_1 \cup L_2\) auch regulär;
                   </li>
                   <li>
-                    <Paragraph>
-                      dann ist auch die Konkatenation
-                      \begin&#123;align*&#125;
-                      L
-                      <i>
-                        1 \circ L
-                      </i>
-                      2 := \&#123;\alpha \beta \ | \alpha \in L
-                      <i>
-                        1, \beta \in L
-                      </i>
-                      2\&#125;
-                      \end&#123;align*&#125;
-                      regulär;
-                    </Paragraph>
+                    dann ist auch die Konkatenation
+                    \begin&#123;align*&#125;
+                    L
+                    <i>
+                      1 \circ L
+                    </i>
+                    2 := \&#123;\alpha \beta \ | \alpha \in L
+                    <i>
+                      1, \beta \in L
+                    </i>
+                    2\&#125;
+                    \end&#123;align*&#125;
+                    regulär;
                   </li>
                   <li>
-                    <Paragraph>
-                      wenn \(L\) regulär ist, dann ist auch ihre Kleenesche Hülle
-                      \begin&#123;align*&#125;
-                      L^* := \&#123; \alpha
-                      <i>
-                        1 \dots \alpha
-                      </i>
-                      n \ | \ n \geq 0, \alpha
-                      <i>
-                        1,\dots,\alpha
-                      </i>
-                      n \in L\&#125;
-                      \end&#123;align*&#125;
-                      regulär.
-                    </Paragraph>
+                    wenn \(L\) regulär ist, dann ist auch ihre Kleenesche Hülle
+                    \begin&#123;align*&#125;
+                    L^* := \&#123; \alpha
+                    <i>
+                      1 \dots \alpha
+                    </i>
+                    n \ | \ n \geq 0, \alpha
+                    <i>
+                      1,\dots,\alpha
+                    </i>
+                    n \in L\&#125;
+                    \end&#123;align*&#125;
+                    regulär.
                   </li>
                 </ol>
                 <Paragraph>
@@ -116,29 +106,31 @@ const Article = () => {
                     {" "}{" "}
                   </Paragraph>
                   <Paragraph>
-                    Können{" "}
-                    <em>
+                    Können 
+                    {" "}
+                    <i>
                       alle
-                    </em>
+                    </i>
+                    {" "}
                     regulären Sprachen nach diesem Baukastenprinzip erstellt werden?
                   </Paragraph>
                 </div>
                 <Paragraph>
                   <Paragraph>
-                    Damit diese Frage überhaupt die Chance hat, mit{" "}
-                    <em>
+                    Damit diese Frage überhaupt die Chance hat, mit 
+                    {" "}
+                    <i>
                       ja
-                    </em>
+                    </i>
+                    {" "}
                     beantwortet zu werden, müssen wir
                     "Atome" zur Verfügung stellen, mit denen wir beginnen können. Daher:
                   </Paragraph>
                 </Paragraph>
                 <ul>
                   <li>
-                    <Paragraph>
-                      Die Sprachen \(\emptyset\), \(\&#123;\epsilon\&#125;\) und \(\&#123;x\&#125;\) für jedes \(x \in \Sigma\)
-                      sind regulär.
-                    </Paragraph>
+                    Die Sprachen \(\emptyset\), \(\&#123;\epsilon\&#125;\) und \(\&#123;x\&#125;\) für jedes \(x \in \Sigma\)
+                    sind regulär.
                   </li>
                 </ul>
                 <Paragraph>
@@ -158,71 +150,63 @@ const Article = () => {
                   </Paragraph>
                   <ul>
                     <li>
-                      <Paragraph>
-                        {" "}{" "}
-                        <b>
-                          Atome.
-                        </b>
-                        {" "}
-                        \(\emptyset\) ist ein regulärer Ausdruck und beschreibt die
-                        Sprache \(\emptyset\).
-                        \(\epsilon\) ist ein regulärer Ausdruck und beschreibt die Sprache \(\&#123;\epsilon\&#125;\).
-                        Jedes einzelne Zeichen \(x \in \Sigma\) ist ein regulärer Ausdruck und
-                        beschreibt die Sprache \(\&#123;x\&#125;\).
-                      </Paragraph>
+                      {" "}{" "}
+                      <b>
+                        Atome.
+                      </b>
+                      {" "}
+                      \(\emptyset\) ist ein regulärer Ausdruck und beschreibt die
+                      Sprache \(\emptyset\).
+                      \(\epsilon\) ist ein regulärer Ausdruck und beschreibt die Sprache \(\&#123;\epsilon\&#125;\).
+                      Jedes einzelne Zeichen \(x \in \Sigma\) ist ein regulärer Ausdruck und
+                      beschreibt die Sprache \(\&#123;x\&#125;\).
                     </li>
                     <li>
-                      <Paragraph>
-                        {" "}{" "}
-                        <b>
-                          Alternative.
-                        </b>
-                        {" "}
-                        Wenn \(R_1, R_2\) reguläre Ausdrücke über \(\Sigma\) sind
-                        und die Sprachen \(L_1\) und \(L_2\) beschreiben, so ist
-                        \((R_1 | R_2)\) ein regulärer Ausdruck und beschreibt die Sprache
-                        \(L_1 \cup L_2\) (die regulär ist, wie wir in{" "}
-                        <a href="./04-01-regular-grammars.html#baukasten">
-                          <Paragraph>
-                            Kapitel 4.1
-                          </Paragraph>
-                        </a>
-                        gesehen haben).
-                      </Paragraph>
+                      {" "}{" "}
+                      <b>
+                        Alternative.
+                      </b>
+                      {" "}
+                      Wenn \(R_1, R_2\) reguläre Ausdrücke über \(\Sigma\) sind
+                      und die Sprachen \(L_1\) und \(L_2\) beschreiben, so ist
+                      \((R_1 | R_2)\) ein regulärer Ausdruck und beschreibt die Sprache
+                      \(L_1 \cup L_2\) (die regulär ist, wie wir in{" "}
+                      <a href="./04-01-regular-grammars.html#baukasten">
+                        Kapitel 4.1
+                      </a>
+                      gesehen haben).
                     </li>
                     <li>
-                      <Paragraph>
-                        {" "}{" "}
-                        <b>
-                          Konkatenation.
-                        </b>
-                        {" "}
-                        \((R_1R_2)\) ist ein regulärer Ausdruck, der
-                        die Sprache \(L_1 \circ L_2\) beschreibt (die auch wiederum regulär ist).
-                        Der Deutlichkeit halber schreiben wir auch manchmal \(R_1 \circ R_2\).
-                      </Paragraph>
+                      {" "}{" "}
+                      <b>
+                        Konkatenation.
+                      </b>
+                      {" "}
+                      \((R_1R_2)\) ist ein regulärer Ausdruck, der
+                      die Sprache \(L_1 \circ L_2\) beschreibt (die auch wiederum regulär ist).
+                      Der Deutlichkeit halber schreiben wir auch manchmal \(R_1 \circ R_2\).
                     </li>
                     <li>
-                      <Paragraph>
-                        {" "}{" "}
-                        <b>
-                          Kleenesche Hülle.
-                        </b>
-                        {" "}
-                        Wenn \(R\) ein regulärer Ausdruck ist und die Sprache
-                        \(L\) beschreibt,
-                        dann ist \((R^*)\) ein regulärer Ausdruck und beschreibt die Sprache \(L^*\).
-                      </Paragraph>
+                      {" "}{" "}
+                      <b>
+                        Kleenesche Hülle.
+                      </b>
+                      {" "}
+                      Wenn \(R\) ein regulärer Ausdruck ist und die Sprache
+                      \(L\) beschreibt,
+                      dann ist \((R^*)\) ein regulärer Ausdruck und beschreibt die Sprache \(L^*\).
                     </li>
                   </ul>
                   <Paragraph>
                     <Paragraph>
                       Weil in der Praxis neben \(L^*\), also beliebig langen, möglicherweise leeren Folgen von
                       \(L\)-Wörtern wir
-                      oft{" "}
-                      <em>
+                      oft 
+                      {" "}
+                      <i>
                         nichtleere
-                      </em>
+                      </i>
+                      {" "}
                       Folgen wollen,
                       führen wir die Abkürzung \(R^+\) für \(R (R^*)\) ein und bezeichnen die beschriebene Sprache
                       \(L \circ L^*\) kurzerhand als \(L^+\).
@@ -236,17 +220,23 @@ const Article = () => {
                     gehen wir davon aus, dass die Operatoren die Präzedenz \(^*\) vor \(\circ\) vor \(|\) haben (wie
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       hoch
-                    </em>
-                    vor{" "}
-                    <em>
+                    </i>
+                    {" "}
+                    vor 
+                    {" "}
+                    <i>
                       Punkt
-                    </em>
-                    vor{" "}
-                    <em>
+                    </i>
+                    {" "}
+                    vor 
+                    {" "}
+                    <i>
                       Strich
-                    </em>
+                    </i>
+                    {" "}
                     in der Arithmetik), sodass beispielsweise
                     der Ausdruck \( a^*b|c^*\) die Bedeutung von \((((a^*)b)(c^*))\) hat, genauso wie wir
                     in der Arithmetik \(a^2 b + c^3\) statt \( (((a^2)b) + c^3) \) schreiben.
@@ -257,15 +247,15 @@ const Article = () => {
                     Die von den atomaren Ausdrücken beschriebenen Sprachen sind alle regulär, da sie alle
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       endliche Sprachen
-                    </em>
+                    </i>
+                    {" "}
                     sind.
                     Dank unserer Vorarbeit aus{" "}
                     <a href="./04-01-regular-grammars.html#baukasten">
-                      <Paragraph>
-                        Kapitel 4.1
-                      </Paragraph>
+                      Kapitel 4.1
                     </a>
                     wissen wir,
                     dass Alterantive, Konkatenation und Kleenesche Hülle wiederum reguläre Sprachen erzeugen.
@@ -298,10 +288,12 @@ const Article = () => {
                     </code>
                     aus dem
                     letzten Kapitel. Sie erinnern sich:
-                    eine endliche Folge von{" "}
-                    <em>
+                    eine endliche Folge von 
+                    {" "}
+                    <i>
                       Labels
-                    </em>
+                    </i>
+                    {" "}
                     , wo ein Label eine nichtleere Folge von Blöcken ist, die
                     entweder{" "}
                     <code>
@@ -400,9 +392,7 @@ const Article = () => {
                     </span>
                     Laden Sie sich{" "}
                     <a href="../code/regular-expressions/TestRegex.java">
-                      <Paragraph>
-                        TestRegex.java
-                      </Paragraph>
+                      TestRegex.java
                     </a>
                     herunter,
                     kompilieren und starten Sie es.
@@ -472,9 +462,7 @@ const Article = () => {
                   </Paragraph>
                   <div style="text-align:center">
                     <a href="https://www.w3schools.com/java/java_regex.asp">
-                      <Paragraph>
-                        W3Schools
-                      </Paragraph>
+                      W3Schools
                     </a>
                   </div>
                   <Paragraph>
@@ -483,10 +471,8 @@ const Article = () => {
                   <div style="text-align:center">
                     <Paragraph>
                       <a href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html">
-                        <Paragraph>
-                          Patternl.html
-                          auf der Java-API
-                        </Paragraph>
+                        Patternl.html
+                        auf der Java-API
                       </a>
                       ,
                     </Paragraph>
@@ -510,9 +496,7 @@ const Article = () => {
                   </h2>
                   Wir beweisen nun das Gegenstück zu{" "}
                   <a href="#regex-to-grammar">
-                    <Paragraph>
-                      Lemma 4.5.2
-                    </Paragraph>
+                    Lemma 4.5.2
                   </a>
                   :
                 </Paragraph>
@@ -529,11 +513,13 @@ const Article = () => {
                 </div>
                 <Paragraph>
                   <Paragraph>
-                    Wir paraphrasieren hier den Beweis aus Michael Sipsers{" "}
-                    <em>
+                    Wir paraphrasieren hier den Beweis aus Michael Sipsers 
+                    {" "}
+                    <i>
                       Introduction to the Theory of
                       Computation
-                    </em>
+                    </i>
+                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>
@@ -589,11 +575,13 @@ const Article = () => {
                     end&#125;\)
                     hinausgehen.
                     All dies lässt sich leicht verwirklichen, wenn wir reguläre Ausdrücke als
-                    Kantenbeschriftung zulassen. Wir nennen so einen Automaten einen{" "}
-                    <em>
+                    Kantenbeschriftung zulassen. Wir nennen so einen Automaten einen 
+                    {" "}
+                    <i>
                       verallgemeinerten
                       nichtdeterministischen endlichen Automaten (VNEA)
-                    </em>
+                    </i>
+                    {" "}
                     .
                   </Paragraph>
                   <figure>
@@ -719,10 +707,12 @@ const Article = () => {
                       schreiben wir einfach \(R_1R_3\) anstatt \(R_1 R_2^* R_3\); falls der Übergang \(A
                       \step&#123;R_4&#125; B\) nicht
                       existieren sollte , lassen wir das \(R_4 | \) im rechten Bild einfach weg.
-                      (Sipser führt hier den eleganten Formalismus ein, zu verlangen, dass{" "}
-                      <em>
+                      (Sipser führt hier den eleganten Formalismus ein, zu verlangen, dass 
+                      {" "}
+                      <i>
                         jedes
-                      </em>
+                      </i>
+                      {" "}
                       Paar
                       durch
                       eine Kante verbunden ist und würde fehlende Kanten einfach mit dem regulären Ausdruck

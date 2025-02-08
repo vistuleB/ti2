@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={17}>
+      <Chapter
+        number={17}
+        path="/lecture-notes17.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="03-01-primitive-recursion-definitions">
-            <Paragraph>
-              &lt;&lt; Kapitel 03.01
-            </Paragraph>
+            &lt;&lt; Kapitel 3.1
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="03-03-ackermann">
-            <Paragraph>
-              Kapitel 03.03 &gt;&gt;
-            </Paragraph>
+            Kapitel 3.3 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -46,9 +42,7 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph>
                       <a href="../code/primitive-recursion/stockpile.py">
-                        <Paragraph>
-                          stockpile.py
-                        </Paragraph>
+                        stockpile.py
                       </a>
                       zu erklären und
                       werde dann weitere, weniger offensichtliche Konstruktionen diskutieren.
@@ -389,10 +383,12 @@ const Article = () => {
                     </Paragraph>
                   </h2>
                   Eine recht stark anmutende Beschränkung primitiv rekursiver Funktionen ist
-                  die Tatsache, dass wir in der Schleife nur{" "}
-                  <em>
+                  die Tatsache, dass wir in der Schleife nur 
+                  {" "}
+                  <i>
                     eine
-                  </em>
+                  </i>
+                  {" "}
                   lokale Variable
                   führen dürfen, hier meistens{" "}
                   <code>
@@ -439,10 +435,12 @@ const Article = () => {
                     fib
                   </code>
                   primitiv rekursiv zu implementieren.
-                  Hauptzutat hierbei ist es, dass wir{" "}
-                  <em>
+                  Hauptzutat hierbei ist es, dass wir 
+                  {" "}
+                  <i>
                     Paare
-                  </em>
+                  </i>
+                  {" "}
                   als neue Datenstruktur
                   verwenden.
                 </Paragraph>
@@ -452,16 +450,16 @@ const Article = () => {
                       Erinnern Sie sich: die primitive Rekursion stellt uns als Datentyp von Haus aus
                       nur die natürlichen Zahlen zur Verfügung. Alles andere müssen wir nach einem
                       selbst gewählten Schema codieren. Bei Booleschen Werten war es einfach.
-                      Wie steht es mit{" "}
-                      <em>
+                      Wie steht es mit 
+                      {" "}
+                      <i>
                         Paaren
-                      </em>
+                      </i>
+                      {" "}
                       von natürlichen Zahlen?
                       In{" "}
                       <a href="02-00-infinite-sets.html">
-                        <Paragraph>
-                          Kapitel 2: Unendliche Mengen
-                        </Paragraph>
+                        Kapitel 2: Unendliche Mengen
                       </a>
                       haben wir
                       die bijektive Funktion
@@ -626,10 +624,12 @@ const Article = () => {
                     Zeit nicht behandeln können. Bei meinen eigenen Experimenten mit meinem
                     Python-Framework bin ich daher dazu übergegangen, dass ich, sobald
                     ich gezeigt habe, dass eine Funktion \(f\) primitiv rekursiv ist,
-                    sie{" "}
-                    <em>
+                    sie 
+                    {" "}
+                    <i>
                       nativ
-                    </em>
+                    </i>
+                    {" "}
                     in Python zu implementieren, also beispielsweise in meiner
                     Datei{" "}
                     <code>

@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={39}>
+      <Chapter
+        number={39}
+        path="/lecture-notes39.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="05-09-general-parsing">
-            <Paragraph>
-              &lt;&lt; Kapitel 05.09
-            </Paragraph>
+            &lt;&lt; Kapitel 5.9
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="06-00-general-grammars">
-            <Paragraph>
-              Kapitel 06.00 &gt;&gt;
-            </Paragraph>
+            Kapitel 6.0 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -42,10 +38,12 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Im letzten Teilkapitel haben wir den CYK-Algorithmus kennengelernt. Dieser verwendet
-                    das Prinzip des{" "}
-                    <em>
+                    das Prinzip des 
+                    {" "}
+                    <i>
                       Dynamic Programming
-                    </em>
+                    </i>
+                    {" "}
                     , um für eine allgemeine kontextfreie
                     Grammatik \(G\) und ein Eingabewort \(\gamma\) einen Ableitungsbaum zu finden (oder
                     festzustellen,
@@ -171,10 +169,12 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Wir haben also gezeigt, dass die kontextfreie Grammatik \(G\){" "}
-                      <em>
+                      Wir haben also gezeigt, dass die kontextfreie Grammatik \(G\) 
+                      {" "}
+                      <i>
                         nicht
-                      </em>
+                      </i>
+                      {" "}
                       die Sprache
                       \(L\) erzeugt: wenn wir alle \(\gamma \in L\) erzeugen kann, dann
                       kann sie auch Wörter wie \(uwy \not \in L\) erzeugen. Da unsere Argumentation keine
@@ -202,10 +202,12 @@ const Article = () => {
                 </div>
                 <Paragraph>
                   <Paragraph>
-                    Die obige Argumentationslinie ist als{" "}
-                    <em>
+                    Die obige Argumentationslinie ist als 
+                    {" "}
+                    <i>
                       Pumping Lemma für kontextfreie Sprachen
-                    </em>
+                    </i>
+                    {" "}
                     bekannt:
                   </Paragraph>
                 </Paragraph>
@@ -283,85 +285,75 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        \(L_1 \cup L_2\). Das war einfach: wir kombinieren die Grammatiken
-                        und fügen die Startproduktionen \(S \rightarrow S_1 \ | \ S_2\) hinzu.
-                      </Paragraph>
+                      \(L_1 \cup L_2\). Das war einfach: wir kombinieren die Grammatiken
+                      und fügen die Startproduktionen \(S \rightarrow S_1 \ | \ S_2\) hinzu.
                     </li>
                     <li>
-                      <Paragraph>
-                        \(L_1 \circ L_2\). Das war schon schwieriger, ging aber auch irgendwie.
-                      </Paragraph>
+                      \(L_1 \circ L_2\). Das war schon schwieriger, ging aber auch irgendwie.
                     </li>
                     <li>
-                      <Paragraph>
-                        \(L_1^*\). Das ging ähnlich zum vorherigen.
-                      </Paragraph>
+                      \(L_1^*\). Das ging ähnlich zum vorherigen.
                     </li>
                     <li>
-                      <Paragraph>
-                        \(\bar&#123;L&#125;_1 := \Sigma^* \setminus L_1\), die Komplementsprache. Das ist einfach,
-                        sobald man einen endlichen Automaten für \(L_1\) gebaut hat: man tauscht akzeptierende
-                        und nicht-akzeptierende Zustände aus.
-                      </Paragraph>
+                      \(\bar&#123;L&#125;_1 := \Sigma^* \setminus L_1\), die Komplementsprache. Das ist einfach,
+                      sobald man einen endlichen Automaten für \(L_1\) gebaut hat: man tauscht akzeptierende
+                      und nicht-akzeptierende Zustände aus.
                     </li>
                     <li>
-                      <Paragraph>
-                        \(L_1^R\), die Sprache, die entsteht, wenn man jedes Wort in \(L_1\) von rechts nach
-                        links liest. Dies ist gar nicht so offensichtlich, wenn man reguläre Grammatiken oder
-                        endliche Automaten ansieht. Wenn man aber für \(L_1\) einen{" "}
-                        <em>
-                          regulären Ausdruck
-                        </em>
-                        gebaut
-                        hat, wird es zur Trivialität: einfach den Ausdruck umdrehen.
-                      </Paragraph>
+                      \(L_1^R\), die Sprache, die entsteht, wenn man jedes Wort in \(L_1\) von rechts nach
+                      links liest. Dies ist gar nicht so offensichtlich, wenn man reguläre Grammatiken oder
+                      endliche Automaten ansieht. Wenn man aber für \(L_1\) einen 
+                      {" "}
+                      <i>
+                        regulären Ausdruck
+                      </i>
+                      {" "}
+                      gebaut
+                      hat, wird es zur Trivialität: einfach den Ausdruck umdrehen.
                     </li>
                     <li>
-                      <Paragraph>
-                        \(L_1 \cap L_2\). Hierfür könnte man für \(L_1, L_2\) jeweils endliche Automaten
-                        \(M_1, M_2\) bauen und die dann "parallel" laufen lassen; man muss nun sehen, dass man
-                        dieses parallele Laufen
-                        mit{" "}
-                        <em>
-                          einem
-                        </em>
-                        Automaten simulieren kann: dieser hat als Zustandsmenge \(Q_1 \times
-                        Q_2\),
-                        merkt sich also in{" "}
-                        <em>
-                          einem
-                        </em>
-                        Zustand, in welchen Zuständen \(M_1\) und \(M_2\)
-                        sind.
-                        Oder man macht es sich einfach:
-                      </Paragraph>
+                      \(L_1 \cap L_2\). Hierfür könnte man für \(L_1, L_2\) jeweils endliche Automaten
+                      \(M_1, M_2\) bauen und die dann "parallel" laufen lassen; man muss nun sehen, dass man
+                      dieses parallele Laufen
+                      mit 
+                      {" "}
+                      <i>
+                        einem
+                      </i>
+                      {" "}
+                      Automaten simulieren kann: dieser hat als Zustandsmenge \(Q_1 \times
+                      Q_2\),
+                      merkt sich also in 
+                      {" "}
+                      <i>
+                        einem
+                      </i>
+                      {" "}
+                      Zustand, in welchen Zuständen \(M_1\) und \(M_2\)
+                      sind.
+                      Oder man macht es sich einfach:
                       <ul>
                         <li>
-                          <Paragraph>
-                            Nach Punkt 4 sind \(\bar&#123;L&#125;_1\) und \(\bar&#123;L&#125;_2\) regulär.
-                          </Paragraph>
+                          Nach Punkt 4 sind \(\bar&#123;L&#125;_1\) und \(\bar&#123;L&#125;_2\) regulär.
                         </li>
                         <li>
-                          <Paragraph>
-                            Nach Punkt 1 daher auch \(\bar&#123;L&#125;_1 \cup \bar&#123;L&#125;_2\) ist regulär.
-                          </Paragraph>
+                          Nach Punkt 1 daher auch \(\bar&#123;L&#125;_1 \cup \bar&#123;L&#125;_2\) ist regulär.
                         </li>
                         <li>
-                          <Paragraph>
-                            Nach Punkt 4 ist daher wiederum \(\overline&#123;\bar&#123;L&#125;_1 \cup \bar&#123;L&#125;_2&#125;\) regulär,
-                            was
-                            nach den De-Morganschen Gesetzen die gleiche Menge ist wie \(L_1 \cap L_2\).
-                          </Paragraph>
+                          Nach Punkt 4 ist daher wiederum \(\overline&#123;\bar&#123;L&#125;_1 \cup \bar&#123;L&#125;_2&#125;\) regulär,
+                          was
+                          nach den De-Morganschen Gesetzen die gleiche Menge ist wie \(L_1 \cap L_2\).
                         </li>
                       </ul>
                     </li>
                   </ol>
                   <Paragraph>
-                    Wie sieht es nun aus, wenn \(L_1, L_2\){" "}
-                    <em>
+                    Wie sieht es nun aus, wenn \(L_1, L_2\) 
+                    {" "}
+                    <i>
                       kontextfreie
-                    </em>
+                    </i>
+                    {" "}
                     Sprachen sind? Welche der
                     obigen Kombinationen sind dann ebenfalls kontextfrei?
                   </Paragraph>
@@ -375,35 +367,23 @@ const Article = () => {
                     </Paragraph>
                     <ol>
                       <li>
-                        <Paragraph>
-                          \(L_1 \cup L_2\)
-                        </Paragraph>
+                        \(L_1 \cup L_2\)
                       </li>
                       <li>
-                        <Paragraph>
-                          \(L_1 \circ L_2\)
-                        </Paragraph>
+                        \(L_1 \circ L_2\)
                       </li>
                       <li>
-                        <Paragraph>
-                          \(L_1^*\)
-                        </Paragraph>
+                        \(L_1^*\)
                       </li>
                       <li>
-                        <Paragraph>
-                          Überspringen wir \(\bar&#123;L&#125;_1\); dieses ist nämlich im Allgemeinen nicht kontextfrei.
-                        </Paragraph>
+                        Überspringen wir \(\bar&#123;L&#125;_1\); dieses ist nämlich im Allgemeinen nicht kontextfrei.
                       </li>
                       <li>
-                        <Paragraph>
-                          \(L_1^R\)
-                        </Paragraph>
+                        \(L_1^R\)
                       </li>
                       <li>
-                        <Paragraph>
-                          Überspringen wir \(L_1 \cap L_2\); dieses ist nämlich im Allgemeinen nicht
-                          kontextfrei.
-                        </Paragraph>
+                        Überspringen wir \(L_1 \cap L_2\); dieses ist nämlich im Allgemeinen nicht
+                        kontextfrei.
                       </li>
                     </ol>
                     <Paragraph>
@@ -429,10 +409,12 @@ const Article = () => {
                       Beobachtung
                     </span>
                     Der Schnitt \(L_1 \cap L_2\) zweier kontextfreier Sprachen
-                    ist im Allgemeinen{" "}
-                    <em>
+                    ist im Allgemeinen 
+                    {" "}
+                    <i>
                       nicht
-                    </em>
+                    </i>
+                    {" "}
                     kontextfrei.
                     Ein Beispiel ist
                     \begin&#123;align*&#125;
@@ -461,10 +443,12 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                     </span>
-                    Das Komplement \(L\) einer kontextfreien Sprache ist im Allgemeinen{" "}
-                    <em>
+                    Das Komplement \(L\) einer kontextfreien Sprache ist im Allgemeinen 
+                    {" "}
+                    <i>
                       nicht
-                    </em>
+                    </i>
+                    {" "}
                     kontextfrei.
                     \\
                   </Paragraph>

@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={24}>
+      <Chapter
+        number={24}
+        path="/lecture-notes24.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="04-03-nfsm">
-            <Paragraph>
-              &lt;&lt; Kapitel 04.03
-            </Paragraph>
+            &lt;&lt; Kapitel 4.3
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="04-05-regular-expressions">
-            <Paragraph>
-              Kapitel 04.05 &gt;&gt;
-            </Paragraph>
+            Kapitel 4.5 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -62,10 +58,12 @@ const Article = () => {
                     paar Abänderungen,
                     um die obigen Transformationen spannender zu machen. Ein Wort in unserer Sprache besteht aus
                     einer
-                    nichtleeren Folge von{" "}
-                    <em>
+                    nichtleeren Folge von 
+                    {" "}
+                    <i>
                       Labels
-                    </em>
+                    </i>
+                    {" "}
                     die jeweils durch einen{" "}
                     <code>
                       .
@@ -109,20 +107,24 @@ const Article = () => {
                   </code>
                   mischt.
                   Habe ich
-                  \(L\) genau genug beschrieben? Stellen wir eine Meta-Frage: Was zählt überhaupt als{" "}
-                  <em>
+                  \(L\) genau genug beschrieben? Stellen wir eine Meta-Frage: Was zählt überhaupt als 
+                  {" "}
+                  <i>
                     genaue
                     Beschreibung
-                  </em>
+                  </i>
+                  {" "}
                   einer
                   Sprache? Wir können uns dem Mund fusselig reden und Beispiele und Nicht-Beispiele angeben, am Ende
                   aber werden
                   wir irgendwann beginnen, formale Regeln aufzustellen, die unsere Sprache beschreiben - wir werden
                   also im Prinzip
-                  eine{" "}
-                  <em>
+                  eine 
+                  {" "}
+                  <i>
                     Grammatik
-                  </em>
+                  </i>
+                  {" "}
                   schreiben. Tun wir dies also.
                 </Paragraph>
                 <Paragraph>
@@ -180,24 +182,26 @@ const Article = () => {
                       <code>
                         :
                       </code>
-                      auf Englisch{" "}
-                      <em>
+                      auf Englisch 
+                      {" "}
+                      <i>
                         colon
-                      </em>
+                      </i>
+                      {" "}
                       und{" "}
                       <code>
                         -
                       </code>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         dash
-                      </em>
+                      </i>
+                      {" "}
                       heißt.
                       \(C\)-Labels können wir uns nach dem Baukastenprizip bauen, in dem
                       wir{" "}
                       <a href="./04-01-regular-grammars.html#operation-L(.L)*">
-                        <Paragraph>
-                          Theorem 4.1.14
-                        </Paragraph>
+                        Theorem 4.1.14
                       </a>
                       anwenden.
                       Wir fügen zur "End-Produktion" \(B \rightarrow a\) eine weiter Produktion \(B \rightarrow a:B\)
@@ -225,9 +229,7 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph>
                       <a href="./04-01-regular-grammars.html#operation-L(.L)*">
-                        <Paragraph>
-                          Theorem 4.1.14
-                        </Paragraph>
+                        Theorem 4.1.14
                       </a>
                       anwenden, dieses
                       mal auf die von \(T\) erzeugte Sprache. Im Ergebnis benennen wir das Startsymbol in \(S\) um.
@@ -268,9 +270,11 @@ const Article = () => {
                       uns
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         ein
-                      </em>
+                      </i>
+                      {" "}
                       neues Nichtterminal \(E\) und ersetzen \(Y \rightarrow x\) durch \(Y \rightarrow
                       xE\)
                       und fügen die Produktion \(E \rightarrow \epsilon\) hinzu.
@@ -295,20 +299,20 @@ const Article = () => {
                       haben.
                       Wir gehen vor wie in{" "}
                       <a href="./04-01-regular-grammars.html#theorem-regular-simplified">
-                        <Paragraph>
-                          Theorem
-                          4.1.7
-                        </Paragraph>
+                        Theorem
+                        4.1.7
                       </a>
                       beschrieben.
                       Wir ersetzen \(S \rightarrow C\) also durch alle Produktionen der Form \(S \rightarrow \alpha\),
                       wobei
                       \(\alpha\) eine Wortform ist, die sich aus \(C\) ableiten lässt und nicht nur aus einem
                       einzelnen Nichtterminal
-                      besteht; dies trifft glücklicherweise auf{" "}
-                      <em>
+                      besteht; dies trifft glücklicherweise auf 
+                      {" "}
+                      <i>
                         alle
-                      </em>
+                      </i>
+                      {" "}
                       rechten Seiten der \(C\)-Produktionen
                       zu; gleiches gilt
                       für \(D\). Wir erhalten:
@@ -365,10 +369,12 @@ const Article = () => {
                     definieren, er hätte also \(2^7 = 128\) viele Zustände. Das wäre jetzt für einen Rechner kein
                     Problem, aber
                     in diesem vorlesungsskript doch etwas ungünstig.
-                    Wir gehen{" "}
-                    <em>
+                    Wir gehen 
+                    {" "}
+                    <i>
                       lazy
-                    </em>
+                    </i>
+                    {" "}
                     vor, erschaffen Zustände in \(2^Q\) also nur dann, wenn wir sie
                     brauchen.
                     Wir beginnen mit dem Zustand \(\&#123;S\&#125;\) und legen dann an jeden Zustand Kanten an, jeweils mit
@@ -383,9 +389,7 @@ const Article = () => {
                   class="centered-figure well">
                   <div>
                     <Paragraph>
-                      <Paragraph>
-                        Der nichtdeterministische Automat
-                      </Paragraph>
+                      Der nichtdeterministische Automat
                     </Paragraph>
                     <img
                       style="height:17em"
@@ -504,9 +508,7 @@ const Article = () => {
                         data-target="#nfsm-to-fsm" />
                     </ol>
                     <Paragraph>
-                      <Paragraph>
-                        Der deterministische Automat, Schritt für Schritt gebaut:{" "}
-                      </Paragraph>
+                      Der deterministische Automat, Schritt für Schritt gebaut:{" "}
                     </Paragraph>
                     <div
                       style="display:inline-block"
@@ -701,8 +703,10 @@ const Article = () => {
                     müssen, wenn wir so einen String "parsen": Zustand \( \&#123;C',C,E,D,D',S'\&#125;\), der
                     in der Grammatik dann zum Nichtterminal \(T\) wird, bedeutet beispielsweise
                   </Paragraph>
-                  <em>
-                    das Label hat schon begonnen, wir wissen aber noch nicht, ob es eines mit
+                  <Paragraph>
+                    _das Label hat schon begonnen, wir wissen aber noch nicht, ob es eines mit
+                  </Paragraph>
+                  <Paragraph>
                     <code>
                       :
                     </code>
@@ -712,14 +716,20 @@ const Article = () => {
                     </code>
                     ist.
                     Der Zustand \(\&#123;C',C,E,S'\&#125;\) bzw. das Nichtterminal \(C\) heißt dann
-                    <em>
-                      wir sind innerhalb eines Labels mit{" "}
-                      <code>
-                        :
-                      </code>
-                    </em>
+                  </Paragraph>
+                  <Paragraph>
+                    <code>
+                      :
+                    </code>
+                    {" "}{" "}
+                    <i>
+                      wir sind innerhalb eines Labels mit 
+                      {" "}
+                    </i>
+                    {" "}
                     .
-                  </em>
+                    _
+                  </Paragraph>
                 </Paragraph>
                 <div class="well well-lg numbered-exercise container">
                   <Paragraph>
@@ -729,9 +739,7 @@ const Article = () => {
                       </span>
                       Erinnern Sie sich an{" "}
                       <a href="./04-03-nfsm#exercise-divisibility">
-                        <Paragraph>
-                          Aufgabe 4.3.1
-                        </Paragraph>
+                        Aufgabe 4.3.1
                       </a>
                       . Hier
                       sehen
@@ -752,10 +760,12 @@ const Article = () => {
                     <Paragraph>
                       Dieser Automat hat 11 Zustände. Sein Potenzmengenautomat hätte also \(2^&#123;11&#125; = 2048\)
                       Zustände.
-                      Führen Sie die Konstruktion{" "}
-                      <em>
+                      Führen Sie die Konstruktion 
+                      {" "}
+                      <i>
                         lazy
-                      </em>
+                      </i>
+                      {" "}
                       durch, indem Sie vom Startzustand \(\&#123;S\&#125;\)
                       ausgehend die Folgezustände konstruieren. Wieviele Zustände bekommen Sie?
                     </Paragraph>

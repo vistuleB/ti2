@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={4}>
+      <Chapter
+        number={4}
+        path="/lecture-notes4.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="01-02-truth-tables-cnf-dnf">
-            <Paragraph>
-              &lt;&lt; Kapitel 01.02
-            </Paragraph>
+            &lt;&lt; Kapitel 1.2
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="01-04-monotone-circuits">
-            <Paragraph>
-              Kapitel 01.04 &gt;&gt;
-            </Paragraph>
+            Kapitel 1.4 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -53,10 +49,12 @@ const Article = () => {
                       sind, dann
                       höchstwahrscheinlich auch in Ihrem Blut). Grund genug, sich diese genauer anzuschauen.
                       Genau wie bei der Addition von Dezimalzahlen gibt es pro Stelle ein Ergebnis und einen
-                      Übertrag (Englisch{" "}
-                      <em>
+                      Übertrag (Englisch 
+                      {" "}
+                      <i>
                         carry
-                      </em>
+                      </i>
+                      {" "}
                       ); beispielsweise ergibt
                       "sechs plus acht plus sieben = eins, zwei gemerkt", und die 2 muss dann zu den links daneben
                       stehenden Ziffern addiert werden. Binär ist alles viel einfacher, weil man sich nur 0 oder 1
@@ -83,10 +81,12 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Das Carry wird dann der eins weiter links stehenden Stelle zur Addition weitergegeben.
-                      Aber halt! Das heißt doch, dass wir in der nächsten Stelle{" "}
-                      <em>
+                      Aber halt! Das heißt doch, dass wir in der nächsten Stelle 
+                      {" "}
+                      <i>
                         drei
-                      </em>
+                      </i>
+                      {" "}
                       Bits addieren
                       müssen:
                       das von \(x\), das von \(y\), und das eingehende Carry \(\cin\). Daraus berechnet
@@ -149,10 +149,14 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Wie groß ist dieser Schaltkreis? Wenn wir jedes \(\oplus\)- und \(M\)-Gate als{" "}
-                    <em>
+                    Wie groß ist dieser Schaltkreis? Wenn wir jedes \(\oplus\)- und \(M\)-Gate als 
+                    {" "}
+                    <i>
                       ein
-                    </em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
                     Gate
                     zählen, so haben wir insgesamt \(2n\) innere Gates und \(2n\) Input-Gates.
                     Wenn wir darauf bestehen, \(\oplus\)- und \(M\)-Gates aus AND/OR/NOT zu basteln,
@@ -208,18 +212,22 @@ const Article = () => {
                     zum Beispiel wenn man \(11111111 + 00000001\) berechnet. So einen Addierer nennt man
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       ripple-carry adder
-                    </em>
+                    </i>
+                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Geringere Tiefe erreicht man mit{" "}
-                    <em>
+                    Geringere Tiefe erreicht man mit 
+                    {" "}
+                    <i>
                       Carry Lookahead
-                    </em>
+                    </i>
+                    {" "}
                     . Hier versuchen wir,
                     im Voraus bereits das Carry auf Position \(i\) zu berechnen, ohne erst das auf Position
                     \(i-1\) abzuwarten. Es lohnt, ein paar Dinge formaler zu definieren:
@@ -336,14 +344,20 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Effizientere Lösungen beginnen oft mit einer guten Definition. In diesem Falle ist das die
-                    Verallgemeinerung von{" "}
-                    <em>
+                    Verallgemeinerung von 
+                    {" "}
+                    <i>
                       Carry Generate \(g_i\)
-                    </em>
-                    und{" "}
-                    <em>
+                    </i>
+                    {" "}
+                    und 
+                    {" "}
+                    <i>
                       Carry Propagate \(p_i\)
-                    </em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
                     von Indizes auf Intervalle. Für ein Interval
                     \([a,b] := \&#123;a, a+1, \dots, b\&#125;\) definieren wir Funktionen
                     \(g_&#123;[a,b]&#125;\) und \(p_&#123;[a,b]&#125;\) in den Variablen \(x_&#123;a&#125;,\dots,x_&#123;b&#125;, y_a, \dots, y_b\)
@@ -366,26 +380,18 @@ const Article = () => {
                   </Paragraph>
                   <ul>
                     <li>
-                      <Paragraph>
-                        Wenn für alle \(i \in I\) das Paar \(x_i, y_i\) den Wert \((0,1)\) oder \((1,0)\)
-                        hat,
-                        dann ist \(p_I = 1\) und \(g_I = 0\).
-                      </Paragraph>
+                      Wenn für alle \(i \in I\) das Paar \(x_i, y_i\) den Wert \((0,1)\) oder \((1,0)\)
+                      hat,
+                      dann ist \(p_I = 1\) und \(g_I = 0\).
                     </li>
                     <li>
-                      <Paragraph>
-                        Ansonsten sei \(i^* := \max \&#123;i \in I \ | \ (x_i, y_i) \in \&#123;(0,0), (1,1)\&#125; \&#125;\).
-                      </Paragraph>
+                      Ansonsten sei \(i^* := \max \&#123;i \in I \ | \ (x_i, y_i) \in \&#123;(0,0), (1,1)\&#125; \&#125;\).
                       <ul>
                         <li>
-                          <Paragraph>
-                            Falls \( (x_&#123;i^*&#125;, y_&#123;i^*&#125;) = (1,1) \), dann sind \(p_I = g_I = 1\).
-                          </Paragraph>
+                          Falls \( (x_&#123;i^*&#125;, y_&#123;i^*&#125;) = (1,1) \), dann sind \(p_I = g_I = 1\).
                         </li>
                         <li>
-                          <Paragraph>
-                            Falls \( (x_&#123;i^*&#125;, y_&#123;i^*&#125;) = (0,0) \), dann sind \(p_I = g_I = 0\).
-                          </Paragraph>
+                          Falls \( (x_&#123;i^*&#125;, y_&#123;i^*&#125;) = (0,0) \), dann sind \(p_I = g_I = 0\).
                         </li>
                       </ul>
                     </li>
@@ -536,9 +542,11 @@ const Article = () => {
                     Der Trick: wir beschränken uns auf besonders schöne Intervalle, nämlich
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Binärintervalle
-                    </em>
+                    </i>
+                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>
@@ -568,10 +576,12 @@ const Article = () => {
                     Beispielsweise ist \(12,13,14,15\) ein Binärintervall mit \(c=3\) und \(d=2\); in der
                     Binärdarstellung
                     ist das \(1100, 1101, 1110, 1111\). Wir können es also auch mit
-                    in{" "}
-                    <em>
+                    in 
+                    {" "}
+                    <i>
                       Sternchennotation
-                    </em>
+                    </i>
+                    {" "}
                     mit [11**] notieren.
                   </Paragraph>
                 </Paragraph>
@@ -727,10 +737,12 @@ const Article = () => {
                   <Paragraph>
                     Eine anschließende Bemerkung: der Schaltkreis
                     besteht ausschließlich aus AND- und OR-Gates; er enthält
-                    keine NOT-Gates und ist somit ein{" "}
-                    <em>
+                    keine NOT-Gates und ist somit ein 
+                    {" "}
+                    <i>
                       monotoner Schaltkreis.
-                    </em>
+                    </i>
+                    {" "}{" "}
                   </Paragraph>
                 </Paragraph>
                 <div class="well container theorem">
@@ -839,10 +851,12 @@ const Article = () => {
                         Die Anzahl schließender 1en ist mindestens 0 (trivialierweise) und höchstens \(d\);
                         ein genauerer Blick zeigt, dass sie sogar höchstens \(d-1\) ist: wäre sie genau \(d\),
                         dann hätten wir es mit der Zahl \( (1^d)_2 = 2^d-1 \geq n-1 \) zu tun; da aber
-                        die Folge der Zahlen{" "}
-                        <em>
+                        die Folge der Zahlen 
+                        {" "}
+                        <i>
                           abnimmt
-                        </em>
+                        </i>
+                        {" "}
                         , müsste bereits \(k = 2^d-1\) gelten, und wir
                         wären in Fall 1, bzw. bereits fertig, weil \([0,k]\) bereits in Binärintervall wäre.
                         Der Wert von \(b\), der Anzahl schließender 1en, kann also höchstens

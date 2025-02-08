@@ -8,9 +8,10 @@
         |> a
             href 05-05-c-LR-grammars
 
-            &lt;&lt; Kapitel 05.05
+            &lt;&lt; Kapitel 5.5
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 05-06-dk-automat
 
-            Kapitel 05.06 &gt;&gt;
+            Kapitel 5.6 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -85,9 +86,7 @@
                         
                         Zu jeder Ableitung \(S \Step{}^* w \in \Sigma^*\) können wir
                         eindeutig einen 
-                        |> em
-
-                            Ableitungsbaum
+                        _Ableitungsbaum_
                         zeichnen. Wenn die Grammatik
                         eindeutig ist, so hängt auch der Baum nur vom Wort \(w \in L(G)\) ab und
                         nicht von der Ableitung \(S \Step{}^* w\).
@@ -309,29 +308,21 @@
                         eine gültige Wortform, und
                         \(\mathcal{T}\) der Ableitungsbaum von \(\gamma\).
                         Der 
-                        |> em
-
-                            Stamm
+                        _Stamm_
                         ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
                         der von allen inneren Knoten, deren Kinder allesamt Blätter sind,
                         am weistesten links steht.
                         Die Kinder von \(u\), per Definition alles Blätter, sind die 
-                        |> em
-
-                            Blüte
+                        _Blüte_
                         .
                         Die Menge der Knoten, die einen Stammknoten als rechtes Geschwister haben,
                         heißt der 
-                        |> em
-
-                            linke Rand
+                        _linke Rand_
                         . Jeder Knoten \(v\) im linken Rand
                         muss ein Blatt sein, ansonsten stünde er ja weiter links als \(u\);
                         die Menge der rechten Geschwisterkinder von Stammknoten sowie deren Nachkommen
                         heißt der 
-                        |> em
-
-                            rechte Rand
+                        _rechte Rand_
                         .
                         Im rechten Rest ist jedes Blatt ein
                         Terminalsymbol, ansonsten wäre es keine Rechtsableitung.
@@ -352,19 +343,13 @@
                         \end{align*}
                         dar. Die Wortform $\alpha\beta$, also linker Rand plus Blüte, nennen wir
                         die 
-                        |> em
-
-                            Front
+                        _Front_
                         von $\mathcal{T}$ und schreiben sie als $\front(\mathcal{T})$.
                         Wir sagen auch, dass \(\beta\) 
-                        |> em
-
-                            eine Blüte von \(\gamma\)
+                        _eine Blüte von \(\gamma\)_
                         und
                         $\alpha\beta$ die 
-                        |> em
-
-                            Front
+                        _Front_
                         von $\gamma$ ist,
                         ohne über den Ableitungsbaum \(\mathcal{T}\) selbst zu reden.
                         Hierbei ist zu beachten, dass in einer mehrdeutigen Grammatik
@@ -680,9 +665,7 @@
                         
                         Hier ist etwas Mentalgymnastik vonnöten: aus Sicht der Sprache
                         $\Front(G)$ sind \(\Sigma \cup N\) 
-                        |> em
-
-                            Terminalsymbole
+                        _Terminalsymbole_
                         . Sie können
                         ja schließlich in den Wörtern der Sprache auftauchen.
                         Die Grammatik \(\hat{G}\) hat also die Terminalsymbole
@@ -728,9 +711,7 @@
                         Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik. Die
                         Front-Grammatik oder DK-Grammatik von \(G\) ist
                         die 
-                        |> em
-
-                            erweitert reguläre
+                        _erweitert reguläre_
                         Grammatik \(\hat{G} = (\Sigma \cup N, \hat{N}, \hat{S},
                         \hat{P})\)
                         mit \(\hat{N} := \{\hat{X} \ | \ X \in N\}\), wobei
@@ -914,9 +895,7 @@
                             Jeder Reduktionsschritt ist ein Linksreduktionsschritt, und
                             wenn man Ende $S$ steht, waren es auch alles
                             
-                            |> em
-
-                                korrekte
+                            _korrekte_
                             Linksreduktionsschritte.
                             
                         
@@ -1018,9 +997,7 @@
                                     von $\front(\gamma w)$ ist; zweitens, dass
                                     \(\gamma \not \in \Front(G)\) ist (sonst hätte der Parser Schritt 1 angewandt); somit
                                     ist $\gamma$ ein 
-                                    |> em
-
-                                        echter
+                                    _echter_
                                     Präfix von $\front(\gamma w)$ und somit
                                     ist $\gamma c$ immer noch ein Präfix von $\front(\gamma w)$.
                                     

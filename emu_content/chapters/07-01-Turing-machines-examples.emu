@@ -8,9 +8,10 @@
         |> a
             href 07-01-Turing-machines-definition
 
-            &lt;&lt; Kapitel 07.01
+            &lt;&lt; Kapitel 7.1
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 07-02-Turing-variants
 
-            Kapitel 07.02 &gt;&gt;
+            Kapitel 7.2 &gt;&gt;
     |> div
         id rightSideWrapper
 

@@ -8,9 +8,10 @@
         |> a
             href 05-05-b-Parser-in-Java
 
-            &lt;&lt; Kapitel 05.05
+            &lt;&lt; Kapitel 5.5
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 05-05-d-linker-Rand-und-Bluete
 
-            Kapitel 05.05 &gt;&gt;
+            Kapitel 5.5 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -101,9 +102,7 @@
                         Da aus der Sicht unseres neuen Parsers die Rückwärtsanwendung einer Produktion
                         \(X \rightarrow \beta\), also der Schritt \(\alpha X \gamma \Leftarrow \alpha \beta \gamma\)
                         einen 
-                        |> em
-
-                            Fortschritt
+                        _Fortschritt_
                         
                         darstellt und zeitlich auch
                         nach vorne geht, verwende ich ab jetzt ein neues Pfeilsymbol, das
@@ -133,23 +132,17 @@
                         \alpha \beta \gamma \rstep{} \alpha X \gamma \ ,
                         \end{align*}
                         und sagen 
-                        |> em
-
-                            \(\alpha \beta \gamma\) reduziert zu \(\alpha X \gamma\)
+                        _\(\alpha \beta \gamma\) reduziert zu \(\alpha X \gamma\)_
                         .
                         Man nennt einen solchen Schritt auch einen 
-                        |> em
-
-                            Reduktionsschritt
+                        _Reduktionsschritt_
                         .
                         
                         |> p
 
                             
                             Wir nennen den Schritt einen 
-                            |> em
-
-                                Linksreduktionsschritt
+                            _Linksreduktionsschritt_
                             , wenn
                             rechts von \(\beta\) nur Terminale stehen. Wenn also
                             \(\gamma = w \in \Sigma^*\) und somit
@@ -160,13 +153,9 @@
                         
                         Eine Folge von Linksreduktionsschritten nennen wir eine
                         
-                        |> em
-
-                            Linksreduktion
+                        _Linksreduktion_
                         . 
-                        |> em
-
-                            Links
+                        _Links_
                         , weil wir uns
                         von links nach rechts in den terminalen Teil hineinarbeiten.
                         Wir werden im folgenden nur Linksreduktionsschritte betrachten und
@@ -247,9 +236,7 @@
                         ist inkorrekt. In unserer Java-Implementierung haben wir dieses Problem händisch gelöst, indem
                         wir der Regel $ND \rstep{} N$ den Vorzug vor $D \rstep{} N$ gegebene haben. Im allgemeinen
                         müssen wir definieren, was ein 
-                        |> em
-
-                            korrekter
+                        _korrekter_
                         Linksreduktionsschritt ist. Und dann
                         überlegen, wie wir herausfinden, ob ein Linksreduktionsschritt korrekt ist. Diese Fragen
                         werden uns für den Rest dieses und des nächsten Teilkapitels beschäftigen.
@@ -271,9 +258,7 @@
                         *(Gültige Wortform, korrekter Reduktionsschritt)*
                         
                         Eine Wortform \(\gamma \in (\Sigma \cup N)^*\) heißt 
-                        |> em
-
-                            gültig
+                        _gültig_
                         ,
                         wenn es eine Rechtsableitung
                         \begin{align*}
@@ -284,9 +269,7 @@
                         \alpha \beta w \rstep{} \alpha X w
                         \end{align*}
                         heißt 
-                        |> em
-
-                            korrekt
+                        _korrekt_
                         , wenn \(\alpha X w\) gültig ist.
                         In diesem Fall ist natürlich $\alpha \beta w$ selbst gültig.
                         
@@ -296,9 +279,7 @@
                             
                             Den Präfix $\alpha$ nennen wir eine
                             
-                            |> em
-
-                                Front
+                            _Front_
                             der gültigen Wortform $\alpha \beta w$.
                             Wenn die Grammatik eindeutig ist, dann hat
                             jede gültige Wortform $\gamma$ genau eine Front, die wir
@@ -351,9 +332,7 @@
                         haben wir manchmal das erste Zeichen von $w$ betrachten müssen. Allerdings behalten wir erst
                         einmal obigen Wunsch als Idealziel.
                         Um ihn zu formalisieren, fragen wir uns, wann es denn 
-                        |> em
-
-                            nicht
+                        _nicht_
                         möglich ist,
                         ohne Betrachten von $w$ zu eintscheiden, ob
                         $\alpha \beta w \rstep{} \alpha X w$ gültig ist.
@@ -374,9 +353,7 @@
                             \(\gamma \rstep{} \gamma'\) und
                             \(\gamma \rstep{} \gamma''\).
                             In diesem Falle gäbe es 
-                            |> em
-
-                                zwei verschiedene
+                            _zwei verschiedene_
                             
                             Rechtsableitungen
                             \begin{align*}
@@ -390,9 +367,7 @@
                                 (wir nehmen an, dass man aus jedem Nichtterminal
                                 mindestens ein Wort \(u \in \Sigma^*\) ableiten kann; andernfalls
                                 kann man solche 
-                                |> em
-
-                                    nutzlosen
+                                _nutzlosen_
                                 Nichtterminale eliminieren).
                                 Das Wort \(w\) hat also zwei verschiedene Ableitungsbäume.
                                 Die Grammatik ist somit mehrdeutig.
@@ -425,9 +400,7 @@
 
                                 
                                 
-                                |> em
-
-                                    nicht
+                                _nicht_
                                 korrekt, obwohl \(\alpha\beta w'\) eine
                                 gültige Wortform ist.
                                 Dieser Fall ist schlecht, weil der Parser nur
@@ -951,9 +924,7 @@
 
                         
                         Beide Aufgaben können mit Hilfe eines 
-                        |> em
-
-                            endlichen Automaten
+                        _endlichen Automaten_
                         ,
                         des DK-Automaten erledigt werden (DK steht als Abkürzung für Donald Knuth,
                         der als erstes diese Idee hatte).
@@ -970,9 +941,7 @@
                         recht herausfordernd. Lesen Sie daher gerne auch
                         das Kapitel 2.4 (Deterministic context free languages) im Lehrbuch
                         
-                        |> em
-
-                            Introduction to the Theory of Computing
+                        _Introduction to the Theory of Computing_
                         von Michael Sipser.
                         Meine Darstellung des doch recht schwierigen Materials fußt auf diesem
                         Kapitel, weicht aber doch stark genug von Sipser ab, so dass es

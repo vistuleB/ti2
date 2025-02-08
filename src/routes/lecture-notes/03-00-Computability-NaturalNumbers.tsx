@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={15}>
+      <Chapter
+        number={15}
+        path="/lecture-notes15.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="02-06-Trichotomiesatz">
-            <Paragraph>
-              &lt;&lt; Kapitel 02.06
-            </Paragraph>
+            &lt;&lt; Kapitel 2.6
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="03-01-primitive-recursion-definitions">
-            <Paragraph>
-              Kapitel 03.01 &gt;&gt;
-            </Paragraph>
+            Kapitel 3.1 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -43,37 +39,47 @@ const Article = () => {
                   Mit den Booleschen Schaltkreisen haben wir ein Modell kennengelernt, dass
                   die Berechnung von Booleschen Funkionen \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) beschreibt.
                   Wir haben mehrere Beweisen gesehen, dass es für jede Boolesche Funktion einen
-                  Schaltkreis gibt. Unsere Zielsetzung war durchweg{" "}
-                  <em>
+                  Schaltkreis gibt. Unsere Zielsetzung war durchweg 
+                  {" "}
+                  <i>
                     komplexitätstheoretisch
-                  </em>
+                  </i>
+                  {" "}
                   : wir
                   wollten möglichst kleine Schaltkreise von möglichst geringer Tiefe entwerfen.
                   Würden wir tiefer in die Schaltkreiskomplexität einsteigen, so würden wir uns fast
-                  ausschließlich mit{" "}
-                  <em>
+                  ausschließlich mit 
+                  {" "}
+                  <i>
                     negativen
-                  </em>
+                  </i>
+                  {" "}
                   Zielen beschäftigen: zu zeigen, dass es zu bestimmten
                   Funktionen eben nicht Schaltkreise mit \(S\) Gates und in Tiefe \(d\) gibt; wir
-                  würden uns zum Großteil mit{" "}
-                  <em>
+                  würden uns zum Großteil mit 
+                  {" "}
+                  <i>
                     unteren Schranken
-                  </em>
+                  </i>
+                  {" "}
                   beschäftigen.
                 </Paragraph>
               </Paragraph>
               <Paragraph>
                 <Paragraph>
-                  Boolesche Funktionen sind immer{" "}
-                  <em>
+                  Boolesche Funktionen sind immer 
+                  {" "}
+                  <i>
                     endliche
-                  </em>
+                  </i>
+                  {" "}
                   Objekte. In der Berechenbarkeitstheorie
-                  geht es im Grunde um die Frage: welche{" "}
-                  <em>
+                  geht es im Grunde um die Frage: welche 
+                  {" "}
+                  <i>
                     unendlichen
-                  </em>
+                  </i>
+                  {" "}
                   Funktionen können wir überhaupt
                   berechnen? Und was gilt denn überhaupt als zulässiges Modell für Berechenbarkeit?
                 </Paragraph>
@@ -82,10 +88,12 @@ const Article = () => {
                 <Paragraph>
                   Wenn wir nun also über Funktionen \(f: X \rightarrow Y\) auf unendlichen Mengen sprechen und uns
                   fragen,
-                  welche durch eine{" "}
-                  <em>
+                  welche durch eine 
+                  {" "}
+                  <i>
                     endliche Rechenvorschrift
-                  </em>
+                  </i>
+                  {" "}
                   beschrieben werden können, dann
                   müssen wir erst einmal entscheiden, mit welcher unendlichen Menge wir uns beschäftigen.
                   Eine Bedingung sollte zum Beispiel sein, dass wir Input und Output vollständig hinschreiben können.
@@ -101,9 +109,13 @@ const Article = () => {
                   aus der Mathematik und Logik, und ganz allgemeinen entstand die Berechenbarkeitstheorie
                 </Paragraph>
                 <Paragraph>
-                  <em>
+                  {" "}{" "}
+                  <i>
                     bevor
-                  </em>
+                  </i>
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
                   die ersten Rechner gebaut wurden. Daher beschäftigten sich die ersten Forscher auch mit einer
                   anderen, uns sehr vertrauten Menge:
                   \begin&#123;align*&#125;

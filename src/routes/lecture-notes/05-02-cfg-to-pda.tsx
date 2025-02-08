@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={30}>
+      <Chapter
+        number={30}
+        path="/lecture-notes30.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="05-01-ableitungen">
-            <Paragraph>
-              &lt;&lt; Kapitel 05.01
-            </Paragraph>
+            &lt;&lt; Kapitel 5.1
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="05-03-exercise-design-grammars">
-            <Paragraph>
-              Kapitel 05.03 &gt;&gt;
-            </Paragraph>
+            Kapitel 5.3 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -73,16 +69,20 @@ const Article = () => {
                     \(X \rightarrow \beta\), löscht \(X\) vom Stack und pusht \(\beta\). Der Stack ist
                     nun \(\beta \alpha\), und \(\beta \alpha \Rightarrow^* w\). Entscheidend ist der
                     Nichtdeterminismus:
-                    es{" "}
-                    <em>
+                    es 
+                    {" "}
+                    <i>
                       gibt
-                    </em>
+                    </i>
+                    {" "}
                     eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
                     führt;
-                    der Automat{" "}
-                    <em>
+                    der Automat 
+                    {" "}
+                    <i>
                       kann
-                    </em>
+                    </i>
+                    {" "}
                     also diese Transition anwenden.
                   </Paragraph>
                   <Paragraph>
@@ -110,10 +110,12 @@ const Article = () => {
                     1, \$)&amp;\step&#123;\epsilon&#125; (\qend, \epsilon)
                     \end&#123;align*&#125;
                     Auf einen formalen Beweis, dass \(L(M) = L(G)\) ist, verzichte ich an dieser Stelle.
-                    Besser als Sipser in seinem Lehrbuch{" "}
-                    <em>
+                    Besser als Sipser in seinem Lehrbuch 
+                    {" "}
+                    <i>
                       Introduction to the Theory of Computing
-                    </em>
+                    </i>
+                    {" "}
                     könnte
                     ich das eh nicht.
                   </Paragraph>
@@ -147,22 +149,26 @@ const Article = () => {
                         <tt>
                           [
                         </tt>
-                        oben auf dem Stack bedeutet dann{" "}
-                        <em>
+                        oben auf dem Stack bedeutet dann 
+                        {" "}
+                        <i>
                           ich will jetzt sofort ein{" "}
                           <tt>
                             [
                           </tt>
                           lesen
-                        </em>
+                        </i>
+                        {" "}
                         ;
                         ein Nichtterminal wie \(A\) oben auf dem Stack bedeutet, dass
                         wir als nächstes ein von \(A\) ableitbares Wort, also ein \(A \rightarrow w \in
                         \Sigma^*\) lesen wollen.
-                        Um ein \(w\) mit \(A \rightarrow w\) lesen zu können, müssen wir{" "}
-                        <em>
+                        Um ein \(w\) mit \(A \rightarrow w\) lesen zu können, müssen wir 
+                        {" "}
+                        <i>
                           sofort
-                        </em>
+                        </i>
+                        {" "}
                         ein
                       </Paragraph>
                       <Paragraph>
@@ -285,15 +291,19 @@ const Article = () => {
                     dass es von \(\qend\) aus keine ausgehenden Transitionen gibt;
                     sollte es also nach Erreichen von \(\qend\) noch weitere Zeichen
                     im Eingabewort geben, so kann der Automat keine weiteren Schritte durchführen,
-                    was einem{" "}
-                    <em>
+                    was einem 
+                    {" "}
+                    <i>
                       reject
-                    </em>
+                    </i>
+                    {" "}
                     entspricht. Erreichen des Zustandes \(\qend\) führt also
-                    nur dann zu einem{" "}
-                    <em>
+                    nur dann zu einem 
+                    {" "}
+                    <i>
                       accept
-                    </em>
+                    </i>
+                    {" "}
                     , wenn dies am Ende des Wortes geschieht.
                   </Paragraph>
                   <figure class="centered-figure well">
@@ -517,55 +527,51 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        Der Automat hat einen einzigen akzeptierenden Zustand \(\qend\). Dies
-                        können wir einfach durch \(\epsilon\)-Übergänge erreichen.
-                      </Paragraph>
+                      Der Automat hat einen einzigen akzeptierenden Zustand \(\qend\). Dies
+                      können wir einfach durch \(\epsilon\)-Übergänge erreichen.
                     </li>
                     <li>
-                      <Paragraph>
-                        Der Automat leert den Stack, bevor er akzeptiert. Dies können wir
-                        z.B. dadurch erreichen, dass wir anfangs ein \(\$\) auf den Stack legen
-                        und am Ende den Stack poppen, bis wir \(\$\) gepoppt haben.
-                      </Paragraph>
+                      Der Automat leert den Stack, bevor er akzeptiert. Dies können wir
+                      z.B. dadurch erreichen, dass wir anfangs ein \(\$\) auf den Stack legen
+                      und am Ende den Stack poppen, bis wir \(\$\) gepoppt haben.
                     </li>
                     <li>
-                      <Paragraph>
-                        Für jede Transition
-                        \begin&#123;align*&#125;
-                        (p, x) \step&#123;a&#125; (q, y)
-                        \end&#123;align*&#125;
-                        ist genau eines von \(x,y\) leer (und das andere ist genau ein Stacksymbol aus
-                        \(\Gamma\)).
-                      </Paragraph>
-                      <Paragraph>
-                        Eine
-                        Transition
-                        der Form \((p, \epsilon) \step&#123;a&#125; (q, x) \) nennen wir eine{" "}
-                        <em>
-                          Push-Operation
-                        </em>
-                        ,
-                        eine der Form
-                        \((p, y) \step&#123;a&#125; (q, \epsilon) \) nennen wir eine{" "}
-                        <em>
-                          Pop-Operation
-                        </em>
-                        .
-                        Der Automat kann in diese Form gebracht werden, indem wir Zwischenzustände einführen:
-                        \begin&#123;align*&#125;
-                        (p, x) \step&#123;a&#125; (q, y) \textnormal&#123; wird ersetzt durch die zwei Transitionen&#125;
-                        (p, x) \step&#123;a&#125; (p', \epsilon) \textnormal&#123; und&#125;(p', \epsilon) \step&#123;a&#125; (q, y) \\
-                        (p, \epsilon) \step&#123;a&#125; (q,\epsilon) \textnormal&#123; wird ersetzt durch die zwei
-                        Transitionen&#125;
-                        (p, \epsilon) \step&#123;a&#125; (p', \bigstar) \textnormal&#123; und&#125;(p', \bigstar) \step&#123;a&#125; (q,
-                        \epsilon) \ .
-                        \end&#123;align*&#125;
-                        Im zweiten Falle pushen wir also pro Forma ein ansonsten irrelevantes Symbol
-                        \(\bigstar\) auf
-                        den
-                        Stack, um es gleich darauf runterzupoppen.
-                      </Paragraph>
+                      Für jede Transition
+                      \begin&#123;align*&#125;
+                      (p, x) \step&#123;a&#125; (q, y)
+                      \end&#123;align*&#125;
+                      ist genau eines von \(x,y\) leer (und das andere ist genau ein Stacksymbol aus
+                      \(\Gamma\)).
+                      Eine
+                      Transition
+                      der Form \((p, \epsilon) \step&#123;a&#125; (q, x) \) nennen wir eine 
+                      {" "}
+                      <i>
+                        Push-Operation
+                      </i>
+                      {" "}
+                      ,
+                      eine der Form
+                      \((p, y) \step&#123;a&#125; (q, \epsilon) \) nennen wir eine 
+                      {" "}
+                      <i>
+                        Pop-Operation
+                      </i>
+                      {" "}
+                      .
+                      Der Automat kann in diese Form gebracht werden, indem wir Zwischenzustände einführen:
+                      \begin&#123;align*&#125;
+                      (p, x) \step&#123;a&#125; (q, y) \textnormal&#123; wird ersetzt durch die zwei Transitionen&#125;
+                      (p, x) \step&#123;a&#125; (p', \epsilon) \textnormal&#123; und&#125;(p', \epsilon) \step&#123;a&#125; (q, y) \\
+                      (p, \epsilon) \step&#123;a&#125; (q,\epsilon) \textnormal&#123; wird ersetzt durch die zwei
+                      Transitionen&#125;
+                      (p, \epsilon) \step&#123;a&#125; (p', \bigstar) \textnormal&#123; und&#125;(p', \bigstar) \step&#123;a&#125; (q,
+                      \epsilon) \ .
+                      \end&#123;align*&#125;
+                      Im zweiten Falle pushen wir also pro Forma ein ansonsten irrelevantes Symbol
+                      \(\bigstar\) auf
+                      den
+                      Stack, um es gleich darauf runterzupoppen.
                     </li>
                   </ol>
                   <Paragraph>
@@ -584,58 +590,54 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        Fall 1: in der Konfigurationsfolge von \((p, \epsilon) \Step&#123;w&#125;^* (q,\epsilon) \)
-                        wird der Stack zwischendurch auch mal leer, und zwar nachdem der Präfix \(u\) des Wortes
-                        \(w = uv\) gelesen ist, und der Automat ist zu diesem Zeitpunkt im Zustand \(r\). Also:
-                        \begin&#123;align*&#125;
-                        (p, \epsilon) \Step&#123;u&#125;^* (r,\epsilon) \Step&#123;v&#125;^* (q,\epsilon) \ .
-                        \end&#123;align*&#125;
-                        Es sollte also (wenn unsere Konstruktion erfolgreich ist) gelten, dass
-                        \(A_&#123;pr&#125; \Rightarrow^* u\) und \(A_&#123;rq&#125; \Rightarrow^* v\). Wir führen daher die
-                        Grammatikproduktion
-                        \begin&#123;align*&#125;
-                        A
-                        <i>
-                          &#123;pq&#125; \rightarrow A
-                        </i>
-                        &#123;pr&#125; A_&#123;rq&#125;
-                        \end&#123;align*&#125;
-                        ein.
-                      </Paragraph>
+                      Fall 1: in der Konfigurationsfolge von \((p, \epsilon) \Step&#123;w&#125;^* (q,\epsilon) \)
+                      wird der Stack zwischendurch auch mal leer, und zwar nachdem der Präfix \(u\) des Wortes
+                      \(w = uv\) gelesen ist, und der Automat ist zu diesem Zeitpunkt im Zustand \(r\). Also:
+                      \begin&#123;align*&#125;
+                      (p, \epsilon) \Step&#123;u&#125;^* (r,\epsilon) \Step&#123;v&#125;^* (q,\epsilon) \ .
+                      \end&#123;align*&#125;
+                      Es sollte also (wenn unsere Konstruktion erfolgreich ist) gelten, dass
+                      \(A_&#123;pr&#125; \Rightarrow^* u\) und \(A_&#123;rq&#125; \Rightarrow^* v\). Wir führen daher die
+                      Grammatikproduktion
+                      \begin&#123;align*&#125;
+                      A
+                      <i>
+                        &#123;pq&#125; \rightarrow A
+                      </i>
+                      &#123;pr&#125; A_&#123;rq&#125;
+                      \end&#123;align*&#125;
+                      ein.
                     </li>
                     <li>
-                      <Paragraph>
-                        Fall 2: in der Konfigurationsfolge von \((p, \epsilon) \Step&#123;w&#125;^* (q,\epsilon) \)
-                        ist der Stack zwischendurch nie leer. Das heißt wiederum, dass das im ersten
-                        Schritt gepushte Stacksymbol \(x\) am Ende gepoppt wird, also \(w = avb\) mit
-                        \begin&#123;align*&#125;
-                        (p, \epsilon) \step&#123;a&#125; (r, x) \Step&#123;v&#125;^* (s,x) \step&#123;b&#125; (q,\epsilon)
-                        \end&#123;align*&#125;
-                        Hier ist wichtig zu wissen, dass die erste Operation eine Push-Operation sein muss:
-                        Pop kann sie eh nicht sein, und die Möglichkeit \((p,\epsilon) \step&#123;a&#125; (r, \epsilon)\)
-                        haben
-                        wir durch unsere Schönheitsoperationen ausgeschlossen. Des weiteren ist zu beachten,
-                        dass in der Konfigurationsfolge von \((r, x) \Step&#123;v&#125;^* (s,x)\) der Stack nie
-                        leer wird. Keine Transition "liest" also das unterste Zeichen \(x\) -- denn
-                        dann müsste nacha Schönheitsoperation das \(x\) ja gepoppt werden und der Stack
-                        würde vollständig geleert. In anderen Worten: die Konfigurationsfolge wäre auch dann
-                        gültig, wenn Anfangs- und Endstack nicht \([x]\) sondern \(\epsilon\), also der leere
-                        Stack wäre:
-                        \begin&#123;align*&#125;
-                        (r, \epsilon) \Step&#123;v&#125;^* (s,\epsilon) \ .
-                        \end&#123;align*&#125;
-                        Wenn unsere Konstruktion Erfolg hat, hieße das also \(A_&#123;rs&#125; \Rightarrow^* v\) und somit
-                        ist
-                        \begin&#123;align*&#125;
-                        A
-                        <i>
-                          &#123;pq&#125; \rightarrow a A
-                        </i>
-                        &#123;rs&#125; b
-                        \end&#123;align*&#125;
-                        eine gültige Regel.
-                      </Paragraph>
+                      Fall 2: in der Konfigurationsfolge von \((p, \epsilon) \Step&#123;w&#125;^* (q,\epsilon) \)
+                      ist der Stack zwischendurch nie leer. Das heißt wiederum, dass das im ersten
+                      Schritt gepushte Stacksymbol \(x\) am Ende gepoppt wird, also \(w = avb\) mit
+                      \begin&#123;align*&#125;
+                      (p, \epsilon) \step&#123;a&#125; (r, x) \Step&#123;v&#125;^* (s,x) \step&#123;b&#125; (q,\epsilon)
+                      \end&#123;align*&#125;
+                      Hier ist wichtig zu wissen, dass die erste Operation eine Push-Operation sein muss:
+                      Pop kann sie eh nicht sein, und die Möglichkeit \((p,\epsilon) \step&#123;a&#125; (r, \epsilon)\)
+                      haben
+                      wir durch unsere Schönheitsoperationen ausgeschlossen. Des weiteren ist zu beachten,
+                      dass in der Konfigurationsfolge von \((r, x) \Step&#123;v&#125;^* (s,x)\) der Stack nie
+                      leer wird. Keine Transition "liest" also das unterste Zeichen \(x\) -- denn
+                      dann müsste nacha Schönheitsoperation das \(x\) ja gepoppt werden und der Stack
+                      würde vollständig geleert. In anderen Worten: die Konfigurationsfolge wäre auch dann
+                      gültig, wenn Anfangs- und Endstack nicht \([x]\) sondern \(\epsilon\), also der leere
+                      Stack wäre:
+                      \begin&#123;align*&#125;
+                      (r, \epsilon) \Step&#123;v&#125;^* (s,\epsilon) \ .
+                      \end&#123;align*&#125;
+                      Wenn unsere Konstruktion Erfolg hat, hieße das also \(A_&#123;rs&#125; \Rightarrow^* v\) und somit
+                      ist
+                      \begin&#123;align*&#125;
+                      A
+                      <i>
+                        &#123;pq&#125; \rightarrow a A
+                      </i>
+                      &#123;rs&#125; b
+                      \end&#123;align*&#125;
+                      eine gültige Regel.
                     </li>
                   </ol>
                   <Paragraph>
@@ -691,10 +693,12 @@ const Article = () => {
                     \begin&#123;align*&#125;
                     a^m b (a|b)^* b a^m
                     \end&#123;align*&#125;
-                    Diese ist{" "}
-                    <em>
+                    Diese ist 
+                    {" "}
+                    <i>
                       nicht
-                    </em>
+                    </i>
+                    {" "}
                     regulär, da der Präfix und der Suffix aus \(a\) die gleiche
                     Länge \(m\) haben müssen.
                     Wir bauen zuerst einen Kellerautomaten und übersetzen den dann entsprechend dem Schema

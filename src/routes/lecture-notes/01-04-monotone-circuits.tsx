@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={5}>
+      <Chapter
+        number={5}
+        path="/lecture-notes5.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="01-03-binary-adder">
-            <Paragraph>
-              &lt;&lt; Kapitel 01.03
-            </Paragraph>
+            &lt;&lt; Kapitel 1.3
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="01-05-majority">
-            <Paragraph>
-              Kapitel 01.05 &gt;&gt;
-            </Paragraph>
+            Kapitel 1.5 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -43,21 +39,27 @@ const Article = () => {
                   <Paragraph>
                     Für zwei Tupel \(\mathbf&#123;x&#125;, \mathbf&#123;y&#125; \in \&#123;0,1\&#125;^n\) schreiben wir
                     \( \mathbf&#123;x&#125; \leq \mathbf&#123;y&#125;\), falls \(x_1 \leq y_1, \dots, x_n \leq y_n\), also
-                    \(\mathbf&#123;x&#125;\){" "}
-                    <em>
+                    \(\mathbf&#123;x&#125;\) 
+                    {" "}
+                    <i>
                       in jeder Koordinate
-                    </em>
+                    </i>
+                    {" "}
                     kleiner gleich \(\mathbf&#123;y&#125;\) ist.
                     Beispielsweise gilt \( (0,0,1) \leq (1,0,1)\). Allerdings gilt weder
-                    \( (0,1,0) \leq (1,0,1)\) noch umgekehrt; die beiden Tupel sind{" "}
-                    <em>
+                    \( (0,1,0) \leq (1,0,1)\) noch umgekehrt; die beiden Tupel sind 
+                    {" "}
+                    <i>
                       unvergleichbar
-                    </em>
+                    </i>
+                    {" "}
                     ;
-                    es handelt sich bei \(\leq\) also um eine{" "}
-                    <em>
+                    es handelt sich bei \(\leq\) also um eine 
+                    {" "}
+                    <i>
                       Partialordnung
-                    </em>
+                    </i>
+                    {" "}
                     .
                     Am Besten stellen Sie sich eine solche Partialordnung als gerichteten Graphen vor:
                   </Paragraph>
@@ -73,9 +75,11 @@ const Article = () => {
                     Diese Darstellung einer Partialordnung als gerichteter Graph bezeichnet man auch als
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Hasse-Diagramm
-                    </em>
+                    </i>
+                    {" "}
                     (ich verzichte hier auf eine formale Definition).
                     Es gilt nun \(\mathbf&#123;x&#125; \leq \mathbf&#123;y&#125;\), wenn Sie im Hasse-Diagramm einen
                     Pfad von \(\mathbf&#123;x&#125;\) nach \(\mathbf&#123;y&#125;\) finden.
@@ -90,10 +94,12 @@ const Article = () => {
                     {" "}
                     Im obigen Bild steht zwar \(001\) unterhalb von \(110\), allerdings
                     werden Sie keinen Pfad von \(001\) nach \(110\) finden;
-                    es gilt also \(001 \not \leq 110\); die beiden Elemente sind{" "}
-                    <em>
+                    es gilt also \(001 \not \leq 110\); die beiden Elemente sind 
+                    {" "}
+                    <i>
                       unvergleichbar
-                    </em>
+                    </i>
+                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>
@@ -105,9 +111,11 @@ const Article = () => {
                     Eine Boolesche Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) heißt
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       monoton
-                    </em>
+                    </i>
+                    {" "}
                     , wenn
                     {" "}
                   </Paragraph>
@@ -155,10 +163,12 @@ const Article = () => {
                     \(\xor (0,1) \gt \xor (1,0)\), was der Definition einer monotonen Funktion
                     widerspricht. (Ich habe hier absichtlich die Präfixschreibweise \(\xor(0,1)\) verwendet,
                     um hervorzuheben, dass es sich hierbei um eine Funktion in zwei Variablen handelt.)
-                    Beachten Sie, dass ich die Worte{" "}
-                    <em>
+                    Beachten Sie, dass ich die Worte 
+                    {" "}
+                    <i>
                       "oberhalb"
-                    </em>
+                    </i>
+                    {" "}
                     im Sinne der Partialordnung
                     meine, nicht wirklich im geometrischen Sinne in der Abbildung.
                   </Paragraph>
@@ -215,18 +225,22 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Finden Sie alle monotonen Funktionen in zwei Variablen.
-                    Wie sieht es mit allen monotonen Funktionen in{" "}
-                    <em>
+                    Wie sieht es mit allen monotonen Funktionen in 
+                    {" "}
+                    <i>
                       drei
-                    </em>
+                    </i>
+                    {" "}
                     Variablen aus?
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Am Besten betrachten Sie das{" "}
-                      <em>
+                      Am Besten betrachten Sie das 
+                      {" "}
+                      <i>
                         Hasse-Diagramm
-                      </em>
+                      </i>
+                      {" "}
                       der
                       Partialordnungen auf Mengen \( \&#123;0,1\&#125;^2\) bzw. \( \&#123;0,1\&#125;^3\):
                     </Paragraph>
@@ -258,10 +272,12 @@ const Article = () => {
                   <Paragraph>
                     Bauen Sie einen Schaltkreis mit drei Input-Variablen \(x,y,z\), der drei
                     Output-Gates hat, die \(\bar&#123;x&#125;, \bar&#123;y&#125;, \bar&#123;z&#125;\) berechnen.
-                    Ihr Schaltkreis darf{" "}
-                    <em>
+                    Ihr Schaltkreis darf 
+                    {" "}
+                    <i>
                       höchstens zwei NOT-Gates
-                    </em>
+                    </i>
+                    {" "}
                     einhalten,
                     aber beliebig viele AND- und OR-Gates.
                   </Paragraph>
@@ -282,10 +298,12 @@ const Article = () => {
                     Ich lege Ihnen sehr ans Herz, die obigen Übungsaufgaben selbständig
                     zu bearbeiten. Falls Sie dennoch die Geduld verlieren,
                     so habe ich hier Lösungen ausgearbeitet. Auch mit dem Zweck, an dieser
-                    Stelle auf Beweismethoden wie{" "}
-                    <em>
+                    Stelle auf Beweismethoden wie 
+                    {" "}
+                    <i>
                       Induktion
-                    </em>
+                    </i>
+                    {" "}
                     und verschiedene
                     Beweisstrategien einzugehen.
                   </Paragraph>
@@ -304,38 +322,34 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Ich werde zweieinhalb Beweise für dieses Theorem vorstellen. Dies dient auch dazu,
-                    gängige{" "}
-                    <em>
+                    gängige 
+                    {" "}
+                    <i>
                       Beweistechniken
-                    </em>
-                    und{" "}
-                    <em>
+                    </i>
+                    {" "}
+                    und 
+                    {" "}
+                    <i>
                       Beweismethoden
-                    </em>
+                    </i>
+                    {" "}
                     zu illustrieren. Unter
                     Beweismethoden
                     verstehe ich hier formale Methoden wie
                   </Paragraph>
                   <ul>
                     <li>
-                      <Paragraph>
-                        Beweis durch Induktion,
-                      </Paragraph>
+                      Beweis durch Induktion,
                     </li>
                     <li>
-                      <Paragraph>
-                        Beweis durch Widerspruch,
-                      </Paragraph>
+                      Beweis durch Widerspruch,
                     </li>
                     <li>
-                      <Paragraph>
-                        Beweis durch vollständige Fallunterscheidung,
-                      </Paragraph>
+                      Beweis durch vollständige Fallunterscheidung,
                     </li>
                     <li>
-                      <Paragraph>
-                        ...
-                      </Paragraph>
+                      ...
                     </li>
                   </ul>
                   <Paragraph>
@@ -343,9 +357,7 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <a href="https://de.wikipedia.org/wiki/Beweis_(Mathematik)#Beweismethoden">
-                      <Paragraph>
-                        Wikipedia
-                      </Paragraph>
+                      Wikipedia
                     </a>
                     aufgeführt
                     sind.
@@ -354,19 +366,13 @@ const Article = () => {
                   </Paragraph>
                   <ul>
                     <li>
-                      <Paragraph>
-                        kleine Beispiele untersuchen und dann verallgemeinern,
-                      </Paragraph>
+                      kleine Beispiele untersuchen und dann verallgemeinern,
                     </li>
                     <li>
-                      <Paragraph>
-                        bereits Bekanntes abwandeln und hoffen, dass es funktioniert,
-                      </Paragraph>
+                      bereits Bekanntes abwandeln und hoffen, dass es funktioniert,
                     </li>
                     <li>
-                      <Paragraph>
-                        local change: ein Objekt schrittweise in die gewünschte Richtung verändern;
-                      </Paragraph>
+                      local change: ein Objekt schrittweise in die gewünschte Richtung verändern;
                     </li>
                   </ul>
                   <Paragraph>
@@ -393,9 +399,7 @@ const Article = () => {
                       abwandeln. Was kennen wir denn bereits? Wir kennen
                       die{" "}
                       <a href="../vorlesungsskript.html#truth-table-top-down">
-                        <Paragraph>
-                          Top-Down-Methode
-                        </Paragraph>
+                        Top-Down-Methode
                       </a>
                       , wie wir
                       aus einer Wahrheitstabelle einen Schaltkreis bauen:
@@ -423,9 +427,7 @@ const Article = () => {
                       erinnern können und eher an Theorem 1 als an allgemeinen Beweismethoden interessiert sind,
                       dürfen Sie gerne{" "}
                       <a href="#after-sub-proof">
-                        <Paragraph>
-                          runterspringen.
-                        </Paragraph>
+                        runterspringen.
                       </a>
                     </Paragraph>
                   </Paragraph>
@@ -439,47 +441,47 @@ const Article = () => {
                         {" "}{" "}
                       </Paragraph>
                       <Paragraph>
-                        Als{" "}
-                        <em>
+                        Als 
+                        {" "}
+                        <i>
                           Beweismethode
-                        </em>
+                        </i>
+                        {" "}
                         verwenden wir Induktion über \(n\), die Anzahl der Variablen.
                       </Paragraph>
                     </Paragraph>
                     <div class="alert-info">
                       <Paragraph>
                         Zur Erinnerung: bei einem Beweis per Induktion wollen wir eine Aussage
-                        der Form{" "}
-                        <em>
+                        der Form 
+                        {" "}
+                        <i>
                           Für alle natürlichen Zahlen \(n \in \N\) gilt \(P(n)\)
-                        </em>
+                        </i>
+                        {" "}
                         beweisen,
                         wobei \(P(n)\) wiederum eine Aussage ist, in der die Zahl \(n\) irgendwo vorkommt.
                         Bei einem Beweis durch Induktion zeigen wir nun,
                       </Paragraph>
                       <ol>
                         <li>
-                          <Paragraph>
-                            dass \(P(0)\) gilt (
-                            {" "}
-                            <b>
-                              Induktionsbasis
-                            </b>
-                            {" "}
-                            ),
-                          </Paragraph>
+                          dass \(P(0)\) gilt (
+                          {" "}
+                          <b>
+                            Induktionsbasis
+                          </b>
+                          {" "}
+                          ),
                         </li>
                         <li>
-                          <Paragraph>
-                            dass, wenn \(P(n)\) für eine Zahl \(n \in \N \) gilt, dann sicherlich
-                            auch \(P(n+1)\) gilt (
-                            {" "}
-                            <b>
-                              Induktionsschritt
-                            </b>
-                            {" "}
-                            ).
-                          </Paragraph>
+                          dass, wenn \(P(n)\) für eine Zahl \(n \in \N \) gilt, dann sicherlich
+                          auch \(P(n+1)\) gilt (
+                          {" "}
+                          <b>
+                            Induktionsschritt
+                          </b>
+                          {" "}
+                          ).
                         </li>
                       </ol>
                       <Paragraph>
@@ -495,10 +497,12 @@ const Article = () => {
                     <Paragraph>
                       <Paragraph>
                         Als erstes müssen wir nun unsere Aussage, die wir beweisen wollen (also die im Theorem)
-                        so formulieren, dass sie die Form{" "}
-                        <em>
+                        so formulieren, dass sie die Form 
+                        {" "}
+                        <i>
                           \(P(n)\) für alle \(n \in \N\)
-                        </em>
+                        </i>
+                        {" "}
                         annimmt.
                         Dies ist einfach, da die Zahl \(n\) bereits im Theorem vorkommt. Wir formulieren sie
                         also nun so um:
@@ -568,10 +572,12 @@ const Article = () => {
                         <Paragraph>
                           <Paragraph>
                             Wenn wir die Induktionsbasis bei \(n=1\) ansetzen wollen, dann sehen wir, dass
-                            es{" "}
-                            <em>
+                            es 
+                            {" "}
+                            <i>
                               vier
-                            </em>
+                            </i>
+                            {" "}
                             Funktionen gibt: \(0, 1, x, \neg x\); all diese haben natürlich
                             einen
                             (sehr einfachen) Schaltkreis. Nur bei \(\neg x\) braucht unser Schaltkreis überhaupt
@@ -582,14 +588,18 @@ const Article = () => {
                         <Paragraph>
                           <Paragraph>
                             An diesem Punkt protestieren Sie vielleicht und sagen, dass \(0\) keine Funktion
-                            in{" "}
-                            <em>
+                            in 
+                            {" "}
+                            <i>
                               einer
-                            </em>
-                            Variable ist, sondern in{" "}
-                            <em>
+                            </i>
+                            {" "}
+                            Variable ist, sondern in 
+                            {" "}
+                            <i>
                               zwei
-                            </em>
+                            </i>
+                            {" "}
                             Variablen.
                             Und auch hier appelliere ich an Ihre Programmiererfahrung: weder Sie
                             noch der Java-Compiler werden Probleme mit der Funktion
@@ -633,10 +643,12 @@ const Article = () => {
                           Input-Variablen etc. In mathematischen Papern lesen Sie
                           in diesem Kontext manchmal{" "}
                           <a href="https://en.wikipedia.org/wiki/Abuse_of_notation">
-                            <em>
+                            {" "}{" "}
+                            <i>
                               with abuse of
                               notation
-                            </em>
+                            </i>
+                            {" "}{" "}
                           </a>
                           ,
                           womit die Autoren andeuten, dass sie ihre Notation nicht ganz korrekt anwenden, aber
@@ -655,10 +667,12 @@ const Article = () => {
                         \(P(n) \Rightarrow P(n+1)\) oder \(P(n-1) \Rightarrow P(n)\) zeigen,
                         kommt aufs Gleiche raus und unterscheidet sich nur in der Notation; in diesem
                         Falle ist es mir angenehmer, \(P(n-1) \Rightarrow P(n)\) zu zeigen. Wir dürfen
-                        also die{" "}
-                        <em>
+                        also die 
+                        {" "}
+                        <i>
                           Induktionshypothese
-                        </em>
+                        </i>
+                        {" "}
                         \(P(n-1)\) als gegeben annehmen:
                       </Paragraph>
                     </Paragraph>
@@ -739,21 +753,27 @@ const Article = () => {
                         Da \(f_0\) und \(f_1\) jeweils nur \(n-1\) Input-Variablen haben,
                         können wir die Induktionshypothese anwenden und folgern,
                         dass es Boolesche Schaltkreise für sie gibt.
-                        Nach{" "}
-                        <em>
+                        Nach 
+                        {" "}
+                        <i>
                           Zerlegen in \(f_0, f_1\)
-                        </em>
+                        </i>
+                        {" "}
                         und
                       </Paragraph>
                       <Paragraph>
-                        <em>
+                        {" "}{" "}
+                        <i>
                           Anwenden der Induktionshypothese
-                        </em>
+                        </i>
+                        {" "}
                         müssen wir nun
-                        die Teilergebnisse wieder{" "}
-                        <em>
+                        die Teilergebnisse wieder 
+                        {" "}
+                        <i>
                           sinnvoll zusammenfügen
-                        </em>
+                        </i>
+                        {" "}
                         . Dies
                         tun wir in diesem Falle mit einem{" "}
                         <code>
@@ -772,31 +792,29 @@ const Article = () => {
                       <Paragraph>
                         Ich behaupte, dass obiger Schaltkreis tatsächlich \(f\) berechnet. Falls dies noch nicht
                         klar sein sollte, können wir auch dies formal beweisen, und zwar
-                        durch die Methode{" "}
-                        <em>
+                        durch die Methode 
+                        {" "}
+                        <i>
                           vollständige Fallunterscheidung.
-                        </em>
+                        </i>
+                        {" "}
                         Sei
                         nun also ein konkreter Input \(x_1,\dots,x_n\) gegeben.
                       </Paragraph>
                     </Paragraph>
                     <ul>
                       <li>
-                        <Paragraph>
-                          Der Fall \(x_1 = 1\). Dann gibt der obige Schaltkreis
-                          den Wert \(f_1(x_2,\dots,x_n\) aus, was per Definition von \(f_1\)
-                          gleich \(f(1, x_2,\dots,x_n) = f(x_1,\dots,x_n)\) ist. Er gibt also den korrekten
-                          Wert aus.
-                        </Paragraph>
+                        Der Fall \(x_1 = 1\). Dann gibt der obige Schaltkreis
+                        den Wert \(f_1(x_2,\dots,x_n\) aus, was per Definition von \(f_1\)
+                        gleich \(f(1, x_2,\dots,x_n) = f(x_1,\dots,x_n)\) ist. Er gibt also den korrekten
+                        Wert aus.
                       </li>
                       <li>
-                        <Paragraph>
-                          Der Fall \(x_1 = 0\). Dann gibt der obige Schaltkreis
-                          den Wert \(f_0(x_2,\dots,x_n\) aus, was per Definition von \(f_0\)
-                          gleich \(f(0, x_2,\dots,x_n) = f(x_1,\dots,x_n)\) ist. Er gibt also auch hier den
-                          korrekten
-                          Wert aus.
-                        </Paragraph>
+                        Der Fall \(x_1 = 0\). Dann gibt der obige Schaltkreis
+                        den Wert \(f_0(x_2,\dots,x_n\) aus, was per Definition von \(f_0\)
+                        gleich \(f(0, x_2,\dots,x_n) = f(x_1,\dots,x_n)\) ist. Er gibt also auch hier den
+                        korrekten
+                        Wert aus.
                       </li>
                     </ul>
                     <Paragraph>
@@ -819,9 +837,7 @@ const Article = () => {
                     auf verschiedene formale Aspekte der Beweisführung einzugehen. Wenden wir uns
                     jetzt dem Beweis von{" "}
                     <a href="#theorem-1">
-                      <Paragraph>
-                        Theorem 1.4.3
-                      </Paragraph>
+                      Theorem 1.4.3
                     </a>
                     zu.{" "}
                   </Paragraph>
@@ -923,13 +939,17 @@ const Article = () => {
                       vorherigen Beweis wiederholen und hoffen, dass alles klappt. Die Beweistechnik heißt ja auch
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         Bekanntes abwandeln
-                      </em>
-                      , nicht{" "}
-                      <em>
+                      </i>
+                      {" "}
+                      , nicht 
+                      {" "}
+                      <i>
                         Bekanntes kritiklos wiederholen
-                      </em>
+                      </i>
+                      {" "}
                       . Wie
                       können wir den obigen Schaltkreis abwandeln, dass er monoton wird, also das eine NOT-Gate
                       entfernen? Spontan fallen mir zwei Wege ein: wir können das NOT-Gate einfach
@@ -954,10 +974,12 @@ const Article = () => {
                       {" "}
                       Ich erlaube mir hier, aus Bequemlichkeit einfach \(f_1\) statt \(f_1(x_2,\dots,x_n)\) zu
                       schreiben.
-                      Auch ein{" "}
-                      <em>
+                      Auch ein 
+                      {" "}
+                      <i>
                         abuse of notation
-                      </em>
+                      </i>
+                      {" "}
                       . In der obigen Formel habe ich rechts
                       das \(x\) ausgeklammert; die Formel beginnt nun mit \(x \wedge ...\); falls
                       \(x=0\) ist, gibt sie also auf jeden Fall \(0\) aus; das kann im Allgemeinen nicht
@@ -1023,129 +1045,119 @@ const Article = () => {
                     </Paragraph>
                     <ul>
                       <li>
-                        <Paragraph>
-                          Der Fall \(x_1 = 0\). Dann gilt
-                          \begin&#123;align*&#125;
-                          f(x
-                          <i>
-                            1,x
-                          </i>
-                          2,\dots,x
-                          <i>
-                            n)&amp;= f(0,x
-                          </i>
-                          2,\dots,x
-                          <i>
-                            n) \tag&#123;da $x
-                          </i>
-                          1=0$&#125; \\
-                          &amp;= f
-                          <i>
-                            0 (x
-                          </i>
-                          2, \dots,x
-                          <i>
-                            n) \tag&#123;Definition von $f
-                          </i>
-                          2$&#125; \\
-                          &amp;= (0 \wedge f
-                          <i>
-                            1) \vee f
-                          </i>
-                          0 \tag&#123;die 0 tötet den ersten Term eh&#125;\\
-                          &amp;= (x
-                          <i>
-                            1 \wedge f
-                          </i>
+                        Der Fall \(x_1 = 0\). Dann gilt
+                        \begin&#123;align*&#125;
+                        f(x
+                        <i>
+                          1,x
+                        </i>
+                        2,\dots,x
+                        <i>
+                          n)&amp;= f(0,x
+                        </i>
+                        2,\dots,x
+                        <i>
+                          n) \tag&#123;da $x
+                        </i>
+                        1=0$&#125; \\
+                        &amp;= f
+                        <i>
+                          0 (x
+                        </i>
+                        2, \dots,x
+                        <i>
+                          n) \tag&#123;Definition von $f
+                        </i>
+                        2$&#125; \\
+                        &amp;= (0 \wedge f
+                        <i>
                           1) \vee f
-                          <i>
-                            0 \tag&#123;weil $x
-                          </i>
-                          1 = 0$&#125; \ ,
-                          \end&#123;align*&#125;
-                          und die behauptete Gleichung gilt.
-                        </Paragraph>
+                        </i>
+                        0 \tag&#123;die 0 tötet den ersten Term eh&#125;\\
+                        &amp;= (x
+                        <i>
+                          1 \wedge f
+                        </i>
+                        1) \vee f
+                        <i>
+                          0 \tag&#123;weil $x
+                        </i>
+                        1 = 0$&#125; \ ,
+                        \end&#123;align*&#125;
+                        und die behauptete Gleichung gilt.
                       </li>
                       <li>
-                        <Paragraph>
-                          Der Fall \(x_1 = 1\). Dann gilt
-                          \begin&#123;align*&#125;
-                          f(x
-                          <i>
-                            1,\dots,x
-                          </i>
-                          n)&amp;= f
-                          <i>
-                            1(x
-                          </i>
-                          2,\dots,x
-                          <i>
-                            n) \ .
-                            \end&#123;align*&#125;
-                            Was ist aber mit der rechten Seite der behaupteten Gleichung?
-                            \begin&#123;align*&#125;
-                            (x
-                          </i>
-                          1 \wedge f
-                          <i>
-                            1) \vee f
-                          </i>
-                          0&amp;= f
-                          <i>
-                            1 \vee f
-                          </i>
-                          0 \tag&#123;da $x
-                          <i>
-                            1=1$ ist und somit im $\wedge$
-                            wegfällt&#125;
-                            \end&#123;align*&#125;
-                            Die linke Seite ist also \(f_1\), die rechte ist \(f_1 \vee f_0\). Schaut leider
-                            nicht
-                            gleich aus.
-                            Jetzt sollten bei Ihnen die Glocken klingeln: wir haben bisher an keiner Stelle
-                            im Beweis verwendet, dass \(f\) eine monotone Funktion ist! Und wenn wir das nicht
-                            verwendet
-                            haben, kann der Beweis ja gar nicht funktionieren. Also: verwenden wir Monotonität:
-                            \begin&#123;align*&#125;
-                            (0, x
-                          </i>
-                          2, \dots,x
-                          <i>
-                            n)&amp;\leq (1, x
-                          </i>
-                          2, \dots,x
-                          <i>
-                            n) \tag&#123;Definition unser Partialordnung,
-                            &#125; \\
-                            f(0, x
-                          </i>
-                          2, \dots,x
-                          <i>
-                            n)&amp;\leq f(1, x
-                          </i>
-                          2, \dots,x
-                          <i>
-                            n) \tag&#123;weil $f$ monoton ist.&#125; \\
-                            f
-                          </i>
-                          0&amp;\leq f_1 \ .
+                        Der Fall \(x_1 = 1\). Dann gilt
+                        \begin&#123;align*&#125;
+                        f(x
+                        <i>
+                          1,\dots,x
+                        </i>
+                        n)&amp;= f
+                        <i>
+                          1(x
+                        </i>
+                        2,\dots,x
+                        <i>
+                          n) \ .
                           \end&#123;align*&#125;
-                          Wir überprüfen nun also: wenn \(f_0(x_2, \dots, x_n) = 0\) ist, dann
-                          gilt \(f_0 \vee f_1 = 0 \vee f_1 = f_1\). Wenn
-                          \(f_0 = 1\) ist, dann ist \(f_1 = 1\) wegen Monotonität (größer als 1 geht ja
-                          nicht),
-                          und daher \(f_0 \vee f_1 = 1 \vee 1 = 1 = f_1\). In jedem Fall gilt also:
-                          {" "}
-                        </Paragraph>
-                        <Paragraph>
-                          $$
-                          (f_0 \vee f_1) = f_1 \ .
-                          $$
-                        </Paragraph>
-                        <Paragraph>
-                          {" "}
-                          Und somit sind linke und rechte Seite gleich, wie behauptet.
-                        </Paragraph>
+                          Was ist aber mit der rechten Seite der behaupteten Gleichung?
+                          \begin&#123;align*&#125;
+                          (x
+                        </i>
+                        1 \wedge f
+                        <i>
+                          1) \vee f
+                        </i>
+                        0&amp;= f
+                        <i>
+                          1 \vee f
+                        </i>
+                        0 \tag&#123;da $x
+                        <i>
+                          1=1$ ist und somit im $\wedge$
+                          wegfällt&#125;
+                          \end&#123;align*&#125;
+                          Die linke Seite ist also \(f_1\), die rechte ist \(f_1 \vee f_0\). Schaut leider
+                          nicht
+                          gleich aus.
+                          Jetzt sollten bei Ihnen die Glocken klingeln: wir haben bisher an keiner Stelle
+                          im Beweis verwendet, dass \(f\) eine monotone Funktion ist! Und wenn wir das nicht
+                          verwendet
+                          haben, kann der Beweis ja gar nicht funktionieren. Also: verwenden wir Monotonität:
+                          \begin&#123;align*&#125;
+                          (0, x
+                        </i>
+                        2, \dots,x
+                        <i>
+                          n)&amp;\leq (1, x
+                        </i>
+                        2, \dots,x
+                        <i>
+                          n) \tag&#123;Definition unser Partialordnung,
+                          &#125; \\
+                          f(0, x
+                        </i>
+                        2, \dots,x
+                        <i>
+                          n)&amp;\leq f(1, x
+                        </i>
+                        2, \dots,x
+                        <i>
+                          n) \tag&#123;weil $f$ monoton ist.&#125; \\
+                          f
+                        </i>
+                        0&amp;\leq f_1 \ .
+                        \end&#123;align*&#125;
+                        Wir überprüfen nun also: wenn \(f_0(x_2, \dots, x_n) = 0\) ist, dann
+                        gilt \(f_0 \vee f_1 = 0 \vee f_1 = f_1\). Wenn
+                        \(f_0 = 1\) ist, dann ist \(f_1 = 1\) wegen Monotonität (größer als 1 geht ja
+                        nicht),
+                        und daher \(f_0 \vee f_1 = 1 \vee 1 = 1 = f_1\). In jedem Fall gilt also:
+                        $$
+                        (f_0 \vee f_1) = f_1 \ .
+                        $$
+                        Und somit sind linke und rechte Seite gleich, wie behauptet.
                       </li>
                     </ul>
                     <span class="qed">
@@ -1188,10 +1200,14 @@ const Article = () => {
                     {" "}{" "}
                   </Paragraph>
                   <Paragraph>
-                    Als Beweisstrategie verwende ich wieder{" "}
-                    <em>
+                    Als Beweisstrategie verwende ich wieder 
+                    {" "}
+                    <i>
                       Bekanntes abwandeln.
-                    </em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
                     <Paragraph>
                       <Paragraph>
                         {" "}{" "}
@@ -1280,10 +1296,12 @@ const Article = () => {
                       </Paragraph>
                       <Paragraph>
                         {" "}
-                        Die Abkürzung \(\sat\) steht für{" "}
-                        <em>
+                        Die Abkürzung \(\sat\) steht für 
+                        {" "}
+                        <i>
                           satisfying assignments
-                        </em>
+                        </i>
+                        {" "}
                         , also
                         diejenigen Belegungen der Variablen, die \(f\) "erfüllen", also 1 werden lassen.
                         Wir bauen uns einen Schaltkreis \(F\):
@@ -1411,14 +1429,10 @@ const Article = () => {
                     </Paragraph>
                     <ol>
                       <li>
-                        <Paragraph>
-                          \(F(\mathbf&#123;x&#125;) \leq F'(\mathbf&#123;x&#125;)\) und{" "}
-                        </Paragraph>
+                        \(F(\mathbf&#123;x&#125;) \leq F'(\mathbf&#123;x&#125;)\) und{" "}
                       </li>
                       <li>
-                        <Paragraph>
-                          \(F(\mathbf&#123;x&#125;) \geq F'(\mathbf&#123;x&#125;)\).
-                        </Paragraph>
+                        \(F(\mathbf&#123;x&#125;) \geq F'(\mathbf&#123;x&#125;)\).
                       </li>
                     </ol>
                     <Paragraph>
@@ -1547,10 +1561,12 @@ const Article = () => {
                       <Paragraph>
                         {" "}
                         Wir können zwar nicht genau mit dem Finger auf einen Term von \(F\) zeigen,
-                        der 1 wird, wissen aber{" "}
-                        <em>
+                        der 1 wird, wissen aber 
+                        {" "}
+                        <i>
                           per Monotonie
-                        </em>
+                        </i>
+                        {" "}
                         , dass es so einen geben muss.
                       </Paragraph>
                       <span class="qed">

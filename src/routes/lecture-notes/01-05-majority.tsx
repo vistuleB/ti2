@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={6}>
+      <Chapter
+        number={6}
+        path="/lecture-notes6.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="01-04-monotone-circuits">
-            <Paragraph>
-              &lt;&lt; Kapitel 01.04
-            </Paragraph>
+            &lt;&lt; Kapitel 1.4
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="01-06-lower-and-upper-bounds">
-            <Paragraph>
-              Kapitel 01.06 &gt;&gt;
-            </Paragraph>
+            Kapitel 1.6 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -35,7 +31,9 @@ const Article = () => {
             <div class="chapter">
               <div class="subChapter">
                 <h1 class="hidden-title">
-                  <span class="subChapterTitle" />
+                  <span class="subChapterTitle">
+                    1.5 Majority
+                  </span>
                 </h1>
                 <Paragraph>
                   Unser Ziel in diesem Teilkapitel ist es, Schaltkreise für die Majority-Funktion zu bauen:
@@ -287,9 +285,7 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   <a href="../sub-pages/01-monotone.html">
-                    <Paragraph>
-                      Lösungen zu den Übungsaufgaben
-                    </Paragraph>
+                    Lösungen zu den Übungsaufgaben
                   </a>
                   dargestellt.
                   Insbesondere definieren wir Verallgemeinerungen von \(\maj_n\) wie folgt:
@@ -398,9 +394,11 @@ const Article = () => {
                   der exponentielle Laufzeit aufweist, und der effizienten Implementierung mittels
                 </Paragraph>
                 <Paragraph>
-                  <em>
+                  {" "}{" "}
+                  <i>
                     Dynamic Programming
-                  </em>
+                  </i>
+                  {" "}
                   , bei welchem wir uns die Zwischenergebnisse merken.
                 </Paragraph>
                 <Paragraph>
@@ -581,20 +579,14 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        Wieviele 2-for-3-Addierer haben Sie in Ebene $i$ des Baumes?
-                      </Paragraph>
+                      Wieviele 2-for-3-Addierer haben Sie in Ebene $i$ des Baumes?
                     </li>
                     <li>
-                      <Paragraph>
-                        Wieviel Bits haben die Zahlen auf Ebene $i$, und wie groß muss daher
-                        der 2-for-3-Addierer sein?
-                      </Paragraph>
+                      Wieviel Bits haben die Zahlen auf Ebene $i$, und wie groß muss daher
+                      der 2-for-3-Addierer sein?
                     </li>
                     <li>
-                      <Paragraph>
-                        Was ergibt sich insgesamt in Summe?
-                      </Paragraph>
+                      Was ergibt sich insgesamt in Summe?
                     </li>
                   </ol>
                 </div>
@@ -662,10 +654,12 @@ const Article = () => {
                     die \(\bigvee\)-Gates haben sehr großen Fan-in, nämlich bis zu \(n\). Um
                     Fan-in 2 zu erreichen, müssen wir jedes \(\bigvee\)-Gate durch einen Binärbaum
                     aus normalen \(\vee\)-Gates von Fan-in 2 ersetzen. Dies gibt uns zusätzlich
-                    Tiefe \(O(\log n)\){" "}
-                    <em>
+                    Tiefe \(O(\log n)\) 
+                    {" "}
+                    <i>
                       pro \(\bigvee\)-Gate
-                    </em>
+                    </i>
+                    {" "}
                     ; wir erhalten also insgesamt
                     eine Tiefe von \(O(\log^2 n)\).
                   </Paragraph>
@@ -703,10 +697,12 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     Die Beweismethode, die wir verwenden, ist womöglich neu für Sie. Wir verwenden
-                    bei der Konstruktion des Schaltkreises{" "}
-                    <em>
+                    bei der Konstruktion des Schaltkreises 
+                    {" "}
+                    <i>
                       Zufall
-                    </em>
+                    </i>
+                    {" "}
                     ; am Ende werden
                     wir zeigen, dass dieser zufällige Schaltkreis mit hoher Wahrscheinlichkeit
                     \(\maj_n\) auf allen möglichen \(2^n\) Inputs korrekt berechnen, und folgern
@@ -725,15 +721,19 @@ const Article = () => {
                       Weise zufällig sind. Wir verwenden also
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         Wahrscheinlichkeitsverteilungen über Schaltkreisen
-                      </em>
+                      </i>
+                      {" "}
                       , nicht
                       von über Inputs. Zuerst definieren wir
-                      die{" "}
-                      <em>
+                      die 
+                      {" "}
+                      <i>
                         Signalstärke
-                      </em>
+                      </i>
+                      {" "}
                       von Verteilungen über Schaltkreise.
                     </Paragraph>
                   </Paragraph>
@@ -743,10 +743,14 @@ const Article = () => {
                         Definition (Signalstärke)
                       </span>
                       Sei \(\mathcal&#123;C&#125;\) eine Verteilung über Schaltkreise mit Input-Variablen
-                      \(x_1,\dots,x_n\). Wir sagen, dass \(\mathcal&#123;C&#125;\){" "}
-                      <em>
+                      \(x_1,\dots,x_n\). Wir sagen, dass \(\mathcal&#123;C&#125;\) 
+                      {" "}
+                      <i>
                         Signalstärke mindestens $\delta$
-                      </em>
+                      </i>
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
                       hat, wenn
                       {" "}
                     </Paragraph>
@@ -860,10 +864,12 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Um eine Analogie aus dem Alltag zu bemühen: wenn Sie für eine
-                      Wahlprognose{" "}
-                      <em>
+                      Wahlprognose 
+                      {" "}
+                      <i>
                         einen
-                      </em>
+                      </i>
+                      {" "}
                       zufällig ausgewählten Bürger befragen, so
                       ist das Ergebnis zwar nicht wirklich repräsentativ, aber immerhin leicht
                       besser, als wenn Sie einfach raten würden. Unser zufälliger
@@ -885,10 +891,12 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph>
                       {" "}
-                      Dann können wir{" "}
-                      <em>
+                      Dann können wir 
+                      {" "}
+                      <i>
                         drei
-                      </em>
+                      </i>
+                      {" "}
                       Schaltkreise
                       \(C_1, C_2, C_3 \sim \mathcal&#123;C&#125;\) unabhängig voneinander samplen und
                       einen neuen Schaltkreis bauen: \(C'(\x) := \maj_3 (C_1(\x), C_2(\x), C_3(\x))\). Dies gibt
@@ -906,22 +914,16 @@ const Article = () => {
                     </Paragraph>
                     <ol>
                       <li>
-                        <Paragraph>
-                          alle Schaltkreise in \(\mathcal&#123;C&#125;^&#123;\otimes 3&#125;\) haben Tiefe
-                          \(d+2\);
-                        </Paragraph>
+                        alle Schaltkreise in \(\mathcal&#123;C&#125;^&#123;\otimes 3&#125;\) haben Tiefe
+                        \(d+2\);
                       </li>
                       <li>
-                        <Paragraph>
-                          alle Schaltkreise in \(\mathcal&#123;C&#125;^&#123;\otimes 3&#125;\) haben Größe
-                          \(3s+4\);
-                        </Paragraph>
+                        alle Schaltkreise in \(\mathcal&#123;C&#125;^&#123;\otimes 3&#125;\) haben Größe
+                        \(3s+4\);
                       </li>
                       <li>
-                        <Paragraph>
-                          die Signalstärke von $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ ist
-                          $\frac&#123;3&#125;&#123;2&#125; \delta - \frac&#123;1&#125;&#123;2&#125;\delta^3$.
-                        </Paragraph>
+                        die Signalstärke von $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ ist
+                        $\frac&#123;3&#125;&#123;2&#125; \delta - \frac&#123;1&#125;&#123;2&#125;\delta^3$.
                       </li>
                     </ol>
                   </div>
@@ -957,10 +959,12 @@ const Article = () => {
                           </i>
                           3 \sim \mathcal&#123;C&#125;$ zufällige Schaltkreise sind, sind $U, V, W$
                           Zufallsvariable
-                          über $\cube$, und zwar{" "}
-                          <em>
+                          über $\cube$, und zwar 
+                          {" "}
+                          <i>
                             unabhängig
-                          </em>
+                          </i>
+                          {" "}
                           , weil wir $C
                           <i>
                             1, C
@@ -1060,10 +1064,12 @@ const Article = () => {
                           1,\dots,x
                         </i>
                         n$
-                        hat{" "}
-                        <em>
+                        hat 
+                        {" "}
+                        <i>
                           Fehlerwahrscheinlichkeit $\epsilon$
-                        </em>
+                        </i>
+                        {" "}
                         , wenn
                       </Paragraph>
                     </Paragraph>
@@ -1168,16 +1174,20 @@ const Article = () => {
                           an. Dieses exponentielle Wachstum kann natürlich nicht beliebig weitergehen. Jenseits
                           $\delta
                         </i>
-                        i \leq 1/2$ hört das auf, dafür{" "}
-                        <em>
+                        i \leq 1/2$ hört das auf, dafür 
+                        {" "}
+                        <i>
                           fällt
-                        </em>
+                        </i>
+                        {" "}
                         nun die Fehlerwahrscheinlichkeit
                       </Paragraph>
                       <Paragraph>
-                        <em>
+                        {" "}{" "}
+                        <i>
                           doppelt exponentiell
-                        </em>
+                        </i>
+                        {" "}
                         . Für $j^* := \log_&#123;3/2&#125; n$ gilt dann
                       </Paragraph>
                     </Paragraph>
@@ -1191,37 +1201,31 @@ const Article = () => {
                     </Paragraph>
                   </Paragraph>
                   <figure>
-                    <Paragraph>
-                      <img
-                        style="height:10em"
-                        src="../img/circuits/majority.svg"
-                        loading="lazy" />
-                      <br />
-                      Graph der Funktion $p \mapsto p^3 + 3 p^2 (1-p)$
-                    </Paragraph>
+                    <img
+                      style="height:10em"
+                      src="../img/circuits/majority.svg"
+                      loading="lazy" />
+                    <br />
+                    Graph der Funktion $p \mapsto p^3 + 3 p^2 (1-p)$
                     <hr />
                   </figure>
                   <figure>
-                    <Paragraph>
-                      <img
-                        style="height:10em"
-                        src="../img/circuits/majority.svg"
-                        loading="lazy" />
-                      <br />
-                      Signalstärke $\delta$ wächst für $p \in [1/2, 3/4]$ exponentiell.
-                    </Paragraph>
+                    <img
+                      style="height:10em"
+                      src="../img/circuits/majority.svg"
+                      loading="lazy" />
+                    <br />
+                    Signalstärke $\delta$ wächst für $p \in [1/2, 3/4]$ exponentiell.
                     <hr />
                   </figure>
                   <figure>
-                    <Paragraph>
-                      <img
-                        style="height:10em"
-                        src="../img/circuits/majority.svg"
-                        loading="lazy" />
-                      <br />
-                      Fehlerwahrscheinlichkeit $\epsilon$ fällt für $p \in [3/4, 1/2]$ doppelt
-                      exponentiell.
-                    </Paragraph>
+                    <img
+                      style="height:10em"
+                      src="../img/circuits/majority.svg"
+                      loading="lazy" />
+                    <br />
+                    Fehlerwahrscheinlichkeit $\epsilon$ fällt für $p \in [3/4, 1/2]$ doppelt
+                    exponentiell.
                     <hr />
                   </figure>
                   <Paragraph>
@@ -1282,10 +1286,12 @@ const Article = () => {
                           n$. Die Menge $E
                         </i>
                         &#123;\b&#125;$
-                        ist somit ein{" "}
-                        <em>
+                        ist somit ein 
+                        {" "}
+                        <i>
                           Ereignis
-                        </em>
+                        </i>
+                        {" "}
                         in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
                       </Paragraph>
                     </Paragraph>
@@ -1429,10 +1435,12 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Wir könnten nun noch ehrgeiziger sein und einen monotonen Schaltkreis mit Fan-in 2,
-                    Tiefe $O(\log n)$ und{" "}
-                    <em>
+                    Tiefe $O(\log n)$ und 
+                    {" "}
+                    <i>
                       linearer
-                    </em>
+                    </i>
+                    {" "}
                     Größe $O(n)$ anstreben.
                   </Paragraph>
                 </Paragraph>

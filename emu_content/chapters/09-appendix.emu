@@ -8,9 +8,10 @@
         |> a
             href 08-01-Time-hierarchy-theorem
 
-            &lt;&lt; Kapitel 08.01
+            &lt;&lt; Kapitel 8.1
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 

@@ -8,9 +8,10 @@
         |> a
             href 04-07-exercises
 
-            &lt;&lt; Kapitel 04.07
+            &lt;&lt; Kapitel 4.7
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 05-01-ableitungen
 
-            Kapitel 05.01 &gt;&gt;
+            Kapitel 5.1 &gt;&gt;
     |> div
         id rightSideWrapper
 

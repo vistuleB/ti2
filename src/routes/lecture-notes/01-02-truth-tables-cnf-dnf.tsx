@@ -5,24 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={3}>
+      <Chapter
+        number={3}
+        path="/lecture-notes3.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
+          </a>
+          <a href="01-01-Fanin-Size-Depth">
+            &lt;&lt; Kapitel 1.1
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="01-03-binary-adder">
-            <Paragraph>
-              Kapitel 01.03 &gt;&gt;
-            </Paragraph>
+            Kapitel 1.3 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -51,12 +52,12 @@ const Article = () => {
                       viele Schaltkreise), die sie berechnen. Wir werden insgesamt drei
                       Konstruktionen sehen. Als erstes lassen Sie uns überlegen, wie man
                       eine Boolesche Funktion im Allgemeinen aufschreibt/codiert.
-                      Beschränken wir uns erst einmal auf Boolesche Funktionen mit
-                    </Paragraph>
-                    <Paragraph>
-                      <em>
+                      Beschränken wir uns erst einmal auf Boolesche Funktionen mit 
+                      {" "}
+                      <i>
                         einem
-                      </em>
+                      </i>
+                      {" "}
                       Ausgabewert, also \(f : \&#123;0,1\&#125;^n \rightarrow
                       \&#123;0,1\&#125;\).
                     </Paragraph>
@@ -66,13 +67,17 @@ const Article = () => {
                   nennt man eine
                 </Paragraph>
                 <Paragraph>
-                  <em>
+                  {" "}{" "}
+                  <i>
                     Wahrheitstabelle
-                  </em>
-                  (englisch{" "}
-                  <em>
+                  </i>
+                  {" "}
+                  (englisch 
+                  {" "}
+                  <i>
                     truth table
-                  </em>
+                  </i>
+                  {" "}
                   ). Hier sehen
                   Sie ein Beispiel:{" "}
                 </Paragraph>
@@ -123,23 +128,19 @@ const Article = () => {
                   das mir lesbarer erscheint). Insgesamt also:
                 </Paragraph>
                 <figure>
-                  <Paragraph>
-                    f ={" "}
-                    <code>
-                      if
-                    </code>
-                    \(x\){" "}
-                    <code>
-                      then
-                    </code>
-                    \(\bar&#123;y&#125; \vee z\)
-                  </Paragraph>
-                  <Paragraph>
-                    <code>
-                      else
-                    </code>
-                    \(y \vee z\).
-                  </Paragraph>
+                  f ={" "}
+                  <code>
+                    if
+                  </code>
+                  \(x\){" "}
+                  <code>
+                    then
+                  </code>
+                  \(\bar&#123;y&#125; \vee z\)
+                  <code>
+                    else
+                  </code>
+                  \(y \vee z\).
                 </figure>
                 <Paragraph>
                   <Paragraph>
@@ -163,41 +164,31 @@ const Article = () => {
                 </Paragraph>
                 <ol>
                   <li>
-                    <Paragraph>
-                      Teile die Tabelle in die oberen \(2^&#123;n-1&#125;\) Zeilen (für die \(x_1 =
-                      0\) gilt) und die unteren \(2^&#123;n-1&#125;\) Zeilen (für die \(x_1 = 1\)
-                      gilt) auf.
-                    </Paragraph>
+                    Teile die Tabelle in die oberen \(2^&#123;n-1&#125;\) Zeilen (für die \(x_1 =
+                    0\) gilt) und die unteren \(2^&#123;n-1&#125;\) Zeilen (für die \(x_1 = 1\)
+                    gilt) auf.
                   </li>
                   <li>
-                    <Paragraph>
-                      Jede Hälfte kann als Boolesche Funktion mit \(n-1\) Variablen
-                      betrachtet werden. Bauen Sie rekursiv Schaltkreise \(C_0\) für die
-                      obere und \(C_1\) für die untere Hälfte, beide mit Input-Variablen
-                      \(x_2,\dots,x_n\).
-                    </Paragraph>
+                    Jede Hälfte kann als Boolesche Funktion mit \(n-1\) Variablen
+                    betrachtet werden. Bauen Sie rekursiv Schaltkreise \(C_0\) für die
+                    obere und \(C_1\) für die untere Hälfte, beide mit Input-Variablen
+                    \(x_2,\dots,x_n\).
                   </li>
                   <li>
-                    <Paragraph>
-                      Kombinieren Sie diese via
-                    </Paragraph>
-                    <Paragraph>
-                      <code>
-                        if
-                      </code>
-                      \(x_1\){" "}
-                      <code>
-                        then
-                      </code>
-                      \(C_1\)
-                    </Paragraph>
-                    <Paragraph>
-                      <code>
-                        else
-                      </code>
-                      \(C_0\) zu einem Schaltkreis für \(f\) mit
-                      insgesamt \(n\) Input-Variablen.
-                    </Paragraph>
+                    Kombinieren Sie diese via{" "}
+                    <code>
+                      if
+                    </code>
+                    \(x_1\){" "}
+                    <code>
+                      then{" "}
+                    </code>
+                    \(C_1\){" "}
+                    <code>
+                      else{" "}
+                    </code>
+                    \(C_0\) zu einem Schaltkreis für \(f\) mit
+                    insgesamt \(n\) Input-Variablen.
                   </li>
                 </ol>
                 <Paragraph>
@@ -304,9 +295,11 @@ const Article = () => {
                       AND von Variablen oder deren Negation besteht, nennt man auch einen
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         Term
-                      </em>
+                      </i>
+                      {" "}
                       .
                     </Paragraph>
                   </Paragraph>
@@ -338,15 +331,19 @@ const Article = () => {
                   In diesem Schaltkreis habe ich die Input-Knoten mehrfach aufgeführt und
                   die NOT-Gates nicht explizit aufgeführt, damit kein "Kabelsalat"
                   entsteht. Beachten Sie auch, das jedes Gate (außer den Input-Gates)
-                  genau{" "}
-                  <em>
+                  genau 
+                  {" "}
+                  <i>
                     eine
-                  </em>
+                  </i>
+                  {" "}
                   ausgehende Kante hat. Konkret bedeutet dies, dass
-                  man diesen Schaltkreis als{" "}
-                  <em>
+                  man diesen Schaltkreis als 
+                  {" "}
+                  <i>
                     logische Formel
-                  </em>
+                  </i>
+                  {" "}
                   hinschreiben kann:
                   {" "}
                 </Paragraph>
@@ -363,21 +360,27 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Ein{" "}
-                    <em>
+                    Ein 
+                    {" "}
+                    <i>
                       Literal
-                    </em>
+                    </i>
+                    {" "}
                     ist eine Variable \(x\) oder deren Negation
-                    \(\bar&#123;x&#125;\). Ein{" "}
-                    <em>
+                    \(\bar&#123;x&#125;\). Ein 
+                    {" "}
+                    <i>
                       Term
-                    </em>
+                    </i>
+                    {" "}
                     ist ein AND (auch: Konjunktion) von
                     Literalen (beispielsweise \(\bar&#123;x&#125; \wedge \bar&#123;y&#125; \wedge z)\). Eine
-                    Formel in{" "}
-                    <em>
+                    Formel in 
+                    {" "}
+                    <i>
                       disjunktiver Normalform
-                    </em>
+                    </i>
+                    {" "}
                     (DNF) ist ein OR von
                     Termen.
                   </Paragraph>
@@ -397,9 +400,11 @@ const Article = () => {
                     sind, sondern auch OR-Gates? Dann wäre dies nach der ersten Definition
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       keine
-                    </em>
+                    </i>
+                    {" "}
                     DNF-Formel, nach der zweiten aber schon. Zeigen Sie,
                     wie man OR-Gates auf Ebene 1 entfernen kann! Als konkretes Beispiel:
                   </Paragraph>
@@ -424,9 +429,11 @@ const Article = () => {
                       wir alle Möglichkeiten auflisten, wie man eine 0 erhalten kann; tritt
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         keine
-                      </em>
+                      </i>
+                      {" "}
                       davon ein, muss wohl eine 1 herauskommen. Wir gehen
                       also in der Wahrheitstabelle alle Zeilen mit Wert 0 durch und
                       schreiben einen Ausdruck, der genau diese Zeile verbietet. So kann man
@@ -446,10 +453,12 @@ const Article = () => {
                 <Paragraph>
                   {" "}Einen Ausdruck
                   der Form \(\bar&#123;x&#125; \vee \bar&#123;y&#125; \vee z\), also ein OR von Literaten,
-                  nennt man auch eine{" "}
-                  <em>
+                  nennt man auch eine 
+                  {" "}
+                  <i>
                     Klausel
-                  </em>
+                  </i>
+                  {" "}
                   . Eine Klausel mit \(n\) (hier:
                   \(n=3\)) Literaten verbietet genau ein Tupel von Wahrheitswerten. Wenn
                   wir also alle Verbote mit AND verknüpfen, erhalten wir
@@ -465,10 +474,12 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Eine Formel in{" "}
-                    <em>
+                    Eine Formel in 
+                    {" "}
+                    <i>
                       konjunktiver Normalform
-                    </em>
+                    </i>
+                    {" "}
                     (CNF) ist ein AND von
                     Klauseln.
                   </Paragraph>
@@ -531,71 +542,65 @@ const Article = () => {
                   <Paragraph>
                     Sie haben eventuell von Methoden zur Minimierung von DNFs bzw. CNFs
                     oder Schaltkreisen im Allgemeinen gehört, z.B. Karnaugh-Diagramme.
-                    Dies sind{" "}
-                    <em>
+                    Dies sind 
+                    {" "}
+                    <i>
                       Heuristiken
-                    </em>
+                    </i>
+                    {" "}
                     , die hilfreich sind, aber nicht
                     garantieren können, eine optimale Lösung zu finden (es sind also keine
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Algorithmen
-                    </em>
+                    </i>
+                    {" "}
                     in dem Sinne). Die genaue Komplexität dieser
                     Optimierungsprobleme ist in der Tat Gegenstand aktiver Forschung,
                   </Paragraph>
                 </Paragraph>
                 <ol>
                   <li>
-                    <Paragraph>
-                      Wenn die Funktion (1) bereits als{" "}
-                      <em>
-                        Boolesche Formel
-                      </em>
-                      vorliegt
-                      (also Schaltkreise, in denen außer den Eingabe-Gates alle Gates nur
-                      eine ausgehende Kante haben), so ist das Minimierungsproblem
-                      \(Sigma_2^&#123;P&#125;\)-vollständig, siehe
-                    </Paragraph>
-                    <Paragraph>
-                      <a href="http://users.cms.caltech.edu/~umans/papers/BU07.pdf">
-                        <Paragraph>
-                          Buchfuhrer, David; Umans, Christopher (January 2011),
-                        </Paragraph>
-                        <Paragraph>
-                          <em>
-                            The complexity of Boolean formula minimization
-                          </em>
-                          (JCSS
-                          2011){" "}
-                        </Paragraph>
-                      </a>
-                      .
-                    </Paragraph>
+                    Wenn die Funktion (1) bereits als 
+                    {" "}
+                    <i>
+                      Boolesche Formel
+                    </i>
+                    {" "}
+                    vorliegt
+                    (also Schaltkreise, in denen außer den Eingabe-Gates alle Gates nur
+                    eine ausgehende Kante haben), so ist das Minimierungsproblem
+                    \(Sigma_2^&#123;P&#125;\)-vollständig, siehe
+                    <a href="http://users.cms.caltech.edu/~umans/papers/BU07.pdf">
+                      Buchfuhrer, David; Umans, Christopher (January 2011),
+                      {" "}
+                      <i>
+                        The complexity of Boolean formula minimization
+                      </i>
+                      {" "}
+                      (JCSS
+                      2011){" "}
+                    </a>
+                    .
                   </li>
                   <li>
-                    <Paragraph>
-                      Wenn die Funktion (2) als Tabelle gegeben ist, dann ist die genaue
-                      Komplexität nicht genau bekannt. Es hat in den letzten Jahren
-                      Fortschritte gegeben (die nahelegen, dass das Problem tatsächlich
-                      schwierig ist), z.B.
-                    </Paragraph>
-                    <Paragraph>
-                      <a href="https://drops.dagstuhl.de/opus/volltexte/2020/12574/pdf/LIPIcs-CCC-2020-22.pdf">
-                        <Paragraph>
-                          Ilango, Loff, and Oliveira.
-                        </Paragraph>
-                        <Paragraph>
-                          <em>
-                            NP-Hardness of Circuit Minimization for Multi-Output
-                            Functions
-                          </em>
-                          , (CCC 2020)
-                        </Paragraph>
-                      </a>
-                      .
-                    </Paragraph>
+                    Wenn die Funktion (2) als Tabelle gegeben ist, dann ist die genaue
+                    Komplexität nicht genau bekannt. Es hat in den letzten Jahren
+                    Fortschritte gegeben (die nahelegen, dass das Problem tatsächlich
+                    schwierig ist), z.B.
+                    <a href="https://drops.dagstuhl.de/opus/volltexte/2020/12574/pdf/LIPIcs-CCC-2020-22.pdf">
+                      Ilango, Loff, and Oliveira.
+                      {" "}
+                      <i>
+                        NP-Hardness of Circuit Minimization for Multi-Output
+                        Functions
+                      </i>
+                      {" "}
+                      , (CCC 2020)
+                    </a>
+                    .
                   </li>
                 </ol>
                 <Paragraph>

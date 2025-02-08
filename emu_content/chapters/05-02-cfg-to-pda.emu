@@ -8,9 +8,10 @@
         |> a
             href 05-01-ableitungen
 
-            &lt;&lt; Kapitel 05.01
+            &lt;&lt; Kapitel 5.1
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 05-03-exercise-design-grammars
 
-            Kapitel 05.03 &gt;&gt;
+            Kapitel 5.3 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -93,15 +94,11 @@
                         nun \(\beta \alpha\), und \(\beta \alpha \Rightarrow^* w\). Entscheidend ist der
                         Nichtdeterminismus:
                         es 
-                        |> em
-
-                            gibt
+                        _gibt_
                         eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
                         führt;
                         der Automat 
-                        |> em
-
-                            kann
+                        _kann_
                         also diese Transition anwenden.
                         
                         |> br
@@ -118,9 +115,7 @@
                         \end{align*}
                         Auf einen formalen Beweis, dass \(L(M) = L(G)\) ist, verzichte ich an dieser Stelle.
                         Besser als Sipser in seinem Lehrbuch 
-                        |> em
-
-                            Introduction to the Theory of Computing
+                        _Introduction to the Theory of Computing_
                         könnte
                         ich das eh nicht.
                         
@@ -170,22 +165,18 @@
 
                                 [
                             oben auf dem Stack bedeutet dann 
-                            |> em
+                            _ich will jetzt sofort ein 
+                            |> tt
 
-                                ich will jetzt sofort ein 
-                                |> tt
-
-                                    [
-                                
-                                lesen
+                                [
+                            
+                            lesen_
                             ;
                             ein Nichtterminal wie \(A\) oben auf dem Stack bedeutet, dass
                             wir als nächstes ein von \(A\) ableitbares Wort, also ein \(A \rightarrow w \in
                             \Sigma^*\) lesen wollen.
                             Um ein \(w\) mit \(A \rightarrow w\) lesen zu können, müssen wir 
-                            |> em
-
-                                sofort
+                            _sofort_
                             ein
                             
                             |> tt
@@ -248,14 +239,10 @@
                         sollte es also nach Erreichen von \(\qend\) noch weitere Zeichen
                         im Eingabewort geben, so kann der Automat keine weiteren Schritte durchführen,
                         was einem 
-                        |> em
-
-                            reject
+                        _reject_
                         entspricht. Erreichen des Zustandes \(\qend\) führt also
                         nur dann zu einem 
-                        |> em
-
-                            accept
+                        _accept_
                         , wenn dies am Ende des Wortes geschieht.
                         
                         |> figure
@@ -716,15 +703,11 @@
                                 Eine
                                 Transition
                                 der Form \((p, \epsilon) \step{a} (q, x) \) nennen wir eine 
-                                |> em
-
-                                    Push-Operation
+                                _Push-Operation_
                                 ,
                                 eine der Form
                                 \((p, y) \step{a} (q, \epsilon) \) nennen wir eine 
-                                |> em
-
-                                    Pop-Operation
+                                _Pop-Operation_
                                 .
                                 Der Automat kann in diese Form gebracht werden, indem wir Zwischenzustände einführen:
                                 \begin{align*}
@@ -868,9 +851,7 @@
                         a^m b (a|b)^* b a^m
                         \end{align*}
                         Diese ist 
-                        |> em
-
-                            nicht
+                        _nicht_
                         regulär, da der Präfix und der Suffix aus \(a\) die gleiche
                         Länge \(m\) haben müssen.
                         Wir bauen zuerst einen Kellerautomaten und übersetzen den dann entsprechend dem Schema

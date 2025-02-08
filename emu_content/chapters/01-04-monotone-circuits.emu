@@ -8,9 +8,10 @@
         |> a
             href 01-03-binary-adder
 
-            &lt;&lt; Kapitel 01.03
+            &lt;&lt; Kapitel 1.3
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 01-05-majority
 
-            Kapitel 01.05 &gt;&gt;
+            Kapitel 1.5 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -64,20 +65,14 @@
                         Für zwei Tupel \(\mathbf{x}, \mathbf{y} \in \{0,1\}^n\) schreiben wir
                         \( \mathbf{x} \leq \mathbf{y}\), falls \(x_1 \leq y_1, \dots, x_n \leq y_n\), also
                         \(\mathbf{x}\) 
-                        |> em
-
-                            in jeder Koordinate
+                        _in jeder Koordinate_
                         kleiner gleich \(\mathbf{y}\) ist.
                         Beispielsweise gilt \( (0,0,1) \leq (1,0,1)\). Allerdings gilt weder
                         \( (0,1,0) \leq (1,0,1)\) noch umgekehrt; die beiden Tupel sind 
-                        |> em
-
-                            unvergleichbar
+                        _unvergleichbar_
                         ;
                         es handelt sich bei \(\leq\) also um eine 
-                        |> em
-
-                            Partialordnung
+                        _Partialordnung_
                         .
                         Am Besten stellen Sie sich eine solche Partialordnung als gerichteten Graphen vor:
                         
@@ -100,9 +95,7 @@
                         
                         Diese Darstellung einer Partialordnung als gerichteter Graph bezeichnet man auch als
                         
-                        |> em
-
-                            Hasse-Diagramm
+                        _Hasse-Diagramm_
                         (ich verzichte hier auf eine formale Definition).
                         Es gilt nun \(\mathbf{x} \leq \mathbf{y}\), wenn Sie im Hasse-Diagramm einen
                         Pfad von \(\mathbf{x}\) nach \(\mathbf{y}\) finden.
@@ -117,9 +110,7 @@
                         Im obigen Bild steht zwar \(001\) unterhalb von \(110\), allerdings
                         werden Sie keinen Pfad von \(001\) nach \(110\) finden;
                         es gilt also \(001 \not \leq 110\); die beiden Elemente sind 
-                        |> em
-
-                            unvergleichbar
+                        _unvergleichbar_
                         .
                         
                     
@@ -138,9 +129,7 @@
                         
                         Eine Boolesche Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\) heißt
                         
-                        |> em
-
-                            monoton
+                        _monoton_
                         , wenn
                         $$
                         \forall \mathbf{x} \leq \mathbf{y} \in \{0,1\}^n \ : \
@@ -203,9 +192,7 @@
                         widerspricht. (Ich habe hier absichtlich die Präfixschreibweise \(\xor(0,1)\) verwendet,
                         um hervorzuheben, dass es sich hierbei um eine Funktion in zwei Variablen handelt.)
                         Beachten Sie, dass ich die Worte 
-                        |> em
-
-                            "oberhalb"
+                        _"oberhalb"_
                         im Sinne der Partialordnung
                         meine, nicht wirklich im geometrischen Sinne in der Abbildung.
                         
@@ -286,18 +273,14 @@
                         
                         Finden Sie alle monotonen Funktionen in zwei Variablen.
                         Wie sieht es mit allen monotonen Funktionen in 
-                        |> em
-
-                            drei
+                        _drei_
                         Variablen aus?
                         
                         |> p
 
                             
                             Am Besten betrachten Sie das 
-                            |> em
-
-                                Hasse-Diagramm
+                            _Hasse-Diagramm_
                             der
                             Partialordnungen auf Mengen \( \{0,1\}^2\) bzw. \( \{0,1\}^3\):
                             
@@ -341,9 +324,7 @@
                         Bauen Sie einen Schaltkreis mit drei Input-Variablen \(x,y,z\), der drei
                         Output-Gates hat, die \(\bar{x}, \bar{y}, \bar{z}\) berechnen.
                         Ihr Schaltkreis darf 
-                        |> em
-
-                            höchstens zwei NOT-Gates
+                        _höchstens zwei NOT-Gates_
                         einhalten,
                         aber beliebig viele AND- und OR-Gates.
                         
@@ -376,9 +357,7 @@
                         zu bearbeiten. Falls Sie dennoch die Geduld verlieren,
                         so habe ich hier Lösungen ausgearbeitet. Auch mit dem Zweck, an dieser
                         Stelle auf Beweismethoden wie 
-                        |> em
-
-                            Induktion
+                        _Induktion_
                         und verschiedene
                         Beweisstrategien einzugehen.
                         
@@ -407,13 +386,9 @@
 
                         Ich werde zweieinhalb Beweise für dieses Theorem vorstellen. Dies dient auch dazu,
                         gängige 
-                        |> em
-
-                            Beweistechniken
+                        _Beweistechniken_
                         und 
-                        |> em
-
-                            Beweismethoden
+                        _Beweismethoden_
                         zu illustrieren. Unter
                         Beweismethoden
                         verstehe ich hier formale Methoden wie
@@ -553,9 +528,7 @@
                                 *Beweis.*
                                 
                                 Als 
-                                |> em
-
-                                    Beweismethode
+                                _Beweismethode_
                                 verwenden wir Induktion über \(n\), die Anzahl der Variablen.
                                 
                             
@@ -566,9 +539,7 @@
                                 
                                 Zur Erinnerung: bei einem Beweis per Induktion wollen wir eine Aussage
                                 der Form 
-                                |> em
-
-                                    Für alle natürlichen Zahlen \(n \in \N\) gilt \(P(n)\)
+                                _Für alle natürlichen Zahlen \(n \in \N\) gilt \(P(n)\)_
                                 beweisen,
                                 wobei \(P(n)\) wiederum eine Aussage ist, in der die Zahl \(n\) irgendwo vorkommt.
                                 Bei einem Beweis durch Induktion zeigen wir nun,
@@ -608,9 +579,7 @@
 
                                 Als erstes müssen wir nun unsere Aussage, die wir beweisen wollen (also die im Theorem)
                                 so formulieren, dass sie die Form 
-                                |> em
-
-                                    \(P(n)\) für alle \(n \in \N\)
+                                _\(P(n)\) für alle \(n \in \N\)_
                                 annimmt.
                                 Dies ist einfach, da die Zahl \(n\) bereits im Theorem vorkommt. Wir formulieren sie
                                 also nun so um:
@@ -689,9 +658,7 @@
                                     
                                     Wenn wir die Induktionsbasis bei \(n=1\) ansetzen wollen, dann sehen wir, dass
                                     es 
-                                    |> em
-
-                                        vier
+                                    _vier_
                                     Funktionen gibt: \(0, 1, x, \neg x\); all diese haben natürlich
                                     einen
                                     (sehr einfachen) Schaltkreis. Nur bei \(\neg x\) braucht unser Schaltkreis überhaupt
@@ -705,13 +672,9 @@
                                     
                                     An diesem Punkt protestieren Sie vielleicht und sagen, dass \(0\) keine Funktion
                                     in 
-                                    |> em
-
-                                        einer
+                                    _einer_
                                     Variable ist, sondern in 
-                                    |> em
-
-                                        zwei
+                                    _zwei_
                                     Variablen.
                                     Und auch hier appelliere ich an Ihre Programmiererfahrung: weder Sie
                                     noch der Java-Compiler werden Probleme mit der Funktion
@@ -754,10 +717,9 @@
                                     in diesem Kontext manchmal 
                                     |> a
                                         href https://en.wikipedia.org/wiki/Abuse_of_notation
-                                        |> em
 
-                                            with abuse of
-                                            notation
+                                        _with abuse of
+                                        notation_
                                     ,
                                     womit die Autoren andeuten, dass sie ihre Notation nicht ganz korrekt anwenden, aber
                                     davon ausgehen, dass Leser oder Leserin (die ja Menschen sind und keine Compiler),
@@ -778,9 +740,7 @@
                                 kommt aufs Gleiche raus und unterscheidet sich nur in der Notation; in diesem
                                 Falle ist es mir angenehmer, \(P(n-1) \Rightarrow P(n)\) zu zeigen. Wir dürfen
                                 also die 
-                                |> em
-
-                                    Induktionshypothese
+                                _Induktionshypothese_
                                 \(P(n-1)\) als gegeben annehmen:
                                 
                             
@@ -837,19 +797,13 @@
                                 können wir die Induktionshypothese anwenden und folgern,
                                 dass es Boolesche Schaltkreise für sie gibt.
                                 Nach 
-                                |> em
-
-                                    Zerlegen in \(f_0, f_1\)
+                                _Zerlegen in \(f_0, f_1\)_
                                 und
                                 
-                                |> em
-
-                                    Anwenden der Induktionshypothese
+                                _Anwenden der Induktionshypothese_
                                 müssen wir nun
                                 die Teilergebnisse wieder 
-                                |> em
-
-                                    sinnvoll zusammenfügen
+                                _sinnvoll zusammenfügen_
                                 . Dies
                                 tun wir in diesem Falle mit einem 
                                 |> code
@@ -877,9 +831,7 @@
                                 Ich behaupte, dass obiger Schaltkreis tatsächlich \(f\) berechnet. Falls dies noch nicht
                                 klar sein sollte, können wir auch dies formal beweisen, und zwar
                                 durch die Methode 
-                                |> em
-
-                                    vollständige Fallunterscheidung.
+                                _vollständige Fallunterscheidung._
                                 Sei
                                 nun also ein konkreter Input \(x_1,\dots,x_n\) gegeben.
                                 
@@ -1028,13 +980,9 @@
                             und enthält ein NOT-Gate. Aber klar: wir können natürlich nicht die Konstruktion aus dem
                             vorherigen Beweis wiederholen und hoffen, dass alles klappt. Die Beweistechnik heißt ja auch
                             
-                            |> em
-
-                                Bekanntes abwandeln
+                            _Bekanntes abwandeln_
                             , nicht 
-                            |> em
-
-                                Bekanntes kritiklos wiederholen
+                            _Bekanntes kritiklos wiederholen_
                             . Wie
                             können wir den obigen Schaltkreis abwandeln, dass er monoton wird, also das eine NOT-Gate
                             entfernen? Spontan fallen mir zwei Wege ein: wir können das NOT-Gate einfach
@@ -1058,9 +1006,7 @@
                             Ich erlaube mir hier, aus Bequemlichkeit einfach \(f_1\) statt \(f_1(x_2,\dots,x_n)\) zu
                             schreiben.
                             Auch ein 
-                            |> em
-
-                                abuse of notation
+                            _abuse of notation_
                             . In der obigen Formel habe ich rechts
                             das \(x\) ausgeklammert; die Formel beginnt nun mit \(x \wedge ...\); falls
                             \(x=0\) ist, gibt sie also auf jeden Fall \(0\) aus; das kann im Allgemeinen nicht
@@ -1236,9 +1182,7 @@
                         
                         
                         Als Beweisstrategie verwende ich wieder 
-                        |> em
-
-                            Bekanntes abwandeln.
+                        _Bekanntes abwandeln._
                         
                         
                         
@@ -1293,9 +1237,7 @@
                             \sat(f) := \{\mathbf{a} \in \{0,1\}^n \ | \ f(\mathbf{a}) = 1 \} \ .
                             $$
                             Die Abkürzung \(\sat\) steht für 
-                            |> em
-
-                                satisfying assignments
+                            _satisfying assignments_
                             , also
                             diejenigen Belegungen der Variablen, die \(f\) "erfüllen", also 1 werden lassen.
                             Wir bauen uns einen Schaltkreis \(F\):
@@ -1513,9 +1455,7 @@
                                 $$
                                 Wir können zwar nicht genau mit dem Finger auf einen Term von \(F\) zeigen,
                                 der 1 wird, wissen aber 
-                                |> em
-
-                                    per Monotonie
+                                _per Monotonie_
                                 , dass es so einen geben muss.
                                 
                                 |> span

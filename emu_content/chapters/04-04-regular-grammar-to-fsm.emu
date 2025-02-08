@@ -8,9 +8,10 @@
         |> a
             href 04-03-nfsm
 
-            &lt;&lt; Kapitel 04.03
+            &lt;&lt; Kapitel 4.3
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 04-05-regular-expressions
 
-            Kapitel 04.05 &gt;&gt;
+            Kapitel 4.5 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -83,9 +84,7 @@
                         um die obigen Transformationen spannender zu machen. Ein Wort in unserer Sprache besteht aus
                         einer
                         nichtleeren Folge von 
-                        |> em
-
-                            Labels
+                        _Labels_
                         die jeweils durch einen 
                         |> code
 
@@ -142,19 +141,15 @@
                     mischt.
                     Habe ich
                     \(L\) genau genug beschrieben? Stellen wir eine Meta-Frage: Was zählt überhaupt als 
-                    |> em
-
-                        genaue
-                        Beschreibung
+                    _genaue
+                    Beschreibung_
                     einer
                     Sprache? Wir können uns dem Mund fusselig reden und Beispiele und Nicht-Beispiele angeben, am Ende
                     aber werden
                     wir irgendwann beginnen, formale Regeln aufzustellen, die unsere Sprache beschreiben - wir werden
                     also im Prinzip
                     eine 
-                    |> em
-
-                        Grammatik
+                    _Grammatik_
                     schreiben. Tun wir dies also.
                     
                     
@@ -213,17 +208,13 @@
 
                             :
                         auf Englisch 
-                        |> em
-
-                            colon
+                        _colon_
                         und 
                         |> code
 
                             -
                         
-                        |> em
-
-                            dash
+                        _dash_
                         heißt.
                         \(C\)-Labels können wir uns nach dem Baukastenprizip bauen, in dem
                         wir 
@@ -299,9 +290,7 @@
                         Wir wollen nun alle Produktionen der Form \(Y \rightarrow x\) eliminieren. Hierfür nehmen wir
                         uns
                         
-                        |> em
-
-                            ein
+                        _ein_
                         neues Nichtterminal \(E\) und ersetzen \(Y \rightarrow x\) durch \(Y \rightarrow
                         xE\)
                         und fügen die Produktion \(E \rightarrow \epsilon\) hinzu.
@@ -336,9 +325,7 @@
                         \(\alpha\) eine Wortform ist, die sich aus \(C\) ableiten lässt und nicht nur aus einem
                         einzelnen Nichtterminal
                         besteht; dies trifft glücklicherweise auf 
-                        |> em
-
-                            alle
+                        _alle_
                         rechten Seiten der \(C\)-Produktionen
                         zu; gleiches gilt
                         für \(D\). Wir erhalten:
@@ -411,9 +398,7 @@
                         Problem, aber
                         in diesem vorlesungsskript doch etwas ungünstig.
                         Wir gehen 
-                        |> em
-
-                            lazy
+                        _lazy_
                         vor, erschaffen Zustände in \(2^Q\) also nur dann, wenn wir sie
                         brauchen.
                         Wir beginnen mit dem Zustand \(\{S\}\) und legen dann an jeden Zustand Kanten an, jeweils mit
@@ -902,28 +887,25 @@
                         müssen, wenn wir so einen String "parsen": Zustand \( \{C',C,E,D,D',S'\}\), der
                         in der Grammatik dann zum Nichtterminal \(T\) wird, bedeutet beispielsweise
                         
-                        |> em
+                        _das Label hat schon begonnen, wir wissen aber noch nicht, ob es eines mit
+                        
+                        |> code
 
-                            das Label hat schon begonnen, wir wissen aber noch nicht, ob es eines mit
-                            
-                            |> code
+                            :
+                        oder eines mit 
+                        |> code
 
-                                :
-                            oder eines mit 
-                            |> code
+                            -
+                        ist.
+                        Der Zustand \(\{C',C,E,S'\}\) bzw. das Nichtterminal \(C\) heißt dann
+                        
+                        |> code
 
-                                -
-                            ist.
-                            Der Zustand \(\{C',C,E,S'\}\) bzw. das Nichtterminal \(C\) heißt dann
-                            
-                            |> em
-
-                                wir sind innerhalb eines Labels mit 
-                                |> code
-
-                                    :
-                            .
-                            
+                            :
+                        _wir sind innerhalb eines Labels mit 
+                        _
+                        .
+                        _
                         
                         
                     
@@ -976,9 +958,7 @@
                             Dieser Automat hat 11 Zustände. Sein Potenzmengenautomat hätte also \(2^{11} = 2048\)
                             Zustände.
                             Führen Sie die Konstruktion 
-                            |> em
-
-                                lazy
+                            _lazy_
                             durch, indem Sie vom Startzustand \(\{S\}\)
                             ausgehend die Folgezustände konstruieren. Wieviele Zustände bekommen Sie?
                             

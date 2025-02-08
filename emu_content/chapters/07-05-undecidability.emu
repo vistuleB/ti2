@@ -8,9 +8,10 @@
         |> a
             href 07-03-Turing-universal
 
-            &lt;&lt; Kapitel 07.03
+            &lt;&lt; Kapitel 7.3
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 07-06-Post-correspondence-problem
 
-            Kapitel 07.06 &gt;&gt;
+            Kapitel 7.6 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -62,9 +63,7 @@
 
                         
                         Im vorherigen Teilkapitel haben wir die 
-                        |> em
-
-                            universelle Turingmaschine
+                        _universelle Turingmaschine_
                         $U$ konstruiert, die
                         eine andere Turingmaschine, deren Codierung und Inputwort sie als Input gegeben hat, simulieren
                         kann.
@@ -81,30 +80,20 @@
                         
                         Allerdings: wenn $M$ auf $x$ nicht terminiert, dann terminiert $U$ auf $\enc(M)x$ auch
                         nicht. $U$ 
-                        |> em
-
-                            akzeptiert
+                        _akzeptiert_
                         die Sprache also, 
-                        |> em
-
-                            entscheidet
+                        _entscheidet_
                         sie aber nicht. Wäre es
                         nicht schön, eine Turingmaschine zu haben, die diese Sprache entscheidet? Dann könnten wir jede
                         Turingmaschine simulieren und gleichzeitig Endlosschleifen und eventuell ganz allgemein
                         "Programmierfehler" vorhersagen und abfangen. Wir werden zeigen, dass dies leider 
-                        |> em
-
-                            nicht
+                        _nicht_
                         
                         möglich ist. In der Literatur ist dies als die 
-                        |> em
-
-                            Unentscheidbarkeit des Halteproblems
+                        _Unentscheidbarkeit des Halteproblems_
                         
                         (englisch 
-                        |> em
-
-                            undecidability of the Halting problem
+                        _undecidability of the Halting problem_
                         bekannt).
                         
                     
@@ -124,15 +113,11 @@
                         dann können wir alle Zeichen in
                         $\Lambda$ wiederum als Strings in $\Sigma^*$ codieren. Wir müssen hier
                         nur vorsichtig sein, dass der Code 
-                        |> em
-
-                            präfixfrei
+                        _präfixfrei_
                         ist. Wenn wir zum Beispiel naiv
                         $1$ als $1$ und $0$ als $0$ und $\texttt{#}$ als $01$ codieren, dann wissen wir nicht mehr, was
                         mit dem Codewort $01$ gemeint ist. Am einfachsten geht das mit einem 
-                        |> em
-
-                            Blockcode
+                        _Blockcode_
                         , in dem
                         alle Codewörter die gleiche Länge $k$ haben, also
                         $\Lambda \rightarrow \{0,1\}^k$. Mit
@@ -231,9 +216,7 @@
                             entscheidbar; wir müssen ja nur $\diag$ entscheiden und dann das Ergebnis negieren.
                             $\negdiag$
                             ist sozusagen die Menge aller Turingmaschinen, die 
-                            |> em
-
-                                nicht
+                            _nicht_
                             ihre eigene Codierung als
                             Inputwort akzeptieren. Da $\negdiag$ nach Annahme entscheidbar ist, gibt es eine Maschine
                             $D$, die $\negdiag$ entscheidet.
@@ -425,9 +408,7 @@
                         In jedem Fall sehen wir, dass \(H\) auf dem Eingabewort
                         \(yy\) einen Fehler macht und somit \(\halt\) nicht
                         entscheidet. Da das für 
-                        |> em
-
-                            jede
+                        _jede_
                         Turingmaschine
                         geht, schließen wir: keine Turingmaschine kann
                         die Sprache \(\halt\) entscheiden; sie ist unentscheidbar.
@@ -461,9 +442,7 @@
                         ist in der Tat relevant, denn daraus folgt (nicht direkt, aber mit ein paar technischen Tricks),
                         dass im Prinzip
                         
-                        |> em
-
-                            jede
+                        _jede_
                         nichttriviale Frage über das Verhalten eines Programmcodes unentscheidbar ist.
                         Also sind
                         auch Fragen wie "Kann das Programm abstürzen?" oder "Kann ein unautorisierter Nutzer Zugang zu
@@ -475,9 +454,7 @@
                         class alert-info
 
                         Das Wort 
-                        |> em
-
-                            Unentscheidbarkeit
+                        _Unentscheidbarkeit_
                         verwenden wir hier in seiner
                         technischen Bedeutung,
                         die wir definiert haben: es gibt keine Turingmaschine, die das Problem entscheidet, also

@@ -8,9 +8,10 @@
         |> a
             href 05-10-not-context-free
 
-            &lt;&lt; Kapitel 05.10
+            &lt;&lt; Kapitel 5.10
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 07-00-Turing-machines
 
-            Kapitel 07.00 &gt;&gt;
+            Kapitel 7.0 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -125,14 +126,10 @@
                         
                         Eine formale Grammatik ist gegeben durch ein endliches Alphabet
                         \(\Sigma\) aus 
-                        |> em
-
-                            Terminalsymbolen
+                        _Terminalsymbolen_
                         , einer endlichen Menge
                         \(\N\) von 
-                        |> em
-
-                            Nichtterminalen
+                        _Nichtterminalen_
                         , einem Startsymbol
                         \(S \in N\) und einer endlichen Menge an Produktionen
                         \begin{align*}
@@ -231,9 +228,7 @@
                         etwas können, das kontextfreie Grammatiken nicht bieten konnten:
                         das Vertauschen von Symbolen. Das mag nicht als besonders viel erscheinen,
                         wird sich aber als 
-                        |> em
-
-                            Game Changer
+                        _Game Changer_
                         herausstellen.
                         
                     
@@ -244,9 +239,7 @@
 
                         Sobald wir eine Wortform erreicht haben, die nur aus Terminalsymbolen
                         besteht (also ein 
-                        |> em
-
-                            Wort
+                        _Wort_
                         geworden ist), muss unsere Ableitung
                         aufhören: wir können keine weitere Produktion anwenden, da jede
                         linke Seite mindestens ein Nichtterminal enthält. Diese Einschränkung
@@ -579,9 +572,7 @@
                         deren Länge eine Quadratzahl ist. Spätestens dieses Beispiel sollte Sie
                         davon überzeugen, dass allgemeine formale Gramatiken, im Gegensatz zu
                         kontextfreien und regulären, nicht nur 
-                        |> em
-
-                            Formate
+                        _Formate_
                         syntaktisch
                         beschreiben, sondern komplizierte Rechnungen durchführen können.
                         Sie stellen somit ein völlig andersartiges Biest dar.
@@ -601,9 +592,7 @@
                         Sei \(L\) die Sprache aller Wörter über
                         \(\Sigma = \{1\}\), deren Länge eine Quadratzahl ist.
                         Wir werden als erstes eine 
-                        |> em
-
-                            Multiplikationsgrammatik
+                        _Multiplikationsgrammatik_
                         erzeugen.
                         Dies soll eine Menge von Produktionen sein, die Ableitungen der Form
                         \begin{align*}
@@ -733,9 +722,7 @@
                             Wir können die Produktion \(R \step{} K\) zwar schon früher
                             anwenden; wenn da allerdings noch \(A\)- oder \(\tilde{C}\)-Symbole
                             enthalten sind, ist es 
-                            |> em
-
-                                game over
+                            _game over_
                             : wir könnten die nie
                             mehr in Terminale umwandeln.
                             
@@ -833,17 +820,13 @@
                         
                         Sie haben sicherlich gemerkt, dass wir die Grammatikproduktionen nun nicht
                         mehr nur zum 
-                        |> em
-
-                            Erzeugen
+                        _Erzeugen_
                         verwenden wie bei kontextfreien Sprachen, sondern zum
                         Umformen, Rumschieben, Kopieren etc. Es ist nun an der Zeit, die
                         Welt der Grammatiken zu verlassen und zu formalisieren, was man
                         mit Umformen, Rumschieben, Kopieren erreichen kann. In anderen Worten:
                         eine Formalisierung des Begriffs des 
-                        |> em
-
-                            Berechnens
+                        _Berechnens_
                         .
                         
                     

@@ -8,9 +8,10 @@
         |> a
             href 03-00-Computability-NaturalNumbers
 
-            &lt;&lt; Kapitel 03.00
+            &lt;&lt; Kapitel 3.0
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 03-02-primitive-recursion-constructions
 
-            Kapitel 03.02 &gt;&gt;
+            Kapitel 3.2 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -66,9 +67,7 @@
                         anhand
                         eines "Baukastenprinzips" zu modellieren. Man stellt gewisse Basisfunktionen als "offensichtlich
                         berechenbar" zur Verfügung und beschreibt 
-                        |> em
-
-                            Kombinatoren
+                        _Kombinatoren_
                         , die aus bereits konstruierten
                         Funktionen neue bauen können. Die primitiv-rekursiven Funktionen sind dann all jene, die
                         mittels der Kombinatoren von den Basisfunktionen ausgehend konstruiert werden können.
@@ -94,9 +93,7 @@
                         beispielsweise Schleifen (von rechts nach links durchgehen), if-then-else-Ausdrücke (gibt es ein
                         Carry?)
                         etc. Daher sollten Sie so tun, also würden wir natürliche Zahlen in 
-                        |> em
-
-                            unärer Schreibweise
+                        _unärer Schreibweise_
                         
                         (auhc Steinzeitnotation genannt)
                         darstellen, also vier \( = 1111\), sieben = \(= 1111111\). Jezt
@@ -259,9 +256,7 @@
                             
                         
                         Die Forderung, dass man nur 
-                        |> em
-
-                            eine
+                        _eine_
                         lokale Variable durch die Schleife führen darf, scheint
                         sehr restriktiv; es ist aber wohl die einfachste Form einer Schleife, die wirklich etwas
                         "schleifenhaftes" tut.

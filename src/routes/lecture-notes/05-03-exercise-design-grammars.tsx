@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={31}>
+      <Chapter
+        number={31}
+        path="/lecture-notes31.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="05-02-cfg-to-pda">
-            <Paragraph>
-              &lt;&lt; Kapitel 05.02
-            </Paragraph>
+            &lt;&lt; Kapitel 5.2
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="05-04-LL1-grammars">
-            <Paragraph>
-              Kapitel 05.04 &gt;&gt;
-            </Paragraph>
+            Kapitel 5.4 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -43,9 +39,7 @@ const Article = () => {
                   <Paragraph>
                     Benutzen Sie die App{" "}
                     <a href="../../demos/drawManualGrammar.html">
-                      <Paragraph>
-                        drawManualGrammar.html
-                      </Paragraph>
+                      drawManualGrammar.html
                     </a>
                     ,
                     um mit kontextfreien Grammatik zu experimentieren:{" "}
@@ -66,32 +60,24 @@ const Article = () => {
                 </Paragraph>
                 <ol>
                   <li>
-                    <Paragraph>
-                      Dem Eingabefenster für die Grammatik links oben. Hier können Sie Ihre eigene Grammatik
-                      eingeben.
-                    </Paragraph>
+                    Dem Eingabefenster für die Grammatik links oben. Hier können Sie Ihre eigene Grammatik
+                    eingeben.
                   </li>
                   <li>
-                    <Paragraph>
-                      Dem Eingabefenster für das Eingabewort.
-                    </Paragraph>
+                    Dem Eingabefenster für das Eingabewort.
                   </li>
                   <li>
-                    <Paragraph>
-                      Der Backtrack-Baum. Jeder Pfad im Backtrack-Baum ist der Versuch, das Eingabewort aus den
-                      Grammatikregeln per Linksableitung abzuleiten. Die Pfade, die in Sackgassen enden, sind rot
-                      markiert.
-                    </Paragraph>
+                    Der Backtrack-Baum. Jeder Pfad im Backtrack-Baum ist der Versuch, das Eingabewort aus den
+                    Grammatikregeln per Linksableitung abzuleiten. Die Pfade, die in Sackgassen enden, sind rot
+                    markiert.
                   </li>
                   <li>
-                    <Paragraph>
-                      Der Ableitungsbaum. Für jeden Knoten \(w\) im Backtrack-Baum stellt der
-                      Pfad von Wurzel nach \(w\) eine Linksableitung dar. Wenn Sie auf \(w\) klicken,
-                      sehen Sie den entsprechenden Ableitungsbaum. Per Default wird die erste erfolgreiche
-                      Linksableitung in einen Ableitungsbaum umgewandelt und angezeigt (wenn es denn überhaupt
-                      eine
-                      erfolgreiche Ableitung gibt).
-                    </Paragraph>
+                    Der Ableitungsbaum. Für jeden Knoten \(w\) im Backtrack-Baum stellt der
+                    Pfad von Wurzel nach \(w\) eine Linksableitung dar. Wenn Sie auf \(w\) klicken,
+                    sehen Sie den entsprechenden Ableitungsbaum. Per Default wird die erste erfolgreiche
+                    Linksableitung in einen Ableitungsbaum umgewandelt und angezeigt (wenn es denn überhaupt
+                    eine
+                    erfolgreiche Ableitung gibt).
                   </li>
                 </ol>
                 <div class="well well-lg numbered-exercise container">
@@ -136,10 +122,12 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Schreiben Sie eine kontextfreie Grammatik für die Sprache aller
-                    "korrekten" URLs; also Folgen von mindestens zwei{" "}
-                    <em>
+                    "korrekten" URLs; also Folgen von mindestens zwei 
+                    {" "}
+                    <i>
                       Labels
-                    </em>
+                    </i>
+                    {" "}
                     , die
                     durch{" "}
                     <code>
@@ -233,9 +221,11 @@ const Article = () => {
                     verschiedene Ableitungsbäume. Können Sie eine äquivalente
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       eindeutige
-                    </em>
+                    </i>
+                    {" "}
                     Grammatik schreiben?
                   </Paragraph>
                 </div>
@@ -251,15 +241,17 @@ const Article = () => {
                     {" "}{" "}
                   </Paragraph>
                   <Paragraph>
-                    Die folgende Grammatik hat User{" "}
-                    <em>
+                    Die folgende Grammatik hat User 
+                    {" "}
+                    <i>
                       babou
-                    </em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
                     auf{" "}
                     <a href="https://cstheory.stackexchange.com/questions/22520/example-of-context-free-grammar-that-triggers-exponential-behaviour-without-memo">
-                      <Paragraph>
-                        StackExchange
-                      </Paragraph>
+                      StackExchange
                     </a>
                     vorgeschlagen als Beispiel für eine eindeutige Grammatik,
                     bei der Sie exponentiell große Backtrack-Bäume bekommen können:
@@ -272,10 +264,12 @@ const Article = () => {
                       </Paragraph>
                     </pre>
                     Das ist aber keine Kunst, da die Grammatik uneindeutig ist.
-                    Können Sie eine{" "}
-                    <em>
+                    Können Sie eine 
+                    {" "}
+                    <i>
                       eindeutige
-                    </em>
+                    </i>
+                    {" "}
                     Grammatik angebene, die ähnlich
                     exponentielles Verhalten zeigt? Exponentiell heißt: mit jedem
                     zusätlichen Zeichen des Eingabewortes kann die Größe des
@@ -293,10 +287,12 @@ const Article = () => {
                     </b>
                     {" "}
                     .
-                    Finden Sie eine kontextfreie Sprache \(L\), für die{" "}
-                    <em>
+                    Finden Sie eine kontextfreie Sprache \(L\), für die 
+                    {" "}
+                    <i>
                       jede
-                    </em>
+                    </i>
+                    {" "}
                     Grammatik,
                     die \(L\) erzeugt, unter exponentiell großen Backtrack-Bäumen leidet.
                   </Paragraph>

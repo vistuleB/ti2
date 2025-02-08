@@ -8,9 +8,10 @@
         |> a
             href 04-01-regular-grammars
 
-            &lt;&lt; Kapitel 04.01
+            &lt;&lt; Kapitel 4.1
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 04-03-nfsm
 
-            Kapitel 04.03 &gt;&gt;
+            Kapitel 4.3 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -59,20 +60,14 @@
                         
                         Grammatiken erlauben es uns, gewisse Formate zu beschreiben. Das reicht uns aber nicht:
                         wir wollen Daten 
-                        |> em
-
-                            parsen
+                        _parsen_
                         , im engen Sinne also eine grammatische Ableitung rekonstruieren
                         und allgemein die Struktur eines gegebenen Wortes herausarbeiten. Ein bescheideneres Ziel
                         ist es, für ein gegebenes Wort zu 
-                        |> em
-
-                            entscheiden
+                        _entscheiden_
                         , ob es sich überhaupt aus einer Grammatik
                         ableiten lässt. Für reguläre Grammatiken gibt es hierfür die 
-                        |> em
-
-                            endlichen Automaten
+                        _endlichen Automaten_
                         . Sie
                         können
                         endliche Automaten verstehen als ein eingeschränktes Modell eines Rechners;
@@ -87,15 +82,11 @@
                         dass der Automat ein Wort \(\alpha\) Zeichen für Zeichen einliest. Die Pfeile zwischen den
                         Kreisen (den
                         
-                        |> em
-
-                            Zuständen
+                        _Zuständen_
                         des Automaten) zeigen an, in welchen neuen Zustand beim Lesen eines Zeichen
                         gewechselt werden
                         muss. Der Pfeil "aus dem Nichts", hier der von links nach \(S\), zeigt den 
-                        |> em
-
-                            Startzustand
+                        _Startzustand_
                         
                         an, in welchem
                         der Automat beginnt.
@@ -529,20 +520,14 @@
                         
                         In diesem Beispiel endet der Automat im Zustand \(Y\). Sie sehen, dass der Zustand \(X\)
                         mit einem doppelten Rand markiert ist: dies symbolisiert, dass \(X\) ein 
-                        |> em
-
-                            akzeptierender
+                        _akzeptierender_
                         
                         Endzustand ist. Wenn der Automat ein Wort \(\alpha\) abgearbeitet hat, 
-                        |> em
-
-                            akzeptiert
+                        _akzeptiert_
                         er
                         es,
                         wenn er in einem akzeptierenden Endzustand gelandet ist; ansonsten 
-                        |> em
-
-                            lehnt er es ab
+                        _lehnt er es ab_
                         . In
                         unserem
                         Beispiel sehen wir also, dass der Automat das Eingabewort \(yxzxxyy\) ablehnt.
@@ -590,9 +575,7 @@
                         q \stackrel{x}{\rightarrow} q' \ .
                         $$
                         Wenn das Wort zu Ende ist, dann 
-                        |> em
-
-                            akzeptiert
+                        _akzeptiert_
                         
                         der Automat, wenn er in einem akzeptierenden Zustand angekommen ist, also in \(F\).
                         
@@ -726,9 +709,7 @@
                         .
                         Für einen endlichen Automaten \((\Sigma, Q, \qstart, F, \delta)\) definieren wir
                         die 
-                        |> em
-
-                            erweiterte Zustandsübergangsfunktion
+                        _erweiterte Zustandsübergangsfunktion_
                         \(\hat{\delta}: Q \times \Sigma^* \rightarrow
                         Q\) rekursiv wie folgt:
                         \begin{align*}
@@ -811,10 +792,8 @@
                             Übungsaufgabe
                         
                         Ändern Sie den Automaten aus dem letzten Beispiel so ab, dass die Bedingung 
-                        |> em
-
-                            "die auf \(x\)
-                            enden"
+                        _"die auf \(x\)
+                        enden"_
                         entfällt, er also
                         alle Wörter akzeptiert, die die Folge \(xy\) nicht enthalten.
                         
@@ -989,9 +968,7 @@
                                 \(q \Rightarrow^* \epsilon q'\) in \(G'\) gelten? Beachten Sie, dass jede Produktion in
                                 \(G'\) ein Terminalsymbol
                                 erzeugt; \(q \Rightarrow^* \epsilon q'\) kann also nur gelten, wenn 
-                                |> em
-
-                                    keine
+                                _keine_
                                 
                                 Produktion erfolgt ist und somit
                                 \(q = q'\) gilt. Wir sehen: beide Aussagen sind äquivalent zu \(q = q'\) und somit auch
@@ -1300,16 +1277,12 @@
                             eben kein \(a\) mehr vorkommen darf. Die Definition eines endlichen Automaten
                             verlangt aber, dass \(\delta\) eine Funktion ist, also für alle Eingabewerte definiert ist.
                             Wir lösen das, indem wir einen sogenannten 
-                            |> em
-
-                                Fehlerzustand (Trap State)
+                            _Fehlerzustand (Trap State)_
                             einführen,
                             der im Prinzip
                             den Zustand
                             
-                            |> em
-
-                                lehne das Wort ab, egal, was noch kommt
+                            _lehne das Wort ab, egal, was noch kommt_
                             versinnbildlicht:
                             
                             |> figure
@@ -1378,9 +1351,7 @@
                             erzeugte Sprache ist, so
                             wird das Problem klarer: \(G\) erzeugt die Sprache aller Wörter über \(\{0,1\}\), deren
                             
-                            |> em
-
-                                viertletztes
+                            _viertletztes_
                             Zeichen
                             eine 1 ist. Die Herausforderung ist nun: wenn der Automat eine 1 liest, dann weiß er nicht,
                             ob das jetzt schon
@@ -1400,9 +1371,7 @@
                         Um mit Fällen wie dem eben geschilderten umgehen zu können, erweitern wir die Definition des
                         endlichen Automaten
                         in nächsten Kapitel zu einem 
-                        |> em
-
-                            nichtdeterministischen
+                        _nichtdeterministischen_
                         endlichen Automaten.
                         
                     

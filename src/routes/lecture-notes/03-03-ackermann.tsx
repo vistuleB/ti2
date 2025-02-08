@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={18}>
+      <Chapter
+        number={18}
+        path="/lecture-notes18.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="03-02-primitive-recursion-constructions">
-            <Paragraph>
-              &lt;&lt; Kapitel 03.02
-            </Paragraph>
+            &lt;&lt; Kapitel 3.2
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="03-04-mu-recursion">
-            <Paragraph>
-              Kapitel 03.04 &gt;&gt;
-            </Paragraph>
+            Kapitel 3.4 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -48,14 +44,20 @@ const Article = () => {
                     scheinen (wie die Fibonacci-Zahlen), ja sogar Dinge, die über den
                     Bereich der natürlichen Zahlen hinausgehen, wie zum Beispiel das Sortieren
                     eines beliebig langen Arrays. Kernpunkt war die Erkenntnis, dass wir
-                    komplexere "Datenstrukturen" wie{" "}
-                    <em>
+                    komplexere "Datenstrukturen" wie 
+                    {" "}
+                    <i>
                       Paare von natürlichen Zahlen
-                    </em>
-                    als{" "}
-                    <em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    als 
+                    {" "}
+                    <i>
                       eine
-                    </em>
+                    </i>
+                    {" "}
                     natürliche Zahl codieren können und somit
                     der primitiven Rekursion zugänglich machen können.
                   </Paragraph>
@@ -67,18 +69,14 @@ const Article = () => {
                     alles "Berechenbare" auch primitiv rekursiv sei.
                     Der{" "}
                     <a href="https://de.wikipedia.org/wiki/Ackermannfunktion">
-                      <Paragraph>
-                        Wikipedia-Artikel
-                        über die Ackermann-Funktion
-                      </Paragraph>
+                      Wikipedia-Artikel
+                      über die Ackermann-Funktion
                     </a>
                     schreibt, dass der deutsche Mathematiker
                     David Hilbert dies auch vermutete. Im Jahre 1926
                     jedoch definierte{" "}
                     <a href="https://de.wikipedia.org/wiki/Wilhelm_Ackermann_(Mathematiker)">
-                      <Paragraph>
-                        Wilhelm Ackermann
-                      </Paragraph>
+                      Wilhelm Ackermann
                     </a>
                     eine Funktion, die "offensichtlich berechenbar", jedoch nicht primitiv rekursiv ist.
                     Die Funktion, die wir heute die Ackermann-Funktion nennen, ist allerdings
@@ -86,9 +84,7 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <a href="https://de.wikipedia.org/wiki/Rózsa_Péter">
-                      <Paragraph>
-                        Rózsa Péter
-                      </Paragraph>
+                      Rózsa Péter
                     </a>
                     gefunden wurde (obwohl
                     der letztere Artikel das Jahr 1955 nennt).
@@ -279,10 +275,12 @@ const Article = () => {
                     \(C\), die null Argumente nimmt und \(A_&#123;m-1&#125;(1)\) zurückgibt. Also:
                     \(g = \comp(A_&#123;m-1&#125;,&#123;\rm one&#125;)\). Wir könnten sogar noch frecher sein
                     und \(g = \comp(\succ, \comp(\succ, \comp(... \comp(\succ, \zero))))\) schreiben,
-                    einfach \(A_&#123;m-1&#125;(1)\) mal hintereinander; diesen Wert also{" "}
-                    <em>
+                    einfach \(A_&#123;m-1&#125;(1)\) mal hintereinander; diesen Wert also 
+                    {" "}
+                    <i>
                       hard-coden
-                    </em>
+                    </i>
+                    {" "}
                     .
                     Allerdings ist die erste Variante einfacher, und somit
                     \begin&#123;align*&#125;
@@ -306,18 +304,22 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Wir haben also gezeigt, dass jedes \(A_m\) primitiv rekursiv ist.
-                    Heißt das auch, dass die zwei-parametrige Funktion \(A(m,n)\){" "}
-                    <em>
+                    Heißt das auch, dass die zwei-parametrige Funktion \(A(m,n)\) 
+                    {" "}
+                    <i>
                       berechenbar
-                    </em>
+                    </i>
+                    {" "}
                     ist?
                     In der primitiven Rekursion haben wir keine Möglichkeit, den Index \(m\) als
                     Eingabewert zu lesen und dann aus dem unendlichen Array primitiv rekursiver Funktionen
                     \([A_0, A_1, A_2, \dots]\) den Eintrag \(A_m\) auszulesen.
-                    Aber{" "}
-                    <em>
+                    Aber 
+                    {" "}
+                    <i>
                       berechenbar
-                    </em>
+                    </i>
+                    {" "}
                     in einem ganz allgemeinen Sinn? Diese Frage können wir
                     zu diesem Zeitpunkt nicht formal beantworten, weil wir den Begriff
                     allgemeiner Berechenbarkeit noch gar nicht definiert haben. Es ist allerdings
@@ -343,9 +345,7 @@ const Article = () => {
                   Mein Beweis paraphrasiert im Wesentlichen den auf
                 </Paragraph>
                 <a href="https://planetmath.org/ackermannfunctionisnotprimitiverecursive">
-                  <Paragraph>
-                    planetmath.org
-                  </Paragraph>
+                  planetmath.org
                 </a>
                 <Paragraph>
                   <Paragraph>
@@ -356,26 +356,34 @@ const Article = () => {
                     {" "}
                     . Beachten Sie, dass Theorem 3.3.3 nicht mit
                     Theorem 3.3.2 im Widerspruch steht. Theorem 3.3.3 besagt, dass \(A_m\) primitiv rekursiv ist,
-                    für jedes \(m\). Die Zahl \(m\) ist hier also{" "}
-                    <em>
+                    für jedes \(m\). Die Zahl \(m\) ist hier also 
+                    {" "}
+                    <i>
                       Teil der Aussage
-                    </em>
+                    </i>
+                    {" "}
                     , nicht
-                    Eingabeparameter der Funktion; die Funktion \(A_m\) hat nur{" "}
-                    <em>
+                    Eingabeparameter der Funktion; die Funktion \(A_m\) hat nur 
+                    {" "}
+                    <i>
                       einen
-                    </em>
+                    </i>
+                    {" "}
                     Eingabeparameter.
-                    Theorem 3.3.3 hingegen macht eine Aussage über{" "}
-                    <em>
+                    Theorem 3.3.3 hingegen macht eine Aussage über 
+                    {" "}
+                    <i>
                       eine
-                    </em>
+                    </i>
+                    {" "}
                     Funktion \(A(m,n)\) mit
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       zwei
-                    </em>
+                    </i>
+                    {" "}
                     Eingabeparametern, und \(m\) ist nun einer dieser beiden.
                   </Paragraph>
                 </Paragraph>
@@ -436,10 +444,12 @@ const Article = () => {
                         Definition.
                       </span>
                       Sei \(f: \N \rightarrow \N\) und \(g: \N^k \rightarrow \N\). Die Funktion
-                      \(f\){" "}
-                      <em>
+                      \(f\) 
+                      {" "}
+                      <i>
                         majorisiert
-                      </em>
+                      </i>
+                      {" "}
                       \(g\), wenn
                       \begin&#123;align*&#125;
                       f (\max(x
@@ -564,10 +574,12 @@ const Article = () => {
                       {" "}
                       \(f(\vec&#123;x&#125;) = g(h_1(\vec&#123;x&#125;), \dots, h_k(\vec&#123;x&#125;))\),
                       für primitiv rekursive Funktionen \(g, h_1, \dots, h_k\). Jede dieser Funktionen
-                      wurde mit{" "}
-                      <em>
+                      wurde mit 
+                      {" "}
+                      <i>
                         weniger
-                      </em>
+                      </i>
+                      {" "}
                       Kombinatoren konstruiert; somit wird jede dieser Funktionen
                       von einem \(A_r\) majorisiert:
                       \(A_r \gt g, A_&#123;s_1&#125; \gt h_1, \dots, A_&#123;s_k&#125; \gt h_k\). Für einen Eingabevektor \(\vec&#123;x&#125;\)
@@ -758,10 +770,12 @@ const Article = () => {
                 </div>
                 <Paragraph>
                   <Paragraph>
-                    In der Vorlesung am 7. Mai 2024 hatte ich den{" "}
-                    <em>
+                    In der Vorlesung am 7. Mai 2024 hatte ich den 
+                    {" "}
+                    <i>
                       Grad
-                    </em>
+                    </i>
+                    {" "}
                     einer primitiv-rekursiven Funktion
                     definiert. Das ist in etwa die "Verschachtelungstiefe" von $f$. Betrachten wir beispielsweise
                     die Funktion $\pair(x,y) =&#123;x + y + 1 \choose 2&#125; + x$ und dröseln auf, wie wir diese

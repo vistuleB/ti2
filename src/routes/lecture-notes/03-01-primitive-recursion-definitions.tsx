@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={16}>
+      <Chapter
+        number={16}
+        path="/lecture-notes16.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="03-00-Computability-NaturalNumbers">
-            <Paragraph>
-              &lt;&lt; Kapitel 03.00
-            </Paragraph>
+            &lt;&lt; Kapitel 3.0
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="03-02-primitive-recursion-constructions">
-            <Paragraph>
-              Kapitel 03.02 &gt;&gt;
-            </Paragraph>
+            Kapitel 3.2 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -45,10 +41,12 @@ const Article = () => {
                       Primitive Rekursion ist ein Versuch, Berechbarkeit von Funktionen \(f: \N^k \rightarrow \N\)
                       anhand
                       eines "Baukastenprinzips" zu modellieren. Man stellt gewisse Basisfunktionen als "offensichtlich
-                      berechenbar" zur Verfügung und beschreibt{" "}
-                      <em>
+                      berechenbar" zur Verfügung und beschreibt 
+                      {" "}
+                      <i>
                         Kombinatoren
-                      </em>
+                      </i>
+                      {" "}
                       , die aus bereits konstruierten
                       Funktionen neue bauen können. Die primitiv-rekursiven Funktionen sind dann all jene, die
                       mittels der Kombinatoren von den Basisfunktionen ausgehend konstruiert werden können.
@@ -74,10 +72,14 @@ const Article = () => {
                       die Operation \(x \mapsto x+1\) bereits eine nicht ganz triviale Operation, sie erfordert
                       beispielsweise Schleifen (von rechts nach links durchgehen), if-then-else-Ausdrücke (gibt es ein
                       Carry?)
-                      etc. Daher sollten Sie so tun, also würden wir natürliche Zahlen in{" "}
-                      <em>
+                      etc. Daher sollten Sie so tun, also würden wir natürliche Zahlen in 
+                      {" "}
+                      <i>
                         unärer Schreibweise
-                      </em>
+                      </i>
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
                       (auhc Steinzeitnotation genannt)
                       darstellen, also vier \( = 1111\), sieben = \(= 1111111\). Jezt
                       brauchen wir für succ kein if-then-else und keine Schleifen, denn
@@ -221,10 +223,12 @@ const Article = () => {
                         return f
                       </code>
                     </pre>
-                    Die Forderung, dass man nur{" "}
-                    <em>
+                    Die Forderung, dass man nur 
+                    {" "}
+                    <i>
                       eine
-                    </em>
+                    </i>
+                    {" "}
                     lokale Variable durch die Schleife führen darf, scheint
                     sehr restriktiv; es ist aber wohl die einfachste Form einer Schleife, die wirklich etwas
                     "schleifenhaftes" tut.
@@ -237,9 +241,7 @@ const Article = () => {
                     </span>
                     Speichern Sie die Datei{" "}
                     <a href="../code/primitive-recursion/primrec.py">
-                      <Paragraph>
-                        primrec.py
-                      </Paragraph>
+                      primrec.py
                     </a>
                     auf
                     Ihrem Rechner.
@@ -256,48 +258,42 @@ const Article = () => {
                   </Paragraph>
                   <ul>
                     <li>
-                      <Paragraph>
-                        <code>
-                          Proj(k)
-                        </code>
-                        : erzeugt die Funktion
-                        \begin&#123;align*&#125;
-                        \pi
-                        <i>
-                          k : \N^*&amp;\rightarrow \N \\
-                          \vec&#123;x&#125;&amp;\mapsto x
-                        </i>
-                        k \ .
-                        \end&#123;align*&#125;
-                      </Paragraph>
+                      <code>
+                        Proj(k)
+                      </code>
+                      : erzeugt die Funktion
+                      \begin&#123;align*&#125;
+                      \pi
+                      <i>
+                        k : \N^*&amp;\rightarrow \N \\
+                        \vec&#123;x&#125;&amp;\mapsto x
+                      </i>
+                      k \ .
+                      \end&#123;align*&#125;
                     </li>
                     <li>
-                      <Paragraph>
-                        <code>
-                          Comp(f, g0, g1, ...)
-                        </code>
-                        : erzeugt die Funktion
-                        \begin&#123;align*&#125;
-                        \vec&#123;x&#125; \mapsto f(g0(x), g1(x), ...)
-                        \end&#123;align*&#125;
-                        Sie als User müssen sicherstellen, dass die Stelligkeit von \(f\) mit der Anzahl der als
-                        \(g_i\) übergebenen Funktionen
-                        übereinstimmt.
-                      </Paragraph>
+                      <code>
+                        Comp(f, g0, g1, ...)
+                      </code>
+                      : erzeugt die Funktion
+                      \begin&#123;align*&#125;
+                      \vec&#123;x&#125; \mapsto f(g0(x), g1(x), ...)
+                      \end&#123;align*&#125;
+                      Sie als User müssen sicherstellen, dass die Stelligkeit von \(f\) mit der Anzahl der als
+                      \(g_i\) übergebenen Funktionen
+                      übereinstimmt.
                     </li>
                     <li>
-                      <Paragraph>
-                        <code>
-                          PrimRec(g,h)
-                        </code>
-                        : erzeugt die Funktion
-                        \begin&#123;align*&#125;
-                        (t, \vec&#123;x&#125;) \mapsto \begin&#123;cases&#125;
-                        g(\vec&#123;x&#125;)&amp;\textnormal&#123; if $t=0$,&#125; \\
-                        h(f(t-1, \vec&#123;x&#125;), t-1, \vec&#123;x&#125;)&amp;\textnormal&#123; if $t \geq 1$.&#125;
-                        \end&#123;cases&#125;
-                        \end&#123;align*&#125;
-                      </Paragraph>
+                      <code>
+                        PrimRec(g,h)
+                      </code>
+                      : erzeugt die Funktion
+                      \begin&#123;align*&#125;
+                      (t, \vec&#123;x&#125;) \mapsto \begin&#123;cases&#125;
+                      g(\vec&#123;x&#125;)&amp;\textnormal&#123; if $t=0$,&#125; \\
+                      h(f(t-1, \vec&#123;x&#125;), t-1, \vec&#123;x&#125;)&amp;\textnormal&#123; if $t \geq 1$.&#125;
+                      \end&#123;cases&#125;
+                      \end&#123;align*&#125;
                     </li>
                   </ul>
                   <Paragraph>
@@ -389,24 +385,16 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        \(&#123;\rm mult&#125;: (x,y) \mapsto x*y\)
-                      </Paragraph>
+                      \(&#123;\rm mult&#125;: (x,y) \mapsto x*y\)
                     </li>
                     <li>
-                      <Paragraph>
-                        \(&#123;\rm exp&#125;: (a,b) \mapsto a^b\)
-                      </Paragraph>
+                      \(&#123;\rm exp&#125;: (a,b) \mapsto a^b\)
                     </li>
                     <li>
-                      <Paragraph>
-                        \(&#123;\rm pred&#125;: x \mapsto \max(0, x-1)\)
-                      </Paragraph>
+                      \(&#123;\rm pred&#125;: x \mapsto \max(0, x-1)\)
                     </li>
                     <li>
-                      <Paragraph>
-                        \(&#123;\rm minus&#125;: (x,y) \mapsto x-y\)
-                      </Paragraph>
+                      \(&#123;\rm minus&#125;: (x,y) \mapsto x-y\)
                     </li>
                   </ol>
                   <Paragraph>
@@ -432,9 +420,7 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <a href="../code/primitive-recursion/stockpile.py">
-                      <Paragraph>
-                        stockpile.py
-                      </Paragraph>
+                      stockpile.py
                     </a>
                     an,
                     in der ich diese Funktionen zum Großteil implementiert habe (basierend auf
@@ -462,17 +448,15 @@ const Article = () => {
                       </code>
                     </li>
                     <li>
-                      <Paragraph>
-                        <code>
-                          ifThenElse(x,y,z)
-                        </code>
-                        : dies soll \(z\) zurückliefern, falls
-                        \(x=0\) (also{" "}
-                        <code>
-                          false
-                        </code>
-                        ) ist, und \(y\) sonst.
-                      </Paragraph>
+                      <code>
+                        ifThenElse(x,y,z)
+                      </code>
+                      : dies soll \(z\) zurückliefern, falls
+                      \(x=0\) (also{" "}
+                      <code>
+                        false
+                      </code>
+                      ) ist, und \(y\) sonst.
                     </li>
                   </ul>
                 </div>

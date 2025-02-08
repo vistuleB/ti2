@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={45}>
+      <Chapter
+        number={45}
+        path="/lecture-notes45.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="07-02-Turing-variants">
-            <Paragraph>
-              &lt;&lt; Kapitel 07.02
-            </Paragraph>
+            &lt;&lt; Kapitel 7.2
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="07-03-Turing-universal">
-            <Paragraph>
-              Kapitel 07.03 &gt;&gt;
-            </Paragraph>
+            Kapitel 7.3 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -51,10 +47,8 @@ const Article = () => {
                     Maschinen zum Addieren und sogar zum Multiplizieren gibt es schon seit
                     dem 17. Jahrhunder (
                     <a href="https://en.wikipedia.org/wiki/Mechanical_calculator">
-                      <Paragraph>
-                        Wikipedia:
-                        Mechanical calculator
-                      </Paragraph>
+                      Wikipedia:
+                      Mechanical calculator
                     </a>
                     ).
                     Leider musste man für jede Aufgabe eine neue Maschine erfinden und auch bauen. Zahlen addieren?
@@ -66,25 +60,27 @@ const Article = () => {
                   <Paragraph>
                     Die Idee einer{" "}
                     <a href="https://en.wikipedia.org/wiki/Mechanical_calculator#Programmable_mechanical_calculators">
-                      <Paragraph>
-                        programmierbaren
-                        Maschine
-                      </Paragraph>
+                      programmierbaren
+                      Maschine
                     </a>
                     ,
                     die erstmals circa 1834 mit Charles Babbage aufkam, ist, dass man neben den Eingabedaten (z.B.
                     die zu multiplizierenden Zahlen) auch
                     die Rechenvorschrift (das Programm) als Eingabe übergibt. Hätte man so eine Maschine, dann
                     müsste man nicht für jede neue Aufgabe
-                    eine neue Maschine entwerfen; man könnte{" "}
-                    <em>
+                    eine neue Maschine entwerfen; man könnte 
+                    {" "}
+                    <i>
                       eine
-                    </em>
+                    </i>
+                    {" "}
                     Maschine bauen und sie für die jeweilige
-                    Aufgabe{" "}
-                    <em>
+                    Aufgabe 
+                    {" "}
+                    <i>
                       programmieren
-                    </em>
+                    </i>
+                    {" "}
                     , indem
                     ihr auf einem separaten Eingabeband die Rechenvorschrift überreicht. Von heute aus gesehen ist
                     diese Idee nicht mehr allzu überraschend, weil
@@ -95,17 +91,13 @@ const Article = () => {
                 </Paragraph>
                 <ol>
                   <li>
-                    <Paragraph>
-                      Wie können wir eine Rechenvorschrift (d.h. ein Programm) so codifizieren, dass wir es im
-                      Prinzip als eine Zeichenkette aufschreiben und einer
-                      Maschine übergeben können?
-                    </Paragraph>
+                    Wie können wir eine Rechenvorschrift (d.h. ein Programm) so codifizieren, dass wir es im
+                    Prinzip als eine Zeichenkette aufschreiben und einer
+                    Maschine übergeben können?
                   </li>
                   <li>
-                    <Paragraph>
-                      Welche Maschine könnte so eine Rechenvorschrift lesen und sie an gegebenen Eingabedaten dann
-                      auch ausführen?
-                    </Paragraph>
+                    Welche Maschine könnte so eine Rechenvorschrift lesen und sie an gegebenen Eingabedaten dann
+                    auch ausführen?
                   </li>
                 </ol>
                 <Paragraph>
@@ -117,9 +109,7 @@ const Article = () => {
                       codieren und erhalten ein Wort
                       \(\enc(M)\). Wie tun wir das? Nun ja, auf{" "}
                       <a href="https://turingmachinesimulator.com">
-                        <Paragraph>
-                          turingmachinesimulator.com
-                        </Paragraph>
+                        turingmachinesimulator.com
                       </a>
                       haben wir das
                       bereits getan:
@@ -140,9 +130,7 @@ const Article = () => {
                       gelangt, zu dem auch \(M(x)\) gelangen würde?
                       Die Programmierer von{" "}
                       <a href="https://turingmachinesimulator.com">
-                        <Paragraph>
-                          turingmachinesimulator.com
-                        </Paragraph>
+                        turingmachinesimulator.com
                       </a>
                       haben dies
                       offensichtlich geschafft:
@@ -167,50 +155,40 @@ const Article = () => {
                     </Paragraph>
                     <ol class="nested">
                       <li>
-                        <Paragraph>
-                          {" "}{" "}
-                          <b>
-                            ablehnt
-                          </b>
-                          {" "}
-                          , falls \(c\) keine gültige Codierung einer Turingmaschine \(M\)
-                          ist,
-                        </Paragraph>
+                        {" "}{" "}
+                        <b>
+                          ablehnt
+                        </b>
+                        {" "}
+                        , falls \(c\) keine gültige Codierung einer Turingmaschine \(M\)
+                        ist,
                       </li>
                       <li>
-                        <Paragraph>
-                          ansonsten, falls also \(c = \enc(M)\), dann
-                        </Paragraph>
+                        ansonsten, falls also \(c = \enc(M)\), dann
                         <ol class="nested">
                           <li>
-                            <Paragraph>
-                              {" "}{" "}
-                              <b>
-                                akzeptiert
-                              </b>
-                              {" "}
-                              falls \(M(x)\) akzeptiert;
-                            </Paragraph>
+                            {" "}{" "}
+                            <b>
+                              akzeptiert
+                            </b>
+                            {" "}
+                            falls \(M(x)\) akzeptiert;
                           </li>
                           <li>
-                            <Paragraph>
-                              {" "}{" "}
-                              <b>
-                                ablehnt
-                              </b>
-                              {" "}
-                              , falls \(M(x)\) ablehnt
-                            </Paragraph>
+                            {" "}{" "}
+                            <b>
+                              ablehnt
+                            </b>
+                            {" "}
+                            , falls \(M(x)\) ablehnt
                           </li>
                           <li>
-                            <Paragraph>
-                              {" "}{" "}
-                              <b>
-                                nicht terminiert
-                              </b>
-                              {" "}
-                              , falls \(M(x)\) nicht terminiert.
-                            </Paragraph>
+                            {" "}{" "}
+                            <b>
+                              nicht terminiert
+                            </b>
+                            {" "}
+                            , falls \(M(x)\) nicht terminiert.
                           </li>
                         </ol>
                       </li>
@@ -274,9 +252,11 @@ const Article = () => {
                       dem Bandalphabet \(\Gamma\) jeweils neue Alphabete. Wir wollen aber ein \(\Lambda\), da für
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         alle
-                      </em>
+                      </i>
+                      {" "}
                       Turingmaschinen
                       mit Eingabealphabet \(\Sigma\) funktioniert.
                     </Paragraph>
@@ -311,10 +291,12 @@ const Article = () => {
                 </figure>
                 <Paragraph>
                   <Paragraph>
-                    Wenn wir dies nun als{" "}
-                    <em>
+                    Wenn wir dies nun als 
+                    {" "}
+                    <i>
                       ein
-                    </em>
+                    </i>
+                    {" "}
                     Wort in obigen Schema schreiben, können wir für eine
                     Tabellenzelle
                     \(\delta(q,x) = (r,y,R)\) nicht einfach \(qxryR\) schreiben, auch nicht einfach die Codierungen
@@ -355,10 +337,12 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Wir können nun{" "}
-                    <em>
+                    Wir können nun 
+                    {" "}
+                    <i>
                       jede
-                    </em>
+                    </i>
+                    {" "}
                     Turingmaschine
                     über dem Alphabet
                     \(\Sigma\) codieren als Wort über dem Alphabet
@@ -374,10 +358,14 @@ const Article = () => {
                         Definition/Beobachtung.
                       </span>
                       Zu einem Eingabealphabet
-                      $\Sigma$ definieren wir das{" "}
-                      <em>
+                      $\Sigma$ definieren wir das 
+                      {" "}
+                      <i>
                         Codierungsalphabet
-                      </em>
+                      </i>
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
                       $\Lambda := \writelambda$,
                       wobei wir annehmen, dass $\texttt&#123;#&#125;, \texttt&#123;,&#125;, \texttt&#123;L&#125;, \texttt&#123;S&#125;, \texttt&#123;R&#125;,
                       \texttt&#123;;&#125;
@@ -395,10 +383,12 @@ const Article = () => {
                     {" "}{" "}
                   </Paragraph>
                   <Paragraph>
-                    das Wort{" "}
-                    <em>
+                    das Wort 
+                    {" "}
+                    <i>
                       Codierung
-                    </em>
+                    </i>
+                    {" "}
                     suggeriert, dass wir, gegeben
                     den String $c = \enc(M)$ die
                     ursprüngliche Turingmaschine $M$ rekonstruieren können. Das gilt natürlich nur

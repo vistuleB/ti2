@@ -8,9 +8,10 @@
         |> a
             href 07-06-Post-correspondence-problem
 
-            &lt;&lt; Kapitel 07.06
+            &lt;&lt; Kapitel 7.6
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 08-00-Complexity-Theory
 
-            Kapitel 08.00 &gt;&gt;
+            Kapitel 8.0 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -70,9 +71,7 @@
                         Diese Grammatiken erlauben uns, gewisse Sprachen zu beschreiben, indem Sie Regeln festlegen -
                         hier
                         
-                        |> em
-
-                            Produktionen
+                        _Produktionen_
                         genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
                         Alphabet
                         (hier: \(\{a,b,c\}\)) ableiten kann. Beispielsweise:
@@ -107,12 +106,10 @@
                             
                             Formal gesehen müssten wir eine Codierung kontextfreier Grammatiken über einem festen
                             Alphabet (zum Beispiel \(\{0,1, \rightarrow, ;, \dots\}\) angeben, um dann die 
-                            |> em
-
-                                Sprache
-                                der
-                                Codierungen all jener
-                                kontextfreien Grammatik, die ein Palindromwort ableiten können
+                            _Sprache
+                            der
+                            Codierungen all jener
+                            kontextfreien Grammatik, die ein Palindromwort ableiten können_
                             
                             definieren zu können. Da wir aber mittlerweile verstanden haben, dass alle
                             "endlichen" Objekte irgendwie auf Turingmschinen-verträgliche Weise codiert werden können,
@@ -274,9 +271,7 @@
                         
                         Es lohnt sich, an dieser Stelle zu pausieren. Was Sie gerade gesehen haben,
                         ist eine 
-                        |> em
-
-                            Reduktion
+                        _Reduktion_
                         . Im "echten" Leben verwenden wir Reduktionen,
                         um bereits gefundene Lösungen zu "recyceln". Beispielsweise:
                         
@@ -332,9 +327,7 @@
                         
                         Seien \(L_1 \subseteq \Sigma_1\) und \(L_2 \subseteq \Sigma_2\) zwei Sprachen.
                         Eine 
-                        |> em
-
-                            Reduktion von \(L_1\) nach \(L_2\)
+                        _Reduktion von \(L_1\) nach \(L_2\)_
                         ist eine Turing-berechenbare Funktion
                         \begin{align*}
                         f : \Sigma_1^* \rightarrow \Sigma_2^*
@@ -405,15 +398,11 @@
                     und \(M_2\) die "Bibliotheksfunktion" ist, die Sie ohne groß nachzudenken aufrufen,
                     weil sie ja bereist von anderen Leuten (hoffentlich korrekt) implementiert worden ist.
                     Behauptung 4.6.8 zeigt also, das etwas 
-                    |> em
-
-                        möglich
+                    _möglich_
                     ist.
                     In der Berechenbarkeitstheorie und Komplexitätstheorie sind wir eher daran interessiert,
                     zu zeigen, was 
-                    |> em
-
-                        nicht möglich
+                    _nicht möglich_
                     ist, und wenden daher häufiger das Kontrapositiv
                     der Behauptung an:
                     
@@ -455,18 +444,12 @@
                     von Reduktionen bereits durchgeführt.
                     Für Neulinge ist diese Richtung oft inintuitiv und verwirrend. Dies spiegelt
                     sich in der Verwendung des Konjunktivs 
-                    |> em
-
-                        wäre / wäre
+                    _wäre / wäre_
                     in Behauptung 4.6.9 wider.
                     Auch ist es schlicht ungewohnt, ein 
-                    |> em
-
-                        altes
+                    _altes_
                     Problem auf ein 
-                    |> em
-
-                        neues
+                    _neues_
                     zu reduzieren
                     statt umgekehrt.
                     
@@ -506,9 +489,7 @@
 
                             
                             Dieses Problem ist als 
-                            |> em
-
-                                Schnittproblem kontextfreier Sprachen
+                            _Schnittproblem kontextfreier Sprachen_
                             
                             bekannt.
                             
@@ -630,9 +611,7 @@
                         mehrdeutige Grammatik erzeugen. Wir gehen einen anderen Weg.
                         Ich folge hier dem Tip in Exercise 5.21 aus
                         Michael Sipsers Buch 
-                        |> em
-
-                            Introduction to the Theory of Computation
+                        _Introduction to the Theory of Computation_
                         , third edition.
                         
                     

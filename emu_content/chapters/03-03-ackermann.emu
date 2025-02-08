@@ -8,9 +8,10 @@
         |> a
             href 03-02-primitive-recursion-constructions
 
-            &lt;&lt; Kapitel 03.02
+            &lt;&lt; Kapitel 3.2
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 03-04-mu-recursion
 
-            Kapitel 03.04 &gt;&gt;
+            Kapitel 3.4 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -69,14 +70,10 @@
                         Bereich der natürlichen Zahlen hinausgehen, wie zum Beispiel das Sortieren
                         eines beliebig langen Arrays. Kernpunkt war die Erkenntnis, dass wir
                         komplexere "Datenstrukturen" wie 
-                        |> em
-
-                            Paare von natürlichen Zahlen
+                        _Paare von natürlichen Zahlen_
                         
                         als 
-                        |> em
-
-                            eine
+                        _eine_
                         natürliche Zahl codieren können und somit
                         der primitiven Rekursion zugänglich machen können.
                         
@@ -243,9 +240,7 @@
                         \(g = \comp(A_{m-1},&#123;\rm one})\). Wir könnten sogar noch frecher sein
                         und \(g = \comp(\succ, \comp(\succ, \comp(... \comp(\succ, \zero))))\) schreiben,
                         einfach \(A_{m-1}(1)\) mal hintereinander; diesen Wert also 
-                        |> em
-
-                            hard-coden
+                        _hard-coden_
                         .
                         Allerdings ist die erste Variante einfacher, und somit
                         \begin{align*}
@@ -270,17 +265,13 @@
                         
                         Wir haben also gezeigt, dass jedes \(A_m\) primitiv rekursiv ist.
                         Heißt das auch, dass die zwei-parametrige Funktion \(A(m,n)\) 
-                        |> em
-
-                            berechenbar
+                        _berechenbar_
                         ist?
                         In der primitiven Rekursion haben wir keine Möglichkeit, den Index \(m\) als
                         Eingabewert zu lesen und dann aus dem unendlichen Array primitiv rekursiver Funktionen
                         \([A_0, A_1, A_2, \dots]\) den Eintrag \(A_m\) auszulesen.
                         Aber 
-                        |> em
-
-                            berechenbar
+                        _berechenbar_
                         in einem ganz allgemeinen Sinn? Diese Frage können wir
                         zu diesem Zeitpunkt nicht formal beantworten, weil wir den Begriff
                         allgemeiner Berechenbarkeit noch gar nicht definiert haben. Es ist allerdings
@@ -327,24 +318,16 @@
                         . Beachten Sie, dass Theorem 3.3.3 nicht mit
                         Theorem 3.3.2 im Widerspruch steht. Theorem 3.3.3 besagt, dass \(A_m\) primitiv rekursiv ist,
                         für jedes \(m\). Die Zahl \(m\) ist hier also 
-                        |> em
-
-                            Teil der Aussage
+                        _Teil der Aussage_
                         , nicht
                         Eingabeparameter der Funktion; die Funktion \(A_m\) hat nur 
-                        |> em
-
-                            einen
+                        _einen_
                         Eingabeparameter.
                         Theorem 3.3.3 hingegen macht eine Aussage über 
-                        |> em
-
-                            eine
+                        _eine_
                         Funktion \(A(m,n)\) mit
                         
-                        |> em
-
-                            zwei
+                        _zwei_
                         Eingabeparametern, und \(m\) ist nun einer dieser beiden.
                         
                     
@@ -415,9 +398,7 @@
                             
                             Sei \(f: \N \rightarrow \N\) und \(g: \N^k \rightarrow \N\). Die Funktion
                             \(f\) 
-                            |> em
-
-                                majorisiert
+                            _majorisiert_
                             \(g\), wenn
                             \begin{align*}
                             f (\max(x_1,\dots,x_k) \gt g(x_1, \dots, x_k) \ .
@@ -522,9 +503,7 @@
                             \(f(\vec{x}) = g(h_1(\vec{x}), \dots, h_k(\vec{x}))\),
                             für primitiv rekursive Funktionen \(g, h_1, \dots, h_k\). Jede dieser Funktionen
                             wurde mit 
-                            |> em
-
-                                weniger
+                            _weniger_
                             Kombinatoren konstruiert; somit wird jede dieser Funktionen
                             von einem \(A_r\) majorisiert:
                             \(A_r \gt g, A_{s_1} \gt h_1, \dots, A_{s_k} \gt h_k\). Für einen Eingabevektor \(\vec{x}\)
@@ -648,9 +627,7 @@
 
                         
                         In der Vorlesung am 7. Mai 2024 hatte ich den 
-                        |> em
-
-                            Grad
+                        _Grad_
                         einer primitiv-rekursiven Funktion
                         definiert. Das ist in etwa die "Verschachtelungstiefe" von $f$. Betrachten wir beispielsweise
                         die Funktion $\pair(x,y) =&#123;x + y + 1 \choose 2} + x$ und dröseln auf, wie wir diese

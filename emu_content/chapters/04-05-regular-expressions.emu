@@ -8,9 +8,10 @@
         |> a
             href 04-04-regular-grammar-to-fsm
 
-            &lt;&lt; Kapitel 04.04
+            &lt;&lt; Kapitel 4.4
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 04-06-limitations-of-regular-grammars
 
-            Kapitel 04.06 &gt;&gt;
+            Kapitel 4.6 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -59,9 +60,7 @@
                         Grammatik (ob normal, erweitert, eingeschränkt),
                         endlichen Automaten und nichtdeterministischen endlichen Automaten
                         gibt es noch die 
-                        |> em
-
-                            regulären Ausdrücke
+                        _regulären Ausdrücke_
                         . Dies wird wahrscheinlich von allen
                         Beschreibungsweise die sein, mit der Sie in der Praxis
                         am ehesten in Berührung kommen.
@@ -124,9 +123,7 @@
                         *Frage:*
                         
                         Können 
-                        |> em
-
-                            alle
+                        _alle_
                         regulären Sprachen nach diesem Baukastenprinzip erstellt werden?
                         
                     
@@ -135,9 +132,7 @@
 
                         
                         Damit diese Frage überhaupt die Chance hat, mit 
-                        |> em
-
-                            ja
+                        _ja_
                         beantwortet zu werden, müssen wir
                         "Atome" zur Verfügung stellen, mit denen wir beginnen können. Daher:
                         
@@ -237,9 +232,7 @@
                             Weil in der Praxis neben \(L^*\), also beliebig langen, möglicherweise leeren Folgen von
                             \(L\)-Wörtern wir
                             oft 
-                            |> em
-
-                                nichtleere
+                            _nichtleere_
                             Folgen wollen,
                             führen wir die Abkürzung \(R^+\) für \(R (R^*)\) ein und bezeichnen die beschriebene Sprache
                             \(L \circ L^*\) kurzerhand als \(L^+\).
@@ -256,17 +249,11 @@
                         Auch
                         gehen wir davon aus, dass die Operatoren die Präzedenz \(^*\) vor \(\circ\) vor \(|\) haben (wie
                         
-                        |> em
-
-                            hoch
+                        _hoch_
                         vor 
-                        |> em
-
-                            Punkt
+                        _Punkt_
                         vor 
-                        |> em
-
-                            Strich
+                        _Strich_
                         in der Arithmetik), sodass beispielsweise
                         der Ausdruck \( a^*b|c^*\) die Bedeutung von \((((a^*)b)(c^*))\) hat, genauso wie wir
                         in der Arithmetik \(a^2 b + c^3\) statt \( (((a^2)b) + c^3) \) schreiben.
@@ -278,9 +265,7 @@
                         
                         Die von den atomaren Ausdrücken beschriebenen Sprachen sind alle regulär, da sie alle
                         
-                        |> em
-
-                            endliche Sprachen
+                        _endliche Sprachen_
                         sind.
                         Dank unserer Vorarbeit aus 
                         |> a
@@ -335,9 +320,7 @@
                         aus dem
                         letzten Kapitel. Sie erinnern sich:
                         eine endliche Folge von 
-                        |> em
-
-                            Labels
+                        _Labels_
                         , wo ein Label eine nichtleere Folge von Blöcken ist, die
                         entweder 
                         |> code
@@ -599,10 +582,8 @@
 
                         
                         Wir paraphrasieren hier den Beweis aus Michael Sipsers 
-                        |> em
-
-                            Introduction to the Theory of
-                            Computation
+                        _Introduction to the Theory of
+                        Computation_
                         .
                         
                     
@@ -646,10 +627,8 @@
                         hinausgehen.
                         All dies lässt sich leicht verwirklichen, wenn wir reguläre Ausdrücke als
                         Kantenbeschriftung zulassen. Wir nennen so einen Automaten einen 
-                        |> em
-
-                            verallgemeinerten
-                            nichtdeterministischen endlichen Automaten (VNEA)
+                        _verallgemeinerten
+                        nichtdeterministischen endlichen Automaten (VNEA)_
                         .
                         
                         |> figure
@@ -771,9 +750,7 @@
                             \step{R_4} B\) nicht
                             existieren sollte , lassen wir das \(R_4 | \) im rechten Bild einfach weg.
                             (Sipser führt hier den eleganten Formalismus ein, zu verlangen, dass 
-                            |> em
-
-                                jedes
+                            _jedes_
                             Paar
                             durch
                             eine Kante verbunden ist und würde fehlende Kanten einfach mit dem regulären Ausdruck

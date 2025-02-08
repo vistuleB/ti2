@@ -30,6 +30,13 @@ fn each_prev_next(l: List(a), prev: Option(a), f: fn(a, Option(a), Option(a)) ->
   }
 } 
 
+fn remove_0_at_start(s: String) -> String {
+  case string.starts_with(s, "0") {
+    True -> string.drop_start(s, 1)
+    False -> s
+  }
+}
+
 fn construct_left_nav(prev_file: Option(String)) {
   let toc_link = vp.V(
     blame_us("toc link"),
@@ -46,7 +53,7 @@ fn construct_left_nav(prev_file: Option(String)) {
     option.Some(prev_file) -> {
       let prev_file_name = string.drop_end(prev_file, 5)
       let assert [prev_number_first, prev_number_second, ..] = string.split(prev_file_name, "-")
-      let prev_number = string.join([prev_number_first, prev_number_second], ".")
+      let prev_number = string.join([remove_0_at_start(prev_number_first), remove_0_at_start(prev_number_second)], ".")
 
       [vp.V(
         blame_us("Prev chapter link"),
@@ -82,12 +89,14 @@ fn construct_right_nav(next_file: Option(String)) {
     option.Some(next_file) -> {
      let next_file_name = string.drop_end(next_file, 5)
       let assert [next_number_first, next_number_second, ..] = string.split(next_file_name, "-")
-      let next_number = string.join([next_number_first, next_number_second], ".")
+      let next_number = string.join([remove_0_at_start(next_number_first), remove_0_at_start(next_number_second)], ".")
 
       [vp.V(
         blame_us("next chapter link"),
         "a",
-        [vp.BlamedAttribute(blame_us("next chapter attribute"), "href", next_file_name)], [vp.T(blame_us("next chapter text node"),
+        [
+          vp.BlamedAttribute(blame_us("next chapter attribute"), "href", next_file_name)
+        ], [vp.T(blame_us("next chapter text node"),
           [
             vp.BlamedContent(blame_us("next chapter content"), "Kapitel " <> next_number <> " &gt;&gt;")
           ]
@@ -99,7 +108,7 @@ fn construct_right_nav(next_file: Option(String)) {
   }
 
  
-  vp.V(blame_us("right nav div"), "div", [vp.BlamedAttribute(blame_us("right nav attribute"), "id", "link-to-overview")], list.flatten([[overview_link], next_chapter_link]))
+  vp.V(blame_us("right nav div"), "div", [vp.BlamedAttribute(blame_us("right nav attribute"), "id", "link-to-overview"), vp.BlamedAttribute(blame_us("right nav attribute"), "style", "text-align: end")], list.flatten([[overview_link], next_chapter_link]))
 }
 
 fn splitter(vxml: VXML, file: String) -> Result(List(#(String, VXML, Nil)), a) {

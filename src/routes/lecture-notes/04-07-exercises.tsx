@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={27}>
+      <Chapter
+        number={27}
+        path="/lecture-notes27.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="04-06-limitations-of-regular-grammars">
-            <Paragraph>
-              &lt;&lt; Kapitel 04.06
-            </Paragraph>
+            &lt;&lt; Kapitel 4.6
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="05-00-context-free-languages">
-            <Paragraph>
-              Kapitel 05.00 &gt;&gt;
-            </Paragraph>
+            Kapitel 5.0 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -73,14 +69,14 @@ const Article = () => {
                       </Paragraph>
                       <Paragraph>
                         <a href="02-02-examples-of-equipotent-sets.html">
-                          <Paragraph>
-                            Kapitel 2.2
-                          </Paragraph>
+                          Kapitel 2.2
                         </a>
-                        als{" "}
-                        <em>
+                        als 
+                        {" "}
+                        <i>
                           eine
-                        </em>
+                        </i>
+                        {" "}
                         natürliche Zahl $\bar&#123;\alpha&#125;$ codieren können.
                         Mittels dieser Codierung wird eine Sprache $L \subseteq \Sigma^*$
                         zu einer Funktion
@@ -195,10 +191,12 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph>
                       Betrachten wir eine Variante des endlichen Automaten, bei der
-                      der Automat{" "}
-                      <em>
+                      der Automat 
+                      {" "}
+                      <i>
                         zurückspulen
-                      </em>
+                      </i>
+                      {" "}
                       kann. Der Automat hat also
                       einen "Lesekopf", mit dem er auf einem Zeichen des Eingabewortes steht
                       (anfangs auf dem ersten). In jedem Schritt kann er nach rechts oder links
@@ -212,12 +210,15 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Wenn z.B. $\delta(q, x) = (r, L)$ ist, dann heißt das:{" "}
-                    <em>
+                    Wenn z.B. $\delta(q, x) = (r, L)$ ist, dann heißt das: 
+                    {" "}
+                    <i>
                       wenn Du im
                       Zustand $q$ bist und der Lesekopf ein $x$ liest, dann wechsle in den
                       Zustand $r$ und gehe nach links.
-                    </em>
+                      {" "}
+                    </i>
+                    {" "}{" "}
                   </Paragraph>
                 </Paragraph>
                 <Paragraph>
@@ -228,10 +229,12 @@ const Article = () => {
                     Die von so einem Automaten $M$ akzeptierte Sprache $L(M)$ ist dann definiert als
                     die Menge aller Wörter $\alpha$, die $M$ in einen akzeptierenden
                     Zustand bringen. Beachten Sie, dass $M$ möglicherweise in eine Endlosschleife
-                    geraten kann. In diesem Falle ist $\alpha${" "}
-                    <em>
+                    geraten kann. In diesem Falle ist $\alpha$ 
+                    {" "}
+                    <i>
                       kein
-                    </em>
+                    </i>
+                    {" "}
                     Wort in $L(M)$.
                   </Paragraph>
                 </Paragraph>

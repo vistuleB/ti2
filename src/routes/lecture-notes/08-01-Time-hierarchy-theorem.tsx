@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={51}>
+      <Chapter
+        number={51}
+        path="/lecture-notes51.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="08-00-Complexity-Theory">
-            <Paragraph>
-              &lt;&lt; Kapitel 08.00
-            </Paragraph>
+            &lt;&lt; Kapitel 8.0
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="09-appendix">
-            <Paragraph>
-              Kapitel 09.appendix &gt;&gt;
-            </Paragraph>
+            Kapitel 9.appendix &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -47,9 +43,7 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <a href="07-03-Turing-universal.html">
-                      <Paragraph>
-                        Kapitel 7.5.
-                      </Paragraph>
+                      Kapitel 7.5.
                     </a>
                     Unsere Implementierung hatte insgesamt
                     fünf Bänder verwendet: (1) ein Band, um die Regeln von $M$ zu speichern (also die Funktion
@@ -59,14 +53,18 @@ const Article = () => {
                     zu speichern; (4) und (5) um das Band von $M$ zu simulieren. Für letzteres hatten wir
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       zwei
-                    </em>
+                    </i>
+                    {" "}
                     Bänder
-                    verwendet, weil das uns erlaubte, effizient Zeichen{" "}
-                    <em>
+                    verwendet, weil das uns erlaubte, effizient Zeichen 
+                    {" "}
+                    <i>
                       einzufügen
-                    </em>
+                    </i>
+                    {" "}
                     statt einfach zu
                     überschreiben.
                     Wie wir aber gesehen hatten, können wir (4) und (5) mit einem Band bewältigen, indem wir zu
@@ -76,10 +74,12 @@ const Article = () => {
                     durch eine
                     Markierung $\texttt&#123;#&#125;$. Auch das Band (3) können wir uns sparen: den akzeptierenden Zustand
                     von $M$ können wir gleich am Anfang von (1) schreiben, ohne das die Simulation dadurch
-                    nennenswert teurer würde. Wir kommen also mit{" "}
-                    <em>
+                    nennenswert teurer würde. Wir kommen also mit 
+                    {" "}
+                    <i>
                       drei
-                    </em>
+                    </i>
+                    {" "}
                     Bändern aus.
                     Allerdings hatten wir uns nur überlegt, wie man
                     Einband-Turingmaschinen $M$ simuliert. Es ist aber ziemlich einfach zu sehen, dass man
@@ -89,9 +89,7 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <a href="07-05-undecidability.html">
-                      <Paragraph>
-                        Kapitel 7.7
-                      </Paragraph>
+                      Kapitel 7.7
                     </a>
                     gesehen, dass wir als Codierungsalphabet
                     $\Sigma$ selbst nehmen können, also $\enc(M) \in \Sigma^*$, solange $\Sigma$ mindestens zwei
@@ -136,10 +134,12 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Schritten. Das $C$ ist hier eine{" "}
-                      <em>
+                      Schritten. Das $C$ ist hier eine 
+                      {" "}
+                      <i>
                         absolute Konstante
-                      </em>
+                      </i>
+                      {" "}
                       , hängt also weder von $M$ noch
                       von $\Sigma$ ab.
                     </Paragraph>
@@ -219,11 +219,13 @@ const Article = () => {
                   <Paragraph>
                     Wir haben gesehen, dass $\negdiag$ nicht entscheidbar ist. Nun wollen
                     wir eine Version von $\negdiag$, die in $t$ Schritten entscheidbar ist,
-                    aber nicht in sehr viel weniger. Dafür definieren wir uns ein{" "}
-                    <em>
+                    aber nicht in sehr viel weniger. Dafür definieren wir uns ein 
+                    {" "}
+                    <i>
                       Halteproblem mit
                       Zeitbudget.
-                    </em>
+                    </i>
+                    {" "}{" "}
                   </Paragraph>
                 </Paragraph>
                 <div class="well container theorem">
@@ -355,9 +357,11 @@ const Article = () => {
                       Eine Funktion $t: \N \rightarrow \N$ heißt
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         zeitkonstruierbar
-                      </em>
+                      </i>
+                      {" "}
                       , wenn es eine Turingmaschine gibt, die aus dem Eingabewort $1^n$
                       das Ausgabewort $1^&#123;t(n)&#125;$ berechnet und selbst maximal $O(t(n))$ Schritte läuft.
                     </Paragraph>
@@ -433,9 +437,7 @@ const Article = () => {
                         $s(n)$ Schritten. Wenn $U$ die Maschine $M$ simuliert, braucht sie
                         nach{" "}
                         <a href="#theorem-universal">
-                          <Paragraph>
-                            Theorem 8.1.1
-                          </Paragraph>
+                          Theorem 8.1.1
                         </a>
                         höchstens
                         $C \cdot |\enc(M)| \cdot (n + s(n))$ Schritte.

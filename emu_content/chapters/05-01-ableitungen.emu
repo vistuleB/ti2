@@ -8,9 +8,10 @@
         |> a
             href 05-00-context-free-languages
 
-            &lt;&lt; Kapitel 05.00
+            &lt;&lt; Kapitel 5.0
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,5 +19,5 @@
         |> a
             href 05-02-cfg-to-pda
 
-            Kapitel 05.02 &gt;&gt;
+            Kapitel 5.2 &gt;&gt;
     |> div

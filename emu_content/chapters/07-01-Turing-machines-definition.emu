@@ -8,9 +8,10 @@
         |> a
             href 07-00-Turing-machines
 
-            &lt;&lt; Kapitel 07.00
+            &lt;&lt; Kapitel 7.0
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,7 +19,7 @@
         |> a
             href 07-01-Turing-machines-examples
 
-            Kapitel 07.01 &gt;&gt;
+            Kapitel 7.1 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -62,22 +63,16 @@
 
                         
                         Eine Turingmaschine besteht aus einem 
-                        |> em
-
-                            Band
+                        _Band_
                         , das in Zellen unterteilt ist und
                         in beide Richtungen unbegrenzt ist,
                         und einem 
-                        |> em
-
-                            Schreib-Lese-Kopf
+                        _Schreib-Lese-Kopf_
                         .
                         Dieser befindet sich in jedem Schritt auf einer
                         Zelle. Wie auch der endliche Automat oder der
                         Kellerautomat hat die Turingmaschine einen internen 
-                        |> em
-
-                            Zustand
+                        _Zustand_
                         .
                         In jedem Schritt liest die Maschine das Zeichen, das sich in der aktuellen
                         Zelle des Bandes befindet (dort, wo der Kopf steht). Abhängig vom gelesenen Zeichen
@@ -269,37 +264,25 @@
                         Sie können sich das Band auch als Magnetband vorstellen, das nach vorn oder nach hinten gespult
                         wird, anstatt dass der Kopf sich bewegt. Am Anfang steht auf dem Band das
                         
-                        |> em
-
-                            Eingabewort
+                        _Eingabewort_
                         und der Kopf auf dem ersten Symbol dieses Wortes. Die Turingmaschine
                         wendet
                         nun ihre Regeln an, bis Sie einen
                         
-                        |> em
-
-                            Endzustand
+                        _Endzustand_
                         erreicht. Bei 
-                        |> em
-
-                            Entscheidungsproblemen
+                        _Entscheidungsproblemen_
                         , wo uns nur
                         eine Ja/Nein-Antwort interessiert, wird die Antwort durch den Entzustand angegeben:
                         der Zustand $\qaccept$ entspricht einem 
-                        |> em
-
-                            Ja
+                        _Ja_
                         , der Zustand
                         $\qreject$ entspricht einem 
-                        |> em
-
-                            Nein
+                        _Nein_
                         . Diese zwei Endzustände reichen im Allgemeinen
                         aus. Wenn wir von der Maschine eine komplexere Ausgabe als Ja/Nein erwarten, so
                         betrachten wir als 
-                        |> em
-
-                            Ausgabe der Turingmaschine
+                        _Ausgabe der Turingmaschine_
                         den Inhalt des Bandes zu dem
                         Zeitpunkt, da die Maschine den Zustand $\qaccept$ erreicht.
                         Was brauchen wir also, um so eine Turingmaschine
@@ -369,9 +352,7 @@
 
                                     L
                                 für 
-                                |> em
-
-                                    gehe eine Zelle nach links
+                                _gehe eine Zelle nach links_
                                 steht,
                                 
                                 |> tt
@@ -382,9 +363,7 @@
 
                                     S
                                 für 
-                                |> em
-
-                                    stay
+                                _stay_
                                 , also die Anweisung, den Kopf
                                 nicht zu bewegen.
                                 
@@ -421,17 +400,13 @@
                     
                     Sie haben nun wohl bereits eine vage Vorstellung, was eine Turingmaschine macht.
                     Versuchen wir, es noch weiter zu formalisieren. Um den 
-                    |> em
-
-                        Gesamtzustand
+                    _Gesamtzustand_
                     der
                     Turingmaschine zu beschreiben, also eine vollständige Momentaufnahme, reicht
                     nicht der aktuelle innere Zustand \(q\); wir brauchen auch den Bandinhalt und insbesondere
                     die Position, an der sich der Kopf befindet. Das alles zusammen nennt
                     man die 
-                    |> em
-
-                        Konfiguration der Turingmaschine
+                    _Konfiguration der Turingmaschine_
                     . Wir wollen sie mit
                     uns bereits bekannten mathematischen Begriffen beschreiben.
                     
@@ -456,9 +431,7 @@
                             Definition
                         
                         Die 
-                        |> em
-
-                            Konfiguration
+                        _Konfiguration_
                         einer Turingmaschine ist ein Element in
                         \(\Gamma^* \times Q \times \Gamma^*\), also
                         \begin{align*}
@@ -474,9 +447,7 @@
                         \mathcal{C} := \Gamma^* \times Q \times \Gamma^*
                         \end{align*}
                         Der 
-                        |> em
-
-                            Zustand einer Konfiguration
+                        _Zustand einer Konfiguration_
                         \(C = uqv\) ist \(q\), also der innere
                         Zustand, in dem sich die Maschine gerade befindet.
                         Wir bezeichnen mit $\state(C)$. Formal:
@@ -486,19 +457,13 @@
                         \end{align*}
                         Eine Konfiguration \(C\) ist
                         eine 
-                        |> em
-
-                            akzeptierende Endkonfiguration
+                        _akzeptierende Endkonfiguration_
                         wenn $\state(C) = \qaccept$ ist;
                         eine 
-                        |> em
-
-                            ablehnende Endkonfiguration
+                        _ablehnende Endkonfiguration_
                         , wenn $\state(C) = \qreject$ ist.
                         In beiden Fällen ist \(C\) eine 
-                        |> em
-
-                            Endkonfiguration
+                        _Endkonfiguration_
                         .
                         
                     
@@ -511,9 +476,7 @@
                         C_{\rm start} = \qstart{} w
                         \end{align*}
                         die 
-                        |> em
-
-                            Startkonfiguration
+                        _Startkonfiguration_
                         .
                         
                     
@@ -684,9 +647,7 @@
                         wir $\hat{\delta}(C') = C'$ für jede Endkonfiguration $C'$ definiert haben.
                         Es spielt also in der obigen Formulierung
                         
-                        |> em
-
-                            wenn es ein $i$ gibt
+                        _wenn es ein $i$ gibt_
                         keine Rolle, welches solche $i$ wir wählen.
                         
                     
@@ -716,26 +677,18 @@
 
                         
                         Ein 
-                        |> em
-
-                            Entscheidungsproblem
+                        _Entscheidungsproblem_
                         ist eine Funktion \(P : \Sigma^* \rightarrow
                         \{\texttt{true}, \texttt{false}\}\), beispielsweise: 
-                        |> em
-
-                            gegeben ein Wort,
-                            stellt dieses Wort ein korrektes Java-Programm dar?
+                        _gegeben ein Wort,
+                        stellt dieses Wort ein korrektes Java-Programm dar?_
                         
                         oder 
-                        |> em
-
-                            gegeben eine Zahl in Dezimalschreibweise, ist dies
-                            eine Primzahl?
+                        _gegeben eine Zahl in Dezimalschreibweise, ist dies
+                        eine Primzahl?_
                         Eine äquivalente Sichtweise ist die
                         eines Entscheidungsproblems als 
-                        |> em
-
-                            Sprache
+                        _Sprache_
                         \(L \subseteq \Sigma^*\).
                         Wir identifizieren \(L\) hier mit der Menge aller Wörter \(x\) mit
                         \(P(x) = \texttt{true}\). Wenn wir es mit einem Entscheidungsproblem
@@ -777,9 +730,7 @@
                         
                         Eine Turingmaschine \(M\)
                         
-                        |> em
-
-                            entscheidet
+                        _entscheidet_
                         die Sprache \(L \subseteq \Sigma^*\) wenn
                         
                         |> ol
@@ -807,9 +758,7 @@
 
                             
                             Eine Sprache \(L\) heißt 
-                            |> em
-
-                                entscheidbar
+                            _entscheidbar_
                             , wenn
                             es eine Turingmaschine gibt, die sie entscheidet.
                             
@@ -832,9 +781,7 @@
                         *(Turingmaschine akzeptiert eine Sprache)*
                         
                         Eine Turingmaschine \(M\) 
-                        |> em
-
-                            akzeptiert
+                        _akzeptiert_
                         die Sprache
                         \(L \subseteq \Sigma^*\) wenn
                         \begin{align*}
@@ -848,9 +795,7 @@
 
                             
                             Eine Sprache \(L \subseteq \Sigma^*\) heißt 
-                            |> em
-
-                                semi-entscheidbar
+                            _semi-entscheidbar_
                             ,
                             wenn es eine Turingmaschine \(M\) gibt, die \(L\) akzeptiert.
                             
@@ -881,10 +826,8 @@
                         bei Eingabe \(x \in \Sigma_1^*\) die Turingmaschine in einer
                         akzeptierenden Endkonfiguration \(C\) landet, und in \(C\) steht
                         dann \(g(x)\) auf dem Band. Formal müssen wir noch klären, was 
-                        |> em
-
-                            \(g(x)\) steht
-                            auf dem Band
+                        _\(g(x)\) steht
+                        auf dem Band_
                         bedeutet.
                         
                     
@@ -907,9 +850,7 @@
                         g : \Sigma_1^* \rightarrow \Sigma_2^*
                         \end{align*}
                         eine Funktion. Eine Turingmaschine \(M\) 
-                        |> em
-
-                            berechnet die Funktion \(g\)
+                        _berechnet die Funktion \(g\)_
                         , wenn
                         
                         |> ol
@@ -1066,9 +1007,7 @@
                             
                         
                         Als nächstes definieren wir 
-                        |> em
-
-                            Aufräumregeln
+                        _Aufräumregeln_
                         : wenn \(q = \texttt{accept}\), dann
                         können wir jedes Zeichen löschen:
                         \begin{align*}

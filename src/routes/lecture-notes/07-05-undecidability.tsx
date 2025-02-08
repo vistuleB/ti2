@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={47}>
+      <Chapter
+        number={47}
+        path="/lecture-notes47.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="07-03-Turing-universal">
-            <Paragraph>
-              &lt;&lt; Kapitel 07.03
-            </Paragraph>
+            &lt;&lt; Kapitel 7.3
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="07-06-Post-correspondence-problem">
-            <Paragraph>
-              Kapitel 07.06 &gt;&gt;
-            </Paragraph>
+            Kapitel 7.6 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -42,10 +38,12 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Im vorherigen Teilkapitel haben wir die{" "}
-                      <em>
+                      Im vorherigen Teilkapitel haben wir die 
+                      {" "}
+                      <i>
                         universelle Turingmaschine
-                      </em>
+                      </i>
+                      {" "}
                       $U$ konstruiert, die
                       eine andere Turingmaschine, deren Codierung und Inputwort sie als Input gegeben hat, simulieren
                       kann.
@@ -61,29 +59,43 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Allerdings: wenn $M$ auf $x$ nicht terminiert, dann terminiert $U$ auf $\enc(M)x$ auch
-                      nicht. $U${" "}
-                      <em>
+                      nicht. $U$ 
+                      {" "}
+                      <i>
                         akzeptiert
-                      </em>
-                      die Sprache also,{" "}
-                      <em>
+                      </i>
+                      {" "}
+                      die Sprache also, 
+                      {" "}
+                      <i>
                         entscheidet
-                      </em>
+                      </i>
+                      {" "}
                       sie aber nicht. Wäre es
                       nicht schön, eine Turingmaschine zu haben, die diese Sprache entscheidet? Dann könnten wir jede
                       Turingmaschine simulieren und gleichzeitig Endlosschleifen und eventuell ganz allgemein
-                      "Programmierfehler" vorhersagen und abfangen. Wir werden zeigen, dass dies leider{" "}
-                      <em>
+                      "Programmierfehler" vorhersagen und abfangen. Wir werden zeigen, dass dies leider 
+                      {" "}
+                      <i>
                         nicht
-                      </em>
-                      möglich ist. In der Literatur ist dies als die{" "}
-                      <em>
+                      </i>
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      möglich ist. In der Literatur ist dies als die 
+                      {" "}
+                      <i>
                         Unentscheidbarkeit des Halteproblems
-                      </em>
-                      (englisch{" "}
-                      <em>
+                      </i>
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      (englisch 
+                      {" "}
+                      <i>
                         undecidability of the Halting problem
-                      </em>
+                      </i>
+                      {" "}
                       bekannt).
                     </Paragraph>
                   </Paragraph>
@@ -107,16 +119,20 @@ const Article = () => {
                         $\Lambda$ wiederum als Strings in $\Sigma^
                       </b>
                       $ codieren. Wir müssen hier
-                      nur vorsichtig sein, dass der Code{" "}
-                      <em>
+                      nur vorsichtig sein, dass der Code 
+                      {" "}
+                      <i>
                         präfixfrei
-                      </em>
+                      </i>
+                      {" "}
                       ist. Wenn wir zum Beispiel naiv
                       $1$ als $1$ und $0$ als $0$ und $\texttt&#123;#&#125;$ als $01$ codieren, dann wissen wir nicht mehr, was
-                      mit dem Codewort $01$ gemeint ist. Am einfachsten geht das mit einem{" "}
-                      <em>
+                      mit dem Codewort $01$ gemeint ist. Am einfachsten geht das mit einem 
+                      {" "}
+                      <i>
                         Blockcode
-                      </em>
+                      </i>
+                      {" "}
                       , in dem
                       alle Codewörter die gleiche Länge $k$ haben, also
                       $\Lambda \rightarrow \&#123;0,1\&#125;^k$. Mit
@@ -215,10 +231,12 @@ const Article = () => {
                       <Paragraph>
                         entscheidbar; wir müssen ja nur $\diag$ entscheiden und dann das Ergebnis negieren.
                         $\negdiag$
-                        ist sozusagen die Menge aller Turingmaschinen, die{" "}
-                        <em>
+                        ist sozusagen die Menge aller Turingmaschinen, die 
+                        {" "}
+                        <i>
                           nicht
-                        </em>
+                        </i>
+                        {" "}
                         ihre eigene Codierung als
                         Inputwort akzeptieren. Da $\negdiag$ nach Annahme entscheidbar ist, gibt es eine Maschine
                         $D$, die $\negdiag$ entscheidet.
@@ -264,19 +282,13 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        \(f_H(z) = \texttt&#123;accept&#125;\) aber \(z \not \in \halt\), oder{" "}
-                      </Paragraph>
+                      \(f_H(z) = \texttt&#123;accept&#125;\) aber \(z \not \in \halt\), oder{" "}
                     </li>
                     <li>
-                      <Paragraph>
-                        \(f_H(z) = \texttt&#123;reject&#125;\) aber \(z \in \halt\) , oder{" "}
-                      </Paragraph>
+                      \(f_H(z) = \texttt&#123;reject&#125;\) aber \(z \in \halt\) , oder{" "}
                     </li>
                     <li>
-                      <Paragraph>
-                        \(f_H(z) = \texttt&#123;undefined&#125;\), d.h. $H$ terminiert auf Eingabewort $z$ nicht.
-                      </Paragraph>
+                      \(f_H(z) = \texttt&#123;undefined&#125;\), d.h. $H$ terminiert auf Eingabewort $z$ nicht.
                     </li>
                   </ol>
                   <Paragraph>
@@ -290,19 +302,13 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        \(f_H(yy) = \texttt&#123;accept&#125;\) aber \(yy \not \in \halt\), oder
-                      </Paragraph>
+                      \(f_H(yy) = \texttt&#123;accept&#125;\) aber \(yy \not \in \halt\), oder
                     </li>
                     <li>
-                      <Paragraph>
-                        \(f_H(yy) = \texttt&#123;reject&#125;\) aber \(yy \in \halt\), oder{" "}
-                      </Paragraph>
+                      \(f_H(yy) = \texttt&#123;reject&#125;\) aber \(yy \in \halt\), oder{" "}
                     </li>
                     <li>
-                      <Paragraph>
-                        \(f_H(yy) = \texttt&#123;undefined&#125;\).
-                      </Paragraph>
+                      \(f_H(yy) = \texttt&#123;undefined&#125;\).
                     </li>
                   </ol>
                   <Paragraph>
@@ -336,48 +342,44 @@ const Article = () => {
                       </Paragraph>
                       <ul>
                         <li>
-                          <Paragraph>
-                            \(H(yy) = \texttt&#123;reject&#125;\). Dann geht der Aufruf von
-                            \(D(y)\) also in den{" "}
-                            <tt>
-                              else
-                            </tt>
-                            -Teil
-                            in den Zeilen 4-5 und
-                            \(D(y) = \texttt&#123;accept&#125;\), somit
-                            $yy = \enc(D)y \in \halt$ Wir befinden uns
-                            in Fall 1: \(y y \in \halt\) aber \(H(yy)= \texttt&#123;reject&#125;\).
-                            Die Maschine \(H\) hat eine falsche Antwort
-                            für \(\halt\) geliefert.
-                          </Paragraph>
+                          \(H(yy) = \texttt&#123;reject&#125;\). Dann geht der Aufruf von
+                          \(D(y)\) also in den{" "}
+                          <tt>
+                            else
+                          </tt>
+                          -Teil
+                          in den Zeilen 4-5 und
+                          \(D(y) = \texttt&#123;accept&#125;\), somit
+                          $yy = \enc(D)y \in \halt$ Wir befinden uns
+                          in Fall 1: \(y y \in \halt\) aber \(H(yy)= \texttt&#123;reject&#125;\).
+                          Die Maschine \(H\) hat eine falsche Antwort
+                          für \(\halt\) geliefert.
                         </li>
                         <li>
-                          <Paragraph>
-                            \(H(yy) = \texttt&#123;accept&#125;\). Dann geht
-                            der Aufruf von \(D(y)\) in Zeile 3,
-                            und \(D(y) = \texttt&#123;reject&#125;\), somit \(yy = \enc(D) y \not \in \halt\).
-                            Wir befinden uns in Fall 2: \(yy \not \in \halt\)
-                            und \(H(yy) = \texttt&#123;accept&#125;\). Die Maschine
-                            \(H\) hat abermals eine falsche Antwort geliefert.
-                          </Paragraph>
+                          \(H(yy) = \texttt&#123;accept&#125;\). Dann geht
+                          der Aufruf von \(D(y)\) in Zeile 3,
+                          und \(D(y) = \texttt&#123;reject&#125;\), somit \(yy = \enc(D) y \not \in \halt\).
+                          Wir befinden uns in Fall 2: \(yy \not \in \halt\)
+                          und \(H(yy) = \texttt&#123;accept&#125;\). Die Maschine
+                          \(H\) hat abermals eine falsche Antwort geliefert.
                         </li>
                         <li>
-                          <Paragraph>
-                            \(H(yy)\) terminiert nicht. Dann befinden
-                            wir uns in Fall 3: \(H\) kann
-                            \(\halt\) nicht entscheiden,
-                            denn Mindestbedingung hierfür wäre ja,
-                            auf jedem Eingabewort zu terminieren.
-                          </Paragraph>
+                          \(H(yy)\) terminiert nicht. Dann befinden
+                          wir uns in Fall 3: \(H\) kann
+                          \(\halt\) nicht entscheiden,
+                          denn Mindestbedingung hierfür wäre ja,
+                          auf jedem Eingabewort zu terminieren.
                         </li>
                       </ul>
                     </Paragraph>
                     In jedem Fall sehen wir, dass \(H\) auf dem Eingabewort
                     \(yy\) einen Fehler macht und somit \(\halt\) nicht
-                    entscheidet. Da das für{" "}
-                    <em>
+                    entscheidet. Da das für 
+                    {" "}
+                    <i>
                       jede
-                    </em>
+                    </i>
+                    {" "}
                     Turingmaschine
                     geht, schließen wir: keine Turingmaschine kann
                     die Sprache \(\halt\) entscheiden; sie ist unentscheidbar.
@@ -407,9 +409,11 @@ const Article = () => {
                     dass im Prinzip
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       jede
-                    </em>
+                    </i>
+                    {" "}
                     nichttriviale Frage über das Verhalten eines Programmcodes unentscheidbar ist.
                     Also sind
                     auch Fragen wie "Kann das Programm abstürzen?" oder "Kann ein unautorisierter Nutzer Zugang zu
@@ -418,10 +422,12 @@ const Article = () => {
                 </Paragraph>
                 <div class="alert-info">
                   <Paragraph>
-                    Das Wort{" "}
-                    <em>
+                    Das Wort 
+                    {" "}
+                    <i>
                       Unentscheidbarkeit
-                    </em>
+                    </i>
+                    {" "}
                     verwenden wir hier in seiner
                     technischen Bedeutung,
                     die wir definiert haben: es gibt keine Turingmaschine, die das Problem entscheidet, also

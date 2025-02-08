@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={42}>
+      <Chapter
+        number={42}
+        path="/lecture-notes42.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="07-00-Turing-machines">
-            <Paragraph>
-              &lt;&lt; Kapitel 07.00
-            </Paragraph>
+            &lt;&lt; Kapitel 7.0
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="07-01-Turing-machines-examples">
-            <Paragraph>
-              Kapitel 07.01 &gt;&gt;
-            </Paragraph>
+            Kapitel 7.1 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -41,23 +37,29 @@ const Article = () => {
                 </h1>
                 <Paragraph>
                   <Paragraph>
-                    Eine Turingmaschine besteht aus einem{" "}
-                    <em>
+                    Eine Turingmaschine besteht aus einem 
+                    {" "}
+                    <i>
                       Band
-                    </em>
+                    </i>
+                    {" "}
                     , das in Zellen unterteilt ist und
                     in beide Richtungen unbegrenzt ist,
-                    und einem{" "}
-                    <em>
+                    und einem 
+                    {" "}
+                    <i>
                       Schreib-Lese-Kopf
-                    </em>
+                    </i>
+                    {" "}
                     .
                     Dieser befindet sich in jedem Schritt auf einer
                     Zelle. Wie auch der endliche Automat oder der
-                    Kellerautomat hat die Turingmaschine einen internen{" "}
-                    <em>
+                    Kellerautomat hat die Turingmaschine einen internen 
+                    {" "}
+                    <i>
                       Zustand
-                    </em>
+                    </i>
+                    {" "}
                     .
                     In jedem Schritt liest die Maschine das Zeichen, das sich in der aktuellen
                     Zelle des Bandes befindet (dort, wo der Kopf steht). Abhängig vom gelesenen Zeichen
@@ -151,38 +153,50 @@ const Article = () => {
                     wird, anstatt dass der Kopf sich bewegt. Am Anfang steht auf dem Band das
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Eingabewort
-                    </em>
+                    </i>
+                    {" "}
                     und der Kopf auf dem ersten Symbol dieses Wortes. Die Turingmaschine
                     wendet
                     nun ihre Regeln an, bis Sie einen
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Endzustand
-                    </em>
-                    erreicht. Bei{" "}
-                    <em>
+                    </i>
+                    {" "}
+                    erreicht. Bei 
+                    {" "}
+                    <i>
                       Entscheidungsproblemen
-                    </em>
+                    </i>
+                    {" "}
                     , wo uns nur
                     eine Ja/Nein-Antwort interessiert, wird die Antwort durch den Entzustand angegeben:
-                    der Zustand $\qaccept$ entspricht einem{" "}
-                    <em>
+                    der Zustand $\qaccept$ entspricht einem 
+                    {" "}
+                    <i>
                       Ja
-                    </em>
+                    </i>
+                    {" "}
                     , der Zustand
-                    $\qreject$ entspricht einem{" "}
-                    <em>
+                    $\qreject$ entspricht einem 
+                    {" "}
+                    <i>
                       Nein
-                    </em>
+                    </i>
+                    {" "}
                     . Diese zwei Endzustände reichen im Allgemeinen
                     aus. Wenn wir von der Maschine eine komplexere Ausgabe als Ja/Nein erwarten, so
-                    betrachten wir als{" "}
-                    <em>
+                    betrachten wir als 
+                    {" "}
+                    <i>
                       Ausgabe der Turingmaschine
-                    </em>
+                    </i>
+                    {" "}
                     den Inhalt des Bandes zu dem
                     Zeitpunkt, da die Maschine den Zustand $\qaccept$ erreicht.
                     Was brauchen wir also, um so eine Turingmaschine
@@ -206,68 +220,60 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        Einem endlichen Eingabe-Alphabet \(\Sigma\). Dies sind die Symbole, die für das
-                        Eingabewort in
-                        Frage kommen.
-                      </Paragraph>
+                      Einem endlichen Eingabe-Alphabet \(\Sigma\). Dies sind die Symbole, die für das
+                      Eingabewort in
+                      Frage kommen.
                     </li>
                     <li>
-                      <Paragraph>
-                        Einem endlichen Bandalphabet \(\Gamma\); das sind die Symbole, die auf dem Band
-                        stehen dürfen. Offensichtlich muss \(\Sigma \subseteq \Gamma\) gelten. Jede
-                        Zelle kann genau ein Zeichen aus \(\Gamma\) enthalten. Darüberhinaus
-                        gibt es noch das sogenannte Blanksymbol \(\square \in \Gamma \setminus \Sigma\). Dies
-                        zeigt an, dass die Zelle im Moment leer ist. Im obigen Beispiel ist
-                        die Zelle links vom ersten \(a\) beispielsweise leer.
-                        Am Anfang steht auf dem Band also ein Eingabewort \(w \in \Sigma^*\) und
-                        rechts und links davon unendlich viele \(\square\)-Symbole.
-                      </Paragraph>
+                      Einem endlichen Bandalphabet \(\Gamma\); das sind die Symbole, die auf dem Band
+                      stehen dürfen. Offensichtlich muss \(\Sigma \subseteq \Gamma\) gelten. Jede
+                      Zelle kann genau ein Zeichen aus \(\Gamma\) enthalten. Darüberhinaus
+                      gibt es noch das sogenannte Blanksymbol \(\square \in \Gamma \setminus \Sigma\). Dies
+                      zeigt an, dass die Zelle im Moment leer ist. Im obigen Beispiel ist
+                      die Zelle links vom ersten \(a\) beispielsweise leer.
+                      Am Anfang steht auf dem Band also ein Eingabewort \(w \in \Sigma^*\) und
+                      rechts und links davon unendlich viele \(\square\)-Symbole.
                     </li>
                     <li>
-                      <Paragraph>
-                        Einer endliche Menge \(Q\) an inneren Zuständen. Dies entspricht in etwa
-                        den Prozessor-Registern eines Computers. Ein Zustand \(\texttt&#123;start&#125; \in Q\)
-                        ist der Startzustand, in welchem sich die Maschine zu Beginn befindet.
-                      </Paragraph>
+                      Einer endliche Menge \(Q\) an inneren Zuständen. Dies entspricht in etwa
+                      den Prozessor-Registern eines Computers. Ein Zustand \(\texttt&#123;start&#125; \in Q\)
+                      ist der Startzustand, in welchem sich die Maschine zu Beginn befindet.
                     </li>
                     <li>
-                      <Paragraph>
-                        Einer Zustandsübergangsfunktion \(\delta\), die sagt, was die Turingmaschine tun soll,
-                        wenn Sie im Zustand \(q\) ist und Zeichen \(s\) liest. Formal:
-                        \begin&#123;align*&#125;
-                        \delta : Q \times \Gamma \rightarrow Q \times \Gamma \times \lsr \ ,
-                        \end&#123;align*&#125;
-                        wobei{" "}
-                        <tt>
-                          L
-                        </tt>
-                        für{" "}
-                        <em>
-                          gehe eine Zelle nach links
-                        </em>
-                        steht,
-                      </Paragraph>
-                      <Paragraph>
-                        <tt>
-                          R
-                        </tt>
-                        für rechts und{" "}
-                        <tt>
-                          S
-                        </tt>
-                        für{" "}
-                        <em>
-                          stay
-                        </em>
-                        , also die Anweisung, den Kopf
-                        nicht zu bewegen.
-                      </Paragraph>
+                      Einer Zustandsübergangsfunktion \(\delta\), die sagt, was die Turingmaschine tun soll,
+                      wenn Sie im Zustand \(q\) ist und Zeichen \(s\) liest. Formal:
+                      \begin&#123;align*&#125;
+                      \delta : Q \times \Gamma \rightarrow Q \times \Gamma \times \lsr \ ,
+                      \end&#123;align*&#125;
+                      wobei{" "}
+                      <tt>
+                        L
+                      </tt>
+                      für 
+                      {" "}
+                      <i>
+                        gehe eine Zelle nach links
+                      </i>
+                      {" "}
+                      steht,
+                      <tt>
+                        R
+                      </tt>
+                      für rechts und{" "}
+                      <tt>
+                        S
+                      </tt>
+                      für 
+                      {" "}
+                      <i>
+                        stay
+                      </i>
+                      {" "}
+                      , also die Anweisung, den Kopf
+                      nicht zu bewegen.
                     </li>
                     <li>
-                      <Paragraph>
-                        Zwei besonderen Zuständen $\qaccept$ und $\qreject$.
-                      </Paragraph>
+                      Zwei besonderen Zuständen $\qaccept$ und $\qreject$.
                     </li>
                   </ol>
                 </div>
@@ -295,18 +301,22 @@ const Article = () => {
                     </Paragraph>
                   </h3>
                   Sie haben nun wohl bereits eine vage Vorstellung, was eine Turingmaschine macht.
-                  Versuchen wir, es noch weiter zu formalisieren. Um den{" "}
-                  <em>
+                  Versuchen wir, es noch weiter zu formalisieren. Um den 
+                  {" "}
+                  <i>
                     Gesamtzustand
-                  </em>
+                  </i>
+                  {" "}
                   der
                   Turingmaschine zu beschreiben, also eine vollständige Momentaufnahme, reicht
                   nicht der aktuelle innere Zustand \(q\); wir brauchen auch den Bandinhalt und insbesondere
                   die Position, an der sich der Kopf befindet. Das alles zusammen nennt
-                  man die{" "}
-                  <em>
+                  man die 
+                  {" "}
+                  <i>
                     Konfiguration der Turingmaschine
-                  </em>
+                  </i>
+                  {" "}
                   . Wir wollen sie mit
                   uns bereits bekannten mathematischen Begriffen beschreiben.
                 </Paragraph>
@@ -318,10 +328,12 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Die{" "}
-                    <em>
+                    Die 
+                    {" "}
+                    <i>
                       Konfiguration
-                    </em>
+                    </i>
+                    {" "}
                     einer Turingmaschine ist ein Element in
                     \(\Gamma^* \times Q \times \Gamma^*\), also
                     \begin&#123;align*&#125;
@@ -340,10 +352,12 @@ const Article = () => {
                       \end&#123;align
                     </b>
                     &#125;
-                    Der{" "}
-                    <em>
+                    Der 
+                    {" "}
+                    <i>
                       Zustand einer Konfiguration
-                    </em>
+                    </i>
+                    {" "}
                     \(C = uqv\) ist \(q\), also der innere
                     Zustand, in dem sich die Maschine gerade befindet.
                     Wir bezeichnen mit $\state(C)$. Formal:
@@ -352,20 +366,26 @@ const Article = () => {
                     uqv&amp;\mapsto q \ .
                     \end&#123;align*&#125;
                     Eine Konfiguration \(C\) ist
-                    eine{" "}
-                    <em>
+                    eine 
+                    {" "}
+                    <i>
                       akzeptierende Endkonfiguration
-                    </em>
+                    </i>
+                    {" "}
                     wenn $\state(C) = \qaccept$ ist;
-                    eine{" "}
-                    <em>
+                    eine 
+                    {" "}
+                    <i>
                       ablehnende Endkonfiguration
-                    </em>
+                    </i>
+                    {" "}
                     , wenn $\state(C) = \qreject$ ist.
-                    In beiden Fällen ist \(C\) eine{" "}
-                    <em>
+                    In beiden Fällen ist \(C\) eine 
+                    {" "}
+                    <i>
                       Endkonfiguration
-                    </em>
+                    </i>
+                    {" "}
                     .
                   </Paragraph>
                 </div>
@@ -373,12 +393,14 @@ const Article = () => {
                   <Paragraph>
                     Wenn also das Eingabewort \(w \in \Sigma^*\) und $\qstart$ der Startzustand ist, dann ist
                     \begin&#123;align*&#125;
-                    C_&#123;\rm start&#125; = \qstart&#123;&#125; w
-                    \end&#123;align*&#125;
-                    die{" "}
-                    <em>
-                      Startkonfiguration
-                    </em>
+                    C
+                    <i>
+                      &#123;\rm start&#125; = \qstart&#123;&#125; w
+                      \end&#123;align*&#125;
+                      die 
+                      {" "}
+                    </i>
+                    Startkonfiguration_
                     .
                   </Paragraph>
                 </Paragraph>
@@ -538,9 +560,11 @@ const Article = () => {
                       Es spielt also in der obigen Formulierung
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         wenn es ein $i$ gibt
-                      </em>
+                      </i>
+                      {" "}
                       keine Rolle, welches solche $i$ wir wählen.
                     </Paragraph>
                   </Paragraph>
@@ -574,26 +598,36 @@ const Article = () => {
                 </h2>
                 <Paragraph>
                   <Paragraph>
-                    Ein{" "}
-                    <em>
+                    Ein 
+                    {" "}
+                    <i>
                       Entscheidungsproblem
-                    </em>
+                    </i>
+                    {" "}
                     ist eine Funktion \(P : \Sigma^* \rightarrow
-                    \&#123;\texttt&#123;true&#125;, \texttt&#123;false&#125;\&#125;\), beispielsweise:{" "}
-                    <em>
+                    \&#123;\texttt&#123;true&#125;, \texttt&#123;false&#125;\&#125;\), beispielsweise: 
+                    {" "}
+                    <i>
                       gegeben ein Wort,
                       stellt dieses Wort ein korrektes Java-Programm dar?
-                    </em>
-                    oder{" "}
-                    <em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    oder 
+                    {" "}
+                    <i>
                       gegeben eine Zahl in Dezimalschreibweise, ist dies
                       eine Primzahl?
-                    </em>
+                    </i>
+                    {" "}
                     Eine äquivalente Sichtweise ist die
-                    eines Entscheidungsproblems als{" "}
-                    <em>
+                    eines Entscheidungsproblems als 
+                    {" "}
+                    <i>
                       Sprache
-                    </em>
+                    </i>
+                    {" "}
                     \(L \subseteq \Sigma^*\).
                     Wir identifizieren \(L\) hier mit der Menge aller Wörter \(x\) mit
                     \(P(x) = \texttt&#123;true&#125;\). Wenn wir es mit einem Entscheidungsproblem
@@ -635,21 +669,19 @@ const Article = () => {
                     Eine Turingmaschine \(M\)
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       entscheidet
-                    </em>
+                    </i>
+                    {" "}
                     die Sprache \(L \subseteq \Sigma^*\) wenn
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        \(f_M(x) = \texttt&#123;accept&#125;\) für alle \(x \in L\),
-                      </Paragraph>
+                      \(f_M(x) = \texttt&#123;accept&#125;\) für alle \(x \in L\),
                     </li>
                     <li>
-                      <Paragraph>
-                        \(f_M(x) = \texttt&#123;reject&#125;\) für alle \(x \in \Sigma^* \setminus L\).
-                      </Paragraph>
+                      \(f_M(x) = \texttt&#123;reject&#125;\) für alle \(x \in \Sigma^* \setminus L\).
                     </li>
                   </ol>
                   <Paragraph>
@@ -657,10 +689,12 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Eine Sprache \(L\) heißt{" "}
-                      <em>
+                      Eine Sprache \(L\) heißt 
+                      {" "}
+                      <i>
                         entscheidbar
-                      </em>
+                      </i>
+                      {" "}
                       , wenn
                       es eine Turingmaschine gibt, die sie entscheidet.
                     </Paragraph>
@@ -678,10 +712,12 @@ const Article = () => {
                     {" "}{" "}
                   </Paragraph>
                   <Paragraph>
-                    Eine Turingmaschine \(M\){" "}
-                    <em>
+                    Eine Turingmaschine \(M\) 
+                    {" "}
+                    <i>
                       akzeptiert
-                    </em>
+                    </i>
+                    {" "}
                     die Sprache
                     \(L \subseteq \Sigma^*\) wenn
                     \begin&#123;align*&#125;
@@ -693,10 +729,12 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Eine Sprache \(L \subseteq \Sigma^*\) heißt{" "}
-                      <em>
+                      Eine Sprache \(L \subseteq \Sigma^*\) heißt 
+                      {" "}
+                      <i>
                         semi-entscheidbar
-                      </em>
+                      </i>
+                      {" "}
                       ,
                       wenn es eine Turingmaschine \(M\) gibt, die \(L\) akzeptiert.
                     </Paragraph>
@@ -720,11 +758,13 @@ const Article = () => {
                     berechnen. Mit einer Turingmaschine heißt das einfach, dass
                     bei Eingabe \(x \in \Sigma_1^*\) die Turingmaschine in einer
                     akzeptierenden Endkonfiguration \(C\) landet, und in \(C\) steht
-                    dann \(g(x)\) auf dem Band. Formal müssen wir noch klären, was{" "}
-                    <em>
+                    dann \(g(x)\) auf dem Band. Formal müssen wir noch klären, was 
+                    {" "}
+                    <i>
                       \(g(x)\) steht
                       auf dem Band
-                    </em>
+                    </i>
+                    {" "}
                     bedeutet.
                   </Paragraph>
                 </Paragraph>
@@ -752,36 +792,30 @@ const Article = () => {
                       \end&#123;align
                     </b>
                     &#125;
-                    eine Funktion. Eine Turingmaschine \(M\){" "}
-                    <em>
+                    eine Funktion. Eine Turingmaschine \(M\) 
+                    {" "}
+                    <i>
                       berechnet die Funktion \(g\)
-                    </em>
+                    </i>
+                    {" "}
                     , wenn
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        \(\Sigma_1\) das Eingabealphabet von \(M\) ist,
-                      </Paragraph>
+                      \(\Sigma_1\) das Eingabealphabet von \(M\) ist,
                     </li>
                     <li>
-                      <Paragraph>
-                        \(\Sigma_1 \cup \Sigma_2 \subseteq \Gamma\) gilt und
-                        \(\square \in \Gamma \setminus (\Sigma_1 \cup \Sigma_2)\); das Blank-Symbol
-                        ist also weder Teil das Eingabealphabets noch des Ausgabealphabets.
-                      </Paragraph>
+                      \(\Sigma_1 \cup \Sigma_2 \subseteq \Gamma\) gilt und
+                      \(\square \in \Gamma \setminus (\Sigma_1 \cup \Sigma_2)\); das Blank-Symbol
+                      ist also weder Teil das Eingabealphabets noch des Ausgabealphabets.
                     </li>
                     <li>
-                      <Paragraph>
-                        $M$ terminiert für jedes $x \in \Sigma^*$.
-                      </Paragraph>
+                      $M$ terminiert für jedes $x \in \Sigma^*$.
                     </li>
                     <li>
-                      <Paragraph>
-                        In der Endkonfiguration $\hat&#123;M&#125;(x)$ steht auf dem Arbeitsband das
-                        Wort \(g(x) \in \Sigma_2^*\) und der Kopf steht ganz links, also
-                        $\hat&#123;M&#125;(x) = \qaccept&#123;&#125; g(x)$.
-                      </Paragraph>
+                      In der Endkonfiguration $\hat&#123;M&#125;(x)$ steht auf dem Arbeitsband das
+                      Wort \(g(x) \in \Sigma_2^*\) und der Kopf steht ganz links, also
+                      $\hat&#123;M&#125;(x) = \qaccept&#123;&#125; g(x)$.
                     </li>
                   </ol>
                 </div>
@@ -796,17 +830,13 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <a href="../../BerKrea/index.html">
-                      <Paragraph>
-                        Berechenbarkeit und Kreativität
-                      </Paragraph>
+                      Berechenbarkeit und Kreativität
                     </a>
                     als auch
                   </Paragraph>
                   <Paragraph>
                     <a href="../../TI-2/index.html">
-                      <Paragraph>
-                        Theoretische Informatik
-                      </Paragraph>
+                      Theoretische Informatik
                     </a>
                     vorkommen, teilen sich die beiden Kurse diese Seiten.
                     Für Berechenbarkeit und Kreativität ist der Rest dieses Teilkapitels
@@ -890,10 +920,12 @@ const Article = () => {
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    Als nächstes definieren wir{" "}
-                    <em>
+                    Als nächstes definieren wir 
+                    {" "}
+                    <i>
                       Aufräumregeln
-                    </em>
+                    </i>
+                    {" "}
                     : wenn \(q = \texttt&#123;accept&#125;\), dann
                     können wir jedes Zeichen löschen:
                     \begin&#123;align*&#125;

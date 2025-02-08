@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={20}>
+      <Chapter
+        number={20}
+        path="/lecture-notes20.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="03-04-mu-recursion">
-            <Paragraph>
-              &lt;&lt; Kapitel 03.04
-            </Paragraph>
+            &lt;&lt; Kapitel 3.4
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="04-01-regular-grammars">
-            <Paragraph>
-              Kapitel 04.01 &gt;&gt;
-            </Paragraph>
+            Kapitel 4.1 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -41,10 +37,14 @@ const Article = () => {
               <div class="subChapter">
                 <Paragraph>
                   <Paragraph>
-                    Hier sehen Sie einige Beispiele für gültige und ungültige Email-Adressen. Mit{" "}
-                    <em>
+                    Hier sehen Sie einige Beispiele für gültige und ungültige Email-Adressen. Mit 
+                    {" "}
+                    <i>
                       gültig
-                    </em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
                     meine ich, dass sie syntaktisch korrekt sind, ungeachtet, ob ein Konto mit dieser Email-Adresse
                     besteht.
                   </Paragraph>
@@ -1230,16 +1230,22 @@ const Article = () => {
                 </pre>
                 <Paragraph>
                   <Paragraph>
-                    Was haben diese vier Beispiele gemeinsam? Es handelt sich in allen Fällen um{" "}
-                    <em>
+                    Was haben diese vier Beispiele gemeinsam? Es handelt sich in allen Fällen um 
+                    {" "}
+                    <i>
                       Daten
-                    </em>
+                    </i>
+                    {" "}
                     , die
                     in
-                    einem bestimmten festgelegten{" "}
-                    <em>
+                    einem bestimmten festgelegten 
+                    {" "}
+                    <i>
                       Format
-                    </em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
                     dargelegt werden. Soll ein Rechner etwas sinnvolles damit anfangen (zum Beispiel das
                     Elm-Programm
                     starten oder die HTML-Seite oder die Svg-Datei
@@ -1267,14 +1273,18 @@ const Article = () => {
                 </Paragraph>
                 <div class="well container">
                   <Paragraph>
-                    Eine Emailadresse besteht aus einem{" "}
-                    <em>
+                    Eine Emailadresse besteht aus einem 
+                    {" "}
+                    <i>
                       Benutzernamen
-                    </em>
-                    und einem{" "}
-                    <em>
+                    </i>
+                    {" "}
+                    und einem 
+                    {" "}
+                    <i>
                       Domainnamen
-                    </em>
+                    </i>
+                    {" "}
                     , die
                     mit
                     einem{" "}
@@ -1290,10 +1300,12 @@ const Article = () => {
                     ).
                     Erster und letzter Buchstaben dürfen keine Punkte sein, außerdem dürfen keine zwei Punkte
                     nebeneinander stehen.
-                    Der Domainname ist eine Folge von mindestenes zwei{" "}
-                    <em>
+                    Der Domainname ist eine Folge von mindestenes zwei 
+                    {" "}
+                    <i>
                       Labels
-                    </em>
+                    </i>
+                    {" "}
                     , die jeweils mit einem
                   </Paragraph>
                   <Paragraph>
@@ -1334,21 +1346,27 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Eine Emailadresse ist von der Form{" "}
-                    <em>
+                    Eine Emailadresse ist von der Form 
+                    {" "}
+                    <i>
                       Benutzername
-                    </em>
+                    </i>
+                    {" "}{" "}
                     <code>
                       @
                     </code>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Domainnname
-                    </em>
+                    </i>
+                    {" "}
                     . Dies
-                    können wir als{" "}
-                    <em>
+                    können wir als 
+                    {" "}
+                    <i>
                       Ableitungsregel
-                    </em>
+                    </i>
+                    {" "}
                     darstellen:
                   </Paragraph>
                 </Paragraph>
@@ -1387,14 +1405,16 @@ const Article = () => {
                     separiert. Wir erreichen dies, indem wir einen an Rekursion
                     erinnernden Trick anwenden: entweder gibt es genau zwei Labels oder die Domain beginnt mit einem
                     Label,
-                    gefolgt von einem Punkt und wiederum einer{" "}
-                    <em>
+                    gefolgt von einem Punkt und wiederum einer 
+                    {" "}
+                    <i>
                       Folge von mindestens zwei durch{" "}
                       <code>
                         .
                       </code>
                       separierten Labels
-                    </em>
+                    </i>
+                    {" "}
                     ,
                     also wiederum etwas, das wie ein Domainname aussieht. Daher:
                   </Paragraph>
@@ -1419,10 +1439,12 @@ const Article = () => {
                 </pre>
                 <Paragraph>
                   <Paragraph>
-                    Wir geben also{" "}
-                    <em>
+                    Wir geben also 
+                    {" "}
+                    <i>
                       zwei
-                    </em>
+                    </i>
+                    {" "}
                     Möglichkeiten an, wie mit einem{" "}
                     <code>
                       &lt;Domain&gt;
@@ -1448,16 +1470,16 @@ const Article = () => {
                     Top-Level-Domain erlauben, siehe
                     zum Beispiel{" "}
                     <a href="https://en.wikipedia.org/wiki/Internationalized_domain_name">
-                      <Paragraph>
-                        Wikipedia:
-                        Internationalized Domain Name
-                      </Paragraph>
+                      Wikipedia:
+                      Internationalized Domain Name
                     </a>
                     ).
-                    Wie formulieren wir{" "}
-                    <em>
+                    Wie formulieren wir 
+                    {" "}
+                    <i>
                       nichtleere Folge von ...
-                    </em>
+                    </i>
+                    {" "}
                     mit unserer{" "}
                     <code>
                       --&gt;
@@ -1936,9 +1958,11 @@ const Article = () => {
                     der Punkt nicht am Anfang und nicht am Ende stehen darf. Also: eine nichtleere Folge von
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Namensblöcken
-                    </em>
+                    </i>
+                    {" "}
                     , die jeweils durch{" "}
                     <code>
                       .
@@ -2397,81 +2421,77 @@ const Article = () => {
                 </h2>
                 <Paragraph>
                   <Paragraph>
-                    Was Sie hier sehen, nennt man eine{" "}
-                    <em>
+                    Was Sie hier sehen, nennt man eine 
+                    {" "}
+                    <i>
                       formale Grammatik
-                    </em>
+                    </i>
+                    {" "}
                     . Ihre Bestandteile sind:
                   </Paragraph>
                 </Paragraph>
                 <ul>
                   <li>
-                    <Paragraph>
-                      Das Alphabet \(\Sigma\) aller verwendeten Zeichen, in unserem
-                      Fall also \(\Sigma = \&#123;a,\dots,z,A,\dots,Z,.,-,@\&#125;\). Wir nennen \(\Sigma\) die Menge
-                      der{" "}
-                      <em>
-                        terminalen Symbole
-                      </em>
-                      .
-                    </Paragraph>
+                    Das Alphabet \(\Sigma\) aller verwendeten Zeichen, in unserem
+                    Fall also \(\Sigma = \&#123;a,\dots,z,A,\dots,Z,.,-,@\&#125;\). Wir nennen \(\Sigma\) die Menge
+                    der 
+                    {" "}
+                    <i>
+                      terminalen Symbole
+                    </i>
+                    {" "}
+                    .
                   </li>
                   <li>
-                    <Paragraph>
-                      Eine Menge \(N\) abstrakter Symbole, hier
-                      {" "}
-                    </Paragraph>
-                    <Paragraph>
-                      $$
-                      N = \&#123;\texttt&#123;&lt;EmailAddress&gt;,&lt;Domain&gt;,
-                      &lt;User&gt;,&lt;NameBlock&gt;,&lt;Label&gt;,&lt;AlphaNumOrDash&gt;,&lt;AlphaNum&gt;&#125;
-                      \&#125; \ .
-                      $$
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}
-                      Diese Menge nennen wir die{" "}
-                      <em>
-                        nichtterminalen Symbole
-                      </em>
-                      . Wir verlangen, dass \(N \cap
-                      \Sigma
-                      = \emptyset\) gilt; ein Symbol kann also
-                      nicht gleichzeitig Terminalsymbol und Nichtterminalsymbol sein.
-                    </Paragraph>
+                    Eine Menge \(N\) abstrakter Symbole, hier
+                    $$
+                    N = \&#123;\texttt&#123;&lt;EmailAddress&gt;,&lt;Domain&gt;,
+                    &lt;User&gt;,&lt;NameBlock&gt;,&lt;Label&gt;,&lt;AlphaNumOrDash&gt;,&lt;AlphaNum&gt;&#125;
+                    \&#125; \ .
+                    $$
+                    Diese Menge nennen wir die 
+                    {" "}
+                    <i>
+                      nichtterminalen Symbole
+                    </i>
+                    {" "}
+                    . Wir verlangen, dass \(N \cap
+                    \Sigma
+                    = \emptyset\) gilt; ein Symbol kann also
+                    nicht gleichzeitig Terminalsymbol und Nichtterminalsymbol sein.
                   </li>
                   <li>
-                    <Paragraph>
-                      Eine Menge \(P\) von Regeln, auch{" "}
-                      <em>
-                        Produktionen
-                      </em>
-                      genannt, wobei jede Regel die Form
-                      \(X \rightarrow \alpha\) hat, wobei \(\alpha\) eine beliebig lange endliche Folge von
-                      Symbolen
-                      in \(\Sigma \cup N\) ist.
-                    </Paragraph>
+                    Eine Menge \(P\) von Regeln, auch 
+                    {" "}
+                    <i>
+                      Produktionen
+                    </i>
+                    {" "}
+                    genannt, wobei jede Regel die Form
+                    \(X \rightarrow \alpha\) hat, wobei \(\alpha\) eine beliebig lange endliche Folge von
+                    Symbolen
+                    in \(\Sigma \cup N\) ist.
                   </li>
                   <li>
-                    <Paragraph>
-                      Ein Startsymbol \(S \in N\), das angibt, wo wir mit unserer Ableitung beginnen sollen. Im
-                      obigen
-                      Beispiel
-                      sind wir ja an Emailadressen interessiert, also ist{" "}
-                      <code>
-                        &lt;EmailAddress&gt;
-                      </code>
-                      das
-                      Startsymbol.
-                    </Paragraph>
+                    Ein Startsymbol \(S \in N\), das angibt, wo wir mit unserer Ableitung beginnen sollen. Im
+                    obigen
+                    Beispiel
+                    sind wir ja an Emailadressen interessiert, also ist{" "}
+                    <code>
+                      &lt;EmailAddress&gt;
+                    </code>
+                    das
+                    Startsymbol.
                   </li>
                 </ul>
                 <Paragraph>
                   <Paragraph>
-                    Wenn wir nun so eine Grammatik gegeben haben, können wir Wörter{" "}
-                    <em>
+                    Wenn wir nun so eine Grammatik gegeben haben, können wir Wörter 
+                    {" "}
+                    <i>
                       ableiten
-                    </em>
+                    </i>
+                    {" "}
                     ; das heißt,
                     wir beginnen mit dem
                     Startsymbol und ersetzen in jedem Schritt ein nichtterminales Symbol durch die rechte Seite
@@ -2629,10 +2649,12 @@ const Article = () => {
                     </code>
                     ableiten, was
                     darauf schließen lässt, dass unsere Grammatik nicht wirklich das
-                    tut, was wir beabsichtigen, dass sie nämlich{" "}
-                    <em>
+                    tut, was wir beabsichtigen, dass sie nämlich 
+                    {" "}
+                    <i>
                       zu viele
-                    </em>
+                    </i>
+                    {" "}
                     Emailadressen
                     herleitet, auch solche, die wir nicht als zulässige Adressen gelten lassen wollen.
                   </Paragraph>
@@ -2690,10 +2712,12 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Für ein Alphabet \(\Sigma\) bezeichnen wir mit \(\Sigma^*\) die Menge aller
-                    endlichen Strings über diesem Alphabet; das schließt den{" "}
-                    <em>
+                    endlichen Strings über diesem Alphabet; das schließt den 
+                    {" "}
+                    <i>
                       leeren String
-                    </em>
+                    </i>
+                    {" "}
                     mit ein,
                     den wir mit \(\epsilon\) bezeichnen. So ist beispielsweise
                     {" "}
@@ -2706,10 +2730,12 @@ const Article = () => {
                   <Paragraph>
                     {" "}
                     Ein Element \(x \in \Sigma^*\), also einen endlichen String aus \(\Sigma\)-Symbolen,
-                    bezeichnen wir als{" "}
-                    <em>
+                    bezeichnen wir als 
+                    {" "}
+                    <i>
                       Wort über \(\Sigma\)
-                    </em>
+                    </i>
+                    {" "}
                     .
                     Mit \(\Sigma^+\) bezeichnen wir die Menge aller nichtleeren Strings, also
                     \(\Sigma^+ = \Sigma^* \setminus \&#123;\epsilon\&#125;\).
@@ -2722,51 +2748,43 @@ const Article = () => {
                 </h2>
                 <Paragraph>
                   <Paragraph>
-                    Eine Teilmenge \(L \subseteq \Sigma\) bezeichnen wir in diesem Kontext als{" "}
-                    <em>
+                    Eine Teilmenge \(L \subseteq \Sigma\) bezeichnen wir in diesem Kontext als 
+                    {" "}
+                    <i>
                       Sprache
-                    </em>
+                    </i>
+                    {" "}
                     und
-                    kürzen Sie oft mit \(L\) ab, was für{" "}
-                    <em>
+                    kürzen Sie oft mit \(L\) ab, was für 
+                    {" "}
+                    <i>
                       language
-                    </em>
+                    </i>
+                    {" "}
                     steht. Beispiele für Sprachen wären
                   </Paragraph>
                 </Paragraph>
                 <ol>
                   <li>
-                    <Paragraph>
-                      Die Sprache aller syntaktisch korrekten Emailadressen.
-                    </Paragraph>
+                    Die Sprache aller syntaktisch korrekten Emailadressen.
                   </li>
                   <li>
-                    <Paragraph>
-                      Die Sprache aller Java-Programme, die ohne Fehlermeldung kompilieren
-                    </Paragraph>
+                    Die Sprache aller Java-Programme, die ohne Fehlermeldung kompilieren
                   </li>
                   <li>
-                    <Paragraph>
-                      Die Sprache aller Java-Programme, die kompilieren, dann aber mit einem Laufzeitfehler
-                      abbrechen.
-                    </Paragraph>
+                    Die Sprache aller Java-Programme, die kompilieren, dann aber mit einem Laufzeitfehler
+                    abbrechen.
                   </li>
                   <li>
-                    <Paragraph>
-                      Die Sprache aller Java-Programme, die kompilieren und nicht mit einem Laufzeitfehler
-                      abbrechen.
-                    </Paragraph>
+                    Die Sprache aller Java-Programme, die kompilieren und nicht mit einem Laufzeitfehler
+                    abbrechen.
                   </li>
                   <li>
-                    <Paragraph>
-                      Die Sprache aller Wörter über \(\&#123;a,b\&#125;\), die gleich viele \(a\)'s wie \(b\)'s enthalten.
-                    </Paragraph>
+                    Die Sprache aller Wörter über \(\&#123;a,b\&#125;\), die gleich viele \(a\)'s wie \(b\)'s enthalten.
                   </li>
                   <li>
-                    <Paragraph>
-                      Die Sprache aller Palindrome über \(\&#123;a,b,c,d\&#125;\), also Wörter, die von vorne wie hinten
-                      gelesen gleich aussehen.
-                    </Paragraph>
+                    Die Sprache aller Palindrome über \(\&#123;a,b,c,d\&#125;\), also Wörter, die von vorne wie hinten
+                    gelesen gleich aussehen.
                   </li>
                 </ol>
                 <Paragraph>
@@ -2779,34 +2797,22 @@ const Article = () => {
                 </Paragraph>
                 <ol>
                   <li>
-                    <Paragraph>
-                      Ja, können wir.
-                    </Paragraph>
+                    Ja, können wir.
                   </li>
                   <li>
-                    <Paragraph>
-                      Ja, wenn wir leicht komplexere Ableitungsregeln erlauben.
-                    </Paragraph>
+                    Ja, wenn wir leicht komplexere Ableitungsregeln erlauben.
                   </li>
                   <li>
-                    <Paragraph>
-                      Ja, wenn wir leicht komplexere Ableitungsregeln erlaubten.
-                    </Paragraph>
+                    Ja, wenn wir leicht komplexere Ableitungsregeln erlaubten.
                   </li>
                   <li>
-                    <Paragraph>
-                      Nein, können wir nicht.
-                    </Paragraph>
+                    Nein, können wir nicht.
                   </li>
                   <li>
-                    <Paragraph>
-                      Ja, können wir.
-                    </Paragraph>
+                    Ja, können wir.
                   </li>
                   <li>
-                    <Paragraph>
-                      Ja, können wir.
-                    </Paragraph>
+                    Ja, können wir.
                   </li>
                 </ol>
                 <h2>
@@ -2826,47 +2832,47 @@ const Article = () => {
                     {" "}{" "}
                   </Paragraph>
                   <Paragraph>
-                    Eine{" "}
-                    <em>
+                    Eine 
+                    {" "}
+                    <i>
                       kontextfreie Grammatik
-                    </em>
+                    </i>
+                    {" "}
                     besteht aus
                   </Paragraph>
                   <ol>
                     <li>
-                      <Paragraph>
-                        einem endlichen Alphabet \(\Sigma\), den{" "}
-                        <em>
-                          terminalen Symbolen
-                        </em>
-                        ;
-                      </Paragraph>
+                      einem endlichen Alphabet \(\Sigma\), den 
+                      {" "}
+                      <i>
+                        terminalen Symbolen
+                      </i>
+                      {" "}
+                      ;
                     </li>
                     <li>
-                      <Paragraph>
-                        einer dazu disjunkten endlichen Menge \(N\), genannt die{" "}
-                        <em>
-                          nichtterminalen
-                          Symbole
-                        </em>
-                        ;{" "}
-                      </Paragraph>
+                      einer dazu disjunkten endlichen Menge \(N\), genannt die 
+                      {" "}
+                      <i>
+                        nichtterminalen
+                        Symbole
+                      </i>
+                      {" "}
+                      ;{" "}
                     </li>
                     <li>
-                      <Paragraph>
-                        einer endlichen Menge \(P\) von{" "}
-                        <em>
-                          Produktionsregeln
-                        </em>
-                        der Form
-                        \(X \rightarrow \alpha\) mit \(X \in N\) und \(\alpha \in (\Sigma \cup \N)^*\);
-                        formal also \(P \subseteq N \times (\Sigma \cup \N)^*\).
-                      </Paragraph>
+                      einer endlichen Menge \(P\) von 
+                      {" "}
+                      <i>
+                        Produktionsregeln
+                      </i>
+                      {" "}
+                      der Form
+                      \(X \rightarrow \alpha\) mit \(X \in N\) und \(\alpha \in (\Sigma \cup \N)^*\);
+                      formal also \(P \subseteq N \times (\Sigma \cup \N)^*\).
                     </li>
                     <li>
-                      <Paragraph>
-                        einem Startsymbol \(S \in N\).
-                      </Paragraph>
+                      einem Startsymbol \(S \in N\).
                     </li>
                   </ol>
                   <Paragraph>
@@ -2875,16 +2881,20 @@ const Article = () => {
                 </div>
                 <Paragraph>
                   <Paragraph>
-                    Woher der Name{" "}
-                    <em>
+                    Woher der Name 
+                    {" "}
+                    <i>
                       kontextfrei
-                    </em>
+                    </i>
+                    {" "}
                     kommt, werden Sie hoffentlich verstehen, wenn wir
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       Ableitungen
-                    </em>
+                    </i>
+                    {" "}
                     definiert haben.
                     Die Tradition will es, dass wir für die terminalen Symbole
                     Zahlen oder lateinsiche Kleinbuchstaben und für die nichtterminalen Symbole
@@ -2918,10 +2928,12 @@ const Article = () => {
                     {" "}
                     Für konkrete Beispiele wie die gerade betrachtete Grammatik jedoch verwenden wir einfach die
                     Pfeilschreibweise \(S \rightarrow AB, \dots\). Hier ist
-                    eine{" "}
-                    <em>
+                    eine 
+                    {" "}
+                    <i>
                       Ableitung
-                    </em>
+                    </i>
+                    {" "}
                     basierend auf der Grammatik:
                     \begin&#123;align*&#125;
                     S \Rightarrow AB \Rightarrow aAB \Rightarrow aAbB \Rightarrow aAbbB
@@ -2944,10 +2956,12 @@ const Article = () => {
                       Definition
                     </span>
                     Gegeben sei eine kontextfreie Grammatik \(G = (\Sigma, N, P, S)\).
-                    Ein String \(\alpha \in (\Sigma \cup N)^*\) heißt{" "}
-                    <em>
+                    Ein String \(\alpha \in (\Sigma \cup N)^*\) heißt 
+                    {" "}
+                    <i>
                       Wortform
-                    </em>
+                    </i>
+                    {" "}
                     (im Gegensatz
                     zu einem Wort \(x \in \Sigma^*)\).
                     Für zwei Wortformen \(\alpha , \beta\) schreiben wir
@@ -2969,11 +2983,13 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Wenn wir \(\alpha = \beta\) "vorlesen", dann sagen wir{" "}
-                      <em>
+                      Wenn wir \(\alpha = \beta\) "vorlesen", dann sagen wir 
+                      {" "}
+                      <i>
                         \(\beta\) kann aus \(\alpha\) in
                         einem Schritt abgeleitet werden
-                      </em>
+                      </i>
+                      {" "}
                       .
                       Wenn \(\beta\) aus \(\alpha\) in mehreren (im Extremfall null) Schritten
                       abgeleitet werden kann, so schreiben wir \(\alpha \Rightarrow^* \beta\).
@@ -2994,24 +3010,30 @@ const Article = () => {
                     <Paragraph>
                       Nochmals: wenn \(\alpha\) die Form \(\alpha_1 X \alpha_2\) hat, dann dürfen Sie
                       das Nichtterminal \(X\) durch die rechte Seite einer Produktionsregel \(X \rightarrow \gamma\)
-                      ersetzen; Sie dürfen das unabhängig von dem{" "}
-                      <em>
+                      ersetzen; Sie dürfen das unabhängig von dem 
+                      {" "}
+                      <i>
                         Kontext
-                      </em>
+                      </i>
+                      {" "}
                       , in welchem \(X\) in
-                      der Wortform \(\alpha\) vorkommt. Daher rührt der Name{" "}
-                      <em>
+                      der Wortform \(\alpha\) vorkommt. Daher rührt der Name 
+                      {" "}
+                      <i>
                         kontextfreie Grammatik
-                      </em>
+                      </i>
+                      {" "}
                       .
                     </Paragraph>
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Beachten Sie, dass \(P\) per Definition eine{" "}
-                      <em>
+                      Beachten Sie, dass \(P\) per Definition eine 
+                      {" "}
+                      <i>
                         endliche Menge
-                      </em>
+                      </i>
+                      {" "}
                       von Regeln
                       sein muss, dass jedoch \(\Rightarrow\) im Allgemeinen unendlich ist. Bereits
                       für unsere einfache Grammatik mit den Produktionsregeln
@@ -3049,19 +3071,23 @@ const Article = () => {
                     L(G) := \&#123;x \in \Sigma^* \ | \ S \Rightarrow^* x\&#125; \ .
                     \end&#123;align*&#125;
                     Wenn es zu einer Sprache \(L \subseteq \Sigma^*\) eine kontextfreie Grammatik \(G\) mit
-                    \(L(G) = L\) gibt, so nennen wir \(L\) eine{" "}
-                    <em>
+                    \(L(G) = L\) gibt, so nennen wir \(L\) eine 
+                    {" "}
+                    <i>
                       kontextfreie Sprache
-                    </em>
+                    </i>
+                    {" "}
                     .
                   </Paragraph>
                 </div>
                 <Paragraph>
                   Beachten Sie, dass in dem obigen Beispiel die Wortform
-                  \(aaAB\) zwar aus \(S\) abgeleitet werden kann, allerdings kein{" "}
-                  <em>
+                  \(aaAB\) zwar aus \(S\) abgeleitet werden kann, allerdings kein 
+                  {" "}
+                  <i>
                     Wort
-                  </em>
+                  </i>
+                  {" "}
                   ist,
                   da es noch nichtterminale Symbole enthält. Es gilt also \(aaAB \not \in L(G)\).
                   Oft können wir \(L(G)\) kompakt mit natürlicher Sprache beschreiben:
@@ -3113,10 +3139,12 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Wir sehen also: das gleiche Wort kann mehrere Ableitungen haben.
-                      Da die Ersetzungsregeln{" "}
-                      <em>
+                      Da die Ersetzungsregeln 
+                      {" "}
+                      <i>
                         kontextfrei
-                      </em>
+                      </i>
+                      {" "}
                       sind, spielt es keine Rolle, in welcher
                       Reihenfolge wir nichtterminale Symbole ersetzen. Wenn Sie scharf hinschauen,
                       werden Sie erkennen, dass die beiden Ableitungen "irgendwie gleich" sind, dass nur
@@ -3124,10 +3152,12 @@ const Article = () => {
                       das in einem späteren Kapitel formal definieren, was ich mit damit meine.
                       Um Ordnung in das Chaos zu bringen, könnten wir uns zum Beispiel einigen,
                       dass man immer das am weitesten links stehende Nichtterminal ersetzen muss.
-                      Das nennt man eine{" "}
-                      <em>
+                      Das nennt man eine 
+                      {" "}
+                      <i>
                         Linksableitung
-                      </em>
+                      </i>
+                      {" "}
                       . Dies ist nicht wirklich eine
                       Einschränkung, da die Ersetzungsreihenfolge keine Rolle spielt.
                       Wir sehen, dass die zweite Ableitung des Wortes \(abab\) oben eine
@@ -3147,10 +3177,12 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Sehen Sie, dass diese Ableitung{" "}
-                    <em>
+                    Sehen Sie, dass diese Ableitung 
+                    {" "}
+                    <i>
                       qualitativ
-                    </em>
+                    </i>
+                    {" "}
                     anders ist, da
                     wir hier auch die Regel \(S \rightarrow bSaS\) angewendet haben? Um die
                     Struktur der Ableitung zu verdeutlichen, könnten wir
@@ -3186,15 +3218,19 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Für einen String \(x\) eine Ableitung zu finden bezeichnen wir als{" "}
-                    <em>
+                    Für einen String \(x\) eine Ableitung zu finden bezeichnen wir als 
+                    {" "}
+                    <i>
                       parsen
-                    </em>
+                    </i>
+                    {" "}
                     ,
-                    das zugehörige Hauptwort als{" "}
-                    <em>
+                    das zugehörige Hauptwort als 
+                    {" "}
+                    <i>
                       Parsing
-                    </em>
+                    </i>
+                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>
@@ -3222,10 +3258,12 @@ const Article = () => {
                   {" "}
                   wir kennen keinen Algorithmus,
                   der das Parsing kontextfreier Sprachen in seiner ganzen Allgemeinheit
-                  in{" "}
-                  <em>
+                  in 
+                  {" "}
+                  <i>
                     linearer Zeit
-                  </em>
+                  </i>
+                  {" "}
                   erledigt, dessen Laufzeit also proportional zur Länge des Zielwortes
                   \(x\) ist. Dies ist aber, was wir in der Praxis, zum Beispiel bei Compilern, erwarten.
                 </Paragraph>
@@ -3247,10 +3285,12 @@ const Article = () => {
                 <Paragraph>
                   Im nächsten Kapitel lernen wir eine stark eingeschränkte, aber dennoch sehr wichtige Klasse
                   kontextfreier Grammatik kennen, die allesamt ein sehr effizientes Parsing
-                  erlauben: die sogenannten{" "}
-                  <em>
+                  erlauben: die sogenannten 
+                  {" "}
+                  <i>
                     regulären
-                  </em>
+                  </i>
+                  {" "}
                   Grammatiken.{" "}
                 </Paragraph>
               </Paragraph>

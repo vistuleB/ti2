@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={50}>
+      <Chapter
+        number={50}
+        path="/lecture-notes50.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="07-07-PCP-applications">
-            <Paragraph>
-              &lt;&lt; Kapitel 07.07
-            </Paragraph>
+            &lt;&lt; Kapitel 7.7
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="08-01-Time-hierarchy-theorem">
-            <Paragraph>
-              Kapitel 08.01 &gt;&gt;
-            </Paragraph>
+            Kapitel 8.1 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -42,15 +38,19 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Turingmaschinen erlauben uns, den Resourcenverbrauch einer Berechnung zu quantifizieren:
-                    zum einen die{" "}
-                    <em>
+                    zum einen die 
+                    {" "}
+                    <i>
                       Zeit
-                    </em>
+                    </i>
+                    {" "}
                     , also die Anzahl der Schritte, die die Turingmaschine
-                    durchführt, bis sie anhält; zum anderen der{" "}
-                    <em>
+                    durchführt, bis sie anhält; zum anderen der 
+                    {" "}
+                    <i>
                       Speicherplatz
-                    </em>
+                    </i>
+                    {" "}
                     , also die Anzahl
                     der Zellen auf dem Band (oder den Bändern), die im Verlauf der Berechnung beschrieben werden.
                     Beides sind Maße, die tatsächlich im echten Leben relevant sind. Turingmaschinen erlauben uns,
@@ -65,46 +65,44 @@ const Article = () => {
                 </Paragraph>
                 <ul>
                   <li>
-                    <Paragraph>
-                      {" "}{" "}
-                      <b>
-                        I/O-Komplexität.
-                      </b>
-                      {" "}
-                      In echten Rechnern haben wir eine Hierarchie von
-                      Speichermedien. Den extrem schnellen Prozessorcache; schnellen Cache; den vergleichsweise
-                      langsamen
-                      Hauptstpeicher (RAM); eventuell sogar einen externen Festplattenspeichern, der um
-                      Größenordnungen langsamer ist.
-                    </Paragraph>
+                    {" "}{" "}
+                    <b>
+                      I/O-Komplexität.
+                    </b>
+                    {" "}
+                    In echten Rechnern haben wir eine Hierarchie von
+                    Speichermedien. Den extrem schnellen Prozessorcache; schnellen Cache; den vergleichsweise
+                    langsamen
+                    Hauptstpeicher (RAM); eventuell sogar einen externen Festplattenspeichern, der um
+                    Größenordnungen langsamer ist.
                   </li>
                   <li>
-                    <Paragraph>
-                      {" "}{" "}
-                      <b>
-                        Kommunikationskomplexität.
-                      </b>
-                      {" "}
-                      Bei verteilten Anwendungen (Cloud Computing) ist
-                      die limitierende Resource eventuell gar nicht die Rechenkapazität sondern das
-                    </Paragraph>
-                    <Paragraph>
-                      <em>
-                        Netzwerk
-                      </em>
-                      , über
-                      das die Daten ausgetauscht werden.
-                    </Paragraph>
+                    {" "}{" "}
+                    <b>
+                      Kommunikationskomplexität.
+                    </b>
+                    {" "}
+                    Bei verteilten Anwendungen (Cloud Computing) ist
+                    die limitierende Resource eventuell gar nicht die Rechenkapazität sondern das
+                    {" "}
+                    <i>
+                      Netzwerk
+                    </i>
+                    {" "}
+                    , über
+                    das die Daten ausgetauscht werden.
                   </li>
                 </ul>
                 <Paragraph>
                   <Paragraph>
                     Also: Turingmaschinen sind zwar universell in dem Sinne, dass sie wohl alle physikalisch
                     realisierbaren
-                    Rechnermodelle simulieren können (ich sage{" "}
-                    <em>
+                    Rechnermodelle simulieren können (ich sage 
+                    {" "}
+                    <i>
                       wohl
-                    </em>
+                    </i>
+                    {" "}
                     , weil wir nicht wissen, was alles
                     physikalisch realisierbar ist). Allerdings ist es möglich, dass Sie, abhängig von Ihrem
                     Anwendungsfeld, ein abgewandeltes oder völlig anderes Modell benötigen, um den
@@ -113,10 +111,12 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Dennoch: in diesem Kapitel beschränken wir uns auf die Resource{" "}
-                    <em>
+                    Dennoch: in diesem Kapitel beschränken wir uns auf die Resource 
+                    {" "}
+                    <i>
                       Zeit
-                    </em>
+                    </i>
+                    {" "}
                     , und daher
                     sind Turingmaschinen das Modell der Wahl.
                   </Paragraph>
@@ -142,23 +142,21 @@ const Article = () => {
                       Turingmaschinen $M$
                     </Paragraph>
                     <Paragraph>
-                      <em>
+                      {" "}{" "}
+                      <i>
                         entscheidet
-                      </em>
+                      </i>
+                      {" "}
                       eine Sprache $L \subseteq \Sigma^*$ in Zeit $t$ wenn
                     </Paragraph>
                   </Paragraph>
                   <ul>
                     <li>
-                      <Paragraph>
-                        sie die Sprache entscheidet, also $x \in L \Longleftrightarrow f_M(x) = \texttt&#123;accept&#125;$
-                        und
-                      </Paragraph>
+                      sie die Sprache entscheidet, also $x \in L \Longleftrightarrow f_M(x) = \texttt&#123;accept&#125;$
+                      und
                     </li>
                     <li>
-                      <Paragraph>
-                        für jede Eingabe $x$ in maximal $O(t(|x|))$ Schritten terminiert.
-                      </Paragraph>
+                      für jede Eingabe $x$ in maximal $O(t(|x|))$ Schritten terminiert.
                     </li>
                   </ul>
                   <Paragraph>
@@ -195,9 +193,7 @@ const Article = () => {
                     nicht von der Eingabe $x$ oder der Länge $|x|$.
                     Wir haben in{" "}
                     <a href="07-02-Turing-variants.html">
-                      <Paragraph>
-                        Kapitel 7.3
-                      </Paragraph>
+                      Kapitel 7.3
                     </a>
                     gezeigt, wie man eine
                     $k$-Band-Turingmaschine $M$ durch eine

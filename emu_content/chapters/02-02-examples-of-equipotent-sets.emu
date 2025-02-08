@@ -8,9 +8,10 @@
         |> a
             href 02-01-comparing-sizes
 
-            &lt;&lt; Kapitel 02.01
+            &lt;&lt; Kapitel 2.1
     |> div
         id link-to-overview
+        style text-align: end
         |> a
             href /
 
@@ -18,5 +19,5 @@
         |> a
             href 02-03-sets-like-R
 
-            Kapitel 02.03 &gt;&gt;
+            Kapitel 2.3 &gt;&gt;
     |> div

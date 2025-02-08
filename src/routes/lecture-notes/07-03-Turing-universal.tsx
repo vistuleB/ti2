@@ -5,29 +5,25 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter number={46}>
+      <Chapter
+        number={46}
+        path="/lecture-notes46.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
-            <Paragraph>
-              Inhaltsverzeichnis
-            </Paragraph>
+            Inhaltsverzeichnis
           </a>
           <a href="07-03-Turing-encoding">
-            <Paragraph>
-              &lt;&lt; Kapitel 07.03
-            </Paragraph>
+            &lt;&lt; Kapitel 7.3
           </a>
         </div>
-        <div id="link-to-overview">
+        <div
+          id="link-to-overview"
+          style="text-align: end">
           <a href="/">
-            <Paragraph>
-              zur Kursübersicht
-            </Paragraph>
+            zur Kursübersicht
           </a>
           <a href="07-05-undecidability">
-            <Paragraph>
-              Kapitel 07.05 &gt;&gt;
-            </Paragraph>
+            Kapitel 7.5 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -128,23 +124,33 @@ const Article = () => {
                     das
                   </Paragraph>
                   <Paragraph>
-                    <em>
+                    {" "}{" "}
+                    <i>
                       unabhängig
-                    </em>
-                    von $M$ ist. Dass wir also{" "}
-                    <em>
+                    </i>
+                    {" "}
+                    von $M$ ist. Dass wir also 
+                    {" "}
+                    <i>
                       jede
-                    </em>
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
                     Turingmaschine
-                    $M$ mit Eingabealphabet $\Sigma$ und{" "}
-                    <em>
+                    $M$ mit Eingabealphabet $\Sigma$ und 
+                    {" "}
+                    <i>
                       jede
-                    </em>
+                    </i>
+                    {" "}
                     ihrer Konfigurationen
-                    als Strings über{" "}
-                    <em>
+                    als Strings über 
+                    {" "}
+                    <i>
                       einem
-                    </em>
+                    </i>
+                    {" "}
                     festen Alphabet $\Lambda$ darstellen
                     können.
                   </Paragraph>
@@ -198,38 +204,30 @@ const Article = () => {
                   </Paragraph>
                   <ul>
                     <li>
-                      <Paragraph>
-                        Falls $x$ nicht die Form
-                        $\enc(M) \texttt&#123;;&#125; w$ mit $w \in \Sigma^*$ hat,
-                        lehnt sie ab;
-                      </Paragraph>
+                      Falls $x$ nicht die Form
+                      $\enc(M) \texttt&#123;;&#125; w$ mit $w \in \Sigma^*$ hat,
+                      lehnt sie ab;
                     </li>
                     <li>
-                      <Paragraph>
-                        Ansonsten, falls also $c = \enc(M)$ für eine Turingmaschine
-                        $M$ ist:
-                      </Paragraph>
+                      Ansonsten, falls also $c = \enc(M)$ für eine Turingmaschine
+                      $M$ ist:
                       <ul>
                         <li>
-                          <Paragraph>
-                            Falls $M$ mit Eingabewort $w$ nicht
-                            terminiert, dann terminiert $U$ mit
-                            Eingabewort $c \texttt&#123;;&#125; w$ auch nicht.
-                          </Paragraph>
+                          Falls $M$ mit Eingabewort $w$ nicht
+                          terminiert, dann terminiert $U$ mit
+                          Eingabewort $c \texttt&#123;;&#125; w$ auch nicht.
                         </li>
                         <li>
-                          <Paragraph>
-                            Falls $M$ mit Eingabewort $w$ eine
-                            Endkonfiguration $C = uqv$ erreicht,
-                            dann
-                            erreicht $U$ mit
-                            Eingabewort $c \texttt&#123;;&#125; w$ die
-                            Endkonfiguration
-                            $q\ \enc(C)$. Das heißt insbesondere,
-                            dass $U$ genau dann akzeptiert, wenn $M$
-                            akzeptiert, und genau dann ablehnt, wenn
-                            $M$ ablehnt.
-                          </Paragraph>
+                          Falls $M$ mit Eingabewort $w$ eine
+                          Endkonfiguration $C = uqv$ erreicht,
+                          dann
+                          erreicht $U$ mit
+                          Eingabewort $c \texttt&#123;;&#125; w$ die
+                          Endkonfiguration
+                          $q\ \enc(C)$. Das heißt insbesondere,
+                          dass $U$ genau dann akzeptiert, wenn $M$
+                          akzeptiert, und genau dann ablehnt, wenn
+                          $M$ ablehnt.
                         </li>
                       </ul>
                     </li>
