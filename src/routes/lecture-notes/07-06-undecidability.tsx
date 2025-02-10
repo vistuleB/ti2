@@ -7,14 +7,14 @@ const Article = () => {
     <Container>
       <Chapter
         title="undecidability"
-        number={7.5}
-        path="/lecture-notes51.tsx">
+        number={7.6}
+        path="/lecture-notes53.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
           </a>
-          <a href="07-03-Turing-universal">
-            &lt;&lt; Kapitel 7.3
+          <a href="07-05-Turing-universal">
+            &lt;&lt; Kapitel 7.5
           </a>
         </div>
         <div
@@ -23,8 +23,8 @@ const Article = () => {
           <a href="/">
             zur Kursübersicht
           </a>
-          <a href="07-06-Post-correspondence-problem">
-            Kapitel 7.6 &gt;&gt;
+          <a href="07-07-Post-correspondence-problem">
+            Kapitel 7.7 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">

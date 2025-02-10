@@ -19,9 +19,9 @@
 
             zur Kursübersicht
         |> a
-            href 07-01-Turing-machines-examples
+            href 07-02-Turing-machines-examples
 
-            Kapitel 7.1 &gt;&gt;
+            Kapitel 7.2 &gt;&gt;
     |> div
         id rightSideWrapper
 

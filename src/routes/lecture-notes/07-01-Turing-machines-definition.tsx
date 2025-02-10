@@ -23,8 +23,8 @@ const Article = () => {
           <a href="/">
             zur Kursübersicht
           </a>
-          <a href="07-01-Turing-machines-examples">
-            Kapitel 7.1 &gt;&gt;
+          <a href="07-02-Turing-machines-examples">
+            Kapitel 7.2 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">

@@ -27,34 +27,497 @@ const Article = () => {
             Kapitel 2.6 &gt;&gt;
           </a>
         </div>
-        <div
-          style="display:none"
-          id="mathjax-definitions">
-          <Paragraph>
-            \(
-            \newcommand&#123;\floor&#125;[1]&#123;\left\lfloor #1 \right\rfloor&#125;
-            \newcommand&#123;\ceil&#125;[1]&#123;\left\lceil #1 \right\rceil&#125;
-          </Paragraph>
-          <Paragraph>
-            \newcommand&#123;\R&#125;&#123;\mathbb&#123;R&#125;&#125;
-            \newcommand&#123;\Z&#125;&#123;\mathbb&#123;Z&#125;&#125;
-            \newcommand&#123;\N&#125;&#123;\mathbb&#123;N&#125;&#125;
-            \newcommand&#123;\Q&#125;&#123;\mathbb&#123;Q&#125;&#125;
-            \newcommand&#123;\cin&#125;&#123;c
-            <i>
-              &#123;\rm in&#125;&#125;
-              \newcommand&#123;\cout&#125;&#123;c
-            </i>
-            &#123;\rm out&#125;&#125;
-            \newcommand&#123;\maj&#125;&#123;\textnormal&#123;Maj&#125;&#125;
-            \newcommand&#123;\xor&#125;&#123;\oplus&#125;
-            \newcommand&#123;\depth&#125;&#123;\textnormal&#123;depth&#125;&#125;
-            \newcommand&#123;\poly&#125;&#123;\textnormal&#123;poly&#125;&#125;
-            \newcommand&#123;\pfrac&#125;[2]&#123;\left(\frac&#123;#1&#125;&#123;#2&#125;\right)&#125;
-            \newcommand&#123;\cube&#125;&#123;\&#123;0,1\&#125;&#125;
-            \newcommand&#123;\cuben&#125;&#123;\cube^&#123;\N&#125;&#125;
-            \)
-          </Paragraph>
+        <div id="rightSideWrapper">
+          <div class="content">
+            <div class="chapter">
+              <div class="subChapter">
+                <h1 class="hidden-title">
+                  <span class="subChapterTitle" />
+                </h1>
+                <Paragraph>
+                  <Paragraph>
+                    Betrachten wir noch einmal einen Beweis, dass $[0,1] \times [0,1]
+                    \approx [0,1]$. Wir nehmen zwei Zahlen $(x,y) \in [0,1] \times [0,1]$
+                    und schreiben sie in Binärdarstellung $0.x
+                    <i>
+                      1 x
+                    </i>
+                    2 x
+                    <i>
+                      3 \dots$ und $0.y
+                    </i>
+                    1
+                    y
+                    <i>
+                      2 y
+                    </i>
+                    3\dots$, wobei wir $1$ nicht als $1.000\dots$, sondern als
+                    $0.111\dots$ schreiben. Wir produzieren eine Zahl $f(x,y) \in [0,1]$,
+                    indem wir die Binärdarstellungen von $x$ und $y$ verschränken: $f(x,y)
+                    = 0.x
+                    <i>
+                      1 y
+                    </i>
+                    1 x
+                    <i>
+                      2 y
+                    </i>
+                    2 x
+                    <i>
+                      3 y
+                    </i>
+                    3 \dots$. Diese Funktion ist injektiv. Aber
+                    eben nicht surjektiv: die Zahl $0.00111111$ beispielsweise ist nicht
+                    im Wertebereich der Funktion. Aber da $[0,1] \times [0,1]$ ja viel
+                    größer als $[0,1]$ erscheint, ist die Hauptarbeit geleistet.
+                    Surjektivität herzustellen sollte nicht so schwer sein. Formalisieren
+                    wir diese Gedanken durch etwas Notation.
+                  </Paragraph>
+                </Paragraph>
+                <div class="well container theorem">
+                  <Paragraph>
+                    <Paragraph>
+                      <span class="numbered-title">
+                        Definition
+                      </span>
+                      Seien $A$ und $B$
+                      zwei Mengen. Wir schreiben $A \leq B$, wenn es eine injektive
+                      Funktion $f : A \rightarrow B$ gibt. Falls $A \leq B$ und $A \not
+                      \approx B$ gilt, so schreiben wir $A \lt B$.
+                    </Paragraph>
+                  </Paragraph>
+                </div>
+                <Paragraph>
+                  <Paragraph>
+                    Beispielsweise haben wir $\N \lt \R$. Obige injektive Funktion $f :
+                    [0,1]\times [0,1]\rightarrow [0,1]$ bezeugt, dass $[0,1] \times [0,1]
+                    \leq [0,1]$. Gilt auch $[0,1] \leq [0,1] \times [0,1]$? Natürlich: die
+                    Funktion $g : [0,1] \rightarrow [0,1] \times [0,1]$ mit $g(x) = (x,0)$
+                    ist injektiv. Jetzt sollten Sie aufhorchen: wir haben zwei Mengen $A =
+                    [0,1] \times [0,1]$ und $B = [0,1]$ und haben $A \leq B$ und $B \leq
+                    A$ gezeigt. Folgt daraus nicht offensichtlich, dass $A$ und $B$ gleich
+                    groß sind, also $A \approx B$? Lassen Sie sich nicht von der
+                    suggestiven Notation $\leq$ verführen! $A \leq B$ und $B \leq A$
+                    heißen, dass es injektive Funktion $f : A \rightarrow B$ und $g : B
+                    \rightarrow A$ gibt. Um daraus zu folgern, dass $A \approx B$ gilt,
+                    müssen wir diese zu 
+                    {" "}
+                    <i>
+                      einer
+                    </i>
+                    {" "}
+                    bijektiven Funktion $h: A
+                    \rightarrow B$ kombinieren. Geht das immer?
+                  </Paragraph>
+                </Paragraph>
+                <div class="well container theorem">
+                  <Paragraph>
+                    <Paragraph>
+                      <span class="numbered-title">
+                        Theorem
+                      </span>
+                      {" "}{" "}
+                      <b>
+                        (Schröder-Bernstein-Theorem).
+                      </b>
+                      {" "}
+                      Seien $A$ und $B$
+                      zwei Mengen. Wenn $A \leq B$ und $B \leq A$ gilt, dann gilt $A
+                      \approx B$. In Worten: wenn es injektive Funktionen $f: A
+                      \rightarrow B$ und $g : B\rightarrow A$ gibt, dann gibt es auch eine
+                      bijektive Funktion $h: A \rightarrow B$.
+                    </Paragraph>
+                  </Paragraph>
+                </div>
+                <div class="well container">
+                  <Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
+                      <b>
+                        Beweis.
+                      </b>
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      Wir tun so, als ob $A \cap B = \emptyset$ gälte. Falls dies nicht
+                      der Fall sein sollte, können wir $A$ durch $A \times \&#123;0\&#125; = \&#123;
+                      (a,0) \ | \ a \in A\&#125;$ ersetzen und $B$ durch $A \times \&#123;1\&#125; = \&#123;
+                      (b,1) \ | \ b \in B\&#125;$. Wir betrachten nun die Menge $A \cup B$ und
+                      zeichnen Pfeile ein: $f$-Pfeile von jedem $a$ zu $f(a)$ und
+                      $g$-Pfeile von jedem $b$ zu $f(b)$:
+                    </Paragraph>
+                  </Paragraph>
+                  <figure class="centered-figure well container-fluid">
+                    <a
+                      data-slide="prev"
+                      href="#schroeder-bernstein"
+                      class="left carousel-control-prev-icon">
+                      <div class="carousel-nav-icon">
+                        <img src="../img/carousel-prev-icon.svg" />
+                      </div>
+                    </a>
+                    <a
+                      data-slide="next"
+                      href="#schroeder-bernstein"
+                      class="right carousel-control-next-icon">
+                      <div class="carousel-nav-icon">
+                        <img src="../img/carousel-next-icon.svg" />
+                      </div>
+                    </a>
+                    <div
+                      style="display: inline-block"
+                      data-interval={false}
+                      class="carousel"
+                      id="schroeder-bernstein">
+                      <ol class="carousel-indicators">
+                        <li
+                          class="active"
+                          data-slide-to={1}
+                          data-target="#schroeder-bernstein" />
+                        <li
+                          data-slide-to={2}
+                          data-target="#schroeder-bernstein" />
+                        <li
+                          data-slide-to={3}
+                          data-target="#schroeder-bernstein" />
+                        <li
+                          data-slide-to={4}
+                          data-target="#schroeder-bernstein" />
+                      </ol>
+                      <div
+                        style="display: inline-block"
+                        class="carousel-inner">
+                        <div class="item active">
+                          <img
+                            style="width: 100%"
+                            src="../img/infinite-sets/schroeder-bernstein-digraph-1.svg" />
+                        </div>
+                        <div class="item">
+                          <img
+                            style="width: 100%"
+                            src="../img/infinite-sets/schroeder-bernstein-digraph-2.svg" />
+                        </div>
+                        <div class="item">
+                          <img
+                            style="width: 100%"
+                            src="../img/infinite-sets/schroeder-bernstein-digraph-3.svg" />
+                        </div>
+                        <div class="item">
+                          <img
+                            style="width: 100%"
+                            src="../img/infinite-sets/schroeder-bernstein-digraph-4.svg" />
+                        </div>
+                      </div>
+                    </div>
+                  </figure>
+                  <Paragraph>
+                    <Paragraph>
+                      Wenn wir die Menge $A \cup B$ zusammen mit den $f$- und $g$-Pfeilen
+                      als Graphen auf einer unendlichen Menge betrachten, dann sehen wir,
+                      dass es vier Arten von Komponenten: (1) unendliche Pfade, die mit
+                      einem roten kreisförmigen Punkt $a \in A$ beginnen; (2) unendliche
+                      Pfade, die mit einem blauen quadratischen Punkt $b \in B$ beginnen;
+                      (3) solche, die in beide Richtungen unendlich sind und keinen
+                      Anfangspunkt haben; (4) solche, die aus endlich vielen Punkten
+                      bestehen. Wir definieren nun die Bijektion $h$, indem wir in den
+                      Komponenten vom Typ (1), (3) und (4) die Funktion $f$ verwenden, in
+                      den vom Typ (2) jedoch $g^&#123;-1&#125;$:
+                    </Paragraph>
+                  </Paragraph>
+                  <figure class="centered-figure well container-fluid">
+                    <a
+                      data-slide="prev"
+                      href="#schroeder-bernstein-bijektion"
+                      class="left carousel-control-prev-icon">
+                      <div class="carousel-nav-icon">
+                        <img src="../img/carousel-prev-icon.svg" />
+                      </div>
+                    </a>
+                    <a
+                      data-slide="next"
+                      href="#schroeder-bernstein-bijektion"
+                      class="right carousel-control-next-icon">
+                      <div class="carousel-nav-icon">
+                        <img src="../img/carousel-next-icon.svg" />
+                      </div>
+                    </a>
+                    <div
+                      style="display: inline-block"
+                      data-interval={false}
+                      class="carousel"
+                      id="schroeder-bernstein-bijektion">
+                      <ol class="carousel-indicators">
+                        <li
+                          class="active"
+                          data-slide-to={1}
+                          data-target="#schroeder-bernstein-bijektion" />
+                        <li
+                          data-slide-to={2}
+                          data-target="#schroeder-bernstein-bijektion" />
+                        <li
+                          data-slide-to={3}
+                          data-target="#schroeder-bernstein-bijektion" />
+                      </ol>
+                      <div
+                        style="display: inline-block"
+                        class="carousel-inner">
+                        <div class="item active">
+                          <img
+                            style="width: 100%"
+                            src="../img/infinite-sets/schroeder-bernstein-bijektion-1.svg" />
+                        </div>
+                        <div class="item">
+                          <img
+                            style="width: 100%"
+                            src="../img/infinite-sets/schroeder-bernstein-bijektion-2.svg" />
+                        </div>
+                        <div class="item">
+                          <img
+                            style="width: 100%"
+                            src="../img/infinite-sets/schroeder-bernstein-bijektion-3.svg" />
+                        </div>
+                      </div>
+                    </div>
+                  </figure>
+                  <Paragraph>
+                    <Paragraph>
+                      <Paragraph>
+                        Formalisieren wir das ein bisschen. Wir definieren eine Folge $X
+                        <i>
+                          0,
+                          X
+                        </i>
+                        1, \dots$, sodass $X
+                        <i>
+                          &#123;2i&#125; \subseteq B$ und $X
+                        </i>
+                        &#123;2i+1&#125; \subseteq A$
+                        für alle $i \geq 0$ gilt:
+                      </Paragraph>
+                    </Paragraph>
+                    \begin&#123;align*&#125; X
+                    <i>
+                      0&amp;:= B \setminus&#123;\rm img&#125; (f) \\ X
+                    </i>
+                    &#123;2i+1&#125;&amp;:=
+                    g(X
+                    <i>
+                      &#123;2i&#125;) \\ X
+                    </i>
+                    &#123;2i+2&#125;&amp;:= f(X
+                    <i>
+                      &#123;2i+1&#125;)\\ A'&amp;:= X
+                    </i>
+                    1 \cup X_ 3 \cup
+                    X
+                    <i>
+                      5 \cup X
+                    </i>
+                    7 \cup \dots \ . \end&#123;align*&#125;
+                  </Paragraph>
+                  <Paragraph>
+                    <Paragraph>
+                      <Paragraph>
+                        In Worten: $X
+                        <i>
+                          0$ sind die $B$-Punkte, die keine eingehende $f$-Kante
+                          haben. $X
+                        </i>
+                        i$ sind dann diejenigen Knoten, die auf einem Pfad vom Typ
+                        (2) liegen und von dem (blauen, in $B$ liegenden) Anfangspunkt
+                        Abstand $i$ haben. $A'$ sind also die $A$-Knoten, die auf einer
+                        Typ-(2)-Komponente liegen. Wir können nun unsere Bijektion $h : A
+                        \rightarrow B$ definieren:
+                      </Paragraph>
+                    </Paragraph>
+                    \begin&#123;align*&#125; h : A&amp;\rightarrow A\\ a&amp;\mapsto \begin&#123;cases&#125; f(a)
+                    &amp;\textnormal&#123; if $a \in A \setminus A'$&#125; \\ g^&#123;-1&#125;(a)&amp;\textnormal&#123;
+                    if $a \in A'$.&#125; \end&#123;cases&#125; \end&#123;align*&#125;
+                  </Paragraph>
+                  <Paragraph>
+                    <Paragraph>
+                      Wir müssen nun zeigen, dass $h$ bijektiv ist (falls das noch nicht
+                      klar sein sollte).
+                    </Paragraph>
+                  </Paragraph>
+                  <div class="well container-fluid subtheorem">
+                    <Paragraph>
+                      <Paragraph>
+                        <span class="numbered-title">
+                          Behauptung 1.
+                        </span>
+                        $g^&#123;-1&#125;(a)$ ist
+                        definiert für jedes $a \in A'$.
+                      </Paragraph>
+                    </Paragraph>
+                  </div>
+                  <div class="well container-fluid">
+                    <Paragraph>
+                      <Paragraph>
+                        {" "}{" "}
+                        <b>
+                          Beweis.
+                        </b>
+                        {" "}{" "}
+                      </Paragraph>
+                      <Paragraph>
+                        Wenn $a \in A'$ gilt, dann gilt $a \in X
+                        <i>
+                          &#123;2i+1&#125;$, also für einen
+                          ungeraden Index. Nach Konstruktion gilt $X
+                        </i>
+                        &#123;2i+1&#125; = g(X
+                        <i>
+                          &#123;2i&#125;)$,
+                          die Menge aller Bilder von $X
+                        </i>
+                        &#123;2i&#125;$ unter $g$; daher gibt es zu $a
+                        \in X
+                        <i>
+                          &#123;2i+1&#125;$ auch ein $b \in X
+                        </i>
+                        &#123;2i&#125;$ mit $g(b) = a$. In andere
+                        Worten: $g^&#123;-1&#125;(a)$ ist definiert.
+                      </Paragraph>
+                    </Paragraph>
+                    <span class="qed">
+                      \(\square\)
+                    </span>
+                  </div>
+                  <Paragraph>
+                    <Paragraph>
+                      Eindeutig ist $g^&#123;-1&#125;(a)$ sowieso, falls es existiert. Wir sehen
+                      nun: $h$ ist wohldefiniert. Ist es injektiv?
+                    </Paragraph>
+                  </Paragraph>
+                  <div class="well container-fluid subtheorem">
+                    <Paragraph>
+                      <Paragraph>
+                        <span class="numbered-title">
+                          Behauptung 2.
+                        </span>
+                        $h$ ist
+                        injektiv.
+                      </Paragraph>
+                    </Paragraph>
+                  </div>
+                  <div class="well container-fluid">
+                    <Paragraph>
+                      <Paragraph>
+                        {" "}{" "}
+                        <b>
+                          Beweis.
+                        </b>
+                        {" "}{" "}
+                      </Paragraph>
+                      <Paragraph>
+                        Seien $a, a' \in A$ zwei verschiedene Elemente. Wir unterscheiden
+                        drei Fälle: (1) Wenn $a, a' \in A \setminus A'$, dann gilt $h(a) =
+                        f(a) \ne f(a') = h(a')$, weil $f$ injektiv ist. (2) Wenn $a, a'
+                        \in A$, dann gilt $h(a) = g^&#123;-1&#125;(a) =: b$ und $h(a') = g^&#123;-1&#125;(a')
+                        =: b'$. Nun gilt auch $b \ne b'$: wenn nämlich $b = b'$ gälte,
+                        dann auch $g(b) = g(b')$; ersteres ist aber $a$, letzteres ist
+                        $a'$. (3) Wenn $a \in A \setminus A'$ und $a' \in A'$ ist (oder
+                        umgekehrt), dann gilt $h(a) = f(a) =: b$ und $h(a') = g^&#123;-1&#125;(a')
+                        =: b'$, also $g(b') = a'$. Wir müssen nun zeigen, dass $b \ne b'$.
+                        Da $a' \in X
+                        <i>
+                          &#123;2i+1&#125;$ für ein $i$ muss $b' \in X
+                        </i>
+                        &#123;2i&#125;$ gelten. Wenn
+                        $i=0$ ist, dann gilt $b' \in X
+                        <i>
+                          &#123;2i&#125; = B \setminus&#123;\rm img&#125;(f)$.
+                          Da $f(a) = b$ gilt aber $b \in&#123;\rm img&#125;(f)$ und $b$ und $b'$ sind
+                          verschieden. Wenn $i \geq 1$ ist, dann bedeutet $b' \in X
+                        </i>
+                        &#123;2i&#125;$,
+                        dass es ein $a'' \in X
+                        <i>
+                          &#123;2i-1&#125;$ gibt mit $f(a'') = b'$. Da $a'' \in
+                          X
+                        </i>
+                        &#123;2i-1&#125; \subseteq A'$ aber $a \in A \setminus A'$ , gilt $a'' \ne
+                        a$ und somit auch $b \ne b'$.
+                      </Paragraph>
+                      <span class="qed">
+                        \(\square\)
+                      </span>
+                    </Paragraph>
+                  </div>
+                  <div class="well container-fluid subtheorem">
+                    <Paragraph>
+                      <Paragraph>
+                        <span class="numbered-title">
+                          Behauptung 3.
+                        </span>
+                        $h$ ist
+                        surjektiv.
+                      </Paragraph>
+                    </Paragraph>
+                  </div>
+                  <div class="well container-fluid">
+                    <Paragraph>
+                      <Paragraph>
+                        {" "}{" "}
+                        <b>
+                          Beweis.
+                        </b>
+                        {" "}{" "}
+                      </Paragraph>
+                      <Paragraph>
+                        Wir unterscheiden zwei Fälle. (1) Wenn $b \in X
+                        <i>
+                          0 \cup X
+                        </i>
+                        2 \cup
+                        X
+                        <i>
+                          4 \cup \dots$ ist, also sagen wir $b \in X
+                        </i>
+                        &#123;2i&#125;$, dann sei $a :=
+                        f(b)$. Es gilt $a \in X_&#123;2i+1&#125;$ und daher $h(a) = g^&#123;-1&#125;(a) = b$.
+                        Das Element $b$ hat also ein Urbild, nämlich $a$.
+                      </Paragraph>
+                    </Paragraph>
+                    <Paragraph>
+                      <Paragraph>
+                        (2) Wenn $b \not \in B'$, dann gilt insbesondere $b \not \in X
+                        <i>
+                          0 =
+                          B \setminus&#123;\rm img&#125;(f)$; also $b \in&#123;\rm img&#125; (f)$. Es gibt
+                          also ein $a \in A$ mit $f(a) = b$. Was ist $h(a)$? Wenn $a \in A
+                          \setminus A'$ gilt, dann ist $h(a) = f(a) = b$, und wir haben ein
+                          Urbild für $b$ gefunden. Was aber, wenn $a \in A'$, also $a \in
+                          X
+                        </i>
+                        &#123;2i+1&#125;$? Weil $f(a)=b$ wäre dann $b \in X_&#123;2i+2&#125; \subseteq B'$,
+                        wir befänden uns also in Fall (1).
+                      </Paragraph>
+                    </Paragraph>
+                    <span class="qed">
+                      \(\square\)
+                    </span>
+                  </div>
+                  <Paragraph>
+                    <Paragraph>
+                      Wir haben nun gezeigt, dass $h$ definiert ist, injektiv und
+                      surjektiv ist. Damit ist $h$ eine Bijektion.
+                    </Paragraph>
+                    <span class="qed">
+                      \(\square\)
+                    </span>
+                  </Paragraph>
+                </div>
+                <Paragraph>
+                  <Paragraph>
+                    Wenn Sie der formale Beweis zu sehr verwirrt, dann halten Sie sich
+                    einfach an die Bilder mit den zwei Arten von Punkten und Pfeilen.
+                  </Paragraph>
+                </Paragraph>
+              </div>
+            </div>
+          </div>
         </div>
       </Chapter>
     </Container>

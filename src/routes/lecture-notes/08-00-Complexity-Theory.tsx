@@ -8,13 +8,13 @@ const Article = () => {
       <Chapter
         title="Complexity Theory"
         number={8.0}
-        path="/lecture-notes50.tsx">
+        path="/lecture-notes57.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
           </a>
-          <a href="07-07-PCP-applications">
-            &lt;&lt; Kapitel 7.7
+          <a href="07-08-PCP-applications">
+            &lt;&lt; Kapitel 7.8
           </a>
         </div>
         <div

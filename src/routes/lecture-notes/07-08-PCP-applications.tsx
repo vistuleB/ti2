@@ -7,14 +7,14 @@ const Article = () => {
     <Container>
       <Chapter
         title="PCP applications"
-        number={7.7}
-        path="/lecture-notes54.tsx">
+        number={7.8}
+        path="/lecture-notes56.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
           </a>
-          <a href="07-06-Post-correspondence-problem">
-            &lt;&lt; Kapitel 7.6
+          <a href="07-07-Post-correspondence-problem">
+            &lt;&lt; Kapitel 7.7
           </a>
         </div>
         <div

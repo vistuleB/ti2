@@ -27,7 +27,811 @@ const Article = () => {
             Kapitel 4.4 &gt;&gt;
           </a>
         </div>
-        <div />
+        <div id="rightSideWrapper">
+          <div class="content">
+            <div class="chapter">
+              <div class="subChapter">
+                <h1 class="hidden-title">
+                  <span class="subChapterTitle">
+                    4.3 Nichtdeterministische Endliche Automaten
+                  </span>
+                </h1>
+                <Paragraph>
+                  <Paragraph>
+                    Ein nichtdeterministischer Automat ist, informell ausgedrückt, wie ein
+                    deterministischer Automat, nur dass es für eine
+                    Zustand-Symbol-Kombination beliebig viele ausgehende Pfeile (eventuell
+                    gar keinen) geben kann. Hier ist das Beispiel von vorhin, leicht
+                    abgewandelt:
+                  </Paragraph>
+                </Paragraph>
+                <figure>
+                  <img
+                    style="height: 10em"
+                    src="../img/finite-state-automata/nfsm-example-01.svg"
+                    loading="lazy" />
+                </figure>
+                <Paragraph>
+                  <Paragraph>
+                    Ein Pfeil beschreibt also nicht unbedingt einen Zustandsübergang, der
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
+                    <i>
+                      geschieht
+                    </i>
+                    {" "}
+                    , sondern einen, der 
+                    {" "}
+                    <i>
+                      möglich
+                    </i>
+                    {" "}
+                    ist. Formal
+                    gesprochen ist \(\delta\) nun keine Funktion mehr, sondern eine
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
+                    <i>
+                      Relation
+                    </i>
+                    {" "}
+                    :
+                  </Paragraph>
+                </Paragraph>
+                <div class="well container theorem">
+                  <Paragraph>
+                    <span class="numbered-title">
+                      Definition
+                    </span>
+                    {" "}{" "}
+                    <b>
+                      (Nichtdeterministischer endlicher Automat, non-deterministic finite state machine)
+                    </b>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    Ein nichtdeterministischer endlicher Automat besteht aus
+                  </Paragraph>
+                  <ul>
+                    <li>
+                      einem endlichen Eingabealphaet \(\Sigma\),
+                    </li>
+                    <li>
+                      einer endlichen Menge \(Q\) von Zuständen,
+                    </li>
+                    <li>
+                      einem Startzustand \(\qstart \in Q\),
+                    </li>
+                    <li>
+                      einer Menge \(F \subseteq Q\) von akzeptierenden Endzuständen,
+                    </li>
+                    <li>
+                      einer Zustandsübergangsrelation \(\delta \subseteq Q \times \Sigma
+                      \times Q\).
+                    </li>
+                  </ul>
+                  <Paragraph>
+                    Formal gesehen ist also ein Automat ein Quintupel \(M = (\Sigma, Q,
+                    \qstart, F, \delta)\).
+                  </Paragraph>
+                </div>
+                <Paragraph>
+                  Von nun an bezeichnen wir endliche Automaten auch als
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
+                  <i>
+                    deterministische
+                  </i>
+                  {" "}
+                  endliche Automaten, um den Unterschied zu den
+                  nichtdeterministischen zu verdeutlichen. Wenn in einem deterministischen
+                  endlichen Automaten \(\delta(q,x) = q'\) war, so hatte das die Bedeutung
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
+                  <i>
+                    wenn der Automat im Zustand \(q\) ist und \(x\) liest, so geht er in Zustand \(q'\) über
+                  </i>
+                  {" "}
+                  ; wenn nun in einem nichtdeterministischen Automaten \((q,x,q') \in
+                  \delta\) gilt, so bedeutet das,
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
+                  <i>
+                    wenn der Automat im Zustand \(q\) ist und \(x\) liest, so kann er in
+                    Zustand \(q'\) übergehen
+                  </i>
+                  {" "}
+                  . Analog zu den deterministischen Automaten definieren wir eine
+                  erweiterte Zustandsübergangsrelation.
+                </Paragraph>
+                <div class="well container theorem">
+                  <Paragraph>
+                    <span class="numbered-title">
+                      Definition
+                    </span>
+                    {" "}{" "}
+                    <b>
+                      (Erweiterte Zuständsübergangsfunktion)
+                    </b>
+                    {" "}
+                    .
+                  </Paragraph>
+                  <Paragraph>
+                    <Paragraph>
+                      Für einen nichtdeterministischen endlichen Automaten \((\Sigma, Q,
+                      \qstart, F, \delta)\) definieren wir die
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
+                      <i>
+                        erweiterte Zustandsübergangsrelation
+                      </i>
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      \(\hat&#123;\delta&#125;\subseteq Q \times \Sigma^* \rightarrow Q\) als die
+                      Menge aller Zustand-Wort-Zustand-Tripel \((q,x_1 x_2 \dots
+                      x_n,q')\), für die wir Zwischenzustände \(q = \qstart, q_1, q_2,
+                      \dots, q_n = q'\) finden können mit{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$ (\qstart, x_1, q_1), (q_1,
+                      x_2, q_2), \dots, (q_&#123;n-1&#125;, x_n, q_n) \in \delta $$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}Dies schließt
+                      den Fall \(n = 0\) mit ein, also \((q, \epsilon, q) \in
+                      \hat&#123;\delta&#125;\). Wie zuvor schreiben wir \(q
+                      \stackrel&#123;\alpha&#125;&#123;\rightarrow&#125; q'\).
+                    </Paragraph>
+                  </Paragraph>
+                  <Paragraph>
+                    <Paragraph>
+                      Die von \(M\) akzeptierte Sprache ist{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$ L(M) := \&#123;\alpha \in
+                      \Sigma^* \ | \ \textnormal&#123; es gibt ein&#125; q \in F \textnormal&#123; mit&#125;
+                      \qstart \stackrel&#123;\alpha&#125;&#123;\rightarrow&#125; q \&#125; $$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
+                    </Paragraph>
+                  </Paragraph>
+                </div>
+                <div class="well container theorem">
+                  <Paragraph>
+                    <span class="numbered-title">
+                      Beobachtung
+                    </span>
+                    Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein nichtdeterministischer
+                    endlicher Automat. Dann gibt es eine reguläre Grammatik \(G\) mit
+                    \(L(G) = L(M)\).
+                  </Paragraph>
+                </div>
+                <Paragraph>
+                  <Paragraph>
+                    Wir führen hier den Beweis nicht noch einmal; er ist mehr oder weniger
+                    identisch mit dem Beweis von
+                  </Paragraph>
+                  <Paragraph>
+                    <a href="./04-02-finite-state-machines.html#theorem-fsm-regular">
+                      Theorem 4.2.5
+                    </a>
+                    ; wir haben nämlich in jenem Beweis nirgends verwendet, dass
+                    \(\delta\) eine 
+                    {" "}
+                    <i>
+                      Funktion
+                    </i>
+                    {" "}
+                    ist, und daher geht mit einem
+                    \(\delta\), das eine 
+                    {" "}
+                    <i>
+                      Relation
+                    </i>
+                    {" "}
+                    ist, alles ganz genau gleich.
+                    Allerdings gilt nun auch der Umkehrschluss: zu einer regulären
+                    Grammatik gibt es einen nichtdeterministischen endlichen Automaten:
+                  </Paragraph>
+                </Paragraph>
+                <div
+                  id="theorem-nfsm-regular"
+                  class="well container theorem">
+                  <Paragraph>
+                    <span class="numbered-title">
+                      Theorem
+                    </span>
+                    Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik. Dann gibt es
+                    einen nichtdeterministischen endlichen Automaten \(M\) mit \(L(G) =
+                    L(M)\).
+                  </Paragraph>
+                </div>
+                <div class="well container">
+                  <Paragraph>
+                    {" "}{" "}
+                    <b>
+                      Beweis.
+                    </b>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    Unser Automat hat als Zustandsmenge \(N\), die Menge der
+                    nichtterminalen Symbole und als Startzustand \(S\), das Startsymbol
+                    der Grammatik \(G\). Wir definieren \(\delta\), indem wir jeden
+                    \(G\)-Pfeil in einem \(M\)-Pfeil umwandeln: eine Produktion{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$ X
+                    \rightarrow a Y $$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}in \(G\) wird dann zu{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$ (X, a, Y) \in \delta $$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
+                    also einem Pfeil \(X \stackrel&#123;a&#125;&#123;\rightarrow&#125; Y\) in \(M\). Für jede
+                    Regel der Form \(X \rightarrow \epsilon\) machen wir \(X\) zu einem
+                    Endzustand.
+                  </Paragraph>
+                  <Paragraph>
+                    <Paragraph>
+                      Was aber mit Regeln der Form \(X \rightarrow Y\)? Hierfür könnte man
+                      Nichtdeterministische Automaten mit \(\epsilon\)-Übergängen
+                      definieren, die also vom Zustand \(X\) nach \(Y\) wechseln können,
+                      ohne ein Eingabesymbol zu lesen; wir gehen hier einen anderen Weg
+                      und verweisen auf
+                    </Paragraph>
+                    <Paragraph>
+                      <a href="./04-01-regular-grammars.html#theorem-regular-simplified">
+                        Theorem 4.1.7
+                      </a>
+                      , welches uns erlaubt, Regeln der Form \(X \rightarrow Y\) und \(X
+                      \rightarrow a\) zu eliminieren.
+                    </Paragraph>
+                    <span class="qed">
+                      \(\square\)
+                    </span>
+                  </Paragraph>
+                </div>
+                <div class="well container theorem">
+                  <span class="numbered-title">
+                    Beispiel
+                  </span>
+                  <Paragraph>
+                    <Paragraph>
+                      Wir betrachten abermals die
+                    </Paragraph>
+                    <Paragraph>
+                      <a href="./04-01-regular-grammars.html#example-aaabb">
+                        reguläre Grammatik aus dem vorherigen Kapitel 4.1
+                      </a>
+                      : \begin&#123;align*&#125; S&amp;\rightarrow \epsilon \ |\ a S \ | \ b T \\ T&
+                      \rightarrow \epsilon \ | \ b T \ \end&#123;align*&#125; und auch den
+                      (falschen) endlichen Automaten, den wir im letzten Kapitel dafür
+                      gebaut haben:
+                    </Paragraph>
+                  </Paragraph>
+                  <figure>
+                    <img
+                      style="height: 10em"
+                      src="../img/finite-state-automata/finite-state-machine-example-03.svg"
+                      loading="lazy" />
+                  </figure>
+                  <Paragraph>
+                    <Paragraph>
+                      Wir sehen nun, dass dies genau der nichtdeterministische Automat
+                      ist, den wir nach{" "}
+                      <a href="#theorem-nfsm-regular">
+                        Theorem 4.3.4
+                      </a>
+                      bauen können. Die Zustandsübergangsrelation \(\delta\) ist{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$ \delta
+                      = \&#123;(S,a,S), (S,b,S), (T,b,T) \&#125; \ . $$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}Jeder Zustand ist ein
+                      Endzustand, allerdings heißt das nicht, dass der Automat jedes Wort
+                      akzeptiert. Für \(\alpha = ba\) beispielsweise gibt es keinen
+                      Zustand \(q\) mit \(S \stackrel&#123;ba&#125;&#123;\rightarrow&#125; q\), geschweige
+                      denn einen akzeptierenden Endzustand. Daher gilt: \(ba \not \in
+                      L(M)\).
+                    </Paragraph>
+                  </Paragraph>
+                </div>
+                <div class="well container theorem">
+                  <Paragraph>
+                    <span class="numbered-title">
+                      Beispiel
+                    </span>
+                    <Paragraph>
+                      <Paragraph>
+                        Wir betrachten die
+                      </Paragraph>
+                      <Paragraph>
+                        <a href="./04-01-regular-grammars.html#exercise-no-a-or-no-b">
+                          reguläre Grammatik aus Übungsaufgabe 4.1.7
+                        </a>
+                        :
+                      </Paragraph>
+                    </Paragraph>
+                    \begin&#123;align*&#125; S&amp;\rightarrow A \ | \ B \\ A&amp;\rightarrow \epsilon \
+                    | \ b A \ | \ c A \\ B&amp;\rightarrow \epsilon \ | \ a B \ | \ c B
+                    \end&#123;align*&#125;
+                  </Paragraph>
+                  <Paragraph>
+                    <Paragraph>
+                      <Paragraph>
+                        Bevor wir einen nichtdeterministischen Automaten bauen können,
+                        müssen wir erst die Produktionen der Form \(X \rightarrow Y\)
+                        eliminieren bzw. ersetzen. Wenn Sie Aufgabe 4.1.7 gelöst haben,
+                        haben Sie wahrscheinlich in etwa folgende Grammatik erhalten:
+                      </Paragraph>
+                    </Paragraph>
+                    \begin&#123;align*&#125; S&amp;\rightarrow \epsilon \ | \ bA \ | \ cA \ | \ aB \ |
+                    \ cB\\ A&amp;\rightarrow \epsilon \ | \ bA \ | \ cA \\ B&amp;\rightarrow
+                    \epsilon \ | \ aB \ | \ cB \end&#123;align*&#125; Also insgesamt 11 statt 8
+                    Produktionen. Alle Nichtterminale erlauben auf ihrer rechten Seite ein
+                    \(\epsilon\) und werden so zu akzeptierenden Zuständen. Die
+                    Zustandsübergangsrelation \(\delta\) ist also \begin&#123;align*&#125; \delta&
+                    = \&#123;(S,b,A), (S,c,A), (S,a,B), (S,c,B), (A,b,A), (A,c,A), (B,a,B),
+                    (B,c,B)\&#125; \end&#123;align*&#125; Der nichtdeterminische Automat schaut also so
+                    aus:
+                  </Paragraph>
+                  <figure>
+                    <img
+                      style="height: 10em"
+                      src="../img/finite-state-automata/nfsm-example-02.svg"
+                      loading="lazy" />
+                  </figure>
+                </div>
+                <div
+                  id="exercise-divisibility"
+                  class="well well-lg numbered-exercise container">
+                  <Paragraph>
+                    <span class="numbered-title">
+                      Übungsaufgabe
+                    </span>
+                    Sei \(\Sigma = \&#123;1\&#125;\) und \(L_k := \&#123;1^n \ | \textnormal&#123; $n$ ist
+                    durch $k$ teilbar&#125; \&#125;\). Schreiben Sie für \(L_k\) einen
+                    deterministischen endlichen Automaten.
+                  </Paragraph>
+                  <Paragraph>
+                    <Paragraph>
+                      Schreiben Sie eine reguläre Grammatik für die Sprache \(L_5 \cup
+                      L_7\), also die Strings aus 1, deren Länge durch 5 oder durch 7
+                      teilbar ist.
+                    </Paragraph>
+                  </Paragraph>
+                  <Paragraph>
+                    <Paragraph>
+                      Zeichnen Sie nun einen nichtdeterministischen endlichen Automaten
+                      für \(L_5 \cup L_7\).
+                    </Paragraph>
+                  </Paragraph>
+                </div>
+                <h2>
+                  <Paragraph>
+                    Nichtdeterministische endliche Automaten deterministisch machen
+                  </Paragraph>
+                </h2>
+                <Paragraph>
+                  <Paragraph>
+                    Wir werden nun zeigen, dass man zu jedem nichtdeterministischen
+                    Automaten \(M\) einen äquivalenten deterministischen Automaten \(M'\)
+                    bauen kann. Bevor wir eine allgemeine Konstruktion zeigen, fragen wir
+                    uns, wie wir beispielsweise für den nichtdeterministischen endlichen
+                    Automaten \(M\):
+                  </Paragraph>
+                </Paragraph>
+                <figure>
+                  <img
+                    style="height: 10em"
+                    src="../img/finite-state-automata/nfsm-example-01.svg"
+                    loading="lazy" />
+                </figure>
+                <Paragraph>
+                  <Paragraph>
+                    und das Eingabewort \(\alpha = 1001100\) überprüfen können, ob
+                    \(1001100 \in L(M)\) gilt. Einem determinischen endlichen Automaten
+                    können wir ja das Eingabewort einfach füttern und schauen, was der
+                    Automat tut; bei nichtdeterministischen Automaten müssen wir schauen,
+                    was er alles tun könnte. Wir plazieren einen kleinen farbigen Punkt in
+                    jeden Zustand, in dem sich der Automat befinden könnte; am Anfang hat
+                    der Startzustand \(A\) einen roten Punkt.
+                  </Paragraph>
+                </Paragraph>
+                <figure class="centered-figure well container">
+                  <a
+                    data-slide="prev"
+                    href="#nfsm-balls"
+                    class="left carousel-control-prev-icon">
+                    <div class="carousel-nav-icon">
+                      <img src="../../img/carousel-prev-icon.svg" />
+                    </div>
+                  </a>
+                  <a
+                    data-slide="next"
+                    href="#nfsm-balls"
+                    class="right carousel-control-next-icon">
+                    <div class="carousel-nav-icon">
+                      <img src="../../img/carousel-next-icon.svg" />
+                    </div>
+                  </a>
+                  <div
+                    style="display: inline-block"
+                    data-interval={false}
+                    class="carousel"
+                    id="nfsm-balls">
+                    <ol class="carousel-indicators">
+                      <li
+                        class="active"
+                        data-slide-to={1}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={2}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={3}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={4}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={5}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={6}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={7}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={8}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={9}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={10}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={11}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={12}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={13}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={14}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={15}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={16}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={17}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={18}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={19}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={20}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={21}
+                        data-target="#nfsm-balls" />
+                      <li
+                        data-slide-to={22}
+                        data-target="#nfsm-balls" />
+                    </ol>
+                    <div
+                      style="display: inline-block"
+                      class="carousel-inner">
+                      <div class="item active">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-01.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-02.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-03.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-04.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-05.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-06.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-07.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-08.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-09.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-10.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-11.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-12.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-13.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-14.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-15.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-16.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-17.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-18.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-19.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-20.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-21.svg" />
+                      </div>
+                      <div class="item">
+                        <img
+                          style="height: 12em"
+                          src="../img/finite-state-automata/nfsm-colored-balls-22.svg" />
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+                <Paragraph>
+                  <Paragraph>
+                    Am Ende landet der grüne Punkt im Zustand \(E\). Das Wort ist also in
+                    \(L(M)\). Das können wir auch ganz allgemein tun. Wenn Zustand \(q\)
+                    einen "Punkt" hat und Zeichen \(x\) gelesen wird, dann teilt sich
+                    dieser Punkt und plaziert einen Kind-Punkt in jedem Zustand \(q'\),
+                    für den \(q \stackrel&#123;x&#125;&#123;\rightarrow&#125; q'\) gilt. Formal gesprochen:
+                    für eine Menge \(R \subseteq Q\) von Zuständen (die, die gerade einen
+                    "Punkt" haben) und ein Eingabe-Symbol \(x\) definieren wir
+                    \begin&#123;align*&#125; \Delta(R, x) := \&#123;q' \in Q \ | \ \textnormal&#123; es gibt&#125;
+                    \ q \in R \textnormal&#123; mit&#125; q \step&#123;x&#125; q'\&#125; \end&#123;align*&#125; Für ein
+                    Eingabewort \(\alpha= x_1 \dots x_n\) fangen wir nun mit \(R_0 =
+                    \&#123;\qstart\&#125;\) an, das entspricht dem einen roten Punkt auf dem
+                    Startzustand, und berechnen dann jeweils \(R_i = \Delta(R_&#123;i-1&#125;,
+                    x_i)\); wenn die Menge \(R_n\) einen akzeptierenden Endzustand enthält
+                    (dieser also am Ende einen "Punkt" hat), gilt \(\alpha \in L(M)\).
+                  </Paragraph>
+                </Paragraph>
+                <Paragraph>
+                  <Paragraph>
+                    Treten Sie einen Schritt zurück und betrachten, was wir mit \(\Delta\)
+                    definiert haben: wir haben eine Zustandsübergangsfunktion definiert,
+                    die nun aber nicht auf Zuständen sondern auf Zustands
+                    {" "}
+                    <i>
+                      mengen
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    operiert. Das heißt, im Gegensatz zu \(\delta\), das eine Funktion
+                    \(\delta: Q \times \Sigma \rightarrow Q\) ist, ist \begin&#123;align*&#125;
+                    \Delta: 2^Q \times \Sigma \rightarrow 2^Q \ . \end&#123;align*&#125; Wenn Sie
+                    die Schreibweise \(2^Q\) nicht kennen: dies ist die Potenzmenge von
+                    \(Q\), also die Menge aller Untermengen, was die leere Menge
+                    \(\emptyset\) und die "volle Menge" \(Q\) selbst miteinschließt. Wir
+                    haben also folgendes Theorem:
+                  </Paragraph>
+                </Paragraph>
+                <div
+                  id="nfsm-to-fsm"
+                  class="well container theorem">
+                  <Paragraph>
+                    <span class="numbered-title">
+                      Theorem
+                    </span>
+                    {" "}{" "}
+                    <b>
+                      (Einen nichtdeterministischen endlichen Automaten deterministisch
+                      machen).
+                    </b>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein nichtdeterministischer
+                    Automat; dann heiße der deterministische Automat \(M' = (\Sigma, 2^Q,
+                    \&#123;\qstart\&#125;, \mathcal&#123;F&#125;, \Delta)\) mit Endzustandsmenge
+                    \(\mathcal&#123;F&#125;\) definiert als \begin&#123;align*&#125; \mathcal&#123;F&#125; := \&#123;X
+                    \subseteq Q \ | \ X \cap F \ne \emptyset\&#125; \end&#123;align*&#125; und
+                    Zustandsübergangsfunktion \(\Delta\) definiert als \begin&#123;align*&#125;
+                    \Delta : \quad&amp;2^Q \times \Sigma \rightarrow 2^Q \\&amp;(R, x) \mapsto
+                    \&#123;q' \in Q \ | \ \textnormal&#123; es gibt&#125; \ q \in R \textnormal&#123; mit&#125; q
+                    \step&#123;x&#125; q'\&#125; \end&#123;align*&#125; der 
+                    {" "}
+                    <i>
+                      Potenzmengenautomat
+                    </i>
+                    {" "}
+                    . Es gilt
+                    \(L(M) = L(M')\).
+                  </Paragraph>
+                </div>
+                <Paragraph>
+                  <Paragraph>
+                    Wir folgern also
+                  </Paragraph>
+                </Paragraph>
+                <div
+                  id="regular-grammar-to-fsm"
+                  class="well container theorem">
+                  <Paragraph>
+                    <span class="numbered-title">
+                      Theorem
+                    </span>
+                    Zu jeder regulären Sprache \(L\) gibt es einen deterministischen
+                    endlichen Automaten \(M\) mit \(L(M) = L\).
+                  </Paragraph>
+                </div>
+                <div class="well container theorem">
+                  <Paragraph>
+                    <span class="numbered-title">
+                      Beispiel
+                    </span>
+                    Der obige nichtdeterminische Automaten \(M\), der die Sprache aller
+                    Wörter, deren viertletztes Zeichen eine 1 ist, akzeptiert, hat fünf
+                    Zustände. Sein Potenzmengenautomat \(M'\) hätte also \(2^5 = 32\).
+                    Allerdings sehen wir, dass alle "relevanten" Zustände von \(M\) den
+                    Zustand \(A\) enthalten. Dieser wird nie verschwinden. Also sehen wir,
+                    dass man \(M'\) mit 16 Zuständen implementieren kann (die anderen,
+                    die, die nicht \(A\) enthalten, sind 
+                    {" "}
+                    <i>
+                      unerreichbar
+                    </i>
+                    {" "}
+                    ). Da 16
+                    immer noch recht groß für eine Abbildung ist, nehmen wir uns die
+                    Sprache aller Wörter, deren 
+                    {" "}
+                    <i>
+                      drittletztes Zeichen
+                    </i>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    eine 1 ist. Der nichtdeterministische Automat hierfür ist
+                  </Paragraph>
+                  <figure>
+                    <img
+                      style="height: 10em"
+                      src="../img/finite-state-automata/nfsm-example-04-third-from-right.svg"
+                      loading="lazy" />
+                  </figure>
+                  <Paragraph>
+                    <Paragraph>
+                      Der Potenzmengenautomat hat die Zustandsmenge
+                    </Paragraph>
+                  </Paragraph>
+                  <figure class="centered-figure well">
+                    <a
+                      data-slide="prev"
+                      href="#potenzmengenautomat"
+                      class="left carousel-control-prev-icon">
+                      <div class="carousel-nav-icon">
+                        <img src="../img/carousel-prev-icon.svg" />
+                      </div>
+                    </a>
+                    <a
+                      data-slide="next"
+                      href="#potenzmengenautomat"
+                      class="right carousel-control-next-icon">
+                      <div class="carousel-nav-icon">
+                        <img src="../img/carousel-next-icon.svg" />
+                      </div>
+                    </a>
+                  </figure>
+                  <Paragraph>
+                    <Paragraph>
+                      Wenn wir uns vorstellen, dass wir vor das Eingabewort \(\alpha\) die
+                      Zeichen 000 stellen, also \(\alpha\) durch \(000\alpha\) ersetzen,
+                      dann codiert jeder Zustand genau die letzten drei Zeichen des
+                      Eingabewortes, die der Automat gelesen hat. Der Zustand \(ACD\)
+                      bedeutet zum Beispiel
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
+                      <i>
+                        die letzten drei Zeichen waren \(110\)
+                      </i>
+                      {" "}{" "}
+                    </Paragraph>
+                  </Paragraph>
+                </div>
+                <Paragraph>
+                  <Paragraph>
+                    Im folgenden Unterkapitel werden wir alle Transformationen, die wir
+                    bisher gesehen haben, an einem konkreten Beispiel anwenden.
+                  </Paragraph>
+                </Paragraph>
+              </div>
+            </div>
+          </div>
+        </div>
       </Chapter>
     </Container>
   );

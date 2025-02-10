@@ -7,14 +7,14 @@ const Article = () => {
     <Container>
       <Chapter
         title="Turing encoding"
-        number={7.3}
-        path="/lecture-notes46.tsx">
+        number={7.4}
+        path="/lecture-notes49.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
           </a>
-          <a href="07-02-Turing-variants">
-            &lt;&lt; Kapitel 7.2
+          <a href="07-03-Turing-variants">
+            &lt;&lt; Kapitel 7.3
           </a>
         </div>
         <div
@@ -23,8 +23,8 @@ const Article = () => {
           <a href="/">
             zur Kursübersicht
           </a>
-          <a href="07-03-Turing-universal">
-            Kapitel 7.3 &gt;&gt;
+          <a href="07-05-Turing-universal">
+            Kapitel 7.5 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
