@@ -21,6 +21,9 @@ const Container = (props: ParentProps) => {
         \newcommand{\xor}{\oplus}
         \newcommand{\depth}{\textnormal{depth}}
         \newcommand{\poly}{\textnormal{poly}}
+        \newcommand{\pfrac}[2]{\left(\frac{#1}{#2}\right)}
+        \newcommand{\cube}{\{0,1\}}
+        \newcommand{\cuben}{\cube^{\N}}
         \)`}
       </div>
       {props.children}

@@ -32,7 +32,9 @@ const Article = () => {
             <div class="chapter">
               <div class="subChapter">
                 <h1 class="hidden-title">
-                  <span class="subChapterTitle" />
+                  <span class="subChapterTitle">
+                    2.1 Wer ist größer?
+                  </span>
                 </h1>
                 <Paragraph>
                   <Paragraph>

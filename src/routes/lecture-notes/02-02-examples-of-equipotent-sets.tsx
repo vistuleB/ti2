@@ -32,7 +32,9 @@ const Article = () => {
             <div class="chapter">
               <div class="subChapter">
                 <h1 class="hidden-title">
-                  <span class="subChapterTitle" />
+                  <span class="subChapterTitle">
+                    2.2 Beispiele abzählbar unendlicher Mengen
+                  </span>
                 </h1>
                 <Paragraph>
                   <Paragraph>
@@ -73,9 +75,9 @@ const Article = () => {
                       style="width: 60%"
                       src="../img/infinite-sets/N.svg" />
                     <br />
-                    <caption>
+                    <div>
                       Die Menge $\N$ bzw. ein Teil davon.
-                    </caption>
+                    </div>
                   </figure>
                   <br />
                   <figure>
@@ -83,9 +85,9 @@ const Article = () => {
                       style="width: 60%"
                       src="../img/infinite-sets/N-times-N.svg" />
                     <br />
-                    <caption>
+                    <div>
                       Die Menge $\N \times \N$ bzw. ein Teil davon.
-                    </caption>
+                    </div>
                   </figure>
                 </div>
                 <div class="well container">

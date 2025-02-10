@@ -49,6 +49,8 @@
                         
                         |> span
                             class subChapterTitle
+
+                            2.3 Mengen, die so groß wie $\R$ sind
                         
                         
                     
@@ -531,7 +533,7 @@
                         |> br
                         
                         
-                        |> caption
+                        |> div
 
                             
                             Plot der (Fast-) Bijektion $f : [0,1) \times [0,1) \rightarrow

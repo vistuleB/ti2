@@ -49,6 +49,8 @@
                         
                         |> span
                             class subChapterTitle
+
+                            2.2 Beispiele abzählbar unendlicher Mengen
                         
                         
                     
@@ -105,7 +107,7 @@
                             |> br
                             
                             
-                            |> caption
+                            |> div
 
                                 
                                 Die Menge $\N$ bzw. ein Teil davon.
@@ -127,7 +129,7 @@
                             |> br
                             
                             
-                            |> caption
+                            |> div
 
                                 
                                 Die Menge $\N \times \N$ bzw. ein Teil davon.
