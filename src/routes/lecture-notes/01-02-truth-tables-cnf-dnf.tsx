@@ -65,10 +65,8 @@ const Article = () => {
                   </Paragraph>
                   Dies ist ein endliches Objekt, wir können es also codieren, indem wir
                   für jeden Eingabewert \( (x_1,\dots,x_n)\) den Ausgabewert angeben. Dies
-                  nennt man eine
-                </Paragraph>
-                <Paragraph>
-                  {" "}{" "}
+                  nennt man eine 
+                  {" "}
                   <i>
                     Wahrheitstabelle
                   </i>
@@ -293,10 +291,8 @@ const Article = () => {
                       in diesem Falle \((1,0,1)\). Wir werden nun also für jede 1-Zeile
                       unserer Wahrheitstabelle einen solchen Ausdruck hinschreiben und diese
                       dann in einem großen OR zusammenführen. Einen Ausdruck, der aus einem
-                      AND von Variablen oder deren Negation besteht, nennt man auch einen
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      AND von Variablen oder deren Negation besteht, nennt man auch einen 
+                      {" "}
                       <i>
                         Term
                       </i>
@@ -398,10 +394,8 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Was, wenn einige der "mittleren" Gates (auf Tiefe 1) keine AND-Gates
-                    sind, sondern auch OR-Gates? Dann wäre dies nach der ersten Definition
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    sind, sondern auch OR-Gates? Dann wäre dies nach der ersten Definition 
+                    {" "}
                     <i>
                       keine
                     </i>
@@ -427,10 +421,8 @@ const Article = () => {
                       Zu der eben demonstrierten Konstruktion gibt es noch eine weitere,
                       dazu duale Konstruktion. Bildlich gesprochen listet DNF-Konstruktion
                       alle Möglichkeiten auf, wie man eine 1 erhalten kann. Dual dazu können
-                      wir alle Möglichkeiten auflisten, wie man eine 0 erhalten kann; tritt
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      wir alle Möglichkeiten auflisten, wie man eine 0 erhalten kann; tritt 
+                      {" "}
                       <i>
                         keine
                       </i>

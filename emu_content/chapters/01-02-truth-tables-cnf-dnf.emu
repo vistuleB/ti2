@@ -77,8 +77,7 @@
                     
                     Dies ist ein endliches Objekt, wir können es also codieren, indem wir
                     für jeden Eingabewert \( (x_1,\dots,x_n)\) den Ausgabewert angeben. Dies
-                    nennt man eine
-                    
+                    nennt man eine 
                     _Wahrheitstabelle_
                     (englisch 
                     _truth table_
@@ -316,8 +315,7 @@
                         in diesem Falle \((1,0,1)\). Wir werden nun also für jede 1-Zeile
                         unserer Wahrheitstabelle einen solchen Ausdruck hinschreiben und diese
                         dann in einem großen OR zusammenführen. Einen Ausdruck, der aus einem
-                        AND von Variablen oder deren Negation besteht, nennt man auch einen
-                        
+                        AND von Variablen oder deren Negation besteht, nennt man auch einen 
                         _Term_
                         .
                         
@@ -403,8 +401,7 @@
                             Übungsaufgabe
                         
                         Was, wenn einige der "mittleren" Gates (auf Tiefe 1) keine AND-Gates
-                        sind, sondern auch OR-Gates? Dann wäre dies nach der ersten Definition
-                        
+                        sind, sondern auch OR-Gates? Dann wäre dies nach der ersten Definition 
                         _keine_
                         DNF-Formel, nach der zweiten aber schon. Zeigen Sie,
                         wie man OR-Gates auf Ebene 1 entfernen kann! Als konkretes Beispiel:
@@ -436,8 +433,7 @@
                         Zu der eben demonstrierten Konstruktion gibt es noch eine weitere,
                         dazu duale Konstruktion. Bildlich gesprochen listet DNF-Konstruktion
                         alle Möglichkeiten auf, wie man eine 1 erhalten kann. Dual dazu können
-                        wir alle Möglichkeiten auflisten, wie man eine 0 erhalten kann; tritt
-                        
+                        wir alle Möglichkeiten auflisten, wie man eine 0 erhalten kann; tritt 
                         _keine_
                         davon ein, muss wohl eine 1 herauskommen. Wir gehen
                         also in der Wahrheitstabelle alle Zeilen mit Wert 0 durch und
