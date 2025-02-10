@@ -33,7 +33,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    2.4 Die Cantorsche Diagonalisation: \N \not \approx \R
+                    2.4 Die Cantorsche Diagonalisation: $\N \not \approx \R$
                   </span>
                 </h1>
                 <Paragraph>
