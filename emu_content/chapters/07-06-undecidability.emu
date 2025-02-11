@@ -1,5 +1,5 @@
 |> Chapter
-    title undecidability
+    title Turingmaschinen, Haltproblem und Unentscheidbarkeit
     number 7.6
     |> div
         id link-to-toc

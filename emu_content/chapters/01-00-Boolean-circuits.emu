@@ -1,5 +1,5 @@
 |> Chapter
-    title Boolean circuits
+    title Boolesche Schaltkreise
     number 1.0
     |> div
         id link-to-toc

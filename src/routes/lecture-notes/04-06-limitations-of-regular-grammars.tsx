@@ -6,7 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="limitations of regular grammars"
+        title="Die Grenzen regulärer Sprachen"
         number={4.6}
         path="/lecture-notes26.tsx">
         <div id="link-to-toc">

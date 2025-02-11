@@ -6,7 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="b Parser in Java"
+        title=""
         number={5.5}
         path="/lecture-notes34.tsx">
         <div id="link-to-toc">

@@ -1,5 +1,5 @@
 |> Chapter
-    title ableitungen
+    title Ableitungen und Ableitungsbäume
     number 5.1
     |> div
         id link-to-toc

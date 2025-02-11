@@ -1,5 +1,5 @@
 |> Chapter
-    title binary adder
+    title Binär-Addierer
     number 1.3
     |> div
         id link-to-toc

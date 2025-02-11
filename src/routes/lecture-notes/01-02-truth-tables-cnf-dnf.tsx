@@ -6,7 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="truth tables cnf dnf"
+        title="Wahrheitstabellen, CNF und DNF"
         number={1.2}
         path="/lecture-notes3.tsx">
         <div id="link-to-toc">
@@ -33,15 +33,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    1.2 Wahrheitstabellen, 
-                    {" "}
-                    <i>
-                      CN
-                      <img />
-                      F
-                    </i>
-                    {" "}
-                    und DNF
+                    1.2 Wahrheitstabellen, CNF und DNF
                   </span>
                 </h1>
                 <Paragraph>

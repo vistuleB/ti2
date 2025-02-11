@@ -1,5 +1,5 @@
 |> Chapter
-    title Turing universal
+    title Turing-Maschinen simulieren Turing-Maschinen: die universelle Turing-Maschine
     number 7.5
     |> div
         id link-to-toc
@@ -49,6 +49,8 @@
                         
                         |> span
                             class subChapterTitle
+
+                            7.5 Turing-Maschinen simulieren Turing-Maschinen: die universelle Turing-Maschine
                         
                         
                     

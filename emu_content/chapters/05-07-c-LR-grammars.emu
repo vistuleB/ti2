@@ -1,6 +1,6 @@
 |> Chapter
-    title c LR grammars
-    number 5.5
+    title LR-Grammatiken
+    number 5.7
     |> div
         id link-to-toc
         |> a
@@ -8,9 +8,9 @@
 
             Inhaltsverzeichnis
         |> a
-            href 05-05-b-Parser-in-Java
+            href 05-06-b-Parser-in-Java
 
-            &lt;&lt; Kapitel 5.5
+            &lt;&lt; Kapitel 5.6
     |> div
         id link-to-overview
         style text-align: end
@@ -19,9 +19,9 @@
 
             zur Kursübersicht
         |> a
-            href 05-05-d-linker-Rand-und-Bluete
+            href 05-08-d-linker-Rand-und-Bluete
 
-            Kapitel 5.5 &gt;&gt;
+            Kapitel 5.8 &gt;&gt;
     |> div
         id rightSideWrapper
 

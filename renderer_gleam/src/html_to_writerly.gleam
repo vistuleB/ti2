@@ -1,3 +1,4 @@
+import infrastructure
 import simplifile
 import gleam/result
 import gleam/list
@@ -116,13 +117,62 @@ fn splitter(vxml: VXML, file: String) -> Result(List(#(String, VXML, Nil)), a) {
   Ok([#(emu_file, vxml, Nil)])
 }
 
+fn get_second_from_tuple(tuple: #(a, b)) -> b {
+  let #(_, b) = tuple
+  b
+}
+
+fn remove_line_break(res: String) -> String {
+  case string.ends_with(res, "\n") {
+    True -> string.drop_end(res, 2)
+    False -> res
+  }
+}
+
+fn title_from_vxml(vxml: VXML) -> String {
+ let assert vp.V(_, _, _, title) = vxml
+  wp.vxmls_to_writerlys(title) 
+    |> wp.writerlys_to_string()
+    |> string.split_once(" ")
+    |> result.unwrap(#("", ""))
+    |> get_second_from_tuple()
+    |> remove_line_break()
+}
+
+fn get_title_internal(vxml: VXML) -> String {
+case vxml {
+    vp.T(_, _) -> ""
+    vp.V(_, _, _, children) -> {
+      io.debug(infrastructure.children_with_attr(vxml, "class", "subChapterTitle"))
+      case infrastructure.children_with_attr(vxml, "class", "subChapterTitle"), infrastructure.children_with_attr(vxml, "class", "chapterTitle") {
+        [found, ..], _ -> title_from_vxml(found) 
+        _, [found, ..] -> title_from_vxml(found) 
+        _, _ -> get_title(children)
+      }
+    }
+  }
+}
+
+fn get_title(vxmls: List(VXML)) -> String {
+  case vxmls {
+    [] -> ""
+    [first, ..rest] -> {
+      let title = get_title_internal(first)
+      case title |> string.is_empty() {
+        True -> get_title(rest)
+        False -> title
+      }
+    }
+  }
+}
+
 fn emitter(pair: #(String, VXML, Nil), prev_file: Option(String), next_file: Option(String)) -> Result(#(String, List(bl.BlamedLine), Nil), String) {
   let #(path, vxml, Nil) = pair
   let title = path |> string.drop_end(4) |> string.split("-") |> list.drop(2) |> string.join(" ")
   let number = path |> string.split("-") |> list.take(2) |> list.map(remove_0_at_start) |> string.join(".")
 
   let root = vp.V(blame_us("Root"), "Chapter", [
-    vp.BlamedAttribute(blame_us("Chapter title"), "title", title),
+    vp.BlamedAttribute(blame_us("Chapter title"), "title", get_title_internal(vxml)),
     vp.BlamedAttribute(blame_us("Chapter number"), "number", number)
   ], [
     construct_left_nav(prev_file), 

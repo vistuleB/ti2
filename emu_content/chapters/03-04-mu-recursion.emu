@@ -1,5 +1,5 @@
 |> Chapter
-    title mu recursion
+    title Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion
     number 3.4
     |> div
         id link-to-toc
@@ -55,7 +55,7 @@
                         |> span
                             class subChapterTitle
 
-                            3.4 \(\mu\)-Rekursion
+                            3.4 Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion
                         
                         
                     

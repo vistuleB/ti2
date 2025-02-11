@@ -1,5 +1,5 @@
 |> Chapter
-    title exercise design grammars
+    title Rechnerübung: Gute kontextfreie Grammatiken entwerfen
     number 5.3
     |> div
         id link-to-toc

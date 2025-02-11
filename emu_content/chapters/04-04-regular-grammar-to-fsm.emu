@@ -1,5 +1,5 @@
 |> Chapter
-    title regular grammar to fsm
+    title Von einer regulären Grammatik zu einem endlichen Automaten
     number 4.4
     |> div
         id link-to-toc
@@ -51,8 +51,7 @@
                         |> span
                             class subChapterTitle
 
-                            4.4 Von einer regulären Grammatik zu einem endlichen
-                            Automaten
+                            4.4 Von einer regulären Grammatik zu einem endlichen Automaten
                         
                         
                     

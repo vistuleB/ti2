@@ -1,5 +1,5 @@
 |> Chapter
-    title exercises
+    title Übungsaufgaben
     number 4.7
     |> div
         id link-to-toc
@@ -50,6 +50,8 @@
                         
                         |> span
                             class subChapterTitle
+
+                            4.7 Übungsaufgaben
                         
                         
                     

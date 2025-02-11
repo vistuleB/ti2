@@ -8,7 +8,7 @@ const Article = () => {
       <Chapter
         title=""
         number="9.appendix.emu"
-        path="/lecture-notes59.tsx">
+        path="/lecture-notes58.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis

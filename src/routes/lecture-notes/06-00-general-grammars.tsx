@@ -6,15 +6,15 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="general grammars"
+        title="Allgemeine Grammatiken"
         number={6.0}
         path="/lecture-notes40.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
           </a>
-          <a href="05-10-not-context-free">
-            &lt;&lt; Kapitel 5.10
+          <a href="05-11-not-context-free">
+            &lt;&lt; Kapitel 5.11
           </a>
         </div>
         <div

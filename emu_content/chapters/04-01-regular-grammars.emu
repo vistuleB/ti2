@@ -1,5 +1,5 @@
 |> Chapter
-    title regular grammars
+    title Reguläre Grammatiken
     number 4.1
     |> div
         id link-to-toc

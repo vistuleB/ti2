@@ -1,5 +1,5 @@
 |> Chapter
-    title formal languages
+    title Formale Sprachen - Einführung und Beispiele
     number 4.0
     |> div
         id link-to-toc

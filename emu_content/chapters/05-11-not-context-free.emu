@@ -1,6 +1,6 @@
 |> Chapter
-    title not context free
-    number 5.10
+    title Die Grenzen kontextfreier Sprachen
+    number 5.11
     |> div
         id link-to-toc
         |> a
@@ -8,9 +8,9 @@
 
             Inhaltsverzeichnis
         |> a
-            href 05-09-general-parsing
+            href 05-10-general-parsing
 
-            &lt;&lt; Kapitel 5.9
+            &lt;&lt; Kapitel 5.10
     |> div
         id link-to-overview
         style text-align: end

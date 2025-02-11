@@ -1,5 +1,5 @@
 |> Chapter
-    title Computability NaturalNumbers
+    title Berechenbarkeit und natürliche Zahlen
     number 3.0
     |> div
         id link-to-toc

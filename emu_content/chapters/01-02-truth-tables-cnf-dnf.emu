@@ -1,5 +1,5 @@
 |> Chapter
-    title truth tables cnf dnf
+    title Wahrheitstabellen, CNF und DNF
     number 1.2
     |> div
         id link-to-toc
@@ -50,11 +50,7 @@
                         |> span
                             class subChapterTitle
 
-                            1.2 Wahrheitstabellen, 
-                            _CN
-                            |> img
-                            F_
-                            und DNF
+                            1.2 Wahrheitstabellen, CNF und DNF
                         
                         
                     

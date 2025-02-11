@@ -1,5 +1,5 @@
 |> Chapter
-    title Time hierarchy theorem
+    title Das Zeithierarchietheorem
     number 8.1
     |> div
         id link-to-toc
@@ -19,9 +19,9 @@
 
             zur Kursübersicht
         |> a
-            href 09-appendix
+            href 09-00-appendix
 
-            Kapitel 9.appendix &gt;&gt;
+            Kapitel 9.0 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -54,6 +54,8 @@
                         
                         |> span
                             class subChapterTitle
+
+                            8.1 Das Zeithierarchietheorem
                         
                         
                     

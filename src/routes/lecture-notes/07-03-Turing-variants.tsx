@@ -6,9 +6,9 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Turing variants"
+        title="Variationen: Mehrband-Maschinen, nichtdeterministische Maschinen"
         number={7.3}
-        path="/lecture-notes48.tsx">
+        path="/lecture-notes44.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -33,8 +33,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    4.3 Variationen: Mehrband-Maschinen, nichtdeterministische
-                    Maschinen
+                    4.3 Variationen: Mehrband-Maschinen, nichtdeterministische Maschinen
                   </span>
                 </h1>
                 <h2>

@@ -1,5 +1,5 @@
 |> Chapter
-    title Post correspondence problem
+    title über Unentscheidbarkeit: Das Postsche Korrespondenzproblem
     number 7.7
     |> div
         id link-to-toc
@@ -55,6 +55,8 @@
                         
                         |> span
                             class subChapterTitle
+
+                            Mehr über Unentscheidbarkeit: Das Postsche Korrespondenzproblem
                         
                         
                     

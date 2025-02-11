@@ -6,7 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="lower and upper bounds"
+        title="Untere und obere Schranken"
         number={1.6}
         path="/lecture-notes7.tsx">
         <div id="link-to-toc">

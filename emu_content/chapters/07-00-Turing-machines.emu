@@ -1,5 +1,5 @@
 |> Chapter
-    title Turing machines
+    title Turing-Maschinen
     number 7.0
     |> div
         id link-to-toc

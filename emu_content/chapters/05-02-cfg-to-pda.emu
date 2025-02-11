@@ -1,5 +1,5 @@
 |> Chapter
-    title cfg to pda
+    title Kontextfreie Grammatiken und Kellerautomaten
     number 5.2
     |> div
         id link-to-toc

@@ -1,5 +1,5 @@
 |> Chapter
-    title Turing variants
+    title Variationen: Mehrband-Maschinen, nichtdeterministische Maschinen
     number 7.3
     |> div
         id link-to-toc
@@ -50,8 +50,7 @@
                         |> span
                             class subChapterTitle
 
-                            4.3 Variationen: Mehrband-Maschinen, nichtdeterministische
-                            Maschinen
+                            4.3 Variationen: Mehrband-Maschinen, nichtdeterministische Maschinen
                         
                         
                     

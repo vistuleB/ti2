@@ -1,5 +1,5 @@
 |> Chapter
-    title Fanin Size Depth
+    title Größe, Tiefe, Fan-In
     number 1.1
     |> div
         id link-to-toc

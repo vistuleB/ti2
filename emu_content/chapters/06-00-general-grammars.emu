@@ -1,5 +1,5 @@
 |> Chapter
-    title general grammars
+    title Allgemeine Grammatiken
     number 6.0
     |> div
         id link-to-toc
@@ -8,9 +8,9 @@
 
             Inhaltsverzeichnis
         |> a
-            href 05-10-not-context-free
+            href 05-11-not-context-free
 
-            &lt;&lt; Kapitel 5.10
+            &lt;&lt; Kapitel 5.11
     |> div
         id link-to-overview
         style text-align: end

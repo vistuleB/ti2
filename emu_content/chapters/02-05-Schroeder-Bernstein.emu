@@ -1,5 +1,5 @@
 |> Chapter
-    title Schroeder Bernstein
+    title Das Schröder-Bernstein-Theore
     number 2.5
     |> div
         id link-to-toc

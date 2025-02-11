@@ -1,5 +1,5 @@
 |> Chapter
-    title monotone circuits
+    title Monotone Funktionen und monotone Schaltkreise
     number 1.4
     |> div
         id link-to-toc

@@ -1,5 +1,5 @@
 |> Chapter
-    title ackermann
+    title Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion
     number 3.3
     |> div
         id link-to-toc
@@ -55,8 +55,7 @@
                         |> span
                             class subChapterTitle
 
-                            3.3 Primitive Rekursion kann nicht alles: die
-                            Péter-Ackermann-Funktion
+                            3.3 Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion
                         
                         
                     

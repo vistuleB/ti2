@@ -6,7 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="examples of equipotent sets"
+        title="Beispiele abzählbar unendlicher Mengen"
         number={2.2}
         path="/lecture-notes10.tsx">
         <div id="link-to-toc">

@@ -6,7 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="regular expressions"
+        title="Reguläre Ausdrücke"
         number={4.5}
         path="/lecture-notes25.tsx">
         <div id="link-to-toc">
@@ -32,7 +32,9 @@ const Article = () => {
             <div class="chapter">
               <div class="subChapter">
                 <h1 class="hidden-title">
-                  <span class="subChapterTitle" />
+                  <span class="subChapterTitle">
+                    4.5 Reguläre Ausdrücke
+                  </span>
                 </h1>
                 <Paragraph>
                   <Paragraph>

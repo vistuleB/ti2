@@ -6,9 +6,9 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Post correspondence problem"
+        title="über Unentscheidbarkeit: Das Postsche Korrespondenzproblem"
         number={7.7}
-        path="/lecture-notes55.tsx">
+        path="/lecture-notes48.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -32,7 +32,9 @@ const Article = () => {
             <div class="chapter">
               <div class="subChapter">
                 <h1 class="hidden-title">
-                  <span class="subChapterTitle" />
+                  <span class="subChapterTitle">
+                    Mehr über Unentscheidbarkeit: Das Postsche Korrespondenzproblem
+                  </span>
                 </h1>
                 <Paragraph>
                   <Paragraph>

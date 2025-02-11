@@ -6,9 +6,9 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Time hierarchy theorem"
+        title="Das Zeithierarchietheorem"
         number={8.1}
-        path="/lecture-notes58.tsx">
+        path="/lecture-notes51.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -23,8 +23,8 @@ const Article = () => {
           <a href="/">
             zur Kursübersicht
           </a>
-          <a href="09-appendix">
-            Kapitel 9.appendix &gt;&gt;
+          <a href="09-00-appendix">
+            Kapitel 9.0 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -32,7 +32,9 @@ const Article = () => {
             <div class="chapter">
               <div class="subChapter">
                 <h1 class="hidden-title">
-                  <span class="subChapterTitle" />
+                  <span class="subChapterTitle">
+                    8.1 Das Zeithierarchietheorem
+                  </span>
                 </h1>
                 <Paragraph>
                   <Paragraph>

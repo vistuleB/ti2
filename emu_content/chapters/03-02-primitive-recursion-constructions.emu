@@ -1,5 +1,5 @@
 |> Chapter
-    title primitive recursion constructions
+    title Primitive Rekursion: Konstruktionen und Tricks
     number 3.2
     |> div
         id link-to-toc

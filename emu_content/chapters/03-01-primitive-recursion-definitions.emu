@@ -1,5 +1,5 @@
 |> Chapter
-    title primitive recursion definitions
+    title Primitive Rekursion: Motivation und Definitionen
     number 3.1
     |> div
         id link-to-toc

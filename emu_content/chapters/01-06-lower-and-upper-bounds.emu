@@ -1,5 +1,5 @@
 |> Chapter
-    title lower and upper bounds
+    title Untere und obere Schranken
     number 1.6
     |> div
         id link-to-toc

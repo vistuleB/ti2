@@ -1,5 +1,5 @@
 |> Chapter
-    title examples of equipotent sets
+    title Beispiele abzählbar unendlicher Mengen
     number 2.2
     |> div
         id link-to-toc

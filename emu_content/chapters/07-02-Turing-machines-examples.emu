@@ -1,5 +1,5 @@
 |> Chapter
-    title Turing machines examples
+    title Beispiele von Turingmaschinen
     number 7.2
     |> div
         id link-to-toc

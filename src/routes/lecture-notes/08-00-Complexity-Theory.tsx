@@ -6,9 +6,9 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Complexity Theory"
+        title="Komplexitätstheorie"
         number={8.0}
-        path="/lecture-notes57.tsx">
+        path="/lecture-notes50.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -33,7 +33,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    Complexity Theory
+                    8. Komplexitätstheorie
                   </span>
                 </h1>
                 <Paragraph>

@@ -1,5 +1,5 @@
 |> Chapter
-    title regular expressions
+    title Reguläre Ausdrücke
     number 4.5
     |> div
         id link-to-toc
@@ -50,6 +50,8 @@
                         
                         |> span
                             class subChapterTitle
+
+                            4.5 Reguläre Ausdrücke
                         
                         
                     

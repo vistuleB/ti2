@@ -6,7 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="binary adder"
+        title="Binär-Addierer"
         number={1.3}
         path="/lecture-notes4.tsx">
         <div id="link-to-toc">

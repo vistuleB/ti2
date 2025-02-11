@@ -1,5 +1,5 @@
 |> Chapter
-    title a LR parsing by hand
+    title LR-Parser per Hand entwerfen
     number 5.5
     |> div
         id link-to-toc
@@ -19,9 +19,9 @@
 
             zur Kursübersicht
         |> a
-            href 05-05-b-Parser-in-Java
+            href 05-06-b-Parser-in-Java
 
-            Kapitel 5.5 &gt;&gt;
+            Kapitel 5.6 &gt;&gt;
     |> div
         id rightSideWrapper
 
@@ -50,6 +50,8 @@
                         
                         |> span
                             class subChapterTitle
+
+                            5.5 LR-Parser per Hand entwerfen
                         
                         
                     

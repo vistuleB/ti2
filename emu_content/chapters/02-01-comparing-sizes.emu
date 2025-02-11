@@ -1,5 +1,5 @@
 |> Chapter
-    title comparing sizes
+    title Wer ist größer?
     number 2.1
     |> div
         id link-to-toc

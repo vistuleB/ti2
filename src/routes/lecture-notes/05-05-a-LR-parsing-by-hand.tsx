@@ -6,7 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="a LR parsing by hand"
+        title="LR-Parser per Hand entwerfen"
         number={5.5}
         path="/lecture-notes33.tsx">
         <div id="link-to-toc">
@@ -23,8 +23,8 @@ const Article = () => {
           <a href="/">
             zur Kursübersicht
           </a>
-          <a href="05-05-b-Parser-in-Java">
-            Kapitel 5.5 &gt;&gt;
+          <a href="05-06-b-Parser-in-Java">
+            Kapitel 5.6 &gt;&gt;
           </a>
         </div>
         <div id="rightSideWrapper">
@@ -32,7 +32,9 @@ const Article = () => {
             <div class="chapter">
               <div class="subChapter">
                 <h1 class="hidden-title">
-                  <span class="subChapterTitle" />
+                  <span class="subChapterTitle">
+                    5.5 LR-Parser per Hand entwerfen
+                  </span>
                 </h1>
                 <Paragraph>
                   <Paragraph>

@@ -1,5 +1,5 @@
 |> Chapter
-    title Complexity Theory
+    title Komplexitätstheorie
     number 8.0
     |> div
         id link-to-toc
@@ -55,7 +55,7 @@
                         |> span
                             class subChapterTitle
 
-                            Complexity Theory
+                            8. Komplexitätstheorie
                         
                         
                     

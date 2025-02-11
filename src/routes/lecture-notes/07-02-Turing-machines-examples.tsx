@@ -6,9 +6,9 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Turing machines examples"
+        title="Beispiele von Turingmaschinen"
         number={7.2}
-        path="/lecture-notes44.tsx">
+        path="/lecture-notes43.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis

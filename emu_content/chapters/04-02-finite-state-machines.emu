@@ -1,5 +1,5 @@
 |> Chapter
-    title finite state machines
+    title Endliche Automaten
     number 4.2
     |> div
         id link-to-toc

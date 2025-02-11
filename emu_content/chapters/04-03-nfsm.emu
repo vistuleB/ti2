@@ -1,5 +1,5 @@
 |> Chapter
-    title nfsm
+    title Nichtdeterministische Endliche Automaten
     number 4.3
     |> div
         id link-to-toc

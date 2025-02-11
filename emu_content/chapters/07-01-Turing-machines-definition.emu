@@ -1,5 +1,5 @@
 |> Chapter
-    title Turing machines definition
+    title Turingmaschinen: Formale Definition und Beispiele
     number 7.1
     |> div
         id link-to-toc

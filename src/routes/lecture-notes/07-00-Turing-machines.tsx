@@ -6,7 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Turing machines"
+        title="Turing-Maschinen"
         number={7.0}
         path="/lecture-notes41.tsx">
         <div id="link-to-toc">

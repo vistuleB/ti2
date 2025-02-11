@@ -1,6 +1,6 @@
 |> Chapter
-    title general parsing
-    number 5.9
+    title Allgemeine kontextfreie Sprachen parsen
+    number 5.10
     |> div
         id link-to-toc
         |> a
@@ -8,9 +8,9 @@
 
             Inhaltsverzeichnis
         |> a
-            href 05-06-dk-automat
+            href 05-09-dk-automat
 
-            &lt;&lt; Kapitel 5.6
+            &lt;&lt; Kapitel 5.9
     |> div
         id link-to-overview
         style text-align: end
@@ -19,9 +19,9 @@
 
             zur Kursübersicht
         |> a
-            href 05-10-not-context-free
+            href 05-11-not-context-free
 
-            Kapitel 5.10 &gt;&gt;
+            Kapitel 5.11 &gt;&gt;
     |> div
         id rightSideWrapper
 
