@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Turingmaschinen: Formale Definition und Beispiele"
+        title_gr="Turingmaschinen: Formale Definition und Beispiele"
+        title_en="Turing machines definition"
         number={7.1}
         path="/lecture-notes42.tsx">
         <div id="link-to-toc">

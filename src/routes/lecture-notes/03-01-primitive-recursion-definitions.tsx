@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Primitive Rekursion: Motivation und Definitionen"
+        title_gr="Primitive Rekursion: Motivation und Definitionen"
+        title_en="primitive recursion definitions"
         number={3.1}
         path="/lecture-notes16.tsx">
         <div id="link-to-toc">

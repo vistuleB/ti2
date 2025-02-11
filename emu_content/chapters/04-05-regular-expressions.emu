@@ -1,5 +1,6 @@
 |> Chapter
-    title Reguläre Ausdrücke
+    title_gr Reguläre Ausdrücke
+    title_en regular expressions
     number 4.5
     |> div
         id link-to-toc

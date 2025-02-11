@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Mengen, die so groß wie $\R$ sind"
+        title_gr="Mengen, die so groß wie $\R$ sind"
+        title_en="sets like R"
         number={2.3}
         path="/lecture-notes11.tsx">
         <div id="link-to-toc">

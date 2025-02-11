@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Allgemeine kontextfreie Sprachen parsen"
+        title_gr="Allgemeine kontextfreie Sprachen parsen"
+        title_en="general parsing"
         number={5.10}
         path="/lecture-notes38.tsx">
         <div id="link-to-toc">

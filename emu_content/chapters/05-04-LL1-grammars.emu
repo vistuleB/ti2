@@ -1,5 +1,6 @@
 |> Chapter
-    title LL(\(k\))-Grammatiken
+    title_gr LL(\(k\))-Grammatiken
+    title_en LL1 grammars
     number 5.4
     |> div
         id link-to-toc

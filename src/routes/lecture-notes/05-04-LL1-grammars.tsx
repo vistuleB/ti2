@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="LL(\(k\))-Grammatiken"
+        title_gr="LL(\(k\))-Grammatiken"
+        title_en="LL1 grammars"
         number={5.4}
         path="/lecture-notes32.tsx">
         <div id="link-to-toc">

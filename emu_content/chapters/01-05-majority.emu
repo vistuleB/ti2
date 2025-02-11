@@ -1,5 +1,6 @@
 |> Chapter
-    title Majority
+    title_gr Majority
+    title_en majority
     number 1.5
     |> div
         id link-to-toc

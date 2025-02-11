@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Die Cantorsche Diagonalisation: $\N \not \approx \R$"
+        title_gr="Die Cantorsche Diagonalisation: $\N \not \approx \R$"
+        title_en="diagonalization"
         number={2.4}
         path="/lecture-notes12.tsx">
         <div id="link-to-toc">

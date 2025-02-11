@@ -1,5 +1,6 @@
 |> Chapter
-    title über Unentscheidbarkeit: Das Postsche Korrespondenzproblem
+    title_gr über Unentscheidbarkeit: Das Postsche Korrespondenzproblem
+    title_en Post correspondence problem
     number 7.7
     |> div
         id link-to-toc

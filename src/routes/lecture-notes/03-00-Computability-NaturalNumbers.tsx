@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Berechenbarkeit und natürliche Zahlen"
+        title_gr="Berechenbarkeit und natürliche Zahlen"
+        title_en="Computability NaturalNumbers"
         number={3.0}
         path="/lecture-notes15.tsx">
         <div id="link-to-toc">

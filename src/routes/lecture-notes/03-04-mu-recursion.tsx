@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion"
+        title_gr="Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion"
+        title_en="mu recursion"
         number={3.4}
         path="/lecture-notes19.tsx">
         <div id="link-to-toc">

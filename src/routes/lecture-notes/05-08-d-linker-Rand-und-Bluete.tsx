@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Linker Rand, Blüten und die DK-Grammatik"
+        title_gr="Linker Rand, Blüten und die DK-Grammatik"
+        title_en="d linker Rand und Bluete"
         number={5.8}
         path="/lecture-notes36.tsx">
         <div id="link-to-toc">

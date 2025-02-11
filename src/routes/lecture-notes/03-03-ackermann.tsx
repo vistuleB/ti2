@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion"
+        title_gr="Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion"
+        title_en="ackermann"
         number={3.3}
         path="/lecture-notes18.tsx">
         <div id="link-to-toc">

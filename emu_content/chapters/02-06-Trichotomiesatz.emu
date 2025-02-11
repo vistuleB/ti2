@@ -1,5 +1,6 @@
 |> Chapter
-    title Der Trichotomiesat
+    title_gr Der Trichotomiesat
+    title_en Trichotomiesatz
     number 2.6
     |> div
         id link-to-toc

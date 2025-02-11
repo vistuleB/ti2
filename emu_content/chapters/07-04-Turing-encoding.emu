@@ -1,5 +1,6 @@
 |> Chapter
-    title Die universelle Turingmaschine
+    title_gr Die universelle Turingmaschine
+    title_en Turing encoding
     number 7.4
     |> div
         id link-to-toc

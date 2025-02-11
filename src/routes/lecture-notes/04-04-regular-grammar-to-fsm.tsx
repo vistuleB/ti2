@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Von einer regulären Grammatik zu einem endlichen Automaten"
+        title_gr="Von einer regulären Grammatik zu einem endlichen Automaten"
+        title_en="regular grammar to fsm"
         number={4.4}
         path="/lecture-notes24.tsx">
         <div id="link-to-toc">

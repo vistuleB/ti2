@@ -143,7 +143,6 @@ fn get_title_internal(vxml: VXML) -> String {
 case vxml {
     vp.T(_, _) -> ""
     vp.V(_, _, _, children) -> {
-      io.debug(infrastructure.children_with_attr(vxml, "class", "subChapterTitle"))
       case infrastructure.children_with_attr(vxml, "class", "subChapterTitle"), infrastructure.children_with_attr(vxml, "class", "chapterTitle") {
         [found, ..], _ -> title_from_vxml(found) 
         _, [found, ..] -> title_from_vxml(found) 
@@ -168,11 +167,13 @@ fn get_title(vxmls: List(VXML)) -> String {
 
 fn emitter(pair: #(String, VXML, Nil), prev_file: Option(String), next_file: Option(String)) -> Result(#(String, List(bl.BlamedLine), Nil), String) {
   let #(path, vxml, Nil) = pair
-  let title = path |> string.drop_end(4) |> string.split("-") |> list.drop(2) |> string.join(" ")
+  let title_en = path |> string.drop_end(4) |> string.split("-") |> list.drop(2) |> string.join(" ")
+  let title_german = get_title_internal(vxml)
   let number = path |> string.split("-") |> list.take(2) |> list.map(remove_0_at_start) |> string.join(".")
 
   let root = vp.V(blame_us("Root"), "Chapter", [
-    vp.BlamedAttribute(blame_us("Chapter title"), "title", get_title_internal(vxml)),
+    vp.BlamedAttribute(blame_us("Chapter title"), "title_gr", title_german),
+    vp.BlamedAttribute(blame_us("Chapter title"), "title_en", title_en),
     vp.BlamedAttribute(blame_us("Chapter number"), "number", number)
   ], [
     construct_left_nav(prev_file), 

@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Rechnerübung: Gute kontextfreie Grammatiken entwerfen"
+        title_gr="Rechnerübung: Gute kontextfreie Grammatiken entwerfen"
+        title_en="exercise design grammars"
         number={5.3}
         path="/lecture-notes31.tsx">
         <div id="link-to-toc">

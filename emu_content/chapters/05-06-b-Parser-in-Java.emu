@@ -1,5 +1,6 @@
 |> Chapter
-    title Einen Parser in Java implementieren
+    title_gr Einen Parser in Java implementieren
+    title_en b Parser in Java
     number 5.6
     |> div
         id link-to-toc

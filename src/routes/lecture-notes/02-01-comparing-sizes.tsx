@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Wer ist größer?"
+        title_gr="Wer ist größer?"
+        title_en="comparing sizes"
         number={2.1}
         path="/lecture-notes9.tsx">
         <div id="link-to-toc">

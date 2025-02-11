@@ -1,5 +1,6 @@
 |> Chapter
-    title Unendliche Mengen
+    title_gr Unendliche Mengen
+    title_en infinite sets
     number 2.0
     |> div
         id link-to-toc

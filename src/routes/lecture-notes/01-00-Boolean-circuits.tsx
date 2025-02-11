@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Boolesche Schaltkreise"
+        title_gr="Boolesche Schaltkreise"
+        title_en="Boolean circuits"
         number={1.0}
         path="/lecture-notes1.tsx">
         <div id="link-to-toc">

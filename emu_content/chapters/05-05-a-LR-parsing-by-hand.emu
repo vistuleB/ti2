@@ -1,5 +1,6 @@
 |> Chapter
-    title LR-Parser per Hand entwerfen
+    title_gr LR-Parser per Hand entwerfen
+    title_en a LR parsing by hand
     number 5.5
     |> div
         id link-to-toc

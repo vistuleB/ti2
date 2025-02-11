@@ -1,5 +1,6 @@
 |> Chapter
-    title Appendix - Manual für das Schreiben dieses Skripts
+    title_gr Appendix - Manual für das Schreiben dieses Skripts
+    title_en appendix
     number 9.0
     |> div
         id link-to-toc

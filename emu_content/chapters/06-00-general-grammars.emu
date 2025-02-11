@@ -1,5 +1,6 @@
 |> Chapter
-    title Allgemeine Grammatiken
+    title_gr Allgemeine Grammatiken
+    title_en general grammars
     number 6.0
     |> div
         id link-to-toc

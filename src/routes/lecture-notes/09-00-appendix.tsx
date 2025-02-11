@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Appendix - Manual für das Schreiben dieses Skripts"
+        title_gr="Appendix - Manual für das Schreiben dieses Skripts"
+        title_en="appendix"
         number={9.0}
         path="/lecture-notes52.tsx">
         <div id="link-to-toc">

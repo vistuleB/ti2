@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="über Unentscheidbarkeit: Das Postsche Korrespondenzproblem"
+        title_gr="über Unentscheidbarkeit: Das Postsche Korrespondenzproblem"
+        title_en="Post correspondence problem"
         number={7.7}
         path="/lecture-notes48.tsx">
         <div id="link-to-toc">

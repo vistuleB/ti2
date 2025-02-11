@@ -1,5 +1,6 @@
 |> Chapter
-    title Von einer regulären Grammatik zu einem endlichen Automaten
+    title_gr Von einer regulären Grammatik zu einem endlichen Automaten
+    title_en regular grammar to fsm
     number 4.4
     |> div
         id link-to-toc

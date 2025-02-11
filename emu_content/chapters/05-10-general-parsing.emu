@@ -1,5 +1,6 @@
 |> Chapter
-    title Allgemeine kontextfreie Sprachen parsen
+    title_gr Allgemeine kontextfreie Sprachen parsen
+    title_en general parsing
     number 5.10
     |> div
         id link-to-toc

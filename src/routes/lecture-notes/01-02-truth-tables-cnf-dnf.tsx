@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Wahrheitstabellen, CNF und DNF"
+        title_gr="Wahrheitstabellen, CNF und DNF"
+        title_en="truth tables cnf dnf"
         number={1.2}
         path="/lecture-notes3.tsx">
         <div id="link-to-toc">

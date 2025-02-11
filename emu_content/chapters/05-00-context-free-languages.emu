@@ -1,5 +1,6 @@
 |> Chapter
-    title Kontextfreie Sprachen
+    title_gr Kontextfreie Sprachen
+    title_en context free languages
     number 5.0
     |> div
         id link-to-toc

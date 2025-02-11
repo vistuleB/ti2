@@ -1,5 +1,6 @@
 |> Chapter
-    title Übungsaufgaben
+    title_gr Übungsaufgaben
+    title_en exercises
     number 4.7
     |> div
         id link-to-toc

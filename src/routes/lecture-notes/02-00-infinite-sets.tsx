@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Unendliche Mengen"
+        title_gr="Unendliche Mengen"
+        title_en="infinite sets"
         number={2.0}
         path="/lecture-notes8.tsx">
         <div id="link-to-toc">

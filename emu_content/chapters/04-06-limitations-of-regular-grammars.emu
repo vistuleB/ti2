@@ -1,5 +1,6 @@
 |> Chapter
-    title Die Grenzen regulärer Sprachen
+    title_gr Die Grenzen regulärer Sprachen
+    title_en limitations of regular grammars
     number 4.6
     |> div
         id link-to-toc

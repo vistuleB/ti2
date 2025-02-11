@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Monotone Funktionen und monotone Schaltkreise"
+        title_gr="Monotone Funktionen und monotone Schaltkreise"
+        title_en="monotone circuits"
         number={1.4}
         path="/lecture-notes5.tsx">
         <div id="link-to-toc">

@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Nichtdeterministische Endliche Automaten"
+        title_gr="Nichtdeterministische Endliche Automaten"
+        title_en="nfsm"
         number={4.3}
         path="/lecture-notes23.tsx">
         <div id="link-to-toc">

@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Turingmaschinen, Haltproblem und Unentscheidbarkeit"
+        title_gr="Turingmaschinen, Haltproblem und Unentscheidbarkeit"
+        title_en="undecidability"
         number={7.6}
         path="/lecture-notes47.tsx">
         <div id="link-to-toc">

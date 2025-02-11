@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Turing-Maschinen simulieren Turing-Maschinen: die universelle Turing-Maschine"
+        title_gr="Turing-Maschinen simulieren Turing-Maschinen: die universelle Turing-Maschine"
+        title_en="Turing universal"
         number={7.5}
         path="/lecture-notes46.tsx">
         <div id="link-to-toc">

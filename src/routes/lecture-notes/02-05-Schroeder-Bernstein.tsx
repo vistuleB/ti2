@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Das Schröder-Bernstein-Theore"
+        title_gr="Das Schröder-Bernstein-Theore"
+        title_en="Schroeder Bernstein"
         number={2.5}
         path="/lecture-notes13.tsx">
         <div id="link-to-toc">

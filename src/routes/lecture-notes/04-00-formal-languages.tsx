@@ -6,7 +6,8 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        title="Formale Sprachen - Einführung und Beispiele"
+        title_gr="Formale Sprachen - Einführung und Beispiele"
+        title_en="formal languages"
         number={4.0}
         path="/lecture-notes20.tsx">
         <div id="link-to-toc">

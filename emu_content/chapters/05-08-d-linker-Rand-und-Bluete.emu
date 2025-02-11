@@ -1,5 +1,6 @@
 |> Chapter
-    title Linker Rand, Blüten und die DK-Grammatik
+    title_gr Linker Rand, Blüten und die DK-Grammatik
+    title_en d linker Rand und Bluete
     number 5.8
     |> div
         id link-to-toc

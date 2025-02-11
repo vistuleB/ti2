@@ -1,5 +1,6 @@
 |> Chapter
-    title Komplexitätstheorie
+    title_gr Komplexitätstheorie
+    title_en Complexity Theory
     number 8.0
     |> div
         id link-to-toc
