@@ -6,11 +6,11 @@ const Article = () => {
   return (
     <Container>
       <Chapter
-        count={4}
+        count={1}
         title_gr="Binär-Addierer"
         title_en="binary adder"
         number={1.3}
-        path="/lecture-notes4.tsx">
+        path="/lecture-notes1.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -119,10 +119,16 @@ const Article = () => {
                     Glücklicherweise muss man sich diese Tabelle nicht merken, es gilt nämlich
                   </Paragraph>
                   <Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     s&amp;= x \oplus y \oplus \cin \\
                     \cout&amp;= &#123;\rm Maj&#125; (x, y, \cin) \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Die Funktion Maj haben wir schon oben kennengelernt; sie gibt 1 aus, wenn mindestens zwei
                     ihrer drei Input-Bits 1 sind. Wir kürzen Sie im folgenden mit \(M\) ab. Hier ist nun
                     unser \(n\)-Bit-Addierer:
@@ -229,26 +235,16 @@ const Article = () => {
                     \(c_i\) ist das Carry, das von Position \(i-1\) an Position \(i\) übergeben wird;
                     \(s_i\) ist das \(i\)-te Bit der Summe (von rechts nach links zählend, bei 0 beginnend).
                     Es gilt also \(c_0 = 0\) und
-                    \begin&#123;align*&#125;
-                    s
-                    <i>
-                      i&amp;= x
-                    </i>
-                    i \oplus y
-                    <i>
-                      i \oplus c
-                    </i>
-                    i \\
-                    c
-                    <i>
-                      &#123;i+1&#125;&amp;= M(x
-                    </i>
-                    i, y
-                    <i>
-                      i, c
-                    </i>
-                    i) \ ,
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    s_i&amp;= x_i \oplus y_i \oplus c_i \\
+                    c_&#123;i+1&#125;&amp;= M(x_i, y_i, c_i) \ ,
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     und das Ergebnis ist dann \(c_&#123;n&#125; s_&#123;n-1&#125; s_&#123;n-2&#125; \dots, s_2 s_1 s_0\).
                     Bauen wir uns doch mal einen Schaltkreis, der \(c_&#123;k+1&#125;\) berechnet; wir können
                     zum Beispiel den obigen Ripple-Carry-Adder nehmen und alles löschen, was nicht
@@ -276,10 +272,28 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   $$
+                  $$
+                </Paragraph>
+                <Paragraph>
                   \begin&#123;align*&#125;
-                  g_i&amp;:= x_i \wedge y_i \tag&#123;carry-generate&#125; \\
-                  p_i&amp;:= x_i \vee y_i \tag&#123;carry-propagate&#125;
+                  g
+                  <i>
+                    i&amp;:= x
+                  </i>
+                  i \wedge y
+                  <i>
+                    i \tag&#123;carry-generate&#125; \\
+                    p
+                  </i>
+                  i&amp;:= x
+                  <i>
+                    i \vee y
+                  </i>
+                  i \tag&#123;carry-propagate&#125;
                   \end&#123;align*&#125;
+                </Paragraph>
+                <Paragraph>
+                  $$
                   $$
                 </Paragraph>
                 <Paragraph>
@@ -391,57 +405,19 @@ const Article = () => {
                       Hier sind Boolesche Formeln (in DNF) für \(p_&#123;[a,b]&#125;\) und \(g_&#123;[a,b]&#125;\):
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
-                  g
-                  <i>
-                    &#123;[a,b]&#125;&amp;:= g
-                  </i>
-                  b \vee (g
-                  <i>
-                    &#123;b-1&#125; \wedge p
-                  </i>
-                  b) \vee (g
-                  <i>
-                    &#123;b-2&#125; \wedge p
-                  </i>
-                  &#123;b-1&#125; \wedge p
-                  <i>
-                    b)
-                    \vee \dots \vee (g
-                  </i>
-                  a \wedge p
-                  <i>
-                    &#123;a+1&#125; \wedge \dots \wedge p
-                  </i>
-                  b) \ , \\
-                  p
-                  <i>
-                    &#123;[a,b]&#125;&amp;:= g
-                  </i>
-                  b \vee (g
-                  <i>
-                    &#123;b-1&#125; \wedge p
-                  </i>
-                  b) \vee (g
-                  <i>
-                    &#123;b-2&#125; \wedge p
-                  </i>
-                  &#123;b-1&#125; \wedge p
-                  <i>
-                    b)
-                    \vee \dots \vee (g
-                  </i>
-                  &#123;a+1&#125; \wedge p
-                  <i>
-                    &#123;a+2&#125; \wedge \dots \wedge p
-                  </i>
-                  b)
-                  \vee (p
-                  <i>
-                    a \wedge p
-                  </i>
-                  &#123;a+1&#125; \wedge \dots \wedge p_b) \ ,
-                  \end&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  g_&#123;[a,b]&#125;&amp;:= g_b \vee (g_&#123;b-1&#125; \wedge p_b) \vee (g_&#123;b-2&#125; \wedge p_&#123;b-1&#125; \wedge p_b)
+                  \vee \dots \vee (g_a \wedge p_&#123;a+1&#125; \wedge \dots \wedge p_b) \ , \\
+                  p_&#123;[a,b]&#125;&amp;:= g_b \vee (g_&#123;b-1&#125; \wedge p_b) \vee (g_&#123;b-2&#125; \wedge p_&#123;b-1&#125; \wedge p_b)
+                  \vee \dots \vee (g_&#123;a+1&#125; \wedge p_&#123;a+2&#125; \wedge \dots \wedge p_b)
+                  \vee (p_a \wedge p_&#123;a+1&#125; \wedge \dots \wedge p_b) \ ,
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -485,26 +461,16 @@ const Article = () => {
                       Beobachtung
                     </span>
                     Wenn wir \([a,b] = [a,i] \cup [i+1,b] \) schreiben für \(a \lt i \lt b\), dann gilt
-                    \begin&#123;align*&#125;
-                    p
-                    <i>
-                      &#123;[a,b]&#125;&amp;= g
-                    </i>
-                    &#123;[i+1,b]&#125; \vee (p
-                    <i>
-                      &#123;[a,i]&#125; \wedge p
-                    </i>
-                    &#123;[i+1,b]&#125;) \ , \\
-                    g
-                    <i>
-                      &#123;[a,b]&#125;&amp;= g
-                    </i>
-                    &#123;[i+1,b]&#125; \vee (g
-                    <i>
-                      &#123;[a,i]&#125; \wedge p
-                    </i>
-                    &#123;[i+1,b]&#125;) \ . \\
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    p_&#123;[a,b]&#125;&amp;= g_&#123;[i+1,b]&#125; \vee (p_&#123;[a,i]&#125; \wedge p_&#123;[i+1,b]&#125;) \ , \\
+                    g_&#123;[a,b]&#125;&amp;= g_&#123;[i+1,b]&#125; \vee (g_&#123;[a,i]&#125; \wedge p_&#123;[i+1,b]&#125;) \ . \\
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <Paragraph>
@@ -605,34 +571,16 @@ const Article = () => {
                     {" "}
                     Ganz allgemein gilt \([c*^&#123;k+1&#125;] = [c0*^k] \cup [c1*^k]\) und somit,
                     mit Hilfe von Beobachtung 1.10:
-                    \begin&#123;align*&#125;
-                    p
-                    <i>
-                      &#123;[c*^&#123;k+1&#125;]&#125;&amp;= g
-                    </i>
-                    &#123;[c1
-                    <b>
-                      ^k]&#125; \vee (p
-                      <i>
-                        &#123;c0*^k&#125; \wedge p
-                      </i>
-                      &#123;c1
-                    </b>
-                    ^k&#125;)\\
-                    g
-                    <i>
-                      &#123;[c*^&#123;k+1&#125;]&#125;&amp;= g
-                    </i>
-                    &#123;[c1
-                    <b>
-                      ^k]&#125; \vee (g
-                      <i>
-                        &#123;c0*^k&#125; \wedge p
-                      </i>
-                      &#123;c1
-                    </b>
-                    ^k&#125;) \ .
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    p_&#123;[c*^&#123;k+1&#125;]&#125;&amp;= g_&#123;[c1*^k]&#125; \vee (p_&#123;c0*^k&#125; \wedge p_&#123;c1*^k&#125;)\\
+                    g_&#123;[c*^&#123;k+1&#125;]&#125;&amp;= g_&#123;[c1*^k]&#125; \vee (g_&#123;c0*^k&#125; \wedge p_&#123;c1*^k&#125;) \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Wir basteln uns also am Besten ein "\(pg\)-Gate" mit vier Inputs und zwei Outputs:
                   </Paragraph>
                   <figure>
@@ -741,10 +689,16 @@ const Article = () => {
                     {" "}
                     Die Idee ist, dass wir jedes \([0,k]\) als Vereinigung
                     von wenigen Binärintervallen schreiben können, zum Beispiel
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     [0,9]&amp;= [0,7] \cup [8,9] \ , \\
                     [0,12]&amp;= [0,7] \cup [8,11] \cup [12] \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Wie kann man das formalisieren?
                   </Paragraph>
                   <Paragraph>
@@ -775,17 +729,15 @@ const Article = () => {
                         Definieren
                         wir \(l := (\alpha 0 1^a 1^b)_2 \). Dann gilt
                         \(l+1 = (\alpha 1 0^a 0^b)_2\). Es gilt also
-                        \begin&#123;align*&#125;
-                        [l+1, k] = [(\alpha 1 0^a 0^b)
-                        <i>
-                          2, (\alpha 1 0^a 1^b)
-                        </i>
-                        2] = [\alpha 1 0^a{" "}
-                        <b>
-                          ^b] \ ,
-                          \end&#123;align
-                        </b>
-                        &#125;
+                        {" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
+                        [l+1, k] = [(\alpha 1 0^a 0^b)_2, (\alpha 1 0^a 1^b)_2] = [\alpha 1 0^a *^b] \ ,
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}{" "}
                       </Paragraph>
                       <Paragraph>
                         <Paragraph>
@@ -812,10 +764,16 @@ const Article = () => {
                         Binärdarstellung
                         also von \(b\) auf \(a+b \geq b+1\) gewachsen ist. Hier ist ein Beispiel
                         für \(n = 32, k = 28\), in Dezimal- und Binärdarstellung:
-                        \begin&#123;align*&#125;
+                        {" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
                         [0,28]&amp;= [0,15] \cup [16,23] \cup [24,27] \cup [28] \\
                         [00000, 11100]&amp;= [00000,01111] \cup [10000,10111] \cup [11000, 11011] \cup [11100] \ .
-                        \end&#123;align*&#125;
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}
                         Beachten wir die Folge \(28, 27, 23, 15\), also immer die Endpunkte der betreffenden
                         Intervalle; wir haben gesehen, dass die Anzahl der schließenden 1en von Element zu Element
                         in dieser Folge strikt zunimmt (im Allgemeinen
@@ -968,18 +926,20 @@ const Article = () => {
                     </span>
                     Bauen Sie einen Schaltkreis für die Boolesche Funktion
                     "less-than":
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     LT : \&#123;0,1\&#125;^&#123;n&#125; \times \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125; \\
                     LT(\mathbf&#123;x&#125;, \mathbf&#123;y&#125;) =
                     \begin&#123;cases&#125;
-                    1&amp;\textnormal&#123; wenn $(\mathbf&#123;x&#125;)
-                    <i>
-                      2 \lt (\mathbf&#123;y&#125;)
-                    </i>
-                    2$, &#125; \\
+                    1&amp;\textnormal&#123; wenn $(\mathbf&#123;x&#125;)_2 \lt (\mathbf&#123;y&#125;)_2$, &#125; \\
                     0&amp;\textnormal&#123; sonst.&#125;
                     \end&#123;cases&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     der also \(\mathbf&#123;x&#125;, \mathbf&#123;y&#125;\) als \(n\)-stellige
                     Binärzahlen interpretiert und ausgibt, ob
                     die erste kleiner ist als die zweite.

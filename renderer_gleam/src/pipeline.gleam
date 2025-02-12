@@ -29,9 +29,9 @@ pub fn our_pipeline() -> List(Pipe) {
   let single_dollar_indexed_regex = infra.unescaped_suffix_indexed_regex("\\$")
 
   let latex_opening_math_block_indexed_regex =
-    infra.unescaped_suffix_indexed_regex("\\\\\\begin")
+    infra.unescaped_suffix_indexed_regex("\\\\begin\\{align\\*\\}")
   let latex_closing_math_block_indexed_regex =
-    infra.unescaped_suffix_indexed_regex("\\\\\\end")
+    infra.unescaped_suffix_indexed_regex("\\\\end\\{align\\*\\}")
 
   let latex_opening_backslash_parenthesis_indexed_regex =
     infra.unescaped_suffix_indexed_regex("\\\\\\(")
@@ -77,21 +77,46 @@ pub fn our_pipeline() -> List(Pipe) {
   [
     // 1
     unwrap_tags(["WriterlyBlurb"]),
+    // **************************
+    // Wrap begin and end with $$
+    // **************************
+    // 2
+    split_by_indexed_regexes(
+      #(
+        [
+          #(
+            latex_opening_math_block_indexed_regex,
+            "OpeningLatexBlock",
+          ),
+          #(
+            latex_closing_math_block_indexed_regex,
+            "ClosingLatexBlock",
+          ),
+        ],
+        [],
+      ),
+    ),
+    // 3
+    fold_tags_into_text([
+      #("OpeningLatexBlock", "$$\\begin{align*}"),
+      #("ClosingLatexBlock", "\\end{align*}$$"),
+    ]),
+
     // ************************
     // $$ *********************
     // ************************
-    // 2
+    // 4
     split_by_indexed_regexes(
       #([#(double_dollar_indexed_regex, "DoubleDollar")], []),
     ),
-    // 3
+    // 5
     pair_bookends(#(["DoubleDollar"], ["DoubleDollar"], "MathBlock")),
-    // 4
+    // 6
     fold_tags_into_text([#("DoubleDollar", "$$")]),
     // ************************
     // VerticalChunk **********
     // ************************
-    // 5
+    // 7
     surround_elements_by(#(
       [
         "div", "ol", "ul", "h1", "figure", "MathBlock", "Image", "Table",
@@ -101,34 +126,18 @@ pub fn our_pipeline() -> List(Pipe) {
       "WriterlyBlankLine",
       "WriterlyBlankLine",
     )),
-    // 6
+    // 8
     group_siblings_not_separated_by_blank_lines(
       #("VerticalChunk", ["MathBlock", "a", "figure", "li"]),
     ),
-    // 7
+    // 9
     unwrap_tags(["WriterlyBlankLine"]),
-    // 8
+    // 10
     concatenate_text_nodes(),
     // ************************
     // \( \) ******************
     // ************************
-    // 9
-    split_by_indexed_regexes(
-      #(
-        [
-          #(
-            latex_opening_math_block_indexed_regex,
-            "OpeningLatexPara",
-          ),
-          #(
-            latex_closing_math_block_indexed_regex,
-            "ClosingLatexPara",
-          ),
-        ],
-        ["MathBlock"],
-      ),
-    ),
-    // 10
+    // 11
     split_by_indexed_regexes(
       #(
         [
@@ -144,9 +153,9 @@ pub fn our_pipeline() -> List(Pipe) {
         ["MathBlock"],
       ),
     ),
-    // 11
-    pair_bookends(#(["OpeningLatexPara"], ["ClosingLatexPara"], "Math")),
     // 12
+    pair_bookends(#(["OpeningLatexPara"], ["ClosingLatexPara"], "Math")),
+    // 13
     fold_tags_into_text([
       #("OpeningLatexPara", "\\("),
       #("ClosingLatexPara", "\\)"),
@@ -154,7 +163,7 @@ pub fn our_pipeline() -> List(Pipe) {
     // ************************
     // _ & * & ` ******************
     // ************************
-    // 13
+    // 14
     split_by_indexed_regexes(
       #(
         [
@@ -182,25 +191,25 @@ pub fn our_pipeline() -> List(Pipe) {
         ["MathBlock", "Math"],
       ),
     ),
-    // 14
+    // 15
     pair_bookends(#(
       ["OpeningUnderscore", "OpeningOrClosingUnderscore"],
       ["ClosingUnderscore", "OpeningOrClosingUnderscore"],
       "i",
     )),
-    // 15
+    // 16
     pair_bookends(#(
       ["OpeningAsterisk", "OpeningOrClosingAsterisk"],
       ["ClosingAsterisk", "OpeningOrClosingAsterisk"],
       "b",
     )),
-    // 16
+    // 17
     pair_bookends(#(
       ["OpeningBackTick", "OpeningOrClosingBackTick"],
       ["ClosingBackTick", "OpeningOrClosingBackTick"],
       "code",
     )),
-    // 17
+    // 18
     fold_tags_into_text([
       #("OpeningOrClosingUnderscore", "_"),
       #("OpeningUnderscore", "_"),
@@ -215,42 +224,42 @@ pub fn our_pipeline() -> List(Pipe) {
     // ************************
     // cleanup $$, \(, \)
     // ************************
-    // 18
+    // 19
     prepend_append_to_text_children_of.prepend_append_to_text_children_of([
       #("$$", "$$", "MathBlock"),
       #("\\(", "\\)", "Math"),
     ]),
-    // 19
+    // 20
     fold_tag_contents_into_text.fold_tag_contents_into_text([
       "MathBlock", "Math",
     ]),
-    // 20
-    counters_substitute_and_assign_handles(),
     // 21
-    handles_generate_ids.handles_generate_ids(),
+    counters_substitute_and_assign_handles(),
     // 22
+    handles_generate_ids.handles_generate_ids(),
+    // 23
     define_article_output_path.define_article_output_path(
       #("Chapter", "/lecture-notes", "tsx", "path"),
     ),
-    // 23
-    handles_generate_dictionary.handles_generate_dictionary([#("Chapter", "path")]),
     // 24
+    handles_generate_dictionary.handles_generate_dictionary([#("Chapter", "path")]),
+    // 25
     handles_substitute.handles_substitute(),
     // more
-    // 25
+    // 26
     concatenate_text_nodes(),
     // remove_empty_lines(),
-    // 26
-    remove_vertical_chunks_with_no_text_child(),
     // 27
-    rename_tag.rename_tag(#("VerticalChunk", "Paragraph")),
+    remove_vertical_chunks_with_no_text_child(),
     // 28
-    rename_tag.rename_tag(#("p", "Paragraph")),
+    rename_tag.rename_tag(#("VerticalChunk", "Paragraph")),
     // 29
+    rename_tag.rename_tag(#("p", "Paragraph")),
+    // 30
     unwrap_tag_when_child_of_tags.unwrap_tag_when_child_of_tags(
       #("Paragraph", ["span", "code", "tt", "figcaption", "em"]),
     ),
-    // 30
+    // 31
     generate_ti2_table_of_contents.generate_ti2_table_of_contents(
       #("TOCAuthorSuppliedContent", "TOCItem", option.None),
     ),
