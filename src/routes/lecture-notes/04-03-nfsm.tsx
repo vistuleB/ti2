@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={23}
         title_gr="Nichtdeterministische Endliche Automaten"
         title_en="nfsm"
         number={4.3}
@@ -55,28 +56,20 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Ein Pfeil beschreibt also nicht unbedingt einen Zustandsübergang, der
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       geschieht
                     </i>
-                    {" "}
-                    , sondern einen, der 
-                    {" "}
+                    , sondern einen, der{" "}
                     <i>
                       möglich
                     </i>
-                    {" "}
                     ist. Formal
                     gesprochen ist \(\delta\) nun keine Funktion mehr, sondern eine
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Relation
                     </i>
-                    {" "}
                     :
                   </Paragraph>
                 </Paragraph>
@@ -89,9 +82,7 @@ const Article = () => {
                     <b>
                       (Nichtdeterministischer endlicher Automat, non-deterministic finite state machine)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Ein nichtdeterministischer endlicher Automat besteht aus
                   </Paragraph>
                   <ul>
@@ -119,33 +110,24 @@ const Article = () => {
                 </div>
                 <Paragraph>
                   Von nun an bezeichnen wir endliche Automaten auch als
-                </Paragraph>
-                <Paragraph>
-                  {" "}{" "}
+                  {" "}
                   <i>
                     deterministische
                   </i>
-                  {" "}
                   endliche Automaten, um den Unterschied zu den
                   nichtdeterministischen zu verdeutlichen. Wenn in einem deterministischen
                   endlichen Automaten \(\delta(q,x) = q'\) war, so hatte das die Bedeutung
-                </Paragraph>
-                <Paragraph>
-                  {" "}{" "}
+                  {" "}
                   <i>
                     wenn der Automat im Zustand \(q\) ist und \(x\) liest, so geht er in Zustand \(q'\) über
                   </i>
-                  {" "}
                   ; wenn nun in einem nichtdeterministischen Automaten \((q,x,q') \in
                   \delta\) gilt, so bedeutet das,
-                </Paragraph>
-                <Paragraph>
-                  {" "}{" "}
+                  {" "}
                   <i>
                     wenn der Automat im Zustand \(q\) ist und \(x\) liest, so kann er in
                     Zustand \(q'\) übergehen
                   </i>
-                  {" "}
                   . Analog zu den deterministischen Automaten definieren wir eine
                   erweiterte Zustandsübergangsrelation.
                 </Paragraph>
@@ -158,22 +140,17 @@ const Article = () => {
                     <b>
                       (Erweiterte Zuständsübergangsfunktion)
                     </b>
-                    {" "}
                     .
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
                       Für einen nichtdeterministischen endlichen Automaten \((\Sigma, Q,
                       \qstart, F, \delta)\) definieren wir die
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         erweiterte Zustandsübergangsrelation
                       </i>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       \(\hat&#123;\delta&#125;\subseteq Q \times \Sigma^* \rightarrow Q\) als die
                       Menge aller Zustand-Wort-Zustand-Tripel \((q,x_1 x_2 \dots
                       x_n,q')\), für die wir Zwischenzustände \(q = \qstart, q_1, q_2,
@@ -196,7 +173,7 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph>
                       $$ L(M) := \&#123;\alpha \in
-                      \Sigma^* \ | \ \textnormal&#123; es gibt ein&#125; q \in F \textnormal&#123; mit&#125;
+                      \Sigma^* \ | \ \textnormal&#123; es gibt ein &#125; q \in F \textnormal&#123; mit &#125;
                       \qstart \stackrel&#123;\alpha&#125;&#123;\rightarrow&#125; q \&#125; $$
                     </Paragraph>
                     <Paragraph>
@@ -224,19 +201,15 @@ const Article = () => {
                       Theorem 4.2.5
                     </a>
                     ; wir haben nämlich in jenem Beweis nirgends verwendet, dass
-                    \(\delta\) eine 
-                    {" "}
+                    \(\delta\) eine{" "}
                     <i>
                       Funktion
                     </i>
-                    {" "}
                     ist, und daher geht mit einem
-                    \(\delta\), das eine 
-                    {" "}
+                    \(\delta\), das eine{" "}
                     <i>
                       Relation
                     </i>
-                    {" "}
                     ist, alles ganz genau gleich.
                     Allerdings gilt nun auch der Umkehrschluss: zu einer regulären
                     Grammatik gibt es einen nichtdeterministischen endlichen Automaten:
@@ -260,9 +233,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Unser Automat hat als Zustandsmenge \(N\), die Menge der
                     nichtterminalen Symbole und als Startzustand \(S\), das Startsymbol
                     der Grammatik \(G\). Wir definieren \(\delta\), indem wir jeden
@@ -669,8 +640,8 @@ const Article = () => {
                     für den \(q \stackrel&#123;x&#125;&#123;\rightarrow&#125; q'\) gilt. Formal gesprochen:
                     für eine Menge \(R \subseteq Q\) von Zuständen (die, die gerade einen
                     "Punkt" haben) und ein Eingabe-Symbol \(x\) definieren wir
-                    \begin&#123;align*&#125; \Delta(R, x) := \&#123;q' \in Q \ | \ \textnormal&#123; es gibt&#125;
-                    \ q \in R \textnormal&#123; mit&#125; q \step&#123;x&#125; q'\&#125; \end&#123;align*&#125; Für ein
+                    \begin&#123;align*&#125; \Delta(R, x) := \&#123;q' \in Q \ | \ \textnormal&#123; es gibt &#125;
+                    \ q \in R \textnormal&#123; mit &#125; q \step&#123;x&#125; q'\&#125; \end&#123;align*&#125; Für ein
                     Eingabewort \(\alpha= x_1 \dots x_n\) fangen wir nun mit \(R_0 =
                     \&#123;\qstart\&#125;\) an, das entspricht dem einen roten Punkt auf dem
                     Startzustand, und berechnen dann jeweils \(R_i = \Delta(R_&#123;i-1&#125;,
@@ -683,13 +654,10 @@ const Article = () => {
                     Treten Sie einen Schritt zurück und betrachten, was wir mit \(\Delta\)
                     definiert haben: wir haben eine Zustandsübergangsfunktion definiert,
                     die nun aber nicht auf Zuständen sondern auf Zustands
-                    {" "}
                     <i>
                       mengen
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     operiert. Das heißt, im Gegensatz zu \(\delta\), das eine Funktion
                     \(\delta: Q \times \Sigma \rightarrow Q\) ist, ist \begin&#123;align*&#125;
                     \Delta: 2^Q \times \Sigma \rightarrow 2^Q \ . \end&#123;align*&#125; Wenn Sie
@@ -711,9 +679,7 @@ const Article = () => {
                       (Einen nichtdeterministischen endlichen Automaten deterministisch
                       machen).
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein nichtdeterministischer
                     Automat; dann heiße der deterministische Automat \(M' = (\Sigma, 2^Q,
                     \&#123;\qstart\&#125;, \mathcal&#123;F&#125;, \Delta)\) mit Endzustandsmenge
@@ -721,13 +687,11 @@ const Article = () => {
                     \subseteq Q \ | \ X \cap F \ne \emptyset\&#125; \end&#123;align*&#125; und
                     Zustandsübergangsfunktion \(\Delta\) definiert als \begin&#123;align*&#125;
                     \Delta : \quad&amp;2^Q \times \Sigma \rightarrow 2^Q \\&amp;(R, x) \mapsto
-                    \&#123;q' \in Q \ | \ \textnormal&#123; es gibt&#125; \ q \in R \textnormal&#123; mit&#125; q
-                    \step&#123;x&#125; q'\&#125; \end&#123;align*&#125; der 
-                    {" "}
+                    \&#123;q' \in Q \ | \ \textnormal&#123; es gibt &#125; \ q \in R \textnormal&#123; mit &#125; q
+                    \step&#123;x&#125; q'\&#125; \end&#123;align*&#125; der{" "}
                     <i>
                       Potenzmengenautomat
                     </i>
-                    {" "}
                     . Es gilt
                     \(L(M) = L(M')\).
                   </Paragraph>
@@ -759,22 +723,17 @@ const Article = () => {
                     Allerdings sehen wir, dass alle "relevanten" Zustände von \(M\) den
                     Zustand \(A\) enthalten. Dieser wird nie verschwinden. Also sehen wir,
                     dass man \(M'\) mit 16 Zuständen implementieren kann (die anderen,
-                    die, die nicht \(A\) enthalten, sind 
-                    {" "}
+                    die, die nicht \(A\) enthalten, sind{" "}
                     <i>
                       unerreichbar
                     </i>
-                    {" "}
                     ). Da 16
                     immer noch recht groß für eine Abbildung ist, nehmen wir uns die
-                    Sprache aller Wörter, deren 
-                    {" "}
+                    Sprache aller Wörter, deren{" "}
                     <i>
                       drittletztes Zeichen
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     eine 1 ist. Der nichtdeterministische Automat hierfür ist
                   </Paragraph>
                   <figure>
@@ -813,9 +772,7 @@ const Article = () => {
                       dann codiert jeder Zustand genau die letzten drei Zeichen des
                       Eingabewortes, die der Automat gelesen hat. Der Zustand \(ACD\)
                       bedeutet zum Beispiel
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         die letzten drei Zeichen waren \(110\)
                       </i>

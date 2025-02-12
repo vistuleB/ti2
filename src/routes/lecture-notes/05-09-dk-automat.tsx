@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={37}
         title_gr="Der DK-Automat"
         title_en="dk automat"
         number={5.9}
@@ -52,12 +53,10 @@ const Article = () => {
                       Algorithmus 5.8.7
                     </a>
                     zu implementieren, müssen wir den Test \(\gamma \stackrel&#123;?&#125;\in
-                    \Front(G)\) durchführen und, falls die Antwort 
-                    {" "}
+                    \Front(G)\) durchführen und, falls die Antwort{" "}
                     <i>
                       ja
                     </i>
-                    {" "}
                     ist, die
                     Blüte finden. Dies gelingt uns, indem wir die Grammatik \(\hat&#123;G&#125;\) in
                     einen endlichen Automaten umwandeln.
@@ -83,14 +82,11 @@ const Article = () => {
                   <Paragraph>
                     Diese übersetzen wir in einen verallgemeinert nichtdeterministischen
                     Automaten, bei dem jede Kante mit einem Wort $\beta \in (\Sigma \cup
-                    N)^*$, also aus 
-                    {" "}
+                    N)^*$, also aus{" "}
                     <i>
                       Terminalen
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     der Grammatik $\dk&#123;G&#125;$ beschriftet ist:
                   </Paragraph>
                 </Paragraph>
@@ -112,19 +108,15 @@ const Article = () => {
                 </figure>
                 <Paragraph>
                   <Paragraph>
-                    Nochmal: jede Kante ist mit einem 
-                    {" "}
+                    Nochmal: jede Kante ist mit einem{" "}
                     <i>
                       Terminalsymbol
                     </i>
-                    {" "}
                     beschriftet.
-                    Die Symbole $B, D, V$ sind 
-                    {" "}
+                    Die Symbole $B, D, V$ sind{" "}
                     <i>
                       Terminale
                     </i>
-                    {" "}
                     in der Grammatik
                     $\dk&#123;G&#125;$. Wenn wir $\epsilon$-Übergänge zulassen, können wir den
                     Automaten übersichtlicher gestalten und mehrere Zustände
@@ -144,13 +136,10 @@ const Article = () => {
                     klare Bedeutung: der Zustand $4$ oben zum Beispiel bedeutet, dass der
                     Knoten $X$ im Stamm mit $a, B, c, D, e$ beschriftete Kinder hat und
                     wir uns bereits entschieden haben, dass $a$, $B$ und $c$
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Blätter
                     </i>
-                    {" "}
                     sein sollen, also zum linken Rand gehören. Der
                     Übergang $\boxed&#123;4&#125; \step&#123;D&#125; \boxed&#123;5&#125;$ entspricht dann der
                     Entscheidung, auch $D$ zu einem Blatt zu machen, während $\boxed&#123;4&#125;
@@ -442,12 +431,10 @@ const Article = () => {
                     . Hier können wir diese leider nicht direkt anwenden, da der obige
                     Automat \(\epsilon\)-Übergänge hat. Wie geht das also nun? Im
                     deterministischen Automaten ist wie bei der Potenzmengenkonstruktion
-                    jeder Zustand eine 
-                    {" "}
+                    jeder Zustand eine{" "}
                     <i>
                       Menge
                     </i>
-                    {" "}
                     \(R\) von Zuständen des
                     nichtdeterministischen Automaten. Wenn wir nun in eine solche Menge
                     \(R\) einen Zustand \(q\) einfügen, dann fügen wir auch alle Zustände
@@ -561,7 +548,6 @@ const Article = () => {
                       <b>
                         (DK-Test).
                       </b>
-                      {" "}
                       Sei $G$ eine kontextfreie Grammatik ohne
                       nutzlose Nichtterminale und ei $M$ der DK-Automat für die Grammatik
                       $G$. Die Grammatik $G$ ist LR(0) genau dann, wenn folgende zwei
@@ -595,9 +581,7 @@ const Article = () => {
                       <b>
                         Beweisskizze.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Wir erinnern den Leser noch einmal an die alternative
                       Charakterisierung von LR(0)-Sprachen, nämlich :
                     </Paragraph>
@@ -615,16 +599,12 @@ const Article = () => {
                           {" "}
                           {" "}
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
-                        {" "}{" "}
+                        {" "}
+                        {" "}
                         <b>
                           (LR(0), äquivalente Formulierung).
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Eine Grammatik $G$ ist LR(0) genau dann, wenn für alle korrekten
                         Linksreduktionsschritte $\alpha \beta w \rstep&#123;&#125; \alpha Xw$ und
                         $\alpha' \beta' w' \rstep&#123;&#125; \alpha' X'w'$ gilt:
@@ -650,13 +630,10 @@ const Article = () => {
                       <Paragraph>
                         Es ist nicht schwer zu sehen, dass (DK.1) äquivalent zu Punkt 1 des
                         Lemmas ist. Wenden wir uns (DK.2) und Punkt 2 zu. Wenn Punkt 2
-                      </Paragraph>
-                      <Paragraph>
-                        {" "}{" "}
+                        {" "}
                         <i>
                           nicht
                         </i>
-                        {" "}
                         gilt, dann gibt es korrekte Reduktionsschritte
                       </Paragraph>
                     </Paragraph>

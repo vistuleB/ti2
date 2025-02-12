@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={15}
         title_gr="Berechenbarkeit und natürliche Zahlen"
         title_en="Computability NaturalNumbers"
         number={3.0}
@@ -41,47 +42,37 @@ const Article = () => {
                   Mit den Booleschen Schaltkreisen haben wir ein Modell kennengelernt, dass
                   die Berechnung von Booleschen Funkionen \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) beschreibt.
                   Wir haben mehrere Beweisen gesehen, dass es für jede Boolesche Funktion einen
-                  Schaltkreis gibt. Unsere Zielsetzung war durchweg 
-                  {" "}
+                  Schaltkreis gibt. Unsere Zielsetzung war durchweg{" "}
                   <i>
                     komplexitätstheoretisch
                   </i>
-                  {" "}
                   : wir
                   wollten möglichst kleine Schaltkreise von möglichst geringer Tiefe entwerfen.
                   Würden wir tiefer in die Schaltkreiskomplexität einsteigen, so würden wir uns fast
-                  ausschließlich mit 
-                  {" "}
+                  ausschließlich mit{" "}
                   <i>
                     negativen
                   </i>
-                  {" "}
                   Zielen beschäftigen: zu zeigen, dass es zu bestimmten
                   Funktionen eben nicht Schaltkreise mit \(S\) Gates und in Tiefe \(d\) gibt; wir
-                  würden uns zum Großteil mit 
-                  {" "}
+                  würden uns zum Großteil mit{" "}
                   <i>
                     unteren Schranken
                   </i>
-                  {" "}
                   beschäftigen.
                 </Paragraph>
               </Paragraph>
               <Paragraph>
                 <Paragraph>
-                  Boolesche Funktionen sind immer 
-                  {" "}
+                  Boolesche Funktionen sind immer{" "}
                   <i>
                     endliche
                   </i>
-                  {" "}
                   Objekte. In der Berechenbarkeitstheorie
-                  geht es im Grunde um die Frage: welche 
-                  {" "}
+                  geht es im Grunde um die Frage: welche{" "}
                   <i>
                     unendlichen
                   </i>
-                  {" "}
                   Funktionen können wir überhaupt
                   berechnen? Und was gilt denn überhaupt als zulässiges Modell für Berechenbarkeit?
                 </Paragraph>
@@ -90,12 +81,10 @@ const Article = () => {
                 <Paragraph>
                   Wenn wir nun also über Funktionen \(f: X \rightarrow Y\) auf unendlichen Mengen sprechen und uns
                   fragen,
-                  welche durch eine 
-                  {" "}
+                  welche durch eine{" "}
                   <i>
                     endliche Rechenvorschrift
                   </i>
-                  {" "}
                   beschrieben werden können, dann
                   müssen wir erst einmal entscheiden, mit welcher unendlichen Menge wir uns beschäftigen.
                   Eine Bedingung sollte zum Beispiel sein, dass wir Input und Output vollständig hinschreiben können.
@@ -109,15 +98,11 @@ const Article = () => {
                   (Wörter, Programme, Dateien, natürliche Zahlen, rationale Zahlen) als solche Bit-Strings codieren.
                   Die ersten Wissenschaftler, die sich mit Berechenbarkeit beschäftigten, kamen allerdings
                   aus der Mathematik und Logik, und ganz allgemeinen entstand die Berechenbarkeitstheorie
-                </Paragraph>
-                <Paragraph>
-                  {" "}{" "}
+                  {" "}
                   <i>
                     bevor
                   </i>
-                  {" "}{" "}
-                </Paragraph>
-                <Paragraph>
+                  {" "}
                   die ersten Rechner gebaut wurden. Daher beschäftigten sich die ersten Forscher auch mit einer
                   anderen, uns sehr vertrauten Menge:
                   \begin&#123;align*&#125;

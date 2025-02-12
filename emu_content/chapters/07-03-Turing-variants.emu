@@ -75,9 +75,7 @@
                         verschiedenen Stellen hin- und herfahren muss. Es bietet sich daher
                         an, an etwas allgemeineres Modell einer Rechenmaschine zu definieren,
                         das dann auch leichter zu programmieren ist. Dies ist die
-                        
-                        _Mehrband-Turingmaschine_
-                        .
+                        _Mehrband-Turingmaschine_.
                         
                     
                     
@@ -364,9 +362,7 @@
                         |> p
 
                             
-                            
-                            *Tip.*
-                            Verwenden Sie drei Bänder. Sei der Bandinhalt
+                            *Tip.*Verwenden Sie drei Bänder. Sei der Bandinhalt
                             \(x+y\). In einer ersten Phase kopieren Sie \(x\) auf das zweite
                             Band. In der nächsten Phase gehen Sie ans Ende von \(y\). Dann
                             addieren Sie nach den Regeln der Binäraddition. Ob "1 gemerkt" gilt
@@ -406,17 +402,13 @@
                     |> p
 
                         
-                        
                         *Berechnete Sprache, berechnete Funktion.*
-                        
                         Die Begriffe des Akzpetierens und Ablehnens definieren wir genau wie
                         für die Einband-Turingmaschinen. Eine formale Definition der
                         Konfiguration ersparen wir uns jedoch. Wenn unsere
                         Mehrband-Turingmaschine nicht nur akzeptieren / ablehnen, sondern
                         etwas
-                        
-                        _berechnen_
-                        soll, also eine Funktion \begin{align*} f :
+                        _berechnen_soll, also eine Funktion \begin{align*} f :
                         \Sigma_1 \rightarrow \Sigma_2 \ , \end{align*} dann bauen wir sie per
                         Konvention so, dass sie ein designiertes Ausgabeband hat, auf dem nach
                         Abschluss der Berechnung das Ausgabewort \(f(x)\) steht.
@@ -450,9 +442,7 @@
 
                             Theorem
                         
-                        
-                        *(Einband-Turingmaschine simuliert Mehrband-Turingmaschine)*
-                        . Sei \(M\) eine Turingmaschine mit \(k\) Bändern, wovon eines ein
+                        *(Einband-Turingmaschine simuliert Mehrband-Turingmaschine)*. Sei \(M\) eine Turingmaschine mit \(k\) Bändern, wovon eines ein
                         designiertes Ausgabeband ist. Dann gibt es eine Einband-Turingmaschine
                         \(M'\) mit folgenden Eigenschaften:
                         
@@ -490,9 +480,7 @@
                         class well container
 
                         
-                        
                         *Beweis.*
-                        
                         Der erste Trick ist, dass wir die \(k\) Bänder von \(M\)
                         "zusammenkleben" in ein neues Band, in welcher jede Zelle \(k\)
                         Symbole enthalten kann:
@@ -550,9 +538,7 @@
                             Das neue Bandalphabet ist also nicht \(\Gamma^k\) sondern \((\Gamma
                             \times \{\texttt{head}, \texttt{nohead}\} )^k\). Wo steht nun aber
                             denn der Kopf von \(M'\)? Jetzt kommt der schwierige Teil: um
-                            
-                            _einen_
-                            Schritt von \(M\) zu simulieren, muss \(M'\) von ganz
+                            _einen_Schritt von \(M\) zu simulieren, muss \(M'\) von ganz
                             links nach ganz rechts laufen und alle Informationen über die \(k\)
                             \(M\)-Köpfe sammeln. Dann von rechts nach links gehen und die
                             ausführen.
@@ -1029,59 +1015,23 @@
                         class listing container
 
                         
+                        `name: replace_b_by_c`
+                        `init: init` 
                         
-                        |> code
-
-                            name: replace_b_by_c
+                        `accept: accept` 
                         
+                        ``
+                        `init, a`
+                        `init, a, >` 
                         
-                        |> code
-
-                            init: init 
+                        ``
+                        `init, b`
+                        `init, c, >` 
                         
+                        ``
+                        `init, _` 
                         
-                        |> code
-
-                            accept: accept 
-                        
-                        
-                        |> code
-                        
-                        
-                        |> code
-
-                            init, a
-                        
-                        
-                        |> code
-
-                            init, a, > 
-                        
-                        
-                        |> code
-                        
-                        
-                        |> code
-
-                            init, b
-                        
-                        
-                        |> code
-
-                            init, c, > 
-                        
-                        
-                        |> code
-                        
-                        
-                        |> code
-
-                            init, _ 
-                        
-                        
-                        |> code
-
-                            accept, _, > 
+                        `accept, _, >` 
                     
                     
                     |> p
@@ -1089,9 +1039,7 @@
                         
                         Ungleich schwieriger ist die Aufgabe, jedes \(b\) durch ein \(bc\) zu
                         ersetzen, weil wir hier etwas
-                        
-                        _einfügen_
-                        wollen. Auf einer Einband-Turingmaschine müssen wir
+                        _einfügen_wollen. Auf einer Einband-Turingmaschine müssen wir
                         für jedes \(b\) alles, was rechts davon kommt, um eine Zelle nach
                         rechts verschieben. Meinen Quelltext finden sie in
                         
@@ -1099,9 +1047,7 @@
                             href ../code/turing machines/replace-b-by-bc.txt
 
                             replace-b-by-bc.txt
-                        Können wir unserer Turingmaschine die Funktionalität geben, eine Zelle 
-                        _einzufügen_
-                        und alles von Kopf bis zum linken Ende um
+                        Können wir unserer Turingmaschine die Funktionalität geben, eine Zelle _einzufügen_und alles von Kopf bis zum linken Ende um
                         eins nach links zu verschieben bzw. das analoge, aber nach rechts? Wir
                         sind freie Menschen, wir können definieren, was wir wollen, müssen uns
                         aber zwei Fragen stellen:
@@ -1135,9 +1081,7 @@
                         
                         In diesem Fall ahnen Sie es wohl bereits: es ist nur Syntaxzucker. Die
                         Funktionalität des
-                        
-                        _Einfügens/Verschiebens_
-                        können wir leicht mit zwei Bändern
+                        _Einfügens/Verschiebens_können wir leicht mit zwei Bändern
                         simulieren. Wir halten uns einfach an die Konvention, dass auf Band 1
                         der Kopf immer auf dem linkesten Zeichen steht und auf Band 2 der Kopf
                         jenseits des rechtesten. \begin{align*} \delta(q,x) = (r,y,\texttt{R})
@@ -1258,9 +1202,7 @@
 
                         
                         Ein fundamentale Datenstruktur beim Programmieren sind
-                        
-                        _Dictionaries_
-                        , die Key-Value-Paare speichern:
+                        _Dictionaries_, die Key-Value-Paare speichern:
                         
                     
                     
@@ -1278,7 +1220,7 @@
                         |> code
                             class pythonPrompt
 
-                            dict =&#123;"karl" : 42, "eva" : 35, "werner" : 20}
+                            dict = {"karl" : 42, "eva" : 35, "werner" : 20}
                         
                         
                         |> code
@@ -1295,6 +1237,7 @@
                         
                         |> code
                             class pythonPrompt
+                        
                     
                     
                     |> p
@@ -1334,9 +1277,7 @@
                         |> p
 
                             
-                            
-                            *Tip:*
-                            Kopieren Sie erst einmal den gesuchten
+                            *Tip:*Kopieren Sie erst einmal den gesuchten
                             Schlüssel \(k\) auf das zweite Band. Dann können Sie bequem den
                             Schlüssel \(k_i\) auf dem ersten Band mit dem auf dem zweiten Band
                             vergleichen. Wenn Sie es sich einfach machen wollen, nehmen Sie
@@ -1415,9 +1356,7 @@
                         Folge von Schritten nach \(C'\) kommen können, also \begin{align*} C =
                         C_0 \Step{} C_1 \Step{} C_2 \Step{} \dots \Step{} C' \end{align*} Wir
                         sagen auch:
-                        
-                        _Die Konfiguration \(C'\) ist von \(C\) aus erreichbar_
-                        .
+                        _Die Konfiguration \(C'\) ist von \(C\) aus erreichbar_.
                         
                     
                     
@@ -1426,15 +1365,11 @@
                         
                         Für ein Eingabewort \(x\) sie \(C_x := \texttt{start} x\) die
                         Startkonfiguration. Eine nichtdeterministische Turingmaschine
-                        
-                        _akzeptiert_
-                        \(x\), wenn es eine akzeptierende Endkonfiguration
+                        _akzeptiert_\(x\), wenn es eine akzeptierende Endkonfiguration
                         \(C_{\rm accept}\) gibt mit \begin{align*} C_x \Step{}^* C_{\rm
                         accept} \end{align*} wenn es also (mindestens) eine akzeptierende
                         Konfiguration gibt, die von \(C_x\) aus erreichbar ist. Dabei kann es
-                        
-                        _mehrere_
-                        erreichbare akzeptierende Konfigurationen geben, Es
+                        _mehrere_erreichbare akzeptierende Konfigurationen geben, Es
                         kann sogar eine ablehnende Konfiguration \(C_x \Step{}^* C_{\rm
                         reject}\) geben. Spielt keine Rolle: solange es einen Weg \(C_x
                         \Step{}^* C_{\rm accept}\) gibt, sagen wir, dass \(M\) das Eingabewort
@@ -1452,20 +1387,16 @@
 
                             Definition
                         
-                        
                         *(Akzeptieren und Entscheiden bei nichtdeterministischen Turingmaschinen).*
-                        
                         Eine nichtdeterministische Turingmaschine \(M\) akzeptiert die Sprache
-                        \(L\) wenn \begin{align*} x \in L \Longleftrightarrow M \textnormal&#123;
-                        akzeptiert&#125; x \end{align*} Für jedes \(x \not \in L\) gibt es also
+                        \(L\) wenn \begin{align*} x \in L \Longleftrightarrow M \textnormal {
+                        akzeptiert } x \end{align*} Für jedes \(x \not \in L\) gibt es also
                         keine akzeptierende Konfiguration \(C\) mit \(C_x \Rightarrow C\).
                         
                         |> p
 
                             
-                            Die Turingmaschine \(M\) 
-                            _entscheidet_
-                            die Sprache \(L\),
+                            Die Turingmaschine \(M\) _entscheidet_die Sprache \(L\),
                             wenn sie sie akzeptiert und es keine unendlich langen Ketten
                             \begin{align*} C_x \Step{} C_1 \Step{} C_2 \Step{} \dots
                             \end{align*} gibt.
@@ -1480,22 +1411,12 @@
                         
                         Oft wird händeringend versucht, zu erklären, was denn eine
                         nichtdeterministische Turingmaschine
-                        
-                        _tut_
-                        . Da lesen Sie dann beispielsweise, dass die
-                        
-                        _alle Möglichkeiten gleichzeitig ausprobiert_
-                        oder den
-                        richtigen Pfad von einem 
-                        _Engel_
-                        gesagt bekommt oder
-                        
-                        _errät_
-                        . Ich stelle mir lieber vor, dass eine
+                        _tut_. Da lesen Sie dann beispielsweise, dass die
+                        _alle Möglichkeiten gleichzeitig ausprobiert_oder den
+                        richtigen Pfad von einem _Engel_gesagt bekommt oder
+                        _errät_. Ich stelle mir lieber vor, dass eine
                         nichtdeterministische Turingmaschine gar nichts "tut" sondern
-                        
-                        _Spielregeln_
-                        definiert, wie man "ziehen" kann. Man gewinnt,
+                        _Spielregeln_definiert, wie man "ziehen" kann. Man gewinnt,
                         wenn man in einer akzeptierenden Konfiguration landet.
                         
                     
@@ -1518,8 +1439,8 @@
                         mit Preisen \(p_1, p_2, \dots, p_n\) und ein Guthaben \(g\) gegeben
                         und wollen wissen, ob wir unser Guthaben exakt ausgeben können. Ob es
                         also eine Teilmenge \(I \subseteq [n]\) von Waren gibt, die genau
-                        \(g\) kostet: \begin{align*} \textnormal{gibt es ein&#125; I \subseteq [n]
-                        \textnormal{ mit&#125; \sum_{i \in I} p_i = g \textnormal{?} \end{align*}
+                        \(g\) kostet: \begin{align*} \textnormal{gibt es ein } I \subseteq [n]
+                        \textnormal{ mit } \sum_{i \in I} p_i = g \textnormal{?} \end{align*}
                         Um das als formale Sprachen bzw. Entscheidungsproblem zu
                         formalisieren, müssen wir uns eine Codierung überlegen. Preise sind
                         ganze Zahlen (in Cent, wenn Sie so wollen), in Dezimalschreibweise
@@ -1598,67 +1519,20 @@
                         class listing container
 
                         
-                        
-                        |> code
-
-                            module SubsetSum exposing (..)
-                        
-                        
-                        |> code
-                        
-                        
-                        |> code
-                        
-                        
-                        |> code
-
-                            subsetSum : List Int -> Int -> Bool
-                        
-                        
-                        |> code
-
-                            subsetSum prices amount =
-                        
-                        
-                        |> code
-
-                            case ( prices, amount ) of
-                        
-                        
-                        |> code
-
-                            ( [], 0 ) ->
-                        
-                        
-                        |> code
-
-                            True
-                        
-                        
-                        |> code
-                        
-                        
-                        |> code
-
-                            ( x :: rest, _ ) ->
-                        
-                        
-                        |> code
-
-                            subsetSum rest amount || subsetSum rest (amount - x)
-                        
-                        
-                        |> code
-                        
-                        
-                        |> code
-
-                            ( [], _ ) ->
-                        
-                        
-                        |> code
-
-                            False
+                        `module SubsetSum exposing (..)`
+                        ``
+                        ``
+                        `subsetSum : List Int -> Int -> Bool`
+                        `subsetSum prices amount =`
+                        `case ( prices, amount ) of`
+                        `( [], 0 ) ->`
+                        `True`
+                        ``
+                        `( x :: rest, _ ) ->`
+                        `subsetSum rest amount || subsetSum rest (amount - x)`
+                        ``
+                        `( [], _ ) ->`
+                        `False`
                     
                     
                     |> p
@@ -1682,9 +1556,7 @@
 
                             Theorem
                         
-                        
                         *(Nichtdeterministische Turingmaschinen deterministischsimulieren)*
-                        
                         Sei \(M\) eine nichtdeterministische Turingmaschine. Dann gibt es eine
                         deterministische Maschine \(M'\) mit \(L(M) = L(M')\), d.h. \(M'\)
                         akzeptiert \(x\) genau dann, wenn \(M\) es akzeptiert.
@@ -1704,9 +1576,7 @@
                         class well container
 
                         
-                        
                         *Beweis.*
-                        
                         Als erstes führen wir eine kosmetische Änderung unserer
                         nichtdeterministischen Maschine durch: wir wollen, dass es für jedes
                         \((q,c)\) genau zwei Möglichkeiten gibt, also \begin{align*} (q,c)&
@@ -1787,9 +1657,7 @@
                             wir sofort ab. Wir haben nun eine deterministische Turingmaschine
                             \(M''\), die jedoch nicht das gleiche tut wie \(M\). Aber: wenn \(x
                             \in L(M)\), dann gibt es ein Wort \(z \in \{0,1\}^*\), das wir auf
-                            das zweite Band schreiben 
-                            _könnten_
-                            , so dass \(M''\) das
+                            das zweite Band schreiben _könnten_, so dass \(M''\) das
                             Eingabewort \(x\) akzeptiert. Im Gegenzug: wenn \(x \not \in L(M)\),
                             dann können wir auf das zweite Band schreiben, was wir wollen,
                             \(M''\) wird immer ablehnen.

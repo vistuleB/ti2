@@ -104,9 +104,7 @@
 
                         Da aus der Sicht unseres neuen Parsers die Rückwärtsanwendung einer Produktion
                         \(X \rightarrow \beta\), also der Schritt \(\alpha X \gamma \Leftarrow \alpha \beta \gamma\)
-                        einen 
-                        _Fortschritt_
-                        
+                        einen _Fortschritt_
                         darstellt und zeitlich auch
                         nach vorne geht, verwende ich ab jetzt ein neues Pfeilsymbol, das
                         von links nach rechts geht und daher dem in Europa üblichen Gefühlt,
@@ -125,28 +123,20 @@
 
                             Definition
                         
-                        
                         *(Reduktion und Linksreduktion)*
-                        
                         Seien
                         \(\alpha, \beta, \gamma \in (\Sigma \cup N)^*\) Wortformen und
                         \(X \rightarrow \beta\) eine Produktion. Dann schreiben wir
                         \begin{align*}
                         \alpha \beta \gamma \rstep{} \alpha X \gamma \ ,
                         \end{align*}
-                        und sagen 
-                        _\(\alpha \beta \gamma\) reduziert zu \(\alpha X \gamma\)_
-                        .
-                        Man nennt einen solchen Schritt auch einen 
-                        _Reduktionsschritt_
-                        .
+                        und sagen _\(\alpha \beta \gamma\) reduziert zu \(\alpha X \gamma\)_.
+                        Man nennt einen solchen Schritt auch einen _Reduktionsschritt_.
                         
                         |> p
 
                             
-                            Wir nennen den Schritt einen 
-                            _Linksreduktionsschritt_
-                            , wenn
+                            Wir nennen den Schritt einen _Linksreduktionsschritt_, wenn
                             rechts von \(\beta\) nur Terminale stehen. Wenn also
                             \(\gamma = w \in \Sigma^*\) und somit
                             \begin{align*}
@@ -155,11 +145,7 @@
                             
                         
                         Eine Folge von Linksreduktionsschritten nennen wir eine
-                        
-                        _Linksreduktion_
-                        . 
-                        _Links_
-                        , weil wir uns
+                        _Linksreduktion_. _Links_, weil wir uns
                         von links nach rechts in den terminalen Teil hineinarbeiten.
                         Wir werden im folgenden nur Linksreduktionsschritte betrachten und
                         sagen daher manchmal auch einfach nur Reduktionsschritt.
@@ -172,8 +158,7 @@
                     
                     |> p
 
-                        *Beobachtung:*
-                        Wenn wir
+                        *Beobachtung:*Wenn wir
                         einen Linksreduktionsschritt \(\alpha \beta w \rstep{} \alpha X w\)
                         betrachten, also
                         \begin{align*}
@@ -238,9 +223,7 @@
                         
                         ist inkorrekt. In unserer Java-Implementierung haben wir dieses Problem händisch gelöst, indem
                         wir der Regel $ND \rstep{} N$ den Vorzug vor $D \rstep{} N$ gegebene haben. Im allgemeinen
-                        müssen wir definieren, was ein 
-                        _korrekter_
-                        Linksreduktionsschritt ist. Und dann
+                        müssen wir definieren, was ein _korrekter_Linksreduktionsschritt ist. Und dann
                         überlegen, wie wir herausfinden, ob ein Linksreduktionsschritt korrekt ist. Diese Fragen
                         werden uns für den Rest dieses und des nächsten Teilkapitels beschäftigen.
                         
@@ -257,12 +240,8 @@
 
                             Definition
                         
-                        
                         *(Gültige Wortform, korrekter Reduktionsschritt)*
-                        
-                        Eine Wortform \(\gamma \in (\Sigma \cup N)^*\) heißt 
-                        _gültig_
-                        ,
+                        Eine Wortform \(\gamma \in (\Sigma \cup N)^*\) heißt _gültig_,
                         wenn es eine Rechtsableitung
                         \begin{align*}
                         S \Step{R}^* \gamma
@@ -271,9 +250,7 @@
                         \begin{align*}
                         \alpha \beta w \rstep{} \alpha X w
                         \end{align*}
-                        heißt 
-                        _korrekt_
-                        , wenn \(\alpha X w\) gültig ist.
+                        heißt _korrekt_, wenn \(\alpha X w\) gültig ist.
                         In diesem Fall ist natürlich $\alpha \beta w$ selbst gültig.
                         
                         |> p
@@ -281,9 +258,7 @@
                             
                             
                             Den Präfix $\alpha$ nennen wir eine
-                            
-                            _Front_
-                            der gültigen Wortform $\alpha \beta w$.
+                            _Front_der gültigen Wortform $\alpha \beta w$.
                             Wenn die Grammatik eindeutig ist, dann hat
                             jede gültige Wortform $\gamma$ genau eine Front, die wir
                             mit $\front(\gamma)$ bezeichnen.
@@ -310,9 +285,7 @@
                         class well container theorem
 
                         
-                        
                         *Wunsch.*
-                        
                         Ob $\alpha \beta w \rstep{} \alpha X w$ gültig ist oder nicht,
                         wollen wir allein auf Grund der Front $\alpha \beta$ entscheiden können, das heißt,
                         ohne $w$ betrachten zu müssen.
@@ -334,9 +307,7 @@
                         zum Beispiel
                         haben wir manchmal das erste Zeichen von $w$ betrachten müssen. Allerdings behalten wir erst
                         einmal obigen Wunsch als Idealziel.
-                        Um ihn zu formalisieren, fragen wir uns, wann es denn 
-                        _nicht_
-                        möglich ist,
+                        Um ihn zu formalisieren, fragen wir uns, wann es denn _nicht_möglich ist,
                         ohne Betrachten von $w$ zu eintscheiden, ob
                         $\alpha \beta w \rstep{} \alpha X w$ gültig ist.
                         
@@ -350,14 +321,11 @@
                         |> li
 
                             *Schlechter Fall 1:*
-                            
                             Es gibt für eine Wortform \(\gamma\) zwei
                             korrekte Linksreduktionsschritte:
                             \(\gamma \rstep{} \gamma'\) und
                             \(\gamma \rstep{} \gamma''\).
-                            In diesem Falle gäbe es 
-                            _zwei verschiedene_
-                            
+                            In diesem Falle gäbe es _zwei verschiedene_
                             Rechtsableitungen
                             \begin{align*}
                             S \Steps{R} \gamma' \Step{R} \gamma \Steps{R} w \in \Sigma^* \\
@@ -369,9 +337,7 @@
                                 
                                 (wir nehmen an, dass man aus jedem Nichtterminal
                                 mindestens ein Wort \(u \in \Sigma^*\) ableiten kann; andernfalls
-                                kann man solche 
-                                _nutzlosen_
-                                Nichtterminale eliminieren).
+                                kann man solche _nutzlosen_Nichtterminale eliminieren).
                                 Das Wort \(w\) hat also zwei verschiedene Ableitungsbäume.
                                 Die Grammatik ist somit mehrdeutig.
                                 Mit uneindeutigen Grammatiken beschäftigen wir uns zunächst gar nicht;
@@ -389,7 +355,6 @@
                         |> li
 
                             *Schlechter Fall 2:*
-                            
                             Der Linksreduktionsschritt
                             \begin{align*}
                             \alpha \beta w \rstep{} \alpha X w
@@ -402,9 +367,7 @@
                             |> p
 
                                 
-                                
-                                _nicht_
-                                korrekt, obwohl \(\alpha\beta w'\) eine
+                                _nicht_korrekt, obwohl \(\alpha\beta w'\) eine
                                 gültige Wortform ist.
                                 Dieser Fall ist schlecht, weil der Parser nur
                                 $\alpha \beta$ gelesen hat und somit nicht
@@ -473,9 +436,7 @@
 
                             Definition
                         
-                        
                         *(\(LR(0)\)-Grammatiken)*
-                        
                         Eine kontextfreie Grammatik heißt \(LR(0)\)-Grammatik,
                         wenn keiner der obigen schlechten Fälle eintritt.
                         Formal, wenn (1) die Grammatik eindeutig ist und (2) wenn ein
@@ -518,9 +479,7 @@
 
                                 Lemma
                             
-                            
                             *(LR(0), äquivalente Formulierung).*
-                            
                             Eine Grammatik $G$ ist LR(0) genau dann, wenn für
                             alle korrekten Linksreduktionsschritte
                             $\alpha \beta w \rstep{} \alpha Xw$ und
@@ -566,7 +525,6 @@
                         |> p
 
                             *Beweis.*
-                            
                             Der Beweis ist leider etwas mechanisch und
                             repetitiv. Aber vielleicht ist es eine
                             gute Übung, ihn genau durchzugehen, um die
@@ -601,8 +559,7 @@
                             
                             |> p
 
-                                *Beweis.*
-                                Um Punkt 1 zu zeigen,
+                                *Beweis.*Um Punkt 1 zu zeigen,
                                 nehmen wir an, dass $\alpha \beta = \alpha' \beta'$ gilt.
                                 Da $\alpha \beta w \rstep{} \alpha X w$ korrekt
                                 ist, $\alpha' \beta' w'$ eine gültige Wortform ist und
@@ -690,7 +647,6 @@
                             |> p
 
                                 *Beweis.*
-                                
                                 
                                 Als erstes zeigen wir, dass $G$ eindeutig ist; dass es
                                 also für jede gültige Wortform genau einen korrekten
@@ -926,9 +882,7 @@
                     |> p
 
                         
-                        Beide Aufgaben können mit Hilfe eines 
-                        _endlichen Automaten_
-                        ,
+                        Beide Aufgaben können mit Hilfe eines _endlichen Automaten_,
                         des DK-Automaten erledigt werden (DK steht als Abkürzung für Donald Knuth,
                         der als erstes diese Idee hatte).
                         
@@ -938,14 +892,10 @@
                         class container alert alert-warning
 
                         
-                        
-                        *Hinweis.*
-                        Was nun folgt, ist mathematisch
+                        *Hinweis.*Was nun folgt, ist mathematisch
                         recht herausfordernd. Lesen Sie daher gerne auch
                         das Kapitel 2.4 (Deterministic context free languages) im Lehrbuch
-                        
-                        _Introduction to the Theory of Computing_
-                        von Michael Sipser.
+                        _Introduction to the Theory of Computing_von Michael Sipser.
                         Meine Darstellung des doch recht schwierigen Materials fußt auf diesem
                         Kapitel, weicht aber doch stark genug von Sipser ab, so dass es
                         womöglich hilfreich ist, beides zu lesen: dieses Vorlesungsskript und

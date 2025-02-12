@@ -89,9 +89,7 @@
                     \stackrel{4}{\Longrightarrow} a * (F + T) \stackrel{6}{\Longrightarrow}
                     a * (a + T) \stackrel{4}{\Longrightarrow} a * (a + F)
                     \stackrel{6}{\Longrightarrow} a * (a + a)&amp;\end{align*} Insbesondere
-                    ist es eine 
-                    _Linksableitung_
-                    , das heißt, in jedem Schritt wird
+                    ist es eine _Linksableitung_, das heißt, in jedem Schritt wird
                     das am weitesten links stehende Nichtterminal expandiert. In der Tat
                     reicht es, nur die Nummer der angewandten Regel anzugeben (da ja klar
                     ist, welches Nichtterminal expandiert werden muss). Die obige Ableitung
@@ -103,9 +101,7 @@
 
                         
                         Betrachten wir im Folgenden ein weiteres Beispiel einer Ableitung, in
-                        diesem Falle eine 
-                        _Rechtsableitung_
-                        , in der in jedem Schritt
+                        diesem Falle eine _Rechtsableitung_, in der in jedem Schritt
                         das am weitesten rechts stehende Nichtterminal expandiert wird:
                         
                     
@@ -157,49 +153,15 @@
                         class listing container
 
                         
-                        
-                        |> code
-
-                            def treeToLeftDerivation (tree):
-                        
-                        
-                        |> code
-
-                            print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
-                        
-                        
-                        |> code
-
-                            for child in tree.children (from left ro right):
-                        
-                        
-                        |> code
-
-                            treeToLeftDerivation(child)
-                        
-                        
-                        |> code
-                        
-                        
-                        |> code
-
-                            def treeToRightDerivation (tree):
-                        
-                        
-                        |> code
-
-                            for child in tree.children (from left ro right):
-                        
-                        
-                        |> code
-
-                            treeToLeftDerivation(child)
-                        
-                        
-                        |> code
-
-                            print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
-                        
+                        `def treeToLeftDerivation (tree):`
+                        `print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
+                        `for child in tree.children (from left ro right):`
+                        `treeToLeftDerivation(child)`
+                        ``
+                        `def treeToRightDerivation (tree):`
+                        `for child in tree.children (from left ro right):`
+                        `treeToLeftDerivation(child)`
+                        `print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
                         
                     
                     

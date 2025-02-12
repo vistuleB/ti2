@@ -61,9 +61,7 @@
                     |> p
 
                         Noch spannender, als zu erkunden, was möglich ist, ist aus Sicht eines theoretischen
-                        Informatikers, zu erkunden, was 
-                        _nicht möglich_
-                        ist. Also Grenzen aufzuzeigen.
+                        Informatikers, zu erkunden, was _nicht möglich_ist. Also Grenzen aufzuzeigen.
                         Wir haben in den letzten vier Teilkapiteln gezeigt, was man mit regulären Sprachen und endlichen
                         Automaten
                         alles beschreiben kann.
@@ -179,11 +177,7 @@
                             Formal sind all diese Modelle gleich mächtig: wir können ein Modell in ein anderes umwandeln,
                             ohne
                             das die erzeugte bzw. akzeptierte Sprache sich ändern. Wenn wir nun zeigen wollen:
-                            
-                            _\(L\) ist nicht regulär_
-                            , dann können wir das 
-                            _einfachste_
-                            Modell nehmen und
+                            _\(L\) ist nicht regulär_, dann können wir das _einfachste_Modell nehmen und
                             dagegen argumentieren. Nach meinem Darfürhalten sind endliche Automaten das einfachste der
                             fünf aufgeführten
                             Modelle. Also:
@@ -282,20 +276,12 @@
                         
                         Das Argument, dass die Sprache \(\{a^nb^n \ | \ n \geq 0\}\) nicht regulär ist, war nicht allzu
                         schwer, fühlt sich
-                        aber etwas 
-                        _ad hoc_
-                        an, also für diesen Fall maßgeschneidert. Es stellt sich aber heraus,
+                        aber etwas _ad hoc_an, also für diesen Fall maßgeschneidert. Es stellt sich aber heraus,
                         dass man
-                        bei 
-                        _allen_
-                        nicht-regulären Sprachen ein solches Argument anführen kann. Die Hauptarbeit
-                        besteht nun darin, Konzepte wie 
-                        _der Automat kann \(\alpha\) nicht von \(\alpha'\)
+                        bei _allen_nicht-regulären Sprachen ein solches Argument anführen kann. Die Hauptarbeit
+                        besteht nun darin, Konzepte wie _der Automat kann \(\alpha\) nicht von \(\alpha'\)
                         unterscheiden_
-                        
-                        und 
-                        _der Automat muss aber \(\gamma\) von \(\gamma'\) unterscheiden können_
-                        zu
+                        und _der Automat muss aber \(\gamma\) von \(\gamma'\) unterscheiden können_zu
                         formalisieren.
                         
                     
@@ -312,14 +298,10 @@
 
                             Definition
                         
-                        
                         *\(M\)-Äquivalenz*
-                        
                         Sei \(M= (\Sigma, Q, \qstart, F, \delta\) ein (deterministischer) endlicher Automat. Zwei Wörter
                         \(\alpha, \beta \in \Sigma^* \) sind
-                        
-                        _\(M\)-äquivalent_
-                        , geschrieben
+                        _\(M\)-äquivalent_, geschrieben
                         \begin{align*}
                         \alpha \equiv_M \beta \ ,
                         \end{align*}
@@ -361,13 +343,9 @@
 
                             Definition
                         
-                        
                         *\(L\)-Äquivalenz*
-                        
                         Sei \(L \subseteq \Sigma^*\) eine Sprache. Zwei Wörter \(\alpha, \beta \in \Sigma^*\) sind
-                        
-                        _\(L\)-äquivalent_
-                        , geschrieben
+                        _\(L\)-äquivalent_, geschrieben
                         \begin{align*}
                         \alpha \equiv_L \beta \ ,
                         \end{align*}
@@ -397,28 +375,22 @@
                         class well container
 
                         
-                        
                         *Beweis.*
-                        
                         Nehmen wir an \(\alpha \equiv_M \beta\); es gibt also einen Zustand \(q\) mit
                         \begin{align*}
-                        \qstart \Step{\alpha} q \textnormal{ und&#125; \qstart \Step{\beta} q
+                        \qstart \Step{\alpha} q \textnormal{ und } \qstart \Step{\beta} q
                         \end{align*}
                         Des weiteren sei \(q' := \hat{\delta}(q, \gamma)\), also
                         \begin{align*}
-                        \qstart \Step{\alpha} q \Step{\gamma} q' \textnormal{ und&#125; \qstart \Step{\beta} q \Step{\gamma}
+                        \qstart \Step{\alpha} q \Step{\gamma} q' \textnormal{ und } \qstart \Step{\beta} q \Step{\gamma}
                         q'
                         \end{align*}
                         also
                         \begin{align*}
-                        \qstart \Step{\alpha\gamma} q' \textnormal{ und&#125; \qstart \Step{\beta\gamma} q'
+                        \qstart \Step{\alpha\gamma} q' \textnormal{ und } \qstart \Step{\beta\gamma} q'
                         \end{align*}
                         Abhängig davon, ob \(q' \in F\) oder nicht, sind \(\alpha\gamma\) und \(\alpha\beta\) entweder
-                        
-                        _beide in \(L\)_
-                        oder 
-                        _beide nicht in \(L\)_
-                        . In anderen Worten: \(\alpha \equiv_L
+                        _beide in \(L\)_oder _beide nicht in \(L\)_. In anderen Worten: \(\alpha \equiv_L
                         \beta\).
                         
                         |> span
@@ -455,9 +427,7 @@
 
                             Definition
                         
-                        Sei \(L \subseteq \Sigma^*\). Der 
-                        _Index von \(L\)_
-                        ist die Anzahl von Äquivalenzklassen
+                        Sei \(L \subseteq \Sigma^*\). Der _Index von \(L\)_ist die Anzahl von Äquivalenzklassen
                         der Relation
                         \(\equiv_L\), also die größtmögliche Anzahl gegenseitig nichtäquivalenter Wörter
                         \(\alpha_1, \alpha_2, \dots \in \Sigma^*\); dies ist möglicherweise unendlich.
@@ -486,9 +456,7 @@
                         class well container
 
                         
-                        
                         *Beweis.*
-                        
                         Wenn der Index von \(L\) größer wäre als \(|Q|\), dann hieße das, dass wir
                         \(k := |Q|+1\) nicht \(L\)-äquivalente \(\alpha_1, \dots, \alpha_{|Q|+1}\) finden können.
                         Sei \(q_i := \hat{\delta}(\qstart, \alpha_i)\) der Zustand, in dem der Automat landet,
@@ -589,9 +557,7 @@
                     
                     |> p
 
-                        Wie mächtig ist diese "Index-Methode"? Es stellt sich heraus, dass sie 
-                        _vollständig_
-                        ist:
+                        Wie mächtig ist diese "Index-Methode"? Es stellt sich heraus, dass sie _vollständig_ist:
                         wenn eine Sprache \(L\) endlichen Index hat, dann ist sie auch regulär.
                     
                     
@@ -615,9 +581,7 @@
                         class well container
 
                         
-                        
                         *Beweis.*
-                        
                         Eine Richtung haben wir bereits weiter oben gezeigt: wenn es zu \(L\) einen endlichen Automaten
                         mit Zustandsmenge \(Q\) gibt, dann ist der Index von \(L\) höchstens \(|Q|\).
                         
@@ -668,15 +632,9 @@
                             ein, wenn es ein \(\alpha \in A_i\) mit \(\alpha x \in A_j\) gibt.
                             Sehen Sie nun: wenn wir ein anderes \(\alpha' \in A_i\) nehmen,
                             dann gilt \(\alpha' x \equiv_L \alpha x\), also ist auch \(\alpha' x \in A_j\). In anderen
-                            Worten: es gibt nur 
-                            _eine_
-                            Produktion der Form \(i \step{x} ...\), d.h. die
+                            Worten: es gibt nur _eine_Produktion der Form \(i \step{x} ...\), d.h. die
                             Produktionen
-                            sind in der Tat ein 
-                            _Funktion_
-                            und der Automat ist 
-                            _determinisitsch_
-                            .
+                            sind in der Tat ein _Funktion_und der Automat ist _determinisitsch_.
                             Als Anfangszustand wählen wir dasjenige \(i\), für das \(\epsilon \in A_i\) gilt.
                             Akzeptierende Zustände sind diejenigen \(j\), für die \(A_j \subseteq L\) gilt. Also:
                             \begin{align*}
@@ -755,9 +713,7 @@
                             class well subtheorem
 
                             
-                            
                             *Beweis.*
-                            
                             Seien \(\alpha:= a_1 a_2 a_3 a_4, \beta := b_1 b_2 b_3 b_4 \in \{0,1\}^4\) zwei verschiedene
                             Wörter. Dann gibt es ein
                             \(1 \leq i \leq 4\) mit \(a_i = 0\) und \(b_i = 1\) (oder umgekehrt).
@@ -765,9 +721,7 @@
                             Zeichen
                             von \(\alpha\gamma\) ist 0, das viertletzte Zeichen von \(\beta\gamma\) ist 1; also
                             gilt \(\alpha\gamma \in L, \beta\gamma\not \in L\), und somit \(\alpha \not \equiv \beta\).
-                            Der Index ist also 
-                            _mindestens_
-                            16. Das er höchstens 16 ist, sehen wir, indem wir
+                            Der Index ist also _mindestens_16. Das er höchstens 16 ist, sehen wir, indem wir
                             einen
                             determinisitschen Automaten mit 16 Zuständen bauen.
                             

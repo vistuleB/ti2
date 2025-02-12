@@ -83,12 +83,8 @@
                         (2) ein Band, um den Zustand von $M$ zu speichern; (3) um den akzeptierenden Zustand $\qaccept$
                         von $M$
                         zu speichern; (4) und (5) um das Band von $M$ zu simulieren. Für letzteres hatten wir
-                        
-                        _zwei_
-                        Bänder
-                        verwendet, weil das uns erlaubte, effizient Zeichen 
-                        _einzufügen_
-                        statt einfach zu
+                        _zwei_Bänder
+                        verwendet, weil das uns erlaubte, effizient Zeichen _einzufügen_statt einfach zu
                         überschreiben.
                         Wie wir aber gesehen hatten, können wir (4) und (5) mit einem Band bewältigen, indem wir zu
                         allererst
@@ -97,9 +93,7 @@
                         durch eine
                         Markierung $\texttt{#}$. Auch das Band (3) können wir uns sparen: den akzeptierenden Zustand
                         von $M$ können wir gleich am Anfang von (1) schreiben, ohne das die Simulation dadurch
-                        nennenswert teurer würde. Wir kommen also mit 
-                        _drei_
-                        Bändern aus.
+                        nennenswert teurer würde. Wir kommen also mit _drei_Bändern aus.
                         Allerdings hatten wir uns nur überlegt, wie man
                         Einband-Turingmaschinen $M$ simuliert. Es ist aber ziemlich einfach zu sehen, dass man
                         Codierung und Simulation ganz analog für $k$-Band-Turingmaschinen durchführen kann.
@@ -153,9 +147,7 @@
                         |> p
 
                             
-                            Schritten. Das $C$ ist hier eine 
-                            _absolute Konstante_
-                            , hängt also weder von $M$ noch
+                            Schritten. Das $C$ ist hier eine _absolute Konstante_, hängt also weder von $M$ noch
                             von $\Sigma$ ab.
                             
                         
@@ -211,7 +203,7 @@
                         
                     
                     \begin{align*}
-                    \halt := L(U) =\{ \enc(M) w \ | \ M \textnormal{ akzeptiert&#125; w\} \ .
+                    \halt := L(U) =\{ \enc(M) w \ | \ M \textnormal{ akzeptiert } w\} \ .
                     \end{align*}
                     
                     |> p
@@ -229,10 +221,8 @@
                         
                         Wir haben gesehen, dass $\negdiag$ nicht entscheidbar ist. Nun wollen
                         wir eine Version von $\negdiag$, die in $t$ Schritten entscheidbar ist,
-                        aber nicht in sehr viel weniger. Dafür definieren wir uns ein 
-                        _Halteproblem mit
+                        aber nicht in sehr viel weniger. Dafür definieren wir uns ein _Halteproblem mit
                         Zeitbudget._
-                        
                         
                     
                     
@@ -246,10 +236,8 @@
                                 class numbered-title
 
                                 Definition
-                            
                             *(Zeitbudgetiertes
                             Halteproblem).*
-                            
                             Sei $\Sigma$ ein endliches Alphabet. Wir definieren die Sprache
                             \begin{align*}
                             \bhalt := \{ \enc(M) 1^b 0 x \ | \
@@ -303,7 +291,6 @@
                         |> p
 
                             *Beweis.*
-                            
                             Wir nehmen die universelle Turingmaschine $U$, die $k$-Band-Turingmaschinen simulieren kann,
                             und statten sie mit einem
                             Stoppuhrband aus. Sie hat nun also $k+3$ Bänder. Sei $n = |\enc(M)| + b + 1 + |x|$ die Länge
@@ -350,10 +337,8 @@
                                 class numbered-title
 
                                 Behauptung
-                            
                             *(nicht ganz
-                            korrekt).*
-                            $\bnegdiag \in \TIME_{k+3}(t)$.
+                            korrekt).*$\bnegdiag \in \TIME_{k+3}(t)$.
                         
                         
                     
@@ -385,9 +370,7 @@
 
                                 Definition
                             Eine Funktion $t: \N \rightarrow \N$ heißt
-                            
-                            _zeitkonstruierbar_
-                            , wenn es eine Turingmaschine gibt, die aus dem Eingabewort $1^n$
+                            _zeitkonstruierbar_, wenn es eine Turingmaschine gibt, die aus dem Eingabewort $1^n$
                             das Ausgabewort $1^{t(n)}$ berechnet und selbst maximal $O(t(n))$ Schritte läuft.
                             
                         
@@ -405,9 +388,7 @@
                                 class numbered-title
 
                                 Behauptung
-                            
-                            *(jetzt korrekt).*
-                            Sei
+                            *(jetzt korrekt).*Sei
                             $t: \N \rightarrow \N$ zeitkonstruierbar, monoton steigend und $t(n) \geq n$. Dann gilt
                             $\bnegdiag \in \TIME_{k+3}(t)$.
                             
@@ -449,7 +430,6 @@
                         |> p
 
                             *Beweis.*
-                            
                             Wir nehmen an, es gäbe eine Turingmaschine $M$, die $\bnegdiag$ in Zeit $s$ entscheidet und
                             leiten einen Widerspruch her. Sei $x := \enc(M)$. Wir wählen eine natürliche Zahl $m$,
                             deren genauen Wert wir weiter unten diskutieren und setzen $b := t(|x| + m)$. Wir fragen uns
@@ -479,7 +459,7 @@
                             Da $\lim_{n \rightarrow \infty} \frac{s(n)}{t(n)} = 0$ ist, ist auch 
                         
                         \begin{align*}
-                        \lim_{m \rightarrow \infty&#125;\frac{2C \cdot |\enc(M)| \cdot s(|x|+m)}{t(|x|+m)} = 0 \ .
+                        \lim_{m \rightarrow \infty }\frac{2C \cdot |\enc(M)| \cdot s(|x|+m)}{t(|x|+m)} = 0 \ .
                         \end{align*}
                         
                         |> p
@@ -544,7 +524,6 @@
 
                                 Theorem
                             *(Zeithierarchiesatz, Rohversion).*
-                            
                             Seien $s, t: \N \rightarrow \N$
                             zeitkonstruierbare Funktionen mit $s(n) \geq n$ und
                             $s \in o(t)$ (also $\lim_{n \rightarrow \infty} s(n)/t(n)
@@ -588,9 +567,7 @@
                                 class numbered-title
 
                                 Theorem
-                            
                             *(Zeithierarchiesatz).*
-                            
                             Seien $s, t: \N \rightarrow \N$ mit $s(n) \geq n$ und $s \log s \in o(t)$. Dann gilt
                             $\TIME(s) \subsetneq \TIME(t)$.
                         

@@ -78,9 +78,7 @@
                         class well container
 
                         
-                        
                         *Beweis.*
-                        
                         Der Beweis ist vergleichsweise einfach, weil wir die Grammatik eins zu eins in
                         Automatentransitionen übersetzen können.
                         Die Idee ist, dass die Symbole auf dem Stack, von unten nach oben gelesen, zu jedem Zeitpunkt
@@ -96,13 +94,9 @@
                         \(X \rightarrow \beta\), löscht \(X\) vom Stack und pusht \(\beta\). Der Stack ist
                         nun \(\beta \alpha\), und \(\beta \alpha \Rightarrow^* w\). Entscheidend ist der
                         Nichtdeterminismus:
-                        es 
-                        _gibt_
-                        eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
+                        es _gibt_eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
                         führt;
-                        der Automat 
-                        _kann_
-                        also diese Transition anwenden.
+                        der Automat _kann_also diese Transition anwenden.
                         
                         |> br
                         
@@ -117,9 +111,7 @@
                         (q_1, \$)&amp;\step{\epsilon} (\qend, \epsilon)
                         \end{align*}
                         Auf einen formalen Beweis, dass \(L(M) = L(G)\) ist, verzichte ich an dieser Stelle.
-                        Besser als Sipser in seinem Lehrbuch 
-                        _Introduction to the Theory of Computing_
-                        könnte
+                        Besser als Sipser in seinem Lehrbuch _Introduction to the Theory of Computing_könnte
                         ich das eh nicht.
                         
                         
@@ -167,20 +159,16 @@
                             |> tt
 
                                 [
-                            oben auf dem Stack bedeutet dann 
-                            _ich will jetzt sofort ein 
+                            oben auf dem Stack bedeutet dann _ich will jetzt sofort ein 
                             |> tt
 
                                 [
                             
-                            lesen_
-                            ;
+                            lesen_;
                             ein Nichtterminal wie \(A\) oben auf dem Stack bedeutet, dass
                             wir als nächstes ein von \(A\) ableitbares Wort, also ein \(A \rightarrow w \in
                             \Sigma^*\) lesen wollen.
-                            Um ein \(w\) mit \(A \rightarrow w\) lesen zu können, müssen wir 
-                            _sofort_
-                            ein
+                            Um ein \(w\) mit \(A \rightarrow w\) lesen zu können, müssen wir _sofort_ein
                             
                             |> tt
 
@@ -241,12 +229,8 @@
                         dass es von \(\qend\) aus keine ausgehenden Transitionen gibt;
                         sollte es also nach Erreichen von \(\qend\) noch weitere Zeichen
                         im Eingabewort geben, so kann der Automat keine weiteren Schritte durchführen,
-                        was einem 
-                        _reject_
-                        entspricht. Erreichen des Zustandes \(\qend\) führt also
-                        nur dann zu einem 
-                        _accept_
-                        , wenn dies am Ende des Wortes geschieht.
+                        was einem _reject_entspricht. Erreichen des Zustandes \(\qend\) führt also
+                        nur dann zu einem _accept_, wenn dies am Ende des Wortes geschieht.
                         
                         |> figure
                             class centered-figure well
@@ -286,7 +270,7 @@
                                     
                                     
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        src ../img/carousel-next-icon.svg
                                     
                                     
                                 
@@ -311,319 +295,372 @@
                                     |> div
                                         class item active
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/01.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/02.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/03.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/04.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/05.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/06.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/07.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/08.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/09.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/10.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/11.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/12.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/13.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/14.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/15.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/16.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/17.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/18.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/19.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/20.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/21.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/22.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/23.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/24.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/25.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/26.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/27.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/28.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/29.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/30.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/31.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/32.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/33.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/34.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/35.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/36.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/37.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/38.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/39.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/40.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/41.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/42.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/43.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/44.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/45.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/46.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/47.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/48.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/49.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/50.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/51.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/52.svg
                                     
                                     
                                     |> div
                                         class item
                                         |> img
-                                            src ../img/carousel-prev-icon.svg
+                                            style height:22em
+                                            src ../img/context-free/cfg-to-pda/53.svg
                                     
                                     
                                 
@@ -669,9 +706,7 @@
                         class well container
 
                         
-                        
                         *Beweis.*
-                        
                         Sei \(M = (\Sigma, Q, \Gamma, \qstart, F, \delta)\) der Kellerautomat.
                         Als erstes führen wir drei Schönheitsoperation durch:
                         
@@ -705,20 +740,16 @@
                                 
                                 Eine
                                 Transition
-                                der Form \((p, \epsilon) \step{a} (q, x) \) nennen wir eine 
-                                _Push-Operation_
-                                ,
+                                der Form \((p, \epsilon) \step{a} (q, x) \) nennen wir eine _Push-Operation_,
                                 eine der Form
-                                \((p, y) \step{a} (q, \epsilon) \) nennen wir eine 
-                                _Pop-Operation_
-                                .
+                                \((p, y) \step{a} (q, \epsilon) \) nennen wir eine _Pop-Operation_.
                                 Der Automat kann in diese Form gebracht werden, indem wir Zwischenzustände einführen:
                                 \begin{align*}
-                                (p, x) \step{a} (q, y) \textnormal&#123; wird ersetzt durch die zwei Transitionen&#125;
-                                (p, x) \step{a} (p', \epsilon) \textnormal&#123; und&#125;(p', \epsilon) \step{a} (q, y) \\
-                                (p, \epsilon) \step{a} (q,\epsilon) \textnormal&#123; wird ersetzt durch die zwei
-                                Transitionen&#125;
-                                (p, \epsilon) \step{a} (p', \bigstar) \textnormal&#123; und&#125;(p', \bigstar) \step{a} (q,
+                                (p, x) \step{a} (q, y) \textnormal { wird ersetzt durch die zwei Transitionen }
+                                (p, x) \step{a} (p', \epsilon) \textnormal { und }(p', \epsilon) \step{a} (q, y) \\
+                                (p, \epsilon) \step{a} (q,\epsilon) \textnormal { wird ersetzt durch die zwei
+                                Transitionen }
+                                (p, \epsilon) \step{a} (p', \bigstar) \textnormal { und }(p', \bigstar) \step{a} (q,
                                 \epsilon) \ .
                                 \end{align*}
                                 Im zweiten Falle pushen wir also pro Forma ein ansonsten irrelevantes Symbol
@@ -853,9 +884,7 @@
                         \begin{align*}
                         a^m b (a|b)^* b a^m
                         \end{align*}
-                        Diese ist 
-                        _nicht_
-                        regulär, da der Präfix und der Suffix aus \(a\) die gleiche
+                        Diese ist _nicht_regulär, da der Präfix und der Suffix aus \(a\) die gleiche
                         Länge \(m\) haben müssen.
                         Wir bauen zuerst einen Kellerautomaten und übersetzen den dann entsprechend dem Schema
                         aus dem letzten Theorem in eine Grammatik. Dann vergleichen wir die entstandene
@@ -926,7 +955,9 @@
                             
                             
                             |> img
-                                src ../img/carousel-prev-icon.svg
+                                style height:10em
+                                src ../img/context-free/pda-to-cfg-diagram.svg
+                                loading lazy
                             
                             
                         
@@ -947,7 +978,9 @@
                                 
                                 
                                 |> img
-                                    src ../img/carousel-prev-icon.svg
+                                    style height:10em
+                                    src ../img/context-free/pda-to-cfg-diagram-stack.svg
+                                    loading lazy
                                 
                                 
                             
@@ -974,32 +1007,32 @@
                             Stack-Symbole sind \(a, b, x\). Suchen wir also zuerst nach Paaren von Transitionen,
                             die \(a\) pushen und poppen.
                             \begin{align*}
-                            (q_1, \epsilon) \step{a} (q_1, a) \textnormal{ und&#125;
-                            (q_3, a) \step{a} (q_3, \epsilon) \textnormal{ ergibt die Produktion&#125;
+                            (q_1, \epsilon) \step{a} (q_1, a) \textnormal{ und }
+                            (q_3, a) \step{a} (q_3, \epsilon) \textnormal{ ergibt die Produktion }
                             A_{13} \rightarrow a A_{13} a
                             \end{align*}
                             Das waren die einzigen Transitionen, in denen \(a\) gepusht und gepoppt wird.
                             Betrachten wir als nächstes das Stacksymbol \(b\):
                             \begin{align*}
-                            (q_1, \epsilon) \step{b} (q_2, b) \textnormal{ und&#125;
-                            (q_2, b) \step{a} (q_3, \epsilon) \textnormal{ ergibt die Produktion&#125;
+                            (q_1, \epsilon) \step{b} (q_2, b) \textnormal{ und }
+                            (q_2, b) \step{a} (q_3, \epsilon) \textnormal{ ergibt die Produktion }
                             A_{13} \rightarrow b A_{22} b
                             \end{align*}
                             Nun zu den Transitionen mit Stacksymbol \(x\). Da gibt es zwei
                             Push-Transitionen und eine Pop-Transition, also zwei Paare:
                             \begin{align*}
-                            (q_2, \epsilon) \step{a} (q'_2, x) \textnormal&#123; und&#125;
-                            (q'_2, x) \step{\epsilon} (q_2, \epsilon) \textnormal{ ergibt die Produktion&#125;
+                            (q_2, \epsilon) \step{a} (q'_2, x) \textnormal { und }
+                            (q'_2, x) \step{\epsilon} (q_2, \epsilon) \textnormal{ ergibt die Produktion }
                             A_{22} \rightarrow a A_{2'2'} \\
-                            (q_2, \epsilon) \step{b} (q'_2, x) \textnormal&#123; und&#125;
-                            (q'_2, x) \step{\epsilon} (q_2, \epsilon) \textnormal{ ergibt die Produktion&#125;
+                            (q_2, \epsilon) \step{b} (q'_2, x) \textnormal { und }
+                            (q'_2, x) \step{\epsilon} (q_2, \epsilon) \textnormal{ ergibt die Produktion }
                             A_{22} \rightarrow b A_{2'2'} \\
                             \end{align*}
                             Und schlussendlich die mit Stacksymbol $. Da gibt es eine Push- und eine
                             Pop-Transition:
                             \begin{align*}
-                            (\qstart, \epsilon) \step{\epsilon} (q_1, \$) \textnormal&#123;und&#125;
-                            (q_3, \$) \step{\epsilon} (\qend, \epsilon) \textnormal{ ergibt die Produktion&#125;
+                            (\qstart, \epsilon) \step{\epsilon} (q_1, \$) \textnormal {und }
+                            (q_3, \$) \step{\epsilon} (\qend, \epsilon) \textnormal{ ergibt die Produktion }
                             A_{04} \rightarrow A_{13} \\
                             \end{align*}
                             

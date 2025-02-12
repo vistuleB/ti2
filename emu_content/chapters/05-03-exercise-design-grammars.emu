@@ -192,14 +192,8 @@
                             Übungsaufgabe
                         
                         Schreiben Sie eine kontextfreie Grammatik für die Sprache aller
-                        "korrekten" URLs; also Folgen von mindestens zwei 
-                        _Labels_
-                        , die
-                        durch 
-                        |> code
-
-                            .
-                        separiert sind. Sie können den "Regelvorschlag"
+                        "korrekten" URLs; also Folgen von mindestens zwei _Labels_, die
+                        durch `.`separiert sind. Sie können den "Regelvorschlag"
                         ganz links unten in der App reinkopieren, um automatisch Regeln für alphanumerische
                         Zeichen zu bekommen (allerdings verschlechtert das die Laufzeit; ich habe erstmal
                         gar nicht auf Effizienz geachtet).
@@ -208,11 +202,7 @@
                         |> p
 
                             
-                            Geben Sie das Eingabewort 
-                            |> code
-
-                                a.aaaaa.aaaa.aaaa.aaaa.aaaa
-                            ein. Wie
+                            Geben Sie das Eingabewort `a.aaaaa.aaaa.aaaa.aaaa.aaaa`ein. Wie
                             sieht Ihr Backtrack-Baum aus? Hat er viele Sackgassen? Können Sie Ihre Grammatik
                             so abändern, dass sie zwar noch die gleiche Sprache erzeugt, aber keine / nur wenige
                             Sackgassen hat?
@@ -287,9 +277,7 @@
 
                             Übungsaufgabe
                         
-                        
                         *(Challenge)*
-                        
                         Geben Sie die Grammatik hier ein:
                         
                         |> pre
@@ -300,15 +288,9 @@
                             S -> ;
                         
                         Überlegen Sie, was diese "bedeutet". Sie sehen, die Grammatik ist
-                        nicht eindeutig. Das Wort 
-                        |> code
-
-                            [([()(
-                        hat zwei
+                        nicht eindeutig. Das Wort `[([()(`hat zwei
                         verschiedene Ableitungsbäume. Können Sie eine äquivalente
-                        
-                        _eindeutige_
-                        Grammatik schreiben?
+                        _eindeutige_Grammatik schreiben?
                         
                     
                     
@@ -323,12 +305,8 @@
 
                             Übungsaufgabe
                         
-                        
                         *(Challenge)*
-                        
-                        Die folgende Grammatik hat User 
-                        _babou_
-                        
+                        Die folgende Grammatik hat User _babou_
                         auf 
                         |> a
                             href https://cstheory.stackexchange.com/questions/22520/example-of-context-free-grammar-that-triggers-exponential-behaviour-without-memo
@@ -345,9 +323,7 @@
                             X -> "a" | "a" X | "a" X X;
                         
                         Das ist aber keine Kunst, da die Grammatik uneindeutig ist.
-                        Können Sie eine 
-                        _eindeutige_
-                        Grammatik angebene, die ähnlich
+                        Können Sie eine _eindeutige_Grammatik angebene, die ähnlich
                         exponentielles Verhalten zeigt? Exponentiell heißt: mit jedem
                         zusätlichen Zeichen des Eingabewortes kann die Größe des
                         Backtrack-Baumes um einen Faktor \(R \gt 1\) wachsen.
@@ -365,12 +341,8 @@
 
                             Übungsaufgabe
                         
-                        
-                        *(Super-Challenge; ich hab selbst keine Lösung)*
-                        .
-                        Finden Sie eine kontextfreie Sprache \(L\), für die 
-                        _jede_
-                        Grammatik,
+                        *(Super-Challenge; ich hab selbst keine Lösung)*.
+                        Finden Sie eine kontextfreie Sprache \(L\), für die _jede_Grammatik,
                         die \(L\) erzeugt, unter exponentiell großen Backtrack-Bäumen leidet.
                         
                     

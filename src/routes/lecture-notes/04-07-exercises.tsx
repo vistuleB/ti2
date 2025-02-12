@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={27}
         title_gr="Übungsaufgaben"
         title_en="exercises"
         number={4.7}
@@ -75,12 +76,10 @@ const Article = () => {
                         <a href="02-02-examples-of-equipotent-sets.html">
                           Kapitel 2.2
                         </a>
-                        als 
-                        {" "}
+                        als{" "}
                         <i>
                           eine
                         </i>
-                        {" "}
                         natürliche Zahl $\bar&#123;\alpha&#125;$ codieren können.
                         Mittels dieser Codierung wird eine Sprache $L \subseteq \Sigma^*$
                         zu einer Funktion
@@ -191,16 +190,12 @@ const Article = () => {
                       <b>
                         (Challenge).
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
-                      Betrachten wir eine Variante des endlichen Automaten, bei der
-                      der Automat 
                       {" "}
+                      Betrachten wir eine Variante des endlichen Automaten, bei der
+                      der Automat{" "}
                       <i>
                         zurückspulen
                       </i>
-                      {" "}
                       kann. Der Automat hat also
                       einen "Lesekopf", mit dem er auf einem Zeichen des Eingabewortes steht
                       (anfangs auf dem ersten). In jedem Schritt kann er nach rechts oder links
@@ -214,8 +209,7 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Wenn z.B. $\delta(q, x) = (r, L)$ ist, dann heißt das: 
-                    {" "}
+                    Wenn z.B. $\delta(q, x) = (r, L)$ ist, dann heißt das:{" "}
                     <i>
                       wenn Du im
                       Zustand $q$ bist und der Lesekopf ein $x$ liest, dann wechsle in den
@@ -233,12 +227,10 @@ const Article = () => {
                     Die von so einem Automaten $M$ akzeptierte Sprache $L(M)$ ist dann definiert als
                     die Menge aller Wörter $\alpha$, die $M$ in einen akzeptierenden
                     Zustand bringen. Beachten Sie, dass $M$ möglicherweise in eine Endlosschleife
-                    geraten kann. In diesem Falle ist $\alpha$ 
-                    {" "}
+                    geraten kann. In diesem Falle ist $\alpha${" "}
                     <i>
                       kein
                     </i>
-                    {" "}
                     Wort in $L(M)$.
                   </Paragraph>
                 </Paragraph>
@@ -294,9 +286,7 @@ const Article = () => {
                     <b>
                       (Challange.)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Sei $L$ die Sprache aus der vorherigen Aufgabe und
                     $\bar&#123;L&#125; = \Sigma^* \setminus L$ ihr Komplement. $\bar&#123;L&#125;$ ist also
                     die Sprache aller Wörter, in denen jedes Zeichen aus $\Sigma$ mindestens

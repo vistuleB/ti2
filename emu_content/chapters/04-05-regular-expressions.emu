@@ -64,9 +64,7 @@
                         Wir werden nun eine weitere Weise finden, reguläre Sprachen zu beschreiben: neben regulären
                         Grammatik (ob normal, erweitert, eingeschränkt),
                         endlichen Automaten und nichtdeterministischen endlichen Automaten
-                        gibt es noch die 
-                        _regulären Ausdrücke_
-                        . Dies wird wahrscheinlich von allen
+                        gibt es noch die _regulären Ausdrücke_. Dies wird wahrscheinlich von allen
                         Beschreibungsweise die sein, mit der Sie in der Praxis
                         am ehesten in Berührung kommen.
                         Wir haben bereits in 
@@ -124,21 +122,15 @@
                         style text-align:center
 
                         
-                        
                         *Frage:*
-                        
-                        Können 
-                        _alle_
-                        regulären Sprachen nach diesem Baukastenprinzip erstellt werden?
+                        Können _alle_regulären Sprachen nach diesem Baukastenprinzip erstellt werden?
                         
                     
                     
                     |> p
 
                         
-                        Damit diese Frage überhaupt die Chance hat, mit 
-                        _ja_
-                        beantwortet zu werden, müssen wir
+                        Damit diese Frage überhaupt die Chance hat, mit _ja_beantwortet zu werden, müssen wir
                         "Atome" zur Verfügung stellen, mit denen wir beginnen können. Daher:
                         
                     
@@ -183,8 +175,7 @@
                             
                             |> li
 
-                                *Atome.*
-                                \(\emptyset\) ist ein regulärer Ausdruck und beschreibt die
+                                *Atome.*\(\emptyset\) ist ein regulärer Ausdruck und beschreibt die
                                 Sprache \(\emptyset\).
                                 \(\epsilon\) ist ein regulärer Ausdruck und beschreibt die Sprache \(\{\epsilon\}\).
                                 Jedes einzelne Zeichen \(x \in \Sigma\) ist ein regulärer Ausdruck und
@@ -194,8 +185,7 @@
                             
                             |> li
 
-                                *Alternative.*
-                                Wenn \(R_1, R_2\) reguläre Ausdrücke über \(\Sigma\) sind
+                                *Alternative.*Wenn \(R_1, R_2\) reguläre Ausdrücke über \(\Sigma\) sind
                                 und die Sprachen \(L_1\) und \(L_2\) beschreiben, so ist
                                 \((R_1 | R_2)\) ein regulärer Ausdruck und beschreibt die Sprache
                                 \(L_1 \cup L_2\) (die regulär ist, wie wir in 
@@ -210,9 +200,7 @@
                             |> li
 
                                 
-                                
-                                *Konkatenation.*
-                                \((R_1R_2)\) ist ein regulärer Ausdruck, der
+                                *Konkatenation.*\((R_1R_2)\) ist ein regulärer Ausdruck, der
                                 die Sprache \(L_1 \circ L_2\) beschreibt (die auch wiederum regulär ist).
                                 Der Deutlichkeit halber schreiben wir auch manchmal \(R_1 \circ R_2\).
                                 
@@ -221,9 +209,7 @@
                             |> li
 
                                 
-                                
-                                *Kleenesche Hülle.*
-                                Wenn \(R\) ein regulärer Ausdruck ist und die Sprache
+                                *Kleenesche Hülle.*Wenn \(R\) ein regulärer Ausdruck ist und die Sprache
                                 \(L\) beschreibt,
                                 dann ist \((R^*)\) ein regulärer Ausdruck und beschreibt die Sprache \(L^*\).
                                 
@@ -236,9 +222,7 @@
                             
                             Weil in der Praxis neben \(L^*\), also beliebig langen, möglicherweise leeren Folgen von
                             \(L\)-Wörtern wir
-                            oft 
-                            _nichtleere_
-                            Folgen wollen,
+                            oft _nichtleere_Folgen wollen,
                             führen wir die Abkürzung \(R^+\) für \(R (R^*)\) ein und bezeichnen die beschriebene Sprache
                             \(L \circ L^*\) kurzerhand als \(L^+\).
                             
@@ -253,13 +237,7 @@
                         In konkreten fällen lassen gerne die Klammerung weg, wenn keine Verwechslungsgefahr besteht.
                         Auch
                         gehen wir davon aus, dass die Operatoren die Präzedenz \(^*\) vor \(\circ\) vor \(|\) haben (wie
-                        
-                        _hoch_
-                        vor 
-                        _Punkt_
-                        vor 
-                        _Strich_
-                        in der Arithmetik), sodass beispielsweise
+                        _hoch_vor _Punkt_vor _Strich_in der Arithmetik), sodass beispielsweise
                         der Ausdruck \( a^*b|c^*\) die Bedeutung von \((((a^*)b)(c^*))\) hat, genauso wie wir
                         in der Arithmetik \(a^2 b + c^3\) statt \( (((a^2)b) + c^3) \) schreiben.
                         
@@ -269,9 +247,7 @@
 
                         
                         Die von den atomaren Ausdrücken beschriebenen Sprachen sind alle regulär, da sie alle
-                        
-                        _endliche Sprachen_
-                        sind.
+                        _endliche Sprachen_sind.
                         Dank unserer Vorarbeit aus 
                         |> a
                             href ./04-01-regular-grammars.html#baukasten
@@ -318,24 +294,10 @@
 
                             Beispiel
                         
-                        Nehmen wir die Sprache der Wörter der Form 
-                        |> code
-
-                            bla:bla:blu.xyz-12-ab.b:x
-                        aus dem
+                        Nehmen wir die Sprache der Wörter der Form `bla:bla:blu.xyz-12-ab.b:x`aus dem
                         letzten Kapitel. Sie erinnern sich:
-                        eine endliche Folge von 
-                        _Labels_
-                        , wo ein Label eine nichtleere Folge von Blöcken ist, die
-                        entweder 
-                        |> code
-
-                            :
-                        oder durch 
-                        |> code
-
-                            -
-                        separiert sind, wobei innerhalb eines Labels
+                        eine endliche Folge von _Labels_, wo ein Label eine nichtleere Folge von Blöcken ist, die
+                        entweder `:`oder durch `-`separiert sind, wobei innerhalb eines Labels
                         immer nur ein
                         Separatortyp vorkommen darf, und wobei ein Block eine nichtleere Folge von alphanumerischen
                         Zeichen ist (wir haben uns dann auf den Buchstaben \(a\) beschränkt).
@@ -353,16 +315,8 @@
                             \begin{align*}
                             B : = a^+
                             \end{align*}
-                            Für ein Label müssen wir uns entscheiden, ob wir die Blöcke mit 
-                            |> code
-
-                                :
-                            oder
-                            
-                            |> code
-
-                                -
-                            separieren; wir
+                            Für ein Label müssen wir uns entscheiden, ob wir die Blöcke mit `:`oder
+                            `-`separieren; wir
                             erhalten den regulären Ausdruck \(T\) für Labels ist also
                             \begin{align*}
                             T := B ({:}B)^* | B (\text{-}B)^*
@@ -378,20 +332,8 @@
                             haben, während \(T'\) eher
                             die Arbeitsweise des determinisitschen Automaten reflektiert (wir lesen erst einmal einen
                             Block und erst, wenn wir zum ersten mal auf
-                            
-                            |> code
-
-                                :
-                            oder 
-                            |> code
-
-                                -
-                            stoßen, entscheiden wir uns für den "Typ" des Labels).
-                            Schlussendlich ist ein Wort in der Sprache eine mit 
-                            |> code
-
-                                .
-                            separierte Folge von
+                            `:`oder `-`stoßen, entscheiden wir uns für den "Typ" des Labels).
+                            Schlussendlich ist ein Wort in der Sprache eine mit `.`separierte Folge von
                             Labels, also:
                             \begin{align*}
                             R := T ({.}T)^*
@@ -448,27 +390,20 @@
 
                                 Enter words to be matched, one per line
                             
-                            
-                            |> code
-
-                                aaaaa:aa:aaaa:a
-                            
+                            `aaaaa:aa:aaaa:a`
                             
                             |> code
                                 class terminalOutput
 
                                 true
                             
-                            
-                            |> code
-
-                                aaa:aa:
-                            
+                            `aaa:aa:`
                             
                             |> code
                                 class terminalOutput
 
                                 false
+                            
                         
                         
                         |> p
@@ -493,21 +428,9 @@
                             Übungsaufgabe
                         
                         In der Praxis gibt es bei reguläre Ausdrücken viele Abkürzung, so beschreibt
-                        
-                        |> code
-
-                            [a-z]
-                        beispielsweise die Menge aller Kleinbuchstaben,
-                        
-                        |> code
-
-                            [aoeiuy]
-                        beschreibt die Menge \{a,o,e,i,u,y\} etc.
-                        Der reguläre Ausdruck 
-                        |> code
-
-                            [a-z]*[aeiuoy][a-z]*
-                        beschreibt also die
+                        `[a-z]`beispielsweise die Menge aller Kleinbuchstaben,
+                        `[aoeiuy]`beschreibt die Menge \{a,o,e,i,u,y\} etc.
+                        Der reguläre Ausdruck `[a-z]*[aeiuoy][a-z]*`beschreibt also die
                         Menge aller Wörter, die mindesten einen Vokal enthalten.
                         Lesen Sie hierfür unter Anderem
                         
@@ -586,10 +509,8 @@
                     |> p
 
                         
-                        Wir paraphrasieren hier den Beweis aus Michael Sipsers 
-                        _Introduction to the Theory of
-                        Computation_
-                        .
+                        Wir paraphrasieren hier den Beweis aus Michael Sipsers _Introduction to the Theory of
+                        Computation_.
                         
                     
                     
@@ -597,9 +518,7 @@
                         class well container
 
                         
-                        
                         *Beweis.*
-                        
                         Zunächst skizzieren wir die Beweisidee. Da \(L\) regulär ist, gibt es einen
                         nichtdeterministischen endlichen
                         Automaten \(M\), die \(L\) akzeptiert. Wir werden nun \(M\) Schritt für Schritt in einen
@@ -631,10 +550,8 @@
                         end}\)
                         hinausgehen.
                         All dies lässt sich leicht verwirklichen, wenn wir reguläre Ausdrücke als
-                        Kantenbeschriftung zulassen. Wir nennen so einen Automaten einen 
-                        _verallgemeinerten
-                        nichtdeterministischen endlichen Automaten (VNEA)_
-                        .
+                        Kantenbeschriftung zulassen. Wir nennen so einen Automaten einen _verallgemeinerten
+                        nichtdeterministischen endlichen Automaten (VNEA)_.
                         
                         |> figure
 
@@ -664,9 +581,7 @@
 
                                 Definition
                             
-                            
                             *(Verallgemeinerter nichtdeterministischer endlicher Automat, VNEA).*
-                            
                             Ein VNEA besteht aus einem Alphabet \(\Sigma\), einer Zustandsmenge \(Q\), einen
                             Startzustand \(\qstart \in Q\), einem
                             akzeptierenden Zustand \(q_{\rm end} \in Q \setminus \{\qstart\}\), einer
@@ -739,8 +654,8 @@
                             
                             
                             |> img
-                                style height:14em
-                                src ../img/finite-state-automata/to-regex/nea-to-vnea.svg
+                                style height:10em
+                                src ../img/finite-state-automata/to-regex/eliminate-B.svg
                                 loading lazy
                             
                             
@@ -754,9 +669,7 @@
                             schreiben wir einfach \(R_1R_3\) anstatt \(R_1 R_2^* R_3\); falls der Übergang \(A
                             \step{R_4} B\) nicht
                             existieren sollte , lassen wir das \(R_4 | \) im rechten Bild einfach weg.
-                            (Sipser führt hier den eleganten Formalismus ein, zu verlangen, dass 
-                            _jedes_
-                            Paar
+                            (Sipser führt hier den eleganten Formalismus ein, zu verlangen, dass _jedes_Paar
                             durch
                             eine Kante verbunden ist und würde fehlende Kanten einfach mit dem regulären Ausdruck
                             \(\emptyset\) beschriften.)
@@ -782,8 +695,8 @@
                             
                             
                             |> img
-                                style height:14em
-                                src ../img/finite-state-automata/to-regex/nea-to-vnea.svg
+                                style height:2.5em
+                                src ../img/finite-state-automata/to-regex/nvea-final.svg
                                 loading lazy
                             
                             
@@ -817,11 +730,7 @@
                     
                     |> p
 
-                        Hier sehen Sie den ganzen Ablauf an unserer 
-                        |> code
-
-                            aaaa:a:aaa.aa-aa
-                        -Sprache:
+                        Hier sehen Sie den ganzen Ablauf an unserer `aaaa:a:aaa.aa-aa`-Sprache:
                     
                     
                     
@@ -844,8 +753,8 @@
                                 
                                 
                                 |> img
-                                    style height:14em
-                                    src ../img/finite-state-automata/to-regex/nea-to-vnea.svg
+                                    style height:20em
+                                    src ../img/finite-state-automata/to-regex/nfsm-to-regex-carpet.svg
                                     loading lazy
                                 
                                 
@@ -873,8 +782,8 @@
                             
                             
                             |> img
-                                style height:14em
-                                src ../img/finite-state-automata/to-regex/nea-to-vnea.svg
+                                style height:10em
+                                src ../img/finite-state-automata/nfsm-example-02.svg
                                 loading lazy
                             
                             

@@ -77,9 +77,7 @@
                             Algorithmus 5.8.7
                         
                         zu implementieren, müssen wir den Test \(\gamma \stackrel{?}\in
-                        \Front(G)\) durchführen und, falls die Antwort 
-                        _ja_
-                        ist, die
+                        \Front(G)\) durchführen und, falls die Antwort _ja_ist, die
                         Blüte finden. Dies gelingt uns, indem wir die Grammatik \(\hat{G}\) in
                         einen endlichen Automaten umwandeln.
                         
@@ -108,9 +106,7 @@
                         
                         Diese übersetzen wir in einen verallgemeinert nichtdeterministischen
                         Automaten, bei dem jede Kante mit einem Wort $\beta \in (\Sigma \cup
-                        N)^*$, also aus 
-                        _Terminalen_
-                        
+                        N)^*$, also aus _Terminalen_
                         der Grammatik $\dk{G}$ beschriftet ist:
                         
                     
@@ -148,12 +144,8 @@
                     |> p
 
                         
-                        Nochmal: jede Kante ist mit einem 
-                        _Terminalsymbol_
-                        beschriftet.
-                        Die Symbole $B, D, V$ sind 
-                        _Terminale_
-                        in der Grammatik
+                        Nochmal: jede Kante ist mit einem _Terminalsymbol_beschriftet.
+                        Die Symbole $B, D, V$ sind _Terminale_in der Grammatik
                         $\dk{G}$. Wenn wir $\epsilon$-Übergänge zulassen, können wir den
                         Automaten übersichtlicher gestalten und mehrere Zustände
                         zusammenfassen:
@@ -180,9 +172,7 @@
                         klare Bedeutung: der Zustand $4$ oben zum Beispiel bedeutet, dass der
                         Knoten $X$ im Stamm mit $a, B, c, D, e$ beschriftete Kinder hat und
                         wir uns bereits entschieden haben, dass $a$, $B$ und $c$
-                        
-                        _Blätter_
-                        sein sollen, also zum linken Rand gehören. Der
+                        _Blätter_sein sollen, also zum linken Rand gehören. Der
                         Übergang $\boxed{4} \step{D} \boxed{5}$ entspricht dann der
                         Entscheidung, auch $D$ zu einem Blatt zu machen, während $\boxed{4}
                         \step{\epsilon} \dk{D}$ der Entscheidung entspricht, $D$ zu einem
@@ -241,9 +231,9 @@
                     
                     \begin{align*} \begin{array}{l|l} \textnormal{Produktion in $G$}&
                     \textnormal{Produktion in $\hat{G}$} \\ \hline % % S \rightarrow aS&
-                    &#123;\dk{S}} \rightarrow \dkt{a} \dk{S}\\&amp;{\dk{S}} \rightarrow \dkt{a}
+                    {\dk{S}} \rightarrow \dkt{a} \dk{S}\\&amp;{\dk{S}} \rightarrow \dkt{a}
                     \dkt{S}\\ \hline % S \rightarrow B&amp;{\dk{S}} \rightarrow \dk{B}\\&
-                    &#123;\dk{S}} \rightarrow \dkt{B}\\ \hline % B \rightarrow aBb&amp;{\dk{B}}
+                    {\dk{S}} \rightarrow \dkt{B}\\ \hline % B \rightarrow aBb&amp;{\dk{B}}
                     \rightarrow \dkt{a}\dk{B}\\&{\dk{B}} \rightarrow
                     \dkt{a}\dkt{B}\dkt{b}\\ \hline % B \rightarrow ab&amp;{\dk{B}} \rightarrow
                     \dkt{ab} \end{array} \end{align*}
@@ -647,9 +637,7 @@
                         . Hier können wir diese leider nicht direkt anwenden, da der obige
                         Automat \(\epsilon\)-Übergänge hat. Wie geht das also nun? Im
                         deterministischen Automaten ist wie bei der Potenzmengenkonstruktion
-                        jeder Zustand eine 
-                        _Menge_
-                        \(R\) von Zuständen des
+                        jeder Zustand eine _Menge_\(R\) von Zuständen des
                         nichtdeterministischen Automaten. Wenn wir nun in eine solche Menge
                         \(R\) einen Zustand \(q\) einfügen, dann fügen wir auch alle Zustände
                         \(q'\) hinzu, zu denen es einen \(\epsilon\)-Übergang \(q
@@ -850,9 +838,7 @@
 
                                 Theroem
                             
-                            
-                            *(DK-Test).*
-                            Sei $G$ eine kontextfreie Grammatik ohne
+                            *(DK-Test).*Sei $G$ eine kontextfreie Grammatik ohne
                             nutzlose Nichtterminale und ei $M$ der DK-Automat für die Grammatik
                             $G$. Die Grammatik $G$ ist LR(0) genau dann, wenn folgende zwei
                             Bedingungen gelten:
@@ -902,9 +888,7 @@
                         |> p
 
                             
-                            
                             *Beweisskizze.*
-                            
                             Wir erinnern den Leser noch einmal an die alternative
                             Charakterisierung von LR(0)-Sprachen, nämlich :
                             
@@ -927,10 +911,7 @@
                                     Lemma 5.7.5, noch einmal
                                 *
                                 *
-                                
-                                
                                 *(LR(0), äquivalente Formulierung).*
-                                
                                 Eine Grammatik $G$ ist LR(0) genau dann, wenn für alle korrekten
                                 Linksreduktionsschritte $\alpha \beta w \rstep{} \alpha Xw$ und
                                 $\alpha' \beta' w' \rstep{} \alpha' X'w'$ gilt:
@@ -970,9 +951,7 @@
                             
                             Es ist nicht schwer zu sehen, dass (DK.1) äquivalent zu Punkt 1 des
                             Lemmas ist. Wenden wir uns (DK.2) und Punkt 2 zu. Wenn Punkt 2
-                            
-                            _nicht_
-                            gilt, dann gibt es korrekte Reduktionsschritte
+                            _nicht_gilt, dann gibt es korrekte Reduktionsschritte
                             
                         
                         \begin{align*} \alpha \beta w \rstep{} \alpha X w \\ \alpha \beta

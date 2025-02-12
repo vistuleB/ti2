@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={42}
         title_gr="Turingmaschinen: Formale Definition und Beispiele"
         title_en="Turing machines definition"
         number={7.1}
@@ -39,29 +40,23 @@ const Article = () => {
                 </h1>
                 <Paragraph>
                   <Paragraph>
-                    Eine Turingmaschine besteht aus einem 
-                    {" "}
+                    Eine Turingmaschine besteht aus einem{" "}
                     <i>
                       Band
                     </i>
-                    {" "}
                     , das in Zellen unterteilt ist und
                     in beide Richtungen unbegrenzt ist,
-                    und einem 
-                    {" "}
+                    und einem{" "}
                     <i>
                       Schreib-Lese-Kopf
                     </i>
-                    {" "}
                     .
                     Dieser befindet sich in jedem Schritt auf einer
                     Zelle. Wie auch der endliche Automat oder der
-                    Kellerautomat hat die Turingmaschine einen internen 
-                    {" "}
+                    Kellerautomat hat die Turingmaschine einen internen{" "}
                     <i>
                       Zustand
                     </i>
-                    {" "}
                     .
                     In jedem Schritt liest die Maschine das Zeichen, das sich in der aktuellen
                     Zelle des Bandes befindet (dort, wo der Kopf steht). Abhängig vom gelesenen Zeichen
@@ -84,7 +79,7 @@ const Article = () => {
                     href="#turing-machine-example-01"
                     class="right carousel-control-next-icon">
                     <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
+                      <img src="../img/carousel-next-icon.svg" />
                     </div>
                   </a>
                   <div
@@ -123,28 +118,44 @@ const Article = () => {
                       style="display:inline-block"
                       class="carousel-inner">
                       <div class="item active">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:15em"
+                          src="../img/turing-machines/exampe-1/01.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:15em"
+                          src="../img/turing-machines/exampe-1/02.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:15em"
+                          src="../img/turing-machines/exampe-1/03.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:15em"
+                          src="../img/turing-machines/exampe-1/04.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:15em"
+                          src="../img/turing-machines/exampe-1/05.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:15em"
+                          src="../img/turing-machines/exampe-1/06.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:15em"
+                          src="../img/turing-machines/exampe-1/07.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:15em"
+                          src="../img/turing-machines/exampe-1/08.svg" />
                       </div>
                     </div>
                   </div>
@@ -153,52 +164,38 @@ const Article = () => {
                   <Paragraph>
                     Sie können sich das Band auch als Magnetband vorstellen, das nach vorn oder nach hinten gespult
                     wird, anstatt dass der Kopf sich bewegt. Am Anfang steht auf dem Band das
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Eingabewort
                     </i>
-                    {" "}
                     und der Kopf auf dem ersten Symbol dieses Wortes. Die Turingmaschine
                     wendet
                     nun ihre Regeln an, bis Sie einen
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Endzustand
                     </i>
-                    {" "}
-                    erreicht. Bei 
-                    {" "}
+                    erreicht. Bei{" "}
                     <i>
                       Entscheidungsproblemen
                     </i>
-                    {" "}
                     , wo uns nur
                     eine Ja/Nein-Antwort interessiert, wird die Antwort durch den Entzustand angegeben:
-                    der Zustand $\qaccept$ entspricht einem 
-                    {" "}
+                    der Zustand $\qaccept$ entspricht einem{" "}
                     <i>
                       Ja
                     </i>
-                    {" "}
                     , der Zustand
-                    $\qreject$ entspricht einem 
-                    {" "}
+                    $\qreject$ entspricht einem{" "}
                     <i>
                       Nein
                     </i>
-                    {" "}
                     . Diese zwei Endzustände reichen im Allgemeinen
                     aus. Wenn wir von der Maschine eine komplexere Ausgabe als Ja/Nein erwarten, so
-                    betrachten wir als 
-                    {" "}
+                    betrachten wir als{" "}
                     <i>
                       Ausgabe der Turingmaschine
                     </i>
-                    {" "}
                     den Inhalt des Bandes zu dem
                     Zeitpunkt, da die Maschine den Zustand $\qaccept$ erreicht.
                     Was brauchen wir also, um so eine Turingmaschine
@@ -215,7 +212,6 @@ const Article = () => {
                       <b>
                         (Turingmaschine).
                       </b>
-                      {" "}
                       Eine
                       Turingmaschine besteht aus folgenden Elementen:
                     </Paragraph>
@@ -251,12 +247,10 @@ const Article = () => {
                       <tt>
                         L
                       </tt>
-                      für 
-                      {" "}
+                      für{" "}
                       <i>
                         gehe eine Zelle nach links
                       </i>
-                      {" "}
                       steht,
                       <tt>
                         R
@@ -265,12 +259,10 @@ const Article = () => {
                       <tt>
                         S
                       </tt>
-                      für 
-                      {" "}
+                      für{" "}
                       <i>
                         stay
                       </i>
-                      {" "}
                       , also die Anweisung, den Kopf
                       nicht zu bewegen.
                     </li>
@@ -303,39 +295,36 @@ const Article = () => {
                     </Paragraph>
                   </h3>
                   Sie haben nun wohl bereits eine vage Vorstellung, was eine Turingmaschine macht.
-                  Versuchen wir, es noch weiter zu formalisieren. Um den 
-                  {" "}
+                  Versuchen wir, es noch weiter zu formalisieren. Um den{" "}
                   <i>
                     Gesamtzustand
                   </i>
-                  {" "}
                   der
                   Turingmaschine zu beschreiben, also eine vollständige Momentaufnahme, reicht
                   nicht der aktuelle innere Zustand \(q\); wir brauchen auch den Bandinhalt und insbesondere
                   die Position, an der sich der Kopf befindet. Das alles zusammen nennt
-                  man die 
-                  {" "}
+                  man die{" "}
                   <i>
                     Konfiguration der Turingmaschine
                   </i>
-                  {" "}
                   . Wir wollen sie mit
                   uns bereits bekannten mathematischen Begriffen beschreiben.
                 </Paragraph>
                 <figure>
-                  <img src="../img/carousel-prev-icon.svg" />
+                  <img
+                    style="height:20em"
+                    src="../img/turing-machines/configuration.svg"
+                    loading="lazy" />
                 </figure>
                 <div class="well container theorem">
                   <Paragraph>
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Die 
-                    {" "}
+                    Die{" "}
                     <i>
                       Konfiguration
                     </i>
-                    {" "}
                     einer Turingmaschine ist ein Element in
                     \(\Gamma^* \times Q \times \Gamma^*\), also
                     \begin&#123;align*&#125;
@@ -354,12 +343,10 @@ const Article = () => {
                       \end&#123;align
                     </b>
                     &#125;
-                    Der 
-                    {" "}
+                    Der{" "}
                     <i>
                       Zustand einer Konfiguration
                     </i>
-                    {" "}
                     \(C = uqv\) ist \(q\), also der innere
                     Zustand, in dem sich die Maschine gerade befindet.
                     Wir bezeichnen mit $\state(C)$. Formal:
@@ -368,26 +355,20 @@ const Article = () => {
                     uqv&amp;\mapsto q \ .
                     \end&#123;align*&#125;
                     Eine Konfiguration \(C\) ist
-                    eine 
-                    {" "}
+                    eine{" "}
                     <i>
                       akzeptierende Endkonfiguration
                     </i>
-                    {" "}
                     wenn $\state(C) = \qaccept$ ist;
-                    eine 
-                    {" "}
+                    eine{" "}
                     <i>
                       ablehnende Endkonfiguration
                     </i>
-                    {" "}
                     , wenn $\state(C) = \qreject$ ist.
-                    In beiden Fällen ist \(C\) eine 
-                    {" "}
+                    In beiden Fällen ist \(C\) eine{" "}
                     <i>
                       Endkonfiguration
                     </i>
-                    {" "}
                     .
                   </Paragraph>
                 </div>
@@ -395,14 +376,12 @@ const Article = () => {
                   <Paragraph>
                     Wenn also das Eingabewort \(w \in \Sigma^*\) und $\qstart$ der Startzustand ist, dann ist
                     \begin&#123;align*&#125;
-                    C
+                    C_&#123;\rm start&#125; = \qstart&#123;&#125; w
+                    \end&#123;align*&#125;
+                    die{" "}
                     <i>
-                      &#123;\rm start&#125; = \qstart&#123;&#125; w
-                      \end&#123;align*&#125;
-                      die 
-                      {" "}
+                      Startkonfiguration
                     </i>
-                    Startkonfiguration_
                     .
                   </Paragraph>
                 </Paragraph>
@@ -412,7 +391,6 @@ const Article = () => {
                     <b>
                       Die Rolle des \(\square\)-Symbols
                     </b>
-                    {" "}
                     . Das Band der Turingmaschine ist ja
                     unendlich.
                     Um eine Momentaufnahme dennoch als endliches Objekt beschreiben zu können,
@@ -429,7 +407,10 @@ const Article = () => {
                     Momentaufnahmen
                   </Paragraph>
                   <figure>
-                    <img src="../img/carousel-prev-icon.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/turing-machines/configuration-two.svg"
+                      loading="lazy" />
                   </figure>
                   <Paragraph>
                     können also beide mit der Konfiguration \(aAAaq\#ba\) beschrieben werden, obwohl
@@ -450,7 +431,10 @@ const Article = () => {
                     </Paragraph>
                   </Paragraph>
                   <figure>
-                    <img src="../img/carousel-prev-icon.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/turing-machines/two-stacks.svg"
+                      loading="lazy" />
                   </figure>
                   <Paragraph>
                     <Paragraph>
@@ -479,9 +463,7 @@ const Article = () => {
                     <b>
                       (erweiterte Zustandsübergangsfunktion)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Die erweiterte Zustandsübergangsfunktion einer Turingmaschine ist
                     \begin&#123;align*&#125;
                     \hat&#123;\delta&#125; : \mathcal&#123;C&#125; \rightarrow \mathcal&#123;C&#125; \
@@ -560,13 +542,10 @@ const Article = () => {
                       dann ist auch $\delta^&#123;(j)&#125;(C)$ eine, für jedes $j \geq i$, weil
                       wir $\hat&#123;\delta&#125;(C') = C'$ für jede Endkonfiguration $C'$ definiert haben.
                       Es spielt also in der obigen Formulierung
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         wenn es ein $i$ gibt
                       </i>
-                      {" "}
                       keine Rolle, welches solche $i$ wir wählen.
                     </Paragraph>
                   </Paragraph>
@@ -600,36 +579,27 @@ const Article = () => {
                 </h2>
                 <Paragraph>
                   <Paragraph>
-                    Ein 
-                    {" "}
+                    Ein{" "}
                     <i>
                       Entscheidungsproblem
                     </i>
-                    {" "}
                     ist eine Funktion \(P : \Sigma^* \rightarrow
-                    \&#123;\texttt&#123;true&#125;, \texttt&#123;false&#125;\&#125;\), beispielsweise: 
-                    {" "}
+                    \&#123;\texttt&#123;true&#125;, \texttt&#123;false&#125;\&#125;\), beispielsweise:{" "}
                     <i>
                       gegeben ein Wort,
                       stellt dieses Wort ein korrektes Java-Programm dar?
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
-                    oder 
                     {" "}
+                    oder{" "}
                     <i>
                       gegeben eine Zahl in Dezimalschreibweise, ist dies
                       eine Primzahl?
                     </i>
-                    {" "}
                     Eine äquivalente Sichtweise ist die
-                    eines Entscheidungsproblems als 
-                    {" "}
+                    eines Entscheidungsproblems als{" "}
                     <i>
                       Sprache
                     </i>
-                    {" "}
                     \(L \subseteq \Sigma^*\).
                     Wir identifizieren \(L\) hier mit der Menge aller Wörter \(x\) mit
                     \(P(x) = \texttt&#123;true&#125;\). Wenn wir es mit einem Entscheidungsproblem
@@ -649,9 +619,9 @@ const Article = () => {
                     \begin&#123;align*&#125;
                     f_M(x) = \begin&#123;cases&#125;
                     \texttt&#123;accept&#125;&amp;\textnormal&#123; falls $\state(\hat&#123;M&#125;(x)) = \qaccept$, wenn also $\hat&#123;M&#125;(x)$
-                    eine akzeptierende Endkonfiguration ist,&#125;\\
+                    eine akzeptierende Endkonfiguration ist, &#125;\\
                     \texttt&#123;reject&#125;&amp;\textnormal&#123; falls $\state(\hat&#123;M&#125;(x)) = \qreject$ ,&#125;\\
-                    \texttt&#123;undefined&#125;&amp;\textnormal&#123; falls $\hat&#123;M&#125;(x) = \texttt&#123;undefined&#125;$&#125;
+                    \texttt&#123;undefined&#125;&amp;\textnormal&#123; falls $\hat&#123;M&#125;(x) = \texttt&#123;undefined&#125;$ &#125;
                     \end&#123;cases&#125;
                     \end&#123;align*&#125;
                   </Paragraph>
@@ -665,17 +635,12 @@ const Article = () => {
                     <b>
                       (Turingmaschine entscheidet eine Sprache)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Eine Turingmaschine \(M\)
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       entscheidet
                     </i>
-                    {" "}
                     die Sprache \(L \subseteq \Sigma^*\) wenn
                   </Paragraph>
                   <ol>
@@ -691,12 +656,10 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Eine Sprache \(L\) heißt 
-                      {" "}
+                      Eine Sprache \(L\) heißt{" "}
                       <i>
                         entscheidbar
                       </i>
-                      {" "}
                       , wenn
                       es eine Turingmaschine gibt, die sie entscheidet.
                     </Paragraph>
@@ -711,15 +674,11 @@ const Article = () => {
                     <b>
                       (Turingmaschine akzeptiert eine Sprache)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
-                    Eine Turingmaschine \(M\) 
                     {" "}
+                    Eine Turingmaschine \(M\){" "}
                     <i>
                       akzeptiert
                     </i>
-                    {" "}
                     die Sprache
                     \(L \subseteq \Sigma^*\) wenn
                     \begin&#123;align*&#125;
@@ -731,12 +690,10 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Eine Sprache \(L \subseteq \Sigma^*\) heißt 
-                      {" "}
+                      Eine Sprache \(L \subseteq \Sigma^*\) heißt{" "}
                       <i>
                         semi-entscheidbar
                       </i>
-                      {" "}
                       ,
                       wenn es eine Turingmaschine \(M\) gibt, die \(L\) akzeptiert.
                     </Paragraph>
@@ -760,13 +717,11 @@ const Article = () => {
                     berechnen. Mit einer Turingmaschine heißt das einfach, dass
                     bei Eingabe \(x \in \Sigma_1^*\) die Turingmaschine in einer
                     akzeptierenden Endkonfiguration \(C\) landet, und in \(C\) steht
-                    dann \(g(x)\) auf dem Band. Formal müssen wir noch klären, was 
-                    {" "}
+                    dann \(g(x)\) auf dem Band. Formal müssen wir noch klären, was{" "}
                     <i>
                       \(g(x)\) steht
                       auf dem Band
                     </i>
-                    {" "}
                     bedeutet.
                   </Paragraph>
                 </Paragraph>
@@ -779,9 +734,7 @@ const Article = () => {
                     <b>
                       (Turingmaschine berechnet eine Funktion)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Seien \(\Sigma_1, \Sigma_2\) zwei endliche Alphabete und
                     \begin&#123;align*&#125;
                     g : \Sigma
@@ -794,12 +747,10 @@ const Article = () => {
                       \end&#123;align
                     </b>
                     &#125;
-                    eine Funktion. Eine Turingmaschine \(M\) 
-                    {" "}
+                    eine Funktion. Eine Turingmaschine \(M\){" "}
                     <i>
                       berechnet die Funktion \(g\)
                     </i>
-                    {" "}
                     , wenn
                   </Paragraph>
                   <ol>
@@ -861,9 +812,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Die Idee ist, dass wir eine Grammatik \(G\) schreiben, die
                     "in umgekehrter Reihenfolge" läuft, also
                     \begin&#123;align*&#125;
@@ -922,12 +871,10 @@ const Article = () => {
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    Als nächstes definieren wir 
-                    {" "}
+                    Als nächstes definieren wir{" "}
                     <i>
                       Aufräumregeln
                     </i>
-                    {" "}
                     : wenn \(q = \texttt&#123;accept&#125;\), dann
                     können wir jedes Zeichen löschen:
                     \begin&#123;align*&#125;
@@ -946,7 +893,7 @@ const Article = () => {
                     &#125;
                     Als letzte Regel definieren wir:
                     \begin&#123;align*&#125;
-                    \texttt&#123;\$&#125;\ \texttt&#123;accept&#125;\ \texttt&#123;.&#125; \rightarrow S
+                    \texttt&#123;\$ &#125;\ \texttt&#123;accept&#125;\ \texttt&#123;.&#125; \rightarrow S
                     \end&#123;align*&#125;
                     Wir haben nun eine Grammatik mit den folgenden Eigenschaften:
                     \begin&#123;align*&#125;
@@ -956,7 +903,7 @@ const Article = () => {
                     </i>
                     2 \dots x
                     <i>
-                      n) = \texttt&#123;accept&#125;&amp;\textnormal&#123; genau dann, wenn&#125;
+                      n) = \texttt&#123;accept&#125;&amp;\textnormal&#123; genau dann, wenn &#125;
                       \texttt&#123;\$&#125; \texttt&#123;start&#125; x
                     </i>
                     1 x

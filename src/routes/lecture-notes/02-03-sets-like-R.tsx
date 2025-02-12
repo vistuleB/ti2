@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={11}
         title_gr="Mengen, die so groß wie $\R$ sind"
         title_en="sets like R"
         number={2.3}
@@ -43,42 +44,29 @@ const Article = () => {
                     unendlich sind, also gleichmächtig mit $\N$. Hier werden wir nun
                     erkunden, welche Mengen gleichmächtig mit $\R$ sind. In der
                     mathematischen Fachsprache sagt man: sie haben die
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Kardinalität des Kontinuums
                     </i>
-                    {" "}
                     . Das Wort
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Kardinalität
                     </i>
-                    {" "}
                     steht hier für
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Anzahl der Elemente
                     </i>
-                    {" "}
                     (bzw. den Größenbegriff bei unendlichen
-                    Mengen), und 
-                    {" "}
+                    Mengen), und{" "}
                     <i>
                       Kontinuum
                     </i>
-                    {" "}
-                    steht für 
-                    {" "}
+                    steht für{" "}
                     <i>
                       die reellen Zahlen
                     </i>
-                    {" "}
                     .
                     Im nächsten Kapitel werden wir zeigen, dass es "echt mehr" reelle
                     Zahlen gibt als natürliche; dass also $\R$ nicht abzählbar ist. Aber
@@ -104,9 +92,7 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Wir können eine Bijektion explizit hinschreiben:
                       </Paragraph>
                     </Paragraph>
@@ -211,9 +197,7 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Die Beweisidee ist einfach, allerdings gehen erst einmal ein paar
                         Dinge schief, die man wieder flicken muss. Da laut
                       </Paragraph>
@@ -350,7 +334,6 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}
                         Mithilfe von
                       </Paragraph>
                       <Paragraph>
@@ -382,12 +365,10 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       <Paragraph>
-                        Wir müssen dieses Folgenpaar nun in 
-                        {" "}
+                        Wir müssen dieses Folgenpaar nun in{" "}
                         <i>
                           eine
                         </i>
-                        {" "}
                         Folge codieren.
                         Ganz klar:
                       </Paragraph>
@@ -538,9 +519,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Wir zeigen den ersten Punkt. Sei $0 \leq z \lt 1/2$ und $(x,y) =
                       f^&#123;-1&#125;(z)$. Dann hat $z$ die Binärdarstellung $z =
                       (0.00z
@@ -673,9 +652,7 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Da $\R \approx \cuben$ gilt, reicht es, zu zeigen, dass
                       </Paragraph>
                     </Paragraph>
@@ -748,9 +725,7 @@ const Article = () => {
                         <b>
                           Zweiter Beweis.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Um zu zeigen, dass $\R^\N \approx \R$ gilt, rechnen wir:
                       </Paragraph>
                     </Paragraph>
@@ -782,22 +757,18 @@ const Article = () => {
                       ist die Multiplikation: die Zahlenmultiplikation $a \cdot b$ hat als
                       mengentheoretisches Analog das Cartesische Produkt $A \times B$, die
                       Menge aller Paare $(x,y)$ mit $x \in A, y \in B$. Die Exponentiation
-                      $a^b$ hat als Analog $A^B$, die Menge aller 
-                      {" "}
+                      $a^b$ hat als Analog $A^B$, die Menge aller{" "}
                       <i>
                         Funktionen
                       </i>
-                      {" "}
                       $\phi:
                       B \rightarrow A$. Was ist das Analog zur Addition? Die Vereinigung $A
                       \cup B$ wäre zu kurz gegriffen, weil ja zum Beispiel $\&#123;1,2,3\&#125; \cup
                       \&#123;4,5\&#125;$ fünf Elemente hat, $\&#123;1,2,3\&#125; \cup \&#123;1,2\&#125;$ aber nur drei.
-                      Das "richtige" Analog ist die 
-                      {" "}
+                      Das "richtige" Analog ist die{" "}
                       <i>
                         disjunkte Vereinigung
                       </i>
-                      {" "}
                       $A \uplus
                       B$, die die Elemente von $B$ erst einmal "markiert", um sie von denen
                       von $A$ unterscheidbar zu machen. Somit wäre also $\&#123;1,2,3\&#125; \uplus
@@ -820,7 +791,6 @@ const Article = () => {
                       <b>
                         (mit Kardinalzahlen rechnen)
                       </b>
-                      {" "}
                       . Es gelten die
                       üblichen Rechenregeln:
                     </Paragraph>
@@ -912,7 +882,6 @@ const Article = () => {
                       <b>
                         Hinweis.
                       </b>
-                      {" "}
                       Die Beweise sind alle nicht wirklich
                       schwierig. Sie müssen nur aufpassen, dass Sie sich nicht in der
                       Notation verlieren.
@@ -945,33 +914,26 @@ const Article = () => {
                     <Paragraph>
                       Die Elemente von $2^\N$, also Teilmengen $A \subseteq \N$, sind nach
                       Inklusion geordnet: $A \subseteq B$. Somit ist $\left(2^&#123;\N&#125;,
-                      \subseteq\right)$ eine Partialordnung. Eine 
-                      {" "}
+                      \subseteq\right)$ eine Partialordnung. Eine{" "}
                       <i>
                         Kette
                       </i>
-                      {" "}
                       in einer
                       Partialordnung $(X, \preceq)$ ist eine Menge $Z$, in der alle Elemente
                       paarweise vergleichbar sind. In diesem konkreten Beispiel heißt das:
                       $Z \subseteq 2^&#123;\N&#125;$ und für alle $A, B \in Z$ gilt $A \subseteq B$
                       oder $B \subseteq A$. Erinnern Sie sich: $A$ und $B$ sind hier Mengen
                       natürlicher Zahlen, und $Z$ ist eine Menge von Mengen natürlicher
-                      Zahlen. Eine 
-                      {" "}
+                      Zahlen. Eine{" "}
                       <i>
                         Antikette
                       </i>
-                      {" "}
                       in einer Partialordnung $(X,\preceq)$
                       ist eine Teilmenge $Z \subseteq X$, in der je zwei Elemente
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         unvergleichbar
                       </i>
-                      {" "}
                       sind. In diesem Beispiel heißt das: $Z
                       \subseteq 2^N$, und für alle $A, B \in Z$ mit $A \ne B$ gilt $A \not
                       \subseteq B$ und $B \not \subseteq A$. Hier ist ein Beispiel für eine
@@ -1008,13 +970,10 @@ const Article = () => {
                     Wenn wir ganz links noch $\&#123;0\&#125;$ hinschreiben und ganz rechts noch
                     $\N$, dann haben wir ein weiteres, eventuell ungewohntes Phänomen: das
                     Element $\&#123;0\&#125;$ in der Kette hat keinen eindeutigen
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Nachfolger
                     </i>
-                    {" "}
                     . Egal, welches $A$ mit $\&#123;0\&#125; \subsetneq A$ Sie
                     wählen, sie finden immer noch ein $B$ dazwischen: $\&#123;0\&#125; \subsetneq B
                     \subsetneq A$.
@@ -1030,14 +989,11 @@ const Article = () => {
                       <b>
                         (Dichte Partialordnung)
                       </b>
-                      {" "}
                       Eine Partialordnung
-                      $(X,\preceq)$ heißt 
-                      {" "}
+                      $(X,\preceq)$ heißt{" "}
                       <i>
                         dicht
                       </i>
-                      {" "}
                       , wenn es für alle $x,z \in X$ mit
                       $x \prec z$ ein $y \in X$ gibt mit $x \prec y \prec z$.
                     </Paragraph>

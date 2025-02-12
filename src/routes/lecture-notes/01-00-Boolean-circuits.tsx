@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={1}
         title_gr="Boolesche Schaltkreise"
         title_en="Boolean circuits"
         number={1.0}
@@ -35,18 +36,14 @@ const Article = () => {
               </h1>
               <Paragraph>
                 Boolesche Schaltkreise sind ein idealisiertes Modell echter elektronischer Schaltkreise.
-                Als primitive Bausteine haben wir Boolesche Operatoren, auch 
-                {" "}
+                Als primitive Bausteine haben wir Boolesche Operatoren, auch{" "}
                 <i>
                   Gatter
                 </i>
-                {" "}
-                (englisch 
-                {" "}
+                (englisch{" "}
                 <i>
                   gates
                 </i>
-                {" "}
                 )
                 genannt, die mehrere (typischerweise ein oder zwei)
                 Signale zu einem Ausgabe-Signal kombinieren. Die Signale können nur zwei Werte annehmen:
@@ -64,53 +61,29 @@ const Article = () => {
               </figure>
               <Paragraph>
                 Von links nach rechts sind dies: das Und-Gatter (
-                {" "}
                 <i>
                   and-gate
                 </i>
-                {" "}
                 ), Oder-Gatter (
-                {" "}
                 <i>
                   or-gate
                 </i>
-                {" "}
                 ) und
                 das
                 Nicht-Gatter (
-                {" "}
                 <i>
                   not-gate
                 </i>
-                {" "}
                 ). In C, C++ und Java kennen Sie diese Booleschen Operatoren als
-              </Paragraph>
-              <Paragraph>
-                <code>
-                  &&
-                </code>
-                ,{" "}
-                <code>
-                  ||
-                </code>
-                und{" "}
-                <code>
-                  !
-                </code>
-                . Was diese Operatoren
-              </Paragraph>
-              <Paragraph>
-                {" "}{" "}
+                `&&`, `||`und `!`. Was diese Operatoren
+                {" "}
                 <i>
                   tun
                 </i>
-                {" "}
-                , können wir als 
-                {" "}
+                , können wir als{" "}
                 <i>
                   Wahrheitstabelle
                 </i>
-                {" "}
                 darstellen.
                 Wir listen alle Kombinationen für \(x,y\) auf und schreiben in jede Zeile
                 auch den Wert, den der Operator ausgibt.
@@ -156,10 +129,11 @@ const Article = () => {
               </Paragraph>
               <figure>
                 <img
-                  style="height:10em"
-                  src="../img/circuits/and-or-not-gates.svg"
+                  style="height:13em"
+                  src="../img/circuits/if-then-else-gate.svg"
                   loading="lazy" />
                 <figcaption>
+                  {" "}{" "}
                   <code>
                     if
                   </code>
@@ -176,12 +150,10 @@ const Article = () => {
               </figure>
               <Paragraph>
                 <Paragraph>
-                  Jeder Schaltkreis 
-                  {" "}
+                  Jeder Schaltkreis{" "}
                   <i>
                     berechnet
                   </i>
-                  {" "}
                   eine Funktion (formale Definition weiter unten).
                   Informell gesprochen, wenn wir Wahrheitswerte (0/1) in die Input-Gates reinstecken,
                   dann fließen diese durch den Schaltkreis und werden von den AND/OR/NOT-Gates entsprechend
@@ -190,8 +162,8 @@ const Article = () => {
               </Paragraph>
               <figure>
                 <img
-                  style="height:10em"
-                  src="../img/circuits/and-or-not-gates.svg"
+                  style="height:13em"
+                  src="../img/circuits/if-then-else-gate-with-values.svg"
                   loading="lazy" />
                 <figcaption>
                   Das if-then-else-Gate mit einer konkreten Belegung und einem Ausgabewert
@@ -217,17 +189,15 @@ const Article = () => {
                     Ein \(n\)-faches XOR-Gate
                     <figure>
                       <img
-                        style="height:10em"
-                        src="../img/circuits/and-or-not-gates.svg"
+                        style="height:5em"
+                        src="../img/circuits/n-fold-xor.svg"
                         loading="lazy" />
                       ,
                     </figure>
-                    welches 1 ausgibt, wenn eine 
-                    {" "}
+                    welches 1 ausgibt, wenn eine{" "}
                     <i>
                       ungerade
                     </i>
-                    {" "}
                     Anzahl seiner Inputs
                     auf 1 stehen.
                   </li>
@@ -247,27 +217,23 @@ const Article = () => {
               <Paragraph>
                 <Paragraph>
                   Je nach Kontext kann es hilfreich sein, Gatter mit beliebig vielen Inputs zuzulassen, beispielsweise
-                  \(x_1 \wedge x_2 \wedge \dots \wedge x_n\) als 
-                  {" "}
+                  \(x_1 \wedge x_2 \wedge \dots \wedge x_n\) als{" "}
                   <i>
                     ein
                   </i>
-                  {" "}
                   Gate darzustellen:
                 </Paragraph>
                 <figure>
                   <img
                     style="height:10em"
-                    src="../img/circuits/and-or-not-gates.svg"
+                    src="../img/circuits/and-fan-in-n.svg"
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  Man bezeichnet dies als AND-Gate mit einem 
-                  {" "}
+                  Man bezeichnet dies als AND-Gate mit einem{" "}
                   <i>
                     Fan-in
                   </i>
-                  {" "}
                   von \(n\). Das "normale" AND-Gate
                   hat einen Fan-in von 2.
                   Mit \(\vee\)- und \(\oplus\)-Gates geht das ganz analog. Für andere Gates (wie zum Beispiel
@@ -277,7 +243,7 @@ const Article = () => {
                 <figure>
                   <img
                     style="height:10em"
-                    src="../img/circuits/and-or-not-gates.svg"
+                    src="../img/circuits/and-n-fold-linear-depth.svg"
                     loading="lazy" />
                 </figure>
                 <Paragraph>
@@ -286,7 +252,7 @@ const Article = () => {
                 <figure>
                   <img
                     style="height:10em"
-                    src="../img/circuits/and-or-not-gates.svg"
+                    src="../img/circuits/and-n-fold-log-depth.svg"
                     loading="lazy" />
                 </figure>
               </Paragraph>
@@ -294,12 +260,10 @@ const Article = () => {
                 <Paragraph>
                   Schaltkreise, wie wir sie in diesem Kapitel betrachten, sind immer azyklisch. Das heißt
                   insbesondere,
-                  das Dinge mit "Feedback-Schleifen" wie Flipflops eben 
-                  {" "}
+                  das Dinge mit "Feedback-Schleifen" wie Flipflops eben{" "}
                   <i>
                     keine
                   </i>
-                  {" "}
                   Schaltkreis in unserem Sinn
                   sind:
                 </Paragraph>
@@ -307,34 +271,30 @@ const Article = () => {
               <figure>
                 <img
                   style="height:10em"
-                  src="../img/circuits/and-or-not-gates.svg"
+                  src="../img/circuits/flipflop.svg"
                   loading="lazy" />
               </figure>
               <Paragraph>
                 <Paragraph>
-                  Das Flipflop zeigt ein interessantes Verhalten: wenn \(&#123;\rm Reset&#125; = 0,&#123;\rm Set&#125; = 1\) ist,
+                  Das Flipflop zeigt ein interessantes Verhalten: wenn \(&#123;\rm Reset&#125; = 0, &#123;\rm Set&#125; = 1\) ist,
                   so ist der Ausgabe-Wert des unteren OR-Gates auf jeden Fall 1, und somit
                   ist \(\bar&#123;Q&#125; = 0\); somit sind wiederum beide Input-Werte des oberen OR-Gates 0 und
-                  \(Q=1\). Wenn \(&#123;\rm Reset&#125; = 1,&#123;\rm Set&#125; = 0\), dann ist
-                  analog \(Q = 0, \bar&#123;Q&#125;=1\). Wenn \(&#123;\rm Reset&#125; =&#123;\rm Set&#125; = 0\), dann
+                  \(Q=1\). Wenn \(&#123;\rm Reset&#125; = 1, &#123;\rm Set&#125; = 0\), dann ist
+                  analog \(Q = 0, \bar&#123;Q&#125;=1\). Wenn \(&#123;\rm Reset&#125; = &#123;\rm Set&#125; = 0\), dann
                   leiten beide OR-Gates einfach die Werte der anderen, von rechts kommenden
                   Kabel durch, und somit gilt \(Q = \neg \bar&#123;Q&#125;\) und \(\bar&#123;Q&#125; = \neg Q\);
                   das heißt, die Werte, die zuvor bestanden, bestehen weiter. Das Flipflop
                   implementiert somit einen 1-Bit-Speicher (die Kombination
-                  \(&#123;\rm Set&#125; =&#123;\rm Reset&#125; = 1\) würde \(Q = \bar&#123;Q&#125; = 0\) erzeugen und gilt als illegale
-                  Eingabe). Ein Flipflop hat somit einen 
-                  {" "}
+                  \(&#123;\rm Set&#125; = &#123;\rm Reset&#125; = 1\) würde \(Q = \bar&#123;Q&#125; = 0\) erzeugen und gilt als illegale
+                  Eingabe). Ein Flipflop hat somit einen{" "}
                   <i>
                     inneren Zustand
                   </i>
-                  {" "}
                   . Die Schaltkreise
-                  in diesem Kapitel haben 
-                  {" "}
+                  in diesem Kapitel haben{" "}
                   <i>
                     keinen
                   </i>
-                  {" "}
                   inneren Zustand: die Werte der Ausgabe-Gates sind
                   vollständig durch die Werte der Input-Gates determiniert. Wir sind nun bereit
                   für eine formale Definition von Schaltkreisen.
@@ -354,19 +314,14 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Ein Boolescher Schaltkreis ist ein gerichteter, azyklischer Graph (englisch
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       directed acyclic graph
                     </i>
-                    {" "}
-                    , kurz 
-                    {" "}
+                    , kurz{" "}
                     <i>
                       DAG
                     </i>
-                    {" "}
                     ), in welchem jeder
                     Knoten entweder
                   </Paragraph>
@@ -383,12 +338,10 @@ const Article = () => {
                   <Paragraph>
                     wobei die mit NOT beschrifteten Knoten genau eine eingehende Kante haben
                     und die mit AND oder OR beschrifteten Knoten mindestens zwei eingehende Kanten haben. Mindestens
-                    ein Knoten ist als 
-                    {" "}
+                    ein Knoten ist als{" "}
                     <i>
                       Output-Gate
                     </i>
-                    {" "}
                     gekennzeichnet. Die Output-Gates sind ihrerseits
                     mit Output-Variablen \(y_1,\dots,y_m\) beschriftet.
                   </Paragraph>
@@ -402,22 +355,17 @@ const Article = () => {
                   Wenn wir allen Input-Variablen eines Schaltkreises \(C\) einen Wahrheitswert zugewiesen bekommen
                   haben,
                   dann können wir den Schaltkreis von "unten" (Input-Gates) nach "oben" (Output-Gates)
-                </Paragraph>
-                <Paragraph>
-                  {" "}{" "}
+                  {" "}
                   <i>
                     auswerten
                   </i>
-                  {" "}
                   ,
                   indem eben jeder mit OR/AND/NOT beschriftete
                   Knoten den ihm zugeordnete Booleschen Operator auswertet. Es ist klar, dass
-                  der Schaltkreis \(C\) eine 
-                  {" "}
+                  der Schaltkreis \(C\) eine{" "}
                   <i>
                     Funktion
                   </i>
-                  {" "}
                   \(f_C : \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;^m\) berechnet.
                   Oft schreiben wir einfach \(C : \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;^m\).
                 </Paragraph>

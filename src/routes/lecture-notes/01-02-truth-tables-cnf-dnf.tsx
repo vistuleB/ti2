@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={3}
         title_gr="Wahrheitstabellen, CNF und DNF"
         title_en="truth tables cnf dnf"
         number={1.2}
@@ -46,30 +47,24 @@ const Article = () => {
                       viele Schaltkreise), die sie berechnen. Wir werden insgesamt drei
                       Konstruktionen sehen. Als erstes lassen Sie uns überlegen, wie man
                       eine Boolesche Funktion im Allgemeinen aufschreibt/codiert.
-                      Beschränken wir uns erst einmal auf Boolesche Funktionen mit 
-                      {" "}
+                      Beschränken wir uns erst einmal auf Boolesche Funktionen mit{" "}
                       <i>
                         einem
                       </i>
-                      {" "}
                       Ausgabewert, also \(f : \&#123;0,1\&#125;^n \rightarrow
                       \&#123;0,1\&#125;\).
                     </Paragraph>
                   </Paragraph>
                   Dies ist ein endliches Objekt, wir können es also codieren, indem wir
                   für jeden Eingabewert \( (x_1,\dots,x_n)\) den Ausgabewert angeben. Dies
-                  nennt man eine 
-                  {" "}
+                  nennt man eine{" "}
                   <i>
                     Wahrheitstabelle
                   </i>
-                  {" "}
-                  (englisch 
-                  {" "}
+                  (englisch{" "}
                   <i>
                     truth table
                   </i>
-                  {" "}
                   ). Hier sehen
                   Sie ein Beispiel:{" "}
                 </Paragraph>
@@ -98,8 +93,8 @@ const Article = () => {
                   </Paragraph>
                   \begin&#123;align*&#125; \color&#123;red&#125;&#123; \begin&#123;array&#125;&#123;ccc|c&#125; x&amp;y&amp;z&amp;f \\\hline
                   0&amp;0&amp;0&amp;0 \\ 0&amp;0&amp;1&amp;1 \\ 0&amp;1&amp;0&amp;1 \\ 0&amp;1&amp;1&amp;1
-                  \end&#123;array&#125;&#125;\\ \color&#123;blue&#125;&#123; \begin&#123;array&#125;&#123;ccc|c&#125; 1&amp;0&amp;0&amp;1 \\ 1&
-                  0&amp;1&amp;1 \\ 1&amp;1&amp;0&amp;0 \\ 1&amp;1&amp;1&amp;1\\ \end&#123;array&#125;&#125; \end&#123;align*&#125;
+                  \end&#123;array&#125; &#125;\\ \color&#123;blue&#125;&#123; \begin&#123;array&#125;&#123;ccc|c&#125; 1&amp;0&amp;0&amp;1 \\ 1&
+                  0&amp;1&amp;1 \\ 1&amp;1&amp;0&amp;0 \\ 1&amp;1&amp;1&amp;1\\ \end&#123;array&#125; &#125; \end&#123;align*&#125;
                   Die obere, roten Hälfte kommt Ihnen vielleicht bekannt vor: es ist genau
                   die Wahrheitstabelle von \(y \vee z\). Der Wert von \(x\) ist im roten
                   Teil ja immer \(0\), also ist die obere Hälfte im Prinzip eine Funktion
@@ -129,6 +124,7 @@ const Article = () => {
                     then
                   </code>
                   \(\bar&#123;y&#125; \vee z\)
+                  {" "}
                   <code>
                     else
                   </code>
@@ -167,18 +163,22 @@ const Article = () => {
                     \(x_2,\dots,x_n\).
                   </li>
                   <li>
-                    Kombinieren Sie diese via{" "}
+                    Kombinieren Sie diese via 
+                    {" "}
                     <code>
                       if
                     </code>
                     \(x_1\){" "}
                     <code>
-                      then{" "}
+                      then
                     </code>
-                    \(C_1\){" "}
+                    {" "}
+                    \(C_1\) 
+                    {" "}
                     <code>
-                      else{" "}
+                      else
                     </code>
+                    {" "}
                     \(C_0\) zu einem Schaltkreis für \(f\) mit
                     insgesamt \(n\) Input-Variablen.
                   </li>
@@ -263,12 +263,7 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Wenn Sie Rekursionshasser sind und generell lieber in
-                    </Paragraph>
-                    <Paragraph>
-                      <code>
-                        for
-                      </code>
-                      -Schleifen denken, dann wird die nächste Konstruktion
+                      `for`-Schleifen denken, dann wird die nächste Konstruktion
                       mehr nach Ihrem Geschmack sein. Im Prinzip werden wir alle
                       Kombinationen der Variablen auflisten, für die die Funktion 1 ausgibt.
                       Stellen Sie sich vor, wir haben drei Variable \(x,y,z\) und einen
@@ -284,12 +279,10 @@ const Article = () => {
                       in diesem Falle \((1,0,1)\). Wir werden nun also für jede 1-Zeile
                       unserer Wahrheitstabelle einen solchen Ausdruck hinschreiben und diese
                       dann in einem großen OR zusammenführen. Einen Ausdruck, der aus einem
-                      AND von Variablen oder deren Negation besteht, nennt man auch einen 
-                      {" "}
+                      AND von Variablen oder deren Negation besteht, nennt man auch einen{" "}
                       <i>
                         Term
                       </i>
-                      {" "}
                       .
                     </Paragraph>
                   </Paragraph>
@@ -321,19 +314,15 @@ const Article = () => {
                   In diesem Schaltkreis habe ich die Input-Knoten mehrfach aufgeführt und
                   die NOT-Gates nicht explizit aufgeführt, damit kein "Kabelsalat"
                   entsteht. Beachten Sie auch, das jedes Gate (außer den Input-Gates)
-                  genau 
-                  {" "}
+                  genau{" "}
                   <i>
                     eine
                   </i>
-                  {" "}
                   ausgehende Kante hat. Konkret bedeutet dies, dass
-                  man diesen Schaltkreis als 
-                  {" "}
+                  man diesen Schaltkreis als{" "}
                   <i>
                     logische Formel
                   </i>
-                  {" "}
                   hinschreiben kann:
                   {" "}
                 </Paragraph>
@@ -350,27 +339,21 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Ein 
-                    {" "}
+                    Ein{" "}
                     <i>
                       Literal
                     </i>
-                    {" "}
                     ist eine Variable \(x\) oder deren Negation
-                    \(\bar&#123;x&#125;\). Ein 
-                    {" "}
+                    \(\bar&#123;x&#125;\). Ein{" "}
                     <i>
                       Term
                     </i>
-                    {" "}
                     ist ein AND (auch: Konjunktion) von
                     Literalen (beispielsweise \(\bar&#123;x&#125; \wedge \bar&#123;y&#125; \wedge z)\). Eine
-                    Formel in 
-                    {" "}
+                    Formel in{" "}
                     <i>
                       disjunktiver Normalform
                     </i>
-                    {" "}
                     (DNF) ist ein OR von
                     Termen.
                   </Paragraph>
@@ -387,12 +370,10 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Was, wenn einige der "mittleren" Gates (auf Tiefe 1) keine AND-Gates
-                    sind, sondern auch OR-Gates? Dann wäre dies nach der ersten Definition 
-                    {" "}
+                    sind, sondern auch OR-Gates? Dann wäre dies nach der ersten Definition{" "}
                     <i>
                       keine
                     </i>
-                    {" "}
                     DNF-Formel, nach der zweiten aber schon. Zeigen Sie,
                     wie man OR-Gates auf Ebene 1 entfernen kann! Als konkretes Beispiel:
                   </Paragraph>
@@ -414,12 +395,10 @@ const Article = () => {
                       Zu der eben demonstrierten Konstruktion gibt es noch eine weitere,
                       dazu duale Konstruktion. Bildlich gesprochen listet DNF-Konstruktion
                       alle Möglichkeiten auf, wie man eine 1 erhalten kann. Dual dazu können
-                      wir alle Möglichkeiten auflisten, wie man eine 0 erhalten kann; tritt 
-                      {" "}
+                      wir alle Möglichkeiten auflisten, wie man eine 0 erhalten kann; tritt{" "}
                       <i>
                         keine
                       </i>
-                      {" "}
                       davon ein, muss wohl eine 1 herauskommen. Wir gehen
                       also in der Wahrheitstabelle alle Zeilen mit Wert 0 durch und
                       schreiben einen Ausdruck, der genau diese Zeile verbietet. So kann man
@@ -439,12 +418,10 @@ const Article = () => {
                 <Paragraph>
                   {" "}Einen Ausdruck
                   der Form \(\bar&#123;x&#125; \vee \bar&#123;y&#125; \vee z\), also ein OR von Literaten,
-                  nennt man auch eine 
-                  {" "}
+                  nennt man auch eine{" "}
                   <i>
                     Klausel
                   </i>
-                  {" "}
                   . Eine Klausel mit \(n\) (hier:
                   \(n=3\)) Literaten verbietet genau ein Tupel von Wahrheitswerten. Wenn
                   wir also alle Verbote mit AND verknüpfen, erhalten wir
@@ -460,12 +437,10 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Eine Formel in 
-                    {" "}
+                    Eine Formel in{" "}
                     <i>
                       konjunktiver Normalform
                     </i>
-                    {" "}
                     (CNF) ist ein AND von
                     Klauseln.
                   </Paragraph>
@@ -528,33 +503,26 @@ const Article = () => {
                   <Paragraph>
                     Sie haben eventuell von Methoden zur Minimierung von DNFs bzw. CNFs
                     oder Schaltkreisen im Allgemeinen gehört, z.B. Karnaugh-Diagramme.
-                    Dies sind 
-                    {" "}
+                    Dies sind{" "}
                     <i>
                       Heuristiken
                     </i>
-                    {" "}
                     , die hilfreich sind, aber nicht
                     garantieren können, eine optimale Lösung zu finden (es sind also keine
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Algorithmen
                     </i>
-                    {" "}
                     in dem Sinne). Die genaue Komplexität dieser
                     Optimierungsprobleme ist in der Tat Gegenstand aktiver Forschung,
                   </Paragraph>
                 </Paragraph>
                 <ol>
                   <li>
-                    Wenn die Funktion (1) bereits als 
-                    {" "}
+                    Wenn die Funktion (1) bereits als{" "}
                     <i>
                       Boolesche Formel
                     </i>
-                    {" "}
                     vorliegt
                     (also Schaltkreise, in denen außer den Eingabe-Gates alle Gates nur
                     eine ausgehende Kante haben), so ist das Minimierungsproblem
@@ -565,7 +533,6 @@ const Article = () => {
                       <i>
                         The complexity of Boolean formula minimization
                       </i>
-                      {" "}
                       (JCSS
                       2011){" "}
                     </a>
@@ -583,7 +550,6 @@ const Article = () => {
                         NP-Hardness of Circuit Minimization for Multi-Output
                         Functions
                       </i>
-                      {" "}
                       , (CCC 2020)
                     </a>
                     .

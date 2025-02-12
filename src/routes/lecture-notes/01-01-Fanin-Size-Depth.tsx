@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={2}
         title_gr="Größe, Tiefe, Fan-In"
         title_en="Fanin Size Depth"
         number={1.1}
@@ -48,28 +49,22 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition.
                     </span>
-                    Die 
-                    {" "}
+                    Die{" "}
                     <i>
                       Größe
                     </i>
-                    {" "}
                     eines Schaltkreises ist die Anzahl seiner Gates, also die Anzahl
                     der Knoten im zugrundeliegenden DAG.
-                    Die 
-                    {" "}
+                    Die{" "}
                     <i>
                       Teife
                     </i>
-                    {" "}
                     ist die Länge des längsten gerichteten Pfades von einem Input- zu einem
                     Output-Gate.
-                    Der 
-                    {" "}
+                    Der{" "}
                     <i>
                       Maximum-Fan-in
                     </i>
-                    {" "}
                     ist der maximale Rein-Grad aller Knoten, also
                     der maximale Fan-in aller Gates.
                   </Paragraph>
@@ -80,7 +75,6 @@ const Article = () => {
                     <b>
                       Vorsicht.
                     </b>
-                    {" "}
                     Manchmal werden zur Bestimmung der Tiefe die NOT-Gates
                     nicht mitgezählt. Entlang eines Pfades wird also gelegentlich nur die Anzahl
                     der AND- und OR-Gates bestimmt.
@@ -110,20 +104,17 @@ const Article = () => {
                   oder alternativ:
                   <img
                     style="height:10em"
-                    src="../img/circuits/and-n-fold-linear-depth.svg"
+                    src="../img/circuits/and-n-fold-log-depth.svg"
                     loading="lazy" />
                 </figure>
                 <Paragraph>
                   <Paragraph>
                     In beiden Fällen ersetzen wir ein AND-Gate von Fan-in \(n\) durch
-                    \(n-1\) AND-Gates von je Fan-in 2. Wenn wir allerdings die 
-                    {" "}
+                    \(n-1\) AND-Gates von je Fan-in 2. Wenn wir allerdings die{" "}
                     <i>
                       Tiefe
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     betrachten, so sehen wir, dass der linke Schaltkreis Tiefe \(n-1\) hat,
                     der rechte jedoch nur \(\ceil&#123;\log_2(n)&#125;\). Ganz allgemein stellen wir fest:
                   </Paragraph>
@@ -135,7 +126,7 @@ const Article = () => {
                     </span>
                     Sei \(C\) ein Schaltkreis Maximum-Fan-in \(k\), Größe \(s\) und Tiefe \(d\).
                     Dann gibt es einen äquivalenten Schaltkreis \(C'\) mit Maximum-Fan-in \(2\),
-                    Größe höchstens \(s (k-1)\) und Tiefe höchstens \(d \ceil&#123;\log_2 k&#125;\).
+                    Größe höchstens \(s (k-1)\) und Tiefe höchstens \(d \ceil &#123;\log_2 k&#125;\).
                   </Paragraph>
                 </div>
               </div>

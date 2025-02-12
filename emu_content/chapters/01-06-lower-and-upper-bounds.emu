@@ -87,9 +87,7 @@
                                 class numbered-title
 
                                 Theorem
-                            
-                            *(Shannon).*
-                            Es gibt
+                            *(Shannon).*Es gibt
                             Boolesche Funktionen $f$, die keine Schaltkreise kleiner
                             als $\Omega(2^n / n)$ haben.
                             
@@ -106,12 +104,9 @@
                         |> p
 
                             *Beweis.*
-                            
                             Die Beweismethode ist vielleicht neu für Sie, aber in der Komplexitätstheorie und
                             Kombinatorik
-                            sehr wichtig. Wir stellen uns zwei 
-                            _Zählaufgaben_
-                            : (1) wie viele Boolesche
+                            sehr wichtig. Wir stellen uns zwei _Zählaufgaben_: (1) wie viele Boolesche
                             Funktion $f : \fcube$ gibt es? (2) Wie viele Boolesche Schaltkreise
                             mit $n$ Input-Variablen, Fan-in 2 und $s$ Gates gibt es?
                             Wenn die Antwort auf (2) kleiner ausfällt als auf (1), dann können nicht alle
@@ -161,7 +156,6 @@
                             |> p
 
                                 *Beweis.*
-                                
                                 Wir bauen den Schaltkreis, indem wir erst einmal $s$ Gates unbeschriftet "hinmalen".
                                 Um nun zu entscheiden, was für ein Schaltkreis das sein soll, müssen wir Entscheidungen
                                 treffen:
@@ -214,7 +208,7 @@
                                         
                                         Insgesamt haben wir also
                                         $$
-                                        n + (s-1) + 2&#123;s-1 \choose 2} = n + s - 1 + (s-1)(s-2) =
+                                        n + (s-1) + 2 {s-1 \choose 2} = n + s - 1 + (s-1)(s-2) =
                                         n + s^2 - 2s + 1 \leq s^2
                                         $$
                                         Möglichkeiten.
@@ -320,16 +314,12 @@
 
                         
                         Der obige Beweis sagt noch mehr: der Anteil Boolescher Funktionen, bei denen wir mit
-                        $\frac{2^n}{2n}$ Gates auskommen, ist verschwindend klein. Fast 
-                        _alle_
-                        Funktionen
+                        $\frac{2^n}{2n}$ Gates auskommen, ist verschwindend klein. Fast _alle_Funktionen
                         brauchen also riesige Schaltkreise. In einem Gewissen Sinne haben wir also einfach Glück:
                         die Funktionen, die uns interessieren, wie $n$-Bit-Addition, Majority, Parity und so weiter,
                         haben einfach niedrige Komplexität. Das liegt wohl in der Natur der Sache: wir addieren,
                         multiplizieren,
-                        bauen Brücken, Häuser, Flugzeuge, Computer, weil wir es 
-                        _können_
-                        , weil also die dafür
+                        bauen Brücken, Häuser, Flugzeuge, Computer, weil wir es _können_, weil also die dafür
                         benötigten Berechnungen effizient durchführbar sind.
                         
                     
@@ -451,9 +441,7 @@
                                 class numbered-title
 
                                 Theorem
-                            
-                            *(Lupanov)*
-                            . Für jede Boolesche
+                            *(Lupanov)*. Für jede Boolesche
                             Funktion in $n$ Variablen gibt es einen Schaltkreis mit Fan-in 2 und $O(2^n / n)$ Gates.
                         
                         
@@ -467,7 +455,6 @@
                         |> p
 
                             *Beweis.*
-                            
                             Der Beweis fußt auf zwei Kernideen: erstens bauen wir den Schaltkreis nicht
                             mit AND- und OR- und NOT-Gates, sondern mit AND- und XOR-Gates. Da wir
                             nach vollendeter Konstruktion jedes XOR-Gates durch einen kleinen Schaltkreis
@@ -489,15 +476,12 @@
                         
                         |> p
 
-                            *$\F_2$-Polynome.*
-                            Polynome in mehreren Variablen kennen Sie
+                            *$\F_2$-Polynome.*Polynome in mehreren Variablen kennen Sie
                             sicherlich: zum Beispiel $xyz + xy + 1 + y$. Der Unterschied hier ist nur,
                             dass wir alle Werte modulo 2 auswerten, also in dem endlichen Körper
                             $\F_2$ arbeiten. Wir brauchen daher auch keine höheren Potenzen:
                             $x^2$ und $x$ ergeben für alle $x \in \{0,1\}$ die gleichen Werte.
-                            Wenn wir in $\F_2$ rechnen, können wir uns also auf 
-                            _multilineare_
-                            
+                            Wenn wir in $\F_2$ rechnen, können wir uns also auf _multilineare_
                             Polynome beschränken. Führen wir Polynome formal ein:
                             wir haben eine Menge $x_1, \dots, x_n$ von Variablen;
                             ein Monom in diesem Variablen ist ein Produkt aus Variablen, also
@@ -530,9 +514,7 @@
                             |> p
 
                                 
-                                
-                                *Tipp:*
-                                beschränken Sie sich zuerst auf Funktionen $f$,
+                                *Tipp:*beschränken Sie sich zuerst auf Funktionen $f$,
                                 deren Wahrheitstabelle in genau einer Zeile eine 1 haben. Schreiben
                                 Sie eine solche Funktion als $\F_2$-Polynom.
                                 
@@ -547,9 +529,7 @@
                             gleichen Koeffizienten, aber die spielen hier ja keine Rolle).
                             Wir würden also sagen, dass
                             $xyz + x$ und $x + yzx$ die gleichen Polynome sind.
-                            Dagegen wären $x^2yz + x$ und $xyz+x$ 
-                            _verschiedene_
-                            Polynome.
+                            Dagegen wären $x^2yz + x$ und $xyz+x$ _verschiedene_Polynome.
                             Da wir über $\F_2$ arbeiten, beschränken wir uns aber eh auf multilineare Polynome,
                             wo also alle Exponenten 1 sind.
                             
@@ -567,9 +547,7 @@
 
                                     Übungsaufgabe
                                 
-                                Zeigen Sie, dass sich jede Funktion $f :\fcube$ 
-                                _eindeutig_
-                                
+                                Zeigen Sie, dass sich jede Funktion $f :\fcube$ _eindeutig_
                                 als multilineares $\F_2$-Polynom schreiben lässt. In anderen Worten:
                                 wenn $p$ und $q$ zwei verschiedene multilineare Polynome sind, dann
                                 berechnen sie verschiedene Funktionen.
@@ -606,9 +584,7 @@
                         |> p
 
                             
-                            Gates. Allerdings ist das eine ungenaue Rechnung: Selbst wenn 
-                            _alle_
-                            
+                            Gates. Allerdings ist das eine ungenaue Rechnung: Selbst wenn _alle_
                             $2^n$ Monome vertreten sind, bestehen nicht alle Monome aus $n$ Variablen.
                             
                         
@@ -687,16 +663,11 @@
                             |> p
 
                                 *Beweis.*
-                                
                                 Die Idee ist: wenn wir $x_1 x_2 x_3 x_4$ berechnen wollen,
                                 brauchen wir drei AND-Gates. Allerdings müssen wir
-                                $x_1 x_2 x_3$ eh berechnen, da wir ja 
-                                _alle_
-                                Monome
+                                $x_1 x_2 x_3$ eh berechnen, da wir ja _alle_Monome
                                 wollen. Wenn wir also einen Schaltkreis für $x_1 x_2 x_3$ haben,
-                                können wir daraus mit 
-                                _einem_
-                                zusätzlichen AND-Gate
+                                können wir daraus mit _einem_zusätzlichen AND-Gate
                                 $x_1x_2x_3x_4$ berechnen.
                                 
                             
@@ -724,13 +695,13 @@
                                     
                                     
                                     |> img
-                                        style height:10em
-                                        src ../img/circuits/all-monomials.svg
+                                        src ../img/circuits/all-monomials-1.svg
+                                        style width:100%
                                     
                                     
                                     |> img
-                                        style height:10em
-                                        src ../img/circuits/all-monomials.svg
+                                        src ../img/circuits/all-monomials-2.svg
+                                        style width:100%
                                     
                                     
                                 
@@ -775,9 +746,7 @@
                             $\y^A g_A(\z)$. Es gibt insgesamt nur $2^{2^k}$ Polynome in den Variablen $\z$.
                             Wenn nun also $2^{n-k} \gg 2^{2^k}$ ist, werden gewisse Polynome $g_A$ mehrfach
                             auftreten, und wir können sparen. Dafür berechnen wir
-                            vorsorglich 
-                            _alle_
-                            Funktionen in $z_1,\dots,z_k$.
+                            vorsorglich _alle_Funktionen in $z_1,\dots,z_k$.
                             
                         
                         
@@ -838,8 +807,7 @@
                             
                             |> p
 
-                                *Tip.*
-                                Jedes Gate muss also gleichzeitig
+                                *Tip.*Jedes Gate muss also gleichzeitig
                                 ein Output-Gate sein.
                             
                             

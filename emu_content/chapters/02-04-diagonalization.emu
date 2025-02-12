@@ -64,9 +64,7 @@
                         also das "diskrete" $\N$ und das "dichte" $\Q$ sicht hinsichtlich
                         ihrer Größe (Fachsprache: Kardinalität) nicht unterscheiden. Könnte es
                         denn sein, dass jede unendliche Menge $A$ abzählbar ist, also $A
-                        \approx \N$? Die Antwort ist ein klares 
-                        _Nein_
-                        .
+                        \approx \N$? Die Antwort ist ein klares _Nein_.
                         
                     
                     
@@ -85,9 +83,7 @@
 
                                 Theorem
                             
-                            
-                            *(Überabzählbarkeit der reellen Zahlen).*
-                            $\N \not
+                            *(Überabzählbarkeit der reellen Zahlen).*$\N \not
                             \approx \R$.
                             
                         
@@ -102,9 +98,7 @@
                         |> p
 
                             
-                            
-                            *Beweis.*
-                            Da wir bereits $\R \approx \{0,1\}^{\N}$
+                            *Beweis.*Da wir bereits $\R \approx \{0,1\}^{\N}$
                             gesehen haben, reicht es, $\N \not \approx \{0,1\}^{\N}$ zu zeigen.
                             Wir müssen also zeigen, dass es keine Bijektion $f : \N \rightarrow
                             \{0,1\}^{\N}$ gibt. Wie gehen wir vor? Wir nehmen an, man hätte uns
@@ -115,10 +109,8 @@
                             111111\dots$. Also ist unsere einzige Chance, zu zeigen, dass $f$
                             nicht surjektiv ist. Wir müssen also eine 0/1-Folge $\mathbf{b} =
                             b_0 b_1 b_2 b_3 \dots \in \{0,1\}^{\N}$ finden, die nicht im
-                            Wertebereich (Englisch: 
-                            _image_
-                            ) von $f$ liegt: $\mathbf{b}
-                            \not \in&#123;\rm img}(f)$. Was wiederum bedeutet, dass für jedes $n \in
+                            Wertebereich (Englisch: _image_) von $f$ liegt: $\mathbf{b}
+                            \not \in {\rm img}(f)$. Was wiederum bedeutet, dass für jedes $n \in
                             \N$ sich die unendliche 0/1-Folge $f(n)$ von $\mathbf{b}$
                             unterscheidet, also an mindestens einer Stelle.
                             
@@ -178,7 +170,7 @@
                             $f_n$ unterscheiden sich an der $n$-ten Stelle (und womöglich auch
                             noch anderswo), und daher gilt: $\mathbf{d} \ne f_n$. Da dies für
                             jedes $n$ gilt, folgern wir: die Folge $\mathbf{d}$ kommt nicht als
-                            Zeile der Tabelle vor, und damit $\mathbf{d} \not \in&#123;\rm img}(f)$.
+                            Zeile der Tabelle vor, und damit $\mathbf{d} \not \in {\rm img}(f)$.
                             Die Funktion $f$ ist nicht surjektiv.
                             |> span
                                 class qed
@@ -255,9 +247,7 @@
                         |> p
 
                             
-                            
-                            *Tipp:*
-                            Sie müssen den obigen Beweis auf die richtige
+                            *Tipp:*Sie müssen den obigen Beweis auf die richtige
                             Weise abstrahieren, dann geht es ganz einfach.
                             
                         
@@ -309,9 +299,7 @@
 
                                 Übungsaufgabe
                             Zeigen Sie, dass
-                            es in $(2^\N, \subseteq)$ eine 
-                            _Kette_
-                            $X$ mit $X \approx \R$
+                            es in $(2^\N, \subseteq)$ eine _Kette_$X$ mit $X \approx \R$
                             gibt.
                             
                         

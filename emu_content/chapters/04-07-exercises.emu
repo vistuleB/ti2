@@ -86,9 +86,7 @@
 
                                 Kapitel 2.2
                             
-                            als 
-                            _eine_
-                            natürliche Zahl $\bar{\alpha}$ codieren können.
+                            als _eine_natürliche Zahl $\bar{\alpha}$ codieren können.
                             Mittels dieser Codierung wird eine Sprache $L \subseteq \Sigma^*$
                             zu einer Funktion
                             
@@ -188,11 +186,8 @@
 
                             Übungsaufgabe
                         *(Challenge).*
-                        
                         Betrachten wir eine Variante des endlichen Automaten, bei der
-                        der Automat 
-                        _zurückspulen_
-                        kann. Der Automat hat also
+                        der Automat _zurückspulen_kann. Der Automat hat also
                         einen "Lesekopf", mit dem er auf einem Zeichen des Eingabewortes steht
                         (anfangs auf dem ersten). In jedem Schritt kann er nach rechts oder links
                         wechseln. Es gibt zwei spezielle Zeichen, die markieren, wo das
@@ -206,12 +201,10 @@
                     |> p
 
                         
-                        Wenn z.B. $\delta(q, x) = (r, L)$ ist, dann heißt das: 
-                        _wenn Du im
+                        Wenn z.B. $\delta(q, x) = (r, L)$ ist, dann heißt das: _wenn Du im
                         Zustand $q$ bist und der Lesekopf ein $x$ liest, dann wechsle in den
                         Zustand $r$ und gehe nach links.
                         _
-                        
                         
                     
                     
@@ -224,9 +217,7 @@
                         Die von so einem Automaten $M$ akzeptierte Sprache $L(M)$ ist dann definiert als
                         die Menge aller Wörter $\alpha$, die $M$ in einen akzeptierenden
                         Zustand bringen. Beachten Sie, dass $M$ möglicherweise in eine Endlosschleife
-                        geraten kann. In diesem Falle ist $\alpha$ 
-                        _kein_
-                        Wort in $L(M)$.
+                        geraten kann. In diesem Falle ist $\alpha$ _kein_Wort in $L(M)$.
                         
                     
                     
@@ -300,9 +291,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        
                         *(Challange.)*
-                        
                         Sei $L$ die Sprache aus der vorherigen Aufgabe und
                         $\bar{L} = \Sigma^* \setminus L$ ihr Komplement. $\bar{L}$ ist also
                         die Sprache aller Wörter, in denen jedes Zeichen aus $\Sigma$ mindestens

@@ -66,12 +66,8 @@
 
                         
                         Turingmaschinen erlauben uns, den Resourcenverbrauch einer Berechnung zu quantifizieren:
-                        zum einen die 
-                        _Zeit_
-                        , also die Anzahl der Schritte, die die Turingmaschine
-                        durchführt, bis sie anhält; zum anderen der 
-                        _Speicherplatz_
-                        , also die Anzahl
+                        zum einen die _Zeit_, also die Anzahl der Schritte, die die Turingmaschine
+                        durchführt, bis sie anhält; zum anderen der _Speicherplatz_, also die Anzahl
                         der Zellen auf dem Band (oder den Bändern), die im Verlauf der Berechnung beschrieben werden.
                         Beides sind Maße, die tatsächlich im echten Leben relevant sind. Turingmaschinen erlauben uns,
                         diese genau zu quantifizieren und die Zeitkomplexität und Speicherkomplexität eines Problems
@@ -90,8 +86,7 @@
                         
                         |> li
 
-                            *I/O-Komplexität.*
-                            In echten Rechnern haben wir eine Hierarchie von
+                            *I/O-Komplexität.*In echten Rechnern haben wir eine Hierarchie von
                             Speichermedien. Den extrem schnellen Prozessorcache; schnellen Cache; den vergleichsweise
                             langsamen
                             Hauptstpeicher (RAM); eventuell sogar einen externen Festplattenspeichern, der um
@@ -101,12 +96,9 @@
                         
                         |> li
 
-                            *Kommunikationskomplexität.*
-                            Bei verteilten Anwendungen (Cloud Computing) ist
+                            *Kommunikationskomplexität.*Bei verteilten Anwendungen (Cloud Computing) ist
                             die limitierende Resource eventuell gar nicht die Rechenkapazität sondern das
-                            
-                            _Netzwerk_
-                            , über
+                            _Netzwerk_, über
                             das die Daten ausgetauscht werden.
                             
                         
@@ -118,9 +110,7 @@
                         
                         Also: Turingmaschinen sind zwar universell in dem Sinne, dass sie wohl alle physikalisch
                         realisierbaren
-                        Rechnermodelle simulieren können (ich sage 
-                        _wohl_
-                        , weil wir nicht wissen, was alles
+                        Rechnermodelle simulieren können (ich sage _wohl_, weil wir nicht wissen, was alles
                         physikalisch realisierbar ist). Allerdings ist es möglich, dass Sie, abhängig von Ihrem
                         Anwendungsfeld, ein abgewandeltes oder völlig anderes Modell benötigen, um den
                         Resourcenverbrauch modellieren zu können.
@@ -130,9 +120,7 @@
                     |> p
 
                         
-                        Dennoch: in diesem Kapitel beschränken wir uns auf die Resource 
-                        _Zeit_
-                        , und daher
+                        Dennoch: in diesem Kapitel beschränken wir uns auf die Resource _Zeit_, und daher
                         sind Turingmaschinen das Modell der Wahl.
                         
                     
@@ -164,9 +152,7 @@
                                 Definition
                             Sei $t: \N \rightarrow \N$. Eine
                             Turingmaschinen $M$
-                            
-                            _entscheidet_
-                            eine Sprache $L \subseteq \Sigma^*$ in Zeit $t$ wenn
+                            _entscheidet_eine Sprache $L \subseteq \Sigma^*$ in Zeit $t$ wenn
                             
                         
                         
@@ -244,9 +230,7 @@
                                 class numbered-title
 
                                 Theorem
-                            
                             *($k$-Band zu $1$-Band).*
-                            
                             Sei $t: \N \rightarrow \N$. Dann gilt
                             $\TIME_k(t) \subseteq \TIME_1(t^2)$.
                             
@@ -277,10 +261,8 @@
                                 class numbered-title
 
                                 Theorem
-                            
                             *($k$-Band zu $2$-Band; ohne
-                            Beweis).*
-                            Sei
+                            Beweis).*Sei
                             $t: \N \rightarrow \N$. Dann gilt $\TIME_k(t) \subseteq \TIME_2(t \log t)$.
                         
                         

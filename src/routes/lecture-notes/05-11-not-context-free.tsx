@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={39}
         title_gr="Die Grenzen kontextfreier Sprachen"
         title_en="not context free"
         number={5.11}
@@ -40,12 +41,10 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Im letzten Teilkapitel haben wir den CYK-Algorithmus kennengelernt. Dieser verwendet
-                    das Prinzip des 
-                    {" "}
+                    das Prinzip des{" "}
                     <i>
                       Dynamic Programming
                     </i>
-                    {" "}
                     , um für eine allgemeine kontextfreie
                     Grammatik \(G\) und ein Eingabewort \(\gamma\) einen Ableitungsbaum zu finden (oder
                     festzustellen,
@@ -113,7 +112,7 @@ const Article = () => {
                   <figure>
                     <img
                       style="height:14em"
-                      src="../img/context-free/pumping-lemma-01.svg"
+                      src="../img/context-free/pumping-lemma-02.svg"
                       loading="lazy" />
                   </figure>
                   <Paragraph>
@@ -143,8 +142,8 @@ const Article = () => {
                       </Paragraph>
                       <figure>
                         <img
-                          style="height:14em"
-                          src="../img/context-free/pumping-lemma-01.svg"
+                          style="height:18em"
+                          src="../img/context-free/pumping-lemma-03.svg"
                           loading="lazy" />
                       </figure>
                       <Paragraph>
@@ -157,7 +156,7 @@ const Article = () => {
                       <figure>
                         <img
                           style="height:14em"
-                          src="../img/context-free/pumping-lemma-01.svg"
+                          src="../img/context-free/pumping-lemma-04.svg"
                           loading="lazy" />
                       </figure>
                     </Paragraph>
@@ -171,12 +170,10 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Wir haben also gezeigt, dass die kontextfreie Grammatik \(G\) 
-                      {" "}
+                      Wir haben also gezeigt, dass die kontextfreie Grammatik \(G\){" "}
                       <i>
                         nicht
                       </i>
-                      {" "}
                       die Sprache
                       \(L\) erzeugt: wenn wir alle \(\gamma \in L\) erzeugen kann, dann
                       kann sie auch Wörter wie \(uwy \not \in L\) erzeugen. Da unsere Argumentation keine
@@ -190,7 +187,6 @@ const Article = () => {
                       <b>
                         Vorsicht!
                       </b>
-                      {" "}
                       Wir haben angenommen, das \(uwy\) weniger Zeichen hat
                       als \(uvwxy\), weil ja \(v\) und \(x\) fehlen. Kann aber \(v = x = \epsilon\) eintreten?
                       Dies würde unsere Argumentation zerstören. Hier kommt wieder die
@@ -204,12 +200,10 @@ const Article = () => {
                 </div>
                 <Paragraph>
                   <Paragraph>
-                    Die obige Argumentationslinie ist als 
-                    {" "}
+                    Die obige Argumentationslinie ist als{" "}
                     <i>
                       Pumping Lemma für kontextfreie Sprachen
                     </i>
-                    {" "}
                     bekannt:
                   </Paragraph>
                 </Paragraph>
@@ -222,9 +216,7 @@ const Article = () => {
                     <b>
                       (Pumping Lemma für kontextfreie Sprachen)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Für jede kontextfreie Grammatik \(G\) gibt es eine Zahl \(p \in \N\), so dass jedes
                     Wort \(\gamma \in L(G)\) der Länge \(|\gamma| \geq p\) zerlegt werden kann in
                     \begin&#123;align*&#125;
@@ -304,8 +296,7 @@ const Article = () => {
                     <li>
                       \(L_1^R\), die Sprache, die entsteht, wenn man jedes Wort in \(L_1\) von rechts nach
                       links liest. Dies ist gar nicht so offensichtlich, wenn man reguläre Grammatiken oder
-                      endliche Automaten ansieht. Wenn man aber für \(L_1\) einen 
-                      {" "}
+                      endliche Automaten ansieht. Wenn man aber für \(L_1\) einen{" "}
                       <i>
                         regulären Ausdruck
                       </i>
@@ -317,20 +308,16 @@ const Article = () => {
                       \(L_1 \cap L_2\). Hierfür könnte man für \(L_1, L_2\) jeweils endliche Automaten
                       \(M_1, M_2\) bauen und die dann "parallel" laufen lassen; man muss nun sehen, dass man
                       dieses parallele Laufen
-                      mit 
-                      {" "}
+                      mit{" "}
                       <i>
                         einem
                       </i>
-                      {" "}
                       Automaten simulieren kann: dieser hat als Zustandsmenge \(Q_1 \times
                       Q_2\),
-                      merkt sich also in 
-                      {" "}
+                      merkt sich also in{" "}
                       <i>
                         einem
                       </i>
-                      {" "}
                       Zustand, in welchen Zuständen \(M_1\) und \(M_2\)
                       sind.
                       Oder man macht es sich einfach:
@@ -350,12 +337,10 @@ const Article = () => {
                     </li>
                   </ol>
                   <Paragraph>
-                    Wie sieht es nun aus, wenn \(L_1, L_2\) 
-                    {" "}
+                    Wie sieht es nun aus, wenn \(L_1, L_2\){" "}
                     <i>
                       kontextfreie
                     </i>
-                    {" "}
                     Sprachen sind? Welche der
                     obigen Kombinationen sind dann ebenfalls kontextfrei?
                   </Paragraph>
@@ -394,7 +379,6 @@ const Article = () => {
                         <b>
                           Tip:
                         </b>
-                        {" "}
                         dies ist viel einacher als für reguläre Grammatiken.
                       </Paragraph>
                     </Paragraph>
@@ -411,12 +395,10 @@ const Article = () => {
                       Beobachtung
                     </span>
                     Der Schnitt \(L_1 \cap L_2\) zweier kontextfreier Sprachen
-                    ist im Allgemeinen 
-                    {" "}
+                    ist im Allgemeinen{" "}
                     <i>
                       nicht
                     </i>
-                    {" "}
                     kontextfrei.
                     Ein Beispiel ist
                     \begin&#123;align*&#125;
@@ -445,12 +427,10 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                     </span>
-                    Das Komplement \(L\) einer kontextfreien Sprache ist im Allgemeinen 
-                    {" "}
+                    Das Komplement \(L\) einer kontextfreien Sprache ist im Allgemeinen{" "}
                     <i>
                       nicht
                     </i>
-                    {" "}
                     kontextfrei.
                     \\
                   </Paragraph>
@@ -487,7 +467,6 @@ const Article = () => {
                       <b>
                         Tip.
                       </b>
-                      {" "}
                       Listen Sie alle Möglichkeiten auf, wie ein Wort \(w\) nicht
                       in \(L\) sein kann: (1) es hat nicht die Form \(a^* b^* c^*\); (2) es hat die Form,
                       hat aber mehr \(a\) als es \(b\) hat; (2) es hat mehr \(a\) als es \(c\) hat...

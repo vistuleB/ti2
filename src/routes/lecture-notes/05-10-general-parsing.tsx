@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={38}
         title_gr="Allgemeine kontextfreie Sprachen parsen"
         title_en="general parsing"
         number={5.10}
@@ -84,30 +85,24 @@ const Article = () => {
                       \end&#123;align*&#125;
                       Diese erzeugt die Sprache
                       \begin&#123;align*&#125;
-                      L = \&#123; a^i b^j c^k \ | \ i = j \textnormal&#123; oder&#125; j = k \&#125;
+                      L = \&#123; a^i b^j c^k \ | \ i = j \textnormal&#123; oder &#125; j = k \&#125;
                       \end&#123;align*&#125;
-                      Die Grammatik ist 
-                      {" "}
+                      Die Grammatik ist{" "}
                       <i>
                         mehrdeutig
                       </i>
-                      {" "}
                       , insbesondere kann jedes Wort der
                       Form \(a^i b^i c^i\) auf zwei Weisen abgeleitet werden: via \(AY\) und via \(XC\).
-                      Man kann sogar zeigen, dass 
-                      {" "}
+                      Man kann sogar zeigen, dass{" "}
                       <i>
                         jede
                       </i>
-                      {" "}
                       äquivalente Grammatik \(G'\), die also
                       die gleiche Sprache \(L\) erzeugt, mehrdeutig sein muss; man sagt, die Sprache
-                      \(L\) ist 
-                      {" "}
+                      \(L\) ist{" "}
                       <i>
                         inhärent mehrdeutig
                       </i>
-                      {" "}
                       .
                     </Paragraph>
                   </Paragraph>
@@ -117,12 +112,10 @@ const Article = () => {
                       unbrauchbar. Gibt es eine allgemeine Methode, die für alle Grammatiken funktioniert?
                       Ja, den sogenannten CYK-Algorithmus. Nur leider ist die nicht besonders schnell. Sie hat
                       kubische Laufzeit \(O(n^3)\), was zwar
-                      in der theoretischen Informatik als 
-                      {" "}
+                      in der theoretischen Informatik als{" "}
                       <i>
                         effizient
                       </i>
-                      {" "}
                       durchgeht, in der Praxis leider
                       meist unbrauchbar ist.
                     </Paragraph>
@@ -132,12 +125,10 @@ const Article = () => {
                       Chomsky-Normalform
                     </Paragraph>
                   </h3>
-                  Eine kontextfreie Grammatik ist in 
-                  {" "}
+                  Eine kontextfreie Grammatik ist in{" "}
                   <i>
                     Chomsky-Normalform
                   </i>
-                  {" "}
                   , wenn jede Produktion eine
                   der folgenden Formen hat:
                   \begin&#123;align*&#125;
@@ -214,12 +205,10 @@ const Article = () => {
                     haben muss, für \(w = uv\). Wenn wir die
                     Unterteilung von \(w\) in \(u\) und \(v\) kennen würden, so könnten wir rekursiv
                     fragen, wie man denn \(A \Step&#123;&#125;^* u\) und \(B \Step&#123;&#125;^* v\) ableitet. Da wir sie
-                    aber 
-                    {" "}
+                    aber{" "}
                     <i>
                       nicht
                     </i>
-                    {" "}
                     kennen, also konkret nicht wissen, wie lange \(u\) und \(v\) sind,
                     können wir alle Möglichkeiten durchprobieren. Da \(G\) in Chomsky-Normalform vorliegt, wissen
                     wir, dass \(|u| \geq 1\) und \(|v| \geq 1\), also \(1 \leq |u| \leq |w|-1\). Wir probieren also
@@ -239,12 +228,10 @@ const Article = () => {
                     Younger und Tadao Kasami).
                     Für die praktische Anwendung ist dieser weniger relevant. Dafür ist er ein wunderbares Beispiel
                     für einen
-                    Algorithmus, der auf dem Prinzip des 
-                    {" "}
+                    Algorithmus, der auf dem Prinzip des{" "}
                     <i>
                       Dynamic Programing
                     </i>
-                    {" "}
                     fußt, welches Sie in der
                     Vorlesung{" "}
                     <a href="../../AuK/index.html">
@@ -254,34 +241,26 @@ const Article = () => {
                     ausführlicher kennenlernen wollen. Wir beschränken uns bei dem folgenden Algorithmus
                     zunächst darauf, die Frage zu beantworten, ob den überhaupt \(S \Step&#123;&#125;^* w\) gilt,
                     und interessieren uns erst einmal nicht dafür eine solche Ableitung auch zu finden (in der
-                    Algorithmik versteht man das als 
-                    {" "}
+                    Algorithmik versteht man das als{" "}
                     <i>
                       Entscheidungsproblem
                     </i>
-                    {" "}
                     , im Gegensatz zu dem
                     allgemeinerin
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Suchproblem
                     </i>
-                    {" "}
                     ).
                   </Paragraph>
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
                     Der Entwurf eines Dynamic-Programming-Algorithmus beginnt oft mit der folgenden Frage:
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Was sind sinnvolle Zwischenergebnisse?
                     </i>
-                    {" "}
                     In unserem Falle sind Ableitungen der Form
                     \begin&#123;align*&#125;
                     X&amp;\Step&#123;&#125;^* u
@@ -356,23 +335,29 @@ const Article = () => {
                     \step&#123;&#125; w_i \textnormal&#123; ist eine Produktion in $G$&#125;\&#125;\)
                   </li>
                   <li>
+                    {" "}{" "}
                     <code>
                       for l = 2 .. n
                     </code>
+                    {" "}{" "}
                     <ol
                       type="I"
                       class="">
                       <li>
+                        {" "}{" "}
                         <code>
                           for i = 0 .. n-l
                         </code>
+                        {" "}{" "}
                         <ol
                           type="i"
                           class="">
                           <li>
+                            {" "}{" "}
                             <code>
                               k := i+l
                             </code>
+                            {" "}{" "}
                             <span class="comment">
                               # wir betrachten das Interval
                               w[i:k] der Länge l
@@ -385,13 +370,16 @@ const Article = () => {
                             Initialisiere \(N_&#123;i,k&#125; := \emptyset\)
                           </li>
                           <li>
+                            {" "}{" "}
                             <code>
                               for j = i+1 .. k-1:
                             </code>
+                            {" "}{" "}
                             <ol
                               type={1}
                               class="">
                               <li>
+                                {" "}{" "}
                                 <code>
                                   for all productions
                                 </code>
@@ -405,32 +393,41 @@ const Article = () => {
                                 </ol>
                               </li>
                               <li>
+                                {" "}{" "}
                                 <code>
                                   end for all productions
                                 </code>
+                                {" "}{" "}
                               </li>
                             </ol>
                           </li>
                           <li>
+                            {" "}{" "}
                             <code>
                               end for j
                             </code>
+                            {" "}{" "}
                           </li>
                         </ol>
                       </li>
                       <li>
+                        {" "}{" "}
                         <code>
-                          end for k{" "}
+                          end for k
                         </code>
+                        {" "}{" "}
                       </li>
                     </ol>
                   </li>
                   <li>
+                    {" "}{" "}
                     <code>
-                      end for i{" "}
+                      end for i
                     </code>
+                    {" "}{" "}
                   </li>
                   <li>
+                    {" "}{" "}
                     <code>
                       return True if
                     </code>
@@ -438,6 +435,7 @@ const Article = () => {
                     <code>
                       else return False
                     </code>
+                    {" "}{" "}
                   </li>
                 </ul>
                 <Paragraph>
@@ -459,7 +457,7 @@ const Article = () => {
                     und jedes solche Tripel auch drankommt. Wie viele solche Tripel gibt es? Genau
                     \(&#123;n \choose 3&#125;\) viele. Also: die Zeile a wird
                     \begin&#123;align*&#125;
-                    g \cdot&#123;n \choose 3&#125; = g \cdot \frac&#123;n (n-1) (n-2)&#125;&#123;6&#125;
+                    g \cdot &#123;n \choose 3&#125; = g \cdot \frac&#123;n (n-1) (n-2)&#125;&#123;6&#125;
                     \end&#123;align*&#125;
                     mal durchlaufen. Also "ungefähr" \(g n^3 / 6\) und "noch ungefährer" \(g n^3\). Also:
                   </Paragraph>
@@ -480,7 +478,6 @@ const Article = () => {
                     <b>
                       Achtung:
                     </b>
-                    {" "}
                     wir haben die Kosten für die allererste Zeile vernachlässigt.
                     Überlegen
                     Sie sich, wie viel Laufzeit diese verursachen kann und überzeugen Sie sich, dass dies in den
@@ -524,7 +521,7 @@ const Article = () => {
                       href="#cyk-demo"
                       class="left carousel-control-prev-icon">
                       <div class="carousel-nav-icon">
-                        <img src="../img/carousel-jump-to-start.svg" />
+                        <img src="../img/carousel-prev-icon.svg" />
                       </div>
                     </a>
                     <a
@@ -532,7 +529,7 @@ const Article = () => {
                       href="#cyk-demo"
                       class="right carousel-control-next-icon">
                       <div class="carousel-nav-icon">
-                        <img src="../img/carousel-jump-to-start.svg" />
+                        <img src="../img/carousel-next-icon.svg" />
                       </div>
                     </a>
                     <a
@@ -540,7 +537,7 @@ const Article = () => {
                       href="#cyk-demo"
                       class="right carousel-control-next-icon">
                       <div class="carousel-nav-icon">
-                        <img src="../img/carousel-jump-to-start.svg" />
+                        <img src="../img/carousel-jump-to-end.svg" />
                       </div>
                     </a>
                     <div
@@ -552,118 +549,194 @@ const Article = () => {
                         style="display:inline-block"
                         class="carousel-inner">
                         <div class="item active">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/01-01.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/01-02.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/01-03.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-01.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-02.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-03.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-04.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-05.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-06.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-07.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-08.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-09.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-10.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-11.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-12.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-13.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-14.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-15.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-16.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-17.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-18.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-19.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-20.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-21.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-22.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-23.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-24.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-25.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-26.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-27.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-28.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-29.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-30.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-31.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-32.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-33.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-34.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-jump-to-start.svg" />
+                          <img
+                            style="height:23em"
+                            src="../img/context-free/CYK/02-35.svg" />
                         </div>
                       </div>
                     </div>

@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={32}
         title_gr="LL(\(k\))-Grammatiken"
         title_en="LL1 grammars"
         number={5.4}
@@ -46,17 +47,13 @@ const Article = () => {
                     <b>
                       Grenzform
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik.
                     Eine Wortform \(A \alpha\) - also eine Wortform, die mit einem Nichtterminal beginnt -
-                    heißt 
-                    {" "}
+                    heißt{" "}
                     <i>
                       Grenzform
                     </i>
-                    {" "}
                     , wenn es ein \(w \in \Sigma^*\) gibt, so dass
                     es eine Linksableitung
                     \begin&#123;align*&#125;
@@ -100,9 +97,7 @@ const Article = () => {
                     <b>
                       LL(\(k\))-Grammatiken
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) ist eine
                     LL(\(k\))-Grammatik, wenn für jede Grenzform \(A \alpha\) und für jedes Paar
                     \begin&#123;align*&#125;
@@ -135,9 +130,7 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Negieren Sie die Definition, d.h., schreiben Sie eine Aussage der Form
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Wenn \(G\) nicht LL(\(k\)) ist, dann gibt es...
                     </i>
@@ -162,9 +155,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Folgen wir der Definition von LL(1): für jedes Paar verschiedener Regeln muss etwas
                       gelten. Wir haben hier keine Auswahl, denn es gibt ja nur ein Paar. Also
                       müssen wir zeigen, dass, falls
@@ -182,7 +173,6 @@ const Article = () => {
                         <b>
                           Behauptung.
                         </b>
-                        {" "}
                         Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
                         dann steht jedes \(S\) in \(\delta\) entweder am Ende von \(\delta\) oder
                         unmittelbar vor einem "\(\texttt&#123;)&#125;\)".
@@ -234,12 +224,10 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Wenn umgekehrt eine Grammatik 
-                    {" "}
+                    Wenn umgekehrt eine Grammatik{" "}
                     <i>
                       nicht
                     </i>
-                    {" "}
                     LL(\(k\)) ist, dann muss der Backtrack-Baum
                     beiden Ableitungen
                     \begin&#123;align*&#125;
@@ -256,12 +244,10 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    (Beispiel 5.3 aus 
-                    {" "}
+                    (Beispiel 5.3 aus{" "}
                     <i>
                       The Theory of Parsing, Translation, and Compiling
                     </i>
-                    {" "}
                     von Alfred V. Aho
                     und Jeffrey D. Ullman).
                     Betrachten wir die Grammatik
@@ -279,7 +265,6 @@ const Article = () => {
                       <b>
                         Tip.
                       </b>
-                      {" "}
                       Leiten Sie erst einmal
                       ein Dutzend verschiedene Wörter ab und finden dann
                       eine "normalsprachliche" Beschreibung
@@ -315,13 +300,10 @@ const Article = () => {
                     L(G) := \&#123; a^&#123;m+k&#125; b^m \ | \ m, k \in \N \&#125; \ ,
                     \end&#123;align*&#125;
                     also Wörter, wo auf beliebig viele \(a\)'s eine Folge von
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       höchstens
                     </i>
-                    {" "}
                     so vielen \(b\)'s folgt.
                   </Paragraph>
                   <Paragraph>
@@ -388,13 +370,10 @@ const Article = () => {
                   schreiben können.
                   Wir tasten uns langsam voran. Wir beginnen mit einer
                   Verallgemeinerung von \(\first_k\) von Wörtern auf
-                </Paragraph>
-                <Paragraph>
-                  {" "}{" "}
+                  {" "}
                   <i>
                     Wortformen
                   </i>
-                  {" "}
                   (die also Nichtterminale beinhalten können).
                 </Paragraph>
                 <div class="well container theorem">
@@ -501,21 +480,17 @@ const Article = () => {
                     i \alpha)
                     \end&#123;align*&#125;
                     da ja nach obiger Beobachtung diese Mengen disjunkt sind. Wenn
-                    \(\first_k(y)\) in 
-                    {" "}
+                    \(\first_k(y)\) in{" "}
                     <i>
                       keiner
                     </i>
-                    {" "}
                     dieser Mengen enthalten ist, so
                     kann die Ableitung offensichtlich nicht vervollständigt werden, und wir schließen,
                     dass \(xy \not \in L(G)\) ist.
-                    Wenn es 
-                    {" "}
+                    Wenn es{" "}
                     <i>
                       genau ein
                     </i>
-                    {" "}
                     \(\beta_i\) gibt mit
                     \(\first_k(y) \in \first_k(\beta_i \alpha)\), dann ist
                     \(A \rightarrow \beta_i\) die "richtige" Produktion.
@@ -703,9 +678,7 @@ const Article = () => {
                     <b>
                       - Wie man \(\First_k(\alpha)\) berechnet.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Sei eine Wortform \(\alpha\) gegeben, also
                     \(\alpha \in (\Sigma \cup N)^*\). Wir berechnen
                     \(\First_k(\alpha)\), indem wir als erstes
@@ -852,20 +825,15 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     In solchen Situationen, wo sich "die Katze in den Schwanz beißt", hilft es oft, die Definition
-                    vorerst 
-                    {" "}
+                    vorerst{" "}
                     <i>
                       komplexere
                     </i>
-                    {" "}
                     un
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       genauer
                     </i>
-                    {" "}
                     zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
                     \(\First_k(\alpha)\), noch eine feinere
                     Unterteilung an:
@@ -1039,9 +1007,7 @@ const Article = () => {
                     <b>
                       - Berechnung der Menge \(\First_k(A)\) für die Nichtterminale einer Sprache.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Wir betrachten die Grammatik
                     \begin&#123;align*&#125;
                     S&amp;\rightarrow Xa \ | \ \epsilon \\
@@ -1055,10 +1021,7 @@ const Article = () => {
                     href="#compute-first-2"
                     class="left carousel-control-prev-icon">
                     <div class="carousel-nav-icon">
-                      <img
-                        style="height:8em"
-                        src="../img/context-free/LL/tree-depth-2.svg"
-                        loading="lazy" />
+                      <img src="../img/carousel-jump-to-start.svg" />
                     </div>
                   </a>
                   <a
@@ -1066,10 +1029,7 @@ const Article = () => {
                     href="#compute-first-2"
                     class="left carousel-control-prev-icon">
                     <div class="carousel-nav-icon">
-                      <img
-                        style="height:8em"
-                        src="../img/context-free/LL/tree-depth-2.svg"
-                        loading="lazy" />
+                      <img src="../img/carousel-prev-icon.svg" />
                     </div>
                   </a>
                   <a
@@ -1077,10 +1037,7 @@ const Article = () => {
                     href="#compute-first-2"
                     class="right carousel-control-next-icon">
                     <div class="carousel-nav-icon">
-                      <img
-                        style="height:8em"
-                        src="../img/context-free/LL/tree-depth-2.svg"
-                        loading="lazy" />
+                      <img src="../img/carousel-next-icon.svg" />
                     </div>
                   </a>
                   <a
@@ -1088,10 +1045,7 @@ const Article = () => {
                     href="#compute-first-2"
                     class="right carousel-control-next-icon">
                     <div class="carousel-nav-icon">
-                      <img
-                        style="height:8em"
-                        src="../img/context-free/LL/tree-depth-2.svg"
-                        loading="lazy" />
+                      <img src="../img/carousel-jump-to-end.svg" />
                     </div>
                   </a>
                   <div
@@ -1104,297 +1058,248 @@ const Article = () => {
                       class="carousel-inner">
                       <div class="item active">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/01.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/02.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/03.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/04.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/05.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/06.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/07.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/08.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/09.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/10.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/11.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/12.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/13.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/14.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/15.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/16.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/17.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/18.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/19.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/20.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/21.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/22.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/23.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/24.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/25.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/26.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/27.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/28.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/29.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/30.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/31.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/32.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/33.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/34.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/35.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/36.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/37.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/38.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/39.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/40.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/41.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/42.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/43.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/44.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/45.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/46.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/47.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/48.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:8em"
-                          src="../img/context-free/LL/tree-depth-2.svg"
-                          loading="lazy" />
+                          style="height:24em"
+                          src="../img/context-free/LL/compute-first-2/49.svg" />
                       </div>
                     </div>
                   </div>

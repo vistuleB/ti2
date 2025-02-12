@@ -88,8 +88,8 @@
                         
                         
                         |> img
-                            style height:10em
-                            src ../img/circuits/majority.svg
+                            style height:8em
+                            src ../img/circuits/maj3.svg
                             loading lazy
                         
                         
@@ -185,7 +185,7 @@
                         
                         Es gilt
                         $$
-                        &#123;n \choose&#123;\ceil{n/2}}} \geq \frac{2^n}{n+1} \ .
+                        {n \choose {\ceil{n/2}}} \geq \frac{2^n}{n+1} \ .
                         $$
                         
                     
@@ -198,9 +198,7 @@
                         class well container
 
                         
-                        
                         *Beweis.*
-                        
                         Sei \(k \in \{1,\dots,n\}\). Vergleichen wir \({n \choose k}\) mit \({n \choose k-1}\):
                         \begin{align*}
                         \frac{{n \choose k}}{{n \choose k-1}}&amp;=
@@ -208,7 +206,7 @@
                         \end{align*}
                         und somit
                         \begin{align*}
-                        &#123;n \choose k}&amp;\geq&#123;n \choose k-1} \quad \Longleftrightarrow \\
+                        {n \choose k}&amp;\geq {n \choose k-1} \quad \Longleftrightarrow \\
                         n-k+1&amp;\geq k \quad \Longleftrightarrow \\
                         2k&amp;\leq n+1 \quad \Longleftrightarrow \\
                         k&amp;\leq \frac{n+1}{2} \quad \Longleftrightarrow \\
@@ -216,7 +214,7 @@
                         \end{align*}
                         Aus der letzten Zeile folgt nun, dass \({n \choose k}\) durch \(k := \ceil{\frac{n}{2}}\)
                         maximiert wird, also
-                        \({n \choose k} \leq&#123;n \choose \ceil{\frac{n}{2}}}\) gilt.
+                        \({n \choose k} \leq {n \choose \ceil{\frac{n}{2}}}\) gilt.
                         
                         |> p
 
@@ -233,19 +231,19 @@
                             nicht,
                             haben also insgesamt \(2^n\) Wahlmöglichkeiten. Daher gilt:
                             $$
-                            \sum_{k=0}^n&#123;n \choose k} = 2^n \ .
+                            \sum_{k=0}^n {n \choose k} = 2^n \ .
                             $$
                             Intuitiv gesprochen heißt das: diese Summe hat \(n+1\) Terme (\(k\) wandert von 0 bis
                             \(n\),
                             also muss
                             der größte Term mindestens ein \((n+1)\)-tel des Gesamtbetrages sein. Formal:
                             $$
-                            2^n = \sum_{k=0}^n&#123;n \choose k} \leq \sum_{k=0}^n&#123;n \choose \ceil{\frac{n}{2}}}
-                            = (n+1) \cdot&#123;n \choose \ceil{\frac{n}{2}}}
+                            2^n = \sum_{k=0}^n {n \choose k} \leq \sum_{k=0}^n {n \choose \ceil{\frac{n}{2}}}
+                            = (n+1) \cdot {n \choose \ceil{\frac{n}{2}}}
                             $$
                             und somit
                             $$
-                            &#123;n \choose \ceil{\frac{n}{2}}} \geq \frac{2^n}&#123;n+1} \ ,
+                            {n \choose \ceil{\frac{n}{2}}} \geq \frac{2^n} {n+1} \ ,
                             $$
                             
                         
@@ -273,11 +271,7 @@
                     |> h3
 
                         
-                        Majority Top-Down mit 
-                        |> code
-
-                            if-then-else
-                        -Gates
+                        Majority Top-Down mit `if-then-else`-Gates
                         
                     
                     
@@ -313,8 +307,8 @@
                         
                         
                         |> img
-                            style height:10em
-                            src ../img/circuits/majority.svg
+                            style height:15em
+                            src ../img/circuits/majority-theta-recursive.svg
                             loading lazy
                         
                         
@@ -330,7 +324,7 @@
                     C^n_0&amp;= 1
                     \end{align*}
                     gilt; sie erfüllt also die gleiche Rekursionsgleichung wie der Binomialkoeffizient
-                    \({n \choose k}\), also gilt \(C^n_k =&#123;n \choose k}\). Die Konstruktion ist
+                    \({n \choose k}\), also gilt \(C^n_k = {n \choose k}\). Die Konstruktion ist
                     asymptotisch auch nicht besser als die, aus der Wahrheitstabelle direkt
                     eine monotone DNF zu basteln.
                     
@@ -349,8 +343,8 @@
                         
                         
                         |> img
-                            style height:10em
-                            src ../img/circuits/majority.svg
+                            style height:18em
+                            src ../img/circuits/majority-theta-dp.svg
                             loading lazy
                         
                         
@@ -370,37 +364,16 @@
                         class listing
 
                         
+                        `def binomial(n,k):`
+                        `if k == 0 or k == n:`
+                        `return 1` 
                         
-                        |> code
-
-                            def binomial(n,k):
-                        
-                        
-                        |> code
-
-                            if k == 0 or k == n:
-                        
-                        
-                        |> code
-
-                            return 1 
-                        
-                        
-                        |> code
-
-                            else:
-                        
-                        
-                        |> code
-
-                            return binomial(n-1,k-1) + binomial(n-1,k)
-                        
+                        `else:`
+                        `return binomial(n-1,k-1) + binomial(n-1,k)`
                         
                     
                     der exponentielle Laufzeit aufweist, und der effizienten Implementierung mittels
-                    
-                    _Dynamic Programming_
-                    , bei welchem wir uns die Zwischenergebnisse merken.
+                    _Dynamic Programming_, bei welchem wir uns die Zwischenergebnisse merken.
                     
                     
                     
@@ -460,8 +433,8 @@
                         
                         
                         |> img
-                            style height:10em
-                            src ../img/circuits/majority.svg
+                            style height:12em
+                            src ../img/circuits/majority-by-adding.svg
                             loading lazy
                         
                         
@@ -524,9 +497,7 @@
                         class well container
 
                         
-                        
                         *Beweis.*
-                        
                         Ich demonstriere das Beweisprinzip erst einmal mit drei Zahlen in Basis 10:
                         
                         |> figure
@@ -535,7 +506,7 @@
                             
                             |> img
                                 style height:10em
-                                src ../img/circuits/majority.svg
+                                src ../img/circuits/2-for-3-adder-example.svg
                                 loading lazy
                             
                             
@@ -554,8 +525,8 @@
                                 
                                 
                                 |> img
-                                    style height:10em
-                                    src ../img/circuits/majority.svg
+                                    style height:15em
+                                    src ../img/circuits/2-for-3-adder-binary.svg
                                     loading lazy
                                 
                                 
@@ -707,9 +678,7 @@
                         die \(\bigvee\)-Gates haben sehr großen Fan-in, nämlich bis zu \(n\). Um
                         Fan-in 2 zu erreichen, müssen wir jedes \(\bigvee\)-Gate durch einen Binärbaum
                         aus normalen \(\vee\)-Gates von Fan-in 2 ersetzen. Dies gibt uns zusätzlich
-                        Tiefe \(O(\log n)\) 
-                        _pro \(\bigvee\)-Gate_
-                        ; wir erhalten also insgesamt
+                        Tiefe \(O(\log n)\) _pro \(\bigvee\)-Gate_; wir erhalten also insgesamt
                         eine Tiefe von \(O(\log^2 n)\).
                         
                     
@@ -756,13 +725,9 @@
                         class well container
 
                         
-                        
                         *Beweis.*
-                        
                         Die Beweismethode, die wir verwenden, ist womöglich neu für Sie. Wir verwenden
-                        bei der Konstruktion des Schaltkreises 
-                        _Zufall_
-                        ; am Ende werden
+                        bei der Konstruktion des Schaltkreises _Zufall_; am Ende werden
                         wir zeigen, dass dieser zufällige Schaltkreis mit hoher Wahrscheinlichkeit
                         \(\maj_n\) auf allen möglichen \(2^n\) Inputs korrekt berechnen, und folgern
                         daraus, das etwas, was mit hoher Wahrscheinlichkeit eintritt, auch existieren muss.
@@ -780,13 +745,9 @@
                             bei der Konstruktion des Schaltkreises \(C\) Zufall verwenden;
                             wir nehmen nicht an, dass die Inputs \(x \in \{0,1\}^n \) in irgendeiner
                             Weise zufällig sind. Wir verwenden also
-                            
-                            _Wahrscheinlichkeitsverteilungen über Schaltkreisen_
-                            , nicht
+                            _Wahrscheinlichkeitsverteilungen über Schaltkreisen_, nicht
                             von über Inputs. Zuerst definieren wir
-                            die 
-                            _Signalstärke_
-                            von Verteilungen über Schaltkreise.
+                            die _Signalstärke_von Verteilungen über Schaltkreise.
                             
                         
                         
@@ -801,9 +762,7 @@
                                 Definition (Signalstärke)
                             
                             Sei \(\mathcal{C}\) eine Verteilung über Schaltkreise mit Input-Variablen
-                            \(x_1,\dots,x_n\). Wir sagen, dass \(\mathcal{C}\) 
-                            _Signalstärke mindestens $\delta$_
-                            
+                            \(x_1,\dots,x_n\). Wir sagen, dass \(\mathcal{C}\) _Signalstärke mindestens $\delta$_
                             hat, wenn
                             $$
                             \forall x \in \{0,1\}: \quad \Pr_{C \in \mathcal{C}} [C(x) = \maj_n(x)]
@@ -853,9 +812,7 @@
                             class well subtheorem
 
                             
-                            
                             *Beweis.*
-                            
                             Der Schaltkreis bzw. die Wahrscheinlichkeitsverteilung ist extrem einfach.
                             Wir wählen zufällig einen Index \(I \in \{1,\dots,n\}\) und
                             geben \(x_I\) als unseren Schaltkreis \(C\) (bestehend aus einem einzigen Input-Gate,
@@ -900,9 +857,7 @@
                         |> p
 
                             Um eine Analogie aus dem Alltag zu bemühen: wenn Sie für eine
-                            Wahlprognose 
-                            _einen_
-                            zufällig ausgewählten Bürger befragen, so
+                            Wahlprognose _einen_zufällig ausgewählten Bürger befragen, so
                             ist das Ergebnis zwar nicht wirklich repräsentativ, aber immerhin leicht
                             besser, als wenn Sie einfach raten würden. Unser zufälliger
                             Schaltkreis sendet uns also ein schwaches aber positives Signal in die
@@ -918,9 +873,7 @@
                             \forall \x \in \{0,1\}^n : \quad
                             \Pr_{C \sim \mathcal{C}} [C(\x) = \maj_n(\x)] \geq \frac{1+\delta}{2} \ .
                             $$
-                            Dann können wir 
-                            _drei_
-                            Schaltkreise
+                            Dann können wir _drei_Schaltkreise
                             \(C_1, C_2, C_3 \sim \mathcal{C}\) unabhängig voneinander samplen und
                             einen neuen Schaltkreis bauen: \(C'(\x) := \maj_3 (C_1(\x), C_2(\x), C_3(\x))\). Dies gibt
                             uns wiederum eine Verteilung über Schaltkreise, die wir
@@ -981,15 +934,12 @@
                             |> p
 
                                 *Beweis.*
-                                
                                 Wir betrachten ein festes $\x \in \cube^n$ mit $\maj_n(\x) = 1$; der
                                 Fall $\maj_n(\x) = 0$ ist analog. Wir definieren
                                 nun $U := C_1(\x)$, $V := C_2(\x)$ und $W := C_3(\x)$. Da
                                 $C_1, C_2, C_3 \sim \mathcal{C}$ zufällige Schaltkreise sind, sind $U, V, W$
                                 Zufallsvariable
-                                über $\cube$, und zwar 
-                                _unabhängig_
-                                , weil wir $C_1, C_2, C-3$ auch unabhängig
+                                über $\cube$, und zwar _unabhängig_, weil wir $C_1, C_2, C-3$ auch unabhängig
                                 gesampelt haben. Wir wissen: $\Pr[U=1] = \Pr[V=1] = \Pr[W=1] \geq \frac{1+\delta}{2} =:
                                 p$.
                                 Was ist nun $\Pr[\maj_3(U,V,W) = 1]$?
@@ -1054,9 +1004,7 @@
                             knapp über $1/2$ liegen, sondern an solchen, die knapp unter $1$ liegen,
                             führen wir einen Parameterwechsel durch: eine Verteilung $\mathcal{C}$ von Schaltkreisen
                             mit Inputs $x_1,\dots,x_n$
-                            hat 
-                            _Fehlerwahrscheinlichkeit $\epsilon$_
-                            , wenn
+                            hat _Fehlerwahrscheinlichkeit $\epsilon$_, wenn
                             
                         
                         \begin{align*}
@@ -1100,8 +1048,7 @@
                             
                             |> p
 
-                                *Beweis.*
-                                Wie im Beweis vom Lemma setzen wir
+                                *Beweis.*Wie im Beweis vom Lemma setzen wir
                                 $p := \frac{1+p}{2} = 1-\epsilon$ und erhalten
                                 
                             
@@ -1149,12 +1096,8 @@
                             
                             Qualitativ sehen wir: solange $\delta_i \leq 1/2$ gilt, wächst die Signalstärke exponentiell
                             an. Dieses exponentielle Wachstum kann natürlich nicht beliebig weitergehen. Jenseits
-                            $\delta_i \leq 1/2$ hört das auf, dafür 
-                            _fällt_
-                            nun die Fehlerwahrscheinlichkeit
-                            
-                            _doppelt exponentiell_
-                            . Für $j^* := \log_{3/2} n$ gilt dann
+                            $\delta_i \leq 1/2$ hört das auf, dafür _fällt_nun die Fehlerwahrscheinlichkeit
+                            _doppelt exponentiell_. Für $j^* := \log_{3/2} n$ gilt dann
                             
                         
                         \begin{align*}
@@ -1171,9 +1114,8 @@
                             
                             
                             |> img
-                                style height:10em
-                                src ../img/circuits/majority.svg
-                                loading lazy
+                                style height:18em
+                                src ../img/circuits/majority-probability-labeled.svg
                             |> br
                             
                             Graph der Funktion $p \mapsto p^3 + 3 p^2 (1-p)$
@@ -1188,9 +1130,8 @@
                             
                             
                             |> img
-                                style height:10em
-                                src ../img/circuits/majority.svg
-                                loading lazy
+                                style height:18em
+                                src ../img/circuits/majority-probability-close-to-half-labeled.svg
                             |> br
                             
                             Signalstärke $\delta$ wächst für $p \in [1/2, 3/4]$ exponentiell.
@@ -1206,9 +1147,8 @@
                             
                             
                             |> img
-                                style height:10em
-                                src ../img/circuits/majority.svg
-                                loading lazy
+                                style height:18em
+                                src ../img/circuits/majority-probability-close-to-one-labeled.svg
                             |> br
                             
                             Fehlerwahrscheinlichkeit $\epsilon$ fällt für $p \in [3/4, 1/2]$ doppelt
@@ -1238,7 +1178,7 @@
                             
                         
                         \begin{align*}
-                        E_{\b} := \{\textnormal{Schaltkreise&#125; C \textnormal{ über&#125; x_1, \dots, x_n \ | \ C(\b) \ne
+                        E_{\b} := \{\textnormal{Schaltkreise } C \textnormal{ über } x_1, \dots, x_n \ | \ C(\b) \ne
                         \maj_n(\b) \} \ .
                         \end{align*}
                         
@@ -1247,9 +1187,7 @@
                             
                             Die Verteilung $\mathcal{C}_k$ existiert ja im Wahrscheinlichkeitsraum aller
                             Boolescher Schaltkreise mit Inputs $x_1,\dots, x_n$. Die Menge $E_{\b}$
-                            ist somit ein 
-                            _Ereignis_
-                            in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
+                            ist somit ein _Ereignis_in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
                             
                         
                         \begin{align*}
@@ -1315,7 +1253,7 @@
                         |> p
 
                             Gates. Ein Schaltkreis mit Fan-in 2 und Tiefe $c \log_2 n$ hat also
-                            insgesamt höchstens $2^{c \log n + 1&#125; - 1 = O(n^c) = O(\poly(n))$ Gates.
+                            insgesamt höchstens $2^{c \log n + 1 } - 1 = O(n^c) = O(\poly(n))$ Gates.
                             
                             |> span
                                 class qed
@@ -1351,9 +1289,7 @@
 
                         
                         Wir könnten nun noch ehrgeiziger sein und einen monotonen Schaltkreis mit Fan-in 2,
-                        Tiefe $O(\log n)$ und 
-                        _linearer_
-                        Größe $O(n)$ anstreben.
+                        Tiefe $O(\log n)$ und _linearer_Größe $O(n)$ anstreben.
                         
                     
                     

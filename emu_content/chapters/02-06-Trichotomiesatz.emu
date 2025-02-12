@@ -126,9 +126,7 @@
 
                                 Theorem
                             
-                            
-                            *(Trichotomiesatz der Mengenlehre).*
-                            Seien $A$ und
+                            *(Trichotomiesatz der Mengenlehre).*Seien $A$ und
                             $B$ zwei Mengen. Dann gibt es eine injektive Funktion $f : A
                             \rightarrow B$ oder eine injektive Funktion $g : A \rightarrow B$.
                             Es gilt also immer genau einer der drei folgenden Fälle:
@@ -166,9 +164,7 @@
                         |> p
 
                             
-                            
                             *(Unvollständiger) Beweis.*
-                            
                             Will man ein Objekt mit gewissen Eigenschaften (hier: Funktion,
                             injektiv) konstruieren, so lohnt es sich oft, die gestellten
                             Bedingungen zu relaxieren und sich langsam zu einer "richtigen"
@@ -180,15 +176,9 @@
 
                             
                             Wir müssen zuerst uns in Erinnerung rufen, was eine
-                            
-                            _Funktion_
-                            formal ist. $A \times B := \{ (a,b) \ | \ a \in A,
+                            _Funktion_formal ist. $A \times B := \{ (a,b) \ | \ a \in A,
                             b \in B\}$, die Menge aller Paare, heißt das
-                            
-                            _cartesische Produkt_
-                            . Eine 
-                            _Relation_
-                            ist eine
+                            _cartesische Produkt_. Eine _Relation_ist eine
                             Teilmenge $R \subseteq A \times B$.
                             
                         
@@ -218,9 +208,7 @@
                                 |> li
 
                                     
-                                    
-                                    _Funktion_
-                                    , wenn es für jedes $a \in A$ genau ein $b \in
+                                    _Funktion_, wenn es für jedes $a \in A$ genau ein $b \in
                                     B$ mit $(a,b) \in R$ gibt; wir schreiben dann üblicherweise $f$
                                     statt $R$ und schreiben $f(a)$, um dieses $b$ zu benennen.
                                     
@@ -229,12 +217,8 @@
                                 |> li
 
                                     
-                                    
-                                    _Matching_
-                                    , wenn es für jedes $a \in A$
-                                    
-                                    _höchstens_
-                                    ein $b \in B$ gibt mit $(a,b) \in R$ und
+                                    _Matching_, wenn es für jedes $a \in A$
+                                    _höchstens_ein $b \in B$ gibt mit $(a,b) \in R$ und
                                     umgekehrt für jedes $b \in B$ höchstens ein $a \in A$ mit $(a,b)
                                     \in R$.
                                     
@@ -243,18 +227,10 @@
                                 |> li
 
                                     
-                                    Wenn $R$ ein Matching ist, dann 
-                                    _sättigt_
-                                    $R$ die Menge
-                                    $A$, wenn es für 
-                                    _jedes_
-                                    $a \in A$ ein $b \in B$ mit
-                                    $(a,b) \in R$ gibt; es 
-                                    _sättigt_
-                                    $B$, wenn es für
-                                    
-                                    _jedes_
-                                    $b \in B$ ein $a \in A$ gibt mit $(a,b) \in R$.
+                                    Wenn $R$ ein Matching ist, dann _sättigt_$R$ die Menge
+                                    $A$, wenn es für _jedes_$a \in A$ ein $b \in B$ mit
+                                    $(a,b) \in R$ gibt; es _sättigt_$B$, wenn es für
+                                    _jedes_$b \in B$ ein $a \in A$ gibt mit $(a,b) \in R$.
                                     
                                 
                                 
@@ -320,9 +296,7 @@
                             |> p
 
                                 
-                                
                                 *Beweis.*
-                                
                                 Nehmen wir an, dass es weder $A$ noch $B$ sättigt. Dann gibt es
                                 also ein $a \in A$, das mit keinem $b' \in B$ "gepaart" ist, und
                                 auch ein $b \in B$, das mit keinem $a' \in A$ gepaart ist. Also
@@ -369,9 +343,7 @@
                                     Definition.
                                 Sei $(X, \preceq)$
                                 eine Partialordnung und $S \subseteq X$ eine Menge. Ein Element $x
-                                \in X$ ist eine 
-                                _obere Schranke für $S$_
-                                wenn
+                                \in X$ ist eine _obere Schranke für $S$_wenn
                                 
                             
                             \begin{align*} s \leq x \quad \forall s \in S \end{align*}
@@ -390,9 +362,7 @@
 
                             
                             Die unendliche aufsteigende Folge $1,2,3,\dots$ hat
-                            
-                            _keine obere Schranke_
-                            in $\N$. Somit gibt es auch kein
+                            _keine obere Schranke_in $\N$. Somit gibt es auch kein
                             maximales Element. Was nun mit $(\mathcal{M}, \subseteq)$? Wenn $M_1
                             \subseteq M_2 \subseteq M_3 \subseteq \dots$ eine unendliche Folge
                             von Matchings ist, dann können wir die doch alle zusammenwerfen:
@@ -506,9 +476,7 @@
                         Man begann, an der mathematischen Intuition zu zweifeln und wollte ein
                         genaues Regelwerk definieren, welche Rechen- und Beweisschritte in der
                         Mathematik erlaubt seien. In moderner Sprache: wann wollte die gesamte
-                        Mathematik 
-                        _axiomatisieren_
-                        . Treibende Kraft hinter diesem
+                        Mathematik _axiomatisieren_. Treibende Kraft hinter diesem
                         Vorhaben war der deutsche Mathematiker
                         
                         |> a

@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={7}
         title_gr="Untere und obere Schranken"
         title_en="lower and upper bounds"
         number={1.6}
@@ -62,7 +63,6 @@ const Article = () => {
                       <b>
                         (Shannon).
                       </b>
-                      {" "}
                       Es gibt
                       Boolesche Funktionen $f$, die keine Schaltkreise kleiner
                       als $\Omega(2^n / n)$ haben.
@@ -76,17 +76,13 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Die Beweismethode ist vielleicht neu für Sie, aber in der Komplexitätstheorie und
                       Kombinatorik
-                      sehr wichtig. Wir stellen uns zwei 
-                      {" "}
+                      sehr wichtig. Wir stellen uns zwei{" "}
                       <i>
                         Zählaufgaben
                       </i>
-                      {" "}
                       : (1) wie viele Boolesche
                       Funktion $f : \fcube$ gibt es? (2) Wie viele Boolesche Schaltkreise
                       mit $n$ Input-Variablen, Fan-in 2 und $s$ Gates gibt es?
@@ -126,9 +122,7 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Wir bauen den Schaltkreis, indem wir erst einmal $s$ Gates unbeschriftet "hinmalen".
                         Um nun zu entscheiden, was für ein Schaltkreis das sein soll, müssen wir Entscheidungen
                         treffen:
@@ -158,7 +152,7 @@ const Article = () => {
                         <Paragraph>
                           Insgesamt haben wir also
                           $$
-                          n + (s-1) + 2&#123;s-1 \choose 2&#125; = n + s - 1 + (s-1)(s-2) =
+                          n + (s-1) + 2 &#123;s-1 \choose 2&#125; = n + s - 1 + (s-1)(s-2) =
                           n + s^2 - 2s + 1 \leq s^2
                           $$
                           Möglichkeiten.
@@ -239,23 +233,19 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Der obige Beweis sagt noch mehr: der Anteil Boolescher Funktionen, bei denen wir mit
-                    $\frac&#123;2^n&#125;&#123;2n&#125;$ Gates auskommen, ist verschwindend klein. Fast 
-                    {" "}
+                    $\frac&#123;2^n&#125;&#123;2n&#125;$ Gates auskommen, ist verschwindend klein. Fast{" "}
                     <i>
                       alle
                     </i>
-                    {" "}
                     Funktionen
                     brauchen also riesige Schaltkreise. In einem Gewissen Sinne haben wir also einfach Glück:
                     die Funktionen, die uns interessieren, wie $n$-Bit-Addition, Majority, Parity und so weiter,
                     haben einfach niedrige Komplexität. Das liegt wohl in der Natur der Sache: wir addieren,
                     multiplizieren,
-                    bauen Brücken, Häuser, Flugzeuge, Computer, weil wir es 
-                    {" "}
+                    bauen Brücken, Häuser, Flugzeuge, Computer, weil wir es{" "}
                     <i>
                       können
                     </i>
-                    {" "}
                     , weil also die dafür
                     benötigten Berechnungen effizient durchführbar sind.
                   </Paragraph>
@@ -347,7 +337,6 @@ const Article = () => {
                       <b>
                         (Lupanov)
                       </b>
-                      {" "}
                       . Für jede Boolesche
                       Funktion in $n$ Variablen gibt es einen Schaltkreis mit Fan-in 2 und $O(2^n / n)$ Gates.
                     </Paragraph>
@@ -360,9 +349,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Der Beweis fußt auf zwei Kernideen: erstens bauen wir den Schaltkreis nicht
                       mit AND- und OR- und NOT-Gates, sondern mit AND- und XOR-Gates. Da wir
                       nach vollendeter Konstruktion jedes XOR-Gates durch einen kleinen Schaltkreis
@@ -382,22 +369,18 @@ const Article = () => {
                     <Paragraph>
                       *$\F
                       <i>
-                        2$-Polynome.*
-                        Polynome in mehreren Variablen kennen Sie
+                        2$-Polynome.*Polynome in mehreren Variablen kennen Sie
                         sicherlich: zum Beispiel $xyz + xy + 1 + y$. Der Unterschied hier ist nur,
                         dass wir alle Werte modulo 2 auswerten, also in dem endlichen Körper
                         $\F
                       </i>
                       2$ arbeiten. Wir brauchen daher auch keine höheren Potenzen:
                       $x^2$ und $x$ ergeben für alle $x \in \&#123;0,1\&#125;$ die gleichen Werte.
-                      Wenn wir in $\F
+                      Wenn wir in $\F_2$ rechnen, können wir uns also auf{" "}
                       <i>
-                        2$ rechnen, können wir uns also auf 
-                        {" "}
+                        multilineare
                       </i>
-                      multilineare_
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Polynome beschränken. Führen wir Polynome formal ein:
                       wir haben eine Menge $x
                       <i>
@@ -437,7 +420,6 @@ const Article = () => {
                         <b>
                           Tipp:
                         </b>
-                        {" "}
                         beschränken Sie sich zuerst auf Funktionen $f$,
                         deren Wahrheitstabelle in genau einer Zeile eine 1 haben. Schreiben
                         Sie eine solche Funktion als $\F_2$-Polynom.
@@ -450,12 +432,10 @@ const Article = () => {
                       gleichen Koeffizienten, aber die spielen hier ja keine Rolle).
                       Wir würden also sagen, dass
                       $xyz + x$ und $x + yzx$ die gleichen Polynome sind.
-                      Dagegen wären $x^2yz + x$ und $xyz+x$ 
-                      {" "}
+                      Dagegen wären $x^2yz + x$ und $xyz+x${" "}
                       <i>
                         verschiedene
                       </i>
-                      {" "}
                       Polynome.
                       Da wir über $\F_2$ arbeiten, beschränken wir uns aber eh auf multilineare Polynome,
                       wo also alle Exponenten 1 sind.
@@ -467,14 +447,11 @@ const Article = () => {
                         <span class="numbered-title">
                           Übungsaufgabe
                         </span>
-                        Zeigen Sie, dass sich jede Funktion $f :\fcube$ 
-                        {" "}
+                        Zeigen Sie, dass sich jede Funktion $f :\fcube${" "}
                         <i>
                           eindeutig
                         </i>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         als multilineares $\F_2$-Polynom schreiben lässt. In anderen Worten:
                         wenn $p$ und $q$ zwei verschiedene multilineare Polynome sind, dann
                         berechnen sie verschiedene Funktionen.
@@ -513,14 +490,11 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Gates. Allerdings ist das eine ungenaue Rechnung: Selbst wenn 
-                      {" "}
+                      Gates. Allerdings ist das eine ungenaue Rechnung: Selbst wenn{" "}
                       <i>
                         alle
                       </i>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       $2^n$ Monome vertreten sind, bestehen nicht alle Monome aus $n$ Variablen.
                     </Paragraph>
                   </Paragraph>
@@ -581,9 +555,7 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Die Idee ist: wenn wir $x
                         <i>
                           1 x
@@ -598,28 +570,20 @@ const Article = () => {
                         <i>
                           1 x
                         </i>
-                        2 x
+                        2 x_3$ eh berechnen, da wir ja{" "}
                         <i>
-                          3$ eh berechnen, da wir ja 
-                          {" "}
+                          alle
                         </i>
-                        alle
+                        Monome
+                        wollen. Wenn wir also einen Schaltkreis für $x
                         <i>
-                          {" "}
-                          Monome
-                          wollen. Wenn wir also einen Schaltkreis für $x
+                          1 x
                         </i>
-                        1 x
-                        <i>
-                          2 x
-                        </i>
-                        3$ haben,
-                        können wir daraus mit 
-                        {" "}
+                        2 x_3$ haben,
+                        können wir daraus mit{" "}
                         <i>
                           einem
                         </i>
-                        {" "}
                         zusätzlichen AND-Gate
                         $x
                         <i>
@@ -650,11 +614,11 @@ const Article = () => {
                     <figure class="centered-figure well container-fluid">
                       <Carousel>
                         <img
-                          style="height:10em"
-                          src="../img/circuits/all-monomials.svg" />
+                          src="../img/circuits/all-monomials-1.svg"
+                          style="width:100%" />
                         <img
-                          style="height:10em"
-                          src="../img/circuits/all-monomials.svg" />
+                          src="../img/circuits/all-monomials-2.svg"
+                          style="width:100%" />
                       </Carousel>
                     </figure>
                     <Paragraph>
@@ -735,12 +699,10 @@ const Article = () => {
                       </i>
                       A$ mehrfach
                       auftreten, und wir können sparen. Dafür berechnen wir
-                      vorsorglich 
-                      {" "}
+                      vorsorglich{" "}
                       <i>
                         alle
                       </i>
-                      {" "}
                       Funktionen in $z
                       <i>
                         1,\dots,z
@@ -793,7 +755,6 @@ const Article = () => {
                         <b>
                           Tip.
                         </b>
-                        {" "}
                         Jedes Gate muss also gleichzeitig
                         ein Output-Gate sein.
                       </Paragraph>

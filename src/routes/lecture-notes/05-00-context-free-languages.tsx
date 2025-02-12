@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={28}
         title_gr="Kontextfreie Sprachen"
         title_en="context free languages"
         number={5.0}

@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={34}
         title_gr="Einen Parser in Java implementieren"
         title_en="b Parser in Java"
         number={5.6}
@@ -84,13 +85,10 @@ const Article = () => {
                     Die Nichtterminale sind also $E$ (Expression), $N$ (Number) und $D$ (Digit). Wir haben auch
                     den einzelnen Produktionen Namen gegeben, bis auf die der Form $D \rightarrow i$.
                     Was soll nun unser Parser tun? Er soll, gegeben ein Eingabewort $w \in L$, den
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Ableitungsbaum
                     </i>
-                    {" "}
                     konstruieren, für{" "}
                     <tt>
                       ((31+402)*83)
@@ -107,13 +105,10 @@ const Article = () => {
                   <Paragraph>
                     Wie wir diesen Baum in Java repräsentieren, darüber sprechen wir in einer Minute.
                     Zuerst aber: wir wollen mit diesem Baum etwas Sinnvolles tun. Zum Beispiel
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       auswerten
                     </i>
-                    {" "}
                     , so dass am Ende eine Zahl rauskommt, im obigen Beispiel
                     also $(31 + 402) \cdot 83 = 35939$. Oder den Ausdruck umformen von
                     Infix-Notation zu Präfixnotation, also

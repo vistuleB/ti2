@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={19}
         title_gr="Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion"
         title_en="mu recursion"
         number={3.4}
@@ -51,12 +52,10 @@ const Article = () => {
                 <Paragraph>
                   Der zweite Punkt ist keine echte Beschränkung, wie wir gesehen haben: wenn wir zwei lokale
                   Variablen \(a,b\) führen wollen, können wir die via der Bijektion
-                  \(&#123;\rm pair&#125; : \N^2 \rightarrow \N\) in 
-                  {" "}
+                  \(&#123;\rm pair&#125; : \N^2 \rightarrow \N\) in{" "}
                   <i>
                     eine
                   </i>
-                  {" "}
                   natürliche Zahl codieren.
                   Der erste Punkt allerdings scheint eine echte Beschränkung zu sein: wir wissen schließlich nicht
                   immer, wie oft wir eine Tätigkeit wiederholen müssen, bis wir fertig sind,
@@ -132,12 +131,10 @@ const Article = () => {
                     </a>
                     erstellt.
                     Es scheint: egal, wo Sie anfangen, Sie enden immer bei 1. Allerdings wissen wir nicht
-                    im Voraus, 
-                    {" "}
+                    im Voraus,{" "}
                     <i>
                       wie oft
                     </i>
-                    {" "}
                     wir die Funktion $f$ anwenden müssen. Und wir wissen nicht einmal,
                     ob man immer bei 1 ankommt, ob es andere Zyklen gibt oder ob es Startwerte gibt, für die die
                     Folge einfach nach Unendlich divergiert. Bis zum heutigen Tage (Stand 30. April 2024) hat sich
@@ -154,36 +151,49 @@ const Article = () => {
                   <Paragraph>
                     Eine Einschränkung primitiv-rekursiver Funktionen ist also, dass wir immer vor der Schleife
                     angeben müssen, wie oft diese durchlaufen werden soll. Es gibt also keine
-                  </Paragraph>
-                  <Paragraph>
-                    <code>
-                      while
-                    </code>
-                    -Schleifen. Führen wir diese nun ein.
+                    `while`-Schleifen. Führen wir diese nun ein.
                   </Paragraph>
                 </Paragraph>
                 <pre class="listing">
-                  <code>
-                    def While (condition, step):
-                  </code>
-                  <code>
-                    def f(x):
-                  </code>
-                  <code>
-                    temp = x
-                  </code>
-                  <code>
-                    while (condition(temp)):
-                  </code>
-                  <code>
-                    temp = step(temp)
-                  </code>
-                  <code>
-                    return temp{" "}
-                  </code>
-                  <code>
-                    return f{" "}
-                  </code>
+                  <Paragraph>
+                    {" "}{" "}
+                    <code>
+                      def While (condition, step):
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      def f(x):
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      temp = x
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      while (condition(temp)):
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      temp = step(temp)
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      return temp
+                    </code>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
+                    <code>
+                      return f
+                    </code>
+                    {" "}{" "}
+                  </Paragraph>
                 </pre>
                 <div class="well well-lg numbered-exercise container">
                   <Paragraph>
@@ -191,23 +201,12 @@ const Article = () => {
                       <span class="numbered-title">
                         Übungsaufgabe
                       </span>
-                      Schreiben Sie mit Hilfe von{" "}
-                      <code>
-                        While
-                      </code>
-                      ,{" "}
-                      <code>
-                        PrimRec
-                      </code>
-                      und{" "}
+                      Schreiben Sie mit Hilfe von `While`, `PrimRec`und{" "}
                       <code>
                         Comp
                       </code>
-                      eine Funktion{" "}
-                      <code>
-                        collatzList
-                      </code>
-                      , die aus einer Zahl
+                      {" "}
+                      eine Funktion `collatzList`, die aus einer Zahl
                       die Collatz-Folge baut, also
                     </Paragraph>
                   </Paragraph>

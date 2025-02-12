@@ -63,18 +63,12 @@
                     Mit den Booleschen Schaltkreisen haben wir ein Modell kennengelernt, dass
                     die Berechnung von Booleschen Funkionen \(f: \{0,1\}^n \rightarrow \{0,1\}\) beschreibt.
                     Wir haben mehrere Beweisen gesehen, dass es für jede Boolesche Funktion einen
-                    Schaltkreis gibt. Unsere Zielsetzung war durchweg 
-                    _komplexitätstheoretisch_
-                    : wir
+                    Schaltkreis gibt. Unsere Zielsetzung war durchweg _komplexitätstheoretisch_: wir
                     wollten möglichst kleine Schaltkreise von möglichst geringer Tiefe entwerfen.
                     Würden wir tiefer in die Schaltkreiskomplexität einsteigen, so würden wir uns fast
-                    ausschließlich mit 
-                    _negativen_
-                    Zielen beschäftigen: zu zeigen, dass es zu bestimmten
+                    ausschließlich mit _negativen_Zielen beschäftigen: zu zeigen, dass es zu bestimmten
                     Funktionen eben nicht Schaltkreise mit \(S\) Gates und in Tiefe \(d\) gibt; wir
-                    würden uns zum Großteil mit 
-                    _unteren Schranken_
-                    beschäftigen.
+                    würden uns zum Großteil mit _unteren Schranken_beschäftigen.
                     
                 
                 
@@ -82,12 +76,8 @@
                 |> p
 
                     
-                    Boolesche Funktionen sind immer 
-                    _endliche_
-                    Objekte. In der Berechenbarkeitstheorie
-                    geht es im Grunde um die Frage: welche 
-                    _unendlichen_
-                    Funktionen können wir überhaupt
+                    Boolesche Funktionen sind immer _endliche_Objekte. In der Berechenbarkeitstheorie
+                    geht es im Grunde um die Frage: welche _unendlichen_Funktionen können wir überhaupt
                     berechnen? Und was gilt denn überhaupt als zulässiges Modell für Berechenbarkeit?
                     
                 
@@ -98,9 +88,7 @@
                     
                     Wenn wir nun also über Funktionen \(f: X \rightarrow Y\) auf unendlichen Mengen sprechen und uns
                     fragen,
-                    welche durch eine 
-                    _endliche Rechenvorschrift_
-                    beschrieben werden können, dann
+                    welche durch eine _endliche Rechenvorschrift_beschrieben werden können, dann
                     müssen wir erst einmal entscheiden, mit welcher unendlichen Menge wir uns beschäftigen.
                     Eine Bedingung sollte zum Beispiel sein, dass wir Input und Output vollständig hinschreiben können.
                     (Denn wenn der Input bereits unendlich groß wäre, wie sollten wir überhaupt über Berechenbarkeit
@@ -113,9 +101,7 @@
                     (Wörter, Programme, Dateien, natürliche Zahlen, rationale Zahlen) als solche Bit-Strings codieren.
                     Die ersten Wissenschaftler, die sich mit Berechenbarkeit beschäftigten, kamen allerdings
                     aus der Mathematik und Logik, und ganz allgemeinen entstand die Berechenbarkeitstheorie
-                    
                     _bevor_
-                    
                     die ersten Rechner gebaut wurden. Daher beschäftigten sich die ersten Forscher auch mit einer
                     anderen, uns sehr vertrauten Menge:
                     \begin{align*}

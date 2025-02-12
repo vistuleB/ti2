@@ -68,12 +68,9 @@
 
                             Definition
                         *Grenzform*
-                        
                         Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik.
                         Eine Wortform \(A \alpha\) - also eine Wortform, die mit einem Nichtterminal beginnt -
-                        heißt 
-                        _Grenzform_
-                        , wenn es ein \(w \in \Sigma^*\) gibt, so dass
+                        heißt _Grenzform_, wenn es ein \(w \in \Sigma^*\) gibt, so dass
                         es eine Linksableitung
                         \begin{align*}
                         S \Step{}^* w A \alpha
@@ -126,9 +123,7 @@
 
                             Definition
                         
-                        
                         *LL(\(k\))-Grammatiken*
-                        
                         Eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) ist eine
                         LL(\(k\))-Grammatik, wenn für jede Grenzform \(A \alpha\) und für jedes Paar
                         \begin{align*}
@@ -164,9 +159,7 @@
                             Übungsaufgabe
                         
                         Negieren Sie die Definition, d.h., schreiben Sie eine Aussage der Form
-                        
                         _Wenn \(G\) nicht LL(\(k\)) ist, dann gibt es..._
-                        
                         
                     
                     
@@ -193,9 +186,7 @@
                             class well subtheorem
 
                             
-                            
                             *Beweis.*
-                            
                             Folgen wir der Definition von LL(1): für jedes Paar verschiedener Regeln muss etwas
                             gelten. Wir haben hier keine Auswahl, denn es gibt ja nur ein Paar. Also
                             müssen wir zeigen, dass, falls
@@ -210,8 +201,7 @@
                             
                             |> p
 
-                                *Behauptung.*
-                                Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
+                                *Behauptung.*Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
                                 dann steht jedes \(S\) in \(\delta\) entweder am Ende von \(\delta\) oder
                                 unmittelbar vor einem "\(\texttt{)}\)".
                             
@@ -269,9 +259,7 @@
                     
                     |> p
 
-                        Wenn umgekehrt eine Grammatik 
-                        _nicht_
-                        LL(\(k\)) ist, dann muss der Backtrack-Baum
+                        Wenn umgekehrt eine Grammatik _nicht_LL(\(k\)) ist, dann muss der Backtrack-Baum
                         beiden Ableitungen
                         \begin{align*}
                         w A \alpha&amp;\Rightarrow w \beta \alpha \\
@@ -295,9 +283,7 @@
                             Übungsaufgabe
                         
                         
-                        (Beispiel 5.3 aus 
-                        _The Theory of Parsing, Translation, and Compiling_
-                        von Alfred V. Aho
+                        (Beispiel 5.3 aus _The Theory of Parsing, Translation, and Compiling_von Alfred V. Aho
                         und Jeffrey D. Ullman).
                         Betrachten wir die Grammatik
                         \begin{align*}
@@ -311,9 +297,7 @@
                         |> p
 
                             
-                            
-                            *Tip.*
-                            Leiten Sie erst einmal
+                            *Tip.*Leiten Sie erst einmal
                             ein Dutzend verschiedene Wörter ab und finden dann
                             eine "normalsprachliche" Beschreibung
                             dieser Sprache. Beschreiben Sie dann alle möglichen Wortformen
@@ -364,9 +348,7 @@
                         L(G) := \{ a^{m+k} b^m \ | \ m, k \in \N \} \ ,
                         \end{align*}
                         also Wörter, wo auf beliebig viele \(a\)'s eine Folge von
-                        
-                        _höchstens_
-                        so vielen \(b\)'s folgt.
+                        _höchstens_so vielen \(b\)'s folgt.
                         
                         
                         |> p
@@ -455,9 +437,7 @@
                     schreiben können.
                     Wir tasten uns langsam voran. Wir beginnen mit einer
                     Verallgemeinerung von \(\first_k\) von Wörtern auf
-                    
-                    _Wortformen_
-                    (die also Nichtterminale beinhalten können).
+                    _Wortformen_(die also Nichtterminale beinhalten können).
                     
                     |> div
                         class well container theorem
@@ -549,14 +529,10 @@
                         \first_k(y) \in \first_k(\beta_i \alpha)
                         \end{align*}
                         da ja nach obiger Beobachtung diese Mengen disjunkt sind. Wenn
-                        \(\first_k(y)\) in 
-                        _keiner_
-                        dieser Mengen enthalten ist, so
+                        \(\first_k(y)\) in _keiner_dieser Mengen enthalten ist, so
                         kann die Ableitung offensichtlich nicht vervollständigt werden, und wir schließen,
                         dass \(xy \not \in L(G)\) ist.
-                        Wenn es 
-                        _genau ein_
-                        \(\beta_i\) gibt mit
+                        Wenn es _genau ein_\(\beta_i\) gibt mit
                         \(\first_k(y) \in \first_k(\beta_i \alpha)\), dann ist
                         \(A \rightarrow \beta_i\) die "richtige" Produktion.
                         Wir wenden sie an, ersetzen also \(A\) auf dem Stack durch \(\beta_i\).
@@ -825,9 +801,7 @@
 
                             Beobachtung
                         
-                        
                         *- Wie man \(\First_k(\alpha)\) berechnet.*
-                        
                         Sei eine Wortform \(\alpha\) gegeben, also
                         \(\alpha \in (\Sigma \cup N)^*\). Wir berechnen
                         \(\First_k(\alpha)\), indem wir als erstes
@@ -973,12 +947,8 @@
 
                         
                         In solchen Situationen, wo sich "die Katze in den Schwanz beißt", hilft es oft, die Definition
-                        vorerst 
-                        _komplexere_
-                        un
-                        
-                        _genauer_
-                        zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
+                        vorerst _komplexere_un
+                        _genauer_zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
                         \(\First_k(\alpha)\), noch eine feinere
                         Unterteilung an:
                         
@@ -1137,9 +1107,7 @@
 
                             Demo.
                         
-                        
                         *- Berechnung der Menge \(\First_k(A)\) für die Nichtterminale einer Sprache.*
-                        
                         Wir betrachten die Grammatik
                         \begin{align*}
                         S&amp;\rightarrow Xa \ | \ \epsilon \\
@@ -1167,9 +1135,7 @@
                                 
                                 
                                 |> img
-                                    style height:8em
-                                    src ../img/context-free/LL/tree-depth-2.svg
-                                    loading lazy
+                                    src ../img/carousel-jump-to-start.svg
                                 
                                 
                             
@@ -1189,9 +1155,7 @@
                                 
                                 
                                 |> img
-                                    style height:8em
-                                    src ../img/context-free/LL/tree-depth-2.svg
-                                    loading lazy
+                                    src ../img/carousel-prev-icon.svg
                                 
                                 
                             
@@ -1211,9 +1175,7 @@
                                 
                                 
                                 |> img
-                                    style height:8em
-                                    src ../img/context-free/LL/tree-depth-2.svg
-                                    loading lazy
+                                    src ../img/carousel-next-icon.svg
                                 
                                 
                             
@@ -1233,9 +1195,7 @@
                                 
                                 
                                 |> img
-                                    style height:8em
-                                    src ../img/context-free/LL/tree-depth-2.svg
-                                    loading lazy
+                                    src ../img/carousel-jump-to-end.svg
                                 
                                 
                             
@@ -1259,393 +1219,344 @@
                                 |> div
                                     class item active
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/01.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/02.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/03.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/04.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/05.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/06.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/07.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/08.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/09.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/10.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/11.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/12.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/13.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/14.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/15.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/16.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/17.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/18.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/19.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/20.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/21.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/22.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/23.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/24.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/25.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/26.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/27.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/28.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/29.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/30.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/31.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/32.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/33.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/34.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/35.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/36.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/37.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/38.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/39.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/40.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/41.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/42.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/43.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/44.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/45.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/46.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/47.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/48.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:8em
-                                        src ../img/context-free/LL/tree-depth-2.svg
-                                        loading lazy
+                                        style height:24em
+                                        src ../img/context-free/LL/compute-first-2/49.svg
                                 
                                 
                             

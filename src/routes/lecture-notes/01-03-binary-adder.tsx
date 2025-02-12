@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={4}
         title_gr="Binär-Addierer"
         title_en="binary adder"
         number={1.3}
@@ -51,12 +52,10 @@ const Article = () => {
                       sind, dann
                       höchstwahrscheinlich auch in Ihrem Blut). Grund genug, sich diese genauer anzuschauen.
                       Genau wie bei der Addition von Dezimalzahlen gibt es pro Stelle ein Ergebnis und einen
-                      Übertrag (Englisch 
-                      {" "}
+                      Übertrag (Englisch{" "}
                       <i>
                         carry
                       </i>
-                      {" "}
                       ); beispielsweise ergibt
                       "sechs plus acht plus sieben = eins, zwei gemerkt", und die 2 muss dann zu den links daneben
                       stehenden Ziffern addiert werden. Binär ist alles viel einfacher, weil man sich nur 0 oder 1
@@ -83,12 +82,10 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Das Carry wird dann der eins weiter links stehenden Stelle zur Addition weitergegeben.
-                      Aber halt! Das heißt doch, dass wir in der nächsten Stelle 
-                      {" "}
+                      Aber halt! Das heißt doch, dass wir in der nächsten Stelle{" "}
                       <i>
                         drei
                       </i>
-                      {" "}
                       Bits addieren
                       müssen:
                       das von \(x\), das von \(y\), und das eingehende Carry \(\cin\). Daraus berechnet
@@ -124,7 +121,7 @@ const Article = () => {
                   <Paragraph>
                     \begin&#123;align*&#125;
                     s&amp;= x \oplus y \oplus \cin \\
-                    \cout&amp;=&#123;\rm Maj&#125; (x, y, \cin) \ .
+                    \cout&amp;= &#123;\rm Maj&#125; (x, y, \cin) \ .
                     \end&#123;align*&#125;
                     Die Funktion Maj haben wir schon oben kennengelernt; sie gibt 1 aus, wenn mindestens zwei
                     ihrer drei Input-Bits 1 sind. Wir kürzen Sie im folgenden mit \(M\) ab. Hier ist nun
@@ -151,14 +148,11 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Wie groß ist dieser Schaltkreis? Wenn wir jedes \(\oplus\)- und \(M\)-Gate als 
-                    {" "}
+                    Wie groß ist dieser Schaltkreis? Wenn wir jedes \(\oplus\)- und \(M\)-Gate als{" "}
                     <i>
                       ein
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Gate
                     zählen, so haben wir insgesamt \(2n\) innere Gates und \(2n\) Input-Gates.
                     Wenn wir darauf bestehen, \(\oplus\)- und \(M\)-Gates aus AND/OR/NOT zu basteln,
@@ -180,7 +174,7 @@ const Article = () => {
                   <figure>
                     <img
                       style="height:10em"
-                      src="../img/circuits/adder-ripple.svg"
+                      src="../img/circuits/onebitadder.svg"
                       loading="lazy" />
                   </figure>
                   <Paragraph>
@@ -212,24 +206,19 @@ const Article = () => {
                     Tiefenmässig hat uns der obige Addierer nicht befriedigt. Das Problem ist, dass das Carry
                     im schlimmsten Fall von ganz rechts nach ganz links durchrasseln muss,
                     zum Beispiel wenn man \(11111111 + 00000001\) berechnet. So einen Addierer nennt man
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       ripple-carry adder
                     </i>
-                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Geringere Tiefe erreicht man mit 
-                    {" "}
+                    Geringere Tiefe erreicht man mit{" "}
                     <i>
                       Carry Lookahead
                     </i>
-                    {" "}
                     . Hier versuchen wir,
                     im Voraus bereits das Carry auf Position \(i\) zu berechnen, ohne erst das auf Position
                     \(i-1\) abzuwarten. Es lohnt, ein paar Dinge formaler zu definieren:
@@ -268,8 +257,8 @@ const Article = () => {
                 </Paragraph>
                 <figure>
                   <img
-                    style="height:10em"
-                    src="../img/circuits/adder-ripple.svg"
+                    style="height:6em"
+                    src="../img/circuits/adder-ripple-only-carry.svg"
                     loading="lazy" />
                 </figure>
                 <Paragraph>
@@ -283,22 +272,18 @@ const Article = () => {
                       Dies motiviert die folgenden Definitionen:
                     </Paragraph>
                   </Paragraph>
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$
                   \begin&#123;align*&#125;
-                  g
-                  <i>
-                    i&amp;:= x
-                  </i>
-                  i \wedge y
-                  <i>
-                    i \tag&#123;carry-generate&#125; \\
-                    p
-                  </i>
-                  i&amp;:= x
-                  <i>
-                    i \vee y
-                  </i>
-                  i \tag&#123;carry-propagate&#125;
+                  g_i&amp;:= x_i \wedge y_i \tag&#123;carry-generate&#125; \\
+                  p_i&amp;:= x_i \vee y_i \tag&#123;carry-propagate&#125;
                   \end&#123;align*&#125;
+                  $$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -334,7 +319,7 @@ const Article = () => {
                   Insgesamt haben wir Tiefe \(O(1)\), wenn wir beliebigen Fan-in zulassen;
                   wenn wir Fan-in 2 wollen, bekommen wir Tiefe \(O(\log n)\).
                   Die Anzahl der Gates ist in jedem Fall \(\Theta(n^3)\), genauer gesagt
-                  etwa \(&#123;n \choose 3&#125;\). Dies scheint
+                  etwa \( &#123;n \choose 3&#125;\). Dies scheint
                   recht verschwenderisch. Für \(n=64\) wie bei zeitgenössischen Rechnern
                   ergibt dies 41664. Das ist nicht unerträglich groß, aber auch nicht besonders handlich.
                 </Paragraph>
@@ -346,20 +331,15 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Effizientere Lösungen beginnen oft mit einer guten Definition. In diesem Falle ist das die
-                    Verallgemeinerung von 
-                    {" "}
+                    Verallgemeinerung von{" "}
                     <i>
                       Carry Generate \(g_i\)
                     </i>
-                    {" "}
-                    und 
-                    {" "}
+                    und{" "}
                     <i>
                       Carry Propagate \(p_i\)
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     von Indizes auf Intervalle. Für ein Interval
                     \([a,b] := \&#123;a, a+1, \dots, b\&#125;\) definieren wir Funktionen
                     \(g_&#123;[a,b]&#125;\) und \(p_&#123;[a,b]&#125;\) in den Variablen \(x_&#123;a&#125;,\dots,x_&#123;b&#125;, y_a, \dots, y_b\)
@@ -470,13 +450,13 @@ const Article = () => {
                 </Paragraph>
                 <figure>
                   <img
-                    style="height:10em"
-                    src="../img/circuits/adder-ripple.svg"
+                    style="height:11em"
+                    src="../img/circuits/carry-generate-interval.svg"
                     loading="lazy" />
                   <br />
                   <img
-                    style="height:10em"
-                    src="../img/circuits/adder-ripple.svg"
+                    style="height:11em"
+                    src="../img/circuits/carry-propagate-interval.svg"
                     loading="lazy" />
                 </figure>
                 <Paragraph>
@@ -497,7 +477,9 @@ const Article = () => {
                     wir die \(g_&#123;[a,b]&#125;\) bequem rekursiv berechnen können:
                   </Paragraph>
                 </Paragraph>
-                <div class="well container theorem">
+                <div
+                  test={222}
+                  class="well container theorem">
                   <Paragraph>
                     <span class="numbered-title">
                       Beobachtung
@@ -539,16 +521,13 @@ const Article = () => {
                     \(s_i = x_i \oplus y_i \oplus c_i\) unmittelbar die Binärdarstellung der Summe \(x+y\)
                     ausgeben
                     können.
-                    Das Problem: es gibt zu viele Intervalle, nämlich \(1 + 2 + \dots + n =&#123;n+1 \choose 2&#125; =
+                    Das Problem: es gibt zu viele Intervalle, nämlich \(1 + 2 + \dots + n = &#123;n+1 \choose 2&#125; =
                     \Theta(n^2)\) viele.
                     Der Trick: wir beschränken uns auf besonders schöne Intervalle, nämlich
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Binärintervalle
                     </i>
-                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>
@@ -578,12 +557,10 @@ const Article = () => {
                     Beispielsweise ist \(12,13,14,15\) ein Binärintervall mit \(c=3\) und \(d=2\); in der
                     Binärdarstellung
                     ist das \(1100, 1101, 1110, 1111\). Wir können es also auch mit
-                    in 
-                    {" "}
+                    in{" "}
                     <i>
                       Sternchennotation
                     </i>
-                    {" "}
                     mit [11**] notieren.
                   </Paragraph>
                 </Paragraph>
@@ -613,9 +590,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Ein Binärintervall, zum Beispiel \([32,47]\) können wir
                     als Vereinigung von zwei kleineren Binärintervallen schreiben, hier
                     \([32,47] = [32,39] \cup [40,47]\). In unserer Sternchen-Notation:
@@ -663,7 +638,7 @@ const Article = () => {
                   <figure>
                     <img
                       style="height:10em"
-                      src="../img/circuits/adder-ripple.svg"
+                      src="../img/circuits/pg-gate.svg"
                       loading="lazy" />
                   </figure>
                   <Paragraph>
@@ -680,8 +655,8 @@ const Article = () => {
                   </Paragraph>
                   <figure>
                     <img
-                      style="height:10em"
-                      src="../img/circuits/adder-ripple.svg"
+                      style="height:18em"
+                      src="../img/circuits/pg-all-gates.svg"
                       loading="lazy" />
                   </figure>
                   <Paragraph>
@@ -739,8 +714,7 @@ const Article = () => {
                   <Paragraph>
                     Eine anschließende Bemerkung: der Schaltkreis
                     besteht ausschließlich aus AND- und OR-Gates; er enthält
-                    keine NOT-Gates und ist somit ein 
-                    {" "}
+                    keine NOT-Gates und ist somit ein{" "}
                     <i>
                       monotoner Schaltkreis.
                     </i>
@@ -764,9 +738,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Die Idee ist, dass wir jedes \([0,k]\) als Vereinigung
                     von wenigen Binärintervallen schreiben können, zum Beispiel
                     \begin&#123;align*&#125;
@@ -781,7 +753,6 @@ const Article = () => {
                       <b>
                         1. Fall.
                       </b>
-                      {" "}
                       Wenn \(k\) die Form \(k = 2^d-1\) hat, dann ist
                       \([0,k]\) bereits ein Binärintervall; dies passiert, wenn
                       die Binärdarstellung von \(k\) die Form \(k = (1^b)_2 \) hat (wobei \(b=0\)
@@ -793,7 +764,6 @@ const Article = () => {
                         <b>
                           2. Fall.
                         </b>
-                        {" "}
                         Wenn \(k\) nicht die Form \(k = 2^d-1\) hat,
                         dann hat die Binärdarstellung von \(k\) nicht die Form \(1^b\); sie
                         enthält also auch nicht-führende Nullen (beachten Sie, dass \((0111)_2\) und \((111)_2\)
@@ -830,8 +800,8 @@ const Article = () => {
                       </Paragraph>
                       <figure>
                         <img
-                          style="height:10em"
-                          src="../img/circuits/adder-ripple.svg"
+                          style="height:5em"
+                          src="../img/circuits/pg0k.svg"
                           loading="lazy" />
                       </figure>
                       <Paragraph>
@@ -853,12 +823,10 @@ const Article = () => {
                         Die Anzahl schließender 1en ist mindestens 0 (trivialierweise) und höchstens \(d\);
                         ein genauerer Blick zeigt, dass sie sogar höchstens \(d-1\) ist: wäre sie genau \(d\),
                         dann hätten wir es mit der Zahl \( (1^d)_2 = 2^d-1 \geq n-1 \) zu tun; da aber
-                        die Folge der Zahlen 
-                        {" "}
+                        die Folge der Zahlen{" "}
                         <i>
                           abnimmt
                         </i>
-                        {" "}
                         , müsste bereits \(k = 2^d-1\) gelten, und wir
                         wären in Fall 1, bzw. bereits fertig, weil \([0,k]\) bereits in Binärintervall wäre.
                         Der Wert von \(b\), der Anzahl schließender 1en, kann also höchstens
@@ -867,8 +835,8 @@ const Article = () => {
                       </Paragraph>
                       <figure>
                         <img
-                          style="height:10em"
-                          src="../img/circuits/adder-ripple.svg"
+                          style="height:18em"
+                          src="../img/circuits/pg-0-30.svg"
                           loading="lazy" />
                       </figure>
                     </Paragraph>
@@ -878,7 +846,6 @@ const Article = () => {
                         <b>
                           Tiefe.
                         </b>
-                        {" "}
                         Jedes \(pg\)-Gate hat Tiefe 2,
                         und somit erreichen \(d-1\) solche Gates hintereinander
                         zusammen eine Tiefe von \(2 (d-1) = 2 \ceil&#123;\log_2 n&#125; - 2\).{" "}
@@ -890,7 +857,6 @@ const Article = () => {
                         <b>
                           Größe.
                         </b>
-                        {" "}
                         Zählen wir die Anzahl von \(pg\)-Gates in unserem
                         Schaltkreis. Wir haben bereits gesehen, dass die Berechnung von \(g_&#123;[0,k]&#125;\) höchstens
                         \(d-1\) viele \(pg\)-Gates braucht. Es scheint also, als bräuchten wir für alle \(n\)
@@ -923,8 +889,8 @@ const Article = () => {
                     </Paragraph>
                     <figure>
                       <img
-                        style="height:10em"
-                        src="../img/circuits/adder-ripple.svg"
+                        style="height:20em"
+                        src="../img/circuits/pg-prefices-16.svg"
                         loading="lazy" />
                     </figure>
                   </Paragraph>
@@ -940,8 +906,8 @@ const Article = () => {
                     </Paragraph>
                     <figure>
                       <img
-                        style="height:10em"
-                        src="../img/circuits/adder-ripple.svg"
+                        style="height:15em"
+                        src="../img/circuits/pg-gadget-no-need-p.svg"
                         loading="lazy" />
                     </figure>
                     <Paragraph>
@@ -955,8 +921,8 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Wir kombinieren wir nun die beiden Lemmas und erhalten einen Schaltkreis der Tiefe \( 4
-                    \ceil&#123;
-                    \log_2 n&#125; - 1\) und
+                    \ceil &#123;
+                    \log_2 n &#125; - 1\) und
                     Größe \(8n - 4\), mit \(x_0, y_0, \dots, x_&#123;n-1&#125;, y_&#123;n-1&#125; \) als Inputvariablen und Carrys
                     \(c_1, \dots, c_n\) als Output-Variablen. Jetzt können wir schließlich
                     {" "}
@@ -988,7 +954,7 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     $$
-                    4 \ceil&#123; \log_2 n&#125; + 3\ .
+                    4 \ceil &#123; \log_2 n &#125; + 3\ .
                     $$
                   </Paragraph>
                   <Paragraph>
@@ -1010,7 +976,7 @@ const Article = () => {
                     <i>
                       2 \lt (\mathbf&#123;y&#125;)
                     </i>
-                    2$,&#125; \\
+                    2$, &#125; \\
                     0&amp;\textnormal&#123; sonst.&#125;
                     \end&#123;cases&#125;
                     \end&#123;align*&#125;

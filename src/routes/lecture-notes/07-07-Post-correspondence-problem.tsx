@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={48}
         title_gr="über Unentscheidbarkeit: Das Postsche Korrespondenzproblem"
         title_en="Post correspondence problem"
         number={7.7}
@@ -47,8 +48,7 @@ const Article = () => {
                     und der Mathematik auf, auch bei Fragestellungen, die
                     auf den ersten Blick nichts mit Turingmaschinen zu tun
                     haben und völlig harmlos wirken. Wie zum Beispiel
-                    das rein kombinatorische 
-                    {" "}
+                    das rein kombinatorische{" "}
                     <i>
                       Postsche Korrespondenzproblem.
                     </i>
@@ -58,12 +58,10 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Im Postschen Korrespondenzproblem haben wir endlich
-                    viele Kärtchen (auch 
-                    {" "}
+                    viele Kärtchen (auch{" "}
                     <i>
                       Kacheln
                     </i>
-                    {" "}
                     genannt) gegeben,
                     die oben und unten jeweils ein Wort haben. Wir müssen
                     die Kärtchen so nebeneinander legen, dass oben und unten
@@ -88,7 +86,7 @@ const Article = () => {
                     href="#pcp-wikipedia"
                     class="right carousel-control-next-icon">
                     <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
+                      <img src="../img/carousel-next-icon.svg" />
                     </div>
                   </a>
                   <div
@@ -130,31 +128,49 @@ const Article = () => {
                       style="display:inline-block"
                       class="carousel-inner">
                       <div class="item active">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-wikipedia/01.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-wikipedia/02.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-wikipedia/03.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-wikipedia/04.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-wikipedia/05.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-wikipedia/06.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-wikipedia/07.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-wikipedia/08.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-wikipedia/09.svg" />
                       </div>
                     </div>
                   </div>
@@ -192,7 +208,7 @@ const Article = () => {
                     href="#pcp-expo"
                     class="right carousel-control-next-icon">
                     <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
+                      <img src="../img/carousel-next-icon.svg" />
                     </div>
                   </a>
                   <div
@@ -282,79 +298,129 @@ const Article = () => {
                       style="display:inline-block"
                       class="carousel-inner">
                       <div class="item active">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/01.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/02.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/03.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/04.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/05.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/06.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/07.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/08.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/09.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/10.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/11.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/12.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/13.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/14.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/15.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/16.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/17.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/18.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/19.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/20.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/21.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/22.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/23.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/24.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/pcp/example-expo/25.svg" />
                       </div>
                     </div>
                   </div>
@@ -389,13 +455,10 @@ const Article = () => {
                       <i>
                         Kachel
                       </i>
-                      {" "}
-                      (auch 
-                      {" "}
+                      (auch{" "}
                       <i>
                         Kärtchen
                       </i>
-                      {" "}
                       genannt) ist ein
                       Paar \((\alpha : \beta) \in \Sigma^* \times \Sigma^*\).
                       Hier bezeichnet \(\alpha\) das Wort auf der oberen Hälfte der Kachel
@@ -428,13 +491,11 @@ const Article = () => {
                       <i>
                         oberen Teil
                       </i>
-                      {" "}
                       \(\top(s)\) und den
                       {" "}
                       <i>
                         unteren Teil
                       </i>
-                      {" "}
                       \(\bottom(s)\):
                       \begin&#123;align*&#125;
                       \top(s)&amp;:= \alpha
@@ -454,8 +515,7 @@ const Article = () => {
                       \end&#123;align*&#125;
                     </li>
                     <li>
-                      Eine Kachelung \(s\) ist eine 
-                      {" "}
+                      Eine Kachelung \(s\) ist eine{" "}
                       <i>
                         Lösung
                       </i>
@@ -471,7 +531,9 @@ const Article = () => {
                   </Paragraph>
                 </Paragraph>
                 <figure>
-                  <img src="../img/carousel-prev-icon.svg" />
+                  <img
+                    style="height:12em"
+                    src="../img/pcp/example-wikipedia/04.svg" />
                 </figure>
                 <Paragraph>
                   <Paragraph>
@@ -526,23 +588,16 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
-                    Wir zeigen: wenn PCP entscheidbar 
                     {" "}
+                    Wir zeigen: wenn PCP entscheidbar{" "}
+                    <i>
+                      wäre
+                    </i>
+                    , dann{" "}
                     <i>
                       wäre
                     </i>
                     {" "}
-                    , dann 
-                    {" "}
-                    <i>
-                      wäre
-                    </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
                     auch \(\halt\) entscheidbar. Da letzteres jedoch unentscheidbar
                     ist, muss auch PCP unentscheidbar sein.
                   </Paragraph>
@@ -559,14 +614,12 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Wie so oft in ähnlichen Beweisen machen wir einen
-                      Zwischenschritt. Das 
-                      {" "}
+                      Zwischenschritt. Das{" "}
                       <i>
                         Modifizierte Postsche
                         Korrespondenzproblem (MPCP)
                         {" "}
                       </i>
-                      {" "}
                       ist genau das gleiche wie das PCP,
                       nur dass es in \(S\) eine markierte Startkachel gibt
                       und jede Lösung mit dieser Startkachel beginnen muss.
@@ -590,9 +643,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Im MPCP zwingen uns bereits die Spielregeln, mit der
                       markierten Startkachel zu beginnen. Wir müssen
                       nun, von \(S\) ausgehend, ein ähnliches Puzzle bauen,
@@ -602,7 +653,10 @@ const Article = () => {
                       jede Kachel durch eine "gesternte Variante" ersetzen:
                     </Paragraph>
                     <figure>
-                      <img src="../img/carousel-prev-icon.svg" />
+                      <img
+                        style="height:5em"
+                        src="../img/pcp/mpcp-to-pcp-01.svg"
+                        loading="lazy" />
                     </figure>
                     <Paragraph>
                       wobei * ein neues Symbol ist. Offensichtlich kann keine
@@ -612,7 +666,10 @@ const Article = () => {
                       weitere "gesternte" Variante:
                     </Paragraph>
                     <figure>
-                      <img src="../img/carousel-prev-icon.svg" />
+                      <img
+                        style="height:5em"
+                        src="../img/pcp/mpcp-to-pcp-02.svg"
+                        loading="lazy" />
                     </figure>
                     <Paragraph>
                       <Paragraph>
@@ -628,7 +685,10 @@ const Article = () => {
                       </Paragraph>
                     </Paragraph>
                     <figure>
-                      <img src="../img/carousel-prev-icon.svg" />
+                      <img
+                        style="height:4em"
+                        src="../img/pcp/mpcp-to-pcp-03.svg"
+                        loading="lazy" />
                     </figure>
                     <Paragraph>
                       <Paragraph>
@@ -670,12 +730,10 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>
-                        Erinneren wir uns: eine 
-                        {" "}
+                        Erinneren wir uns: eine{" "}
                         <i>
                           Konfiguration
                         </i>
-                        {" "}
                         einer
                         Turingmaschine ist eine Folge
                         \begin&#123;align*&#125;
@@ -687,21 +745,18 @@ const Article = () => {
                         <i>
                           &#123;j-1&#125; q w
                         </i>
-                        j \dots w
+                        j \dots w_m
+                        \end&#123;align*&#125;
+                        mit
+                        \(w_i \in \Gamma\) und \(q \in Q\). Die Bedeutung ist,
+                        dass auf dem Band das Wort \(w_1 w_2 \dots w_m\) steht,
+                        die Turingmaschine im Zustand \(q\) ist und der
+                        Schreib-Lese-Kopf über den Zeichen \(w_j\) steht.
+                        Wir schreiben also den Zustand unmittelbar{" "}
                         <i>
-                          m
-                          \end&#123;align*&#125;
-                          mit
-                          \(w_i \in \Gamma\) und \(q \in Q\). Die Bedeutung ist,
-                          dass auf dem Band das Wort \(w_1 w_2 \dots w_m\) steht,
-                          die Turingmaschine im Zustand \(q\) ist und der
-                          Schreib-Lese-Kopf über den Zeichen \(w_j\) steht.
-                          Wir schreiben also den Zustand unmittelbar 
-                          {" "}
+                          links
                         </i>
-                        links_
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         von dem Zeichen, über dem er steht.
                         Wenn das Eingabewort \(x_1 \dots x_n\) und
                         \(q_0 \in Q\) der Startzustand, dann ist
@@ -739,7 +794,10 @@ const Article = () => {
                     Konfigurationen identisch. Die Idee ist nun, zuerst eine Startkachel
                   </Paragraph>
                   <figure>
-                    <img src="../img/carousel-prev-icon.svg" />
+                    <img
+                      style="height:3em"
+                      src="../img/pcp/halt-to-pcp-01.svg"
+                      loading="lazy" />
                   </figure>
                   <Paragraph>
                     zu bauen. Wir sehen: oben "steht etwas über", und zwar genau
@@ -773,7 +831,7 @@ const Article = () => {
                       href="#pcp-step-right"
                       class="right carousel-control-next-icon">
                       <div class="carousel-nav-icon">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img src="../img/carousel-next-icon.svg" />
                       </div>
                     </a>
                     <div
@@ -812,28 +870,44 @@ const Article = () => {
                         style="display:inline-block"
                         class="carousel-inner">
                         <div class="item active">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:12em"
+                            src="../img/pcp/step-right/01.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:12em"
+                            src="../img/pcp/step-right/02.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:12em"
+                            src="../img/pcp/step-right/03.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:12em"
+                            src="../img/pcp/step-right/04.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:12em"
+                            src="../img/pcp/step-right/05.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:12em"
+                            src="../img/pcp/step-right/06.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:12em"
+                            src="../img/pcp/step-right/07.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:12em"
+                            src="../img/pcp/step-right/08.svg" />
                         </div>
                       </div>
                     </div>
@@ -871,7 +945,7 @@ const Article = () => {
                       href="#pcp-step-left"
                       class="right carousel-control-next-icon">
                       <div class="carousel-nav-icon">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img src="../img/carousel-next-icon.svg" />
                       </div>
                     </a>
                     <div
@@ -901,19 +975,29 @@ const Article = () => {
                         style="display:inline-block"
                         class="carousel-inner">
                         <div class="item active">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:12em"
+                            src="../img/pcp/step-left/01.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:12em"
+                            src="../img/pcp/step-left/02.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:12em"
+                            src="../img/pcp/step-left/03.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:12em"
+                            src="../img/pcp/step-left/04.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:12em"
+                            src="../img/pcp/step-left/05.svg" />
                         </div>
                       </div>
                     </div>
@@ -921,13 +1005,10 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Hier brauchen wir halt eine Kopfkachel \((q_2yz:yq_1x_2)\) für
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         jedes
                       </i>
-                      {" "}
                       Bandsymbol \(y\), da die Regel immer anzuwenden ist,
                       egal, welches Symbol \(y\) links vom Schreib-Lese-Kopf steht.
                     </Paragraph>
@@ -943,7 +1024,10 @@ const Article = () => {
                     </Paragraph>
                   </Paragraph>
                   <figure>
-                    <img src="../img/carousel-prev-icon.svg" />
+                    <img
+                      style="height:20em"
+                      src="../img/pcp/almost-all-tiles.svg"
+                      loading="lazy" />
                   </figure>
                   <Paragraph>
                     <Paragraph>
@@ -966,7 +1050,10 @@ const Article = () => {
                     </Paragraph>
                   </Paragraph>
                   <figure>
-                    <img src="../img/carousel-prev-icon.svg" />
+                    <img
+                      style="height:6em"
+                      src="../img/pcp/tile-delete-symbols.svg"
+                      loading="lazy" />
                   </figure>
                   <Paragraph>
                     <Paragraph>
@@ -988,7 +1075,7 @@ const Article = () => {
                       href="#pcp-finishing-tile"
                       class="right carousel-control-next-icon">
                       <div class="carousel-nav-icon">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img src="../img/carousel-next-icon.svg" />
                       </div>
                     </a>
                     <div
@@ -1012,13 +1099,19 @@ const Article = () => {
                         style="display:inline-block"
                         class="carousel-inner">
                         <div class="item active">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:10em"
+                            src="../img/pcp/finish-00.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:10em"
+                            src="../img/pcp/finish-01.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:10em"
+                            src="../img/pcp/finish-03.svg" />
                         </div>
                       </div>
                     </div>

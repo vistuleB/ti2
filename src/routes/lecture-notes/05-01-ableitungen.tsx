@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={29}
         title_gr="Ableitungen und Ableitungsbäume"
         title_en="ableitungen"
         number={5.1}
@@ -64,12 +65,10 @@ const Article = () => {
                   \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; a * (F + T) \stackrel&#123;6&#125;&#123;\Longrightarrow&#125;
                   a * (a + T) \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; a * (a + F)
                   \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; a * (a + a)&amp;\end&#123;align*&#125; Insbesondere
-                  ist es eine 
-                  {" "}
+                  ist es eine{" "}
                   <i>
                     Linksableitung
                   </i>
-                  {" "}
                   , das heißt, in jedem Schritt wird
                   das am weitesten links stehende Nichtterminal expandiert. In der Tat
                   reicht es, nur die Nummer der angewandten Regel anzugeben (da ja klar
@@ -81,12 +80,10 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Betrachten wir im Folgenden ein weiteres Beispiel einer Ableitung, in
-                      diesem Falle eine 
-                      {" "}
+                      diesem Falle eine{" "}
                       <i>
                         Rechtsableitung
                       </i>
-                      {" "}
                       , in der in jedem Schritt
                       das am weitesten rechts stehende Nichtterminal expandiert wird:
                     </Paragraph>
@@ -128,31 +125,53 @@ const Article = () => {
                   </Paragraph>
                 </Paragraph>
                 <pre class="listing container">
-                  <code>
-                    def treeToLeftDerivation (tree):
-                  </code>
-                  <code>
-                    print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
-                  </code>
-                  <code>
-                    for child in tree.children (from left ro right):
-                  </code>
-                  <code>
-                    treeToLeftDerivation(child)
-                  </code>
-                  <code />
-                  <code>
-                    def treeToRightDerivation (tree):
-                  </code>
-                  <code>
-                    for child in tree.children (from left ro right):
-                  </code>
-                  <code>
-                    treeToLeftDerivation(child)
-                  </code>
-                  <code>
-                    print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
-                  </code>
+                  <Paragraph>
+                    {" "}{" "}
+                    <code>
+                      def treeToLeftDerivation (tree):
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      for child in tree.children (from left ro right):
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      treeToLeftDerivation(child)
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      {" "}{" "}
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      def treeToRightDerivation (tree):
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      for child in tree.children (from left ro right):
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      treeToLeftDerivation(child)
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
+                    </code>
+                    {" "}{" "}
+                  </Paragraph>
                 </pre>
                 <Paragraph>
                   <Paragraph>

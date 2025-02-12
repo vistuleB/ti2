@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={51}
         title_gr="Das Zeithierarchietheorem"
         title_en="Time hierarchy theorem"
         number={8.1}
@@ -55,20 +56,15 @@ const Article = () => {
                     (2) ein Band, um den Zustand von $M$ zu speichern; (3) um den akzeptierenden Zustand $\qaccept$
                     von $M$
                     zu speichern; (4) und (5) um das Band von $M$ zu simulieren. Für letzteres hatten wir
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       zwei
                     </i>
-                    {" "}
                     Bänder
-                    verwendet, weil das uns erlaubte, effizient Zeichen 
-                    {" "}
+                    verwendet, weil das uns erlaubte, effizient Zeichen{" "}
                     <i>
                       einzufügen
                     </i>
-                    {" "}
                     statt einfach zu
                     überschreiben.
                     Wie wir aber gesehen hatten, können wir (4) und (5) mit einem Band bewältigen, indem wir zu
@@ -78,12 +74,10 @@ const Article = () => {
                     durch eine
                     Markierung $\texttt&#123;#&#125;$. Auch das Band (3) können wir uns sparen: den akzeptierenden Zustand
                     von $M$ können wir gleich am Anfang von (1) schreiben, ohne das die Simulation dadurch
-                    nennenswert teurer würde. Wir kommen also mit 
-                    {" "}
+                    nennenswert teurer würde. Wir kommen also mit{" "}
                     <i>
                       drei
                     </i>
-                    {" "}
                     Bändern aus.
                     Allerdings hatten wir uns nur überlegt, wie man
                     Einband-Turingmaschinen $M$ simuliert. Es ist aber ziemlich einfach zu sehen, dass man
@@ -138,12 +132,10 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Schritten. Das $C$ ist hier eine 
-                      {" "}
+                      Schritten. Das $C$ ist hier eine{" "}
                       <i>
                         absolute Konstante
                       </i>
-                      {" "}
                       , hängt also weder von $M$ noch
                       von $\Sigma$ ab.
                     </Paragraph>
@@ -206,7 +198,7 @@ const Article = () => {
                     </Paragraph>
                   </Paragraph>
                   \begin&#123;align*&#125;
-                  \halt := L(U) =\&#123; \enc(M) w \ | \ M \textnormal&#123; akzeptiert&#125; w\&#125; \ .
+                  \halt := L(U) =\&#123; \enc(M) w \ | \ M \textnormal&#123; akzeptiert &#125; w\&#125; \ .
                   \end&#123;align*&#125;
                 </Paragraph>
                 <Paragraph>
@@ -223,8 +215,7 @@ const Article = () => {
                   <Paragraph>
                     Wir haben gesehen, dass $\negdiag$ nicht entscheidbar ist. Nun wollen
                     wir eine Version von $\negdiag$, die in $t$ Schritten entscheidbar ist,
-                    aber nicht in sehr viel weniger. Dafür definieren wir uns ein 
-                    {" "}
+                    aber nicht in sehr viel weniger. Dafür definieren wir uns ein{" "}
                     <i>
                       Halteproblem mit
                       Zeitbudget.
@@ -243,9 +234,7 @@ const Article = () => {
                         (Zeitbudgetiertes
                         Halteproblem).
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Sei $\Sigma$ ein endliches Alphabet. Wir definieren die Sprache
                       \begin&#123;align*&#125;
                       \bhalt := \&#123; \enc(M) 1^b 0 x \ | \
@@ -288,9 +277,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Wir nehmen die universelle Turingmaschine $U$, die $k$-Band-Turingmaschinen simulieren kann,
                       und statten sie mit einem
                       Stoppuhrband aus. Sie hat nun also $k+3$ Bänder. Sei $n = |\enc(M)| + b + 1 + |x|$ die Länge
@@ -333,7 +320,6 @@ const Article = () => {
                         (nicht ganz
                         korrekt).
                       </b>
-                      {" "}
                       $\bnegdiag \in \TIME_&#123;k+3&#125;(t)$.
                     </Paragraph>
                   </Paragraph>
@@ -359,13 +345,10 @@ const Article = () => {
                         Definition
                       </span>
                       Eine Funktion $t: \N \rightarrow \N$ heißt
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         zeitkonstruierbar
                       </i>
-                      {" "}
                       , wenn es eine Turingmaschine gibt, die aus dem Eingabewort $1^n$
                       das Ausgabewort $1^&#123;t(n)&#125;$ berechnet und selbst maximal $O(t(n))$ Schritte läuft.
                     </Paragraph>
@@ -381,7 +364,6 @@ const Article = () => {
                       <b>
                         (jetzt korrekt).
                       </b>
-                      {" "}
                       Sei
                       $t: \N \rightarrow \N$ zeitkonstruierbar, monoton steigend und $t(n) \geq n$. Dann gilt
                       $\bnegdiag \in \TIME_&#123;k+3&#125;(t)$.
@@ -419,9 +401,7 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Wir nehmen an, es gäbe eine Turingmaschine $M$, die $\bnegdiag$ in Zeit $s$ entscheidet und
                         leiten einen Widerspruch her. Sei $x := \enc(M)$. Wir wählen eine natürliche Zahl $m$,
                         deren genauen Wert wir weiter unten diskutieren und setzen $b := t(|x| + m)$. Wir fragen uns
@@ -451,7 +431,7 @@ const Article = () => {
                       </Paragraph>
                     </Paragraph>
                     \begin&#123;align*&#125;
-                    \lim_&#123;m \rightarrow \infty&#125;\frac&#123;2C \cdot |\enc(M)| \cdot s(|x|+m)&#125;&#123;t(|x|+m)&#125; = 0 \ .
+                    \lim_&#123;m \rightarrow \infty &#125;\frac&#123;2C \cdot |\enc(M)| \cdot s(|x|+m)&#125;&#123;t(|x|+m)&#125; = 0 \ .
                     \end&#123;align*&#125;
                   </Paragraph>
                   <Paragraph>
@@ -507,9 +487,7 @@ const Article = () => {
                         <b>
                           (Zeithierarchiesatz, Rohversion).
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Seien $s, t: \N \rightarrow \N$
                         zeitkonstruierbare Funktionen mit $s(n) \geq n$ und
                         $s \in o(t)$ (also $\lim_&#123;n \rightarrow \infty&#125; s(n)/t(n)
@@ -559,9 +537,7 @@ const Article = () => {
                       <b>
                         (Zeithierarchiesatz).
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Seien $s, t: \N \rightarrow \N$ mit $s(n) \geq n$ und $s \log s \in o(t)$. Dann gilt
                       $\TIME(s) \subsetneq \TIME(t)$.
                     </Paragraph>

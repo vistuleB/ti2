@@ -90,9 +90,7 @@
                         
                         
                         Zu jeder Ableitung \(S \Step{}^* w \in \Sigma^*\) können wir
-                        eindeutig einen 
-                        _Ableitungsbaum_
-                        zeichnen. Wenn die Grammatik
+                        eindeutig einen _Ableitungsbaum_zeichnen. Wenn die Grammatik
                         eindeutig ist, so hängt auch der Baum nur vom Wort \(w \in L(G)\) ab und
                         nicht von der Ableitung \(S \Step{}^* w\).
                         Allerdings können wir für Zwischenformen
@@ -157,7 +155,7 @@
                                 
                                 
                                 |> img
-                                    src ../img/carousel-prev-icon.svg
+                                    src ../img/carousel-next-icon.svg
                                 
                                 
                             
@@ -204,19 +202,22 @@
                                 |> div
                                     class item active
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:16em
+                                        src ../img/context-free/LR/G-right-derivation.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:16em
+                                        src ../img/context-free/LR/G-left-derivation.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:16em
+                                        src ../img/context-free/LR/G-messy-derivation.svg
                                 
                                 
                             
@@ -240,7 +241,8 @@
                         
                         
                         |> img
-                            src ../img/carousel-prev-icon.svg
+                            style height:40em
+                            src ../img/context-free/LR/G-tree-large.svg
                         
                         
                     
@@ -249,9 +251,7 @@
                         class well container subtheorem
 
                         
-                        
                         *Warten Sie!*
-                        
                         Scrollen Sie erst weiter, wenn Sie den Baum oben lang genug angeschaut haben!
                         Versuchen Sie selbst, die spezielle Form dieses Baumes möglichst
                         formal zu beschreiben!
@@ -269,9 +269,7 @@
                         class well container subtheorem
 
                         
-                        
-                        *Auflösung.*
-                        Hier sehen Sie noch einmal
+                        *Auflösung.*Hier sehen Sie noch einmal
                         den gleichen Baum, nun aber gewisse Teile verschieden umrandet / eingefärbt.
                         
                     
@@ -281,7 +279,8 @@
                         
                         
                         |> img
-                            src ../img/carousel-prev-icon.svg
+                            style height:40em
+                            src ../img/context-free/LR/G-tree-large-colored.svg
                         
                         
                     
@@ -306,29 +305,19 @@
 
                             Definition / Beobachtung
                         
-                        
                         *(Stamm, linker Rand, Blüte, Front, rechter Rest)*
-                        
                         Sei \(S \Step{}^* \gamma\) eine Rechtsableitung, \(\gamma\) also
                         eine gültige Wortform, und
                         \(\mathcal{T}\) der Ableitungsbaum von \(\gamma\).
-                        Der 
-                        _Stamm_
-                        ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
+                        Der _Stamm_ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
                         der von allen inneren Knoten, deren Kinder allesamt Blätter sind,
                         am weistesten links steht.
-                        Die Kinder von \(u\), per Definition alles Blätter, sind die 
-                        _Blüte_
-                        .
+                        Die Kinder von \(u\), per Definition alles Blätter, sind die _Blüte_.
                         Die Menge der Knoten, die einen Stammknoten als rechtes Geschwister haben,
-                        heißt der 
-                        _linke Rand_
-                        . Jeder Knoten \(v\) im linken Rand
+                        heißt der _linke Rand_. Jeder Knoten \(v\) im linken Rand
                         muss ein Blatt sein, ansonsten stünde er ja weiter links als \(u\);
                         die Menge der rechten Geschwisterkinder von Stammknoten sowie deren Nachkommen
-                        heißt der 
-                        _rechte Rand_
-                        .
+                        heißt der _rechte Rand_.
                         Im rechten Rest ist jedes Blatt ein
                         Terminalsymbol, ansonsten wäre es keine Rechtsableitung.
                         
@@ -347,15 +336,9 @@
                         S \Step{R}^* \alpha \beta w
                         \end{align*}
                         dar. Die Wortform $\alpha\beta$, also linker Rand plus Blüte, nennen wir
-                        die 
-                        _Front_
-                        von $\mathcal{T}$ und schreiben sie als $\front(\mathcal{T})$.
-                        Wir sagen auch, dass \(\beta\) 
-                        _eine Blüte von \(\gamma\)_
-                        und
-                        $\alpha\beta$ die 
-                        _Front_
-                        von $\gamma$ ist,
+                        die _Front_von $\mathcal{T}$ und schreiben sie als $\front(\mathcal{T})$.
+                        Wir sagen auch, dass \(\beta\) _eine Blüte von \(\gamma\)_und
+                        $\alpha\beta$ die _Front_von $\gamma$ ist,
                         ohne über den Ableitungsbaum \(\mathcal{T}\) selbst zu reden.
                         Hierbei ist zu beachten, dass in einer mehrdeutigen Grammatik
                         eine gültige Wortform mehrere Ableitungsbäume und somit
@@ -430,7 +413,7 @@
                                 
                                 
                                 |> img
-                                    src ../img/carousel-prev-icon.svg
+                                    src ../img/carousel-next-icon.svg
                                 
                                 
                             
@@ -512,61 +495,71 @@
                                 |> div
                                     class item active
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:40em
+                                        src ../img/context-free/LR/tree-destruction/01.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:40em
+                                        src ../img/context-free/LR/tree-destruction/02.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:40em
+                                        src ../img/context-free/LR/tree-destruction/03.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:40em
+                                        src ../img/context-free/LR/tree-destruction/04.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:40em
+                                        src ../img/context-free/LR/tree-destruction/05.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:40em
+                                        src ../img/context-free/LR/tree-destruction/06.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:40em
+                                        src ../img/context-free/LR/tree-destruction/07.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:40em
+                                        src ../img/context-free/LR/tree-destruction/08.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:40em
+                                        src ../img/context-free/LR/tree-destruction/09.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:40em
+                                        src ../img/context-free/LR/tree-destruction/10.svg
                                 
                                 
                             
@@ -604,7 +597,8 @@
                         
                         
                         |> img
-                            src ../img/carousel-prev-icon.svg
+                            style height:20em
+                            src ../img/context-free/LR/schema-linker-rand-bluete-stamm.svg
                         
                         
                     
@@ -631,7 +625,7 @@
                         die Sprache \(\Front(G) \subseteq (\Sigma \cup N)^*\):
                         \begin{align*}
                         \Front(G) := \{\front(\mathcal{T}) \ | \ \mathcal{T}
-                        \textnormal{ ist der Ableitungsbaum einer Rechtsableitung&#125;
+                        \textnormal{ ist der Ableitungsbaum einer Rechtsableitung }
                         S \Step{R}^* \gamma \}
                         \end{align*}
                         alternativ
@@ -669,9 +663,7 @@
 
                         
                         Hier ist etwas Mentalgymnastik vonnöten: aus Sicht der Sprache
-                        $\Front(G)$ sind \(\Sigma \cup N\) 
-                        _Terminalsymbole_
-                        . Sie können
+                        $\Front(G)$ sind \(\Sigma \cup N\) _Terminalsymbole_. Sie können
                         ja schließlich in den Wörtern der Sprache auftauchen.
                         Die Grammatik \(\hat{G}\) hat also die Terminalsymbole
                         \(\Sigma \cup N\). Darüberhinaus hat sie
@@ -682,7 +674,8 @@
                         das \(\hat{X} \in \hat{N}\) entspricht dem
                         
                         |> img
-                            src ../img/carousel-prev-icon.svg
+                            style height:1.5em
+                            src ../img/context-free/LR/circle-X.svg
                         ,
                         also wo \(W\) als innerer Knoten vorkommt. Bevor ich
                         \(\hat{G}\) formal definiere, zeige ich den obigen Ableitungsbaum
@@ -697,7 +690,8 @@
                         
                         
                         |> img
-                            src ../img/carousel-prev-icon.svg
+                            style height:40em
+                            src ../img/context-free/LR/hat-G-derivation.svg
                         
                         
                     
@@ -715,9 +709,7 @@
                         
                         Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik. Die
                         Front-Grammatik oder DK-Grammatik von \(G\) ist
-                        die 
-                        _erweitert reguläre_
-                        Grammatik \(\hat{G} = (\Sigma \cup N, \hat{N}, \hat{S},
+                        die _erweitert reguläre_Grammatik \(\hat{G} = (\Sigma \cup N, \hat{N}, \hat{S},
                         \hat{P})\)
                         mit \(\hat{N} := \{\hat{X} \ | \ X \in N\}\), wobei
                         \(\hat{P}\) für jede \(G\)-Produktion
@@ -818,9 +810,7 @@
 
                             Algorithmus
                         
-                        
                         *- Der \(LR(0)\)-Parser.*
-                        
                         Starte mit einem leerem Stack. Sei
                         \(\gamma\) der Inhalt des Stacks zu einem Zeitpunkt.
                         
@@ -895,13 +885,10 @@
                         |> p
 
                             *Beweis.*
-                            
                             Der erste Teil der Bedeutung ist einfach zu sehen.
                             Jeder Reduktionsschritt ist ein Linksreduktionsschritt, und
                             wenn man Ende $S$ steht, waren es auch alles
-                            
-                            _korrekte_
-                            Linksreduktionsschritte.
+                            _korrekte_Linksreduktionsschritte.
                             
                         
                         
@@ -928,7 +915,6 @@
                         |> p
 
                             *Behauptung.*
-                            
                             (i) \(\gamma w\) ist eine gültige Wortform. (ii)
                             \(\gamma\) ist ein Präfix von \(\front(\gamma w)\).
                             
@@ -938,7 +924,6 @@
                         |> p
 
                             *Beweis.*
-                            
                             Die Behauptung gilt offensichtlich am Anfang, da
                             $\gamma = \epsilon$ und \(w\in L\) ist und
                             somit $\gamma w = w$ eine gültige Wortform ist. Des weiteren
@@ -1001,9 +986,7 @@
                                     dass Teil (ii) vor dem Schritt galt, also $\gamma$ ein Präfix
                                     von $\front(\gamma w)$ ist; zweitens, dass
                                     \(\gamma \not \in \Front(G)\) ist (sonst hätte der Parser Schritt 1 angewandt); somit
-                                    ist $\gamma$ ein 
-                                    _echter_
-                                    Präfix von $\front(\gamma w)$ und somit
+                                    ist $\gamma$ ein _echter_Präfix von $\front(\gamma w)$ und somit
                                     ist $\gamma c$ immer noch ein Präfix von $\front(\gamma w)$.
                                     
                                 

@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={16}
         title_gr="Primitive Rekursion: Motivation und Definitionen"
         title_en="primitive recursion definitions"
         number={3.1}
@@ -43,12 +44,10 @@ const Article = () => {
                       Primitive Rekursion ist ein Versuch, Berechbarkeit von Funktionen \(f: \N^k \rightarrow \N\)
                       anhand
                       eines "Baukastenprinzips" zu modellieren. Man stellt gewisse Basisfunktionen als "offensichtlich
-                      berechenbar" zur Verfügung und beschreibt 
-                      {" "}
+                      berechenbar" zur Verfügung und beschreibt{" "}
                       <i>
                         Kombinatoren
                       </i>
-                      {" "}
                       , die aus bereits konstruierten
                       Funktionen neue bauen können. Die primitiv-rekursiven Funktionen sind dann all jene, die
                       mittels der Kombinatoren von den Basisfunktionen ausgehend konstruiert werden können.
@@ -74,14 +73,11 @@ const Article = () => {
                       die Operation \(x \mapsto x+1\) bereits eine nicht ganz triviale Operation, sie erfordert
                       beispielsweise Schleifen (von rechts nach links durchgehen), if-then-else-Ausdrücke (gibt es ein
                       Carry?)
-                      etc. Daher sollten Sie so tun, also würden wir natürliche Zahlen in 
-                      {" "}
+                      etc. Daher sollten Sie so tun, also würden wir natürliche Zahlen in{" "}
                       <i>
                         unärer Schreibweise
                       </i>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       (auhc Steinzeitnotation genannt)
                       darstellen, also vier \( = 1111\), sieben = \(= 1111111\). Jezt
                       brauchen wir für succ kein if-then-else und keine Schleifen, denn
@@ -120,9 +116,7 @@ const Article = () => {
                   <b>
                     Kombinatoren.
                   </b>
-                  {" "}{" "}
-                </Paragraph>
-                <Paragraph>
+                  {" "}
                   Die primitive Rekursion stellt zwei Kombinatoren zur Verfügung: Komposition (Verknüpfung) und
                   primitive Rekursion.
                 </Paragraph>
@@ -135,9 +129,7 @@ const Article = () => {
                     <b>
                       (Komposition)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Sei \(f: \N^k \rightarrow \N\) und
                     \(g_1, \dots, g_k: \N^l \rightarrow \N\). Dann ist
                     \(\comp(f, g_1, \dots, g_k)\) die Funktion
@@ -174,9 +166,7 @@ const Article = () => {
                     <b>
                       Primitive Rekursion
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Seien \(g: \N^k \rightarrow \N\) und \(h: \N^&#123;k+2&#125; \rightarrow \N\). Wir
                     definieren eine neue Funktion $f: \N^&#123;k+1&#125; \rightarrow \N$ wie folgt:
                     \begin&#123;align*&#125;
@@ -193,44 +183,53 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Wenn Sie Rekursionshasser sind, dann können Sie sich es als Funktion mit einer
-                  </Paragraph>
-                  <Paragraph>
-                    <code>
-                      for
-                    </code>
-                    -Schleife
+                    `for`-Schleife
                     vorstellen, in der nur eine lokale Variable erlaubt ist:
                   </Paragraph>
                   <Paragraph>
                     <pre class="listing">
-                      <code>
-                        def PrimRec(g, h):
-                      </code>
-                      <code>
-                        def f(t,*x):
-                      </code>
-                      <code>
-                        temp = g(*x)
-                      </code>
-                      <code>
-                        for i in range(t):
-                      </code>
-                      <code>
-                        temp = h(temp, i, *x)
-                      </code>
-                      <code>
-                        return temp
-                      </code>
-                      <code>
-                        return f
-                      </code>
+                      <Paragraph>
+                        {" "}{" "}
+                        <code>
+                          def PrimRec(g, h):
+                        </code>
+                        {" "}
+                        {" "}
+                        <code>
+                          def f(t,*x):
+                        </code>
+                        {" "}
+                        {" "}
+                        <code>
+                          temp = g(*x)
+                        </code>
+                        {" "}
+                        {" "}
+                        <code>
+                          for i in range(t):
+                        </code>
+                        {" "}
+                        {" "}
+                        <code>
+                          temp = h(temp, i, *x)
+                        </code>
+                        {" "}
+                        {" "}
+                        <code>
+                          return temp
+                        </code>
+                        {" "}
+                        {" "}
+                        <code>
+                          return f
+                        </code>
+                        {" "}{" "}
+                      </Paragraph>
                     </pre>
-                    Die Forderung, dass man nur 
-                    {" "}
+                    Die Forderung, dass man nur{" "}
                     <i>
                       eine
                     </i>
-                    {" "}
                     lokale Variable durch die Schleife führen darf, scheint
                     sehr restriktiv; es ist aber wohl die einfachste Form einer Schleife, die wirklich etwas
                     "schleifenhaftes" tut.
@@ -260,10 +259,7 @@ const Article = () => {
                   </Paragraph>
                   <ul>
                     <li>
-                      <code>
-                        Proj(k)
-                      </code>
-                      : erzeugt die Funktion
+                      `Proj(k)`: erzeugt die Funktion
                       \begin&#123;align*&#125;
                       \pi
                       <i>
@@ -274,10 +270,7 @@ const Article = () => {
                       \end&#123;align*&#125;
                     </li>
                     <li>
-                      <code>
-                        Comp(f, g0, g1, ...)
-                      </code>
-                      : erzeugt die Funktion
+                      `Comp(f, g0, g1, ...)`: erzeugt die Funktion
                       \begin&#123;align*&#125;
                       \vec&#123;x&#125; \mapsto f(g0(x), g1(x), ...)
                       \end&#123;align*&#125;
@@ -286,10 +279,7 @@ const Article = () => {
                       übereinstimmt.
                     </li>
                     <li>
-                      <code>
-                        PrimRec(g,h)
-                      </code>
-                      : erzeugt die Funktion
+                      `PrimRec(g,h)`: erzeugt die Funktion
                       \begin&#123;align*&#125;
                       (t, \vec&#123;x&#125;) \mapsto \begin&#123;cases&#125;
                       g(\vec&#123;x&#125;)&amp;\textnormal&#123; if $t=0$,&#125; \\
@@ -303,11 +293,7 @@ const Article = () => {
                       <Paragraph>
                         Wenn wir die primitive Rekursion als "Programmiersprache" betrachten, dann heißt das, dass
                         wir
-                        neue Funktionen bauen dürfen, indem wir{" "}
-                        <code>
-                          zero,succ,Proj,Comp,PrimRec
-                        </code>
-                        verwenden,
+                        neue Funktionen bauen dürfen, indem wir `zero,succ,Proj,Comp,PrimRec`verwenden,
                         aber nicht selbst Python-Funktionen schreiben. Wir dürfen also nie selbst Integers in die
                         Hand nehmen.
                       </Paragraph>
@@ -322,21 +308,23 @@ const Article = () => {
                     <pre
                       style="color:red; background-color: yellow;"
                       class="listing">
-                      <code>
-                        def add(x,y):
-                      </code>
-                      <code>
-                        return x + y
-                      </code>
+                      <Paragraph>
+                        {" "}{" "}
+                        <code>
+                          def add(x,y):
+                        </code>
+                        {" "}
+                        {" "}
+                        <code>
+                          return x + y
+                        </code>
+                        {" "}{" "}
+                      </Paragraph>
                     </pre>
                     <Paragraph>
                       <Paragraph>
                         schreiben, denn unsere "Programmiersprache" ist Primitive Rekursion, nicht Python! Wir
-                        müssen uns{" "}
-                        <code>
-                          add
-                        </code>
-                        aus den Kombinatoren zusammenbasteln. Ich schreibe
+                        müssen uns `add`aus den Kombinatoren zusammenbasteln. Ich schreibe
                         nun \(&#123;\rm add&#125;(t,x)\) statt \(&#123;\rm add&#125;(x,y)\), um den Rekursionsparameter \(t\) deutlich
                         zu machen.
                       </Paragraph>
@@ -359,16 +347,22 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Wir sehen also, dass dies eine Anwendung der primitiven Rekursion ist mit
-                      \(g = \pi_0\) und \(h =&#123;\comp&#125;(\succ, \pi_0)\), also
+                      \(g = \pi_0\) und \(h = &#123;\comp&#125;(\succ, \pi_0)\), also
                     </Paragraph>
                   </Paragraph>
                   <pre class="listing">
-                    <code>
-                      p0 = Proj(0)
-                    </code>
-                    <code>
-                      add = PrimRec (p0, Comp(succ,p0))
-                    </code>
+                    <Paragraph>
+                      {" "}{" "}
+                      <code>
+                        p0 = Proj(0)
+                      </code>
+                      {" "}
+                      {" "}
+                      <code>
+                        add = PrimRec (p0, Comp(succ,p0))
+                      </code>
+                      {" "}{" "}
+                    </Paragraph>
                   </pre>
                 </div>
                 <div class="well well-lg numbered-exercise container">
@@ -378,11 +372,11 @@ const Article = () => {
                     </span>
                     Zeigen Sie, dass die folgenden Funktionen primitiv-rekursiv sind, und implementieren Sie sie
                     in meinem Python-Framework, so wie ich Addition mit
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     <code>
                       add = PrimRec (p0, Comp(succ,p0))
                     </code>
+                    {" "}
                     implementiert habe:
                   </Paragraph>
                   <ol>
@@ -405,7 +399,6 @@ const Article = () => {
                       <b>
                         Tip:
                       </b>
-                      {" "}
                       Für exp und minus ist es einfacher, die Argumente "umgedreht" zu
                       betrachten,
                       also \((a,b) \mapsto b^a\) und \((x,y) \mapsto y-x\).
@@ -435,25 +428,28 @@ const Article = () => {
                   </Paragraph>
                   <ul>
                     <li>
+                      {" "}{" "}
                       <code>
                         isPositive
                       </code>
+                      {" "}{" "}
                     </li>
                     <li>
+                      {" "}{" "}
                       <code>
                         greaterThan, lessThan, greaterEqual, lessEqual
                       </code>
+                      {" "}{" "}
                     </li>
                     <li>
+                      {" "}{" "}
                       <code>
                         max, min
                       </code>
+                      {" "}{" "}
                     </li>
                     <li>
-                      <code>
-                        ifThenElse(x,y,z)
-                      </code>
-                      : dies soll \(z\) zurückliefern, falls
+                      `ifThenElse(x,y,z)`: dies soll \(z\) zurückliefern, falls
                       \(x=0\) (also{" "}
                       <code>
                         false

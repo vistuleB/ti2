@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={14}
         title_gr="Der Trichotomiesat"
         title_en="Trichotomiesatz"
         number={2.6}
@@ -80,7 +81,6 @@ const Article = () => {
                       <b>
                         (Trichotomiesatz der Mengenlehre).
                       </b>
-                      {" "}
                       Seien $A$ und
                       $B$ zwei Mengen. Dann gibt es eine injektive Funktion $f : A
                       \rightarrow B$ oder eine injektive Funktion $g : A \rightarrow B$.
@@ -106,9 +106,7 @@ const Article = () => {
                       <b>
                         (Unvollständiger) Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Will man ein Objekt mit gewissen Eigenschaften (hier: Funktion,
                       injektiv) konstruieren, so lohnt es sich oft, die gestellten
                       Bedingungen zu relaxieren und sich langsam zu einer "richtigen"
@@ -118,28 +116,20 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Wir müssen zuerst uns in Erinnerung rufen, was eine
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         Funktion
                       </i>
-                      {" "}
                       formal ist. $A \times B := \&#123; (a,b) \ | \ a \in A,
                       b \in B\&#125;$, die Menge aller Paare, heißt das
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         cartesische Produkt
                       </i>
-                      {" "}
-                      . Eine 
-                      {" "}
+                      . Eine{" "}
                       <i>
                         Relation
                       </i>
-                      {" "}
                       ist eine
                       Teilmenge $R \subseteq A \times B$.
                     </Paragraph>
@@ -160,7 +150,6 @@ const Article = () => {
                         <i>
                           Funktion
                         </i>
-                        {" "}
                         , wenn es für jedes $a \in A$ genau ein $b \in
                         B$ mit $(a,b) \in R$ gibt; wir schreiben dann üblicherweise $f$
                         statt $R$ und schreiben $f(a)$, um dieses $b$ zu benennen.
@@ -170,44 +159,35 @@ const Article = () => {
                         <i>
                           Matching
                         </i>
-                        {" "}
                         , wenn es für jedes $a \in A$
                         {" "}
                         <i>
                           höchstens
                         </i>
-                        {" "}
                         ein $b \in B$ gibt mit $(a,b) \in R$ und
                         umgekehrt für jedes $b \in B$ höchstens ein $a \in A$ mit $(a,b)
                         \in R$.
                       </li>
                       <li>
-                        Wenn $R$ ein Matching ist, dann 
-                        {" "}
+                        Wenn $R$ ein Matching ist, dann{" "}
                         <i>
                           sättigt
                         </i>
-                        {" "}
                         $R$ die Menge
-                        $A$, wenn es für 
-                        {" "}
+                        $A$, wenn es für{" "}
                         <i>
                           jedes
                         </i>
-                        {" "}
                         $a \in A$ ein $b \in B$ mit
-                        $(a,b) \in R$ gibt; es 
-                        {" "}
+                        $(a,b) \in R$ gibt; es{" "}
                         <i>
                           sättigt
                         </i>
-                        {" "}
                         $B$, wenn es für
                         {" "}
                         <i>
                           jedes
                         </i>
-                        {" "}
                         $b \in B$ ein $a \in A$ gibt mit $(a,b) \in R$.
                       </li>
                     </ul>
@@ -258,9 +238,7 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Nehmen wir an, dass es weder $A$ noch $B$ sättigt. Dann gibt es
                         also ein $a \in A$, das mit keinem $b' \in B$ "gepaart" ist, und
                         auch ein $b \in B$, das mit keinem $a' \in A$ gepaart ist. Also
@@ -297,12 +275,10 @@ const Article = () => {
                           </span>
                           Sei $(X, \preceq)$
                           eine Partialordnung und $S \subseteq X$ eine Menge. Ein Element $x
-                          \in X$ ist eine 
-                          {" "}
+                          \in X$ ist eine{" "}
                           <i>
                             obere Schranke für $S$
                           </i>
-                          {" "}
                           wenn
                         </Paragraph>
                       </Paragraph>
@@ -318,13 +294,10 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Die unendliche aufsteigende Folge $1,2,3,\dots$ hat
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         keine obere Schranke
                       </i>
-                      {" "}
                       in $\N$. Somit gibt es auch kein
                       maximales Element. Was nun mit $(\mathcal&#123;M&#125;, \subseteq)$? Wenn $M
                       <i>
@@ -454,12 +427,10 @@ const Article = () => {
                     Man begann, an der mathematischen Intuition zu zweifeln und wollte ein
                     genaues Regelwerk definieren, welche Rechen- und Beweisschritte in der
                     Mathematik erlaubt seien. In moderner Sprache: wann wollte die gesamte
-                    Mathematik 
-                    {" "}
+                    Mathematik{" "}
                     <i>
                       axiomatisieren
                     </i>
-                    {" "}
                     . Treibende Kraft hinter diesem
                     Vorhaben war der deutsche Mathematiker
                   </Paragraph>

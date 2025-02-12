@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={6}
         title_gr="Majority"
         title_en="majority"
         number={1.5}
@@ -63,8 +64,8 @@ const Article = () => {
                 </Paragraph>
                 <figure>
                   <img
-                    style="height:10em"
-                    src="../img/circuits/majority.svg"
+                    style="height:8em"
+                    src="../img/circuits/maj3.svg"
                     loading="lazy" />
                 </figure>
                 <Paragraph>
@@ -177,7 +178,7 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     $$
-                    &#123;n \choose&#123;\ceil&#123;n/2&#125;&#125;&#125; \geq \frac&#123;2^n&#125;&#123;n+1&#125; \ .
+                    &#123;n \choose &#123;\ceil&#123;n/2&#125;&#125;&#125; \geq \frac&#123;2^n&#125;&#123;n+1&#125; \ .
                     $$
                   </Paragraph>
                   <Paragraph>
@@ -190,9 +191,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Sei \(k \in \&#123;1,\dots,n\&#125;\). Vergleichen wir \(&#123;n \choose k&#125;\) mit \(&#123;n \choose k-1&#125;\):
                     \begin&#123;align*&#125;
                     \frac&#123;&#123;n \choose k&#125;&#125;&#123;&#123;n \choose k-1&#125;&#125;&amp;=
@@ -200,7 +199,7 @@ const Article = () => {
                     \end&#123;align*&#125;
                     und somit
                     \begin&#123;align*&#125;
-                    &#123;n \choose k&#125;&amp;\geq&#123;n \choose k-1&#125; \quad \Longleftrightarrow \\
+                    &#123;n \choose k&#125;&amp;\geq &#123;n \choose k-1&#125; \quad \Longleftrightarrow \\
                     n-k+1&amp;\geq k \quad \Longleftrightarrow \\
                     2k&amp;\leq n+1 \quad \Longleftrightarrow \\
                     k&amp;\leq \frac&#123;n+1&#125;&#123;2&#125; \quad \Longleftrightarrow \\
@@ -208,7 +207,7 @@ const Article = () => {
                     \end&#123;align*&#125;
                     Aus der letzten Zeile folgt nun, dass \(&#123;n \choose k&#125;\) durch \(k := \ceil&#123;\frac&#123;n&#125;&#123;2&#125;&#125;\)
                     maximiert wird, also
-                    \(&#123;n \choose k&#125; \leq&#123;n \choose \ceil&#123;\frac&#123;n&#125;&#123;2&#125;&#125;&#125;\) gilt.
+                    \(&#123;n \choose k&#125; \leq &#123;n \choose \ceil&#123;\frac&#123;n&#125;&#123;2&#125;&#125;&#125;\) gilt.
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -228,7 +227,7 @@ const Article = () => {
                       </Paragraph>
                       <Paragraph>
                         $$
-                        \sum_&#123;k=0&#125;^n&#123;n \choose k&#125; = 2^n \ .
+                        \sum_&#123;k=0&#125;^n &#123;n \choose k&#125; = 2^n \ .
                         $$
                       </Paragraph>
                       <Paragraph>
@@ -241,8 +240,8 @@ const Article = () => {
                       </Paragraph>
                       <Paragraph>
                         $$
-                        2^n = \sum_&#123;k=0&#125;^n&#123;n \choose k&#125; \leq \sum_&#123;k=0&#125;^n&#123;n \choose \ceil&#123;\frac&#123;n&#125;&#123;2&#125;&#125;&#125;
-                        = (n+1) \cdot&#123;n \choose \ceil&#123;\frac&#123;n&#125;&#123;2&#125;&#125;&#125;
+                        2^n = \sum_&#123;k=0&#125;^n &#123;n \choose k&#125; \leq \sum_&#123;k=0&#125;^n &#123;n \choose \ceil&#123;\frac&#123;n&#125;&#123;2&#125;&#125;&#125;
+                        = (n+1) \cdot &#123;n \choose \ceil&#123;\frac&#123;n&#125;&#123;2&#125;&#125;&#125;
                         $$
                       </Paragraph>
                       <Paragraph>
@@ -252,7 +251,7 @@ const Article = () => {
                       </Paragraph>
                       <Paragraph>
                         $$
-                        &#123;n \choose \ceil&#123;\frac&#123;n&#125;&#123;2&#125;&#125;&#125; \geq \frac&#123;2^n&#125;&#123;n+1&#125; \ ,
+                        &#123;n \choose \ceil&#123;\frac&#123;n&#125;&#123;2&#125;&#125;&#125; \geq \frac&#123;2^n&#125; &#123;n+1&#125; \ ,
                         $$
                       </Paragraph>
                       <Paragraph>
@@ -275,11 +274,7 @@ const Article = () => {
                   </Paragraph>
                   <h3>
                     <Paragraph>
-                      Majority Top-Down mit{" "}
-                      <code>
-                        if-then-else
-                      </code>
-                      -Gates
+                      Majority Top-Down mit `if-then-else`-Gates
                     </Paragraph>
                   </h3>
                   Wenden wir nun statt Wahrheitstabelle die Top-Down-Methode an, modifiziert
@@ -325,8 +320,8 @@ const Article = () => {
                 </Paragraph>
                 <figure>
                   <img
-                    style="height:10em"
-                    src="../img/circuits/majority.svg"
+                    style="height:15em"
+                    src="../img/circuits/majority-theta-recursive.svg"
                     loading="lazy" />
                 </figure>
                 <Paragraph>
@@ -349,7 +344,7 @@ const Article = () => {
                   C^n_0&amp;= 1
                   \end&#123;align*&#125;
                   gilt; sie erfüllt also die gleiche Rekursionsgleichung wie der Binomialkoeffizient
-                  \(&#123;n \choose k&#125;\), also gilt \(C^n_k =&#123;n \choose k&#125;\). Die Konstruktion ist
+                  \(&#123;n \choose k&#125;\), also gilt \(C^n_k = &#123;n \choose k&#125;\). Die Konstruktion ist
                   asymptotisch auch nicht besser als die, aus der Wahrheitstabelle direkt
                   eine monotone DNF zu basteln.
                 </Paragraph>
@@ -363,8 +358,8 @@ const Article = () => {
                 </Paragraph>
                 <figure>
                   <img
-                    style="height:10em"
-                    src="../img/circuits/majority.svg"
+                    style="height:18em"
+                    src="../img/circuits/majority-theta-dp.svg"
                     loading="lazy" />
                 </figure>
                 <Paragraph>
@@ -377,30 +372,41 @@ const Article = () => {
                     </Paragraph>
                   </Paragraph>
                   <pre class="listing">
-                    <code>
-                      def binomial(n,k):
-                    </code>
-                    <code>
-                      if k == 0 or k == n:
-                    </code>
-                    <code>
-                      return 1{" "}
-                    </code>
-                    <code>
-                      else:
-                    </code>
-                    <code>
-                      return binomial(n-1,k-1) + binomial(n-1,k)
-                    </code>
+                    <Paragraph>
+                      {" "}{" "}
+                      <code>
+                        def binomial(n,k):
+                      </code>
+                      {" "}
+                      {" "}
+                      <code>
+                        if k == 0 or k == n:
+                      </code>
+                      {" "}
+                      {" "}
+                      <code>
+                        return 1
+                      </code>
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
+                      <code>
+                        else:
+                      </code>
+                      {" "}
+                      {" "}
+                      <code>
+                        return binomial(n-1,k-1) + binomial(n-1,k)
+                      </code>
+                      {" "}{" "}
+                    </Paragraph>
                   </pre>
                   der exponentielle Laufzeit aufweist, und der effizienten Implementierung mittels
-                </Paragraph>
-                <Paragraph>
-                  {" "}{" "}
+                  {" "}
                   <i>
                     Dynamic Programming
                   </i>
-                  {" "}
                   , bei welchem wir uns die Zwischenergebnisse merken.
                 </Paragraph>
                 <Paragraph>
@@ -443,8 +449,8 @@ const Article = () => {
                 </Paragraph>
                 <figure>
                   <img
-                    style="height:10em"
-                    src="../img/circuits/majority.svg"
+                    style="height:12em"
+                    src="../img/circuits/majority-by-adding.svg"
                     loading="lazy" />
                 </figure>
                 <div class="well well-lg numbered-exercise container">
@@ -497,15 +503,13 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Ich demonstriere das Beweisprinzip erst einmal mit drei Zahlen in Basis 10:
                   </Paragraph>
                   <figure>
                     <img
                       style="height:10em"
-                      src="../img/circuits/majority.svg"
+                      src="../img/circuits/2-for-3-adder-example.svg"
                       loading="lazy" />
                   </figure>
                   <Paragraph>
@@ -519,8 +523,8 @@ const Article = () => {
                       </Paragraph>
                       <figure>
                         <img
-                          style="height:10em"
-                          src="../img/circuits/majority.svg"
+                          style="height:15em"
+                          src="../img/circuits/2-for-3-adder-binary.svg"
                           loading="lazy" />
                       </figure>
                     </Paragraph>
@@ -656,12 +660,10 @@ const Article = () => {
                     die \(\bigvee\)-Gates haben sehr großen Fan-in, nämlich bis zu \(n\). Um
                     Fan-in 2 zu erreichen, müssen wir jedes \(\bigvee\)-Gate durch einen Binärbaum
                     aus normalen \(\vee\)-Gates von Fan-in 2 ersetzen. Dies gibt uns zusätzlich
-                    Tiefe \(O(\log n)\) 
-                    {" "}
+                    Tiefe \(O(\log n)\){" "}
                     <i>
                       pro \(\bigvee\)-Gate
                     </i>
-                    {" "}
                     ; wir erhalten also insgesamt
                     eine Tiefe von \(O(\log^2 n)\).
                   </Paragraph>
@@ -695,16 +697,12 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
-                    Die Beweismethode, die wir verwenden, ist womöglich neu für Sie. Wir verwenden
-                    bei der Konstruktion des Schaltkreises 
                     {" "}
+                    Die Beweismethode, die wir verwenden, ist womöglich neu für Sie. Wir verwenden
+                    bei der Konstruktion des Schaltkreises{" "}
                     <i>
                       Zufall
                     </i>
-                    {" "}
                     ; am Ende werden
                     wir zeigen, dass dieser zufällige Schaltkreis mit hoher Wahrscheinlichkeit
                     \(\maj_n\) auf allen möglichen \(2^n\) Inputs korrekt berechnen, und folgern
@@ -721,21 +719,16 @@ const Article = () => {
                       bei der Konstruktion des Schaltkreises \(C\) Zufall verwenden;
                       wir nehmen nicht an, dass die Inputs \(x \in \&#123;0,1\&#125;^n \) in irgendeiner
                       Weise zufällig sind. Wir verwenden also
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         Wahrscheinlichkeitsverteilungen über Schaltkreisen
                       </i>
-                      {" "}
                       , nicht
                       von über Inputs. Zuerst definieren wir
-                      die 
-                      {" "}
+                      die{" "}
                       <i>
                         Signalstärke
                       </i>
-                      {" "}
                       von Verteilungen über Schaltkreise.
                     </Paragraph>
                   </Paragraph>
@@ -745,14 +738,11 @@ const Article = () => {
                         Definition (Signalstärke)
                       </span>
                       Sei \(\mathcal&#123;C&#125;\) eine Verteilung über Schaltkreise mit Input-Variablen
-                      \(x_1,\dots,x_n\). Wir sagen, dass \(\mathcal&#123;C&#125;\) 
-                      {" "}
+                      \(x_1,\dots,x_n\). Wir sagen, dass \(\mathcal&#123;C&#125;\){" "}
                       <i>
                         Signalstärke mindestens $\delta$
                       </i>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       hat, wenn
                       {" "}
                     </Paragraph>
@@ -806,9 +796,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Der Schaltkreis bzw. die Wahrscheinlichkeitsverteilung ist extrem einfach.
                       Wir wählen zufällig einen Index \(I \in \&#123;1,\dots,n\&#125;\) und
                       geben \(x_I\) als unseren Schaltkreis \(C\) (bestehend aus einem einzigen Input-Gate,
@@ -866,12 +854,10 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Um eine Analogie aus dem Alltag zu bemühen: wenn Sie für eine
-                      Wahlprognose 
-                      {" "}
+                      Wahlprognose{" "}
                       <i>
                         einen
                       </i>
-                      {" "}
                       zufällig ausgewählten Bürger befragen, so
                       ist das Ergebnis zwar nicht wirklich repräsentativ, aber immerhin leicht
                       besser, als wenn Sie einfach raten würden. Unser zufälliger
@@ -893,12 +879,10 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph>
                       {" "}
-                      Dann können wir 
-                      {" "}
+                      Dann können wir{" "}
                       <i>
                         drei
                       </i>
-                      {" "}
                       Schaltkreise
                       \(C_1, C_2, C_3 \sim \mathcal&#123;C&#125;\) unabhängig voneinander samplen und
                       einen neuen Schaltkreis bauen: \(C'(\x) := \maj_3 (C_1(\x), C_2(\x), C_3(\x))\). Dies gibt
@@ -937,9 +921,7 @@ const Article = () => {
                           <b>
                             Beweis.
                           </b>
-                          {" "}{" "}
-                        </Paragraph>
-                        <Paragraph>
+                          {" "}
                           Wir betrachten ein festes $\x \in \cube^n$ mit $\maj
                           <i>
                             n(\x) = 1$; der
@@ -961,12 +943,10 @@ const Article = () => {
                           </i>
                           3 \sim \mathcal&#123;C&#125;$ zufällige Schaltkreise sind, sind $U, V, W$
                           Zufallsvariable
-                          über $\cube$, und zwar 
-                          {" "}
+                          über $\cube$, und zwar{" "}
                           <i>
                             unabhängig
                           </i>
-                          {" "}
                           , weil wir $C
                           <i>
                             1, C
@@ -1066,12 +1046,10 @@ const Article = () => {
                           1,\dots,x
                         </i>
                         n$
-                        hat 
-                        {" "}
+                        hat{" "}
                         <i>
                           Fehlerwahrscheinlichkeit $\epsilon$
                         </i>
-                        {" "}
                         , wenn
                       </Paragraph>
                     </Paragraph>
@@ -1114,7 +1092,6 @@ const Article = () => {
                           <b>
                             Beweis.
                           </b>
-                          {" "}
                           Wie im Beweis vom Lemma setzen wir
                           $p := \frac&#123;1+p&#125;&#123;2&#125; = 1-\epsilon$ und erhalten
                         </Paragraph>
@@ -1176,20 +1153,15 @@ const Article = () => {
                           an. Dieses exponentielle Wachstum kann natürlich nicht beliebig weitergehen. Jenseits
                           $\delta
                         </i>
-                        i \leq 1/2$ hört das auf, dafür 
-                        {" "}
+                        i \leq 1/2$ hört das auf, dafür{" "}
                         <i>
                           fällt
                         </i>
-                        {" "}
                         nun die Fehlerwahrscheinlichkeit
-                      </Paragraph>
-                      <Paragraph>
-                        {" "}{" "}
+                        {" "}
                         <i>
                           doppelt exponentiell
                         </i>
-                        {" "}
                         . Für $j^* := \log_&#123;3/2&#125; n$ gilt dann
                       </Paragraph>
                     </Paragraph>
@@ -1204,27 +1176,24 @@ const Article = () => {
                   </Paragraph>
                   <figure>
                     <img
-                      style="height:10em"
-                      src="../img/circuits/majority.svg"
-                      loading="lazy" />
+                      style="height:18em"
+                      src="../img/circuits/majority-probability-labeled.svg" />
                     <br />
                     Graph der Funktion $p \mapsto p^3 + 3 p^2 (1-p)$
                     <hr />
                   </figure>
                   <figure>
                     <img
-                      style="height:10em"
-                      src="../img/circuits/majority.svg"
-                      loading="lazy" />
+                      style="height:18em"
+                      src="../img/circuits/majority-probability-close-to-half-labeled.svg" />
                     <br />
                     Signalstärke $\delta$ wächst für $p \in [1/2, 3/4]$ exponentiell.
                     <hr />
                   </figure>
                   <figure>
                     <img
-                      style="height:10em"
-                      src="../img/circuits/majority.svg"
-                      loading="lazy" />
+                      style="height:18em"
+                      src="../img/circuits/majority-probability-close-to-one-labeled.svg" />
                     <br />
                     Fehlerwahrscheinlichkeit $\epsilon$ fällt für $p \in [3/4, 1/2]$ doppelt
                     exponentiell.
@@ -1265,7 +1234,7 @@ const Article = () => {
                     \begin&#123;align*&#125;
                     E
                     <i>
-                      &#123;\b&#125; := \&#123;\textnormal&#123;Schaltkreise&#125; C \textnormal&#123; über&#125; x
+                      &#123;\b&#125; := \&#123;\textnormal&#123;Schaltkreise &#125; C \textnormal&#123; über &#125; x
                     </i>
                     1, \dots, x
                     <i>
@@ -1288,12 +1257,10 @@ const Article = () => {
                           n$. Die Menge $E
                         </i>
                         &#123;\b&#125;$
-                        ist somit ein 
-                        {" "}
+                        ist somit ein{" "}
                         <i>
                           Ereignis
                         </i>
-                        {" "}
                         in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
                       </Paragraph>
                     </Paragraph>
@@ -1416,7 +1383,7 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Gates. Ein Schaltkreis mit Fan-in 2 und Tiefe $c \log_2 n$ hat also
-                      insgesamt höchstens $2^&#123;c \log n + 1&#125; - 1 = O(n^c) = O(\poly(n))$ Gates.
+                      insgesamt höchstens $2^&#123;c \log n + 1 &#125; - 1 = O(n^c) = O(\poly(n))$ Gates.
                     </Paragraph>
                     <span class="qed">
                       \(\square\)
@@ -1437,12 +1404,10 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Wir könnten nun noch ehrgeiziger sein und einen monotonen Schaltkreis mit Fan-in 2,
-                    Tiefe $O(\log n)$ und 
-                    {" "}
+                    Tiefe $O(\log n)$ und{" "}
                     <i>
                       linearer
                     </i>
-                    {" "}
                     Größe $O(n)$ anstreben.
                   </Paragraph>
                 </Paragraph>

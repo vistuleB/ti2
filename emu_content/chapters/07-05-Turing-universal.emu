@@ -115,18 +115,10 @@
                         sicherzustellen, dass wir
                         die Konfigurationen von $M$ darstellen können in dem Alphabet $\Lambda$,
                         das
-                        
-                        _unabhängig_
-                        von $M$ ist. Dass wir also 
-                        _jede_
-                        
+                        _unabhängig_von $M$ ist. Dass wir also _jede_
                         Turingmaschine
-                        $M$ mit Eingabealphabet $\Sigma$ und 
-                        _jede_
-                        ihrer Konfigurationen
-                        als Strings über 
-                        _einem_
-                        festen Alphabet $\Lambda$ darstellen
+                        $M$ mit Eingabealphabet $\Sigma$ und _jede_ihrer Konfigurationen
+                        als Strings über _einem_festen Alphabet $\Lambda$ darstellen
                         können.
                         
                     
@@ -158,10 +150,8 @@
                                 class numbered-title
 
                                 Theorem
-                            
                             *(Universelle
-                            Turingmaschine).*
-                            Zu
+                            Turingmaschine).*Zu
                             jedem
                             endlichen Eingabealphabet $\Sigma$ sei
                             $\Lambda := \writelambda$ das Codierungsalphabet. Es gibt es
@@ -231,7 +221,7 @@
                             
                         
                         \begin{align*}
-                        \{ c w \ | \ w \in \Sigma^* \textnormal{ und&#125; c = \enc(M) \textnormal{
+                        \{ c w \ | \ w \in \Sigma^* \textnormal{ und } c = \enc(M) \textnormal{
                         und $M$ akzeptiert $w$} \} \ .
                         \end{align*}
                         
@@ -247,10 +237,8 @@
                         |> p
 
                             
-                            
                             *Ein technischer aber letztendlich irrelevanter Punkt:
-                            *
-                            die Mengen
+                            *die Mengen
                             $Q$ und $\Gamma$ der Turingmaschine $M$ können ja beliebige
                             (endliche) Mengen sein,
                             und weder $\Lambda$ noch die Turingmaschine $U$ haben "Kenntnis"
@@ -301,7 +289,6 @@
                         |> p
 
                             *Beweis.*
-                            
                             Den Beweis in allen Details zu führen hieße, die Maschine $U$
                             konkret als Turingmaschine
                             zu implementieren. Wir tun dies nicht. Wir beschränken uns auf
@@ -350,7 +337,7 @@
                                 
                                 
                                 |> img
-                                    src ../img/carousel-prev-icon.svg
+                                    src ../img/carousel-next-icon.svg
                                 
                                 
                             
@@ -677,355 +664,414 @@
                                 |> div
                                     class item active
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-01-01.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-01-02.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-01-03.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-01-04.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-02-01.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-01.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-02.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-03.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-04.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-05.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-06.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-07.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-08.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-09.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-10.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-11.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-12.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-13.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-14.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-15.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-16.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-17.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-18.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-19.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-20.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-21.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-22.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-23.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-24.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-25.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-26.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-27.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-28.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-29.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-30.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-31.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-32.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-33.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-34.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-35.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-36.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-37.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-38.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-39.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-40.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-41.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-42.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-43.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-44.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-45.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-46.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-47.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-48.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-49.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-50.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-51.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-52.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-53.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:22em
+                                        src ../img/turing-machines/universal/universal-03-54.svg
                                 
                                 
                             

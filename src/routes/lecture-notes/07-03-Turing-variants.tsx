@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={44}
         title_gr="Variationen: Mehrband-Maschinen, nichtdeterministische Maschinen"
         title_en="Turing variants"
         number={7.3}
@@ -57,13 +58,10 @@ const Article = () => {
                     verschiedenen Stellen hin- und herfahren muss. Es bietet sich daher
                     an, an etwas allgemeineres Modell einer Rechenmaschine zu definieren,
                     das dann auch leichter zu programmieren ist. Dies ist die
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Mehrband-Turingmaschine
                     </i>
-                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>
@@ -232,7 +230,6 @@ const Article = () => {
                       <b>
                         Tip.
                       </b>
-                      {" "}
                       Verwenden Sie drei Bänder. Sei der Bandinhalt
                       \(x+y\). In einer ersten Phase kopieren Sie \(x\) auf das zweite
                       Band. In der nächsten Phase gehen Sie ans Ende von \(y\). Dann
@@ -270,21 +267,16 @@ const Article = () => {
                     <b>
                       Berechnete Sprache, berechnete Funktion.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Die Begriffe des Akzpetierens und Ablehnens definieren wir genau wie
                     für die Einband-Turingmaschinen. Eine formale Definition der
                     Konfiguration ersparen wir uns jedoch. Wenn unsere
                     Mehrband-Turingmaschine nicht nur akzeptieren / ablehnen, sondern
                     etwas
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       berechnen
                     </i>
-                    {" "}
                     soll, also eine Funktion \begin&#123;align*&#125; f :
                     \Sigma
                     <i>
@@ -317,7 +309,6 @@ const Article = () => {
                     <b>
                       (Einband-Turingmaschine simuliert Mehrband-Turingmaschine)
                     </b>
-                    {" "}
                     . Sei \(M\) eine Turingmaschine mit \(k\) Bändern, wovon eines ein
                     designiertes Ausgabeband ist. Dann gibt es eine Einband-Turingmaschine
                     \(M'\) mit folgenden Eigenschaften:
@@ -345,9 +336,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Der erste Trick ist, dass wir die \(k\) Bänder von \(M\)
                     "zusammenkleben" in ein neues Band, in welcher jede Zelle \(k\)
                     Symbole enthalten kann:
@@ -386,13 +375,10 @@ const Article = () => {
                       Das neue Bandalphabet ist also nicht \(\Gamma^k\) sondern \((\Gamma
                       \times \&#123;\texttt&#123;head&#125;, \texttt&#123;nohead&#125;\&#125; )^k\). Wo steht nun aber
                       denn der Kopf von \(M'\)? Jetzt kommt der schwierige Teil: um
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         einen
                       </i>
-                      {" "}
                       Schritt von \(M\) zu simulieren, muss \(M'\) von ganz
                       links nach ganz rechts laufen und alle Informationen über die \(k\)
                       \(M\)-Köpfe sammeln. Dann von rechts nach links gehen und die
@@ -639,52 +625,91 @@ const Article = () => {
                   :
                 </Paragraph>
                 <pre class="listing container">
-                  <code>
-                    name: replace
-                    <i>
-                      b
-                    </i>
-                    by_c
-                  </code>
-                  <code>
-                    init: init{" "}
-                  </code>
-                  <code>
-                    accept: accept{" "}
-                  </code>
-                  <code />
-                  <code>
-                    init, a
-                  </code>
-                  <code>
-                    init, a, &gt;{" "}
-                  </code>
-                  <code />
-                  <code>
-                    init, b
-                  </code>
-                  <code>
-                    init, c, &gt;{" "}
-                  </code>
-                  <code />
-                  <code>
-                    init, _{" "}
-                  </code>
-                  <code>
-                    accept, _, &gt;{" "}
-                  </code>
+                  <Paragraph>
+                    {" "}{" "}
+                    <code>
+                      name: replace
+                      <i>
+                        b
+                      </i>
+                      by_c
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      init: init
+                    </code>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
+                    <code>
+                      accept: accept
+                    </code>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
+                    <code>
+                      {" "}{" "}
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      init, a
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      init, a, &gt;
+                    </code>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
+                    <code>
+                      {" "}{" "}
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      init, b
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      init, c, &gt;
+                    </code>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
+                    <code>
+                      {" "}{" "}
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      init, _
+                    </code>
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
+                    <code>
+                      accept, _, &gt;
+                    </code>
+                    {" "}{" "}
+                  </Paragraph>
                 </pre>
                 <Paragraph>
                   <Paragraph>
                     Ungleich schwieriger ist die Aufgabe, jedes \(b\) durch ein \(bc\) zu
                     ersetzen, weil wir hier etwas
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       einfügen
                     </i>
-                    {" "}
                     wollen. Auf einer Einband-Turingmaschine müssen wir
                     für jedes \(b\) alles, was rechts davon kommt, um eine Zelle nach
                     rechts verschieben. Meinen Quelltext finden sie in
@@ -693,12 +718,10 @@ const Article = () => {
                     <a href="../code/turing machines/replace-b-by-bc.txt">
                       replace-b-by-bc.txt
                     </a>
-                    Können wir unserer Turingmaschine die Funktionalität geben, eine Zelle 
-                    {" "}
+                    Können wir unserer Turingmaschine die Funktionalität geben, eine Zelle{" "}
                     <i>
                       einzufügen
                     </i>
-                    {" "}
                     und alles von Kopf bis zum linken Ende um
                     eins nach links zu verschieben bzw. das analoge, aber nach rechts? Wir
                     sind freie Menschen, wir können definieren, was wir wollen, müssen uns
@@ -720,13 +743,10 @@ const Article = () => {
                     <Paragraph>
                       In diesem Fall ahnen Sie es wohl bereits: es ist nur Syntaxzucker. Die
                       Funktionalität des
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         Einfügens/Verschiebens
                       </i>
-                      {" "}
                       können wir leicht mit zwei Bändern
                       simulieren. Wir halten uns einfach an die Konvention, dass auf Band 1
                       der Kopf immer auf dem linkesten Zeichen steht und auf Band 2 der Kopf
@@ -826,13 +846,10 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Ein fundamentale Datenstruktur beim Programmieren sind
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Dictionaries
                     </i>
-                    {" "}
                     , die Key-Value-Paare speichern:
                   </Paragraph>
                 </Paragraph>
@@ -841,7 +858,7 @@ const Article = () => {
                     python -i
                   </code>
                   <code class="pythonPrompt">
-                    dict =&#123;"karl" : 42, "eva" : 35, "werner" : 20&#125;
+                    dict = &#123;"karl" : 42, "eva" : 35, "werner" : 20&#125;
                   </code>
                   <code class="pythonPrompt">
                     dict["eva"]
@@ -895,7 +912,6 @@ const Article = () => {
                       <b>
                         Tip:
                       </b>
-                      {" "}
                       Kopieren Sie erst einmal den gesuchten
                       Schlüssel \(k\) auf das zweite Band. Dann können Sie bequem den
                       Schlüssel \(k_i\) auf dem ersten Band mit dem auf dem zweiten Band
@@ -964,29 +980,23 @@ const Article = () => {
                     <i>
                       0 \Step&#123;&#125; C
                     </i>
-                    1 \Step&#123;&#125; C_2 \Step&#123;&#125; \dots \Step&#123;&#125; C' \end&#123;align*&#125; Wir
-                    sagen auch:
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    1 \Step&#123;&#125; C
                     <i>
-                      Die Konfiguration \(C'\) ist von \(C\) aus erreichbar
+                      2 \Step&#123;&#125; \dots \Step&#123;&#125; C' \end&#123;align*&#125; Wir
+                      sagen auch:
+                      {" "}
                     </i>
-                    {" "}
-                    .
+                    Die Konfiguration \(C'\) ist von \(C\) aus erreichbar_.
                   </Paragraph>
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
                     Für ein Eingabewort \(x\) sie \(C_x := \texttt&#123;start&#125; x\) die
                     Startkonfiguration. Eine nichtdeterministische Turingmaschine
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       akzeptiert
                     </i>
-                    {" "}
                     \(x\), wenn es eine akzeptierende Endkonfiguration
                     \(C_&#123;\rm accept&#125;\) gibt mit \begin&#123;align*&#125; C
                     <i>
@@ -995,13 +1005,10 @@ const Article = () => {
                     &#123;\rm
                     accept&#125; \end&#123;align*&#125; wenn es also (mindestens) eine akzeptierende
                     Konfiguration gibt, die von \(C_x\) aus erreichbar ist. Dabei kann es
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       mehrere
                     </i>
-                    {" "}
                     erreichbare akzeptierende Konfigurationen geben, Es
                     kann sogar eine ablehnende Konfiguration \(C_x \Step&#123;&#125;^* C_&#123;\rm
                     reject&#125;\) geben. Spielt keine Rolle: solange es einen Weg \(C_x
@@ -1018,22 +1025,18 @@ const Article = () => {
                     <b>
                       (Akzeptieren und Entscheiden bei nichtdeterministischen Turingmaschinen).
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Eine nichtdeterministische Turingmaschine \(M\) akzeptiert die Sprache
-                    \(L\) wenn \begin&#123;align*&#125; x \in L \Longleftrightarrow M \textnormal&#123;
-                    akzeptiert&#125; x \end&#123;align*&#125; Für jedes \(x \not \in L\) gibt es also
+                    \(L\) wenn \begin&#123;align*&#125; x \in L \Longleftrightarrow M \textnormal &#123;
+                    akzeptiert &#125; x \end&#123;align*&#125; Für jedes \(x \not \in L\) gibt es also
                     keine akzeptierende Konfiguration \(C\) mit \(C_x \Rightarrow C\).
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Die Turingmaschine \(M\) 
-                      {" "}
+                      Die Turingmaschine \(M\){" "}
                       <i>
                         entscheidet
                       </i>
-                      {" "}
                       die Sprache \(L\),
                       wenn sie sie akzeptiert und es keine unendlich langen Ketten
                       \begin&#123;align*&#125; C
@@ -1049,45 +1052,31 @@ const Article = () => {
                   <Paragraph>
                     Oft wird händeringend versucht, zu erklären, was denn eine
                     nichtdeterministische Turingmaschine
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       tut
                     </i>
-                    {" "}
                     . Da lesen Sie dann beispielsweise, dass die
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       alle Möglichkeiten gleichzeitig ausprobiert
                     </i>
-                    {" "}
                     oder den
-                    richtigen Pfad von einem 
-                    {" "}
+                    richtigen Pfad von einem{" "}
                     <i>
                       Engel
                     </i>
-                    {" "}
                     gesagt bekommt oder
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       errät
                     </i>
-                    {" "}
                     . Ich stelle mir lieber vor, dass eine
                     nichtdeterministische Turingmaschine gar nichts "tut" sondern
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Spielregeln
                     </i>
-                    {" "}
                     definiert, wie man "ziehen" kann. Man gewinnt,
                     wenn man in einer akzeptierenden Konfiguration landet.
                   </Paragraph>
@@ -1102,8 +1091,8 @@ const Article = () => {
                     mit Preisen \(p_1, p_2, \dots, p_n\) und ein Guthaben \(g\) gegeben
                     und wollen wissen, ob wir unser Guthaben exakt ausgeben können. Ob es
                     also eine Teilmenge \(I \subseteq [n]\) von Waren gibt, die genau
-                    \(g\) kostet: \begin&#123;align*&#125; \textnormal&#123;gibt es ein&#125; I \subseteq [n]
-                    \textnormal&#123; mit&#125; \sum
+                    \(g\) kostet: \begin&#123;align*&#125; \textnormal&#123;gibt es ein &#125; I \subseteq [n]
+                    \textnormal&#123; mit &#125; \sum
                     <i>
                       &#123;i \in I&#125; p
                     </i>
@@ -1175,40 +1164,78 @@ const Article = () => {
                   </Paragraph>
                 </Paragraph>
                 <pre class="listing container">
-                  <code>
-                    module SubsetSum exposing (..)
-                  </code>
-                  <code />
-                  <code />
-                  <code>
-                    subsetSum : List Int -&gt; Int -&gt; Bool
-                  </code>
-                  <code>
-                    subsetSum prices amount =
-                  </code>
-                  <code>
-                    case ( prices, amount ) of
-                  </code>
-                  <code>
-                    ( [], 0 ) -&gt;
-                  </code>
-                  <code>
-                    True
-                  </code>
-                  <code />
-                  <code>
-                    ( x :: rest, _ ) -&gt;
-                  </code>
-                  <code>
-                    subsetSum rest amount || subsetSum rest (amount - x)
-                  </code>
-                  <code />
-                  <code>
-                    ( [], _ ) -&gt;
-                  </code>
-                  <code>
-                    False
-                  </code>
+                  <Paragraph>
+                    {" "}{" "}
+                    <code>
+                      module SubsetSum exposing (..)
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      {" "}{" "}
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      {" "}{" "}
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      subsetSum : List Int -&gt; Int -&gt; Bool
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      subsetSum prices amount =
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      case ( prices, amount ) of
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      ( [], 0 ) -&gt;
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      True
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      {" "}{" "}
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      ( x :: rest, _ ) -&gt;
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      subsetSum rest amount || subsetSum rest (amount - x)
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      {" "}{" "}
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      ( [], _ ) -&gt;
+                    </code>
+                    {" "}
+                    {" "}
+                    <code>
+                      False
+                    </code>
+                    {" "}{" "}
+                  </Paragraph>
                 </pre>
                 <Paragraph>
                   <Paragraph>
@@ -1227,9 +1254,7 @@ const Article = () => {
                     <b>
                       (Nichtdeterministische Turingmaschinen deterministischsimulieren)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Sei \(M\) eine nichtdeterministische Turingmaschine. Dann gibt es eine
                     deterministische Maschine \(M'\) mit \(L(M) = L(M')\), d.h. \(M'\)
                     akzeptiert \(x\) genau dann, wenn \(M\) es akzeptiert.
@@ -1248,9 +1273,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Als erstes führen wir eine kosmetische Änderung unserer
                     nichtdeterministischen Maschine durch: wir wollen, dass es für jedes
                     \((q,c)\) genau zwei Möglichkeiten gibt, also \begin&#123;align*&#125; (q,c)&
@@ -1323,12 +1346,10 @@ const Article = () => {
                       wir sofort ab. Wir haben nun eine deterministische Turingmaschine
                       \(M''\), die jedoch nicht das gleiche tut wie \(M\). Aber: wenn \(x
                       \in L(M)\), dann gibt es ein Wort \(z \in \&#123;0,1\&#125;^*\), das wir auf
-                      das zweite Band schreiben 
-                      {" "}
+                      das zweite Band schreiben{" "}
                       <i>
                         könnten
                       </i>
-                      {" "}
                       , so dass \(M''\) das
                       Eingabewort \(x\) akzeptiert. Im Gegenzug: wenn \(x \not \in L(M)\),
                       dann können wir auf das zweite Band schreiben, was wir wollen,

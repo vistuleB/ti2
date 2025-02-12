@@ -94,15 +94,7 @@
                             copy an existing file, a "chapter" or a "subchapter" file, depending
                             on the new file you want to create. The ordering in which they
                             appear (in the table of content and in the link structure given by
-                            the 
-                            |> code
-
-                                next
-                            nad 
-                            |> code
-
-                                prev
-                            navigation links) is
+                            the `next`nad `prev`navigation links) is
                             determined purely by the order in which they appear in
                             
                             |> a
@@ -135,7 +127,7 @@
 
                                         Sauer-Shelah lemma
                                     
-                                    Let $A \subseteq \{0,1\}^n$. If $|A| \gt&#123;\rm vol}(n,r-1)$ then
+                                    Let $A \subseteq \{0,1\}^n$. If $|A| \gt {\rm vol}(n,r-1)$ then
                                     there exists some set $I \subseteq [n]$ of indices with $|I|
                                     \geq r$ such that
                                     
@@ -152,7 +144,7 @@
                                 
                                 <div class='well container theorem'>
                                 &lt;p><span class='numbered-title' id="sauer-shelah-lemma" data-label-title="Lemma">Lemma</span> 
-                                &lt;strong>(Sauer-Shelah lemma).&lt;/strong>Let $A \subseteq \{0,1\}^n$. If $|A| \gt&#123;\rm vol}(n,r-1)$ then
+                                &lt;strong>(Sauer-Shelah lemma).&lt;/strong>Let $A \subseteq \{0,1\}^n$. If $|A| \gt {\rm vol}(n,r-1)$ then
                                 there exists some set $I \subseteq [n]$ of indices with $|I| \geq r$ such that</p>
                                 \begin{align*}
                                 \{ \mathbf{x}_I \ | \ \mathbf{x} \in A\} = \{0,1\}^r \ ,
@@ -161,41 +153,17 @@
                                 </div class='well container theorem'>
                                 
                             
-                            You must give the environment 
-                            |> code
-
-                                div
-                            the class
-                            
-                            |> code
-
-                                theorem
-                            and the title 
-                            |> code
-
-                                span
-                            the class
-                            
-                            |> code
-
-                                nunbered-title
-                            , otherwise the automatic numbering will
+                            You must give the environment `div`the class
+                            `theorem`and the title `span`the class
+                            `nunbered-title`, otherwise the automatic numbering will
                             not work.
                             
                             
                             |> p
 
                                 
-                                The attributes 
-                                |> code
-
-                                    id="sauer-shelah-lemma"
-                                and
-                                
-                                |> code
-
-                                    data-label-title="Lemma"
-                                are necessarily for
+                                The attributes `id="sauer-shelah-lemma"`and
+                                `data-label-title="Lemma"`are necessarily for
                                 automatic referencing. Here is how you create a reference:
                                 
                             
@@ -232,14 +200,8 @@
                         |> p
 
                             
-                            To work, the 
-                            |> code
-
-                                id
-                            of a theorem (or a general environment)
-                            has to be unique 
-                            _across all files of the lecture notes_
-                            .
+                            To work, the `id`of a theorem (or a general environment)
+                            has to be unique _across all files of the lecture notes_.
                             Also, since we have to correctly compute the numbering of theorems
                             like 
                             |> span
@@ -249,9 +211,7 @@
                             would have to read the file containing it. So we'd have to write
                             code that, while loading Chapter 9, loads all chapters of referenced
                             environments. Potentially, this forces the browser to load
-                            
-                            _the entire lecture notes_
-                            each time a single file is loaded.
+                            _the entire lecture notes_each time a single file is loaded.
                             This would take too much time, so we use a precompilation step:
                             
                         
@@ -268,26 +228,10 @@
                             
                             that loads the table of content and all chapters (which takes quite
                             a substantial amount of time, like 20 seconds or so) and extracts
-                            all environments with class 
-                            |> code
-
-                                theorem
-                            or
-                            
-                            |> code
-
-                                exercise
-                            that have also class
-                            
-                            |> code
-
-                                numbered-title
-                            and numbers them. If the environment has
-                            the attribute 
-                            |> code
-
-                                data-label-title
-                            , then it adds an entry
+                            all environments with class `theorem`or
+                            `exercise`that have also class
+                            `numbered-title`and numbers them. If the environment has
+                            the attribute `data-label-title`, then it adds an entry
                             to a global dictionary. At the end, when all has been loaded, the
                             web page will show this dictionary as a json object.
                             
@@ -313,9 +257,7 @@
                             class alert-warning
 
                             
-                            
-                            *Important:*
-                             
+                            *Important:* 
                             The page
                             
                             |> a
@@ -332,11 +274,7 @@
                                 http-server .  --cors
                             
                             Once this server is running, go to
-                            
-                            |> code
-
-                                http://localhost:8080
-                            in your browser.
+                            `http://localhost:8080`in your browser.
                             
                         
                         

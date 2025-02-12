@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={22}
         title_gr="Endliche Automaten"
         title_en="finite state machines"
         number={4.2}
@@ -40,27 +41,21 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Grammatiken erlauben es uns, gewisse Formate zu beschreiben. Das reicht uns aber nicht:
-                    wir wollen Daten 
-                    {" "}
+                    wir wollen Daten{" "}
                     <i>
                       parsen
                     </i>
-                    {" "}
                     , im engen Sinne also eine grammatische Ableitung rekonstruieren
                     und allgemein die Struktur eines gegebenen Wortes herausarbeiten. Ein bescheideneres Ziel
-                    ist es, für ein gegebenes Wort zu 
-                    {" "}
+                    ist es, für ein gegebenes Wort zu{" "}
                     <i>
                       entscheiden
                     </i>
-                    {" "}
                     , ob es sich überhaupt aus einer Grammatik
-                    ableiten lässt. Für reguläre Grammatiken gibt es hierfür die 
-                    {" "}
+                    ableiten lässt. Für reguläre Grammatiken gibt es hierfür die{" "}
                     <i>
                       endlichen Automaten
                     </i>
-                    {" "}
                     . Sie
                     können
                     endliche Automaten verstehen als ein eingeschränktes Modell eines Rechners;
@@ -73,23 +68,17 @@ const Article = () => {
                     \&#123;x,y,z\&#125;\). Die Idee ist,
                     dass der Automat ein Wort \(\alpha\) Zeichen für Zeichen einliest. Die Pfeile zwischen den
                     Kreisen (den
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Zuständen
                     </i>
-                    {" "}
                     des Automaten) zeigen an, in welchen neuen Zustand beim Lesen eines Zeichen
                     gewechselt werden
-                    muss. Der Pfeil "aus dem Nichts", hier der von links nach \(S\), zeigt den 
-                    {" "}
+                    muss. Der Pfeil "aus dem Nichts", hier der von links nach \(S\), zeigt den{" "}
                     <i>
                       Startzustand
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     an, in welchem
                     der Automat beginnt.
                   </Paragraph>
@@ -112,10 +101,7 @@ const Article = () => {
                     href="#fsa-example-01"
                     class="left carousel-control-prev-icon">
                     <div class="carousel-nav-icon">
-                      <img
-                        style="height:13em"
-                        src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                        loading="lazy" />
+                      <img src="../../img/carousel-prev-icon.svg" />
                     </div>
                   </a>
                   <a
@@ -123,10 +109,7 @@ const Article = () => {
                     href="#fsa-example-01"
                     class="right carousel-control-next-icon">
                     <div class="carousel-nav-icon">
-                      <img
-                        style="height:13em"
-                        src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                        loading="lazy" />
+                      <img src="../../img/carousel-next-icon.svg" />
                     </div>
                   </a>
                   <div
@@ -217,153 +200,128 @@ const Article = () => {
                       class="carousel-inner">
                       <div class="item active">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-01.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-02.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-03.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-04.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-05.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-06.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-07.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-08.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-09.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-10.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-11.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-12.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-13.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-14.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-15.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-16.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-17.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-18.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-19.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-20.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-21.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-22.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-23.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-24.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:13em"
-                          src="../img/finite-state-automata/finite-state-machine-example-01.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/fsa-example-01-25.svg" />
                       </div>
                     </div>
                   </div>
@@ -371,28 +329,21 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     In diesem Beispiel endet der Automat im Zustand \(Y\). Sie sehen, dass der Zustand \(X\)
-                    mit einem doppelten Rand markiert ist: dies symbolisiert, dass \(X\) ein 
-                    {" "}
+                    mit einem doppelten Rand markiert ist: dies symbolisiert, dass \(X\) ein{" "}
                     <i>
                       akzeptierender
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
-                    Endzustand ist. Wenn der Automat ein Wort \(\alpha\) abgearbeitet hat, 
                     {" "}
+                    Endzustand ist. Wenn der Automat ein Wort \(\alpha\) abgearbeitet hat,{" "}
                     <i>
                       akzeptiert
                     </i>
-                    {" "}
                     er
                     es,
-                    wenn er in einem akzeptierenden Endzustand gelandet ist; ansonsten 
-                    {" "}
+                    wenn er in einem akzeptierenden Endzustand gelandet ist; ansonsten{" "}
                     <i>
                       lehnt er es ab
                     </i>
-                    {" "}
                     . In
                     unserem
                     Beispiel sehen wir also, dass der Automat das Eingabewort \(yxzxxyy\) ablehnt.
@@ -410,9 +361,7 @@ const Article = () => {
                     <b>
                       (Endlicher Automat, Finite State Machine).
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Ein endlicher Automat besteht aus einem endlichen Eingabealphaet \(\Sigma\), einer endlichen
                     Menge \(Q\) von Zuständen,
                     einem Startzustand \(\qstart \in Q\), einer Menge \(F \subseteq Q\) von akzeptierenden
@@ -441,14 +390,11 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     {" "}
-                    Wenn das Wort zu Ende ist, dann 
-                    {" "}
+                    Wenn das Wort zu Ende ist, dann{" "}
                     <i>
                       akzeptiert
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     der Automat, wenn er in einem akzeptierenden Zustand angekommen ist, also in \(F\).
                   </Paragraph>
                 </Paragraph>
@@ -461,7 +407,7 @@ const Article = () => {
                   </Paragraph>
                   <figure>
                     <img
-                      style="height:13em"
+                      style="height:10em"
                       src="../img/finite-state-automata/finite-state-machine-example-01.svg"
                       loading="lazy" />
                   </figure>
@@ -534,7 +480,7 @@ const Article = () => {
                   </Paragraph>
                   <figure>
                     <img
-                      style="height:13em"
+                      style="height:10em"
                       src="../img/finite-state-automata/finite-state-machine-example-01.svg"
                       loading="lazy" />
                   </figure>
@@ -555,15 +501,12 @@ const Article = () => {
                     <b>
                       (Erweiterte Zuständsübergangsfunktion)
                     </b>
-                    {" "}
                     .
                     Für einen endlichen Automaten \((\Sigma, Q, \qstart, F, \delta)\) definieren wir
-                    die 
-                    {" "}
+                    die{" "}
                     <i>
                       erweiterte Zustandsübergangsfunktion
                     </i>
-                    {" "}
                     \(\hat&#123;\delta&#125;: Q \times \Sigma^* \rightarrow
                     Q\) rekursiv wie folgt:
                     \begin&#123;align*&#125;
@@ -596,9 +539,7 @@ const Article = () => {
                       (Akzeptierte Sprache).
                       {" "}
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein endlicher Automat. Die von \(M\) akzeptierte
                     Sprache
                     ist
@@ -616,7 +557,7 @@ const Article = () => {
                   </Paragraph>
                   <figure>
                     <img
-                      style="height:13em"
+                      style="height:10em"
                       src="../img/finite-state-automata/finite-state-machine-example-01.svg"
                       loading="lazy" />
                   </figure>
@@ -630,13 +571,11 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Ändern Sie den Automaten aus dem letzten Beispiel so ab, dass die Bedingung 
-                    {" "}
+                    Ändern Sie den Automaten aus dem letzten Beispiel so ab, dass die Bedingung{" "}
                     <i>
                       "die auf \(x\)
                       enden"
                     </i>
-                    {" "}
                     entfällt, er also
                     alle Wörter akzeptiert, die die Folge \(xy\) nicht enthalten.
                   </Paragraph>
@@ -671,7 +610,7 @@ const Article = () => {
                 </Paragraph>
                 <figure>
                   <img
-                    style="height:13em"
+                    style="height:10em"
                     src="../img/finite-state-automata/finite-state-machine-example-01.svg"
                     loading="lazy" />
                 </figure>
@@ -713,9 +652,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Wir setzen \(N = Q\) und \(S = \qstart\) und führen für jeden Zustandsübergang, der von
                     \(\delta\) beschrieben wird, eine Ableitungsregel ein:
                     \begin&#123;align*&#125;
@@ -723,7 +660,7 @@ const Article = () => {
                     <i>
                       1 \stackrel&#123;x&#125;&#123;\rightarrow&#125; q
                     </i>
-                    2&amp;\quad \textnormal&#123; wird zur Produktion&#125; \quad
+                    2&amp;\quad \textnormal&#123; wird zur Produktion &#125; \quad
                     q
                     <i>
                       1 \rightarrow xq
@@ -770,9 +707,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Wir verwenden Induktion über die Länge des Wortes \(\alpha\).
                     </Paragraph>
                     <Paragraph>
@@ -782,21 +717,17 @@ const Article = () => {
                           <b>
                             Induktionsbasis.
                           </b>
-                          {" "}
                           Wenn \(\alpha = \epsilon\) gilt, also \(\alpha\) die
                           Länge 0 hat, dann
                           gilt \(q \stackrel&#123;\epsilon&#125;&#123;\rightarrow&#125; q'\) genau dann, wenn \(q = q'\) ist. Wie kann
                           nun
                           \(q \Rightarrow^* \epsilon q'\) in \(G'\) gelten? Beachten Sie, dass jede Produktion in
                           \(G'\) ein Terminalsymbol
-                          erzeugt; \(q \Rightarrow^* \epsilon q'\) kann also nur gelten, wenn 
-                          {" "}
+                          erzeugt; \(q \Rightarrow^* \epsilon q'\) kann also nur gelten, wenn{" "}
                           <i>
                             keine
                           </i>
-                          {" "}{" "}
-                        </Paragraph>
-                        <Paragraph>
+                          {" "}
                           Produktion erfolgt ist und somit
                           \(q = q'\) gilt. Wir sehen: beide Aussagen sind äquivalent zu \(q = q'\) und somit auch
                           äquivalent zueinander.
@@ -808,7 +739,6 @@ const Article = () => {
                           <b>
                             Induktionsschritt
                           </b>
-                          {" "}
                           . Wenn \(\alpha\) die Länge \(n+1\) hat, so schreiben
                           wir \(\alpha = x \beta\)
                           für ein Wort \(\beta \in \Sigma^*\) der Länge \(n\). Per Induktionshypothese können wir
@@ -837,7 +767,6 @@ const Article = () => {
                           <b>
                             Aus (1) folgt (2).
                           </b>
-                          {" "}
                           Nehmen wir also an, dass
                           \(q \stackrel&#123;x \beta&#125;&#123;\rightarrow&#125; q'\) gilt und bezeichnen
                           \(q_1 := \delta(q,x)\). Es gilt also
@@ -878,9 +807,7 @@ const Article = () => {
                           <b>
                             Aus (2) folgt (1).
                           </b>
-                          {" "}{" "}
-                        </Paragraph>
-                        <Paragraph>
+                          {" "}
                           Nun nehmen wir an, dass \(q \Rightarrow^* x \beta q'\) gilt. Untersuchen wir die erste
                           Produktion, die in dieser
                           Ableitung verwendet worden ist. Alle Produktionen in \(G'\) erzeugen ein Terminalsymbol,
@@ -1017,7 +944,7 @@ const Article = () => {
                   <figure>
                     <img
                       style="height:13em"
-                      src="../img/finite-state-automata/finite-state-machine-example-01.svg"
+                      src="../img/finite-state-automata/finite-state-machine-example-02.svg"
                       loading="lazy" />
                   </figure>
                   <Paragraph>
@@ -1066,8 +993,8 @@ const Article = () => {
                   </Paragraph>
                   <figure>
                     <img
-                      style="height:13em"
-                      src="../img/finite-state-automata/finite-state-machine-example-01.svg"
+                      style="height:11em"
+                      src="../img/finite-state-automata/finite-state-machine-example-03.svg"
                       loading="lazy" />
                   </figure>
                   <Paragraph>
@@ -1080,28 +1007,23 @@ const Article = () => {
                       mal ein \(b\) vorgekommen ist,
                       eben kein \(a\) mehr vorkommen darf. Die Definition eines endlichen Automaten
                       verlangt aber, dass \(\delta\) eine Funktion ist, also für alle Eingabewerte definiert ist.
-                      Wir lösen das, indem wir einen sogenannten 
-                      {" "}
+                      Wir lösen das, indem wir einen sogenannten{" "}
                       <i>
                         Fehlerzustand (Trap State)
                       </i>
-                      {" "}
                       einführen,
                       der im Prinzip
                       den Zustand
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         lehne das Wort ab, egal, was noch kommt
                       </i>
-                      {" "}
                       versinnbildlicht:
                     </Paragraph>
                     <figure>
                       <img
-                        style="height:13em"
-                        src="../img/finite-state-automata/finite-state-machine-example-01.svg"
+                        style="height:12em"
+                        src="../img/finite-state-automata/finite-state-machine-example-04.svg"
                         loading="lazy" />
                     </figure>
                     <Paragraph>
@@ -1132,8 +1054,8 @@ const Article = () => {
                   </Paragraph>
                   <figure>
                     <img
-                      style="height:13em"
-                      src="../img/finite-state-automata/finite-state-machine-example-01.svg"
+                      style="height:7em"
+                      src="../img/finite-state-automata/finite-state-machine-example-05.svg"
                       loading="lazy" />
                   </figure>
                   <Paragraph>
@@ -1143,13 +1065,10 @@ const Article = () => {
                       Pfeile mit \(1\) beschriftet hinaus. Wenn wir uns vor Augen halten, was die von \(G\)
                       erzeugte Sprache ist, so
                       wird das Problem klarer: \(G\) erzeugt die Sprache aller Wörter über \(\&#123;0,1\&#125;\), deren
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         viertletztes
                       </i>
-                      {" "}
                       Zeichen
                       eine 1 ist. Die Herausforderung ist nun: wenn der Automat eine 1 liest, dann weiß er nicht,
                       ob das jetzt schon
@@ -1163,12 +1082,10 @@ const Article = () => {
                   <Paragraph>
                     Um mit Fällen wie dem eben geschilderten umgehen zu können, erweitern wir die Definition des
                     endlichen Automaten
-                    in nächsten Kapitel zu einem 
-                    {" "}
+                    in nächsten Kapitel zu einem{" "}
                     <i>
                       nichtdeterministischen
                     </i>
-                    {" "}
                     endlichen Automaten.
                   </Paragraph>
                 </Paragraph>

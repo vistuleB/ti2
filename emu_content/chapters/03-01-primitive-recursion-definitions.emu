@@ -69,9 +69,7 @@
                         Primitive Rekursion ist ein Versuch, Berechbarkeit von Funktionen \(f: \N^k \rightarrow \N\)
                         anhand
                         eines "Baukastenprinzips" zu modellieren. Man stellt gewisse Basisfunktionen als "offensichtlich
-                        berechenbar" zur Verfügung und beschreibt 
-                        _Kombinatoren_
-                        , die aus bereits konstruierten
+                        berechenbar" zur Verfügung und beschreibt _Kombinatoren_, die aus bereits konstruierten
                         Funktionen neue bauen können. Die primitiv-rekursiven Funktionen sind dann all jene, die
                         mittels der Kombinatoren von den Basisfunktionen ausgehend konstruiert werden können.
                         Die Basisfunktionen sind:
@@ -95,9 +93,7 @@
                         die Operation \(x \mapsto x+1\) bereits eine nicht ganz triviale Operation, sie erfordert
                         beispielsweise Schleifen (von rechts nach links durchgehen), if-then-else-Ausdrücke (gibt es ein
                         Carry?)
-                        etc. Daher sollten Sie so tun, also würden wir natürliche Zahlen in 
-                        _unärer Schreibweise_
-                        
+                        etc. Daher sollten Sie so tun, also würden wir natürliche Zahlen in _unärer Schreibweise_
                         (auhc Steinzeitnotation genannt)
                         darstellen, also vier \( = 1111\), sieben = \(= 1111111\). Jezt
                         brauchen wir für succ kein if-then-else und keine Schleifen, denn
@@ -127,9 +123,7 @@
                         
                     
                     
-                    
                     *Kombinatoren.*
-                    
                     Die primitive Rekursion stellt zwei Kombinatoren zur Verfügung: Komposition (Verknüpfung) und
                     primitive Rekursion.
                     
@@ -143,9 +137,7 @@
 
                             Definition
                         
-                        
                         *(Komposition)*
-                        
                         Sei \(f: \N^k \rightarrow \N\) und
                         \(g_1, \dots, g_k: \N^l \rightarrow \N\). Dann ist
                         \(\comp(f, g_1, \dots, g_k)\) die Funktion
@@ -190,9 +182,7 @@
 
                             Definition
                         
-                        
                         *Primitive Rekursion*
-                        
                         Seien \(g: \N^k \rightarrow \N\) und \(h: \N^{k+2} \rightarrow \N\). Wir
                         definieren eine neue Funktion $f: \N^{k+1} \rightarrow \N$ wie folgt:
                         \begin{align*}
@@ -211,56 +201,22 @@
 
                         
                         Wenn Sie Rekursionshasser sind, dann können Sie sich es als Funktion mit einer
-                        
-                        |> code
-
-                            for
-                        -Schleife
+                        `for`-Schleife
                         vorstellen, in der nur eine lokale Variable erlaubt ist:
                         
                         |> pre
                             class listing
 
                             
-                            
-                            |> code
-
-                                def PrimRec(g, h):
-                            
-                            
-                            |> code
-
-                                def f(t,*x):
-                            
-                            
-                            |> code
-
-                                temp = g(*x)
-                            
-                            
-                            |> code
-
-                                for i in range(t):
-                            
-                            
-                            |> code
-
-                                temp = h(temp, i, *x)
-                            
-                            
-                            |> code
-
-                                return temp
-                            
-                            
-                            |> code
-
-                                return f
-                            
+                            `def PrimRec(g, h):`
+                            `def f(t,*x):`
+                            `temp = g(*x)`
+                            `for i in range(t):`
+                            `temp = h(temp, i, *x)`
+                            `return temp`
+                            `return f`
                         
-                        Die Forderung, dass man nur 
-                        _eine_
-                        lokale Variable durch die Schleife führen darf, scheint
+                        Die Forderung, dass man nur _eine_lokale Variable durch die Schleife führen darf, scheint
                         sehr restriktiv; es ist aber wohl die einfachste Form einer Schleife, die wirklich etwas
                         "schleifenhaftes" tut.
                         
@@ -290,8 +246,8 @@
                         Verfügung.
                         Insbesondere implementiert sie die folgenden Funktion \(\N^k \rightarrow \N\):
                         \begin{align*}
-                        &#123;\rm zero}:&amp;\vec{x} \mapsto 0 \\
-                        &#123;\rm succ}:&amp;x \mapsto x+1
+                        {\rm zero}:&amp;\vec{x} \mapsto 0 \\
+                        {\rm succ}:&amp;x \mapsto x+1
                         \end{align*}
                         als "übliche" Python-Funktionen. Darüberhinaus implementiert sie die folgenden
                         Kombinatoren, welche Ihnen nach den
@@ -302,10 +258,8 @@
                             
                             
                             |> li
-                                |> code
 
-                                    Proj(k)
-                                : erzeugt die Funktion
+                                `Proj(k)`: erzeugt die Funktion
                                 \begin{align*}
                                 \pi_k : \N^*&amp;\rightarrow \N \\
                                 \vec{x}&amp;\mapsto x_k \ .
@@ -314,10 +268,8 @@
                             
                             
                             |> li
-                                |> code
 
-                                    Comp(f, g0, g1, ...)
-                                : erzeugt die Funktion
+                                `Comp(f, g0, g1, ...)`: erzeugt die Funktion
                                 \begin{align*}
                                 \vec{x} \mapsto f(g0(x), g1(x), ...)
                                 \end{align*}
@@ -330,11 +282,7 @@
                             |> li
 
                                 
-                                
-                                |> code
-
-                                    PrimRec(g,h)
-                                : erzeugt die Funktion
+                                `PrimRec(g,h)`: erzeugt die Funktion
                                 \begin{align*}
                                 (t, \vec{x}) \mapsto \begin{cases}
                                 g(\vec{x})&amp;\textnormal{ if $t=0$,} \\
@@ -351,11 +299,7 @@
                             
                             Wenn wir die primitive Rekursion als "Programmiersprache" betrachten, dann heißt das, dass
                             wir
-                            neue Funktionen bauen dürfen, indem wir 
-                            |> code
-
-                                zero,succ,Proj,Comp,PrimRec
-                            verwenden,
+                            neue Funktionen bauen dürfen, indem wir `zero,succ,Proj,Comp,PrimRec`verwenden,
                             aber nicht selbst Python-Funktionen schreiben. Wir dürfen also nie selbst Integers in die
                             Hand nehmen.
                             
@@ -375,37 +319,26 @@
                             class listing
 
                             
-                            
-                            |> code
-
-                                def add(x,y):
-                            
-                            
-                            |> code
-
-                                return x + y
+                            `def add(x,y):`
+                            `return x + y`
                         
                         
                         |> p
 
                             schreiben, denn unsere "Programmiersprache" ist Primitive Rekursion, nicht Python! Wir
-                            müssen uns 
-                            |> code
-
-                                add
-                            aus den Kombinatoren zusammenbasteln. Ich schreibe
+                            müssen uns `add`aus den Kombinatoren zusammenbasteln. Ich schreibe
                             nun \({\rm add}(t,x)\) statt \({\rm add}(x,y)\), um den Rekursionsparameter \(t\) deutlich
                             zu machen.
                             
                         
                         \begin{align*}
-                        &#123;\rm add}(t,x)&amp;= \begin{cases}
+                        {\rm add}(t,x)&amp;= \begin{cases}
                         x&amp;\textnormal{ if $t=0$} \\
-                        &#123;\rm succ}({\rm add}(t-1,x))&amp;\textnormal{ if $t \geq 1$.}
+                        {\rm succ}({\rm add}(t-1,x))&amp;\textnormal{ if $t \geq 1$.}
                         \end{cases} \\
                         &amp;= \begin{cases}
                         \pi_0(x)&amp;\textnormal{ if $t=0$} \\
-                        &#123;\rm succ}(\pi_0({\rm add}(t-1,x), t-1, x))&amp;\textnormal{ if $t \geq 1$.}
+                        {\rm succ}(\pi_0({\rm add}(t-1,x), t-1, x))&amp;\textnormal{ if $t \geq 1$.}
                         \end{cases} \\
                         \end{align*}
                         
@@ -413,7 +346,7 @@
 
                             
                             Wir sehen also, dass dies eine Anwendung der primitiven Rekursion ist mit
-                            \(g = \pi_0\) und \(h =&#123;\comp}(\succ, \pi_0)\), also
+                            \(g = \pi_0\) und \(h = {\comp}(\succ, \pi_0)\), also
                             
                         
                         
@@ -421,15 +354,8 @@
                             class listing
 
                             
-                            
-                            |> code
-
-                                p0 = Proj(0)
-                            
-                            
-                            |> code
-
-                                add = PrimRec (p0, Comp(succ,p0))
+                            `p0 = Proj(0)`
+                            `add = PrimRec (p0, Comp(succ,p0))`
                         
                         
                     
@@ -448,11 +374,7 @@
                         
                         Zeigen Sie, dass die folgenden Funktionen primitiv-rekursiv sind, und implementieren Sie sie
                         in meinem Python-Framework, so wie ich Addition mit
-                        
-                        |> code
-
-                            add = PrimRec (p0, Comp(succ,p0))
-                        
+                        `add = PrimRec (p0, Comp(succ,p0))`
                         implementiert habe:
                         
                         |> ol
@@ -483,8 +405,7 @@
                         
                         |> p
 
-                            *Tip:*
-                            Für exp und minus ist es einfacher, die Argumente "umgedreht" zu
+                            *Tip:*Für exp und minus ist es einfacher, die Argumente "umgedreht" zu
                             betrachten,
                             also \((a,b) \mapsto b^a\) und \((x,y) \mapsto y-x\).
                         
@@ -527,33 +448,24 @@
                             
                             
                             |> li
-                                |> code
 
-                                    isPositive
+                                `isPositive`
                             
                             
                             |> li
-                                |> code
 
-                                    greaterThan, lessThan, greaterEqual, lessEqual
+                                `greaterThan, lessThan, greaterEqual, lessEqual`
                             
                             
                             |> li
-                                |> code
 
-                                    max, min
+                                `max, min`
                             
                             
                             |> li
-                                |> code
 
-                                    ifThenElse(x,y,z)
-                                : dies soll \(z\) zurückliefern, falls
-                                \(x=0\) (also 
-                                |> code
-
-                                    false
-                                ) ist, und \(y\) sonst.
+                                `ifThenElse(x,y,z)`: dies soll \(z\) zurückliefern, falls
+                                \(x=0\) (also `false`) ist, und \(y\) sonst.
                             
                             
                         

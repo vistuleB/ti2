@@ -60,9 +60,7 @@
                     |> p
 
                         
-                        Für endliche Mengen haben den Begriff der 
-                        _Größe_
-                        
+                        Für endliche Mengen haben den Begriff der _Größe_
                         $\{0,1,2,3,4,5,6,7,8,9\}$ hat zehn Elemente und ist somit größer als
                         $\{a,e,i,o,u\}$, die nur fünf Elemente hat. Können wir auch für
                         unendliche Mengen einen Größenbegriff einführen, oder sie zumindest
@@ -76,10 +74,8 @@
                         Bei den "üblichen" unendlichen Mengen $\N, \Z, \Q, \R$ scheint das zu
                         gehen. Es gilt nämlich $\N \subsetneq \Z \subsetneq \Q \subsetneq \R$,
                         und damit können wir doch mit Fug und Recht behaupten:
-                        
                         _Die Menge der ganzen Zahlen ist kleiner als die der rationalen
-                        Zahlen_
-                        .
+                        Zahlen_.
                         
                     
                     
@@ -181,9 +177,7 @@
 
                         
                         Diese anfangs etwas überraschende Tatsache, dass $\N$ und $\N^+$
-                        "gleich groß" sind, ist als 
-                        _Hilberts Hotel_
-                        bekannt. Das Hotel
+                        "gleich groß" sind, ist als _Hilberts Hotel_bekannt. Das Hotel
                         hat unendlich viele Zimmer, für jede Zahl $n \in \N^+$ eins. Dann
                         kommt ein neuer Gast (die $0$) und braucht ein Zimmer. Er kriegt das
                         Zimmer $1$. Da dies aber schon belegt ist, wird die Person, die bisher
@@ -282,9 +276,7 @@
                         |> p
 
                             
-                            
-                            *Anmerkung:*
-                            es ist überhaupt nicht schlimm, eine
+                            *Anmerkung:*es ist überhaupt nicht schlimm, eine
                             Funktion mit einer Fallunterscheidung zu definieren. Sie ist dadurch
                             nicht etwa eine "Funktion zweiter Klasse".
                             
@@ -333,9 +325,7 @@
 
                                 Definition
                             Zwei Mengen $A$ und
-                            $B$ heißen 
-                            _gleichmächtig_
-                            , wenn es eine Bijektion $f : A
+                            $B$ heißen _gleichmächtig_, wenn es eine Bijektion $f : A
                             \rightarrow B$ gibt. Wir schreiben in diesem Falle $A \approx B$.
                             
                         
@@ -352,9 +342,7 @@
                         und $g : B \rightarrow C$ Bijektionen sind, dann ist $g \circ f : A
                         \rightarrow C$ auch eine. Wir sehen: Die Relation $\approx$ ist
                         reflexiv, symmetrisch und transitiv und ist somit eine
-                        
-                        _Äquivalenzrelation_
-                        .
+                        _Äquivalenzrelation_.
                         
                     
                     
@@ -374,14 +362,8 @@
                                 Definition
                             Eine Menge $A$ mit $A
                             \approx \N$, die also gleichmächtig zu den natürlichen Zahlen ist,
-                            nennt man 
-                            _abzählbar unendlich_
-                            , auf Englisch
-                            
-                            _countably infinite_
-                            oder einfach 
-                            _countable_
-                            .
+                            nennt man _abzählbar unendlich_, auf Englisch
+                            _countably infinite_oder einfach _countable_.
                             
                         
                         
@@ -392,15 +374,9 @@
 
                         
                         Wie wir sehen werden, gibt es tatsächlich unendliche Mengen, die
-                        
-                        _nicht_
-                        gleichmächtig mit $\N$ sind, weil sie "viel viel
-                        größer" sind. Wir nennen sie 
-                        _überabzählbare_
-                        Mengen, auf
-                        Englisch 
-                        _uncountably infinite_
-                        .
+                        _nicht_gleichmächtig mit $\N$ sind, weil sie "viel viel
+                        größer" sind. Wir nennen sie _überabzählbare_Mengen, auf
+                        Englisch _uncountably infinite_.
                         
                     
                     
@@ -433,9 +409,7 @@
 
                                 Definition
                             Eine Menge $A$ heißt
-                            
-                            _unendlich_
-                            , wenn es eine echte Teilmenge $A' \subsetneq A$
+                            _unendlich_, wenn es eine echte Teilmenge $A' \subsetneq A$
                             gibt, zu der sie gleichmächtig ist, also $A' \approx A$.
                             
                         
@@ -473,9 +447,7 @@
                         |> p
 
                             
-                            
-                            *Hinweis:*
-                            Tappen Sie nicht in die "Das ist doch
+                            *Hinweis:*Tappen Sie nicht in die "Das ist doch
                             offensichtlich"-Falle: die Menge $A$ könnte ja viel größer sein als
                             $\N$ und keine für Sie "greifbare" Struktur haben. Ihre Aufgabe ist
                             es, dennoch eine abzählbar unendliche Teilmenge $X \subseteq A$ zu

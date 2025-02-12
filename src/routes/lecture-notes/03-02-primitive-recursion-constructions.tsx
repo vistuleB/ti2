@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={17}
         title_gr="Primitive Rekursion: Konstruktionen und Tricks"
         title_en="primitive recursion constructions"
         number={3.2}
@@ -63,6 +64,7 @@ const Article = () => {
                   <code>
                     mult
                   </code>
+                  {" "}
                   in der Schleifenform, wie sie die primitive Rekursion zulässt, und schreiben in Orange
                   auch gleich die Funktionen \(g\) und \(h\) dazu:
                 </Paragraph>
@@ -199,22 +201,9 @@ const Article = () => {
                       Die primitive Rekursion stellt uns als "Datentyp" nur die natürlichen Zahlen zur
                       Verfügung. Alles andere müssen wir als natürliche Zahlen nach einem von uns
                       selbst gewählten Schema codieren. Für Boolesche Werte ist das recht naheliegend.
-                      Wir codieren{" "}
-                      <code>
-                        True
-                      </code>
-                      als 1 und{" "}
-                      <code>
-                        False
-                      </code>
-                      als 0.
+                      Wir codieren `True`als 1 und `False`als 0.
                       Unser erstes Prädikat, also Funktion mit Booleschem Ausgabewert, ist
-                    </Paragraph>
-                    <Paragraph>
-                      <code>
-                        isPositive
-                      </code>
-                      :
+                      `isPositive`:
                     </Paragraph>
                   </Paragraph>
                   <pre class="container">
@@ -234,7 +223,7 @@ const Article = () => {
                   </pre>
                   und somit
                   \begin&#123;align*&#125;
-                  &#123;\rm isPositive&#125; = \primrec(\zero,&#123;\rm one&#125;)
+                  &#123;\rm isPositive&#125; = \primrec(\zero, &#123;\rm one&#125;)
                   \end&#123;align*&#125;
                 </Paragraph>
                 <Paragraph>
@@ -277,11 +266,11 @@ const Article = () => {
                     <Paragraph>
                       Das Prädikat
                       \begin&#123;align*&#125;
-                      &#123;\rm iSquareLessEqualX&#125; (i,x)&amp;= [ i^2 \leq x ]
+                      &#123;\rm iSquareLessEqualX &#125; (i,x)&amp;= [ i^2 \leq x ]
                       \end&#123;align*&#125;
                       ist primitiv rekursiv:
                       \begin&#123;align*&#125;
-                      &#123;\rm iSquareLessEqualX&#125; = \comp(&#123;\rm lessEqual&#125;, \comp(&#123;\rm mult&#125;, \pi
+                      &#123;\rm iSquareLessEqualX &#125; = \comp(&#123;\rm lessEqual&#125;, \comp(&#123;\rm mult&#125;, \pi
                       <i>
                         0, \pi
                       </i>
@@ -375,7 +364,7 @@ const Article = () => {
                     </Paragraph>
                   </Paragraph>
                   \begin&#123;align*&#125;
-                  &#123;\rm sqrt&#125; =&#123;\rm LargestLessThan&#125; (\pi_0,&#123;\rm iSquareLessEqual&#125;)
+                  &#123;\rm sqrt&#125; = &#123;\rm LargestLessThan&#125; (\pi_0, &#123;\rm iSquareLessEqual&#125;)
                   \end&#123;align*&#125;
                 </Paragraph>
                 <Paragraph>
@@ -385,18 +374,12 @@ const Article = () => {
                     </Paragraph>
                   </h2>
                   Eine recht stark anmutende Beschränkung primitiv rekursiver Funktionen ist
-                  die Tatsache, dass wir in der Schleife nur 
-                  {" "}
+                  die Tatsache, dass wir in der Schleife nur{" "}
                   <i>
                     eine
                   </i>
-                  {" "}
                   lokale Variable
-                  führen dürfen, hier meistens{" "}
-                  <code>
-                    temp
-                  </code>
-                  genannt.
+                  führen dürfen, hier meistens `temp`genannt.
                   Manche Funktionen scheinen inhärent mindestens zwei zu benötigen.
                   Betrachten wir den Fall der Fibonacci-Zahlen:
                 </Paragraph>
@@ -425,24 +408,13 @@ const Article = () => {
                   </pre>
                   Doch selbst dann hätten wir immer noch zwei lokale Variable.
                   Die Fibonacci-Zahlen rekursiv per
-                </Paragraph>
-                <Paragraph>
-                  <code>
-                    return F(n-1)+F(n-2)
-                  </code>
-                  scheint noch weiter weg zu sein
+                  `return F(n-1)+F(n-2)`scheint noch weiter weg zu sein
                   vom Paradigma der primitiven Rekursion; primitive Rekursion verzweigt sich nie.
-                  Dennoch ist es möglich,{" "}
-                  <code>
-                    fib
-                  </code>
-                  primitiv rekursiv zu implementieren.
-                  Hauptzutat hierbei ist es, dass wir 
-                  {" "}
+                  Dennoch ist es möglich, `fib`primitiv rekursiv zu implementieren.
+                  Hauptzutat hierbei ist es, dass wir{" "}
                   <i>
                     Paare
                   </i>
-                  {" "}
                   als neue Datenstruktur
                   verwenden.
                 </Paragraph>
@@ -452,12 +424,10 @@ const Article = () => {
                       Erinnern Sie sich: die primitive Rekursion stellt uns als Datentyp von Haus aus
                       nur die natürlichen Zahlen zur Verfügung. Alles andere müssen wir nach einem
                       selbst gewählten Schema codieren. Bei Booleschen Werten war es einfach.
-                      Wie steht es mit 
-                      {" "}
+                      Wie steht es mit{" "}
                       <i>
                         Paaren
                       </i>
-                      {" "}
                       von natürlichen Zahlen?
                       In{" "}
                       <a href="02-00-infinite-sets.html">
@@ -469,7 +439,7 @@ const Article = () => {
                   </Paragraph>
                   \begin&#123;align*&#125;
                   \pair : \N^2&amp;\rightarrow \N \\
-                  (x,y)&amp;\mapsto&#123;x + y + 1 \choose 2&#125; + x
+                  (x,y)&amp;\mapsto &#123;x + y + 1 \choose 2&#125; + x
                   \end&#123;align*&#125;
                   kennengelernt. Diese Funktion ist primitiv rekursiv: es gilt
                   \(&#123;n \choose 2&#125; = 1 + 2 + \cdots + (n-1)\) und somit
@@ -510,7 +480,7 @@ const Article = () => {
                       \(\pair(x,y)\) wieder \(x\) und \(y\) berechnen, bestimmen wir erst
                       den Wert von \(x+y\). Wenn \(\pair(x,y) = n\) gilt und \(x+y=i)\) ist, dann ist
                       \begin&#123;align*&#125;
-                      n = \pair(x,y) =&#123;i + 1 \choose 2&#125; + x \geq
+                      n = \pair(x,y) = &#123;i + 1 \choose 2&#125; + x \geq
                       &#123;i+1 \choose 2&#125; + 0 = \pair(0,i) \ ,
                       \end&#123;align*&#125;
                       und somit ist \(x+y\) der größte Wert von \(i\), so dass \(n \geq \pair(0,i)\) ist.
@@ -518,7 +488,7 @@ const Article = () => {
                     </Paragraph>
                   </Paragraph>
                   \begin&#123;align*&#125;
-                  &#123;\rm getXplusY&#125;&amp;=&#123;\rm LargestLessThan&#125;(\pi
+                  &#123;\rm getXplusY&#125;&amp;= &#123;\rm LargestLessThan&#125;(\pi
                   <i>
                     0, \comp(&#123;\rm greaterEqual&#125;, \pi
                   </i>
@@ -528,8 +498,8 @@ const Article = () => {
                     0)))\\
                     \first&amp;= \comp(&#123;\rm minus&#125;, \pi
                   </i>
-                  0, \comp(\pair, \zero,&#123;\rm getXplusY&#125;))\\
-                  \second&amp;= \comp(&#123;\rm minus&#125;,&#123;\rm getXplusY&#125;, \first)
+                  0, \comp(\pair, \zero, &#123;\rm getXplusY&#125;))\\
+                  \second&amp;= \comp(&#123;\rm minus&#125;, &#123;\rm getXplusY&#125;, \first)
                   \end&#123;align*&#125;
                 </Paragraph>
                 <Paragraph>
@@ -573,7 +543,7 @@ const Article = () => {
                     </Paragraph>
                   </Paragraph>
                   \begin&#123;align*&#125;
-                  &#123;\rm push&#125; (x,&#123;\rm restlist&#125;)&amp;= 1 + \pair(x,&#123;\rm restlist&#125;) \\
+                  &#123;\rm push&#125; (x, &#123;\rm restlist&#125;)&amp;= 1 + \pair(x, &#123;\rm restlist&#125;) \\
                   &#123;\rm head&#125; (&#123;\rm list&#125;)&amp;= \first(&#123;\rm list&#125; - 1)\\
                   &#123;\rm second&#125; (&#123;\rm list&#125;)&amp;= \second(&#123;\rm list&#125; - 1)
                   \end&#123;align*&#125;
@@ -615,7 +585,6 @@ const Article = () => {
                     <b>
                       Native Implementierung.
                     </b>
-                    {" "}
                     Die primitive Rekursion ist
                     ein theoretischer Berechenbarkeitsbegriff für Funktionen
                     auf natürlichen Zahlen. Es ist definitiv keine ernstzunehmende Programmiersprache.
@@ -626,27 +595,25 @@ const Article = () => {
                     Zeit nicht behandeln können. Bei meinen eigenen Experimenten mit meinem
                     Python-Framework bin ich daher dazu übergegangen, dass ich, sobald
                     ich gezeigt habe, dass eine Funktion \(f\) primitiv rekursiv ist,
-                    sie 
-                    {" "}
+                    sie{" "}
                     <i>
                       nativ
                     </i>
-                    {" "}
                     in Python zu implementieren, also beispielsweise in meiner
-                    Datei{" "}
-                    <code>
-                      stockpile.py
-                    </code>
-                    :
+                    Datei `stockpile.py`:
                   </Paragraph>
                 </Paragraph>
                 <pre class="listing">
-                  <code style="counter-set: listing 63;">
-                    def pair(x,y):
-                  </code>
-                  <code>
-                    return int(((x+y+1) * (x+y)) / 2 + x )
-                  </code>
+                  <Paragraph>
+                    <code style="counter-set: listing 63;">
+                      def pair(x,y):
+                    </code>
+                    {" "}{" "}
+                    <code>
+                      return int(((x+y+1) * (x+y)) / 2 + x )
+                    </code>
+                    {" "}{" "}
+                  </Paragraph>
                 </pre>
               </div>
             </div>

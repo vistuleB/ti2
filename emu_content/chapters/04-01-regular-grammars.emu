@@ -82,14 +82,10 @@
                             Definition
                         
                         Eine kontextfreie Sprache \(G = (\Sigma, N, P, S)\) heißt
-                        
-                        _regulär_
-                        , wenn jede Produktion eine der folgenden vier Formen
+                        _regulär_, wenn jede Produktion eine der folgenden vier Formen
                         hat: \begin{align*} X&amp;\rightarrow aY \\ X&amp;\rightarrow a \\ X&
                         \rightarrow Y \\ X&amp;\rightarrow \epsilon \end{align*} Eine Sprache
-                        \(L \subseteq \Sigma^*\) heißt 
-                        _regulär_
-                        , wenn es eine reguläre
+                        \(L \subseteq \Sigma^*\) heißt _regulär_, wenn es eine reguläre
                         Grammatik \(G\) gibt, die sie erzeugt, also \(L(G) = L\).
                         
                     
@@ -257,7 +253,7 @@
                             Übungsaufgabe
                         
                         Betrachten Sie die Sprache \begin{align*} L := \{x \in \{a,b\}^* \ | \
-                        \textnormal{in $x$ kommt $b$ mindestens 4 mal vor&#125;\} \ \end{align*}
+                        \textnormal{in $x$ kommt $b$ mindestens 4 mal vor }\} \ \end{align*}
                         und entwerfen Sie eine reguläre Grammatik für \(L\).
                         
                     
@@ -276,20 +272,8 @@
                         Sei \(\Sigma = \{a,b,.\}\) und \(L \subseteq \Sigma^*\) die Sprache
                         aller Strings der Form $$ x_1 . x_2 . x_3 . \cdots . x_n $$ wobei \(n
                         \geq 2\) und jedes \(x_i \in \{a,b\}^+\), also zum Beispiel
-                        
-                        |> code
-
-                            a.bba.aba
-                        aber nicht 
-                        |> code
-
-                            aba
-                        und auch nicht
-                        
-                        |> code
-
-                            a.b..a
-                        
+                        `a.bba.aba`aber nicht `aba`und auch nicht
+                        `a.b..a`
                         Entwerfen Sie eine reguläre Grammatik für diese Sprache.
                         
                     
@@ -312,9 +296,7 @@
 
                             Grammatik für korrekte Emailadressen
                         
-                        im letzten Abschnitt war 
-                        _nicht_
-                        regulär. Allerdings können wir
+                        im letzten Abschnitt war _nicht_regulär. Allerdings können wir
                         eine reguläre Grammatik angeben, die die gleiche Sprache erzeugt.
                         
                         
@@ -369,16 +351,12 @@
                             Definition
                         
                         Eine Grammatik \(G = (\Sigma, N, P, S)\) heißt
-                        
-                        _erweitert regulär_
-                        , wenn jede Produktion eine der folgenden
+                        _erweitert regulär_, wenn jede Produktion eine der folgenden
                         Formen hat: \begin{align*} X&amp;\rightarrow \alpha Y \\ X&amp;\rightarrow
                         \alpha \\ \end{align*} hat, wobei \(X \in N\) und \(\alpha \in
                         \Sigma^*\) ist. Im Unterschied zu den eigentlich regulären Grammatiken
                         erlauben wir also mehrere terminale Symbole auf der rechten Seite,
-                        sofern Sie 
-                        _vor_
-                        dem Nichtterminal vorkommen.
+                        sofern Sie _vor_dem Nichtterminal vorkommen.
                         
                     
                     
@@ -402,9 +380,7 @@
                         class well container
 
                         
-                        
                         *Beweis.*
-                        
                         Wir ersetzen einfach jede Regel der Form $$ X \rightarrow a_1 a_2
                         \dots a_k Y $$ durch \(k\) reguläre Regeln: \begin{align*} X&
                         \rightarrow a_1 X_2 \\ X_2&amp;\rightarrow a_2 X_3 \\ \dots \\ X_k&
@@ -488,9 +464,7 @@
                             class well container
 
                             
-                            
                             *Beweis.*
-                            
                             Produktionen vom Typ 2, also von der Form \(X \rightarrow a\) können
                             wir leicht eliminieren, indem wir ein neues Nichtterminalsymbol \(E
                             \not \in \Sigma \cup N\) einführen, jedes \(X \rightarrow a\) durch
@@ -537,31 +511,21 @@
                             mit \(\alpha \not \in N\) durchgehen und überprüfen, ob \(X
                             \Rightarrow^* Y\) gilt. Dies können wir beispielsweise überprüfen,
                             indem wir die Mengen \begin{align*} N_k(X) := \{ Y \in N \ | \
-                            \textnormal{ es gibt&#125; X_1,\dots, X_{l-1} \textnormal{ mit&#125; X
+                            \textnormal{ es gibt } X_1,\dots, X_{l-1} \textnormal{ mit } X
                             \rightarrow X_1 \rightarrow X_2 \cdots X_{l-1} \rightarrow Y
-                            \textnormal{ und&#125; l \leq k \} \end{align*} definieren, also die
+                            \textnormal{ und } l \leq k \} \end{align*} definieren, also die
                             Menge derjenigen Nichtterminalsymbole, die sich in bis zu \(k\)
                             Schritten von \(X\) aus ableiten lassen. Wir berechnen die \(N_k\)
                             iterativ wie folgt: \begin{align*} N_0 (X)&amp;:= \{X\} \ , \\ N_{k+1}
-                            (X)&amp;:= N_k \cup \{Z \in N \ | \ \textnormal{ es gibt&#125; Y \in
-                            N_k(X) \textnormal{ mit&#125; Y \rightarrow Z \} \ . \end{align*} Die
+                            (X)&amp;:= N_k \cup \{Z \in N \ | \ \textnormal{ es gibt } Y \in
+                            N_k(X) \textnormal{ mit } Y \rightarrow Z \} \ . \end{align*} Die
                             Menge \(N_{k+1}(X)\) lässt sich also mit zwei geschachtelten
-                            
-                            |> code
-
-                                for
-                            -Schleifen berechnen: eine über die \(Y \in N_k\)
+                            `for`-Schleifen berechnen: eine über die \(Y \in N_k\)
                             und eine über die Produktionen \(Y \rightarrow Z\). Um
                             \(N_{k+1}(X)\) für
-                            
                             _alle_
-                            
                             \(X \in N\) zu berechnen, brauchen wir eine weitere
-                            
-                            |> code
-
-                                for
-                            -Schleife. Wir berechnen nun \(N_{\geq k}\) für
+                            `for`-Schleife. Wir berechnen nun \(N_{\geq k}\) für
                             steigende \(k\), bis keine weitere Veränderung eintritt.
                             
                         
@@ -686,13 +650,7 @@
 
                                 
                                 Ding 1, dann Ding 2, wie beispielsweise
-                                
-                                _Username, dann 
-                                |> code
-
-                                    @
-                                , dann Domainname_
-                                
+                                _Username, dann `@`, dann Domainname_
                                 
                             
                             
@@ -700,14 +658,8 @@
 
                                 
                                 Ding, bliebig oft wiederholt, wie beispielsweise
-                                
                                 _eine beliebig lange Folge von Labels, mit
-                                
-                                |> code
-
-                                    .
-                                separiert._
-                                
+                                `.`separiert._
                                 
                             
                             
@@ -715,9 +667,7 @@
 
                                 
                                 Ding 1 oder Ding 2. Beispielsweise
-                                
-                                _Bindestrich oder alphanumerisches Zeichen_
-                                .
+                                _Bindestrich oder alphanumerisches Zeichen_.
                                 
                             
                             
@@ -743,9 +693,7 @@
                             class well container
 
                             
-                            
                             *Beweis.*
-                            
                             Unsere Strategie ist, reguläre Grammatiken \(G_1\) für \(L_1\) und
                             \(G_2\) für \(L_2\) zu betrachten und daraus eine neue reguläre
                             Grammatik \(G\) für \(L_1 \cup L_2\) zu bauen. Aus \(G\) sollen also
@@ -786,9 +734,7 @@
 
                             
                             In einem nächsten Schritt werden wir zeigen, dass Konstrukte wie
-                            
-                            _Ding 1, gefolgt von Ding 2_
-                             
+                            _Ding 1, gefolgt von Ding 2_ 
                             mit regulären Grammatiken
                             realisierbar sind.
                             
@@ -804,9 +750,7 @@
 
                                 Definition
                             
-                            
                             *(Kleenesche Hülle).*
-                            
                             Seien \(L_1, L_2 \in \Sigma^*\) zwei Sprachen. Die
                             Verknüpfungssprache \(L_1 \circ L_2\) ist definiert als
                             \begin{align*} L_1 \circ L_2 := \{ \alpha \beta \ | \ \alpha \in
@@ -833,9 +777,7 @@
                             class well container
 
                             
-                            
                             *Beweis.*
-                            
                             Wir im letzten Beweis nehmen wir uns eine reguläre Grammatik \(G_1 =
                             (\Sigma, N_1, P_1, S_1)\) für \(L_1\) und \(G_2 = (\Sigma, N_2, P_2,
                             S_2)\) für \(L_2\). Ob die beiden Alphabete die gleichen sind, also
@@ -890,9 +832,7 @@
                             
                         
                         In einem dritten Lemma werden wir zeigen, dass die Konstruktion
-                        
-                        _Ding, beliebig oft wiederholt_
-                        mit regulären Sprachen möglich
+                        _Ding, beliebig oft wiederholt_mit regulären Sprachen möglich
                         ist.
                         
                         |> div
@@ -935,9 +875,7 @@
                             class well container
 
                             
-                            
                             *Beweis.*
-                            
                             Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik für \(L\). Wir
                             könnten ein neues Startsymbol \(S'\) einführen und \begin{align*} S'
                             &amp;\rightarrow \epsilon \\ S'&amp;\rightarrow SS' \end{align*} als zwei
@@ -975,11 +913,7 @@
                             |> p
 
                                 
-                                
-                                |> code
-
-                                    https://web1.hszg.de/modulkatalog/index.php?activTopic=3&activNav=2&stid=566&frei=1&kennz=suche&activCont=1
-                                
+                                `https://web1.hszg.de/modulkatalog/index.php?activTopic=3&activNav=2&stid=566&frei=1&kennz=suche&activCont=1`
                                 
                             
                             Der URL besteht aus mehreren Teilen:
@@ -991,68 +925,36 @@
                                 |> li
 
                                     
-                                    Dem Protokoll. Hier ist das 
-                                    |> code
-
-                                        https
-                                    ; es kann aber
-                                    auch 
-                                    |> code
-
-                                        http
-                                    oder 
-                                    |> code
-
-                                        ftp
-                                    sein.
+                                    Dem Protokoll. Hier ist das `https`; es kann aber
+                                    auch `http`oder `ftp`sein.
                                     
                                 
                                 
                                 |> li
 
-                                    Dem 
-                                    |> code
-
-                                        ://
-                                    nach dem Protokoll.
+                                    Dem `://`nach dem Protokoll.
                                 
                                 
                                 |> li
 
-                                    Dem Domainnamen, hier 
-                                    |> code
-
-                                        web1.hszg.de
-                                    .
+                                    Dem Domainnamen, hier `web1.hszg.de`.
                                 
                                 
                                 |> li
 
                                     
                                     Optional nun einem Pfad, hier
-                                    
-                                    |> code
-
-                                        /modulkatalog/index.php
-                                    .
+                                    `/modulkatalog/index.php`.
                                     
                                 
                                 
                                 |> li
 
                                     
-                                    Falls ein Pfad enthalten ist, dann optional ein 
-                                    |> code
-
-                                        ?
-                                    ,
+                                    Falls ein Pfad enthalten ist, dann optional ein `?`,
                                     gefolgt von einem Query-String; dieser besteht aus beliebig
                                     vielen, aber mindestens einem Paar der Form Key=Value, wobei die
-                                    Paare mit einem 
-                                    |> code
-
-                                        &
-                                    separiert sind.
+                                    Paare mit einem `&`separiert sind.
                                     
                                 
                                 
@@ -1103,9 +1005,7 @@
                             class well container
 
                             
-                            
                             *Beweis.*
-                            
                             Dies folgt sofort aus den vorherigen Theorem, weil wir nur
                             Konkatenation \(\circ\) und Kleenesche Hülle \(^*\) verwenden.
                             Dennoch lohne es sich, explizit für \(L'\) eine Grammatik zu bauen.
@@ -1134,9 +1034,7 @@
                                 
                             
                             Die neue Grammatik \(G'\) ist eine
-                            
-                            _erweitert reguläre Grammatik_
-                            , da Regeln wie \(Y \rightarrow
+                            _erweitert reguläre Grammatik_, da Regeln wie \(Y \rightarrow
                             acS\) auf der rechten Seite zwei Terminalsymbole haben. Wir müssen
                             sie also erst noch in eine "richtig reguläre" umwandeln. In
                             konkreten Anwendungne empfiehlt es dazu, die Nichtterminale von

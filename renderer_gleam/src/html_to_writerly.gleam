@@ -200,13 +200,28 @@ pub fn html_to_writerly(dir: String, amendments: vr.CommandLineAmendments(Bool))
   let files = list.sort(files, string.compare)
 
   each_prev_next(files, option.None, fn(file, prev, next) {
+    let path = dir <> file
     let renderer =
       vr.Renderer(
-        assembler: fn(_) { Ok([]) },
-        source_parser: fn(_){ Ok("") },
-        parsed_source_converter: fn(_) { 
-          let assert Ok(vxmls) = xmlm_based_html_parser(dir <> file)
-          [vxmls]
+        assembler: fn (_) {
+          case simplifile.read(path) {
+            Error(error) -> {
+              io.println("couldn't read file at " <> path)
+              Error(error)
+            }
+            Ok(content) -> {
+              bl.string_to_blamed_lines(content, path)
+              |> Ok
+            }
+          }
+        },
+        source_parser: fn(lines){ 
+          let path = bl.first_blame_filename(lines) |> result.unwrap("")
+          bl.blamed_lines_to_string(lines)
+            |> vp.xmlm_based_html_parser(path)
+         },
+        parsed_source_converter: fn(vxml) { 
+         [vxml]
         },
         pipeline: html_pipeline.html_pipeline(),
         splitter: fn(vxml) { splitter(vxml, file) },

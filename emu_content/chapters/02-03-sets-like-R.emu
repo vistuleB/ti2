@@ -64,20 +64,10 @@
                         unendlich sind, also gleichmächtig mit $\N$. Hier werden wir nun
                         erkunden, welche Mengen gleichmächtig mit $\R$ sind. In der
                         mathematischen Fachsprache sagt man: sie haben die
-                        
-                        _Kardinalität des Kontinuums_
-                        . Das Wort
-                        
-                        _Kardinalität_
-                        steht hier für
-                        
-                        _Anzahl der Elemente_
-                        (bzw. den Größenbegriff bei unendlichen
-                        Mengen), und 
-                        _Kontinuum_
-                        steht für 
-                        _die reellen Zahlen_
-                        .
+                        _Kardinalität des Kontinuums_. Das Wort
+                        _Kardinalität_steht hier für
+                        _Anzahl der Elemente_(bzw. den Größenbegriff bei unendlichen
+                        Mengen), und _Kontinuum_steht für _die reellen Zahlen_.
                         Im nächsten Kapitel werden wir zeigen, dass es "echt mehr" reelle
                         Zahlen gibt als natürliche; dass also $\R$ nicht abzählbar ist. Aber
                         eins nach dem anderen.
@@ -113,9 +103,7 @@
                         |> p
 
                             
-                            
                             *Beweis.*
-                            
                             Wir können eine Bijektion explizit hinschreiben:
                             
                         
@@ -275,9 +263,7 @@
                         |> p
 
                             
-                            
                             *Beweis.*
-                            
                             Die Beweisidee ist einfach, allerdings gehen erst einmal ein paar
                             Dinge schief, die man wieder flicken muss. Da laut
                             
@@ -445,9 +431,7 @@
                         |> p
 
                             
-                            
-                            *Beweis.*
-                            Mithilfe von
+                            *Beweis.*Mithilfe von
                             
                             |> span
                                 data-ref theorem-R-bitstrings
@@ -465,9 +449,7 @@
                         |> p
 
                             
-                            Wir müssen dieses Folgenpaar nun in 
-                            _eine_
-                            Folge codieren.
+                            Wir müssen dieses Folgenpaar nun in _eine_Folge codieren.
                             Ganz klar:
                             
                         
@@ -633,9 +615,7 @@
                         |> p
 
                             
-                            
                             *Beweis.*
-                            
                             Wir zeigen den ersten Punkt. Sei $0 \leq z \lt 1/2$ und $(x,y) =
                             f^{-1}(z)$. Dann hat $z$ die Binärdarstellung $z =
                             (0.00z_3z_4z_5\dots)$. Die ersten beiden Bits nach dem Komma sind
@@ -866,9 +846,7 @@
                         |> p
 
                             
-                            
                             *Beweis.*
-                            
                             Da $\R \approx \cuben$ gilt, reicht es, zu zeigen, dass
                             
                         
@@ -963,9 +941,7 @@
                         |> p
 
                             
-                            
                             *Zweiter Beweis.*
-                            
                             Um zu zeigen, dass $\R^\N \approx \R$ gilt, rechnen wir:
                             
                         
@@ -1003,15 +979,11 @@
                         ist die Multiplikation: die Zahlenmultiplikation $a \cdot b$ hat als
                         mengentheoretisches Analog das Cartesische Produkt $A \times B$, die
                         Menge aller Paare $(x,y)$ mit $x \in A, y \in B$. Die Exponentiation
-                        $a^b$ hat als Analog $A^B$, die Menge aller 
-                        _Funktionen_
-                        $\phi:
+                        $a^b$ hat als Analog $A^B$, die Menge aller _Funktionen_$\phi:
                         B \rightarrow A$. Was ist das Analog zur Addition? Die Vereinigung $A
                         \cup B$ wäre zu kurz gegriffen, weil ja zum Beispiel $\{1,2,3\} \cup
                         \{4,5\}$ fünf Elemente hat, $\{1,2,3\} \cup \{1,2\}$ aber nur drei.
-                        Das "richtige" Analog ist die 
-                        _disjunkte Vereinigung_
-                        $A \uplus
+                        Das "richtige" Analog ist die _disjunkte Vereinigung_$A \uplus
                         B$, die die Elemente von $B$ erst einmal "markiert", um sie von denen
                         von $A$ unterscheidbar zu machen. Somit wäre also $\{1,2,3\} \uplus
                         \{1,2\} = \{1,2,3,1',2'\}$ eine Menge der Kardinalität 5. Formal kann
@@ -1037,9 +1009,7 @@
 
                                 Theorem
                             
-                            
-                            *(mit Kardinalzahlen rechnen)*
-                            . Es gelten die
+                            *(mit Kardinalzahlen rechnen)*. Es gelten die
                             üblichen Rechenregeln:
                             
                         
@@ -1180,9 +1150,7 @@
                         |> p
 
                             
-                            
-                            *Hinweis.*
-                            Die Beweise sind alle nicht wirklich
+                            *Hinweis.*Die Beweise sind alle nicht wirklich
                             schwierig. Sie müssen nur aufpassen, dass Sie sich nicht in der
                             Notation verlieren.
                             
@@ -1230,21 +1198,15 @@
                         
                         Die Elemente von $2^\N$, also Teilmengen $A \subseteq \N$, sind nach
                         Inklusion geordnet: $A \subseteq B$. Somit ist $\left(2^{\N},
-                        \subseteq\right)$ eine Partialordnung. Eine 
-                        _Kette_
-                        in einer
+                        \subseteq\right)$ eine Partialordnung. Eine _Kette_in einer
                         Partialordnung $(X, \preceq)$ ist eine Menge $Z$, in der alle Elemente
                         paarweise vergleichbar sind. In diesem konkreten Beispiel heißt das:
                         $Z \subseteq 2^{\N}$ und für alle $A, B \in Z$ gilt $A \subseteq B$
                         oder $B \subseteq A$. Erinnern Sie sich: $A$ und $B$ sind hier Mengen
                         natürlicher Zahlen, und $Z$ ist eine Menge von Mengen natürlicher
-                        Zahlen. Eine 
-                        _Antikette_
-                        in einer Partialordnung $(X,\preceq)$
+                        Zahlen. Eine _Antikette_in einer Partialordnung $(X,\preceq)$
                         ist eine Teilmenge $Z \subseteq X$, in der je zwei Elemente
-                        
-                        _unvergleichbar_
-                        sind. In diesem Beispiel heißt das: $Z
+                        _unvergleichbar_sind. In diesem Beispiel heißt das: $Z
                         \subseteq 2^N$, und für alle $A, B \in Z$ mit $A \ne B$ gilt $A \not
                         \subseteq B$ und $B \not \subseteq A$. Hier ist ein Beispiel für eine
                         unendliche Kette:
@@ -1277,9 +1239,7 @@
                         Wenn wir ganz links noch $\{0\}$ hinschreiben und ganz rechts noch
                         $\N$, dann haben wir ein weiteres, eventuell ungewohntes Phänomen: das
                         Element $\{0\}$ in der Kette hat keinen eindeutigen
-                        
-                        _Nachfolger_
-                        . Egal, welches $A$ mit $\{0\} \subsetneq A$ Sie
+                        _Nachfolger_. Egal, welches $A$ mit $\{0\} \subsetneq A$ Sie
                         wählen, sie finden immer noch ein $B$ dazwischen: $\{0\} \subsetneq B
                         \subsetneq A$.
                         
@@ -1299,12 +1259,8 @@
 
                                 Definition
                             
-                            
-                            *(Dichte Partialordnung)*
-                            Eine Partialordnung
-                            $(X,\preceq)$ heißt 
-                            _dicht_
-                            , wenn es für alle $x,z \in X$ mit
+                            *(Dichte Partialordnung)*Eine Partialordnung
+                            $(X,\preceq)$ heißt _dicht_, wenn es für alle $x,z \in X$ mit
                             $x \prec z$ ein $y \in X$ gibt mit $x \prec y \prec z$.
                             
                         

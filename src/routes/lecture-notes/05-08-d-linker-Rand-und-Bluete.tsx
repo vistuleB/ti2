@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={36}
         title_gr="Linker Rand, Blüten und die DK-Grammatik"
         title_en="d linker Rand und Bluete"
         number={5.8}
@@ -65,12 +66,10 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph>
                       Zu jeder Ableitung \(S \Step&#123;&#125;^* w \in \Sigma^*\) können wir
-                      eindeutig einen 
-                      {" "}
+                      eindeutig einen{" "}
                       <i>
                         Ableitungsbaum
                       </i>
-                      {" "}
                       zeichnen. Wenn die Grammatik
                       eindeutig ist, so hängt auch der Baum nur vom Wort \(w \in L(G)\) ab und
                       nicht von der Ableitung \(S \Step&#123;&#125;^* w\).
@@ -110,7 +109,7 @@ const Article = () => {
                     href="#right-left-messy"
                     class="right carousel-control-next-icon">
                     <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
+                      <img src="../img/carousel-next-icon.svg" />
                     </div>
                   </a>
                   <div
@@ -134,13 +133,19 @@ const Article = () => {
                       style="display:inline-block"
                       class="carousel-inner">
                       <div class="item active">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:16em"
+                          src="../img/context-free/LR/G-right-derivation.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:16em"
+                          src="../img/context-free/LR/G-left-derivation.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:16em"
+                          src="../img/context-free/LR/G-messy-derivation.svg" />
                       </div>
                     </div>
                   </div>
@@ -154,7 +159,9 @@ const Article = () => {
                   </Paragraph>
                 </Paragraph>
                 <figure>
-                  <img src="../img/carousel-prev-icon.svg" />
+                  <img
+                    style="height:40em"
+                    src="../img/context-free/LR/G-tree-large.svg" />
                 </figure>
                 <div class="well container subtheorem">
                   <Paragraph>
@@ -162,9 +169,7 @@ const Article = () => {
                     <b>
                       Warten Sie!
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Scrollen Sie erst weiter, wenn Sie den Baum oben lang genug angeschaut haben!
                     Versuchen Sie selbst, die spezielle Form dieses Baumes möglichst
                     formal zu beschreiben!
@@ -177,13 +182,14 @@ const Article = () => {
                     <b>
                       Auflösung.
                     </b>
-                    {" "}
                     Hier sehen Sie noch einmal
                     den gleichen Baum, nun aber gewisse Teile verschieden umrandet / eingefärbt.
                   </Paragraph>
                 </div>
                 <figure>
-                  <img src="../img/carousel-prev-icon.svg" />
+                  <img
+                    style="height:40em"
+                    src="../img/context-free/LR/G-tree-large-colored.svg" />
                 </figure>
                 <Paragraph>
                   <Paragraph>
@@ -204,44 +210,34 @@ const Article = () => {
                     <b>
                       (Stamm, linker Rand, Blüte, Front, rechter Rest)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Sei \(S \Step&#123;&#125;^* \gamma\) eine Rechtsableitung, \(\gamma\) also
                     eine gültige Wortform, und
                     \(\mathcal&#123;T&#125;\) der Ableitungsbaum von \(\gamma\).
-                    Der 
-                    {" "}
+                    Der{" "}
                     <i>
                       Stamm
                     </i>
-                    {" "}
                     ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
                     der von allen inneren Knoten, deren Kinder allesamt Blätter sind,
                     am weistesten links steht.
-                    Die Kinder von \(u\), per Definition alles Blätter, sind die 
-                    {" "}
+                    Die Kinder von \(u\), per Definition alles Blätter, sind die{" "}
                     <i>
                       Blüte
                     </i>
-                    {" "}
                     .
                     Die Menge der Knoten, die einen Stammknoten als rechtes Geschwister haben,
-                    heißt der 
-                    {" "}
+                    heißt der{" "}
                     <i>
                       linke Rand
                     </i>
-                    {" "}
                     . Jeder Knoten \(v\) im linken Rand
                     muss ein Blatt sein, ansonsten stünde er ja weiter links als \(u\);
                     die Menge der rechten Geschwisterkinder von Stammknoten sowie deren Nachkommen
-                    heißt der 
-                    {" "}
+                    heißt der{" "}
                     <i>
                       rechte Rand
                     </i>
-                    {" "}
                     .
                     Im rechten Rest ist jedes Blatt ein
                     Terminalsymbol, ansonsten wäre es keine Rechtsableitung.
@@ -260,26 +256,20 @@ const Article = () => {
                     S \Step&#123;R&#125;^* \alpha \beta w
                     \end&#123;align*&#125;
                     dar. Die Wortform $\alpha\beta$, also linker Rand plus Blüte, nennen wir
-                    die 
-                    {" "}
+                    die{" "}
                     <i>
                       Front
                     </i>
-                    {" "}
                     von $\mathcal&#123;T&#125;$ und schreiben sie als $\front(\mathcal&#123;T&#125;)$.
-                    Wir sagen auch, dass \(\beta\) 
-                    {" "}
+                    Wir sagen auch, dass \(\beta\){" "}
                     <i>
                       eine Blüte von \(\gamma\)
                     </i>
-                    {" "}
                     und
-                    $\alpha\beta$ die 
-                    {" "}
+                    $\alpha\beta$ die{" "}
                     <i>
                       Front
                     </i>
-                    {" "}
                     von $\gamma$ ist,
                     ohne über den Ableitungsbaum \(\mathcal&#123;T&#125;\) selbst zu reden.
                     Hierbei ist zu beachten, dass in einer mehrdeutigen Grammatik
@@ -325,7 +315,7 @@ const Article = () => {
                     href="#remove-flowers"
                     class="right carousel-control-next-icon">
                     <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
+                      <img src="../img/carousel-next-icon.svg" />
                     </div>
                   </a>
                   <div
@@ -370,34 +360,54 @@ const Article = () => {
                       style="display:inline-block"
                       class="carousel-inner">
                       <div class="item active">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:40em"
+                          src="../img/context-free/LR/tree-destruction/01.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:40em"
+                          src="../img/context-free/LR/tree-destruction/02.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:40em"
+                          src="../img/context-free/LR/tree-destruction/03.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:40em"
+                          src="../img/context-free/LR/tree-destruction/04.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:40em"
+                          src="../img/context-free/LR/tree-destruction/05.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:40em"
+                          src="../img/context-free/LR/tree-destruction/06.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:40em"
+                          src="../img/context-free/LR/tree-destruction/07.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:40em"
+                          src="../img/context-free/LR/tree-destruction/08.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:40em"
+                          src="../img/context-free/LR/tree-destruction/09.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:40em"
+                          src="../img/context-free/LR/tree-destruction/10.svg" />
                       </div>
                     </div>
                   </div>
@@ -423,7 +433,9 @@ const Article = () => {
                   </Paragraph>
                 </Paragraph>
                 <figure>
-                  <img src="../img/carousel-prev-icon.svg" />
+                  <img
+                    style="height:20em"
+                    src="../img/context-free/LR/schema-linker-rand-bluete-stamm.svg" />
                 </figure>
                 <Paragraph>
                   <Paragraph>
@@ -440,7 +452,7 @@ const Article = () => {
                     die Sprache \(\Front(G) \subseteq (\Sigma \cup N)^*\):
                     \begin&#123;align*&#125;
                     \Front(G) := \&#123;\front(\mathcal&#123;T&#125;) \ | \ \mathcal&#123;T&#125;
-                    \textnormal&#123; ist der Ableitungsbaum einer Rechtsableitung&#125;
+                    \textnormal&#123; ist der Ableitungsbaum einer Rechtsableitung &#125;
                     S \Step&#123;R&#125;^* \gamma \&#125;
                     \end&#123;align*&#125;
                     alternativ
@@ -468,12 +480,10 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Hier ist etwas Mentalgymnastik vonnöten: aus Sicht der Sprache
-                    $\Front(G)$ sind \(\Sigma \cup N\) 
-                    {" "}
+                    $\Front(G)$ sind \(\Sigma \cup N\){" "}
                     <i>
                       Terminalsymbole
                     </i>
-                    {" "}
                     . Sie können
                     ja schließlich in den Wörtern der Sprache auftauchen.
                     Die Grammatik \(\hat&#123;G&#125;\) hat also die Terminalsymbole
@@ -485,7 +495,9 @@ const Article = () => {
                     das \(\hat&#123;X&#125; \in \hat&#123;N&#125;\) entspricht dem
                   </Paragraph>
                   <Paragraph>
-                    <img src="../img/carousel-prev-icon.svg" />
+                    <img
+                      style="height:1.5em"
+                      src="../img/context-free/LR/circle-X.svg" />
                     ,
                     also wo \(W\) als innerer Knoten vorkommt. Bevor ich
                     \(\hat&#123;G&#125;\) formal definiere, zeige ich den obigen Ableitungsbaum
@@ -495,7 +507,9 @@ const Article = () => {
                   </Paragraph>
                 </Paragraph>
                 <figure>
-                  <img src="../img/carousel-prev-icon.svg" />
+                  <img
+                    style="height:40em"
+                    src="../img/context-free/LR/hat-G-derivation.svg" />
                 </figure>
                 <div class="well container theorem">
                   <Paragraph>
@@ -504,12 +518,10 @@ const Article = () => {
                     </span>
                     Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik. Die
                     Front-Grammatik oder DK-Grammatik von \(G\) ist
-                    die 
-                    {" "}
+                    die{" "}
                     <i>
                       erweitert reguläre
                     </i>
-                    {" "}
                     Grammatik \(\hat&#123;G&#125; = (\Sigma \cup N, \hat&#123;N&#125;, \hat&#123;S&#125;,
                     \hat&#123;P&#125;)\)
                     mit \(\hat&#123;N&#125; := \&#123;\hat&#123;X&#125; \ | \ X \in N\&#125;\), wobei
@@ -653,9 +665,7 @@ const Article = () => {
                     <b>
                       - Der \(LR(0)\)-Parser.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Starte mit einem leerem Stack. Sei
                     \(\gamma\) der Inhalt des Stacks zu einem Zeitpunkt.
                   </Paragraph>
@@ -707,19 +717,14 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Der erste Teil der Bedeutung ist einfach zu sehen.
                       Jeder Reduktionsschritt ist ein Linksreduktionsschritt, und
                       wenn man Ende $S$ steht, waren es auch alles
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         korrekte
                       </i>
-                      {" "}
                       Linksreduktionsschritte.
                     </Paragraph>
                   </Paragraph>
@@ -747,9 +752,7 @@ const Article = () => {
                       <b>
                         Behauptung.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       (i) \(\gamma w\) ist eine gültige Wortform. (ii)
                       \(\gamma\) ist ein Präfix von \(\front(\gamma w)\).
                     </Paragraph>
@@ -760,9 +763,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Die Behauptung gilt offensichtlich am Anfang, da
                       $\gamma = \epsilon$ und \(w\in L\) ist und
                       somit $\gamma w = w$ eine gültige Wortform ist. Des weiteren
@@ -817,12 +818,10 @@ const Article = () => {
                         dass Teil (ii) vor dem Schritt galt, also $\gamma$ ein Präfix
                         von $\front(\gamma w)$ ist; zweitens, dass
                         \(\gamma \not \in \Front(G)\) ist (sonst hätte der Parser Schritt 1 angewandt); somit
-                        ist $\gamma$ ein 
-                        {" "}
+                        ist $\gamma$ ein{" "}
                         <i>
                           echter
                         </i>
-                        {" "}
                         Präfix von $\front(\gamma w)$ und somit
                         ist $\gamma c$ immer noch ein Präfix von $\front(\gamma w)$.
                       </li>

@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={24}
         title_gr="Von einer regulären Grammatik zu einem endlichen Automaten"
         title_en="regular grammar to fsm"
         number={4.4}
@@ -59,73 +60,55 @@ const Article = () => {
                     paar Abänderungen,
                     um die obigen Transformationen spannender zu machen. Ein Wort in unserer Sprache besteht aus
                     einer
-                    nichtleeren Folge von 
-                    {" "}
+                    nichtleeren Folge von{" "}
                     <i>
                       Labels
                     </i>
-                    {" "}
-                    die jeweils durch einen{" "}
-                    <code>
-                      .
-                    </code>
-                    separiert sind.
+                    die jeweils durch einen `.`separiert sind.
                     Jedes Label ist eine nichtleere Folge von Blöcken (ein nichtleerer String aus Buchstaben und
                     Zahlen), separiert
-                    durch{" "}
-                    <code>
-                      :
-                    </code>
-                    oder{" "}
-                    <code>
-                      -
-                    </code>
-                    aber niemals durch beides innerhalb eines Blockes.
+                    durch `:`oder `-`aber niemals durch beides innerhalb eines Blockes.
                     Also:
                   </Paragraph>
                 </Paragraph>
                 <div style="text-align:center">
-                  <code>
-                    bla:bla:blue.xyz-12-zx.b:x:yyy:xxx:aaa
-                  </code>
+                  <Paragraph>
+                    {" "}{" "}
+                    <code>
+                      bla:bla:blue.xyz-12-zx.b:x:yyy:xxx:aaa
+                    </code>
+                    {" "}{" "}
+                  </Paragraph>
                 </div>
                 <Paragraph>
                   ist ein Wort in \(L\), aber
                 </Paragraph>
                 <div style="text-align:center">
-                  <code>
-                    a:b-c.hello
-                  </code>
+                  <Paragraph>
+                    {" "}{" "}
+                    <code>
+                      a:b-c.hello
+                    </code>
+                    {" "}{" "}
+                  </Paragraph>
                 </div>
                 <Paragraph>
-                  ist kein Wort in \(L\), da das erste Label die Separatoren{" "}
-                  <code>
-                    :
-                  </code>
-                  und{" "}
-                  <code>
-                    -
-                  </code>
-                  mischt.
+                  ist kein Wort in \(L\), da das erste Label die Separatoren `:`und `-`mischt.
                   Habe ich
-                  \(L\) genau genug beschrieben? Stellen wir eine Meta-Frage: Was zählt überhaupt als 
-                  {" "}
+                  \(L\) genau genug beschrieben? Stellen wir eine Meta-Frage: Was zählt überhaupt als{" "}
                   <i>
                     genaue
                     Beschreibung
                   </i>
-                  {" "}
                   einer
                   Sprache? Wir können uns dem Mund fusselig reden und Beispiele und Nicht-Beispiele angeben, am Ende
                   aber werden
                   wir irgendwann beginnen, formale Regeln aufzustellen, die unsere Sprache beschreiben - wir werden
                   also im Prinzip
-                  eine 
-                  {" "}
+                  eine{" "}
                   <i>
                     Grammatik
                   </i>
-                  {" "}
                   schreiben. Tun wir dies also.
                 </Paragraph>
                 <Paragraph>
@@ -137,23 +120,10 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Beginnen wir mit dem Alphabet.
-                      Da es 62 alphanumerische Zeichen gibt:{" "}
-                      <code>
-                        a..zA..Z0..9
-                      </code>
-                      und wir uns keine unnötige
+                      Da es 62 alphanumerische Zeichen gibt: `a..zA..Z0..9`und wir uns keine unnötige
                       Arbeit machen wollen,
-                      beschränken wir uns auf ein Zeichen:{" "}
-                      <code>
-                        a
-                      </code>
-                      . Dazu kommen die Separatoren
-                    </Paragraph>
-                    <Paragraph>
-                      <code>
-                        :-.
-                      </code>
-                      . Also: \(\Sigma = \&#123;a,.,:,-\&#125;\). Stellen Sie sich einfach vor, \(a\) stehe
+                      beschränken wir uns auf ein Zeichen: `a`. Dazu kommen die Separatoren
+                      `:-.`. Also: \(\Sigma = \&#123;a,.,:,-\&#125;\). Stellen Sie sich einfach vor, \(a\) stehe
                       für beliebige alphanumerische Zeichen. Sowohl Grammatik als auch Automaten lassen sich einfach
                       anpassen.
                       Wir beginnen ganz unten und schreiben eine Grammatik für
@@ -167,28 +137,13 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Als nächstes führen wir ein nichtterminales Symbole \(C\) für Labels mit{" "}
-                      <code>
-                        :
-                      </code>
-                      ein
-                      und ein Nichtterminal \(D\) für Labels mit{" "}
-                      <code>
-                        -
-                      </code>
-                      . Wir wählen die Buchstaben \(C,D\),
+                      Als nächstes führen wir ein nichtterminales Symbole \(C\) für Labels mit `:`ein
+                      und ein Nichtterminal \(D\) für Labels mit `-`. Wir wählen die Buchstaben \(C,D\),
                       weil
-                    </Paragraph>
-                    <Paragraph>
-                      <code>
-                        :
-                      </code>
-                      auf Englisch 
-                      {" "}
+                      `:`auf Englisch{" "}
                       <i>
                         colon
                       </i>
-                      {" "}
                       und{" "}
                       <code>
                         -
@@ -197,7 +152,6 @@ const Article = () => {
                       <i>
                         dash
                       </i>
-                      {" "}
                       heißt.
                       \(C\)-Labels können wir uns nach dem Baukastenprizip bauen, in dem
                       wir{" "}
@@ -222,11 +176,7 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Von \(L\) lassen sich nun also alle Labels ableiten. Wir brauchen nun zum Schluss wieder
-                      eine Folge von \(L\), mit{" "}
-                      <code>
-                        .
-                      </code>
-                      separiert, müssen also wieder
+                      eine Folge von \(L\), mit `.`separiert, müssen also wieder
                     </Paragraph>
                     <Paragraph>
                       <a href="./04-01-regular-grammars.html#operation-L(.L)*">
@@ -253,10 +203,10 @@ const Article = () => {
                   \begin&#123;align*&#125;
                   S&amp;\rightarrow C \ | \ D \\
                   C&amp;\rightarrow a \ | \ aC \ | \ aC'\ | \ aS' \\
-                  C'&amp;\rightarrow&#123;:&#125;C \\
+                  C'&amp;\rightarrow &#123;:&#125;C \\
                   D&amp;\rightarrow a \ | \ aD \ | \ a D' \ | \ aS' \\
                   D'&amp;\rightarrow \text&#123;-&#125;D \\
-                  S'&amp;\rightarrow&#123;.&#125;S
+                  S'&amp;\rightarrow &#123;.&#125;S
                   \end&#123;align*&#125;
                 </Paragraph>
                 <Paragraph>
@@ -269,13 +219,10 @@ const Article = () => {
                     <Paragraph>
                       Wir wollen nun alle Produktionen der Form \(Y \rightarrow x\) eliminieren. Hierfür nehmen wir
                       uns
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         ein
                       </i>
-                      {" "}
                       neues Nichtterminal \(E\) und ersetzen \(Y \rightarrow x\) durch \(Y \rightarrow
                       xE\)
                       und fügen die Produktion \(E \rightarrow \epsilon\) hinzu.
@@ -284,10 +231,10 @@ const Article = () => {
                   \begin&#123;align*&#125;
                   S&amp;\rightarrow C \ | \ D \\
                   C&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \\
-                  C'&amp;\rightarrow&#123;:&#125;C \\
+                  C'&amp;\rightarrow &#123;:&#125;C \\
                   D&amp;\rightarrow aE \ | \ aD \ | \ a D' \ | \ aS' \\
                   D'&amp;\rightarrow \text&#123;-&#125;D \\
-                  S'&amp;\rightarrow&#123;.&#125;S \\
+                  S'&amp;\rightarrow &#123;.&#125;S \\
                   E&amp;\rightarrow \epsilon
                   \end&#123;align*&#125;
                 </Paragraph>
@@ -308,12 +255,10 @@ const Article = () => {
                       wobei
                       \(\alpha\) eine Wortform ist, die sich aus \(C\) ableiten lässt und nicht nur aus einem
                       einzelnen Nichtterminal
-                      besteht; dies trifft glücklicherweise auf 
-                      {" "}
+                      besteht; dies trifft glücklicherweise auf{" "}
                       <i>
                         alle
                       </i>
-                      {" "}
                       rechten Seiten der \(C\)-Produktionen
                       zu; gleiches gilt
                       für \(D\). Wir erhalten:
@@ -322,10 +267,10 @@ const Article = () => {
                   \begin&#123;align*&#125;
                   S&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \ | \ aD \ | \ a D' \\
                   C&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \ \\
-                  C'&amp;\rightarrow&#123;:&#125;C \\
+                  C'&amp;\rightarrow &#123;:&#125;C \\
                   D&amp;\rightarrow aE \ | \ aD \ | \ a D' \ | \ aS' \ \\
                   D'&amp;\rightarrow \text&#123;-&#125;D \\
-                  S'&amp;\rightarrow&#123;.&#125;S \\
+                  S'&amp;\rightarrow &#123;.&#125;S \\
                   E&amp;\rightarrow \epsilon
                   \end&#123;align*&#125;
                 </Paragraph>
@@ -348,11 +293,7 @@ const Article = () => {
                 </figure>
                 <Paragraph>
                   <Paragraph>
-                    Ich habe die Zeichen{" "}
-                    <code>
-                      .:-
-                    </code>
-                    rot unterlegt, weil man sie sonst kaum erkennen würde in
+                    Ich habe die Zeichen `.:-`rot unterlegt, weil man sie sonst kaum erkennen würde in
                     dem Automaten.
                   </Paragraph>
                 </Paragraph>
@@ -370,12 +311,10 @@ const Article = () => {
                     definieren, er hätte also \(2^7 = 128\) viele Zustände. Das wäre jetzt für einen Rechner kein
                     Problem, aber
                     in diesem vorlesungsskript doch etwas ungünstig.
-                    Wir gehen 
-                    {" "}
+                    Wir gehen{" "}
                     <i>
                       lazy
                     </i>
-                    {" "}
                     vor, erschaffen Zustände in \(2^Q\) also nur dann, wenn wir sie
                     brauchen.
                     Wir beginnen mit dem Zustand \(\&#123;S\&#125;\) und legen dann an jeden Zustand Kanten an, jeweils mit
@@ -393,7 +332,7 @@ const Article = () => {
                       Der nichtdeterministische Automat
                     </Paragraph>
                     <img
-                      style="height:17em"
+                      style="height:10em"
                       src="../img/finite-state-automata/nfsm-example-03-big.svg"
                       loading="lazy" />
                   </div>
@@ -402,10 +341,7 @@ const Article = () => {
                     href="#nfsm-to-fsm"
                     class="left carousel-control-prev-icon">
                     <div class="carousel-nav-icon">
-                      <img
-                        style="height:17em"
-                        src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                        loading="lazy" />
+                      <img src="../img/carousel-prev-icon.svg" />
                     </div>
                   </a>
                   <a
@@ -413,10 +349,7 @@ const Article = () => {
                     href="#nfsm-to-fsm"
                     class="right carousel-control-next-icon">
                     <div class="carousel-nav-icon">
-                      <img
-                        style="height:17em"
-                        src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                        loading="lazy" />
+                      <img src="../img/carousel-next-icon.svg" />
                     </div>
                   </a>
                   <div
@@ -516,165 +449,138 @@ const Article = () => {
                       class="carousel-inner">
                       <div class="item active">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/01.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/02.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/03.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/04.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/05.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/06.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/07.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/08.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/09.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/10.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/11.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/12.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/13.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/14.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/15.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/16.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/17.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/18.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/19.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/20.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/21.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/22.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/23.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/24.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/25.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/26.svg" />
                       </div>
                       <div class="item">
                         <img
-                          style="height:17em"
-                          src="../img/finite-state-automata/nfsm-example-03-big.svg"
-                          loading="lazy" />
+                          style="height:18em"
+                          src="../img/finite-state-automata/transformation/27.svg" />
                       </div>
                     </div>
                   </div>
@@ -693,9 +599,9 @@ const Article = () => {
                   </Paragraph>
                   \begin&#123;align*&#125;
                   S&amp;\rightarrow aT \\
-                  T&amp;\rightarrow&#123;.&#125;S \ | \ aT \ | \&#123;:&#125;aC \ | \ \text&#123;-&#125;a D \\
-                  C&amp;\rightarrow aC \ | \&#123;:&#125;aC \ | \&#123;.&#125;S \\
-                  D&amp;\rightarrow aD \ | \ \text&#123;-&#125;aD \ | \&#123;.&#125;S
+                  T&amp;\rightarrow &#123;.&#125;S \ | \ aT \ | \ &#123;:&#125;aC \ | \ \text&#123;-&#125;a D \\
+                  C&amp;\rightarrow aC \ | \ &#123;:&#125;aC \ | \ &#123;.&#125;S \\
+                  D&amp;\rightarrow aD \ | \ \text&#123;-&#125;aD \ | \ &#123;.&#125;S
                   \end&#123;align*&#125;
                 </Paragraph>
                 <Paragraph>
@@ -703,33 +609,24 @@ const Article = () => {
                     Die Zustände des deterministischen Automaten beschreiben im Prinzip das, was wir uns merken
                     müssen, wenn wir so einen String "parsen": Zustand \( \&#123;C',C,E,D,D',S'\&#125;\), der
                     in der Grammatik dann zum Nichtterminal \(T\) wird, bedeutet beispielsweise
-                  </Paragraph>
-                  <Paragraph>
-                    _das Label hat schon begonnen, wir wissen aber noch nicht, ob es eines mit
-                  </Paragraph>
-                  <Paragraph>
-                    <code>
-                      :
-                    </code>
-                    oder eines mit{" "}
-                    <code>
-                      -
-                    </code>
-                    ist.
-                    Der Zustand \(\&#123;C',C,E,S'\&#125;\) bzw. das Nichtterminal \(C\) heißt dann
-                  </Paragraph>
-                  <Paragraph>
-                    <code>
-                      :
-                    </code>
-                    {" "}{" "}
+                    {" "}
                     <i>
-                      wir sind innerhalb eines Labels mit 
+                      das Label hat schon begonnen, wir wissen aber noch nicht, ob es eines mit
+                      `:`oder eines mit `-`ist.
+                      Der Zustand \(\&#123;C',C,E,S'\&#125;\) bzw. das Nichtterminal \(C\) heißt dann
+                      {" "}
+                      <code>
+                        :
+                      </code>
+                      {" "}{" "}
+                    </i>
+                    wir sind innerhalb eines Labels mit 
+                    {" "}
+                    <i>
+                      .
                       {" "}
                     </i>
-                    {" "}
-                    .
-                    _
+                    {" "}{" "}
                   </Paragraph>
                 </Paragraph>
                 <div class="well well-lg numbered-exercise container">
@@ -753,20 +650,18 @@ const Article = () => {
                   </Paragraph>
                   <figure>
                     <img
-                      style="height:17em"
-                      src="../img/finite-state-automata/nfsm-example-03-big.svg"
+                      style="height:14em"
+                      src="../img/finite-state-automata/divisibility-automaton/divisibility.svg"
                       loading="lazy" />
                   </figure>
                   <Paragraph>
                     <Paragraph>
                       Dieser Automat hat 11 Zustände. Sein Potenzmengenautomat hätte also \(2^&#123;11&#125; = 2048\)
                       Zustände.
-                      Führen Sie die Konstruktion 
-                      {" "}
+                      Führen Sie die Konstruktion{" "}
                       <i>
                         lazy
                       </i>
-                      {" "}
                       durch, indem Sie vom Startzustand \(\&#123;S\&#125;\)
                       ausgehend die Folgezustände konstruieren. Wieviele Zustände bekommen Sie?
                     </Paragraph>

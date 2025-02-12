@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={18}
         title_gr="Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion"
         title_en="ackermann"
         number={3.3}
@@ -45,20 +46,15 @@ const Article = () => {
                     scheinen (wie die Fibonacci-Zahlen), ja sogar Dinge, die über den
                     Bereich der natürlichen Zahlen hinausgehen, wie zum Beispiel das Sortieren
                     eines beliebig langen Arrays. Kernpunkt war die Erkenntnis, dass wir
-                    komplexere "Datenstrukturen" wie 
-                    {" "}
+                    komplexere "Datenstrukturen" wie{" "}
                     <i>
                       Paare von natürlichen Zahlen
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
-                    als 
                     {" "}
+                    als{" "}
                     <i>
                       eine
                     </i>
-                    {" "}
                     natürliche Zahl codieren können und somit
                     der primitiven Rekursion zugänglich machen können.
                   </Paragraph>
@@ -100,9 +96,7 @@ const Article = () => {
                     <b>
                       (Péter-Ackermann-Funktion).
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     \begin&#123;align*&#125;
                     A(m,n)&amp;:= \begin&#123;cases&#125;
                     n+1&amp;\textnormal&#123; if $m=0$,&#125; \\
@@ -241,9 +235,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Wir verwenden Induktion über \(m\). Für \(m=0\) gilt \(A_0(n)= n+1\) und somit
                     \(A_0 = \succ\). Sei nun also \(m \geq 1\). Wir sehen, dass
                     \begin&#123;align*&#125;
@@ -274,14 +266,12 @@ const Article = () => {
                     Der Startwert soll \(g(\vec&#123;x&#125;)\) sein, wir haben aber kein \(\vec&#123;x&#125;\), bzw. dies
                     ist der "leere Vektor". Wir brauchen eine Funktion
                     \(C\), die null Argumente nimmt und \(A_&#123;m-1&#125;(1)\) zurückgibt. Also:
-                    \(g = \comp(A_&#123;m-1&#125;,&#123;\rm one&#125;)\). Wir könnten sogar noch frecher sein
+                    \(g = \comp(A_&#123;m-1&#125;, &#123;\rm one&#125;)\). Wir könnten sogar noch frecher sein
                     und \(g = \comp(\succ, \comp(\succ, \comp(... \comp(\succ, \zero))))\) schreiben,
-                    einfach \(A_&#123;m-1&#125;(1)\) mal hintereinander; diesen Wert also 
-                    {" "}
+                    einfach \(A_&#123;m-1&#125;(1)\) mal hintereinander; diesen Wert also{" "}
                     <i>
                       hard-coden
                     </i>
-                    {" "}
                     .
                     Allerdings ist die erste Variante einfacher, und somit
                     \begin&#123;align*&#125;
@@ -289,7 +279,7 @@ const Article = () => {
                     <i>
                       m&amp;= \primrec(\comp (A
                     </i>
-                    &#123;m-1&#125;,&#123;\rm one&#125;), \comp (A
+                    &#123;m-1&#125;, &#123;\rm one&#125;), \comp (A
                     <i>
                       &#123;m-1&#125;, \pi^3
                     </i>
@@ -305,22 +295,18 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Wir haben also gezeigt, dass jedes \(A_m\) primitiv rekursiv ist.
-                    Heißt das auch, dass die zwei-parametrige Funktion \(A(m,n)\) 
-                    {" "}
+                    Heißt das auch, dass die zwei-parametrige Funktion \(A(m,n)\){" "}
                     <i>
                       berechenbar
                     </i>
-                    {" "}
                     ist?
                     In der primitiven Rekursion haben wir keine Möglichkeit, den Index \(m\) als
                     Eingabewert zu lesen und dann aus dem unendlichen Array primitiv rekursiver Funktionen
                     \([A_0, A_1, A_2, \dots]\) den Eintrag \(A_m\) auszulesen.
-                    Aber 
-                    {" "}
+                    Aber{" "}
                     <i>
                       berechenbar
                     </i>
-                    {" "}
                     in einem ganz allgemeinen Sinn? Diese Frage können wir
                     zu diesem Zeitpunkt nicht formal beantworten, weil wir den Begriff
                     allgemeiner Berechenbarkeit noch gar nicht definiert haben. Es ist allerdings
@@ -354,37 +340,27 @@ const Article = () => {
                     <b>
                       Die Aussage verstehen
                     </b>
-                    {" "}
                     . Beachten Sie, dass Theorem 3.3.3 nicht mit
                     Theorem 3.3.2 im Widerspruch steht. Theorem 3.3.3 besagt, dass \(A_m\) primitiv rekursiv ist,
-                    für jedes \(m\). Die Zahl \(m\) ist hier also 
-                    {" "}
+                    für jedes \(m\). Die Zahl \(m\) ist hier also{" "}
                     <i>
                       Teil der Aussage
                     </i>
-                    {" "}
                     , nicht
-                    Eingabeparameter der Funktion; die Funktion \(A_m\) hat nur 
-                    {" "}
+                    Eingabeparameter der Funktion; die Funktion \(A_m\) hat nur{" "}
                     <i>
                       einen
                     </i>
-                    {" "}
                     Eingabeparameter.
-                    Theorem 3.3.3 hingegen macht eine Aussage über 
-                    {" "}
+                    Theorem 3.3.3 hingegen macht eine Aussage über{" "}
                     <i>
                       eine
                     </i>
-                    {" "}
                     Funktion \(A(m,n)\) mit
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       zwei
                     </i>
-                    {" "}
                     Eingabeparametern, und \(m\) ist nun einer dieser beiden.
                   </Paragraph>
                 </Paragraph>
@@ -403,23 +379,13 @@ const Article = () => {
                     <b>
                       Beweisidee.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Für jedes feste \(m\) ist die ein-parametrige Funktion \(A_m := n \mapsto A(m,n)\)
                     primitiv rekursiv und
-                    kann als Funktion mit \(m\) verschachtelten{" "}
-                    <code>
-                      for
-                    </code>
-                    -Schleifen betrachtet werden.
+                    kann als Funktion mit \(m\) verschachtelten `for`-Schleifen betrachtet werden.
                     Es wird sich herausstellen, dass \(A_m\) in gewisser Weise die am schnellsten wachsende
                     aller solcher Funktionen ist. Wäre also \(A(m,n)\) primitiv-rekursiv, dann könnten
-                    wir es mit \(d\) verschachtelten{" "}
-                    <code>
-                      for
-                    </code>
-                    -Schleifen berechnen; was ein
+                    wir es mit \(d\) verschachtelten `for`-Schleifen berechnen; was ein
                     Widerspruch ist, weil bereits \(A_&#123;d+1&#125;\) schneller wächst als jede primitiv-rekursive
                     Funktion mit \(d\) verschachtelten Schleifen.
                   </Paragraph>
@@ -431,9 +397,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Wir brauchen eine robuste Definition, was es heißt, dass eine Funktion \(f: \N \rightarrow \N \)
                       schneller wächst als
                       \(g: \N^k \rightarrow \N\).
@@ -445,12 +409,10 @@ const Article = () => {
                         Definition.
                       </span>
                       Sei \(f: \N \rightarrow \N\) und \(g: \N^k \rightarrow \N\). Die Funktion
-                      \(f\) 
-                      {" "}
+                      \(f\){" "}
                       <i>
                         majorisiert
                       </i>
-                      {" "}
                       \(g\), wenn
                       \begin&#123;align*&#125;
                       f (\max(x
@@ -525,9 +487,7 @@ const Article = () => {
                       <b>
                         Induktionsbasis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Wir betrachten wir die Basisfunktionen
                       \(\zero, \succ, \pi^n_k\).
                       Wir wissen bereits, dass \(A_0(n) = n+1\) ist, also \(A_0 = \succ\).
@@ -558,9 +518,7 @@ const Article = () => {
                       <b>
                         Induktionsschritt.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Wenn \(f\) keine Basisfunktion ist, dann wurde \(f\) mittels Komposition oder
                       primitiver Rekursion konstruiert. Für jeden Fall führen wir eine getrennte Rechnung
                       durch.
@@ -572,15 +530,12 @@ const Article = () => {
                       <b>
                         Komposition:
                       </b>
-                      {" "}
                       \(f(\vec&#123;x&#125;) = g(h_1(\vec&#123;x&#125;), \dots, h_k(\vec&#123;x&#125;))\),
                       für primitiv rekursive Funktionen \(g, h_1, \dots, h_k\). Jede dieser Funktionen
-                      wurde mit 
-                      {" "}
+                      wurde mit{" "}
                       <i>
                         weniger
                       </i>
-                      {" "}
                       Kombinatoren konstruiert; somit wird jede dieser Funktionen
                       von einem \(A_r\) majorisiert:
                       \(A_r \gt g, A_&#123;s_1&#125; \gt h_1, \dots, A_&#123;s_k&#125; \gt h_k\). Für einen Eingabevektor \(\vec&#123;x&#125;\)
@@ -653,7 +608,6 @@ const Article = () => {
                       <b>
                         Primitive Rekursion:
                       </b>
-                      {" "}
                       \(f = \primrec (g,h)\), also
                       \begin&#123;align*&#125;
                       f(t, \vec&#123;x&#125;)&amp;=
@@ -681,9 +635,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Wir verwenden Induktion über \(t\). Wenn \(t=0\) ist,
                       dann gilt
                       \begin&#123;align*&#125;
@@ -703,11 +655,11 @@ const Article = () => {
                       </i>
                       1, \dots, x
                       <i>
-                        n)) \tag&#123;weil \(A_q \gt h\)&#125;
+                        n)) \tag &#123;weil \(A_q \gt h\)&#125;
                         \\
                         &amp;\lt A
                       </i>
-                      &#123;q&#125; (\max(f(t-1, \vec&#123;x&#125;), t-1, x)) \tag&#123;für \(x := \max(x_1,\dots,x_n)\)&#125;
+                      &#123;q&#125; (\max(f(t-1, \vec&#123;x&#125;), t-1, x)) \tag &#123;für \(x := \max(x_1,\dots,x_n)\)&#125;
                       \\
                       &amp;\leq A
                       <i>
@@ -771,15 +723,13 @@ const Article = () => {
                 </div>
                 <Paragraph>
                   <Paragraph>
-                    In der Vorlesung am 7. Mai 2024 hatte ich den 
-                    {" "}
+                    In der Vorlesung am 7. Mai 2024 hatte ich den{" "}
                     <i>
                       Grad
                     </i>
-                    {" "}
                     einer primitiv-rekursiven Funktion
                     definiert. Das ist in etwa die "Verschachtelungstiefe" von $f$. Betrachten wir beispielsweise
-                    die Funktion $\pair(x,y) =&#123;x + y + 1 \choose 2&#125; + x$ und dröseln auf, wie wir diese
+                    die Funktion $\pair(x,y) = &#123;x + y + 1 \choose 2&#125; + x$ und dröseln auf, wie wir diese
                     als primitiv-rekursive Funktion konstruiert haben:
                   </Paragraph>
                 </Paragraph>

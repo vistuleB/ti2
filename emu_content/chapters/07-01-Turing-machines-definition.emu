@@ -65,18 +65,12 @@
                     |> p
 
                         
-                        Eine Turingmaschine besteht aus einem 
-                        _Band_
-                        , das in Zellen unterteilt ist und
+                        Eine Turingmaschine besteht aus einem _Band_, das in Zellen unterteilt ist und
                         in beide Richtungen unbegrenzt ist,
-                        und einem 
-                        _Schreib-Lese-Kopf_
-                        .
+                        und einem _Schreib-Lese-Kopf_.
                         Dieser befindet sich in jedem Schritt auf einer
                         Zelle. Wie auch der endliche Automat oder der
-                        Kellerautomat hat die Turingmaschine einen internen 
-                        _Zustand_
-                        .
+                        Kellerautomat hat die Turingmaschine einen internen _Zustand_.
                         In jedem Schritt liest die Maschine das Zeichen, das sich in der aktuellen
                         Zelle des Bandes befindet (dort, wo der Kopf steht). Abhängig vom gelesenen Zeichen
                         \(s\) und dem internen Zustand \(q\) schreibt die Turingmaschine ein neues Symbol
@@ -123,7 +117,7 @@
                                 
                                 
                                 |> img
-                                    src ../img/carousel-prev-icon.svg
+                                    src ../img/carousel-next-icon.svg
                                 
                                 
                             
@@ -195,21 +189,15 @@
                                 |> div
                                     class item active
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:15em
+                                        src ../img/turing-machines/exampe-1/01.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
-                                    
-                                    
-                                
-                                
-                                |> div
-                                    class item
-                                    |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:15em
+                                        src ../img/turing-machines/exampe-1/02.svg
                                     
                                     
                                 
@@ -217,7 +205,8 @@
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:15em
+                                        src ../img/turing-machines/exampe-1/03.svg
                                     
                                     
                                 
@@ -225,7 +214,8 @@
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:15em
+                                        src ../img/turing-machines/exampe-1/04.svg
                                     
                                     
                                 
@@ -233,7 +223,8 @@
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:15em
+                                        src ../img/turing-machines/exampe-1/05.svg
                                     
                                     
                                 
@@ -241,7 +232,8 @@
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:15em
+                                        src ../img/turing-machines/exampe-1/06.svg
                                     
                                     
                                 
@@ -249,7 +241,17 @@
                                 |> div
                                     class item
                                     |> img
-                                        src ../img/carousel-prev-icon.svg
+                                        style height:15em
+                                        src ../img/turing-machines/exampe-1/07.svg
+                                    
+                                    
+                                
+                                
+                                |> div
+                                    class item
+                                    |> img
+                                        style height:15em
+                                        src ../img/turing-machines/exampe-1/08.svg
                                     
                                     
                                 
@@ -266,27 +268,15 @@
                         
                         Sie können sich das Band auch als Magnetband vorstellen, das nach vorn oder nach hinten gespult
                         wird, anstatt dass der Kopf sich bewegt. Am Anfang steht auf dem Band das
-                        
-                        _Eingabewort_
-                        und der Kopf auf dem ersten Symbol dieses Wortes. Die Turingmaschine
+                        _Eingabewort_und der Kopf auf dem ersten Symbol dieses Wortes. Die Turingmaschine
                         wendet
                         nun ihre Regeln an, bis Sie einen
-                        
-                        _Endzustand_
-                        erreicht. Bei 
-                        _Entscheidungsproblemen_
-                        , wo uns nur
+                        _Endzustand_erreicht. Bei _Entscheidungsproblemen_, wo uns nur
                         eine Ja/Nein-Antwort interessiert, wird die Antwort durch den Entzustand angegeben:
-                        der Zustand $\qaccept$ entspricht einem 
-                        _Ja_
-                        , der Zustand
-                        $\qreject$ entspricht einem 
-                        _Nein_
-                        . Diese zwei Endzustände reichen im Allgemeinen
+                        der Zustand $\qaccept$ entspricht einem _Ja_, der Zustand
+                        $\qreject$ entspricht einem _Nein_. Diese zwei Endzustände reichen im Allgemeinen
                         aus. Wenn wir von der Maschine eine komplexere Ausgabe als Ja/Nein erwarten, so
-                        betrachten wir als 
-                        _Ausgabe der Turingmaschine_
-                        den Inhalt des Bandes zu dem
+                        betrachten wir als _Ausgabe der Turingmaschine_den Inhalt des Bandes zu dem
                         Zeitpunkt, da die Maschine den Zustand $\qaccept$ erreicht.
                         Was brauchen wir also, um so eine Turingmaschine
                         und ihre Arbeitsweise zu beschreiben?
@@ -303,8 +293,7 @@
                                 class numbered-title
 
                                 Definition
-                            *(Turingmaschine).*
-                            Eine
+                            *(Turingmaschine).*Eine
                             Turingmaschine besteht aus folgenden Elementen:
                         
                         
@@ -354,9 +343,7 @@
                                 |> tt
 
                                     L
-                                für 
-                                _gehe eine Zelle nach links_
-                                steht,
+                                für _gehe eine Zelle nach links_steht,
                                 
                                 |> tt
 
@@ -365,9 +352,7 @@
                                 |> tt
 
                                     S
-                                für 
-                                _stay_
-                                , also die Anweisung, den Kopf
+                                für _stay_, also die Anweisung, den Kopf
                                 nicht zu bewegen.
                                 
                             
@@ -402,15 +387,11 @@
                     
                     
                     Sie haben nun wohl bereits eine vage Vorstellung, was eine Turingmaschine macht.
-                    Versuchen wir, es noch weiter zu formalisieren. Um den 
-                    _Gesamtzustand_
-                    der
+                    Versuchen wir, es noch weiter zu formalisieren. Um den _Gesamtzustand_der
                     Turingmaschine zu beschreiben, also eine vollständige Momentaufnahme, reicht
                     nicht der aktuelle innere Zustand \(q\); wir brauchen auch den Bandinhalt und insbesondere
                     die Position, an der sich der Kopf befindet. Das alles zusammen nennt
-                    man die 
-                    _Konfiguration der Turingmaschine_
-                    . Wir wollen sie mit
+                    man die _Konfiguration der Turingmaschine_. Wir wollen sie mit
                     uns bereits bekannten mathematischen Begriffen beschreiben.
                     
                     |> figure
@@ -418,7 +399,9 @@
                         
                         
                         |> img
-                            src ../img/carousel-prev-icon.svg
+                            style height:20em
+                            src ../img/turing-machines/configuration.svg
+                            loading lazy
                         
                         
                     
@@ -433,9 +416,7 @@
 
                             Definition
                         
-                        Die 
-                        _Konfiguration_
-                        einer Turingmaschine ist ein Element in
+                        Die _Konfiguration_einer Turingmaschine ist ein Element in
                         \(\Gamma^* \times Q \times \Gamma^*\), also
                         \begin{align*}
                         C = u q v
@@ -449,9 +430,7 @@
                         \begin{align*}
                         \mathcal{C} := \Gamma^* \times Q \times \Gamma^*
                         \end{align*}
-                        Der 
-                        _Zustand einer Konfiguration_
-                        \(C = uqv\) ist \(q\), also der innere
+                        Der _Zustand einer Konfiguration_\(C = uqv\) ist \(q\), also der innere
                         Zustand, in dem sich die Maschine gerade befindet.
                         Wir bezeichnen mit $\state(C)$. Formal:
                         \begin{align*}
@@ -459,15 +438,9 @@
                         uqv&amp;\mapsto q \ .
                         \end{align*}
                         Eine Konfiguration \(C\) ist
-                        eine 
-                        _akzeptierende Endkonfiguration_
-                        wenn $\state(C) = \qaccept$ ist;
-                        eine 
-                        _ablehnende Endkonfiguration_
-                        , wenn $\state(C) = \qreject$ ist.
-                        In beiden Fällen ist \(C\) eine 
-                        _Endkonfiguration_
-                        .
+                        eine _akzeptierende Endkonfiguration_wenn $\state(C) = \qaccept$ ist;
+                        eine _ablehnende Endkonfiguration_, wenn $\state(C) = \qreject$ ist.
+                        In beiden Fällen ist \(C\) eine _Endkonfiguration_.
                         
                     
                     
@@ -478,9 +451,7 @@
                         \begin{align*}
                         C_{\rm start} = \qstart{} w
                         \end{align*}
-                        die 
-                        _Startkonfiguration_
-                        .
+                        die _Startkonfiguration_.
                         
                     
                     
@@ -488,9 +459,7 @@
                         class alert-info
 
                         
-                        
-                        *Die Rolle des \(\square\)-Symbols*
-                        . Das Band der Turingmaschine ist ja
+                        *Die Rolle des \(\square\)-Symbols*. Das Band der Turingmaschine ist ja
                         unendlich.
                         Um eine Momentaufnahme dennoch als endliches Objekt beschreiben zu können,
                         lassen wir die \(\square\)-Symbole links und rechts vom "eigentlichen" Bandinhalt weg.
@@ -510,7 +479,9 @@
                             
                             
                             |> img
-                                src ../img/carousel-prev-icon.svg
+                                style height:18em
+                                src ../img/turing-machines/configuration-two.svg
+                                loading lazy
                             
                             
                         
@@ -538,7 +509,9 @@
                             
                             
                             |> img
-                                src ../img/carousel-prev-icon.svg
+                                style height:18em
+                                src ../img/turing-machines/two-stacks.svg
+                                loading lazy
                             
                             
                         
@@ -578,9 +551,7 @@
 
                             Definition
                         
-                        
                         *(erweiterte Zustandsübergangsfunktion)*
-                        
                         Die erweiterte Zustandsübergangsfunktion einer Turingmaschine ist
                         \begin{align*}
                         \hat{\delta} : \mathcal{C} \rightarrow \mathcal{C} \
@@ -649,9 +620,7 @@
                         dann ist auch $\delta^{(j)}(C)$ eine, für jedes $j \geq i$, weil
                         wir $\hat{\delta}(C') = C'$ für jede Endkonfiguration $C'$ definiert haben.
                         Es spielt also in der obigen Formulierung
-                        
-                        _wenn es ein $i$ gibt_
-                        keine Rolle, welches solche $i$ wir wählen.
+                        _wenn es ein $i$ gibt_keine Rolle, welches solche $i$ wir wählen.
                         
                     
                     Für ein Eingabewort \(x \in \Sigma^*\) können wir nun das Ergebnis der Berechnung
@@ -679,20 +648,12 @@
                     |> p
 
                         
-                        Ein 
-                        _Entscheidungsproblem_
-                        ist eine Funktion \(P : \Sigma^* \rightarrow
-                        \{\texttt{true}, \texttt{false}\}\), beispielsweise: 
-                        _gegeben ein Wort,
+                        Ein _Entscheidungsproblem_ist eine Funktion \(P : \Sigma^* \rightarrow
+                        \{\texttt{true}, \texttt{false}\}\), beispielsweise: _gegeben ein Wort,
                         stellt dieses Wort ein korrektes Java-Programm dar?_
-                        
-                        oder 
-                        _gegeben eine Zahl in Dezimalschreibweise, ist dies
-                        eine Primzahl?_
-                        Eine äquivalente Sichtweise ist die
-                        eines Entscheidungsproblems als 
-                        _Sprache_
-                        \(L \subseteq \Sigma^*\).
+                        oder _gegeben eine Zahl in Dezimalschreibweise, ist dies
+                        eine Primzahl?_Eine äquivalente Sichtweise ist die
+                        eines Entscheidungsproblems als _Sprache_\(L \subseteq \Sigma^*\).
                         Wir identifizieren \(L\) hier mit der Menge aller Wörter \(x\) mit
                         \(P(x) = \texttt{true}\). Wenn wir es mit einem Entscheidungsproblem
                         zu tun haben und dieses mit einer Turingmaschine lösen wollen,
@@ -710,9 +671,9 @@
                         \begin{align*}
                         f_M(x) = \begin{cases}
                         \texttt{accept}&amp;\textnormal{ falls $\state(\hat{M}(x)) = \qaccept$, wenn also $\hat{M}(x)$
-                        eine akzeptierende Endkonfiguration ist,&#125;\\
+                        eine akzeptierende Endkonfiguration ist, }\\
                         \texttt{reject}&amp;\textnormal{ falls $\state(\hat{M}(x)) = \qreject$ ,}\\
-                        \texttt{undefined}&amp;\textnormal{ falls $\hat{M}(x) = \texttt{undefined}$&#125;
+                        \texttt{undefined}&amp;\textnormal{ falls $\hat{M}(x) = \texttt{undefined}$ }
                         \end{cases}
                         \end{align*}
                         
@@ -728,13 +689,9 @@
 
                             Definition
                         
-                        
                         *(Turingmaschine entscheidet eine Sprache)*
-                        
                         Eine Turingmaschine \(M\)
-                        
-                        _entscheidet_
-                        die Sprache \(L \subseteq \Sigma^*\) wenn
+                        _entscheidet_die Sprache \(L \subseteq \Sigma^*\) wenn
                         
                         |> ol
 
@@ -760,9 +717,7 @@
                         |> p
 
                             
-                            Eine Sprache \(L\) heißt 
-                            _entscheidbar_
-                            , wenn
+                            Eine Sprache \(L\) heißt _entscheidbar_, wenn
                             es eine Turingmaschine gibt, die sie entscheidet.
                             
                         
@@ -780,12 +735,8 @@
 
                             Definition
                         
-                        
                         *(Turingmaschine akzeptiert eine Sprache)*
-                        
-                        Eine Turingmaschine \(M\) 
-                        _akzeptiert_
-                        die Sprache
+                        Eine Turingmaschine \(M\) _akzeptiert_die Sprache
                         \(L \subseteq \Sigma^*\) wenn
                         \begin{align*}
                         x \in L \Longleftrightarrow f_M(x) = \texttt{accept}
@@ -797,9 +748,7 @@
                         |> p
 
                             
-                            Eine Sprache \(L \subseteq \Sigma^*\) heißt 
-                            _semi-entscheidbar_
-                            ,
+                            Eine Sprache \(L \subseteq \Sigma^*\) heißt _semi-entscheidbar_,
                             wenn es eine Turingmaschine \(M\) gibt, die \(L\) akzeptiert.
                             
                         
@@ -828,10 +777,8 @@
                         berechnen. Mit einer Turingmaschine heißt das einfach, dass
                         bei Eingabe \(x \in \Sigma_1^*\) die Turingmaschine in einer
                         akzeptierenden Endkonfiguration \(C\) landet, und in \(C\) steht
-                        dann \(g(x)\) auf dem Band. Formal müssen wir noch klären, was 
-                        _\(g(x)\) steht
-                        auf dem Band_
-                        bedeutet.
+                        dann \(g(x)\) auf dem Band. Formal müssen wir noch klären, was _\(g(x)\) steht
+                        auf dem Band_bedeutet.
                         
                     
                     
@@ -845,16 +792,12 @@
 
                             Definition
                         
-                        
                         *(Turingmaschine berechnet eine Funktion)*
-                        
                         Seien \(\Sigma_1, \Sigma_2\) zwei endliche Alphabete und
                         \begin{align*}
                         g : \Sigma_1^* \rightarrow \Sigma_2^*
                         \end{align*}
-                        eine Funktion. Eine Turingmaschine \(M\) 
-                        _berechnet die Funktion \(g\)_
-                        , wenn
+                        eine Funktion. Eine Turingmaschine \(M\) _berechnet die Funktion \(g\)_, wenn
                         
                         |> ol
 
@@ -946,9 +889,7 @@
                         class well container
 
                         
-                        
                         *Beweis.*
-                        
                         Die Idee ist, dass wir eine Grammatik \(G\) schreiben, die
                         "in umgekehrter Reihenfolge" läuft, also
                         \begin{align*}
@@ -1009,9 +950,7 @@
                             \end{align*}
                             
                         
-                        Als nächstes definieren wir 
-                        _Aufräumregeln_
-                        : wenn \(q = \texttt{accept}\), dann
+                        Als nächstes definieren wir _Aufräumregeln_: wenn \(q = \texttt{accept}\), dann
                         können wir jedes Zeichen löschen:
                         \begin{align*}
                         \texttt{accept}\ x&amp;\rightarrow \texttt{accept} \\
@@ -1025,11 +964,11 @@
                         \end{align*}
                         Als letzte Regel definieren wir:
                         \begin{align*}
-                        \texttt{\$&#125;\ \texttt{accept}\ \texttt{.} \rightarrow S
+                        \texttt{\$ }\ \texttt{accept}\ \texttt{.} \rightarrow S
                         \end{align*}
                         Wir haben nun eine Grammatik mit den folgenden Eigenschaften:
                         \begin{align*}
-                        M(x_1 x_2 \dots x_n) = \texttt{accept}&amp;\textnormal{ genau dann, wenn&#125;
+                        M(x_1 x_2 \dots x_n) = \texttt{accept}&amp;\textnormal{ genau dann, wenn }
                         \texttt{\$} \texttt{start} x_1 x_2 \dots x_n \texttt{.} \Step{}^* S
                         \end{align*}
                         Wir bauen nun eine weitere Grammatik \(G\), in der wir jede Produktion \(\alpha \rightarrow

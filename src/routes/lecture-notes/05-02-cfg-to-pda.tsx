@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={30}
         title_gr="Kontextfreie Grammatiken und Kellerautomaten"
         title_en="cfg to pda"
         number={5.2}
@@ -53,9 +54,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Der Beweis ist vergleichsweise einfach, weil wir die Grammatik eins zu eins in
                     Automatentransitionen übersetzen können.
                     Die Idee ist, dass die Symbole auf dem Stack, von unten nach oben gelesen, zu jedem Zeitpunkt
@@ -71,20 +70,16 @@ const Article = () => {
                     \(X \rightarrow \beta\), löscht \(X\) vom Stack und pusht \(\beta\). Der Stack ist
                     nun \(\beta \alpha\), und \(\beta \alpha \Rightarrow^* w\). Entscheidend ist der
                     Nichtdeterminismus:
-                    es 
-                    {" "}
+                    es{" "}
                     <i>
                       gibt
                     </i>
-                    {" "}
                     eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
                     führt;
-                    der Automat 
-                    {" "}
+                    der Automat{" "}
                     <i>
                       kann
                     </i>
-                    {" "}
                     also diese Transition anwenden.
                   </Paragraph>
                   <Paragraph>
@@ -112,12 +107,10 @@ const Article = () => {
                     1, \$)&amp;\step&#123;\epsilon&#125; (\qend, \epsilon)
                     \end&#123;align*&#125;
                     Auf einen formalen Beweis, dass \(L(M) = L(G)\) ist, verzichte ich an dieser Stelle.
-                    Besser als Sipser in seinem Lehrbuch 
-                    {" "}
+                    Besser als Sipser in seinem Lehrbuch{" "}
                     <i>
                       Introduction to the Theory of Computing
                     </i>
-                    {" "}
                     könnte
                     ich das eh nicht.
                   </Paragraph>
@@ -151,8 +144,7 @@ const Article = () => {
                         <tt>
                           [
                         </tt>
-                        oben auf dem Stack bedeutet dann 
-                        {" "}
+                        oben auf dem Stack bedeutet dann{" "}
                         <i>
                           ich will jetzt sofort ein{" "}
                           <tt>
@@ -160,17 +152,14 @@ const Article = () => {
                           </tt>
                           lesen
                         </i>
-                        {" "}
                         ;
                         ein Nichtterminal wie \(A\) oben auf dem Stack bedeutet, dass
                         wir als nächstes ein von \(A\) ableitbares Wort, also ein \(A \rightarrow w \in
                         \Sigma^*\) lesen wollen.
-                        Um ein \(w\) mit \(A \rightarrow w\) lesen zu können, müssen wir 
-                        {" "}
+                        Um ein \(w\) mit \(A \rightarrow w\) lesen zu können, müssen wir{" "}
                         <i>
                           sofort
                         </i>
-                        {" "}
                         ein
                       </Paragraph>
                       <Paragraph>
@@ -293,19 +282,15 @@ const Article = () => {
                     dass es von \(\qend\) aus keine ausgehenden Transitionen gibt;
                     sollte es also nach Erreichen von \(\qend\) noch weitere Zeichen
                     im Eingabewort geben, so kann der Automat keine weiteren Schritte durchführen,
-                    was einem 
-                    {" "}
+                    was einem{" "}
                     <i>
                       reject
                     </i>
-                    {" "}
                     entspricht. Erreichen des Zustandes \(\qend\) führt also
-                    nur dann zu einem 
-                    {" "}
+                    nur dann zu einem{" "}
                     <i>
                       accept
                     </i>
-                    {" "}
                     , wenn dies am Ende des Wortes geschieht.
                   </Paragraph>
                   <figure class="centered-figure well">
@@ -322,7 +307,7 @@ const Article = () => {
                       href="#cfg-to-pda"
                       class="right carousel-control-next-icon">
                       <div class="carousel-nav-icon">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img src="../img/carousel-next-icon.svg" />
                       </div>
                     </a>
                     <div
@@ -334,163 +319,269 @@ const Article = () => {
                         style="display:inline-block"
                         class="carousel-inner">
                         <div class="item active">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/01.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/02.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/03.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/04.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/05.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/06.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/07.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/08.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/09.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/10.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/11.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/12.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/13.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/14.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/15.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/16.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/17.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/18.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/19.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/20.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/21.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/22.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/23.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/24.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/25.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/26.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/27.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/28.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/29.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/30.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/31.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/32.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/33.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/34.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/35.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/36.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/37.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/38.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/39.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/40.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/41.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/42.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/43.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/44.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/45.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/46.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/47.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/48.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/49.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/50.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/51.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/52.svg" />
                         </div>
                         <div class="item">
-                          <img src="../img/carousel-prev-icon.svg" />
+                          <img
+                            style="height:22em"
+                            src="../img/context-free/cfg-to-pda/53.svg" />
                         </div>
                       </div>
                     </div>
@@ -521,9 +612,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Sei \(M = (\Sigma, Q, \Gamma, \qstart, F, \delta)\) der Kellerautomat.
                     Als erstes führen wir drei Schönheitsoperation durch:
                   </Paragraph>
@@ -546,28 +635,24 @@ const Article = () => {
                       \(\Gamma\)).
                       Eine
                       Transition
-                      der Form \((p, \epsilon) \step&#123;a&#125; (q, x) \) nennen wir eine 
-                      {" "}
+                      der Form \((p, \epsilon) \step&#123;a&#125; (q, x) \) nennen wir eine{" "}
                       <i>
                         Push-Operation
                       </i>
-                      {" "}
                       ,
                       eine der Form
-                      \((p, y) \step&#123;a&#125; (q, \epsilon) \) nennen wir eine 
-                      {" "}
+                      \((p, y) \step&#123;a&#125; (q, \epsilon) \) nennen wir eine{" "}
                       <i>
                         Pop-Operation
                       </i>
-                      {" "}
                       .
                       Der Automat kann in diese Form gebracht werden, indem wir Zwischenzustände einführen:
                       \begin&#123;align*&#125;
-                      (p, x) \step&#123;a&#125; (q, y) \textnormal&#123; wird ersetzt durch die zwei Transitionen&#125;
-                      (p, x) \step&#123;a&#125; (p', \epsilon) \textnormal&#123; und&#125;(p', \epsilon) \step&#123;a&#125; (q, y) \\
-                      (p, \epsilon) \step&#123;a&#125; (q,\epsilon) \textnormal&#123; wird ersetzt durch die zwei
-                      Transitionen&#125;
-                      (p, \epsilon) \step&#123;a&#125; (p', \bigstar) \textnormal&#123; und&#125;(p', \bigstar) \step&#123;a&#125; (q,
+                      (p, x) \step&#123;a&#125; (q, y) \textnormal &#123; wird ersetzt durch die zwei Transitionen &#125;
+                      (p, x) \step&#123;a&#125; (p', \epsilon) \textnormal &#123; und &#125;(p', \epsilon) \step&#123;a&#125; (q, y) \\
+                      (p, \epsilon) \step&#123;a&#125; (q,\epsilon) \textnormal &#123; wird ersetzt durch die zwei
+                      Transitionen &#125;
+                      (p, \epsilon) \step&#123;a&#125; (p', \bigstar) \textnormal &#123; und &#125;(p', \bigstar) \step&#123;a&#125; (q,
                       \epsilon) \ .
                       \end&#123;align*&#125;
                       Im zweiten Falle pushen wir also pro Forma ein ansonsten irrelevantes Symbol
@@ -695,12 +780,10 @@ const Article = () => {
                     \begin&#123;align*&#125;
                     a^m b (a|b)^* b a^m
                     \end&#123;align*&#125;
-                    Diese ist 
-                    {" "}
+                    Diese ist{" "}
                     <i>
                       nicht
                     </i>
-                    {" "}
                     regulär, da der Präfix und der Suffix aus \(a\) die gleiche
                     Länge \(m\) haben müssen.
                     Wir bauen zuerst einen Kellerautomaten und übersetzen den dann entsprechend dem Schema
@@ -798,7 +881,10 @@ const Article = () => {
                     </Paragraph>
                   </Paragraph>
                   <figure>
-                    <img src="../img/carousel-prev-icon.svg" />
+                    <img
+                      style="height:10em"
+                      src="../img/context-free/pda-to-cfg-diagram.svg"
+                      loading="lazy" />
                   </figure>
                   <Paragraph>
                     <Paragraph>
@@ -811,7 +897,10 @@ const Article = () => {
                       eine Orientierung. Neben jeden Zustand haben wir schematisch den Stack gemalt:
                     </Paragraph>
                     <figure>
-                      <img src="../img/carousel-prev-icon.svg" />
+                      <img
+                        style="height:10em"
+                        src="../img/context-free/pda-to-cfg-diagram-stack.svg"
+                        loading="lazy" />
                     </figure>
                     <Paragraph>
                       Die einzigen Nichtterminale sind also die "trivialen" der Form \(A_&#123;qq&#125;\) und darüberhinaus
@@ -876,12 +965,12 @@ const Article = () => {
                       </i>
                       1, \epsilon) \step&#123;a&#125; (q
                       <i>
-                        1, a) \textnormal&#123; und&#125;
+                        1, a) \textnormal&#123; und &#125;
                         (q
                       </i>
                       3, a) \step&#123;a&#125; (q
                       <i>
-                        3, \epsilon) \textnormal&#123; ergibt die Produktion&#125;
+                        3, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
                         A
                       </i>
                       &#123;13&#125; \rightarrow a A
@@ -895,12 +984,12 @@ const Article = () => {
                       </i>
                       1, \epsilon) \step&#123;b&#125; (q
                       <i>
-                        2, b) \textnormal&#123; und&#125;
+                        2, b) \textnormal&#123; und &#125;
                         (q
                       </i>
                       2, b) \step&#123;a&#125; (q
                       <i>
-                        3, \epsilon) \textnormal&#123; ergibt die Produktion&#125;
+                        3, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
                         A
                       </i>
                       &#123;13&#125; \rightarrow b A
@@ -914,12 +1003,12 @@ const Article = () => {
                       </i>
                       2, \epsilon) \step&#123;a&#125; (q'
                       <i>
-                        2, x) \textnormal&#123; und&#125;
+                        2, x) \textnormal &#123; und &#125;
                         (q'
                       </i>
                       2, x) \step&#123;\epsilon&#125; (q
                       <i>
-                        2, \epsilon) \textnormal&#123; ergibt die Produktion&#125;
+                        2, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
                         A
                       </i>
                       &#123;22&#125; \rightarrow a A
@@ -929,12 +1018,12 @@ const Article = () => {
                       </i>
                       2, \epsilon) \step&#123;b&#125; (q'
                       <i>
-                        2, x) \textnormal&#123; und&#125;
+                        2, x) \textnormal &#123; und &#125;
                         (q'
                       </i>
                       2, x) \step&#123;\epsilon&#125; (q
                       <i>
-                        2, \epsilon) \textnormal&#123; ergibt die Produktion&#125;
+                        2, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
                         A
                       </i>
                       &#123;22&#125; \rightarrow b A
@@ -946,10 +1035,10 @@ const Article = () => {
                         \begin&#123;align*&#125;
                         (\qstart, \epsilon) \step&#123;\epsilon&#125; (q
                       </i>
-                      1, \$) \textnormal&#123;und&#125;
+                      1, \$) \textnormal &#123;und &#125;
                       (q
                       <i>
-                        3, \$) \step&#123;\epsilon&#125; (\qend, \epsilon) \textnormal&#123; ergibt die Produktion&#125;
+                        3, \$) \step&#123;\epsilon&#125; (\qend, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
                         A
                       </i>
                       &#123;04&#125; \rightarrow A_&#123;13&#125; \\

@@ -66,9 +66,7 @@
                     |> p
 
                         
-                        Hier sehen Sie einige Beispiele für gültige und ungültige Email-Adressen. Mit 
-                        _gültig_
-                        
+                        Hier sehen Sie einige Beispiele für gültige und ungültige Email-Adressen. Mit _gültig_
                         meine ich, dass sie syntaktisch korrekt sind, ungeachtet, ob ein Konto mit dieser Email-Adresse
                         besteht.
                         
@@ -122,22 +120,22 @@
 
                         
                         .StartTag,
-                        .EndTag&#123;
+                        .EndTag {
                         color: blue;
-                        &#125;
+                        }
                         
                         .AttributeValueDoubleQuote,
-                        .AttributeValueSingleQuote&#123;
+                        .AttributeValueSingleQuote {
                         color: orange
-                        &#125;
+                        }
                         
-                        .RawText&#123;
+                        .RawText {
                         font-style: italic;
-                        &#125;
+                        }
                         
-                        .AttributeName&#123;
+                        .AttributeName {
                         color: limegreen;
-                        &#125;
+                        }
                         
                     
                     
@@ -1242,74 +1240,21 @@
                         class listing container
 
                         
-                        
-                        |> code
-
-                            find : Bst -> String -> Maybe String
-                        
-                        
-                        |> code
-
-                            find tree key =
-                        
-                        
-                        |> code
-
-                            case tree of
-                        
-                        
-                        |> code
-
-                            Empty _ ->
-                        
-                        
-                        |> code
-
-                            Nothing
-                        
-                        
-                        |> code
-                        
-                        
-                        |> code
-
-                            Node ( keyHere, valueHere ) leftChild rightChild ->
-                        
-                        
-                        |> code
-
-                            if key == keyHere then
-                        
-                        
-                        |> code
-
-                            Just valueHere
-                        
-                        
-                        |> code
-                        
-                        
-                        |> code
-
-                            else if key&lt; keyHere then
-                        
-                        
-                        |> code
-
-                            find leftChild key
-                        
-                        
-                        |> code
-                        
-                        
-                        |> code
-
-                            else
-                        
-                        
-                        |> code
-
-                            find rightChild key
+                        `find : Bst -> String -> Maybe String`
+                        `find tree key =`
+                        `case tree of`
+                        `Empty _ ->`
+                        `Nothing`
+                        ``
+                        `Node ( keyHere, valueHere ) leftChild rightChild ->`
+                        `if key == keyHere then`
+                        `Just valueHere`
+                        ``
+                        `else if key&lt; keyHere then`
+                        `find leftChild key`
+                        ``
+                        `else`
+                        `find rightChild key`
                     
                     
                     |> p
@@ -1329,605 +1274,598 @@
                         class listing container
 
                         
+                        `
                         
-                        |> code
+                        |> span
+                            class RawText
+                        
+                        
+                        |> span
+                            class LessThanBracket
 
-                            
-                            
-                            |> span
-                                class RawText
-                            
-                            
-                            |> span
-                                class LessThanBracket
+                            <
+                        
+                        
+                        |> span
+                            class StartTag
 
-                                <
-                            
-                            
-                            |> span
-                                class StartTag
+                            ?xml
+                        
+                        
+                        |> span
+                            class WaitingForAttribute
 
-                                ?xml
-                            
-                            
-                            |> span
-                                class WaitingForAttribute
-
-                                
-                            
-                            
-                            |> span
-                                class AttributeName
-
-                                version
-                            
-                            
-                            |> span
-                                class WaitingForValue
-
-                                =
-                            
-                            
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            
-                            
-                            |> span
-                                class AttributeValueDoubleQuote
-
-                                1.0
-                            
-                            
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            
-                            
-                            |> span
-                                class WaitingForAttribute
-
-                                
-                            
-                            
-                            |> span
-                                class AttributeName
-
-                                encoding
-                            
-                            
-                            |> span
-                                class WaitingForValue
-
-                                =
-                            
-                            
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            
-                            
-                            |> span
-                                class AttributeValueDoubleQuote
-
-                                UTF-8
-                            
-                            
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            
-                            
-                            |> span
-                                class AttributeName
-
-                                ?
-                            
-                            
-                            |> span
-                                class GreaterThanBracket
-
-                                >
-                            
-                            
-                            |> span
-                                class LineBreak
-                            
                             
                         
                         
-                        |> code
-                            |> span
-                                class LessThanBracket
+                        |> span
+                            class AttributeName
 
-                                <
+                            version
+                        
+                        
+                        |> span
+                            class WaitingForValue
+
+                            =
+                        
+                        
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        
+                        
+                        |> span
+                            class AttributeValueDoubleQuote
+
+                            1.0
+                        
+                        
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        
+                        
+                        |> span
+                            class WaitingForAttribute
+
                             
+                        
+                        
+                        |> span
+                            class AttributeName
+
+                            encoding
+                        
+                        
+                        |> span
+                            class WaitingForValue
+
+                            =
+                        
+                        
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        
+                        
+                        |> span
+                            class AttributeValueDoubleQuote
+
+                            UTF-8
+                        
+                        
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        
+                        
+                        |> span
+                            class AttributeName
+
+                            ?
+                        
+                        
+                        |> span
+                            class GreaterThanBracket
+
+                            >
+                        
+                        
+                        |> span
+                            class LineBreak
+                        
+                        `
+                        
+                        |> span
+                            class LineBreak
+                        |> span
+                            class WaitingForAttribute
+
                             
-                            |> span
-                                class StartTag
+                        |> span
+                            class DoubleQuote
 
-                                svg
-                            |> span
-                                class WaitingForAttribute
+                            "
+                        |> span
+                            class AttributeValueDoubleQuote
 
-                                
-                            |> span
-                                class AttributeName
+                            http://www.w3.org/2000/svg
+                        |> span
+                            class DoubleQuote
 
-                                xmlns
-                            |> span
-                                class WaitingForValue
+                            "
+                        |> span
+                            class WaitingForValue
 
-                                =
-                            |> span
-                                class DoubleQuote
+                            =
+                        |> span
+                            class AttributeName
 
-                                "
-                            |> span
-                                class AttributeValueDoubleQuote
+                            xmlns
+                        |> span
+                            class WaitingForAttribute
 
-                                http://www.w3.org/2000/svg
-                            |> span
-                                class DoubleQuote
+                            
+                        |> span
+                            class StartTag
 
-                                "
-                            |> span
-                                class WaitingForAttribute
-
-                                
-                            |> span
-                                class LineBreak
+                            svg
                         
                         
-                        |> code
-                            |> span
-                                class WaitingForAttribute
+                        |> span
+                            class LessThanBracket
 
-                                
-                            |> span
-                                class AttributeName
-
-                                xmlns:xlink
-                            |> span
-                                class WaitingForValue
-
-                                =
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            |> span
-                                class AttributeValueDoubleQuote
-
-                                http://www.w3.org/1999/xlink
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            |> span
-                                class WaitingForAttribute
-
-                                
-                            |> span
-                                class LineBreak
+                            <
+                        `
+                        `
                         
+                        |> span
+                            class LineBreak
+                        |> span
+                            class WaitingForAttribute
+
+                            
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class AttributeValueDoubleQuote
+
+                            http://www.w3.org/1999/xlink
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class WaitingForValue
+
+                            =
+                        |> span
+                            class AttributeName
+
+                            xmlns:xlink
+                        |> span
+                            class WaitingForAttribute
+
+                            
+                        `
+                        `
                         
-                        |> code
-                            |> span
-                                class WaitingForAttribute
+                        |> span
+                            class LineBreak
+                        |> span
+                            class WaitingForAttribute
 
-                                
-                            |> span
-                                class AttributeName
+                            
+                        |> span
+                            class DoubleQuote
 
-                                width
-                            |> span
-                                class WaitingForValue
+                            "
+                        |> span
+                            class AttributeValueDoubleQuote
 
-                                =
-                            |> span
-                                class DoubleQuote
+                            102pt
+                        |> span
+                            class DoubleQuote
 
-                                "
-                            |> span
-                                class AttributeValueDoubleQuote
+                            "
+                        |> span
+                            class WaitingForValue
 
-                                102pt
-                            |> span
-                                class DoubleQuote
+                            =
+                        |> span
+                            class AttributeName
 
-                                "
-                            |> span
-                                class WaitingForAttribute
+                            height
+                        |> span
+                            class WaitingForAttribute
 
-                                
-                            |> span
-                                class AttributeName
+                            
+                        |> span
+                            class DoubleQuote
 
-                                height
-                            |> span
-                                class WaitingForValue
+                            "
+                        |> span
+                            class AttributeValueDoubleQuote
 
-                                =
-                            |> span
-                                class DoubleQuote
+                            102pt
+                        |> span
+                            class DoubleQuote
 
-                                "
-                            |> span
-                                class AttributeValueDoubleQuote
+                            "
+                        |> span
+                            class WaitingForValue
 
-                                102pt
-                            |> span
-                                class DoubleQuote
+                            =
+                        |> span
+                            class AttributeName
 
-                                "
-                            |> span
-                                class WaitingForAttribute
+                            width
+                        |> span
+                            class WaitingForAttribute
 
-                                
-                            |> span
-                                class LineBreak
+                            
+                        `
+                        `
                         
+                        |> span
+                            class LineBreak
+                        |> span
+                            class WaitingForAttribute
+
+                            
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class AttributeValueDoubleQuote
+
+                            0 0 102 102
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class WaitingForValue
+
+                            =
+                        |> span
+                            class AttributeName
+
+                            viewBox
+                        |> span
+                            class WaitingForAttribute
+
+                            
+                        `
+                        `
                         
-                        |> code
-                            |> span
-                                class WaitingForAttribute
+                        |> span
+                            class LineBreak
+                        |> span
+                            class GreaterThanBracket
 
-                                
-                            |> span
-                                class AttributeName
+                            >
+                        |> span
+                            class DoubleQuote
 
-                                viewBox
-                            |> span
-                                class WaitingForValue
+                            "
+                        |> span
+                            class AttributeValueDoubleQuote
 
-                                =
-                            |> span
-                                class DoubleQuote
+                            1.1
+                        |> span
+                            class DoubleQuote
 
-                                "
-                            |> span
-                                class AttributeValueDoubleQuote
+                            "
+                        |> span
+                            class WaitingForValue
 
-                                0 0 102 102
-                            |> span
-                                class DoubleQuote
+                            =
+                        |> span
+                            class AttributeName
 
-                                "
-                            |> span
-                                class WaitingForAttribute
+                            version
+                        |> span
+                            class WaitingForAttribute
 
-                                
-                            |> span
-                                class LineBreak
+                            
+                        `
+                        `
                         
+                        |> span
+                            class LineBreak
+                        |> span
+                            class GreaterThanBracket
+
+                            >
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class AttributeValueDoubleQuote
+
+                            surface2322
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class WaitingForValue
+
+                            =
+                        |> span
+                            class AttributeName
+
+                            id
+                        |> span
+                            class WaitingForAttribute
+
+                            
+                        |> span
+                            class StartTag
+
+                            g
+                        |> span
+                            class LessThanBracket
+
+                            <
+                        `
+                        `
                         
-                        |> code
-                            |> span
-                                class WaitingForAttribute
+                        |> span
+                            class LineBreak
+                        |> span
+                            class WaitingForAttribute
 
-                                
-                            |> span
-                                class AttributeName
+                            
+                        |> span
+                            class DoubleQuote
 
-                                version
-                            |> span
-                                class WaitingForValue
+                            "
+                        |> span
+                            class AttributeValueDoubleQuote
 
-                                =
-                            |> span
-                                class DoubleQuote
+                            fill:none;stroke-width:0.4;stroke:rgba(0,0,0,100);
+                        |> span
+                            class DoubleQuote
 
-                                "
-                            |> span
-                                class AttributeValueDoubleQuote
+                            "
+                        |> span
+                            class WaitingForValue
 
-                                1.1
-                            |> span
-                                class DoubleQuote
+                            =
+                        |> span
+                            class AttributeName
 
-                                "
-                            |> span
-                                class GreaterThanBracket
+                            style
+                        |> span
+                            class WaitingForAttribute
 
-                                >
-                            |> span
-                                class LineBreak
+                            
+                        |> span
+                            class StartTag
+
+                            circle
+                        |> span
+                            class LessThanBracket
+
+                            <
+                        `
+                        `
                         
+                        |> span
+                            class LineBreak
+                        |> span
+                            class GreaterThanBracket
+
+                            >
+                        |> span
+                            class AttributeName
+
+                            /
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class AttributeValueDoubleQuote
+
+                            40
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class WaitingForValue
+
+                            =
+                        |> span
+                            class AttributeName
+
+                            r
+                        |> span
+                            class WaitingForAttribute
+
+                            
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class AttributeValueDoubleQuote
+
+                            51
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class WaitingForValue
+
+                            =
+                        |> span
+                            class AttributeName
+
+                            cy
+                        |> span
+                            class WaitingForAttribute
+
+                            
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class AttributeValueDoubleQuote
+
+                            51
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class WaitingForValue
+
+                            =
+                        |> span
+                            class AttributeName
+
+                            cx
+                        |> span
+                            class WaitingForAttribute
+
+                            
+                        `
+                        `
                         
-                        |> code
-                            |> span
-                                class LessThanBracket
+                        |> span
+                            class LineBreak
+                        |> span
+                            class DoubleQuote
 
-                                <
-                            |> span
-                                class StartTag
+                            "
+                        |> span
+                            class AttributeValueDoubleQuote
 
-                                g
-                            |> span
-                                class WaitingForAttribute
+                            fill:none;stroke-width:0.4;stroke:rgba(0,0,0,100);
+                        |> span
+                            class DoubleQuote
 
-                                
-                            |> span
-                                class AttributeName
+                            "
+                        |> span
+                            class WaitingForValue
 
-                                id
-                            |> span
-                                class WaitingForValue
+                            =
+                        |> span
+                            class AttributeName
 
-                                =
-                            |> span
-                                class DoubleQuote
+                            style
+                        |> span
+                            class WaitingForAttribute
 
-                                "
-                            |> span
-                                class AttributeValueDoubleQuote
+                            
+                        |> span
+                            class StartTag
 
-                                surface2322
-                            |> span
-                                class DoubleQuote
+                            path
+                        |> span
+                            class LessThanBracket
 
-                                "
-                            |> span
-                                class GreaterThanBracket
-
-                                >
-                            |> span
-                                class LineBreak
+                            <
+                        `
+                        `
                         
+                        |> span
+                            class LineBreak
+                        |> span
+                            class RawText
+
+                            
+                        |> span
+                            class GreaterThanBracket
+
+                            >
+                        |> span
+                            class AttributeName
+
+                            /
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class AttributeValueDoubleQuote
+
+                            M 50 50 l 33.5 -22.5
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class WaitingForValue
+
+                            =
+                        |> span
+                            class AttributeName
+
+                            d
+                        |> span
+                            class WaitingForAttribute
+
+                            
+                        `
+                        `
                         
-                        |> code
-                            |> span
-                                class LessThanBracket
+                        |> span
+                            class LineBreak
+                        |> span
+                            class GreaterThanBracket
 
-                                <
-                            |> span
-                                class StartTag
+                            >
+                        |> span
+                            class EndTag
 
-                                circle
-                            |> span
-                                class WaitingForAttribute
+                            /g
+                        |> span
+                            class LessThanBracket
 
-                                
-                            |> span
-                                class AttributeName
-
-                                style
-                            |> span
-                                class WaitingForValue
-
-                                =
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            |> span
-                                class AttributeValueDoubleQuote
-
-                                fill:none;stroke-width:0.4;stroke:rgba(0,0,0,100);
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            |> span
-                                class WaitingForAttribute
-
-                                
-                            |> span
-                                class LineBreak
+                            <
+                        `
+                        `
                         
-                        
-                        |> code
-                            |> span
-                                class WaitingForAttribute
+                        |> span
+                            class LineBreak
+                        |> span
+                            class GreaterThanBracket
 
-                                
-                            |> span
-                                class AttributeName
+                            >
+                        |> span
+                            class EndTag
 
-                                cx
-                            |> span
-                                class WaitingForValue
+                            /svg
+                        |> span
+                            class LessThanBracket
 
-                                =
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            |> span
-                                class AttributeValueDoubleQuote
-
-                                51
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            |> span
-                                class WaitingForAttribute
-
-                                
-                            |> span
-                                class AttributeName
-
-                                cy
-                            |> span
-                                class WaitingForValue
-
-                                =
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            |> span
-                                class AttributeValueDoubleQuote
-
-                                51
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            |> span
-                                class WaitingForAttribute
-
-                                
-                            |> span
-                                class AttributeName
-
-                                r
-                            |> span
-                                class WaitingForValue
-
-                                =
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            |> span
-                                class AttributeValueDoubleQuote
-
-                                40
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            |> span
-                                class AttributeName
-
-                                /
-                            |> span
-                                class GreaterThanBracket
-
-                                >
-                            |> span
-                                class LineBreak
-                        
-                        
-                        |> code
-                            |> span
-                                class LessThanBracket
-
-                                <
-                            |> span
-                                class StartTag
-
-                                path
-                            |> span
-                                class WaitingForAttribute
-
-                                
-                            |> span
-                                class AttributeName
-
-                                style
-                            |> span
-                                class WaitingForValue
-
-                                =
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            |> span
-                                class AttributeValueDoubleQuote
-
-                                fill:none;stroke-width:0.4;stroke:rgba(0,0,0,100);
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            |> span
-                                class LineBreak
-                        
-                        
-                        |> code
-                            |> span
-                                class WaitingForAttribute
-
-                                
-                            |> span
-                                class AttributeName
-
-                                d
-                            |> span
-                                class WaitingForValue
-
-                                =
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            |> span
-                                class AttributeValueDoubleQuote
-
-                                M 50 50 l 33.5 -22.5
-                            |> span
-                                class DoubleQuote
-
-                                "
-                            |> span
-                                class AttributeName
-
-                                /
-                            |> span
-                                class GreaterThanBracket
-
-                                >
-                            |> span
-                                class RawText
-
-                                
-                            |> span
-                                class LineBreak
-                        
-                        
-                        |> code
-                            |> span
-                                class LessThanBracket
-
-                                <
-                            |> span
-                                class EndTag
-
-                                /g
-                            |> span
-                                class GreaterThanBracket
-
-                                >
-                            |> span
-                                class LineBreak
-                        
-                        
-                        |> code
-                            |> span
-                                class LessThanBracket
-
-                                <
-                            |> span
-                                class EndTag
-
-                                /svg
-                            |> span
-                                class GreaterThanBracket
-
-                                >
-                            |> span
-                                class LineBreak
+                            <
+                        `
+                        `
                     
                     
                     
                     |> p
 
-                        Was haben diese vier Beispiele gemeinsam? Es handelt sich in allen Fällen um 
-                        _Daten_
-                        , die
+                        Was haben diese vier Beispiele gemeinsam? Es handelt sich in allen Fällen um _Daten_, die
                         in
-                        einem bestimmten festgelegten 
-                        _Format_
-                        
+                        einem bestimmten festgelegten _Format_
                         dargelegt werden. Soll ein Rechner etwas sinnvolles damit anfangen (zum Beispiel das
                         Elm-Programm
                         starten oder die HTML-Seite oder die Svg-Datei
@@ -1961,39 +1899,17 @@
                         class well container
 
                         
-                        Eine Emailadresse besteht aus einem 
-                        _Benutzernamen_
-                        und einem 
-                        _Domainnamen_
-                        , die
+                        Eine Emailadresse besteht aus einem _Benutzernamen_und einem _Domainnamen_, die
                         mit
-                        einem 
-                        |> code
-
-                            @
-                        verbunden sind.
+                        einem `@`verbunden sind.
                         Der Benutzername ist ein nichtleerer String bestehend aus Groß- und Kleinbuchstaben, Zahlen, und
-                        Punkten (
-                        |> code
-
-                            .
-                        ).
+                        Punkten (`.`).
                         Erster und letzter Buchstaben dürfen keine Punkte sein, außerdem dürfen keine zwei Punkte
                         nebeneinander stehen.
-                        Der Domainname ist eine Folge von mindestenes zwei 
-                        _Labels_
-                        , die jeweils mit einem
-                        
-                        |> code
-
-                            .
-                        separiert sind. Ein Label
+                        Der Domainname ist eine Folge von mindestenes zwei _Labels_, die jeweils mit einem
+                        `.`separiert sind. Ein Label
                         ist ein nichtleerer String aus Groß- und Kleinbuchstaben, Zahlen und dem Bindestrich
-                        (
-                        |> code
-
-                            -
-                        ).
+                        (`-`).
                         
                     
                     
@@ -2002,11 +1918,7 @@
                         
                         Die genauen Regeln mögen von Anbieter zu Anbieter variieren; ich habe mich mal an das gehalten,
                         was
-                        ich experimentell bei 
-                        |> code
-
-                            gmail.com
-                        herausgefunden
+                        ich experimentell bei `gmail.com`herausgefunden
                         habe. Die obige Beschreibung ist (hoffentlich) verständlich und präzise und unzweideutig.
                         Allerdings
                         ist sie in natürlicher Sprache verfasst;
@@ -2025,60 +1937,28 @@
                     
                     |> p
 
-                        Eine Emailadresse ist von der Form 
-                        _Benutzername_
-                        |> code
-
-                            @
-                        _Domainnname_
-                        . Dies
-                        können wir als 
-                        _Ableitungsregel_
-                        darstellen:
+                        Eine Emailadresse ist von der Form _Benutzername_`@`_Domainnname_. Dies
+                        können wir als _Ableitungsregel_darstellen:
                     
                     
                     |> pre
                         class container
 
                         
-                        &lt;EmailAdress> 
-                        *->*
-                        &lt;User> @&lt;Domain>
+                        &lt;EmailAdress> *->*&lt;User> @&lt;Domain>
                     
                     
                     |> p
 
-                        Wie können wir nun beispielsweise eine ähnliche Ableitungsregeln für 
-                        |> code
-
-                            <Domain>
-                        
-                        erstellen? Eine 
-                        |> code
-
-                            <Domain>
-                        soll
-                        eine Folge aus mindestens zwei 
-                        |> code
-
-                            <Label>
-                        sein, jeweils durch einen
-                        
-                        |> code
-
-                            .
-                        
+                        Wie können wir nun beispielsweise eine ähnliche Ableitungsregeln für `<Domain>`
+                        erstellen? Eine `<Domain>`soll
+                        eine Folge aus mindestens zwei `<Label>`sein, jeweils durch einen
+                        `.`
                         separiert. Wir erreichen dies, indem wir einen an Rekursion
                         erinnernden Trick anwenden: entweder gibt es genau zwei Labels oder die Domain beginnt mit einem
                         Label,
-                        gefolgt von einem Punkt und wiederum einer 
-                        _Folge von mindestens zwei durch 
-                        |> code
-
-                            .
-                        
-                        separierten Labels_
-                        ,
+                        gefolgt von einem Punkt und wiederum einer _Folge von mindestens zwei durch `.`
+                        separierten Labels_,
                         also wiederum etwas, das wie ein Domainname aussieht. Daher:
                         
                     
@@ -2087,37 +1967,19 @@
                         class container
 
                         
-                        <Domain> 
-                        *->*
-                        &lt;Label> .&lt;Label>
-                        <Domain> 
-                        *->*
-                        &lt;Label> .&lt;Domain>
+                        <Domain> *->*&lt;Label> .&lt;Label>
+                        <Domain> *->*&lt;Label> .&lt;Domain>
                     
                     
                     |> p
 
                         
-                        Wir geben also 
-                        _zwei_
-                        Möglichkeiten an, wie mit einem 
-                        |> code
-
-                            <Domain>
-                        zu
+                        Wir geben also _zwei_Möglichkeiten an, wie mit einem `<Domain>`zu
                         verfahren ist.
-                        Was ist nun 
-                        |> code
-
-                            <Label>
-                        ? Dies ist eine nichtleere Folge von in Domainnamen
+                        Was ist nun `<Label>`? Dies ist eine nichtleere Folge von in Domainnamen
                         erlaubten
                         Zeichen.
-                        Diese sind alphanumerisch (Buchstaben und Zahlen) und der Strich 
-                        |> code
-
-                            -
-                        (in der Praxis
+                        Diese sind alphanumerisch (Buchstaben und Zahlen) und der Strich `-`(in der Praxis
                         sind
                         eventuell noch weitere Zeichen erlaubt;
                         im Ernstfall hängt dies davon ab, was die Domain Name Server des jeweiligen Landes / der
@@ -2130,13 +1992,7 @@
                             Wikipedia:
                             Internationalized Domain Name
                         ).
-                        Wie formulieren wir 
-                        _nichtleere Folge von ..._
-                        mit unserer 
-                        |> code
-
-                            -->
-                        -Notation?
+                        Wie formulieren wir _nichtleere Folge von ..._mit unserer `-->`-Notation?
                         Wieder mit dem Rekursionstrick:
                         
                     
@@ -2145,28 +2001,16 @@
                         class container
 
                         
-                        <Label> 
-                        *->*
-                        &lt;AlphaNumOrDash> 
-                        <Label> 
-                        *->*
-                        &lt;AlphaNumOrDash>&lt;Label>
-                        <AlphaNumOrDash> 
-                        *->*
-                        &lt;AlphaNum>
-                        <AlphaNumOrDash> 
-                        *->*
-                        - 
+                        <Label> *->*&lt;AlphaNumOrDash> 
+                        <Label> *->*&lt;AlphaNumOrDash>&lt;Label>
+                        <AlphaNumOrDash> *->*&lt;AlphaNum>
+                        <AlphaNumOrDash> *->*- 
                     
                     
                     |> p
 
                         
-                        Nun müssen wir noch Regeln für 
-                        |> code
-
-                            <AlphaNum>
-                        angeben. Hier führen wir eine
+                        Nun müssen wir noch Regeln für `<AlphaNum>`angeben. Hier führen wir eine
                         weitere
                         Konvention ein: nämlich, dass wir
                         verschiedene Alternativen mit einem senkrechten Strich | separieren:
@@ -2177,59 +2021,7 @@
                         class container
 
                         
-                        <AlphaNum> 
-                        *->*
-                        a 
-                        *|*
-                        b 
-                        *|*
-                        c 
-                        *|*
-                        d 
-                        *|*
-                        e 
-                        *|*
-                        f 
-                        *|*
-                        g 
-                        *|*
-                        h 
-                        *|*
-                        i 
-                        *|*
-                        j 
-                        *|*
-                        k 
-                        *|*
-                        l 
-                        *|*
-                        m 
-                        *|*
-                        n 
-                        *|*
-                        o 
-                        *|*
-                        p 
-                        *|*
-                        q 
-                        *|*
-                        r 
-                        *|*
-                        s 
-                        *|*
-                        t 
-                        *|*
-                        u 
-                        *|*
-                        v 
-                        *|*
-                        w 
-                        *|*
-                        x 
-                        *|*
-                        y 
-                        *|*
-                        z
+                        <AlphaNum> *->*a *|*b *|*c *|*d *|*e *|*f *|*g *|*h *|*i *|*j *|*k *|*l *|*m *|*n *|*o *|*p *|*q *|*r *|*s *|*t *|*u *|*v *|*w *|*x *|*y *|*z
                         <AlphaNum> 
                         |> STRONG
 
@@ -2335,43 +2127,13 @@
 
                             |
                         Z
-                        <AlphaNum> 
-                        *->*
-                        0 
-                        *|*
-                        1 
-                        *|*
-                        2 
-                        *|*
-                        3 
-                        *|*
-                        4 
-                        *|*
-                        5 
-                        *|*
-                        6 
-                        *|*
-                        7 
-                        *|*
-                        8 
-                        *|*
-                        9
+                        <AlphaNum> *->*0 *|*1 *|*2 *|*3 *|*4 *|*5 *|*6 *|*7 *|*8 *|*9
                     
                     
                     |> p
 
                         Beachten Sie: ich habe hier absichtlich nicht
-                        
-                        |> code
-
-                            <AlphaNum> 
-                            *->*
-                            a 
-                            *|*
-                            ... 
-                            *|*
-                            z
-                        
+                        `<AlphaNum> *->*a *|*... *|*z`
                         geschrieben, weil ich in diesem Beispiel wirklich alles ausschreiben wollte und mit der
                         ...-Notation
                         schon wieder etwas menschen- aber nicht maschinenlesbares
@@ -2382,24 +2144,10 @@
                     |> p
 
                         
-                        Wir brauchen noch Regeln für 
-                        |> code
-
-                            <User>
-                        . Dies ist ein nichtleerer String aus
-                        alphanumerischen Zeichen und dem Punkt 
-                        |> code
-
-                            .
-                        , wobei
+                        Wir brauchen noch Regeln für `<User>`. Dies ist ein nichtleerer String aus
+                        alphanumerischen Zeichen und dem Punkt `.`, wobei
                         der Punkt nicht am Anfang und nicht am Ende stehen darf. Also: eine nichtleere Folge von
-                        
-                        _Namensblöcken_
-                        , die jeweils durch 
-                        |> code
-
-                            .
-                        separiert sind,
+                        _Namensblöcken_, die jeweils durch `.`separiert sind,
                         wobei ein Namensblock eine nichtleere Folge alphanumerischer Zeichen ist.
                         
                     
@@ -2408,16 +2156,8 @@
                         class container
 
                         
-                        <User> 
-                        *->*
-                        &lt;NameBlock> 
-                        *|*
-                        &lt;NameBlock> .&lt;User>
-                        <NameBlock> 
-                        *->*
-                        &lt;AlphaNum> 
-                        *|*
-                        &lt;AlphaNum>&lt;NameBlock>
+                        <User> *->*&lt;NameBlock> *|*&lt;NameBlock> .&lt;User>
+                        <NameBlock> *->*&lt;AlphaNum> *|*&lt;AlphaNum>&lt;NameBlock>
                     
                     
                     |> p
@@ -2432,223 +2172,119 @@
                         class container listing
 
                         
+                        `<EmailAddress>    *->*&lt;User> @&lt;Domain>`
+                        `<Domain>          *->*&lt;Label> .&lt;Label> *|*&lt;Label> .&lt;Domain>`
+                        `<User>            *->*&lt;NameBlock> *|*&lt;NameBlock> .&lt;User>`
+                        `<NameBlock>       *->*&lt;AlphaNum> *|*&lt;AlphaNum>&lt;NameBlock>`
+                        `<Label>           *->*&lt;AlphaNumOrDash> *|*&lt;AlphaNumOrDash>&lt;Label>`
+                        `<AlphaNumOrDash>  *->*&lt;AlphaNum> *|*-` 
                         
-                        |> code
+                        `<AlphaNum>        *->*a *|*b *|*c *|*d *|*e *|*f *|*g *|*h *|*i *|*j *|*k *|*l *|*m *|*n *|*o *|*p *|*q *|*r *|*s *|*t *|*u *|*v *|*w *|*x *|*y *|*z`
+                        `<AlphaNum>        
+                        |> STRONG
 
-                            <EmailAddress>    
-                            *->*
-                            &lt;User> @&lt;Domain>
-                        
-                        
-                        |> code
+                            ->
+                        A 
+                        |> STRONG
 
-                            <Domain>          
-                            *->*
-                            &lt;Label> .&lt;Label> 
-                            *|*
-                            &lt;Label> .&lt;Domain>
-                        
-                        
-                        |> code
+                            |
+                        B 
+                        |> STRONG
 
-                            <User>            
-                            *->*
-                            &lt;NameBlock> 
-                            *|*
-                            &lt;NameBlock> .&lt;User>
-                        
-                        
-                        |> code
+                            |
+                        C 
+                        |> STRONG
 
-                            <NameBlock>       
-                            *->*
-                            &lt;AlphaNum> 
-                            *|*
-                            &lt;AlphaNum>&lt;NameBlock>
-                        
-                        
-                        |> code
+                            |
+                        D 
+                        |> STRONG
 
-                            <Label>           
-                            *->*
-                            &lt;AlphaNumOrDash> 
-                            *|*
-                            &lt;AlphaNumOrDash>&lt;Label>
-                        
-                        
-                        |> code
+                            |
+                        E 
+                        |> STRONG
 
-                            <AlphaNumOrDash>  
-                            *->*
-                            &lt;AlphaNum> 
-                            *|*
-                            - 
-                        
-                        
-                        |> code
+                            |
+                        F 
+                        |> STRONG
 
-                            <AlphaNum>        
-                            *->*
-                            a 
-                            *|*
-                            b 
-                            *|*
-                            c 
-                            *|*
-                            d 
-                            *|*
-                            e 
-                            *|*
-                            f 
-                            *|*
-                            g 
-                            *|*
-                            h 
-                            *|*
-                            i 
-                            *|*
-                            j 
-                            *|*
-                            k 
-                            *|*
-                            l 
-                            *|*
-                            m 
-                            *|*
-                            n 
-                            *|*
-                            o 
-                            *|*
-                            p 
-                            *|*
-                            q 
-                            *|*
-                            r 
-                            *|*
-                            s 
-                            *|*
-                            t 
-                            *|*
-                            u 
-                            *|*
-                            v 
-                            *|*
-                            w 
-                            *|*
-                            x 
-                            *|*
-                            y 
-                            *|*
-                            z
-                        
-                        
-                        |> code
+                            |
+                        G 
+                        |> STRONG
 
-                            <AlphaNum>        
-                            |> STRONG
+                            |
+                        H 
+                        |> STRONG
 
-                                ->
-                            A 
-                            |> STRONG
+                            |
+                        I 
+                        |> STRONG
 
-                                |
-                            B 
-                            |> STRONG
+                            |
+                        J 
+                        |> STRONG
 
-                                |
-                            C 
-                            |> STRONG
+                            |
+                        K 
+                        |> STRONG
 
-                                |
-                            D 
-                            |> STRONG
+                            |
+                        L 
+                        |> STRONG
 
-                                |
-                            E 
-                            |> STRONG
+                            |
+                        M 
+                        |> STRONG
 
-                                |
-                            F 
-                            |> STRONG
+                            |
+                        N 
+                        |> STRONG
 
-                                |
-                            G 
-                            |> STRONG
+                            |
+                        O 
+                        |> STRONG
 
-                                |
-                            H 
-                            |> STRONG
+                            |
+                        P 
+                        |> STRONG
 
-                                |
-                            I 
-                            |> STRONG
+                            |
+                        Q 
+                        |> STRONG
 
-                                |
-                            J 
-                            |> STRONG
+                            |
+                        R 
+                        |> STRONG
 
-                                |
-                            K 
-                            |> STRONG
+                            |
+                        S 
+                        |> STRONG
 
-                                |
-                            L 
-                            |> STRONG
+                            |
+                        T 
+                        |> STRONG
 
-                                |
-                            M 
-                            |> STRONG
+                            |
+                        U 
+                        |> STRONG
 
-                                |
-                            N 
-                            |> STRONG
+                            |
+                        V 
+                        |> STRONG
 
-                                |
-                            O 
-                            |> STRONG
+                            |
+                        W 
+                        |> STRONG
 
-                                |
-                            P 
-                            |> STRONG
+                            |
+                        X 
+                        |> STRONG
 
-                                |
-                            Q 
-                            |> STRONG
+                            |
+                        Y 
+                        |> STRONG
 
-                                |
-                            R 
-                            |> STRONG
-
-                                |
-                            S 
-                            |> STRONG
-
-                                |
-                            T 
-                            |> STRONG
-
-                                |
-                            U 
-                            |> STRONG
-
-                                |
-                            V 
-                            |> STRONG
-
-                                |
-                            W 
-                            |> STRONG
-
-                                |
-                            X 
-                            |> STRONG
-
-                                |
-                            Y 
-                            |> STRONG
-
-                                |
-                            Z
+                            |
+                        Z`
                     
                     
                     
@@ -2661,9 +2297,7 @@
                     |> p
 
                         
-                        Was Sie hier sehen, nennt man eine 
-                        _formale Grammatik_
-                        . Ihre Bestandteile sind:
+                        Was Sie hier sehen, nennt man eine _formale Grammatik_. Ihre Bestandteile sind:
                         
                     
                     
@@ -2676,9 +2310,7 @@
 
                             Das Alphabet \(\Sigma\) aller verwendeten Zeichen, in unserem
                             Fall also \(\Sigma = \{a,\dots,z,A,\dots,Z,.,-,@\}\). Wir nennen \(\Sigma\) die Menge
-                            der 
-                            _terminalen Symbole_
-                            .
+                            der _terminalen Symbole_.
                             
                         
                         
@@ -2691,9 +2323,7 @@
                             &lt;User>,<NameBlock>,<Label>,<AlphaNumOrDash>,<AlphaNum>}
                             \} \ .
                             $$
-                            Diese Menge nennen wir die 
-                            _nichtterminalen Symbole_
-                            . Wir verlangen, dass \(N \cap
+                            Diese Menge nennen wir die _nichtterminalen Symbole_. Wir verlangen, dass \(N \cap
                             \Sigma
                             = \emptyset\) gilt; ein Symbol kann also
                             nicht gleichzeitig Terminalsymbol und Nichtterminalsymbol sein.
@@ -2703,9 +2333,7 @@
                         |> li
 
                             
-                            Eine Menge \(P\) von Regeln, auch 
-                            _Produktionen_
-                            genannt, wobei jede Regel die Form
+                            Eine Menge \(P\) von Regeln, auch _Produktionen_genannt, wobei jede Regel die Form
                             \(X \rightarrow \alpha\) hat, wobei \(\alpha\) eine beliebig lange endliche Folge von
                             Symbolen
                             in \(\Sigma \cup N\) ist.
@@ -2718,11 +2346,7 @@
                             Ein Startsymbol \(S \in N\), das angibt, wo wir mit unserer Ableitung beginnen sollen. Im
                             obigen
                             Beispiel
-                            sind wir ja an Emailadressen interessiert, also ist 
-                            |> code
-
-                                <EmailAddress>
-                            das
+                            sind wir ja an Emailadressen interessiert, also ist `<EmailAddress>`das
                             Startsymbol.
                             
                         
@@ -2732,9 +2356,7 @@
                     |> p
 
                         
-                        Wenn wir nun so eine Grammatik gegeben haben, können wir Wörter 
-                        _ableiten_
-                        ; das heißt,
+                        Wenn wir nun so eine Grammatik gegeben haben, können wir Wörter _ableiten_; das heißt,
                         wir beginnen mit dem
                         Startsymbol und ersetzen in jedem Schritt ein nichtterminales Symbol durch die rechte Seite
                         einer entsprechenden Regel.
@@ -2749,139 +2371,42 @@
                         class container
 
                         
+                        `<EmailAddress>  *->*&lt;User>@<Domain>`
+                        `*->*&lt;NameBlock>.<User>@<Domain>` 
                         
-                        |> code
-
-                            <EmailAddress>  
-                            *->*
-                            &lt;User>@<Domain>
+                        `*->*&lt;NameBlock>.<NameBlock>@<Domain>` 
                         
+                        `*->*&lt;NameBlock>.<NameBlock>@<Label>.<Domain>` 
                         
-                        |> code
-
-                            
-                            *->*
-                            &lt;NameBlock>.<User>@<Domain> 
+                        `*->*&lt;NameBlock>.<NameBlock>@<Label>.<Label>.<Label>` 
                         
+                        `*->*&lt;AlphaNum>.<NameBlock>@<Label>.<Label>.<Label>` 
                         
-                        |> code
-
-                            
-                            *->*
-                            &lt;NameBlock>.<NameBlock>@<Domain> 
+                        `*->*&lt;AlphaNum>.<AlphaNum>@<Label>.<Label>.<Label>` 
                         
+                        `*->*&lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<Label>.<Label>` 
                         
-                        |> code
-
-                            
-                            *->*
-                            &lt;NameBlock>.<NameBlock>@<Label>.<Domain> 
+                        `*->*&lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<Label>` 
                         
+                        `*->*&lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash><Label>` 
                         
-                        |> code
-
-                            
-                            *->*
-                            &lt;NameBlock>.<NameBlock>@<Label>.<Label>.<Label> 
+                        `*->*&lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash><AlphaNumOrDash>` 
                         
+                        `*->*d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash><AlphaNumOrDash>` 
                         
-                        |> code
-
-                            
-                            *->*
-                            &lt;AlphaNum>.<NameBlock>@<Label>.<Label>.<Label> 
-                        
-                        
-                        |> code
-
-                            
-                            *->*
-                            &lt;AlphaNum>.<AlphaNum>@<Label>.<Label>.<Label> 
-                        
-                        
-                        |> code
-
-                            
-                            *->*
-                            &lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<Label>.<Label> 
-                        
-                        
-                        |> code
-
-                            
-                            *->*
-                            &lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<Label> 
-                        
-                        
-                        |> code
-
-                            
-                            *->*
-                            &lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash><Label> 
-                        
-                        
-                        |> code
-
-                            
-                            *->*
-                            &lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash><AlphaNumOrDash> 
-                        
-                        
-                        |> code
-
-                            
-                            *->*
-                            d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash><AlphaNumOrDash> 
-                        
-                        
-                        |> code
-
-                            
-                            *->*
-                            d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash>e
-                        
-                        
-                        |> code
-
-                            
-                            *->*
-                            d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.de
-                        
-                        
-                        |> code
-
-                            
-                            *->*
-                            d.s@<AlphaNumOrDash>.<AlphaNumOrDash>.de
-                        
-                        
-                        |> code
-
-                            
-                            *->*
-                            d.s@<AlphaNumOrDash>.b.de
-                        
-                        
-                        |> code
-
-                            
-                            *->*
-                            d.s@a.b.de
-                        
+                        `*->*d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash>e`
+                        `*->*d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.de`
+                        `*->*d.s@<AlphaNumOrDash>.<AlphaNumOrDash>.de`
+                        `*->*d.s@<AlphaNumOrDash>.b.de`
+                        `*->*d.s@a.b.de`
                     
                     
                     |> p
 
                         
-                        Nach dem gleichen Schema könnten wir 
-                        |> code
-
-                            d.s.@-.-.--
-                        ableiten, was
+                        Nach dem gleichen Schema könnten wir `d.s.@-.-.--`ableiten, was
                         darauf schließen lässt, dass unsere Grammatik nicht wirklich das
-                        tut, was wir beabsichtigen, dass sie nämlich 
-                        _zu viele_
-                        Emailadressen
+                        tut, was wir beabsichtigen, dass sie nämlich _zu viele_Emailadressen
                         herleitet, auch solche, die wir nicht als zulässige Adressen gelten lassen wollen.
                         
                     
@@ -2896,11 +2421,7 @@
 
                             Übungsaufgabe
                         
-                        Formulieren Sie weitere Regeln, um unsinnige Domainnamen wie 
-                        |> code
-
-                            -.-.--
-                        
+                        Formulieren Sie weitere Regeln, um unsinnige Domainnamen wie `-.-.--`
                         zu verbieten. Wie müssen Sie die obige Grammatik ändern?
                         
                     
@@ -2936,16 +2457,10 @@
                         
                         Wenn wir über formale Sprachen reden, so liegt immer eine (endliche) Menge von
                         Symbolen zugrunde, das Alphabet \(\Sigma\). Im Emailadressen-Beispiel war (\Sigma) recht groß:
-                        die 52 Buchstaben; 10 Ziffern; die Zeichen 
-                        |> code
-
-                            @ . - 
+                        die 52 Buchstaben; 10 Ziffern; die Zeichen `@ . -` 
                         . Für Java-Programme oder
                         andere Programmiersprachen kämen
-                        noch weitere Zeichen hinzu, zum Beispiel 
-                        |> code
-
-                            + - / \&#123;&#125; 
+                        noch weitere Zeichen hinzu, zum Beispiel `+ - / \ { }` 
                         und so weiter;
                         wenn wir alle Unicode-Zeichen miteinschließen, landen wir im Millionenbereich.
                         In den theoretischen Beispielen, die in diesem Kurs folgen werden, ist das Alphabet fast immer
@@ -2958,17 +2473,13 @@
                     |> p
 
                         Für ein Alphabet \(\Sigma\) bezeichnen wir mit \(\Sigma^*\) die Menge aller
-                        endlichen Strings über diesem Alphabet; das schließt den 
-                        _leeren String_
-                        mit ein,
+                        endlichen Strings über diesem Alphabet; das schließt den _leeren String_mit ein,
                         den wir mit \(\epsilon\) bezeichnen. So ist beispielsweise
                         $$
                         \{a,b\}^* = \{\epsilon, a, b, aa, ab, ba, bb, aaa, aab, aba, ...\}
                         $$
                         Ein Element \(x \in \Sigma^*\), also einen endlichen String aus \(\Sigma\)-Symbolen,
-                        bezeichnen wir als 
-                        _Wort über \(\Sigma\)_
-                        .
+                        bezeichnen wir als _Wort über \(\Sigma\)_.
                         Mit \(\Sigma^+\) bezeichnen wir die Menge aller nichtleeren Strings, also
                         \(\Sigma^+ = \Sigma^* \setminus \{\epsilon\}\).
                         
@@ -2984,12 +2495,8 @@
                     |> p
 
                         
-                        Eine Teilmenge \(L \subseteq \Sigma\) bezeichnen wir in diesem Kontext als 
-                        _Sprache_
-                        und
-                        kürzen Sie oft mit \(L\) ab, was für 
-                        _language_
-                        steht. Beispiele für Sprachen wären
+                        Eine Teilmenge \(L \subseteq \Sigma\) bezeichnen wir in diesem Kontext als _Sprache_und
+                        kürzen Sie oft mit \(L\) ab, was für _language_steht. Beispiele für Sprachen wären
                         
                     
                     
@@ -3096,12 +2603,8 @@
 
                             Definition
                         
-                        
                         *(Kontextfreie Grammatik).*
-                        
-                        Eine 
-                        _kontextfreie Grammatik_
-                        besteht aus
+                        Eine _kontextfreie Grammatik_besteht aus
                         
                         |> ol
 
@@ -3109,24 +2612,18 @@
                             
                             |> li
 
-                                einem endlichen Alphabet \(\Sigma\), den 
-                                _terminalen Symbolen_
-                                ;
+                                einem endlichen Alphabet \(\Sigma\), den _terminalen Symbolen_;
                             
                             
                             |> li
 
-                                einer dazu disjunkten endlichen Menge \(N\), genannt die 
-                                _nichtterminalen
-                                Symbole_
-                                ; 
+                                einer dazu disjunkten endlichen Menge \(N\), genannt die _nichtterminalen
+                                Symbole_; 
                             
                             
                             |> li
 
-                                einer endlichen Menge \(P\) von 
-                                _Produktionsregeln_
-                                der Form
+                                einer endlichen Menge \(P\) von _Produktionsregeln_der Form
                                 \(X \rightarrow \alpha\) mit \(X \in N\) und \(\alpha \in (\Sigma \cup \N)^*\);
                                 formal also \(P \subseteq N \times (\Sigma \cup \N)^*\).
                             
@@ -3144,12 +2641,8 @@
                     
                     |> p
 
-                        Woher der Name 
-                        _kontextfrei_
-                        kommt, werden Sie hoffentlich verstehen, wenn wir
-                        
-                        _Ableitungen_
-                        definiert haben.
+                        Woher der Name _kontextfrei_kommt, werden Sie hoffentlich verstehen, wenn wir
+                        _Ableitungen_definiert haben.
                         Die Tradition will es, dass wir für die terminalen Symbole
                         Zahlen oder lateinsiche Kleinbuchstaben und für die nichtterminalen Symbole
                         lateinische Großbuchstaben verwenden.
@@ -3183,9 +2676,7 @@
                         $$
                         Für konkrete Beispiele wie die gerade betrachtete Grammatik jedoch verwenden wir einfach die
                         Pfeilschreibweise \(S \rightarrow AB, \dots\). Hier ist
-                        eine 
-                        _Ableitung_
-                        basierend auf der Grammatik:
+                        eine _Ableitung_basierend auf der Grammatik:
                         \begin{align*}
                         S \Rightarrow AB \Rightarrow aAB \Rightarrow aAbB \Rightarrow aAbbB
                         \Rightarrow aAbb \Rightarrow abb \ .
@@ -3215,9 +2706,7 @@
                             Definition
                         
                         Gegeben sei eine kontextfreie Grammatik \(G = (\Sigma, N, P, S)\).
-                        Ein String \(\alpha \in (\Sigma \cup N)^*\) heißt 
-                        _Wortform_
-                        (im Gegensatz
+                        Ein String \(\alpha \in (\Sigma \cup N)^*\) heißt _Wortform_(im Gegensatz
                         zu einem Wort \(x \in \Sigma^*)\).
                         Für zwei Wortformen \(\alpha , \beta\) schreiben wir
                         $$
@@ -3233,10 +2722,8 @@
                         |> p
 
                             
-                            Wenn wir \(\alpha = \beta\) "vorlesen", dann sagen wir 
-                            _\(\beta\) kann aus \(\alpha\) in
-                            einem Schritt abgeleitet werden_
-                            .
+                            Wenn wir \(\alpha = \beta\) "vorlesen", dann sagen wir _\(\beta\) kann aus \(\alpha\) in
+                            einem Schritt abgeleitet werden_.
                             Wenn \(\beta\) aus \(\alpha\) in mehreren (im Extremfall null) Schritten
                             abgeleitet werden kann, so schreiben wir \(\alpha \Rightarrow^* \beta\).
                         
@@ -3259,12 +2746,8 @@
 
                         Nochmals: wenn \(\alpha\) die Form \(\alpha_1 X \alpha_2\) hat, dann dürfen Sie
                         das Nichtterminal \(X\) durch die rechte Seite einer Produktionsregel \(X \rightarrow \gamma\)
-                        ersetzen; Sie dürfen das unabhängig von dem 
-                        _Kontext_
-                        , in welchem \(X\) in
-                        der Wortform \(\alpha\) vorkommt. Daher rührt der Name 
-                        _kontextfreie Grammatik_
-                        .
+                        ersetzen; Sie dürfen das unabhängig von dem _Kontext_, in welchem \(X\) in
+                        der Wortform \(\alpha\) vorkommt. Daher rührt der Name _kontextfreie Grammatik_.
                         
                     
                     
@@ -3272,9 +2755,7 @@
                     
                     |> p
 
-                        Beachten Sie, dass \(P\) per Definition eine 
-                        _endliche Menge_
-                        von Regeln
+                        Beachten Sie, dass \(P\) per Definition eine _endliche Menge_von Regeln
                         sein muss, dass jedoch \(\Rightarrow\) im Allgemeinen unendlich ist. Bereits
                         für unsere einfache Grammatik mit den Produktionsregeln
                     
@@ -3302,24 +2783,18 @@
 
                             Definition
                         
-                        
                         *(Die von einer Grammatik erzeugte Sprache).*
-                        
                         Sei \(G = (\Sigma, N, P, S) \) eine kontextfreie Grammatik. Die von \(G\) erzeugte Sprache
                         \(L(G)\) ist die Menge aller Wörter, die vom Startsymbol \(S\) abgeleitet werden können, also
                         \begin{align*}
                         L(G) := \{x \in \Sigma^* \ | \ S \Rightarrow^* x\} \ .
                         \end{align*}
                         Wenn es zu einer Sprache \(L \subseteq \Sigma^*\) eine kontextfreie Grammatik \(G\) mit
-                        \(L(G) = L\) gibt, so nennen wir \(L\) eine 
-                        _kontextfreie Sprache_
-                        .
+                        \(L(G) = L\) gibt, so nennen wir \(L\) eine _kontextfreie Sprache_.
                         
                     
                     Beachten Sie, dass in dem obigen Beispiel die Wortform
-                    \(aaAB\) zwar aus \(S\) abgeleitet werden kann, allerdings kein 
-                    _Wort_
-                    ist,
+                    \(aaAB\) zwar aus \(S\) abgeleitet werden kann, allerdings kein _Wort_ist,
                     da es noch nichtterminale Symbole enthält. Es gilt also \(aaAB \not \in L(G)\).
                     Oft können wir \(L(G)\) kompakt mit natürlicher Sprache beschreiben:
                     
@@ -3384,18 +2859,14 @@
 
                         
                         Wir sehen also: das gleiche Wort kann mehrere Ableitungen haben.
-                        Da die Ersetzungsregeln 
-                        _kontextfrei_
-                        sind, spielt es keine Rolle, in welcher
+                        Da die Ersetzungsregeln _kontextfrei_sind, spielt es keine Rolle, in welcher
                         Reihenfolge wir nichtterminale Symbole ersetzen. Wenn Sie scharf hinschauen,
                         werden Sie erkennen, dass die beiden Ableitungen "irgendwie gleich" sind, dass nur
                         die Ableitungen in anderer Reihenfolge durchgeführt worden sind. Ich werde
                         das in einem späteren Kapitel formal definieren, was ich mit damit meine.
                         Um Ordnung in das Chaos zu bringen, könnten wir uns zum Beispiel einigen,
                         dass man immer das am weitesten links stehende Nichtterminal ersetzen muss.
-                        Das nennt man eine 
-                        _Linksableitung_
-                        . Dies ist nicht wirklich eine
+                        Das nennt man eine _Linksableitung_. Dies ist nicht wirklich eine
                         Einschränkung, da die Ersetzungsreihenfolge keine Rolle spielt.
                         Wir sehen, dass die zweite Ableitung des Wortes \(abab\) oben eine
                         Linksableitung ist; zusammen mit der Beschriftung
@@ -3415,9 +2886,7 @@
                     |> p
 
                         
-                        Sehen Sie, dass diese Ableitung 
-                        _qualitativ_
-                        anders ist, da
+                        Sehen Sie, dass diese Ableitung _qualitativ_anders ist, da
                         wir hier auch die Regel \(S \rightarrow bSaS\) angewendet haben? Um die
                         Struktur der Ableitung zu verdeutlichen, könnten wir
                         die ersten beiden Ableitungen mit
@@ -3465,12 +2934,8 @@
                     |> p
 
                         
-                        Für einen String \(x\) eine Ableitung zu finden bezeichnen wir als 
-                        _parsen_
-                        ,
-                        das zugehörige Hauptwort als 
-                        _Parsing_
-                        .
+                        Für einen String \(x\) eine Ableitung zu finden bezeichnen wir als _parsen_,
+                        das zugehörige Hauptwort als _Parsing_.
                         
                     
                     
@@ -3480,7 +2945,6 @@
                 |> p
 
                     *Die gute Nachricht:*
-                    
                     Die gute Nachricht: wir kennen Algorithmen, die dieses
                     Problem im effizient lösen, wenn wir den "theoretischen" Effizienzbegriff
                     zugrund legen. 
@@ -3490,20 +2954,16 @@
                 
                 |> p
 
-                    *Die schlechte Nachricht:*
-                    wir kennen keinen Algorithmus,
+                    *Die schlechte Nachricht:*wir kennen keinen Algorithmus,
                     der das Parsing kontextfreier Sprachen in seiner ganzen Allgemeinheit
-                    in 
-                    _linearer Zeit_
-                    erledigt, dessen Laufzeit also proportional zur Länge des Zielwortes
+                    in _linearer Zeit_erledigt, dessen Laufzeit also proportional zur Länge des Zielwortes
                     \(x\) ist. Dies ist aber, was wir in der Praxis, zum Beispiel bei Compilern, erwarten.
                 
                 
                 
                 |> p
 
-                    *Die gute Nachricht:*
-                    in fast allen praktisch relevanten Fällen haben
+                    *Die gute Nachricht:*in fast allen praktisch relevanten Fällen haben
                     wir es mit Grammatiken zu tun, die Parsing in linearer Zeit ermöglichen.
                     Und wenn wir Programmiersprachen, Datenformate etc. entwerfen, haben wir es ja in der Hand,
                     Sprache und Grammatik so anzulegen, dass effizientes Parsen möglich ist. 
@@ -3515,9 +2975,7 @@
 
                     Im nächsten Kapitel lernen wir eine stark eingeschränkte, aber dennoch sehr wichtige Klasse
                     kontextfreier Grammatik kennen, die allesamt ein sehr effizientes Parsing
-                    erlauben: die sogenannten 
-                    _regulären_
-                    Grammatiken. 
+                    erlauben: die sogenannten _regulären_Grammatiken. 
                 
                 
                 

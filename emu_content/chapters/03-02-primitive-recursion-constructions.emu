@@ -86,11 +86,7 @@
                     \({\rm add} = \primrec (\pi_0, \comp(\succ, \pi_0)) \) schreiben können. Beachten Sie, dass ich
                     hier die Indizierung immer bei 0 beginnen lasse, im Python-Code sowie im Mathematik-Modus (in der
                     Vorlesung hatte ich an der Tafel das oft bei 1 beginnen lassen, entschuldigen Sie die Inkonsistenz).
-                    Multiplikation geht nach dem gleichen Schema. Wir schreiben 
-                    |> code
-
-                        mult
-                    
+                    Multiplikation geht nach dem gleichen Schema. Wir schreiben `mult`
                     in der Schleifenform, wie sie die primitive Rekursion zulässt, und schreiben in Orange
                     auch gleich die Funktionen \(g\) und \(h\) dazu:
                     
@@ -117,17 +113,17 @@
                     erinnern Sie sich daran: \(h\) muss immer eine Funktion in der lokalen Variable temp,
                     der Laufvariable \(i\) und \(\vec{x}\) sein. Daher:
                     \begin{align*}
-                    &#123;\rm mult} = \primrec(\zero, \comp({\rm add}, \pi_0, \pi_2))
+                    {\rm mult} = \primrec(\zero, \comp({\rm add}, \pi_0, \pi_2))
                     \end{align*}
                     Genauso erhalten wir \(x^t\), indem wir statt bei 0 bei 1 beginnen und statt
                     \(x\) draufzuzählen, es draufmultiplizieren:
                     \begin{align*}
-                    &#123;\rm expReverse} = \primrec({\rm one}, \comp({\rm mult}, \pi_0, \pi_2))
+                    {\rm expReverse} = \primrec({\rm one}, \comp({\rm mult}, \pi_0, \pi_2))
                     \end{align*}
                     Allerdings gibt uns das \((t,x) \mapsto x^t\). Für \({\rm exp}(a,b) = a^b\) müssen
                     wir die Argumente umdrehen:
                     \begin{align*}
-                    &#123;\rm exp} = \comp({\rm expReverse}, \pi_1, \pi_0)
+                    {\rm exp} = \comp({\rm expReverse}, \pi_1, \pi_0)
                     \end{align*}
                     Die Fakultätsfunktion \(t!\) ist konzeptuell ähnlich, allerdings etwas interessanter, weil
                     wir hier auf das Zwischenergebnis und die Laufvariable zugreifen müssen:
@@ -202,8 +198,8 @@
                         \({\rm subtractFrom}: (t,x) \mapsto x-t\). Hierfür wenden wir einfach pred
                         \(t\) mal auf \(x\) an:
                         \begin{align*}
-                        &#123;\rm subtractFrom}&amp;= \primrec(\pi_0, \comp(\pred, \pi_0)) \\
-                        &#123;\rm minus}&amp;= \comp({\rm subtractFrom}, \pi_1, \pi_0)
+                        {\rm subtractFrom}&amp;= \primrec(\pi_0, \comp(\pred, \pi_0)) \\
+                        {\rm minus}&amp;= \comp({\rm subtractFrom}, \pi_1, \pi_0)
                         \end{align*}
                     
                     
@@ -219,21 +215,9 @@
                         Die primitive Rekursion stellt uns als "Datentyp" nur die natürlichen Zahlen zur
                         Verfügung. Alles andere müssen wir als natürliche Zahlen nach einem von uns
                         selbst gewählten Schema codieren. Für Boolesche Werte ist das recht naheliegend.
-                        Wir codieren 
-                        |> code
-
-                            True
-                        als 1 und 
-                        |> code
-
-                            False
-                        als 0.
+                        Wir codieren `True`als 1 und `False`als 0.
                         Unser erstes Prädikat, also Funktion mit Booleschem Ausgabewert, ist
-                        
-                        |> code
-
-                            isPositive
-                        :
+                        `isPositive`:
                         
                     
                     
@@ -259,7 +243,7 @@
                     
                     und somit
                     \begin{align*}
-                    &#123;\rm isPositive} = \primrec(\zero,&#123;\rm one})
+                    {\rm isPositive} = \primrec(\zero, {\rm one})
                     \end{align*}
                     
                     |> p
@@ -310,11 +294,11 @@
                         
                         Das Prädikat
                         \begin{align*}
-                        &#123;\rm iSquareLessEqualX&#125; (i,x)&amp;= [ i^2 \leq x ]
+                        {\rm iSquareLessEqualX } (i,x)&amp;= [ i^2 \leq x ]
                         \end{align*}
                         ist primitiv rekursiv:
                         \begin{align*}
-                        &#123;\rm iSquareLessEqualX&#125; = \comp({\rm lessEqual}, \comp({\rm mult}, \pi_0, \pi_0), \pi_1)
+                        {\rm iSquareLessEqualX } = \comp({\rm lessEqual}, \comp({\rm mult}, \pi_0, \pi_0), \pi_1)
                         \end{align*}
                         und damit können wir die ganzzahlige Wurzel schreiben als
                         
@@ -350,12 +334,12 @@
                         
                     
                     \begin{align*}
-                    &#123;\rm largestIbelowTwithISquareLessEqualX = \primrec(zero,
+                    {\rm largestIbelowTwithISquareLessEqualX = \primrec(zero,
                     \comp(ifThenElse, \comp(iSquareLessEqual, \pi_1, \pi_2), \pi_1, \pi_0))}
                     \end{align*}
                     Und schließlich ist
                     \begin{align*}
-                    &#123;\rm sqrt} = \comp({\rm largestIbelowTwithISquareLessEqualX}, \pi_0, \pi_0)
+                    {\rm sqrt} = \comp({\rm largestIbelowTwithISquareLessEqualX}, \pi_0, \pi_0)
                     \end{align*}
                     da wir zum Suchen der Wurzel von \(t\) gleich \(t\) als Obergrenze des Suchraumes
                     angeben können. Ganz allgemein können wir für ein Prädikat
@@ -383,7 +367,7 @@
                         und somit können wir sqrt schreiben als
                     
                     \begin{align*}
-                    &#123;\rm sqrt} =&#123;\rm LargestLessThan} (\pi_0,&#123;\rm iSquareLessEqual})
+                    {\rm sqrt} = {\rm LargestLessThan} (\pi_0, {\rm iSquareLessEqual})
                     \end{align*}
                     
                     
@@ -393,14 +377,8 @@
                     
                     
                     Eine recht stark anmutende Beschränkung primitiv rekursiver Funktionen ist
-                    die Tatsache, dass wir in der Schleife nur 
-                    _eine_
-                    lokale Variable
-                    führen dürfen, hier meistens 
-                    |> code
-
-                        temp
-                    genannt.
+                    die Tatsache, dass wir in der Schleife nur _eine_lokale Variable
+                    führen dürfen, hier meistens `temp`genannt.
                     Manche Funktionen scheinen inhärent mindestens zwei zu benötigen.
                     Betrachten wir den Fall der Fibonacci-Zahlen:
                     
@@ -429,20 +407,10 @@
                     
                     Doch selbst dann hätten wir immer noch zwei lokale Variable.
                     Die Fibonacci-Zahlen rekursiv per
-                    
-                    |> code
-
-                        return F(n-1)+F(n-2)
-                    scheint noch weiter weg zu sein
+                    `return F(n-1)+F(n-2)`scheint noch weiter weg zu sein
                     vom Paradigma der primitiven Rekursion; primitive Rekursion verzweigt sich nie.
-                    Dennoch ist es möglich, 
-                    |> code
-
-                        fib
-                    primitiv rekursiv zu implementieren.
-                    Hauptzutat hierbei ist es, dass wir 
-                    _Paare_
-                    als neue Datenstruktur
+                    Dennoch ist es möglich, `fib`primitiv rekursiv zu implementieren.
+                    Hauptzutat hierbei ist es, dass wir _Paare_als neue Datenstruktur
                     verwenden.
                     
                     
@@ -452,9 +420,7 @@
                         Erinnern Sie sich: die primitive Rekursion stellt uns als Datentyp von Haus aus
                         nur die natürlichen Zahlen zur Verfügung. Alles andere müssen wir nach einem
                         selbst gewählten Schema codieren. Bei Booleschen Werten war es einfach.
-                        Wie steht es mit 
-                        _Paaren_
-                        von natürlichen Zahlen?
+                        Wie steht es mit _Paaren_von natürlichen Zahlen?
                         In 
                         |> a
                             href 02-00-infinite-sets.html
@@ -466,7 +432,7 @@
                     
                     \begin{align*}
                     \pair : \N^2&amp;\rightarrow \N \\
-                    (x,y)&amp;\mapsto&#123;x + y + 1 \choose 2} + x
+                    (x,y)&amp;\mapsto {x + y + 1 \choose 2} + x
                     \end{align*}
                     kennengelernt. Diese Funktion ist primitiv rekursiv: es gilt
                     \({n \choose 2} = 1 + 2 + \cdots + (n-1)\) und somit
@@ -491,7 +457,7 @@
                     
                     und somit
                     \begin{align*}
-                    &#123;\rm choose2}&amp;= \primrec(\zero, \comp({\rm add},\pi_0,\pi_1)) \\
+                    {\rm choose2}&amp;= \primrec(\zero, \comp({\rm add},\pi_0,\pi_1)) \\
                     \pair&amp;= \comp({\rm add}, \comp({\rm choose2}, \comp({\rm add}, \pi_0, \comp(\succ, \pi_1)), \pi_0)
                     \end{align*}
                     
@@ -502,18 +468,18 @@
                         \(\pair(x,y)\) wieder \(x\) und \(y\) berechnen, bestimmen wir erst
                         den Wert von \(x+y\). Wenn \(\pair(x,y) = n\) gilt und \(x+y=i)\) ist, dann ist
                         \begin{align*}
-                        n = \pair(x,y) =&#123;i + 1 \choose 2} + x \geq
-                        &#123;i+1 \choose 2} + 0 = \pair(0,i) \ ,
+                        n = \pair(x,y) = {i + 1 \choose 2} + x \geq
+                        {i+1 \choose 2} + 0 = \pair(0,i) \ ,
                         \end{align*}
                         und somit ist \(x+y\) der größte Wert von \(i\), so dass \(n \geq \pair(0,i)\) ist.
                         Aus \(x+y\) und \({x+y+1 \choose 2} + x\) können wir dann leicht \(x\) und \(y\) berechnen:
                         
                     
                     \begin{align*}
-                    &#123;\rm getXplusY}&amp;=&#123;\rm LargestLessThan}(\pi_0, \comp({\rm greaterEqual}, \pi_1, \comp(\pair,
+                    {\rm getXplusY}&amp;= {\rm LargestLessThan}(\pi_0, \comp({\rm greaterEqual}, \pi_1, \comp(\pair,
                     \zero, \pi_0)))\\
-                    \first&amp;= \comp({\rm minus}, \pi_0, \comp(\pair, \zero,&#123;\rm getXplusY}))\\
-                    \second&amp;= \comp({\rm minus},&#123;\rm getXplusY}, \first)
+                    \first&amp;= \comp({\rm minus}, \pi_0, \comp(\pair, \zero, {\rm getXplusY}))\\
+                    \second&amp;= \comp({\rm minus}, {\rm getXplusY}, \first)
                     \end{align*}
                     
                     |> p
@@ -570,6 +536,7 @@
                             class terminalOutput
 
                             11031
+                        
                     
                     
                     |> p
@@ -581,9 +548,9 @@
                         
                     
                     \begin{align*}
-                    &#123;\rm push} (x,&#123;\rm restlist})&amp;= 1 + \pair(x,&#123;\rm restlist}) \\
-                    &#123;\rm head} ({\rm list})&amp;= \first({\rm list} - 1)\\
-                    &#123;\rm second} ({\rm list})&amp;= \second({\rm list} - 1)
+                    {\rm push} (x, {\rm restlist})&amp;= 1 + \pair(x, {\rm restlist}) \\
+                    {\rm head} ({\rm list})&amp;= \first({\rm list} - 1)\\
+                    {\rm second} ({\rm list})&amp;= \second({\rm list} - 1)
                     \end{align*}
                     
                     |> p
@@ -644,12 +611,12 @@
                             class terminalOutput
 
                             5
+                        
                     
                     
                     |> p
 
-                        *Native Implementierung.*
-                        Die primitive Rekursion ist
+                        *Native Implementierung.*Die primitive Rekursion ist
                         ein theoretischer Berechenbarkeitsbegriff für Funktionen
                         auf natürlichen Zahlen. Es ist definitiv keine ernstzunehmende Programmiersprache.
                         Ich finde allerdings, dass es hilfreich ist, sie als Programmiersprache zu begreifen
@@ -659,14 +626,8 @@
                         Zeit nicht behandeln können. Bei meinen eigenen Experimenten mit meinem
                         Python-Framework bin ich daher dazu übergegangen, dass ich, sobald
                         ich gezeigt habe, dass eine Funktion \(f\) primitiv rekursiv ist,
-                        sie 
-                        _nativ_
-                        in Python zu implementieren, also beispielsweise in meiner
-                        Datei 
-                        |> code
-
-                            stockpile.py
-                        :
+                        sie _nativ_in Python zu implementieren, also beispielsweise in meiner
+                        Datei `stockpile.py`:
                     
                     
                     |> pre
@@ -679,11 +640,7 @@
 
                             def pair(x,y):
                         
-                        
-                        |> code
-
-                            return int(((x+y+1) * (x+y)) / 2 + x )
-                        
+                        `return int(((x+y+1) * (x+y)) / 2 + x )`
                         
                     
                     

@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={5}
         title_gr="Monotone Funktionen und monotone Schaltkreise"
         title_en="monotone circuits"
         number={1.4}
@@ -41,27 +42,21 @@ const Article = () => {
                   <Paragraph>
                     Für zwei Tupel \(\mathbf&#123;x&#125;, \mathbf&#123;y&#125; \in \&#123;0,1\&#125;^n\) schreiben wir
                     \( \mathbf&#123;x&#125; \leq \mathbf&#123;y&#125;\), falls \(x_1 \leq y_1, \dots, x_n \leq y_n\), also
-                    \(\mathbf&#123;x&#125;\) 
-                    {" "}
+                    \(\mathbf&#123;x&#125;\){" "}
                     <i>
                       in jeder Koordinate
                     </i>
-                    {" "}
                     kleiner gleich \(\mathbf&#123;y&#125;\) ist.
                     Beispielsweise gilt \( (0,0,1) \leq (1,0,1)\). Allerdings gilt weder
-                    \( (0,1,0) \leq (1,0,1)\) noch umgekehrt; die beiden Tupel sind 
-                    {" "}
+                    \( (0,1,0) \leq (1,0,1)\) noch umgekehrt; die beiden Tupel sind{" "}
                     <i>
                       unvergleichbar
                     </i>
-                    {" "}
                     ;
-                    es handelt sich bei \(\leq\) also um eine 
-                    {" "}
+                    es handelt sich bei \(\leq\) also um eine{" "}
                     <i>
                       Partialordnung
                     </i>
-                    {" "}
                     .
                     Am Besten stellen Sie sich eine solche Partialordnung als gerichteten Graphen vor:
                   </Paragraph>
@@ -75,13 +70,10 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Diese Darstellung einer Partialordnung als gerichteter Graph bezeichnet man auch als
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Hasse-Diagramm
                     </i>
-                    {" "}
                     (ich verzichte hier auf eine formale Definition).
                     Es gilt nun \(\mathbf&#123;x&#125; \leq \mathbf&#123;y&#125;\), wenn Sie im Hasse-Diagramm einen
                     Pfad von \(\mathbf&#123;x&#125;\) nach \(\mathbf&#123;y&#125;\) finden.
@@ -93,15 +85,12 @@ const Article = () => {
                     <b>
                       Vorsicht.
                     </b>
-                    {" "}
                     Im obigen Bild steht zwar \(001\) unterhalb von \(110\), allerdings
                     werden Sie keinen Pfad von \(001\) nach \(110\) finden;
-                    es gilt also \(001 \not \leq 110\); die beiden Elemente sind 
-                    {" "}
+                    es gilt also \(001 \not \leq 110\); die beiden Elemente sind{" "}
                     <i>
                       unvergleichbar
                     </i>
-                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>
@@ -111,13 +100,10 @@ const Article = () => {
                       Definition
                     </span>
                     Eine Boolesche Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) heißt
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       monoton
                     </i>
-                    {" "}
                     , wenn
                     {" "}
                   </Paragraph>
@@ -153,7 +139,7 @@ const Article = () => {
                 <figure>
                   <img
                     style="height:10em"
-                    src="../img/circuits/hasse-diagram.svg"
+                    src="../img/circuits/hasse-clouds.svg"
                     loading="lazy" />
                 </figure>
                 <Paragraph>
@@ -165,12 +151,10 @@ const Article = () => {
                     \(\xor (0,1) \gt \xor (1,0)\), was der Definition einer monotonen Funktion
                     widerspricht. (Ich habe hier absichtlich die Präfixschreibweise \(\xor(0,1)\) verwendet,
                     um hervorzuheben, dass es sich hierbei um eine Funktion in zwei Variablen handelt.)
-                    Beachten Sie, dass ich die Worte 
-                    {" "}
+                    Beachten Sie, dass ich die Worte{" "}
                     <i>
                       "oberhalb"
                     </i>
-                    {" "}
                     im Sinne der Partialordnung
                     meine, nicht wirklich im geometrischen Sinne in der Abbildung.
                   </Paragraph>
@@ -185,7 +169,7 @@ const Article = () => {
                   <figure>
                     <img
                       style="height:10em"
-                      src="../img/circuits/hasse-diagram.svg"
+                      src="../img/circuits/monotone-or-not.svg"
                       loading="lazy" />
                   </figure>
                   <Paragraph>
@@ -210,12 +194,10 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Beweisen Sie das Theorem. 
-                    {" "}
+                    Beweisen Sie das Theorem.{" "}
                     <b>
                       Tip.
                     </b>
-                    {" "}
                     Gehen Sie meine oben skizzierten drei
                     Konstruktionen durch (Rekursiv, DNF, CNF) und versuchen Sie, sie so zu modifizieren,
                     dass Sie alle NOT-Gates loswerden.
@@ -227,22 +209,18 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Finden Sie alle monotonen Funktionen in zwei Variablen.
-                    Wie sieht es mit allen monotonen Funktionen in 
-                    {" "}
+                    Wie sieht es mit allen monotonen Funktionen in{" "}
                     <i>
                       drei
                     </i>
-                    {" "}
                     Variablen aus?
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Am Besten betrachten Sie das 
-                      {" "}
+                      Am Besten betrachten Sie das{" "}
                       <i>
                         Hasse-Diagramm
                       </i>
-                      {" "}
                       der
                       Partialordnungen auf Mengen \( \&#123;0,1\&#125;^2\) bzw. \( \&#123;0,1\&#125;^3\):
                     </Paragraph>
@@ -269,24 +247,20 @@ const Article = () => {
                     <b>
                       (Challenge).
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Bauen Sie einen Schaltkreis mit drei Input-Variablen \(x,y,z\), der drei
                     Output-Gates hat, die \(\bar&#123;x&#125;, \bar&#123;y&#125;, \bar&#123;z&#125;\) berechnen.
-                    Ihr Schaltkreis darf 
-                    {" "}
+                    Ihr Schaltkreis darf{" "}
                     <i>
                       höchstens zwei NOT-Gates
                     </i>
-                    {" "}
                     einhalten,
                     aber beliebig viele AND- und OR-Gates.
                   </Paragraph>
                   <figure>
                     <img
                       style="height:10em"
-                      src="../img/circuits/hasse-diagram.svg"
+                      src="../img/circuits/triple-negator.svg"
                       loading="lazy" />
                   </figure>
                 </div>
@@ -300,12 +274,10 @@ const Article = () => {
                     Ich lege Ihnen sehr ans Herz, die obigen Übungsaufgaben selbständig
                     zu bearbeiten. Falls Sie dennoch die Geduld verlieren,
                     so habe ich hier Lösungen ausgearbeitet. Auch mit dem Zweck, an dieser
-                    Stelle auf Beweismethoden wie 
-                    {" "}
+                    Stelle auf Beweismethoden wie{" "}
                     <i>
                       Induktion
                     </i>
-                    {" "}
                     und verschiedene
                     Beweisstrategien einzugehen.
                   </Paragraph>
@@ -324,18 +296,14 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Ich werde zweieinhalb Beweise für dieses Theorem vorstellen. Dies dient auch dazu,
-                    gängige 
-                    {" "}
+                    gängige{" "}
                     <i>
                       Beweistechniken
                     </i>
-                    {" "}
-                    und 
-                    {" "}
+                    und{" "}
                     <i>
                       Beweismethoden
                     </i>
-                    {" "}
                     zu illustrieren. Unter
                     Beweismethoden
                     verstehe ich hier formale Methoden wie
@@ -387,11 +355,7 @@ const Article = () => {
                   <Paragraph>
                     {" "}{" "}
                     <b>
-                      Erster Beweis. Top-Down mit{" "}
-                      <code>
-                        if-then-else
-                      </code>
-                      .
+                      Erster Beweis. Top-Down mit `if-then-else`.
                     </b>
                     {" "}{" "}
                   </Paragraph>
@@ -440,27 +404,21 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
-                        Als 
                         {" "}
+                        Als{" "}
                         <i>
                           Beweismethode
                         </i>
-                        {" "}
                         verwenden wir Induktion über \(n\), die Anzahl der Variablen.
                       </Paragraph>
                     </Paragraph>
                     <div class="alert-info">
                       <Paragraph>
                         Zur Erinnerung: bei einem Beweis per Induktion wollen wir eine Aussage
-                        der Form 
-                        {" "}
+                        der Form{" "}
                         <i>
                           Für alle natürlichen Zahlen \(n \in \N\) gilt \(P(n)\)
                         </i>
-                        {" "}
                         beweisen,
                         wobei \(P(n)\) wiederum eine Aussage ist, in der die Zahl \(n\) irgendwo vorkommt.
                         Bei einem Beweis durch Induktion zeigen wir nun,
@@ -468,21 +426,17 @@ const Article = () => {
                       <ol>
                         <li>
                           dass \(P(0)\) gilt (
-                          {" "}
                           <b>
                             Induktionsbasis
                           </b>
-                          {" "}
                           ),
                         </li>
                         <li>
                           dass, wenn \(P(n)\) für eine Zahl \(n \in \N \) gilt, dann sicherlich
                           auch \(P(n+1)\) gilt (
-                          {" "}
                           <b>
                             Induktionsschritt
                           </b>
-                          {" "}
                           ).
                         </li>
                       </ol>
@@ -499,12 +453,10 @@ const Article = () => {
                     <Paragraph>
                       <Paragraph>
                         Als erstes müssen wir nun unsere Aussage, die wir beweisen wollen (also die im Theorem)
-                        so formulieren, dass sie die Form 
-                        {" "}
+                        so formulieren, dass sie die Form{" "}
                         <i>
                           \(P(n)\) für alle \(n \in \N\)
                         </i>
-                        {" "}
                         annimmt.
                         Dies ist einfach, da die Zahl \(n\) bereits im Theorem vorkommt. Wir formulieren sie
                         also nun so um:
@@ -533,7 +485,6 @@ const Article = () => {
                         <b>
                           Induktionsbasis.
                         </b>
-                        {" "}
                         Wenn \(n=0\) ist, dann gibt es nur zwei mögliche
                         Boolesche
                         Funktionen,
@@ -554,10 +505,10 @@ const Article = () => {
                           style="margin:2ch"
                           class="listing">
                           <Paragraph>
-                            public boolean constantFalse()&#123;
+                            public boolean constantFalse() &#123;
                             return false;
                             &#125;
-                            public boolean constantTrue()&#123;
+                            public boolean constantTrue() &#123;
                             return true;
                             &#125;
                           </Paragraph>
@@ -574,12 +525,10 @@ const Article = () => {
                         <Paragraph>
                           <Paragraph>
                             Wenn wir die Induktionsbasis bei \(n=1\) ansetzen wollen, dann sehen wir, dass
-                            es 
-                            {" "}
+                            es{" "}
                             <i>
                               vier
                             </i>
-                            {" "}
                             Funktionen gibt: \(0, 1, x, \neg x\); all diese haben natürlich
                             einen
                             (sehr einfachen) Schaltkreis. Nur bei \(\neg x\) braucht unser Schaltkreis überhaupt
@@ -590,18 +539,14 @@ const Article = () => {
                         <Paragraph>
                           <Paragraph>
                             An diesem Punkt protestieren Sie vielleicht und sagen, dass \(0\) keine Funktion
-                            in 
-                            {" "}
+                            in{" "}
                             <i>
                               einer
                             </i>
-                            {" "}
-                            Variable ist, sondern in 
-                            {" "}
+                            Variable ist, sondern in{" "}
                             <i>
                               zwei
                             </i>
-                            {" "}
                             Variablen.
                             Und auch hier appelliere ich an Ihre Programmiererfahrung: weder Sie
                             noch der Java-Compiler werden Probleme mit der Funktion
@@ -611,18 +556,14 @@ const Article = () => {
                           style="margin:2ch"
                           class="listing">
                           <Paragraph>
-                            public boolean constantFalse(boolean x)&#123;
+                            public boolean constantFalse(boolean x) &#123;
                             return false;
                             &#125;
                           </Paragraph>
                         </pre>
                         <Paragraph>
                           <Paragraph>
-                            haben. Ja in der Tat, Java toleriert es, dass Sie{" "}
-                            <code>
-                              constantFalse
-                            </code>
-                            zweimal
+                            haben. Ja in der Tat, Java toleriert es, dass Sie `constantFalse`zweimal
                             deklariert haben, einmal als Funktion mit 0 Input-Variablen, einmal als
                             Funktion mit einer Input-Variablen. Um hundertprozentig korrekt zu sein, müssten wir
                             Funktionen \(\textnormal&#123;zero&#125;_n\) definieren als
@@ -669,12 +610,10 @@ const Article = () => {
                         \(P(n) \Rightarrow P(n+1)\) oder \(P(n-1) \Rightarrow P(n)\) zeigen,
                         kommt aufs Gleiche raus und unterscheidet sich nur in der Notation; in diesem
                         Falle ist es mir angenehmer, \(P(n-1) \Rightarrow P(n)\) zu zeigen. Wir dürfen
-                        also die 
-                        {" "}
+                        also die{" "}
                         <i>
                           Induktionshypothese
                         </i>
-                        {" "}
                         \(P(n-1)\) als gegeben annehmen:
                       </Paragraph>
                     </Paragraph>
@@ -684,9 +623,7 @@ const Article = () => {
                         <b>
                           Induktionshypothese.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Zu jeder Booleschen Funktion in \(n-1\) Variablen
                         gibt es einen äquivalenten Schaltkreis.
                       </Paragraph>
@@ -702,9 +639,7 @@ const Article = () => {
                         <b>
                           Ziel des Induktionsschritts.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Zu jeder Booleschen Funktion in \(n\) Variablen
                         gibt es einen äquivalenten Schaltkreis.
                       </Paragraph>
@@ -715,7 +650,6 @@ const Article = () => {
                         <b>
                           Beweistechnik/-strategie
                         </b>
-                        {" "}
                         . Um den Induktionsschritt
                         vollziehen zu können, müssen wir irgendwie die \(n\)-stellige
                         Funktion \(f\) auf sinnvolle Weise in \(n-1\)-stellige Funktionen
@@ -755,51 +689,38 @@ const Article = () => {
                         Da \(f_0\) und \(f_1\) jeweils nur \(n-1\) Input-Variablen haben,
                         können wir die Induktionshypothese anwenden und folgern,
                         dass es Boolesche Schaltkreise für sie gibt.
-                        Nach 
-                        {" "}
+                        Nach{" "}
                         <i>
                           Zerlegen in \(f_0, f_1\)
                         </i>
-                        {" "}
                         und
-                      </Paragraph>
-                      <Paragraph>
-                        {" "}{" "}
+                        {" "}
                         <i>
                           Anwenden der Induktionshypothese
                         </i>
-                        {" "}
                         müssen wir nun
-                        die Teilergebnisse wieder 
-                        {" "}
+                        die Teilergebnisse wieder{" "}
                         <i>
                           sinnvoll zusammenfügen
                         </i>
-                        {" "}
                         . Dies
-                        tun wir in diesem Falle mit einem{" "}
-                        <code>
-                          if-then-else
-                        </code>
-                        -Gate:
+                        tun wir in diesem Falle mit einem `if-then-else`-Gate:
                       </Paragraph>
                     </Paragraph>
                     <figure>
                       <img
-                        style="height:10em"
-                        src="../img/circuits/hasse-diagram.svg"
+                        style="height:15em"
+                        src="../img/circuits/top-down-if-then-else.svg"
                         loading="lazy" />
                     </figure>
                     <Paragraph>
                       <Paragraph>
                         Ich behaupte, dass obiger Schaltkreis tatsächlich \(f\) berechnet. Falls dies noch nicht
                         klar sein sollte, können wir auch dies formal beweisen, und zwar
-                        durch die Methode 
-                        {" "}
+                        durch die Methode{" "}
                         <i>
                           vollständige Fallunterscheidung.
                         </i>
-                        {" "}
                         Sei
                         nun also ein konkreter Input \(x_1,\dots,x_n\) gegeben.
                       </Paragraph>
@@ -850,9 +771,7 @@ const Article = () => {
                     <b>
                       Theorem 1.4.3, nochmals.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Zu jeder monotonen Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) gibt es einen monotonen
                     Schaltkreis (also ohne NOT-Gates), der \(f\) berechnet.
                   </Paragraph>
@@ -861,11 +780,7 @@ const Article = () => {
                   <Paragraph>
                     {" "}{" "}
                     <b>
-                      Erster Beweis. Top-Down mit{" "}
-                      <code>
-                        if-then-else
-                      </code>
-                      .
+                      Erster Beweis. Top-Down mit `if-then-else`.
                     </b>
                     {" "}{" "}
                   </Paragraph>
@@ -906,52 +821,39 @@ const Article = () => {
                       Diese Funktionen sind selbst wiederum monoton (versuchen Sie, dies formal zu zeigen,
                       wenn Sie Lust haben; oder versuchen Sie, es sich intuitiv klar zu machen).
                       Per Induktionshypothese gibt es also monotone Schaltkreise für \(f_0\) und \(f_1\). Wir
-                      kombinieren diese mit einem{" "}
-                      <code>
-                        if-then-else
-                      </code>
-                      -Gate und erhalten:
+                      kombinieren diese mit einem `if-then-else`-Gate und erhalten:
                     </Paragraph>
                     <figure>
                       <img
-                        style="height:10em"
-                        src="../img/circuits/hasse-diagram.svg"
+                        style="height:15em"
+                        src="../img/circuits/top-down-if-then-else-2.svg"
                         loading="lazy" />
                     </figure>
                     <Paragraph>
                       Die "durchgetrichenen" Kabel bedeuten, dass hier mehrere Kabel parallel laufen (also hier
                       \(n-1\)
                       viele).
-                      Erkennen Sie das Problem mit der Konstruktion? Klar: das{" "}
-                      <code>
-                        if-then-else
-                      </code>
-                      -Gate ist
+                      Erkennen Sie das Problem mit der Konstruktion? Klar: das `if-then-else`-Gate ist
                       nicht
                       monoton. Unser Schaltkreis schaut also in Wirklichkeit so aus:
                     </Paragraph>
                     <figure>
                       <img
-                        style="height:10em"
-                        src="../img/circuits/hasse-diagram.svg"
+                        style="height:18em"
+                        src="../img/circuits/top-down-if-then-else-3.svg"
                         loading="lazy" />
                     </figure>
                     <Paragraph>
                       und enthält ein NOT-Gate. Aber klar: wir können natürlich nicht die Konstruktion aus dem
                       vorherigen Beweis wiederholen und hoffen, dass alles klappt. Die Beweistechnik heißt ja auch
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         Bekanntes abwandeln
                       </i>
-                      {" "}
-                      , nicht 
-                      {" "}
+                      , nicht{" "}
                       <i>
                         Bekanntes kritiklos wiederholen
                       </i>
-                      {" "}
                       . Wie
                       können wir den obigen Schaltkreis abwandeln, dass er monoton wird, also das eine NOT-Gate
                       entfernen? Spontan fallen mir zwei Wege ein: wir können das NOT-Gate einfach
@@ -959,8 +861,8 @@ const Article = () => {
                     </Paragraph>
                     <figure>
                       <img
-                        style="height:10em"
-                        src="../img/circuits/hasse-diagram.svg"
+                        style="height:18em"
+                        src="../img/circuits/top-down-if-then-else-4.svg"
                         loading="lazy" />
                     </figure>
                     <Paragraph>
@@ -976,12 +878,10 @@ const Article = () => {
                       {" "}
                       Ich erlaube mir hier, aus Bequemlichkeit einfach \(f_1\) statt \(f_1(x_2,\dots,x_n)\) zu
                       schreiben.
-                      Auch ein 
-                      {" "}
+                      Auch ein{" "}
                       <i>
                         abuse of notation
                       </i>
-                      {" "}
                       . In der obigen Formel habe ich rechts
                       das \(x\) ausgeklammert; die Formel beginnt nun mit \(x \wedge ...\); falls
                       \(x=0\) ist, gibt sie also auf jeden Fall \(0\) aus; das kann im Allgemeinen nicht
@@ -999,8 +899,8 @@ const Article = () => {
                     </Paragraph>
                     <figure>
                       <img
-                        style="height:10em"
-                        src="../img/circuits/hasse-diagram.svg"
+                        style="height:18em"
+                        src="../img/circuits/top-down-if-then-else-monotone.svg"
                         loading="lazy" />
                     </figure>
                     <Paragraph>
@@ -1040,9 +940,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Wir machen eine Fallunterscheidung nach dem Wert von \(x_1\).
                     </Paragraph>
                     <ul>
@@ -1181,8 +1079,8 @@ const Article = () => {
                     </Paragraph>
                     <figure>
                       <img
-                        style="height:10em"
-                        src="../img/circuits/hasse-diagram.svg"
+                        style="height:18em"
+                        src="../img/circuits/top-down-if-then-else-monotone-finished.svg"
                         loading="lazy" />
                     </figure>
                     <Paragraph>
@@ -1202,8 +1100,7 @@ const Article = () => {
                     {" "}{" "}
                   </Paragraph>
                   <Paragraph>
-                    Als Beweisstrategie verwende ich wieder 
-                    {" "}
+                    Als Beweisstrategie verwende ich wieder{" "}
                     <i>
                       Bekanntes abwandeln.
                     </i>
@@ -1216,9 +1113,7 @@ const Article = () => {
                         <b>
                           Das Bekannte.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Erinnern Sie sich an die Konstruktion einer DNF-Formel auf Basis der gegebenen
                         Wahrheitstabelle. Für jedes \(n\)-Tupel \(\mathbf&#123;a&#125; := a_1,\dots,a_n) \in \&#123;0,1\&#125;^n\),
                         für welches \(f\) den Wert 1 ausgibt, konstruieren wir einen DNF-Term \(T_&#123;\mathbf&#123;a&#125;&#125;\),
@@ -1298,12 +1193,10 @@ const Article = () => {
                       </Paragraph>
                       <Paragraph>
                         {" "}
-                        Die Abkürzung \(\sat\) steht für 
-                        {" "}
+                        Die Abkürzung \(\sat\) steht für{" "}
                         <i>
                           satisfying assignments
                         </i>
-                        {" "}
                         , also
                         diejenigen Belegungen der Variablen, die \(f\) "erfüllen", also 1 werden lassen.
                         Wir bauen uns einen Schaltkreis \(F\):
@@ -1328,7 +1221,6 @@ const Article = () => {
                       <b>
                         Das Bekannte abwandeln.
                       </b>
-                      {" "}
                       Der Ausdruck
                       \(\bigvee_&#123;\mathbf&#123;a&#125; \in \sat(f)&#125; T_&#123;\mathbf&#123;a&#125;&#125;\) ist ja bereits
                       ein Schaltkreis (der Tiefe 2), allerdings im Allgemeinen kein
@@ -1367,9 +1259,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Definieren wir zusätzlich noch \(T''_&#123;\mathbf&#123;a&#125;&#125; := \bigwedge_&#123;i \in O_&#123;\mathbf&#123;a&#125;&#125;&#125;
                       \bar&#123;x&#125;_i\),
                       dann können wir \(T_&#123;\mathbf&#123;a&#125;&#125; = T'_&#123;\mathbf&#123;a&#125;&#125; \wedge T''_&#123;\mathbf&#123;a&#125;&#125;\) schreiben.
@@ -1412,16 +1302,14 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Um zu zeigen, dass beide dieselbe Funktion berechnen, müssen
                       wir zeigen, dass
                       {" "}
                     </Paragraph>
                     <Paragraph>
                       $$
-                      F(\mathbf&#123;x&#125;) = F'(\mathbf&#123;x&#125;) \textnormal&#123; für alle $\mathbf&#123;x&#125; \in \&#123;0,1\&#125;^n$.&#125;
+                      F(\mathbf&#123;x&#125;) = F'(\mathbf&#123;x&#125;) \textnormal&#123; für alle $\mathbf&#123;x&#125; \in \&#123;0,1\&#125;^n$. &#125;
                       $$
                     </Paragraph>
                     <Paragraph>
@@ -1474,9 +1362,7 @@ const Article = () => {
                         <b>
                           Strategie: was haben wir?
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Es ist immer gut, Dinge konkret "in der Hand zu haben". In diesem Falle?
                         Wir wissen ja, dass
                         \(F' = \bigvee_&#123;\mathbf&#123;a&#125; \in \sat(f)&#125; T'_&#123;\mathbf&#123;a&#125;&#125; \) ist. Wenn nun
@@ -1563,12 +1449,10 @@ const Article = () => {
                       <Paragraph>
                         {" "}
                         Wir können zwar nicht genau mit dem Finger auf einen Term von \(F\) zeigen,
-                        der 1 wird, wissen aber 
-                        {" "}
+                        der 1 wird, wissen aber{" "}
                         <i>
                           per Monotonie
                         </i>
-                        {" "}
                         , dass es so einen geben muss.
                       </Paragraph>
                       <span class="qed">

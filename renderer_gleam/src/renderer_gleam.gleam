@@ -23,8 +23,7 @@ type FragmentType {
 type Ti2SplitterError {
   NoTOCAuthorSuppliedContent
   MoreThanOneTOCAuthorSuppliedContent
-  NoPanelAuthorSuppliedContent
-  MoreThanOnePanelAuthorSuppliedContent
+  Message(String)
 }
 
 type Ti2EmitterError {
@@ -33,6 +32,13 @@ type Ti2EmitterError {
 
 fn blame_us(message: String) -> Blame {
   Blame(message, -1, [])
+}
+
+fn prepand_0(number: String) {
+  case string.length(number) {
+    1 -> "0" <> number
+    _ -> number
+  }
 }
 
 fn ti2_splitter(
@@ -50,22 +56,6 @@ fn ti2_splitter(
     },
   )
 
-  // use panel_vxml <- infra.on_error_on_ok(
-  //   infra.unique_child_with_tag(root, "PanelAuthorSuppliedContent"),
-  //   with_on_error: fn(error) {
-  //     case error {
-  //       infra.MoreThanOne -> Error(MoreThanOnePanelAuthorSuppliedContent)
-  //       infra.LessThanOne -> Error(NoPanelAuthorSuppliedContent)
-  //     }
-  //   },
-  // )
-  let assert Ok(chapters) = simplifile.read_directory("../emu_content/chapters")
-  let chapters =
-    chapters
-    |> list.filter(fn(c) { c != "__parent.emu" })
-    |> list.sort(string.compare)
-    |> list.map(fn(c) { string.drop_end(c, 4) })
-
   Ok(
     list.flatten([
       [
@@ -75,28 +65,28 @@ fn ti2_splitter(
           TOCAuthorSuppliedContent,
         ),
       ],
-      // [
-      //   #(
-      //     "components/PanelAuthorSuppliedContent.tsx",
-      //     panel_vxml,
-      //     PanelAuthorSuppliedContent,
-      //   ),
-      // ],
       list.index_map(chapter_vxmls, fn(vxml, index) {
-        let assert [chapter_name, ..] = list.drop(chapters, index)
+        // use title_attr <- infra.on_none_on_some(
+        //   infra.get_attribute_by_name(vxml, "title_en"),
+        //   with_on_none: Error(Ti2SplitterError(Message(tp <> " missing title_en attribute")))
+        // )
+        // use number_attribute <- infra.on_none_on_some(
+        //   infra.get_attribute_by_name(item, "number"),
+        //   with_on_none: Error(Ti2SplitterError(Message(tp <> " missing number attribute")))
+        // )
+        let assert Some(title_attr) = infra.get_attribute_by_name(vxml, "title_en")
+        let assert Some(number_attribute) = infra.get_attribute_by_name(vxml, "number")
+        let chapter_name = 
+            number_attribute.value |> string.split(".") |> list.map(prepand_0) |> string.join("-") 
+            <> "-" 
+            <> title_attr.value |> string.replace(" ", "-")
+
         #(
           "routes/lecture-notes/" <> chapter_name <> ".tsx",
           vxml,
           Chapter(index + 1),
         )
       }),
-      // list.index_map(bootcamp_vxmls, fn(c, index) {
-    //   #(
-    //     "routes/article/bootcamp" <> ins(index + 1) <> ".tsx",
-    //     c,
-    //     Bootcamp(index + 1),
-    //   )
-    // }),
     ]),
   )
 }
@@ -107,15 +97,12 @@ fn ti2_chapter_bootcamp_common_emitter(
   fragment_type: FragmentType,
   number: Int,
 ) -> Result(#(String, List(BlamedLine), FragmentType), Ti2EmitterError) {
-  // let blame =
-  //   BlamedAttribute(blame_us("ti2_fragment_emitterL65"), "number", ins(number))
+  let number_attribute = BlamedAttribute(blame_us("lbp_fragment_emitterL65"), "count", ins(number))
 
-  // use with_attribute <- infra.on_error_on_ok(
-  //   over: infra.prepend_unique_key_attribute(fragment, blame),
-  //   with_on_error: fn(_) {
-  //     Error(NumberAttributeAlreadyExists(fragment_type, number))
-  //   },
-  // )
+  use fragment <- infra.on_error_on_ok(
+    over: infra.prepend_unique_key_attribute(fragment, number_attribute),
+    with_on_error: fn(_) { Error(NumberAttributeAlreadyExists(fragment_type, number)) }
+  )
 
   let lines =
     list.flatten([
@@ -127,12 +114,6 @@ fn ti2_chapter_bootcamp_common_emitter(
               0,
               "import Chapter from \"~/components/Chapter\";",
             )
-          // Bootcamp(_) ->
-          //   BlamedLine(
-          //     blame_us("ti2_fragment_emitter"),
-          //     0,
-          //     "import Bootcamp from \"~/components/Bootcamp\";",
-          //   )
           _ -> panic as "bad fragment_type"
         },
       ],
@@ -219,10 +200,7 @@ fn ti2_emitter(
   case fragment_type {
     Chapter(n) ->
       ti2_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
-    // Bootcamp(n) ->
-      // ti2_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
     TOCAuthorSuppliedContent -> toc_emitter(path, vxml, fragment_type)
-    // PanelAuthorSuppliedContent -> panel_emitter(path, vxml, fragment_type)
   }
 }
 

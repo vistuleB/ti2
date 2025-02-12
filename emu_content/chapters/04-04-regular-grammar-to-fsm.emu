@@ -85,24 +85,10 @@
                         paar Abänderungen,
                         um die obigen Transformationen spannender zu machen. Ein Wort in unserer Sprache besteht aus
                         einer
-                        nichtleeren Folge von 
-                        _Labels_
-                        die jeweils durch einen 
-                        |> code
-
-                            .
-                        separiert sind.
+                        nichtleeren Folge von _Labels_die jeweils durch einen `.`separiert sind.
                         Jedes Label ist eine nichtleere Folge von Blöcken (ein nichtleerer String aus Buchstaben und
                         Zahlen), separiert
-                        durch 
-                        |> code
-
-                            :
-                        oder 
-                        |> code
-
-                            -
-                        aber niemals durch beides innerhalb eines Blockes.
+                        durch `:`oder `-`aber niemals durch beides innerhalb eines Blockes.
                         Also:
                         
                     
@@ -112,11 +98,7 @@
                         style text-align:center
 
                         
-                        
-                        |> code
-
-                            bla:bla:blue.xyz-12-zx.b:x:yyy:xxx:aaa
-                        
+                        `bla:bla:blue.xyz-12-zx.b:x:yyy:xxx:aaa`
                         
                     
                     ist ein Wort in \(L\), aber
@@ -125,34 +107,18 @@
                         style text-align:center
 
                         
-                        
-                        |> code
-
-                            a:b-c.hello
-                        
+                        `a:b-c.hello`
                         
                     
-                    ist kein Wort in \(L\), da das erste Label die Separatoren 
-                    |> code
-
-                        :
-                    und 
-                    |> code
-
-                        -
-                    mischt.
+                    ist kein Wort in \(L\), da das erste Label die Separatoren `:`und `-`mischt.
                     Habe ich
-                    \(L\) genau genug beschrieben? Stellen wir eine Meta-Frage: Was zählt überhaupt als 
-                    _genaue
-                    Beschreibung_
-                    einer
+                    \(L\) genau genug beschrieben? Stellen wir eine Meta-Frage: Was zählt überhaupt als _genaue
+                    Beschreibung_einer
                     Sprache? Wir können uns dem Mund fusselig reden und Beispiele und Nicht-Beispiele angeben, am Ende
                     aber werden
                     wir irgendwann beginnen, formale Regeln aufzustellen, die unsere Sprache beschreiben - wir werden
                     also im Prinzip
-                    eine 
-                    _Grammatik_
-                    schreiben. Tun wir dies also.
+                    eine _Grammatik_schreiben. Tun wir dies also.
                     
                     
                     |> h2
@@ -165,22 +131,10 @@
 
                         
                         Beginnen wir mit dem Alphabet.
-                        Da es 62 alphanumerische Zeichen gibt: 
-                        |> code
-
-                            a..zA..Z0..9
-                        und wir uns keine unnötige
+                        Da es 62 alphanumerische Zeichen gibt: `a..zA..Z0..9`und wir uns keine unnötige
                         Arbeit machen wollen,
-                        beschränken wir uns auf ein Zeichen: 
-                        |> code
-
-                            a
-                        . Dazu kommen die Separatoren
-                        
-                        |> code
-
-                            :-.
-                        . Also: \(\Sigma = \{a,.,:,-\}\). Stellen Sie sich einfach vor, \(a\) stehe
+                        beschränken wir uns auf ein Zeichen: `a`. Dazu kommen die Separatoren
+                        `:-.`. Also: \(\Sigma = \{a,.,:,-\}\). Stellen Sie sich einfach vor, \(a\) stehe
                         für beliebige alphanumerische Zeichen. Sowohl Grammatik als auch Automaten lassen sich einfach
                         anpassen.
                         Wir beginnen ganz unten und schreiben eine Grammatik für
@@ -194,30 +148,10 @@
                     |> p
 
                         
-                        Als nächstes führen wir ein nichtterminales Symbole \(C\) für Labels mit 
-                        |> code
-
-                            :
-                        ein
-                        und ein Nichtterminal \(D\) für Labels mit 
-                        |> code
-
-                            -
-                        . Wir wählen die Buchstaben \(C,D\),
+                        Als nächstes führen wir ein nichtterminales Symbole \(C\) für Labels mit `:`ein
+                        und ein Nichtterminal \(D\) für Labels mit `-`. Wir wählen die Buchstaben \(C,D\),
                         weil
-                        
-                        |> code
-
-                            :
-                        auf Englisch 
-                        _colon_
-                        und 
-                        |> code
-
-                            -
-                        
-                        _dash_
-                        heißt.
+                        `:`auf Englisch _colon_und `-`_dash_heißt.
                         \(C\)-Labels können wir uns nach dem Baukastenprizip bauen, in dem
                         wir 
                         |> a
@@ -242,11 +176,7 @@
 
                         
                         Von \(L\) lassen sich nun also alle Labels ableiten. Wir brauchen nun zum Schluss wieder
-                        eine Folge von \(L\), mit 
-                        |> code
-
-                            .
-                        separiert, müssen also wieder
+                        eine Folge von \(L\), mit `.`separiert, müssen also wieder
                         
                         |> a
                             href ./04-01-regular-grammars.html#operation-L(.L)*
@@ -273,10 +203,10 @@
                     \begin{align*}
                     S&amp;\rightarrow C \ | \ D \\
                     C&amp;\rightarrow a \ | \ aC \ | \ aC'\ | \ aS' \\
-                    C'&amp;\rightarrow&#123;:}C \\
+                    C'&amp;\rightarrow {:}C \\
                     D&amp;\rightarrow a \ | \ aD \ | \ a D' \ | \ aS' \\
                     D'&amp;\rightarrow \text{-}D \\
-                    S'&amp;\rightarrow&#123;.}S
+                    S'&amp;\rightarrow {.}S
                     \end{align*}
                     
                     
@@ -291,9 +221,7 @@
                         
                         Wir wollen nun alle Produktionen der Form \(Y \rightarrow x\) eliminieren. Hierfür nehmen wir
                         uns
-                        
-                        _ein_
-                        neues Nichtterminal \(E\) und ersetzen \(Y \rightarrow x\) durch \(Y \rightarrow
+                        _ein_neues Nichtterminal \(E\) und ersetzen \(Y \rightarrow x\) durch \(Y \rightarrow
                         xE\)
                         und fügen die Produktion \(E \rightarrow \epsilon\) hinzu.
                         
@@ -301,10 +229,10 @@
                     \begin{align*}
                     S&amp;\rightarrow C \ | \ D \\
                     C&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \\
-                    C'&amp;\rightarrow&#123;:}C \\
+                    C'&amp;\rightarrow {:}C \\
                     D&amp;\rightarrow aE \ | \ aD \ | \ a D' \ | \ aS' \\
                     D'&amp;\rightarrow \text{-}D \\
-                    S'&amp;\rightarrow&#123;.}S \\
+                    S'&amp;\rightarrow {.}S \\
                     E&amp;\rightarrow \epsilon
                     \end{align*}
                     
@@ -326,9 +254,7 @@
                         wobei
                         \(\alpha\) eine Wortform ist, die sich aus \(C\) ableiten lässt und nicht nur aus einem
                         einzelnen Nichtterminal
-                        besteht; dies trifft glücklicherweise auf 
-                        _alle_
-                        rechten Seiten der \(C\)-Produktionen
+                        besteht; dies trifft glücklicherweise auf _alle_rechten Seiten der \(C\)-Produktionen
                         zu; gleiches gilt
                         für \(D\). Wir erhalten:
                         
@@ -336,10 +262,10 @@
                     \begin{align*}
                     S&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \ | \ aD \ | \ a D' \\
                     C&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \ \\
-                    C'&amp;\rightarrow&#123;:}C \\
+                    C'&amp;\rightarrow {:}C \\
                     D&amp;\rightarrow aE \ | \ aD \ | \ a D' \ | \ aS' \ \\
                     D'&amp;\rightarrow \text{-}D \\
-                    S'&amp;\rightarrow&#123;.}S \\
+                    S'&amp;\rightarrow {.}S \\
                     E&amp;\rightarrow \epsilon
                     \end{align*}
                     
@@ -374,11 +300,7 @@
                     
                     |> p
 
-                        Ich habe die Zeichen 
-                        |> code
-
-                            .:-
-                        rot unterlegt, weil man sie sonst kaum erkennen würde in
+                        Ich habe die Zeichen `.:-`rot unterlegt, weil man sie sonst kaum erkennen würde in
                         dem Automaten.
                     
                     
@@ -399,9 +321,7 @@
                         definieren, er hätte also \(2^7 = 128\) viele Zustände. Das wäre jetzt für einen Rechner kein
                         Problem, aber
                         in diesem vorlesungsskript doch etwas ungünstig.
-                        Wir gehen 
-                        _lazy_
-                        vor, erschaffen Zustände in \(2^Q\) also nur dann, wenn wir sie
+                        Wir gehen _lazy_vor, erschaffen Zustände in \(2^Q\) also nur dann, wenn wir sie
                         brauchen.
                         Wir beginnen mit dem Zustand \(\{S\}\) und legen dann an jeden Zustand Kanten an, jeweils mit
                         \(a, :, -, . \) beschriftet, und erschaffen, falls nötig, dabei neue Zustände. In der folgenden
@@ -427,7 +347,7 @@
                             
                             
                             |> img
-                                style height:17em
+                                style height:10em
                                 src ../img/finite-state-automata/nfsm-example-03-big.svg
                                 loading lazy
                             
@@ -448,9 +368,7 @@
                                 
                                 
                                 |> img
-                                    style height:17em
-                                    src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                    loading lazy
+                                    src ../img/carousel-prev-icon.svg
                                 
                                 
                             
@@ -470,9 +388,7 @@
                                 
                                 
                                 |> img
-                                    style height:17em
-                                    src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                    loading lazy
+                                    src ../img/carousel-next-icon.svg
                                 
                                 
                             
@@ -644,217 +560,190 @@
                                 |> div
                                     class item active
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/01.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/02.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/03.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/04.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/05.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/06.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/07.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/08.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/09.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/10.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/11.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/12.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/13.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/14.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/15.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/16.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/17.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/18.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/19.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/20.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/21.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/22.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/23.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/24.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/25.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/26.svg
                                 
                                 
                                 |> div
                                     class item
                                     |> img
-                                        style height:17em
-                                        src ../img/finite-state-automata/nfsm-example-03-big.svg
-                                        loading lazy
+                                        style height:18em
+                                        src ../img/finite-state-automata/transformation/27.svg
                                 
                                 
                             
@@ -877,9 +766,9 @@
                     
                     \begin{align*}
                     S&amp;\rightarrow aT \\
-                    T&amp;\rightarrow&#123;.}S \ | \ aT \ | \&#123;:}aC \ | \ \text{-}a D \\
-                    C&amp;\rightarrow aC \ | \&#123;:}aC \ | \&#123;.}S \\
-                    D&amp;\rightarrow aD \ | \ \text{-}aD \ | \&#123;.}S
+                    T&amp;\rightarrow {.}S \ | \ aT \ | \ {:}aC \ | \ \text{-}a D \\
+                    C&amp;\rightarrow aC \ | \ {:}aC \ | \ {.}S \\
+                    D&amp;\rightarrow aD \ | \ \text{-}aD \ | \ {.}S
                     \end{align*}
                     
                     |> p
@@ -888,27 +777,12 @@
                         Die Zustände des deterministischen Automaten beschreiben im Prinzip das, was wir uns merken
                         müssen, wenn wir so einen String "parsen": Zustand \( \{C',C,E,D,D',S'\}\), der
                         in der Grammatik dann zum Nichtterminal \(T\) wird, bedeutet beispielsweise
-                        
                         _das Label hat schon begonnen, wir wissen aber noch nicht, ob es eines mit
-                        
-                        |> code
-
-                            :
-                        oder eines mit 
-                        |> code
-
-                            -
-                        ist.
+                        `:`oder eines mit `-`ist.
                         Der Zustand \(\{C',C,E,S'\}\) bzw. das Nichtterminal \(C\) heißt dann
-                        
-                        |> code
-
-                            :
-                        _wir sind innerhalb eines Labels mit 
+                        `:`_wir sind innerhalb eines Labels mit 
+                        _.
                         _
-                        .
-                        _
-                        
                         
                     
                     
@@ -947,8 +821,8 @@
                             
                             
                             |> img
-                                style height:17em
-                                src ../img/finite-state-automata/nfsm-example-03-big.svg
+                                style height:14em
+                                src ../img/finite-state-automata/divisibility-automaton/divisibility.svg
                                 loading lazy
                             
                             
@@ -959,9 +833,7 @@
                             
                             Dieser Automat hat 11 Zustände. Sein Potenzmengenautomat hätte also \(2^{11} = 2048\)
                             Zustände.
-                            Führen Sie die Konstruktion 
-                            _lazy_
-                            durch, indem Sie vom Startzustand \(\{S\}\)
+                            Führen Sie die Konstruktion _lazy_durch, indem Sie vom Startzustand \(\{S\}\)
                             ausgehend die Folgezustände konstruieren. Wieviele Zustände bekommen Sie?
                             
                         

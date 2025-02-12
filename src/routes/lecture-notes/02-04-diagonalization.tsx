@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={12}
         title_gr="Die Cantorsche Diagonalisation: $\N \not \approx \R$"
         title_en="diagonalization"
         number={2.4}
@@ -43,12 +44,10 @@ const Article = () => {
                     also das "diskrete" $\N$ und das "dichte" $\Q$ sicht hinsichtlich
                     ihrer Größe (Fachsprache: Kardinalität) nicht unterscheiden. Könnte es
                     denn sein, dass jede unendliche Menge $A$ abzählbar ist, also $A
-                    \approx \N$? Die Antwort ist ein klares 
-                    {" "}
+                    \approx \N$? Die Antwort ist ein klares{" "}
                     <i>
                       Nein
                     </i>
-                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>
@@ -62,7 +61,6 @@ const Article = () => {
                       <b>
                         (Überabzählbarkeit der reellen Zahlen).
                       </b>
-                      {" "}
                       $\N \not
                       \approx \R$.
                     </Paragraph>
@@ -75,7 +73,6 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}
                       Da wir bereits $\R \approx \&#123;0,1\&#125;^&#123;\N&#125;$
                       gesehen haben, reicht es, $\N \not \approx \&#123;0,1\&#125;^&#123;\N&#125;$ zu zeigen.
                       Wir müssen also zeigen, dass es keine Bijektion $f : \N \rightarrow
@@ -95,14 +92,12 @@ const Article = () => {
                         2 b
                       </i>
                       3 \dots \in \&#123;0,1\&#125;^&#123;\N&#125;$ finden, die nicht im
-                      Wertebereich (Englisch: 
-                      {" "}
+                      Wertebereich (Englisch:{" "}
                       <i>
                         image
                       </i>
-                      {" "}
                       ) von $f$ liegt: $\mathbf&#123;b&#125;
-                      \not \in&#123;\rm img&#125;(f)$. Was wiederum bedeutet, dass für jedes $n \in
+                      \not \in &#123;\rm img&#125;(f)$. Was wiederum bedeutet, dass für jedes $n \in
                       \N$ sich die unendliche 0/1-Folge $f(n)$ von $\mathbf&#123;b&#125;$
                       unterscheidet, also an mindestens einer Stelle.
                     </Paragraph>
@@ -168,7 +163,7 @@ const Article = () => {
                       </i>
                       n$. Da dies für
                       jedes $n$ gilt, folgern wir: die Folge $\mathbf&#123;d&#125;$ kommt nicht als
-                      Zeile der Tabelle vor, und damit $\mathbf&#123;d&#125; \not \in&#123;\rm img&#125;(f)$.
+                      Zeile der Tabelle vor, und damit $\mathbf&#123;d&#125; \not \in &#123;\rm img&#125;(f)$.
                       Die Funktion $f$ ist nicht surjektiv.
                       <span class="qed">
                         \(\square\)
@@ -222,7 +217,6 @@ const Article = () => {
                       <b>
                         Tipp:
                       </b>
-                      {" "}
                       Sie müssen den obigen Beweis auf die richtige
                       Weise abstrahieren, dann geht es ganz einfach.
                     </Paragraph>
@@ -253,12 +247,10 @@ const Article = () => {
                         Übungsaufgabe
                       </span>
                       Zeigen Sie, dass
-                      es in $(2^\N, \subseteq)$ eine 
-                      {" "}
+                      es in $(2^\N, \subseteq)$ eine{" "}
                       <i>
                         Kette
                       </i>
-                      {" "}
                       $X$ mit $X \approx \R$
                       gibt.
                     </Paragraph>

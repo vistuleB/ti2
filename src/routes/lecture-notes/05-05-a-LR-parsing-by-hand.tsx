@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={33}
         title_gr="LR-Parser per Hand entwerfen"
         title_en="a LR parsing by hand"
         number={5.5}
@@ -116,15 +117,13 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       <Paragraph>
-                        also 
-                        {" "}
+                        also{" "}
                         <i>
                           beliebig viele $a$'s, gefolgt von gleich vielen oder weniger $b$'s (aber mindestens
                           einem), abgeschlossen
                           mit einem $c$
                           {" "}
                         </i>
-                        {" "}
                         . Eine
                         Grammatik ist schnell geschrieben:
                       </Paragraph>
@@ -158,12 +157,10 @@ const Article = () => {
                     anzuwenden ist. Hierbei haben wir immer versucht, für das am weitesten
                     links stehende Nichtterminal eine Regel zu finden. Wir beschreiben nun ein ganz anderes
                     Vorgehen: wir lesen das Eingabewort $v$ von links nach rechts, unterhalten also
-                    einen 
-                    {" "}
+                    einen{" "}
                     <i>
                       Stack
                     </i>
-                    {" "}
                     , auf dem ein Präfix $\gamma$ von $v$ liegt,
                     bis wir am rechten Ende die rechte Seite einer Produktionsregel erkennen - bis also
                     $\gamma = \alpha \beta$ und es eine Produktion $X \rightarrow \beta$ gibt. Dann ersetzen
@@ -191,7 +188,7 @@ const Article = () => {
                     href="#aaabbc-sprache"
                     class="right carousel-control-next-icon">
                     <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
+                      <img src="../img/carousel-next-icon.svg" />
                     </div>
                   </a>
                   <div
@@ -275,73 +272,119 @@ const Article = () => {
                       style="display:inline-block"
                       class="carousel-inner">
                       <div class="item active">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-01.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-02.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-03.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-04.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-05.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-06.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-07.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-08.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-09.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-10.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-11.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-12.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-13.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-14.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-15.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-16.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-17.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-18.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-19.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-20.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-21.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-22.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-first-example/aaaabbbc-example-01-23.svg" />
                       </div>
                     </div>
                   </div>
@@ -366,7 +409,7 @@ const Article = () => {
                     href="#arithm"
                     class="right carousel-control-next-icon">
                     <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
+                      <img src="../img/carousel-next-icon.svg" />
                     </div>
                   </a>
                   <div
@@ -447,70 +490,114 @@ const Article = () => {
                       style="display:inline-block"
                       class="carousel-inner">
                       <div class="item active">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-01.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-02.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-03.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-04.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-05.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-06.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-07.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-08.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-09.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-10.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-11.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-12.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-13.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-14.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-15.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-16.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-17.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-18.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-19.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-20.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-21.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:18em"
+                          src="../img/context-free/LR/LR-arithmetic-example/arithmetic-example-01-22.svg" />
                       </div>
                     </div>
                   </div>
@@ -545,12 +632,10 @@ const Article = () => {
                       beginnen links (daher das L) und suchen eine Rechtsableitung (daher das R), allerdings in
                       umgekehrter
                       Reihenfolge. Statt von $S$ ausgehend $w$ abzuleiten, also $S \Step&#123;&#125;^* w$, versuchen
-                      wir $w$ zu $S$ zu 
-                      {" "}
+                      wir $w$ zu $S$ zu{" "}
                       <i>
                         reduzieren
                       </i>
-                      {" "}
                       , also $w \Pets&#123;&#125;^* S$.
                       Allerdings ist das nicht immer so einfach: manchmal ist nicht auf den ersten Blick erkennbar,
                       welche Produktionsregel wir (rückwärts) anwenden sollen. Hier ein etwas konstruiertes Beispiel:
@@ -640,12 +725,10 @@ const Article = () => {
                       $S \Step&#123;&#125;^* \alpha X w \Step&#123;&#125; \alpha \beta w$ in einer Rechtsableitung vorkommen kann.
                       Das hängt von der Grammatik ab. Aber selbst dann brauchen wir einen Algorithmus, der
                       uns sagen kann, ob $XYa \Pets&#123;&#125; XYY$ ein korrekter Reduktionsschritt ist. Dies scheint
-                      komplexer, als $w \stackrel&#123;?&#125;&#123;\in&#125; L$ zu entscheiden, ist aber 
-                      {" "}
+                      komplexer, als $w \stackrel&#123;?&#125;&#123;\in&#125; L$ zu entscheiden, ist aber{" "}
                       <i>
                         einfacher
                       </i>
-                      {" "}
                       !
                     </Paragraph>
                   </Paragraph>

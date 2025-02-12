@@ -101,12 +101,8 @@
                         die zu multiplizierenden Zahlen) auch
                         die Rechenvorschrift (das Programm) als Eingabe übergibt. Hätte man so eine Maschine, dann
                         müsste man nicht für jede neue Aufgabe
-                        eine neue Maschine entwerfen; man könnte 
-                        _eine_
-                        Maschine bauen und sie für die jeweilige
-                        Aufgabe 
-                        _programmieren_
-                        , indem
+                        eine neue Maschine entwerfen; man könnte _eine_Maschine bauen und sie für die jeweilige
+                        Aufgabe _programmieren_, indem
                         ihr auf einem separaten Eingabeband die Rechenvorschrift überreicht. Von heute aus gesehen ist
                         diese Idee nicht mehr allzu überraschend, weil
                         diese Maschinen überall anzutreffen sind. Damals aber war es revolutionär. Um dies, zumindest
@@ -204,9 +200,7 @@
                             |> li
 
                                 
-                                
-                                *ablehnt*
-                                , falls \(c\) keine gültige Codierung einer Turingmaschine \(M\)
+                                *ablehnt*, falls \(c\) keine gültige Codierung einer Turingmaschine \(M\)
                                 ist,
                                 
                             
@@ -223,20 +217,17 @@
                                     
                                     |> li
 
-                                        *akzeptiert*
-                                        falls \(M(x)\) akzeptiert;
+                                        *akzeptiert*falls \(M(x)\) akzeptiert;
                                     
                                     
                                     |> li
 
-                                        *ablehnt*
-                                        , falls \(M(x)\) ablehnt
+                                        *ablehnt*, falls \(M(x)\) ablehnt
                                     
                                     
                                     |> li
 
-                                        *nicht terminiert*
-                                        , falls \(M(x)\) nicht terminiert.
+                                        *nicht terminiert*, falls \(M(x)\) nicht terminiert.
                                     
                                     
                                 
@@ -272,8 +263,7 @@
                     
                     |> p
 
-                        *Erster, zum scheitern verurteilter Versuch.*
-                        Sei \(M\) eine Turingmaschine
+                        *Erster, zum scheitern verurteilter Versuch.*Sei \(M\) eine Turingmaschine
                         mit Eingabealphabet \(\Sigma\), Arbeitsalphabet \(\Gamma\), Zustandsmenge \(Q\), Startzustand
                         \(\qstart\), akzeptierendem Zustand
                         \(\qaccept\) und Übergangsfunktion \(\delta\).
@@ -294,9 +284,7 @@
                         Sehen Sie das Problem? Das Codierungsalphabet ist nicht uniform: wir brauchen, abhängig von der
                         Zustandsmenge \(Q\) und
                         dem Bandalphabet \(\Gamma\) jeweils neue Alphabete. Wir wollen aber ein \(\Lambda\), da für
-                        
-                        _alle_
-                        Turingmaschinen
+                        _alle_Turingmaschinen
                         mit Eingabealphabet \(\Sigma\) funktioniert.
                         
                     
@@ -328,7 +316,7 @@
                         
                         |> img
                             style height:10em
-                            src ../img/turing-machines/exampe-2-aabbcc/delta-table.svg
+                            src ../img/turing-machines/exampe-2-aabbcc/delta-table-encoded.svg
                             loading lazy
                         
                         
@@ -336,9 +324,7 @@
                     
                     |> p
 
-                        Wenn wir dies nun als 
-                        _ein_
-                        Wort in obigen Schema schreiben, können wir für eine
+                        Wenn wir dies nun als _ein_Wort in obigen Schema schreiben, können wir für eine
                         Tabellenzelle
                         \(\delta(q,x) = (r,y,R)\) nicht einfach \(qxryR\) schreiben, auch nicht einfach die Codierungen
                         zusammenschreiben:
@@ -386,9 +372,7 @@
                     |> p
 
                         
-                        Wir können nun 
-                        _jede_
-                        Turingmaschine
+                        Wir können nun _jede_Turingmaschine
                         über dem Alphabet
                         \(\Sigma\) codieren als Wort über dem Alphabet
                         \begin{align*}
@@ -409,9 +393,7 @@
 
                                 Definition/Beobachtung.
                             Zu einem Eingabealphabet
-                            $\Sigma$ definieren wir das 
-                            _Codierungsalphabet_
-                            
+                            $\Sigma$ definieren wir das _Codierungsalphabet_
                             $\Lambda := \writelambda$,
                             wobei wir annehmen, dass $\texttt{#}, \texttt{,}, \texttt{L}, \texttt{S}, \texttt{R},
                             \texttt{;}
@@ -426,12 +408,8 @@
                         class alert-info container
 
                         
-                        
-                        *Anmerkungen:*
-                         
-                        das Wort 
-                        _Codierung_
-                        suggeriert, dass wir, gegeben
+                        *Anmerkungen:* 
+                        das Wort _Codierung_suggeriert, dass wir, gegeben
                         den String $c = \enc(M)$ die
                         ursprüngliche Turingmaschine $M$ rekonstruieren können. Das gilt natürlich nur
                         beschränkt: eventuell decodieren wir $c$ zu einer Maschine $M'$, die sich

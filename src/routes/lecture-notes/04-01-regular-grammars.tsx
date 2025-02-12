@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={21}
         title_gr="Reguläre Grammatiken"
         title_en="regular grammars"
         number={4.1}
@@ -55,22 +56,17 @@ const Article = () => {
                       Definition
                     </span>
                     Eine kontextfreie Sprache \(G = (\Sigma, N, P, S)\) heißt
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       regulär
                     </i>
-                    {" "}
                     , wenn jede Produktion eine der folgenden vier Formen
                     hat: \begin&#123;align*&#125; X&amp;\rightarrow aY \\ X&amp;\rightarrow a \\ X&
                     \rightarrow Y \\ X&amp;\rightarrow \epsilon \end&#123;align*&#125; Eine Sprache
-                    \(L \subseteq \Sigma^*\) heißt 
-                    {" "}
+                    \(L \subseteq \Sigma^*\) heißt{" "}
                     <i>
                       regulär
                     </i>
-                    {" "}
                     , wenn es eine reguläre
                     Grammatik \(G\) gibt, die sie erzeugt, also \(L(G) = L\).
                   </Paragraph>
@@ -194,7 +190,7 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Betrachten Sie die Sprache \begin&#123;align*&#125; L := \&#123;x \in \&#123;a,b\&#125;^* \ | \
-                    \textnormal&#123;in $x$ kommt $b$ mindestens 4 mal vor&#125;\&#125; \ \end&#123;align*&#125;
+                    \textnormal&#123;in $x$ kommt $b$ mindestens 4 mal vor &#125;\&#125; \ \end&#123;align*&#125;
                     und entwerfen Sie eine reguläre Grammatik für \(L\).
                   </Paragraph>
                 </div>
@@ -212,21 +208,12 @@ const Article = () => {
                   <Paragraph>
                     {" "}wobei \(n
                     \geq 2\) und jedes \(x_i \in \&#123;a,b\&#125;^+\), also zum Beispiel
-                  </Paragraph>
-                  <Paragraph>
-                    <code>
-                      a.bba.aba
-                    </code>
-                    aber nicht{" "}
-                    <code>
-                      aba
-                    </code>
-                    und auch nicht
-                  </Paragraph>
-                  <Paragraph>
+                    `a.bba.aba`aber nicht `aba`und auch nicht
+                    {" "}
                     <code>
                       a.b..a
                     </code>
+                    {" "}
                     Entwerfen Sie eine reguläre Grammatik für diese Sprache.
                   </Paragraph>
                 </div>
@@ -241,12 +228,10 @@ const Article = () => {
                     <a href="./04-00-formal-languages.html#email-context-free-grammar">
                       Grammatik für korrekte Emailadressen
                     </a>
-                    im letzten Abschnitt war 
-                    {" "}
+                    im letzten Abschnitt war{" "}
                     <i>
                       nicht
                     </i>
-                    {" "}
                     regulär. Allerdings können wir
                     eine reguläre Grammatik angeben, die die gleiche Sprache erzeugt.
                   </Paragraph>
@@ -288,24 +273,19 @@ const Article = () => {
                       Definition
                     </span>
                     Eine Grammatik \(G = (\Sigma, N, P, S)\) heißt
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       erweitert regulär
                     </i>
-                    {" "}
                     , wenn jede Produktion eine der folgenden
                     Formen hat: \begin&#123;align*&#125; X&amp;\rightarrow \alpha Y \\ X&amp;\rightarrow
                     \alpha \\ \end&#123;align*&#125; hat, wobei \(X \in N\) und \(\alpha \in
                     \Sigma^*\) ist. Im Unterschied zu den eigentlich regulären Grammatiken
                     erlauben wir also mehrere terminale Symbole auf der rechten Seite,
-                    sofern Sie 
-                    {" "}
+                    sofern Sie{" "}
                     <i>
                       vor
                     </i>
-                    {" "}
                     dem Nichtterminal vorkommen.
                   </Paragraph>
                 </div>
@@ -325,9 +305,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Wir ersetzen einfach jede Regel der Form{" "}
                   </Paragraph>
                   <Paragraph>
@@ -414,9 +392,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Produktionen vom Typ 2, also von der Form \(X \rightarrow a\) können
                       wir leicht eliminieren, indem wir ein neues Nichtterminalsymbol \(E
                       \not \in \Sigma \cup N\) einführen, jedes \(X \rightarrow a\) durch
@@ -463,11 +439,11 @@ const Article = () => {
                       indem wir die Mengen \begin&#123;align*&#125; N
                       <i>
                         k(X) := \&#123; Y \in N \ | \
-                        \textnormal&#123; es gibt&#125; X
+                        \textnormal&#123; es gibt &#125; X
                       </i>
                       1,\dots, X
                       <i>
-                        &#123;l-1&#125; \textnormal&#123; mit&#125; X
+                        &#123;l-1&#125; \textnormal&#123; mit &#125; X
                         \rightarrow X
                       </i>
                       1 \rightarrow X
@@ -475,7 +451,7 @@ const Article = () => {
                         2 \cdots X
                       </i>
                       &#123;l-1&#125; \rightarrow Y
-                      \textnormal&#123; und&#125; l \leq k \&#125; \end&#123;align*&#125; definieren, also die
+                      \textnormal&#123; und &#125; l \leq k \&#125; \end&#123;align*&#125; definieren, also die
                       Menge derjenigen Nichtterminalsymbole, die sich in bis zu \(k\)
                       Schritten von \(X\) aus ableiten lassen. Wir berechnen die \(N_k\)
                       iterativ wie folgt: \begin&#123;align*&#125; N
@@ -485,35 +461,21 @@ const Article = () => {
                       &#123;k+1&#125;
                       (X)&amp;:= N
                       <i>
-                        k \cup \&#123;Z \in N \ | \ \textnormal&#123; es gibt&#125; Y \in
+                        k \cup \&#123;Z \in N \ | \ \textnormal&#123; es gibt &#125; Y \in
                         N
                       </i>
-                      k(X) \textnormal&#123; mit&#125; Y \rightarrow Z \&#125; \ . \end&#123;align*&#125; Die
+                      k(X) \textnormal&#123; mit &#125; Y \rightarrow Z \&#125; \ . \end&#123;align*&#125; Die
                       Menge \(N_&#123;k+1&#125;(X)\) lässt sich also mit zwei geschachtelten
-                    </Paragraph>
-                    <Paragraph>
-                      <code>
-                        for
-                      </code>
-                      -Schleifen berechnen: eine über die \(Y \in N_k\)
+                      `for`-Schleifen berechnen: eine über die \(Y \in N_k\)
                       und eine über die Produktionen \(Y \rightarrow Z\). Um
                       \(N_&#123;k+1&#125;(X)\) für
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         alle
                       </i>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       \(X \in N\) zu berechnen, brauchen wir eine weitere
-                    </Paragraph>
-                    <Paragraph>
-                      <code>
-                        for
-                      </code>
-                      -Schleife. Wir berechnen nun \(N_&#123;\geq k&#125;\) für
+                      `for`-Schleife. Wir berechnen nun \(N_&#123;\geq k&#125;\) für
                       steigende \(k\), bis keine weitere Veränderung eintritt.
                     </Paragraph>
                   </Paragraph>
@@ -648,11 +610,7 @@ const Article = () => {
                       Ding 1, dann Ding 2, wie beispielsweise
                       {" "}
                       <i>
-                        Username, dann{" "}
-                        <code>
-                          @
-                        </code>
-                        , dann Domainname
+                        Username, dann `@`, dann Domainname
                       </i>
                       {" "}{" "}
                     </li>
@@ -661,10 +619,7 @@ const Article = () => {
                       {" "}
                       <i>
                         eine beliebig lange Folge von Labels, mit
-                        <code>
-                          .
-                        </code>
-                        separiert.
+                        `.`separiert.
                       </i>
                       {" "}{" "}
                     </li>
@@ -674,7 +629,6 @@ const Article = () => {
                       <i>
                         Bindestrich oder alphanumerisches Zeichen
                       </i>
-                      {" "}
                       .
                     </li>
                   </ul>
@@ -693,9 +647,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Unsere Strategie ist, reguläre Grammatiken \(G_1\) für \(L_1\) und
                       \(G_2\) für \(L_2\) zu betrachten und daraus eine neue reguläre
                       Grammatik \(G\) für \(L_1 \cup L_2\) zu bauen. Aus \(G\) sollen also
@@ -738,15 +690,11 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       In einem nächsten Schritt werden wir zeigen, dass Konstrukte wie
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         Ding 1, gefolgt von Ding 2
                       </i>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       mit regulären Grammatiken
                       realisierbar sind.
                     </Paragraph>
@@ -760,9 +708,7 @@ const Article = () => {
                       <b>
                         (Kleenesche Hülle).
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Seien \(L_1, L_2 \in \Sigma^*\) zwei Sprachen. Die
                       Verknüpfungssprache \(L_1 \circ L_2\) ist definiert als
                       \begin&#123;align*&#125; L
@@ -792,9 +738,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Wir im letzten Beweis nehmen wir uns eine reguläre Grammatik \(G_1 =
                       (\Sigma, N_1, P_1, S_1)\) für \(L_1\) und \(G_2 = (\Sigma, N_2, P_2,
                       S_2)\) für \(L_2\). Ob die beiden Alphabete die gleichen sind, also
@@ -853,13 +797,10 @@ const Article = () => {
                   </div>
                   <Paragraph>
                     In einem dritten Lemma werden wir zeigen, dass die Konstruktion
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Ding, beliebig oft wiederholt
                     </i>
-                    {" "}
                     mit regulären Sprachen möglich
                     ist.
                   </Paragraph>
@@ -900,9 +841,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik für \(L\). Wir
                       könnten ein neues Startsymbol \(S'\) einführen und \begin&#123;align*&#125; S'
                       &amp;\rightarrow \epsilon \\ S'&amp;\rightarrow SS' \end&#123;align*&#125; als zwei
@@ -930,63 +869,36 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>
-                        <code>
-                          https://web1.hszg.de/modulkatalog/index.php?activTopic=3&activNav=2&stid=566&frei=1&kennz=suche&activCont=1
-                        </code>
+                        <Paragraph>
+                          {" "}{" "}
+                          <code>
+                            https://web1.hszg.de/modulkatalog/index.php?activTopic=3&activNav=2&stid=566&frei=1&kennz=suche&activCont=1
+                          </code>
+                          {" "}{" "}
+                        </Paragraph>
                       </Paragraph>
                       Der URL besteht aus mehreren Teilen:
                     </Paragraph>
                     <ol>
                       <li>
-                        Dem Protokoll. Hier ist das{" "}
-                        <code>
-                          https
-                        </code>
-                        ; es kann aber
-                        auch{" "}
-                        <code>
-                          http
-                        </code>
-                        oder{" "}
-                        <code>
-                          ftp
-                        </code>
-                        sein.
+                        Dem Protokoll. Hier ist das `https`; es kann aber
+                        auch `http`oder `ftp`sein.
                       </li>
                       <li>
-                        Dem{" "}
-                        <code>
-                          ://
-                        </code>
-                        nach dem Protokoll.
+                        Dem `://`nach dem Protokoll.
                       </li>
                       <li>
-                        Dem Domainnamen, hier{" "}
-                        <code>
-                          web1.hszg.de
-                        </code>
-                        .
+                        Dem Domainnamen, hier `web1.hszg.de`.
                       </li>
                       <li>
                         Optional nun einem Pfad, hier
-                        <code>
-                          /modulkatalog/index.php
-                        </code>
-                        .
+                        `/modulkatalog/index.php`.
                       </li>
                       <li>
-                        Falls ein Pfad enthalten ist, dann optional ein{" "}
-                        <code>
-                          ?
-                        </code>
-                        ,
+                        Falls ein Pfad enthalten ist, dann optional ein `?`,
                         gefolgt von einem Query-String; dieser besteht aus beliebig
                         vielen, aber mindestens einem Paar der Form Key=Value, wobei die
-                        Paare mit einem{" "}
-                        <code>
-                          &
-                        </code>
-                        separiert sind.
+                        Paare mit einem `&`separiert sind.
                       </li>
                     </ol>
                     <Paragraph>
@@ -1024,9 +936,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Dies folgt sofort aus den vorherigen Theorem, weil wir nur
                       Konkatenation \(\circ\) und Kleenesche Hülle \(^*\) verwenden.
                       Dennoch lohne es sich, explizit für \(L'\) eine Grammatik zu bauen.
@@ -1052,13 +962,10 @@ const Article = () => {
                         </Paragraph>
                       </Paragraph>
                       Die neue Grammatik \(G'\) ist eine
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         erweitert reguläre Grammatik
                       </i>
-                      {" "}
                       , da Regeln wie \(Y \rightarrow
                       acS\) auf der rechten Seite zwei Terminalsymbole haben. Wir müssen
                       sie also erst noch in eine "richtig reguläre" umwandeln. In

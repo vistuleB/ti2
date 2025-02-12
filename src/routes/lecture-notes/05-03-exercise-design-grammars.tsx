@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={31}
         title_gr="Rechnerübung: Gute kontextfreie Grammatiken entwerfen"
         title_en="exercise design grammars"
         number={5.3}
@@ -124,29 +125,19 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Schreiben Sie eine kontextfreie Grammatik für die Sprache aller
-                    "korrekten" URLs; also Folgen von mindestens zwei 
-                    {" "}
+                    "korrekten" URLs; also Folgen von mindestens zwei{" "}
                     <i>
                       Labels
                     </i>
-                    {" "}
                     , die
-                    durch{" "}
-                    <code>
-                      .
-                    </code>
-                    separiert sind. Sie können den "Regelvorschlag"
+                    durch `.`separiert sind. Sie können den "Regelvorschlag"
                     ganz links unten in der App reinkopieren, um automatisch Regeln für alphanumerische
                     Zeichen zu bekommen (allerdings verschlechtert das die Laufzeit; ich habe erstmal
                     gar nicht auf Effizienz geachtet).
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Geben Sie das Eingabewort{" "}
-                      <code>
-                        a.aaaaa.aaaa.aaaa.aaaa.aaaa
-                      </code>
-                      ein. Wie
+                      Geben Sie das Eingabewort `a.aaaaa.aaaa.aaaa.aaaa.aaaa`ein. Wie
                       sieht Ihr Backtrack-Baum aus? Hat er viele Sackgassen? Können Sie Ihre Grammatik
                       so abändern, dass sie zwar noch die gleiche Sprache erzeugt, aber keine / nur wenige
                       Sackgassen hat?
@@ -201,9 +192,7 @@ const Article = () => {
                     <b>
                       (Challenge)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Geben Sie die Grammatik hier ein:
                   </Paragraph>
                   <Paragraph>
@@ -215,19 +204,12 @@ const Article = () => {
                       </Paragraph>
                     </pre>
                     Überlegen Sie, was diese "bedeutet". Sie sehen, die Grammatik ist
-                    nicht eindeutig. Das Wort{" "}
-                    <code>
-                      [([()(
-                    </code>
-                    hat zwei
+                    nicht eindeutig. Das Wort `[([()(`hat zwei
                     verschiedene Ableitungsbäume. Können Sie eine äquivalente
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       eindeutige
                     </i>
-                    {" "}
                     Grammatik schreiben?
                   </Paragraph>
                 </div>
@@ -240,17 +222,12 @@ const Article = () => {
                     <b>
                       (Challenge)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
-                    Die folgende Grammatik hat User 
                     {" "}
+                    Die folgende Grammatik hat User{" "}
                     <i>
                       babou
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     auf{" "}
                     <a href="https://cstheory.stackexchange.com/questions/22520/example-of-context-free-grammar-that-triggers-exponential-behaviour-without-memo">
                       StackExchange
@@ -266,12 +243,10 @@ const Article = () => {
                       </Paragraph>
                     </pre>
                     Das ist aber keine Kunst, da die Grammatik uneindeutig ist.
-                    Können Sie eine 
-                    {" "}
+                    Können Sie eine{" "}
                     <i>
                       eindeutige
                     </i>
-                    {" "}
                     Grammatik angebene, die ähnlich
                     exponentielles Verhalten zeigt? Exponentiell heißt: mit jedem
                     zusätlichen Zeichen des Eingabewortes kann die Größe des
@@ -287,14 +262,11 @@ const Article = () => {
                     <b>
                       (Super-Challenge; ich hab selbst keine Lösung)
                     </b>
-                    {" "}
                     .
-                    Finden Sie eine kontextfreie Sprache \(L\), für die 
-                    {" "}
+                    Finden Sie eine kontextfreie Sprache \(L\), für die{" "}
                     <i>
                       jede
                     </i>
-                    {" "}
                     Grammatik,
                     die \(L\) erzeugt, unter exponentiell großen Backtrack-Bäumen leidet.
                   </Paragraph>

@@ -61,9 +61,7 @@
                     |> p
 
                         Im letzten Teilkapitel haben wir den CYK-Algorithmus kennengelernt. Dieser verwendet
-                        das Prinzip des 
-                        _Dynamic Programming_
-                        , um für eine allgemeine kontextfreie
+                        das Prinzip des _Dynamic Programming_, um für eine allgemeine kontextfreie
                         Grammatik \(G\) und ein Eingabewort \(\gamma\) einen Ableitungsbaum zu finden (oder
                         festzustellen,
                         dass es
@@ -149,7 +147,7 @@
                             
                             |> img
                                 style height:14em
-                                src ../img/context-free/pumping-lemma-01.svg
+                                src ../img/context-free/pumping-lemma-02.svg
                                 loading lazy
                             
                             
@@ -183,8 +181,8 @@
                                 
                                 
                                 |> img
-                                    style height:14em
-                                    src ../img/context-free/pumping-lemma-01.svg
+                                    style height:18em
+                                    src ../img/context-free/pumping-lemma-03.svg
                                     loading lazy
                                 
                                 
@@ -201,7 +199,7 @@
                                 
                                 |> img
                                     style height:14em
-                                    src ../img/context-free/pumping-lemma-01.svg
+                                    src ../img/context-free/pumping-lemma-04.svg
                                     loading lazy
                                 
                                 
@@ -219,9 +217,7 @@
                         |> p
 
                             
-                            Wir haben also gezeigt, dass die kontextfreie Grammatik \(G\) 
-                            _nicht_
-                            die Sprache
+                            Wir haben also gezeigt, dass die kontextfreie Grammatik \(G\) _nicht_die Sprache
                             \(L\) erzeugt: wenn wir alle \(\gamma \in L\) erzeugen kann, dann
                             kann sie auch Wörter wie \(uwy \not \in L\) erzeugen. Da unsere Argumentation keine
                             Annahmen über \(G\) getroffen hat, außer, dass sie kontextfrei ist, haben wir gezeigt:
@@ -231,8 +227,7 @@
                         
                         |> p
 
-                            *Vorsicht!*
-                            Wir haben angenommen, das \(uwy\) weniger Zeichen hat
+                            *Vorsicht!*Wir haben angenommen, das \(uwy\) weniger Zeichen hat
                             als \(uvwxy\), weil ja \(v\) und \(x\) fehlen. Kann aber \(v = x = \epsilon\) eintreten?
                             Dies würde unsere Argumentation zerstören. Hier kommt wieder die
                             Chomsky-Normalform zur Hilfe: es gibt keine Produktionen \(X \rightarrow \epsilon\),
@@ -248,9 +243,7 @@
                     
                     |> p
 
-                        Die obige Argumentationslinie ist als 
-                        _Pumping Lemma für kontextfreie Sprachen_
-                        bekannt:
+                        Die obige Argumentationslinie ist als _Pumping Lemma für kontextfreie Sprachen_bekannt:
                         
                     
                     
@@ -264,9 +257,7 @@
 
                             Theorem
                         
-                        
                         *(Pumping Lemma für kontextfreie Sprachen)*
-                        
                         Für jede kontextfreie Grammatik \(G\) gibt es eine Zahl \(p \in \N\), so dass jedes
                         Wort \(\gamma \in L(G)\) der Länge \(|\gamma| \geq p\) zerlegt werden kann in
                         \begin{align*}
@@ -381,9 +372,7 @@
 
                                 \(L_1^R\), die Sprache, die entsteht, wenn man jedes Wort in \(L_1\) von rechts nach
                                 links liest. Dies ist gar nicht so offensichtlich, wenn man reguläre Grammatiken oder
-                                endliche Automaten ansieht. Wenn man aber für \(L_1\) einen 
-                                _regulären Ausdruck_
-                                
+                                endliche Automaten ansieht. Wenn man aber für \(L_1\) einen _regulären Ausdruck_
                                 gebaut
                                 hat, wird es zur Trivialität: einfach den Ausdruck umdrehen.
                                 
@@ -394,13 +383,9 @@
                                 \(L_1 \cap L_2\). Hierfür könnte man für \(L_1, L_2\) jeweils endliche Automaten
                                 \(M_1, M_2\) bauen und die dann "parallel" laufen lassen; man muss nun sehen, dass man
                                 dieses parallele Laufen
-                                mit 
-                                _einem_
-                                Automaten simulieren kann: dieser hat als Zustandsmenge \(Q_1 \times
+                                mit _einem_Automaten simulieren kann: dieser hat als Zustandsmenge \(Q_1 \times
                                 Q_2\),
-                                merkt sich also in 
-                                _einem_
-                                Zustand, in welchen Zuständen \(M_1\) und \(M_2\)
+                                merkt sich also in _einem_Zustand, in welchen Zuständen \(M_1\) und \(M_2\)
                                 sind.
                                 Oder man macht es sich einfach:
                                 
@@ -432,9 +417,7 @@
                             
                         
                         
-                        Wie sieht es nun aus, wenn \(L_1, L_2\) 
-                        _kontextfreie_
-                        Sprachen sind? Welche der
+                        Wie sieht es nun aus, wenn \(L_1, L_2\) _kontextfreie_Sprachen sind? Welche der
                         obigen Kombinationen sind dann ebenfalls kontextfrei?
                         
                         
@@ -491,8 +474,7 @@
                             
                             |> p
 
-                                *Tip:*
-                                dies ist viel einacher als für reguläre Grammatiken.
+                                *Tip:*dies ist viel einacher als für reguläre Grammatiken.
                             
                             
                         
@@ -514,9 +496,7 @@
                             Beobachtung
                         
                         Der Schnitt \(L_1 \cap L_2\) zweier kontextfreier Sprachen
-                        ist im Allgemeinen 
-                        _nicht_
-                        kontextfrei.
+                        ist im Allgemeinen _nicht_kontextfrei.
                         Ein Beispiel ist
                         \begin{align*}
                         L_1&amp;:= \{a^n b^n c^* \ | \ n \geq 0 \}\\
@@ -543,9 +523,7 @@
 
                             Beobachtung
                         
-                        Das Komplement \(L\) einer kontextfreien Sprache ist im Allgemeinen 
-                        _nicht_
-                        kontextfrei.
+                        Das Komplement \(L\) einer kontextfreien Sprache ist im Allgemeinen _nicht_kontextfrei.
                         \\
                         
                         Warum? Wenn er es wäre, dann wäre mit Hilfe von Punkt 1 auch
@@ -576,8 +554,7 @@
                         
                         |> p
 
-                            *Tip.*
-                            Listen Sie alle Möglichkeiten auf, wie ein Wort \(w\) nicht
+                            *Tip.*Listen Sie alle Möglichkeiten auf, wie ein Wort \(w\) nicht
                             in \(L\) sein kann: (1) es hat nicht die Form \(a^* b^* c^*\); (2) es hat die Form,
                             hat aber mehr \(a\) als es \(b\) hat; (2) es hat mehr \(a\) als es \(c\) hat...
                         

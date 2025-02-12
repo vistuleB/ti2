@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={9}
         title_gr="Wer ist größer?"
         title_en="comparing sizes"
         number={2.1}
@@ -40,14 +41,11 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Für endliche Mengen haben den Begriff der 
-                      {" "}
+                      Für endliche Mengen haben den Begriff der{" "}
                       <i>
                         Größe
                       </i>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       $\&#123;0,1,2,3,4,5,6,7,8,9\&#125;$ hat zehn Elemente und ist somit größer als
                       $\&#123;a,e,i,o,u\&#125;$, die nur fünf Elemente hat. Können wir auch für
                       unendliche Mengen einen Größenbegriff einführen, oder sie zumindest
@@ -59,14 +57,11 @@ const Article = () => {
                       Bei den "üblichen" unendlichen Mengen $\N, \Z, \Q, \R$ scheint das zu
                       gehen. Es gilt nämlich $\N \subsetneq \Z \subsetneq \Q \subsetneq \R$,
                       und damit können wir doch mit Fug und Recht behaupten:
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         Die Menge der ganzen Zahlen ist kleiner als die der rationalen
                         Zahlen
                       </i>
-                      {" "}
                       .
                     </Paragraph>
                   </Paragraph>
@@ -144,12 +139,10 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Diese anfangs etwas überraschende Tatsache, dass $\N$ und $\N^+$
-                    "gleich groß" sind, ist als 
-                    {" "}
+                    "gleich groß" sind, ist als{" "}
                     <i>
                       Hilberts Hotel
                     </i>
-                    {" "}
                     bekannt. Das Hotel
                     hat unendlich viele Zimmer, für jede Zahl $n \in \N^+$ eins. Dann
                     kommt ein neuer Gast (die $0$) und braucht ein Zimmer. Er kriegt das
@@ -219,7 +212,6 @@ const Article = () => {
                       <b>
                         Anmerkung:
                       </b>
-                      {" "}
                       es ist überhaupt nicht schlimm, eine
                       Funktion mit einer Fallunterscheidung zu definieren. Sie ist dadurch
                       nicht etwa eine "Funktion zweiter Klasse".
@@ -250,12 +242,10 @@ const Article = () => {
                         Definition
                       </span>
                       Zwei Mengen $A$ und
-                      $B$ heißen 
-                      {" "}
+                      $B$ heißen{" "}
                       <i>
                         gleichmächtig
                       </i>
-                      {" "}
                       , wenn es eine Bijektion $f : A
                       \rightarrow B$ gibt. Wir schreiben in diesem Falle $A \approx B$.
                     </Paragraph>
@@ -270,13 +260,10 @@ const Article = () => {
                     und $g : B \rightarrow C$ Bijektionen sind, dann ist $g \circ f : A
                     \rightarrow C$ auch eine. Wir sehen: Die Relation $\approx$ ist
                     reflexiv, symmetrisch und transitiv und ist somit eine
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Äquivalenzrelation
                     </i>
-                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>
@@ -288,26 +275,19 @@ const Article = () => {
                       </span>
                       Eine Menge $A$ mit $A
                       \approx \N$, die also gleichmächtig zu den natürlichen Zahlen ist,
-                      nennt man 
-                      {" "}
+                      nennt man{" "}
                       <i>
                         abzählbar unendlich
                       </i>
-                      {" "}
                       , auf Englisch
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         countably infinite
                       </i>
-                      {" "}
-                      oder einfach 
-                      {" "}
+                      oder einfach{" "}
                       <i>
                         countable
                       </i>
-                      {" "}
                       .
                     </Paragraph>
                   </Paragraph>
@@ -315,27 +295,20 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Wie wir sehen werden, gibt es tatsächlich unendliche Mengen, die
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       nicht
                     </i>
-                    {" "}
                     gleichmächtig mit $\N$ sind, weil sie "viel viel
-                    größer" sind. Wir nennen sie 
-                    {" "}
+                    größer" sind. Wir nennen sie{" "}
                     <i>
                       überabzählbare
                     </i>
-                    {" "}
                     Mengen, auf
-                    Englisch 
-                    {" "}
+                    Englisch{" "}
                     <i>
                       uncountably infinite
                     </i>
-                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>
@@ -357,13 +330,10 @@ const Article = () => {
                         Definition
                       </span>
                       Eine Menge $A$ heißt
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         unendlich
                       </i>
-                      {" "}
                       , wenn es eine echte Teilmenge $A' \subsetneq A$
                       gibt, zu der sie gleichmächtig ist, also $A' \approx A$.
                     </Paragraph>
@@ -392,7 +362,6 @@ const Article = () => {
                       <b>
                         Hinweis:
                       </b>
-                      {" "}
                       Tappen Sie nicht in die "Das ist doch
                       offensichtlich"-Falle: die Menge $A$ könnte ja viel größer sein als
                       $\N$ und keine für Sie "greifbare" Struktur haben. Ihre Aufgabe ist

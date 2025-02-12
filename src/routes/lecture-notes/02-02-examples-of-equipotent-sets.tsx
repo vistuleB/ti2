@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={10}
         title_gr="Beispiele abzählbar unendlicher Mengen"
         title_en="examples of equipotent sets"
         number={2.2}
@@ -61,12 +62,10 @@ const Article = () => {
                       </span>
                       Die Mengen $\N$ und $\N^2$ sind gleichmächtig. Mit $\N^2$ (oder auch
                       $\N \times \N$) bezeichnen wir hier das cartesische Produkt von $\N$
-                      mit sich selbst: die Menge aller 
-                      {" "}
+                      mit sich selbst: die Menge aller{" "}
                       <i>
                         Paare
                       </i>
-                      {" "}
                       $(a,b)$ von
                       natürlichen Zahlen.
                     </Paragraph>
@@ -98,9 +97,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Wir skizzieren eine Bijektion $f : \N \times \N \rightarrow \N$,
                       indem wir für jeden Punkt $(x,y) \in \N \times \N$ angeben, auf
                       welche natürliche Zahl er abgebildet werden soll:
@@ -220,9 +217,7 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Falls Sie es vergessen haben: eine Funktion $f: A \rightarrow B$
                         heißt injektiv, wenn für alle verschiedenen $a, a' \in A$ auch $f(a)
                         \ne f(a')$ gilt. Wenn $f$ also "kollisionsfrei" ist.
@@ -240,11 +235,9 @@ const Article = () => {
                     <Paragraph>
                       mit $a \in \Z$ und $b \in \N^+$ und $\gcd(a,b) = 1$. Mit $\gcd(a,b)$
                       bezeichnen wir den größten gemeinsamen Teiler (
-                      {" "}
                       <i>
                         greatest common divisor
                       </i>
-                      {" "}
                       ) von $a$ und $b$. Wir definieren nun also $f
                       <i>
                         1(q) := (a,b) \in \Z
@@ -307,7 +300,6 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}
                         Dies ist ganz einach: da $\N \subseteq \Q$
                         gilt, können wir jedes $n$ einfach bei sich belassen. Die Funktion
                       </Paragraph>
@@ -317,13 +309,10 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       ist die gewünschte Injektion. Man nennt so eine Funktion auch die
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         Einbettung
                       </i>
-                      {" "}
                       von $\N$ in $\Q$.
                     </Paragraph>
                     <span class="qed">
@@ -335,23 +324,19 @@ const Article = () => {
                   <Paragraph>
                     Wir sind nun also in der sonderbaren Situation, dass wir eine
                     injektive Funktion $f : \Q \rightarrow \N$ haben, die aber nicht alle
-                    $\N$ ausfüllt, also nicht 
-                    {" "}
+                    $\N$ ausfüllt, also nicht{" "}
                     <i>
                       surjektiv
                     </i>
-                    {" "}
                     ist. Gleichzeitig haben
                     wir $g : \N \rightarrow \Q$, die injektiv ist aber auch nicht
                     surjektiv. Bei $f$ bleiben also manche natürlichen Zahlen ungenutzt,
                     bei $g$ bleiben rationale Zahlen ungenutzt. Können wir $f$ und $g$
                     irgendwie kombinieren, um eine bijektive Funktion zu erschaffen? Die
-                    Antwort lautet 
-                    {" "}
+                    Antwort lautet{" "}
                     <i>
                       ja, das geht immer
                     </i>
-                    {" "}
                     , ist nicht ganz trivial zu
                     beweisen, heißt
                   </Paragraph>
@@ -384,9 +369,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Wir definieren eine Bijektion $f: \N \rightarrow \Q$, indem wir die
                       Beweisidee von
                     </Paragraph>
@@ -446,12 +429,10 @@ const Article = () => {
                   </h2>
                   Erinnern wir uns an $\&#123;0,1\&#125;^*$, die Menge aller endlichen Bitstrings.
                   Die Menge ist ganz klar unendlich, weil sie zum Beispiel $1, 11, 111,
-                  1111, \dots$ enthält. Ist sie 
-                  {" "}
+                  1111, \dots$ enthält. Ist sie{" "}
                   <i>
                     abzählbar
                   </i>
-                  {" "}
                   unendlich?
                 </Paragraph>
                 <div class="well container theorem">
@@ -473,7 +454,6 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}
                         Hier ist eine Idee: wir interpretieren den
                         Bitstring $a
                         <i>

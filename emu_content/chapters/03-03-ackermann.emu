@@ -71,12 +71,8 @@
                         scheinen (wie die Fibonacci-Zahlen), ja sogar Dinge, die über den
                         Bereich der natürlichen Zahlen hinausgehen, wie zum Beispiel das Sortieren
                         eines beliebig langen Arrays. Kernpunkt war die Erkenntnis, dass wir
-                        komplexere "Datenstrukturen" wie 
-                        _Paare von natürlichen Zahlen_
-                        
-                        als 
-                        _eine_
-                        natürliche Zahl codieren können und somit
+                        komplexere "Datenstrukturen" wie _Paare von natürlichen Zahlen_
+                        als _eine_natürliche Zahl codieren können und somit
                         der primitiven Rekursion zugänglich machen können.
                         
                     
@@ -127,9 +123,7 @@
 
                             Definition
                         
-                        
                         *(Péter-Ackermann-Funktion).*
-                        
                         \begin{align*}
                         A(m,n)&amp;:= \begin{cases}
                         n+1&amp;\textnormal{ if $m=0$,} \\
@@ -218,9 +212,7 @@
                         class well container
 
                         
-                        
                         *Beweis.*
-                        
                         Wir verwenden Induktion über \(m\). Für \(m=0\) gilt \(A_0(n)= n+1\) und somit
                         \(A_0 = \succ\). Sei nun also \(m \geq 1\). Wir sehen, dass
                         \begin{align*}
@@ -239,14 +231,12 @@
                         Der Startwert soll \(g(\vec{x})\) sein, wir haben aber kein \(\vec{x}\), bzw. dies
                         ist der "leere Vektor". Wir brauchen eine Funktion
                         \(C\), die null Argumente nimmt und \(A_{m-1}(1)\) zurückgibt. Also:
-                        \(g = \comp(A_{m-1},&#123;\rm one})\). Wir könnten sogar noch frecher sein
+                        \(g = \comp(A_{m-1}, {\rm one})\). Wir könnten sogar noch frecher sein
                         und \(g = \comp(\succ, \comp(\succ, \comp(... \comp(\succ, \zero))))\) schreiben,
-                        einfach \(A_{m-1}(1)\) mal hintereinander; diesen Wert also 
-                        _hard-coden_
-                        .
+                        einfach \(A_{m-1}(1)\) mal hintereinander; diesen Wert also _hard-coden_.
                         Allerdings ist die erste Variante einfacher, und somit
                         \begin{align*}
-                        A_m&amp;= \primrec(\comp (A_{m-1},&#123;\rm one}), \comp (A_{m-1}, \pi^3_1)) \ .
+                        A_m&amp;= \primrec(\comp (A_{m-1}, {\rm one}), \comp (A_{m-1}, \pi^3_1)) \ .
                         \end{align*}
                         Wir sehen also: jedes \(A_m\), betrachtet als Funktion mit einem
                         Eingabeparameter, ist primitiv rekursiv.
@@ -266,15 +256,11 @@
 
                         
                         Wir haben also gezeigt, dass jedes \(A_m\) primitiv rekursiv ist.
-                        Heißt das auch, dass die zwei-parametrige Funktion \(A(m,n)\) 
-                        _berechenbar_
-                        ist?
+                        Heißt das auch, dass die zwei-parametrige Funktion \(A(m,n)\) _berechenbar_ist?
                         In der primitiven Rekursion haben wir keine Möglichkeit, den Index \(m\) als
                         Eingabewert zu lesen und dann aus dem unendlichen Array primitiv rekursiver Funktionen
                         \([A_0, A_1, A_2, \dots]\) den Eintrag \(A_m\) auszulesen.
-                        Aber 
-                        _berechenbar_
-                        in einem ganz allgemeinen Sinn? Diese Frage können wir
+                        Aber _berechenbar_in einem ganz allgemeinen Sinn? Diese Frage können wir
                         zu diesem Zeitpunkt nicht formal beantworten, weil wir den Begriff
                         allgemeiner Berechenbarkeit noch gar nicht definiert haben. Es ist allerdings
                         an der Definition von \(A(m,n)\) nichts magisches, und intuitiv würden wir
@@ -316,21 +302,12 @@
                     
                     |> p
 
-                        *Die Aussage verstehen*
-                        . Beachten Sie, dass Theorem 3.3.3 nicht mit
+                        *Die Aussage verstehen*. Beachten Sie, dass Theorem 3.3.3 nicht mit
                         Theorem 3.3.2 im Widerspruch steht. Theorem 3.3.3 besagt, dass \(A_m\) primitiv rekursiv ist,
-                        für jedes \(m\). Die Zahl \(m\) ist hier also 
-                        _Teil der Aussage_
-                        , nicht
-                        Eingabeparameter der Funktion; die Funktion \(A_m\) hat nur 
-                        _einen_
-                        Eingabeparameter.
-                        Theorem 3.3.3 hingegen macht eine Aussage über 
-                        _eine_
-                        Funktion \(A(m,n)\) mit
-                        
-                        _zwei_
-                        Eingabeparametern, und \(m\) ist nun einer dieser beiden.
+                        für jedes \(m\). Die Zahl \(m\) ist hier also _Teil der Aussage_, nicht
+                        Eingabeparameter der Funktion; die Funktion \(A_m\) hat nur _einen_Eingabeparameter.
+                        Theorem 3.3.3 hingegen macht eine Aussage über _eine_Funktion \(A(m,n)\) mit
+                        _zwei_Eingabeparametern, und \(m\) ist nun einer dieser beiden.
                         
                     
                     
@@ -349,21 +326,12 @@
                     |> p
 
                         *Beweisidee.*
-                        
                         Für jedes feste \(m\) ist die ein-parametrige Funktion \(A_m := n \mapsto A(m,n)\)
                         primitiv rekursiv und
-                        kann als Funktion mit \(m\) verschachtelten 
-                        |> code
-
-                            for
-                        -Schleifen betrachtet werden.
+                        kann als Funktion mit \(m\) verschachtelten `for`-Schleifen betrachtet werden.
                         Es wird sich herausstellen, dass \(A_m\) in gewisser Weise die am schnellsten wachsende
                         aller solcher Funktionen ist. Wäre also \(A(m,n)\) primitiv-rekursiv, dann könnten
-                        wir es mit \(d\) verschachtelten 
-                        |> code
-
-                            for
-                        -Schleifen berechnen; was ein
+                        wir es mit \(d\) verschachtelten `for`-Schleifen berechnen; was ein
                         Widerspruch ist, weil bereits \(A_{d+1}\) schneller wächst als jede primitiv-rekursive
                         Funktion mit \(d\) verschachtelten Schleifen.
                         
@@ -379,9 +347,7 @@
                         |> p
 
                             
-                            
                             *Beweis.*
-                            
                             Wir brauchen eine robuste Definition, was es heißt, dass eine Funktion \(f: \N \rightarrow \N \)
                             schneller wächst als
                             \(g: \N^k \rightarrow \N\).
@@ -399,9 +365,7 @@
                                 Definition.
                             
                             Sei \(f: \N \rightarrow \N\) und \(g: \N^k \rightarrow \N\). Die Funktion
-                            \(f\) 
-                            _majorisiert_
-                            \(g\), wenn
+                            \(f\) _majorisiert_\(g\), wenn
                             \begin{align*}
                             f (\max(x_1,\dots,x_k) \gt g(x_1, \dots, x_k) \ .
                             \end{align*}
@@ -470,8 +434,7 @@
                         
                         |> p
 
-                            *Induktionsbasis.*
-                             
+                            *Induktionsbasis.* 
                             Wir betrachten wir die Basisfunktionen
                             \(\zero, \succ, \pi^n_k\).
                             Wir wissen bereits, dass \(A_0(n) = n+1\) ist, also \(A_0 = \succ\).
@@ -491,7 +454,6 @@
                         |> p
 
                             *Induktionsschritt.*
-                            
                             Wenn \(f\) keine Basisfunktion ist, dann wurde \(f\) mittels Komposition oder
                             primitiver Rekursion konstruiert. Für jeden Fall führen wir eine getrennte Rechnung
                             durch.
@@ -501,12 +463,9 @@
                         
                         |> p
 
-                            *Komposition:*
-                            \(f(\vec{x}) = g(h_1(\vec{x}), \dots, h_k(\vec{x}))\),
+                            *Komposition:*\(f(\vec{x}) = g(h_1(\vec{x}), \dots, h_k(\vec{x}))\),
                             für primitiv rekursive Funktionen \(g, h_1, \dots, h_k\). Jede dieser Funktionen
-                            wurde mit 
-                            _weniger_
-                            Kombinatoren konstruiert; somit wird jede dieser Funktionen
+                            wurde mit _weniger_Kombinatoren konstruiert; somit wird jede dieser Funktionen
                             von einem \(A_r\) majorisiert:
                             \(A_r \gt g, A_{s_1} \gt h_1, \dots, A_{s_k} \gt h_k\). Für einen Eingabevektor \(\vec{x}\)
                             schreiben wir \(x := \max(x_1,\dots,x_n)\) und rechnen:
@@ -532,8 +491,7 @@
                         
                         |> p
 
-                            *Primitive Rekursion:*
-                            \(f = \primrec (g,h)\), also
+                            *Primitive Rekursion:*\(f = \primrec (g,h)\), also
                             \begin{align*}
                             f(t, \vec{x})&amp;=
                             \begin{cases}
@@ -565,9 +523,7 @@
                             class well subtheorem
 
                             
-                            
                             *Beweis.*
-                            
                             Wir verwenden Induktion über \(t\). Wenn \(t=0\) ist,
                             dann gilt
                             \begin{align*}
@@ -577,9 +533,9 @@
                             \begin{align*}
                             \hspace{-3cm}
                             f(t, \vec{x})&= h(f(t-1,\vec{x}), t-1, \vec{x}) \\
-                            &amp;\lt A_{q} (\max(f(t-1, \vec{x}), t-1, x_1, \dots, x_n)) \tag&#123;weil \(A_q \gt h\)}
+                            &amp;\lt A_{q} (\max(f(t-1, \vec{x}), t-1, x_1, \dots, x_n)) \tag {weil \(A_q \gt h\)}
                             \\
-                            &amp;\lt A_{q} (\max(f(t-1, \vec{x}), t-1, x)) \tag&#123;für \(x := \max(x_1,\dots,x_n)\)}
+                            &amp;\lt A_{q} (\max(f(t-1, \vec{x}), t-1, x)) \tag {für \(x := \max(x_1,\dots,x_n)\)}
                             \\
                             &amp;\leq A_q (\max(A_{q+1} (t-1+x), t-1, x)) \tag{ per Induktionshypothese für $t-1$} \\
                             &amp;= A_q (A_{q+1}(t-1+x)) % \tag{weil \(\max(t-1,x) \leq t-1+x \leq A_{q+1}(t-1+x)\)}
@@ -628,11 +584,9 @@
                     |> p
 
                         
-                        In der Vorlesung am 7. Mai 2024 hatte ich den 
-                        _Grad_
-                        einer primitiv-rekursiven Funktion
+                        In der Vorlesung am 7. Mai 2024 hatte ich den _Grad_einer primitiv-rekursiven Funktion
                         definiert. Das ist in etwa die "Verschachtelungstiefe" von $f$. Betrachten wir beispielsweise
-                        die Funktion $\pair(x,y) =&#123;x + y + 1 \choose 2} + x$ und dröseln auf, wie wir diese
+                        die Funktion $\pair(x,y) = {x + y + 1 \choose 2} + x$ und dröseln auf, wie wir diese
                         als primitiv-rekursive Funktion konstruiert haben:
                         
                     

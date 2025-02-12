@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={43}
         title_gr="Beispiele von Turingmaschinen"
         title_en="Turing machines examples"
         number={7.2}
@@ -56,7 +57,6 @@ const Article = () => {
                         <b>
                           Informelle Beschreibung.
                         </b>
-                        {" "}
                         Unsere Turingmaschine arbeitet
                         in Phasen. In jeder Phase sucht die Maschine ein \(a\) und löscht es
                         (ersetzt es durch ein \(X\)). Dann geht sie nach rechts und
@@ -80,7 +80,6 @@ const Article = () => {
                         <b>
                           Formellere Beschreibung.
                         </b>
-                        {" "}
                         Als Bandalphabet verwenden wir
                         \begin&#123;align*&#125;
                         \Gamma := \&#123;a,b,c, X, \square\&#125; \ .
@@ -335,8 +334,8 @@ const Article = () => {
                   </ul>
                   <figure>
                     <img
-                      style="height:12em"
-                      src="../img/turing-machines/exampe-2-aabbcc/delta-table.svg"
+                      style="height:15em"
+                      src="../img/turing-machines/exampe-2-aabbcc/delta-table-palindromes.svg"
                       loading="lazy" />
                   </figure>
                 </div>
@@ -390,13 +389,10 @@ const Article = () => {
                     \begin&#123;align*&#125;
                     L := \&#123;1^n \ | \ n = 2^d, d \geq 0\&#125; \ .
                     \end&#123;align*&#125;
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <b>
                       Tip:
                     </b>
-                    {" "}
                     gehen Sie durch das Band und ersetzen jede zweite
                     \(1\), die Sie sehen, durch ein \(X\). Wenn Sie rechts ankommen und eine
                     ungerade Anzahl von Einsen gelesen haben, lehnen Sie ab. Wenn

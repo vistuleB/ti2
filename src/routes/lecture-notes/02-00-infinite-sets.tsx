@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={8}
         title_gr="Unendliche Mengen"
         title_en="infinite sets"
         number={2.0}
@@ -49,27 +50,20 @@ const Article = () => {
                     1, \dots, x
                   </i>
                   n$ Sie begegnen werden.
-                  Für ein allgemeines Modell der Berechnung ist dies ungeeignet. Wir wollen ja 
-                  {" "}
+                  Für ein allgemeines Modell der Berechnung ist dies ungeeignet. Wir wollen ja{" "}
                   <i>
                     ein
                   </i>
-                  {" "}{" "}
-                </Paragraph>
-                <Paragraph>
-                  Computerprogramm, das beliebig große Eingaben verkraften kann. Ein Computerprogramm
-                  soll also 
                   {" "}
+                  Computerprogramm, das beliebig große Eingaben verkraften kann. Ein Computerprogramm
+                  soll also{" "}
                   <i>
                     endlich
                   </i>
-                  {" "}
-                  sein, aber für eine 
-                  {" "}
+                  sein, aber für eine{" "}
                   <i>
                     unendliche
                   </i>
-                  {" "}
                   Menge potentieller Eingaben
                   funktionieren.
                 </Paragraph>

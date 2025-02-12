@@ -83,8 +83,7 @@
                         
                         |> p
 
-                            *Informelle Beschreibung.*
-                            Unsere Turingmaschine arbeitet
+                            *Informelle Beschreibung.*Unsere Turingmaschine arbeitet
                             in Phasen. In jeder Phase sucht die Maschine ein \(a\) und löscht es
                             (ersetzt es durch ein \(X\)). Dann geht sie nach rechts und
                             sucht und markiert ein \(b\); dann ein \(c\). Sobald sie das \(c\) markiert hat,
@@ -102,8 +101,7 @@
                         
                         |> p
 
-                            *Formellere Beschreibung.*
-                            Als Bandalphabet verwenden wir
+                            *Formellere Beschreibung.*Als Bandalphabet verwenden wir
                             \begin{align*}
                             \Gamma := \{a,b,c, X, \square\} \ .
                             \end{align*}
@@ -422,8 +420,8 @@
                             
                             
                             |> img
-                                style height:12em
-                                src ../img/turing-machines/exampe-2-aabbcc/delta-table.svg
+                                style height:15em
+                                src ../img/turing-machines/exampe-2-aabbcc/delta-table-palindromes.svg
                                 loading lazy
                             
                             
@@ -506,9 +504,7 @@
                         \begin{align*}
                         L := \{1^n \ | \ n = 2^d, d \geq 0\} \ .
                         \end{align*}
-                        
-                        *Tip:*
-                        gehen Sie durch das Band und ersetzen jede zweite
+                        *Tip:*gehen Sie durch das Band und ersetzen jede zweite
                         \(1\), die Sie sehen, durch ein \(X\). Wenn Sie rechts ankommen und eine
                         ungerade Anzahl von Einsen gelesen haben, lehnen Sie ab. Wenn
                         die Anzahl gerade ist, gehen Sie wieder nach ganz links; sie haben nun

@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={26}
         title_gr="Die Grenzen regulärer Sprachen"
         title_en="limitations of regular grammars"
         number={4.6}
@@ -40,12 +41,10 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Noch spannender, als zu erkunden, was möglich ist, ist aus Sicht eines theoretischen
-                    Informatikers, zu erkunden, was 
-                    {" "}
+                    Informatikers, zu erkunden, was{" "}
                     <i>
                       nicht möglich
                     </i>
-                    {" "}
                     ist. Also Grenzen aufzuzeigen.
                     Wir haben in den letzten vier Teilkapiteln gezeigt, was man mit regulären Sprachen und endlichen
                     Automaten
@@ -129,19 +128,14 @@ const Article = () => {
                       Formal sind all diese Modelle gleich mächtig: wir können ein Modell in ein anderes umwandeln,
                       ohne
                       das die erzeugte bzw. akzeptierte Sprache sich ändern. Wenn wir nun zeigen wollen:
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         \(L\) ist nicht regulär
                       </i>
-                      {" "}
-                      , dann können wir das 
-                      {" "}
+                      , dann können wir das{" "}
                       <i>
                         einfachste
                       </i>
-                      {" "}
                       Modell nehmen und
                       dagegen argumentieren. Nach meinem Darfürhalten sind endliche Automaten das einfachste der
                       fünf aufgeführten
@@ -249,36 +243,27 @@ const Article = () => {
                   <Paragraph>
                     Das Argument, dass die Sprache \(\&#123;a^nb^n \ | \ n \geq 0\&#125;\) nicht regulär ist, war nicht allzu
                     schwer, fühlt sich
-                    aber etwas 
-                    {" "}
+                    aber etwas{" "}
                     <i>
                       ad hoc
                     </i>
-                    {" "}
                     an, also für diesen Fall maßgeschneidert. Es stellt sich aber heraus,
                     dass man
-                    bei 
-                    {" "}
+                    bei{" "}
                     <i>
                       allen
                     </i>
-                    {" "}
                     nicht-regulären Sprachen ein solches Argument anführen kann. Die Hauptarbeit
-                    besteht nun darin, Konzepte wie 
-                    {" "}
+                    besteht nun darin, Konzepte wie{" "}
                     <i>
                       der Automat kann \(\alpha\) nicht von \(\alpha'\)
                       unterscheiden
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
-                    und 
                     {" "}
+                    und{" "}
                     <i>
                       der Automat muss aber \(\gamma\) von \(\gamma'\) unterscheiden können
                     </i>
-                    {" "}
                     zu
                     formalisieren.
                   </Paragraph>
@@ -292,18 +277,13 @@ const Article = () => {
                     <b>
                       \(M\)-Äquivalenz
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Sei \(M= (\Sigma, Q, \qstart, F, \delta\) ein (deterministischer) endlicher Automat. Zwei Wörter
                     \(\alpha, \beta \in \Sigma^* \) sind
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       \(M\)-äquivalent
                     </i>
-                    {" "}
                     , geschrieben
                     \begin&#123;align*&#125;
                     \alpha \equiv_M \beta \ ,
@@ -338,17 +318,12 @@ const Article = () => {
                     <b>
                       \(L\)-Äquivalenz
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Sei \(L \subseteq \Sigma^*\) eine Sprache. Zwei Wörter \(\alpha, \beta \in \Sigma^*\) sind
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       \(L\)-äquivalent
                     </i>
-                    {" "}
                     , geschrieben
                     \begin&#123;align*&#125;
                     \alpha \equiv_L \beta \ ,
@@ -373,36 +348,29 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Nehmen wir an \(\alpha \equiv_M \beta\); es gibt also einen Zustand \(q\) mit
                     \begin&#123;align*&#125;
-                    \qstart \Step&#123;\alpha&#125; q \textnormal&#123; und&#125; \qstart \Step&#123;\beta&#125; q
+                    \qstart \Step&#123;\alpha&#125; q \textnormal&#123; und &#125; \qstart \Step&#123;\beta&#125; q
                     \end&#123;align*&#125;
                     Des weiteren sei \(q' := \hat&#123;\delta&#125;(q, \gamma)\), also
                     \begin&#123;align*&#125;
-                    \qstart \Step&#123;\alpha&#125; q \Step&#123;\gamma&#125; q' \textnormal&#123; und&#125; \qstart \Step&#123;\beta&#125; q \Step&#123;\gamma&#125;
+                    \qstart \Step&#123;\alpha&#125; q \Step&#123;\gamma&#125; q' \textnormal&#123; und &#125; \qstart \Step&#123;\beta&#125; q \Step&#123;\gamma&#125;
                     q'
                     \end&#123;align*&#125;
                     also
                     \begin&#123;align*&#125;
-                    \qstart \Step&#123;\alpha\gamma&#125; q' \textnormal&#123; und&#125; \qstart \Step&#123;\beta\gamma&#125; q'
+                    \qstart \Step&#123;\alpha\gamma&#125; q' \textnormal&#123; und &#125; \qstart \Step&#123;\beta\gamma&#125; q'
                     \end&#123;align*&#125;
                     Abhängig davon, ob \(q' \in F\) oder nicht, sind \(\alpha\gamma\) und \(\alpha\beta\) entweder
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       beide in \(L\)
                     </i>
-                    {" "}
-                    oder 
-                    {" "}
+                    oder{" "}
                     <i>
                       beide nicht in \(L\)
                     </i>
-                    {" "}
                     . In anderen Worten: \(\alpha \equiv_L
                     \beta\).
                   </Paragraph>
@@ -428,12 +396,10 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Sei \(L \subseteq \Sigma^*\). Der 
-                    {" "}
+                    Sei \(L \subseteq \Sigma^*\). Der{" "}
                     <i>
                       Index von \(L\)
                     </i>
-                    {" "}
                     ist die Anzahl von Äquivalenzklassen
                     der Relation
                     \(\equiv_L\), also die größtmögliche Anzahl gegenseitig nichtäquivalenter Wörter
@@ -457,9 +423,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Wenn der Index von \(L\) größer wäre als \(|Q|\), dann hieße das, dass wir
                     \(k := |Q|+1\) nicht \(L\)-äquivalente \(\alpha_1, \dots, \alpha_&#123;|Q|+1&#125;\) finden können.
                     Sei \(q_i := \hat&#123;\delta&#125;(\qstart, \alpha_i)\) der Zustand, in dem der Automat landet,
@@ -534,12 +498,10 @@ const Article = () => {
                 </div>
                 <Paragraph>
                   <Paragraph>
-                    Wie mächtig ist diese "Index-Methode"? Es stellt sich heraus, dass sie 
-                    {" "}
+                    Wie mächtig ist diese "Index-Methode"? Es stellt sich heraus, dass sie{" "}
                     <i>
                       vollständig
                     </i>
-                    {" "}
                     ist:
                     wenn eine Sprache \(L\) endlichen Index hat, dann ist sie auch regulär.
                   </Paragraph>
@@ -558,9 +520,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Eine Richtung haben wir bereits weiter oben gezeigt: wenn es zu \(L\) einen endlichen Automaten
                     mit Zustandsmenge \(Q\) gibt, dann ist der Index von \(L\) höchstens \(|Q|\).
                   </Paragraph>
@@ -623,26 +583,20 @@ const Article = () => {
                       ein, wenn es ein \(\alpha \in A_i\) mit \(\alpha x \in A_j\) gibt.
                       Sehen Sie nun: wenn wir ein anderes \(\alpha' \in A_i\) nehmen,
                       dann gilt \(\alpha' x \equiv_L \alpha x\), also ist auch \(\alpha' x \in A_j\). In anderen
-                      Worten: es gibt nur 
-                      {" "}
+                      Worten: es gibt nur{" "}
                       <i>
                         eine
                       </i>
-                      {" "}
                       Produktion der Form \(i \step&#123;x&#125; ...\), d.h. die
                       Produktionen
-                      sind in der Tat ein 
-                      {" "}
+                      sind in der Tat ein{" "}
                       <i>
                         Funktion
                       </i>
-                      {" "}
-                      und der Automat ist 
-                      {" "}
+                      und der Automat ist{" "}
                       <i>
                         determinisitsch
                       </i>
-                      {" "}
                       .
                       Als Anfangszustand wählen wir dasjenige \(i\), für das \(\epsilon \in A_i\) gilt.
                       Akzeptierende Zustände sind diejenigen \(j\), für die \(A_j \subseteq L\) gilt. Also:
@@ -709,9 +663,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Seien \(\alpha:= a_1 a_2 a_3 a_4, \beta := b_1 b_2 b_3 b_4 \in \&#123;0,1\&#125;^4\) zwei verschiedene
                       Wörter. Dann gibt es ein
                       \(1 \leq i \leq 4\) mit \(a_i = 0\) und \(b_i = 1\) (oder umgekehrt).
@@ -719,12 +671,10 @@ const Article = () => {
                       Zeichen
                       von \(\alpha\gamma\) ist 0, das viertletzte Zeichen von \(\beta\gamma\) ist 1; also
                       gilt \(\alpha\gamma \in L, \beta\gamma\not \in L\), und somit \(\alpha \not \equiv \beta\).
-                      Der Index ist also 
-                      {" "}
+                      Der Index ist also{" "}
                       <i>
                         mindestens
                       </i>
-                      {" "}
                       16. Das er höchstens 16 ist, sehen wir, indem wir
                       einen
                       determinisitschen Automaten mit 16 Zuständen bauen.

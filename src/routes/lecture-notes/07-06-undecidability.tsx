@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={47}
         title_gr="Turingmaschinen, Haltproblem und Unentscheidbarkeit"
         title_en="undecidability"
         number={7.6}
@@ -40,12 +41,10 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Im vorherigen Teilkapitel haben wir die 
-                      {" "}
+                      Im vorherigen Teilkapitel haben wir die{" "}
                       <i>
                         universelle Turingmaschine
                       </i>
-                      {" "}
                       $U$ konstruiert, die
                       eine andere Turingmaschine, deren Codierung und Inputwort sie als Input gegeben hat, simulieren
                       kann.
@@ -61,43 +60,31 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Allerdings: wenn $M$ auf $x$ nicht terminiert, dann terminiert $U$ auf $\enc(M)x$ auch
-                      nicht. $U$ 
-                      {" "}
+                      nicht. $U${" "}
                       <i>
                         akzeptiert
                       </i>
-                      {" "}
-                      die Sprache also, 
-                      {" "}
+                      die Sprache also,{" "}
                       <i>
                         entscheidet
                       </i>
-                      {" "}
                       sie aber nicht. Wäre es
                       nicht schön, eine Turingmaschine zu haben, die diese Sprache entscheidet? Dann könnten wir jede
                       Turingmaschine simulieren und gleichzeitig Endlosschleifen und eventuell ganz allgemein
-                      "Programmierfehler" vorhersagen und abfangen. Wir werden zeigen, dass dies leider 
-                      {" "}
+                      "Programmierfehler" vorhersagen und abfangen. Wir werden zeigen, dass dies leider{" "}
                       <i>
                         nicht
                       </i>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
-                      möglich ist. In der Literatur ist dies als die 
                       {" "}
+                      möglich ist. In der Literatur ist dies als die{" "}
                       <i>
                         Unentscheidbarkeit des Halteproblems
                       </i>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
-                      (englisch 
                       {" "}
+                      (englisch{" "}
                       <i>
                         undecidability of the Halting problem
                       </i>
-                      {" "}
                       bekannt).
                     </Paragraph>
                   </Paragraph>
@@ -121,20 +108,16 @@ const Article = () => {
                         $\Lambda$ wiederum als Strings in $\Sigma^
                       </b>
                       $ codieren. Wir müssen hier
-                      nur vorsichtig sein, dass der Code 
-                      {" "}
+                      nur vorsichtig sein, dass der Code{" "}
                       <i>
                         präfixfrei
                       </i>
-                      {" "}
                       ist. Wenn wir zum Beispiel naiv
                       $1$ als $1$ und $0$ als $0$ und $\texttt&#123;#&#125;$ als $01$ codieren, dann wissen wir nicht mehr, was
-                      mit dem Codewort $01$ gemeint ist. Am einfachsten geht das mit einem 
-                      {" "}
+                      mit dem Codewort $01$ gemeint ist. Am einfachsten geht das mit einem{" "}
                       <i>
                         Blockcode
                       </i>
-                      {" "}
                       , in dem
                       alle Codewörter die gleiche Länge $k$ haben, also
                       $\Lambda \rightarrow \&#123;0,1\&#125;^k$. Mit
@@ -152,7 +135,7 @@ const Article = () => {
                     </Paragraph>
                   </Paragraph>
                   \begin&#123;align*&#125;
-                  \halt := \&#123; \enc(M) w \ | \ M \textnormal&#123; akzeptiert&#125; w\&#125; \ .
+                  \halt := \&#123; \enc(M) w \ | \ M \textnormal&#123; akzeptiert &#125; w\&#125; \ .
                   \end&#123;align*&#125;
                 </Paragraph>
                 <Paragraph>
@@ -183,9 +166,7 @@ const Article = () => {
                     <b>
                       (Unentscheidbarkeit des Halteproblems).
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Die Sprache \(\halt\) ist unentscheidbar.
                   </Paragraph>
                 </div>
@@ -204,7 +185,6 @@ const Article = () => {
                         <b>
                           Kurzer Beweis per Wiederspruch.
                         </b>
-                        {" "}
                         Nehmen wir an, es gäbe eine Maschine $H$,
                         die $\halt$ entscheidet. Dann wäre auch die Sprache
                       </Paragraph>
@@ -233,12 +213,10 @@ const Article = () => {
                       <Paragraph>
                         entscheidbar; wir müssen ja nur $\diag$ entscheiden und dann das Ergebnis negieren.
                         $\negdiag$
-                        ist sozusagen die Menge aller Turingmaschinen, die 
-                        {" "}
+                        ist sozusagen die Menge aller Turingmaschinen, die{" "}
                         <i>
                           nicht
                         </i>
-                        {" "}
                         ihre eigene Codierung als
                         Inputwort akzeptieren. Da $\negdiag$ nach Annahme entscheidbar ist, gibt es eine Maschine
                         $D$, die $\negdiag$ entscheidet.
@@ -274,7 +252,6 @@ const Article = () => {
                     <b>
                       Ausführlicher Beweis.
                     </b>
-                    {" "}
                     Ich finde Beweise durch Widerspruch immer
                     etwas unintuitiv, weil man die ganze Zeit im Konjunktiv argumentieren muss.
                     Daher hier ein Beweis ohne Widerspruch. Wir zeigen, dass $\halt$ unentscheidbar ist,
@@ -322,21 +299,39 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <pre class="listing">
-                      <code>
-                        def D(x):
-                      </code>
-                      <code>
-                        if H(xx) == accept then{" "}
-                      </code>
-                      <code>
-                        reject{" "}
-                      </code>
-                      <code>
-                        else{" "}
-                      </code>
-                      <code>
-                        accept
-                      </code>
+                      <Paragraph>
+                        {" "}{" "}
+                        <code>
+                          def D(x):
+                        </code>
+                        {" "}
+                        {" "}
+                        <code>
+                          if H(xx) == accept then
+                        </code>
+                        {" "}{" "}
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}{" "}
+                        <code>
+                          reject
+                        </code>
+                        {" "}{" "}
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}{" "}
+                        <code>
+                          else
+                        </code>
+                        {" "}{" "}
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}{" "}
+                        <code>
+                          accept
+                        </code>
+                        {" "}{" "}
+                      </Paragraph>
                     </pre>
                     <Paragraph>
                       <Paragraph>
@@ -376,12 +371,10 @@ const Article = () => {
                     </Paragraph>
                     In jedem Fall sehen wir, dass \(H\) auf dem Eingabewort
                     \(yy\) einen Fehler macht und somit \(\halt\) nicht
-                    entscheidet. Da das für 
-                    {" "}
+                    entscheidet. Da das für{" "}
                     <i>
                       jede
                     </i>
-                    {" "}
                     Turingmaschine
                     geht, schließen wir: keine Turingmaschine kann
                     die Sprache \(\halt\) entscheiden; sie ist unentscheidbar.
@@ -409,13 +402,10 @@ const Article = () => {
                     unentscheidbar ist,
                     ist in der Tat relevant, denn daraus folgt (nicht direkt, aber mit ein paar technischen Tricks),
                     dass im Prinzip
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       jede
                     </i>
-                    {" "}
                     nichttriviale Frage über das Verhalten eines Programmcodes unentscheidbar ist.
                     Also sind
                     auch Fragen wie "Kann das Programm abstürzen?" oder "Kann ein unautorisierter Nutzer Zugang zu
@@ -424,12 +414,10 @@ const Article = () => {
                 </Paragraph>
                 <div class="alert-info">
                   <Paragraph>
-                    Das Wort 
-                    {" "}
+                    Das Wort{" "}
                     <i>
                       Unentscheidbarkeit
                     </i>
-                    {" "}
                     verwenden wir hier in seiner
                     technischen Bedeutung,
                     die wir definiert haben: es gibt keine Turingmaschine, die das Problem entscheidet, also

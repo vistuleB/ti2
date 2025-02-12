@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={45}
         title_gr="Die universelle Turingmaschine"
         title_en="Turing encoding"
         number={7.4}
@@ -70,19 +71,15 @@ const Article = () => {
                     die zu multiplizierenden Zahlen) auch
                     die Rechenvorschrift (das Programm) als Eingabe übergibt. Hätte man so eine Maschine, dann
                     müsste man nicht für jede neue Aufgabe
-                    eine neue Maschine entwerfen; man könnte 
-                    {" "}
+                    eine neue Maschine entwerfen; man könnte{" "}
                     <i>
                       eine
                     </i>
-                    {" "}
                     Maschine bauen und sie für die jeweilige
-                    Aufgabe 
-                    {" "}
+                    Aufgabe{" "}
                     <i>
                       programmieren
                     </i>
-                    {" "}
                     , indem
                     ihr auf einem separaten Eingabeband die Rechenvorschrift überreicht. Von heute aus gesehen ist
                     diese Idee nicht mehr allzu überraschend, weil
@@ -161,7 +158,6 @@ const Article = () => {
                         <b>
                           ablehnt
                         </b>
-                        {" "}
                         , falls \(c\) keine gültige Codierung einer Turingmaschine \(M\)
                         ist,
                       </li>
@@ -173,7 +169,6 @@ const Article = () => {
                             <b>
                               akzeptiert
                             </b>
-                            {" "}
                             falls \(M(x)\) akzeptiert;
                           </li>
                           <li>
@@ -181,7 +176,6 @@ const Article = () => {
                             <b>
                               ablehnt
                             </b>
-                            {" "}
                             , falls \(M(x)\) ablehnt
                           </li>
                           <li>
@@ -189,7 +183,6 @@ const Article = () => {
                             <b>
                               nicht terminiert
                             </b>
-                            {" "}
                             , falls \(M(x)\) nicht terminiert.
                           </li>
                         </ol>
@@ -230,7 +223,6 @@ const Article = () => {
                       <b>
                         Erster, zum scheitern verurteilter Versuch.
                       </b>
-                      {" "}
                       Sei \(M\) eine Turingmaschine
                       mit Eingabealphabet \(\Sigma\), Arbeitsalphabet \(\Gamma\), Zustandsmenge \(Q\), Startzustand
                       \(\qstart\), akzeptierendem Zustand
@@ -252,13 +244,10 @@ const Article = () => {
                       Sehen Sie das Problem? Das Codierungsalphabet ist nicht uniform: wir brauchen, abhängig von der
                       Zustandsmenge \(Q\) und
                       dem Bandalphabet \(\Gamma\) jeweils neue Alphabete. Wir wollen aber ein \(\Lambda\), da für
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         alle
                       </i>
-                      {" "}
                       Turingmaschinen
                       mit Eingabealphabet \(\Sigma\) funktioniert.
                     </Paragraph>
@@ -288,17 +277,15 @@ const Article = () => {
                 <figure>
                   <img
                     style="height:10em"
-                    src="../img/turing-machines/exampe-2-aabbcc/delta-table.svg"
+                    src="../img/turing-machines/exampe-2-aabbcc/delta-table-encoded.svg"
                     loading="lazy" />
                 </figure>
                 <Paragraph>
                   <Paragraph>
-                    Wenn wir dies nun als 
-                    {" "}
+                    Wenn wir dies nun als{" "}
                     <i>
                       ein
                     </i>
-                    {" "}
                     Wort in obigen Schema schreiben, können wir für eine
                     Tabellenzelle
                     \(\delta(q,x) = (r,y,R)\) nicht einfach \(qxryR\) schreiben, auch nicht einfach die Codierungen
@@ -339,12 +326,10 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Wir können nun 
-                    {" "}
+                    Wir können nun{" "}
                     <i>
                       jede
                     </i>
-                    {" "}
                     Turingmaschine
                     über dem Alphabet
                     \(\Sigma\) codieren als Wort über dem Alphabet
@@ -360,14 +345,11 @@ const Article = () => {
                         Definition/Beobachtung.
                       </span>
                       Zu einem Eingabealphabet
-                      $\Sigma$ definieren wir das 
-                      {" "}
+                      $\Sigma$ definieren wir das{" "}
                       <i>
                         Codierungsalphabet
                       </i>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       $\Lambda := \writelambda$,
                       wobei wir annehmen, dass $\texttt&#123;#&#125;, \texttt&#123;,&#125;, \texttt&#123;L&#125;, \texttt&#123;S&#125;, \texttt&#123;R&#125;,
                       \texttt&#123;;&#125;
@@ -382,15 +364,11 @@ const Article = () => {
                     <b>
                       Anmerkungen:
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
-                    das Wort 
                     {" "}
+                    das Wort{" "}
                     <i>
                       Codierung
                     </i>
-                    {" "}
                     suggeriert, dass wir, gegeben
                     den String $c = \enc(M)$ die
                     ursprüngliche Turingmaschine $M$ rekonstruieren können. Das gilt natürlich nur

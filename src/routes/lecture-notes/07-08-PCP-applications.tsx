@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={49}
         title_gr="des Postschen Korrespondenzproblems"
         title_en="PCP applications"
         number={7.8}
@@ -47,13 +48,10 @@ const Article = () => {
                     \end&#123;align*&#125;
                     Diese Grammatiken erlauben uns, gewisse Sprachen zu beschreiben, indem Sie Regeln festlegen -
                     hier
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Produktionen
                     </i>
-                    {" "}
                     genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
                     Alphabet
                     (hier: \(\&#123;a,b,c\&#125;\)) ableiten kann. Beispielsweise:
@@ -80,17 +78,14 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Formal gesehen müssten wir eine Codierung kontextfreier Grammatiken über einem festen
-                      Alphabet (zum Beispiel \(\&#123;0,1, \rightarrow, ;, \dots\&#125;\) angeben, um dann die 
-                      {" "}
+                      Alphabet (zum Beispiel \(\&#123;0,1, \rightarrow, ;, \dots\&#125;\) angeben, um dann die{" "}
                       <i>
                         Sprache
                         der
                         Codierungen all jener
                         kontextfreien Grammatik, die ein Palindromwort ableiten können
                       </i>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       definieren zu können. Da wir aber mittlerweile verstanden haben, dass alle
                       "endlichen" Objekte irgendwie auf Turingmschinen-verträgliche Weise codiert werden können,
                       ersparen wir uns diese Formalitäten.
@@ -103,9 +98,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Wir zeigen: wenn man zu einer gegebenen kontextfreien Grammatik entscheiden könnte,
                     ob sie ein Palindromwort ableiten kann, dann könnten wir auch entscheiden, ob ein
                     gegebenes PCP-Puzzle eine Lösung hat. Da wir bereits Letzteres als unentscheidbar
@@ -146,9 +139,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Die letzte angewandte Regel muss \(S \rightarrow \$\) sein, und somit hat
                       das abgeleitete Wort die Form
                       \begin&#123;align*&#125;
@@ -206,9 +197,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Sei
                       \begin&#123;align*&#125;
                       (\alpha
@@ -313,12 +302,10 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Es lohnt sich, an dieser Stelle zu pausieren. Was Sie gerade gesehen haben,
-                    ist eine 
-                    {" "}
+                    ist eine{" "}
                     <i>
                       Reduktion
                     </i>
-                    {" "}
                     . Im "echten" Leben verwenden wir Reduktionen,
                     um bereits gefundene Lösungen zu "recyceln". Beispielsweise:
                   </Paragraph>
@@ -328,7 +315,6 @@ const Article = () => {
                       <b>
                         Aufgabe:
                       </b>
-                      {" "}
                       Zeigen Sie, dass die Funktion
                       \(n \mapsto n!\) im \(\lambda\)-Kalkül berechenbar ist.
                     </li>
@@ -356,12 +342,10 @@ const Article = () => {
                       Definition
                     </span>
                     Seien \(L_1 \subseteq \Sigma_1\) und \(L_2 \subseteq \Sigma_2\) zwei Sprachen.
-                    Eine 
-                    {" "}
+                    Eine{" "}
                     <i>
                       Reduktion von \(L_1\) nach \(L_2\)
                     </i>
-                    {" "}
                     ist eine Turing-berechenbare Funktion
                     \begin&#123;align*&#125;
                     f : \Sigma
@@ -409,9 +393,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Sei \(M_2\) eine Turingmaschine, die \(L_2\) entscheidet und sei \(M_f\) die Turingmaschine,
                     die \(f\) berechnet.
                     Wir bauen nun eine neue Turingmaschine \(M_1\).
@@ -447,20 +429,16 @@ const Article = () => {
                   Stellen Sie sich einfach vor, dass \(M_f\) der Code ist, den Sie selber schreiben müssen,
                   und \(M_2\) die "Bibliotheksfunktion" ist, die Sie ohne groß nachzudenken aufrufen,
                   weil sie ja bereist von anderen Leuten (hoffentlich korrekt) implementiert worden ist.
-                  Behauptung 4.6.8 zeigt also, das etwas 
-                  {" "}
+                  Behauptung 4.6.8 zeigt also, das etwas{" "}
                   <i>
                     möglich
                   </i>
-                  {" "}
                   ist.
                   In der Berechenbarkeitstheorie und Komplexitätstheorie sind wir eher daran interessiert,
-                  zu zeigen, was 
-                  {" "}
+                  zu zeigen, was{" "}
                   <i>
                     nicht möglich
                   </i>
-                  {" "}
                   ist, und wenden daher häufiger das Kontrapositiv
                   der Behauptung an:
                 </Paragraph>
@@ -479,9 +457,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Angenommen, \(L_2\) wäre entscheidbar. Dann wäre laut Behauptung 4.6.8 die Sprache
                     \(L_1\) ja auch entscheidbar, was sie aber nach Annahme nicht ist. Daher ist
                     \(L_2\) eben nicht entscheidbar.
@@ -496,25 +472,19 @@ const Article = () => {
                   auf das "Kann ein Palindrom abgeleitet werden"-Problem. Wir haben also eine ganze Kette
                   von Reduktionen bereits durchgeführt.
                   Für Neulinge ist diese Richtung oft inintuitiv und verwirrend. Dies spiegelt
-                  sich in der Verwendung des Konjunktivs 
-                  {" "}
+                  sich in der Verwendung des Konjunktivs{" "}
                   <i>
                     wäre / wäre
                   </i>
-                  {" "}
                   in Behauptung 4.6.9 wider.
-                  Auch ist es schlicht ungewohnt, ein 
-                  {" "}
+                  Auch ist es schlicht ungewohnt, ein{" "}
                   <i>
                     altes
                   </i>
-                  {" "}
-                  Problem auf ein 
-                  {" "}
+                  Problem auf ein{" "}
                   <i>
                     neues
                   </i>
-                  {" "}
                   zu reduzieren
                   statt umgekehrt.
                 </Paragraph>
@@ -547,14 +517,11 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      Dieses Problem ist als 
-                      {" "}
+                      Dieses Problem ist als{" "}
                       <i>
                         Schnittproblem kontextfreier Sprachen
                       </i>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       bekannt.
                     </Paragraph>
                   </Paragraph>
@@ -565,16 +532,14 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Wir reduzieren das Palindromwortproblem (bereits bekannt) auf das Schnittproblem (neues
                     Problem).
                     Sei \(G\) eine Grammatik und \(\Sigma\) die Menge der Terminalsymbole. Sei \(G'\) die
                     folgende Grammatik:
                     \begin&#123;align*&#125;
-                    S'&amp;\rightarrow x S' x \tag&#123; für alle \(x \in \Sigma\)&#125;\\
-                    S'&amp;\rightarrow x \tag&#123; für alle \(x \in \Sigma\)&#125;\\
+                    S'&amp;\rightarrow x S' x \tag&#123; für alle \(x \in \Sigma\) &#125;\\
+                    S'&amp;\rightarrow x \tag&#123; für alle \(x \in \Sigma\) &#125;\\
                     S'&amp;\rightarrow \epsilon
                     \end&#123;align*&#125;
                     Die Grammatik \(G'\) erzeugt genau die Sprache der Palindromwörter über \(\Sigma\).
@@ -598,9 +563,7 @@ const Article = () => {
                     <b>
                       (Mehrdeutigkeitsproblem kontextfreier Sprachen)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Gegeben eine kontextfreie Grammatik \(G\). Es ist unentscheidbar,
                     ob \(G\) mehrdeutig ist, d.h., ob es ein Wort \(x \in \Sigma^*\) gibt,
                     für das zwei verschiedene Ableitungsbäume existieren.
@@ -614,9 +577,7 @@ const Article = () => {
                     <b>
                       Falscher Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Wir reduzieren das uns bereits bekannte Schnittproblem auf das Mehrdeutigkeitsproblem.
                     Gegeben seien zwei kontextfreie Grammatiken \(G_1, G_2\) mit Startsymbolen \(S_1, S_2\) und
                     Nichtterminalmenge \(N_1, N_2\). Wir machen in einem ersten Schritt die Mengen \(N_1\) und
@@ -677,12 +638,10 @@ const Article = () => {
                     Wenn dem so wäre, dann würde bereits unsere Reduktion auf das Palindromwortproblem eine
                     mehrdeutige Grammatik erzeugen. Wir gehen einen anderen Weg.
                     Ich folge hier dem Tip in Exercise 5.21 aus
-                    Michael Sipsers Buch 
-                    {" "}
+                    Michael Sipsers Buch{" "}
                     <i>
                       Introduction to the Theory of Computation
                     </i>
-                    {" "}
                     , third edition.
                   </Paragraph>
                 </Paragraph>
@@ -692,9 +651,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Sei ein PCP-Puzzle \(P = \&#123; (\alpha_1:\beta_1), \dots, (\alpha_n : \beta_n)\&#125;\) gegeben.
                     Wir erstellen nun eine kontextfreie Gramatik, die es dem "User" erlaubt, zu entscheiden,
                     ob er das Wort via die oberen Teile \(\alpha_i\) oder via die unteren Teile ableiten will;

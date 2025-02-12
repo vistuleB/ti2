@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={46}
         title_gr="Turing-Maschinen simulieren Turing-Maschinen: die universelle Turing-Maschine"
         title_en="Turing universal"
         number={7.5}
@@ -126,35 +127,25 @@ const Article = () => {
                     sicherzustellen, dass wir
                     die Konfigurationen von $M$ darstellen können in dem Alphabet $\Lambda$,
                     das
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       unabhängig
                     </i>
-                    {" "}
-                    von $M$ ist. Dass wir also 
-                    {" "}
+                    von $M$ ist. Dass wir also{" "}
                     <i>
                       jede
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Turingmaschine
-                    $M$ mit Eingabealphabet $\Sigma$ und 
-                    {" "}
+                    $M$ mit Eingabealphabet $\Sigma$ und{" "}
                     <i>
                       jede
                     </i>
-                    {" "}
                     ihrer Konfigurationen
-                    als Strings über 
-                    {" "}
+                    als Strings über{" "}
                     <i>
                       einem
                     </i>
-                    {" "}
                     festen Alphabet $\Lambda$ darstellen
                     können.
                   </Paragraph>
@@ -189,7 +180,6 @@ const Article = () => {
                         (Universelle
                         Turingmaschine).
                       </b>
-                      {" "}
                       Zu
                       jedem
                       endlichen Eingabealphabet $\Sigma$ sei
@@ -243,7 +233,7 @@ const Article = () => {
                       </Paragraph>
                     </Paragraph>
                     \begin&#123;align*&#125;
-                    \&#123; c w \ | \ w \in \Sigma^* \textnormal&#123; und&#125; c = \enc(M) \textnormal&#123;
+                    \&#123; c w \ | \ w \in \Sigma^* \textnormal&#123; und &#125; c = \enc(M) \textnormal&#123;
                     und $M$ akzeptiert $w$&#125; \&#125; \ .
                     \end&#123;align*&#125;
                   </Paragraph>
@@ -258,7 +248,6 @@ const Article = () => {
                         Ein technischer aber letztendlich irrelevanter Punkt:
                         {" "}
                       </b>
-                      {" "}
                       die Mengen
                       $Q$ und $\Gamma$ der Turingmaschine $M$ können ja beliebige
                       (endliche) Mengen sein,
@@ -304,9 +293,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Den Beweis in allen Details zu führen hieße, die Maschine $U$
                       konkret als Turingmaschine
                       zu implementieren. Wir tun dies nicht. Wir beschränken uns auf
@@ -329,7 +316,7 @@ const Article = () => {
                     href="#universal-TM"
                     class="right carousel-control-next-icon">
                     <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
+                      <img src="../img/carousel-next-icon.svg" />
                     </div>
                   </a>
                   <div
@@ -521,181 +508,299 @@ const Article = () => {
                       style="display:inline-block"
                       class="carousel-inner">
                       <div class="item active">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-01-01.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-01-02.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-01-03.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-01-04.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-02-01.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-01.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-02.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-03.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-04.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-05.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-06.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-07.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-08.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-09.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-10.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-11.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-12.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-13.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-14.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-15.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-16.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-17.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-18.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-19.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-20.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-21.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-22.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-23.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-24.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-25.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-26.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-27.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-28.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-29.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-30.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-31.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-32.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-33.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-34.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-35.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-36.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-37.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-38.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-39.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-40.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-41.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-42.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-43.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-44.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-45.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-46.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-47.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-48.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-49.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-50.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-51.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-52.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-53.svg" />
                       </div>
                       <div class="item">
-                        <img src="../img/carousel-prev-icon.svg" />
+                        <img
+                          style="height:22em"
+                          src="../img/turing-machines/universal/universal-03-54.svg" />
                       </div>
                     </div>
                   </div>

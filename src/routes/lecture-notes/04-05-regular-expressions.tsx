@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={25}
         title_gr="Reguläre Ausdrücke"
         title_en="regular expressions"
         number={4.5}
@@ -42,12 +43,10 @@ const Article = () => {
                     Wir werden nun eine weitere Weise finden, reguläre Sprachen zu beschreiben: neben regulären
                     Grammatik (ob normal, erweitert, eingeschränkt),
                     endlichen Automaten und nichtdeterministischen endlichen Automaten
-                    gibt es noch die 
-                    {" "}
+                    gibt es noch die{" "}
                     <i>
                       regulären Ausdrücke
                     </i>
-                    {" "}
                     . Dies wird wahrscheinlich von allen
                     Beschreibungsweise die sein, mit der Sie in der Praxis
                     am ehesten in Berührung kommen.
@@ -107,26 +106,20 @@ const Article = () => {
                     <b>
                       Frage:
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
-                    Können 
                     {" "}
+                    Können{" "}
                     <i>
                       alle
                     </i>
-                    {" "}
                     regulären Sprachen nach diesem Baukastenprinzip erstellt werden?
                   </Paragraph>
                 </div>
                 <Paragraph>
                   <Paragraph>
-                    Damit diese Frage überhaupt die Chance hat, mit 
-                    {" "}
+                    Damit diese Frage überhaupt die Chance hat, mit{" "}
                     <i>
                       ja
                     </i>
-                    {" "}
                     beantwortet zu werden, müssen wir
                     "Atome" zur Verfügung stellen, mit denen wir beginnen können. Daher:
                   </Paragraph>
@@ -158,7 +151,6 @@ const Article = () => {
                       <b>
                         Atome.
                       </b>
-                      {" "}
                       \(\emptyset\) ist ein regulärer Ausdruck und beschreibt die
                       Sprache \(\emptyset\).
                       \(\epsilon\) ist ein regulärer Ausdruck und beschreibt die Sprache \(\&#123;\epsilon\&#125;\).
@@ -170,7 +162,6 @@ const Article = () => {
                       <b>
                         Alternative.
                       </b>
-                      {" "}
                       Wenn \(R_1, R_2\) reguläre Ausdrücke über \(\Sigma\) sind
                       und die Sprachen \(L_1\) und \(L_2\) beschreiben, so ist
                       \((R_1 | R_2)\) ein regulärer Ausdruck und beschreibt die Sprache
@@ -185,7 +176,6 @@ const Article = () => {
                       <b>
                         Konkatenation.
                       </b>
-                      {" "}
                       \((R_1R_2)\) ist ein regulärer Ausdruck, der
                       die Sprache \(L_1 \circ L_2\) beschreibt (die auch wiederum regulär ist).
                       Der Deutlichkeit halber schreiben wir auch manchmal \(R_1 \circ R_2\).
@@ -195,7 +185,6 @@ const Article = () => {
                       <b>
                         Kleenesche Hülle.
                       </b>
-                      {" "}
                       Wenn \(R\) ein regulärer Ausdruck ist und die Sprache
                       \(L\) beschreibt,
                       dann ist \((R^*)\) ein regulärer Ausdruck und beschreibt die Sprache \(L^*\).
@@ -205,12 +194,10 @@ const Article = () => {
                     <Paragraph>
                       Weil in der Praxis neben \(L^*\), also beliebig langen, möglicherweise leeren Folgen von
                       \(L\)-Wörtern wir
-                      oft 
-                      {" "}
+                      oft{" "}
                       <i>
                         nichtleere
                       </i>
-                      {" "}
                       Folgen wollen,
                       führen wir die Abkürzung \(R^+\) für \(R (R^*)\) ein und bezeichnen die beschriebene Sprache
                       \(L \circ L^*\) kurzerhand als \(L^+\).
@@ -222,25 +209,18 @@ const Article = () => {
                     In konkreten fällen lassen gerne die Klammerung weg, wenn keine Verwechslungsgefahr besteht.
                     Auch
                     gehen wir davon aus, dass die Operatoren die Präzedenz \(^*\) vor \(\circ\) vor \(|\) haben (wie
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       hoch
                     </i>
-                    {" "}
-                    vor 
-                    {" "}
+                    vor{" "}
                     <i>
                       Punkt
                     </i>
-                    {" "}
-                    vor 
-                    {" "}
+                    vor{" "}
                     <i>
                       Strich
                     </i>
-                    {" "}
                     in der Arithmetik), sodass beispielsweise
                     der Ausdruck \( a^*b|c^*\) die Bedeutung von \((((a^*)b)(c^*))\) hat, genauso wie wir
                     in der Arithmetik \(a^2 b + c^3\) statt \( (((a^2)b) + c^3) \) schreiben.
@@ -249,13 +229,10 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Die von den atomaren Ausdrücken beschriebenen Sprachen sind alle regulär, da sie alle
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       endliche Sprachen
                     </i>
-                    {" "}
                     sind.
                     Dank unserer Vorarbeit aus{" "}
                     <a href="./04-01-regular-grammars.html#baukasten">
@@ -286,28 +263,14 @@ const Article = () => {
                     <span class="numbered-title">
                       Beispiel
                     </span>
-                    Nehmen wir die Sprache der Wörter der Form{" "}
-                    <code>
-                      bla:bla:blu.xyz-12-ab.b:x
-                    </code>
-                    aus dem
+                    Nehmen wir die Sprache der Wörter der Form `bla:bla:blu.xyz-12-ab.b:x`aus dem
                     letzten Kapitel. Sie erinnern sich:
-                    eine endliche Folge von 
-                    {" "}
+                    eine endliche Folge von{" "}
                     <i>
                       Labels
                     </i>
-                    {" "}
                     , wo ein Label eine nichtleere Folge von Blöcken ist, die
-                    entweder{" "}
-                    <code>
-                      :
-                    </code>
-                    oder durch{" "}
-                    <code>
-                      -
-                    </code>
-                    separiert sind, wobei innerhalb eines Labels
+                    entweder `:`oder durch `-`separiert sind, wobei innerhalb eines Labels
                     immer nur ein
                     Separatortyp vorkommen darf, und wobei ein Block eine nichtleere Folge von alphanumerischen
                     Zeichen ist (wir haben uns dann auf den Buchstaben \(a\) beschränkt).
@@ -323,17 +286,8 @@ const Article = () => {
                       \begin&#123;align*&#125;
                       B : = a^+
                       \end&#123;align*&#125;
-                      Für ein Label müssen wir uns entscheiden, ob wir die Blöcke mit{" "}
-                      <code>
-                        :
-                      </code>
-                      oder
-                    </Paragraph>
-                    <Paragraph>
-                      <code>
-                        -
-                      </code>
-                      separieren; wir
+                      Für ein Label müssen wir uns entscheiden, ob wir die Blöcke mit `:`oder
+                      `-`separieren; wir
                       erhalten den regulären Ausdruck \(T\) für Labels ist also
                       \begin&#123;align*&#125;
                       T := B (&#123;:&#125;B)^* | B (\text&#123;-&#125;B)^
@@ -353,21 +307,8 @@ const Article = () => {
                       haben, während \(T'\) eher
                       die Arbeitsweise des determinisitschen Automaten reflektiert (wir lesen erst einmal einen
                       Block und erst, wenn wir zum ersten mal auf
-                    </Paragraph>
-                    <Paragraph>
-                      <code>
-                        :
-                      </code>
-                      oder{" "}
-                      <code>
-                        -
-                      </code>
-                      stoßen, entscheiden wir uns für den "Typ" des Labels).
-                      Schlussendlich ist ein Wort in der Sprache eine mit{" "}
-                      <code>
-                        .
-                      </code>
-                      separierte Folge von
+                      `:`oder `-`stoßen, entscheiden wir uns für den "Typ" des Labels).
+                      Schlussendlich ist ein Wort in der Sprache eine mit `.`separierte Folge von
                       Labels, also:
                       \begin&#123;align*&#125;
                       R := T (&#123;.&#125;T)^
@@ -411,18 +352,26 @@ const Article = () => {
                       </code>
                       (a+)(:a+)*
                     </Paragraph>
-                    <code class="terminalOutput">
-                      Enter words to be matched, one per line
-                    </code>
-                    <code>
-                      aaaaa:aa:aaaa:a
-                    </code>
-                    <code class="terminalOutput">
-                      true
-                    </code>
-                    <code>
-                      aaa:aa:
-                    </code>
+                    <Paragraph>
+                      <code class="terminalOutput">
+                        Enter words to be matched, one per line
+                      </code>
+                      {" "}{" "}
+                      <code>
+                        aaaaa:aa:aaaa:a
+                      </code>
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      <code class="terminalOutput">
+                        true
+                      </code>
+                      {" "}{" "}
+                      <code>
+                        aaa:aa:
+                      </code>
+                      {" "}{" "}
+                    </Paragraph>
                     <code class="terminalOutput">
                       false
                     </code>
@@ -440,27 +389,13 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     In der Praxis gibt es bei reguläre Ausdrücken viele Abkürzung, so beschreibt
-                  </Paragraph>
-                  <Paragraph>
-                    <code>
-                      [a-z]
-                    </code>
-                    beispielsweise die Menge aller Kleinbuchstaben,
-                  </Paragraph>
-                  <Paragraph>
-                    <code>
-                      [aoeiuy]
-                    </code>
-                    beschreibt die Menge \&#123;a,o,e,i,u,y\&#125; etc.
-                    Der reguläre Ausdruck{" "}
-                    <code>
-                      [a-z]
-                      <b>
-                        [aeiuoy][a-z]
-                      </b>
-                      {" "}{" "}
-                    </code>
-                    beschreibt also die
+                    `[a-z]`beispielsweise die Menge aller Kleinbuchstaben,
+                    `[aoeiuy]`beschreibt die Menge \&#123;a,o,e,i,u,y\&#125; etc.
+                    Der reguläre Ausdruck `[a-z]
+                    <b>
+                      [aeiuoy][a-z]
+                    </b>
+                    `beschreibt also die
                     Menge aller Wörter, die mindesten einen Vokal enthalten.
                     Lesen Sie hierfür unter Anderem
                   </Paragraph>
@@ -517,13 +452,11 @@ const Article = () => {
                 </div>
                 <Paragraph>
                   <Paragraph>
-                    Wir paraphrasieren hier den Beweis aus Michael Sipsers 
-                    {" "}
+                    Wir paraphrasieren hier den Beweis aus Michael Sipsers{" "}
                     <i>
                       Introduction to the Theory of
                       Computation
                     </i>
-                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>
@@ -533,9 +466,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Zunächst skizzieren wir die Beweisidee. Da \(L\) regulär ist, gibt es einen
                     nichtdeterministischen endlichen
                     Automaten \(M\), die \(L\) akzeptiert. Wir werden nun \(M\) Schritt für Schritt in einen
@@ -579,13 +510,11 @@ const Article = () => {
                     end&#125;\)
                     hinausgehen.
                     All dies lässt sich leicht verwirklichen, wenn wir reguläre Ausdrücke als
-                    Kantenbeschriftung zulassen. Wir nennen so einen Automaten einen 
-                    {" "}
+                    Kantenbeschriftung zulassen. Wir nennen so einen Automaten einen{" "}
                     <i>
                       verallgemeinerten
                       nichtdeterministischen endlichen Automaten (VNEA)
                     </i>
-                    {" "}
                     .
                   </Paragraph>
                   <figure>
@@ -608,9 +537,7 @@ const Article = () => {
                       <b>
                         (Verallgemeinerter nichtdeterministischer endlicher Automat, VNEA).
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Ein VNEA besteht aus einem Alphabet \(\Sigma\), einer Zustandsmenge \(Q\), einen
                       Startzustand \(\qstart \in Q\), einem
                       akzeptierenden Zustand \(q_&#123;\rm end&#125; \in Q \setminus \&#123;\qstart\&#125;\), einer
@@ -700,8 +627,8 @@ const Article = () => {
                   </Paragraph>
                   <figure>
                     <img
-                      style="height:14em"
-                      src="../img/finite-state-automata/to-regex/nea-to-vnea.svg"
+                      style="height:10em"
+                      src="../img/finite-state-automata/to-regex/eliminate-B.svg"
                       loading="lazy" />
                   </figure>
                   <Paragraph>
@@ -711,12 +638,10 @@ const Article = () => {
                       schreiben wir einfach \(R_1R_3\) anstatt \(R_1 R_2^* R_3\); falls der Übergang \(A
                       \step&#123;R_4&#125; B\) nicht
                       existieren sollte , lassen wir das \(R_4 | \) im rechten Bild einfach weg.
-                      (Sipser führt hier den eleganten Formalismus ein, zu verlangen, dass 
-                      {" "}
+                      (Sipser führt hier den eleganten Formalismus ein, zu verlangen, dass{" "}
                       <i>
                         jedes
                       </i>
-                      {" "}
                       Paar
                       durch
                       eine Kante verbunden ist und würde fehlende Kanten einfach mit dem regulären Ausdruck
@@ -737,8 +662,8 @@ const Article = () => {
                   </Paragraph>
                   <figure>
                     <img
-                      style="height:14em"
-                      src="../img/finite-state-automata/to-regex/nea-to-vnea.svg"
+                      style="height:2.5em"
+                      src="../img/finite-state-automata/to-regex/nvea-final.svg"
                       loading="lazy" />
                   </figure>
                   <Paragraph>
@@ -760,11 +685,7 @@ const Article = () => {
                 </div>
                 <Paragraph>
                   <Paragraph>
-                    Hier sehen Sie den ganzen Ablauf an unserer{" "}
-                    <code>
-                      aaaa:a:aaa.aa-aa
-                    </code>
-                    -Sprache:
+                    Hier sehen Sie den ganzen Ablauf an unserer `aaaa:a:aaa.aa-aa`-Sprache:
                   </Paragraph>
                 </Paragraph>
                 <div
@@ -773,8 +694,8 @@ const Article = () => {
                   <div style="overflow-x: auto; margin: 1em;">
                     <figure>
                       <img
-                        style="height:14em"
-                        src="../img/finite-state-automata/to-regex/nea-to-vnea.svg"
+                        style="height:20em"
+                        src="../img/finite-state-automata/to-regex/nfsm-to-regex-carpet.svg"
                         loading="lazy" />
                     </figure>
                   </div>
@@ -788,8 +709,8 @@ const Article = () => {
                   </Paragraph>
                   <figure>
                     <img
-                      style="height:14em"
-                      src="../img/finite-state-automata/to-regex/nea-to-vnea.svg"
+                      style="height:10em"
+                      src="../img/finite-state-automata/nfsm-example-02.svg"
                       loading="lazy" />
                   </figure>
                   <Paragraph>

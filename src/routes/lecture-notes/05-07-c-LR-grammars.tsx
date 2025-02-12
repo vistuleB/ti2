@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={35}
         title_gr="LR-Grammatiken"
         title_en="c LR grammars"
         number={5.7}
@@ -85,14 +86,11 @@ const Article = () => {
                   <Paragraph>
                     Da aus der Sicht unseres neuen Parsers die Rückwärtsanwendung einer Produktion
                     \(X \rightarrow \beta\), also der Schritt \(\alpha X \gamma \Leftarrow \alpha \beta \gamma\)
-                    einen 
-                    {" "}
+                    einen{" "}
                     <i>
                       Fortschritt
                     </i>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     darstellt und zeitlich auch
                     nach vorne geht, verwende ich ab jetzt ein neues Pfeilsymbol, das
                     von links nach rechts geht und daher dem in Europa üblichen Gefühlt,
@@ -109,39 +107,31 @@ const Article = () => {
                     <b>
                       (Reduktion und Linksreduktion)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Seien
                     \(\alpha, \beta, \gamma \in (\Sigma \cup N)^*\) Wortformen und
                     \(X \rightarrow \beta\) eine Produktion. Dann schreiben wir
                     \begin&#123;align*&#125;
                     \alpha \beta \gamma \rstep&#123;&#125; \alpha X \gamma \ ,
                     \end&#123;align*&#125;
-                    und sagen 
-                    {" "}
+                    und sagen{" "}
                     <i>
                       \(\alpha \beta \gamma\) reduziert zu \(\alpha X \gamma\)
                     </i>
-                    {" "}
                     .
-                    Man nennt einen solchen Schritt auch einen 
-                    {" "}
+                    Man nennt einen solchen Schritt auch einen{" "}
                     <i>
                       Reduktionsschritt
                     </i>
-                    {" "}
                     .
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
                       <Paragraph>
-                        Wir nennen den Schritt einen 
-                        {" "}
+                        Wir nennen den Schritt einen{" "}
                         <i>
                           Linksreduktionsschritt
                         </i>
-                        {" "}
                         , wenn
                         rechts von \(\beta\) nur Terminale stehen. Wenn also
                         \(\gamma = w \in \Sigma^*\) und somit
@@ -151,19 +141,14 @@ const Article = () => {
                       </Paragraph>
                     </Paragraph>
                     Eine Folge von Linksreduktionsschritten nennen wir eine
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Linksreduktion
                     </i>
-                    {" "}
-                    . 
-                    {" "}
+                    .{" "}
                     <i>
                       Links
                     </i>
-                    {" "}
                     , weil wir uns
                     von links nach rechts in den terminalen Teil hineinarbeiten.
                     Wir werden im folgenden nur Linksreduktionsschritte betrachten und
@@ -177,7 +162,6 @@ const Article = () => {
                       <b>
                         Beobachtung:
                       </b>
-                      {" "}
                       Wenn wir
                       einen Linksreduktionsschritt \(\alpha \beta w \rstep&#123;&#125; \alpha X w\)
                       betrachten, also
@@ -239,12 +223,10 @@ const Article = () => {
                   <Paragraph>
                     ist inkorrekt. In unserer Java-Implementierung haben wir dieses Problem händisch gelöst, indem
                     wir der Regel $ND \rstep&#123;&#125; N$ den Vorzug vor $D \rstep&#123;&#125; N$ gegebene haben. Im allgemeinen
-                    müssen wir definieren, was ein 
-                    {" "}
+                    müssen wir definieren, was ein{" "}
                     <i>
                       korrekter
                     </i>
-                    {" "}
                     Linksreduktionsschritt ist. Und dann
                     überlegen, wie wir herausfinden, ob ein Linksreduktionsschritt korrekt ist. Diese Fragen
                     werden uns für den Rest dieses und des nächsten Teilkapitels beschäftigen.
@@ -259,15 +241,11 @@ const Article = () => {
                     <b>
                       (Gültige Wortform, korrekter Reduktionsschritt)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
-                    Eine Wortform \(\gamma \in (\Sigma \cup N)^*\) heißt 
                     {" "}
+                    Eine Wortform \(\gamma \in (\Sigma \cup N)^*\) heißt{" "}
                     <i>
                       gültig
                     </i>
-                    {" "}
                     ,
                     wenn es eine Rechtsableitung
                     \begin&#123;align*&#125;
@@ -277,25 +255,20 @@ const Article = () => {
                     \begin&#123;align*&#125;
                     \alpha \beta w \rstep&#123;&#125; \alpha X w
                     \end&#123;align*&#125;
-                    heißt 
-                    {" "}
+                    heißt{" "}
                     <i>
                       korrekt
                     </i>
-                    {" "}
                     , wenn \(\alpha X w\) gültig ist.
                     In diesem Fall ist natürlich $\alpha \beta w$ selbst gültig.
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
                       Den Präfix $\alpha$ nennen wir eine
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         Front
                       </i>
-                      {" "}
                       der gültigen Wortform $\alpha \beta w$.
                       Wenn die Grammatik eindeutig ist, dann hat
                       jede gültige Wortform $\gamma$ genau eine Front, die wir
@@ -319,9 +292,7 @@ const Article = () => {
                     <b>
                       Wunsch.
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Ob $\alpha \beta w \rstep&#123;&#125; \alpha X w$ gültig ist oder nicht,
                     wollen wir allein auf Grund der Front $\alpha \beta$ entscheiden können, das heißt,
                     ohne $w$ betrachten zu müssen.
@@ -339,12 +310,10 @@ const Article = () => {
                     zum Beispiel
                     haben wir manchmal das erste Zeichen von $w$ betrachten müssen. Allerdings behalten wir erst
                     einmal obigen Wunsch als Idealziel.
-                    Um ihn zu formalisieren, fragen wir uns, wann es denn 
-                    {" "}
+                    Um ihn zu formalisieren, fragen wir uns, wann es denn{" "}
                     <i>
                       nicht
                     </i>
-                    {" "}
                     möglich ist,
                     ohne Betrachten von $w$ zu eintscheiden, ob
                     $\alpha \beta w \rstep&#123;&#125; \alpha X w$ gültig ist.
@@ -361,8 +330,7 @@ const Article = () => {
                     korrekte Linksreduktionsschritte:
                     \(\gamma \rstep&#123;&#125; \gamma'\) und
                     \(\gamma \rstep&#123;&#125; \gamma''\).
-                    In diesem Falle gäbe es 
-                    {" "}
+                    In diesem Falle gäbe es{" "}
                     <i>
                       zwei verschiedene
                     </i>
@@ -375,12 +343,10 @@ const Article = () => {
                     <Paragraph>
                       (wir nehmen an, dass man aus jedem Nichtterminal
                       mindestens ein Wort \(u \in \Sigma^*\) ableiten kann; andernfalls
-                      kann man solche 
-                      {" "}
+                      kann man solche{" "}
                       <i>
                         nutzlosen
                       </i>
-                      {" "}
                       Nichtterminale eliminieren).
                       Das Wort \(w\) hat also zwei verschiedene Ableitungsbäume.
                       Die Grammatik ist somit mehrdeutig.
@@ -416,7 +382,6 @@ const Article = () => {
                       <i>
                         nicht
                       </i>
-                      {" "}
                       korrekt, obwohl \(\alpha\beta w'\) eine
                       gültige Wortform ist.
                       Dieser Fall ist schlecht, weil der Parser nur
@@ -473,9 +438,7 @@ const Article = () => {
                     <b>
                       (\(LR(0)\)-Grammatiken)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    {" "}
                     Eine kontextfreie Grammatik heißt \(LR(0)\)-Grammatik,
                     wenn keiner der obigen schlechten Fälle eintritt.
                     Formal, wenn (1) die Grammatik eindeutig ist und (2) wenn ein
@@ -514,9 +477,7 @@ const Article = () => {
                       <b>
                         (LR(0), äquivalente Formulierung).
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Eine Grammatik $G$ ist LR(0) genau dann, wenn für
                       alle korrekten Linksreduktionsschritte
                       $\alpha \beta w \rstep&#123;&#125; \alpha Xw$ und
@@ -548,9 +509,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Der Beweis ist leider etwas mechanisch und
                       repetitiv. Aber vielleicht ist es eine
                       gute Übung, ihn genau durchzugehen, um die
@@ -579,7 +538,6 @@ const Article = () => {
                           <b>
                             Beweis.
                           </b>
-                          {" "}
                           Um Punkt 1 zu zeigen,
                           nehmen wir an, dass $\alpha \beta = \alpha' \beta'$ gilt.
                           Da $\alpha \beta w \rstep&#123;&#125; \alpha X w$ korrekt
@@ -841,12 +799,10 @@ const Article = () => {
                 </ol>
                 <Paragraph>
                   <Paragraph>
-                    Beide Aufgaben können mit Hilfe eines 
-                    {" "}
+                    Beide Aufgaben können mit Hilfe eines{" "}
                     <i>
                       endlichen Automaten
                     </i>
-                    {" "}
                     ,
                     des DK-Automaten erledigt werden (DK steht als Abkürzung für Donald Knuth,
                     der als erstes diese Idee hatte).
@@ -858,17 +814,13 @@ const Article = () => {
                     <b>
                       Hinweis.
                     </b>
-                    {" "}
                     Was nun folgt, ist mathematisch
                     recht herausfordernd. Lesen Sie daher gerne auch
                     das Kapitel 2.4 (Deterministic context free languages) im Lehrbuch
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <i>
                       Introduction to the Theory of Computing
                     </i>
-                    {" "}
                     von Michael Sipser.
                     Meine Darstellung des doch recht schwierigen Materials fußt auf diesem
                     Kapitel, weicht aber doch stark genug von Sipser ab, so dass es

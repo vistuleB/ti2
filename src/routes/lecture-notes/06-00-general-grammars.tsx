@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={40}
         title_gr="Allgemeine Grammatiken"
         title_en="general grammars"
         number={6.0}
@@ -80,23 +81,17 @@ const Article = () => {
                     <b>
                       (formale Grammatik)
                     </b>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
-                    Eine formale Grammatik ist gegeben durch ein endliches Alphabet
-                    \(\Sigma\) aus 
                     {" "}
+                    Eine formale Grammatik ist gegeben durch ein endliches Alphabet
+                    \(\Sigma\) aus{" "}
                     <i>
                       Terminalsymbolen
                     </i>
-                    {" "}
                     , einer endlichen Menge
-                    \(\N\) von 
-                    {" "}
+                    \(\N\) von{" "}
                     <i>
                       Nichtterminalen
                     </i>
-                    {" "}
                     , einem Startsymbol
                     \(S \in N\) und einer endlichen Menge an Produktionen
                     \begin&#123;align*&#125;
@@ -128,7 +123,6 @@ const Article = () => {
                     <b>
                       (Ableitung und erzeugte Sprache)
                     </b>
-                    {" "}
                     . Sei \(G\) eine formale
                     Grammtik und \(\gamma_1, \gamma_2 \in (\Sigma\cup N)^* \) zwei Wortformen.
                     Wir schreiben \(\gamma_1 \Step&#123;&#125; \gamma_2\), wenn wir
@@ -183,24 +177,20 @@ const Article = () => {
                     Die obige Beispielableitung illustriert, dass allgemeine formale Grammatiken
                     etwas können, das kontextfreie Grammatiken nicht bieten konnten:
                     das Vertauschen von Symbolen. Das mag nicht als besonders viel erscheinen,
-                    wird sich aber als 
-                    {" "}
+                    wird sich aber als{" "}
                     <i>
                       Game Changer
                     </i>
-                    {" "}
                     herausstellen.
                   </Paragraph>
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
                     Sobald wir eine Wortform erreicht haben, die nur aus Terminalsymbolen
-                    besteht (also ein 
-                    {" "}
+                    besteht (also ein{" "}
                     <i>
                       Wort
                     </i>
-                    {" "}
                     geworden ist), muss unsere Ableitung
                     aufhören: wir können keine weitere Produktion anwenden, da jede
                     linke Seite mindestens ein Nichtterminal enthält. Diese Einschränkung
@@ -432,7 +422,7 @@ const Article = () => {
                     ,
                     in der zu zeigen war, dass
                     \begin&#123;align*&#125;
-                    L = \&#123; 1^n \ | \ n = 2^d \textnormal&#123; für ein $d \in \N$&#125;\&#125;
+                    L = \&#123; 1^n \ | \ n = 2^d \textnormal&#123; für ein $d \in \N$ &#125;\&#125;
                     \end&#123;align*&#125;
                     nicht kontextfrei ist. Allerdings ist \(L\) kein sehr kompliziertes Gebilde.
                     So könnten Sie recht einfach ein Programm schreiben, dass für ein Eingabewort
@@ -475,12 +465,10 @@ const Article = () => {
                     Wagen wir ein letztes Beispiel: die Sprache aller Wörter,
                     deren Länge eine Quadratzahl ist. Spätestens dieses Beispiel sollte Sie
                     davon überzeugen, dass allgemeine formale Gramatiken, im Gegensatz zu
-                    kontextfreien und regulären, nicht nur 
-                    {" "}
+                    kontextfreien und regulären, nicht nur{" "}
                     <i>
                       Formate
                     </i>
-                    {" "}
                     syntaktisch
                     beschreiben, sondern komplizierte Rechnungen durchführen können.
                     Sie stellen somit ein völlig andersartiges Biest dar.
@@ -493,12 +481,10 @@ const Article = () => {
                     </span>
                     Sei \(L\) die Sprache aller Wörter über
                     \(\Sigma = \&#123;1\&#125;\), deren Länge eine Quadratzahl ist.
-                    Wir werden als erstes eine 
-                    {" "}
+                    Wir werden als erstes eine{" "}
                     <i>
                       Multiplikationsgrammatik
                     </i>
-                    {" "}
                     erzeugen.
                     Dies soll eine Menge von Produktionen sein, die Ableitungen der Form
                     \begin&#123;align*&#125;
@@ -601,12 +587,10 @@ const Article = () => {
                       \end&#123;align*&#125;
                       Wir können die Produktion \(R \step&#123;&#125; K\) zwar schon früher
                       anwenden; wenn da allerdings noch \(A\)- oder \(\tilde&#123;C&#125;\)-Symbole
-                      enthalten sind, ist es 
-                      {" "}
+                      enthalten sind, ist es{" "}
                       <i>
                         game over
                       </i>
-                      {" "}
                       : wir könnten die nie
                       mehr in Terminale umwandeln.
                     </Paragraph>
@@ -672,13 +656,10 @@ const Article = () => {
                     abba\text&#123;:&#125;aaaaaaa\text&#123;;&#125;abbbb\text&#123;;&#125;abba\text&#123;;&#125;bbbb \in L \\
                     abba\text&#123;:&#125;aaaaaaa\text&#123;;&#125;abbbb\text&#123;;&#125;abbba\text&#123;;&#125;bbbb \not \in L \\
                     \end&#123;align*&#125;
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
+                    {" "}
                     <b>
                       Tip:
                     </b>
-                    {" "}
                     das ist einfach, wenn Sie bereits eine Grammatik
                     für das vorherige Problem haben. Erzeugen Sie
                     \(wXwY\) und lassen dann aus \(X\) und \(Y\) den Rest der Liste entstehen.
@@ -687,22 +668,18 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Sie haben sicherlich gemerkt, dass wir die Grammatikproduktionen nun nicht
-                    mehr nur zum 
-                    {" "}
+                    mehr nur zum{" "}
                     <i>
                       Erzeugen
                     </i>
-                    {" "}
                     verwenden wie bei kontextfreien Sprachen, sondern zum
                     Umformen, Rumschieben, Kopieren etc. Es ist nun an der Zeit, die
                     Welt der Grammatiken zu verlassen und zu formalisieren, was man
                     mit Umformen, Rumschieben, Kopieren erreichen kann. In anderen Worten:
-                    eine Formalisierung des Begriffs des 
-                    {" "}
+                    eine Formalisierung des Begriffs des{" "}
                     <i>
                       Berechnens
                     </i>
-                    {" "}
                     .
                   </Paragraph>
                 </Paragraph>

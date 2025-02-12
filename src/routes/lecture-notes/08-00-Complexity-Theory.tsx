@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={50}
         title_gr="Komplexitätstheorie"
         title_en="Complexity Theory"
         number={8.0}
@@ -40,19 +41,15 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Turingmaschinen erlauben uns, den Resourcenverbrauch einer Berechnung zu quantifizieren:
-                    zum einen die 
-                    {" "}
+                    zum einen die{" "}
                     <i>
                       Zeit
                     </i>
-                    {" "}
                     , also die Anzahl der Schritte, die die Turingmaschine
-                    durchführt, bis sie anhält; zum anderen der 
-                    {" "}
+                    durchführt, bis sie anhält; zum anderen der{" "}
                     <i>
                       Speicherplatz
                     </i>
-                    {" "}
                     , also die Anzahl
                     der Zellen auf dem Band (oder den Bändern), die im Verlauf der Berechnung beschrieben werden.
                     Beides sind Maße, die tatsächlich im echten Leben relevant sind. Turingmaschinen erlauben uns,
@@ -71,7 +68,6 @@ const Article = () => {
                     <b>
                       I/O-Komplexität.
                     </b>
-                    {" "}
                     In echten Rechnern haben wir eine Hierarchie von
                     Speichermedien. Den extrem schnellen Prozessorcache; schnellen Cache; den vergleichsweise
                     langsamen
@@ -83,14 +79,12 @@ const Article = () => {
                     <b>
                       Kommunikationskomplexität.
                     </b>
-                    {" "}
                     Bei verteilten Anwendungen (Cloud Computing) ist
                     die limitierende Resource eventuell gar nicht die Rechenkapazität sondern das
                     {" "}
                     <i>
                       Netzwerk
                     </i>
-                    {" "}
                     , über
                     das die Daten ausgetauscht werden.
                   </li>
@@ -99,12 +93,10 @@ const Article = () => {
                   <Paragraph>
                     Also: Turingmaschinen sind zwar universell in dem Sinne, dass sie wohl alle physikalisch
                     realisierbaren
-                    Rechnermodelle simulieren können (ich sage 
-                    {" "}
+                    Rechnermodelle simulieren können (ich sage{" "}
                     <i>
                       wohl
                     </i>
-                    {" "}
                     , weil wir nicht wissen, was alles
                     physikalisch realisierbar ist). Allerdings ist es möglich, dass Sie, abhängig von Ihrem
                     Anwendungsfeld, ein abgewandeltes oder völlig anderes Modell benötigen, um den
@@ -113,12 +105,10 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
-                    Dennoch: in diesem Kapitel beschränken wir uns auf die Resource 
-                    {" "}
+                    Dennoch: in diesem Kapitel beschränken wir uns auf die Resource{" "}
                     <i>
                       Zeit
                     </i>
-                    {" "}
                     , und daher
                     sind Turingmaschinen das Modell der Wahl.
                   </Paragraph>
@@ -142,13 +132,10 @@ const Article = () => {
                       </span>
                       Sei $t: \N \rightarrow \N$. Eine
                       Turingmaschinen $M$
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
+                      {" "}
                       <i>
                         entscheidet
                       </i>
-                      {" "}
                       eine Sprache $L \subseteq \Sigma^*$ in Zeit $t$ wenn
                     </Paragraph>
                   </Paragraph>
@@ -215,9 +202,7 @@ const Article = () => {
                       <b>
                         ($k$-Band zu $1$-Band).
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Sei $t: \N \rightarrow \N$. Dann gilt
                       $\TIME
                       <i>
@@ -248,7 +233,6 @@ const Article = () => {
                         ($k$-Band zu $2$-Band; ohne
                         Beweis).
                       </b>
-                      {" "}
                       Sei
                       $t: \N \rightarrow \N$. Dann gilt $\TIME
                       <i>

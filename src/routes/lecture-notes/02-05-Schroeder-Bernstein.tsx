@@ -6,6 +6,7 @@ const Article = () => {
   return (
     <Container>
       <Chapter
+        count={13}
         title_gr="Das Schröder-Bernstein-Theore"
         title_en="Schroeder Bernstein"
         number={2.5}
@@ -103,12 +104,10 @@ const Article = () => {
                     suggestiven Notation $\leq$ verführen! $A \leq B$ und $B \leq A$
                     heißen, dass es injektive Funktion $f : A \rightarrow B$ und $g : B
                     \rightarrow A$ gibt. Um daraus zu folgern, dass $A \approx B$ gilt,
-                    müssen wir diese zu 
-                    {" "}
+                    müssen wir diese zu{" "}
                     <i>
                       einer
                     </i>
-                    {" "}
                     bijektiven Funktion $h: A
                     \rightarrow B$ kombinieren. Geht das immer?
                   </Paragraph>
@@ -123,7 +122,6 @@ const Article = () => {
                       <b>
                         (Schröder-Bernstein-Theorem).
                       </b>
-                      {" "}
                       Seien $A$ und $B$
                       zwei Mengen. Wenn $A \leq B$ und $B \leq A$ gilt, dann gilt $A
                       \approx B$. In Worten: wenn es injektive Funktionen $f: A
@@ -139,9 +137,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}{" "}
-                    </Paragraph>
-                    <Paragraph>
+                      {" "}
                       Wir tun so, als ob $A \cap B = \emptyset$ gälte. Falls dies nicht
                       der Fall sein sollte, können wir $A$ durch $A \times \&#123;0\&#125; = \&#123;
                       (a,0) \ | \ a \in A\&#125;$ ersetzen und $B$ durch $A \times \&#123;1\&#125; = \&#123;
@@ -300,7 +296,7 @@ const Article = () => {
                     </Paragraph>
                     \begin&#123;align*&#125; X
                     <i>
-                      0&amp;:= B \setminus&#123;\rm img&#125; (f) \\ X
+                      0&amp;:= B \setminus &#123;\rm img&#125; (f) \\ X
                     </i>
                     &#123;2i+1&#125;&amp;:=
                     g(X
@@ -361,9 +357,7 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Wenn $a \in A'$ gilt, dann gilt $a \in X
                         <i>
                           &#123;2i+1&#125;$, also für einen
@@ -411,9 +405,7 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Seien $a, a' \in A$ zwei verschiedene Elemente. Wir unterscheiden
                         drei Fälle: (1) Wenn $a, a' \in A \setminus A'$, dann gilt $h(a) =
                         f(a) \ne f(a') = h(a')$, weil $f$ injektiv ist. (2) Wenn $a, a'
@@ -430,8 +422,8 @@ const Article = () => {
                         &#123;2i&#125;$ gelten. Wenn
                         $i=0$ ist, dann gilt $b' \in X
                         <i>
-                          &#123;2i&#125; = B \setminus&#123;\rm img&#125;(f)$.
-                          Da $f(a) = b$ gilt aber $b \in&#123;\rm img&#125;(f)$ und $b$ und $b'$ sind
+                          &#123;2i&#125; = B \setminus &#123;\rm img&#125;(f)$.
+                          Da $f(a) = b$ gilt aber $b \in &#123;\rm img&#125;(f)$ und $b$ und $b'$ sind
                           verschieden. Wenn $i \geq 1$ ist, dann bedeutet $b' \in X
                         </i>
                         &#123;2i&#125;$,
@@ -466,9 +458,7 @@ const Article = () => {
                         <b>
                           Beweis.
                         </b>
-                        {" "}{" "}
-                      </Paragraph>
-                      <Paragraph>
+                        {" "}
                         Wir unterscheiden zwei Fälle. (1) Wenn $b \in X
                         <i>
                           0 \cup X
@@ -488,7 +478,7 @@ const Article = () => {
                         (2) Wenn $b \not \in B'$, dann gilt insbesondere $b \not \in X
                         <i>
                           0 =
-                          B \setminus&#123;\rm img&#125;(f)$; also $b \in&#123;\rm img&#125; (f)$. Es gibt
+                          B \setminus &#123;\rm img&#125;(f)$; also $b \in &#123;\rm img&#125; (f)$. Es gibt
                           also ein $a \in A$ mit $f(a) = b$. Was ist $h(a)$? Wenn $a \in A
                           \setminus A'$ gilt, dann ist $h(a) = f(a) = b$, und wir haben ein
                           Urbild für $b$ gefunden. Was aber, wenn $a \in A'$, also $a \in

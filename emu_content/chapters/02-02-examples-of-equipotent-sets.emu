@@ -91,9 +91,7 @@
                             
                             Die Mengen $\N$ und $\N^2$ sind gleichmächtig. Mit $\N^2$ (oder auch
                             $\N \times \N$) bezeichnen wir hier das cartesische Produkt von $\N$
-                            mit sich selbst: die Menge aller 
-                            _Paare_
-                            $(a,b)$ von
+                            mit sich selbst: die Menge aller _Paare_$(a,b)$ von
                             natürlichen Zahlen.
                             
                         
@@ -150,9 +148,7 @@
                         |> p
 
                             
-                            
                             *Beweis.*
-                            
                             Wir skizzieren eine Bijektion $f : \N \times \N \rightarrow \N$,
                             indem wir für jeden Punkt $(x,y) \in \N \times \N$ angeben, auf
                             welche natürliche Zahl er abgebildet werden soll:
@@ -350,9 +346,7 @@
                         |> p
 
                             
-                            
                             *Beweis.*
-                            
                             Falls Sie es vergessen haben: eine Funktion $f: A \rightarrow B$
                             heißt injektiv, wenn für alle verschiedenen $a, a' \in A$ auch $f(a)
                             \ne f(a')$ gilt. Wenn $f$ also "kollisionsfrei" ist.
@@ -372,9 +366,7 @@
 
                             
                             mit $a \in \Z$ und $b \in \N^+$ und $\gcd(a,b) = 1$. Mit $\gcd(a,b)$
-                            bezeichnen wir den größten gemeinsamen Teiler (
-                            _greatest common divisor_
-                            ) von $a$ und $b$. Wir definieren nun also $f_1(q) := (a,b) \in \Z
+                            bezeichnen wir den größten gemeinsamen Teiler (_greatest common divisor_) von $a$ und $b$. Wir definieren nun also $f_1(q) := (a,b) \in \Z
                             \times \N$. Dies ist injektiv: zwei verschiedene rationale Zahlen
                             $q$ und $q'$ haben verschiedene Darstellung als gekürzter Bruch, und
                             somit gilt auch $f_1(q) \ne f_1(q')$.
@@ -447,9 +439,7 @@
                         |> p
 
                             
-                            
-                            *Beweis.*
-                            Dies ist ganz einach: da $\N \subseteq \Q$
+                            *Beweis.*Dies ist ganz einach: da $\N \subseteq \Q$
                             gilt, können wir jedes $n$ einfach bei sich belassen. Die Funktion
                             
                         
@@ -459,9 +449,7 @@
 
                             
                             ist die gewünschte Injektion. Man nennt so eine Funktion auch die
-                            
-                            _Einbettung_
-                            von $\N$ in $\Q$.
+                            _Einbettung_von $\N$ in $\Q$.
                             
                             |> span
                                 class qed
@@ -478,16 +466,12 @@
                         
                         Wir sind nun also in der sonderbaren Situation, dass wir eine
                         injektive Funktion $f : \Q \rightarrow \N$ haben, die aber nicht alle
-                        $\N$ ausfüllt, also nicht 
-                        _surjektiv_
-                        ist. Gleichzeitig haben
+                        $\N$ ausfüllt, also nicht _surjektiv_ist. Gleichzeitig haben
                         wir $g : \N \rightarrow \Q$, die injektiv ist aber auch nicht
                         surjektiv. Bei $f$ bleiben also manche natürlichen Zahlen ungenutzt,
                         bei $g$ bleiben rationale Zahlen ungenutzt. Können wir $f$ und $g$
                         irgendwie kombinieren, um eine bijektive Funktion zu erschaffen? Die
-                        Antwort lautet 
-                        _ja, das geht immer_
-                        , ist nicht ganz trivial zu
+                        Antwort lautet _ja, das geht immer_, ist nicht ganz trivial zu
                         beweisen, heißt
                         
                         |> a
@@ -532,9 +516,7 @@
                         |> p
 
                             
-                            
                             *Beweis.*
-                            
                             Wir definieren eine Bijektion $f: \N \rightarrow \Q$, indem wir die
                             Beweisidee von
                             
@@ -614,9 +596,7 @@
                     
                     Erinnern wir uns an $\{0,1\}^*$, die Menge aller endlichen Bitstrings.
                     Die Menge ist ganz klar unendlich, weil sie zum Beispiel $1, 11, 111,
-                    1111, \dots$ enthält. Ist sie 
-                    _abzählbar_
-                    unendlich?
+                    1111, \dots$ enthält. Ist sie _abzählbar_unendlich?
                     
                     
                     |> div
@@ -647,9 +627,7 @@
                         |> p
 
                             
-                            
-                            *Beweis.*
-                            Hier ist eine Idee: wir interpretieren den
+                            *Beweis.*Hier ist eine Idee: wir interpretieren den
                             Bitstring $a_1 a_2 \dots a_n$ als $n$-stellige Binärzahl, also
                             
                         
