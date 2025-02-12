@@ -36,20 +36,16 @@ const Article = () => {
                   </span>
                 </h1>
                 <div class="alert-info">
-                  <Paragraph>
-                    Dieses Kapitel sind ausschließlich persönliche Notizen für mich dazu,
-                    wie man "korrekt" dieses Skript schreibt, insbesondere wie man die
-                    automatische Numerierung verwendet. Es ist also natürlich nicht Stoff
-                    der Vorlesung.
-                  </Paragraph>
+                  Dieses Kapitel sind ausschließlich persönliche Notizen für mich dazu,
+                  wie man "korrekt" dieses Skript schreibt, insbesondere wie man die
+                  automatische Numerierung verwendet. Es ist also natürlich nicht Stoff
+                  der Vorlesung.
                 </div>
                 <Paragraph>
-                  <Paragraph>
-                    Parts of these lecture notes are generated automatically with
-                    javascript. This includes chapter and subchapter numbering, links to
-                    next and previous chapters, the table of content, and theorem
-                    numbering.
-                  </Paragraph>
+                  Parts of these lecture notes are generated automatically with
+                  javascript. This includes chapter and subchapter numbering, links to
+                  next and previous chapters, the table of content, and theorem
+                  numbering.
                 </Paragraph>
                 <ol>
                   <li>
@@ -126,87 +122,69 @@ const Article = () => {
                     </pre>
                   </li>
                   <Paragraph>
-                    <Paragraph>
-                      To work, the `id`of a theorem (or a general environment)
-                      has to be unique{" "}
-                      <i>
-                        across all files of the lecture notes
-                      </i>
-                      .
-                      Also, since we have to correctly compute the numbering of theorems
-                      like{" "}
-                      <span
-                        data-ref="theorem-N-N^2"
-                        class="reference" />
-                      , we
-                      would have to read the file containing it. So we'd have to write
-                      code that, while loading Chapter 9, loads all chapters of referenced
-                      environments. Potentially, this forces the browser to load
-                      {" "}
-                      <i>
-                        the entire lecture notes
-                      </i>
-                      each time a single file is loaded.
-                      This would take too much time, so we use a precompilation step:
-                    </Paragraph>
+                    To work, the `id`of a theorem (or a general environment)
+                    has to be unique{" "}
+                    <i>
+                      across all files of the lecture notes
+                    </i>
+                    .
+                    Also, since we have to correctly compute the numbering of theorems
+                    like{" "}
+                    <span
+                      data-ref="theorem-N-N^2"
+                      class="reference" />
+                    , we
+                    would have to read the file containing it. So we'd have to write
+                    code that, while loading Chapter 9, loads all chapters of referenced
+                    environments. Potentially, this forces the browser to load
+                    {" "}
+                    <i>
+                      the entire lecture notes
+                    </i>
+                    each time a single file is loaded.
+                    This would take too much time, so we use a precompilation step:
                   </Paragraph>
                   <Paragraph>
-                    <Paragraph>
-                      I wrote an html page
-                    </Paragraph>
-                    <Paragraph>
-                      <a href="../javascript/put-all-in-one-page.html">
-                        put-all-in-one-page.html
-                      </a>
-                      that loads the table of content and all chapters (which takes quite
-                      a substantial amount of time, like 20 seconds or so) and extracts
-                      all environments with class `theorem`or
-                      `exercise`that have also class
-                      `numbered-title`and numbers them. If the environment has
-                      the attribute `data-label-title`, then it adds an entry
-                      to a global dictionary. At the end, when all has been loaded, the
-                      web page will show this dictionary as a json object.
-                    </Paragraph>
+                    I wrote an html page
+                    <a href="../javascript/put-all-in-one-page.html">
+                      put-all-in-one-page.html
+                    </a>
+                    that loads the table of content and all chapters (which takes quite
+                    a substantial amount of time, like 20 seconds or so) and extracts
+                    all environments with class `theorem`or
+                    `exercise`that have also class
+                    `numbered-title`and numbers them. If the environment has
+                    the attribute `data-label-title`, then it adds an entry
+                    to a global dictionary. At the end, when all has been loaded, the
+                    web page will show this dictionary as a json object.
                   </Paragraph>
                   <Paragraph>
-                    <Paragraph>
-                      You should then copy this table and paste it in the beginning of the
-                      file
-                    </Paragraph>
-                    <Paragraph>
-                      <a href="../javascript/number-my-theorems.js">
-                        nunmber-my-theorems.js
-                      </a>
-                      . The point is that creating the table is expensive (must read all
-                      chapters) but using it is cheap.
-                    </Paragraph>
+                    You should then copy this table and paste it in the beginning of the
+                    file
+                    <a href="../javascript/number-my-theorems.js">
+                      nunmber-my-theorems.js
+                    </a>
+                    . The point is that creating the table is expensive (must read all
+                    chapters) but using it is cheap.
                   </Paragraph>
                   <div class="alert-warning">
-                    <Paragraph>
-                      {" "}{" "}
-                      <b>
-                        Important:
-                      </b>
-                      {" "}
-                      The page
-                    </Paragraph>
-                    <Paragraph>
-                      <a href="../javascript/put-all-in-one-page.html">
-                        put-all-in-one-page.html
-                      </a>
-                      does not work if you just open it by double-clicking in your file
-                      explorer. It has to be hosted by an http-server server with CORS
-                      enabled, for example
-                    </Paragraph>
-                    <Paragraph>
-                      <pre>
-                        <Paragraph>
-                          http-server .  --cors
-                        </Paragraph>
-                      </pre>
-                      Once this server is running, go to
-                      `http://localhost:8080`in your browser.
-                    </Paragraph>
+                    {" "}{" "}
+                    <b>
+                      Important:
+                    </b>
+                    {" "}
+                    The page
+                    <a href="../javascript/put-all-in-one-page.html">
+                      put-all-in-one-page.html
+                    </a>
+                    does not work if you just open it by double-clicking in your file
+                    explorer. It has to be hosted by an http-server server with CORS
+                    enabled, for example
+                    <pre>
+                      http-server .  --cors
+                    </pre>
+                    Once this server is running, go to
+                    `http://localhost:8080`in your browser.
                   </div>
                 </ol>
               </div>

@@ -39,79 +39,51 @@ const Article = () => {
                   </span>
                 </h1>
                 <div class="well container theorem">
+                  <span class="numbered-title">
+                    Beispiel
+                  </span>
+                  Betrachten wir die Sprache
+                  $$\begin&#123;align*&#125;
+                  \&#123;a^n b^n c^n \ | \ n \geq 0 \&#125;
+                  \end&#123;align*&#125;$$
+                  über dem Alphabet \(\&#123;a,b,c\&#125;\). Wir wollen eine Turingmaschine
+                  entwerfen, die diese Sprache entscheidet.
                   <Paragraph>
-                    <span class="numbered-title">
-                      Beispiel
-                    </span>
-                    Betrachten wir die Sprache
-                    {" "}
+                    {" "}{" "}
+                    <b>
+                      Informelle Beschreibung.
+                    </b>
+                    Unsere Turingmaschine arbeitet
+                    in Phasen. In jeder Phase sucht die Maschine ein \(a\) und löscht es
+                    (ersetzt es durch ein \(X\)). Dann geht sie nach rechts und
+                    sucht und markiert ein \(b\); dann ein \(c\). Sobald sie das \(c\) markiert hat,
+                    geht sie wieder nach links. Dies beendet die Phase.
                   </Paragraph>
+                  Wenn die Maschine kein \(a\) mehr findet und auch kein \(b\) oder \(c\) mehr da ist,
+                  akzeptiert die Maschine.
+                  Wenn unterwegs ein "Fehler" geschieht, beispielsweise die Maschine ein \(b\) sucht
+                  aber keines findet, wechselt sie in den{" "}
+                  <tt>
+                    reject
+                  </tt>
+                  -Zustand.
                   <Paragraph>
+                    {" "}{" "}
+                    <b>
+                      Formellere Beschreibung.
+                    </b>
+                    Als Bandalphabet verwenden wir
                     $$\begin&#123;align*&#125;
-                    \&#123;a^n b^n c^n \ | \ n \geq 0 \&#125;
+                    \Gamma := \&#123;a,b,c, X, \square\&#125; \ .
                     \end&#123;align*&#125;$$
                   </Paragraph>
-                  <Paragraph>
-                    {" "}
-                    über dem Alphabet \(\&#123;a,b,c\&#125;\). Wir wollen eine Turingmaschine
-                    entwerfen, die diese Sprache entscheidet.
-                  </Paragraph>
-                  <Paragraph>
-                    <Paragraph>
-                      <Paragraph>
-                        {" "}{" "}
-                        <b>
-                          Informelle Beschreibung.
-                        </b>
-                        Unsere Turingmaschine arbeitet
-                        in Phasen. In jeder Phase sucht die Maschine ein \(a\) und löscht es
-                        (ersetzt es durch ein \(X\)). Dann geht sie nach rechts und
-                        sucht und markiert ein \(b\); dann ein \(c\). Sobald sie das \(c\) markiert hat,
-                        geht sie wieder nach links. Dies beendet die Phase.
-                      </Paragraph>
-                    </Paragraph>
-                    Wenn die Maschine kein \(a\) mehr findet und auch kein \(b\) oder \(c\) mehr da ist,
-                    akzeptiert die Maschine.
-                    Wenn unterwegs ein "Fehler" geschieht, beispielsweise die Maschine ein \(b\) sucht
-                    aber keines findet, wechselt sie in den{" "}
-                    <tt>
-                      reject
-                    </tt>
-                    -Zustand.
-                  </Paragraph>
-                  <Paragraph>
-                    <Paragraph>
-                      <Paragraph>
-                        {" "}{" "}
-                        <b>
-                          Formellere Beschreibung.
-                        </b>
-                        Als Bandalphabet verwenden wir
-                        {" "}
-                      </Paragraph>
-                      <Paragraph>
-                        $$\begin&#123;align*&#125;
-                        \Gamma := \&#123;a,b,c, X, \square\&#125; \ .
-                        \end&#123;align*&#125;$$
-                      </Paragraph>
-                      <Paragraph>
-                        {" "}{" "}
-                      </Paragraph>
-                    </Paragraph>
-                    Das Symbol \(X\) heißt dann "hier stand mal \(a\), \(b\) oder \(c\), wir haben es aber bereits
-                    gelesen". Als Zustandsmenge verwenden wir
-                    {" "}
-                  </Paragraph>
-                  <Paragraph>
-                    $$\begin&#123;align*&#125;
-                    Q := \&#123;\texttt&#123;findA&#125;,\texttt&#123;findB&#125;,\texttt&#123;findC&#125;,\texttt&#123;noA&#125;,
-                    \texttt&#123;accept&#125;,\texttt&#123;reject&#125;\&#125; \ .
-                    \end&#123;align*&#125;$$
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}
-                    Die "Bedeutung" dieser Zustände ist:
-                  </Paragraph>
+                  Das Symbol \(X\) heißt dann "hier stand mal \(a\), \(b\) oder \(c\), wir haben es aber bereits
+                  gelesen". Als Zustandsmenge verwenden wir
+                  $$\begin&#123;align*&#125;
+                  Q := \&#123;\texttt&#123;findA&#125;,\texttt&#123;findB&#125;,\texttt&#123;findC&#125;,\texttt&#123;noA&#125;,
+                  \texttt&#123;accept&#125;,\texttt&#123;reject&#125;\&#125; \ .
+                  \end&#123;align*&#125;$$
+                  Die "Bedeutung" dieser Zustände ist:
                   <ul>
                     <li>
                       <tt>
@@ -143,18 +115,16 @@ const Article = () => {
                       ;jedes andere Zeichen erzeugt einen Fehler.
                     </li>
                     <Li>
-                      <Paragraph>
-                        <tt>
-                          findC
-                        </tt>
-                        : gehe nach rechts, bis Du ein \(c\) gefunden hast;
-                        ignoriere derweil alle \(b\) und \(X\); wenn Du ein \(c\) liest,
-                        ersetze es durch \(X\) und gehe in Zustand{" "}
-                        <tt>
-                          findA
-                        </tt>
-                        .
-                      </Paragraph>
+                      <tt>
+                        findC
+                      </tt>
+                      : gehe nach rechts, bis Du ein \(c\) gefunden hast;
+                      ignoriere derweil alle \(b\) und \(X\); wenn Du ein \(c\) liest,
+                      ersetze es durch \(X\) und gehe in Zustand{" "}
+                      <tt>
+                        findA
+                      </tt>
+                      .
                     </Li>
                     <li>
                       <tt>
@@ -176,10 +146,8 @@ const Article = () => {
                     </li>
                   </ul>
                   <Paragraph>
-                    <Paragraph>
-                      Wir können die Beschreibung jetzt formal als Funktion
-                      \(\delta: Q \times \Gamma \rightarrow Q \times \Gamma \times \rls\) niederschreiben.
-                    </Paragraph>
+                    Wir können die Beschreibung jetzt formal als Funktion
+                    \(\delta: Q \times \Gamma \rightarrow Q \times \Gamma \times \rls\) niederschreiben.
                   </Paragraph>
                   <figure>
                     <img
@@ -188,113 +156,79 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    <Paragraph>
-                      Beachten Sie: manche Zellen sind leer. Damit meine ich, dass die Turingmaschine dort
-                      in den Zustand{" "}
-                      <tt>
-                        reject
-                      </tt>
-                      wechselt. Andere Zellen bestehen nur aus einem
-                      Buchstaben; so steht in der Zelle von \(\delta(\texttt&#123;findA&#125;, b)\) nur
-                      ein \(\texttt&#123;R&#125;\). Dies bedeutet, dass die Turingmaschine ihren Zustand nicht
-                      wechselt und einfach das gelesene Zeichen in die Zelle wieder reinschreibt. Dies
-                      ist reiner Syntaxzucker.
-                    </Paragraph>
+                    Beachten Sie: manche Zellen sind leer. Damit meine ich, dass die Turingmaschine dort
+                    in den Zustand{" "}
+                    <tt>
+                      reject
+                    </tt>
+                    wechselt. Andere Zellen bestehen nur aus einem
+                    Buchstaben; so steht in der Zelle von \(\delta(\texttt&#123;findA&#125;, b)\) nur
+                    ein \(\texttt&#123;R&#125;\). Dies bedeutet, dass die Turingmaschine ihren Zustand nicht
+                    wechselt und einfach das gelesene Zeichen in die Zelle wieder reinschreibt. Dies
+                    ist reiner Syntaxzucker.
                   </Paragraph>
                   <Paragraph>
-                    <Paragraph>
-                      Auf der Webseite
-                    </Paragraph>
-                    <Paragraph>
-                      <a href="https://turingmachinesimulator.com">
-                        turingmachinesimulator.com
-                      </a>
-                      können Sie Ihre Turingmaschine eingeben und simulieren. Den Text für
-                      die gerade beschriebene finden in{" "}
-                      <a href="../code/turing machines/aabbcc.txt">
-                        aabbcc.txt
-                      </a>
-                      .
-                      Generell können Sie Regeln der Form
-                      {" "}
-                    </Paragraph>
-                    <Paragraph>
-                      $$\begin&#123;align*&#125;
-                      \delta(q,a) = (r, b, D)
-                      \end&#123;align*&#125;$$
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}
-                      auf turingmachinesimulator.com als
-                    </Paragraph>
-                    <Paragraph>
-                      <pre>
-                        <Paragraph>
-                          q, a 
-                          r, b, D{" "}
-                        </Paragraph>
-                      </pre>
-                      angeben, wobei die Richtung \(D\) mit den Symbolen{" "}
-                      <tt>
-                        &lt;, -,&gt;
-                      </tt>
-                      codiert wird.
-                    </Paragraph>
+                    Auf der Webseite
+                    <a href="https://turingmachinesimulator.com">
+                      turingmachinesimulator.com
+                    </a>
+                    können Sie Ihre Turingmaschine eingeben und simulieren. Den Text für
+                    die gerade beschriebene finden in{" "}
+                    <a href="../code/turing machines/aabbcc.txt">
+                      aabbcc.txt
+                    </a>
+                    .
+                    Generell können Sie Regeln der Form
+                    $$\begin&#123;align*&#125;
+                    \delta(q,a) = (r, b, D)
+                    \end&#123;align*&#125;$$
+                    auf turingmachinesimulator.com als
+                    <pre>
+                      q, a 
+                      r, b, D{" "}
+                    </pre>
+                    angeben, wobei die Richtung \(D\) mit den Symbolen{" "}
+                    <tt>
+                      &lt;, -,&gt;
+                    </tt>
+                    codiert wird.
                   </Paragraph>
                 </div>
                 <div
                   id="example-palindromes"
                   class="well container theorem">
+                  <span class="numbered-title">
+                    Beispiel
+                  </span>
+                  Als zweites Beispiel nehmen wir die Palindromsprache
+                  $$\begin&#123;align*&#125;
+                  L := \&#123; w \in \&#123;a,b\&#125;^* \ | \ w = w^R \&#125; \ ,
+                  \end&#123;align*&#125;$$
+                  wobei \(w^R\) das Kehrwort bedeutet, also \(aabba^R = abbaa\).
                   <Paragraph>
-                    <span class="numbered-title">
-                      Beispiel
-                    </span>
-                    Als zweites Beispiel nehmen wir die Palindromsprache
-                    {" "}
+                    Unsere Maschine sucht das erste Zeichen, löscht es (ersetzt es durch \(\square\)
+                    und "merkt" es sich in ihrem Zustand.
+                    Dann geht sie zum rechten Rand und vergleicht es mit dem dortigen.
+                    Falls es passt, löscht sie es und geht wieder nach links zurück. Falls es nicht
+                    passt, wechselt sie in{" "}
+                    <tt>
+                      reject
+                    </tt>
+                    .
+                    Wenn unsere Maschine das erste Zeichen sucht aber keines findet, dann hat
+                    sie alle Zeichen erfolgreich gelöscht und es hat sich also um ein
+                    Palindrom von gerader Länge gehandelt. Wenn die Maschine allerdings
+                    nach dem Löschen des linkesten Zeichens sofort am rechten Rand steht, dann
+                    stand dort nur noch ein einziges Zeichen und es hat sich um ein Palindrom ungerader
+                    Länge gehandelt.
                   </Paragraph>
                   <Paragraph>
+                    Als Bandalphabet brauchen wir hier nur \(\Gamma = \&#123;a,b,\square\&#125;\). Als
+                    Zustandsmenge nehmen wir
                     $$\begin&#123;align*&#125;
-                    L := \&#123; w \in \&#123;a,b\&#125;^* \ | \ w = w^R \&#125; \ ,
+                    Q = \&#123;\texttt&#123;next&#125;, \texttt&#123;readA&#125;, \texttt&#123;readB&#125;, \texttt&#123;killA&#125;, \texttt&#123;killB&#125;,
+                    \texttt&#123;return&#125;, \texttt&#123;reject&#125;, \texttt&#123;accept&#125;\&#125;.
                     \end&#123;align*&#125;$$
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}
-                    wobei \(w^R\) das Kehrwort bedeutet, also \(aabba^R = abbaa\).
-                  </Paragraph>
-                  <Paragraph>
-                    <Paragraph>
-                      Unsere Maschine sucht das erste Zeichen, löscht es (ersetzt es durch \(\square\)
-                      und "merkt" es sich in ihrem Zustand.
-                      Dann geht sie zum rechten Rand und vergleicht es mit dem dortigen.
-                      Falls es passt, löscht sie es und geht wieder nach links zurück. Falls es nicht
-                      passt, wechselt sie in{" "}
-                      <tt>
-                        reject
-                      </tt>
-                      .
-                      Wenn unsere Maschine das erste Zeichen sucht aber keines findet, dann hat
-                      sie alle Zeichen erfolgreich gelöscht und es hat sich also um ein
-                      Palindrom von gerader Länge gehandelt. Wenn die Maschine allerdings
-                      nach dem Löschen des linkesten Zeichens sofort am rechten Rand steht, dann
-                      stand dort nur noch ein einziges Zeichen und es hat sich um ein Palindrom ungerader
-                      Länge gehandelt.
-                    </Paragraph>
-                  </Paragraph>
-                  <Paragraph>
-                    <Paragraph>
-                      Als Bandalphabet brauchen wir hier nur \(\Gamma = \&#123;a,b,\square\&#125;\). Als
-                      Zustandsmenge nehmen wir
-                      {" "}
-                    </Paragraph>
-                    <Paragraph>
-                      $$\begin&#123;align*&#125;
-                      Q = \&#123;\texttt&#123;next&#125;, \texttt&#123;readA&#125;, \texttt&#123;readB&#125;, \texttt&#123;killA&#125;, \texttt&#123;killB&#125;,
-                      \texttt&#123;return&#125;, \texttt&#123;reject&#125;, \texttt&#123;accept&#125;\&#125;.
-                      \end&#123;align*&#125;$$
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
-                    </Paragraph>
                   </Paragraph>
                   <ul>
                     <li>
@@ -376,78 +310,56 @@ const Article = () => {
                   </figure>
                 </div>
                 <div class="well well-lg numbered-exercise container">
-                  <Paragraph>
-                    <span class="numbered-title">
-                      Übungsaufgabe
-                    </span>
-                    Implementieren Sie die Turingmaschine für die Palindromsprache auf
-                  </Paragraph>
-                  <Paragraph>
-                    <a href="https://turingmachinesimulator.com">
-                      turingmachinesimulator.com
-                    </a>
-                    .
-                  </Paragraph>
+                  <span class="numbered-title">
+                    Übungsaufgabe
+                  </span>
+                  Implementieren Sie die Turingmaschine für die Palindromsprache auf
+                  <a href="https://turingmachinesimulator.com">
+                    turingmachinesimulator.com
+                  </a>
+                  .
                 </div>
                 <Paragraph>
-                  <Paragraph>
-                    Jetzt sind Sie dran.
-                  </Paragraph>
+                  Jetzt sind Sie dran.
                 </Paragraph>
                 <div
                   id="exercise-wcw"
                   class="well well-lg numbered-exercise container">
-                  <Paragraph>
-                    <span class="numbered-title">
-                      Übungsaufgabe
-                    </span>
-                    Schreiben Sie eine Turingmaschine (auf{" "}
-                    <a href="https://turingmachinesimulator.com">
-                      turingmachinesimulator.com
-                    </a>
-                    ),
-                    die die folgende Sprache \(L \subseteq \&#123;a,b,c\&#125;\) entscheidet:
-                    {" "}
-                  </Paragraph>
-                  <Paragraph>
-                    $$\begin&#123;align*&#125;
-                    L := \&#123; w c w \ | \ w \in \&#123;a,b\&#125;^* \&#125;
-                    \end&#123;align*&#125;$$
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
-                  </Paragraph>
+                  <span class="numbered-title">
+                    Übungsaufgabe
+                  </span>
+                  Schreiben Sie eine Turingmaschine (auf{" "}
+                  <a href="https://turingmachinesimulator.com">
+                    turingmachinesimulator.com
+                  </a>
+                  ),
+                  die die folgende Sprache \(L \subseteq \&#123;a,b,c\&#125;\) entscheidet:
+                  $$\begin&#123;align*&#125;
+                  L := \&#123; w c w \ | \ w \in \&#123;a,b\&#125;^* \&#125;
+                  \end&#123;align*&#125;$$
                 </div>
                 <div class="well well-lg numbered-exercise container">
-                  <Paragraph>
-                    <span class="numbered-title">
-                      Übungsaufgabe
-                    </span>
-                    Schreiben Sie auf{" "}
-                    <a href="https://turingmachinesimulator.com">
-                      turingmachinesimulator.com
-                    </a>
-                    eine Turingmaschine für die Sprache
-                    {" "}
-                  </Paragraph>
-                  <Paragraph>
-                    $$\begin&#123;align*&#125;
-                    L := \&#123;1^n \ | \ n = 2^d, d \geq 0\&#125; \ .
-                    \end&#123;align*&#125;$$
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}
-                    {" "}
-                    <b>
-                      Tip:
-                    </b>
-                    gehen Sie durch das Band und ersetzen jede zweite
-                    \(1\), die Sie sehen, durch ein \(X\). Wenn Sie rechts ankommen und eine
-                    ungerade Anzahl von Einsen gelesen haben, lehnen Sie ab. Wenn
-                    die Anzahl gerade ist, gehen Sie wieder nach ganz links; sie haben nun
-                    die Anzahl der Einsen halbiert. Sie akzeptieren, wenn
-                    Sie von links nach rechts durchgehend genau eine 1 gelesen haben.
-                  </Paragraph>
+                  <span class="numbered-title">
+                    Übungsaufgabe
+                  </span>
+                  Schreiben Sie auf{" "}
+                  <a href="https://turingmachinesimulator.com">
+                    turingmachinesimulator.com
+                  </a>
+                  eine Turingmaschine für die Sprache
+                  $$\begin&#123;align*&#125;
+                  L := \&#123;1^n \ | \ n = 2^d, d \geq 0\&#125; \ .
+                  \end&#123;align*&#125;$$
+                  {" "}
+                  <b>
+                    Tip:
+                  </b>
+                  gehen Sie durch das Band und ersetzen jede zweite
+                  \(1\), die Sie sehen, durch ein \(X\). Wenn Sie rechts ankommen und eine
+                  ungerade Anzahl von Einsen gelesen haben, lehnen Sie ab. Wenn
+                  die Anzahl gerade ist, gehen Sie wieder nach ganz links; sie haben nun
+                  die Anzahl der Einsen halbiert. Sie akzeptieren, wenn
+                  Sie von links nach rechts durchgehend genau eine 1 gelesen haben.
                 </div>
               </div>
             </div>

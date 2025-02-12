@@ -39,14 +39,12 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  <Paragraph>
-                    Benutzen Sie die App{" "}
-                    <a href="../../demos/drawManualGrammar.html">
-                      drawManualGrammar.html
-                    </a>
-                    ,
-                    um mit kontextfreien Grammatik zu experimentieren:{" "}
-                  </Paragraph>
+                  Benutzen Sie die App{" "}
+                  <a href="../../demos/drawManualGrammar.html">
+                    drawManualGrammar.html
+                  </a>
+                  ,
+                  um mit kontextfreien Grammatik zu experimentieren:{" "}
                 </Paragraph>
                 <figure>
                   <a href="../../demos/drawManualGrammar.html">
@@ -57,9 +55,7 @@ const Article = () => {
                   </a>
                 </figure>
                 <Paragraph>
-                  <Paragraph>
-                    Diese besteht aus folgenden Teilen:
-                  </Paragraph>
+                  Diese besteht aus folgenden Teilen:
                 </Paragraph>
                 <ol>
                   <li>
@@ -84,192 +80,152 @@ const Article = () => {
                   </li>
                 </ol>
                 <div class="well well-lg numbered-exercise container">
-                  <Paragraph>
-                    <span class="numbered-title">
-                      Übungsaufgabe
-                    </span>
-                    Geben Sie folgende Grammatik in die App ein:
-                  </Paragraph>
+                  <span class="numbered-title">
+                    Übungsaufgabe
+                  </span>
+                  Geben Sie folgende Grammatik in die App ein:
                   <pre>
-                    <Paragraph>
-                      S -&gt; ;
-                      S -&gt; "("S")"S ;
-                      S -&gt; "(" S "]" S;
-                    </Paragraph>
+                    S -&gt; ;
+                    S -&gt; "("S")"S ;
+                    S -&gt; "(" S "]" S;
                   </pre>
                   <Paragraph>
-                    <Paragraph>
-                      Was ist die erzeugte Sprache? Können Sie sie in Worten beschreiben?
-                    </Paragraph>
+                    Was ist die erzeugte Sprache? Können Sie sie in Worten beschreiben?
                   </Paragraph>
                   <Paragraph>
-                    <Paragraph>
-                      Erzeugen Sie Wörter in dieser Sprache, für die der Backtrack-Baum viele rote
-                      Sackgassen enthält.
-                    </Paragraph>
+                    Erzeugen Sie Wörter in dieser Sprache, für die der Backtrack-Baum viele rote
+                    Sackgassen enthält.
                   </Paragraph>
                   <Paragraph>
-                    <Paragraph>
-                      Schreiben Sie eine äquivalente Grammatik (d.h., die die gleiche Sprache erzeugt),
-                      für die es keine oder nur sehr kurze Sackgassen gibt.
-                      Testen Sie die beiden Grammatiken mit "großen" Eingabewörtern
-                      und schauen Sie, ob Sie Laufzeitunterschiede bemerken.
-                      (Hier erweist sich mein ineffizienter Code als Vorteil: eine schlechte Grammatik
-                      wird sofort bestraft).
-                    </Paragraph>
+                    Schreiben Sie eine äquivalente Grammatik (d.h., die die gleiche Sprache erzeugt),
+                    für die es keine oder nur sehr kurze Sackgassen gibt.
+                    Testen Sie die beiden Grammatiken mit "großen" Eingabewörtern
+                    und schauen Sie, ob Sie Laufzeitunterschiede bemerken.
+                    (Hier erweist sich mein ineffizienter Code als Vorteil: eine schlechte Grammatik
+                    wird sofort bestraft).
                   </Paragraph>
                 </div>
                 <div class="well well-lg numbered-exercise container">
+                  <span class="numbered-title">
+                    Übungsaufgabe
+                  </span>
+                  Schreiben Sie eine kontextfreie Grammatik für die Sprache aller
+                  "korrekten" URLs; also Folgen von mindestens zwei{" "}
+                  <i>
+                    Labels
+                  </i>
+                  , die
+                  durch `.`separiert sind. Sie können den "Regelvorschlag"
+                  ganz links unten in der App reinkopieren, um automatisch Regeln für alphanumerische
+                  Zeichen zu bekommen (allerdings verschlechtert das die Laufzeit; ich habe erstmal
+                  gar nicht auf Effizienz geachtet).
                   <Paragraph>
-                    <span class="numbered-title">
-                      Übungsaufgabe
-                    </span>
-                    Schreiben Sie eine kontextfreie Grammatik für die Sprache aller
-                    "korrekten" URLs; also Folgen von mindestens zwei{" "}
-                    <i>
-                      Labels
-                    </i>
-                    , die
-                    durch `.`separiert sind. Sie können den "Regelvorschlag"
-                    ganz links unten in der App reinkopieren, um automatisch Regeln für alphanumerische
-                    Zeichen zu bekommen (allerdings verschlechtert das die Laufzeit; ich habe erstmal
-                    gar nicht auf Effizienz geachtet).
-                  </Paragraph>
-                  <Paragraph>
-                    <Paragraph>
-                      Geben Sie das Eingabewort `a.aaaaa.aaaa.aaaa.aaaa.aaaa`ein. Wie
-                      sieht Ihr Backtrack-Baum aus? Hat er viele Sackgassen? Können Sie Ihre Grammatik
-                      so abändern, dass sie zwar noch die gleiche Sprache erzeugt, aber keine / nur wenige
-                      Sackgassen hat?
-                    </Paragraph>
+                    Geben Sie das Eingabewort `a.aaaaa.aaaa.aaaa.aaaa.aaaa`ein. Wie
+                    sieht Ihr Backtrack-Baum aus? Hat er viele Sackgassen? Können Sie Ihre Grammatik
+                    so abändern, dass sie zwar noch die gleiche Sprache erzeugt, aber keine / nur wenige
+                    Sackgassen hat?
                   </Paragraph>
                 </div>
                 <div class="well well-lg numbered-exercise container">
-                  <Paragraph>
-                    <span class="numbered-title">
-                      Übungsaufgabe
-                    </span>
-                    Entwerfen Sie eine Grammatik für arithmetische Ausdrücke im Racket-Stil, also
-                  </Paragraph>
+                  <span class="numbered-title">
+                    Übungsaufgabe
+                  </span>
+                  Entwerfen Sie eine Grammatik für arithmetische Ausdrücke im Racket-Stil, also
                   <pre>
-                    <Paragraph>
-                      (* (+ 2 3) (- 4 (* 2 4) 5)
-                      (+ 1 2 (* 2))
-                    </Paragraph>
+                    (* (+ 2 3) (- 4 (* 2 4) 5)
+                    (+ 1 2 (* 2))
                   </pre>
                   <Paragraph>
-                    <Paragraph>
-                      Leidet Ihre Grammatik an langen Sackgassen? Wenn ja, können Sie die Grammatik abändern?
-                      Haben Sie mittlerweile ein Schema erkannt, welche Konstrukte lange Sackgassen
-                      begünstigen?
-                    </Paragraph>
+                    Leidet Ihre Grammatik an langen Sackgassen? Wenn ja, können Sie die Grammatik abändern?
+                    Haben Sie mittlerweile ein Schema erkannt, welche Konstrukte lange Sackgassen
+                    begünstigen?
                   </Paragraph>
                 </div>
                 <div class="well well-lg numbered-exercise container">
-                  <Paragraph>
-                    <span class="numbered-title">
-                      Übungsaufgabe
-                    </span>
-                    Wiederholen Sie die vorherige Übung für arithmetische Ausdrücke in der uns
-                    geläufigen Infix-Notation. Hierbei sollten die Konventionen Punkt-vor-Strich
-                    beachtet werden. Im Ableitungsbaum von
-                  </Paragraph>
-                  <Paragraph>
-                    <pre>
-                      <Paragraph>
-                        2+3*(5+4)
-                      </Paragraph>
-                    </pre>
-                    sollte sich das wiederspiegeln.
-                  </Paragraph>
+                  <span class="numbered-title">
+                    Übungsaufgabe
+                  </span>
+                  Wiederholen Sie die vorherige Übung für arithmetische Ausdrücke in der uns
+                  geläufigen Infix-Notation. Hierbei sollten die Konventionen Punkt-vor-Strich
+                  beachtet werden. Im Ableitungsbaum von
+                  <pre>
+                    2+3*(5+4)
+                  </pre>
+                  sollte sich das wiederspiegeln.
                 </div>
                 <div class="well well-lg numbered-exercise container">
-                  <Paragraph>
-                    <span class="numbered-title">
-                      Übungsaufgabe
-                    </span>
-                    {" "}{" "}
-                    <b>
-                      (Challenge)
-                    </b>
-                    {" "}
-                    Geben Sie die Grammatik hier ein:
-                  </Paragraph>
-                  <Paragraph>
-                    <pre>
-                      <Paragraph>
-                        S -&gt; "("S")"S;
-                        S -&gt; "["S"("S;
-                        S -&gt; ;
-                      </Paragraph>
-                    </pre>
-                    Überlegen Sie, was diese "bedeutet". Sie sehen, die Grammatik ist
-                    nicht eindeutig. Das Wort `[([()(`hat zwei
-                    verschiedene Ableitungsbäume. Können Sie eine äquivalente
-                    {" "}
-                    <i>
-                      eindeutige
-                    </i>
-                    Grammatik schreiben?
-                  </Paragraph>
+                  <span class="numbered-title">
+                    Übungsaufgabe
+                  </span>
+                  {" "}{" "}
+                  <b>
+                    (Challenge)
+                  </b>
+                  {" "}
+                  Geben Sie die Grammatik hier ein:
+                  <pre>
+                    S -&gt; "("S")"S;
+                    S -&gt; "["S"("S;
+                    S -&gt; ;
+                  </pre>
+                  Überlegen Sie, was diese "bedeutet". Sie sehen, die Grammatik ist
+                  nicht eindeutig. Das Wort `[([()(`hat zwei
+                  verschiedene Ableitungsbäume. Können Sie eine äquivalente
+                  {" "}
+                  <i>
+                    eindeutige
+                  </i>
+                  Grammatik schreiben?
                 </div>
                 <div class="well well-lg numbered-exercise container">
-                  <Paragraph>
-                    <span class="numbered-title">
-                      Übungsaufgabe
-                    </span>
-                    {" "}{" "}
-                    <b>
-                      (Challenge)
-                    </b>
-                    {" "}
-                    Die folgende Grammatik hat User{" "}
-                    <i>
-                      babou
-                    </i>
-                    {" "}
-                    auf{" "}
-                    <a href="https://cstheory.stackexchange.com/questions/22520/example-of-context-free-grammar-that-triggers-exponential-behaviour-without-memo">
-                      StackExchange
-                    </a>
-                    vorgeschlagen als Beispiel für eine eindeutige Grammatik,
-                    bei der Sie exponentiell große Backtrack-Bäume bekommen können:
-                  </Paragraph>
-                  <Paragraph>
-                    <pre>
-                      <Paragraph>
-                        S -&gt;  "a" X "b" | "a" X "c";
-                        X -&gt; "a" | "a" X | "a" X X;
-                      </Paragraph>
-                    </pre>
-                    Das ist aber keine Kunst, da die Grammatik uneindeutig ist.
-                    Können Sie eine{" "}
-                    <i>
-                      eindeutige
-                    </i>
-                    Grammatik angebene, die ähnlich
-                    exponentielles Verhalten zeigt? Exponentiell heißt: mit jedem
-                    zusätlichen Zeichen des Eingabewortes kann die Größe des
-                    Backtrack-Baumes um einen Faktor \(R \gt 1\) wachsen.
-                  </Paragraph>
+                  <span class="numbered-title">
+                    Übungsaufgabe
+                  </span>
+                  {" "}{" "}
+                  <b>
+                    (Challenge)
+                  </b>
+                  {" "}
+                  Die folgende Grammatik hat User{" "}
+                  <i>
+                    babou
+                  </i>
+                  {" "}
+                  auf{" "}
+                  <a href="https://cstheory.stackexchange.com/questions/22520/example-of-context-free-grammar-that-triggers-exponential-behaviour-without-memo">
+                    StackExchange
+                  </a>
+                  vorgeschlagen als Beispiel für eine eindeutige Grammatik,
+                  bei der Sie exponentiell große Backtrack-Bäume bekommen können:
+                  <pre>
+                    S -&gt;  "a" X "b" | "a" X "c";
+                    X -&gt; "a" | "a" X | "a" X X;
+                  </pre>
+                  Das ist aber keine Kunst, da die Grammatik uneindeutig ist.
+                  Können Sie eine{" "}
+                  <i>
+                    eindeutige
+                  </i>
+                  Grammatik angebene, die ähnlich
+                  exponentielles Verhalten zeigt? Exponentiell heißt: mit jedem
+                  zusätlichen Zeichen des Eingabewortes kann die Größe des
+                  Backtrack-Baumes um einen Faktor \(R \gt 1\) wachsen.
                 </div>
                 <div class="well well-lg numbered-exercise container">
-                  <Paragraph>
-                    <span class="numbered-title">
-                      Übungsaufgabe
-                    </span>
-                    {" "}{" "}
-                    <b>
-                      (Super-Challenge; ich hab selbst keine Lösung)
-                    </b>
-                    .
-                    Finden Sie eine kontextfreie Sprache \(L\), für die{" "}
-                    <i>
-                      jede
-                    </i>
-                    Grammatik,
-                    die \(L\) erzeugt, unter exponentiell großen Backtrack-Bäumen leidet.
-                  </Paragraph>
+                  <span class="numbered-title">
+                    Übungsaufgabe
+                  </span>
+                  {" "}{" "}
+                  <b>
+                    (Super-Challenge; ich hab selbst keine Lösung)
+                  </b>
+                  .
+                  Finden Sie eine kontextfreie Sprache \(L\), für die{" "}
+                  <i>
+                    jede
+                  </i>
+                  Grammatik,
+                  die \(L\) erzeugt, unter exponentiell großen Backtrack-Bäumen leidet.
                 </div>
               </div>
             </div>

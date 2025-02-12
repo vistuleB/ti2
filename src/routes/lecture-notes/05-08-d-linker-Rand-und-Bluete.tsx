@@ -39,73 +39,47 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  <Paragraph>
-                    <Paragraph>
-                      In diesem Teilkapitel werden wir sehen,
-                      wie wir für eine gültige Wortform $\gamma$
-                      den korrekten Linksreduktionsschritt
-                    </Paragraph>
-                  </Paragraph>
-                  {" "}{" "}
+                  In diesem Teilkapitel werden wir sehen,
+                  wie wir für eine gültige Wortform $\gamma$
+                  den korrekten Linksreduktionsschritt
+                </Paragraph>
+                $$\begin&#123;align*&#125;
+                \gamma = \alpha \beta w \rstep&#123;&#125; \alpha X w
+                \end&#123;align*&#125;$$
+                <Paragraph>
+                  finden. Als erstes müssen wir uns überlegen,
+                  wie die Front $\front(\gamma) = \alpha \beta$
+                  überhaupt aussehen kann. Wenn wir
+                  uns den Ableitungsbaum von $\gamma$ ansehen,
+                  wird das einigermaßen offensichtlich sein.
                 </Paragraph>
                 <Paragraph>
-                  $$\begin&#123;align*&#125;
-                  \gamma = \alpha \beta w \rstep&#123;&#125; \alpha X w
-                  \end&#123;align*&#125;$$
+                  Zur Erinnerung:
+                  Zu jeder Ableitung \(S \Step&#123;&#125;^* w \in \Sigma^*\) können wir
+                  eindeutig einen{" "}
+                  <i>
+                    Ableitungsbaum
+                  </i>
+                  zeichnen. Wenn die Grammatik
+                  eindeutig ist, so hängt auch der Baum nur vom Wort \(w \in L(G)\) ab und
+                  nicht von der Ableitung \(S \Step&#123;&#125;^* w\).
+                  Allerdings können wir für Zwischenformen
+                  \(S \Step&#123;&#125;^* \gamma \Step&#123;&#125;^* w\) auch einen Ableitungsbaum zeichnen,
+                  und der unterscheidet sich stark, abhängig davon, ob \(S \Step&#123;&#125;^* \gamma\) eine
+                  Rechtsableitung, Linksableitung oder sonst was ist.
+                  Ich zeige Ihnen jetzt ein Beispiel für eine Grammatik und
+                  eine Handvoll Ableitungen samt Ableitungsbaum.
                 </Paragraph>
+                $$\begin&#123;align*&#125;
+                G&amp;: \\
+                S&amp;\rightarrow AB \\
+                A&amp;\rightarrow xBS \ | \ Bz \\
+                B&amp;\rightarrow yAS \ | \ Az \ | \ x \ | \ y \ | \ z
+                \end&#123;align*&#125;$$
                 <Paragraph>
-                  {" "}{" "}
-                </Paragraph>
-                <Paragraph>
-                  <Paragraph>
-                    <Paragraph>
-                      finden. Als erstes müssen wir uns überlegen,
-                      wie die Front $\front(\gamma) = \alpha \beta$
-                      überhaupt aussehen kann. Wenn wir
-                      uns den Ableitungsbaum von $\gamma$ ansehen,
-                      wird das einigermaßen offensichtlich sein.
-                    </Paragraph>
-                  </Paragraph>
-                  <Paragraph>
-                    <Paragraph>
-                      Zur Erinnerung:
-                    </Paragraph>
-                    <Paragraph>
-                      Zu jeder Ableitung \(S \Step&#123;&#125;^* w \in \Sigma^*\) können wir
-                      eindeutig einen{" "}
-                      <i>
-                        Ableitungsbaum
-                      </i>
-                      zeichnen. Wenn die Grammatik
-                      eindeutig ist, so hängt auch der Baum nur vom Wort \(w \in L(G)\) ab und
-                      nicht von der Ableitung \(S \Step&#123;&#125;^* w\).
-                      Allerdings können wir für Zwischenformen
-                      \(S \Step&#123;&#125;^* \gamma \Step&#123;&#125;^* w\) auch einen Ableitungsbaum zeichnen,
-                      und der unterscheidet sich stark, abhängig davon, ob \(S \Step&#123;&#125;^* \gamma\) eine
-                      Rechtsableitung, Linksableitung oder sonst was ist.
-                      Ich zeige Ihnen jetzt ein Beispiel für eine Grammatik und
-                      eine Handvoll Ableitungen samt Ableitungsbaum.
-                    </Paragraph>
-                  </Paragraph>
-                  {" "}{" "}
-                </Paragraph>
-                <Paragraph>
-                  $$\begin&#123;align*&#125;
-                  G&amp;: \\
-                  S&amp;\rightarrow AB \\
-                  A&amp;\rightarrow xBS \ | \ Bz \\
-                  B&amp;\rightarrow yAS \ | \ Az \ | \ x \ | \ y \ | \ z
-                  \end&#123;align*&#125;$$
-                </Paragraph>
-                <Paragraph>
-                  {" "}{" "}
-                </Paragraph>
-                <Paragraph>
-                  <Paragraph>
-                    Es ist zu diesem Zeitpunkt irrelevant, ob \(G\) eindeutig
-                    oder sogar \(LR(0)\) ist. Ich interessiere mich
-                    gerade nur für Ableitungsbäume von Wortformen.
-                  </Paragraph>
+                  Es ist zu diesem Zeitpunkt irrelevant, ob \(G\) eindeutig
+                  oder sogar \(LR(0)\) ist. Ich interessiere mich
+                  gerade nur für Ableitungsbäume von Wortformen.
                 </Paragraph>
                 <figure class="centered-figure well container">
                   <a
@@ -163,12 +137,10 @@ const Article = () => {
                   </div>
                 </figure>
                 <Paragraph>
-                  <Paragraph>
-                    Fällt Ihnen etwas auf? Schauen Sie sich bitte noch ein weiteres
-                    Beispiel an für den Ableitungsbaum einer in einer
-                    gültigen Wortform, also von einer, die in einer
-                    Rechtsableitung vorkommen kann:
-                  </Paragraph>
+                  Fällt Ihnen etwas auf? Schauen Sie sich bitte noch ein weiteres
+                  Beispiel an für den Ableitungsbaum einer in einer
+                  gültigen Wortform, also von einer, die in einer
+                  Rechtsableitung vorkommen kann:
                 </Paragraph>
                 <figure>
                   <img
@@ -176,27 +148,23 @@ const Article = () => {
                     src="../img/context-free/LR/G-tree-large.svg" />
                 </figure>
                 <div class="well container subtheorem">
-                  <Paragraph>
-                    {" "}{" "}
-                    <b>
-                      Warten Sie!
-                    </b>
-                    {" "}
-                    Scrollen Sie erst weiter, wenn Sie den Baum oben lang genug angeschaut haben!
-                    Versuchen Sie selbst, die spezielle Form dieses Baumes möglichst
-                    formal zu beschreiben!
-                  </Paragraph>
+                  {" "}{" "}
+                  <b>
+                    Warten Sie!
+                  </b>
+                  {" "}
+                  Scrollen Sie erst weiter, wenn Sie den Baum oben lang genug angeschaut haben!
+                  Versuchen Sie selbst, die spezielle Form dieses Baumes möglichst
+                  formal zu beschreiben!
                 </div>
                 <div style="height:40em" />
                 <div class="well container subtheorem">
-                  <Paragraph>
-                    {" "}{" "}
-                    <b>
-                      Auflösung.
-                    </b>
-                    Hier sehen Sie noch einmal
-                    den gleichen Baum, nun aber gewisse Teile verschieden umrandet / eingefärbt.
-                  </Paragraph>
+                  {" "}{" "}
+                  <b>
+                    Auflösung.
+                  </b>
+                  Hier sehen Sie noch einmal
+                  den gleichen Baum, nun aber gewisse Teile verschieden umrandet / eingefärbt.
                 </div>
                 <figure>
                   <img
@@ -204,126 +172,102 @@ const Article = () => {
                     src="../img/context-free/LR/G-tree-large-colored.svg" />
                 </figure>
                 <Paragraph>
-                  <Paragraph>
-                    Sie sehen: links vom Stamm gibt es nur Blätter.
-                    Rechts vom Stamm ist jedes Blatt ein Terminalsymbol.
-                    Wir erkennen auch, was der letzte Ableitungsschritt war, der zu diesem
-                    Baum geführt hat: die Blüte ist hinzugekommen, in diesem Fall
-                    also \(A \rightarrow x B S\).
-                    Wir definieren nun eingeführten Begriffe formal:
-                  </Paragraph>
+                  Sie sehen: links vom Stamm gibt es nur Blätter.
+                  Rechts vom Stamm ist jedes Blatt ein Terminalsymbol.
+                  Wir erkennen auch, was der letzte Ableitungsschritt war, der zu diesem
+                  Baum geführt hat: die Blüte ist hinzugekommen, in diesem Fall
+                  also \(A \rightarrow x B S\).
+                  Wir definieren nun eingeführten Begriffe formal:
                 </Paragraph>
                 <div class="well container theorem">
+                  <span class="numbered-title">
+                    Definition / Beobachtung
+                  </span>
+                  {" "}{" "}
+                  <b>
+                    (Stamm, linker Rand, Blüte, Front, rechter Rest)
+                  </b>
+                  {" "}
+                  Sei \(S \Step&#123;&#125;^* \gamma\) eine Rechtsableitung, \(\gamma\) also
+                  eine gültige Wortform, und
+                  \(\mathcal&#123;T&#125;\) der Ableitungsbaum von \(\gamma\).
+                  Der{" "}
+                  <i>
+                    Stamm
+                  </i>
+                  ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
+                  der von allen inneren Knoten, deren Kinder allesamt Blätter sind,
+                  am weistesten links steht.
+                  Die Kinder von \(u\), per Definition alles Blätter, sind die{" "}
+                  <i>
+                    Blüte
+                  </i>
+                  .
+                  Die Menge der Knoten, die einen Stammknoten als rechtes Geschwister haben,
+                  heißt der{" "}
+                  <i>
+                    linke Rand
+                  </i>
+                  . Jeder Knoten \(v\) im linken Rand
+                  muss ein Blatt sein, ansonsten stünde er ja weiter links als \(u\);
+                  die Menge der rechten Geschwisterkinder von Stammknoten sowie deren Nachkommen
+                  heißt der{" "}
+                  <i>
+                    rechte Rand
+                  </i>
+                  .
+                  Im rechten Rest ist jedes Blatt ein
+                  Terminalsymbol, ansonsten wäre es keine Rechtsableitung.
                   <Paragraph>
-                    <span class="numbered-title">
-                      Definition / Beobachtung
-                    </span>
-                    {" "}{" "}
-                    <b>
-                      (Stamm, linker Rand, Blüte, Front, rechter Rest)
-                    </b>
-                    {" "}
-                    Sei \(S \Step&#123;&#125;^* \gamma\) eine Rechtsableitung, \(\gamma\) also
-                    eine gültige Wortform, und
-                    \(\mathcal&#123;T&#125;\) der Ableitungsbaum von \(\gamma\).
-                    Der{" "}
-                    <i>
-                      Stamm
-                    </i>
-                    ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
-                    der von allen inneren Knoten, deren Kinder allesamt Blätter sind,
-                    am weistesten links steht.
-                    Die Kinder von \(u\), per Definition alles Blätter, sind die{" "}
-                    <i>
-                      Blüte
-                    </i>
-                    .
-                    Die Menge der Knoten, die einen Stammknoten als rechtes Geschwister haben,
-                    heißt der{" "}
-                    <i>
-                      linke Rand
-                    </i>
-                    . Jeder Knoten \(v\) im linken Rand
-                    muss ein Blatt sein, ansonsten stünde er ja weiter links als \(u\);
-                    die Menge der rechten Geschwisterkinder von Stammknoten sowie deren Nachkommen
-                    heißt der{" "}
-                    <i>
-                      rechte Rand
-                    </i>
-                    .
-                    Im rechten Rest ist jedes Blatt ein
-                    Terminalsymbol, ansonsten wäre es keine Rechtsableitung.
+                    Die Beschriftung der Knoten im linken Rand ergibt eine Wortform \(\alpha\);
+                    die Blüte ergibt \(\beta\).
+                    Die Blätter im rechten Rand
+                    sind ausschließlich mit Terminalen beschriftet und ergeben ein
+                    Wort \(w \in \Sigma^*\). Der ganze Baum stellt also eine Rechtsableitung
                   </Paragraph>
+                  $$\begin&#123;align*&#125;
+                  S \Step&#123;R&#125;^* \alpha \beta w
+                  \end&#123;align*&#125;$$
+                  dar. Die Wortform $\alpha\beta$, also linker Rand plus Blüte, nennen wir
+                  die{" "}
+                  <i>
+                    Front
+                  </i>
+                  von $\mathcal&#123;T&#125;$ und schreiben sie als $\front(\mathcal&#123;T&#125;)$.
+                  Wir sagen auch, dass \(\beta\){" "}
+                  <i>
+                    eine Blüte von \(\gamma\)
+                  </i>
+                  und
+                  $\alpha\beta$ die{" "}
+                  <i>
+                    Front
+                  </i>
+                  von $\gamma$ ist,
+                  ohne über den Ableitungsbaum \(\mathcal&#123;T&#125;\) selbst zu reden.
+                  Hierbei ist zu beachten, dass in einer mehrdeutigen Grammatik
+                  eine gültige Wortform mehrere Ableitungsbäume und somit
+                  mehrere Blüten haben kann, die Unterteilung \(\gamma = \alpha\beta w\)
+                  also nicht eindeutig ist. Für eindeutige Grammatiken ist
+                  die Unterteilung aber eindeutig.
                   <Paragraph>
-                    <Paragraph>
-                      <Paragraph>
-                        Die Beschriftung der Knoten im linken Rand ergibt eine Wortform \(\alpha\);
-                        die Blüte ergibt \(\beta\).
-                        Die Blätter im rechten Rand
-                        sind ausschließlich mit Terminalen beschriftet und ergeben ein
-                        Wort \(w \in \Sigma^*\). Der ganze Baum stellt also eine Rechtsableitung
-                      </Paragraph>
-                    </Paragraph>
-                    {" "}{" "}
-                  </Paragraph>
-                  <Paragraph>
+                    Sei weiterhin \(A\) die Beschriftung des Elternknoten der Blüte
+                    (notwenigerweise ein Nichtterminal; Terminale haben keine Kinder).
+                    Dann ist \(A \rightarrow \beta\) eine Produktion in der Grammatik und
+                    \(\alpha A w\) eine gültige Wortform; wir erhalten den Ableitungsbaum
+                    von \(\alpha A w\), indem wir die Blüte von \(\mathcal&#123;T&#125;\) entfernen.
+                    Wir schließen, dass
                     $$\begin&#123;align*&#125;
-                    S \Step&#123;R&#125;^* \alpha \beta w
+                    \alpha \beta w \rstep&#123;&#125; \alpha A w
                     \end&#123;align*&#125;$$
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}
-                    dar. Die Wortform $\alpha\beta$, also linker Rand plus Blüte, nennen wir
-                    die{" "}
-                    <i>
-                      Front
-                    </i>
-                    von $\mathcal&#123;T&#125;$ und schreiben sie als $\front(\mathcal&#123;T&#125;)$.
-                    Wir sagen auch, dass \(\beta\){" "}
-                    <i>
-                      eine Blüte von \(\gamma\)
-                    </i>
-                    und
-                    $\alpha\beta$ die{" "}
-                    <i>
-                      Front
-                    </i>
-                    von $\gamma$ ist,
-                    ohne über den Ableitungsbaum \(\mathcal&#123;T&#125;\) selbst zu reden.
-                    Hierbei ist zu beachten, dass in einer mehrdeutigen Grammatik
-                    eine gültige Wortform mehrere Ableitungsbäume und somit
-                    mehrere Blüten haben kann, die Unterteilung \(\gamma = \alpha\beta w\)
-                    also nicht eindeutig ist. Für eindeutige Grammatiken ist
-                    die Unterteilung aber eindeutig.
-                  </Paragraph>
-                  <Paragraph>
-                    <Paragraph>
-                      Sei weiterhin \(A\) die Beschriftung des Elternknoten der Blüte
-                      (notwenigerweise ein Nichtterminal; Terminale haben keine Kinder).
-                      Dann ist \(A \rightarrow \beta\) eine Produktion in der Grammatik und
-                      \(\alpha A w\) eine gültige Wortform; wir erhalten den Ableitungsbaum
-                      von \(\alpha A w\), indem wir die Blüte von \(\mathcal&#123;T&#125;\) entfernen.
-                      Wir schließen, dass
-                      {" "}
-                    </Paragraph>
-                    <Paragraph>
-                      $$\begin&#123;align*&#125;
-                      \alpha \beta w \rstep&#123;&#125; \alpha A w
-                      \end&#123;align*&#125;$$
-                    </Paragraph>
-                    <Paragraph>
-                      {" "}
-                      ein korrekter Linksreduktionsschritt ist.
-                    </Paragraph>
+                    ein korrekter Linksreduktionsschritt ist.
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  <Paragraph>
-                    Wir können also, ausgehend von der Wortform \(\gamma\),
-                    eine Linksreduktion \(\gamma \rstep&#123;&#125;^* S\) finden,
-                    indem wir den Ableitungsbaum von \(\gamma\) zeichnen und
-                    immer wieder die Blüte abschneiden:
-                  </Paragraph>
+                  Wir können also, ausgehend von der Wortform \(\gamma\),
+                  eine Linksreduktion \(\gamma \rstep&#123;&#125;^* S\) finden,
+                  indem wir den Ableitungsbaum von \(\gamma\) zeichnen und
+                  immer wieder die Blüte abschneiden:
                 </Paragraph>
                 <figure class="centered-figure well container">
                   <a
@@ -437,24 +381,20 @@ const Article = () => {
                   </div>
                 </figure>
                 <Paragraph>
-                  <Paragraph>
-                    Um für eine Wortform \(\gamma\) den korrekten Reduktionsschritt zu finden,
-                    reicht es also aus, linken Rand und Blüte zu bestimmen, also
-                    \(\alpha\) und \(\beta\), so dass \(\gamma = \alpha\beta w\)
-                    und \(\alpha \beta w \rstep&#123;&#125; \alpha A w\) korrekt ist (\(A\) steht hier
-                    für das Nichtterminal, mit dem der Elternknoten der Blüte beschriftet ist).
-                    Linken Rand und Blüte zu finden scheint keine leichte Aufgabe zu sein:
-                    schließlich müssen wir dafür doch den Ableitungsbaum von \(\gamma\) bilden,
-                    was selbst wieder eine Parsing-Aufgabe ist???
-                  </Paragraph>
+                  Um für eine Wortform \(\gamma\) den korrekten Reduktionsschritt zu finden,
+                  reicht es also aus, linken Rand und Blüte zu bestimmen, also
+                  \(\alpha\) und \(\beta\), so dass \(\gamma = \alpha\beta w\)
+                  und \(\alpha \beta w \rstep&#123;&#125; \alpha A w\) korrekt ist (\(A\) steht hier
+                  für das Nichtterminal, mit dem der Elternknoten der Blüte beschriftet ist).
+                  Linken Rand und Blüte zu finden scheint keine leichte Aufgabe zu sein:
+                  schließlich müssen wir dafür doch den Ableitungsbaum von \(\gamma\) bilden,
+                  was selbst wieder eine Parsing-Aufgabe ist???
                 </Paragraph>
                 <Paragraph>
-                  <Paragraph>
-                    An dieser Stelle zeigt sich die Genialität des DK-Ansatzes:
-                    der Ableitungsbaum von \(\gamma\) kann beliebig verschachtelt sein,
-                    aber Stamm, linker Rand und Blüte haben zusammen eine einfache,
-                    beinahe linear anmutende Struktur. Schematisch:
-                  </Paragraph>
+                  An dieser Stelle zeigt sich die Genialität des DK-Ansatzes:
+                  der Ableitungsbaum von \(\gamma\) kann beliebig verschachtelt sein,
+                  aber Stamm, linker Rand und Blüte haben zusammen eine einfache,
+                  beinahe linear anmutende Struktur. Schematisch:
                 </Paragraph>
                 <figure>
                   <img
@@ -462,85 +402,63 @@ const Article = () => {
                     src="../img/context-free/LR/schema-linker-rand-bluete-stamm.svg" />
                 </figure>
                 <Paragraph>
-                  <Paragraph>
-                    Die Aussage "Stamm, linker Rand und Blüte haben eine einfache Struktur"
-                    können wir formalisieren.
-                  </Paragraph>
+                  Die Aussage "Stamm, linker Rand und Blüte haben eine einfache Struktur"
+                  können wir formalisieren.
                 </Paragraph>
+                <div class="well container theorem">
+                  <span class="numbered-title">
+                    Definition
+                  </span>
+                  Für eine kontextfreie Grammatik \(G\) definieren wir
+                  die Sprache \(\Front(G) \subseteq (\Sigma \cup N)^*\):
+                  $$\begin&#123;align*&#125;
+                  \Front(G) := \&#123;\front(\mathcal&#123;T&#125;) \ | \ \mathcal&#123;T&#125;
+                  \textnormal&#123; ist der Ableitungsbaum einer Rechtsableitung &#125;
+                  S \Step&#123;R&#125;^* \gamma \&#125;
+                  \end&#123;align*&#125;$$
+                  alternativ
+                  $$\begin&#123;align*&#125;
+                  \Front(G) := \&#123;\alpha \beta \ | \ S \Steps&#123;R&#125; \alpha X w
+                  \Step&#123;R&#125; \alpha \beta w \&#125;
+                  \end&#123;align*&#125;$$
+                  also die Menge aller Wortformen, die Front einer gültigen Wortform
+                  sind.
+                </div>
                 <div class="well container theorem">
                   <Paragraph>
                     <span class="numbered-title">
-                      Definition
+                      Lemma
                     </span>
-                    Für eine kontextfreie Grammatik \(G\) definieren wir
-                    die Sprache \(\Front(G) \subseteq (\Sigma \cup N)^*\):
-                    {" "}
-                  </Paragraph>
-                  <Paragraph>
-                    $$\begin&#123;align*&#125;
-                    \Front(G) := \&#123;\front(\mathcal&#123;T&#125;) \ | \ \mathcal&#123;T&#125;
-                    \textnormal&#123; ist der Ableitungsbaum einer Rechtsableitung &#125;
-                    S \Step&#123;R&#125;^* \gamma \&#125;
-                    \end&#123;align*&#125;$$
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}
-                    alternativ
-                    {" "}
-                  </Paragraph>
-                  <Paragraph>
-                    $$\begin&#123;align*&#125;
-                    \Front(G) := \&#123;\alpha \beta \ | \ S \Steps&#123;R&#125; \alpha X w
-                    \Step&#123;R&#125; \alpha \beta w \&#125;
-                    \end&#123;align*&#125;$$
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}
-                    also die Menge aller Wortformen, die Front einer gültigen Wortform
-                    sind.
-                  </Paragraph>
-                </div>
-                <div class="well container theorem">
-                  <Paragraph>
-                    <Paragraph>
-                      <span class="numbered-title">
-                        Lemma
-                      </span>
-                      Die Sprache $\Front(G)$ ist regulär.
-                      Insbesondere gibt es eine erweitert reguläre Grammatik \(\hat&#123;G&#125;\) für
-                      $\Front(G)$, so dass die Blüte genau die im letzen Ableitungsschritt
-                      erzeugten Terminalsymbole sind.
-                    </Paragraph>
+                    Die Sprache $\Front(G)$ ist regulär.
+                    Insbesondere gibt es eine erweitert reguläre Grammatik \(\hat&#123;G&#125;\) für
+                    $\Front(G)$, so dass die Blüte genau die im letzen Ableitungsschritt
+                    erzeugten Terminalsymbole sind.
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  <Paragraph>
-                    Hier ist etwas Mentalgymnastik vonnöten: aus Sicht der Sprache
-                    $\Front(G)$ sind \(\Sigma \cup N\){" "}
-                    <i>
-                      Terminalsymbole
-                    </i>
-                    . Sie können
-                    ja schließlich in den Wörtern der Sprache auftauchen.
-                    Die Grammatik \(\hat&#123;G&#125;\) hat also die Terminalsymbole
-                    \(\Sigma \cup N\). Darüberhinaus hat sie
-                    die Nichtterminale \(\hat&#123;N&#125; := \&#123; \hat&#123;X&#125; \ | \ X \in N\&#125;\),
-                    also für jedes Nichtterminal \(X\) von \(G\) ein
-                    Meta-Nichtterminal \(\hat&#123;X&#125;\). Das \(X \in N\) entspricht
-                    dem \(\boxed&#123;X&#125;\) in den obigen Bäumen, wo also \(N\) als Blatt vorkommt;
-                    das \(\hat&#123;X&#125; \in \hat&#123;N&#125;\) entspricht dem
-                  </Paragraph>
-                  <Paragraph>
-                    <img
-                      style="height:1.5em"
-                      src="../img/context-free/LR/circle-X.svg" />
-                    ,
-                    also wo \(W\) als innerer Knoten vorkommt. Bevor ich
-                    \(\hat&#123;G&#125;\) formal definiere, zeige ich den obigen Ableitungsbaum
-                    (ohne rechten Rand, weil der ja bei $\front(G)$ eh fehlt)
-                    und annotiere jeden Knoten auf dem Stamm mit der entsprechenden
-                    \(\hat&#123;G&#125;\)-Produktion.
-                  </Paragraph>
+                  Hier ist etwas Mentalgymnastik vonnöten: aus Sicht der Sprache
+                  $\Front(G)$ sind \(\Sigma \cup N\){" "}
+                  <i>
+                    Terminalsymbole
+                  </i>
+                  . Sie können
+                  ja schließlich in den Wörtern der Sprache auftauchen.
+                  Die Grammatik \(\hat&#123;G&#125;\) hat also die Terminalsymbole
+                  \(\Sigma \cup N\). Darüberhinaus hat sie
+                  die Nichtterminale \(\hat&#123;N&#125; := \&#123; \hat&#123;X&#125; \ | \ X \in N\&#125;\),
+                  also für jedes Nichtterminal \(X\) von \(G\) ein
+                  Meta-Nichtterminal \(\hat&#123;X&#125;\). Das \(X \in N\) entspricht
+                  dem \(\boxed&#123;X&#125;\) in den obigen Bäumen, wo also \(N\) als Blatt vorkommt;
+                  das \(\hat&#123;X&#125; \in \hat&#123;N&#125;\) entspricht dem
+                  <img
+                    style="height:1.5em"
+                    src="../img/context-free/LR/circle-X.svg" />
+                  ,
+                  also wo \(W\) als innerer Knoten vorkommt. Bevor ich
+                  \(\hat&#123;G&#125;\) formal definiere, zeige ich den obigen Ableitungsbaum
+                  (ohne rechten Rand, weil der ja bei $\front(G)$ eh fehlt)
+                  und annotiere jeden Knoten auf dem Stamm mit der entsprechenden
+                  \(\hat&#123;G&#125;\)-Produktion.
                 </Paragraph>
                 <figure>
                   <img
@@ -548,121 +466,93 @@ const Article = () => {
                     src="../img/context-free/LR/hat-G-derivation.svg" />
                 </figure>
                 <div class="well container theorem">
-                  <Paragraph>
-                    <span class="numbered-title">
-                      Definition
-                    </span>
-                    Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik. Die
-                    Front-Grammatik oder DK-Grammatik von \(G\) ist
-                    die{" "}
-                    <i>
-                      erweitert reguläre
-                    </i>
-                    Grammatik \(\hat&#123;G&#125; = (\Sigma \cup N, \hat&#123;N&#125;, \hat&#123;S&#125;,
-                    \hat&#123;P&#125;)\)
-                    mit \(\hat&#123;N&#125; := \&#123;\hat&#123;X&#125; \ | \ X \in N\&#125;\), wobei
-                    \(\hat&#123;P&#125;\) für jede \(G\)-Produktion
-                    {" "}
-                  </Paragraph>
-                  <Paragraph>
-                    $$\begin&#123;align*&#125;
-                    A \rightarrow w_0 A_1 w_1 A_2 w_2 \dots w_&#123;k-1&#125; A_k w_k
-                    \end&#123;align*&#125;$$
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}
-                    mit \(w_i \in \Sigma^*\) die Produktionen
-                    {" "}
-                  </Paragraph>
-                  <Paragraph>
-                    $$\begin&#123;align*&#125;
-                    \hat&#123;A&#125;&amp;\rightarrow w_0 \hat&#123;A&#125;_1 \\
-                    \hat&#123;A&#125;&amp;\rightarrow w_0 A_1 w_1 \hat&#123;A&#125;_2 \\
-                    &amp;\vdots \\
-                    \hat&#123;A&#125;&amp;\rightarrow w_0 A_1 w_1 A_2 w_2 \dots A_&#123;k-1&#125; w_&#123;k-1&#125; \hat&#123;A&#125;_k \\
-                    \hat&#123;A&#125;&amp;\rightarrow w_0 A_1 w_1 A_2 w_2 \dots w_&#123;k-1&#125; A_k w_k
-                    \end&#123;align*&#125;$$
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}
-                    besitzt.
-                  </Paragraph>
+                  <span class="numbered-title">
+                    Definition
+                  </span>
+                  Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik. Die
+                  Front-Grammatik oder DK-Grammatik von \(G\) ist
+                  die{" "}
+                  <i>
+                    erweitert reguläre
+                  </i>
+                  Grammatik \(\hat&#123;G&#125; = (\Sigma \cup N, \hat&#123;N&#125;, \hat&#123;S&#125;,
+                  \hat&#123;P&#125;)\)
+                  mit \(\hat&#123;N&#125; := \&#123;\hat&#123;X&#125; \ | \ X \in N\&#125;\), wobei
+                  \(\hat&#123;P&#125;\) für jede \(G\)-Produktion
+                  $$\begin&#123;align*&#125;
+                  A \rightarrow w_0 A_1 w_1 A_2 w_2 \dots w_&#123;k-1&#125; A_k w_k
+                  \end&#123;align*&#125;$$
+                  mit \(w_i \in \Sigma^*\) die Produktionen
+                  $$\begin&#123;align*&#125;
+                  \hat&#123;A&#125;&amp;\rightarrow w_0 \hat&#123;A&#125;_1 \\
+                  \hat&#123;A&#125;&amp;\rightarrow w_0 A_1 w_1 \hat&#123;A&#125;_2 \\
+                  &amp;\vdots \\
+                  \hat&#123;A&#125;&amp;\rightarrow w_0 A_1 w_1 A_2 w_2 \dots A_&#123;k-1&#125; w_&#123;k-1&#125; \hat&#123;A&#125;_k \\
+                  \hat&#123;A&#125;&amp;\rightarrow w_0 A_1 w_1 A_2 w_2 \dots w_&#123;k-1&#125; A_k w_k
+                  \end&#123;align*&#125;$$
+                  besitzt.
                 </div>
                 <div class="well container theorem">
-                  <Paragraph>
-                    <span class="numbered-title">
-                      Beobachtung
-                    </span>
-                    \(\hat&#123;G&#125;\) erzeugt die Sprache
-                    \(\Front(G)\).
-                  </Paragraph>
+                  <span class="numbered-title">
+                    Beobachtung
+                  </span>
+                  \(\hat&#123;G&#125;\) erzeugt die Sprache
+                  \(\Front(G)\).
                 </div>
                 <div class="well container theorem">
-                  <Paragraph>
-                    <span class="numbered-title">
-                      Beispiel
-                    </span>
-                    Für unsere Grammatik \(G\) oben ergeben sich folgende Produktionen
-                    \(\hat&#123;P&#125;\) in \(\hat&#123;G&#125;\):
-                    {" "}
-                  </Paragraph>
-                  <Paragraph>
-                    $$\begin&#123;align*&#125;
-                    \begin&#123;array&#125;&#123;l|l&#125;
-                    \textnormal&#123;Produktion in $G$&#125;
-                    &
-                    \textnormal&#123;Produktion in $\hat&#123;G&#125;$&#125; \\
-                    &amp;&#123;\dk&#123;S&#125;&#125; \rightarrow \dk&#123;A&#125;\\
-                    S \rightarrow AB&amp;&#123;\dk&#123;S&#125;&#125; \rightarrow \dkt&#123;A&#125; \dk&#123;B&#125;\\
-                    &amp;&#123;\dk&#123;S&#125;&#125; \rightarrow \dkt&#123;AB&#125; \\ \hline
-                    %
-                    &amp;&#123;\dk&#123;A&#125;&#125; \rightarrow \dkt&#123;x&#125; \dk&#123;B&#125;\\
-                    A \rightarrow xBS&amp;&#123;\dk&#123;A&#125;&#125; \rightarrow \dkt&#123;x B&#125; \dk&#123;S&#125;\\
-                    &amp;&#123;\dk&#123;A&#125;&#125; \rightarrow \dkt&#123;x B S&#125;\\ \hline
-                    %
-                    A \rightarrow Bz&amp;&#123;\dk&#123;A&#125;&#125; \rightarrow \dk&#123;B&#125;\\
-                    &amp;&#123;\dk&#123;A&#125;&#125; \rightarrow \dkt&#123;Bz&#125; \\ \hline
-                    %
-                    &amp;\dk&#123;B&#125; \rightarrow \dkt&#123;y&#125; \dk&#123;A&#125;\\
-                    B \rightarrow y A S&amp;\dk&#123;B&#125; \rightarrow \dkt&#123;y A&#125; \dk&#123;S&#125; \\
-                    &amp;\dk&#123;B&#125; \rightarrow \dkt&#123;y A S&#125; \\ \hline
-                    %
-                    &amp;\dk&#123;B&#125; \rightarrow \dk&#123;A&#125; \\
-                    B \rightarrow Az&amp;\dk&#123;B&#125; \rightarrow \dkt&#123;Az&#125; \\ \hline
-                    %
-                    B \rightarrow x&amp;\dk&#123;B&#125; \rightarrow \dkt&#123;x&#125; \\
-                    B \rightarrow y&amp;\dk&#123;B&#125; \rightarrow \dkt&#123;y&#125; \\
-                    B \rightarrow z&amp;\dk&#123;B&#125; \rightarrow \dkt&#123;z&#125; \\
-                    \end&#123;array&#125;
-                    \end&#123;align*&#125;$$
-                  </Paragraph>
-                  <Paragraph>
-                    {" "}{" "}
-                  </Paragraph>
+                  <span class="numbered-title">
+                    Beispiel
+                  </span>
+                  Für unsere Grammatik \(G\) oben ergeben sich folgende Produktionen
+                  \(\hat&#123;P&#125;\) in \(\hat&#123;G&#125;\):
+                  $$\begin&#123;align*&#125;
+                  \begin&#123;array&#125;&#123;l|l&#125;
+                  \textnormal&#123;Produktion in $G$&#125;
+                  &
+                  \textnormal&#123;Produktion in $\hat&#123;G&#125;$&#125; \\
+                  &amp;&#123;\dk&#123;S&#125;&#125; \rightarrow \dk&#123;A&#125;\\
+                  S \rightarrow AB&amp;&#123;\dk&#123;S&#125;&#125; \rightarrow \dkt&#123;A&#125; \dk&#123;B&#125;\\
+                  &amp;&#123;\dk&#123;S&#125;&#125; \rightarrow \dkt&#123;AB&#125; \\ \hline
+                  %
+                  &amp;&#123;\dk&#123;A&#125;&#125; \rightarrow \dkt&#123;x&#125; \dk&#123;B&#125;\\
+                  A \rightarrow xBS&amp;&#123;\dk&#123;A&#125;&#125; \rightarrow \dkt&#123;x B&#125; \dk&#123;S&#125;\\
+                  &amp;&#123;\dk&#123;A&#125;&#125; \rightarrow \dkt&#123;x B S&#125;\\ \hline
+                  %
+                  A \rightarrow Bz&amp;&#123;\dk&#123;A&#125;&#125; \rightarrow \dk&#123;B&#125;\\
+                  &amp;&#123;\dk&#123;A&#125;&#125; \rightarrow \dkt&#123;Bz&#125; \\ \hline
+                  %
+                  &amp;\dk&#123;B&#125; \rightarrow \dkt&#123;y&#125; \dk&#123;A&#125;\\
+                  B \rightarrow y A S&amp;\dk&#123;B&#125; \rightarrow \dkt&#123;y A&#125; \dk&#123;S&#125; \\
+                  &amp;\dk&#123;B&#125; \rightarrow \dkt&#123;y A S&#125; \\ \hline
+                  %
+                  &amp;\dk&#123;B&#125; \rightarrow \dk&#123;A&#125; \\
+                  B \rightarrow Az&amp;\dk&#123;B&#125; \rightarrow \dkt&#123;Az&#125; \\ \hline
+                  %
+                  B \rightarrow x&amp;\dk&#123;B&#125; \rightarrow \dkt&#123;x&#125; \\
+                  B \rightarrow y&amp;\dk&#123;B&#125; \rightarrow \dkt&#123;y&#125; \\
+                  B \rightarrow z&amp;\dk&#123;B&#125; \rightarrow \dkt&#123;z&#125; \\
+                  \end&#123;array&#125;
+                  \end&#123;align*&#125;$$
                 </div>
                 <Paragraph>
-                  <Paragraph>
-                    Nochmals: Produktionen wie
-                    \(\dk&#123;B&#125; \rightarrow \dkt&#123;y A&#125; \dk&#123;S&#125;\) sind erweitert regulär
-                    weil $\dkt&#123;y&#125;$ und $\dkt&#123;A&#125;$ aus Sicht von \(\hat&#123;G&#125;\) beides
-                    Terminalsymbole sind. Wir können nun unseren \(LR(0)\)-Parser beschreiben:
-                  </Paragraph>
+                  Nochmals: Produktionen wie
+                  \(\dk&#123;B&#125; \rightarrow \dkt&#123;y A&#125; \dk&#123;S&#125;\) sind erweitert regulär
+                  weil $\dkt&#123;y&#125;$ und $\dkt&#123;A&#125;$ aus Sicht von \(\hat&#123;G&#125;\) beides
+                  Terminalsymbole sind. Wir können nun unseren \(LR(0)\)-Parser beschreiben:
                 </Paragraph>
                 <div
                   id="algorithm-LR-parser"
                   class="well container theorem">
-                  <Paragraph>
-                    <span class="numbered-title">
-                      Algorithmus
-                    </span>
-                    {" "}{" "}
-                    <b>
-                      - Der \(LR(0)\)-Parser.
-                    </b>
-                    {" "}
-                    Starte mit einem leerem Stack. Sei
-                    \(\gamma\) der Inhalt des Stacks zu einem Zeitpunkt.
-                  </Paragraph>
+                  <span class="numbered-title">
+                    Algorithmus
+                  </span>
+                  {" "}{" "}
+                  <b>
+                    - Der \(LR(0)\)-Parser.
+                  </b>
+                  {" "}
+                  Starte mit einem leerem Stack. Sei
+                  \(\gamma\) der Inhalt des Stacks zu einem Zeitpunkt.
                   <ol>
                     <li>
                       Wenn \(\gamma \in \Front(G)\), dann
@@ -680,93 +570,77 @@ const Article = () => {
                       lies das nächste Eingabezeichen und lege es auf den Stack.
                     </li>
                   </ol>
-                  <Paragraph>
-                    Der Parser endet, wenn weder Schritt 1 noch Schritt 2 möglich sind;
-                    wenn zu diesem Zeitpunkt nur noch \(S\) auf dem Stack liegt,
-                    akzeptiert er, andernfalls lehnt er das Eingabewort ab.
-                  </Paragraph>
+                  Der Parser endet, wenn weder Schritt 1 noch Schritt 2 möglich sind;
+                  wenn zu diesem Zeitpunkt nur noch \(S\) auf dem Stack liegt,
+                  akzeptiert er, andernfalls lehnt er das Eingabewort ab.
                 </div>
                 <div class="well container theorem">
+                  <span class="numbered-title">
+                    Theorem
+                  </span>
+                  Wenn der \(LR(0)\)-Parser akzeptiert, dann hat er eine Linksreduktion
+                  \(w \rstep&#123;&#125;^* S\) und somit eine Rechtsableitung konstruiert; es gilt
+                  also \(w \in L(G)\).
                   <Paragraph>
-                    <span class="numbered-title">
-                      Theorem
-                    </span>
-                    Wenn der \(LR(0)\)-Parser akzeptiert, dann hat er eine Linksreduktion
-                    \(w \rstep&#123;&#125;^* S\) und somit eine Rechtsableitung konstruiert; es gilt
-                    also \(w \in L(G)\).
-                  </Paragraph>
-                  <Paragraph>
-                    <Paragraph>
-                      Wenn umgekehrt \(w \in L(G)\) gilt und
-                      \(G\) die \(LR(0)\)-Bedingung erfüllt,
-                      dann findet der
-                      Parser die Rechtsableitung \(S \Step&#123;&#125;^* w\),
-                    </Paragraph>
+                    Wenn umgekehrt \(w \in L(G)\) gilt und
+                    \(G\) die \(LR(0)\)-Bedingung erfüllt,
+                    dann findet der
+                    Parser die Rechtsableitung \(S \Step&#123;&#125;^* w\),
                   </Paragraph>
                 </div>
                 <div class="well container">
                   <Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
-                      <b>
-                        Beweis.
-                      </b>
-                      {" "}
-                      Der erste Teil der Bedeutung ist einfach zu sehen.
-                      Jeder Reduktionsschritt ist ein Linksreduktionsschritt, und
-                      wenn man Ende $S$ steht, waren es auch alles
-                      {" "}
-                      <i>
-                        korrekte
-                      </i>
-                      Linksreduktionsschritte.
-                    </Paragraph>
+                    {" "}{" "}
+                    <b>
+                      Beweis.
+                    </b>
+                    {" "}
+                    Der erste Teil der Bedeutung ist einfach zu sehen.
+                    Jeder Reduktionsschritt ist ein Linksreduktionsschritt, und
+                    wenn man Ende $S$ steht, waren es auch alles
+                    {" "}
+                    <i>
+                      korrekte
+                    </i>
+                    Linksreduktionsschritte.
                   </Paragraph>
                   <Paragraph>
-                    <Paragraph>
-                      Der zweite Teil ist schwieriger. Wir nehmen also
-                      an, dass $G$ eine LR(0)-Grammatik ist.
-                    </Paragraph>
-                    <Paragraph>
-                      Da \(G\) eindeutig ist, hat jede gültige Wortform
-                      \(\gamma\) eine eindeutige Rechtsableitung und einen
-                      dazugehörigen Ableitungsbaum \(\mathcal&#123;T&#125;\); somit
-                      ist $\front(\gamma) := \front(\mathcal&#123;T&#125;)$ eindeutig bestimmt.
-                      Beachten Sie, dass rechts
-                      von $\front(\gamma)$ nur Terminalsymbole folgen.
-                      Betrachten wir einen Zeitpunkt während des Parsing-Prozesses.
-                      Sei \(\gamma\) der Stackinhalt und \(w\) der ungelesene
-                      Teil des Eingabewortes. Wir werden beweisen, dass zu jedem Zeitpunkt folgende
-                      Invariante gilt:
-                    </Paragraph>
+                    Der zweite Teil ist schwieriger. Wir nehmen also
+                    an, dass $G$ eine LR(0)-Grammatik ist.
+                    Da \(G\) eindeutig ist, hat jede gültige Wortform
+                    \(\gamma\) eine eindeutige Rechtsableitung und einen
+                    dazugehörigen Ableitungsbaum \(\mathcal&#123;T&#125;\); somit
+                    ist $\front(\gamma) := \front(\mathcal&#123;T&#125;)$ eindeutig bestimmt.
+                    Beachten Sie, dass rechts
+                    von $\front(\gamma)$ nur Terminalsymbole folgen.
+                    Betrachten wir einen Zeitpunkt während des Parsing-Prozesses.
+                    Sei \(\gamma\) der Stackinhalt und \(w\) der ungelesene
+                    Teil des Eingabewortes. Wir werden beweisen, dass zu jedem Zeitpunkt folgende
+                    Invariante gilt:
                   </Paragraph>
                   <Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
-                      <b>
-                        Behauptung.
-                      </b>
-                      {" "}
-                      (i) \(\gamma w\) ist eine gültige Wortform. (ii)
-                      \(\gamma\) ist ein Präfix von \(\front(\gamma w)\).
-                    </Paragraph>
+                    {" "}{" "}
+                    <b>
+                      Behauptung.
+                    </b>
+                    {" "}
+                    (i) \(\gamma w\) ist eine gültige Wortform. (ii)
+                    \(\gamma\) ist ein Präfix von \(\front(\gamma w)\).
                   </Paragraph>
                   <Paragraph>
-                    <Paragraph>
-                      {" "}{" "}
-                      <b>
-                        Beweis.
-                      </b>
-                      {" "}
-                      Die Behauptung gilt offensichtlich am Anfang, da
-                      $\gamma = \epsilon$ und \(w\in L\) ist und
-                      somit $\gamma w = w$ eine gültige Wortform ist. Des weiteren
-                      ist der Stack leer, also \(\gamma = \epsilon\), und daher
-                      sicherlich ein Präfix von \(\front(w)\).
-                      Wir zeigen nun, dass, wenn die Invariante in Schritt \(t\) gilt,
-                      sie auch im nächsten Schritt \(t+1\) gilt.
-                      Es gibt nun zwei Möglichkeiten.
-                    </Paragraph>
+                    {" "}{" "}
+                    <b>
+                      Beweis.
+                    </b>
+                    {" "}
+                    Die Behauptung gilt offensichtlich am Anfang, da
+                    $\gamma = \epsilon$ und \(w\in L\) ist und
+                    somit $\gamma w = w$ eine gültige Wortform ist. Des weiteren
+                    ist der Stack leer, also \(\gamma = \epsilon\), und daher
+                    sicherlich ein Präfix von \(\front(w)\).
+                    Wir zeigen nun, dass, wenn die Invariante in Schritt \(t\) gilt,
+                    sie auch im nächsten Schritt \(t+1\) gilt.
+                    Es gibt nun zwei Möglichkeiten.
                     <ol>
                       <li>
                         Der Parser wendet Schritt 1 an, also \(\gamma \in \Front(G)\).
@@ -820,12 +694,10 @@ const Article = () => {
                         ist $\gamma c$ immer noch ein Präfix von $\front(\gamma w)$.
                       </li>
                     </ol>
-                    <Paragraph>
-                      Wenn das Eingabewort gelesen ist, ist nun \(w = \epsilon\) und
-                      Stackinhalt \(\gamma\) ist selbst eine
-                      gültige Wortform, die allerdings nicht weiter reduziert werden kann.
-                      Also muss \(\gamma = S\) gelten und der Parser akzeptiert.
-                    </Paragraph>
+                    Wenn das Eingabewort gelesen ist, ist nun \(w = \epsilon\) und
+                    Stackinhalt \(\gamma\) ist selbst eine
+                    gültige Wortform, die allerdings nicht weiter reduziert werden kann.
+                    Also muss \(\gamma = S\) gelten und der Parser akzeptiert.
                     <span class="qed">
                       \(\square\)
                     </span>

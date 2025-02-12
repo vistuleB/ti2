@@ -117,19 +117,19 @@ pub fn our_pipeline() -> List(Pipe) {
     // VerticalChunk **********
     // ************************
     // 7
-    surround_elements_by(#(
-      [
-        "div", "ol", "ul", "h1", "figure", "MathBlock", "Image", "Table",
-        "Exercises", "Solution", "Example", "Section", "Exercise", "List",
-        "Grid", "ImageLeft", "ImageRight", "Pause"
-      ],
-      "WriterlyBlankLine",
-      "WriterlyBlankLine",
-    )),
-    // 8
-    group_siblings_not_separated_by_blank_lines(
-      #("VerticalChunk", ["MathBlock", "a", "figure", "li"]),
-    ),
+    // surround_elements_by(#(
+    //   [
+    //     "div", "ol", "ul", "h1", "figure", "MathBlock", "Image", "Table",
+    //     "Exercises", "Solution", "Example", "Section", "Exercise", "List",
+    //     "Grid", "ImageLeft", "ImageRight", "Pause"
+    //   ],
+    //   "WriterlyBlankLine",
+    //   "WriterlyBlankLine",
+    // )),
+    // // 8
+    // group_siblings_not_separated_by_blank_lines(
+    //   #("VerticalChunk", ["MathBlock", "a", "figure", "li"]),
+    // ),
     // 9
     unwrap_tags(["WriterlyBlankLine"]),
     // 10
@@ -252,7 +252,7 @@ pub fn our_pipeline() -> List(Pipe) {
     // 27
     remove_vertical_chunks_with_no_text_child(),
     // 28
-    rename_tag.rename_tag(#("VerticalChunk", "Paragraph")),
+    // rename_tag.rename_tag(#("VerticalChunk", "Paragraph")),
     // 29
     rename_tag.rename_tag(#("p", "Paragraph")),
     // 30

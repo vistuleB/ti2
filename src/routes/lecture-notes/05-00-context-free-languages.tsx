@@ -38,9 +38,7 @@ const Article = () => {
                 </span>
               </h1>
               <Paragraph>
-                <Paragraph>
-                  Some introductory stuff about grammars.
-                </Paragraph>
+                Some introductory stuff about grammars.
               </Paragraph>
             </div>
           </div>

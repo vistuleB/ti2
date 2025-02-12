@@ -39,91 +39,63 @@ const Article = () => {
                   </span>
                 </h1>
                 <div class="well container theorem">
-                  <Paragraph>
-                    <span class="numbered-title">
-                      Definition (Ableitung)
-                    </span>
-                    Sei \(G\) eine Grammatik mit Startsymbol \(S\). Die Ableitung eines
-                    Wortes \(\alpha\) ist eine Sequenz von Wortformen \( w_0, w_1, \dots,
-                    w_n\) mit \(w_0 = S, w_n = \alpha\) und \(w_&#123;i-1&#125; \Longrightarrow
-                    w_i\).
-                  </Paragraph>
+                  <span class="numbered-title">
+                    Definition (Ableitung)
+                  </span>
+                  Sei \(G\) eine Grammatik mit Startsymbol \(S\). Die Ableitung eines
+                  Wortes \(\alpha\) ist eine Sequenz von Wortformen \( w_0, w_1, \dots,
+                  w_n\) mit \(w_0 = S, w_n = \alpha\) und \(w_&#123;i-1&#125; \Longrightarrow
+                  w_i\).
                 </div>
+                Das folgende Beispiel ist Beispiel 3.22 aus dem Buch von Aho und Ullman.
+                Wir betrachten die klassische kontextfreie Grammatik für arithmetische
+                Ausdrücke mit Klammerung: $$\begin&#123;align*&#125; (1)\ E \rightarrow&amp;E + T \\
+                (2)\ E \rightarrow&amp;T \\ (3)\ T \rightarrow&amp;T * F \\ (4)\ T
+                \rightarrow&amp;F \\ (5)\ F \rightarrow&amp;(E) \\ (6)\ F \rightarrow&amp;a \\
+                \end&#123;align*&#125;$$ wobei \(E\) das Startsymbol ist. Hier ist ein Beispiel
+                einer Ableitung von \(a * (a+a)\) von der obigen Grammatik.
+                $$\begin&#123;align*&#125; E&amp;\stackrel&#123;2&#125;&#123;\Longrightarrow&#125; T
+                \stackrel&#123;3&#125;&#123;\Longrightarrow&#125; T * F \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; F * F
+                \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; a * F&amp;\\&amp;\stackrel&#123;5&#125;&#123;\Longrightarrow&#125;
+                a * (E) \stackrel&#123;1&#125;&#123;\Longrightarrow&#125; a * (E + T)
+                \stackrel&#123;2&#125;&#123;\Longrightarrow&#125; a * (T + T)&amp;\\&
+                \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; a * (F + T) \stackrel&#123;6&#125;&#123;\Longrightarrow&#125;
+                a * (a + T) \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; a * (a + F)
+                \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; a * (a + a)&amp;\end&#123;align*&#125;$$ Insbesondere
+                ist es eine{" "}
+                <i>
+                  Linksableitung
+                </i>
+                , das heißt, in jedem Schritt wird
+                das am weitesten links stehende Nichtterminal expandiert. In der Tat
+                reicht es, nur die Nummer der angewandten Regel anzugeben (da ja klar
+                ist, welches Nichtterminal expandiert werden muss). Die obige Ableitung
+                kann also kompakt durch die Zahlenfolge 23465124646 repräsentiert
+                werden.
                 <Paragraph>
-                  Das folgende Beispiel ist Beispiel 3.22 aus dem Buch von Aho und Ullman.
-                  Wir betrachten die klassische kontextfreie Grammatik für arithmetische
-                  Ausdrücke mit Klammerung:{" "}
-                </Paragraph>
-                <Paragraph>
-                  $$\begin&#123;align*&#125; (1)\ E \rightarrow&amp;E + T \\
-                  (2)\ E \rightarrow&amp;T \\ (3)\ T \rightarrow&amp;T * F \\ (4)\ T
-                  \rightarrow&amp;F \\ (5)\ F \rightarrow&amp;(E) \\ (6)\ F \rightarrow&amp;a \\
-                  \end&#123;align*&#125;$$
-                </Paragraph>
-                <Paragraph>
-                  {" "}wobei \(E\) das Startsymbol ist. Hier ist ein Beispiel
-                  einer Ableitung von \(a * (a+a)\) von der obigen Grammatik.
-                  {" "}
-                </Paragraph>
-                <Paragraph>
-                  $$\begin&#123;align*&#125; E&amp;\stackrel&#123;2&#125;&#123;\Longrightarrow&#125; T
-                  \stackrel&#123;3&#125;&#123;\Longrightarrow&#125; T * F \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; F * F
-                  \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; a * F&amp;\\&amp;\stackrel&#123;5&#125;&#123;\Longrightarrow&#125;
-                  a * (E) \stackrel&#123;1&#125;&#123;\Longrightarrow&#125; a * (E + T)
-                  \stackrel&#123;2&#125;&#123;\Longrightarrow&#125; a * (T + T)&amp;\\&
-                  \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; a * (F + T) \stackrel&#123;6&#125;&#123;\Longrightarrow&#125;
-                  a * (a + T) \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; a * (a + F)
-                  \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; a * (a + a)&amp;\end&#123;align*&#125;$$
-                </Paragraph>
-                <Paragraph>
-                  {" "}Insbesondere
-                  ist es eine{" "}
+                  Betrachten wir im Folgenden ein weiteres Beispiel einer Ableitung, in
+                  diesem Falle eine{" "}
                   <i>
-                    Linksableitung
+                    Rechtsableitung
                   </i>
-                  , das heißt, in jedem Schritt wird
-                  das am weitesten links stehende Nichtterminal expandiert. In der Tat
-                  reicht es, nur die Nummer der angewandten Regel anzugeben (da ja klar
-                  ist, welches Nichtterminal expandiert werden muss). Die obige Ableitung
-                  kann also kompakt durch die Zahlenfolge 23465124646 repräsentiert
-                  werden.
+                  , in der in jedem Schritt
+                  das am weitesten rechts stehende Nichtterminal expandiert wird:
                 </Paragraph>
+                $$\begin&#123;align*&#125; E&amp;\stackrel&#123;2&#125;&#123;\Longrightarrow&#125; T
+                \stackrel&#123;3&#125;&#123;\Longrightarrow&#125; T * F \stackrel&#123;5&#125;&#123;\Longrightarrow&#125; T *
+                (E) \stackrel&#123;1&#125;&#123;\Longrightarrow&#125; T * (E+T)
+                \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; T * (E+F)&amp;\\&
+                \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; T * (E+a) \stackrel&#123;2&#125;&#123;\Longrightarrow&#125; T
+                * (T + a) \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; T * (F + a)&amp;\\&
+                \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; T * (a + a) \stackrel&#123;4&#125;&#123;\Longrightarrow&#125;
+                F * (a + a) \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; a * (a + a)&amp;\end&#123;align*&#125;$$
+                Rechtsableitungen können auch kompakt als Zahlenfolge repräsentiert
+                werden. Allerdings geben wir Rechtsableitungen immer in umgekehrter
+                Reihenfolge an, also von hinten nach vorne, in diesem Falle also nicht
+                2351... sondern 64642641532.
                 <Paragraph>
-                  <Paragraph>
-                    <Paragraph>
-                      Betrachten wir im Folgenden ein weiteres Beispiel einer Ableitung, in
-                      diesem Falle eine{" "}
-                      <i>
-                        Rechtsableitung
-                      </i>
-                      , in der in jedem Schritt
-                      das am weitesten rechts stehende Nichtterminal expandiert wird:
-                    </Paragraph>
-                  </Paragraph>
-                  {" "}{" "}
-                </Paragraph>
-                <Paragraph>
-                  $$\begin&#123;align*&#125; E&amp;\stackrel&#123;2&#125;&#123;\Longrightarrow&#125; T
-                  \stackrel&#123;3&#125;&#123;\Longrightarrow&#125; T * F \stackrel&#123;5&#125;&#123;\Longrightarrow&#125; T *
-                  (E) \stackrel&#123;1&#125;&#123;\Longrightarrow&#125; T * (E+T)
-                  \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; T * (E+F)&amp;\\&
-                  \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; T * (E+a) \stackrel&#123;2&#125;&#123;\Longrightarrow&#125; T
-                  * (T + a) \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; T * (F + a)&amp;\\&
-                  \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; T * (a + a) \stackrel&#123;4&#125;&#123;\Longrightarrow&#125;
-                  F * (a + a) \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; a * (a + a)&amp;\end&#123;align*&#125;$$
-                </Paragraph>
-                <Paragraph>
-                  {" "}
-                  Rechtsableitungen können auch kompakt als Zahlenfolge repräsentiert
-                  werden. Allerdings geben wir Rechtsableitungen immer in umgekehrter
-                  Reihenfolge an, also von hinten nach vorne, in diesem Falle also nicht
-                  2351... sondern 64642641532.
-                </Paragraph>
-                <Paragraph>
-                  <Paragraph>
-                    Beachten Sie, dass wir es hier mit einer eindeutigen Grammatik zu tun
-                    haben, es also nur einen Syntaxbaum gibt:
-                  </Paragraph>
+                  Beachten Sie, dass wir es hier mit einer eindeutigen Grammatik zu tun
+                  haben, es also nur einen Syntaxbaum gibt:
                 </Paragraph>
                 <figure>
                   <img
@@ -132,66 +104,60 @@ const Article = () => {
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  <Paragraph>
-                    Rechtsableitung und Linksableitung sowie deren Codierung als
-                    Zahlenfolge spiegeln also nur zwei verschiedene Weisen wieder, den
-                    Baum auszugeben.
-                  </Paragraph>
+                  Rechtsableitung und Linksableitung sowie deren Codierung als
+                  Zahlenfolge spiegeln also nur zwei verschiedene Weisen wieder, den
+                  Baum auszugeben.
                 </Paragraph>
                 <pre class="listing container">
-                  <Paragraph>
+                  {" "}{" "}
+                  <code>
+                    def treeToLeftDerivation (tree):
+                  </code>
+                  {" "}
+                  {" "}
+                  <code>
+                    print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
+                  </code>
+                  {" "}
+                  {" "}
+                  <code>
+                    for child in tree.children (from left ro right):
+                  </code>
+                  {" "}
+                  {" "}
+                  <code>
+                    treeToLeftDerivation(child)
+                  </code>
+                  {" "}
+                  {" "}
+                  <code>
                     {" "}{" "}
-                    <code>
-                      def treeToLeftDerivation (tree):
-                    </code>
-                    {" "}
-                    {" "}
-                    <code>
-                      print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
-                    </code>
-                    {" "}
-                    {" "}
-                    <code>
-                      for child in tree.children (from left ro right):
-                    </code>
-                    {" "}
-                    {" "}
-                    <code>
-                      treeToLeftDerivation(child)
-                    </code>
-                    {" "}
-                    {" "}
-                    <code>
-                      {" "}{" "}
-                    </code>
-                    {" "}
-                    {" "}
-                    <code>
-                      def treeToRightDerivation (tree):
-                    </code>
-                    {" "}
-                    {" "}
-                    <code>
-                      for child in tree.children (from left ro right):
-                    </code>
-                    {" "}
-                    {" "}
-                    <code>
-                      treeToLeftDerivation(child)
-                    </code>
-                    {" "}
-                    {" "}
-                    <code>
-                      print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
-                    </code>
-                    {" "}{" "}
-                  </Paragraph>
+                  </code>
+                  {" "}
+                  {" "}
+                  <code>
+                    def treeToRightDerivation (tree):
+                  </code>
+                  {" "}
+                  {" "}
+                  <code>
+                    for child in tree.children (from left ro right):
+                  </code>
+                  {" "}
+                  {" "}
+                  <code>
+                    treeToLeftDerivation(child)
+                  </code>
+                  {" "}
+                  {" "}
+                  <code>
+                    print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
+                  </code>
+                  {" "}{" "}
                 </pre>
                 <Paragraph>
-                  <Paragraph>
-                    Beachten Sie, dass wir in beiden Fällen die Liste Kinder von links
-                    nach rechts durchgehen.
-                  </Paragraph>
+                  Beachten Sie, dass wir in beiden Fällen die Liste Kinder von links
+                  nach rechts durchgehen.
                 </Paragraph>
               </div>
             </div>
