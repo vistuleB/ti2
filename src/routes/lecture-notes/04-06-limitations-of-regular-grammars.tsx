@@ -62,10 +62,16 @@ const Article = () => {
                     \(a^n b^n\) haben; also eine beliebig lange Folge von \(a\)s, gefolgt von genau so vielen
                     \(b\)s.
                     Hier ist eine kontextfreie Grammatik für \(L\):
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\rightarrow \epsilon \\
                     S&amp;\rightarrow aSb
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -161,13 +167,15 @@ const Article = () => {
                       Setzen wir diesen Plan in die Tat um. Wir füttern dem Automaten eine Folge von
                       \(aaaaaaa...\) und
                       beobachten die Zustandsfolge \(q_0, q_1, q_2, \dots\), die sich daraus ergibt. Formal:
-                      \begin&#123;align*&#125;
-                      q
-                      <i>
-                        i := \hat&#123;\delta&#125;(q
-                      </i>
-                      0, a^i) \ ,
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      q_i := \hat&#123;\delta&#125;(q_0, a^i) \ ,
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       wobei \(a^i\) das Wort ist, dass aus \(i\) vielen \(a\)'s hintereinander besteht.
                       Da der Automat nur \(|Q|\) viele Zustände hat,
                       muss sich nach mindestens \(|Q|\) vielen \(a\)'s eine Wiederholung einstellen, also
@@ -181,40 +189,38 @@ const Article = () => {
                     <Paragraph>
                       Wir füttern den Automaten mit dem Wort \(a^i b^i\). Der Automat landet in einem Zustand
                       \(q^*\):
-                      \begin&#123;align*&#125;
-                      q
-                      <i>
-                        0 \step&#123;a^i&#125; q
-                      </i>
-                      i \step&#123;b^i&#125; q^
-                      <b>
-                        {" "}
-                        \end&#123;align
-                      </b>
-                      &#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      q_0 \step&#123;a^i&#125; q_i \step&#123;b^i&#125; q^*
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Das Wort \(a^i b^i\) ist in der Sprache \(L\). Dere Zustand \(q^*\) muss also ein
                       akzeptierender Zustand sein.
                       Nun füttern wir ihn mit dem Wort \(a^j b^i\). Der Automat landet wo?
-                      \begin&#123;align*&#125;
-                      q
-                      <i>
-                        0 \step&#123;a^j&#125; q
-                      </i>
-                      i
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      q_0 \step&#123;a^j&#125; q_i
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       da ja \(a^i\) und \(a^j\) ihn in den selben Zustand bringen. Daraufhin geschieht abermals
                       \(q_i \step&#123;b^i&#125; q^*\), also insgesamt
-                      \begin&#123;align*&#125;
-                      q
-                      <i>
-                        0 \step&#123;a^j&#125; q
-                      </i>
-                      i \step&#123;b^i&#125; q^
-                      <b>
-                        {" "}
-                        \end&#123;align
-                      </b>
-                      &#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      q_0 \step&#123;a^j&#125; q_i \step&#123;b^i&#125; q^*
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Wir haben aber bereits gesehen, dass \(q^*\) ein akzeptierender Zustand sein muss; also
                       akzeptiert der Automat
                       auch \(a^j b^i\); das ist aber ein Fehler, denn \(a^j b^i \not \in L\). Der Automat ist also
@@ -285,9 +291,15 @@ const Article = () => {
                       \(M\)-äquivalent
                     </i>
                     , geschrieben
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \alpha \equiv_M \beta \ ,
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     wenn \( \hat&#123;\delta&#125;(\qstart, \alpha) = \hat&#123;\delta&#125;(\qstart, \beta)\) gilt; wenn sie also
                     den Automaten in den gleichen Zustand bringen.
                   </Paragraph>
@@ -325,9 +337,15 @@ const Article = () => {
                       \(L\)-äquivalent
                     </i>
                     , geschrieben
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \alpha \equiv_L \beta \ ,
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     wenn für alle \(\gamma \in \Sigma^*\) die Wörter
                     \(\alpha \gamma\) und \(\beta \gamma\) entweder
                     beide in \(L\) oder beide nicht in \(L\) sind.
@@ -350,18 +368,36 @@ const Article = () => {
                     </b>
                     {" "}
                     Nehmen wir an \(\alpha \equiv_M \beta\); es gibt also einen Zustand \(q\) mit
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \qstart \Step&#123;\alpha&#125; q \textnormal&#123; und &#125; \qstart \Step&#123;\beta&#125; q
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Des weiteren sei \(q' := \hat&#123;\delta&#125;(q, \gamma)\), also
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \qstart \Step&#123;\alpha&#125; q \Step&#123;\gamma&#125; q' \textnormal&#123; und &#125; \qstart \Step&#123;\beta&#125; q \Step&#123;\gamma&#125;
                     q'
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     also
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \qstart \Step&#123;\alpha\gamma&#125; q' \textnormal&#123; und &#125; \qstart \Step&#123;\beta\gamma&#125; q'
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Abhängig davon, ob \(q' \in F\) oder nicht, sind \(\alpha\gamma\) und \(\alpha\beta\) entweder
                     {" "}
                     <i>
@@ -434,14 +470,16 @@ const Article = () => {
                     (oder
                     umgekehrt).
                     Da \(M\) die Sprache \(L\) akzeptiert, muss auch folgendes gelten:
-                    \begin&#123;align*&#125;
-                    \qstart \Step&#123;\alpha
-                    <i>
-                      i \gamma&#125; q \in F \\
-                      \qstart \Step&#123;\alpha
-                    </i>
-                    j \gamma&#125; q' \not \in F \ ,
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \qstart \Step&#123;\alpha_i \gamma&#125; q \in F \\
+                    \qstart \Step&#123;\alpha_j \gamma&#125; q' \not \in F \ ,
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     was aber nicht sein kann, da \(\alpha_i \equiv_M \alpha_j\) und daher auch \(\alpha_i \gamma
                     \equiv_M \alpha_j \gamma\), also
                     \(q = q'\) gelten würde.
@@ -476,9 +514,15 @@ const Article = () => {
                     \(\alpha = \alpha^R\), wobei \(\alpha^R\) das Wort \(\alpha\) in umgekehrter Reihnfolge gelesen
                     ist.
                     Die Sprache \(L\) ist ein klassisches Beispiel einer kontextfreien Sprache:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S \rightarrow \epsilon \ | \ aSa \ | \ bSb
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Sie ist nicht regulär: die Wörter \(a, aa, aaa, aaaa, ...\) sind alle nicht \(L\)-äquivalent, da
                     \(a^i b a^i \in L\) aber \(a^j b a^i \not \in L\) ist.
                   </Paragraph>
@@ -490,9 +534,15 @@ const Article = () => {
                     </span>
                     Betrachten Sie die Sprache aller \(\alpha\in \&#123;a,b\&#125;^*\), die gleich viele \(a\)'s wie \(b\)'s
                     haben:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S \rightarrow \epsilon \ | \ aSbS \ | \ bSaS
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Zeigen Sie, dass diese Sprache nicht regulär ist.
                   </Paragraph>
                 </div>
@@ -532,32 +582,28 @@ const Article = () => {
                       Allerdings ist \(n\) ist auch die größte solche Zahl; dies heißt, jedes weitere
                       \(\beta \in \Sigma^*\) ist äquivalent zu einem dieser \(\alpha_i\).
                       In anderen Worten: wir können \(\Sigma^*\) in Teilmengen partitionieren:
-                      \begin&#123;align*&#125;
-                      \Sigma = A
-                      <i>
-                        1 \cup A
-                      </i>
-                      2 \cup \dots \cup A
-                      <i>
-                        n \ ,
-                        \end&#123;align*&#125;
-                        so dass innerhalb eines \(A_i\) alle Wörter äquivalent sind, und zwischen
-                        zwei verschiedenen \(A_i, A_j\) alle nicht äquivalent sind:
-                        \begin&#123;align*&#125;
-                        \forall 1 \leq i \leq n&amp;\forall \alpha, \beta \in A
-                      </i>
-                      i:&amp;\quad \alpha \equiv
-                      <i>
-                        L \beta \\
-                        \forall 1 \leq i \lt j \leq n&amp;\forall \alpha\in A
-                      </i>
-                      i, \beta\in A
-                      <i>
-                        j :&amp;\quad \alpha \not
-                        \equiv
-                      </i>
-                      L \beta
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \Sigma = A_1 \cup A_2 \cup \dots \cup A_n \ ,
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
+                      so dass innerhalb eines \(A_i\) alle Wörter äquivalent sind, und zwischen
+                      zwei verschiedenen \(A_i, A_j\) alle nicht äquivalent sind:
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \forall 1 \leq i \leq n&amp;\forall \alpha, \beta \in A_i:&amp;\quad \alpha \equiv_L \beta \\
+                      \forall 1 \leq i \lt j \leq n&amp;\forall \alpha\in A_i, \beta\in A_j :&amp;\quad \alpha \not
+                      \equiv_L \beta
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Die Menge von Mengen \(\&#123;A_1, A_2, \dots, A_n\&#125;\) nennt man eine Partition oder
                       Partitionierung von \(\Sigma^*\).
                     </Paragraph>
@@ -577,9 +623,15 @@ const Article = () => {
                     <Paragraph>
                       Wir bauen nun einen endlichen Automaten mit der Zustandsmenge \(Q = \&#123;1,2,\dots,n\&#125;\).
                       Für \(i, j\) führen wir die Produktion
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       i \step&#123;x&#125; j
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       ein, wenn es ein \(\alpha \in A_i\) mit \(\alpha x \in A_j\) gibt.
                       Sehen Sie nun: wenn wir ein anderes \(\alpha' \in A_i\) nehmen,
                       dann gilt \(\alpha' x \equiv_L \alpha x\), also ist auch \(\alpha' x \in A_j\). In anderen
@@ -600,21 +652,19 @@ const Article = () => {
                       .
                       Als Anfangszustand wählen wir dasjenige \(i\), für das \(\epsilon \in A_i\) gilt.
                       Akzeptierende Zustände sind diejenigen \(j\), für die \(A_j \subseteq L\) gilt. Also:
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       Q&amp;:= \&#123;1,2,\dots,n\&#125; \\
-                      \qstart&amp;:= \textnormal&#123; das $i$, für das $\epsilon \in A
-                      <i>
-                        i$&#125; \\
-                        F&amp;:= \&#123;j \in Q \ | \ A
-                      </i>
-                      j \subseteq L\&#125; \\
-                      \delta&amp;:= (i,x) \mapsto \textnormal&#123;(das eindeutige $j$, für das es ein $\alpha \in A
-                      <i>
-                        i$
-                        gibt mit $\alpha x \in A
-                      </i>
-                      j$).&#125;
-                      \end&#123;align*&#125;
+                      \qstart&amp;:= \textnormal&#123; das $i$, für das $\epsilon \in A_i$&#125; \\
+                      F&amp;:= \&#123;j \in Q \ | \ A_j \subseteq L\&#125; \\
+                      \delta&amp;:= (i,x) \mapsto \textnormal&#123;(das eindeutige $j$, für das es ein $\alpha \in A_i$
+                      gibt mit $\alpha x \in A_j$).&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Der Automat \((\Sigma, Q, \qstart, F, \delta)\) erkennt die Sprache \(L\); die Anzahl
                       seiner Zustände ist gleich dem Index der Sprache \(L\).
                     </Paragraph>

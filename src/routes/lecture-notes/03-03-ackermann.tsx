@@ -97,25 +97,43 @@ const Article = () => {
                       (Péter-Ackermann-Funktion).
                     </b>
                     {" "}
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     A(m,n)&amp;:= \begin&#123;cases&#125;
                     n+1&amp;\textnormal&#123; if $m=0$,&#125; \\
                     A(m-1,1)&amp;\textnormal&#123; if $m \geq 1, n=0$&#125; \\
                     A(m-1, A(m,n-1))&amp;\textnormal&#123; if $m,n \geq 1$&#125; \ .
                     \end&#123;cases&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Manchmal sehen Sie in der Literatur auch die äquivalente, vielleicht lesbarere Definition:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     A(0,n)&amp;:= n+1 \\
                     A(m+1, 0)&amp;:= A(m,1) \\
                     A(m+1, n+1)&amp;:= A(m, A(m+1,n))
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Für festes \(m\in \N\) schreiben wir auch \(A_m\) für die ein-parametrige
                     Funktion
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     A_m :&amp;\N \rightarrow \N \\
                     n&amp;\mapsto A(m,n) \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <Paragraph>
@@ -124,94 +142,58 @@ const Article = () => {
                     Aus der Definition geht unmittelbar hervor, dass
                     \(A_0(n) = n+1\) ist.
                     Für \(A_1 (n)\) rechnen wir
-                    \begin&#123;align*&#125;
-                    A
-                    <i>
-                      1 (n)&amp;= A
-                    </i>
-                    0 ( A
-                    <i>
-                      1 (n-1)) =
-                      A
-                    </i>
-                    0 (A
-                    <i>
-                      0(A
-                    </i>
-                    1(n-2))) = \dots =
-                    \underbrace&#123;A
-                    <i>
-                      0 (A
-                    </i>
-                    0 (...(A
-                    <i>
-                      0&#125;
-                    </i>
-                    &#123;i \textnormal&#123; mal&#125;&#125;(A
-                    <i>
-                      1(n-i)))...)) \\
-                      &amp;=
-                      \underbrace&#123;A
-                    </i>
-                    0 (A
-                    <i>
-                      0 (...(A
-                    </i>
-                    0&#125;
-                    <i>
-                      &#123;n \textnormal&#123; mal&#125;&#125;(A
-                    </i>
-                    1(0)))...)) \\
-                    &amp;= \underbrace&#123;A
-                    <i>
-                      0 (A
-                    </i>
-                    0 (...(A
-                    <i>
-                      0&#125;
-                    </i>
-                    &#123;n+1 \textnormal&#123; mal&#125;&#125;(1))...)) \\
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    A_1 (n)&amp;= A_0 ( A_1 (n-1)) =
+                    A_0 (A_0(A_1(n-2))) = \dots =
+                    \underbrace&#123;A_0 (A_0 (...(A_0&#125;_&#123;i \textnormal&#123; mal&#125;&#125;(A_1(n-i)))...)) \\
+                    &amp;=
+                    \underbrace&#123;A_0 (A_0 (...(A_0&#125;_&#123;n \textnormal&#123; mal&#125;&#125;(A_1(0)))...)) \\
+                    &amp;= \underbrace&#123;A_0 (A_0 (...(A_0&#125;_&#123;n+1 \textnormal&#123; mal&#125;&#125;(1))...)) \\
                     &amp;= n+2 \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Soweit schaut die Funktion nicht besonders beindruckend aus. \(A_2\) bekommen iwr
                     nach dem gleichen Schema:
-                    \begin&#123;align*&#125;
-                    A
-                    <i>
-                      2 (n)&amp;= \underbrace&#123;A
-                    </i>
-                    1 (A
-                    <i>
-                      1 (...(A
-                    </i>
-                    1&#125;
-                    <i>
-                      &#123;n+1 \textnormal&#123; mal&#125;&#125;(1))...)) \ , \\
-                      \end&#123;align*&#125;
-                      wir fangen also mit \(1\) an und zählen \(n+1\) mal eine 2 drauf. Wir erhalten
-                      \(2n + 3\), also
-                      \begin&#123;align*&#125;
-                      A
-                    </i>
-                    2 (n)&amp;= 2n + 3 \ .
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    A_2 (n)&amp;= \underbrace&#123;A_1 (A_1 (...(A_1&#125;_&#123;n+1 \textnormal&#123; mal&#125;&#125;(1))...)) \ , \\
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
+                    wir fangen also mit \(1\) an und zählen \(n+1\) mal eine 2 drauf. Wir erhalten
+                    \(2n + 3\), also
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    A_2 (n)&amp;= 2n + 3 \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     \(A_3\) wird etwas unangenehmer, weil wir keine gute Intuition haben, was
                     "\(n+1\) mal verdoppeln und jedes Mal 3 draufzählen" ergibt. Mit 1 beginnend erhalten wir also
-                    \begin&#123;align*&#125;
-                    1 \stackrel&#123;A
-                    <i>
-                      2&#125;&#123;\rightarrow&#125; 5
-                      \stackrel&#123;A
-                    </i>
-                    2&#125;&#123;\rightarrow&#125; 13
-                    \stackrel&#123;A
-                    <i>
-                      2&#125;&#123;\rightarrow&#125; 29
-                      \stackrel&#123;A
-                    </i>
-                    2&#125;&#123;\rightarrow&#125; 61
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    1 \stackrel&#123;A_2&#125;&#123;\rightarrow&#125; 5
+                    \stackrel&#123;A_2&#125;&#123;\rightarrow&#125; 13
+                    \stackrel&#123;A_2&#125;&#123;\rightarrow&#125; 29
+                    \stackrel&#123;A_2&#125;&#123;\rightarrow&#125; 61
                     \stackrel&#123;A_2&#125;&#123;\rightarrow&#125; 125
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Das ist schon genug, um eine Vermutung zu formulieren:
                     \(A_3(n) = 2^&#123;n+3&#125; - 3\) und diese dann per Indution zu beweisen.
                   </Paragraph>
@@ -238,30 +220,30 @@ const Article = () => {
                     {" "}
                     Wir verwenden Induktion über \(m\). Für \(m=0\) gilt \(A_0(n)= n+1\) und somit
                     \(A_0 = \succ\). Sei nun also \(m \geq 1\). Wir sehen, dass
-                    \begin&#123;align*&#125;
-                    A
-                    <i>
-                      m(t) = A
-                    </i>
-                    &#123;m-1&#125; (A(m,t-1)) \ .
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    A_m(t) = A_&#123;m-1&#125; (A(m,t-1)) \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Ich schreibe nun \(t\) anstatt \(n\) als Parameter, um mich der Notation
                     der primitiven Rekursion anzunähern. Wir wissen bereits, dass
                     \(A_&#123;m-1&#125;\) primitiv rekursiv ist. Wir können \(A_m(t)\) also schreiben als
-                    \begin&#123;align*&#125;
-                    A
-                    <i>
-                      m(t)&amp;= \begin&#123;cases&#125;
-                      A
-                    </i>
-                    &#123;m-1&#125; (1)&amp;\textnormal&#123; if $t=0$&#125; \\
-                    A
-                    <i>
-                      &#123;m-1&#125; (A
-                    </i>
-                    m(t-1))&amp;\textnormal&#123; if $t \geq 1$.&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    A_m(t)&amp;= \begin&#123;cases&#125;
+                    A_&#123;m-1&#125; (1)&amp;\textnormal&#123; if $t=0$&#125; \\
+                    A_&#123;m-1&#125; (A_m(t-1))&amp;\textnormal&#123; if $t \geq 1$.&#125;
                     \end&#123;cases&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Wir können also \(h = \comp (A_&#123;m-1&#125;, \pi^3_1)\) wählen. Was ist \(g\)?
                     Der Startwert soll \(g(\vec&#123;x&#125;)\) sein, wir haben aber kein \(\vec&#123;x&#125;\), bzw. dies
                     ist der "leere Vektor". Wir brauchen eine Funktion
@@ -274,17 +256,15 @@ const Article = () => {
                     </i>
                     .
                     Allerdings ist die erste Variante einfacher, und somit
-                    \begin&#123;align*&#125;
-                    A
-                    <i>
-                      m&amp;= \primrec(\comp (A
-                    </i>
-                    &#123;m-1&#125;, &#123;\rm one&#125;), \comp (A
-                    <i>
-                      &#123;m-1&#125;, \pi^3
-                    </i>
-                    1)) \ .
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    A_m&amp;= \primrec(\comp (A_&#123;m-1&#125;, &#123;\rm one&#125;), \comp (A_&#123;m-1&#125;, \pi^3_1)) \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Wir sehen also: jedes \(A_m\), betrachtet als Funktion mit einem
                     Eingabeparameter, ist primitiv rekursiv.
                   </Paragraph>
@@ -414,17 +394,15 @@ const Article = () => {
                         majorisiert
                       </i>
                       \(g\), wenn
-                      \begin&#123;align*&#125;
-                      f (\max(x
-                      <i>
-                        1,\dots,x
-                      </i>
-                      k) \gt g(x
-                      <i>
-                        1, \dots, x
-                      </i>
-                      k) \ .
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      f (\max(x_1,\dots,x_k) \gt g(x_1, \dots, x_k) \ .
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       für alle \(x_1,\dots,x_k \in \N\) gilt.
                       Wir schreiben auch kurzerhand \(f \gt g\).
                     </Paragraph>
@@ -458,17 +436,25 @@ const Article = () => {
                       primitiv rekursiv sein kann. Wäre es dies, dann gäbe es ja ein
                       \(r\), so dass das ein-parametrige \(A_r\) die zwei-parametrige Funktion
                       \(A(m,n)\) majorisieren würde:
-                      \begin&#123;align*&#125;
-                      A
-                      <i>
-                        r (\max(m,n)) \gt A(m,n)
-                        \end&#123;align*&#125;
-                        für alle Werte \(m,n \in \N\) und somit insbesondere
-                        \begin&#123;align*&#125;
-                        A
-                      </i>
-                      r (r) \gt A(r,r) \ ,
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      A_r (\max(m,n)) \gt A(m,n)
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
+                      für alle Werte \(m,n \in \N\) und somit insbesondere
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      A_r (r) \gt A(r,r) \ ,
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       was offensichtlich ein Widerspruch ist, da beide Seiten gleich sind.
                     </Paragraph>
                   </Paragraph>
@@ -495,19 +481,17 @@ const Article = () => {
                       \(A_1\)? Es gilt \(A_1(n) = n+2\), und somit ist
                     </Paragraph>
                     <Paragraph>
-                      \begin&#123;align*&#125;
-                      \zero(\vec&#123;x&#125;)&amp;= 0 \lt 1 \lt A
-                      <i>
-                        1(x) \\
-                        \succ(x)&amp;= x+1 \lt x+2 = A
-                      </i>
-                      1(x) \\
-                      \pi^n
-                      <i>
-                        k (\vec&#123;x&#125;)&amp;= x
-                      </i>
-                      k \leq x \lt x + 2 = A_1(x) \ ,
-                      \end&#123;align*&#125;
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \zero(\vec&#123;x&#125;)&amp;= 0 \lt 1 \lt A_1(x) \\
+                      \succ(x)&amp;= x+1 \lt x+2 = A_1(x) \\
+                      \pi^n_k (\vec&#123;x&#125;)&amp;= x_k \leq x \lt x + 2 = A_1(x) \ ,
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       wobei wir die Schreibweise \(x = \max(\vec&#123;x&#125;) = \max(x_1,\dots,x_n)\) verwenden.
                       Wir schlussfolgern: \(A_2\) majorisiert jede Basisfunktion.
                     </Paragraph>
@@ -540,65 +524,39 @@ const Article = () => {
                       von einem \(A_r\) majorisiert:
                       \(A_r \gt g, A_&#123;s_1&#125; \gt h_1, \dots, A_&#123;s_k&#125; \gt h_k\). Für einen Eingabevektor \(\vec&#123;x&#125;\)
                       schreiben wir \(x := \max(x_1,\dots,x_n)\) und rechnen:
-                      \begin&#123;align*&#125;
-                      f(\vec&#123;x&#125;)&amp;= g(h
-                      <i>
-                        1(\vec&#123;x&#125;), \dots, h
-                      </i>
-                      k(\vec&#123;x&#125;)) \\
-                      &amp;\lt A
-                      <i>
-                        r (\max (h
-                      </i>
-                      1(\vec&#123;x&#125;), \dots, h
-                      <i>
-                        k(\vec&#123;x&#125;))) \tag&#123;weil \(A_q \gt g\)&#125; \\
-                        &amp;\leq A
-                      </i>
-                      r ( \max (A
-                      <i>
-                        &#123;s
-                      </i>
-                      1&#125;(x), A
-                      <i>
-                        &#123;s
-                      </i>
-                      2&#125;(x), \dots, A
-                      <i>
-                        &#123;s
-                      </i>
-                      k&#125;(x))) \tag&#123;weil \(A_r\) monoton und
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      f(\vec&#123;x&#125;)&amp;= g(h_1(\vec&#123;x&#125;), \dots, h_k(\vec&#123;x&#125;)) \\
+                      &amp;\lt A_r (\max (h_1(\vec&#123;x&#125;), \dots, h_k(\vec&#123;x&#125;))) \tag&#123;weil \(A_q \gt g\)&#125; \\
+                      &amp;\leq A_r ( \max (A_&#123;s_1&#125;(x), A_&#123;s_2&#125;(x), \dots, A_&#123;s_k&#125;(x))) \tag&#123;weil \(A_r\) monoton und
                       \(A_&#123;s_i&#125; \gt h_i\)&#125;
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Wir setzen nun \(q := \max(r, s_1, \dots, s_k)\). Dann ist der obige Wert höchstens:
-                      \begin&#123;align*&#125;
-                      \dots&amp;\leq A
-                      <i>
-                        q (A
-                      </i>
-                      q(x)) \\
-                      &amp;\leq A
-                      <i>
-                        &#123;q&#125; (A
-                      </i>
-                      &#123;q+1&#125; (x)) = A
-                      <i>
-                        &#123;q+1&#125; (x+1) \ .
-                        \end&#123;align*&#125;
-                        Schlussendlich behaupte ich, dass \(A_&#123;q+1&#125;(x+1) \leq A_&#123;q+2&#125;(x)\) gilt:
-                        \begin&#123;align*&#125;
-                        A
-                      </i>
-                      &#123;q+2&#125;(x)&amp;= A
-                      <i>
-                        &#123;q+1&#125; (A
-                      </i>
-                      &#123;q+2&#125;(x-1)) \geq A
-                      <i>
-                        &#123;q+1&#125; (A
-                      </i>
-                      2 (x-1)) = A_&#123;q+1&#125; (x+1) \ .
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \dots&amp;\leq A_q (A_q(x)) \\
+                      &amp;\leq A_&#123;q&#125; (A_&#123;q+1&#125; (x)) = A_&#123;q+1&#125; (x+1) \ .
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
+                      Schlussendlich behaupte ich, dass \(A_&#123;q+1&#125;(x+1) \leq A_&#123;q+2&#125;(x)\) gilt:
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      A_&#123;q+2&#125;(x)&amp;= A_&#123;q+1&#125; (A_&#123;q+2&#125;(x-1)) \geq A_&#123;q+1&#125; (A_2 (x-1)) = A_&#123;q+1&#125; (x+1) \ .
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Also: \(A_&#123;q+2&#125;\) majorisiert \(f\).
                     </Paragraph>
                   </Paragraph>
@@ -609,13 +567,19 @@ const Article = () => {
                         Primitive Rekursion:
                       </b>
                       \(f = \primrec (g,h)\), also
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       f(t, \vec&#123;x&#125;)&amp;=
                       \begin&#123;cases&#125;
                       g(\vec&#123;x&#125;)&amp;\textnormal&#123; if $t=0$&#125; \\
                       h(f(t-1,\vec&#123;x&#125;), t-1, \vec&#123;x&#125;)&amp;\textnormal&#123; if $t \geq 1$&#125;
                       \end&#123;cases&#125; \ ,
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       wobei \(g, h\) bereits mit weniger Kombinatoren konstruierte primitiv rekursive Funktionen
                       sind. Daher gibt es ein \(q \in \N\) mit \(A_q \gt g\) und \(A_q \gt h\).
                     </Paragraph>
@@ -638,42 +602,34 @@ const Article = () => {
                       {" "}
                       Wir verwenden Induktion über \(t\). Wenn \(t=0\) ist,
                       dann gilt
-                      \begin&#123;align*&#125;
-                      f(0,\vec&#123;x&#125;)&amp;= g(\vec&#123;x&#125;) \lt A
-                      <i>
-                        q (x) \leq A
-                      </i>
-                      &#123;q+1&#125; (x) \ .
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      f(0,\vec&#123;x&#125;)&amp;= g(\vec&#123;x&#125;) \lt A_q (x) \leq A_&#123;q+1&#125; (x) \ .
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Wenn \(t \geq 1\) ist, dann gilt
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \hspace&#123;-3cm&#125;
                       f(t, \vec&#123;x&#125;)&= h(f(t-1,\vec&#123;x&#125;), t-1, \vec&#123;x&#125;) \\
-                      &amp;\lt A
-                      <i>
-                        &#123;q&#125; (\max(f(t-1, \vec&#123;x&#125;), t-1, x
-                      </i>
-                      1, \dots, x
-                      <i>
-                        n)) \tag &#123;weil \(A_q \gt h\)&#125;
-                        \\
-                        &amp;\lt A
-                      </i>
-                      &#123;q&#125; (\max(f(t-1, \vec&#123;x&#125;), t-1, x)) \tag &#123;für \(x := \max(x_1,\dots,x_n)\)&#125;
+                      &amp;\lt A_&#123;q&#125; (\max(f(t-1, \vec&#123;x&#125;), t-1, x_1, \dots, x_n)) \tag &#123;weil \(A_q \gt h\)&#125;
                       \\
-                      &amp;\leq A
-                      <i>
-                        q (\max(A
-                      </i>
-                      &#123;q+1&#125; (t-1+x), t-1, x)) \tag&#123; per Induktionshypothese für $t-1$&#125; \\
-                      &amp;= A
-                      <i>
-                        q (A
-                      </i>
-                      &#123;q+1&#125;(t-1+x)) % \tag&#123;weil \(\max(t-1,x) \leq t-1+x \leq A_&#123;q+1&#125;(t-1+x)\)&#125;
+                      &amp;\lt A_&#123;q&#125; (\max(f(t-1, \vec&#123;x&#125;), t-1, x)) \tag &#123;für \(x := \max(x_1,\dots,x_n)\)&#125;
+                      \\
+                      &amp;\leq A_q (\max(A_&#123;q+1&#125; (t-1+x), t-1, x)) \tag&#123; per Induktionshypothese für $t-1$&#125; \\
+                      &amp;= A_q (A_&#123;q+1&#125;(t-1+x)) % \tag&#123;weil \(\max(t-1,x) \leq t-1+x \leq A_&#123;q+1&#125;(t-1+x)\)&#125;
                       \\
                       &amp;= A_&#123;q+1&#125;(t+x) \ .
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Somit ist die Behauptung bewiesen.
                     </Paragraph>
                     <span class="qed">
@@ -691,28 +647,18 @@ const Article = () => {
                         Sei also \(z := \max(t,x) = \max(t, x_1,\dots,x_n)\). Dann gilt
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    A
-                    <i>
-                      &#123;q+1&#125; (x+t)&amp;\leq A
-                    </i>
-                    &#123;q+1&#125; (2z) \leq A
-                    <i>
-                      &#123;q+1&#125; (2(z-1) + 3) \\
-                      &amp;= A
-                    </i>
-                    &#123;q+1&#125; (A
-                    <i>
-                      2(z-1)) \tag&#123;da $A
-                    </i>
-                    2(n) = 2n+3$&#125;\\
-                    &amp;\leq A
-                    <i>
-                      &#123;q+1&#125; (A
-                    </i>
-                    &#123;q+2&#125;(z-1)) \\
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    A_&#123;q+1&#125; (x+t)&amp;\leq A_&#123;q+1&#125; (2z) \leq A_&#123;q+1&#125; (2(z-1) + 3) \\
+                    &amp;= A_&#123;q+1&#125; (A_2(z-1)) \tag&#123;da $A_2(n) = 2n+3$&#125;\\
+                    &amp;\leq A_&#123;q+1&#125; (A_&#123;q+2&#125;(z-1)) \\
                     &amp;= A_&#123;q+2&#125;(z) \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     Es gilt also \(A_&#123;q+2&#125; \gt f\) und das Lemma ist bewiesen.

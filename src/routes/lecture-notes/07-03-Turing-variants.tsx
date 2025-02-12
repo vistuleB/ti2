@@ -46,13 +46,21 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Im letzten Teilkapitel ist Ihnen bestimmt aufgefallen, dass es
-                    auffallend lästig ist, selbst für einfache Sprachen wie \begin&#123;align*&#125;
-                    \&#123;a^n b^n c^n \ | \ n \geq 0 \&#125; \end&#123;align*&#125; oder \begin&#123;align*&#125; \&#123;wcw
-                    \ | \ w \in \&#123;a,b\&#125;^
-                    <b>
-                      \&#125; \end&#123;align
-                    </b>
-                    &#125; Turingmaschinen zu programmieren.
+                    auffallend lästig ist, selbst für einfache Sprachen wie{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \&#123;a^n b^n c^n \ | \ n \geq 0 \&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}oder{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; \&#123;wcw
+                    \ | \ w \in \&#123;a,b\&#125;^*\&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}Turingmaschinen zu programmieren.
                     Ein Grund dafür ist, dass die Maschine nur an einer Position des
                     Bandes lesen und schreiben kann und man deswegen ständig zwischen
                     verschiedenen Stellen hin- und herfahren muss. Es bietet sich daher
@@ -70,8 +78,14 @@ const Article = () => {
                     Eine Mehrband-Turingmaschine ist wie eine Turingmaschine, nur dass sie
                     statt einem \(k\) viele Bänder und somit auch \(k\) viele
                     Schreib-Lese-Köpfe hat. Die Zustandsübergangsfunktion \(\delta\) hat
-                    somit auch die Signatur \begin&#123;align*&#125; \delta : Q \times \Gamma^k
-                    \rightarrow Q \times \Gamma^k \times \lsr^k \end&#123;align*&#125;
+                    somit auch die Signatur{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; \delta : Q \times \Gamma^k
+                    \rightarrow Q \times \Gamma^k \times \lsr^k \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </Paragraph>
                 <figure class="centered-figure well container">
@@ -151,8 +165,14 @@ const Article = () => {
                       Beispiel
                     </span>
                     Entwerfen wir nun eine Turingmaschine für die Palindromsprache
-                    \begin&#123;align*&#125; L := \&#123; w \in \&#123;a,b\&#125;^* \ | \ w = w^R \&#125; \ ,
-                    \end&#123;align*&#125; In
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; L := \&#123; w \in \&#123;a,b\&#125;^* \ | \ w = w^R \&#125; \ ,
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}In
                   </Paragraph>
                   <Paragraph>
                     <a href="./04-01-Turing-machines-examples.html#example-palindromes">
@@ -277,12 +297,14 @@ const Article = () => {
                     <i>
                       berechnen
                     </i>
-                    soll, also eine Funktion \begin&#123;align*&#125; f :
-                    \Sigma
-                    <i>
-                      1 \rightarrow \Sigma
-                    </i>
-                    2 \ , \end&#123;align*&#125; dann bauen wir sie per
+                    soll, also eine Funktion{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; f :
+                    \Sigma_1 \rightarrow \Sigma_2 \ , \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}dann bauen wir sie per
                     Konvention so, dass sie ein designiertes Ausgabeband hat, auf dem nach
                     Abschluss der Berechnung das Ausgabewort \(f(x)\) steht.
                   </Paragraph>
@@ -750,8 +772,14 @@ const Article = () => {
                       können wir leicht mit zwei Bändern
                       simulieren. Wir halten uns einfach an die Konvention, dass auf Band 1
                       der Kopf immer auf dem linkesten Zeichen steht und auf Band 2 der Kopf
-                      jenseits des rechtesten. \begin&#123;align*&#125; \delta(q,x) = (r,y,\texttt&#123;R&#125;)
-                      \end&#123;align*&#125; wird dann
+                      jenseits des rechtesten.{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; \delta(q,x) = (r,y,\texttt&#123;R&#125;)
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}wird dann
                     </Paragraph>
                   </Paragraph>
                   <pre class="container">
@@ -796,8 +824,14 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Ein neues Zeichen links vom Kopf einfügen ist nun einfach: aus
-                    \begin&#123;align*&#125; \delta(q,x) = \textnormal&#123;Zustand $r$, schreibe $y$ und
-                    füge $z$ links vom Kopf ein&#125; \end&#123;align*&#125; wird
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; \delta(q,x) = \textnormal&#123;Zustand $r$, schreibe $y$ und
+                    füge $z$ links vom Kopf ein&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}wird
                   </Paragraph>
                 </Paragraph>
                 <pre class="container">
@@ -887,20 +921,14 @@ const Article = () => {
                     <a href="https://turingmachinesimulator.com">
                       turingmachinesimulator.com
                     </a>
-                    eine Mehrband-Turingmaschine, die Inputs der Form \begin&#123;align*&#125; k [
-                    k
-                    <i>
-                      1 : v
-                    </i>
-                    1; k
-                    <i>
-                      2 : v
-                    </i>
-                    2; \dots ; k
-                    <i>
-                      n : v
-                    </i>
-                    n ] \end&#123;align*&#125; entgegennimmt,
+                    eine Mehrband-Turingmaschine, die Inputs der Form{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; k [
+                    k_1 : v_1; k_2 : v_2; \dots ; k_n : v_n ] \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}entgegennimmt,
                     für \(k, k_1, \dots, k_n, v_1, \dots, v_n \in \&#123;0,1\&#125;^n \), also
                     \(\Sigma = \&#123;0,1, \texttt&#123;:&#125;, \texttt&#123;;&#125;, \texttt&#123;[&#125;, \texttt&#123;]&#125;\&#125;\)
                     und akzeptiert, wenn es ein \(i\) gibt mit \(k = k_i\) und in diesem
@@ -963,30 +991,50 @@ const Article = () => {
                     Um nichtdeterministische Turingmaschinen zu definieren, müssen wir die
                     Zustandsübergangsfunktion \(\delta\) zu einer
                     Zustandsübergangsrelation machen. Statt \(\delta: Q \times \Gamma
-                    \rightarrow Q \times \Gamma \times \lsr\) also nun \begin&#123;align*&#125;
+                    \rightarrow Q \times \Gamma \times \lsr\) also nun{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \delta \subseteq (Q \times \Gamma) \times (Q \times \Gamma \times
-                    \lsr) \ . \end&#123;align*&#125; Und statt \(\delta(q,x) = (r,y,\texttt&#123;D&#125;)\)
+                    \lsr) \ . \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}Und statt \(\delta(q,x) = (r,y,\texttt&#123;D&#125;)\)
                     schreiben wir nun \((q,x) \step&#123;\delta&#125; (r,y,\texttt&#123;D&#125;)\). Wir
                     beschränken uns zunächst auf Einband-Turingmaschinen. Für
                     Konfigurationen \(C \in \Gamma^* \times Q \times\Gamma^*\) haben wir
                     keine erweiterte Zustandsübergangsfunktion \(\delta(C) = C'\), wo
                     \(C'\) die Folgekonfiguration ist, sondern eine erweiterte
-                    Zustandsübergangsrelation: \begin&#123;align*&#125; C \Step&#123;&#125; C' \end&#123;align*&#125;
+                    Zustandsübergangsrelation:{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; C \Step&#123;&#125; C' \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Wobei nun dank Nichtdeterminismus mehrere Folgekonfigurationen \(C'\)
                     geben kann (oder eben mal auch gar keine). Wir schreiben
-                    \begin&#123;align*&#125; C \Step&#123;&#125;^* C' \end&#123;align*&#125; wenn wir von \(C\) in einer
-                    Folge von Schritten nach \(C'\) kommen können, also \begin&#123;align*&#125; C =
-                    C
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; C \Step&#123;&#125;^* C' \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}wenn wir von \(C\) in einer
+                    Folge von Schritten nach \(C'\) kommen können, also{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; C =
+                    C_0 \Step&#123;&#125; C_1 \Step&#123;&#125; C_2 \Step&#123;&#125; \dots \Step&#123;&#125; C' \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}Wir
+                    sagen auch:
+                    {" "}
                     <i>
-                      0 \Step&#123;&#125; C
+                      Die Konfiguration \(C'\) ist von \(C\) aus erreichbar
                     </i>
-                    1 \Step&#123;&#125; C
-                    <i>
-                      2 \Step&#123;&#125; \dots \Step&#123;&#125; C' \end&#123;align*&#125; Wir
-                      sagen auch:
-                      {" "}
-                    </i>
-                    Die Konfiguration \(C'\) ist von \(C\) aus erreichbar_.
+                    .
                   </Paragraph>
                 </Paragraph>
                 <Paragraph>
@@ -998,12 +1046,14 @@ const Article = () => {
                       akzeptiert
                     </i>
                     \(x\), wenn es eine akzeptierende Endkonfiguration
-                    \(C_&#123;\rm accept&#125;\) gibt mit \begin&#123;align*&#125; C
-                    <i>
-                      x \Step&#123;&#125;^* C
-                    </i>
-                    &#123;\rm
-                    accept&#125; \end&#123;align*&#125; wenn es also (mindestens) eine akzeptierende
+                    \(C_&#123;\rm accept&#125;\) gibt mit{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; C_x \Step&#123;&#125;^* C_&#123;\rm
+                    accept&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}wenn es also (mindestens) eine akzeptierende
                     Konfiguration gibt, die von \(C_x\) aus erreichbar ist. Dabei kann es
                     {" "}
                     <i>
@@ -1027,8 +1077,14 @@ const Article = () => {
                     </b>
                     {" "}
                     Eine nichtdeterministische Turingmaschine \(M\) akzeptiert die Sprache
-                    \(L\) wenn \begin&#123;align*&#125; x \in L \Longleftrightarrow M \textnormal &#123;
-                    akzeptiert &#125; x \end&#123;align*&#125; Für jedes \(x \not \in L\) gibt es also
+                    \(L\) wenn{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; x \in L \Longleftrightarrow M \textnormal &#123;
+                    akzeptiert &#125; x \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}Für jedes \(x \not \in L\) gibt es also
                     keine akzeptierende Konfiguration \(C\) mit \(C_x \Rightarrow C\).
                   </Paragraph>
                   <Paragraph>
@@ -1039,12 +1095,14 @@ const Article = () => {
                       </i>
                       die Sprache \(L\),
                       wenn sie sie akzeptiert und es keine unendlich langen Ketten
-                      \begin&#123;align*&#125; C
-                      <i>
-                        x \Step&#123;&#125; C
-                      </i>
-                      1 \Step&#123;&#125; C_2 \Step&#123;&#125; \dots
-                      \end&#123;align*&#125; gibt.
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; C_x \Step&#123;&#125; C_1 \Step&#123;&#125; C_2 \Step&#123;&#125; \dots
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}gibt.
                     </Paragraph>
                   </Paragraph>
                 </div>
@@ -1091,20 +1149,28 @@ const Article = () => {
                     mit Preisen \(p_1, p_2, \dots, p_n\) und ein Guthaben \(g\) gegeben
                     und wollen wissen, ob wir unser Guthaben exakt ausgeben können. Ob es
                     also eine Teilmenge \(I \subseteq [n]\) von Waren gibt, die genau
-                    \(g\) kostet: \begin&#123;align*&#125; \textnormal&#123;gibt es ein &#125; I \subseteq [n]
-                    \textnormal&#123; mit &#125; \sum
-                    <i>
-                      &#123;i \in I&#125; p
-                    </i>
-                    i = g \textnormal&#123;?&#125; \end&#123;align*&#125;
+                    \(g\) kostet:{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; \textnormal&#123;gibt es ein &#125; I \subseteq [n]
+                    \textnormal&#123; mit &#125; \sum_&#123;i \in I&#125; p_i = g \textnormal&#123;?&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Um das als formale Sprachen bzw. Entscheidungsproblem zu
                     formalisieren, müssen wir uns eine Codierung überlegen. Preise sind
                     ganze Zahlen (in Cent, wenn Sie so wollen), in Dezimalschreibweise
                     dargstellt. Waren sind mit einem \(\#\) separiert. Nach den Waren
                     kommt ein \(:\) und dann das Guthaben. Wenn also beispielsweise die
                     Waren die Preise 65, 8, 22, 19, 7, 58, 30, 1, 13, 38 haben und unser
-                    Guthaben 194 ist, dann würden wir das als Wort \begin&#123;align*&#125;
-                    \#65\#8\#22\#19\#7\#58\#30\#1\#13\#38:194 \end&#123;align*&#125; über dem
+                    Guthaben 194 ist, dann würden wir das als Wort{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \#65\#8\#22\#19\#7\#58\#30\#1\#13\#38:194 \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}über dem
                     Alphabet \(\Sigma = \&#123;0,1,2,3,4,5,6,7,8,9,\#,:\&#125;\) codieren. Das Wort
                     ist in unserer Sprache \(L\) enthalten, wenn es nun eben eine
                     Teilmenge gibt, die sich genau zu 194 aufsummiert.
@@ -1115,7 +1181,10 @@ const Article = () => {
                       für diese Sprache. \(M\) geht von links nach rechts alle Waren
                       durch. Jedes Mal, wenn ein Preis beginnt, haben wir die Möglichkeit,
                       diesen Preis auf das zweite Band zu kopieren (die Ware zu kaufen)
-                      oder eben nicht: also \begin&#123;align*&#125; (\texttt&#123;choose&#125;, \#, \square)
+                      oder eben nicht: also{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; (\texttt&#123;choose&#125;, \#, \square)
                       &amp;\rightarrow (\texttt&#123;buy&#125;, \#, +, \texttt&#123;R&#125;, \texttt&#123;R&#125;)\\
                       (\texttt&#123;choose&#125;, \#, \square)&amp;\rightarrow (\texttt&#123;skip&#125;, \#,
                       \texttt&#123;R&#125;, \texttt&#123;S&#125;) \\ \\ (\texttt&#123;buy&#125;, c, \square)&
@@ -1128,11 +1197,20 @@ const Article = () => {
                       (\texttt&#123;choose&#125;, \#, \square, \texttt&#123;S&#125;, \texttt&#123;S&#125;) \\ \\
                       (\texttt&#123;buy&#125;, :, \square)&amp;\rightarrow (\texttt&#123;add&#125;, :, \square,
                       \texttt&#123;S&#125;, \texttt&#123;S&#125;) \\ (\texttt&#123;skip&#125;, :, \square)&amp;\rightarrow
-                      (\texttt&#123;add&#125;, :, \square, \texttt&#123;S&#125;, \texttt&#123;S&#125;) \\ \end&#123;align*&#125;
+                      (\texttt&#123;add&#125;, :, \square, \texttt&#123;S&#125;, \texttt&#123;S&#125;) \\ \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Dies erlaubt uns zum Beispiel, bei Eingabe
                       \(\#65\#8\#22\#19\#7\#58\#30\#1\#13\#38:194\) eine Konfiguration zu
                       erreichen, wo auf dem ersten Band der Kopf auf dem : steht und auf
-                      dem zweiten Band \begin&#123;align*&#125; + 6 + 19 + 58 + 1 + 13 \end&#123;align*&#125;
+                      dem zweiten Band{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; + 6 + 19 + 58 + 1 + 13 \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       aber eben auch jede beliebige andere Summe. Im Zustand
                       $\texttt&#123;add&#125;$ aufgerufen, muss nun die Turingmaschine alle diese
                       Zahlen auf dem zweiten Band addieren (lästig, geht aber irgendwie)
@@ -1141,11 +1219,23 @@ const Article = () => {
                       stimmt sie nicht über ein, lehnt sie ab. Da \(6 + 19 + 58 + 1 + 13 =
                       97\), haben wir eine ablehnende Konfiguration erreicht. Es sind aber
                       viele Endkonfigurationen erreichbar. Wir können zum Beispiel in
-                      Phase 1 auch \begin&#123;align*&#125; + 65 + 22 + 19+ 7+ 30+ 13+38
-                      \end&#123;align*&#125; auf das untere Band kopieren. Da dies tatsächlich 194
+                      Phase 1 auch{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; + 65 + 22 + 19+ 7+ 30+ 13+38
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}auf das untere Band kopieren. Da dies tatsächlich 194
                       ergibt, akzeptiert die Turingmaschine. Wir sehen also:
-                      \begin&#123;align*&#125; M(\#65\#8\#22\#19\#7\#58\#30\#1\#13\#38:194) =
-                      \texttt&#123;accept&#125; \ , \end&#123;align*&#125; weil es eben eine vom Start aus
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; M(\#65\#8\#22\#19\#7\#58\#30\#1\#13\#38:194) =
+                      \texttt&#123;accept&#125; \ , \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}weil es eben eine vom Start aus
                       erreichbare akzeptierende Konfiguration gibt.
                     </Paragraph>
                   </Paragraph>
@@ -1276,21 +1366,15 @@ const Article = () => {
                     {" "}
                     Als erstes führen wir eine kosmetische Änderung unserer
                     nichtdeterministischen Maschine durch: wir wollen, dass es für jedes
-                    \((q,c)\) genau zwei Möglichkeiten gibt, also \begin&#123;align*&#125; (q,c)&
-                    \rightarrow (q
-                    <i>
-                      1, c
-                    </i>
-                    1, D
-                    <i>
-                      1) \\ (q,c)&amp;\rightarrow (q
-                    </i>
-                    2, c
-                    <i>
-                      2, D
-                    </i>
-                    2) \ ,
-                    \end&#123;align*&#125; außer wenn \(q \in \&#123;\texttt&#123;reject&#125;,\texttt&#123;accept&#125;\&#125;\);
+                    \((q,c)\) genau zwei Möglichkeiten gibt, also{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; (q,c)&
+                    \rightarrow (q_1, c_1, D_1) \\ (q,c)&amp;\rightarrow (q_2, c_2, D_2) \ ,
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}außer wenn \(q \in \&#123;\texttt&#123;reject&#125;,\texttt&#123;accept&#125;\&#125;\);
                     dann gibt es gar keine Möglichkeit. Dies ist einfach: sollte es mehr
                     als zwei Möglichkeiten geben, so führen wir Zwischenzustände ein:
                   </Paragraph>

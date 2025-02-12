@@ -61,8 +61,14 @@ const Article = () => {
                       regulär
                     </i>
                     , wenn jede Produktion eine der folgenden vier Formen
-                    hat: \begin&#123;align*&#125; X&amp;\rightarrow aY \\ X&amp;\rightarrow a \\ X&
-                    \rightarrow Y \\ X&amp;\rightarrow \epsilon \end&#123;align*&#125; Eine Sprache
+                    hat:{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; X&amp;\rightarrow aY \\ X&amp;\rightarrow a \\ X&
+                    \rightarrow Y \\ X&amp;\rightarrow \epsilon \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}Eine Sprache
                     \(L \subseteq \Sigma^*\) heißt{" "}
                     <i>
                       regulär
@@ -77,8 +83,14 @@ const Article = () => {
                       Beispiel
                     </span>
                     Die folgende Grammatik über dem Alphabet \(\Sigma = \&#123;1\&#125;\), den
-                    nichtterminalen Symbolen \(\&#123;E,O\&#125;\) und den Regeln \begin&#123;align*&#125; E&
-                    \rightarrow 1O \ | \ \epsilon \\ O&amp;\rightarrow 1E \end&#123;align*&#125;
+                    nichtterminalen Symbolen \(\&#123;E,O\&#125;\) und den Regeln{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; E&
+                    \rightarrow 1O \ | \ \epsilon \\ O&amp;\rightarrow 1E \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     erzeugt die Sprache \(\&#123;\epsilon, 11, 1111, 111111, \dots \&#125;= \&#123;1^n \
                     | \ n \textnormal&#123; ist gerade&#125;\&#125;\).
                   </Paragraph>
@@ -91,9 +103,15 @@ const Article = () => {
                       Beispiel
                     </span>
                     Die folgende Grammatik haben wir bereits im letzten Abschnitt
-                    kennengelernt. Sie ist nicht regulär: \begin&#123;align*&#125; S&amp;\rightarrow A
+                    kennengelernt. Sie ist nicht regulär:{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; S&amp;\rightarrow A
                     B \\ A&amp;\rightarrow \epsilon \ | \ a A \\ B&amp;\rightarrow \epsilon \
-                    | \ b B \ . \\ \end&#123;align*&#125;
+                    | \ b B \ . \\ \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -104,11 +122,23 @@ const Article = () => {
                         gleiche Sprache erzeugt:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; S&amp;\rightarrow \epsilon \ |\ a S \ | \ b T \\ T&
-                    \rightarrow \epsilon \ | \ b T \ . \end&#123;align*&#125; Hier ist
-                    beispielsweise eine Ableitung des Wortes \(aabbb\): \begin&#123;align*&#125; S
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; S&amp;\rightarrow \epsilon \ |\ a S \ | \ b T \\ T&
+                    \rightarrow \epsilon \ | \ b T \ . \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}Hier ist
+                    beispielsweise eine Ableitung des Wortes \(aabbb\):{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; S
                     \Rightarrow aS \Rightarrow aaS \Rightarrow aabT \Rightarrow aabbT
-                    \Rightarrow aabbbT \Rightarrow aabbb \end&#123;align*&#125;
+                    \Rightarrow aabbbT \Rightarrow aabbb \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -148,8 +178,14 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Betrachten Sie die Gramatik über \(\Sigma = \&#123;0,1\&#125;\): \begin&#123;align*&#125;
-                    S&amp;\rightarrow 1 S \ | \ 0 S \ | \ 0 \end&#123;align*&#125; Leiten Sie das Wort
+                    Betrachten Sie die Gramatik über \(\Sigma = \&#123;0,1\&#125;\):{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    S&amp;\rightarrow 1 S \ | \ 0 S \ | \ 0 \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}Leiten Sie das Wort
                     \(11010\) ab. Beschreiben Sie in eigenen Worten die erzeugte Sprache.
                   </Paragraph>
                 </div>
@@ -160,10 +196,16 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Betrachten Sie die Grammatik über \(\Sigma = \&#123;0,1\&#125;\): \begin&#123;align*&#125;
+                    Betrachten Sie die Grammatik über \(\Sigma = \&#123;0,1\&#125;\):{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     A&amp;\rightarrow 0 A \ | 1 A \ | 1 B \\ B&amp;\rightarrow 0 C \ | 1 C \\
                     C&amp;\rightarrow 0 D \ | 1 D \\ D&amp;\rightarrow 0 E \ | 1 E \\ E&
-                    \rightarrow \epsilon \ \end&#123;align*&#125; mit Startsymbol \(A\). Leiten Sie
+                    \rightarrow \epsilon \ \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}mit Startsymbol \(A\). Leiten Sie
                     das Wort \(01101001\) ab und beschreiben Sie die erzeugte Sprache in
                     eigenen Worten.
                   </Paragraph>
@@ -189,8 +231,14 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Betrachten Sie die Sprache \begin&#123;align*&#125; L := \&#123;x \in \&#123;a,b\&#125;^* \ | \
-                    \textnormal&#123;in $x$ kommt $b$ mindestens 4 mal vor &#125;\&#125; \ \end&#123;align*&#125;
+                    Betrachten Sie die Sprache{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; L := \&#123;x \in \&#123;a,b\&#125;^* \ | \
+                    \textnormal&#123;in $x$ kommt $b$ mindestens 4 mal vor &#125;\&#125; \ \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     und entwerfen Sie eine reguläre Grammatik für \(L\).
                   </Paragraph>
                 </div>
@@ -257,7 +305,13 @@ const Article = () => {
                       teilbar. Hier ist eine besonders einfache Lösung:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125; S \rightarrow \epsilon \ | \ 111S \end&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; S \rightarrow \epsilon \ | \ 111S \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -278,8 +332,14 @@ const Article = () => {
                       erweitert regulär
                     </i>
                     , wenn jede Produktion eine der folgenden
-                    Formen hat: \begin&#123;align*&#125; X&amp;\rightarrow \alpha Y \\ X&amp;\rightarrow
-                    \alpha \\ \end&#123;align*&#125; hat, wobei \(X \in N\) und \(\alpha \in
+                    Formen hat:{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; X&amp;\rightarrow \alpha Y \\ X&amp;\rightarrow
+                    \alpha \\ \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}hat, wobei \(X \in N\) und \(\alpha \in
                     \Sigma^*\) ist. Im Unterschied zu den eigentlich regulären Grammatiken
                     erlauben wir also mehrere terminale Symbole auf der rechten Seite,
                     sofern Sie{" "}
@@ -313,21 +373,15 @@ const Article = () => {
                     \dots a_k Y $$
                   </Paragraph>
                   <Paragraph>
-                    {" "}durch \(k\) reguläre Regeln: \begin&#123;align*&#125; X&
-                    \rightarrow a
-                    <i>
-                      1 X
-                    </i>
-                    2 \\ X
-                    <i>
-                      2&amp;\rightarrow a
-                    </i>
-                    2 X
-                    <i>
-                      3 \\ \dots \\ X
-                    </i>
-                    k&
-                    \rightarrow a_k Y \end&#123;align*&#125; wobei wir darauf achten, dass \(X_2,
+                    {" "}durch \(k\) reguläre Regeln:{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; X&
+                    \rightarrow a_1 X_2 \\ X_2&amp;\rightarrow a_2 X_3 \\ \dots \\ X_k&
+                    \rightarrow a_k Y \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}wobei wir darauf achten, dass \(X_2,
                     \dots, X_k\) "frische" Nichtterminalsymbole sind. Falls \(\alpha =
                     \epsilon\) ist, so ist die Regel bereits in einer in regulären
                     Grammatiken erlaubten Form: \(X \rightarrow Y\) oder \(X \rightarrow
@@ -364,9 +418,15 @@ const Article = () => {
                       Definition 4.1
                     </a>
                     hat jede Produktion in einer
-                    regulären Grammatik eine der folgenden vier Formen: \begin&#123;align*&#125; 1.
+                    regulären Grammatik eine der folgenden vier Formen:{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; 1.
                     \quad X&amp;\rightarrow aY \\ 2. \quad X&amp;\rightarrow a \\ 3. \quad X&
-                    \rightarrow Y \\ 4. \quad X&amp;\rightarrow \epsilon \end&#123;align*&#125;
+                    \rightarrow Y \\ 4. \quad X&amp;\rightarrow \epsilon \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -436,35 +496,27 @@ const Article = () => {
                       Nichtterminale \(X\) und alle Produktionen \(Y \rightarrow \alpha\)
                       mit \(\alpha \not \in N\) durchgehen und überprüfen, ob \(X
                       \Rightarrow^* Y\) gilt. Dies können wir beispielsweise überprüfen,
-                      indem wir die Mengen \begin&#123;align*&#125; N
-                      <i>
-                        k(X) := \&#123; Y \in N \ | \
-                        \textnormal&#123; es gibt &#125; X
-                      </i>
-                      1,\dots, X
-                      <i>
-                        &#123;l-1&#125; \textnormal&#123; mit &#125; X
-                        \rightarrow X
-                      </i>
-                      1 \rightarrow X
-                      <i>
-                        2 \cdots X
-                      </i>
-                      &#123;l-1&#125; \rightarrow Y
-                      \textnormal&#123; und &#125; l \leq k \&#125; \end&#123;align*&#125; definieren, also die
+                      indem wir die Mengen{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; N_k(X) := \&#123; Y \in N \ | \
+                      \textnormal&#123; es gibt &#125; X_1,\dots, X_&#123;l-1&#125; \textnormal&#123; mit &#125; X
+                      \rightarrow X_1 \rightarrow X_2 \cdots X_&#123;l-1&#125; \rightarrow Y
+                      \textnormal&#123; und &#125; l \leq k \&#125; \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}definieren, also die
                       Menge derjenigen Nichtterminalsymbole, die sich in bis zu \(k\)
                       Schritten von \(X\) aus ableiten lassen. Wir berechnen die \(N_k\)
-                      iterativ wie folgt: \begin&#123;align*&#125; N
-                      <i>
-                        0 (X)&amp;:= \&#123;X\&#125; \ , \\ N
-                      </i>
-                      &#123;k+1&#125;
-                      (X)&amp;:= N
-                      <i>
-                        k \cup \&#123;Z \in N \ | \ \textnormal&#123; es gibt &#125; Y \in
-                        N
-                      </i>
-                      k(X) \textnormal&#123; mit &#125; Y \rightarrow Z \&#125; \ . \end&#123;align*&#125; Die
+                      iterativ wie folgt:{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; N_0 (X)&amp;:= \&#123;X\&#125; \ , \\ N_&#123;k+1&#125;
+                      (X)&amp;:= N_k \cup \&#123;Z \in N \ | \ \textnormal&#123; es gibt &#125; Y \in
+                      N_k(X) \textnormal&#123; mit &#125; Y \rightarrow Z \&#125; \ . \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}Die
                       Menge \(N_&#123;k+1&#125;(X)\) lässt sich also mit zwei geschachtelten
                       `for`-Schleifen berechnen: eine über die \(Y \in N_k\)
                       und eine über die Produktionen \(Y \rightarrow Z\). Um
@@ -517,9 +569,15 @@ const Article = () => {
                       Wörter, die kein \(a\) enthalten. Die Grammatik \(B \rightarrow
                       \epsilon \ | \ a B \ | \ c B\) erzeugt die Wörter, die kein \(b\)
                       enthalten. Die Grammatik \(G\) mit Startsymbol \(S\) und den
-                      Produktionen \begin&#123;align*&#125; S&amp;\rightarrow A \ | \ B \\ A&
+                      Produktionen{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; S&amp;\rightarrow A \ | \ B \\ A&
                       \rightarrow \epsilon \ | \ b A \ | \ c A \\ B&amp;\rightarrow \epsilon
-                      \ | \ a B \ | \ c B \end&#123;align*&#125; erzeugt die Sprache aller Wörter,
+                      \ | \ a B \ | \ c B \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}erzeugt die Sprache aller Wörter,
                       die kein \(a\) oder kein \(b\) enthalten.
                     </Paragraph>
                     <Paragraph>
@@ -545,46 +603,16 @@ const Article = () => {
                       Betrachten Sie die folgende Grammatik über \(\Sigma =
                       \&#123;a_1,a_2,\dots,a_n\&#125;\) mit den Nichtterminalsymbolen \(\&#123;S, A_1,
                       A_2, \dots, A_n\&#125;\) und den insgesamt \(3n-1\) Produktionen
-                      \begin&#123;align*&#125; S&amp;\rightarrow a
-                      <i>
-                        1 A
-                      </i>
-                      1 | a
-                      <i>
-                        2 A
-                      </i>
-                      2 | a
-                      <i>
-                        3 A
-                      </i>
-                      3 | \dots |
-                      a
-                      <i>
-                        n A
-                      </i>
-                      n \\ A
-                      <i>
-                        1&amp;\rightarrow a
-                      </i>
-                      1 | A
-                      <i>
-                        2 \\ \dots \\ A
-                      </i>
-                      i&amp;\rightarrow
-                      a
-                      <i>
-                        &#123;i&#125; | A
-                      </i>
-                      &#123;i+1&#125;\\ \dots \\ A
-                      <i>
-                        &#123;n-1&#125;&amp;\rightarrow a
-                      </i>
-                      &#123;n-1&#125; | A
-                      <i>
-                        n \\
-                        A
-                      </i>
-                      n&amp;\rightarrow a_n \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; S&amp;\rightarrow a_1 A_1 | a_2 A_2 | a_3 A_3 | \dots |
+                      a_n A_n \\ A_1&amp;\rightarrow a_1 | A_2 \\ \dots \\ A_i&amp;\rightarrow
+                      a_&#123;i&#125; | A_&#123;i+1&#125;\\ \dots \\ A_&#123;n-1&#125;&amp;\rightarrow a_&#123;n-1&#125; | A_n \\
+                      A_n&amp;\rightarrow a_n \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>
@@ -664,12 +692,14 @@ const Article = () => {
                         können wir zum Beispiel die Symbole in \(N_2\) einfach umbenennen.
                         Wir erschaffen nun ein neues Startsymbol \(S \not \in N_1 \cup
                         N_2\) und bauen uns eine neue Grammatik, in dem wir die zwei neuen
-                        Regeln \begin&#123;align*&#125; S&amp;\rightarrow S
-                        <i>
-                          1 \\ S&amp;\rightarrow S
-                        </i>
-                        2
-                        \end&#123;align*&#125; hinzufügen. Formal also{" "}
+                        Regeln{" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125; S&amp;\rightarrow S_1 \\ S&amp;\rightarrow S_2
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}hinzufügen. Formal also{" "}
                       </Paragraph>
                       <Paragraph>
                         $$ G := (\Sigma_1 \cup
@@ -711,16 +741,14 @@ const Article = () => {
                       {" "}
                       Seien \(L_1, L_2 \in \Sigma^*\) zwei Sprachen. Die
                       Verknüpfungssprache \(L_1 \circ L_2\) ist definiert als
-                      \begin&#123;align*&#125; L
-                      <i>
-                        1 \circ L
-                      </i>
-                      2 := \&#123; \alpha \beta \ | \ \alpha \in
-                      L
-                      <i>
-                        1, \beta \in L
-                      </i>
-                      2\&#125; \ . \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; L_1 \circ L_2 := \&#123; \alpha \beta \ | \ \alpha \in
+                      L_1, \beta \in L_2\&#125; \ . \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                   </div>
                   <div class="well container theorem">
@@ -773,15 +801,17 @@ const Article = () => {
                           wir das Zeichen \(S_2\) anhängen:
                         </Paragraph>
                       </Paragraph>
-                      \begin&#123;align*&#125; \begin&#123;array&#125;&#123;l|l&#125; \textnormal&#123;Regel in $G
-                      <i>
-                        1$&#125;&
-                        \textnormal&#123;wird zu&#125; \\ \hline X \rightarrow aY&amp;X \rightarrow aY
-                        \\ X \rightarrow a&amp;X \rightarrow aS
-                      </i>
-                      2 \\ X \rightarrow Y&amp;X
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; \begin&#123;array&#125;&#123;l|l&#125; \textnormal&#123;Regel in $G_1$&#125;&
+                      \textnormal&#123;wird zu&#125; \\ \hline X \rightarrow aY&amp;X \rightarrow aY
+                      \\ X \rightarrow a&amp;X \rightarrow aS_2 \\ X \rightarrow Y&amp;X
                       \rightarrow Y \\ X \rightarrow \epsilon&amp;Y \rightarrow S_2 \ .
-                      \end&#123;array&#125; \end&#123;align*&#125;
+                      \end&#123;array&#125; \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>
@@ -810,19 +840,23 @@ const Article = () => {
                         Definition
                       </span>
                       Sei \(L \subseteq \Sigma^*\). Die Sprache \(L^n\) ist die Menge
-                      \begin&#123;align*&#125; L^n := \&#123; \alpha
-                      <i>
-                        1 \alpha
-                      </i>
-                      2 \dots \alpha
-                      <i>
-                        n \ | \
-                        \alpha
-                      </i>
-                      i \in L \ \forall 1 \leq i \leq n \&#125; \ . \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; L^n := \&#123; \alpha_1 \alpha_2 \dots \alpha_n \ | \
+                      \alpha_i \in L \ \forall 1 \leq i \leq n \&#125; \ . \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Insbesondere ist \(L^1 = L\) und \(L^0 = \&#123;\epsilon\&#125;\). Die Menge
-                      \(L^*\) ist nun \begin&#123;align*&#125; L^* := L^0 \cup L^1 \cup L^2 \cup L^3
-                      \cup \dots \end&#123;align*&#125; also die Sprache der Wörter der Form
+                      \(L^*\) ist nun{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; L^* := L^0 \cup L^1 \cup L^2 \cup L^3
+                      \cup \dots \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}also die Sprache der Wörter der Form
                       \(\alpha_1 \alpha_2 \dots \alpha_n\), wobei \(n\) beliebig und jedes
                       \(\alpha_i \in L\) ist.
                     </Paragraph>
@@ -843,16 +877,28 @@ const Article = () => {
                       </b>
                       {" "}
                       Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik für \(L\). Wir
-                      könnten ein neues Startsymbol \(S'\) einführen und \begin&#123;align*&#125; S'
-                      &amp;\rightarrow \epsilon \\ S'&amp;\rightarrow SS' \end&#123;align*&#125; als zwei
+                      könnten ein neues Startsymbol \(S'\) einführen und{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; S'
+                      &amp;\rightarrow \epsilon \\ S'&amp;\rightarrow SS' \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}als zwei
                       neue Regeln einführen. Natürlich geht das nicht, denn \(S'
                       \rightarrow SS'\) ist nicht erlaubt in regulären Grammatiken.
                       Ähnlich wie im vorherigen Beweis fangen wir das Ende einer
-                      \(G\)-Ableitung ab: \begin&#123;align*&#125; \begin&#123;array&#125;&#123;l|l&#125;
+                      \(G\)-Ableitung ab:{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; \begin&#123;array&#125;&#123;l|l&#125;
                       \textnormal&#123;Regel in $G$&#125;&amp;\textnormal&#123;wird zu&#125; \\ \hline X
                       \rightarrow aY&amp;X \rightarrow aY \\ X \rightarrow a&amp;X \rightarrow
                       aS \\ X \rightarrow Y&amp;X \rightarrow Y \\ X \rightarrow \epsilon&
-                      Y \rightarrow S \ . \end&#123;array&#125; \end&#123;align*&#125; Um überhaupt eine
+                      Y \rightarrow S \ . \end&#123;array&#125; \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}Um überhaupt eine
                       Ableitung beenden zu können, fügen wir \(S \rightarrow \epsilon\)
                       noch als Regel hinzu.
                     </Paragraph>
@@ -926,7 +972,13 @@ const Article = () => {
                       Sei \(L \subseteq \Sigma^*\) eine reguläre Sprache und \(c \not \in
                       \Sigma\) ein neues Terminalsymbol. Die Sprache aller nichtleeren
                       Folgen von \(L\)-Wörten, die durch \(c\) separiert sind, also formal
-                      \begin&#123;align*&#125; L' := L \circ ( \&#123;c\&#125; \circ L)^* \end&#123;align*&#125; ist
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; L' := L \circ ( \&#123;c\&#125; \circ L)^* \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}ist
                       wiederum regulär.
                     </Paragraph>
                   </div>

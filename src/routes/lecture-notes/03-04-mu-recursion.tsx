@@ -76,18 +76,20 @@ const Article = () => {
                       +$ wie folgt:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
-                  f : \N
-                  <i>
-                    +&amp;\rightarrow \N
-                  </i>
-                  + \\
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  f : \N_+&amp;\rightarrow \N_+ \\
                   n&amp;\mapsto
                   \begin&#123;cases&#125;
                   n/2&amp;\textnormal&#123; if $n$ even&#125; \\
                   3n+1&amp;\textnormal&#123; if $n$ odd.&#125;
                   \end&#123;cases&#125;
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -97,10 +99,16 @@ const Article = () => {
                       landen kann:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   13 \mapsto 40 \mapsto 20 \mapsto 10 \mapsto 5 \mapsto 16 \mapsto 8 \mapsto 4 \mapsto 2 \mapsto 1
                   \mapsto 4 \mapsto 2 \mapsto 1 \dots
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>

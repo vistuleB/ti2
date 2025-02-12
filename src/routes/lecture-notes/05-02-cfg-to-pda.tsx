@@ -87,25 +87,19 @@ const Article = () => {
                     Formaler: Die Zustände des Automaten
                     sind \(Q = \&#123;\qstart, q_1, \qend\&#125;\), das Stackalphabet ist
                     \(\Gamma = \Sigma \cup N \cup \&#123;\$\&#125;\) und die Transitionsregeln sind
-                    \begin&#123;align*&#125;
-                    (q
-                    <i>
-                      1, x)&amp;\step&#123;x&#125; (q
-                    </i>
-                    1, \epsilon) \quad \textnormal&#123;für jedes $x \in \Sigma$&#125;\\
-                    (q
-                    <i>
-                      1, A)&amp;\step&#123;\epsilon&#125; (q
-                    </i>
-                    1, \beta) \quad \textnormal&#123;für jede Produktion $A \rightarrow
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    (q_1, x)&amp;\step&#123;x&#125; (q_1, \epsilon) \quad \textnormal&#123;für jedes $x \in \Sigma$&#125;\\
+                    (q_1, A)&amp;\step&#123;\epsilon&#125; (q_1, \beta) \quad \textnormal&#123;für jede Produktion $A \rightarrow
                     \beta$&#125;\\ \hline
-                    (\qstart, \epsilon)&amp;\step&#123;\epsilon&#125; (q
-                    <i>
-                      1, S \$) \\
-                      (q
-                    </i>
-                    1, \$)&amp;\step&#123;\epsilon&#125; (\qend, \epsilon)
-                    \end&#123;align*&#125;
+                    (\qstart, \epsilon)&amp;\step&#123;\epsilon&#125; (q_1, S \$) \\
+                    (q_1, \$)&amp;\step&#123;\epsilon&#125; (\qend, \epsilon)
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Auf einen formalen Beweis, dass \(L(M) = L(G)\) ist, verzichte ich an dieser Stelle.
                     Besser als Sipser in seinem Lehrbuch{" "}
                     <i>
@@ -124,12 +118,18 @@ const Article = () => {
                       Beispiel
                     </span>
                     Betrachten wir die Grammatik
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\rightarrow A \ | \ B \ | \ C \ | \ \epsilon \\
                     A&amp;\rightarrow \texttt&#123;\&#123;&#125; B \texttt&#123;\&#125;&#125; S \\
                     B&amp;\rightarrow \texttt&#123;[&#125; C \texttt&#123;]&#125; S \\
                     C&amp;\rightarrow \texttt&#123;(&#125; A \texttt&#123;)&#125; S \ | \ \texttt&#123;()&#125;S \\
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Ein Wort in der erzeugten Sprache wäre zum Beispiel
                   </Paragraph>
                   <Paragraph>
@@ -184,82 +184,32 @@ const Article = () => {
                       </Paragraph>
                     </Paragraph>
                     Konkret also bauen wir für obige Grammatik die folgenden Automatentransitionen:
-                    \begin&#123;align*&#125;
-                    (q
-                    <i>
-                      1, S)&amp;\step&#123;\epsilon&#125; (q
-                    </i>
-                    1, A) \\
-                    (q
-                    <i>
-                      1, S)&amp;\step&#123;\epsilon&#125; (q
-                    </i>
-                    1, B) \\
-                    (q
-                    <i>
-                      1, S)&amp;\step&#123;\epsilon&#125; (q
-                    </i>
-                    1, C) \\
-                    (q
-                    <i>
-                      1, S)&amp;\step&#123;\epsilon&#125; (q
-                    </i>
-                    1, \epsilon) \\
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    (q_1, S)&amp;\step&#123;\epsilon&#125; (q_1, A) \\
+                    (q_1, S)&amp;\step&#123;\epsilon&#125; (q_1, B) \\
+                    (q_1, S)&amp;\step&#123;\epsilon&#125; (q_1, C) \\
+                    (q_1, S)&amp;\step&#123;\epsilon&#125; (q_1, \epsilon) \\
                     \hline
-                    (q
-                    <i>
-                      1,A)&amp;\step&#123;\epsilon&#125; (q
-                    </i>
-                    1, \texttt&#123;\&#123;&#125; B \texttt&#123;\&#125;&#125; S) \\
+                    (q_1,A)&amp;\step&#123;\epsilon&#125; (q_1, \texttt&#123;\&#123;&#125; B \texttt&#123;\&#125;&#125; S) \\
                     \hline
-                    (q
-                    <i>
-                      1,B)&amp;\step&#123;\epsilon&#125; (q
-                    </i>
-                    1, \texttt&#123;[&#125; C \texttt&#123;]&#125; S) \\
+                    (q_1,B)&amp;\step&#123;\epsilon&#125; (q_1, \texttt&#123;[&#125; C \texttt&#123;]&#125; S) \\
                     \hline
-                    (q
-                    <i>
-                      1,C)&amp;\step&#123;\epsilon&#125; (q
-                    </i>
-                    1, \texttt&#123;(&#125; A \texttt&#123;)&#125; S) \\
-                    (q
-                    <i>
-                      1,C)&amp;\step&#123;\epsilon&#125; (q
-                    </i>
-                    1, \texttt&#123;(&#125; \texttt&#123;)&#125; S) \\
+                    (q_1,C)&amp;\step&#123;\epsilon&#125; (q_1, \texttt&#123;(&#125; A \texttt&#123;)&#125; S) \\
+                    (q_1,C)&amp;\step&#123;\epsilon&#125; (q_1, \texttt&#123;(&#125; \texttt&#123;)&#125; S) \\
                     \hline
-                    (q
-                    <i>
-                      1,\texttt&#123;\&#123;&#125;)&amp;\step&#123;\texttt&#123;\&#123;&#125;&#125; (q
-                    </i>
-                    1, \epsilon) \\
-                    (q
-                    <i>
-                      1,\texttt&#123;\&#125;&#125;)&amp;\step&#123;\texttt&#123;\&#125;&#125;&#125; (q
-                    </i>
-                    1, \epsilon) \\
-                    (q
-                    <i>
-                      1,\texttt&#123;[&#125;)&amp;\step&#123;\texttt&#123;[&#125;&#125; (q
-                    </i>
-                    1, \epsilon) \\
-                    (q
-                    <i>
-                      1,\texttt&#123;]&#125;)&amp;\step&#123;\texttt&#123;]&#125;&#125; (q
-                    </i>
-                    1, \epsilon) \\
-                    (q
-                    <i>
-                      1,\texttt&#123;(&#125;)&amp;\step&#123;\texttt&#123;(&#125;&#125; (q
-                    </i>
-                    1, \epsilon) \\
-                    (q
-                    <i>
-                      1,\texttt&#123;)&#125;)&amp;\step&#123;\texttt&#123;)&#125;&#125; (q
-                    </i>
-                    1, \epsilon) \\
-                    \end&#123;align*&#125;
+                    (q_1,\texttt&#123;\&#123;&#125;)&amp;\step&#123;\texttt&#123;\&#123;&#125;&#125; (q_1, \epsilon) \\
+                    (q_1,\texttt&#123;\&#125;&#125;)&amp;\step&#123;\texttt&#123;\&#125;&#125;&#125; (q_1, \epsilon) \\
+                    (q_1,\texttt&#123;[&#125;)&amp;\step&#123;\texttt&#123;[&#125;&#125; (q_1, \epsilon) \\
+                    (q_1,\texttt&#123;]&#125;)&amp;\step&#123;\texttt&#123;]&#125;&#125; (q_1, \epsilon) \\
+                    (q_1,\texttt&#123;(&#125;)&amp;\step&#123;\texttt&#123;(&#125;&#125; (q_1, \epsilon) \\
+                    (q_1,\texttt&#123;)&#125;)&amp;\step&#123;\texttt&#123;)&#125;&#125; (q_1, \epsilon) \\
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Dies ist völlig mechanisch und benötigt kein Nachdenken. Wie fangen wir an?
                     Wir legen anfangs ein \(S\) auf den leeren Stack. Wenn dieses \(S\) abgearbeitet
                     ist und das Wort zu Ende ist, akzeptieren wir, und nur dann. Um festzustellen,
@@ -269,14 +219,16 @@ const Article = () => {
                       $
                     </tt>
                     . Also:
-                    \begin&#123;align*&#125;
-                    (\qstart, \epsilon) \step&#123;\epsilon&#125; (q
-                    <i>
-                      1, S \$) \\
-                      (q
-                    </i>
-                    1, \$) \step&#123;\epsilon&#125; (\qend, \epsilon)
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    (\qstart, \epsilon) \step&#123;\epsilon&#125; (q_1, S \$) \\
+                    (q_1, \$) \step&#123;\epsilon&#125; (\qend, \epsilon)
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Unsere Maschine hat also nur drei Zustände: \(\qstart\), \(q_1\) und
                     \(\qend\), welches der akeptierende Endzustand ist. Beachten Sie,
                     dass es von \(\qend\) aus keine ausgehenden Transitionen gibt;
@@ -628,9 +580,9 @@ const Article = () => {
                     </li>
                     <li>
                       Für jede Transition
-                      \begin&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
                       (p, x) \step&#123;a&#125; (q, y)
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
                       ist genau eines von \(x,y\) leer (und das andere ist genau ein Stacksymbol aus
                       \(\Gamma\)).
                       Eine
@@ -647,14 +599,14 @@ const Article = () => {
                       </i>
                       .
                       Der Automat kann in diese Form gebracht werden, indem wir Zwischenzustände einführen:
-                      \begin&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
                       (p, x) \step&#123;a&#125; (q, y) \textnormal &#123; wird ersetzt durch die zwei Transitionen &#125;
                       (p, x) \step&#123;a&#125; (p', \epsilon) \textnormal &#123; und &#125;(p', \epsilon) \step&#123;a&#125; (q, y) \\
                       (p, \epsilon) \step&#123;a&#125; (q,\epsilon) \textnormal &#123; wird ersetzt durch die zwei
                       Transitionen &#125;
                       (p, \epsilon) \step&#123;a&#125; (p', \bigstar) \textnormal &#123; und &#125;(p', \bigstar) \step&#123;a&#125; (q,
                       \epsilon) \ .
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
                       Im zweiten Falle pushen wir also pro Forma ein ansonsten irrelevantes Symbol
                       \(\bigstar\) auf
                       den
@@ -667,9 +619,15 @@ const Article = () => {
                       Idee, dass wir für
                       jedes Paar \(p,q\) von Zuständen ein Nichtterminalsymbol \(A_&#123;pq&#125;\) einführen, dass
                       genau die Wörter \(w\) ableiten kann, für die
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       (p, \epsilon) \Step&#123;w&#125;^* (q,\epsilon)
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       gilt, die also den Automaten von \(p\) nach \(q\) bringen können, wobei der Stack am Anfang
                       und am Ende leer
                       ist. Dies kann auf zwei Weisen geschehen:
@@ -680,28 +638,24 @@ const Article = () => {
                       Fall 1: in der Konfigurationsfolge von \((p, \epsilon) \Step&#123;w&#125;^* (q,\epsilon) \)
                       wird der Stack zwischendurch auch mal leer, und zwar nachdem der Präfix \(u\) des Wortes
                       \(w = uv\) gelesen ist, und der Automat ist zu diesem Zeitpunkt im Zustand \(r\). Also:
-                      \begin&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
                       (p, \epsilon) \Step&#123;u&#125;^* (r,\epsilon) \Step&#123;v&#125;^* (q,\epsilon) \ .
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
                       Es sollte also (wenn unsere Konstruktion erfolgreich ist) gelten, dass
                       \(A_&#123;pr&#125; \Rightarrow^* u\) und \(A_&#123;rq&#125; \Rightarrow^* v\). Wir führen daher die
                       Grammatikproduktion
-                      \begin&#123;align*&#125;
-                      A
-                      <i>
-                        &#123;pq&#125; \rightarrow A
-                      </i>
-                      &#123;pr&#125; A_&#123;rq&#125;
-                      \end&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
+                      A_&#123;pq&#125; \rightarrow A_&#123;pr&#125; A_&#123;rq&#125;
+                      \end&#123;align*&#125;$$
                       ein.
                     </li>
                     <li>
                       Fall 2: in der Konfigurationsfolge von \((p, \epsilon) \Step&#123;w&#125;^* (q,\epsilon) \)
                       ist der Stack zwischendurch nie leer. Das heißt wiederum, dass das im ersten
                       Schritt gepushte Stacksymbol \(x\) am Ende gepoppt wird, also \(w = avb\) mit
-                      \begin&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
                       (p, \epsilon) \step&#123;a&#125; (r, x) \Step&#123;v&#125;^* (s,x) \step&#123;b&#125; (q,\epsilon)
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
                       Hier ist wichtig zu wissen, dass die erste Operation eine Push-Operation sein muss:
                       Pop kann sie eh nicht sein, und die Möglichkeit \((p,\epsilon) \step&#123;a&#125; (r, \epsilon)\)
                       haben
@@ -712,18 +666,14 @@ const Article = () => {
                       würde vollständig geleert. In anderen Worten: die Konfigurationsfolge wäre auch dann
                       gültig, wenn Anfangs- und Endstack nicht \([x]\) sondern \(\epsilon\), also der leere
                       Stack wäre:
-                      \begin&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
                       (r, \epsilon) \Step&#123;v&#125;^* (s,\epsilon) \ .
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
                       Wenn unsere Konstruktion Erfolg hat, hieße das also \(A_&#123;rs&#125; \Rightarrow^* v\) und somit
                       ist
-                      \begin&#123;align*&#125;
-                      A
-                      <i>
-                        &#123;pq&#125; \rightarrow a A
-                      </i>
-                      &#123;rs&#125; b
-                      \end&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
+                      A_&#123;pq&#125; \rightarrow a A_&#123;rs&#125; b
+                      \end&#123;align*&#125;$$
                       eine gültige Regel.
                     </li>
                   </ol>
@@ -738,24 +688,18 @@ const Article = () => {
                     </Paragraph>
                     Zusammenfassend gesagt besteht unsere Grammatik \(G\) aus drei unterschiedlichen Typen von
                     Regeln:
-                    \begin&#123;align*&#125;
-                    A
-                    <i>
-                      &#123;pp&#125;&amp;\rightarrow \epsilon \textnormal&#123; für jeden Zustand \(p \in Q\)&#125; \\
-                      A
-                    </i>
-                    &#123;pq&#125;&amp;\rightarrow A
-                    <i>
-                      &#123;pr&#125;A
-                    </i>
-                    &#123;rq&#125; \textnormal&#123; für alle Zustände $p,q,r \in Q$&#125; \\
-                    A
-                    <i>
-                      &#123;pq&#125;&amp;\rightarrow a A
-                    </i>
-                    &#123;rs&#125; b \textnormal&#123; für alle Pushp-Pop-Paare
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    A_&#123;pp&#125;&amp;\rightarrow \epsilon \textnormal&#123; für jeden Zustand \(p \in Q\)&#125; \\
+                    A_&#123;pq&#125;&amp;\rightarrow A_&#123;pr&#125;A_&#123;rq&#125; \textnormal&#123; für alle Zustände $p,q,r \in Q$&#125; \\
+                    A_&#123;pq&#125;&amp;\rightarrow a A_&#123;rs&#125; b \textnormal&#123; für alle Pushp-Pop-Paare
                     $(p,\epsilon) \step&#123;a&#125; (r,x)$, $(s,x) \step&#123;b&#125; (q,\epsilon)$ von Transitionen&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -777,9 +721,15 @@ const Article = () => {
                       Beispiel
                     </span>
                     Wir betrachten die Sprache
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     a^m b (a|b)^* b a^m
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Diese ist{" "}
                     <i>
                       nicht
@@ -801,44 +751,22 @@ const Article = () => {
                         \(b\) das letzte ist, weil er dann mit dem Stack-Poppen beginnen muss.
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    (\qstart, \epsilon)&amp;\step&#123;\epsilon&#125; (q
-                    <i>
-                      1, \$) \\ \hline
-                      (q
-                    </i>
-                    1, \epsilon)&amp;\step&#123;a&#125; (q
-                    <i>
-                      1, a) \\
-                      (q
-                    </i>
-                    1, \epsilon)&\step&#123;b&#125; (q
-                    <i>
-                      2, b) \\
-                      \textcolor&#123;red&#125;&#123;(q
-                    </i>
-                    2, \epsilon)&#125;&\textcolor&#123;red&#125;&#123; \step&#123;a&#125; (q
-                    <i>
-                      2, \epsilon)&#125; \\
-                      \textcolor&#123;red&#125;&#123;(q
-                    </i>
-                    2, \epsilon)&#125;&\textcolor&#123;red&#125;&#123; \step&#123;b&#125; (q
-                    <i>
-                      2, \epsilon)&#125; \\
-                      (q
-                    </i>
-                    2, b)&amp;\step&#123;b&#125; (q
-                    <i>
-                      3, \epsilon) \\
-                      (q
-                    </i>
-                    3, a)&amp;\step&#123;a&#125; (q
-                    <i>
-                      3, \epsilon) \\ \hline
-                      (q
-                    </i>
-                    3, \$)&amp;\step&#123;\epsilon&#125; (\qend, \epsilon)
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    (\qstart, \epsilon)&amp;\step&#123;\epsilon&#125; (q_1, \$) \\ \hline
+                    (q_1, \epsilon)&amp;\step&#123;a&#125; (q_1, a) \\
+                    (q_1, \epsilon)&\step&#123;b&#125; (q_2, b) \\
+                    \textcolor&#123;red&#125;&#123;(q_2, \epsilon)&#125;&\textcolor&#123;red&#125;&#123; \step&#123;a&#125; (q_2, \epsilon)&#125; \\
+                    \textcolor&#123;red&#125;&#123;(q_2, \epsilon)&#125;&\textcolor&#123;red&#125;&#123; \step&#123;b&#125; (q_2, \epsilon)&#125; \\
+                    (q_2, b)&amp;\step&#123;b&#125; (q_3, \epsilon) \\
+                    (q_3, a)&amp;\step&#123;a&#125; (q_3, \epsilon) \\ \hline
+                    (q_3, \$)&amp;\step&#123;\epsilon&#125; (\qend, \epsilon)
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -846,23 +774,13 @@ const Article = () => {
                     </Paragraph>
                   </Paragraph>
                   <span style="color:purple">
-                    \begin&#123;align*&#125;
-                    (q
-                    <i>
-                      2, \epsilon)&amp;\step&#123;a&#125; (q'
-                    </i>
-                    2, x) \\
-                    (q
-                    <i>
-                      2, \epsilon)&amp;\step&#123;b&#125; (q'
-                    </i>
-                    2, x) \\
-                    (q'
-                    <i>
-                      2, x)&amp;\step&#123;\epsilon&#125; (q
-                    </i>
-                    2, \epsilon) \\
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                    $$\begin&#123;align*&#125;
+                    (q_2, \epsilon)&amp;\step&#123;a&#125; (q'_2, x) \\
+                    (q_2, \epsilon)&amp;\step&#123;b&#125; (q'_2, x) \\
+                    (q'_2, x)&amp;\step&#123;\epsilon&#125; (q_2, \epsilon) \\
+                    \end&#123;align*&#125;$$
+                    {" "}{" "}
                   </span>
                   <Paragraph>
                     <Paragraph>
@@ -904,259 +822,139 @@ const Article = () => {
                     </figure>
                     <Paragraph>
                       Die einzigen Nichtterminale sind also die "trivialen" der Form \(A_&#123;qq&#125;\) und darüberhinaus
-                      \begin&#123;align*&#125;
-                      A
-                      <i>
-                        &#123;04&#125;, A
-                      </i>
-                      &#123;13&#125;
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      A_&#123;04&#125;, A_&#123;13&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Da man von \(\qstart\) zu sich selber und von \(\qend\) zu sich selber
                       nur mit dem leeren Wort gelant, ersetzen wir \(A_&#123;00&#125;\) und \(A_&#123;44&#125;\) sofort durch
                       \(\epsilon\).
                     </Paragraph>
                     <Paragraph>
                       Als Produktionen der Form \(A_&#123;pq&#125; \rightarrow A_&#123;pr&#125; A_&#123;rq&#125;\) erhalten wir also:
-                      \begin&#123;align*&#125;
-                      A
-                      <i>
-                        &#123;11&#125;&amp;\rightarrow A
-                      </i>
-                      &#123;11&#125; A
-                      <i>
-                        &#123;11&#125; \\
-                        A
-                      </i>
-                      &#123;13&#125;&amp;\rightarrow A
-                      <i>
-                        &#123;11&#125; A
-                      </i>
-                      &#123;13&#125; \\
-                      A
-                      <i>
-                        &#123;13&#125;&amp;\rightarrow A
-                      </i>
-                      &#123;13&#125; A
-                      <i>
-                        &#123;33&#125; \\
-                        A
-                      </i>
-                      &#123;22&#125;&amp;\rightarrow A
-                      <i>
-                        &#123;22&#125; A
-                      </i>
-                      &#123;22&#125; \\
-                      A
-                      <i>
-                        &#123;33&#125;&amp;\rightarrow A
-                      </i>
-                      &#123;33&#125; A
-                      <i>
-                        &#123;33&#125;
-                        \end&#123;align*&#125;
-                        Schon deutlich besser als die 125 Produktionen, die wir bekämen, wenn wir stur an der
-                        Methode im Beweis festhalten würden. Wir brauchen noch Produktionen der
-                        Form \(A_&#123;pq&#125; \rightarrow a A_&#123;rs&#125; b\). Dafür müssen wir nach
-                        Push-Pop-Paaren \((p,\epsilon) \step&#123;a&#125; (r,x)\), \((s,x) \step&#123;b&#125; (q,\epsilon)\) suchen.
-                        Stack-Symbole sind \(a, b, x\). Suchen wir also zuerst nach Paaren von Transitionen,
-                        die \(a\) pushen und poppen.
-                        \begin&#123;align*&#125;
-                        (q
-                      </i>
-                      1, \epsilon) \step&#123;a&#125; (q
-                      <i>
-                        1, a) \textnormal&#123; und &#125;
-                        (q
-                      </i>
-                      3, a) \step&#123;a&#125; (q
-                      <i>
-                        3, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
-                        A
-                      </i>
-                      &#123;13&#125; \rightarrow a A
-                      <i>
-                        &#123;13&#125; a
-                        \end&#123;align*&#125;
-                        Das waren die einzigen Transitionen, in denen \(a\) gepusht und gepoppt wird.
-                        Betrachten wir als nächstes das Stacksymbol \(b\):
-                        \begin&#123;align*&#125;
-                        (q
-                      </i>
-                      1, \epsilon) \step&#123;b&#125; (q
-                      <i>
-                        2, b) \textnormal&#123; und &#125;
-                        (q
-                      </i>
-                      2, b) \step&#123;a&#125; (q
-                      <i>
-                        3, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
-                        A
-                      </i>
-                      &#123;13&#125; \rightarrow b A
-                      <i>
-                        &#123;22&#125; b
-                        \end&#123;align*&#125;
-                        Nun zu den Transitionen mit Stacksymbol \(x\). Da gibt es zwei
-                        Push-Transitionen und eine Pop-Transition, also zwei Paare:
-                        \begin&#123;align*&#125;
-                        (q
-                      </i>
-                      2, \epsilon) \step&#123;a&#125; (q'
-                      <i>
-                        2, x) \textnormal &#123; und &#125;
-                        (q'
-                      </i>
-                      2, x) \step&#123;\epsilon&#125; (q
-                      <i>
-                        2, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
-                        A
-                      </i>
-                      &#123;22&#125; \rightarrow a A
-                      <i>
-                        &#123;2'2'&#125; \\
-                        (q
-                      </i>
-                      2, \epsilon) \step&#123;b&#125; (q'
-                      <i>
-                        2, x) \textnormal &#123; und &#125;
-                        (q'
-                      </i>
-                      2, x) \step&#123;\epsilon&#125; (q
-                      <i>
-                        2, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
-                        A
-                      </i>
-                      &#123;22&#125; \rightarrow b A
-                      <i>
-                        &#123;2'2'&#125; \\
-                        \end&#123;align*&#125;
-                        Und schlussendlich die mit Stacksymbol $. Da gibt es eine Push- und eine
-                        Pop-Transition:
-                        \begin&#123;align*&#125;
-                        (\qstart, \epsilon) \step&#123;\epsilon&#125; (q
-                      </i>
-                      1, \$) \textnormal &#123;und &#125;
-                      (q
-                      <i>
-                        3, \$) \step&#123;\epsilon&#125; (\qend, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
-                        A
-                      </i>
-                      &#123;04&#125; \rightarrow A_&#123;13&#125; \\
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      A_&#123;11&#125;&amp;\rightarrow A_&#123;11&#125; A_&#123;11&#125; \\
+                      A_&#123;13&#125;&amp;\rightarrow A_&#123;11&#125; A_&#123;13&#125; \\
+                      A_&#123;13&#125;&amp;\rightarrow A_&#123;13&#125; A_&#123;33&#125; \\
+                      A_&#123;22&#125;&amp;\rightarrow A_&#123;22&#125; A_&#123;22&#125; \\
+                      A_&#123;33&#125;&amp;\rightarrow A_&#123;33&#125; A_&#123;33&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
+                      Schon deutlich besser als die 125 Produktionen, die wir bekämen, wenn wir stur an der
+                      Methode im Beweis festhalten würden. Wir brauchen noch Produktionen der
+                      Form \(A_&#123;pq&#125; \rightarrow a A_&#123;rs&#125; b\). Dafür müssen wir nach
+                      Push-Pop-Paaren \((p,\epsilon) \step&#123;a&#125; (r,x)\), \((s,x) \step&#123;b&#125; (q,\epsilon)\) suchen.
+                      Stack-Symbole sind \(a, b, x\). Suchen wir also zuerst nach Paaren von Transitionen,
+                      die \(a\) pushen und poppen.
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      (q_1, \epsilon) \step&#123;a&#125; (q_1, a) \textnormal&#123; und &#125;
+                      (q_3, a) \step&#123;a&#125; (q_3, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
+                      A_&#123;13&#125; \rightarrow a A_&#123;13&#125; a
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
+                      Das waren die einzigen Transitionen, in denen \(a\) gepusht und gepoppt wird.
+                      Betrachten wir als nächstes das Stacksymbol \(b\):
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      (q_1, \epsilon) \step&#123;b&#125; (q_2, b) \textnormal&#123; und &#125;
+                      (q_2, b) \step&#123;a&#125; (q_3, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
+                      A_&#123;13&#125; \rightarrow b A_&#123;22&#125; b
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
+                      Nun zu den Transitionen mit Stacksymbol \(x\). Da gibt es zwei
+                      Push-Transitionen und eine Pop-Transition, also zwei Paare:
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      (q_2, \epsilon) \step&#123;a&#125; (q'_2, x) \textnormal &#123; und &#125;
+                      (q'_2, x) \step&#123;\epsilon&#125; (q_2, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
+                      A_&#123;22&#125; \rightarrow a A_&#123;2'2'&#125; \\
+                      (q_2, \epsilon) \step&#123;b&#125; (q'_2, x) \textnormal &#123; und &#125;
+                      (q'_2, x) \step&#123;\epsilon&#125; (q_2, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
+                      A_&#123;22&#125; \rightarrow b A_&#123;2'2'&#125; \\
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
+                      Und schlussendlich die mit Stacksymbol $. Da gibt es eine Push- und eine
+                      Pop-Transition:
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      (\qstart, \epsilon) \step&#123;\epsilon&#125; (q_1, \$) \textnormal &#123;und &#125;
+                      (q_3, \$) \step&#123;\epsilon&#125; (\qend, \epsilon) \textnormal&#123; ergibt die Produktion &#125;
+                      A_&#123;04&#125; \rightarrow A_&#123;13&#125; \\
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                     <Paragraph>
                       Sammeln wir nun alle Produktionen:
-                      \begin&#123;align*&#125;
-                      \textcolor&#123;red&#125;&#123;A
-                      <i>
-                        &#123;11&#125;&#125;&amp;\textcolor&#123;red&#125;&#123;\rightarrow A
-                      </i>
-                      &#123;11&#125; A
-                      <i>
-                        &#123;11&#125;&#125; \\
-                        A
-                      </i>
-                      &#123;13&#125;&amp;\rightarrow \textcolor&#123;red&#125;&#123;A
-                      <i>
-                        &#123;11&#125;&#125; A
-                      </i>
-                      &#123;13&#125; \\
-                      A
-                      <i>
-                        &#123;13&#125;&amp;\rightarrow A
-                      </i>
-                      &#123;13&#125; \textcolor&#123;red&#125;&#123;A
-                      <i>
-                        &#123;33&#125;&#125; \\
-                        A
-                      </i>
-                      &#123;22&#125;&amp;\rightarrow A
-                      <i>
-                        &#123;22&#125; A
-                      </i>
-                      &#123;22&#125; \\
-                      \textcolor&#123;red&#125;&#123;A
-                      <i>
-                        &#123;33&#125;&#125;&amp;\textcolor&#123;red&#125;&#123;\rightarrow A
-                      </i>
-                      &#123;33&#125; A
-                      <i>
-                        &#123;33&#125;&#125; \\ \hline
-                        A
-                      </i>
-                      &#123;13&#125;&amp;\rightarrow a A
-                      <i>
-                        &#123;13&#125; a \\
-                        A
-                      </i>
-                      &#123;13&#125;&amp;\rightarrow b A
-                      <i>
-                        &#123;22&#125; b \\
-                        A
-                      </i>
-                      &#123;22&#125;&amp;\rightarrow a \textcolor&#123;red&#125;&#123;A
-                      <i>
-                        &#123;2'2'&#125;&#125; \\
-                        A
-                      </i>
-                      &#123;22&#125;&amp;\rightarrow b \textcolor&#123;red&#125;&#123;A
-                      <i>
-                        &#123;2'2'&#125;&#125; \\
-                        A
-                      </i>
-                      &#123;04&#125;&amp;\rightarrow A
-                      <i>
-                        &#123;13&#125;\\ \hline
-                        \textcolor&#123;red&#125;&#123;A
-                      </i>
-                      &#123;00&#125;&#125;&amp;\textcolor&#123;red&#125;&#123;\rightarrow \epsilon&#125; \\
-                      \textcolor&#123;red&#125;&#123;A
-                      <i>
-                        &#123;11&#125;&#125;&amp;\textcolor&#123;red&#125;&#123;\rightarrow \epsilon&#125; \\
-                        A
-                      </i>
-                      &#123;22&#125;&amp;\rightarrow \epsilon \\
-                      \textcolor&#123;red&#125;&#123;A
-                      <i>
-                        &#123;2'2'&#125;&#125;&amp;\textcolor&#123;red&#125;&#123;\rightarrow \epsilon&#125; \\
-                        \textcolor&#123;red&#125;&#123;A
-                      </i>
-                      &#123;33&#125;&#125;&amp;\textcolor&#123;red&#125;&#123;\rightarrow \epsilon&#125; \\
-                      \textcolor&#123;red&#125;&#123;A
-                      <i>
-                        &#123;44&#125;&#125;&amp;\textcolor&#123;red&#125;&#123;\rightarrow \epsilon&#125; \\
-                        \end&#123;align*&#125;
-                        wobei \(A_&#123;04&#125;\) das Startsymbol ist.
-                        Wir haben diejenigen Nichtterminale und Produktionen rot markiert, aus denen nur
-                        \(\epsilon\) hervorgehen kann. Wir können die Grammatik nun entsprechend vereinfachen.
-                        Zusätzlich
-                        löschen wir \(A_&#123;04&#125;\) und ernennen \(A_&#123;13&#125;\) zu unserem Startsymbol:
-                        \begin&#123;align*&#125;
-                        A
-                      </i>
-                      &#123;22&#125;&amp;\rightarrow A
-                      <i>
-                        &#123;22&#125; A
-                      </i>
-                      &#123;22&#125; \\
-                      A
-                      <i>
-                        &#123;13&#125;&amp;\rightarrow a A
-                      </i>
-                      &#123;13&#125; a \\
-                      A
-                      <i>
-                        &#123;13&#125;&amp;\rightarrow b A
-                      </i>
-                      &#123;22&#125; b \\
-                      A
-                      <i>
-                        &#123;22&#125;&amp;\rightarrow a \\
-                        A
-                      </i>
-                      &#123;22&#125;&amp;\rightarrow b \\ \hline
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \textcolor&#123;red&#125;&#123;A_&#123;11&#125;&#125;&amp;\textcolor&#123;red&#125;&#123;\rightarrow A_&#123;11&#125; A_&#123;11&#125;&#125; \\
+                      A_&#123;13&#125;&amp;\rightarrow \textcolor&#123;red&#125;&#123;A_&#123;11&#125;&#125; A_&#123;13&#125; \\
+                      A_&#123;13&#125;&amp;\rightarrow A_&#123;13&#125; \textcolor&#123;red&#125;&#123;A_&#123;33&#125;&#125; \\
+                      A_&#123;22&#125;&amp;\rightarrow A_&#123;22&#125; A_&#123;22&#125; \\
+                      \textcolor&#123;red&#125;&#123;A_&#123;33&#125;&#125;&amp;\textcolor&#123;red&#125;&#123;\rightarrow A_&#123;33&#125; A_&#123;33&#125;&#125; \\ \hline
+                      A_&#123;13&#125;&amp;\rightarrow a A_&#123;13&#125; a \\
+                      A_&#123;13&#125;&amp;\rightarrow b A_&#123;22&#125; b \\
+                      A_&#123;22&#125;&amp;\rightarrow a \textcolor&#123;red&#125;&#123;A_&#123;2'2'&#125;&#125; \\
+                      A_&#123;22&#125;&amp;\rightarrow b \textcolor&#123;red&#125;&#123;A_&#123;2'2'&#125;&#125; \\
+                      A_&#123;04&#125;&amp;\rightarrow A_&#123;13&#125;\\ \hline
+                      \textcolor&#123;red&#125;&#123;A_&#123;00&#125;&#125;&amp;\textcolor&#123;red&#125;&#123;\rightarrow \epsilon&#125; \\
+                      \textcolor&#123;red&#125;&#123;A_&#123;11&#125;&#125;&amp;\textcolor&#123;red&#125;&#123;\rightarrow \epsilon&#125; \\
                       A_&#123;22&#125;&amp;\rightarrow \epsilon \\
-                      \end&#123;align*&#125;
+                      \textcolor&#123;red&#125;&#123;A_&#123;2'2'&#125;&#125;&amp;\textcolor&#123;red&#125;&#123;\rightarrow \epsilon&#125; \\
+                      \textcolor&#123;red&#125;&#123;A_&#123;33&#125;&#125;&amp;\textcolor&#123;red&#125;&#123;\rightarrow \epsilon&#125; \\
+                      \textcolor&#123;red&#125;&#123;A_&#123;44&#125;&#125;&amp;\textcolor&#123;red&#125;&#123;\rightarrow \epsilon&#125; \\
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
+                      wobei \(A_&#123;04&#125;\) das Startsymbol ist.
+                      Wir haben diejenigen Nichtterminale und Produktionen rot markiert, aus denen nur
+                      \(\epsilon\) hervorgehen kann. Wir können die Grammatik nun entsprechend vereinfachen.
+                      Zusätzlich
+                      löschen wir \(A_&#123;04&#125;\) und ernennen \(A_&#123;13&#125;\) zu unserem Startsymbol:
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      A_&#123;22&#125;&amp;\rightarrow A_&#123;22&#125; A_&#123;22&#125; \\
+                      A_&#123;13&#125;&amp;\rightarrow a A_&#123;13&#125; a \\
+                      A_&#123;13&#125;&amp;\rightarrow b A_&#123;22&#125; b \\
+                      A_&#123;22&#125;&amp;\rightarrow a \\
+                      A_&#123;22&#125;&amp;\rightarrow b \\ \hline
+                      A_&#123;22&#125;&amp;\rightarrow \epsilon \\
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                   </Paragraph>
                   <Paragraph>
@@ -1166,20 +964,28 @@ const Article = () => {
                       können. Die einzigen zwei Produktionen mit \(A_&#123;13&#125;\) sind
                       \(A_&#123;13&#125; \rightarrow a A_&#123;13&#125; a\) und \(A_&#123;13&#125; \rightarrow b A_&#123;22&#125;\), also
                       gilt
-                      \begin&#123;align*&#125;
-                      A
-                      <i>
-                        &#123;13&#125; \Rightarrow^* a^m b A
-                      </i>
-                      &#123;22&#125; b a^m \ .
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      A_&#123;13&#125; \Rightarrow^* a^m b A_&#123;22&#125; b a^m \ .
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Aus \(A_&#123;22&#125;\) können wir per Produktion \(A_&#123;22&#125; \rightarrow A_&#123;22&#125; A_&#123;22&#125;\)
                       erst einmal alle Wortformem der Form \(A_&#123;22&#125;^*\) ableiten; per
                       \(A_&#123;22&#125; \rightarrow a \ | \ b \ | \ \epsilon\) dann alle Wortform \((a|b)^*\).
                       Also:
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       A_&#123;13&#125; \Step&#123;&#125;^* a^m b (a|b)^* b a^m \ .
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Die Grammatik erzeugt also die gewünschte Sprache.
                     </Paragraph>
                   </Paragraph>

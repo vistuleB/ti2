@@ -85,21 +85,25 @@ const Article = () => {
                         zu einer Funktion
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     f_L : \N&amp;\rightarrow \&#123;0,1\&#125; \\
                     a&amp;\mapsto
                     \begin&#123;cases&#125;
                     1&amp;\textnormal&#123; if $\exists \alpha \in L$ with $\bar&#123;\alpha&#125; = a$&#125; \\
                     0&amp;\textnormal&#123; else.&#125;
                     \end&#123;cases&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
-                      <Paragraph>
-                        Sei $L$ eine reguläre Sprache. Zeigen Sie, dass $f_L$ primitiv rekursiv ist!
-                      </Paragraph>
+                      Sei $L$ eine reguläre Sprache. Zeigen Sie, dass $f_L$ primitiv rekursiv ist!
                     </Paragraph>
-                    \end&#123;align*&#125;
                   </Paragraph>
                 </div>
                 <Paragraph>
@@ -137,18 +141,20 @@ const Article = () => {
                       {" "}\rightarrow \cube$ mittels
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
-                  f
-                  <i>
-                    L : \cube^*&amp;\rightarrow \cube \\
-                    y&amp;\mapsto
-                    \begin&#123;cases&#125;
-                    1&amp;\textnormal&#123;if $\exists \alpha \in L: x
-                  </i>
-                  \alpha = y$&#125; \\
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  f_L : \cube^*&amp;\rightarrow \cube \\
+                  y&amp;\mapsto
+                  \begin&#123;cases&#125;
+                  1&amp;\textnormal&#123;if $\exists \alpha \in L: x_\alpha = y$&#125; \\
                   0&amp;\textnormal&#123;else.&#125;
                   \end&#123;cases&#125;
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -203,9 +209,15 @@ const Article = () => {
                       Wort aufhört: $\lt$ und $\gt$. Die Zustandsübergangsfunktion ist also
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \delta: Q \times (\Sigma \cup \&#123;\lt, \gt\&#125;) \rightarrow Q \times \&#123;L, R\&#125; \ .
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -252,13 +264,15 @@ const Article = () => {
                       Wörter, in denen mindestens ein Zeichen fehlt, also
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
-                  L = \bigcup_&#123;i=1&#125;^k (\Sigma \setminus \&#123;i\&#125;)^
-                  <b>
-                    {" "}
-                    \end&#123;align
-                  </b>
-                  &#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  L = \bigcup_&#123;i=1&#125;^k (\Sigma \setminus \&#123;i\&#125;)^*
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>

@@ -98,6 +98,7 @@
                         1&amp;\textnormal{ if $\exists \alpha \in L$ with $\bar{\alpha} = a$} \\
                         0&amp;\textnormal{ else.}
                         \end{cases}
+                        \end{align*}
                         
                         |> p
 
@@ -105,10 +106,6 @@
                             Sei $L$ eine reguläre Sprache. Zeigen Sie, dass $f_L$ primitiv rekursiv ist!
                             
                         
-                        \end{align*}
-                        
-                    
-                    
                     
                     
                     |> h3

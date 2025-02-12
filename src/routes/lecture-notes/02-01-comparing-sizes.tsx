@@ -74,8 +74,14 @@ const Article = () => {
                       ist Ihrer Meinung denn größer:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125; \&#123;\dots, -4, -2, 0, 2, 4, 6, \dots\&#125; \quad
-                  \textnormal&#123;oder&#125;\quad \&#123;0,1,2,3, \dots\&#125; ? \end&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; \&#123;\dots, -4, -2, 0, 2, 4, 6, \dots\&#125; \quad
+                  \textnormal&#123;oder&#125;\quad \&#123;0,1,2,3, \dots\&#125; ? \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -127,8 +133,14 @@ const Article = () => {
                         beschreiben. Die Funktion
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; f : \N&amp;\rightarrow \N^+ \\ n&amp;\mapsto n+1
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; f : \N&amp;\rightarrow \N^+ \\ n&amp;\mapsto n+1
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -189,9 +201,15 @@ const Article = () => {
                         definieren:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; f : \N&amp;\rightarrow \Z \\ n&amp;\mapsto \begin&#123;cases&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; f : \N&amp;\rightarrow \Z \\ n&amp;\mapsto \begin&#123;cases&#125;
                     \frac&#123;n&#125;&#123;2&#125;&amp;\textnormal&#123; wenn $n$ gerade ist,&#125; \\ - \frac&#123;n+1&#125;&#123;2&#125;&
-                    \textnormal&#123; wenn $n$ ungerade ist.&#125; \end&#123;cases&#125; \end&#123;align*&#125;
+                    \textnormal&#123; wenn $n$ ungerade ist.&#125; \end&#123;cases&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <div class="well well-lg numbered-exercise container">

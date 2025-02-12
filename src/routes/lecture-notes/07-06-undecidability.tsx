@@ -134,9 +134,15 @@ const Article = () => {
                       $:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \halt := \&#123; \enc(M) w \ | \ M \textnormal&#123; akzeptiert &#125; w\&#125; \ .
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -189,9 +195,15 @@ const Article = () => {
                         die $\halt$ entscheidet. Dann wäre auch die Sprache
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \diag := \&#123;\enc(M) \ | \ \textnormal&#123;$M$ akzeptiert $\enc(M)$&#125; \&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -204,9 +216,15 @@ const Article = () => {
                         Codierung als Inputwort akzeptieren. Ebenso wäre auch
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \negdiag := \&#123;\enc(M) \ | \ \textnormal&#123;$M$ akzeptiert $\enc(M)$ nicht&#125;\&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -227,13 +245,19 @@ const Article = () => {
                         Wir fragen uns jetzt: gehört $\enc(D)$ selbst zu $\negdiag$?
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \enc(D) \in \negdiag&amp;\Longleftrightarrow \textnormal&#123;$D$ akzeptiert $\enc(D)$ nicht&#125;
                     \tag&#123;nach Definition von $\negdiag$&#125; \\
                     &amp;\Longleftrightarrow \textnormal&#123;$\enc(D) \not \in L(D)$&#125; \tag&#123;Bedeutung der Notation $L(D)$&#125;
                     \\
                     &amp;\Longleftrightarrow \enc(D) \not \in \negdiag \tag&#123;nach Annahme $L(D) = \negdiag$&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -389,9 +413,15 @@ const Article = () => {
                       Ein Student hat am 26. Juni 2024 angemerkt, dass die Sprache
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \negdiag = \&#123;\enc(M) \ | \ \textnormal&#123;$M$ akzeptiert $\enc(M)$ nicht&#125;\&#125;
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>

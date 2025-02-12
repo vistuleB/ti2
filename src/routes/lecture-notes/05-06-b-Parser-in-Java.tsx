@@ -70,7 +70,10 @@ const Article = () => {
                       Die Produktionsregeln sind:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   E&amp;\rightarrow N \tag&#123;JustNumber&#125; \\
                   E&amp;\rightarrow \texttt&#123;(&#125;E \texttt&#123;+&#125; E\texttt&#123;)&#125; \tag&#123;Sum&#125; \\
                   E&amp;\rightarrow \texttt&#123;(&#125;E \texttt&#123;*&#125; E\texttt&#123;)&#125; \tag&#123;Product&#125;\\
@@ -78,7 +81,10 @@ const Article = () => {
                   N&amp;\rightarrow ND \tag&#123;NumberDigit&#125; \\
                   D&amp;\rightarrow \texttt&#123;0&#125;\ | \ \texttt&#123;1&#125;\ | \ \texttt&#123;2&#125;\ | \ \texttt&#123;3&#125;\ | \ \texttt&#123;4&#125;\ | \
                   \texttt&#123;5&#125;\ | \ \texttt&#123;6&#125;\ | \ \texttt&#123;7&#125;\ | \ \texttt&#123;8&#125;\ | \ \texttt&#123;9&#125;
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>

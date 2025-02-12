@@ -46,9 +46,15 @@ const Article = () => {
                       den korrekten Linksreduktionsschritt
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \gamma = \alpha \beta w \rstep&#123;&#125; \alpha X w
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -81,12 +87,18 @@ const Article = () => {
                       eine Handvoll Ableitungen samt Ableitungsbaum.
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   G&amp;: \\
                   S&amp;\rightarrow AB \\
                   A&amp;\rightarrow xBS \ | \ Bz \\
                   B&amp;\rightarrow yAS \ | \ Az \ | \ x \ | \ y \ | \ z
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -252,9 +264,15 @@ const Article = () => {
                         Wort \(w \in \Sigma^*\). Der ganze Baum stellt also eine Rechtsableitung
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S \Step&#123;R&#125;^* \alpha \beta w
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     dar. Die Wortform $\alpha\beta$, also linker Rand plus Blüte, nennen wir
                     die{" "}
                     <i>
@@ -286,9 +304,15 @@ const Article = () => {
                       \(\alpha A w\) eine gültige Wortform; wir erhalten den Ableitungsbaum
                       von \(\alpha A w\), indem wir die Blüte von \(\mathcal&#123;T&#125;\) entfernen.
                       Wir schließen, dass
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \alpha \beta w \rstep&#123;&#125; \alpha A w
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       ein korrekter Linksreduktionsschritt ist.
                     </Paragraph>
                   </Paragraph>
@@ -450,16 +474,28 @@ const Article = () => {
                     </span>
                     Für eine kontextfreie Grammatik \(G\) definieren wir
                     die Sprache \(\Front(G) \subseteq (\Sigma \cup N)^*\):
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \Front(G) := \&#123;\front(\mathcal&#123;T&#125;) \ | \ \mathcal&#123;T&#125;
                     \textnormal&#123; ist der Ableitungsbaum einer Rechtsableitung &#125;
                     S \Step&#123;R&#125;^* \gamma \&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     alternativ
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \Front(G) := \&#123;\alpha \beta \ | \ S \Steps&#123;R&#125; \alpha X w
                     \Step&#123;R&#125; \alpha \beta w \&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     also die Menge aller Wortformen, die Front einer gültigen Wortform
                     sind.
                   </Paragraph>
@@ -526,77 +562,29 @@ const Article = () => {
                     \hat&#123;P&#125;)\)
                     mit \(\hat&#123;N&#125; := \&#123;\hat&#123;X&#125; \ | \ X \in N\&#125;\), wobei
                     \(\hat&#123;P&#125;\) für jede \(G\)-Produktion
-                    \begin&#123;align*&#125;
-                    A \rightarrow w
-                    <i>
-                      0 A
-                    </i>
-                    1 w
-                    <i>
-                      1 A
-                    </i>
-                    2 w
-                    <i>
-                      2 \dots w
-                    </i>
-                    &#123;k-1&#125; A
-                    <i>
-                      k w
-                    </i>
-                    k
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    A \rightarrow w_0 A_1 w_1 A_2 w_2 \dots w_&#123;k-1&#125; A_k w_k
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     mit \(w_i \in \Sigma^*\) die Produktionen
-                    \begin&#123;align*&#125;
-                    \hat&#123;A&#125;&amp;\rightarrow w
-                    <i>
-                      0 \hat&#123;A&#125;
-                    </i>
-                    1 \\
-                    \hat&#123;A&#125;&amp;\rightarrow w
-                    <i>
-                      0 A
-                    </i>
-                    1 w
-                    <i>
-                      1 \hat&#123;A&#125;
-                    </i>
-                    2 \\
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \hat&#123;A&#125;&amp;\rightarrow w_0 \hat&#123;A&#125;_1 \\
+                    \hat&#123;A&#125;&amp;\rightarrow w_0 A_1 w_1 \hat&#123;A&#125;_2 \\
                     &amp;\vdots \\
-                    \hat&#123;A&#125;&amp;\rightarrow w
-                    <i>
-                      0 A
-                    </i>
-                    1 w
-                    <i>
-                      1 A
-                    </i>
-                    2 w
-                    <i>
-                      2 \dots A
-                    </i>
-                    &#123;k-1&#125; w
-                    <i>
-                      &#123;k-1&#125; \hat&#123;A&#125;
-                    </i>
-                    k \\
-                    \hat&#123;A&#125;&amp;\rightarrow w
-                    <i>
-                      0 A
-                    </i>
-                    1 w
-                    <i>
-                      1 A
-                    </i>
-                    2 w
-                    <i>
-                      2 \dots w
-                    </i>
-                    &#123;k-1&#125; A
-                    <i>
-                      k w
-                    </i>
-                    k
-                    \end&#123;align*&#125;
+                    \hat&#123;A&#125;&amp;\rightarrow w_0 A_1 w_1 A_2 w_2 \dots A_&#123;k-1&#125; w_&#123;k-1&#125; \hat&#123;A&#125;_k \\
+                    \hat&#123;A&#125;&amp;\rightarrow w_0 A_1 w_1 A_2 w_2 \dots w_&#123;k-1&#125; A_k w_k
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     besitzt.
                   </Paragraph>
                 </div>
@@ -616,7 +604,10 @@ const Article = () => {
                     </span>
                     Für unsere Grammatik \(G\) oben ergeben sich folgende Produktionen
                     \(\hat&#123;P&#125;\) in \(\hat&#123;G&#125;\):
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \begin&#123;array&#125;&#123;l|l&#125;
                     \textnormal&#123;Produktion in $G$&#125;
                     &
@@ -643,7 +634,10 @@ const Article = () => {
                     B \rightarrow y&amp;\dk&#123;B&#125; \rightarrow \dkt&#123;y&#125; \\
                     B \rightarrow z&amp;\dk&#123;B&#125; \rightarrow \dkt&#123;z&#125; \\
                     \end&#123;array&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <Paragraph>
@@ -676,9 +670,9 @@ const Article = () => {
                       \(\hat&#123;X&#125; \rightarrow \beta\) und schreibe
                       \(\gamma = \alpha\beta\). Wende die \(G\)-Produktion
                       \(X \rightarrow \beta\) rückwärts an, reduziere also
-                      \begin&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
                       \alpha \beta \rstep&#123;&#125; \alpha X
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
                       Konkret: lösche \(\beta\) vom Stack und ersetze es durch \(A\).
                     </li>
                     <li>
@@ -779,9 +773,9 @@ const Article = () => {
                         Das heißt nach Definition von $\Front(G)$, dass es ein \(w' \in \Sigma^*\) gibt,
                         so dass \(\gamma w'\) eine gültige Wortform ist
                         und $\gamma = \front(\gamma w')$. Also
-                        \begin&#123;align*&#125;
+                        $$\begin&#123;align*&#125;
                         S \Step&#123;R&#125;^* \alpha A w' \Step&#123;R&#125;^* \alpha \beta w'
-                        \end&#123;align*&#125;
+                        \end&#123;align*&#125;$$
                         mit $\gamma = \alpha \beta$. Es sind $\alpha$ und $\beta$ also
                         linker Rand und Blüte von $\gamma w'$. Somit ist
                         \begin&#123;align&#125;

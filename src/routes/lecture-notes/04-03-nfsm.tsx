@@ -287,8 +287,14 @@ const Article = () => {
                       <a href="./04-01-regular-grammars.html#example-aaabb">
                         reguläre Grammatik aus dem vorherigen Kapitel 4.1
                       </a>
-                      : \begin&#123;align*&#125; S&amp;\rightarrow \epsilon \ |\ a S \ | \ b T \\ T&
-                      \rightarrow \epsilon \ | \ b T \ \end&#123;align*&#125; und auch den
+                      :{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; S&amp;\rightarrow \epsilon \ |\ a S \ | \ b T \\ T&
+                      \rightarrow \epsilon \ | \ b T \ \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}und auch den
                       (falschen) endlichen Automaten, den wir im letzten Kapitel dafür
                       gebaut haben:
                     </Paragraph>
@@ -338,9 +344,15 @@ const Article = () => {
                         :
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; S&amp;\rightarrow A \ | \ B \\ A&amp;\rightarrow \epsilon \
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; S&amp;\rightarrow A \ | \ B \\ A&amp;\rightarrow \epsilon \
                     | \ b A \ | \ c A \\ B&amp;\rightarrow \epsilon \ | \ a B \ | \ c B
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -351,14 +363,26 @@ const Article = () => {
                         haben Sie wahrscheinlich in etwa folgende Grammatik erhalten:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; S&amp;\rightarrow \epsilon \ | \ bA \ | \ cA \ | \ aB \ |
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; S&amp;\rightarrow \epsilon \ | \ bA \ | \ cA \ | \ aB \ |
                     \ cB\\ A&amp;\rightarrow \epsilon \ | \ bA \ | \ cA \\ B&amp;\rightarrow
-                    \epsilon \ | \ aB \ | \ cB \end&#123;align*&#125; Also insgesamt 11 statt 8
+                    \epsilon \ | \ aB \ | \ cB \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}Also insgesamt 11 statt 8
                     Produktionen. Alle Nichtterminale erlauben auf ihrer rechten Seite ein
                     \(\epsilon\) und werden so zu akzeptierenden Zuständen. Die
-                    Zustandsübergangsrelation \(\delta\) ist also \begin&#123;align*&#125; \delta&
+                    Zustandsübergangsrelation \(\delta\) ist also{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; \delta&
                     = \&#123;(S,b,A), (S,c,A), (S,a,B), (S,c,B), (A,b,A), (A,c,A), (B,a,B),
-                    (B,c,B)\&#125; \end&#123;align*&#125; Der nichtdeterminische Automat schaut also so
+                    (B,c,B)\&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}Der nichtdeterminische Automat schaut also so
                     aus:
                   </Paragraph>
                   <figure>
@@ -640,8 +664,14 @@ const Article = () => {
                     für den \(q \stackrel&#123;x&#125;&#123;\rightarrow&#125; q'\) gilt. Formal gesprochen:
                     für eine Menge \(R \subseteq Q\) von Zuständen (die, die gerade einen
                     "Punkt" haben) und ein Eingabe-Symbol \(x\) definieren wir
-                    \begin&#123;align*&#125; \Delta(R, x) := \&#123;q' \in Q \ | \ \textnormal&#123; es gibt &#125;
-                    \ q \in R \textnormal&#123; mit &#125; q \step&#123;x&#125; q'\&#125; \end&#123;align*&#125; Für ein
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; \Delta(R, x) := \&#123;q' \in Q \ | \ \textnormal&#123; es gibt &#125;
+                    \ q \in R \textnormal&#123; mit &#125; q \step&#123;x&#125; q'\&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}Für ein
                     Eingabewort \(\alpha= x_1 \dots x_n\) fangen wir nun mit \(R_0 =
                     \&#123;\qstart\&#125;\) an, das entspricht dem einen roten Punkt auf dem
                     Startzustand, und berechnen dann jeweils \(R_i = \Delta(R_&#123;i-1&#125;,
@@ -659,8 +689,14 @@ const Article = () => {
                     </i>
                     {" "}
                     operiert. Das heißt, im Gegensatz zu \(\delta\), das eine Funktion
-                    \(\delta: Q \times \Sigma \rightarrow Q\) ist, ist \begin&#123;align*&#125;
-                    \Delta: 2^Q \times \Sigma \rightarrow 2^Q \ . \end&#123;align*&#125; Wenn Sie
+                    \(\delta: Q \times \Sigma \rightarrow Q\) ist, ist{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \Delta: 2^Q \times \Sigma \rightarrow 2^Q \ . \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}Wenn Sie
                     die Schreibweise \(2^Q\) nicht kennen: dies ist die Potenzmenge von
                     \(Q\), also die Menge aller Untermengen, was die leere Menge
                     \(\emptyset\) und die "volle Menge" \(Q\) selbst miteinschließt. Wir
@@ -683,12 +719,24 @@ const Article = () => {
                     Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein nichtdeterministischer
                     Automat; dann heiße der deterministische Automat \(M' = (\Sigma, 2^Q,
                     \&#123;\qstart\&#125;, \mathcal&#123;F&#125;, \Delta)\) mit Endzustandsmenge
-                    \(\mathcal&#123;F&#125;\) definiert als \begin&#123;align*&#125; \mathcal&#123;F&#125; := \&#123;X
-                    \subseteq Q \ | \ X \cap F \ne \emptyset\&#125; \end&#123;align*&#125; und
-                    Zustandsübergangsfunktion \(\Delta\) definiert als \begin&#123;align*&#125;
+                    \(\mathcal&#123;F&#125;\) definiert als{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; \mathcal&#123;F&#125; := \&#123;X
+                    \subseteq Q \ | \ X \cap F \ne \emptyset\&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}und
+                    Zustandsübergangsfunktion \(\Delta\) definiert als{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \Delta : \quad&amp;2^Q \times \Sigma \rightarrow 2^Q \\&amp;(R, x) \mapsto
                     \&#123;q' \in Q \ | \ \textnormal&#123; es gibt &#125; \ q \in R \textnormal&#123; mit &#125; q
-                    \step&#123;x&#125; q'\&#125; \end&#123;align*&#125; der{" "}
+                    \step&#123;x&#125; q'\&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}der{" "}
                     <i>
                       Potenzmengenautomat
                     </i>

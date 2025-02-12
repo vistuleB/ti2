@@ -65,28 +65,46 @@ const Article = () => {
                       kann im Allgemeinen selbst bei einfachen Grammatiken exponentielle Laufzeit aufweisen.
                       LL-Parser und LR-Parser funktionieren schlicht nicht für allgemeine kontextfreie Grammatiken.
                       Standardbeispiel ist die Palindromsprache ohne Kennzeichnung der Mitte:
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       S&amp;\rightarrow aSa \\
                       S&amp;\rightarrow bSb \\
                       S&amp;\rightarrow a \ | \ b \ | \ \epsilon
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Weder LL-Parser noch LR-Parser können bei langen Wörtern wie
                       \(aaaaaaaaaaaaaabbaaaaaaaaaaaaaa\) erkennen, wo die Mitte ist. Das muss man aber wissen,
                       denn sonst landet man in einer Sackgasse. Es gilt sogar: jeder Kellerautomat für
                       diese Sprache muss nichtdeterministisch sein (was wir an dieser Stelle weder formal definieren
                       noch beweisen).
                       Noch schlimmer steht es mit Grammatiken wie
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       S&amp;\rightarrow AY \ \ | XC \\
                       A&amp;\rightarrow aA \ | \ \epsilon \\
                       C&amp;\rightarrow cC \ | \ \epsilon \\
                       X&amp;\rightarrow aXb \ | \epsilon \\
                       Y&amp;\rightarrow bYc \ | \epsilon
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Diese erzeugt die Sprache
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       L = \&#123; a^i b^j c^k \ | \ i = j \textnormal&#123; oder &#125; j = k \&#125;
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Die Grammatik ist{" "}
                       <i>
                         mehrdeutig
@@ -131,15 +149,27 @@ const Article = () => {
                   </i>
                   , wenn jede Produktion eine
                   der folgenden Formen hat:
-                  \begin&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   X&amp;\rightarrow YZ \\
                   X&amp;\rightarrow a
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   Eine solche Sprache kann offensichtlich nicht das Wort \(\epsilon\) ableiten. Daher lassen wir
                   als Sonderregel die Produktion
-                  \begin&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   S&amp;\rightarrow \epsilon
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   zu, verbieten dann aber, dass das Startsymbol \(S\) auf der rechten Seite einer Produktion vorkommen
                   kann.
                 </Paragraph>
@@ -165,12 +195,18 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Finden Sie zu der folgenden kontextfreien Grammatik
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\rightarrow A \ | \ Bb \ | \ C \\
                     A&amp;\rightarrow xyB \ | \ B \ | \ BC \\
                     B&amp;\rightarrow yzC \ | \ AC \\
                     C&amp;\rightarrow xzA \ | \ AB \ | \ \epsilon
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     eine äquivalente in Chomsky-Normalform.
                   </Paragraph>
                   <Paragraph>
@@ -199,9 +235,15 @@ const Article = () => {
                     Wenn nun \(G\) in Chomsky-Normalform vorliegt und wir für ein gegebenes Eingabewort \(w\)
                     eine Ableitung \(G: S \Step&#123;&#125;^* w\) finden wollen (oder feststellen, dass es keine gibt),
                     so ist die erste Beobachtung, dass eine Linksableitung die Form
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\Step&#123;&#125;^* AB \Step&#123;&#125;^* uB \Step&#123;&#125;^* uv
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     haben muss, für \(w = uv\). Wenn wir die
                     Unterteilung von \(w\) in \(u\) und \(v\) kennen würden, so könnten wir rekursiv
                     fragen, wie man denn \(A \Step&#123;&#125;^* u\) und \(B \Step&#123;&#125;^* v\) ableitet. Da wir sie
@@ -262,26 +304,36 @@ const Article = () => {
                       Was sind sinnvolle Zwischenergebnisse?
                     </i>
                     In unserem Falle sind Ableitungen der Form
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     X&amp;\Step&#123;&#125;^* u
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     sinnvolle Zwischenergebnisse, wenn \(u\) ein Teilwort von \(w\) ist, also
                     \(w = v_1 u v_2\). Konkret schreiben wir \(w = w_0 w_1 \dots w_&#123;n-1&#125;\) und definieren
-                    \begin&#123;align*&#125;
-                    w[i:j] := w
-                    <i>
-                      i w
-                    </i>
-                    &#123;i+1&#125; \dots w
-                    <i>
-                      &#123;j-1&#125;
-                      \end&#123;align*&#125;
-                      und
-                      \begin&#123;align*&#125;
-                      N
-                    </i>
-                    &#123;i,j&#125; := \&#123;X \in N \ | \ X \Step&#123;&#125;^* w[i:j]\&#125; \ .
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    w[i:j] := w_i w_&#123;i+1&#125; \dots w_&#123;j-1&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
+                    und
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    N_&#123;i,j&#125; := \&#123;X \in N \ | \ X \Step&#123;&#125;^* w[i:j]\&#125; \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Das ist also die Menge der Nichtterminale, die das Teilwort \(w[i:j]\) ableiten können.
                     Die "Hauptfrage" ist dann: enthält \(N_&#123;0,|w|&#125;\) das Startsymbol \(S\)?
                     Der CYK-Algorithmus berechnet nun die Mengen \(N_&#123;i, i+d&#125;\) systematisch
@@ -304,10 +356,16 @@ const Article = () => {
                     wie wir kürzere Unterwörter herleiten. Die Kernbeobachtung ist:
                     \(X \in N_&#123;i,k&#125;\), also \(X \Step&#123;&#125;^* w[i:k]\) gilt genau dann,
                     wenn es eine Produktion \(X \rightarrow YZ\) gibt, so dass dann
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     Y&amp;\Step&#123;&#125;^* w[i:j] \\
                     Z&amp;\Step&#123;&#125;^* w[j:k]
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     gilt. Das Problem ist, wie bereits oben skizziert, dass wir die "Grenze" \(j\) nicht kennen. Wir
                     probieren also alle Grenzen aus, und somit
                     \begin&#123;align&#125;
@@ -444,21 +502,29 @@ const Article = () => {
                     Form \(X \rightarrow YZ\). Die innerste Schleife, also Punkt a, wird jedes Mal \(g\) mal
                     durchlaufen, und somit
                     wird Zeile a insgesamt
-                    \begin&#123;align*&#125;
-                    \sum
-                    <i>
-                      &#123;i=0&#125;^&#123;n-1&#125;\sum
-                    </i>
-                    &#123;k=i+2&#125;^&#123;n-1&#125; \sum_&#123;j = i+1&#125;^&#123;k-1&#125; g
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \sum_&#123;i=0&#125;^&#123;n-1&#125;\sum_&#123;k=i+2&#125;^&#123;n-1&#125; \sum_&#123;j = i+1&#125;^&#123;k-1&#125; g
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     ausgeführt. Können Sie eine geschlossene Form für die drei Summen angeben? Leichter geht es,
                     wenn wir erkennen, dass für alle \(i,j,k\) die Ungleichung \(0 \leq i \lt j \lt k \leq n-1\)
                     gilt,
                     und jedes solche Tripel auch drankommt. Wie viele solche Tripel gibt es? Genau
                     \(&#123;n \choose 3&#125;\) viele. Also: die Zeile a wird
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     g \cdot &#123;n \choose 3&#125; = g \cdot \frac&#123;n (n-1) (n-2)&#125;&#123;6&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     mal durchlaufen. Also "ungefähr" \(g n^3 / 6\) und "noch ungefährer" \(g n^3\). Also:
                   </Paragraph>
                 </Paragraph>
@@ -495,12 +561,18 @@ const Article = () => {
                         Betrachten wir die Grammatik
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\rightarrow AB \ | \ BC \ | \ AC \\
                     A&amp;\rightarrow AC \ | \ x \ | \ z \\
                     B&amp;\rightarrow AB \ | \ y \\
                     C&amp;\rightarrow BC \ | \ AS \ | \ z
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>

@@ -181,8 +181,14 @@ const Article = () => {
                         Sei $\N^*$ die Menge aller endlichen Folgen natürlicher Zahlen, also
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; \N^* := \&#123;\epsilon\&#125; \cup \N \cup \N^2 \cup \N^3 \cup
-                    \dots \ , \end&#123;align*&#125; wobei $\epsilon$ die leere Folge (mit 0
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; \N^* := \&#123;\epsilon\&#125; \cup \N \cup \N^2 \cup \N^3 \cup
+                    \dots \ , \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}wobei $\epsilon$ die leere Folge (mit 0
                     Gliedern) bezeichnet. Zeigen Sie $\N^* \approx \N$.
                   </Paragraph>
                 </div>
@@ -229,7 +235,13 @@ const Article = () => {
                         Bruch schreiben, also
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; q = \frac&#123;a&#125;&#123;b&#125; \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; q = \frac&#123;a&#125;&#123;b&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -304,7 +316,13 @@ const Article = () => {
                         gilt, können wir jedes $n$ einfach bei sich belassen. Die Funktion
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; g : \N&amp;\rightarrow \Q \\ n&amp;\mapsto n \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; g : \N&amp;\rightarrow \Q \\ n&amp;\mapsto n \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -462,16 +480,14 @@ const Article = () => {
                         2 \dots a_n$ als $n$-stellige Binärzahl, also
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; f(a
-                    <i>
-                      1 a
-                    </i>
-                    2 \dots a
-                    <i>
-                      n) := \sum
-                    </i>
-                    &#123;i=1&#125;^n a_i 2^&#123;n-i&#125; \ .
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; f(a_1 a_2 \dots a_n) := \sum_&#123;i=1&#125;^n a_i 2^&#123;n-i&#125; \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -482,8 +498,14 @@ const Article = () => {
                         beispielsweise
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; 0011 \mapsto 10011 \mapsto (10011)_2 = 16 + 2 + 1 = 19
-                    \ . \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; 0011 \mapsto 10011 \mapsto (10011)_2 = 16 + 2 + 1 = 19
+                    \ . \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -491,20 +513,14 @@ const Article = () => {
                         Formal also
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; f : \&#123;0,1\&#125;^
-                    <b>
-                      &amp;\rightarrow \N \\ a
-                      <i>
-                        1 a
-                      </i>
-                      2 \dots a
-                      <i>
-                        n&
-                        \mapsto 2^n + \sum
-                      </i>
-                      &#123;i=1&#125;^n a_i 2^&#123;n-i&#125; \ . \end&#123;align
-                    </b>
-                    &#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; f : \&#123;0,1\&#125;^*&amp;\rightarrow \N \\ a_1 a_2 \dots a_n&
+                    \mapsto 2^n + \sum_&#123;i=1&#125;^n a_i 2^&#123;n-i&#125; \ . \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -516,10 +532,16 @@ const Article = () => {
                         eine natürliche Zahl zu. Also:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; \begin&#123;array&#125;&#123;c|c&#125; \epsilon&amp;0&amp;1&amp;00&amp;01&amp;10&amp;11
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; \begin&#123;array&#125;&#123;c|c&#125; \epsilon&amp;0&amp;1&amp;00&amp;01&amp;10&amp;11
                     &amp;000&amp;001&amp;010&amp;011&amp;100&amp;101&amp;110&amp;111 \\ \hline 1&amp;2&amp;3&
                     4&amp;5&amp;6&amp;7&amp;8&amp;9&amp;10&amp;11&amp;12&amp;13&amp;14&amp;15 \end&#123;array&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -529,20 +551,14 @@ const Article = () => {
                         dar. Dies ist leicht korrigiert, indem wir 1 abziehen: die Funktion
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; g : \&#123;0,1\&#125;^
-                    <b>
-                      &amp;\rightarrow \N \\ a
-                      <i>
-                        1 a
-                      </i>
-                      2 \dots a
-                      <i>
-                        n&
-                        \mapsto 2^n - 1 + \sum
-                      </i>
-                      &#123;i=1&#125;^n a_i 2^&#123;n-i&#125; \ . \end&#123;align
-                    </b>
-                    &#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; g : \&#123;0,1\&#125;^*&amp;\rightarrow \N \\ a_1 a_2 \dots a_n&
+                    \mapsto 2^n - 1 + \sum_&#123;i=1&#125;^n a_i 2^&#123;n-i&#125; \ . \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>

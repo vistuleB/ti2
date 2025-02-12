@@ -50,16 +50,28 @@ const Article = () => {
                       versuchen, eine Linksableitung \(S \Step&#123;&#125;^* w\) Schritt für
                       Schritt zu konstruieren. Eine Hauptschwäche ist, dass Sie von
                       einer Wortform
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       w A \alpha
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       die nächste Ableitungsregel \(A \rightarrow \beta\) bestimmen müssen,
                       ohne das "Endergebnis" von \(\beta\) überhaupt vollständig gelesen zu haben.
                       Sie müssen also erkennen, dass der rote / mit "?" markierte Pfeil in der Ableitung
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       S \Step&#123;&#125;^* w A \alpha \textcolor&#123;red&#125;&#123;\Step&#123;?&#125;&#125; w \beta \alpha
                       \Step&#123;&#125;^* w x \alpha \Step&#123;&#125;^* w x y
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       die richtige Entscheidung ist, obwohl sie von dem aus \(\beta\) abgeleiteten
                       Wort \(x\) nur die ersten \(k\) Buchstaben sehen.
                     </Paragraph>
@@ -69,13 +81,15 @@ const Article = () => {
                       allerdings in zeitlich umgekehrter Reihenfolge, also{" "}
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
-                  w \Pets&#123;&#125; \alpha
-                  <i>
-                    1 \Pets&#123;&#125; \alpha
-                  </i>
-                  2 \Pets&#123;&#125; \dots \Pets&#123;&#125; \alpha_&#123;t-1&#125; \Pets&#123;&#125; S
-                  \end&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  w \Pets&#123;&#125; \alpha_1 \Pets&#123;&#125; \alpha_2 \Pets&#123;&#125; \dots \Pets&#123;&#125; \alpha_&#123;t-1&#125; \Pets&#123;&#125; S
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <h2>
                   <Paragraph>
@@ -111,9 +125,15 @@ const Article = () => {
                     Seien
                     \(\alpha, \beta, \gamma \in (\Sigma \cup N)^*\) Wortformen und
                     \(X \rightarrow \beta\) eine Produktion. Dann schreiben wir
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \alpha \beta \gamma \rstep&#123;&#125; \alpha X \gamma \ ,
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     und sagen{" "}
                     <i>
                       \(\alpha \beta \gamma\) reduziert zu \(\alpha X \gamma\)
@@ -135,9 +155,15 @@ const Article = () => {
                         , wenn
                         rechts von \(\beta\) nur Terminale stehen. Wenn also
                         \(\gamma = w \in \Sigma^*\) und somit
-                        \begin&#123;align*&#125;
+                        {" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
                         \alpha \beta w \rstep&#123;&#125; \alpha X w \ .
-                        \end&#123;align*&#125;
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}{" "}
                       </Paragraph>
                     </Paragraph>
                     Eine Folge von Linksreduktionsschritten nennen wir eine
@@ -165,9 +191,15 @@ const Article = () => {
                       Wenn wir
                       einen Linksreduktionsschritt \(\alpha \beta w \rstep&#123;&#125; \alpha X w\)
                       betrachten, also
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \alpha X w \Step&#123;&#125; \alpha \beta w \ ,
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       so sehen wir, dass das am weitesten rechts stehende Nichtterminal
                       ersetzt worden ist; Linksreduktionen
                       entsprechen also einer Rechtsableitung.
@@ -180,11 +212,17 @@ const Article = () => {
                       Ein einfaches Beispiel war die "Zahlengrammatik"
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   N&amp;\rightarrow D \\
                   N&amp;\rightarrow ND \\
                   D&amp;\rightarrow 0 \ | \ 1 \ | \ 2\ | \ 3\ | \ 4\ | \ 5\ | \ 6\ | \ 7\ | \ 8\ | \ 9
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -192,9 +230,15 @@ const Article = () => {
                       So ist folgende Linksreduktion korrekt:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   14 \rstep&#123;&#125; D4\rstep&#123;&#125; N4 \rstep&#123;&#125; ND \rstep&#123;&#125; N
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -204,9 +248,15 @@ const Article = () => {
                       allerdings inkorrekt:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \textcolor&#123;red&#125;&#123;14 \rstep&#123;&#125; D4 \rstep&#123;&#125; DD&#125;
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -215,9 +265,15 @@ const Article = () => {
                       Auch
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \textcolor&#123;red&#125;&#123;14 \rstep&#123;&#125; D4 \rstep&#123;&#125; N4 \rstep&#123;&#125; ND \rstep&#123;&#125; NN&#125;
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -248,13 +304,25 @@ const Article = () => {
                     </i>
                     ,
                     wenn es eine Rechtsableitung
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S \Step&#123;R&#125;^* \gamma
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     gibt. Ein Linksreduktionsschritt
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \alpha \beta w \rstep&#123;&#125; \alpha X w
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     heißt{" "}
                     <i>
                       korrekt
@@ -336,10 +404,10 @@ const Article = () => {
                     </i>
                     {" "}
                     Rechtsableitungen
-                    \begin&#123;align*&#125;
+                    $$\begin&#123;align*&#125;
                     S \Steps&#123;R&#125; \gamma' \Step&#123;R&#125; \gamma \Steps&#123;R&#125; w \in \Sigma^* \\
                     S \Steps&#123;R&#125; \gamma'' \Step&#123;R&#125; \gamma \Steps&#123;R&#125; w \in \Sigma^* \\
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
                     <Paragraph>
                       (wir nehmen an, dass man aus jedem Nichtterminal
                       mindestens ein Wort \(u \in \Sigma^*\) ableiten kann; andernfalls
@@ -366,17 +434,13 @@ const Article = () => {
                     </b>
                     {" "}
                     Der Linksreduktionsschritt
-                    \begin&#123;align*&#125;
+                    $$\begin&#123;align*&#125;
                     \alpha \beta w \rstep&#123;&#125; \alpha X w
-                    \end&#123;align*&#125;
-                    ist korrekt, aber für ein anderes $w' \in \Sigma^
-                    <b>
-                      $ ist
-                      \begin&#123;align
-                    </b>
-                    &#125;
+                    \end&#123;align*&#125;$$
+                    ist korrekt, aber für ein anderes $w' \in \Sigma^*$ ist
+                    $$\begin&#123;align*&#125;
                     \alpha \beta w' \rstep&#123;&#125; \alpha X w'
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
                     <Paragraph>
                       {" "}{" "}
                       <i>
@@ -400,21 +464,39 @@ const Article = () => {
                       Beispiel
                     </span>
                     Erinnern Sie sich: unsere obige Grammatik
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\step&#123;1&#125; aS \\
                     S&amp;\step&#123;2&#125; X \\
                     X&amp;\step&#123;3&#125; a X b \\
                     X&amp;\step&#123;4&#125; ab \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     ist eindeutig (das ist leicht zu sehen), allerdings tritt
                     Schlechte Fall 2 ein: der Reduktionsschritt
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     aaX \rstep&#123;&#125; aaS
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     ist korrekt (hier also \(w = \epsilon)\), aber leider ist
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     aaXb \rstep&#123;&#125; aaSb
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     nicht korrekt (hier \(w' = b)\), da \(aaXb\) gültig ist,
                     \(aaSb\) aber nicht. Die Entscheidung für eine Reduktionsregel
                     kann also nicht ohne Wissen über das, was dahinter kommt,
@@ -443,22 +525,40 @@ const Article = () => {
                     wenn keiner der obigen schlechten Fälle eintritt.
                     Formal, wenn (1) die Grammatik eindeutig ist und (2) wenn ein
                     korrekter Linksreduktionsschritt
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \alpha \beta w \rstep&#123;&#125; \alpha X w
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     bedeutet, dass auch alle anderen Linksreduktionsschritte
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \alpha \beta w' \rstep&#123;&#125; \alpha X w'
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     korrekt sind, sofern $w' \in \Sigma^*$ ist und \(\alpha \beta w'\) selbst eine gültige
                     Wortform ist.
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
                       In Worten/Graustufen: wenn wir
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \alpha \beta \textcolor&#123;gray&#125;&#123;w&#125; \rstep&#123;&#125; \alpha X \textcolor&#123;gray&#125;&#123;w&#125;
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       guten Gewissens anwenden dürfen, ohne auch nur ein Zeichen von \(w\)
                       gelesen zu haben, sofern wir sicher sind, dass es irgendein $w$ gibt, das
                       $\alpha \beta w$ zu einer gültigen Wortform macht.
@@ -545,9 +645,15 @@ const Article = () => {
                           $G$ eine LR(0)-Grammatik ist, so ist auch
                         </Paragraph>
                       </Paragraph>
-                      \begin&#123;align*&#125;
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \alpha' \beta' w' = \alpha \beta w' \rstep&#123;&#125; \alpha X w'
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>
@@ -569,10 +675,16 @@ const Article = () => {
                           $\varphi \in \Sigma^*$ gälte, wäre
                         </Paragraph>
                       </Paragraph>
-                      \begin&#123;align*&#125;
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \alpha' \beta' w' = \alpha \beta \varphi w' \rstep&#123;&#125;
                       \alpha X \varphi w'
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>
@@ -622,10 +734,16 @@ const Article = () => {
                           die Linksreduktionsschritte
                         </Paragraph>
                       </Paragraph>
-                      \begin&#123;align*&#125;
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \gamma = \alpha \beta w&amp;\rstep&#123;&#125; \alpha X w \textnormal&#123; und&#125; \\
                       \gamma = \alpha' \beta' w'&amp;\rstep&#123;&#125; \alpha' X' w' \textnormal&#123; und&#125; \\
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>
@@ -654,9 +772,15 @@ const Article = () => {
                           nehmen wir an, dass
                         </Paragraph>
                       </Paragraph>
-                      \begin&#123;align*&#125;
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \alpha \beta w \rstep&#123;&#125; \alpha X w
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>
@@ -669,9 +793,15 @@ const Article = () => {
                           gibt es einen eindeutigen korrekten Linksreduktionsschritt
                         </Paragraph>
                       </Paragraph>
-                      \begin&#123;align*&#125;
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \gamma' = \alpha' \beta' w' \rstep&#123;&#125; \alpha' X' w'
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>
@@ -728,12 +858,18 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Zeigen Sie, dass die folgende Grammatik \(LR(0)\) ist:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\rightarrow aS \\
                     S&amp;\rightarrow Bc \\
                     B&amp;\rightarrow aBb \\
                     B&amp;\rightarrow ab
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Als ersten Schritt sollten Sie sich überlegen, wie gültige
                     Wortformen überhaupt aussehen können.
                   </Paragraph>
@@ -744,12 +880,18 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Wir ändern die Grammatik etwas ab:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\rightarrow aS \\
                     S&amp;\rightarrow B \\
                     B&amp;\rightarrow aBb \\
                     B&amp;\rightarrow ab
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Die erzeugte Sprache ist \(\&#123; a^* a^m b^m \ | \ m \geq 1\&#125;\).
                     Zeigen Sie, dass die Grammatik nicht \(LR(0)\) ist.
                   </Paragraph>
@@ -760,7 +902,10 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Zeigen Sie, dass die folgende Grammatik \(LR(0)\) ist:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\rightarrow aS \\
                     S&amp;\rightarrow BC \\
                     B&amp;\rightarrow aBb \\
@@ -769,7 +914,10 @@ const Article = () => {
                     C&amp;\rightarrow cT \\
                     T&amp;\rightarrow abC \\
                     T&amp;\rightarrow ab
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Als ersten Schritt sollten Sie sich überlegen, wie gültige
                     Wortformen überhaupt aussehen können.
                   </Paragraph>
@@ -790,9 +938,9 @@ const Article = () => {
                   <li>
                     Falls sie es tut, wie können wir für eine gegebene gültige Wortform
                     \(\gamma\) den korrekten Reduktionsschritt
-                    \begin&#123;align*&#125;
+                    $$\begin&#123;align*&#125;
                     \gamma = \alpha \beta w \rstep&#123;&#125; \alpha X w
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
                     finden? Insbesondere die Zerlegung in
                     \(\gamma = \alpha \beta w\)?
                   </li>

@@ -130,9 +130,15 @@ const Article = () => {
                       Blöcke, also nichtleere Strings aus alphanumerischen Zeichen.
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   B&amp;\rightarrow a \ | \ aB
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -166,11 +172,17 @@ const Article = () => {
                       dem ursprünglichen \(B\) aufkommt. Das gleiche machen wir für \(D\).
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   C&amp;\rightarrow a \ | \ aC \ | \ a&#123;:&#125;C \\
                   D&amp;\rightarrow a \ | \ aD \ | \ a&#123;-&#125;D \\
                   T&amp;\rightarrow C \ | D
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -186,11 +198,17 @@ const Article = () => {
                       mal auf die von \(T\) erzeugte Sprache. Im Ergebnis benennen wir das Startsymbol in \(S\) um.
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   S&amp;\rightarrow C \ | \ D \\
                   C&amp;\rightarrow a \ | \ aC \ | \ a&#123;:&#125;C \ | a&#123;.&#125;S \ \\
                   D&amp;\rightarrow a \ | \ aD \ | \ a\text&#123;-&#125;D \ | \ a&#123;.&#125;S \\
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -200,14 +218,20 @@ const Article = () => {
                       wie \(C \rightarrow a&#123;:&#125;C\). Dafür brauchen wir neue Symbole \(C', D', S'\):
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   S&amp;\rightarrow C \ | \ D \\
                   C&amp;\rightarrow a \ | \ aC \ | \ aC'\ | \ aS' \\
                   C'&amp;\rightarrow &#123;:&#125;C \\
                   D&amp;\rightarrow a \ | \ aD \ | \ a D' \ | \ aS' \\
                   D'&amp;\rightarrow \text&#123;-&#125;D \\
                   S'&amp;\rightarrow &#123;.&#125;S
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <h2>
@@ -228,7 +252,10 @@ const Article = () => {
                       und fügen die Produktion \(E \rightarrow \epsilon\) hinzu.
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   S&amp;\rightarrow C \ | \ D \\
                   C&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \\
                   C'&amp;\rightarrow &#123;:&#125;C \\
@@ -236,7 +263,10 @@ const Article = () => {
                   D'&amp;\rightarrow \text&#123;-&#125;D \\
                   S'&amp;\rightarrow &#123;.&#125;S \\
                   E&amp;\rightarrow \epsilon
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -264,7 +294,10 @@ const Article = () => {
                       für \(D\). Wir erhalten:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   S&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \ | \ aD \ | \ a D' \\
                   C&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \ \\
                   C'&amp;\rightarrow &#123;:&#125;C \\
@@ -272,7 +305,10 @@ const Article = () => {
                   D'&amp;\rightarrow \text&#123;-&#125;D \\
                   S'&amp;\rightarrow &#123;.&#125;S \\
                   E&amp;\rightarrow \epsilon
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <h2>
                   <Paragraph>
@@ -597,12 +633,18 @@ const Article = () => {
                       wir den deterministischen Automaten besonders konzise in eine Grammatik fassen:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   S&amp;\rightarrow aT \\
                   T&amp;\rightarrow &#123;.&#125;S \ | \ aT \ | \ &#123;:&#125;aC \ | \ \text&#123;-&#125;a D \\
                   C&amp;\rightarrow aC \ | \ &#123;:&#125;aC \ | \ &#123;.&#125;S \\
                   D&amp;\rightarrow aD \ | \ \text&#123;-&#125;aD \ | \ &#123;.&#125;S
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>

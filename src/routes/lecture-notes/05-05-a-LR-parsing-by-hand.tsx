@@ -46,15 +46,17 @@ const Article = () => {
                       $\Sigma = \&#123;x, y, z, (, ), +, *\&#125;$:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   S&amp;\rightarrow x \ |\ y\ |\ z \\
                   S&amp;\rightarrow (S+S) \\
-                  S&amp;\rightarrow (S
-                  <b>
-                    S)
-                    \end&#123;align
-                  </b>
-                  &#125;
+                  S&amp;\rightarrow (S*S)
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -70,9 +72,15 @@ const Article = () => {
                       schon ganz am Anfang auf ein Problem: wenn zum Beispiel
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   w = ((((\dots
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -83,15 +91,17 @@ const Article = () => {
                       Wir könnten beispielsweise die Grammatik ändern:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   S&amp;\rightarrow x \ | \ y \ | \ z \\
                   S&amp;\rightarrow (SOS) \\
-                  O&amp;\rightarrow + \ | \{" "}
-                  <b>
-                    {" "}
-                    \end&#123;align
-                  </b>
-                  &#125;
+                  O&amp;\rightarrow + \ | \ *
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -110,9 +120,15 @@ const Article = () => {
                         Betrachten wir die recht einfache Sprache{" "}
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L_2 := \&#123;a^&#123;m+k&#125; b^m c \ | \ m \geq 1, k \geq 0 \&#125; \ ,
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -608,22 +624,20 @@ const Article = () => {
                       Wenn wir uns nun die Ableitung ansehen, die wir gefunden haben:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \texttt&#123;S&#125; \Step&#123;&#125;
                   \texttt&#123;(S+S)&#125; \Step&#123;&#125;
-                  \texttt&#123;(S+(S
-                  <b>
-                    S))&#125; \Step&#123;&#125;
-                    \texttt&#123;(S+(S
-                  </b>
-                  z))&#125; \Step&#123;&#125;
-                  \texttt&#123;(S+(y
-                  <b>
-                    z))&#125; \Step&#123;&#125;
-                    \texttt&#123;(x+(y
-                  </b>
-                  z))&#125;
-                  \end&#123;align*&#125;
+                  \texttt&#123;(S+(S*S))&#125; \Step&#123;&#125;
+                  \texttt&#123;(S+(S*z))&#125; \Step&#123;&#125;
+                  \texttt&#123;(S+(y*z))&#125; \Step&#123;&#125;
+                  \texttt&#123;(x+(y*z))&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -641,11 +655,17 @@ const Article = () => {
                       welche Produktionsregel wir (rückwärts) anwenden sollen. Hier ein etwas konstruiertes Beispiel:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   S&amp;\rightarrow XYz \\
                   X&amp;\rightarrow aXa \ | \ bXb \ | \ c \\
                   Y&amp;\rightarrow Ya \ | \ Yb \ | \ a \ | \ b
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -653,9 +673,15 @@ const Article = () => {
                       Die erzeugte Sprache ist{" "}
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   L(G) = \&#123;vcv^Rwz \ | \ v, w \in \&#123;a,b\&#125;^* \&#125;
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -669,7 +695,10 @@ const Article = () => {
                 </Paragraph>
                 <div class="container">
                   <Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     &amp;\textcolor&#123;darkgray&#125;&#123;acabaz&#125; \tag&#123;lesen&#125; \\
                     &amp;a\textcolor&#123;darkgray&#125;&#123;cabaz&#125; \tag&#123;lesen&#125; \\
                     &amp;ac\textcolor&#123;darkgray&#125;&#123;abaz&#125; \tag&#123;reduzieren per $X \rightarrow c$&#125; \\
@@ -682,7 +711,10 @@ const Article = () => {
                     &amp;XY\textcolor&#123;darkgray&#125;&#123;z&#125; \tag&#123;lesen&#125; \\
                     &amp;XYz \tag&#123;reduzieren per $S \rightarrow XYz$&#125; \\
                     &amp;S \tag&#123;fertig&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <Paragraph>
@@ -707,9 +739,15 @@ const Article = () => {
                         Rechtsableitung vorkommen kann. Genauer gesagt: es gibt kein $w \in \Sigma^*$, so dass
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S \Step&#123;&#125;^* XYYw \Step&#123;&#125; XYaw
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -739,11 +777,17 @@ const Article = () => {
                       abgewandelt:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   S&amp;\rightarrow XY \tag&#123;beachten Sie: oben hatten wir $S \rightarrow XYz$&#125;\\
                   X&amp;\rightarrow aXa \ | \ bXb \ | \ c \\
                   Y&amp;\rightarrow Ya \ | \ Yb \ | \ a \ | \ b
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -751,13 +795,19 @@ const Article = () => {
                       Wenn wir jetzt als einfaches Beispiel $cab$ ableiten wollen:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \textcolor&#123;darkgray&#125;&#123;cab&#125; \tag&#123;lesen&#125; \\
                   c\textcolor&#123;darkgray&#125;&#123;ab&#125; \tag&#123;reduzieren per $X \rightarrow c$&#125; \\
                   X\textcolor&#123;darkgray&#125;&#123;ab&#125; \tag&#123;lesen&#125; \\
                   Xa\textcolor&#123;darkgray&#125;&#123;ab&#125; \tag&#123;reduzieren per $Y \rightarrow a$&#125; \\
                   XY\textcolor&#123;darkgray&#125;&#123;b&#125; \tag&#123;reduzieren per $Y \rightarrow a$&#125;
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -767,9 +817,15 @@ const Article = () => {
                       Ersteres wäre inkorrekt:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   XY\textcolor&#123;darkgray&#125;&#123;b&#125; \Pets&#123;&#125; S \textcolor&#123;darkgray&#125;&#123;b&#125; \ ,
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>

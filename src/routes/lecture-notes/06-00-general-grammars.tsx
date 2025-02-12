@@ -94,9 +94,15 @@ const Article = () => {
                     </i>
                     , einem Startsymbol
                     \(S \in N\) und einer endlichen Menge an Produktionen
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \alpha \rightarrow \beta
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     wobei \(\beta \in (\Sigma \cup \Gamma)^*\)
                     und \(\alpha \in (\Sigma \cup \Gamma)^* \setminus \Sigma^*\). Letzeres
                     bedeutet einfach, dass die linke Seite \(\alpha\) mindestens ein
@@ -126,14 +132,16 @@ const Article = () => {
                     . Sei \(G\) eine formale
                     Grammtik und \(\gamma_1, \gamma_2 \in (\Sigma\cup N)^* \) zwei Wortformen.
                     Wir schreiben \(\gamma_1 \Step&#123;&#125; \gamma_2\), wenn wir
-                    \begin&#123;align*&#125;
-                    \gamma
-                    <i>
-                      1&amp;= u \alpha v \\
-                      \gamma
-                    </i>
-                    2&amp;= u \beta v
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \gamma_1&amp;= u \alpha v \\
+                    \gamma_2&amp;= u \beta v
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     schreiben können für Wortformen \(u,v\), sodass \(\alpha \rightarrow \beta\) eine
                     Produktion von \(G\) ist.
                   </Paragraph>
@@ -146,7 +154,10 @@ const Article = () => {
                     Betrachten wir die allgemeine Grammatik mit
                     Terminalalphabet \(\Sigma = \&#123;a,b,c\&#125;\), Nichtterminalsymbolen
                     \(N = \&#123;S, A, B, C\&#125;\), Startsymbol \(S\) und den Produktionen
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\step&#123;1&#125; ABCS \ | \ \epsilon \\
                     AB&amp;\step&#123;2&#125; BA \\
                     BA&amp;\step&#123;3&#125; AB \\
@@ -157,7 +168,10 @@ const Article = () => {
                     A&amp;\step&#123;8&#125; a \\
                     B&amp;\step&#123;9&#125; b \\
                     C&amp;\step&#123;10&#125; c
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -165,11 +179,17 @@ const Article = () => {
                         Nun schauen wir uns eine Beispielableitung an:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S \Step&#123;1&#125; ABCS \Step&#123;1&#125; ABCABCS \Step&#123;2&#125;
                     ABCABC \Step&#123;5&#125; ABACBC \Step&#123;3&#125; AABCBC
                     \Step&#123;8,8,9,9,10,10&#125;^* aabcbc
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <Paragraph>
@@ -211,14 +231,23 @@ const Article = () => {
                       Beispiel
                     </span>
                     Versuchen wir nun, eine allgemeine formale Grammatik für die Sprache
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L = \&#123;a^nb^nc^n \ | \ n \geq 0\&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     zu erstellen. Wir haben ja bereits gesehen, dass es zu dieser Sprache keine
                     kontextfreie Grammatik gibt. Als ersten Versuch kopieren wir
                     die obige Grammatik, allerdings lassen wir nur die Vertauschungsregeln zu, die
                     die Buchstaben in die richtige Reihenfolge bringen:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\step&#123;&#125; ABCS \ | \ \epsilon \\
                     BA&amp;\step&#123;&#125; AB \\
                     CA&amp;\step&#123;&#125; AC \\
@@ -226,28 +255,25 @@ const Article = () => {
                     A&amp;\step&#123;&#125; a \\
                     B&amp;\step&#123;&#125; b \\
                     C&amp;\step&#123;&#125; c
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Offensichtlich kann jedes Wort in \(L\) erzeugt werden, allerdings
                     auch Wörter wie \(abcabc\), die nicht in \(L\) sind. Können wir
                     die erzeugte Sprache beschreiben? Ich glaube, es ist die Sprache
                     aller \(abc\)-Wörter \(w\) mit
                     gilt
-                    \begin&#123;align*&#125;
-                    &amp;\#
-                    <i>
-                      a(w) \geq \#
-                    </i>
-                    b(w) \geq \#
-                    <i>
-                      c(w) \quad \textnormal&#123;und&#125; \\
-                      &amp;\#
-                    </i>
-                    a(v) \geq \#
-                    <i>
-                      b(v) \geq \#
-                    </i>
-                    c(v) \quad \textnormal&#123;für alle Präfixe $v$ von $w$&#125;
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    &amp;\#_a(w) \geq \#_b(w) \geq \#_c(w) \quad \textnormal&#123;und&#125; \\
+                    &amp;\#_a(v) \geq \#_b(v) \geq \#_c(v) \quad \textnormal&#123;für alle Präfixe $v$ von $w$&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     wobei \(\#_b(v)\) die Anzahl der in \(v\) enthaltenen \(b\) ist.
                   </Paragraph>
                   <Paragraph>
@@ -256,67 +282,84 @@ const Article = () => {
                       zweiten. Wir stellen uns die Ableitung als aus zwei Phasen
                       bestehend vor. In der ersten wird eine Wortform
                       \(w \in \&#123;A,B,C\&#125;\) erzeugt mit
-                      \begin&#123;align*&#125;
-                      \#
-                      <i>
-                        A(w) = \#
-                      </i>
-                      B(w) = \#_C(w)
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \#_A(w) = \#_B(w) = \#_C(w)
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       erzeugt. In einer zweiten wandert ein Kontrollsymbol
                       von links nach rechts durch und wandelt jeden Großbuchstaben
                       in einen Kleinbuchstaben um, weigert sich aber bei
                       Großbuchstaben, die in der falschen Reihenfolge stehen.
                       Wir brauchen nun sieben Nichtterminale
                       \(N = \&#123;S,A,B,C,X,Y,Z\&#125;\). Für \(S\) haben wir die Produktionen
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       S&amp;\step&#123;1&#125; SABC \\
                       S&amp;\step&#123;2&#125; X
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       so dass \(S \Step&#123;&#125;^* X (ABC)^n\) gilt. Als nächstes brauchen wir
                       die Vertauschregeln, um alles in die richtige Reihenfolge zu bringen:
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       BA&amp;\step&#123;3&#125; AB \\
                       CA&amp;\step&#123;4&#125; AC \\
                       CB&amp;\step&#123;5&#125; BC
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Die Nichtterminale \(X,Y,Z\) stehen für folgendes:
                     </Paragraph>
                   </Paragraph>
                   <ul>
                     <li>
                       \(X\): will \(A\) in \(a\) umwandeln:
-                      \begin&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
                       XA&amp;\step&#123;6&#125; aX
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
                       Zu jedem Zeitpunkt können wir beschließen, nun keine
                       \(A\) in \(a\) mehr umzuwandeln, sondern nun \(B\)-Symbole zu erwarten:
-                      \begin&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
                       X&amp;\step&#123;7&#125; Y
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
                     </li>
                     <li>
                       \(Y\): will \(B\) in \(b\) umwandeln oder mit \(C\) fortfahren:
-                      \begin&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
                       YB&amp;\step&#123;8&#125; bY \\
                       Y&amp;\step&#123;9&#125; Z
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
                     </li>
                     <li>
                       \(Z\): will \(C\) in \(c\) umwandeln. Wir
                       können aber auch einfach aufhören, zum Beispiel
                       wenn wir den rechten Rand erreicht haben:
-                      \begin&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
                       ZC&amp;\step&#123;10&#125; cZ \\
                       Z&amp;\step&#123;11&#125; \epsilon
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
                     </li>
                   </ul>
                   <Paragraph>
                     <Paragraph>
                       Nun müssen wir zeigen, dass die Grammatik die Sprache \(L\) erzeugt. Für
                       jedes Wort \(a^n b^n c^n \in L \) müssen wir zeigen, dass wir es ableiten können:
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       &amp;S \Step&#123;1&#125;^* S(ABC)^n \Step&#123;2&#125; X(ABC)^n
                       \Step&#123;3,4,5&#125;^* X A^n B^n C^n\\
                       &amp;\Step&#123;6&#125;^* a^n X B^n C^n
@@ -325,7 +368,10 @@ const Article = () => {
                       \Step&#123;9&#125; a^n b^n Z C^n
                       \Step&#123;10&#125;^* a^n b^n c^n Z
                       \Step&#123;11&#125;^* a^n b^n c^n
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                   </Paragraph>
                   <Paragraph>
@@ -421,9 +467,15 @@ const Article = () => {
                     </a>
                     ,
                     in der zu zeigen war, dass
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L = \&#123; 1^n \ | \ n = 2^d \textnormal&#123; für ein $d \in \N$ &#125;\&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     nicht kontextfrei ist. Allerdings ist \(L\) kein sehr kompliziertes Gebilde.
                     So könnten Sie recht einfach ein Programm schreiben, dass für ein Eingabewort
                     prüft, ob es in \(L\) ist. Können wir also auch eine formale Grammatik
@@ -433,30 +485,54 @@ const Article = () => {
                     <Paragraph>
                       Dies geht sogar nohc einfacher als die obigen Sprachen. Wir
                       schaffen eine Startregel:
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       S&amp;\step&#123;1&#125; L1R
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Die Nichtterminale \(L\) und \(R\) zeigen den linken und rechten Rand an.
                       Wir können am linken Rand einen "Verdopplungssymbol" \(D\) erzeugen. Dies
                       kann nur nach rechts durchwandern und bei \(R\) verschwinden und verdoppelt dabei
                       jede \(1\), die es trifft:
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       L&amp;\step&#123;2&#125; LD \\
                       D1&amp;\step&#123;3&#125; 11D \\
                       DR&amp;\step&#123;4&#125; R
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Schlussendlich definieren wir End-Produktionen, die die Randmarkierungen
                       löschen:
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       L&amp;\step&#123;5&#125; \epsilon \\
                       R&amp;\step&#123;6&#125; \epsilon
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Hier sehen Sie nun ein Beispiel für eine Ableitung:
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       S \Step&#123;1&#125; L1R \Step&#123;2&#125; LD1R \Step&#123;3&#125; L11DR
                       \Step&#123;2&#125; LD11DR \Step&#123;3&#125; L11D1DR
                       \Step&#123;4&#125; L11D1R \Step&#123;3&#125; L1111R \Step&#123;5&#125; 1111R \Step&#123;6&#125; 1111
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                   </Paragraph>
                 </div>
@@ -487,62 +563,110 @@ const Article = () => {
                     </i>
                     erzeugen.
                     Dies soll eine Menge von Produktionen sein, die Ableitungen der Form
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L A^m B^n R \Step&#123;&#125; L \tilde&#123;A&#125;^m B^n C^&#123;mn&#125; R
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     ermöglicht. Wenn wir dies geschafft haben, sind wir fertig. Mittels
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\rightarrow L S' R \\
                     S'&amp;\rightarrow A S' B \ | \ \epsilon
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     können wir alle \(S \Step&#123;&#125;^* L A^m B^m R\) ableiten.
                     Die Multiplikationsgrammatik wandelt uns dies in
                     \(L A^m B^m C^&#123;m^2&#125; T\) um. Schlussendlich führen
                     wir ein Killersymbol \(K\) ein, das bei \(T\) entsteht und sich
                     nach links durcharbeitet, dabei die \(C\) in \(1)\ umwandelt
                     und die \(\tilde&#123;A&#125;,B\) durch \(\epsilon\) ersetzt:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     R&amp;\rightarrow K \\
                     CK&amp;\rightarrow K1 \\
                     BK&amp;\rightarrow K \\
                     \tilde&#123;A&#125;K&amp;\rightarrow K \\
                     LK&amp;\rightarrow \epsilon
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Es bleibt also, die Multiplikationsgrammatik zu entwerfen, die,
                     um es zu wiederholen,
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L A^m B^n R \Step&#123;&#125; L \tilde&#123;A&#125;^m B^n C^&#123;mn&#125; R
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     ermöglicht, aber nicht wirklich viel mehr. Wir erschaffen die Produktion
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     A&amp;\rightarrow \tilde&#123;A&#125; X
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Das neue Nichtterminal \(\tilde&#123;A&#125;\) bedeutet soviel wie "ein \(A\), das bereits
                     abgearbeitet worden ist." Das Nichtterminal \(X\) bedeutet:
                     erzeuge rechts vom \(B\)-Block einen \(C\)-Block gleicher Länge.
                     Wir wollen also
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L \tilde&#123;A&#125;^i X A^j B^n R \Step&#123;&#125;
                     L \tilde&#123;A&#125;^i A^j B^n C^n R
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Die einfachste Möglichkeit ist vielleicht, das
                     \(X\) nach rechts durchrutschen zu lassen und dabei
                     jedes \(B\) durch ein \(B \tilde&#123;C&#125;\) ersetzen zu lassen:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     XA&amp;\rightarrow AX \\
                     XB&amp;\rightarrow B \tilde&#123;C&#125;X\\
                     XR&amp;\rightarrow R\\
                     X\tilde&#123;C&#125;&amp;\rightarrow \tilde&#123;C&#125;X
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Das \(X\) erzeugt also von seinem Entstehen bis zu seinem Verschwinden bei \(R\)
                     genau \(n\) viele \(\tilde&#123;C&#125;\)-Symbole. Wir erstellen nun Regeln,
                     die uns zwingen, jedes \(\tilde&#123;C&#125;\) nach rechts laufen zu lassen,
                     wo sie in ein \(C\) umgewandelt werden können:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \tilde&#123;C&#125; B&amp;\rightarrow B \tilde&#123;C&#125; \\
                     \tilde&#123;C&#125; C&amp;\rightarrow C \tilde&#123;C&#125; \\
                     \tilde&#123;C&#125; R&amp;\rightarrow R
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Überzeugen wir uns, dass dies den gewünschten Effekt hat.
                   </Paragraph>
                   <ul>
@@ -582,9 +706,15 @@ const Article = () => {
                       \(L A^m B^n R\) ein Wort ableiten, so
                       muss zum Zeitpunkt der Produktion \(R \rightarrow K\)
                       die Wortform so aussehen:
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \tilde&#123;A&#125;^m B^n C^&#123;mn&#125; R \Step&#123;&#125; \tilde&#123;A&#125;^m B^n C^&#123;mn&#125; K
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Wir können die Produktion \(R \step&#123;&#125; K\) zwar schon früher
                       anwenden; wenn da allerdings noch \(A\)- oder \(\tilde&#123;C&#125;\)-Symbole
                       enthalten sind, ist es{" "}
@@ -598,9 +728,15 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       In einer leichten Variation können wir auch die Sprache
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \&#123;a^m b^n c^&#123;mn&#125; \ | \ m,n \geq 0 \&#125;
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       erzeugen.
                     </Paragraph>
                   </Paragraph>
@@ -617,9 +753,15 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Geben Sie ein formale Grammatik für
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L = \&#123;w\texttt&#123;:&#125;w \ | \ w \in \&#123;a,b\&#125;^* \&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     an. Dies ist auch ein Paradebeispiel für eine Sprache, die nicht kontextfrei ist.
                   </Paragraph>
                 </div>
@@ -635,13 +777,15 @@ const Article = () => {
                     </span>
                     Sei \(L\) die Sprache über \(\Sigma = \&#123;a,b,:,;\&#125;\)
                     mit
-                    \begin&#123;align*&#125;
-                    L := w:w
-                    <i>
-                      1;w
-                    </i>
-                    2; \dots; w_n
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    L := w:w_1;w_2; \dots; w_n
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     mit \(w, w_1, \dots, w_n \in \&#123;a,b\&#125;^*\).
                     Sie implementiert also im Prinzip die Funktion
                   </Paragraph>
@@ -652,10 +796,16 @@ const Article = () => {
                       </Paragraph>
                     </pre>
                     die überprüft, ob \(x\) in der angegebenen Liste enthalten ist:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     abba\text&#123;:&#125;aaaaaaa\text&#123;;&#125;abbbb\text&#123;;&#125;abba\text&#123;;&#125;bbbb \in L \\
                     abba\text&#123;:&#125;aaaaaaa\text&#123;;&#125;abbbb\text&#123;;&#125;abbba\text&#123;;&#125;bbbb \not \in L \\
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     {" "}
                     <b>
                       Tip:

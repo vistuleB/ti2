@@ -195,11 +195,17 @@ const Article = () => {
                         $s$ Gates gibt es? Die Schranke in der obigen Behauptung sagt, dies seien höchstens
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \pfrac&#123;2^n&#125;&#123;2n&#125;^&#123;\frac&#123;2^&#123;n&#125;&#125;&#123;n&#125; + 1&#125;&amp;= \left(2^&#123;n - \log (2n)&#125;\right)^&#123;\frac&#123;2^n&#125;&#123;n&#125; + 1&#125; \\
                     &amp;= 2^&#123;2^&#123;n&#125; + n - \log(2n) \frac&#123;2^&#123;n&#125;&#125;&#123;n&#125; - \log (2n)&#125; \\
                     &amp;\lt 2^&#123;2^n&#125; \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -281,9 +287,15 @@ const Article = () => {
                         ein Graph $G = (V,E)$, gibt es eine Funktion{" "}
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     c : V \rightarrow \&#123;\textnormal&#123;rot, grün, blau&#125;\&#125; \ ,
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -484,9 +496,15 @@ const Article = () => {
                         $t \leq 2^n$ und $|I| \leq n$ gilt, brauchen wir maximal
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     (n-1) 2^n + 2^n - 1 \leq n 2^n
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -509,9 +527,15 @@ const Article = () => {
                           brauchen Sie
                         </Paragraph>
                       </Paragraph>
-                      \begin&#123;align*&#125;
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \sum_&#123;I \subseteq [n]&#125; (|I| - 1)
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>
@@ -661,33 +685,19 @@ const Article = () => {
                         wie folgt schreiben:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    f(\x)&amp;= \sum
-                    <i>
-                      &#123;I \subseteq [n]&#125; c
-                    </i>
-                    I \x^I \tag&#123;mit Koeffizienten $c
-                    <i>
-                      I \in \&#123;0,1\&#125;$&#125; \\
-                      &amp;= \sum
-                    </i>
-                    &#123;A \subseteq [n-k]&#125; \sum
-                    <i>
-                      &#123;B \subseteq [k]&#125; c
-                    </i>
-                    &#123;A,B&#125; \y^A \z^B \\
-                    &amp;= \sum
-                    <i>
-                      &#123;A \subseteq [n-k]&#125; \y^A \left( \sum
-                    </i>
-                    &#123;B \subseteq [k]&#125; c
-                    <i>
-                      &#123;A,B&#125; \z^B\right)
-                      \tag&#123;den Faktor $\y^A$ ausklammern&#125; \\
-                      &amp;=: \sum
-                    </i>
-                    &#123;A \subseteq [n-k]&#125; \y^A g_A(\z) \tag&#123;der inneren Summe einen Namen geben&#125;
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    f(\x)&amp;= \sum_&#123;I \subseteq [n]&#125; c_I \x^I \tag&#123;mit Koeffizienten $c_I \in \&#123;0,1\&#125;$&#125; \\
+                    &amp;= \sum_&#123;A \subseteq [n-k]&#125; \sum_&#123;B \subseteq [k]&#125; c_&#123;A,B&#125; \y^A \z^B \\
+                    &amp;= \sum_&#123;A \subseteq [n-k]&#125; \y^A \left( \sum_&#123;B \subseteq [k]&#125; c_&#123;A,B&#125; \z^B\right)
+                    \tag&#123;den Faktor $\y^A$ ausklammern&#125; \\
+                    &amp;=: \sum_&#123;A \subseteq [n-k]&#125; \y^A g_A(\z) \tag&#123;der inneren Summe einen Namen geben&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -768,14 +778,16 @@ const Article = () => {
                         wieder $f(\x)$ an.
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     f(\x)&amp;=
-                    \sum
-                    <i>
-                      &#123;A \subseteq [n-k]&#125; \y^A g
-                    </i>
-                    A(\z)
-                    \end&#123;align*&#125;
+                    \sum_&#123;A \subseteq [n-k]&#125; \y^A g_A(\z)
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -829,11 +841,17 @@ const Article = () => {
                         obere Schranke.
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     2^&#123;2^k&#125;&amp;= 2^&#123;n-k&#125; \qquad \Leftrightarrow \\
                     2^k&amp;= n-k \qquad \Leftrightarrow \\
                     2^k +k&amp;= n
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -844,10 +862,16 @@ const Article = () => {
                     </Paragraph>
                     <Paragraph style="color:red">
                       <Paragraph>
-                        \begin&#123;align*&#125;
+                        {" "}{" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
                         (\ref&#123;size-lupanov&#125;)&amp;= 2^&#123;2^k&#125; + 3 \cdot 2^&#123;n-k&#125; + 2^k - 1 \\
                         &amp;= 2^&#123;2^&#123;\log n&#125;&#125; + \dots
-                        \end&#123;align*&#125;
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}{" "}
                       </Paragraph>
                     </Paragraph>
                     <Paragraph>
@@ -857,7 +881,10 @@ const Article = () => {
                         Wir müssen $k$ also kleiner wählen. Nächster Versuch: $k := \log n - 1$.
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     (\ref&#123;size-lupanov&#125;)&amp;= 2^&#123;2^k&#125; + 3 \cdot 2^&#123;n-k&#125; + 2^k - 1 \\
                     &amp;=
                     2^&#123;2^&#123;\log n - 1&#125;&#125; + 3 \cdot 2^&#123;n - \log n + 1&#125; + 2^&#123;\log n - 1&#125; - 1 \\
@@ -865,7 +892,10 @@ const Article = () => {
                     2^&#123;n/2&#125; + \frac&#123;6 \cdot 2^n&#125;&#123;n&#125; + n/2 - 1 \\
                     &amp;=
                     O\pfrac&#123;2^n&#125;&#123;n&#125; \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>

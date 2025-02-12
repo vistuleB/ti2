@@ -470,22 +470,10 @@ const Article = () => {
                     </li>
                     <li>
                       Eine Kachelung ist eine Folge \(s\) von Kacheln aus \(S\), also
-                      \begin&#123;align*&#125;
-                      s = (\alpha
-                      <i>
-                        &#123;1&#125; : \beta
-                      </i>
-                      &#123;1&#125;) (\alpha
-                      <i>
-                        &#123;2&#125; : \beta
-                      </i>
-                      &#123;2&#125;) \dots
-                      (\alpha
-                      <i>
-                        &#123;m&#125; : \beta
-                      </i>
-                      &#123;m&#125;)
-                      \end&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
+                      s = (\alpha_&#123;1&#125; : \beta_&#123;1&#125;) (\alpha_&#123;2&#125; : \beta_&#123;2&#125;) \dots
+                      (\alpha_&#123;m&#125; : \beta_&#123;m&#125;)
+                      \end&#123;align*&#125;$$
                       Für eine Kachelung \(s\) definieren wir den
                       {" "}
                       <i>
@@ -497,22 +485,10 @@ const Article = () => {
                         unteren Teil
                       </i>
                       \(\bottom(s)\):
-                      \begin&#123;align*&#125;
-                      \top(s)&amp;:= \alpha
-                      <i>
-                        1 \alpha
-                      </i>
-                      2 \dots \alpha
-                      <i>
-                        m \\
-                        \bottom(s)&amp;:= \beta
-                      </i>
-                      1 \beta
-                      <i>
-                        2 \dots \beta
-                      </i>
-                      m \\
-                      \end&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
+                      \top(s)&amp;:= \alpha_1 \alpha_2 \dots \alpha_m \\
+                      \bottom(s)&amp;:= \beta_1 \beta_2 \dots \beta_m \\
+                      \end&#123;align*&#125;$$
                     </li>
                     <li>
                       Eine Kachelung \(s\) ist eine{" "}
@@ -539,20 +515,28 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Das Puzzle besteht aus drei Kacheln:
-                      \begin&#123;align*&#125;
-                      k
-                      <i>
-                        1&amp;:= (a : baa) \\
-                        k
-                      </i>
-                      2&amp;:= (ab : aa) \\
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      k_1&amp;:= (a : baa) \\
+                      k_2&amp;:= (ab : aa) \\
                       k_3&amp;:= (bba : bb) \ .
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Oben sehen wir eine Kachelung \(s := k_3 k_2 k_3\) und
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \top(s)&amp;= bbaabbba \\
                       \bottom(s)&amp;= bbaabb \ .
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Die Kachelung \(k_3 k_2 k_3\) ist noch keine Lösung, aber
                       \(k_3 k_2 k_3 k_1\) ist eine.
                     </Paragraph>
@@ -565,14 +549,26 @@ const Article = () => {
                       Das erste Beispielpuzzle \(S\) wäre dann
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \enc(S) := (a:baa)(ab:aa)(bba:bb)
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   Somit können wir das Postsche Korrespondenzproblem formal
                   als Sprache definieren:
-                  \begin&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   &#123;\rm PCP&#125; := \&#123; \enc(S) \ | \ S \textnormal&#123; ist ein PCP-Puzzle und hat eine Lösung&#125; \&#125; \ .
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <div class="well container theorem">
                   <Paragraph>
@@ -736,17 +732,15 @@ const Article = () => {
                         </i>
                         einer
                         Turingmaschine ist eine Folge
-                        \begin&#123;align*&#125;
-                        w
-                        <i>
-                          1 w
-                        </i>
-                        2 \dots w
-                        <i>
-                          &#123;j-1&#125; q w
-                        </i>
-                        j \dots w_m
-                        \end&#123;align*&#125;
+                        {" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
+                        w_1 w_2 \dots w_&#123;j-1&#125; q w_j \dots w_m
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}
                         mit
                         \(w_i \in \Gamma\) und \(q \in Q\). Die Bedeutung ist,
                         dass auf dem Band das Wort \(w_1 w_2 \dots w_m\) steht,
@@ -760,34 +754,30 @@ const Article = () => {
                         von dem Zeichen, über dem er steht.
                         Wenn das Eingabewort \(x_1 \dots x_n\) und
                         \(q_0 \in Q\) der Startzustand, dann ist
-                        \begin&#123;align*&#125;
-                        C
-                        <i>
-                          0 := q
-                        </i>
-                        0 x
-                        <i>
-                          1 \dots x
-                        </i>
-                        n
-                        \end&#123;align*&#125;
+                        {" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
+                        C_0 := q_0 x_1 \dots x_n
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}
                         die Startkonfiguration.
                         Die Berechnung einer Turingmaschine ist nun
                         eine Folge von Konfigurationen, die wir mit dem
                         \(\#\)-Zeichen separieren, also
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    \#\# C
-                    <i>
-                      0 \# C
-                    </i>
-                    1 \# C
-                    <i>
-                      2 \# C
-                    </i>
-                    3 \# \dots \# C_t
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \#\# C_0 \# C_1 \# C_2 \# C_3 \# \dots \# C_t
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Zwei aufeinanderfolgende Konfigurationen
                     \(C_i, C_&#123;i+1&#125;\) unterscheiden sich nur in der unmittelbaren
                     Umgebung des Schreib-Lese-Kopfes. Der Rest ist in beiden
@@ -807,13 +797,15 @@ const Article = () => {
                     zu legen. Hierfür brauchen wir "Kopierkacheln", die es uns
                     erlauben, Zeichen in die Folgekonfiguration zu kopieren und
                     "Kopf-Kacheln", die die Aktion am Schreib-Lese-Kopf simulieren.
-                    \begin&#123;align*&#125;
-                    \delta(q
-                    <i>
-                      0, x
-                    </i>
-                    1) = (q_1, y, \texttt&#123;R&#125;)
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \delta(q_0, x_1) = (q_1, y, \texttt&#123;R&#125;)
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     ist, dann würden wir folgende Kachel erzeugen und wie folgt
                     einsetzen:
                   </Paragraph>
@@ -917,13 +909,15 @@ const Article = () => {
                       Was geschieht nun? Für das Symbol \(q_1\), das ja einen Zustand
                       bezeichnet, gibt es keine Kopierkachel. Wenn nun
                       beispielsweise
-                      \begin&#123;align*&#125;
-                      \delta(q
-                      <i>
-                        1, x
-                      </i>
-                      2) = (q_3, z, \texttt&#123;L&#125;)
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \delta(q_1, x_2) = (q_3, z, \texttt&#123;L&#125;)
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       gilt, dann müssten wir den Kopf wieder nach links verschieben, und
                       er würde wiederum ganz am Anfang der Konfiguration stehen. Es war
                       also ein Fehler, \(y\) per Kopierkachel zu kopieren. Wir
@@ -1122,22 +1116,16 @@ const Article = () => {
                       die Turingmaschine akzeptiert. Hierfür könnten wir zum Beispiel zeigen, dass, wenn
                       \(s\) eine Kachelung ist, in welcher \(\top(s)\) und \(\bottom(s)\) beide auf dem Zeichen
                       \(\#\) enden und wenn \(\bottom(s)\) nicht das Zeichen \(q^*\) enthält, dann ist
-                      \begin&#123;align*&#125;
-                      \top(s)&amp;= \#\# C
-                      <i>
-                        0 \# C
-                      </i>
-                      1 \# \dots \# C
-                      <i>
-                        &#123;j+1&#125;\# \\
-                        \bottom(s)&amp;= \#\# C
-                      </i>
-                      0 \# C
-                      <i>
-                        1 \# \dots \# C
-                      </i>
-                      j\# \\
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \top(s)&amp;= \#\# C_0 \# C_1 \# \dots \# C_&#123;j+1&#125;\# \\
+                      \bottom(s)&amp;= \#\# C_0 \# C_1 \# \dots \# C_j\# \\
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       wobei \(C_0 = q_0 x_1 \dots x_n\) die Startkonfiguration der Turingmaschine ist
                       und jedes \(C_&#123;i+1&#125;\) die Folgekonfiguration von \(C_i\); dass also die Teillösung
                       \(s\) des Puzzles getreu die Berechnung der Turingmaschine abbildet.

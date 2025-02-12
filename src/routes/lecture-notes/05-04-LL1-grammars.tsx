@@ -56,9 +56,15 @@ const Article = () => {
                     </i>
                     , wenn es ein \(w \in \Sigma^*\) gibt, so dass
                     es eine Linksableitung
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S \Step&#123;&#125;^* w A \alpha
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     gibt.
                     In anderen Worten: eine Grenzform ist das, was bei einem Kellerautomaten auf dem Stack liegt,
                     wenn ein Nichtterminal ganz oben liegt.
@@ -78,12 +84,18 @@ const Article = () => {
                     </span>
                     Für ein Wort \(w \in \Sigma^*\) und eine natürliche Zahl \(k \in \N\)
                     sei \(\first_k(w)\) wie folgt definiert:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \first_k(w) := \begin&#123;cases&#125;
                     w&amp;\textnormal&#123; wenn $|w| \lt k$&#125; \\
                     u&amp;\textnormal&#123; wenn $w = uv$ und $|u| = k$&#125;
                     \end&#123;cases&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     In Worten: \(\first_&#123;k&#125;(w)\) besteht aus den ersten \(k\) Zeichen
                     von \(w\) (oder aus ganz \(w\), falls es weniger als \(k\) lang ist).
                   </Paragraph>
@@ -100,23 +112,37 @@ const Article = () => {
                     {" "}
                     Eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) ist eine
                     LL(\(k\))-Grammatik, wenn für jede Grenzform \(A \alpha\) und für jedes Paar
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     A&amp;\step&#123;1&#125; \beta \\
                     A&amp;\step&#123;2&#125; \gamma
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     verschiedener Produktionen (also \(\beta \ne \gamma\)) folgendes gilt: wenn
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     A\alpha&amp;\Step&#123;1&#125; \beta \alpha \Step&#123;&#125;^* x \\
                     A\alpha&amp;\Step&#123;2&#125; \gamma \alpha \Step&#123;&#125;^* y \\
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     dann müssen sich \(x\) und \(y\) in den ersten \(k\) Zeichen unterscheiden, also
-                    \begin&#123;align*&#125;
-                    \first
-                    <i>
-                      k(x) \ne \first
-                    </i>
-                    k(y) \ .
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \first_k(x) \ne \first_k(y) \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <Paragraph>
@@ -143,10 +169,16 @@ const Article = () => {
                       Beispiel
                     </span>
                     Die Klammern-Grammatik
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\step&#123;1&#125; \epsilon \\
                     S&amp;\step&#123;2&#125; (S)S
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     ist LL(1).
                   </Paragraph>
                   <div class="well subtheorem">
@@ -159,10 +191,16 @@ const Article = () => {
                       Folgen wir der Definition von LL(1): für jedes Paar verschiedener Regeln muss etwas
                       gelten. Wir haben hier keine Auswahl, denn es gibt ja nur ein Paar. Also
                       müssen wir zeigen, dass, falls
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       S \Step&#123;&#125;^* wS\alpha&amp;\Step&#123;1&#125; w \alpha \Step&#123;&#125;^* w x \\
                       S \Step&#123;&#125;^* wS\alpha&amp;\Step&#123;2&#125; w \texttt&#123;(&#125;S\texttt&#123;)&#125;S \alpha \Step&#123;&#125;^* w y \\
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       gilt, dann auch \(\first_1(x) \ne \first_2(y)\) gilt.
                       Offensichtlich ist \(\first_2(y) = \) "\(\texttt&#123;(&#125;\)".
                       Was kann \(\first_k(x)\) sein?
@@ -196,14 +234,16 @@ const Article = () => {
                         Herleitungen \(\first_k(\alpha) \in \&#123;\epsilon, \texttt&#123;)&#125;\&#125;\) gilt.
                         Keines davon ist ein Nichtterminal, und so muss auch
                         \(\first_k(\alpha) = \first_k(x)\) gelten. Zusammenfassend gesagt:
-                        \begin&#123;align*&#125;
-                        \first
-                        <i>
-                          k(x)&amp;\in \&#123;\epsilon, \texttt&#123;)&#125;\&#125; \\
-                          \first
-                        </i>
-                        y(y)&amp;= \texttt&#123;(&#125; \ ,
-                        \end&#123;align*&#125;
+                        {" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
+                        \first_k(x)&amp;\in \&#123;\epsilon, \texttt&#123;)&#125;\&#125; \\
+                        \first_y(y)&amp;= \texttt&#123;(&#125; \ ,
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}
                         und somit sind sie verschieden.
                         Wir folgern, dass \(G\) eine LL(1)-Grammatik ist.
                       </Paragraph>
@@ -230,10 +270,16 @@ const Article = () => {
                     </i>
                     LL(\(k\)) ist, dann muss der Backtrack-Baum
                     beiden Ableitungen
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     w A \alpha&amp;\Rightarrow w \beta \alpha \\
                     w A \alpha&amp;\Rightarrow w \gamma \alpha \\
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     mindestens so lange weiterverfolgen, bis der
                     Terminalpräfix \(k\) weitere Zeichen dazugewonnen hat. Der Baum bekommt also dementsprechend
                     lange Sackgassen.
@@ -251,12 +297,18 @@ const Article = () => {
                     von Alfred V. Aho
                     und Jeffrey D. Ullman).
                     Betrachten wir die Grammatik
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\step&#123;1&#125; \epsilon \\
                     S&amp;\step&#123;2&#125; ab A \\
                     A&amp;\step&#123;3&#125; Saa \\
                     A&amp;\step&#123;4&#125; b
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Zeigen Sie, dass diese Grammatik LL(2) ist, aber nicht LL(1).
                   </Paragraph>
                   <Paragraph>
@@ -290,15 +342,27 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Betrachten wir die Grammatik \(G\):
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\step&#123;1&#125; a S b \\
                     S&amp;\step&#123;2&#125; a S \\
                     S&amp;\step&#123;3&#125; \epsilon
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Sie erzeugt die Sprache
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L(G) := \&#123; a^&#123;m+k&#125; b^m \ | \ m, k \in \N \&#125; \ ,
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     also Wörter, wo auf beliebig viele \(a\)'s eine Folge von
                     {" "}
                     <i>
@@ -331,9 +395,15 @@ const Article = () => {
                     </span>
                     Sei \(t \in \N\) eine feste, im Voraus bekannte Zahl.
                     Betrachten wir die Sprache
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L_t := \&#123;a^&#123;m + l&#125; b^m \ | \ m \geq 0, l \leq t\&#125; \ ,
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     also die Wörter der Form \(a^m b^n\) mit
                     \(n \leq m \leq n+t\).
                   </Paragraph>
@@ -384,17 +454,15 @@ const Article = () => {
                     Sei eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) und eine
                     Wortform \(\alpha \in (\Sigma \cup N)^*\) gegeben.
                     Wir definieren
-                    \begin&#123;align*&#125;
-                    \First
-                    <i>
-                      k(\alpha) := \&#123; \first
-                    </i>
-                    k(w) \ | \ w \in \Sigma^
-                    <b>
-                      , \alpha \Step&#123;&#125;^
-                    </b>
-                    {" "}w\&#125;
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \First_k(\alpha) := \&#123; \first_k(w) \ | \ w \in \Sigma^*, \alpha \Step&#123;&#125;^* w\&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <Paragraph>
@@ -408,16 +476,18 @@ const Article = () => {
                     Eine Grammatik \(G\) ist LL\((k)\) genau dann, wenn
                     für alle Grenzformen \(A \alpha\) und alle
                     Produktionen mit \(A\) auf der linken Seite, also
-                    \begin&#123;align*&#125;
-                    A&amp;\rightarrow \beta
-                    <i>
-                      1 \\
-                      A&amp;\rightarrow \beta
-                    </i>
-                    2 \\
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    A&amp;\rightarrow \beta_1 \\
+                    A&amp;\rightarrow \beta_2 \\
                     &amp;\vdots\\
                     A&amp;\rightarrow \beta_l
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     die Mengen \(\First(\beta_i \alpha)\) paarweise disjunkt sind (wenn also keine
                     zwei dieser Mengen ein gemeinsames Element enthalten).
                   </Paragraph>
@@ -427,13 +497,15 @@ const Article = () => {
                     Nehmen wir eine Momentaufnahme unseres Kellerautomaten. Er
                     hat den Präfix \(x\) des Eingabewortes \(xy\) gelesen und
                     eine Linksableitung
-                    \begin&#123;align*&#125;
-                    S \Rightarrow^
-                    <b>
-                      &#123;&#125; x \alpha
-                      \end&#123;align
-                    </b>
-                    &#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    S \Rightarrow^*&#123;&#125; x \alpha
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     durchgeführt. Die Wortform \(\alpha\) ist genau das, was im Moment
                     auf dem Stack des Automaten liegt (um ganz genau zu sein: \(\alpha\texttt&#123;\$&#125;\)
                     liegt auf dem Stack). Wenn \(\alpha\) mit einem Terminalsymbol
@@ -448,37 +520,43 @@ const Article = () => {
                     eine Wortform, die mit einem Nichtterminal beginnt, also
                     \(A \alpha\). Das bedeutet, dass der Automat per Linksableitung
                     bis jetzt
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S \Step&#123;&#125;^* x A \alpha
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     hergeleitet hat. Der Automat muss sich nun zwischen allen Regeln für \(A\) entscheiden:
-                    \begin&#123;align*&#125;
-                    A&amp;\rightarrow \beta
-                    <i>
-                      1 \\
-                      A&amp;\rightarrow \beta
-                    </i>
-                    2 \\
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    A&amp;\rightarrow \beta_1 \\
+                    A&amp;\rightarrow \beta_2 \\
                     &amp;\vdots\\
-                    A&amp;\rightarrow \beta
-                    <i>
-                      l \ .
-                      \end&#123;align*&#125;
-                      Der Automat betrachtet nun die nächsten \(k\) Eingabesymbole, also
-                      \(\first_k(y)\) (wir gehen
-                      mal davon aus, dass er das kann; programmieren könnten wir das auf jeden Fall;
-                      ob man es im strengen Framework des Kellerautomaten hinkriegt, werden wir später sehen).
-                      Wenn \(G\) eine LL\((k)\)-Grammatik ist, dann gibt es höchstens eine
-                      Regel \(A \rightarrow \beta_i\) mit
-                      \begin&#123;align*&#125;
-                      \first
-                    </i>
-                    k(y) \in \first
-                    <i>
-                      k(\beta
-                    </i>
-                    i \alpha)
-                    \end&#123;align*&#125;
+                    A&amp;\rightarrow \beta_l \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
+                    Der Automat betrachtet nun die nächsten \(k\) Eingabesymbole, also
+                    \(\first_k(y)\) (wir gehen
+                    mal davon aus, dass er das kann; programmieren könnten wir das auf jeden Fall;
+                    ob man es im strengen Framework des Kellerautomaten hinkriegt, werden wir später sehen).
+                    Wenn \(G\) eine LL\((k)\)-Grammatik ist, dann gibt es höchstens eine
+                    Regel \(A \rightarrow \beta_i\) mit
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \first_k(y) \in \first_k(\beta_i \alpha)
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     da ja nach obiger Beobachtung diese Mengen disjunkt sind. Wenn
                     \(\first_k(y)\) in{" "}
                     <i>
@@ -616,28 +694,38 @@ const Article = () => {
                     </span>
                     Seien \(K, L \subseteq \Sigma^*\) zwei Mengen.
                     Mit \(K \circ L\) bezeichnen wir die Menge
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     K \circ L := \&#123;xy \ | \ x \in K, y \in L\&#125; \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     (Diese Definition haben Sie schon im Kapitel über reguläre Sprachen kennengelernt).
                     Für eine natürliche Zahl \(k\) definieren wir
-                    \begin&#123;align*&#125;
-                    \First
-                    <i>
-                      k(L) := \&#123;\first
-                    </i>
-                    k(x) \ | \ x \in L\&#125; \ .
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \First_k(L) := \&#123;\first_k(x) \ | \ x \in L\&#125; \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Weiterhin bezeichnen wir mit
                     \(K \circ_k L\) die Menge
-                    \begin&#123;align*&#125;
-                    K \circ
-                    <i>
-                      k L&amp;:= \First(K \circ L) \\
-                      &amp;= \&#123;\first
-                    </i>
-                    k(xy) \ | \ x \in K, y \in L\&#125; \ .
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    K \circ_k L&amp;:= \First(K \circ L) \\
+                    &amp;= \&#123;\first_k(xy) \ | \ x \in K, y \in L\&#125; \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <Paragraph>
@@ -654,19 +742,37 @@ const Article = () => {
                       Beispiel
                     </span>
                     Sei
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     K&amp;:= \&#123;\epsilon, a, ab, aba\&#125; \\
                     L&amp;:= \&#123;c, bb, b\&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Dann ist
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     K \circ L = \&#123;c, bb, b, ac, abb, ab, abc, abbb, abb, abac, ababb, abab\&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     und somit
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     K \circ_2 L&amp;= \&#123;c, bb, b, ac, ab, ab, ab, ab, ab, ab, ab, ab\&#125; \\
                     &amp;=\&#123;c, bb, b, ac, ab\&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <div class="well container theorem">
@@ -683,17 +789,15 @@ const Article = () => {
                     \(\alpha \in (\Sigma \cup N)^*\). Wir berechnen
                     \(\First_k(\alpha)\), indem wir als erstes
                     \(\alpha\) aussschreiben als
-                    \begin&#123;align*&#125;
-                    \alpha = (\sigma
-                    <i>
-                      1 \sigma
-                    </i>
-                    2 \sigma
-                    <i>
-                      3 \dots \sigma
-                    </i>
-                    n)
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \alpha = (\sigma_1 \sigma_2 \sigma_3 \dots \sigma_n)
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     wobei jedes \(\sigma_i\) ein Terminalsymbol oder ein Nichtterminalsymbol ist,
                     und berechnen dann \(\First_k(\alpha)\) wie folgt:
                     \begin&#123;align&#125;
@@ -779,27 +883,29 @@ const Article = () => {
                       Beobachtung
                     </span>
                     Sei \(X\) ein Nichtterminal und
-                    \begin&#123;align*&#125;
-                    X&amp;\rightarrow \alpha
-                    <i>
-                      1 \\
-                      X&amp;\rightarrow \alpha
-                    </i>
-                    2 \\
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    X&amp;\rightarrow \alpha_1 \\
+                    X&amp;\rightarrow \alpha_2 \\
                     &amp;\vdots \\
-                    X&amp;\rightarrow \alpha
+                    X&amp;\rightarrow \alpha_k
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
+                    die Produktionen der Grammatik mit \(X\) auf der linken Seite. Dann gilt
+                    \begin&#123;align&#125;
+                    \First
                     <i>
-                      k
-                      \end&#123;align*&#125;
-                      die Produktionen der Grammatik mit \(X\) auf der linken Seite. Dann gilt
-                      \begin&#123;align&#125;
-                      \First
+                      k(X) = \bigcup
                     </i>
-                    k(X) = \bigcup
+                    &#123;i=1&#125;^k \First
                     <i>
-                      &#123;i=1&#125;^k \First
+                      k(\alpha
                     </i>
-                    k(\alpha_i)
+                    i)
                     \label&#123;first-k-nonterminal&#125;
                     \end&#123;align&#125;
                     Was ja eigentlich offensichtlich ist: wenn sich ein Wort \(X \Step&#123;&#125;^* w\) aus \(X\) ableiten
@@ -845,14 +951,16 @@ const Article = () => {
                       Definition
                     </span>
                     Sei \(\sigma\) ein Symbol und \(d \in \N\). Dann ist
-                    \begin&#123;align*&#125;
-                    \First
-                    <i>
-                      k^&#123;(d)&#125;(\sigma) := \&#123;\first
-                    </i>
-                    k(w) \ | \ \textnormal&#123; es gibt einen Ableitungsbaum für
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \First_k^&#123;(d)&#125;(\sigma) := \&#123;\first_k(w) \ | \ \textnormal&#123; es gibt einen Ableitungsbaum für
                     $\sigma \Step&#123;&#125;^* w$ der Höhe höchstens $d$&#125;\&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <div class="well container theorem">
@@ -861,10 +969,16 @@ const Article = () => {
                       Beispiel
                     </span>
                     Sei unsere Grammatik
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\rightarrow Xa \\
                     X&amp;\rightarrow Sb \ | c
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Dann ist beispielsweise
                   </Paragraph>
                   <figure>
@@ -875,40 +989,38 @@ const Article = () => {
                   </figure>
                   <Paragraph>
                     ein Ableitungsbaum der Höhe 2 von \(S \Step&#123;&#125;^* ca\), und somit gilt
-                    \begin&#123;align*&#125;
-                    c \in \First
-                    <i>
-                      1^&#123;(d)&#125; (S) \ .
-                      \end&#123;align*&#125;
-                      Ein Baum der Höhe 1, der mit \(S\) beginnt, könnte ja nur \(Xa\) ableiten und somit gar kein
-                      Wort. Es gilt also
-                      \begin&#123;align*&#125;
-                      \First
-                    </i>
-                    1^&#123;(1)&#125; (S) = \emptyset \ .
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    c \in \First_1^&#123;(d)&#125; (S) \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
+                    Ein Baum der Höhe 1, der mit \(S\) beginnt, könnte ja nur \(Xa\) ableiten und somit gar kein
+                    Wort. Es gilt also
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \First_1^&#123;(1)&#125; (S) = \emptyset \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Für eine Wortform \(\alpha = \sigma_1 \sigma_2 \dots \sigma_n \in (\Sigma \cup N)^*\) definieren
                     wir
-                    \begin&#123;align*&#125;
-                    \First
-                    <i>
-                      k^&#123;(d)&#125;(\alpha) = \First
-                    </i>
-                    k^&#123;(d)&#125;(\sigma
-                    <i>
-                      1) \circ
-                    </i>
-                    k \First
-                    <i>
-                      k^&#123;(d)&#125;(\sigma
-                    </i>
-                    2) \circ
-                    <i>
-                      k \dots
-                      \circ
-                    </i>
-                    k \First_k^&#123;(d)&#125;
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \First_k^&#123;(d)&#125;(\alpha) = \First_k^&#123;(d)&#125;(\sigma_1) \circ_k \First_k^&#123;(d)&#125;(\sigma_2) \circ_k \dots
+                    \circ_k \First_k^&#123;(d)&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Eine Ableitung \(\alpha \Step&#123;&#125;^* w\) der Höhe maximal \(d\) entspricht also einer Folge
                     von \(n\) Ableitungsbäumen, von denen jeder Höhe maximal \(d\) hat.
                   </Paragraph>
@@ -928,47 +1040,37 @@ const Article = () => {
                       Lemma.
                     </span>
                     Für \(d \geq 1\) gilt
-                    \begin&#123;align*&#125;
-                    \First
-                    <i>
-                      k^&#123;(d)&#125;(X)&amp;= \bigcup
-                    </i>
-                    &#123;i=1&#125;^k \First
-                    <i>
-                      k^&#123;(d-1)&#125; (\alpha
-                    </i>
-                    i) \\
-                    \First
-                    <i>
-                      k^&#123;(d)&#125;(\alpha)&amp;= \First
-                    </i>
-                    k^&#123;(d)&#125;(\sigma
-                    <i>
-                      1) \circ
-                    </i>
-                    k \First
-                    <i>
-                      k^&#123;(d)&#125;(\sigma
-                    </i>
-                    2) \circ
-                    <i>
-                      k
-                      \dots \circ
-                    </i>
-                    k \First
-                    <i>
-                      k^&#123;(d)&#125;
-                      \end&#123;align*&#125;
-                      Für \(d = 0\) gilt
-                      \begin&#123;align*&#125;
-                      \First
-                    </i>
-                    k^&#123;(0)&#125;(X)&amp;:= \emptyset \tag&#123;für jedes Nichtterminal&#125;
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \First_k^&#123;(d)&#125;(X)&amp;= \bigcup_&#123;i=1&#125;^k \First_k^&#123;(d-1)&#125; (\alpha_i) \\
+                    \First_k^&#123;(d)&#125;(\alpha)&amp;= \First_k^&#123;(d)&#125;(\sigma_1) \circ_k \First_k^&#123;(d)&#125;(\sigma_2) \circ_k
+                    \dots \circ_k \First_k^&#123;(d)&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
+                    Für \(d = 0\) gilt
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \First_k^&#123;(0)&#125;(X)&amp;:= \emptyset \tag&#123;für jedes Nichtterminal&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     und schließlich
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \First_k^&#123;(d)&#125;(a)&amp;:= \&#123;a\&#125; \tag&#123;für jedes Terminalsymbol und jedes \(d \in \N\)&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <Paragraph>
@@ -988,13 +1090,15 @@ const Article = () => {
                       Beobachtung
                     </span>
                     Falls \(\First_&#123;k&#125;^&#123;(d-1)&#125;(X)=\First_&#123;k&#125;^&#123;(d)&#125;(X)\) für alle \(X \in N\), dann gilt
-                    \begin&#123;align*&#125;
-                    \First
-                    <i>
-                      k (X) = \First
-                    </i>
-                    k^&#123;(d)&#125;(X)
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \First_k (X) = \First_k^&#123;(d)&#125;(X)
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     für alle \(X \in N\).
                   </Paragraph>
                 </div>
@@ -1009,10 +1113,16 @@ const Article = () => {
                     </b>
                     {" "}
                     Wir betrachten die Grammatik
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\rightarrow Xa \ | \ \epsilon \\
                     X&amp;\rightarrow b \ | \ Sc \ | \ SX
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <figure class="centered-figure well container">

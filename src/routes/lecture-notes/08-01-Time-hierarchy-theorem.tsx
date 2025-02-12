@@ -111,13 +111,15 @@ const Article = () => {
                         Dann gilt
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    f
-                    <i>
-                      &#123;U&#125; (\enc(M)x) = f
-                    </i>
-                    M(x) \ .
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    f_&#123;U&#125; (\enc(M)x) = f_M(x) \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -126,9 +128,15 @@ const Article = () => {
                         terminiert $U$ auf $\enc(M)x$ innerhalb von
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     C \cdot |\enc(M)| \cdot (|x| + s)
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -156,20 +164,18 @@ const Article = () => {
                       werden mit einem $\texttt&#123;-&#125;$ gefüllt. Hier ein Beispiel für den Fall $l=4$:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
-                  \texttt&#123;#&#125;x
-                  <i>
-                    1 \texttt&#123;-&#125; \texttt&#123;-&#125; \texttt&#123;-&#125; \texttt&#123;#&#125; x
-                  </i>
-                  2 \texttt&#123;-&#125; \texttt&#123;-&#125;
-                  \texttt&#123;-&#125; \texttt&#123;#&#125; x
-                  <i>
-                    3 \texttt&#123;-&#125; \texttt&#123;-&#125; \texttt&#123;-&#125; \texttt&#123;#&#125; \cdots \texttt&#123;#&#125; x
-                  </i>
-                  n
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  \texttt&#123;#&#125;x_1 \texttt&#123;-&#125; \texttt&#123;-&#125; \texttt&#123;-&#125; \texttt&#123;#&#125; x_2 \texttt&#123;-&#125; \texttt&#123;-&#125;
+                  \texttt&#123;-&#125; \texttt&#123;#&#125; x_3 \texttt&#123;-&#125; \texttt&#123;-&#125; \texttt&#123;-&#125; \texttt&#123;#&#125; \cdots \texttt&#123;#&#125; x_n
                   \texttt&#123;-&#125; \texttt&#123;-&#125; \texttt&#123;-&#125;
                   \texttt&#123;#&#125;
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -197,9 +203,15 @@ const Article = () => {
                       $U$ akzeptierte Sprache:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \halt := L(U) =\&#123; \enc(M) w \ | \ M \textnormal&#123; akzeptiert &#125; w\&#125; \ .
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -207,9 +219,15 @@ const Article = () => {
                       und davon abgeleitete "Diagonalisierungssprache"
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \negdiag := \&#123; \enc(M) \in \Sigma^* \ | \ \enc(M) \enc(M) \not \in \halt\&#125;
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -236,11 +254,17 @@ const Article = () => {
                       </b>
                       {" "}
                       Sei $\Sigma$ ein endliches Alphabet. Wir definieren die Sprache
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \bhalt := \&#123; \enc(M) 1^b 0 x \ | \
                       U \textnormal&#123; akzeptiert $\enc(M)x$ innerhalb von $b$ Schritten&#125;
                       \&#125;
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Mit $1^b$ bezeichnen wir die Folge von $n$ vielen $1$en.
                       Des Weiteren ist $M$ eine $k$-Band-Turingmaschine mit Eingabealphabet $\Sigma$ und $x \in
                       \Sigma^*$ und
@@ -303,9 +327,15 @@ const Article = () => {
                       Wir definieren eine Zeitbudgetierte Version der Diagonalisierungssprache:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \bnegdiag := \&#123; \enc(M)1^m \ | \ \enc(M)1^&#123;b&#125; 0 \enc(M) 1^n \not \in \bhalt, \ b = t(|\enc(M)|+m) \&#125;
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <div
                   style="background-color: rgba(255,0,0,0.1);"
@@ -408,10 +438,16 @@ const Article = () => {
                         nun: ist $x1^m \in \bnegdiag$?
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     x1^m \in \bnegdiag&amp;\Longleftrightarrow \enc(M) 1^b 0 x1^m \not \in \bhalt \\
                     &\Longleftrightarrow U \textnormal&#123; lehnt $\enc(M)x1^m$ innerhalb von $b$ Schritten ab&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -430,9 +466,15 @@ const Article = () => {
                         Da $\lim_&#123;n \rightarrow \infty&#125; \frac&#123;s(n)&#125;&#123;t(n)&#125; = 0$ ist, ist auch{" "}
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \lim_&#123;m \rightarrow \infty &#125;\frac&#123;2C \cdot |\enc(M)| \cdot s(|x|+m)&#125;&#123;t(|x|+m)&#125; = 0 \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -441,9 +483,15 @@ const Article = () => {
                         und die Simulation terminiert also innerhalb von
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     2C \cdot |\enc(M)| \cdot s(|x|+m) \leq t(|x|+m) = b
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -454,12 +502,18 @@ const Article = () => {
                         wenn sie es überhaupt irgendwann ablehnt. Also schließen wir weiter:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     x1^m \in \bnegdiag&amp;\Longleftrightarrow \enc(M) 1^b 0 x1^m \not \in \bhalt \\
                     &\Longleftrightarrow U \textnormal&#123; lehnt $\enc(M)x1^m$ innerhalb von $b$ Schritten ab&#125; \\
                     &\Longleftrightarrow U \textnormal&#123; lehnt $\enc(M)x1^m$ ab&#125; \\
                     &amp;\Longleftrightarrow M \textnormal&#123; lehnt $x1^m$ ab&#125; \\
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -494,13 +548,15 @@ const Article = () => {
                         = 0$). Dann gilt{" "}
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    \TIME
-                    <i>
-                      k(s) \subsetneq \TIME
-                    </i>
-                    &#123;k+3&#125;(t)
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \TIME_k(s) \subsetneq \TIME_&#123;k+3&#125;(t)
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -514,13 +570,15 @@ const Article = () => {
                       Zusammen mit der Simulation von $k$-Band-TMs durch $2$-Band-TMs folgt nun
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
-                  \TIME(s) \subsetneq \TIME
-                  <i>
-                    2(s \log s) \subsetneq \TIME
-                  </i>
-                  5(t \log t)
-                  \end&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  \TIME(s) \subsetneq \TIME_2(s \log s) \subsetneq \TIME_5(t \log t)
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>

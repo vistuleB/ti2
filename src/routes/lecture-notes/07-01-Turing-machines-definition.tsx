@@ -240,9 +240,9 @@ const Article = () => {
                     <li>
                       Einer Zustandsübergangsfunktion \(\delta\), die sagt, was die Turingmaschine tun soll,
                       wenn Sie im Zustand \(q\) ist und Zeichen \(s\) liest. Formal:
-                      \begin&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
                       \delta : Q \times \Gamma \rightarrow Q \times \Gamma \times \lsr \ ,
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
                       wobei{" "}
                       <tt>
                         L
@@ -275,18 +275,16 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Für die Turingmaschine in dem obigen Beispiel haben wir zwei Regeln gesehen:
-                      \begin&#123;align*&#125;
-                      \delta(q
-                      <i>
-                        2, b)&amp;= (q
-                      </i>
-                      3, a, \texttt&#123;R&#125;) \\
-                      \delta(q
-                      <i>
-                        3, \#)&amp;= (q
-                      </i>
-                      4, b, \texttt&#123;L&#125;)
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \delta(q_2, b)&amp;= (q_3, a, \texttt&#123;R&#125;) \\
+                      \delta(q_3, \#)&amp;= (q_4, b, \texttt&#123;L&#125;)
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                   </Paragraph>
                   <h3>
@@ -327,22 +325,30 @@ const Article = () => {
                     </i>
                     einer Turingmaschine ist ein Element in
                     \(\Gamma^* \times Q \times \Gamma^*\), also
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     C = u q v
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     wobei \(uv \in \Gamma^*\) der Bandinhalt ist, der
                     Schreib-Lese-Kopf auf dem ersten Zeichen von \(v\) steht und \(q\) der
                     innere Zustand der Turingmaschine ist. Das \(q\) in \(C\)
                     kennzeichnet also sowohl die Position des Schreib-Lese-Kopfes auf dem Band
                     sowie den inneren Zustand
                     Die Menge aller Konfigurationen ist
-                    \begin&#123;align*&#125;
-                    \mathcal&#123;C&#125; := \Gamma^* \times Q \times \Gamma^
-                    <b>
-                      {" "}
-                      \end&#123;align
-                    </b>
-                    &#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \mathcal&#123;C&#125; := \Gamma^* \times Q \times \Gamma^*
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Der{" "}
                     <i>
                       Zustand einer Konfiguration
@@ -350,10 +356,16 @@ const Article = () => {
                     \(C = uqv\) ist \(q\), also der innere
                     Zustand, in dem sich die Maschine gerade befindet.
                     Wir bezeichnen mit $\state(C)$. Formal:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \state: \mathcal&#123;C&#125;&amp;\rightarrow Q \\
                     uqv&amp;\mapsto q \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Eine Konfiguration \(C\) ist
                     eine{" "}
                     <i>
@@ -375,9 +387,15 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Wenn also das Eingabewort \(w \in \Sigma^*\) und $\qstart$ der Startzustand ist, dann ist
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     C_&#123;\rm start&#125; = \qstart&#123;&#125; w
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     die{" "}
                     <i>
                       Startkonfiguration
@@ -465,9 +483,15 @@ const Article = () => {
                     </b>
                     {" "}
                     Die erweiterte Zustandsübergangsfunktion einer Turingmaschine ist
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \hat&#123;\delta&#125; : \mathcal&#123;C&#125; \rightarrow \mathcal&#123;C&#125; \
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Sie beschreibt für eine Konfiguration \(C\), welches die Konfiguration
                     im nächsten Schritt ist.
                     Per Konvention
@@ -479,23 +503,17 @@ const Article = () => {
                   Unsere obige Turingmaschine hat beispielsweise die Regeln
                   \(\delta(q_2,b) = (q_3, a,R)\) und
                   \(\delta(q_3, \#) = (q_4, b, \texttt&#123;L&#125;)\), und somit würden
-                  \begin&#123;align*&#125;
-                  \hat&#123;\delta&#125;(aaAq
-                  <i>
-                    2b\#ba)&amp;= aaAaq
-                  </i>
-                  3\#ba \\
-                  \hat&#123;\delta&#125;(aaAaq
-                  <i>
-                    3\#ba)&amp;= aaAq
-                  </i>
-                  4abba \\
-                  \hat&#123;\delta&#125;(abAq
-                  <i>
-                    2bba\#)&amp;= abAaq
-                  </i>
-                  3ba\# \\
-                  \end&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  \hat&#123;\delta&#125;(aaAq_2b\#ba)&amp;= aaAaq_3\#ba \\
+                  \hat&#123;\delta&#125;(aaAaq_3\#ba)&amp;= aaAq_4abba \\
+                  \hat&#123;\delta&#125;(abAq_2bba\#)&amp;= abAaq_3ba\# \\
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   gelten. Sie sehen:
                   Die Definition von $\hat&#123;\delta&#125;$ ist nichts wirklich Tiefgründiges, sondern einfach
                   eine Implementierung der Turingmaschinen-Momentaufnahme mit uns bereits
@@ -512,10 +530,16 @@ const Article = () => {
                   </h3>
                   Die Funktion \(\hat&#123;\delta&#125;\) bildet aus einer Konfiguration die
                   Folgekonfiguration. Wir definieren nun
-                  \begin&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \hat&#123;\delta&#125;^&#123;(i)&#125; (C) := \underbrace&#123;\hat&#123;\delta&#125;(\hat&#123;\delta&#125;(\dots (\hat&#123;\delta&#125;&#125;_&#123;i \textnormal&#123;
                   mal&#125;&#125; (C) \dots)))
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   also die Konfiguration, die die Turingmaschine nach \(i\) Rechenschritten erreicht hat.
                   Weiterhin definieren wir
                   \(\hat&#123;\delta&#125;^* (C)\) als die Endkonfiguration, die bei wiederholter
@@ -527,13 +551,19 @@ const Article = () => {
                     undefined
                   </tt>
                   sein:
-                  \begin&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \hat&#123;\delta&#125;^* (C) := \begin&#123;cases&#125;
                   \hat&#123;\delta&#125;^&#123;(i)&#125; (C)&
                   \textnormal&#123; wenn es ein \(i\) gibt, so dass $\hat&#123;\delta&#125;^&#123;(i)&#125; (C)$ eine Endkonfiguration ist&#125; \\
                   \texttt&#123;undefined&#125;&amp;\textnormal&#123;sonst.&#125;
                   \end&#123;cases&#125;
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -551,17 +581,15 @@ const Article = () => {
                   </Paragraph>
                   Für ein Eingabewort \(x \in \Sigma^*\) können wir nun das Ergebnis der Berechnung
                   von Turingmaschine \(M\) auf \(x = x_1 \dots x_n\) definieren:
-                  \begin&#123;align*&#125;
-                  \hat&#123;M&#125;(x) := \hat&#123;\delta&#125;^* (\qstart&#123;&#125; x
-                  <i>
-                    1 x
-                  </i>
-                  2 x
-                  <i>
-                    3 \dots x
-                  </i>
-                  n) \ .
-                  \end&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  \hat&#123;M&#125;(x) := \hat&#123;\delta&#125;^* (\qstart&#123;&#125; x_1 x_2 x_3 \dots x_n) \ .
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   Wir beginnen also mit der Startkonfiguration und lassen die Turingmaschine dann
                   laufen, bis sie einen Endzustand erreicht. Die erreichte Konfiguration bezeichnen
                   wir mit \(\hat&#123;M&#125;(x)\). Falls nie ein Endzustand erreicht wird (die Turingmaschine also
@@ -616,14 +644,20 @@ const Article = () => {
                       reject
                     </tt>
                     ist. Wir definieren daher
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     f_M(x) = \begin&#123;cases&#125;
                     \texttt&#123;accept&#125;&amp;\textnormal&#123; falls $\state(\hat&#123;M&#125;(x)) = \qaccept$, wenn also $\hat&#123;M&#125;(x)$
                     eine akzeptierende Endkonfiguration ist, &#125;\\
                     \texttt&#123;reject&#125;&amp;\textnormal&#123; falls $\state(\hat&#123;M&#125;(x)) = \qreject$ ,&#125;\\
                     \texttt&#123;undefined&#125;&amp;\textnormal&#123; falls $\hat&#123;M&#125;(x) = \texttt&#123;undefined&#125;$ &#125;
                     \end&#123;cases&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </Paragraph>
                 <div class="well container theorem">
@@ -681,9 +715,15 @@ const Article = () => {
                     </i>
                     die Sprache
                     \(L \subseteq \Sigma^*\) wenn
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     x \in L \Longleftrightarrow f_M(x) = \texttt&#123;accept&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     für alle \(x \in \Sigma^*\) gilt. Das heißt, dass \(M\) für \(x \not \in \Sigma^*\)
                     entweder irgendwann den Endzustand $\qreject$ erreicht oder
                     nie einen Endzustand erreicht.
@@ -736,17 +776,15 @@ const Article = () => {
                     </b>
                     {" "}
                     Seien \(\Sigma_1, \Sigma_2\) zwei endliche Alphabete und
-                    \begin&#123;align*&#125;
-                    g : \Sigma
-                    <i>
-                      1^* \rightarrow \Sigma
-                    </i>
-                    2^
-                    <b>
-                      {" "}
-                      \end&#123;align
-                    </b>
-                    &#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    g : \Sigma_1^* \rightarrow \Sigma_2^*
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     eine Funktion. Eine Turingmaschine \(M\){" "}
                     <i>
                       berechnet die Funktion \(g\)
@@ -815,9 +853,15 @@ const Article = () => {
                     {" "}
                     Die Idee ist, dass wir eine Grammatik \(G\) schreiben, die
                     "in umgekehrter Reihenfolge" läuft, also
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \texttt&#123;\$&#125; q_&#123;\rm start&#125; w \texttt&#123;.&#125; \Step&#123;&#125;^* S
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     ableiten kann genau dann, wenn \(w \in S\) gilt. Wir brauchen
                     \(\texttt&#123;\$&#125;\) und \(\texttt&#123;.&#125;\) als Randmarkierungen. Wir lassen hier
                     temporär zu, dass die linke Seite ausschließlich aus Terminalsymbolen bestehen kann.
@@ -825,14 +869,20 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Hierfür definieren wir für jede Regel der Turingmaschine eine Grammatik-Regel:
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \begin&#123;array&#125;&#123;lcl&#125;
                       \delta(q,x) = (r,y,\texttt&#123;S&#125; )&amp;\textnormal&#123;wird zur Produktion&#125;&amp;qx \rightarrow ry \\
                       \delta(q,x) = (y,r,\texttt&#123;R&#125;)&amp;\textnormal&#123;wird zur Produktionen&#125;&amp;qx \rightarrow yr \\
                       \delta(q,x) = (y,r,\texttt&#123;L&#125;)&amp;\textnormal&#123;wird zu den Produktionen&#125;&amp;aqx \rightarrow ray
                       \textnormal&#123; für alle $a \in \Gamma$&#125;
                       \end&#123;array&#125;
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Die Asymmetrie zwischen den Regeln, die den Kopf nach rechts verschieben und denen, die ihn
                       nach links verschieben, ergibt sich aus unserer Konvention, die Konfigurationen \(uqv\) so
                       zu
@@ -840,15 +890,27 @@ const Article = () => {
                       und nicht etwa auf dem letzten von \(u\) steht.
                       Ein Problem ergibt sich, wenn \(q\) am Rand steht. Hierfür erlauben wir,
                       an den Rändern der Konfiguration \(\square\)-Symbole zu erzeugen:
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \texttt&#123;\$&#125;&amp;\rightarrow \texttt&#123;\$&#125; \square \\
                       \texttt&#123;.&#125;&amp;\rightarrow \square \texttt&#123;.&#125; \
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Wenn der Kopf also vor dem \(\texttt&#123;.&#125;\) stehen sollte,
                       dann können wir
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \texttt&#123;\$&#125;uq\texttt&#123;.&#125; \Step&#123;&#125; \texttt&#123;\$&#125;uq\square \texttt&#123;.&#125;
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       anwenden und dann die Produktion, die der Regel von \(\delta(q,\square)\) entspricht.
                       Es sollte nun klar sein, dass folgendes gilt:
                     </Paragraph>
@@ -861,13 +923,15 @@ const Article = () => {
                       Wenn \(\hat&#123;\delta&#125;^&#123;(i)&#125; (uqv) = u'q'v'\) gilt, die Turingmaschine also in
                       \(i\) Schritten von Konfiguration \(uqv\) nach \(u'q'v'\) übergeht, dann gilt in der gerade
                       entwickelten Grammatik auch
-                      \begin&#123;align*&#125;
-                      \texttt&#123;\$&#125;uqv\texttt&#123;.&#125; \Step&#123;&#125;^* \texttt&#123;\$&#125;\square^* u'q'v'\square^
-                      <b>
-                        \texttt&#123;.&#125;
-                        \end&#123;align
-                      </b>
-                      &#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \texttt&#123;\$&#125;uqv\texttt&#123;.&#125; \Step&#123;&#125;^* \texttt&#123;\$&#125;\square^* u'q'v'\square^*\texttt&#123;.&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                   </div>
                   <Paragraph>
@@ -877,58 +941,81 @@ const Article = () => {
                     </i>
                     : wenn \(q = \texttt&#123;accept&#125;\), dann
                     können wir jedes Zeichen löschen:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \texttt&#123;accept&#125;\ x&amp;\rightarrow \texttt&#123;accept&#125; \\
                     x\ \texttt&#123;accept&#125;&amp;\rightarrow \texttt&#123;accept&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     wobei \(\texttt&#123;accept&#125;\) ein Nichtterminal der Grammatik ist.
                     Und somit gilt auch
-                    \begin&#123;align*&#125;
-                    \texttt&#123;\$&#125; u \ \texttt&#123;accept&#125; \ v \texttt&#123;.&#125;&amp;\Step&#123;&#125;^
-                    <b>
-                      {" "}
-                      \texttt&#123;\$&#125;\ \texttt&#123;accept&#125; \ \texttt&#123;.&#125;
-                      \end&#123;align
-                    </b>
-                    &#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \texttt&#123;\$&#125; u \ \texttt&#123;accept&#125; \ v \texttt&#123;.&#125;&amp;\Step&#123;&#125;^*
+                    \texttt&#123;\$&#125;\ \texttt&#123;accept&#125; \ \texttt&#123;.&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Als letzte Regel definieren wir:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \texttt&#123;\$ &#125;\ \texttt&#123;accept&#125;\ \texttt&#123;.&#125; \rightarrow S
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Wir haben nun eine Grammatik mit den folgenden Eigenschaften:
-                    \begin&#123;align*&#125;
-                    M(x
-                    <i>
-                      1 x
-                    </i>
-                    2 \dots x
-                    <i>
-                      n) = \texttt&#123;accept&#125;&amp;\textnormal&#123; genau dann, wenn &#125;
-                      \texttt&#123;\$&#125; \texttt&#123;start&#125; x
-                    </i>
-                    1 x
-                    <i>
-                      2 \dots x
-                    </i>
-                    n \texttt&#123;.&#125; \Step&#123;&#125;^* S
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    M(x_1 x_2 \dots x_n) = \texttt&#123;accept&#125;&amp;\textnormal&#123; genau dann, wenn &#125;
+                    \texttt&#123;\$&#125; \texttt&#123;start&#125; x_1 x_2 \dots x_n \texttt&#123;.&#125; \Step&#123;&#125;^* S
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Wir bauen nun eine weitere Grammatik \(G\), in der wir jede Produktion \(\alpha \rightarrow
                     \beta\)
                     umdrehen, also durch \(\beta \rightarrow \alpha\) ersetzen. Zusätzlich definieren wir
                     Abschlussregeln
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \texttt&#123;\$&#125;&amp;\rightarrow \epsilon \\
                     \texttt&#123;.&#125;&amp;\rightarrow \epsilon \\
                     \texttt&#123;start&#125;&amp;\rightarrow \epsilon
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     die die Randmarkierungen ersetzen. In dieser Grammatik gilt nun für
                     alle Wörter \(x \in \Sigma^*\):
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     x \in L(M) \Longleftrightarrow S \rightarrow
                     G: S \Step&#123;&#125;^* x
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     und somit gilt \(L(G) = L(M)\). Zusammenfassend besitzt \(G\) also die Produktionen
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\step&#123;1&#125; \texttt&#123;\$&#125; \ \texttt&#123;accept&#125; \ \texttt&#123;.&#125; \\
                     \texttt&#123;accept&#125;&amp;\step&#123;2&#125; x \ \texttt&#123;accept&#125; \ | \ \texttt&#123;accept&#125; \ x \quad
                     \tag&#123; für jedes \(x \in \Gamma\)&#125; \\
@@ -941,7 +1028,10 @@ const Article = () => {
                     \texttt&#123;\$&#125;&amp;\step&#123;8&#125; \epsilon \\
                     \texttt&#123;.&#125;&amp;\step&#123;9&#125; \epsilon \\
                     \texttt&#123;start&#125;&amp;\step&#123;10&#125; \epsilon
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Um also ein Wort \(x \in L(M)\) abzuleiten, müssen wir
                     die akzeptierende Endkonfiguration \(C\) von \(M(x)\) "erraten" und dann
                     per Produktionen 1 und 2 die Wortform \(\texttt&#123;\$&#125;C\texttt&#123;.&#125;\) ableiten. Von da

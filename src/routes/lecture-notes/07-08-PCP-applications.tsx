@@ -41,11 +41,17 @@ const Article = () => {
                 <Paragraph>
                   <Paragraph>
                     Erinnerin Sie sich an kontextfreie Grammatiken? Das waren formale Grammatiken wie zum Beispiel
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\rightarrow Tc \\
                     T&amp;\rightarrow TaTb \\
                     T&amp;\rightarrow \epsilon
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Diese Grammatiken erlauben uns, gewisse Sprachen zu beschreiben, indem Sie Regeln festlegen -
                     hier
                     {" "}
@@ -55,10 +61,16 @@ const Article = () => {
                     genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
                     Alphabet
                     (hier: \(\&#123;a,b,c\&#125;\)) ableiten kann. Beispielsweise:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S \Rightarrow Tc \Rightarrow TaTbc \Rightarrow TaTaTbbc \Rightarrow
                     TaTabbc \Rightarrow Taabbc \Rightarrow aabbc
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Kontextfreie Grammatiken werden zum Beispiel verwendet, um die Syntax von Dateiformaten,
                     Programmiersprachen und manchmal sogar natürlicher Sprachen zu beschreiben. Es wäre daher
                     schön, über gegebene kontextfreie Grammatik möglichst viele Dinge herausfinden zu können.
@@ -112,14 +124,26 @@ const Article = () => {
                       Die Konstruktion ist überraschend einfach. Wir erschaffen ein Startsymbol \(S\)
                       für unsere Grammatik und erstellen zu jeder Kachel \(\alpha : \beta\) die
                       Grammatikregel
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       S&amp;\rightarrow \alpha S \beta^R \ ,
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       wobei \(\beta^R\) das Wort \(\beta\) von rechts nach links gelesen bedeutet, also
                       \((xyz)^R = zyx\). Wir fügen noch eine weitere Regel hinzu:
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       S&amp;\rightarrow \$ \ ,
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       wobei \(\$\) ein neues Zeichen ist, dass nicht in der Symbolmenge des PCP-Puzzles \(P\)
                       enthalten ist.
                     </Paragraph>
@@ -142,39 +166,27 @@ const Article = () => {
                       {" "}
                       Die letzte angewandte Regel muss \(S \rightarrow \$\) sein, und somit hat
                       das abgeleitete Wort die Form
-                      \begin&#123;align*&#125;
-                      \alpha
-                      <i>
-                        1 \alpha
-                      </i>
-                      2 \dots \alpha
-                      <i>
-                        n \$ \beta
-                      </i>
-                      n^R \dots \beta
-                      <i>
-                        2^R \beta
-                      </i>
-                      1^R \ .
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \alpha_1 \alpha_2 \dots \alpha_n \$ \beta_n^R \dots \beta_2^R \beta_1^R \ .
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Jedes Paar \(\alpha_i : \beta_i\) ist eine Kachel des PCP-Puzzles. Wenn das
                       Wort ein Palindrom ist, dann gilt \(\alpha_1 \dots \alpha_n = \beta_1 \dots \beta_n\)
                       und somit ist
-                      \begin&#123;align*&#125;
-                      (\alpha
-                      <i>
-                        1 : \beta
-                      </i>
-                      1) (\alpha
-                      <i>
-                        2 : \beta
-                      </i>
-                      2)\dots (\alpha
-                      <i>
-                        n : \beta
-                      </i>
-                      n)
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      (\alpha_1 : \beta_1) (\alpha_2 : \beta_2)\dots (\alpha_n : \beta_n)
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       eine Lösung des PCP-Puzzles.
                     </Paragraph>
                     <span class="qed">
@@ -199,83 +211,41 @@ const Article = () => {
                       </b>
                       {" "}
                       Sei
-                      \begin&#123;align*&#125;
-                      (\alpha
-                      <i>
-                        1 : \beta
-                      </i>
-                      1) (\alpha
-                      <i>
-                        2 : \beta
-                      </i>
-                      2)\dots (\alpha
-                      <i>
-                        n : \beta
-                      </i>
-                      n)
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      (\alpha_1 : \beta_1) (\alpha_2 : \beta_2)\dots (\alpha_n : \beta_n)
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       eine Lösung des Puzzles, also \(\alpha_1 \alpha_2 \dots \alpha_n = \beta_1 \beta_2 \dots
                       \beta_n \).
                       Dann ist auch
-                      \begin&#123;align*&#125;
-                      \alpha
-                      <i>
-                        1 \alpha
-                      </i>
-                      2 \dots \alpha
-                      <i>
-                        n \$ (\beta
-                      </i>
-                      1 \beta
-                      <i>
-                        2 \dots \beta
-                      </i>
-                      n)^R
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \alpha_1 \alpha_2 \dots \alpha_n \$ (\beta_1 \beta_2 \dots \beta_n)^R
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       ein Palindrom und kann von \(G\) abgeleitet werden:
-                      \begin&#123;align*&#125;
-                      S \Rightarrow \alpha
-                      <i>
-                        1 S \beta
-                      </i>
-                      1^R \Rightarrow \alpha
-                      <i>
-                        1 \alpha
-                      </i>
-                      2 S \beta
-                      <i>
-                        2^R \beta
-                      </i>
-                      1^R
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      S \Rightarrow \alpha_1 S \beta_1^R \Rightarrow \alpha_1 \alpha_2 S \beta_2^R \beta_1^R
                       \Rightarrow
                       \dots \Rightarrow
-                      \alpha
-                      <i>
-                        1 \alpha
-                      </i>
-                      2 \dots \alpha
-                      <i>
-                        n S \beta
-                      </i>
-                      n^R \dots \beta
-                      <i>
-                        2^R \beta
-                      </i>
-                      1^R \Rightarrow
-                      \alpha
-                      <i>
-                        1 \alpha
-                      </i>
-                      2 \dots \alpha
-                      <i>
-                        n \$ \beta
-                      </i>
-                      n^R \dots \beta
-                      <i>
-                        2^R \beta
-                      </i>
-                      1^R
-                      \end&#123;align*&#125;
+                      \alpha_1 \alpha_2 \dots \alpha_n S \beta_n^R \dots \beta_2^R \beta_1^R \Rightarrow
+                      \alpha_1 \alpha_2 \dots \alpha_n \$ \beta_n^R \dots \beta_2^R \beta_1^R
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Somit ist gezeigt, dass \(G\) ein Palindromwort ableiten kann.
                     </Paragraph>
                     <span class="qed">
@@ -347,25 +317,25 @@ const Article = () => {
                       Reduktion von \(L_1\) nach \(L_2\)
                     </i>
                     ist eine Turing-berechenbare Funktion
-                    \begin&#123;align*&#125;
-                    f : \Sigma
-                    <i>
-                      1^* \rightarrow \Sigma
-                    </i>
-                    2^
-                    <b>
-                      {" "}
-                      \end&#123;align
-                    </b>
-                    &#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    f : \Sigma_1^* \rightarrow \Sigma_2^*
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     mit der Eigenschaft, dass
-                    \begin&#123;align*&#125;
-                    \forall x \in \Sigma
-                    <i>
-                      1^*: \ x \in L
-                    </i>
-                    1 \Leftrightarrow f(x) \in L_2 \ .
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \forall x \in \Sigma_1^*: \ x \in L_1 \Leftrightarrow f(x) \in L_2 \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <Paragraph>
@@ -402,23 +372,17 @@ const Article = () => {
                     Wir rufen nun die Turing-Maschien \(M_2\) mit dem Eingabewort \(f(x)\) auf.
                     Wenn \(M_2\) akzeptiert (oder eben ablehnt), dann lassen wir \(M_1\) akzeptieren (oder eben
                     ablehnen). Es gilt nun:
-                    \begin&#123;align*&#125;
-                    M
-                    <i>
-                      1(x) = \texttt&#123;accept&#125;&amp;\Leftrightarrow M
-                    </i>
-                    2(f(x)) = \texttt&#123;accept&#125; \\
-                    &amp;\Leftrightarrow f(x) \in L
-                    <i>
-                      2 \tag&#123;weil $M
-                    </i>
-                    2$ die Sprache $L
-                    <i>
-                      2$ entscheidet&#125; \\
-                      &amp;\Leftrightarrow x \in L
-                    </i>
-                    1 \tag&#123;weil $f$ eine Reduktion ist&#125;
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    M_1(x) = \texttt&#123;accept&#125;&amp;\Leftrightarrow M_2(f(x)) = \texttt&#123;accept&#125; \\
+                    &amp;\Leftrightarrow f(x) \in L_2 \tag&#123;weil $M_2$ die Sprache $L_2$ entscheidet&#125; \\
+                    &amp;\Leftrightarrow x \in L_1 \tag&#123;weil $f$ eine Reduktion ist&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     und somit entscheidet \(M_1\) die Sprache \(L_1\).
                   </Paragraph>
                   <span class="qed">
@@ -537,11 +501,17 @@ const Article = () => {
                     Problem).
                     Sei \(G\) eine Grammatik und \(\Sigma\) die Menge der Terminalsymbole. Sei \(G'\) die
                     folgende Grammatik:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S'&amp;\rightarrow x S' x \tag&#123; für alle \(x \in \Sigma\) &#125;\\
                     S'&amp;\rightarrow x \tag&#123; für alle \(x \in \Sigma\) &#125;\\
                     S'&amp;\rightarrow \epsilon
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Die Grammatik \(G'\) erzeugt genau die Sprache der Palindromwörter über \(\Sigma\).
                     Unsere Reduktion \(f\) nimmt nun als Eingabe eine kontextfreie Grammatik \(G\) (bzw. deren
                     Codierung) und gibt das Paar \((G,G')\) aus (bzw. deren Codierungen). Wir stellen fest:
@@ -584,30 +554,30 @@ const Article = () => {
                     \(N_2\) disjunkt (wenn sie es nicht eh schon sind; wir können beispielsweise jedes \(X \in N_2\)
                     in
                     \(X'\) umbenennen). Dann führen wir ein Super-Startsymbol \(S\) ein und zwei Produktionen:
-                    \begin&#123;align*&#125;
-                    S&amp;\rightarrow S
-                    <i>
-                      1 \\
-                      S&amp;\rightarrow S
-                    </i>
-                    2
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    S&amp;\rightarrow S_1 \\
+                    S&amp;\rightarrow S_2
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     und übernehmen alle Produktionen von \(G_1\) und \(G_2\). Dies ist unsere neue Grammatik \(G\).
                     Sie sehen nun:
                     wenn es ein \(x \in L(G_1) \cap L(G_2)\) gibt, dann kann man \(x\) auf zwei verschiedene
                     Weisen in \(G\) ableiten, nämlich
-                    \begin&#123;align*&#125;
-                    S&amp;\Rightarrow S
-                    <i>
-                      1 \Rightarrow^* x \tag&#123;Ableitung wie in $G
-                    </i>
-                    1$&#125; \\
-                    S&amp;\Rightarrow S
-                    <i>
-                      2 \Rightarrow^* x \tag&#123;Ableitung wie in $G
-                    </i>
-                    2$&#125; \ ,
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    S&amp;\Rightarrow S_1 \Rightarrow^* x \tag&#123;Ableitung wie in $G_1$&#125; \\
+                    S&amp;\Rightarrow S_2 \Rightarrow^* x \tag&#123;Ableitung wie in $G_2$&#125; \ ,
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     und das sind wirklich zwei verschiedene Ableitungen, weil ja bereits \(S_1 \ne S_2\).
                     Wenn nun umgekehrt ein Wort \(y\) via \(S_1\) und via \(S_2\) ableitbar sein sollte
                     (\(G\) also mehrdeutig sein sollte), dann bedeutet dies, dass \(G_1\) und \(G_2\) beide
@@ -631,10 +601,16 @@ const Article = () => {
                     reduzieren.
                     Problematisch ist, dass ein PCP-Puzzle selbst mehrere Lösungen haben kann und auch für
                     ein Lösungswort \(\gamma\) es mehrere Möglichkeiten geben kann, es zu "legen", also
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \top(s)&amp;= \bottom(s) = \gamma \\
                     \top(s')&amp;= \bottom(s') = \gamma \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Wenn dem so wäre, dann würde bereits unsere Reduktion auf das Palindromwortproblem eine
                     mehrdeutige Grammatik erzeugen. Wir gehen einen anderen Weg.
                     Ich folge hier dem Tip in Exercise 5.21 aus
@@ -657,32 +633,18 @@ const Article = () => {
                     ob er das Wort via die oberen Teile \(\alpha_i\) oder via die unteren Teile ableiten will;
                     wenn es auf beide Weisen geht, dann ist die Grammatik mehrdeutig und das PCP hat eine Lösung.
                     Also:
-                    \begin&#123;align*&#125;
-                    S&amp;\rightarrow S
-                    <i>
-                      1 \\
-                      S&amp;\rightarrow S
-                    </i>
-                    2 \\
-                    S
-                    <i>
-                      1&amp;\rightarrow \alpha
-                    </i>
-                    i S
-                    <i>
-                      1 i \ | \ \alpha
-                    </i>
-                    i i \tag&#123;für alle oberen Teile \(\alpha_i\)&#125; \\
-                    S
-                    <i>
-                      2&amp;\rightarrow \beta
-                    </i>
-                    i S
-                    <i>
-                      2 i \ | \ \beta
-                    </i>
-                    i i \tag&#123;für alle unteren Teile \(\beta_i\)&#125;
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    S&amp;\rightarrow S_1 \\
+                    S&amp;\rightarrow S_2 \\
+                    S_1&amp;\rightarrow \alpha_i S_1 i \ | \ \alpha_i i \tag&#123;für alle oberen Teile \(\alpha_i\)&#125; \\
+                    S_2&amp;\rightarrow \beta_i S_2 i \ | \ \beta_i i \tag&#123;für alle unteren Teile \(\beta_i\)&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     wobei \(1, 2, \dots, n\) neue Symbole sind. Die Indizes \(i\) stellen sicher,
                     dass jede von \(S_1\) ausgehende Ableitung eindeutig ist (und genau so von \(S_2\));
                     die einzige Mehrdeutigkeit kann aufkommen, wenn ein Wort sowohl via \(S_1\) als

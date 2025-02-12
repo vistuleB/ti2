@@ -207,8 +207,14 @@ const Article = () => {
                         \times B$:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; \mathcal&#123;M&#125; := \&#123; R \subseteq A \times B \ | \ R
-                    \textnormal&#123; ist ein Matching&#125;\&#125; \ . \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; \mathcal&#123;M&#125; := \&#123; R \subseteq A \times B \ | \ R
+                    \textnormal&#123; ist ein Matching&#125;\&#125; \ . \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -282,7 +288,13 @@ const Article = () => {
                           wenn
                         </Paragraph>
                       </Paragraph>
-                      \begin&#123;align*&#125; s \leq x \quad \forall s \in S \end&#123;align*&#125;
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; s \leq x \quad \forall s \in S \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>
@@ -345,7 +357,13 @@ const Article = () => {
                           1$. Dann ist
                         </Paragraph>
                       </Paragraph>
-                      \begin&#123;align*&#125; \bigcup_&#123;M \in S&#125; M \end&#123;align*&#125;
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; \bigcup_&#123;M \in S&#125; M \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>

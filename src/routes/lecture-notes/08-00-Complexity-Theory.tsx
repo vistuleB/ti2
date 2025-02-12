@@ -154,10 +154,16 @@ const Article = () => {
                         Wir definieren nun
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \TIME_k(t) := \&#123;L \subseteq \Sigma^* \ | \
                     \textnormal&#123;es gibt eine $k$-Band-TM $M$, die $L$ in Zeit $t$ entscheidet&#125;\&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -165,13 +171,15 @@ const Article = () => {
                         und schließlich
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    \TIME(t) := \bigcup
-                    <i>
-                      &#123;k \geq 1&#125; \TIME
-                    </i>
-                    k(t) \ .
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \TIME(t) := \bigcup_&#123;k \geq 1&#125; \TIME_k(t) \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <Paragraph>

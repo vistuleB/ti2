@@ -54,14 +54,26 @@ const Article = () => {
                       Die Basisfunktionen sind:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \zero:&\N^* \rightarrow \N \\
                   \vec&#123;x&#125;&amp;\mapsto 0
-                  \end&#123;align*&#125;
-                  \begin&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \succ: \N&amp;\rightarrow \N \\
                   x&amp;\mapsto x+1
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -89,26 +101,30 @@ const Article = () => {
                       Eine weitere Klasse von "offensichtlich" berechenbaren Funktionen sind die sogenannten
                       Projektionen
                       \(\pi^n_k\), definiert als
-                      \begin&#123;align*&#125;
-                      \pi^n
-                      <i>
-                        k : \N^n&amp;\rightarrow \N \\
-                        \vec&#123;x&#125;&amp;\mapsto x
-                      </i>
-                      k \ .
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \pi^n_k : \N^n&amp;\rightarrow \N \\
+                      \vec&#123;x&#125;&amp;\mapsto x_k \ .
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Irgendwie sollte auch hier klar sein, dass die Vorschrift "gib von den 3 Argumenten, die Du
                       erhältst, das erste zurück" ohne Zweifel "berechenbar" ist.
                       Weil wir bald alles in einem Python-Framework implementieren werden, sei angemerkt,
                       dass ich die Zählung der Indizes bei 0 beginnen lasse, also zum Beispiel
-                      \begin&#123;align*&#125;
-                      \pi^3
-                      <i>
-                        0: (x,y,z) \mapsto x \\
-                        \pi^3
-                      </i>
-                      1: (x,y,z) \mapsto y \ .
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \pi^3_0: (x,y,z) \mapsto x \\
+                      \pi^3_1: (x,y,z) \mapsto y \ .
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Auch die Stelligkeit \(n\) lasse ich oft weg und schreibe einfach \(\pi_k\) statt \(\pi^n_k\).
                     </Paragraph>
                   </Paragraph>
@@ -133,14 +149,16 @@ const Article = () => {
                     Sei \(f: \N^k \rightarrow \N\) und
                     \(g_1, \dots, g_k: \N^l \rightarrow \N\). Dann ist
                     \(\comp(f, g_1, \dots, g_k)\) die Funktion
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \N^l&amp;\rightarrow \N \\
-                    \vec&#123;x&#125;&amp;\mapsto f(g
-                    <i>
-                      1(\vec&#123;x&#125;), \dots, g
-                    </i>
-                    k(\vec&#123;x&#125;))
-                    \end&#123;align*&#125;
+                    \vec&#123;x&#125;&amp;\mapsto f(g_1(\vec&#123;x&#125;), \dots, g_k(\vec&#123;x&#125;))
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Graphisch können Sie sich Komposition so vorstellen:
                   </Paragraph>
                   <figure>
@@ -169,13 +187,19 @@ const Article = () => {
                     {" "}
                     Seien \(g: \N^k \rightarrow \N\) und \(h: \N^&#123;k+2&#125; \rightarrow \N\). Wir
                     definieren eine neue Funktion $f: \N^&#123;k+1&#125; \rightarrow \N$ wie folgt:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     f : \N^&#123;k+1&#125;&amp;\rightarrow \N \\
                     (t, \vec&#123;x&#125;)&amp;\rightarrow \begin&#123;cases&#125;
                     g(\vec&#123;x&#125;)&amp;\textnormal&#123; if $t=0$&#125; \\
                     h(f(t-1, \vec&#123;x&#125;), t-1, \vec&#123;x&#125;)&amp;\textnormal&#123; if $t \geq 1$&#125;.
                     \end&#123;cases&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Für diese Konstruktion schreiben wir kompakt
                     \(f := \primrec(g,h)\).
                   </Paragraph>
@@ -249,10 +273,16 @@ const Article = () => {
                     Diese Datei stellt ein Framework für die Implementierung primitiv rekursiver Funktionen zur
                     Verfügung.
                     Insbesondere implementiert sie die folgenden Funktion \(\N^k \rightarrow \N\):
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     &#123;\rm zero&#125;:&amp;\vec&#123;x&#125; \mapsto 0 \\
                     &#123;\rm succ&#125;:&amp;x \mapsto x+1
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     als "übliche" Python-Funktionen. Darüberhinaus implementiert sie die folgenden
                     Kombinatoren, welche Ihnen nach den
                     Regeln der primitiven Rekursion neue Funktionen erstellt:
@@ -260,32 +290,28 @@ const Article = () => {
                   <ul>
                     <li>
                       `Proj(k)`: erzeugt die Funktion
-                      \begin&#123;align*&#125;
-                      \pi
-                      <i>
-                        k : \N^*&amp;\rightarrow \N \\
-                        \vec&#123;x&#125;&amp;\mapsto x
-                      </i>
-                      k \ .
-                      \end&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
+                      \pi_k : \N^*&amp;\rightarrow \N \\
+                      \vec&#123;x&#125;&amp;\mapsto x_k \ .
+                      \end&#123;align*&#125;$$
                     </li>
                     <li>
                       `Comp(f, g0, g1, ...)`: erzeugt die Funktion
-                      \begin&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
                       \vec&#123;x&#125; \mapsto f(g0(x), g1(x), ...)
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
                       Sie als User müssen sicherstellen, dass die Stelligkeit von \(f\) mit der Anzahl der als
                       \(g_i\) übergebenen Funktionen
                       übereinstimmt.
                     </li>
                     <li>
                       `PrimRec(g,h)`: erzeugt die Funktion
-                      \begin&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
                       (t, \vec&#123;x&#125;) \mapsto \begin&#123;cases&#125;
                       g(\vec&#123;x&#125;)&amp;\textnormal&#123; if $t=0$,&#125; \\
                       h(f(t-1, \vec&#123;x&#125;), t-1, \vec&#123;x&#125;)&amp;\textnormal&#123; if $t \geq 1$.&#125;
                       \end&#123;cases&#125;
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
                     </li>
                   </ul>
                   <Paragraph>
@@ -329,20 +355,22 @@ const Article = () => {
                         zu machen.
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     &#123;\rm add&#125;(t,x)&amp;= \begin&#123;cases&#125;
                     x&amp;\textnormal&#123; if $t=0$&#125; \\
                     &#123;\rm succ&#125;(&#123;\rm add&#125;(t-1,x))&amp;\textnormal&#123; if $t \geq 1$.&#125;
                     \end&#123;cases&#125; \\
                     &amp;= \begin&#123;cases&#125;
-                    \pi
-                    <i>
-                      0(x)&amp;\textnormal&#123; if $t=0$&#125; \\
-                      &#123;\rm succ&#125;(\pi
-                    </i>
-                    0(&#123;\rm add&#125;(t-1,x), t-1, x))&amp;\textnormal&#123; if $t \geq 1$.&#125;
+                    \pi_0(x)&amp;\textnormal&#123; if $t=0$&#125; \\
+                    &#123;\rm succ&#125;(\pi_0(&#123;\rm add&#125;(t-1,x), t-1, x))&amp;\textnormal&#123; if $t \geq 1$.&#125;
                     \end&#123;cases&#125; \\
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>

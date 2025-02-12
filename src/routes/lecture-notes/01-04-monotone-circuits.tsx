@@ -569,14 +569,16 @@ const Article = () => {
                             Funktionen \(\textnormal&#123;zero&#125;_n\) definieren als
                           </Paragraph>
                         </Paragraph>
-                        \begin&#123;align*&#125;
-                        \textnormal&#123;zero&#125;
-                        <i>
-                          n&amp;: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125; \\
-                          (x
-                        </i>
-                        1,\dots,x_n)&amp;\mapsto 0 \ .
-                        \end&#123;align*&#125;
+                        {" "}{" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
+                        \textnormal&#123;zero&#125;_n&amp;: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125; \\
+                        (x_1,\dots,x_n)&amp;\mapsto 0 \ .
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}{" "}
                       </Paragraph>
                       <Paragraph>
                         <Paragraph>
@@ -657,30 +659,16 @@ const Article = () => {
                         Im vorliegenden Falle ist es aber recht klar, welche Zerlegung in Frage kommt.
                         Wir definieren zwei neue, "kleinere" Funktionen
                         \(f_0, f_1: \&#123;0,1\&#125;^&#123;n-1&#125; \rightarrow \&#123;0,1\&#125;\) per
-                        \begin&#123;align*&#125;
-                        f
-                        <i>
-                          0 (x
-                        </i>
-                        2, \dots, x
-                        <i>
-                          n)&amp;:= f(0, x
-                        </i>
-                        2, \dots, x
-                        <i>
-                          n) \\
-                          f
-                        </i>
-                        1 (x
-                        <i>
-                          2, \dots, x
-                        </i>
-                        n)&amp;:= f(1, x
-                        <i>
-                          2, \dots, x
-                        </i>
-                        n) \ .
-                        \end&#123;align*&#125;
+                        {" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
+                        f_0 (x_2, \dots, x_n)&amp;:= f(0, x_2, \dots, x_n) \\
+                        f_1 (x_2, \dots, x_n)&amp;:= f(1, x_2, \dots, x_n) \ .
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}
                         In anderen Worten, wir fixieren das erste Input-Bit auf einen konstanten Wert und
                         erhalten so
                         eine Funktion in \(n-1\) Variablen.
@@ -794,30 +782,16 @@ const Article = () => {
                       in
                       zwei neue, "kleinere" Funktionen
                       \(f_0, f_1: \&#123;0,1\&#125;^&#123;n-1&#125; \rightarrow \&#123;0,1\&#125;\) per
-                      \begin&#123;align*&#125;
-                      f
-                      <i>
-                        0 (x
-                      </i>
-                      2, \dots, x
-                      <i>
-                        n)&amp;:= f(0, x
-                      </i>
-                      2, \dots, x
-                      <i>
-                        n) \\
-                        f
-                      </i>
-                      1 (x
-                      <i>
-                        2, \dots, x
-                      </i>
-                      n)&amp;:= f(1, x
-                      <i>
-                        2, \dots, x
-                      </i>
-                      n) \ .
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      f_0 (x_2, \dots, x_n)&amp;:= f(0, x_2, \dots, x_n) \\
+                      f_1 (x_2, \dots, x_n)&amp;:= f(1, x_2, \dots, x_n) \ .
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Diese Funktionen sind selbst wiederum monoton (versuchen Sie, dies formal zu zeigen,
                       wenn Sie Lust haben; oder versuchen Sie, es sich intuitiv klar zu machen).
                       Per Induktionshypothese gibt es also monotone Schaltkreise für \(f_0\) und \(f_1\). Wir
@@ -946,109 +920,37 @@ const Article = () => {
                     <ul>
                       <li>
                         Der Fall \(x_1 = 0\). Dann gilt
-                        \begin&#123;align*&#125;
-                        f(x
-                        <i>
-                          1,x
-                        </i>
-                        2,\dots,x
-                        <i>
-                          n)&amp;= f(0,x
-                        </i>
-                        2,\dots,x
-                        <i>
-                          n) \tag&#123;da $x
-                        </i>
-                        1=0$&#125; \\
-                        &amp;= f
-                        <i>
-                          0 (x
-                        </i>
-                        2, \dots,x
-                        <i>
-                          n) \tag&#123;Definition von $f
-                        </i>
-                        2$&#125; \\
-                        &amp;= (0 \wedge f
-                        <i>
-                          1) \vee f
-                        </i>
-                        0 \tag&#123;die 0 tötet den ersten Term eh&#125;\\
-                        &amp;= (x
-                        <i>
-                          1 \wedge f
-                        </i>
-                        1) \vee f
-                        <i>
-                          0 \tag&#123;weil $x
-                        </i>
-                        1 = 0$&#125; \ ,
-                        \end&#123;align*&#125;
+                        $$\begin&#123;align*&#125;
+                        f(x_1,x_2,\dots,x_n)&amp;= f(0,x_2,\dots,x_n) \tag&#123;da $x_1=0$&#125; \\
+                        &amp;= f_0 (x_2, \dots,x_n) \tag&#123;Definition von $f_2$&#125; \\
+                        &amp;= (0 \wedge f_1) \vee f_0 \tag&#123;die 0 tötet den ersten Term eh&#125;\\
+                        &amp;= (x_1 \wedge f_1) \vee f_0 \tag&#123;weil $x_1 = 0$&#125; \ ,
+                        \end&#123;align*&#125;$$
                         und die behauptete Gleichung gilt.
                       </li>
                       <li>
                         Der Fall \(x_1 = 1\). Dann gilt
-                        \begin&#123;align*&#125;
-                        f(x
-                        <i>
-                          1,\dots,x
-                        </i>
-                        n)&amp;= f
-                        <i>
-                          1(x
-                        </i>
-                        2,\dots,x
-                        <i>
-                          n) \ .
-                          \end&#123;align*&#125;
-                          Was ist aber mit der rechten Seite der behaupteten Gleichung?
-                          \begin&#123;align*&#125;
-                          (x
-                        </i>
-                        1 \wedge f
-                        <i>
-                          1) \vee f
-                        </i>
-                        0&amp;= f
-                        <i>
-                          1 \vee f
-                        </i>
-                        0 \tag&#123;da $x
-                        <i>
-                          1=1$ ist und somit im $\wedge$
-                          wegfällt&#125;
-                          \end&#123;align*&#125;
-                          Die linke Seite ist also \(f_1\), die rechte ist \(f_1 \vee f_0\). Schaut leider
-                          nicht
-                          gleich aus.
-                          Jetzt sollten bei Ihnen die Glocken klingeln: wir haben bisher an keiner Stelle
-                          im Beweis verwendet, dass \(f\) eine monotone Funktion ist! Und wenn wir das nicht
-                          verwendet
-                          haben, kann der Beweis ja gar nicht funktionieren. Also: verwenden wir Monotonität:
-                          \begin&#123;align*&#125;
-                          (0, x
-                        </i>
-                        2, \dots,x
-                        <i>
-                          n)&amp;\leq (1, x
-                        </i>
-                        2, \dots,x
-                        <i>
-                          n) \tag&#123;Definition unser Partialordnung,
-                          &#125; \\
-                          f(0, x
-                        </i>
-                        2, \dots,x
-                        <i>
-                          n)&amp;\leq f(1, x
-                        </i>
-                        2, \dots,x
-                        <i>
-                          n) \tag&#123;weil $f$ monoton ist.&#125; \\
-                          f
-                        </i>
-                        0&amp;\leq f_1 \ .
-                        \end&#123;align*&#125;
+                        $$\begin&#123;align*&#125;
+                        f(x_1,\dots,x_n)&amp;= f_1(x_2,\dots,x_n) \ .
+                        \end&#123;align*&#125;$$
+                        Was ist aber mit der rechten Seite der behaupteten Gleichung?
+                        $$\begin&#123;align*&#125;
+                        (x_1 \wedge f_1) \vee f_0&amp;= f_1 \vee f_0 \tag&#123;da $x_1=1$ ist und somit im $\wedge$
+                        wegfällt&#125;
+                        \end&#123;align*&#125;$$
+                        Die linke Seite ist also \(f_1\), die rechte ist \(f_1 \vee f_0\). Schaut leider
+                        nicht
+                        gleich aus.
+                        Jetzt sollten bei Ihnen die Glocken klingeln: wir haben bisher an keiner Stelle
+                        im Beweis verwendet, dass \(f\) eine monotone Funktion ist! Und wenn wir das nicht
+                        verwendet
+                        haben, kann der Beweis ja gar nicht funktionieren. Also: verwenden wir Monotonität:
+                        $$\begin&#123;align*&#125;
+                        (0, x_2, \dots,x_n)&amp;\leq (1, x_2, \dots,x_n) \tag&#123;Definition unser Partialordnung,
+                        &#125; \\
+                        f(0, x_2, \dots,x_n)&amp;\leq f(1, x_2, \dots,x_n) \tag&#123;weil $f$ monoton ist.&#125; \\
+                        f_0&amp;\leq f_1 \ .
+                        \end&#123;align*&#125;$$
                         Wir überprüfen nun also: wenn \(f_0(x_2, \dots, x_n) = 0\) ist, dann
                         gilt \(f_0 \vee f_1 = 0 \vee f_1 = f_1\). Wenn
                         \(f_0 = 1\) ist, dann ist \(f_1 = 1\) wegen Monotonität (größer als 1 geht ja
@@ -1067,13 +969,15 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Wir haben nun also gezeigt, dass für jeden Input \(x_1,\dots,x_n\) gilt:
-                      \begin&#123;align*&#125;
-                      f = (x
-                      <i>
-                        1 \wedge f
-                      </i>
-                      1) \vee f_0 \ ,
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      f = (x_1 \wedge f_1) \vee f_0 \ ,
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       (wobei wir aus Gründen der Lesbarkeit statt \(f(x_1,\dots,x_n)\) einfach \(f\) schreiben);
                       per Induktion können wir für \(f_1, f_0\) monotone Schaltkreise finden, und somit ist
                     </Paragraph>
@@ -1121,58 +1025,54 @@ const Article = () => {
                         Um den Term genau zu beschreiben, definieren wir
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    I
-                    <i>
-                      &#123;\mathbf&#123;a&#125;&#125;&amp;:= \&#123; i \in \&#123;1,\dots, n\&#125; \ | \ a
-                    </i>
-                    i = 1 \&#125; \\
-                    O
-                    <i>
-                      &#123;\mathbf&#123;a&#125;&#125;&amp;:= \&#123; i \in \&#123;1,\dots, n\&#125; \ | \ a
-                    </i>
-                    i = 0 \&#125; \ .
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    I_&#123;\mathbf&#123;a&#125;&#125;&amp;:= \&#123; i \in \&#123;1,\dots, n\&#125; \ | \ a_i = 1 \&#125; \\
+                    O_&#123;\mathbf&#123;a&#125;&#125;&amp;:= \&#123; i \in \&#123;1,\dots, n\&#125; \ | \ a_i = 0 \&#125; \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Als Beispiel: wenn \(n=5\) und \(\mathbf&#123;a&#125; = (10010)\), dann ist
                     \(I_&#123;\mathbf&#123;a&#125;&#125; = \&#123;1,4\&#125;\) und \(I_&#123;\mathbf&#123;a&#125;&#125; = \&#123;2,3,5\&#125;\). Wir definieren
-                    \begin&#123;align*&#125;
-                    T
-                    <i>
-                      &#123;\mathbf&#123;a&#125;&#125;&amp;:= \bigwedge
-                    </i>
-                    &#123;i \in I
-                    <i>
-                      &#123;\mathbf&#123;a&#125;&#125;&#125; x
-                    </i>
-                    i \wedge
-                    \bigwedge
-                    <i>
-                      &#123;i \in O
-                    </i>
-                    &#123;\mathbf&#123;a&#125;&#125;&#125; \bar&#123;x&#125;
-                    <i>
-                      i \ .
-                      \end&#123;align*&#125;
-                      Für \(\mathbf&#123;a&#125; = (10010)\) gibt das also \(x_1 \wedge x_4 \wedge \bar&#123;x&#125;_2 \wedge
-                      \bar&#123;x&#125;_3 \wedge \bar&#123;x&#125;_5\).
-                      Noch kompakter kann man es hinschreiben, wenn man für eine Variable
-                      \(x\) und einen Wert \(b \in \&#123;0,1\&#125;\) folgendes definiert:
-                      \begin&#123;align*&#125;
-                      x^&#123;b&#125;&amp;:= \begin&#123;cases&#125;
-                      x&amp;\textnormal&#123; if $b=1$,&#125;\\
-                      \bar&#123;x&#125;&amp;\textnormal&#123; if $b=0$.&#125;
-                      \end&#123;cases&#125;
-                      \end&#123;align*&#125;
-                      Dann können wir \(T_&#123;\mathbf&#123;a&#125;&#125;\) einfach als
-                      \begin&#123;align*&#125;
-                      T
-                    </i>
-                    &#123;\mathbf&#123;a&#125;&#125; = \bigwedge
-                    <i>
-                      &#123;i=1&#125;^n x
-                    </i>
-                    i^&#123;a_i&#125;
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    T_&#123;\mathbf&#123;a&#125;&#125;&amp;:= \bigwedge_&#123;i \in I_&#123;\mathbf&#123;a&#125;&#125;&#125; x_i \wedge
+                    \bigwedge_&#123;i \in O_&#123;\mathbf&#123;a&#125;&#125;&#125; \bar&#123;x&#125;_i \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
+                    Für \(\mathbf&#123;a&#125; = (10010)\) gibt das also \(x_1 \wedge x_4 \wedge \bar&#123;x&#125;_2 \wedge
+                    \bar&#123;x&#125;_3 \wedge \bar&#123;x&#125;_5\).
+                    Noch kompakter kann man es hinschreiben, wenn man für eine Variable
+                    \(x\) und einen Wert \(b \in \&#123;0,1\&#125;\) folgendes definiert:
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    x^&#123;b&#125;&amp;:= \begin&#123;cases&#125;
+                    x&amp;\textnormal&#123; if $b=1$,&#125;\\
+                    \bar&#123;x&#125;&amp;\textnormal&#123; if $b=0$.&#125;
+                    \end&#123;cases&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
+                    Dann können wir \(T_&#123;\mathbf&#123;a&#125;&#125;\) einfach als
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    T_&#123;\mathbf&#123;a&#125;&#125; = \bigwedge_&#123;i=1&#125;^n x_i^&#123;a_i&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     definieren, für \(\mathbf&#123;a&#125; = (10010)\) also
                     \(x_1^1 \wedge x_2^0 \wedge x_3^0 \wedge x_4^1 \wedge x_5^0 =
                     x_1 \wedge \bar&#123;x&#125;_2 \wedge \bar&#123;x&#125;_3 \wedge x_4 \wedge \bar&#123;x&#125;_5\). Das gibt den gleichen
@@ -1202,13 +1102,15 @@ const Article = () => {
                         Wir bauen uns einen Schaltkreis \(F\):
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    F := \bigvee
-                    <i>
-                      &#123;\mathbf&#123;a&#125; \in \sat(f)&#125; T
-                    </i>
-                    &#123;\mathbf&#123;a&#125;&#125;
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    F := \bigvee_&#123;\mathbf&#123;a&#125; \in \sat(f)&#125; T_&#123;\mathbf&#123;a&#125;&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Dies ist eine DNF-Formel, also insbesondere ein Schaltkreis der Tiefe 2; wir sehen,
                     dass \(F \equiv f\) ist, dieser Schaltkreis (diese Formel) also die Funktion \(f\)
                     berechnet.
@@ -1392,19 +1294,17 @@ const Article = () => {
                         \(F = \bigvee_&#123;\mathbf&#123;a&#125; \in \sat(f)&#125; T_&#123;\mathbf&#123;a&#125;&#125; \) gilt, liegt der
                         Verdacht nahe, dass der entsprechende Term
                         \( T_&#123;\mathbf&#123;a&#125;^*&#125;\) auch 1 ausgibt. Das Problem ist leider, dass
-                        \begin&#123;align*&#125;
-                        T
-                        <i>
-                          &#123;\mathbf&#123;a&#125;^*&#125;(\mathbf&#123;x&#125;)&amp;= T'
-                        </i>
-                        &#123;\mathbf&#123;a&#125;^*&#125;(\mathbf&#123;x&#125;) \wedge
-                        T''
-                        <i>
-                          &#123;\mathbf&#123;a&#125;^*&#125;(\mathbf&#123;x&#125;) \\
-                          &amp;= 1 \wedge \bigwedge
-                        </i>
-                        &#123;i \in O(\mathbf&#123;a&#125;^*)&#125; \bar&#123;x&#125;_i \ .
-                        \end&#123;align*&#125;
+                        {" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
+                        T_&#123;\mathbf&#123;a&#125;^*&#125;(\mathbf&#123;x&#125;)&amp;= T'_&#123;\mathbf&#123;a&#125;^*&#125;(\mathbf&#123;x&#125;) \wedge
+                        T''_&#123;\mathbf&#123;a&#125;^*&#125;(\mathbf&#123;x&#125;) \\
+                        &amp;= 1 \wedge \bigwedge_&#123;i \in O(\mathbf&#123;a&#125;^*)&#125; \bar&#123;x&#125;_i \ .
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}
                         Wir wissen also, dass \(x_i=1\) für alle \(i \in I(\mathbf&#123;a&#125;^*)\) gilt;
                         über die \(i \in O(\mathbf&#123;a&#125;^*)\) wissen wir leider nichts.
                         Was hätten wir denn gerne? Wir hätten gerne, dass

@@ -52,19 +52,31 @@ const Article = () => {
                 <Paragraph>
                   Das folgende Beispiel ist Beispiel 3.22 aus dem Buch von Aho und Ullman.
                   Wir betrachten die klassische kontextfreie Grammatik für arithmetische
-                  Ausdrücke mit Klammerung: \begin&#123;align*&#125; (1)\ E \rightarrow&amp;E + T \\
+                  Ausdrücke mit Klammerung:{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; (1)\ E \rightarrow&amp;E + T \\
                   (2)\ E \rightarrow&amp;T \\ (3)\ T \rightarrow&amp;T * F \\ (4)\ T
                   \rightarrow&amp;F \\ (5)\ F \rightarrow&amp;(E) \\ (6)\ F \rightarrow&amp;a \\
-                  \end&#123;align*&#125; wobei \(E\) das Startsymbol ist. Hier ist ein Beispiel
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}wobei \(E\) das Startsymbol ist. Hier ist ein Beispiel
                   einer Ableitung von \(a * (a+a)\) von der obigen Grammatik.
-                  \begin&#123;align*&#125; E&amp;\stackrel&#123;2&#125;&#123;\Longrightarrow&#125; T
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; E&amp;\stackrel&#123;2&#125;&#123;\Longrightarrow&#125; T
                   \stackrel&#123;3&#125;&#123;\Longrightarrow&#125; T * F \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; F * F
                   \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; a * F&amp;\\&amp;\stackrel&#123;5&#125;&#123;\Longrightarrow&#125;
                   a * (E) \stackrel&#123;1&#125;&#123;\Longrightarrow&#125; a * (E + T)
                   \stackrel&#123;2&#125;&#123;\Longrightarrow&#125; a * (T + T)&amp;\\&
                   \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; a * (F + T) \stackrel&#123;6&#125;&#123;\Longrightarrow&#125;
                   a * (a + T) \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; a * (a + F)
-                  \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; a * (a + a)&amp;\end&#123;align*&#125; Insbesondere
+                  \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; a * (a + a)&amp;\end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}Insbesondere
                   ist es eine{" "}
                   <i>
                     Linksableitung
@@ -88,18 +100,20 @@ const Article = () => {
                       das am weitesten rechts stehende Nichtterminal expandiert wird:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125; E&amp;\stackrel&#123;2&#125;&#123;\Longrightarrow&#125; T
-                  \stackrel&#123;3&#125;&#123;\Longrightarrow&#125; T * F \stackrel&#123;5&#125;&#123;\Longrightarrow&#125; T{" "}
-                  <b>
-                    {" "}
-                    (E) \stackrel&#123;1&#125;&#123;\Longrightarrow&#125; T * (E+T)
-                    \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; T * (E+F)&amp;\\&
-                    \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; T * (E+a) \stackrel&#123;2&#125;&#123;\Longrightarrow&#125; T
-                    {" "}
-                  </b>
-                  {" "}(T + a) \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; T * (F + a)&amp;\\&
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; E&amp;\stackrel&#123;2&#125;&#123;\Longrightarrow&#125; T
+                  \stackrel&#123;3&#125;&#123;\Longrightarrow&#125; T * F \stackrel&#123;5&#125;&#123;\Longrightarrow&#125; T *
+                  (E) \stackrel&#123;1&#125;&#123;\Longrightarrow&#125; T * (E+T)
+                  \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; T * (E+F)&amp;\\&
+                  \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; T * (E+a) \stackrel&#123;2&#125;&#123;\Longrightarrow&#125; T
+                  * (T + a) \stackrel&#123;4&#125;&#123;\Longrightarrow&#125; T * (F + a)&amp;\\&
                   \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; T * (a + a) \stackrel&#123;4&#125;&#123;\Longrightarrow&#125;
-                  F * (a + a) \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; a * (a + a)&amp;\end&#123;align*&#125;
+                  F * (a + a) \stackrel&#123;6&#125;&#123;\Longrightarrow&#125; a * (a + a)&amp;\end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   Rechtsableitungen können auch kompakt als Zahlenfolge repräsentiert
                   werden. Allerdings geben wir Rechtsableitungen immer in umgekehrter
                   Reihenfolge an, also von hinten nach vorne, in diesem Falle also nicht

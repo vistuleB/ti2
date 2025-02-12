@@ -113,10 +113,16 @@ const Article = () => {
                       haben wir das
                       bereits getan:
                       eine Turingmaschine mit Alphabet \(\Sigma\) können wir dort als String über dem Alphabet
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \Sigma \cup \&#123;a,\dots,z,A\dots,Z,0,\dots,9\&#125; \cup \&#123;\texttt&#123;&lt;&#125;, \texttt&#123;-&#125;, \texttt&#123;&gt;&#125;,
                       \texttt&#123;,&#125;, \texttt&#123;_&#125;, \texttt&#123;\n&#125;, \dots\&#125;
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       codieren. Codierung ist im Prinzip kein Problem, wir werden aber ein paar Subtilitäten
                       ansprechen.
                     </Paragraph>
@@ -147,9 +153,15 @@ const Article = () => {
                       als
                       Turingmaschine implementieren kann. Also eine Turingmaschine \(U\), die als Input Wörter der
                       Form
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       c\#x
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       entgegennimmt und dann
                     </Paragraph>
                     <ol class="nested">
@@ -207,13 +219,15 @@ const Article = () => {
                   gibt es keinen Grund, für die Definitionen nicht allgemeine endliche Alphabete \(\Sigma\)
                   zuzulassen. Wir wollen
                   nun ein Codierungsalphabet \(\Lambda\) und eine Codierungsfunktion \(\enc\), so dass
-                  \begin&#123;align*&#125;
-                  \enc(M) \in \Lambda^
-                  <b>
-                    {" "}
-                    \end&#123;align
-                  </b>
-                  &#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  \enc(M) \in \Lambda^*
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   für jede Turingmaschine \(M\) mit Eingabealphabet \(\Sigma\) gilt.
                 </Paragraph>
                 <Paragraph>
@@ -228,19 +242,37 @@ const Article = () => {
                       \(\qstart\), akzeptierendem Zustand
                       \(\qaccept\) und Übergangsfunktion \(\delta\).
                       Wir codieren \(M\) wie folgt: wenn
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \delta(q,x) = (r,y,\texttt&#123;R&#125;) \\
                       \delta(q,y) = (s,z,\texttt&#123;L&#125;) \\
                       \dots
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       dann schreiben wir in der Codierung
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \qstart \# \qaccept \# qxryR \# qyszL \# \dots
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Unser Codierungsalphabet ist also
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \Lambda := Q \cup \Gamma \cup \&#123;\#, \texttt&#123;L&#125;, \texttt&#123;S&#125;, \texttt&#123;R&#125;\&#125; \ .
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Sehen Sie das Problem? Das Codierungsalphabet ist nicht uniform: wir brauchen, abhängig von der
                       Zustandsmenge \(Q\) und
                       dem Bandalphabet \(\Gamma\) jeweils neue Alphabete. Wir wollen aber ein \(\Lambda\), da für
@@ -315,9 +347,15 @@ const Article = () => {
                     </tt>
                     steht,
                     dann ist das eine Abkürzung für
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \delta(01,1) = (01,1,\texttt&#123;R&#125;),
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     also
                   </Paragraph>
                   <tt>
@@ -333,9 +371,15 @@ const Article = () => {
                     Turingmaschine
                     über dem Alphabet
                     \(\Sigma\) codieren als Wort über dem Alphabet
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \Lambda := \writelambda
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </Paragraph>
                 <div class="well container theorem">

@@ -46,9 +46,15 @@ const Article = () => {
                       Eingabealphabet $\Sigma$ codieren können als
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \enc(M) \in \Lambda^* \ ,
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -56,9 +62,15 @@ const Article = () => {
                       also als String über dem Codierungsalphabet
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \Lambda := \writelambda
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -76,17 +88,15 @@ const Article = () => {
                       Für eine Konfiguration
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
-                  C = u
-                  <i>
-                    1 \dots u
-                  </i>
-                  m q v
-                  <i>
-                    1 \dots v
-                  </i>
-                  n
-                  \end&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  C = u_1 \dots u_m q v_1 \dots v_n
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -94,32 +104,18 @@ const Article = () => {
                       der Maschine $M$ definieren wir die Codierung von $C$ als
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
-                  \enc(C) := \enc
-                  <i>
-                    \Gamma(u
-                  </i>
-                  1) \texttt&#123;#&#125; \enc
-                  <i>
-                    \Gamma(u
-                  </i>
-                  2) \dots \texttt&#123;#&#125;
-                  \enc
-                  <i>
-                    \Gamma(u
-                  </i>
-                  m)\texttt&#123;#&#125;
-                  \enc
-                  <i>
-                    Q(q) \texttt&#123;#&#125; \enc
-                  </i>
-                  \Gamma(v
-                  <i>
-                    1)\texttt&#123;#&#125; \dots \texttt&#123;#&#125;
-                    \enc
-                  </i>
-                  \Gamma(v_n) \in \Lambda^* \ .
-                  \end&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  \enc(C) := \enc_\Gamma(u_1) \texttt&#123;#&#125; \enc_\Gamma(u_2) \dots \texttt&#123;#&#125;
+                  \enc_\Gamma(u_m)\texttt&#123;#&#125;
+                  \enc_Q(q) \texttt&#123;#&#125; \enc_\Gamma(v_1)\texttt&#123;#&#125; \dots \texttt&#123;#&#125;
+                  \enc_\Gamma(v_n) \in \Lambda^* \ .
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -232,10 +228,16 @@ const Article = () => {
                         $U$ akzeptiert also die Sprache
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \&#123; c w \ | \ w \in \Sigma^* \textnormal&#123; und &#125; c = \enc(M) \textnormal&#123;
                     und $M$ akzeptiert $w$&#125; \&#125; \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <div

@@ -91,9 +91,15 @@ const Article = () => {
                   (Denn wenn der Input bereits unendlich groß wäre, wie sollten wir überhaupt über Berechenbarkeit
                   sprechen?)
                   Für uns als Informatiker wäre doch folgende Menge am naheliegendsten:
-                  \begin&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \&#123;0,1\&#125;^* \ ,
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   also die Menge aller beliebig langen aber endlichen Bit-Strings. Wir können alle möglichen Dinge
                   (Wörter, Programme, Dateien, natürliche Zahlen, rationale Zahlen) als solche Bit-Strings codieren.
                   Die ersten Wissenschaftler, die sich mit Berechenbarkeit beschäftigten, kamen allerdings
@@ -105,28 +111,28 @@ const Article = () => {
                   {" "}
                   die ersten Rechner gebaut wurden. Daher beschäftigten sich die ersten Forscher auch mit einer
                   anderen, uns sehr vertrauten Menge:
-                  \begin&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \mathbb&#123;N&#125; \ ,
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   den natürlichen Zahlen. Im letzten Kapitel haben wir ja unter anderen bewiesen, dass diese
                   gleichmächtig sind:
                   \(\&#123;0,1\&#125;^* \cong \N\) und haben auch eine Bijektion kennengelernt, beispielsweise
-                  \begin&#123;align*&#125;
-                  f : \&#123;0,1\&#125;^
-                  <b>
-                    &amp;\rightarrow \N \\
-                    (x
-                    <i>
-                      1, \dots, x
-                    </i>
-                    n)&amp;\mapsto (1 x
-                    <i>
-                      1\dots x
-                    </i>
-                    n)_2 - 1\ ,
-                    \end&#123;align
-                  </b>
-                  &#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  f : \&#123;0,1\&#125;^*&amp;\rightarrow \N \\
+                  (x_1, \dots, x_n)&amp;\mapsto (1 x_1\dots x_n)_2 - 1\ ,
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   wir stellen also dem Bitstring \(x_1,\dots,x_n\) eine 1 voran und interpretieren das Ergebnis als
                   natürliche Zahl;
                   dann ziehen wir 1 ab.

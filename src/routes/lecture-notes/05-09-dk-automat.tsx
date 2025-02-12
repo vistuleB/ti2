@@ -72,10 +72,16 @@ const Article = () => {
                     die Terminale $\Sigma = \&#123;a,c,e,u,w\&#125;$ und die Nichtterminale $N =
                     \&#123;X,B,D,V\&#125;$. In $\dk&#123;G&#125;$ sind \&#123;a,c,e,u,w,A,B,D,V\&#125; alles Terminale,
                     und die Nichtterminale sind $\dk&#123;N&#125; = \&#123;\dk&#123;X&#125;, \dk&#123;B&#125;, \dk&#123;D&#125;,
-                    \dk&#123;V&#125;\&#125;.$ Die Produktionen von $\hat&#123;G&#125;$ sind \begin&#123;align*&#125; \dk&#123;X&#125;&
+                    \dk&#123;V&#125;\&#125;.$ Die Produktionen von $\hat&#123;G&#125;$ sind{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; \dk&#123;X&#125;&
                     \rightarrow a\dk&#123;B&#125; \\ \dk&#123;X&#125;&amp;\rightarrow a\dkt&#123;B&#125;c\dk&#123;D&#125; \\ \dk&#123;X&#125;
                     &amp;\rightarrow a\dkt&#123;B&#125;c\dkt&#123;D&#125;e \\&amp;\\ \dk&#123;X&#125;&amp;\rightarrow u\dk&#123;V&#125;
-                    \\ \dk&#123;X&#125;&amp;\rightarrow u\dkt&#123;V&#125;w \end&#123;align*&#125;
+                    \\ \dk&#123;X&#125;&amp;\rightarrow u\dkt&#123;V&#125;w \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </Paragraph>
                 <Paragraph>
@@ -171,8 +177,14 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph id="the-grammar">
                     <Paragraph>
-                      \begin&#123;align*&#125; G&amp;: \\ S&amp;\rightarrow aS \\ S&amp;\rightarrow B \\ B&
-                      \rightarrow aBb \\ B&amp;\rightarrow ab \end&#123;align*&#125;
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125; G&amp;: \\ S&amp;\rightarrow aS \\ S&amp;\rightarrow B \\ B&
+                      \rightarrow aBb \\ B&amp;\rightarrow ab \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                   </Paragraph>
                   <Paragraph>
@@ -183,14 +195,20 @@ const Article = () => {
                       $\dk&#123;G&#125;$ ergeben sich wie folgt:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125; \begin&#123;array&#125;&#123;l|l&#125; \textnormal&#123;Produktion in $G$&#125;&
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; \begin&#123;array&#125;&#123;l|l&#125; \textnormal&#123;Produktion in $G$&#125;&
                   \textnormal&#123;Produktion in $\hat&#123;G&#125;$&#125; \\ \hline % % S \rightarrow aS&
                   &#123;\dk&#123;S&#125;&#125; \rightarrow \dkt&#123;a&#125; \dk&#123;S&#125;\\&amp;&#123;\dk&#123;S&#125;&#125; \rightarrow \dkt&#123;a&#125;
                   \dkt&#123;S&#125;\\ \hline % S \rightarrow B&amp;&#123;\dk&#123;S&#125;&#125; \rightarrow \dk&#123;B&#125;\\&
                   &#123;\dk&#123;S&#125;&#125; \rightarrow \dkt&#123;B&#125;\\ \hline % B \rightarrow aBb&amp;&#123;\dk&#123;B&#125;&#125;
                   \rightarrow \dkt&#123;a&#125;\dk&#123;B&#125;\\&&#123;\dk&#123;B&#125;&#125; \rightarrow
                   \dkt&#123;a&#125;\dkt&#123;B&#125;\dkt&#123;b&#125;\\ \hline % B \rightarrow ab&amp;&#123;\dk&#123;B&#125;&#125; \rightarrow
-                  \dkt&#123;ab&#125; \end&#123;array&#125; \end&#123;align*&#125;
+                  \dkt&#123;ab&#125; \end&#123;array&#125; \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -198,8 +216,14 @@ const Article = () => {
                       In dieser Grammatik betrachten wir die Rechtsableitung
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125; S \Step&#123;&#125; aS \Step&#123;&#125; aaS \Step&#123;&#125; aaB \Step&#123;&#125; aaaBb
-                  \Step&#123;&#125; aaaaBbb \Step&#123;&#125; aaaaaBbbb \end&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; S \Step&#123;&#125; aS \Step&#123;&#125; aaS \Step&#123;&#125; aaB \Step&#123;&#125; aaaBb
+                  \Step&#123;&#125; aaaaBbb \Step&#123;&#125; aaaaaBbbb \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -208,8 +232,14 @@ const Article = () => {
                       obige Rechtsableitung der Ableitung
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125; \hat&#123;S&#125; \Step&#123;&#125; a\hat&#123;S&#125; \Step&#123;&#125; aa\hat&#123;S&#125; \Step&#123;&#125;
-                  aa\hat&#123;B&#125; \Step&#123;&#125; aaa\hat&#123;B&#125; \Step&#123;&#125; aaaaBb \end&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; \hat&#123;S&#125; \Step&#123;&#125; a\hat&#123;S&#125; \Step&#123;&#125; aa\hat&#123;S&#125; \Step&#123;&#125;
+                  aa\hat&#123;B&#125; \Step&#123;&#125; aaa\hat&#123;B&#125; \Step&#123;&#125; aaaaBb \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -637,8 +667,14 @@ const Article = () => {
                         gilt, dann gibt es korrekte Reduktionsschritte
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; \alpha \beta w \rstep&#123;&#125; \alpha X w \\ \alpha \beta
-                    \sigma w' = \alpha' \beta' w' \rstep&#123;&#125; \alpha' X' w' \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; \alpha \beta w \rstep&#123;&#125; \alpha X w \\ \alpha \beta
+                    \sigma w' = \alpha' \beta' w' \rstep&#123;&#125; \alpha' X' w' \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>

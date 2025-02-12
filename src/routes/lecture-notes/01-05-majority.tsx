@@ -193,18 +193,30 @@ const Article = () => {
                     </b>
                     {" "}
                     Sei \(k \in \&#123;1,\dots,n\&#125;\). Vergleichen wir \(&#123;n \choose k&#125;\) mit \(&#123;n \choose k-1&#125;\):
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \frac&#123;&#123;n \choose k&#125;&#125;&#123;&#123;n \choose k-1&#125;&#125;&amp;=
                     \frac&#123; \frac&#123;n!&#125;&#123;k! (n-k)!&#125;&#125;&#123;\frac&#123;n!&#125;&#123; (k-1)! (n-k+1)!&#125;&#125; = \frac&#123;n-k+1&#125;&#123;k&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     und somit
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     &#123;n \choose k&#125;&amp;\geq &#123;n \choose k-1&#125; \quad \Longleftrightarrow \\
                     n-k+1&amp;\geq k \quad \Longleftrightarrow \\
                     2k&amp;\leq n+1 \quad \Longleftrightarrow \\
                     k&amp;\leq \frac&#123;n+1&#125;&#123;2&#125; \quad \Longleftrightarrow \\
                     k&amp;\leq \floor&#123; \frac&#123;n+1&#125;&#123;2&#125;&#125; = \ceil&#123;\frac&#123;n&#125;&#123;2&#125;&#125; \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Aus der letzten Zeile folgt nun, dass \(&#123;n \choose k&#125;\) durch \(k := \ceil&#123;\frac&#123;n&#125;&#123;2&#125;&#125;\)
                     maximiert wird, also
                     \(&#123;n \choose k&#125; \leq &#123;n \choose \ceil&#123;\frac&#123;n&#125;&#123;2&#125;&#125;&#125;\) gilt.
@@ -286,21 +298,19 @@ const Article = () => {
                   </a>
                   dargestellt.
                   Insbesondere definieren wir Verallgemeinerungen von \(\maj_n\) wie folgt:
-                  \begin&#123;align*&#125;
-                  \theta^n
-                  <i>
-                    k (x
-                  </i>
-                  1,\dots,x
-                  <i>
-                    n)&amp;:=
-                    \begin&#123;cases&#125;
-                    1&amp;\textnormal&#123; falls $x
-                  </i>
-                  1 + \dots + x_n \geq k$&#125; \\
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  \theta^n_k (x_1,\dots,x_n)&amp;:=
+                  \begin&#123;cases&#125;
+                  1&amp;\textnormal&#123; falls $x_1 + \dots + x_n \geq k$&#125; \\
                   0&amp;\textnormal&#123; sonst.&#125;
                   \end&#123;cases&#125;
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   Die Funktion \(\maj_n\) ist also ein Speziallfall \(\theta^n_k\) für
                   \(k = \ceil&#123;\frac&#123;n+1&#125;&#123;2&#125;&#125;\). Wir können \(\theta^n_k\) rekursiv zerlegen wie folgt:
                   {" "}
@@ -330,19 +340,17 @@ const Article = () => {
                   Konstruktion ist leider auch nicht effizient; wenn man
                   mit \(C^n_k\) die Anzahl der \(\theta^m_m\) und \(\theta^m_0\) in diesem
                   Baum zählt, dann sieht man, dass
-                  \begin&#123;align*&#125;
-                  C^n
-                  <i>
-                    k&amp;= C^&#123;n-1&#125;
-                  </i>
-                  &#123;k-1&#125; + C^&#123;n-1&#125;
-                  <i>
-                    k \\
-                    C^n
-                  </i>
-                  n&amp;= 1 \\
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  C^n_k&amp;= C^&#123;n-1&#125;_&#123;k-1&#125; + C^&#123;n-1&#125;_k \\
+                  C^n_n&amp;= 1 \\
                   C^n_0&amp;= 1
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   gilt; sie erfüllt also die gleiche Rekursionsgleichung wie der Binomialkoeffizient
                   \(&#123;n \choose k&#125;\), also gilt \(C^n_k = &#123;n \choose k&#125;\). Die Konstruktion ist
                   asymptotisch auch nicht besser als die, aus der Wahrheitstabelle direkt
@@ -550,7 +558,10 @@ const Article = () => {
                   wir mit einem "normalen" Binäraddierer addieren. Das Ergebnis vergleichen
                   wir mit dem \(\geq\)-Schaltkreis mit \(\frac&#123;k+1&#125;&#123;2&#125;\). Was ist die
                   Tiefe des Gesamtschaltkreises? Es ist
-                  \begin&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   &amp;\log_&#123;3/2&#125; n \times \depth(\textnormal&#123;2-for-3 adder&#125;) \\
                   +&
                   \depth(\textnormal&#123;Binäraddierer für ($\log n$)-stellige Zahlen&#125;) \\
@@ -558,7 +569,10 @@ const Article = () => {
                   \depth(\textnormal&#123;$\geq$-Schaltkreis für ($\log n$)-stellige Zahlen&#125; \\
                   =&
                   O(\log n) + O(\log \log n) + O(\log \log n) = O(\log n) \ .
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   Die Größe des Schaltkreises wird dominiert von den 2-for-3-Addierern. Wir
                   haben \(O(n)\) viele davon, allerdings hat jeder bis zu
                   \(O(\log n)\) viele Gates, da wir ja (\(\log n\))-stellige Zahlen addieren müssen;
@@ -623,37 +637,29 @@ const Article = () => {
                     \(\mathbf&#123;x&#125; \in \&#123;0,1\&#125;^n\) in
                     \(\mathbf&#123;y&#125; = (x_1, \dots, x_&#123;n/2&#125;)\) und
                     \(\mathbf&#123;z&#125; = (x_&#123;n/2+1&#125;, \dots, x_n)\) und sehen, dass
-                    \begin&#123;align*&#125;
-                    \sum
-                    <i>
-                      i x
-                    </i>
-                    i&amp;\geq k \quad \Longleftrightarrow \\
-                    \sum
-                    <i>
-                      i y
-                    </i>
-                    i&amp;\geq a \wedge \sum
-                    <i>
-                      j z
-                    </i>
-                    j \geq b
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \sum_i x_i&amp;\geq k \quad \Longleftrightarrow \\
+                    \sum_i y_i&amp;\geq a \wedge \sum_j z_j \geq b
                     \textnormal&#123; für Werte $a,b \geq 0$ mit $a + b = k$&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     und somit
-                    \begin&#123;align*&#125;
-                    \theta^n
-                    <i>
-                      k(\mathbf&#123;x&#125;)&amp;= \bigvee
-                    </i>
-                    &#123;a=0&#125;^k
-                    ( \theta^&#123;n/2&#125;
-                    <i>
-                      a (\mathbf&#123;y&#125;) \wedge
-                      \theta^&#123;n/2&#125;
-                    </i>
-                    &#123;k-a&#125; (\mathbf&#123;z&#125;) )
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \theta^n_k(\mathbf&#123;x&#125;)&amp;= \bigvee_&#123;a=0&#125;^k
+                    ( \theta^&#123;n/2&#125;_a (\mathbf&#123;y&#125;) \wedge
+                    \theta^&#123;n/2&#125;_&#123;k-a&#125; (\mathbf&#123;z&#125;) )
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Wenn wir diese Konstruktion rekursiv fortsetzen, erhalten
                     wir \(\log n\) Ebenen und somit auf den ersten Blick logarithmische
                     Tiefe. Auf den zweiten Blick erkennen wir, dass wir etwas geschummelt haben:
@@ -812,37 +818,33 @@ const Article = () => {
                           ist unser (recht primitiver) Schaltkreis korrekt?
                         </Paragraph>
                       </Paragraph>
-                      \begin&#123;align*&#125;
-                      C(\x)&amp;= \maj
-                      <i>
-                        n (\x) \quad \Longleftrightarrow \\
-                        x
-                      </i>
-                      I&amp;= \maj
-                      <i>
-                        n (\x) \ .
-                        \end&#123;align*&#125;
-                        Wir unterscheiden nun zwei Fälle. Wenn \(\maj_n(\x) = 1\) ist, dann
-                        gibt es mindestens \(k+1\) Indizes \(i\) mit \(x_i = 1\). Wenn wir
-                        mit \(I\) einen solchen ausgewählt haben, dann sind wir erfolgreich. Die
-                        Wahrscheinlichkeit hierfür ist
-                        \begin&#123;align*&#125;
-                        \Pr
-                      </i>
-                      &#123;C \sim \mathcal&#123;C&#125;
-                      <i>
-                        0&#125; [C(\x) = 1] = \Pr
-                      </i>
-                      &#123;I \in [n]&#125; [x
-                      <i>
-                        I = 1]&amp;= \frac&#123;| \&#123;i \in [n]\
-                        |
-                        \ x
-                      </i>
-                      i = 1\&#125;&#125;&#123;n&#125; \geq \frac&#123;k+1&#125;&#123;n&#125; \\
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      C(\x)&amp;= \maj_n (\x) \quad \Longleftrightarrow \\
+                      x_I&amp;= \maj_n (\x) \ .
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
+                      Wir unterscheiden nun zwei Fälle. Wenn \(\maj_n(\x) = 1\) ist, dann
+                      gibt es mindestens \(k+1\) Indizes \(i\) mit \(x_i = 1\). Wenn wir
+                      mit \(I\) einen solchen ausgewählt haben, dann sind wir erfolgreich. Die
+                      Wahrscheinlichkeit hierfür ist
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      \Pr_&#123;C \sim \mathcal&#123;C&#125;_0&#125; [C(\x) = 1] = \Pr_&#123;I \in [n]&#125; [x_I = 1]&amp;= \frac&#123;| \&#123;i \in [n]\
+                      |
+                      \ x_i = 1\&#125;&#125;&#123;n&#125; \geq \frac&#123;k+1&#125;&#123;n&#125; \\
                       &amp;= \frac&#123;k+1&#125;&#123;2k+1&#125; = \frac&#123;k + \frac&#123;1&#125;&#123;2&#125; + \frac&#123;1&#125;&#123;2&#125;&#125;&#123;2k+1&#125; \\
                       &amp;= \frac&#123;1&#125;&#123;2&#125; + \frac&#123;1&#125;&#123;2n&#125; \ .
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Wenn nun \(\maj_n(\x) = 0\) ist, dann gibt es mindestens \(k+1\) Stellen \(i\) mit
                       \(x_i = 0\), und somit ist \(C(\x)\) auch wieder mit Wahrscheinlichkeit mindestens
                       \(\frac&#123;k+1&#125;&#123;n+1&#125;\) korrekt.
@@ -957,14 +959,20 @@ const Article = () => {
                           Was ist nun $\Pr[\maj_3(U,V,W) = 1]$?
                         </Paragraph>
                       </Paragraph>
-                      \begin&#123;align*&#125;
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \Pr[\maj_3(U,V,W)=1]&amp;= \Pr[U=V=W=1] + \Pr[\textnormal&#123;genau zwei von $\&#123;U,V,W\&#125;$ sind 1&#125;]
                       \\
                       &amp;= p^3 + 3p^2 (1-p) = \pfrac&#123;1 + \delta&#125;&#123;2&#125;^3 + 3 \pfrac&#123;1 + \delta&#125;&#123;2&#125;^2 \frac&#123;1 -
                       \delta&#125;&#123;2&#125; \\
                       &amp;= \frac&#123;1&#125;&#123;8&#125; (4 + 6 \delta - 2 \delta^3) \\
                       &amp;= \frac&#123;1&#125;&#123;2&#125; \left( 1 + \frac&#123;3&#125;&#123;2&#125; \delta - \frac&#123;1&#125;&#123;2&#125;\delta^3 \right) \ .
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>
@@ -983,13 +991,15 @@ const Article = () => {
                         Größe 1 und definieren{" "}
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    \mathcal&#123;C&#125;
-                    <i>
-                      &#123;i+1&#125; := (\mathcal&#123;C&#125;
-                    </i>
-                    i)^&#123;\oplus 3&#125; \ .
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \mathcal&#123;C&#125;_&#123;i+1&#125; := (\mathcal&#123;C&#125;_i)^&#123;\oplus 3&#125; \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -1053,13 +1063,15 @@ const Article = () => {
                         , wenn
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    \forall \x \in \cube^n: \Pr
-                    <i>
-                      &#123;C \sim \mathcal&#123;C&#125;&#125;[ C(\x) = \maj
-                    </i>
-                    n(\x)] \geq 1 - \epsilon \ .
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \forall \x \in \cube^n: \Pr_&#123;C \sim \mathcal&#123;C&#125;&#125;[ C(\x) = \maj_n(\x)] \geq 1 - \epsilon \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -1096,10 +1108,16 @@ const Article = () => {
                           $p := \frac&#123;1+p&#125;&#123;2&#125; = 1-\epsilon$ und erhalten
                         </Paragraph>
                       </Paragraph>
-                      \begin&#123;align*&#125;
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \Pr[\maj_3(U,V,W) = 1]&amp;= p^3 + 3 p^2 (1-p) =
                       (1 - \epsilon^3) + 3 (1- \epsilon)^2 \epsilon = 1 - 3 \epsilon^2 \ .
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                     <Paragraph>
                       <Paragraph>
@@ -1135,14 +1153,16 @@ const Article = () => {
                         und somit
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    \epsilon
-                    <i>
-                      &#123;i^*+2 + j&#125; \leq \left(\epsilon
-                    </i>
-                    &#123;i^*&#125;\right)^&#123;\pfrac&#123;3&#125;&#123;2&#125;^j&#125; \leq
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \epsilon_&#123;i^*+2 + j&#125; \leq \left(\epsilon_&#123;i^*&#125;\right)^&#123;\pfrac&#123;3&#125;&#123;2&#125;^j&#125; \leq
                     \pfrac&#123;1&#125;&#123;4&#125;^&#123;\pfrac&#123;3&#125;&#123;2&#125;^j&#125; \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -1165,9 +1185,15 @@ const Article = () => {
                         . Für $j^* := \log_&#123;3/2&#125; n$ gilt dann
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \epsilon_&#123;i^* + 2 + j^*&#125; \leq \pfrac&#123;1&#125;&#123;4&#125;^&#123;n&#125; \lt 2^&#123;-n&#125; \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -1231,18 +1257,16 @@ const Article = () => {
                         1,\dots,x_n$, die sich auf $\b$ irren, also
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    E
-                    <i>
-                      &#123;\b&#125; := \&#123;\textnormal&#123;Schaltkreise &#125; C \textnormal&#123; über &#125; x
-                    </i>
-                    1, \dots, x
-                    <i>
-                      n \ | \ C(\b) \ne
-                      \maj
-                    </i>
-                    n(\b) \&#125; \ .
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    E_&#123;\b&#125; := \&#123;\textnormal&#123;Schaltkreise &#125; C \textnormal&#123; über &#125; x_1, \dots, x_n \ | \ C(\b) \ne
+                    \maj_n(\b) \&#125; \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -1264,17 +1288,15 @@ const Article = () => {
                         in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    \forall \b \in \cube^n: \Pr
-                    <i>
-                      &#123;C \sim \mathcal&#123;C&#125;
-                    </i>
-                    k&#125; [ C \in E
-                    <i>
-                      &#123;\b&#125; ] = \epsilon
-                    </i>
-                    k \lt 2^&#123;n-&#125; \ .
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \forall \b \in \cube^n: \Pr_&#123;C \sim \mathcal&#123;C&#125;_k&#125; [ C \in E_&#123;\b&#125; ] = \epsilon_k \lt 2^&#123;n-&#125; \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -1291,13 +1313,15 @@ const Article = () => {
                         &#123;\b&#125;$ für jedes $\b \in \cube^n$ und definieren
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    E := \bigcup
-                    <i>
-                      &#123;\b \in \cube^n&#125; E
-                    </i>
-                    &#123;\b&#125; \ .
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    E := \bigcup_&#123;\b \in \cube^n&#125; E_&#123;\b&#125; \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -1309,36 +1333,18 @@ const Article = () => {
                         berechnen. Es gilt nun
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
-                    \Pr
-                    <i>
-                      &#123;\mathcal&#123;C&#125;
-                    </i>
-                    k&#125;[E]&amp;= \Pr
-                    <i>
-                      &#123;\mathcal&#123;C&#125;
-                    </i>
-                    k&#125; \left[\bigcup
-                    <i>
-                      &#123;\b \in \cube^n&#125; E
-                    </i>
-                    &#123;\b&#125; \right] \\
-                    &amp;\leq \sum
-                    <i>
-                      &#123;\b \in \cube^n&#125; \Pr
-                    </i>
-                    &#123;\mathcal&#123;C&#125;
-                    <i>
-                      k&#125; [E
-                    </i>
-                    &#123;\b&#125;] \\
-                    &amp;= \sum
-                    <i>
-                      &#123;b \in \cube^n&#125; \epsilon
-                    </i>
-                    k\\
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    \Pr_&#123;\mathcal&#123;C&#125;_k&#125;[E]&amp;= \Pr_&#123;\mathcal&#123;C&#125;_k&#125; \left[\bigcup_&#123;\b \in \cube^n&#125; E_&#123;\b&#125; \right] \\
+                    &amp;\leq \sum_&#123;\b \in \cube^n&#125; \Pr_&#123;\mathcal&#123;C&#125;_k&#125; [E_&#123;\b&#125;] \\
+                    &amp;= \sum_&#123;b \in \cube^n&#125; \epsilon_k\\
                     &amp;\lt \sum_&#123;b \in \cube^n&#125; 2^&#123;-n&#125; = 2^n 2^&#123;-n&#125; = 1 \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -1376,9 +1382,15 @@ const Article = () => {
                         $i$ vom Output-Gate haben. Somit hat ein Schaltkreis mit Fan-in 2 und Tiefe $d$ höchstens
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     1 + 2 + 4 + \dots + 2^d = 2^&#123;d+1&#125;-1
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>

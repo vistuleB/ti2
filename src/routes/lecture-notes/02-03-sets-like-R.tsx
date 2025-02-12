@@ -96,8 +96,14 @@ const Article = () => {
                         Wir können eine Bijektion explizit hinschreiben:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; f : \R&amp;\rightarrow (0,1) \\ x&amp;\mapsto
-                    \frac&#123;e^x&#125;&#123;e^x + 1&#125; \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; f : \R&amp;\rightarrow (0,1) \\ x&amp;\mapsto
+                    \frac&#123;e^x&#125;&#123;e^x + 1&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -215,7 +221,13 @@ const Article = () => {
                         $(x)_2$ schreiben, beispielsweise
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; \pfrac&#123;1&#125;&#123;3&#125;_2 = 0.01010101\dots \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; \pfrac&#123;1&#125;&#123;3&#125;_2 = 0.01010101\dots \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -241,16 +253,14 @@ const Article = () => {
                         Menge aller $0/1$-Folgen mit einem unendlichen Schweif an Einsen:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; X := \&#123; a
-                    <i>
-                      1 a
-                    </i>
-                    2 a
-                    <i>
-                      3 \dots \in \&#123;0,1\&#125;^&#123;\N&#125; \ | \
-                      \exists\ n \geq 1: a
-                    </i>
-                    i = 1 \ \forall i \geq n\&#125; \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; X := \&#123; a_1 a_2 a_3 \dots \in \&#123;0,1\&#125;^&#123;\N&#125; \ | \
+                    \exists\ n \geq 1: a_i = 1 \ \forall i \geq n\&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -347,20 +357,14 @@ const Article = () => {
                         \&#123;0,1\&#125;^\N$ besteht aus zwei unendlichen $0/1$-Folgen:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; (a,b) = (a
-                    <i>
-                      1 a
-                    </i>
-                    2 a
-                    <i>
-                      3 \dots, b
-                    </i>
-                    1 b
-                    <i>
-                      2 b
-                    </i>
-                    3 \dots) \ .
-                    \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; (a,b) = (a_1 a_2 a_3 \dots, b_1 b_2 b_3 \dots) \ .
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -373,32 +377,14 @@ const Article = () => {
                         Ganz klar:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; (a
-                    <i>
-                      1 a
-                    </i>
-                    2 a
-                    <i>
-                      3 \dots, b
-                    </i>
-                    1 b
-                    <i>
-                      2 b
-                    </i>
-                    3 \dots) \mapsto (a
-                    <i>
-                      1 b
-                    </i>
-                    1
-                    a
-                    <i>
-                      2 b
-                    </i>
-                    2 a
-                    <i>
-                      3 b
-                    </i>
-                    3 \dots) \end&#123;align*&#125; Dies ist die gewünschte Bijektion
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; (a_1 a_2 a_3 \dots, b_1 b_2 b_3 \dots) \mapsto (a_1 b_1
+                    a_2 b_2 a_3 b_3 \dots) \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}Dies ist die gewünschte Bijektion
                     $\&#123;0,1\&#125;^\N \times \&#123;0,1\&#125;^\N \rightarrow \&#123;0,1\&#125;^\N$ .
                   </Paragraph>
                   <span class="qed">
@@ -421,14 +407,16 @@ const Article = () => {
                       Reißverschlussverfahren zu einer Zahl, z.B.
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125; \left(\frac&#123;1&#125;&#123;3&#125;, \frac&#123;1&#125;&#123;2&#125;\right) =
-                  (0.010\overline&#123;10&#125;\dots, 0.1)
-                  <i>
-                    2 \mapsto (010101\dots, 100000\dots)
-                    \mapsto (01100010001000\dots) \mapsto (0.01\overline&#123;1000&#125;)
-                  </i>
-                  2 =: z\ .
-                  \end&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; \left(\frac&#123;1&#125;&#123;3&#125;, \frac&#123;1&#125;&#123;2&#125;\right) =
+                  (0.010\overline&#123;10&#125;\dots, 0.1)_2 \mapsto (010101\dots, 100000\dots)
+                  \mapsto (01100010001000\dots) \mapsto (0.01\overline&#123;1000&#125;)_2 =: z\ .
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -437,7 +425,13 @@ const Article = () => {
                       multiplizieren wir sie mit 64:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125; \end&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -469,14 +463,16 @@ const Article = () => {
                       $y$. Beispielsweise für $z = 1/7$ gilt
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125; \frac&#123;1&#125;&#123;7&#125; = (0.001001\overline&#123;001&#125;)
-                  <i>
-                    2 \mapsto
-                    001001001001\dots \mapsto (010010\dots, 001001\dots) \mapsto (
-                    (0.\overline&#123;010&#125;)
-                  </i>
-                  2, (0.\overline&#123;001&#125;)) = \left(\frac&#123;2&#125;&#123;7&#125;,
-                  \frac&#123;1&#125;&#123;7&#125;\right) \ , \end&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; \frac&#123;1&#125;&#123;7&#125; = (0.001001\overline&#123;001&#125;)_2 \mapsto
+                  001001001001\dots \mapsto (010010\dots, 001001\dots) \mapsto (
+                  (0.\overline&#123;010&#125;)_2, (0.\overline&#123;001&#125;)) = \left(\frac&#123;2&#125;&#123;7&#125;,
+                  \frac&#123;1&#125;&#123;7&#125;\right) \ , \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -656,7 +652,13 @@ const Article = () => {
                         Da $\R \approx \cuben$ gilt, reicht es, zu zeigen, dass
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; \cuben \approx \left(\cuben\right)^&#123;\N&#125; \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; \cuben \approx \left(\cuben\right)^&#123;\N&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -776,8 +778,14 @@ const Article = () => {
                       man $A \uplus B$ so definieren;
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125; A \uplus B := \&#123; (a,0) \ | \ a \in A\&#125; \cup \&#123; (b,1) \ |
-                  \ b \in B\&#125; \ . \end&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; A \uplus B := \&#123; (a,0) \ | \ a \in A\&#125; \cup \&#123; (b,1) \ |
+                  \ b \in B\&#125; \ . \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <div class="well container theorem">
                   <Paragraph>
@@ -940,8 +948,14 @@ const Article = () => {
                       unendliche Kette:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125; \&#123;\emptyset, \&#123;1\&#125;, \&#123;1,2\&#125;, \&#123;1,2,3\&#125;, \dots,
-                  \&#123;1,2,\dots,k\&#125;, \dots \&#125; \end&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; \&#123;\emptyset, \&#123;1\&#125;, \&#123;1,2\&#125;, \&#123;1,2,3\&#125;, \dots,
+                  \&#123;1,2,\dots,k\&#125;, \dots \&#125; \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -960,10 +974,16 @@ const Article = () => {
                       sein: sei $[k] := \&#123;1,2,\dots,k\&#125;$.
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125; \dots \subseteq 2\N \setminus [6] \subseteq 2\N \setminus
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; \dots \subseteq 2\N \setminus [6] \subseteq 2\N \setminus
                   [4] \subseteq 2\N \setminus [2] \subseteq 2\N \subseteq 2\N \cup \&#123;1\&#125;
                   \subseteq 2\N \cup \&#123;1,3\&#125; \subseteq 2\N \cup \&#123;1,3,5\&#125; \subseteq \dots
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>

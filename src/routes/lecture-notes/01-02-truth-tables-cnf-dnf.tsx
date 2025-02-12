@@ -91,10 +91,16 @@ const Article = () => {
                       untere Hälfte:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125; \color&#123;red&#125;&#123; \begin&#123;array&#125;&#123;ccc|c&#125; x&amp;y&amp;z&amp;f \\\hline
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125; \color&#123;red&#125;&#123; \begin&#123;array&#125;&#123;ccc|c&#125; x&amp;y&amp;z&amp;f \\\hline
                   0&amp;0&amp;0&amp;0 \\ 0&amp;0&amp;1&amp;1 \\ 0&amp;1&amp;0&amp;1 \\ 0&amp;1&amp;1&amp;1
                   \end&#123;array&#125; &#125;\\ \color&#123;blue&#125;&#123; \begin&#123;array&#125;&#123;ccc|c&#125; 1&amp;0&amp;0&amp;1 \\ 1&
-                  0&amp;1&amp;1 \\ 1&amp;1&amp;0&amp;0 \\ 1&amp;1&amp;1&amp;1\\ \end&#123;array&#125; &#125; \end&#123;align*&#125;
+                  0&amp;1&amp;1 \\ 1&amp;1&amp;0&amp;0 \\ 1&amp;1&amp;1&amp;1\\ \end&#123;array&#125; &#125; \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   Die obere, roten Hälfte kommt Ihnen vielleicht bekannt vor: es ist genau
                   die Wahrheitstabelle von \(y \vee z\). Der Wert von \(x\) ist im roten
                   Teil ja immer \(0\), also ist die obere Hälfte im Prinzip eine Funktion
@@ -195,30 +201,16 @@ const Article = () => {
                     </span>
                     Sei \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) eine Boolesche Funktion, \(i
                     \in \&#123;1,\dots,n\&#125;\) ein Index und \(b \in \&#123;0,1\&#125;\) ein Wert. Dann ist
-                    \(f|_&#123;x_i=b&#125;\) eine neue Funktion, und zwar \begin&#123;align*&#125; f|
-                    <i>
-                      &#123;x
-                    </i>
-                    i=b&#125;
-                    &amp;: \&#123;0,1\&#125;^&#123;n-1&#125; \rightarrow \&#123;0,1\&#125; \\ (x
-                    <i>
-                      1,\dots,x
-                    </i>
-                    &#123;i-1&#125;, x
-                    <i>
-                      &#123;i+1&#125;,
-                      \dots, x
-                    </i>
-                    n)&amp;\mapsto f(x
-                    <i>
-                      1,\dots,x
-                    </i>
-                    &#123;i-1&#125;, b, x
-                    <i>
-                      &#123;i+1&#125;, \dots, x
-                    </i>
-                    &#123;n&#125;) \
-                    . \end&#123;align*&#125;
+                    \(f|_&#123;x_i=b&#125;\) eine neue Funktion, und zwar{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; f|_&#123;x_i=b&#125;
+                    &amp;: \&#123;0,1\&#125;^&#123;n-1&#125; \rightarrow \&#123;0,1\&#125; \\ (x_1,\dots,x_&#123;i-1&#125;, x_&#123;i+1&#125;,
+                    \dots, x_n)&amp;\mapsto f(x_1,\dots,x_&#123;i-1&#125;, b, x_&#123;i+1&#125;, \dots, x_&#123;n&#125;) \
+                    . \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>

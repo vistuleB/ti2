@@ -64,32 +64,16 @@ const Article = () => {
                   </li>
                   <li>
                     dann ist auch die Konkatenation
-                    \begin&#123;align*&#125;
-                    L
-                    <i>
-                      1 \circ L
-                    </i>
-                    2 := \&#123;\alpha \beta \ | \alpha \in L
-                    <i>
-                      1, \beta \in L
-                    </i>
-                    2\&#125;
-                    \end&#123;align*&#125;
+                    $$\begin&#123;align*&#125;
+                    L_1 \circ L_2 := \&#123;\alpha \beta \ | \alpha \in L_1, \beta \in L_2\&#125;
+                    \end&#123;align*&#125;$$
                     regulär;
                   </li>
                   <li>
                     wenn \(L\) regulär ist, dann ist auch ihre Kleenesche Hülle
-                    \begin&#123;align*&#125;
-                    L^* := \&#123; \alpha
-                    <i>
-                      1 \dots \alpha
-                    </i>
-                    n \ | \ n \geq 0, \alpha
-                    <i>
-                      1,\dots,\alpha
-                    </i>
-                    n \in L\&#125;
-                    \end&#123;align*&#125;
+                    $$\begin&#123;align*&#125;
+                    L^* := \&#123; \alpha_1 \dots \alpha_n \ | \ n \geq 0, \alpha_1,\dots,\alpha_n \in L\&#125;
+                    \end&#123;align*&#125;$$
                     regulär.
                   </li>
                 </ol>
@@ -283,24 +267,38 @@ const Article = () => {
                     <Paragraph>
                       Ein Block ist eine nichtleere Folge von \(a\)'s. Der entsprechende reguläre Ausdruck \(B\)
                       für Blöcke ist also
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       B : = a^+
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Für ein Label müssen wir uns entscheiden, ob wir die Blöcke mit `:`oder
                       `-`separieren; wir
                       erhalten den regulären Ausdruck \(T\) für Labels ist also
-                      \begin&#123;align*&#125;
-                      T := B (&#123;:&#125;B)^* | B (\text&#123;-&#125;B)^
-                      <b>
-                        {" "}
-                        \end&#123;align
-                      </b>
-                      &#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      T := B (&#123;:&#125;B)^* | B (\text&#123;-&#125;B)^*
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Sehen Sie, dass wir in \(T\) das erste \(B\) "ausfaktorisieren" können und statt dem obigen
                       folgenden Ausdruck schreiben können:
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       T' := B ( (&#123;:&#125;B)^* | (\text&#123;-&#125;B)^* )
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Beide Varianten sind äquivalent, d.h., sie beschreiben die gleiche Sprache; die erste
                       Variante, also \(T\), ähnelt mehr dem,
                       was wir in unserer Grammatik bzw. dem nichtdeterministischen Automaten für \(L\) getan
@@ -310,23 +308,27 @@ const Article = () => {
                       `:`oder `-`stoßen, entscheiden wir uns für den "Typ" des Labels).
                       Schlussendlich ist ein Wort in der Sprache eine mit `.`separierte Folge von
                       Labels, also:
-                      \begin&#123;align*&#125;
-                      R := T (&#123;.&#125;T)^
-                      <b>
-                        {" "}
-                        \end&#123;align
-                      </b>
-                      &#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      R := T (&#123;.&#125;T)^*
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Somit können wir nun den regulären Ausdruck für \(L\) in seiner ganzen Pracht zeigen:
                     </Paragraph>
                     <Paragraph>
-                      \begin&#123;align*&#125;
-                      R := (a^+ (&#123;:&#125;a^+)^* | a^+ (\text&#123;-&#125;a^+)^*) (&#123;.&#125;(a^+ (&#123;:&#125;a^+)^* | a^+ (\text&#123;-&#125;a^+)^*))^
-                      <b>
-                        {" "}
-                        \end&#123;align
-                      </b>
-                      &#125;
+                      {" "}{" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      R := (a^+ (&#123;:&#125;a^+)^* | a^+ (\text&#123;-&#125;a^+)^*) (&#123;.&#125;(a^+ (&#123;:&#125;a^+)^* | a^+ (\text&#123;-&#125;a^+)^*))^*
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                   </Paragraph>
                 </div>
@@ -472,34 +474,40 @@ const Article = () => {
                     Automaten \(M\), die \(L\) akzeptiert. Wir werden nun \(M\) Schritt für Schritt in einen
                     regulären Ausdruck
                     verwandeln. Kern der Idee ist, dass wir neben den üblichen Übergängen
-                    \begin&#123;align*&#125;
-                    q
-                    <i>
-                      1 \step&#123;x&#125; q
-                    </i>
-                    2
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    q_1 \step&#123;x&#125; q_2
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     komplexere Übergänge wie zum Beispiel
                     \(q_1 \step&#123;xy&#125; q_2\) zulassen. Die Bedeutung wäre hier beispielsweise, dass der Automat
                     von \(q_1\) nach \(q_2\) übergehen kann, wenn er die Eingabesymbole \(xy\) liest. Wir lassen
                     auch komplexere
                     Übergänge wie
-                    \begin&#123;align*&#125;
-                    q
-                    <i>
-                      1 \step&#123;x|yz^*&#125; q
-                    </i>
-                    2
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    q_1 \step&#123;x|yz^*&#125; q_2
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     zu, also "von \(q_1\) kann der Automat nach \(q_2\) gehen, wenn er ein \(x\) liest oder
                     ein \(y\), gefolgt von beliebig vielen \(z\)"; ganz allgemein lassen wir Übergänge der Form
-                    \begin&#123;align*&#125;
-                    q
-                    <i>
-                      1 \step&#123;R&#125; q
-                    </i>
-                    2 \ ,
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    q_1 \step&#123;R&#125; q_2 \ ,
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     wobei \(R\) ein regulärer Ausdruck ist. Insbesondere lassen wir Übergänge der Form
                     \(q_1 \step&#123;\epsilon&#125; q_2 \) zu.
                     Dies bedeutet, dass der Automat von \(q_1\) nach \(q_2\) "springen" kann, ohne ein Eingabesymbol
@@ -542,9 +550,15 @@ const Article = () => {
                       Startzustand \(\qstart \in Q\), einem
                       akzeptierenden Zustand \(q_&#123;\rm end&#125; \in Q \setminus \&#123;\qstart\&#125;\), einer
                       Menge von gerichteten Kanten
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       E \subseteq (Q \setminus \&#123;\qstart\&#125;) \times (Q \setminus \&#123;q_&#123;\rm end&#125;\&#125;) \ .
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Jede Kante \((q_i, q_j) \in E\) ist mit einem regulären Ausdruck
                       \(\delta(q_i, q_j)\) beschriftet. Wenn \(R = \delta(q_i, q_j)\) gilt, dann schreiben wir
                       \(q_i \step&#123;R&#125; q_j\).
@@ -555,9 +569,15 @@ const Article = () => {
                     <Paragraph>
                       <Paragraph>
                         Für \(q, q' \in Q\) und \(\alpha \in \Sigma^*\) schreiben wir
-                        \begin&#123;align*&#125;
+                        {" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
                         q \Step&#123;\alpha&#125; q'
-                        \end&#123;align*&#125;
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}
                         wenn man \(\alpha\) zerlegen kann als \(\alpha = \beta_1 \beta_2 \dots \beta_k\) gibt
                         (wobei \(\beta_i = \epsilon\) zulässig ist)
                         und es eine Zustandsfolge
@@ -565,30 +585,16 @@ const Article = () => {
                         regulären Ausdruck
                         \(R_i\) beschriftet ist und
                         jedes \(\beta_i\) in der von \(R_i\) beschriebenen Sprache ist. Wenn also
-                        \begin&#123;align*&#125;
-                        q
-                        <i>
-                          0 \step&#123;\beta
-                        </i>
-                        1 \in R
-                        <i>
-                          1&#125; q
-                        </i>
-                        1 \step&#123;\beta
-                        <i>
-                          2 \in R
-                        </i>
-                        2&#125; q
-                        <i>
-                          2 \dots q
-                        </i>
-                        &#123;k-1&#125; \step&#123;\beta
-                        <i>
-                          k
-                          \in R
-                        </i>
-                        k&#125; p_k
-                        \end&#123;align*&#125;
+                        {" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
+                        q_0 \step&#123;\beta_1 \in R_1&#125; q_1 \step&#123;\beta_2 \in R_2&#125; q_2 \dots q_&#123;k-1&#125; \step&#123;\beta_k
+                        \in R_k&#125; p_k
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}
                         gilt.
                       </Paragraph>
                     </Paragraph>
@@ -607,17 +613,15 @@ const Article = () => {
                     <Paragraph>
                       Wir haben den ganzen Aufwand betrieben, weil wir für einen VNEA sehr leicht
                       Zustände eliminieren können. Wenn wir zum Beispiel
-                      \begin&#123;align*&#125;
-                      q
-                      <i>
-                        0 \step&#123;R
-                      </i>
-                      1&#125; q
-                      <i>
-                        1 \step&#123;R
-                      </i>
-                      2&#125; q_2
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      q_0 \step&#123;R_1&#125; q_1 \step&#123;R_2&#125; q_2
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       haben, dann können wir ja ein Wort in \(R_1 R_2\) lesen und direkt von \(q_0\) nach \(q_2\)
                       übergehen;
                       wir brauchen also \(q_1\) gar nicht. Wir müssen nur aufpassen, das neue \(R_1 R_2\) mit
@@ -671,9 +675,15 @@ const Article = () => {
                       Dieser VNEA akzeptiert immer noch die gleiche Sprache \(L\) wie der ursprüngliche NEA, mit
                       dem wir
                       begonnen haben. Welche Sprache ist das? Es ist die Sprache aller \(\alpha \in \Sigma\) mit
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \qstart \Step&#123;\alpha&#125; \qend
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       Da der Pfad von \(\qstart\) nach \(\qend\) nur eine Kante hat, muss \(\alpha\) in der von
                       \(R\) beschriebenen Sprache liegen. \(R\) ist der gesuchte reguläre Ausdruck: er beschreibt
                       die Sprache \(L\).

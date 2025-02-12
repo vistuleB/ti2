@@ -86,31 +86,37 @@ const Article = () => {
                   </pre>
                   erinnern Sie sich daran: \(h\) muss immer eine Funktion in der lokalen Variable temp,
                   der Laufvariable \(i\) und \(\vec&#123;x&#125;\) sein. Daher:
-                  \begin&#123;align*&#125;
-                  &#123;\rm mult&#125; = \primrec(\zero, \comp(&#123;\rm add&#125;, \pi
-                  <i>
-                    0, \pi
-                  </i>
-                  2))
-                  \end&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  &#123;\rm mult&#125; = \primrec(\zero, \comp(&#123;\rm add&#125;, \pi_0, \pi_2))
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   Genauso erhalten wir \(x^t\), indem wir statt bei 0 bei 1 beginnen und statt
                   \(x\) draufzuzählen, es draufmultiplizieren:
-                  \begin&#123;align*&#125;
-                  &#123;\rm expReverse&#125; = \primrec(&#123;\rm one&#125;, \comp(&#123;\rm mult&#125;, \pi
-                  <i>
-                    0, \pi
-                  </i>
-                  2))
-                  \end&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  &#123;\rm expReverse&#125; = \primrec(&#123;\rm one&#125;, \comp(&#123;\rm mult&#125;, \pi_0, \pi_2))
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   Allerdings gibt uns das \((t,x) \mapsto x^t\). Für \(&#123;\rm exp&#125;(a,b) = a^b\) müssen
                   wir die Argumente umdrehen:
-                  \begin&#123;align*&#125;
-                  &#123;\rm exp&#125; = \comp(&#123;\rm expReverse&#125;, \pi
-                  <i>
-                    1, \pi
-                  </i>
-                  0)
-                  \end&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  &#123;\rm exp&#125; = \comp(&#123;\rm expReverse&#125;, \pi_1, \pi_0)
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   Die Fakultätsfunktion \(t!\) ist konzeptuell ähnlich, allerdings etwas interessanter, weil
                   wir hier auf das Zwischenergebnis und die Laufvariable zugreifen müssen:
                 </Paragraph>
@@ -167,9 +173,15 @@ const Article = () => {
                   zurück, also \(0\). Ansonsten durchlaufen wir die Schleife \(t\) mal;
                   der letzte Schleifenindex ist \(t-1\), und das ist dann auch der Wert
                   von temp, der zurückgegeben wird. Daher:
-                  \begin&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \pred = \primrec(\zero, \pi_1)
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -177,18 +189,16 @@ const Article = () => {
                       Für minus schreiben wir uns erst mal
                       \(&#123;\rm subtractFrom&#125;: (t,x) \mapsto x-t\). Hierfür wenden wir einfach pred
                       \(t\) mal auf \(x\) an:
-                      \begin&#123;align*&#125;
-                      &#123;\rm subtractFrom&#125;&amp;= \primrec(\pi
-                      <i>
-                        0, \comp(\pred, \pi
-                      </i>
-                      0)) \\
-                      &#123;\rm minus&#125;&amp;= \comp(&#123;\rm subtractFrom&#125;, \pi
-                      <i>
-                        1, \pi
-                      </i>
-                      0)
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      &#123;\rm subtractFrom&#125;&amp;= \primrec(\pi_0, \comp(\pred, \pi_0)) \\
+                      &#123;\rm minus&#125;&amp;= \comp(&#123;\rm subtractFrom&#125;, \pi_1, \pi_0)
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                   </Paragraph>
                   <h2>
@@ -222,9 +232,15 @@ const Article = () => {
                     </Paragraph>
                   </pre>
                   und somit
-                  \begin&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   &#123;\rm isPositive&#125; = \primrec(\zero, &#123;\rm one&#125;)
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -265,17 +281,25 @@ const Article = () => {
                   <Paragraph>
                     <Paragraph>
                       Das Prädikat
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       &#123;\rm iSquareLessEqualX &#125; (i,x)&amp;= [ i^2 \leq x ]
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       ist primitiv rekursiv:
-                      \begin&#123;align*&#125;
-                      &#123;\rm iSquareLessEqualX &#125; = \comp(&#123;\rm lessEqual&#125;, \comp(&#123;\rm mult&#125;, \pi
-                      <i>
-                        0, \pi
-                      </i>
-                      0), \pi_1)
-                      \end&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
+                      &#123;\rm iSquareLessEqualX &#125; = \comp(&#123;\rm lessEqual&#125;, \comp(&#123;\rm mult&#125;, \pi_0, \pi_0), \pi_1)
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       und damit können wir die ganzzahlige Wurzel schreiben als
                     </Paragraph>
                   </Paragraph>
@@ -310,26 +334,26 @@ const Article = () => {
                       also das letzte \(i\), für das das Prädikat True wahr.
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   &#123;\rm largestIbelowTwithISquareLessEqualX = \primrec(zero,
-                  \comp(ifThenElse, \comp(iSquareLessEqual, \pi
-                  <i>
-                    1, \pi
-                  </i>
-                  2), \pi
-                  <i>
-                    1, \pi
-                  </i>
-                  0))&#125;
-                  \end&#123;align*&#125;
+                  \comp(ifThenElse, \comp(iSquareLessEqual, \pi_1, \pi_2), \pi_1, \pi_0))&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   Und schließlich ist
-                  \begin&#123;align*&#125;
-                  &#123;\rm sqrt&#125; = \comp(&#123;\rm largestIbelowTwithISquareLessEqualX&#125;, \pi
-                  <i>
-                    0, \pi
-                  </i>
-                  0)
-                  \end&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  &#123;\rm sqrt&#125; = \comp(&#123;\rm largestIbelowTwithISquareLessEqualX&#125;, \pi_0, \pi_0)
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   da wir zum Suchen der Wurzel von \(t\) gleich \(t\) als Obergrenze des Suchraumes
                   angeben können. Ganz allgemein können wir für ein Prädikat
                   \(&#123;\rm predicate&#125;(i,x)\) das größte \(i \in \&#123;0,\dots,t\&#125;\) finden, für das
@@ -363,9 +387,15 @@ const Article = () => {
                       und somit können wir sqrt schreiben als
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   &#123;\rm sqrt&#125; = &#123;\rm LargestLessThan&#125; (\pi_0, &#123;\rm iSquareLessEqual&#125;)
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <h2>
@@ -437,10 +467,16 @@ const Article = () => {
                       die bijektive Funktion
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   \pair : \N^2&amp;\rightarrow \N \\
                   (x,y)&amp;\mapsto &#123;x + y + 1 \choose 2&#125; + x
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   kennengelernt. Diese Funktion ist primitiv rekursiv: es gilt
                   \(&#123;n \choose 2&#125; = 1 + 2 + \cdots + (n-1)\) und somit
                 </Paragraph>
@@ -460,18 +496,16 @@ const Article = () => {
                     </Paragraph>
                   </pre>
                   und somit
-                  \begin&#123;align*&#125;
-                  &#123;\rm choose2&#125;&amp;= \primrec(\zero, \comp(&#123;\rm add&#125;,\pi
-                  <i>
-                    0,\pi
-                  </i>
-                  1)) \\
-                  \pair&amp;= \comp(&#123;\rm add&#125;, \comp(&#123;\rm choose2&#125;, \comp(&#123;\rm add&#125;, \pi
-                  <i>
-                    0, \comp(\succ, \pi
-                  </i>
-                  1)), \pi_0)
-                  \end&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  &#123;\rm choose2&#125;&amp;= \primrec(\zero, \comp(&#123;\rm add&#125;,\pi_0,\pi_1)) \\
+                  \pair&amp;= \comp(&#123;\rm add&#125;, \comp(&#123;\rm choose2&#125;, \comp(&#123;\rm add&#125;, \pi_0, \comp(\succ, \pi_1)), \pi_0)
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -479,28 +513,32 @@ const Article = () => {
                       Um die Umkehrfunktionen \(\first, \second\) zu implementieren, die uns aus
                       \(\pair(x,y)\) wieder \(x\) und \(y\) berechnen, bestimmen wir erst
                       den Wert von \(x+y\). Wenn \(\pair(x,y) = n\) gilt und \(x+y=i)\) ist, dann ist
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       n = \pair(x,y) = &#123;i + 1 \choose 2&#125; + x \geq
                       &#123;i+1 \choose 2&#125; + 0 = \pair(0,i) \ ,
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       und somit ist \(x+y\) der größte Wert von \(i\), so dass \(n \geq \pair(0,i)\) ist.
                       Aus \(x+y\) und \(&#123;x+y+1 \choose 2&#125; + x\) können wir dann leicht \(x\) und \(y\) berechnen:
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
-                  &#123;\rm getXplusY&#125;&amp;= &#123;\rm LargestLessThan&#125;(\pi
-                  <i>
-                    0, \comp(&#123;\rm greaterEqual&#125;, \pi
-                  </i>
-                  1, \comp(\pair,
-                  \zero, \pi
-                  <i>
-                    0)))\\
-                    \first&amp;= \comp(&#123;\rm minus&#125;, \pi
-                  </i>
-                  0, \comp(\pair, \zero, &#123;\rm getXplusY&#125;))\\
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
+                  &#123;\rm getXplusY&#125;&amp;= &#123;\rm LargestLessThan&#125;(\pi_0, \comp(&#123;\rm greaterEqual&#125;, \pi_1, \comp(\pair,
+                  \zero, \pi_0)))\\
+                  \first&amp;= \comp(&#123;\rm minus&#125;, \pi_0, \comp(\pair, \zero, &#123;\rm getXplusY&#125;))\\
                   \second&amp;= \comp(&#123;\rm minus&#125;, &#123;\rm getXplusY&#125;, \first)
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -542,11 +580,17 @@ const Article = () => {
                       1 draufaddieren müssen, also
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   &#123;\rm push&#125; (x, &#123;\rm restlist&#125;)&amp;= 1 + \pair(x, &#123;\rm restlist&#125;) \\
                   &#123;\rm head&#125; (&#123;\rm list&#125;)&amp;= \first(&#123;\rm list&#125; - 1)\\
                   &#123;\rm second&#125; (&#123;\rm list&#125;)&amp;= \second(&#123;\rm list&#125; - 1)
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>

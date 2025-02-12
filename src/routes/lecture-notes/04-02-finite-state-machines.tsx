@@ -368,9 +368,15 @@ const Article = () => {
                     Endzuständen
                     und einer
                     Zustandsübergangsfunktion
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \delta : Q \times \Sigma \rightarrow Q \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Formal gesehen ist also ein Automat ein Quintupel \(M = (\Sigma, Q, \qstart, F, \delta)\).
                   </Paragraph>
                 </div>
@@ -419,12 +425,18 @@ const Article = () => {
                       data-ref="definition-finite-state-machine"
                       class="reference" />
                     als Quintupel \(M = (\Sigma, Q, \qstart, F, \delta)\) dar mit
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \Sigma&amp;= \&#123;x,y,z\&#125; \\
                     Q&amp;= \&#123;S, X, Y\&#125; \\
                     \qstart&amp;= S \\
                     F&amp;= \&#123;X\&#125; \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -436,7 +448,10 @@ const Article = () => {
                         Wahrheitstabellen getan haben. $\delta$ ist also
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \begin&#123;array&#125;&#123;cc|c&#125;
                     q&amp;\sigma&amp;\delta(q,x) \\ \hline
                     S&amp;x&amp;X \\
@@ -449,7 +464,10 @@ const Article = () => {
                     Y&amp;y&amp;Y \\
                     Y&amp;z&amp;Y
                     \end&#123;array&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -459,14 +477,20 @@ const Article = () => {
                         zweidimensionale Tabelle darstellen:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \begin&#123;array&#125;&#123;c|c|c|c&#125;
                     &amp;x&amp;y&amp;z \\ \hline
                     S&amp;X&amp;S&amp;S \\ \hline
                     X&amp;X&amp;Y&amp;S \\ \hline
                     Y&amp;Y&amp;Y&amp;Y
                     \end&#123;array&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -509,10 +533,16 @@ const Article = () => {
                     </i>
                     \(\hat&#123;\delta&#125;: Q \times \Sigma^* \rightarrow
                     Q\) rekursiv wie folgt:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \hat&#123;\delta&#125; (q, \epsilon)&amp;= q \\
                     \hat&#123;\delta&#125; (q, x\alpha)&amp;= \hat&#123;\delta&#125; (\delta(x), \alpha) \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     \(\hat&#123;\delta&#125; (q, \alpha) = q'\) heißt also, dass der Automat, wenn er sich im Zustand \(q\)
                     befindet
                     und das Wort \(\alpha\) abarbeitet, er danach im Zustand \(q'\) landet. Wir schreiben auch
@@ -543,9 +573,15 @@ const Article = () => {
                     Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein endlicher Automat. Die von \(M\) akzeptierte
                     Sprache
                     ist
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L(M) := \&#123; \alpha \in \Sigma \ | \ \hat&#123;\delta&#125;(\qstart, \alpha) \in F \&#125; \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <div class="well container theorem">
@@ -616,15 +652,27 @@ const Article = () => {
                 </figure>
                 <Paragraph>
                   würde dies beispielsweise die folgenden Produktionen ergeben:
-                  \begin&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   S&amp;\rightarrow y S \ | \ zS \ | \ x X \\
                   X&amp;\rightarrow x X \ | \ z S \ | \ y Y \\
                   Y&amp;\rightarrow x Y \ | \ y Y \ | \ z Y \\
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   und, weil \(X\) ein akzeptierender Zustand ist,
-                  \begin&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   X&amp;\rightarrow \epsilon
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   Dies geht ganz allgemein:
@@ -655,24 +703,28 @@ const Article = () => {
                     {" "}
                     Wir setzen \(N = Q\) und \(S = \qstart\) und führen für jeden Zustandsübergang, der von
                     \(\delta\) beschrieben wird, eine Ableitungsregel ein:
-                    \begin&#123;align*&#125;
-                    q
-                    <i>
-                      1 \stackrel&#123;x&#125;&#123;\rightarrow&#125; q
-                    </i>
-                    2&amp;\quad \textnormal&#123; wird zur Produktion &#125; \quad
-                    q
-                    <i>
-                      1 \rightarrow xq
-                    </i>
-                    2
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    q_1 \stackrel&#123;x&#125;&#123;\rightarrow&#125; q_2&amp;\quad \textnormal&#123; wird zur Produktion &#125; \quad
+                    q_1 \rightarrow xq_2
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Hiermit erhalten wir eine "Zwischengrammatik" \(G'\). Die endgültige Grammatik \(G\) erhalten
                     wir,
                     indem wir für jeden akzeptierenden Zustand \(q \in N\) die Produktion
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     q \rightarrow \epsilon
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     einführen. Wir zeigen nun per Induktion:
                   </Paragraph>
                   <div class="well subtheorem theorem">
@@ -823,9 +875,15 @@ const Article = () => {
                         <Paragraph>
                           {" "}
                           gewesen sein. Die Ableitung hat also die Form
-                          \begin&#123;align*&#125;
+                          {" "}
+                        </Paragraph>
+                        <Paragraph>
+                          $$\begin&#123;align*&#125;
                           q \Rightarrow x q_1 \Rightarrow^* x \beta q' \ ,
-                          \end&#123;align*&#125;
+                          \end&#123;align*&#125;$$
+                        </Paragraph>
+                        <Paragraph>
+                          {" "}
                           wir können also aus \(q_1\) die Wortform \(\beta q'\) ableiten: \(q_1 \Rightarrow^*
                           \beta q'\). Auf diese
                           Erkenntnis wenden wir die Induktionshypothese an und schließen, dass
@@ -977,10 +1035,16 @@ const Article = () => {
                       dem vorherigen Kapitel 4.1
                     </a>
                     :
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\rightarrow \epsilon \ |\ a S \ | \ b T \\
                     T&amp;\rightarrow \epsilon \ | \ b T \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -1043,13 +1107,19 @@ const Article = () => {
                       dem vorherigen Kapitel 4.1
                     </a>
                     :
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     A&amp;\rightarrow 0 A \ | 1 A \ | 1 B \\
                     B&amp;\rightarrow 0 C \ | 1 C \\
                     C&amp;\rightarrow 0 D \ | 1 D \\
                     D&amp;\rightarrow 0 E \ | 1 E \\
                     E&amp;\rightarrow \epsilon \
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Wobei wir aus dem vorherigen Beispiel lernen und einen Fehlerzustand einführen:
                   </Paragraph>
                   <figure>

@@ -294,25 +294,15 @@ const Article = () => {
                         für alle $i \geq 0$ gilt:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; X
-                    <i>
-                      0&amp;:= B \setminus &#123;\rm img&#125; (f) \\ X
-                    </i>
-                    &#123;2i+1&#125;&amp;:=
-                    g(X
-                    <i>
-                      &#123;2i&#125;) \\ X
-                    </i>
-                    &#123;2i+2&#125;&amp;:= f(X
-                    <i>
-                      &#123;2i+1&#125;)\\ A'&amp;:= X
-                    </i>
-                    1 \cup X_ 3 \cup
-                    X
-                    <i>
-                      5 \cup X
-                    </i>
-                    7 \cup \dots \ . \end&#123;align*&#125;
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; X_0&amp;:= B \setminus &#123;\rm img&#125; (f) \\ X_&#123;2i+1&#125;&amp;:=
+                    g(X_&#123;2i&#125;) \\ X_&#123;2i+2&#125;&amp;:= f(X_&#123;2i+1&#125;)\\ A'&amp;:= X_1 \cup X_ 3 \cup
+                    X_5 \cup X_7 \cup \dots \ . \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -329,9 +319,15 @@ const Article = () => {
                         \rightarrow B$ definieren:
                       </Paragraph>
                     </Paragraph>
-                    \begin&#123;align*&#125; h : A&amp;\rightarrow A\\ a&amp;\mapsto \begin&#123;cases&#125; f(a)
+                    {" "}{" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125; h : A&amp;\rightarrow A\\ a&amp;\mapsto \begin&#123;cases&#125; f(a)
                     &amp;\textnormal&#123; if $a \in A \setminus A'$&#125; \\ g^&#123;-1&#125;(a)&amp;\textnormal&#123;
-                    if $a \in A'$.&#125; \end&#123;cases&#125; \end&#123;align*&#125;
+                    if $a \in A'$.&#125; \end&#123;cases&#125; \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>

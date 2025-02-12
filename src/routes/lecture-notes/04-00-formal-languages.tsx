@@ -2747,11 +2747,17 @@ const Article = () => {
                       Beispiel
                     </span>
                     Wir betrachten die Grammatik \(G = (\&#123;a,b\&#125;, \&#123;S, A, B\&#125;, P, S)\) mit den Produktionsregeln
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S&amp;\rightarrow A B \\
                     A&amp;\rightarrow \epsilon \ | \ a A \\
                     B&amp;\rightarrow \epsilon \ | \ b B \ . \\
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Formal sind die Produktionsregeln \(P\) eine Teilmenge von \( N \times (\Sigma \cup \N)^*\),
                     also
                     {" "}
@@ -2770,10 +2776,16 @@ const Article = () => {
                       Ableitung
                     </i>
                     basierend auf der Grammatik:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     S \Rightarrow AB \Rightarrow aAB \Rightarrow aAbB \Rightarrow aAbbB
                     \Rightarrow aAbb \Rightarrow abb \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -2864,18 +2876,30 @@ const Article = () => {
                       für unsere einfache Grammatik mit den Produktionsregeln
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   S&amp;\rightarrow A B \\
                   A&amp;\rightarrow \epsilon \ | \ a A \\
                   B&amp;\rightarrow \epsilon \ | \ b B \ . \\
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   haben wir beispielsweise
-                  \begin&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   A&amp;\rightarrow aA \\
                   aA&amp;\rightarrow aaA \\
                   aaA&amp;\rightarrow aaaA \\
                   \dots
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}
                   und sehen, dass die Menge aller Paare \(\alpha \Rightarrow \beta\) unendlich ist.
                 </Paragraph>
                 <div class="well container theorem">
@@ -2890,9 +2914,15 @@ const Article = () => {
                     {" "}
                     Sei \(G = (\Sigma, N, P, S) \) eine kontextfreie Grammatik. Die von \(G\) erzeugte Sprache
                     \(L(G)\) ist die Menge aller Wörter, die vom Startsymbol \(S\) abgeleitet werden können, also
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L(G) := \&#123;x \in \Sigma^* \ | \ S \Rightarrow^* x\&#125; \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Wenn es zu einer Sprache \(L \subseteq \Sigma^*\) eine kontextfreie Grammatik \(G\) mit
                     \(L(G) = L\) gibt, so nennen wir \(L\) eine{" "}
                     <i>
@@ -2941,7 +2971,10 @@ const Article = () => {
                   Hier sind mögliche Ableitungen des Wortes \(abab\). Zur Verdeutlichung
                   schreiben wir über den Pfeil \(\Rightarrow\) die Nummer der Regel, die
                   wir angewendet haben:
-                  \begin&#123;align*&#125;
+                  {" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   S&amp;\stackrel&#123;(1)&#125;&#123;\Rightarrow&#125; aSbS
                   \stackrel&#123;(1)&#125;&#123;\Rightarrow&#125; aSbaSbS
                   \stackrel&#123;(3)&#125;&#123;\Rightarrow&#125; aSbaSb
@@ -2952,7 +2985,10 @@ const Article = () => {
                   \stackrel&#123;(1)&#125;&#123;\Rightarrow&#125; abaSbS
                   \stackrel&#123;(3)&#125;&#123;\Rightarrow&#125; ababS
                   \stackrel&#123;(3)&#125;&#123;\Rightarrow&#125; abab \ .
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>
@@ -2982,13 +3018,19 @@ const Article = () => {
                       Betrachten Sie nun eine weitere Linksableitung \(S \Rightarrow^* abab\):
                     </Paragraph>
                   </Paragraph>
-                  \begin&#123;align*&#125;
+                  {" "}{" "}
+                </Paragraph>
+                <Paragraph>
+                  $$\begin&#123;align*&#125;
                   S&amp;\stackrel&#123;(1)&#125;&#123;\Rightarrow&#125; aSbS
                   \stackrel&#123;(2)&#125;&#123;\Rightarrow&#125; abSaSbS
                   \stackrel&#123;(3)&#125;&#123;\Rightarrow&#125; abaSbS
                   \stackrel&#123;(3)&#125;&#123;\Rightarrow&#125; ababS
                   \stackrel&#123;(3)&#125;&#123;\Rightarrow&#125; abab
-                  \end&#123;align*&#125;
+                  \end&#123;align*&#125;$$
+                </Paragraph>
+                <Paragraph>
+                  {" "}{" "}
                 </Paragraph>
                 <Paragraph>
                   <Paragraph>

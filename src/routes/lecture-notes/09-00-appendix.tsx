@@ -83,8 +83,8 @@ const Article = () => {
                         there exists some set $I \subseteq [n]$ of indices with $|I|
                         \geq r$ such that
                       </Paragraph>
-                      \begin&#123;align*&#125; \&#123; \mathbf&#123;x&#125;_I \ | \ \mathbf&#123;x&#125; \in A\&#125; =
-                      \&#123;0,1\&#125;^r \ , \end&#123;align*&#125; in other words, the set $I$ of
+                      $$\begin&#123;align*&#125; \&#123; \mathbf&#123;x&#125;_I \ | \ \mathbf&#123;x&#125; \in A\&#125; =
+                      \&#123;0,1\&#125;^r \ , \end&#123;align*&#125;$$ in other words, the set $I$ of
                       coordinates is shattered.
                     </div>
                     and here is the source code:
@@ -93,9 +93,9 @@ const Article = () => {
                       &lt;p&gt;&lt;span class='numbered-title' id="sauer-shelah-lemma" data-label-title="Lemma"&gt;Lemma&lt;/span&gt; 
                       &lt;strong&gt;(Sauer-Shelah lemma).&lt;/strong&gt;Let $A \subseteq \&#123;0,1\&#125;^n$. If $|A| \gt &#123;\rm vol&#125;(n,r-1)$ then
                       there exists some set $I \subseteq [n]$ of indices with $|I| \geq r$ such that&lt;/p&gt;
-                      \begin&#123;align*&#125;
+                      $$\begin&#123;align*&#125;
                       \&#123; \mathbf&#123;x&#125;_I \ | \ \mathbf&#123;x&#125; \in A\&#125; = \&#123;0,1\&#125;^r \ ,
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
                       in other words, the set $I$ of coordinates is shattered.
                       &lt;/div class='well container theorem'&gt;
                     </pre>

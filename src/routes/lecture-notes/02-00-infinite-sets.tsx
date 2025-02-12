@@ -88,11 +88,17 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title" />
                     Die Menge
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \&#123;0,1\&#125;^* := \&#123;\epsilon\&#125; \cup \&#123;0,1\&#125; \cup \&#123;00, 01, 10, 11\&#125; \cup \dots \cup \&#123;0,1\&#125;^n
                     \cup
                     \dots \ ,
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     also die Menge aller endlichen Bit-Strings ist unendlich. Mit $\epsilon$ bezeichnen wir hier den
                     leeren String.
                     Ganz generell: wenn $\Sigma$ eine

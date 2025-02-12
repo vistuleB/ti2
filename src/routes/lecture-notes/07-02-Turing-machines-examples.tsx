@@ -44,9 +44,15 @@ const Article = () => {
                       Beispiel
                     </span>
                     Betrachten wir die Sprache
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \&#123;a^n b^n c^n \ | \ n \geq 0 \&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     über dem Alphabet \(\&#123;a,b,c\&#125;\). Wir wollen eine Turingmaschine
                     entwerfen, die diese Sprache entscheidet.
                   </Paragraph>
@@ -81,17 +87,29 @@ const Article = () => {
                           Formellere Beschreibung.
                         </b>
                         Als Bandalphabet verwenden wir
-                        \begin&#123;align*&#125;
+                        {" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
                         \Gamma := \&#123;a,b,c, X, \square\&#125; \ .
-                        \end&#123;align*&#125;
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}{" "}
                       </Paragraph>
                     </Paragraph>
                     Das Symbol \(X\) heißt dann "hier stand mal \(a\), \(b\) oder \(c\), wir haben es aber bereits
                     gelesen". Als Zustandsmenge verwenden wir
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     Q := \&#123;\texttt&#123;findA&#125;,\texttt&#123;findB&#125;,\texttt&#123;findC&#125;,\texttt&#123;noA&#125;,
                     \texttt&#123;accept&#125;,\texttt&#123;reject&#125;\&#125; \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Die "Bedeutung" dieser Zustände ist:
                   </Paragraph>
                   <ul>
@@ -198,9 +216,15 @@ const Article = () => {
                       </a>
                       .
                       Generell können Sie Regeln der Form
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       \delta(q,a) = (r, b, D)
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}
                       auf turingmachinesimulator.com als
                     </Paragraph>
                     <Paragraph>
@@ -226,9 +250,15 @@ const Article = () => {
                       Beispiel
                     </span>
                     Als zweites Beispiel nehmen wir die Palindromsprache
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L := \&#123; w \in \&#123;a,b\&#125;^* \ | \ w = w^R \&#125; \ ,
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     wobei \(w^R\) das Kehrwort bedeutet, also \(aabba^R = abbaa\).
                   </Paragraph>
                   <Paragraph>
@@ -254,10 +284,16 @@ const Article = () => {
                     <Paragraph>
                       Als Bandalphabet brauchen wir hier nur \(\Gamma = \&#123;a,b,\square\&#125;\). Als
                       Zustandsmenge nehmen wir
-                      \begin&#123;align*&#125;
+                      {" "}
+                    </Paragraph>
+                    <Paragraph>
+                      $$\begin&#123;align*&#125;
                       Q = \&#123;\texttt&#123;next&#125;, \texttt&#123;readA&#125;, \texttt&#123;readB&#125;, \texttt&#123;killA&#125;, \texttt&#123;killB&#125;,
                       \texttt&#123;return&#125;, \texttt&#123;reject&#125;, \texttt&#123;accept&#125;\&#125;.
-                      \end&#123;align*&#125;
+                      \end&#123;align*&#125;$$
+                    </Paragraph>
+                    <Paragraph>
+                      {" "}{" "}
                     </Paragraph>
                   </Paragraph>
                   <ul>
@@ -371,9 +407,15 @@ const Article = () => {
                     </a>
                     ),
                     die die folgende Sprache \(L \subseteq \&#123;a,b,c\&#125;\) entscheidet:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L := \&#123; w c w \ | \ w \in \&#123;a,b\&#125;^* \&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                 </div>
                 <div class="well well-lg numbered-exercise container">
@@ -386,9 +428,15 @@ const Article = () => {
                       turingmachinesimulator.com
                     </a>
                     eine Turingmaschine für die Sprache
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L := \&#123;1^n \ | \ n = 2^d, d \geq 0\&#125; \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     {" "}
                     <b>
                       Tip:

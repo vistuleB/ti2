@@ -67,9 +67,15 @@ const Article = () => {
                       Beispiel
                     </span>
                     Betrachten wir die Sprache
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L := \&#123; a^n b^n c^n \ | \ \ n \geq 0\&#125; \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}{" "}
                   </Paragraph>
                   <Paragraph>
                     <Paragraph>
@@ -134,9 +140,15 @@ const Article = () => {
                         Nun holen wir zum entscheidenden Schlag aus: wir "pumpen" das Wort \(\gamma\) auf, indem
                         wir die Teilbäume mit \(Z\) an der Wurzel wiederholen. Konkret besagt ja oberer Baum,
                         dass \(\gamma\) wie folgt hergeleitet wurde:
-                        \begin&#123;align*&#125;
+                        {" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
                         S \Step&#123;&#125;^* u Z v \Step&#123;&#125;^* uvZxy \Step&#123;&#125;^* uvwxy
-                        \end&#123;align*&#125;
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}
                         Insbesondere heißt das, dass \(Z \Step&#123;&#125;^* vZx\) gilt. Wir können diesen
                         Schritt also wiederholen:
                       </Paragraph>
@@ -148,9 +160,15 @@ const Article = () => {
                       </figure>
                       <Paragraph>
                         und somit das Wort \(uvvwxxy\) und ganz allgemein jedes Wort
-                        \begin&#123;align*&#125;
+                        {" "}
+                      </Paragraph>
+                      <Paragraph>
+                        $$\begin&#123;align*&#125;
                         uv^i w x^i y
-                        \end&#123;align*&#125;
+                        \end&#123;align*&#125;$$
+                      </Paragraph>
+                      <Paragraph>
+                        {" "}
                         ableiten, für jedes \(i \geq 0\). Selbst für \(i = 0\) geht das:
                       </Paragraph>
                       <figure>
@@ -219,13 +237,25 @@ const Article = () => {
                     {" "}
                     Für jede kontextfreie Grammatik \(G\) gibt es eine Zahl \(p \in \N\), so dass jedes
                     Wort \(\gamma \in L(G)\) der Länge \(|\gamma| \geq p\) zerlegt werden kann in
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \gamma = uvwxy \ ,
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     wobei \(|vwx| \leq p\) gilt und \(v,x\) nicht beide \(\epsilon\) sind, so dass
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     u v^i w x^i y \in L(G)
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     gilt, für alle \(i \geq 0\).
                     Die Zahl \(p\) kann zum Beispiel als \(2^&#123;N_&#123;\rm CNF&#125;&#125;\) gewählt werden, wobei \(N_&#123;\rm CNF&#125;\)
                     die
@@ -238,9 +268,15 @@ const Article = () => {
                       Übungsaufgabe
                     </span>
                     Sei \(L \subseteq \&#123;a,b,c\&#125;^n\) die Sprache aller Wörter
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     \&#123;\alpha c \alpha \ | \ \alpha \in \&#123;a,b\&#125;^* \&#125; \ .
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     In Worten: rechts und links vom \(c\) in der Mitte muss das gleiche Teilwort stehen.
                     Zeigen Sie analog zu dem vorherigen Beweis, dass \(L\) nicht kontextfrei ist.
                   </Paragraph>
@@ -254,9 +290,15 @@ const Article = () => {
                     </span>
                     Sie \(L \subseteq \&#123;1\&#125;^*\) die Sprache aller Wörter, deren Länge
                     eine Zweierpotenz ist:
-                    \begin&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
                     L := \&#123; 1^n \ | \ n = 2^d \textnormal&#123; für ein \(d \in \N\)&#125; \&#125;
-                    \end&#123;align*&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Also \(L = \&#123;1, 11, 1111, 11111111, 1111111111111111, \dots\&#125;\). Zeigen Sie, dass \(L\) nicht
                     kontextfrei ist.
                   </Paragraph>
@@ -401,24 +443,28 @@ const Article = () => {
                     </i>
                     kontextfrei.
                     Ein Beispiel ist
-                    \begin&#123;align*&#125;
-                    L
-                    <i>
-                      1&amp;:= \&#123;a^n b^n c^* \ | \ n \geq 0 \&#125;\\
-                      L
-                    </i>
-                    2&amp;:= \&#123;a^* b^n c^n \ | \ n \geq 0 \&#125;
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    L_1&amp;:= \&#123;a^n b^n c^* \ | \ n \geq 0 \&#125;\\
+                    L_2&amp;:= \&#123;a^* b^n c^n \ | \ n \geq 0 \&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     Diese sind beide kontextfrei (schreiben Sie jeweils eine Grammatik, wenn Sie's nicht glauben).
                     Der
                     Schnitt allerdings ist
-                    \begin&#123;align*&#125;
-                    L
-                    <i>
-                      1 \cap L
-                    </i>
-                    2 = \&#123;a^n b^n c^n \ | \ n \geq 0\&#125; \ ,
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    L_1 \cap L_2 = \&#123;a^n b^n c^n \ | \ n \geq 0\&#125; \ ,
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     genau diejenige Sprache, für die wir oben gezeigt haben, dass sie nicht kontextfrei ist.
                   </Paragraph>
                 </div>
@@ -436,17 +482,15 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     Warum? Wenn er es wäre, dann wäre mit Hilfe von Punkt 1 auch
-                    \begin&#123;align*&#125;
-                    L
-                    <i>
-                      1 \cap L
-                    </i>
-                    2 = \overline&#123; \bar&#123;L&#125;
-                    <i>
-                      1 \cup \bar&#123;L
-                    </i>
-                    2&#125;&#125;
-                    \end&#123;align*&#125;
+                    {" "}
+                  </Paragraph>
+                  <Paragraph>
+                    $$\begin&#123;align*&#125;
+                    L_1 \cap L_2 = \overline&#123; \bar&#123;L&#125;_1 \cup \bar&#123;L_2&#125;&#125;
+                    \end&#123;align*&#125;$$
+                  </Paragraph>
+                  <Paragraph>
+                    {" "}
                     kontextfrei, was es aber im Allgemeinen nicht ist. Befriedigender wäre es allerdings, wenn wir
                     ein konkretes Beispiel hätten.
                   </Paragraph>
