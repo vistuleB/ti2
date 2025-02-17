@@ -66,13 +66,13 @@ const TOCAuthorSuppliedContent = () => {
             number={2.4}
             href="02-04-diagonalization" />
           <TOCItem
-            label="Das Schröder-Bernstein-Theore"
-            on_mobile="Das Schröder-Bernstein-Theore"
+            label="Das Schröder-Bernstein-Theorem"
+            on_mobile="Das Schröder-Bernstein-Theorem"
             number={2.5}
             href="02-05-Schroeder-Bernstein" />
           <TOCItem
-            label="Der Trichotomiesat"
-            on_mobile="Der Trichotomiesat"
+            label="Der Trichotomiesatz"
+            on_mobile="Der Trichotomiesatz"
             number={2.6}
             href="02-06-Trichotomiesatz" />
           <TOCItem

@@ -5,7 +5,9 @@ const TOC = () => {
     <>
       <div>
         <p>
-          <a href="index.html">zur Kursübersicht</a>
+          <a href="https://www.tu-chemnitz.de/informatik/theoretische-informatik/TI-2/index.html">
+            zur Kursübersicht
+          </a>
         </p>
       </div>
       <div class="container" style="text-align: center;">

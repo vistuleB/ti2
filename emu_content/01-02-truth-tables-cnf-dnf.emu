@@ -51,12 +51,8 @@
                         |> span
                             class subChapterTitle
 
-                            1.2 Wahrheitstabellen, CNF und DNF
+                            ::++ChapterCounter Wahrheitstabellen, CNF und DNF
                         
-                        
-                    
-                    
-                    
                     |> p
 
                         

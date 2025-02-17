@@ -7,7 +7,7 @@ const Article = () => {
     <Container>
       <Chapter
         count={13}
-        title_gr="Das Schröder-Bernstein-Theore"
+        title_gr="Das Schröder-Bernstein-Theorem"
         title_en="Schroeder Bernstein"
         number={2.5}
         path="/lecture-notes13.tsx">

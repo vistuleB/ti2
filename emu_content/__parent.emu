@@ -1,2 +1,2 @@
 |> Book
-    counter ChapterCounter
+    counter ChapterCounter 1 0.1

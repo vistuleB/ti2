@@ -26,12 +26,15 @@ const Article = () => {
             Kapitel 1.1 &gt;&gt;
           </a>
         </div>
-        <div id="rightSideWrapper">
+        <div
+          counter="ExoCounter"
+          counter="DefCounter"
+          id="rightSideWrapper">
           <div class="content">
             <div class="chapter">
               <h1 class="hidden-title">
                 <span class="chapterTitle">
-                  1. Boolesche Schaltkreise
+                  1.  Boolesche Schaltkreise
                 </span>
               </h1>
               Boolesche Schaltkreise sind ein idealisiertes Modell echter elektronischer Schaltkreise.
@@ -157,7 +160,10 @@ const Article = () => {
               </figure>
               <div class="well well-lg numbered-exercise container">
                 <span class="numbered-title">
-                  Übungsaufgabe
+                  Übungsaufgabe{" "}
+                  <span style="color: blue;">
+                    1.1{" "}
+                  </span>
                 </span>
                 Bauen Sie folgende Gates aus And-, Or- und Not-Gates zusammen:
                 <ol>
@@ -276,7 +282,7 @@ const Article = () => {
               </Paragraph>
               <div class="well container theorem">
                 <span class="numbered-title">
-                  Definition
+                  Definition 1.1
                 </span>
                 {" "}{" "}
                 <b>
@@ -338,7 +344,7 @@ const Article = () => {
               </Paragraph>
               <div class="well container theorem">
                 <span class="numbered-title">
-                  Beobachtung
+                  Beobachtung 1.2{" "}
                 </span>
                 Ein Schaltkreis \(C\) mit \(n\) Input-Gates und \(m\) Output-Gates berechnet
                 eine Funktion \(f_C : \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;^m\).
@@ -352,7 +358,7 @@ const Article = () => {
               </Paragraph>
               <div class="well container theorem">
                 <span class="numbered-title">
-                  Definition
+                  Definition 1.3{" "}
                 </span>
                 Zwei Boolesche Schaltkreise \(C, C'\) heißen äquivalent, wenn
                 \(f_C = f_&#123;C'&#125;\), wenn sie also die gleiche Funktion berechnen. Wir schreiben

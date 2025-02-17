@@ -209,24 +209,10 @@ const Article = () => {
                   \(x_i \ne y_i\) ist, dann schaltet das \(M\)-Gate einfach \(c_i\) unverändert durch.
                   Dies motiviert die folgenden Definitionen:
                 </Paragraph>
-                $$
                 $$\begin&#123;align*&#125;
-                g
-                <i>
-                  i&amp;:= x
-                </i>
-                i \wedge y
-                <i>
-                  i \tag&#123;carry-generate&#125; \\
-                  p
-                </i>
-                i&amp;:= x
-                <i>
-                  i \vee y
-                </i>
-                i \tag&#123;carry-propagate&#125;
+                g_i&amp;:= x_i \wedge y_i \tag&#123;carry-generate&#125; \\
+                p_i&amp;:= x_i \vee y_i \tag&#123;carry-propagate&#125;
                 \end&#123;align*&#125;$$
-                $$
                 <Paragraph>
                   Jetzt können wir \(c_&#123;k+1&#125;\) wie folgt berechnen: an Stelle \(k\) wird ein Carry
                   ausgegeben, wenn es eine Stelle \(i \leq k\) gibt, wo \(x_i = y_i=1\) gilt, das
@@ -343,9 +329,7 @@ const Article = () => {
                   gilt, wir also die Carrys direkt ablesen, zweitens
                   wir die \(g_&#123;[a,b]&#125;\) bequem rekursiv berechnen können:
                 </Paragraph>
-                <div
-                  test={222}
-                  class="well container theorem">
+                <div class="well container theorem">
                   <span class="numbered-title">
                     Beobachtung
                   </span>

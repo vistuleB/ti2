@@ -232,7 +232,7 @@ pub fn html_to_writerly(dir: String, amendments: vr.CommandLineAmendments(Bool))
     let parameters =
       vr.RendererParameters(
         input_dir: "../public/pages",
-        output_dir: option.Some("../emu_content/chapters"),
+        output_dir: option.Some("../emu_content"),
         prettifying_option: False,
       )
       |> vr.amend_renderer_paramaters_by_command_line_amendment(amendments)
