@@ -35,7 +35,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    1.2 Wahrheitstabellen, CNF und DNF
+                    3 Wahrheitstabellen, CNF und DNF
                   </span>
                 </h1>
                 <Paragraph>
@@ -45,7 +45,8 @@ const Article = () => {
                   viele Schaltkreise), die sie berechnen. Wir werden insgesamt drei
                   Konstruktionen sehen. Als erstes lassen Sie uns überlegen, wie man
                   eine Boolesche Funktion im Allgemeinen aufschreibt/codiert.
-                  Beschränken wir uns erst einmal auf Boolesche Funktionen mit{" "}
+                  Beschränken wir uns erst einmal auf Boolesche Funktionen mit
+                  {" "}
                   <i>
                     einem
                   </i>
@@ -58,17 +59,17 @@ const Article = () => {
                 <i>
                   Wahrheitstabelle
                 </i>
-                (englisch{" "}
+                (englisch
+                {" "}
                 <i>
                   truth table
                 </i>
-                ). Hier sehen
-                Sie ein Beispiel: $$ \begin&#123;array&#125;&#123;ccc|c&#125; x&amp;y&amp;z&amp;f \\\hline 0&amp;0&
-                0&amp;0 \\ 0&amp;0&amp;1&amp;1 \\ 0&amp;1&amp;0&amp;1 \\ 0&amp;1&amp;1&amp;1 \\ 1&amp;0&amp;0&
-                1 \\ 1&amp;0&amp;1&amp;1 \\ 1&amp;1&amp;0&amp;0 \\ 1&amp;1&amp;1&amp;1\\ \end&#123;array&#125; $$
-                Wie können wir von so einer Tabelle ausgehend einen Schaltkreis bauen,
-                der diese Funktion berechnet? Ich stelle Ihnen drei Herangehensweisen
-                vor.
+                ). Hier sehen Sie ein Beispiel: $$
+                \begin&#123;array&#125;&#123;ccc|c&#125; x&amp;y&amp;z&amp;f \\\hline 0&amp;0&amp;0&amp;0 \\ 0&amp;0&amp;1&
+                1 \\ 0&amp;1&amp;0&amp;1 \\ 0&amp;1&amp;1&amp;1 \\ 1&amp;0&amp;0&amp;1 \\ 1&amp;0&amp;1&amp;1 \\
+                1&amp;1&amp;0&amp;0 \\ 1&amp;1&amp;1&amp;1\\ \end&#123;array&#125; $$ Wie können wir von so
+                einer Tabelle ausgehend einen Schaltkreis bauen, der diese Funktion
+                berechnet? Ich stelle Ihnen drei Herangehensweisen vor.
                 <h3 id="truth-table-top-down">
                   Rekursiv, top-down
                 </h3>
@@ -141,7 +142,7 @@ const Article = () => {
                     \(x_2,\dots,x_n\).
                   </li>
                   <li>
-                    Kombinieren Sie diese via 
+                    Kombinieren Sie diese via
                     {" "}
                     <code>
                       if
@@ -151,7 +152,7 @@ const Article = () => {
                       then
                     </code>
                     {" "}
-                    \(C_1\) 
+                    \(C_1\)
                     {" "}
                     <code>
                       else
@@ -211,7 +212,8 @@ const Article = () => {
                   in diesem Falle \((1,0,1)\). Wir werden nun also für jede 1-Zeile
                   unserer Wahrheitstabelle einen solchen Ausdruck hinschreiben und diese
                   dann in einem großen OR zusammenführen. Einen Ausdruck, der aus einem
-                  AND von Variablen oder deren Negation besteht, nennt man auch einen{" "}
+                  AND von Variablen oder deren Negation besteht, nennt man auch einen
+                  {" "}
                   <i>
                     Term
                   </i>
@@ -279,7 +281,8 @@ const Article = () => {
                     Übungsaufgabe
                   </span>
                   Was, wenn einige der "mittleren" Gates (auf Tiefe 1) keine AND-Gates
-                  sind, sondern auch OR-Gates? Dann wäre dies nach der ersten Definition{" "}
+                  sind, sondern auch OR-Gates? Dann wäre dies nach der ersten Definition
+                  {" "}
                   <i>
                     keine
                   </i>
@@ -299,7 +302,8 @@ const Article = () => {
                   Zu der eben demonstrierten Konstruktion gibt es noch eine weitere,
                   dazu duale Konstruktion. Bildlich gesprochen listet DNF-Konstruktion
                   alle Möglichkeiten auf, wie man eine 1 erhalten kann. Dual dazu können
-                  wir alle Möglichkeiten auflisten, wie man eine 0 erhalten kann; tritt{" "}
+                  wir alle Möglichkeiten auflisten, wie man eine 0 erhalten kann; tritt
+                  {" "}
                   <i>
                     keine
                   </i>

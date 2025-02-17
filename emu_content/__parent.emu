@@ -1,2 +1,3 @@
 |> Book
-    counter ChapterCounter 1 0.1
+    counter ChapterCtr
+    counter SectionCtr

@@ -35,7 +35,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    1.3 Binär-Addierer
+                    4 Binär-Addierer
                   </span>
                 </h1>
                 <h3>

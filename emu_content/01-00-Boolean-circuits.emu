@@ -20,8 +20,8 @@
 
             Kapitel 1.1 &gt;&gt;
     |> div
-        counter ExoCounter
-        counter DefCounter
+        counter ExoCtr
+        counter DefCtr
         id rightSideWrapper
         |> div
             class content
@@ -32,7 +32,7 @@
                     |> span
                         class chapterTitle
 
-                        ::::ChapterCounter.  Boolesche Schaltkreise
+                        ::++ChapterCtr.  Boolesche Schaltkreise
                 Boolesche Schaltkreise sind ein idealisiertes Modell echter elektronischer Schaltkreise.
                 Als primitive Bausteine haben wir Boolesche Operatoren, auch _Gatter_(englisch _gates_)
                 genannt, die mehrere (typischerweise ein oder zwei)
@@ -116,7 +116,7 @@
                         |> span
                             style color: blue;
 
-                            ::::ChapterCounter.::++ExoCounter 
+                            ::::ChapterCtr.::++ExoCtr 
                     Bauen Sie folgende Gates aus And-, Or- und Not-Gates zusammen:
                     |> ol
                         |> li
@@ -206,7 +206,11 @@
                     |> span
                         class numbered-title
 
-                        Definition ::::ChapterCounter.::++DefCounter
+                        Definition 
+                        |> span
+                            style color: blue;
+
+                            ::::ChapterCtr.::++DefCtr
                     *(Boolesche Schaltkreise)*
                     |> p
 
@@ -244,7 +248,11 @@
                     |> span
                         class numbered-title
 
-                        Beobachtung ::::ChapterCounter.::++DefCounter 
+                        Beobachtung 
+                        |> span
+                            style color: blue;
+
+                            ::::ChapterCtr.::++DefCtr 
                     Ein Schaltkreis \(C\) mit \(n\) Input-Gates und \(m\) Output-Gates berechnet
                     eine Funktion \(f_C : \{0,1\}^n \rightarrow \{0,1\}^m\).
                 |> p
@@ -259,7 +267,11 @@
                     |> span
                         class numbered-title
 
-                        Definition ::::ChapterCounter.::++DefCounter 
+                        Definition 
+                        |> span
+                            style color: blue;
+
+                            ::::ChapterCtr.::++DefCtr 
                     Zwei Boolesche Schaltkreise \(C, C'\) heißen äquivalent, wenn
                     \(f_C = f_{C'}\), wenn sie also die gleiche Funktion berechnen. Wir schreiben
                     \(C \equiv C'\).

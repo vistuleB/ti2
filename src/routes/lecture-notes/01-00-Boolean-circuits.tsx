@@ -27,8 +27,8 @@ const Article = () => {
           </a>
         </div>
         <div
-          counter="ExoCounter"
-          counter="DefCounter"
+          counter="ExoCtr"
+          counter="DefCtr"
           id="rightSideWrapper">
           <div class="content">
             <div class="chapter">
@@ -282,7 +282,10 @@ const Article = () => {
               </Paragraph>
               <div class="well container theorem">
                 <span class="numbered-title">
-                  Definition 1.1
+                  Definition{" "}
+                  <span style="color: blue;">
+                    1.1
+                  </span>
                 </span>
                 {" "}{" "}
                 <b>
@@ -344,7 +347,10 @@ const Article = () => {
               </Paragraph>
               <div class="well container theorem">
                 <span class="numbered-title">
-                  Beobachtung 1.2{" "}
+                  Beobachtung{" "}
+                  <span style="color: blue;">
+                    1.2{" "}
+                  </span>
                 </span>
                 Ein Schaltkreis \(C\) mit \(n\) Input-Gates und \(m\) Output-Gates berechnet
                 eine Funktion \(f_C : \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;^m\).
@@ -358,7 +364,10 @@ const Article = () => {
               </Paragraph>
               <div class="well container theorem">
                 <span class="numbered-title">
-                  Definition 1.3{" "}
+                  Definition{" "}
+                  <span style="color: blue;">
+                    1.3{" "}
+                  </span>
                 </span>
                 Zwei Boolesche Schaltkreise \(C, C'\) heißen äquivalent, wenn
                 \(f_C = f_&#123;C'&#125;\), wenn sie also die gleiche Funktion berechnen. Wir schreiben

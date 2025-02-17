@@ -36,7 +36,7 @@
                         |> span
                             class subChapterTitle
 
-                            ::++ChapterCounter Binär-Addierer
+                            ::++ChapterCtr Binär-Addierer
                     |> h3
 
                         Ein Schaltkreis für binäre Addition

@@ -29,13 +29,15 @@ const Article = () => {
             Kapitel 1.2 &gt;&gt;
           </a>
         </div>
-        <div id="rightSideWrapper">
+        <div
+          counter="DefCtr"
+          id="rightSideWrapper">
           <div class="content">
             <div class="chapter">
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    1.1 Größe, Tiefe, Fan-In
+                    2.1 Größe, Tiefe, Fan-In
                   </span>
                 </h1>
                 <Paragraph>
@@ -44,7 +46,10 @@ const Article = () => {
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
-                    Definition.
+                    Definition.{" "}
+                    <span style="color: blue;">
+                      2.1.1{" "}
+                    </span>
                   </span>
                   Die{" "}
                   <i>
@@ -109,7 +114,10 @@ const Article = () => {
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
-                    Theorem
+                    Theorem{" "}
+                    <span style="color: blue;">
+                      2.1.2{" "}
+                    </span>
                   </span>
                   Sei \(C\) ein Schaltkreis Maximum-Fan-in \(k\), Größe \(s\) und Tiefe \(d\).
                   Dann gibt es einen äquivalenten Schaltkreis \(C'\) mit Maximum-Fan-in \(2\),

@@ -24,6 +24,7 @@
 
             Kapitel 1.2 &gt;&gt;
     |> div
+        counter DefCtr
         id rightSideWrapper
         |> div
             class content
@@ -36,7 +37,7 @@
                         |> span
                             class subChapterTitle
 
-                            ::++ChapterCounter Größe, Tiefe, Fan-In
+                            ::++ChapterCtr.::++SectionCtr Größe, Tiefe, Fan-In
                     |> p
 
                         Für Boolesche Schaltkreise gibt es drei Komplexitätsparameter, die uns
@@ -46,7 +47,11 @@
                         |> span
                             class numbered-title
 
-                            Definition.
+                            Definition. 
+                            |> span
+                                style color: blue;
+
+                                ::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Die _Größe_eines Schaltkreises ist die Anzahl seiner Gates, also die Anzahl
                         der Knoten im zugrundeliegenden DAG.
                         Die _Teife_ist die Länge des längsten gerichteten Pfades von einem Input- zu einem
@@ -92,7 +97,11 @@
                         |> span
                             class numbered-title
 
-                            Theorem
+                            Theorem 
+                            |> span
+                                style color: blue;
+
+                                ::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Sei \(C\) ein Schaltkreis Maximum-Fan-in \(k\), Größe \(s\) und Tiefe \(d\).
                         Dann gibt es einen äquivalenten Schaltkreis \(C'\) mit Maximum-Fan-in \(2\),
                         Größe höchstens \(s (k-1)\) und Tiefe höchstens \(d \ceil {\log_2 k}\).
