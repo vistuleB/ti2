@@ -4,6 +4,8 @@ import desugarers/insert_bookend_text_if_no_attributes.{insert_bookend_text_if_n
 import desugarers/extract_starting_and_ending_spaces.{extract_starting_and_ending_spaces}
 import desugarers/fold_tags_into_text.{fold_tags_into_text}
 import desugarers/surround_elements_by.{surround_elements_by}
+import desugarers/trim_spaces_around_newlines.{trim_spaces_around_newlines}
+
 
 
 import infrastructure.{type Pipe}
@@ -22,6 +24,7 @@ pub fn html_pipeline() -> List(Pipe) {
     surround_elements_by(#(["i", "b", "strong", "em", "code"], "go23_xU", "go23_xU")),
     unwrap_tags_if_no_attributes(["i", "b", "strong", "em", "code"]),
     fold_tags_into_text([#("go23_xU", "")]),
+    trim_spaces_around_newlines(),
     // insert_string_at_end_of([#("em", " ")]),
   ]
 }
