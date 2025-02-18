@@ -37,7 +37,7 @@
                         |> span
                             class subChapterTitle
 
-                            ::++ChapterCtr.::++SectionCtr Größe, Tiefe, Fan-In
+                            ::::ChapterCtr.::++SectionCtr Größe, Tiefe, Fan-In
                     |> p
 
                         Für Boolesche Schaltkreise gibt es drei Komplexitätsparameter, die uns

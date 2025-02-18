@@ -195,12 +195,32 @@ pub fn prettifier(
   Ok("")
 }
 
-pub fn html_to_writerly(dir: String, amendments: vr.CommandLineAmendments(Bool)) {
-  use files <- result.try(simplifile.read_directory(dir))
+fn drop_slash_at_end(path: String) -> String {
+  case string.ends_with(path)
+}
+
+fn directory_files_else_file(path: String) -> Result(List(String), simplifile.FileError) {
+  case simplifile.read_directory(path) {
+    Ok(files) -> {
+      let path = 
+      Ok(files |> list.map(fn(file) { path <> "/" <> file }))
+    }
+    Error(_) -> {
+      case simplifile.is_file(path) {
+        Error(e) -> Error(e)
+        _ -> Ok([path])
+      }
+    }
+  }
+}
+
+pub fn html_to_writerly(path: String, amendments: vr.CommandLineAmendments(Bool)) {
+  case directory_files_else_file(path)
+  use files <- result.try(simplifile.read_directory(path))
   let files = list.sort(files, string.compare)
 
   each_prev_next(files, option.None, fn(file, prev, next) {
-    let path = dir <> file
+    let path = path <> file
     let renderer =
       vr.Renderer(
         assembler: fn (_) {
