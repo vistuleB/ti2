@@ -196,52 +196,51 @@ pub fn prettifier(
 }
 
 fn drop_slash_at_end(path: String) -> String {
-  case string.ends_with(path)
+  case string.ends_with(path, "/") {
+    True -> string.drop_end(path, 1)
+    False -> path
+  }
 }
 
-fn directory_files_else_file(path: String) -> Result(List(String), simplifile.FileError) {
+fn directory_files_else_file(path: String) -> Result(#(String, List(String)), simplifile.FileError) {
   case simplifile.read_directory(path) {
     Ok(files) -> {
-      let path = 
-      Ok(files |> list.map(fn(file) { path <> "/" <> file }))
+      let path = drop_slash_at_end(path) 
+      Ok(#(path, files))
     }
     Error(_) -> {
       case simplifile.is_file(path) {
         Error(e) -> Error(e)
-        _ -> Ok([path])
+        _ -> Ok(#("", [path]))
       }
     }
   }
 }
 
-pub fn html_to_writerly(path: String, amendments: vr.CommandLineAmendments(Bool)) {
-  case directory_files_else_file(path)
-  use files <- result.try(simplifile.read_directory(path))
-  let files = list.sort(files, string.compare)
+fn renderer(file, prev, next) {
 
+}
+
+pub fn html_to_writerly(path: String, amendments: vr.CommandLineAmendments(Bool)) {
+  
+  use #(path, files) <- infrastructure.on_error_on_ok(
+    directory_files_else_file(path),
+    fn(e) { io.print("Failed to load files " <> ins(e)) },
+  )
+
+  let files = list.sort(files, string.compare)
   each_prev_next(files, option.None, fn(file, prev, next) {
-    let path = path <> file
+    let path = path <> "/" <> file
     let renderer =
       vr.Renderer(
-        assembler: fn (_) {
-          case simplifile.read(path) {
-            Error(error) -> {
-              io.println("couldn't read file at " <> path)
-              Error(error)
-            }
-            Ok(content) -> {
-              bl.string_to_blamed_lines(content, path)
-              |> Ok
-            }
-          }
-        },
+        assembler: wp.assemble_blamed_lines,
         source_parser: fn(lines){ 
           let path = bl.first_blame_filename(lines) |> result.unwrap("")
           bl.blamed_lines_to_string(lines)
             |> vp.xmlm_based_html_parser(path)
-         },
+        },
         parsed_source_converter: fn(vxml) { 
-         [vxml]
+        [vxml]
         },
         pipeline: html_pipeline.html_pipeline(),
         splitter: fn(vxml) { splitter(vxml, file) },
@@ -251,7 +250,7 @@ pub fn html_to_writerly(path: String, amendments: vr.CommandLineAmendments(Bool)
 
     let parameters =
       vr.RendererParameters(
-        input_dir: "../public/pages",
+        input_dir: path,
         output_dir: option.Some("../emu_content"),
         prettifying_option: False,
       )
@@ -269,5 +268,4 @@ pub fn html_to_writerly(path: String, amendments: vr.CommandLineAmendments(Bool)
       Error(error) -> io.println("\nrenderer error: " <> ins(error) <> "\n")
     }
   })
-  Ok(Nil)
 }
