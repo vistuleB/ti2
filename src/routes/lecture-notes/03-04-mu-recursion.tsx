@@ -53,7 +53,7 @@ const Article = () => {
                 <i>
                   eine
                 </i>
-                natürliche Zahl codieren.
+                {" "}natürliche Zahl codieren.
                 Der erste Punkt allerdings scheint eine echte Beschränkung zu sein: wir wissen schließlich nicht
                 immer, wie oft wir eine Tätigkeit wiederholen müssen, bis wir fertig sind,
                 und ob wir überhaupt jemals fertig werden. Sie kennen vielleicht die Collatz-Vermutung.
@@ -106,13 +106,13 @@ const Article = () => {
                   <a href="../code/primitive-recursion/collatz.html">
                     collatz.html
                   </a>
-                  erstellt.
+                  &ensp;erstellt.
                   Es scheint: egal, wo Sie anfangen, Sie enden immer bei 1. Allerdings wissen wir nicht
                   im Voraus,{" "}
                   <i>
                     wie oft
                   </i>
-                  wir die Funktion $f$ anwenden müssen. Und wir wissen nicht einmal,
+                  {" "}wir die Funktion $f$ anwenden müssen. Und wir wissen nicht einmal,
                   ob man immer bei 1 ankommt, ob es andere Zyklen gibt oder ob es Startwerte gibt, für die die
                   Folge einfach nach Unendlich divergiert. Bis zum heutigen Tage (Stand 30. April 2024) hat sich
                   die Collatz-Vermutung zahlreichen Lösungsversuchung widersetzt und demonstriert eindrucksvoll,
@@ -132,43 +132,23 @@ const Article = () => {
                     def While (condition, step):
                   </code>
                   {" "}
-                  {" "}
-                  <code>
-                    def f(x):
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    temp = x
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    while (condition(temp)):
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    temp = step(temp)
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    return temp
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    return f
-                  </code>
-                  {" "}{" "}
+                  &ensp;`def f(x):`
+                  &ensp;&ensp;`temp = x`
+                  &ensp;&ensp;`while (condition(temp)):`
+                  &ensp;&ensp;&ensp;`temp = step(temp)`
+                  &ensp;&ensp;`return temp` 
+                  &ensp;`return f`{" "}
                 </pre>
                 <div class="well well-lg numbered-exercise container">
                   <Paragraph>
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Schreiben Sie mit Hilfe von `While`, `PrimRec`und{" "}
+                    Schreiben Sie mit Hilfe von `While`,{" "}
+                    <code>
+                      PrimRec
+                    </code>
+                    {" "}und{" "}
                     <code>
                       Comp
                     </code>

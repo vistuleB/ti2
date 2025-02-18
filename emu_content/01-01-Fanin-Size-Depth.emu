@@ -47,21 +47,21 @@
                         |> span
                             class numbered-title
 
-                            Definition. 
+                            Definition.
                             |> span
                                 style color: blue;
 
                                 ::::ChapterCtr.::::SectionCtr.::++DefCtr 
-                        Die _Größe_eines Schaltkreises ist die Anzahl seiner Gates, also die Anzahl
+                        Die _Größe_ eines Schaltkreises ist die Anzahl seiner Gates, also die Anzahl
                         der Knoten im zugrundeliegenden DAG.
-                        Die _Teife_ist die Länge des längsten gerichteten Pfades von einem Input- zu einem
+                        Die _Teife_ ist die Länge des längsten gerichteten Pfades von einem Input- zu einem
                         Output-Gate.
-                        Der _Maximum-Fan-in_ist der maximale Rein-Grad aller Knoten, also
+                        Der _Maximum-Fan-in_ ist der maximale Rein-Grad aller Knoten, also
                         der maximale Fan-in aller Gates.
                     |> div
                         class alter-warning
 
-                        *Vorsicht.*Manchmal werden zur Bestimmung der Tiefe die NOT-Gates
+                        *Vorsicht.* Manchmal werden zur Bestimmung der Tiefe die NOT-Gates
                         nicht mitgezählt. Entlang eines Pfades wird also gelegentlich nur die Anzahl
                         der AND- und OR-Gates bestimmt.
                     |> p
@@ -97,7 +97,7 @@
                         |> span
                             class numbered-title
 
-                            Theorem 
+                            Theorem
                             |> span
                                 style color: blue;
 

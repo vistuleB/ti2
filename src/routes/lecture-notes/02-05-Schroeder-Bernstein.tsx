@@ -81,7 +81,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Seien $A$ und $B$
+                    &ensp;Seien $A$ und $B$
                     zwei Mengen. Wir schreiben $A \leq B$, wenn es eine injektive
                     Funktion $f : A \rightarrow B$ gibt. Falls $A \leq B$ und $A \not
                     \approx B$ gilt, so schreiben wir $A \lt B$.
@@ -103,7 +103,7 @@ const Article = () => {
                   <i>
                     einer
                   </i>
-                  bijektiven Funktion $h: A
+                  {" "}bijektiven Funktion $h: A
                   \rightarrow B$ kombinieren. Geht das immer?
                 </Paragraph>
                 <div class="well container theorem">
@@ -115,7 +115,7 @@ const Article = () => {
                     <b>
                       (Schröder-Bernstein-Theorem).
                     </b>
-                    Seien $A$ und $B$
+                    {" "}Seien $A$ und $B$
                     zwei Mengen. Wenn $A \leq B$ und $B \leq A$ gilt, dann gilt $A
                     \approx B$. In Worten: wenn es injektive Funktionen $f: A
                     \rightarrow B$ und $g : B\rightarrow A$ gibt, dann gibt es auch eine
@@ -306,7 +306,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Behauptung 1.
                       </span>
-                      $g^&#123;-1&#125;(a)$ ist
+                      &ensp;$g^&#123;-1&#125;(a)$ ist
                       definiert für jedes $a \in A'$.
                     </Paragraph>
                   </div>
@@ -348,7 +348,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Behauptung 2.
                       </span>
-                      $h$ ist
+                      &ensp;$h$ ist
                       injektiv.
                     </Paragraph>
                   </div>
@@ -397,7 +397,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Behauptung 3.
                       </span>
-                      $h$ ist
+                      &ensp;$h$ ist
                       surjektiv.
                     </Paragraph>
                   </div>

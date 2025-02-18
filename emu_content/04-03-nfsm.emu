@@ -52,7 +52,7 @@
                     |> p
 
                         Ein Pfeil beschreibt also nicht unbedingt einen Zustandsübergang, der
-                        _geschieht_, sondern einen, der _möglich_ist. Formal
+                        _geschieht_, sondern einen, der _möglich_ ist. Formal
                         gesprochen ist \(\delta\) nun keine Funktion mehr, sondern eine
                         _Relation_:
                     |> div
@@ -83,7 +83,7 @@
                         Formal gesehen ist also ein Automat ein Quintupel \(M = (\Sigma, Q,
                         \qstart, F, \delta)\).
                     Von nun an bezeichnen wir endliche Automaten auch als
-                    _deterministische_endliche Automaten, um den Unterschied zu den
+                    _deterministische_ endliche Automaten, um den Unterschied zu den
                     nichtdeterministischen zu verdeutlichen. Wenn in einem deterministischen
                     endlichen Automaten \(\delta(q,x) = q'\) war, so hatte das die Bedeutung
                     _wenn der Automat im Zustand \(q\) ist und \(x\) liest, so geht er in Zustand \(q'\) über_; wenn nun in einem nichtdeterministischen Automaten \((q,x,q') \in
@@ -134,8 +134,8 @@
 
                             Theorem 4.2.5
                         ; wir haben nämlich in jenem Beweis nirgends verwendet, dass
-                        \(\delta\) eine _Funktion_ist, und daher geht mit einem
-                        \(\delta\), das eine _Relation_ist, alles ganz genau gleich.
+                        \(\delta\) eine _Funktion_ ist, und daher geht mit einem
+                        \(\delta\), das eine _Relation_ ist, alles ganz genau gleich.
                         Allerdings gilt nun auch der Umkehrschluss: zu einer regulären
                         Grammatik gibt es einen nichtdeterministischen endlichen Automaten:
                     |> div

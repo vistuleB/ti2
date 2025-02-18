@@ -45,7 +45,7 @@ const Article = () => {
                   <i>
                     in jeder Koordinate
                   </i>
-                  kleiner gleich \(\mathbf&#123;y&#125;\) ist.
+                  {" "}kleiner gleich \(\mathbf&#123;y&#125;\) ist.
                   Beispielsweise gilt \( (0,0,1) \leq (1,0,1)\). Allerdings gilt weder
                   \( (0,1,0) \leq (1,0,1)\) noch umgekehrt; die beiden Tupel sind{" "}
                   <i>
@@ -71,7 +71,7 @@ const Article = () => {
                   <i>
                     Hasse-Diagramm
                   </i>
-                  (ich verzichte hier auf eine formale Definition).
+                  {" "}(ich verzichte hier auf eine formale Definition).
                   Es gilt nun \(\mathbf&#123;x&#125; \leq \mathbf&#123;y&#125;\), wenn Sie im Hasse-Diagramm einen
                   Pfad von \(\mathbf&#123;x&#125;\) nach \(\mathbf&#123;y&#125;\) finden.
                 </Paragraph>
@@ -80,7 +80,7 @@ const Article = () => {
                   <b>
                     Vorsicht.
                   </b>
-                  Im obigen Bild steht zwar \(001\) unterhalb von \(110\), allerdings
+                  {" "}Im obigen Bild steht zwar \(001\) unterhalb von \(110\), allerdings
                   werden Sie keinen Pfad von \(001\) nach \(110\) finden;
                   es gilt also \(001 \not \leq 110\); die beiden Elemente sind{" "}
                   <i>
@@ -136,7 +136,7 @@ const Article = () => {
                   <i>
                     "oberhalb"
                   </i>
-                  im Sinne der Partialordnung
+                  {" "}im Sinne der Partialordnung
                   meine, nicht wirklich im geometrischen Sinne in der Abbildung.
                 </Paragraph>
                 <Paragraph>
@@ -171,7 +171,7 @@ const Article = () => {
                   <b>
                     Tip.
                   </b>
-                  Gehen Sie meine oben skizzierten drei
+                  {" "}Gehen Sie meine oben skizzierten drei
                   Konstruktionen durch (Rekursiv, DNF, CNF) und versuchen Sie, sie so zu modifizieren,
                   dass Sie alle NOT-Gates loswerden.
                 </div>
@@ -184,13 +184,13 @@ const Article = () => {
                   <i>
                     drei
                   </i>
-                  Variablen aus?
+                  {" "}Variablen aus?
                   <Paragraph>
                     Am Besten betrachten Sie das{" "}
                     <i>
                       Hasse-Diagramm
                     </i>
-                    der
+                    {" "}der
                     Partialordnungen auf Mengen \( \&#123;0,1\&#125;^2\) bzw. \( \&#123;0,1\&#125;^3\):
                   </Paragraph>
                   <figure>
@@ -208,7 +208,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  {" "}{" "}
+                  &ensp;
                   <b>
                     (Challenge).
                   </b>
@@ -219,7 +219,7 @@ const Article = () => {
                   <i>
                     höchstens zwei NOT-Gates
                   </i>
-                  einhalten,
+                  {" "}einhalten,
                   aber beliebig viele AND- und OR-Gates.
                   <figure>
                     <img
@@ -239,7 +239,7 @@ const Article = () => {
                   <i>
                     Induktion
                   </i>
-                  und verschiedene
+                  {" "}und verschiedene
                   Beweisstrategien einzugehen.
                 </Paragraph>
                 <div
@@ -257,11 +257,11 @@ const Article = () => {
                   <i>
                     Beweistechniken
                   </i>
-                  und{" "}
+                  {" "}und{" "}
                   <i>
                     Beweismethoden
                   </i>
-                  zu illustrieren. Unter
+                  {" "}zu illustrieren. Unter
                   Beweismethoden
                   verstehe ich hier formale Methoden wie
                   <ul>
@@ -282,7 +282,7 @@ const Article = () => {
                   <a href="https://de.wikipedia.org/wiki/Beweis_(Mathematik)#Beweismethoden">
                     Wikipedia
                   </a>
-                  aufgeführt
+                  &ensp;aufgeführt
                   sind.
                   Diesen zur Seite stehen die nicht wirklich formalisierbaren Beweistechniken oder Beweisstrategien,
                   die sich oft aus persönlicher Erfahrung speisen, wie zum Beispiel
@@ -350,7 +350,7 @@ const Article = () => {
                       <i>
                         Beweismethode
                       </i>
-                      verwenden wir Induktion über \(n\), die Anzahl der Variablen.
+                      {" "}verwenden wir Induktion über \(n\), die Anzahl der Variablen.
                     </Paragraph>
                     <div class="alert-info">
                       Zur Erinnerung: bei einem Beweis per Induktion wollen wir eine Aussage
@@ -358,7 +358,7 @@ const Article = () => {
                       <i>
                         Für alle natürlichen Zahlen \(n \in \N\) gilt \(P(n)\)
                       </i>
-                      beweisen,
+                      {" "}beweisen,
                       wobei \(P(n)\) wiederum eine Aussage ist, in der die Zahl \(n\) irgendwo vorkommt.
                       Bei einem Beweis durch Induktion zeigen wir nun,
                       <ol>
@@ -392,7 +392,7 @@ const Article = () => {
                       <i>
                         \(P(n)\) für alle \(n \in \N\)
                       </i>
-                      annimmt.
+                      {" "}annimmt.
                       Dies ist einfach, da die Zahl \(n\) bereits im Theorem vorkommt. Wir formulieren sie
                       also nun so um:
                     </Paragraph>
@@ -414,7 +414,7 @@ const Article = () => {
                       <b>
                         Induktionsbasis.
                       </b>
-                      Wenn \(n=0\) ist, dann gibt es nur zwei mögliche
+                      {" "}Wenn \(n=0\) ist, dann gibt es nur zwei mögliche
                       Boolesche
                       Funktionen,
                       nämlich die konstanten Funktionen \(0\) und \(1\). Für beide Funktionen
@@ -449,7 +449,7 @@ const Article = () => {
                         <i>
                           vier
                         </i>
-                        Funktionen gibt: \(0, 1, x, \neg x\); all diese haben natürlich
+                        {" "}Funktionen gibt: \(0, 1, x, \neg x\); all diese haben natürlich
                         einen
                         (sehr einfachen) Schaltkreis. Nur bei \(\neg x\) braucht unser Schaltkreis überhaupt
                         ein
@@ -461,11 +461,11 @@ const Article = () => {
                         <i>
                           einer
                         </i>
-                        Variable ist, sondern in{" "}
+                        {" "}Variable ist, sondern in{" "}
                         <i>
                           zwei
                         </i>
-                        Variablen.
+                        {" "}Variablen.
                         Und auch hier appelliere ich an Ihre Programmiererfahrung: weder Sie
                         noch der Java-Compiler werden Probleme mit der Funktion
                       </Paragraph>
@@ -477,7 +477,11 @@ const Article = () => {
                         &#125;
                       </pre>
                       <Paragraph>
-                        haben. Ja in der Tat, Java toleriert es, dass Sie `constantFalse`zweimal
+                        haben. Ja in der Tat, Java toleriert es, dass Sie{" "}
+                        <code>
+                          constantFalse
+                        </code>
+                        {" "}zweimal
                         deklariert haben, einmal als Funktion mit 0 Input-Variablen, einmal als
                         Funktion mit einer Input-Variablen. Um hundertprozentig korrekt zu sein, müssten wir
                         Funktionen \(\textnormal&#123;zero&#125;_n\) definieren als
@@ -519,7 +523,7 @@ const Article = () => {
                       <i>
                         Induktionshypothese
                       </i>
-                      \(P(n-1)\) als gegeben annehmen:
+                      {" "}\(P(n-1)\) als gegeben annehmen:
                     </Paragraph>
                     <div class="well subtheorem">
                       {" "}{" "}
@@ -570,12 +574,12 @@ const Article = () => {
                       <i>
                         Zerlegen in \(f_0, f_1\)
                       </i>
-                      und
+                      {" "}und
                       {" "}
                       <i>
                         Anwenden der Induktionshypothese
                       </i>
-                      müssen wir nun
+                      {" "}müssen wir nun
                       die Teilergebnisse wieder{" "}
                       <i>
                         sinnvoll zusammenfügen
@@ -596,7 +600,7 @@ const Article = () => {
                       <i>
                         vollständige Fallunterscheidung.
                       </i>
-                      Sei
+                      {" "}Sei
                       nun also ein konkreter Input \(x_1,\dots,x_n\) gegeben.
                     </Paragraph>
                     <ul>
@@ -633,7 +637,7 @@ const Article = () => {
                   <a href="#theorem-1">
                     Theorem 1.4.3
                   </a>
-                  zu.{" "}
+                  &ensp;zu.{" "}
                 </Paragraph>
                 <div class="well container">
                   {" "}{" "}
@@ -902,7 +906,7 @@ const Article = () => {
                     <b>
                       Das Bekannte abwandeln.
                     </b>
-                    Der Ausdruck
+                    {" "}Der Ausdruck
                     \(\bigvee_&#123;\mathbf&#123;a&#125; \in \sat(f)&#125; T_&#123;\mathbf&#123;a&#125;&#125;\) ist ja bereits
                     ein Schaltkreis (der Tiefe 2), allerdings im Allgemeinen kein
                     monotoner, da die Terme \(T_&#123;\mathbf&#123;a&#125;&#125;\) negative Literale (und somit NOT-Gates)

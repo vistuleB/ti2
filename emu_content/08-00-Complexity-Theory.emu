@@ -52,14 +52,14 @@
                     |> ul
                         |> li
 
-                            *I/O-Komplexität.*In echten Rechnern haben wir eine Hierarchie von
+                            *I/O-Komplexität.* In echten Rechnern haben wir eine Hierarchie von
                             Speichermedien. Den extrem schnellen Prozessorcache; schnellen Cache; den vergleichsweise
                             langsamen
                             Hauptstpeicher (RAM); eventuell sogar einen externen Festplattenspeichern, der um
                             Größenordnungen langsamer ist.
                         |> li
 
-                            *Kommunikationskomplexität.*Bei verteilten Anwendungen (Cloud Computing) ist
+                            *Kommunikationskomplexität.* Bei verteilten Anwendungen (Cloud Computing) ist
                             die limitierende Resource eventuell gar nicht die Rechenkapazität sondern das
                             _Netzwerk_, über
                             das die Daten ausgetauscht werden.
@@ -89,9 +89,9 @@
                                 class numbered-title
 
                                 Definition
-                            Sei $t: \N \rightarrow \N$. Eine
+                            &ensp;Sei $t: \N \rightarrow \N$. Eine
                             Turingmaschinen $M$
-                            _entscheidet_eine Sprache $L \subseteq \Sigma^*$ in Zeit $t$ wenn
+                            _entscheidet_ eine Sprache $L \subseteq \Sigma^*$ in Zeit $t$ wenn
                         |> ul
                             |> li
 
@@ -124,7 +124,7 @@
                             href 07-02-Turing-variants.html
 
                             Kapitel 7.3
-                        gezeigt, wie man eine
+                        &ensp;gezeigt, wie man eine
                         $k$-Band-Turingmaschine $M$ durch eine
                         Ein-Band-Turingmaschine $M'$. Der Aufwand war quadratisch: wenn $M$ innerhalb von $t$ Schritten
                         terminiert, so terminiert $M'$ innerhalb von $c t^2$ Schritten, wobei $c$ eine Konstante ist,
@@ -137,7 +137,7 @@
                                 class numbered-title
 
                                 Theorem
-                            *($k$-Band zu $1$-Band).*
+                            &ensp;*($k$-Band zu $1$-Band).*
                             Sei $t: \N \rightarrow \N$. Dann gilt
                             $\TIME_k(t) \subseteq \TIME_1(t^2)$.
                     |> p
@@ -154,6 +154,6 @@
                                 class numbered-title
 
                                 Theorem
-                            *($k$-Band zu $2$-Band; ohne
-                            Beweis).*Sei
+                            &ensp;*($k$-Band zu $2$-Band; ohne
+                            Beweis).* Sei
                             $t: \N \rightarrow \N$. Dann gilt $\TIME_k(t) \subseteq \TIME_2(t \log t)$.

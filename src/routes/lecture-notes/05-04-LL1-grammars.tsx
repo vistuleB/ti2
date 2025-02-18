@@ -152,7 +152,7 @@ const Article = () => {
                       <b>
                         Behauptung.
                       </b>
-                      Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
+                      {" "}Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
                       dann steht jedes \(S\) in \(\delta\) entweder am Ende von \(\delta\) oder
                       unmittelbar vor einem "\(\texttt&#123;)&#125;\)".
                     </Paragraph>
@@ -195,7 +195,7 @@ const Article = () => {
                   <i>
                     nicht
                   </i>
-                  LL(\(k\)) ist, dann muss der Backtrack-Baum
+                  {" "}LL(\(k\)) ist, dann muss der Backtrack-Baum
                   beiden Ableitungen
                   $$\begin&#123;align*&#125;
                   w A \alpha&amp;\Rightarrow w \beta \alpha \\
@@ -213,7 +213,7 @@ const Article = () => {
                   <i>
                     The Theory of Parsing, Translation, and Compiling
                   </i>
-                  von Alfred V. Aho
+                  {" "}von Alfred V. Aho
                   und Jeffrey D. Ullman).
                   Betrachten wir die Grammatik
                   $$\begin&#123;align*&#125;
@@ -228,7 +228,7 @@ const Article = () => {
                     <b>
                       Tip.
                     </b>
-                    Leiten Sie erst einmal
+                    {" "}Leiten Sie erst einmal
                     ein Dutzend verschiedene Wörter ab und finden dann
                     eine "normalsprachliche" Beschreibung
                     dieser Sprache. Beschreiben Sie dann alle möglichen Wortformen
@@ -263,7 +263,7 @@ const Article = () => {
                   <i>
                     höchstens
                   </i>
-                  so vielen \(b\)'s folgt.
+                  {" "}so vielen \(b\)'s folgt.
                   <Paragraph>
                     Geben Sie diese Grammatik in den
                     <a href="../../demos/drawManualGrammar.html">
@@ -293,7 +293,7 @@ const Article = () => {
                     <a href="../../demos/drawManualGrammar.html">
                       Parser-Simulator
                     </a>
-                    ein
+                    &ensp;ein
                     und schauen, wie lang die Sackgassen werden können.
                   </Paragraph>
                   <Paragraph>
@@ -315,7 +315,7 @@ const Article = () => {
                 <i>
                   Wortformen
                 </i>
-                (die also Nichtterminale beinhalten können).
+                {" "}(die also Nichtterminale beinhalten können).
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
@@ -387,14 +387,14 @@ const Article = () => {
                   <i>
                     keiner
                   </i>
-                  dieser Mengen enthalten ist, so
+                  {" "}dieser Mengen enthalten ist, so
                   kann die Ableitung offensichtlich nicht vervollständigt werden, und wir schließen,
                   dass \(xy \not \in L(G)\) ist.
                   Wenn es{" "}
                   <i>
                     genau ein
                   </i>
-                  \(\beta_i\) gibt mit
+                  {" "}\(\beta_i\) gibt mit
                   \(\first_k(y) \in \first_k(\beta_i \alpha)\), dann ist
                   \(A \rightarrow \beta_i\) die "richtige" Produktion.
                   Wir wenden sie an, ersetzen also \(A\) auf dem Stack durch \(\beta_i\).
@@ -421,7 +421,7 @@ const Article = () => {
                       <tt>
                         while
                       </tt>
-                      Stack nicht leer
+                      &ensp;Stack nicht leer
                     </li>
                     <ol class="nested">
                       <li>
@@ -489,7 +489,7 @@ const Article = () => {
                         <tt>
                           Accept
                         </tt>
-                        ansonsten{" "}
+                        &ensp;ansonsten{" "}
                         <tt>
                           Reject
                         </tt>
@@ -605,11 +605,11 @@ const Article = () => {
                       <tt>
                         for
                       </tt>
-                      \(i=n\){" "}
+                      &ensp;\(i=n\){" "}
                       <tt>
                         down to
                       </tt>
-                      1{" "}
+                      &ensp;1{" "}
                       <tt>
                         do:
                       </tt>
@@ -627,7 +627,7 @@ const Article = () => {
                       <tt>
                         return
                       </tt>
-                      \(K\)
+                      &ensp;\(K\)
                     </li>
                   </ol>
                   <Paragraph>
@@ -686,12 +686,12 @@ const Article = () => {
                   <i>
                     komplexere
                   </i>
-                  un
+                  {" "}un
                   {" "}
                   <i>
                     genauer
                   </i>
-                  zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
+                  {" "}zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
                   \(\First_k(\alpha)\), noch eine feinere
                   Unterteilung an:
                 </Paragraph>

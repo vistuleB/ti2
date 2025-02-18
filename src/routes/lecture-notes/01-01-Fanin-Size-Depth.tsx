@@ -37,7 +37,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    2.1 Größe, Tiefe, Fan-In
+                    1.1 Größe, Tiefe, Fan-In
                   </span>
                 </h1>
                 <Paragraph>
@@ -46,28 +46,28 @@ const Article = () => {
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
-                    Definition.{" "}
+                    Definition.
                     <span style="color: blue;">
-                      2.1.1{" "}
+                      1.1.1{" "}
                     </span>
                   </span>
                   Die{" "}
                   <i>
                     Größe
                   </i>
-                  eines Schaltkreises ist die Anzahl seiner Gates, also die Anzahl
+                  {" "}eines Schaltkreises ist die Anzahl seiner Gates, also die Anzahl
                   der Knoten im zugrundeliegenden DAG.
                   Die{" "}
                   <i>
                     Teife
                   </i>
-                  ist die Länge des längsten gerichteten Pfades von einem Input- zu einem
+                  {" "}ist die Länge des längsten gerichteten Pfades von einem Input- zu einem
                   Output-Gate.
                   Der{" "}
                   <i>
                     Maximum-Fan-in
                   </i>
-                  ist der maximale Rein-Grad aller Knoten, also
+                  {" "}ist der maximale Rein-Grad aller Knoten, also
                   der maximale Fan-in aller Gates.
                 </div>
                 <div class="alter-warning">
@@ -75,7 +75,7 @@ const Article = () => {
                   <b>
                     Vorsicht.
                   </b>
-                  Manchmal werden zur Bestimmung der Tiefe die NOT-Gates
+                  {" "}Manchmal werden zur Bestimmung der Tiefe die NOT-Gates
                   nicht mitgezählt. Entlang eines Pfades wird also gelegentlich nur die Anzahl
                   der AND- und OR-Gates bestimmt.
                 </div>
@@ -114,9 +114,9 @@ const Article = () => {
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
-                    Theorem{" "}
+                    Theorem
                     <span style="color: blue;">
-                      2.1.2{" "}
+                      1.1.2{" "}
                     </span>
                   </span>
                   Sei \(C\) ein Schaltkreis Maximum-Fan-in \(k\), Größe \(s\) und Tiefe \(d\).

@@ -114,21 +114,9 @@ const Article = () => {
                     def treeToLeftDerivation (tree):
                   </code>
                   {" "}
-                  {" "}
-                  <code>
-                    print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    for child in tree.children (from left ro right):
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    treeToLeftDerivation(child)
-                  </code>
-                  {" "}
+                  &ensp;&ensp;`print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
+                  &ensp;&ensp;`for child in tree.children (from left ro right):`
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`treeToLeftDerivation(child)`
                   {" "}
                   <code>
                     {" "}{" "}
@@ -139,21 +127,9 @@ const Article = () => {
                     def treeToRightDerivation (tree):
                   </code>
                   {" "}
-                  {" "}
-                  <code>
-                    for child in tree.children (from left ro right):
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    treeToLeftDerivation(child)
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
-                  </code>
-                  {" "}{" "}
+                  &ensp;&ensp;`for child in tree.children (from left ro right):`
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`treeToLeftDerivation(child)`
+                  &ensp;&ensp;`print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
                 </pre>
                 <Paragraph>
                   Beachten Sie, dass wir in beiden Fällen die Liste Kinder von links

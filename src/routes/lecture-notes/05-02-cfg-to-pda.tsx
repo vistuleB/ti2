@@ -71,13 +71,13 @@ const Article = () => {
                   <i>
                     gibt
                   </i>
-                  eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
+                  {" "}eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
                   führt;
                   der Automat{" "}
                   <i>
                     kann
                   </i>
-                  also diese Transition anwenden.
+                  {" "}also diese Transition anwenden.
                   <br />
                   Formaler: Die Zustände des Automaten
                   sind \(Q = \&#123;\qstart, q_1, \qend\&#125;\), das Stackalphabet ist
@@ -94,7 +94,7 @@ const Article = () => {
                   <i>
                     Introduction to the Theory of Computing
                   </i>
-                  könnte
+                  {" "}könnte
                   ich das eh nicht.
                   <span class="qed">
                     \(\square\)
@@ -122,7 +122,7 @@ const Article = () => {
                     <tt>
                       [
                     </tt>
-                    oben auf dem Stack bedeutet dann{" "}
+                    &ensp;oben auf dem Stack bedeutet dann{" "}
                     <i>
                       ich will jetzt sofort ein{" "}
                       <tt>
@@ -138,15 +138,15 @@ const Article = () => {
                     <i>
                       sofort
                     </i>
-                    ein
+                    {" "}ein
                     <tt>
                       &#123;
                     </tt>
-                    lesen, dann ein Wort \(v\) mit \(B \rightarrow v\), dann ein{" "}
+                    &ensp;lesen, dann ein Wort \(v\) mit \(B \rightarrow v\), dann ein{" "}
                     <tt>
                       &#125;
                     </tt>
-                    und
+                    &ensp;und
                     so weiter.
                     Wir können das also im Automaten implementieren, indem wir
                     \(A\) vom Stack löschen und durch \(\texttt&#123;\&#123;&#125; B \texttt&#123;\&#125;&#125; S\) auf den Stack legen,
@@ -201,7 +201,7 @@ const Article = () => {
                   <i>
                     reject
                   </i>
-                  entspricht. Erreichen des Zustandes \(\qend\) führt also
+                  {" "}entspricht. Erreichen des Zustandes \(\qend\) führt also
                   nur dann zu einem{" "}
                   <i>
                     accept
@@ -659,7 +659,7 @@ const Article = () => {
                   <i>
                     nicht
                   </i>
-                  regulär, da der Präfix und der Suffix aus \(a\) die gleiche
+                  {" "}regulär, da der Präfix und der Suffix aus \(a\) die gleiche
                   Länge \(m\) haben müssen.
                   Wir bauen zuerst einen Kellerautomaten und übersetzen den dann entsprechend dem Schema
                   aus dem letzten Theorem in eine Grammatik. Dann vergleichen wir die entstandene

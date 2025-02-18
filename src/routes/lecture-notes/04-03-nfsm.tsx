@@ -61,7 +61,7 @@ const Article = () => {
                   <i>
                     möglich
                   </i>
-                  ist. Formal
+                  {" "}ist. Formal
                   gesprochen ist \(\delta\) nun keine Funktion mehr, sondern eine
                   {" "}
                   <i>
@@ -105,7 +105,7 @@ const Article = () => {
                 <i>
                   deterministische
                 </i>
-                endliche Automaten, um den Unterschied zu den
+                {" "}endliche Automaten, um den Unterschied zu den
                 nichtdeterministischen zu verdeutlichen. Wenn in einem deterministischen
                 endlichen Automaten \(\delta(q,x) = q'\) war, so hatte das die Bedeutung
                 {" "}
@@ -172,12 +172,12 @@ const Article = () => {
                   <i>
                     Funktion
                   </i>
-                  ist, und daher geht mit einem
+                  {" "}ist, und daher geht mit einem
                   \(\delta\), das eine{" "}
                   <i>
                     Relation
                   </i>
-                  ist, alles ganz genau gleich.
+                  {" "}ist, alles ganz genau gleich.
                   Allerdings gilt nun auch der Umkehrschluss: zu einer regulären
                   Grammatik gibt es einen nichtdeterministischen endlichen Automaten:
                 </Paragraph>

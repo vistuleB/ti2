@@ -56,7 +56,7 @@
 
                         Zur Erinnerung:
                         Zu jeder Ableitung \(S \Step{}^* w \in \Sigma^*\) können wir
-                        eindeutig einen _Ableitungsbaum_zeichnen. Wenn die Grammatik
+                        eindeutig einen _Ableitungsbaum_ zeichnen. Wenn die Grammatik
                         eindeutig ist, so hängt auch der Baum nur vom Wort \(w \in L(G)\) ab und
                         nicht von der Ableitung \(S \Step{}^* w\).
                         Allerdings können wir für Zwischenformen
@@ -151,7 +151,7 @@
                     |> div
                         class well container subtheorem
 
-                        *Auflösung.*Hier sehen Sie noch einmal
+                        *Auflösung.* Hier sehen Sie noch einmal
                         den gleichen Baum, nun aber gewisse Teile verschieden umrandet / eingefärbt.
                     |> figure
                         |> img
@@ -175,7 +175,7 @@
                         Sei \(S \Step{}^* \gamma\) eine Rechtsableitung, \(\gamma\) also
                         eine gültige Wortform, und
                         \(\mathcal{T}\) der Ableitungsbaum von \(\gamma\).
-                        Der _Stamm_ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
+                        Der _Stamm_ ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
                         der von allen inneren Knoten, deren Kinder allesamt Blätter sind,
                         am weistesten links steht.
                         Die Kinder von \(u\), per Definition alles Blätter, sind die _Blüte_.
@@ -197,9 +197,9 @@
                         S \Step{R}^* \alpha \beta w
                         \end{align*}
                         dar. Die Wortform $\alpha\beta$, also linker Rand plus Blüte, nennen wir
-                        die _Front_von $\mathcal{T}$ und schreiben sie als $\front(\mathcal{T})$.
-                        Wir sagen auch, dass \(\beta\) _eine Blüte von \(\gamma\)_und
-                        $\alpha\beta$ die _Front_von $\gamma$ ist,
+                        die _Front_ von $\mathcal{T}$ und schreiben sie als $\front(\mathcal{T})$.
+                        Wir sagen auch, dass \(\beta\) _eine Blüte von \(\gamma\)_ und
+                        $\alpha\beta$ die _Front_ von $\gamma$ ist,
                         ohne über den Ableitungsbaum \(\mathcal{T}\) selbst zu reden.
                         Hierbei ist zu beachten, dass in einer mehrdeutigen Grammatik
                         eine gültige Wortform mehrere Ableitungsbäume und somit
@@ -421,7 +421,7 @@
                             Definition
                         Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik. Die
                         Front-Grammatik oder DK-Grammatik von \(G\) ist
-                        die _erweitert reguläre_Grammatik \(\hat{G} = (\Sigma \cup N, \hat{N}, \hat{S},
+                        die _erweitert reguläre_ Grammatik \(\hat{G} = (\Sigma \cup N, \hat{N}, \hat{S},
                         \hat{P})\)
                         mit \(\hat{N} := \{\hat{X} \ | \ X \in N\}\), wobei
                         \(\hat{P}\) für jede \(G\)-Produktion
@@ -539,7 +539,7 @@
                             Der erste Teil der Bedeutung ist einfach zu sehen.
                             Jeder Reduktionsschritt ist ein Linksreduktionsschritt, und
                             wenn man Ende $S$ steht, waren es auch alles
-                            _korrekte_Linksreduktionsschritte.
+                            _korrekte_ Linksreduktionsschritte.
                         |> p
 
                             Der zweite Teil ist schwieriger. Wir nehmen also
@@ -616,7 +616,7 @@
                                     dass Teil (ii) vor dem Schritt galt, also $\gamma$ ein Präfix
                                     von $\front(\gamma w)$ ist; zweitens, dass
                                     \(\gamma \not \in \Front(G)\) ist (sonst hätte der Parser Schritt 1 angewandt); somit
-                                    ist $\gamma$ ein _echter_Präfix von $\front(\gamma w)$ und somit
+                                    ist $\gamma$ ein _echter_ Präfix von $\front(\gamma w)$ und somit
                                     ist $\gamma c$ immer noch ein Präfix von $\front(\gamma w)$.
                             Wenn das Eingabewort gelesen ist, ist nun \(w = \epsilon\) und
                             Stackinhalt \(\gamma\) ist selbst eine

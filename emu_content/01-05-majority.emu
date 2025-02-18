@@ -192,7 +192,7 @@
                         href ../sub-pages/01-monotone.html
 
                         Lösungen zu den Übungsaufgaben
-                    dargestellt.
+                    &ensp;dargestellt.
                     Insbesondere definieren wir Verallgemeinerungen von \(\maj_n\) wie folgt:
                     \begin{align*}
                     \theta^n_k (x_1,\dots,x_n)&amp;:=
@@ -251,11 +251,14 @@
                         class listing
 
                         `def binomial(n,k):`
-                        `if k == 0 or k == n:`
-                        `return 1` 
 
-                        `else:`
-                        `return binomial(n-1,k-1) + binomial(n-1,k)`
+                        &ensp;&ensp;&ensp;&ensp;`if k == 0 or k == n:`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`return 1` 
+
+                        &ensp;&ensp;&ensp;&ensp;`else:`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`return binomial(n-1,k-1) + binomial(n-1,k)`
                     der exponentielle Laufzeit aufweist, und der effizienten Implementierung mittels
                     _Dynamic Programming_, bei welchem wir uns die Zwischenergebnisse merken.
                     |> p
@@ -492,7 +495,7 @@
                             Weise zufällig sind. Wir verwenden also
                             _Wahrscheinlichkeitsverteilungen über Schaltkreisen_, nicht
                             von über Inputs. Zuerst definieren wir
-                            die _Signalstärke_von Verteilungen über Schaltkreise.
+                            die _Signalstärke_ von Verteilungen über Schaltkreise.
                         |> div
                             class well subtheorem theorem
                             |> span
@@ -571,7 +574,7 @@
                         |> p
 
                             Um eine Analogie aus dem Alltag zu bemühen: wenn Sie für eine
-                            Wahlprognose _einen_zufällig ausgewählten Bürger befragen, so
+                            Wahlprognose _einen_ zufällig ausgewählten Bürger befragen, so
                             ist das Ergebnis zwar nicht wirklich repräsentativ, aber immerhin leicht
                             besser, als wenn Sie einfach raten würden. Unser zufälliger
                             Schaltkreis sendet uns also ein schwaches aber positives Signal in die
@@ -584,7 +587,7 @@
                             \forall \x \in \{0,1\}^n : \quad
                             \Pr_{C \sim \mathcal{C}} [C(\x) = \maj_n(\x)] \geq \frac{1+\delta}{2} \ .
                             $$
-                            Dann können wir _drei_Schaltkreise
+                            Dann können wir _drei_ Schaltkreise
                             \(C_1, C_2, C_3 \sim \mathcal{C}\) unabhängig voneinander samplen und
                             einen neuen Schaltkreis bauen: \(C'(\x) := \maj_3 (C_1(\x), C_2(\x), C_3(\x))\). Dies gibt
                             uns wiederum eine Verteilung über Schaltkreise, die wir
@@ -686,7 +689,7 @@
                                     class numbered-title
 
                                     Behauptung.
-                                Wenn $\mathcal{C}$
+                                &ensp;Wenn $\mathcal{C}$
                                 Fehlerwahrscheinlichkeit
                                 $\epsilon$ hat, dann hat $\mathcal{C}^{\otimes 3}$ Fehlerwahrscheinlichkeit
                                 $3 \epsilon^2$
@@ -694,7 +697,7 @@
                             class well container-fluid
                             |> p
 
-                                *Beweis.*Wie im Beweis vom Lemma setzen wir
+                                *Beweis.* Wie im Beweis vom Lemma setzen wir
                                 $p := \frac{1+p}{2} = 1-\epsilon$ und erhalten
                             \begin{align*}
                             \Pr[\maj_3(U,V,W) = 1]&amp;= p^3 + 3 p^2 (1-p) =
@@ -725,7 +728,7 @@
 
                             Qualitativ sehen wir: solange $\delta_i \leq 1/2$ gilt, wächst die Signalstärke exponentiell
                             an. Dieses exponentielle Wachstum kann natürlich nicht beliebig weitergehen. Jenseits
-                            $\delta_i \leq 1/2$ hört das auf, dafür _fällt_nun die Fehlerwahrscheinlichkeit
+                            $\delta_i \leq 1/2$ hört das auf, dafür _fällt_ nun die Fehlerwahrscheinlichkeit
                             _doppelt exponentiell_. Für $j^* := \log_{3/2} n$ gilt dann
                         \begin{align*}
                         \epsilon_{i^* + 2 + j^*} \leq \pfrac{1}{4}^{n} \lt 2^{-n} \ .
@@ -776,7 +779,7 @@
 
                             Die Verteilung $\mathcal{C}_k$ existiert ja im Wahrscheinlichkeitsraum aller
                             Boolescher Schaltkreise mit Inputs $x_1,\dots, x_n$. Die Menge $E_{\b}$
-                            ist somit ein _Ereignis_in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
+                            ist somit ein _Ereignis_ in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
                         \begin{align*}
                         \forall \b \in \cube^n: \Pr_{C \sim \mathcal{C}_k} [ C \in E_{\b} ] = \epsilon_k \lt 2^{n-} \ .
                         \end{align*}
@@ -838,4 +841,4 @@
                     |> p
 
                         Wir könnten nun noch ehrgeiziger sein und einen monotonen Schaltkreis mit Fan-in 2,
-                        Tiefe $O(\log n)$ und _linearer_Größe $O(n)$ anstreben.
+                        Tiefe $O(\log n)$ und _linearer_ Größe $O(n)$ anstreben.

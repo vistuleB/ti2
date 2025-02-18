@@ -43,7 +43,7 @@ const Article = () => {
                   <a href="../code/primitive-recursion/stockpile.py">
                     stockpile.py
                   </a>
-                  zu erklären und
+                  &ensp;zu erklären und
                   werde dann weitere, weniger offensichtliche Konstruktionen diskutieren.
                 </Paragraph>
                 <h2>
@@ -153,7 +153,15 @@ const Article = () => {
                   Die primitive Rekursion stellt uns als "Datentyp" nur die natürlichen Zahlen zur
                   Verfügung. Alles andere müssen wir als natürliche Zahlen nach einem von uns
                   selbst gewählten Schema codieren. Für Boolesche Werte ist das recht naheliegend.
-                  Wir codieren `True`als 1 und `False`als 0.
+                  Wir codieren{" "}
+                  <code>
+                    True
+                  </code>
+                  {" "}als 1 und{" "}
+                  <code>
+                    False
+                  </code>
+                  {" "}als 0.
                   Unser erstes Prädikat, also Funktion mit Booleschem Ausgabewert, ist
                   `isPositive`:
                 </Paragraph>
@@ -254,15 +262,15 @@ const Article = () => {
                   def new
                   <i>
                     function(*x):
-                    temp = 0 
+                    temp = 0
                     for i in range(upperBound(
                     <b>
                       x)):
                       if (predicate(i,
                     </b>
                     x)):
-                    temp = i 
-                    return temp 
+                    temp = i
+                    return temp
                     return new
                   </i>
                   function
@@ -281,8 +289,12 @@ const Article = () => {
                 <i>
                   eine
                 </i>
-                lokale Variable
-                führen dürfen, hier meistens `temp`genannt.
+                {" "}lokale Variable
+                führen dürfen, hier meistens{" "}
+                <code>
+                  temp
+                </code>
+                {" "}genannt.
                 Manche Funktionen scheinen inhärent mindestens zwei zu benötigen.
                 Betrachten wir den Fall der Fibonacci-Zahlen:
                 <pre class="container">
@@ -290,27 +302,35 @@ const Article = () => {
                   a = 0
                   b = 1
                   for i in range(t):
-                  c = a+b 
-                  a = b 
-                  b = c 
+                  c = a+b
+                  a = b
+                  b = c
                   return a
                 </pre>
                 Wir führen hier zwei lokale Variable, \(a\) und \(b\). Das \(c\) könnten
                 wir mit diesem schönen Trick eliminieren:
                 <pre class="container">
-                  b = a+b 
+                  b = a+b
                   a = b-a{" "}
                 </pre>
                 Doch selbst dann hätten wir immer noch zwei lokale Variable.
                 Die Fibonacci-Zahlen rekursiv per
-                `return F(n-1)+F(n-2)`scheint noch weiter weg zu sein
+                {" "}
+                <code>
+                  return F(n-1)+F(n-2)
+                </code>
+                {" "}scheint noch weiter weg zu sein
                 vom Paradigma der primitiven Rekursion; primitive Rekursion verzweigt sich nie.
-                Dennoch ist es möglich, `fib`primitiv rekursiv zu implementieren.
+                Dennoch ist es möglich,{" "}
+                <code>
+                  fib
+                </code>
+                {" "}primitiv rekursiv zu implementieren.
                 Hauptzutat hierbei ist es, dass wir{" "}
                 <i>
                   Paare
                 </i>
-                als neue Datenstruktur
+                {" "}als neue Datenstruktur
                 verwenden.
                 <Paragraph>
                   Erinnern Sie sich: die primitive Rekursion stellt uns als Datentyp von Haus aus
@@ -320,12 +340,12 @@ const Article = () => {
                   <i>
                     Paaren
                   </i>
-                  von natürlichen Zahlen?
+                  {" "}von natürlichen Zahlen?
                   In{" "}
                   <a href="02-00-infinite-sets.html">
                     Kapitel 2: Unendliche Mengen
                   </a>
-                  haben wir
+                  &ensp;haben wir
                   die bijektive Funktion
                 </Paragraph>
                 $$\begin&#123;align*&#125;
@@ -442,7 +462,7 @@ const Article = () => {
                   <b>
                     Native Implementierung.
                   </b>
-                  Die primitive Rekursion ist
+                  {" "}Die primitive Rekursion ist
                   ein theoretischer Berechenbarkeitsbegriff für Funktionen
                   auf natürlichen Zahlen. Es ist definitiv keine ernstzunehmende Programmiersprache.
                   Ich finde allerdings, dass es hilfreich ist, sie als Programmiersprache zu begreifen
@@ -456,18 +476,14 @@ const Article = () => {
                   <i>
                     nativ
                   </i>
-                  in Python zu implementieren, also beispielsweise in meiner
+                  {" "}in Python zu implementieren, also beispielsweise in meiner
                   Datei `stockpile.py`:
                 </Paragraph>
                 <pre class="listing">
                   <code style="counter-set: listing 63;">
                     def pair(x,y):
                   </code>
-                  {" "}{" "}
-                  <code>
-                    return int(((x+y+1) * (x+y)) / 2 + x )
-                  </code>
-                  {" "}{" "}
+                  &ensp;&ensp;`return int(((x+y+1) * (x+y)) / 2 + x )`
                 </pre>
               </div>
             </div>

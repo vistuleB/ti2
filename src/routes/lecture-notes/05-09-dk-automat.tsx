@@ -52,7 +52,7 @@ const Article = () => {
                   <i>
                     ja
                   </i>
-                  ist, die
+                  {" "}ist, die
                   Blüte finden. Dies gelingt uns, indem wir die Grammatik \(\hat&#123;G&#125;\) in
                   einen endlichen Automaten umwandeln.
                   <a href="./04-03-nfsm.html#regular-grammar-to-fsm">
@@ -99,12 +99,12 @@ const Article = () => {
                   <i>
                     Terminalsymbol
                   </i>
-                  beschriftet.
+                  {" "}beschriftet.
                   Die Symbole $B, D, V$ sind{" "}
                   <i>
                     Terminale
                   </i>
-                  in der Grammatik
+                  {" "}in der Grammatik
                   $\dk&#123;G&#125;$. Wenn wir $\epsilon$-Übergänge zulassen, können wir den
                   Automaten übersichtlicher gestalten und mehrere Zustände
                   zusammenfassen:
@@ -125,7 +125,7 @@ const Article = () => {
                   <i>
                     Blätter
                   </i>
-                  sein sollen, also zum linken Rand gehören. Der
+                  {" "}sein sollen, also zum linken Rand gehören. Der
                   Übergang $\boxed&#123;4&#125; \step&#123;D&#125; \boxed&#123;5&#125;$ entspricht dann der
                   Entscheidung, auch $D$ zu einem Blatt zu machen, während $\boxed&#123;4&#125;
                   \step&#123;\epsilon&#125; \dk&#123;D&#125;$ der Entscheidung entspricht, $D$ zu einem
@@ -308,7 +308,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Für eine kontextfreie
+                    &ensp;Für eine kontextfreie
                     Grammatik ist der nichtdeterministische DK-Automat (NDK-Automat) ein
                     nichtdeterministischer endlicher Automat mit $\epsilon$-Übergängen,
                     den wir wie folgt konstruieren:
@@ -386,7 +386,7 @@ const Article = () => {
                   <i>
                     Menge
                   </i>
-                  \(R\) von Zuständen des
+                  {" "}\(R\) von Zuständen des
                   nichtdeterministischen Automaten. Wenn wir nun in eine solche Menge
                   \(R\) einen Zustand \(q\) einfügen, dann fügen wir auch alle Zustände
                   \(q'\) hinzu, zu denen es einen \(\epsilon\)-Übergang \(q
@@ -495,7 +495,7 @@ const Article = () => {
                     <b>
                       (DK-Test).
                     </b>
-                    Sei $G$ eine kontextfreie Grammatik ohne
+                    {" "}Sei $G$ eine kontextfreie Grammatik ohne
                     nutzlose Nichtterminale und ei $M$ der DK-Automat für die Grammatik
                     $G$. Die Grammatik $G$ ist LR(0) genau dann, wenn folgende zwei
                     Bedingungen gelten:
@@ -572,7 +572,7 @@ const Article = () => {
                     <i>
                       nicht
                     </i>
-                    gilt, dann gibt es korrekte Reduktionsschritte
+                    {" "}gilt, dann gibt es korrekte Reduktionsschritte
                   </Paragraph>
                   $$\begin&#123;align*&#125; \alpha \beta w \rstep&#123;&#125; \alpha X w \\ \alpha \beta
                   \sigma w' = \alpha' \beta' w' \rstep&#123;&#125; \alpha' X' w' \end&#123;align*&#125;$$

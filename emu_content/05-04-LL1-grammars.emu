@@ -136,7 +136,7 @@
                             Was kann \(\first_k(x)\) sein?
                             |> p
 
-                                *Behauptung.*Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
+                                *Behauptung.* Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
                                 dann steht jedes \(S\) in \(\delta\) entweder am Ende von \(\delta\) oder
                                 unmittelbar vor einem "\(\texttt{)}\)".
                             |> p
@@ -174,7 +174,7 @@
                     aber "moralisch" geschieht etwas ähnliches).
                     |> p
 
-                        Wenn umgekehrt eine Grammatik _nicht_LL(\(k\)) ist, dann muss der Backtrack-Baum
+                        Wenn umgekehrt eine Grammatik _nicht_ LL(\(k\)) ist, dann muss der Backtrack-Baum
                         beiden Ableitungen
                         \begin{align*}
                         w A \alpha&amp;\Rightarrow w \beta \alpha \\
@@ -189,7 +189,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        (Beispiel 5.3 aus _The Theory of Parsing, Translation, and Compiling_von Alfred V. Aho
+                        (Beispiel 5.3 aus _The Theory of Parsing, Translation, and Compiling_ von Alfred V. Aho
                         und Jeffrey D. Ullman).
                         Betrachten wir die Grammatik
                         \begin{align*}
@@ -201,7 +201,7 @@
                         Zeigen Sie, dass diese Grammatik LL(2) ist, aber nicht LL(1).
                         |> p
 
-                            *Tip.*Leiten Sie erst einmal
+                            *Tip.* Leiten Sie erst einmal
                             ein Dutzend verschiedene Wörter ab und finden dann
                             eine "normalsprachliche" Beschreibung
                             dieser Sprache. Beschreiben Sie dann alle möglichen Wortformen
@@ -232,7 +232,7 @@
                         L(G) := \{ a^{m+k} b^m \ | \ m, k \in \N \} \ ,
                         \end{align*}
                         also Wörter, wo auf beliebig viele \(a\)'s eine Folge von
-                        _höchstens_so vielen \(b\)'s folgt.
+                        _höchstens_ so vielen \(b\)'s folgt.
                         |> p
 
                             Geben Sie diese Grammatik in den
@@ -266,7 +266,7 @@
                                 href ../../demos/drawManualGrammar.html
 
                                 Parser-Simulator
-                            ein
+                            &ensp;ein
                             und schauen, wie lang die Sackgassen werden können.
                         |> p
 
@@ -282,7 +282,7 @@
                     schreiben können.
                     Wir tasten uns langsam voran. Wir beginnen mit einer
                     Verallgemeinerung von \(\first_k\) von Wörtern auf
-                    _Wortformen_(die also Nichtterminale beinhalten können).
+                    _Wortformen_ (die also Nichtterminale beinhalten können).
                     |> div
                         class well container theorem
                         |> span
@@ -353,10 +353,10 @@
                         \first_k(y) \in \first_k(\beta_i \alpha)
                         \end{align*}
                         da ja nach obiger Beobachtung diese Mengen disjunkt sind. Wenn
-                        \(\first_k(y)\) in _keiner_dieser Mengen enthalten ist, so
+                        \(\first_k(y)\) in _keiner_ dieser Mengen enthalten ist, so
                         kann die Ableitung offensichtlich nicht vervollständigt werden, und wir schließen,
                         dass \(xy \not \in L(G)\) ist.
-                        Wenn es _genau ein_\(\beta_i\) gibt mit
+                        Wenn es _genau ein_ \(\beta_i\) gibt mit
                         \(\first_k(y) \in \first_k(\beta_i \alpha)\), dann ist
                         \(A \rightarrow \beta_i\) die "richtige" Produktion.
                         Wir wenden sie an, ersetzen also \(A\) auf dem Stack durch \(\beta_i\).
@@ -380,7 +380,7 @@
                                 |> tt
 
                                     while
-                                Stack nicht leer
+                                &ensp;Stack nicht leer
                             |> ol
                                 class nested
                                 |> li
@@ -447,7 +447,7 @@
                                     |> tt
 
                                         Accept
-                                    ansonsten 
+                                    &ensp;ansonsten 
                                     |> tt
 
                                         Reject
@@ -540,11 +540,11 @@
                                 |> tt
 
                                     for
-                                \(i=n\) 
+                                &ensp;\(i=n\) 
                                 |> tt
 
                                     down to
-                                1 
+                                &ensp;1 
                                 |> tt
 
                                     do:
@@ -562,7 +562,7 @@
                                 |> tt
 
                                     return
-                                \(K\)
+                                &ensp;\(K\)
                         |> p
 
                             Wir müssen nur noch herausfinden, wie wir
@@ -608,8 +608,8 @@
                     |> p
 
                         In solchen Situationen, wo sich "die Katze in den Schwanz beißt", hilft es oft, die Definition
-                        vorerst _komplexere_un
-                        _genauer_zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
+                        vorerst _komplexere_ un
+                        _genauer_ zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
                         \(\First_k(\alpha)\), noch eine feinere
                         Unterteilung an:
                     |> div

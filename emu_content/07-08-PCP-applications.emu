@@ -47,7 +47,7 @@
                         \end{align*}
                         Diese Grammatiken erlauben uns, gewisse Sprachen zu beschreiben, indem Sie Regeln festlegen -
                         hier
-                        _Produktionen_genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
+                        _Produktionen_ genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
                         Alphabet
                         (hier: \(\{a,b,c\}\)) ableiten kann. Beispielsweise:
                         \begin{align*}
@@ -64,7 +64,7 @@
                             class numbered-title
 
                             Theorem
-                        Wir wollen bestimmen, ob
+                        &ensp;Wir wollen bestimmen, ob
                         aus einer gegebenen kontextfreien Grammatik \(G\) ein Palindromwort ableitbar ist,
                         also ein \(\gamma\), das von rechts nach links gelesen gleich ist, sprich
                         \(\gamma = \gamma^R\). Dieses Problem ist unentscheidbar.
@@ -110,7 +110,7 @@
                                 class numbered-title
 
                                 Behauptung
-                            Wenn die Grammatik \(G\) ein Palindromwort
+                            &ensp;Wenn die Grammatik \(G\) ein Palindromwort
                             ableiten kann, dann hat das PCP-Puzzle \(P\) eine Lösung.
                         |> div
                             class well subtheorem
@@ -138,7 +138,7 @@
                                 class numbered-title
 
                                 Behauptung
-                            Wenn
+                            &ensp;Wenn
                             das PCP-Puzzle \(P\) eine Lösung hat, dann kann die Grammatik \(G\) ein Palindromwort
                             ableiten.
                         |> div
@@ -189,7 +189,7 @@
                         |> ul
                             |> li
 
-                                *Aufgabe:*Zeigen Sie, dass die Funktion
+                                *Aufgabe:* Zeigen Sie, dass die Funktion
                                 \(n \mapsto n!\) im \(\lambda\)-Kalkül berechenbar ist.
                             |> li
 
@@ -212,7 +212,7 @@
 
                             Definition
                         Seien \(L_1 \subseteq \Sigma_1\) und \(L_2 \subseteq \Sigma_2\) zwei Sprachen.
-                        Eine _Reduktion von \(L_1\) nach \(L_2\)_ist eine Turing-berechenbare Funktion
+                        Eine _Reduktion von \(L_1\) nach \(L_2\)_ ist eine Turing-berechenbare Funktion
                         \begin{align*}
                         f : \Sigma_1^* \rightarrow \Sigma_2^*
                         \end{align*}
@@ -234,7 +234,7 @@
                             class numbered-title
 
                             Beobachtung
-                        Wenn \(f\) eine Reduktion von \(L_1\) nach
+                        &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                         \(L_2\) ist und \(L_2\) entscheidbar ist, dann ist auch \(L_1\) entscheidbar.
                     |> div
                         class well container
@@ -261,9 +261,9 @@
                     Stellen Sie sich einfach vor, dass \(M_f\) der Code ist, den Sie selber schreiben müssen,
                     und \(M_2\) die "Bibliotheksfunktion" ist, die Sie ohne groß nachzudenken aufrufen,
                     weil sie ja bereist von anderen Leuten (hoffentlich korrekt) implementiert worden ist.
-                    Behauptung 4.6.8 zeigt also, das etwas _möglich_ist.
+                    Behauptung 4.6.8 zeigt also, das etwas _möglich_ ist.
                     In der Berechenbarkeitstheorie und Komplexitätstheorie sind wir eher daran interessiert,
-                    zu zeigen, was _nicht möglich_ist, und wenden daher häufiger das Kontrapositiv
+                    zu zeigen, was _nicht möglich_ ist, und wenden daher häufiger das Kontrapositiv
                     der Behauptung an:
                     |> div
                         class well container theorem
@@ -271,7 +271,7 @@
                             class numbered-title
 
                             Beobachtung
-                        Wenn \(f\) eine Reduktion von \(L_1\) nach
+                        &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                         \(L_2\) ist und \(L_1\) unentscheidbar ist, dann ist auch \(L_2\) unentscheidbar.
                     |> div
                         class well container
@@ -289,8 +289,8 @@
                     auf das "Kann ein Palindrom abgeleitet werden"-Problem. Wir haben also eine ganze Kette
                     von Reduktionen bereits durchgeführt.
                     Für Neulinge ist diese Richtung oft inintuitiv und verwirrend. Dies spiegelt
-                    sich in der Verwendung des Konjunktivs _wäre / wäre_in Behauptung 4.6.9 wider.
-                    Auch ist es schlicht ungewohnt, ein _altes_Problem auf ein _neues_zu reduzieren
+                    sich in der Verwendung des Konjunktivs _wäre / wäre_ in Behauptung 4.6.9 wider.
+                    Auch ist es schlicht ungewohnt, ein _altes_ Problem auf ein _neues_ zu reduzieren
                     statt umgekehrt.
                     |> figure
                         |> img

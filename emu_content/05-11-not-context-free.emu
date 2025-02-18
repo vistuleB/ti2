@@ -143,14 +143,14 @@
                         häufig vor, und somit \(uwy\not \in L\).
                         |> p
 
-                            Wir haben also gezeigt, dass die kontextfreie Grammatik \(G\) _nicht_die Sprache
+                            Wir haben also gezeigt, dass die kontextfreie Grammatik \(G\) _nicht_ die Sprache
                             \(L\) erzeugt: wenn wir alle \(\gamma \in L\) erzeugen kann, dann
                             kann sie auch Wörter wie \(uwy \not \in L\) erzeugen. Da unsere Argumentation keine
                             Annahmen über \(G\) getroffen hat, außer, dass sie kontextfrei ist, haben wir gezeigt:
                             \(L\) ist keine kontextfreie Sprache.
                         |> p
 
-                            *Vorsicht!*Wir haben angenommen, das \(uwy\) weniger Zeichen hat
+                            *Vorsicht!* Wir haben angenommen, das \(uwy\) weniger Zeichen hat
                             als \(uvwxy\), weil ja \(v\) und \(x\) fehlen. Kann aber \(v = x = \epsilon\) eintreten?
                             Dies würde unsere Argumentation zerstören. Hier kommt wieder die
                             Chomsky-Normalform zur Hilfe: es gibt keine Produktionen \(X \rightarrow \epsilon\),
@@ -160,7 +160,7 @@
                             \(\epsilon\)-Produktion zur Anwendung.
                     |> p
 
-                        Die obige Argumentationslinie ist als _Pumping Lemma für kontextfreie Sprachen_bekannt:
+                        Die obige Argumentationslinie ist als _Pumping Lemma für kontextfreie Sprachen_ bekannt:
                     |> div
                         class well container theorem
                         |> span
@@ -247,9 +247,9 @@
                                 \(L_1 \cap L_2\). Hierfür könnte man für \(L_1, L_2\) jeweils endliche Automaten
                                 \(M_1, M_2\) bauen und die dann "parallel" laufen lassen; man muss nun sehen, dass man
                                 dieses parallele Laufen
-                                mit _einem_Automaten simulieren kann: dieser hat als Zustandsmenge \(Q_1 \times
+                                mit _einem_ Automaten simulieren kann: dieser hat als Zustandsmenge \(Q_1 \times
                                 Q_2\),
-                                merkt sich also in _einem_Zustand, in welchen Zuständen \(M_1\) und \(M_2\)
+                                merkt sich also in _einem_ Zustand, in welchen Zuständen \(M_1\) und \(M_2\)
                                 sind.
                                 Oder man macht es sich einfach:
                                 |> ul
@@ -264,7 +264,7 @@
                                         Nach Punkt 4 ist daher wiederum \(\overline{\bar{L}_1 \cup \bar{L}_2}\) regulär,
                                         was
                                         nach den De-Morganschen Gesetzen die gleiche Menge ist wie \(L_1 \cap L_2\).
-                        Wie sieht es nun aus, wenn \(L_1, L_2\) _kontextfreie_Sprachen sind? Welche der
+                        Wie sieht es nun aus, wenn \(L_1, L_2\) _kontextfreie_ Sprachen sind? Welche der
                         obigen Kombinationen sind dann ebenfalls kontextfrei?
                         |> div
                             class well well-lg numbered-exercise container
@@ -296,7 +296,7 @@
                                     kontextfrei.
                             |> p
 
-                                *Tip:*dies ist viel einacher als für reguläre Grammatiken.
+                                *Tip:* dies ist viel einacher als für reguläre Grammatiken.
                     Wie schon angedeutet, geben uns Komplement und Schnittmenge im Allgemeinen keine kontextfreie
                     Sprache.
                     Das Gegenbeispiel haben wir schon fast gesehen:
@@ -307,7 +307,7 @@
 
                             Beobachtung
                         Der Schnitt \(L_1 \cap L_2\) zweier kontextfreier Sprachen
-                        ist im Allgemeinen _nicht_kontextfrei.
+                        ist im Allgemeinen _nicht_ kontextfrei.
                         Ein Beispiel ist
                         \begin{align*}
                         L_1&amp;:= \{a^n b^n c^* \ | \ n \geq 0 \}\\
@@ -326,7 +326,7 @@
                             class numbered-title
 
                             Beobachtung
-                        Das Komplement \(L\) einer kontextfreien Sprache ist im Allgemeinen _nicht_kontextfrei.
+                        Das Komplement \(L\) einer kontextfreien Sprache ist im Allgemeinen _nicht_ kontextfrei.
                         \\
                         Warum? Wenn er es wäre, dann wäre mit Hilfe von Punkt 1 auch
                         \begin{align*}
@@ -346,6 +346,6 @@
                         deren Komplement, also \(L\), nicht kontextfrei ist.
                         |> p
 
-                            *Tip.*Listen Sie alle Möglichkeiten auf, wie ein Wort \(w\) nicht
+                            *Tip.* Listen Sie alle Möglichkeiten auf, wie ein Wort \(w\) nicht
                             in \(L\) sein kann: (1) es hat nicht die Form \(a^* b^* c^*\); (2) es hat die Form,
                             hat aber mehr \(a\) als es \(b\) hat; (2) es hat mehr \(a\) als es \(c\) hat...

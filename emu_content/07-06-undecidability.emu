@@ -39,7 +39,7 @@
                             4.6 Turingmaschinen, Haltproblem und Unentscheidbarkeit
                     |> p
 
-                        Im vorherigen Teilkapitel haben wir die _universelle Turingmaschine_$U$ konstruiert, die
+                        Im vorherigen Teilkapitel haben wir die _universelle Turingmaschine_ $U$ konstruiert, die
                         eine andere Turingmaschine, deren Codierung und Inputwort sie als Input gegeben hat, simulieren
                         kann.
                         Technisch gesprochen: $U$ akzeptiert die Sprache
@@ -50,12 +50,12 @@
                     |> p
 
                         Allerdings: wenn $M$ auf $x$ nicht terminiert, dann terminiert $U$ auf $\enc(M)x$ auch
-                        nicht. $U$ _akzeptiert_die Sprache also, _entscheidet_sie aber nicht. Wäre es
+                        nicht. $U$ _akzeptiert_ die Sprache also, _entscheidet_ sie aber nicht. Wäre es
                         nicht schön, eine Turingmaschine zu haben, die diese Sprache entscheidet? Dann könnten wir jede
                         Turingmaschine simulieren und gleichzeitig Endlosschleifen und eventuell ganz allgemein
                         "Programmierfehler" vorhersagen und abfangen. Wir werden zeigen, dass dies leider _nicht_
                         möglich ist. In der Literatur ist dies als die _Unentscheidbarkeit des Halteproblems_
-                        (englisch _undecidability of the Halting problem_bekannt).
+                        (englisch _undecidability of the Halting problem_ bekannt).
                     |> p
 
                         Als vorbereitenden Schritt schauen wir uns kurz die Codierungsfunktion nochmal genauer an. Wir
@@ -68,7 +68,7 @@
                         $\Sigma$ mindestens zwei Zeichen hat. Wenn z.B. $\Sigma$ die Zeichen $0$ und $1$ enthält,
                         dann können wir alle Zeichen in
                         $\Lambda$ wiederum als Strings in $\Sigma^*$ codieren. Wir müssen hier
-                        nur vorsichtig sein, dass der Code _präfixfrei_ist. Wenn wir zum Beispiel naiv
+                        nur vorsichtig sein, dass der Code _präfixfrei_ ist. Wenn wir zum Beispiel naiv
                         $1$ als $1$ und $0$ als $0$ und $\texttt{#}$ als $01$ codieren, dann wissen wir nicht mehr, was
                         mit dem Codewort $01$ gemeint ist. Am einfachsten geht das mit einem _Blockcode_, in dem
                         alle Codewörter die gleiche Länge $k$ haben, also
@@ -107,7 +107,7 @@
                         class well container
                         |> p
 
-                            *Kurzer Beweis per Wiederspruch.*Nehmen wir an, es gäbe eine Maschine $H$,
+                            *Kurzer Beweis per Wiederspruch.* Nehmen wir an, es gäbe eine Maschine $H$,
                             die $\halt$ entscheidet. Dann wäre auch die Sprache
                         \begin{align*}
                         \diag := \{\enc(M) \ | \ \textnormal{$M$ akzeptiert $\enc(M)$} \}
@@ -127,7 +127,7 @@
 
                             entscheidbar; wir müssen ja nur $\diag$ entscheiden und dann das Ergebnis negieren.
                             $\negdiag$
-                            ist sozusagen die Menge aller Turingmaschinen, die _nicht_ihre eigene Codierung als
+                            ist sozusagen die Menge aller Turingmaschinen, die _nicht_ ihre eigene Codierung als
                             Inputwort akzeptieren. Da $\negdiag$ nach Annahme entscheidbar ist, gibt es eine Maschine
                             $D$, die $\negdiag$ entscheidet.
                         |> p
@@ -152,7 +152,7 @@
                     |> div
                         class well container
 
-                        *Ausführlicher Beweis.*Ich finde Beweise durch Widerspruch immer
+                        *Ausführlicher Beweis.* Ich finde Beweise durch Widerspruch immer
                         etwas unintuitiv, weil man die ganze Zeit im Konjunktiv argumentieren muss.
                         Daher hier ein Beweis ohne Widerspruch. Wir zeigen, dass $\halt$ unentscheidbar ist,
                         indem wir für eine beliebige Turingmaschine $M$ zeigen, dass sie $\halt$ nicht entscheidet,
@@ -194,16 +194,17 @@
                             class listing
 
                             `def D(x):`
-                            `if H(xx) == accept then` 
 
-                            `reject` 
+                            &ensp;&ensp;&ensp;&ensp;`if H(xx) == accept then` 
 
-                            `else` 
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`reject` 
 
-                            `accept`
+                            &ensp;&ensp;&ensp;&ensp;`else` 
+
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`accept`
                         |> p
 
-                            Zur Erinnerung: $y := \enc(D)$. Wir unterscheiden drei Fälle.
+                            &ensp;Zur Erinnerung: $y := \enc(D)$. Wir unterscheiden drei Fälle.
                             |> ul
                                 |> li
 
@@ -236,7 +237,7 @@
                                     auf jedem Eingabewort zu terminieren.
                         In jedem Fall sehen wir, dass \(H\) auf dem Eingabewort
                         \(yy\) einen Fehler macht und somit \(\halt\) nicht
-                        entscheidet. Da das für _jede_Turingmaschine
+                        entscheidet. Da das für _jede_ Turingmaschine
                         geht, schließen wir: keine Turingmaschine kann
                         die Sprache \(\halt\) entscheiden; sie ist unentscheidbar.
                         |> span
@@ -258,14 +259,14 @@
                         unentscheidbar ist,
                         ist in der Tat relevant, denn daraus folgt (nicht direkt, aber mit ein paar technischen Tricks),
                         dass im Prinzip
-                        _jede_nichttriviale Frage über das Verhalten eines Programmcodes unentscheidbar ist.
+                        _jede_ nichttriviale Frage über das Verhalten eines Programmcodes unentscheidbar ist.
                         Also sind
                         auch Fragen wie "Kann das Programm abstürzen?" oder "Kann ein unautorisierter Nutzer Zugang zu
                         XYZ erhalten?" unentscheidbar.
                     |> div
                         class alert-info
 
-                        Das Wort _Unentscheidbarkeit_verwenden wir hier in seiner
+                        Das Wort _Unentscheidbarkeit_ verwenden wir hier in seiner
                         technischen Bedeutung,
                         die wir definiert haben: es gibt keine Turingmaschine, die das Problem entscheidet, also
                         auf jeder Eingabeinstanz terminiert und die richtige Antwort liefert. Es gibt also in der Tat

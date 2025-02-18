@@ -51,13 +51,13 @@
                                 class numbered-title
 
                                 Theorem
-                            *(Überabzählbarkeit der reellen Zahlen).*$\N \not
+                            *(Überabzählbarkeit der reellen Zahlen).* $\N \not
                             \approx \R$.
                     |> div
                         class well container
                         |> p
 
-                            *Beweis.*Da wir bereits $\R \approx \{0,1\}^{\N}$
+                            *Beweis.* Da wir bereits $\R \approx \{0,1\}^{\N}$
                             gesehen haben, reicht es, $\N \not \approx \{0,1\}^{\N}$ zu zeigen.
                             Wir müssen also zeigen, dass es keine Bijektion $f : \N \rightarrow
                             \{0,1\}^{\N}$ gibt. Wie gehen wir vor? Wir nehmen an, man hätte uns
@@ -118,7 +118,7 @@
                             href 07-00-Turing-machines.html
 
                             7
-                        über Turingmaschinen und in
+                        &ensp;über Turingmaschinen und in
                         Kapitel ? über Komplexitätstheorie eine Rolle spielen, wenn wir z.B.
                         zeigen wollen, dass es Probleme gibt, an denen jedes Computerprogram
                         versagt.
@@ -145,7 +145,7 @@
                             die Menge aller Untermengen.
                         |> p
 
-                            *Tipp:*Sie müssen den obigen Beweis auf die richtige
+                            *Tipp:* Sie müssen den obigen Beweis auf die richtige
                             Weise abstrahieren, dann geht es ganz einfach.
                     |> p
 
@@ -168,6 +168,6 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            Zeigen Sie, dass
-                            es in $(2^\N, \subseteq)$ eine _Kette_$X$ mit $X \approx \R$
+                            &ensp;Zeigen Sie, dass
+                            es in $(2^\N, \subseteq)$ eine _Kette_ $X$ mit $X \approx \R$
                             gibt.

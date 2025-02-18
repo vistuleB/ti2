@@ -167,7 +167,15 @@ const Article = () => {
                   Sei \(\Sigma = \&#123;a,b,.\&#125;\) und \(L \subseteq \Sigma^*\) die Sprache
                   aller Strings der Form $$ x_1 . x_2 . x_3 . \cdots . x_n $$ wobei \(n
                   \geq 2\) und jedes \(x_i \in \&#123;a,b\&#125;^+\), also zum Beispiel
-                  `a.bba.aba`aber nicht `aba`und auch nicht
+                  {" "}
+                  <code>
+                    a.bba.aba
+                  </code>
+                  {" "}aber nicht{" "}
+                  <code>
+                    aba
+                  </code>
+                  {" "}und auch nicht
                   {" "}
                   <code>
                     a.b..a
@@ -187,7 +195,7 @@ const Article = () => {
                   <i>
                     nicht
                   </i>
-                  regulär. Allerdings können wir
+                  {" "}regulär. Allerdings können wir
                   eine reguläre Grammatik angeben, die die gleiche Sprache erzeugt.
                   <Paragraph>
                     Entwerfen Sie eine reguläre Grammatik für die Sprache aller
@@ -229,7 +237,7 @@ const Article = () => {
                   <i>
                     vor
                   </i>
-                  dem Nichtterminal vorkommen.
+                  {" "}dem Nichtterminal vorkommen.
                 </div>
                 <div class="well container theorem">
                   <span class="numbered-title">
@@ -276,7 +284,7 @@ const Article = () => {
                   <a href="#def-regular">
                     Definition 4.1
                   </a>
-                  hat jede Produktion in einer
+                  &ensp;hat jede Produktion in einer
                   regulären Grammatik eine der folgenden vier Formen: $$\begin&#123;align*&#125; 1.
                   \quad X&amp;\rightarrow aY \\ 2. \quad X&amp;\rightarrow a \\ 3. \quad X&
                   \rightarrow Y \\ 4. \quad X&amp;\rightarrow \epsilon \end&#123;align*&#125;$$
@@ -435,7 +443,11 @@ const Article = () => {
                       {" "}
                       <i>
                         eine beliebig lange Folge von Labels, mit
-                        `.`separiert.
+                        {" "}
+                        <code>
+                          .
+                        </code>
+                        {" "}separiert.
                       </i>
                       {" "}{" "}
                     </li>
@@ -494,7 +506,7 @@ const Article = () => {
                       Ding 1, gefolgt von Ding 2
                     </i>
                     {" "}
-                    mit regulären Grammatiken
+                    &ensp;mit regulären Grammatiken
                     realisierbar sind.
                   </Paragraph>
                   <div class="well container theorem">
@@ -566,7 +578,7 @@ const Article = () => {
                   <i>
                     Ding, beliebig oft wiederholt
                   </i>
-                  mit regulären Sprachen möglich
+                  {" "}mit regulären Sprachen möglich
                   ist.
                   <div class="well container theorem">
                     <span class="numbered-title">
@@ -626,10 +638,22 @@ const Article = () => {
                     <ol>
                       <li>
                         Dem Protokoll. Hier ist das `https`; es kann aber
-                        auch `http`oder `ftp`sein.
+                        auch{" "}
+                        <code>
+                          http
+                        </code>
+                        {" "}oder{" "}
+                        <code>
+                          ftp
+                        </code>
+                        {" "}sein.
                       </li>
                       <li>
-                        Dem `://`nach dem Protokoll.
+                        Dem{" "}
+                        <code>
+                          ://
+                        </code>
+                        {" "}nach dem Protokoll.
                       </li>
                       <li>
                         Dem Domainnamen, hier `web1.hszg.de`.
@@ -642,7 +666,11 @@ const Article = () => {
                         Falls ein Pfad enthalten ist, dann optional ein `?`,
                         gefolgt von einem Query-String; dieser besteht aus beliebig
                         vielen, aber mindestens einem Paar der Form Key=Value, wobei die
-                        Paare mit einem `&`separiert sind.
+                        Paare mit einem{" "}
+                        <code>
+                          &
+                        </code>
+                        {" "}separiert sind.
                       </li>
                     </ol>
                     <Paragraph>

@@ -60,7 +60,7 @@ const Article = () => {
                   <i>
                     Ableitungsbaum
                   </i>
-                  zeichnen. Wenn die Grammatik
+                  {" "}zeichnen. Wenn die Grammatik
                   eindeutig ist, so hängt auch der Baum nur vom Wort \(w \in L(G)\) ab und
                   nicht von der Ableitung \(S \Step&#123;&#125;^* w\).
                   Allerdings können wir für Zwischenformen
@@ -163,7 +163,7 @@ const Article = () => {
                   <b>
                     Auflösung.
                   </b>
-                  Hier sehen Sie noch einmal
+                  {" "}Hier sehen Sie noch einmal
                   den gleichen Baum, nun aber gewisse Teile verschieden umrandet / eingefärbt.
                 </div>
                 <figure>
@@ -195,7 +195,7 @@ const Article = () => {
                   <i>
                     Stamm
                   </i>
-                  ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
+                  {" "}ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
                   der von allen inneren Knoten, deren Kinder allesamt Blätter sind,
                   am weistesten links steht.
                   Die Kinder von \(u\), per Definition alles Blätter, sind die{" "}
@@ -233,17 +233,17 @@ const Article = () => {
                   <i>
                     Front
                   </i>
-                  von $\mathcal&#123;T&#125;$ und schreiben sie als $\front(\mathcal&#123;T&#125;)$.
+                  {" "}von $\mathcal&#123;T&#125;$ und schreiben sie als $\front(\mathcal&#123;T&#125;)$.
                   Wir sagen auch, dass \(\beta\){" "}
                   <i>
                     eine Blüte von \(\gamma\)
                   </i>
-                  und
+                  {" "}und
                   $\alpha\beta$ die{" "}
                   <i>
                     Front
                   </i>
-                  von $\gamma$ ist,
+                  {" "}von $\gamma$ ist,
                   ohne über den Ableitungsbaum \(\mathcal&#123;T&#125;\) selbst zu reden.
                   Hierbei ist zu beachten, dass in einer mehrdeutigen Grammatik
                   eine gültige Wortform mehrere Ableitungsbäume und somit
@@ -475,7 +475,7 @@ const Article = () => {
                   <i>
                     erweitert reguläre
                   </i>
-                  Grammatik \(\hat&#123;G&#125; = (\Sigma \cup N, \hat&#123;N&#125;, \hat&#123;S&#125;,
+                  {" "}Grammatik \(\hat&#123;G&#125; = (\Sigma \cup N, \hat&#123;N&#125;, \hat&#123;S&#125;,
                   \hat&#123;P&#125;)\)
                   mit \(\hat&#123;N&#125; := \&#123;\hat&#123;X&#125; \ | \ X \in N\&#125;\), wobei
                   \(\hat&#123;P&#125;\) für jede \(G\)-Produktion
@@ -602,7 +602,7 @@ const Article = () => {
                     <i>
                       korrekte
                     </i>
-                    Linksreduktionsschritte.
+                    {" "}Linksreduktionsschritte.
                   </Paragraph>
                   <Paragraph>
                     Der zweite Teil ist schwieriger. Wir nehmen also
@@ -690,7 +690,7 @@ const Article = () => {
                         <i>
                           echter
                         </i>
-                        Präfix von $\front(\gamma w)$ und somit
+                        {" "}Präfix von $\front(\gamma w)$ und somit
                         ist $\gamma c$ immer noch ein Präfix von $\front(\gamma w)$.
                       </li>
                     </ol>

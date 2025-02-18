@@ -63,7 +63,7 @@ const Article = () => {
                     <i>
                       Paare
                     </i>
-                    $(a,b)$ von
+                    {" "}$(a,b)$ von
                     natürlichen Zahlen.
                   </Paragraph>
                   <figure>
@@ -179,7 +179,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung.
                     </span>
-                    Es gibt eine
+                    &ensp;Es gibt eine
                     injektive Funktion $f : \Q \rightarrow \N$.
                   </Paragraph>
                 </div>
@@ -250,7 +250,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung:
                     </span>
-                    Es gibt eine
+                    &ensp;Es gibt eine
                     injektive Funktion $g: \N \rightarrow \Q$.
                   </Paragraph>
                 </div>
@@ -260,7 +260,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    Dies ist ganz einach: da $\N \subseteq \Q$
+                    {" "}Dies ist ganz einach: da $\N \subseteq \Q$
                     gilt, können wir jedes $n$ einfach bei sich belassen. Die Funktion
                   </Paragraph>
                   $$\begin&#123;align*&#125; g : \N&amp;\rightarrow \Q \\ n&amp;\mapsto n \end&#123;align*&#125;$$
@@ -270,7 +270,7 @@ const Article = () => {
                     <i>
                       Einbettung
                     </i>
-                    von $\N$ in $\Q$.
+                    {" "}von $\N$ in $\Q$.
                     <span class="qed">
                       \(\square\)
                     </span>
@@ -283,7 +283,7 @@ const Article = () => {
                   <i>
                     surjektiv
                   </i>
-                  ist. Gleichzeitig haben
+                  {" "}ist. Gleichzeitig haben
                   wir $g : \N \rightarrow \Q$, die injektiv ist aber auch nicht
                   surjektiv. Bei $f$ bleiben also manche natürlichen Zahlen ungenutzt,
                   bei $g$ bleiben rationale Zahlen ungenutzt. Können wir $f$ und $g$
@@ -301,7 +301,7 @@ const Article = () => {
                   <a href="...">
                     ...
                   </a>
-                  beweisen.
+                  &ensp;beweisen.
                   Vorerst behelfen wir uns mit ad-hoc-Methoden.
                 </Paragraph>
                 <div class="well container theorem">
@@ -309,7 +309,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    Es gilt $\Q \approx \N$.
+                    &ensp;Es gilt $\Q \approx \N$.
                   </Paragraph>
                 </div>
                 <div class="well container">
@@ -372,13 +372,13 @@ const Article = () => {
                 <i>
                   abzählbar
                 </i>
-                unendlich?
+                {" "}unendlich?
                 <div class="well container theorem">
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    Es gilt $\&#123;0,1\&#125;^*
+                    &ensp;Es gilt $\&#123;0,1\&#125;^*
                     \approx \N$.
                   </Paragraph>
                 </div>
@@ -388,7 +388,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    Hier ist eine Idee: wir interpretieren den
+                    {" "}Hier ist eine Idee: wir interpretieren den
                     Bitstring $a
                     <i>
                       1 a

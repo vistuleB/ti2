@@ -44,9 +44,9 @@
                         erkunden, welche Mengen gleichmächtig mit $\R$ sind. In der
                         mathematischen Fachsprache sagt man: sie haben die
                         _Kardinalität des Kontinuums_. Das Wort
-                        _Kardinalität_steht hier für
-                        _Anzahl der Elemente_(bzw. den Größenbegriff bei unendlichen
-                        Mengen), und _Kontinuum_steht für _die reellen Zahlen_.
+                        _Kardinalität_ steht hier für
+                        _Anzahl der Elemente_ (bzw. den Größenbegriff bei unendlichen
+                        Mengen), und _Kontinuum_ steht für _die reellen Zahlen_.
                         Im nächsten Kapitel werden wir zeigen, dass es "echt mehr" reelle
                         Zahlen gibt als natürliche; dass also $\R$ nicht abzählbar ist. Aber
                         eins nach dem anderen.
@@ -57,7 +57,7 @@
                                 class numbered-title
 
                                 Beobachtung
-                            Es gilt $\R \approx
+                            &ensp;Es gilt $\R \approx
                             (0,1)$, wobei $(0,1)$ das offene Einheitsintervall ist.
                     |> div
                         class well container
@@ -230,11 +230,11 @@
                         class well container
                         |> p
 
-                            *Beweis.*Mithilfe von
+                            *Beweis.* Mithilfe von
                             |> span
                                 data-ref theorem-R-bitstrings
                                 class reference
-                            geht
+                            &ensp;geht
                             das ganz einfach. Da $\R \approx \{0,1\}^\N$ gilt, reicht es
                             nämlich, eine Bijektion $\{0,1\}^\N \times \{0,1\}^\N \rightarrow
                             \{0,1\}^\N$ zu konstruieren. Ein Element von $\{0,1\}^\N \times
@@ -243,7 +243,7 @@
                         \end{align*}
                         |> p
 
-                            Wir müssen dieses Folgenpaar nun in _eine_Folge codieren.
+                            Wir müssen dieses Folgenpaar nun in _eine_ Folge codieren.
                             Ganz klar:
                         \begin{align*} (a_1 a_2 a_3 \dots, b_1 b_2 b_3 \dots) \mapsto (a_1 b_1
                         a_2 b_2 a_3 b_3 \dots) \end{align*} Dies ist die gewünschte Bijektion
@@ -310,7 +310,7 @@
                                 class numbered-title
 
                                 Beobachtung
-                            Die Funktion
+                            &ensp;Die Funktion
                             $f^{-1}$ bildet
                         |> ul
                             |> li
@@ -436,7 +436,7 @@
                                 class numbered-title
 
                                 Theorem
-                            $\R \approx \R^{\N}$.
+                            &ensp;$\R \approx \R^{\N}$.
                     |> div
                         class well container
                         |> p
@@ -514,11 +514,11 @@
                         ist die Multiplikation: die Zahlenmultiplikation $a \cdot b$ hat als
                         mengentheoretisches Analog das Cartesische Produkt $A \times B$, die
                         Menge aller Paare $(x,y)$ mit $x \in A, y \in B$. Die Exponentiation
-                        $a^b$ hat als Analog $A^B$, die Menge aller _Funktionen_$\phi:
+                        $a^b$ hat als Analog $A^B$, die Menge aller _Funktionen_ $\phi:
                         B \rightarrow A$. Was ist das Analog zur Addition? Die Vereinigung $A
                         \cup B$ wäre zu kurz gegriffen, weil ja zum Beispiel $\{1,2,3\} \cup
                         \{4,5\}$ fünf Elemente hat, $\{1,2,3\} \cup \{1,2\}$ aber nur drei.
-                        Das "richtige" Analog ist die _disjunkte Vereinigung_$A \uplus
+                        Das "richtige" Analog ist die _disjunkte Vereinigung_ $A \uplus
                         B$, die die Elemente von $B$ erst einmal "markiert", um sie von denen
                         von $A$ unterscheidbar zu machen. Somit wäre also $\{1,2,3\} \uplus
                         \{1,2\} = \{1,2,3,1',2'\}$ eine Menge der Kardinalität 5. Formal kann
@@ -589,7 +589,7 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            Beweisen Sie so
+                            &ensp;Beweisen Sie so
                             viele Punkte von
                             |> span
                                 data-ref calculating-with-cardinals
@@ -601,7 +601,7 @@
                             , wie Sie wollen.
                         |> p
 
-                            *Hinweis.*Die Beweise sind alle nicht wirklich
+                            *Hinweis.* Die Beweise sind alle nicht wirklich
                             schwierig. Sie müssen nur aufpassen, dass Sie sich nicht in der
                             Notation verlieren.
                     |> h3
@@ -623,15 +623,15 @@
 
                         Die Elemente von $2^\N$, also Teilmengen $A \subseteq \N$, sind nach
                         Inklusion geordnet: $A \subseteq B$. Somit ist $\left(2^{\N},
-                        \subseteq\right)$ eine Partialordnung. Eine _Kette_in einer
+                        \subseteq\right)$ eine Partialordnung. Eine _Kette_ in einer
                         Partialordnung $(X, \preceq)$ ist eine Menge $Z$, in der alle Elemente
                         paarweise vergleichbar sind. In diesem konkreten Beispiel heißt das:
                         $Z \subseteq 2^{\N}$ und für alle $A, B \in Z$ gilt $A \subseteq B$
                         oder $B \subseteq A$. Erinnern Sie sich: $A$ und $B$ sind hier Mengen
                         natürlicher Zahlen, und $Z$ ist eine Menge von Mengen natürlicher
-                        Zahlen. Eine _Antikette_in einer Partialordnung $(X,\preceq)$
+                        Zahlen. Eine _Antikette_ in einer Partialordnung $(X,\preceq)$
                         ist eine Teilmenge $Z \subseteq X$, in der je zwei Elemente
-                        _unvergleichbar_sind. In diesem Beispiel heißt das: $Z
+                        _unvergleichbar_ sind. In diesem Beispiel heißt das: $Z
                         \subseteq 2^N$, und für alle $A, B \in Z$ mit $A \ne B$ gilt $A \not
                         \subseteq B$ und $B \not \subseteq A$. Hier ist ein Beispiel für eine
                         unendliche Kette:
@@ -666,7 +666,7 @@
                                 class numbered-title
 
                                 Definition
-                            *(Dichte Partialordnung)*Eine Partialordnung
+                            *(Dichte Partialordnung)* Eine Partialordnung
                             $(X,\preceq)$ heißt _dicht_, wenn es für alle $x,z \in X$ mit
                             $x \prec z$ ein $y \in X$ gibt mit $x \prec y \prec z$.
                     |> p

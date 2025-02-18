@@ -53,7 +53,7 @@ const Article = () => {
                     <b>
                       Informelle Beschreibung.
                     </b>
-                    Unsere Turingmaschine arbeitet
+                    {" "}Unsere Turingmaschine arbeitet
                     in Phasen. In jeder Phase sucht die Maschine ein \(a\) und löscht es
                     (ersetzt es durch ein \(X\)). Dann geht sie nach rechts und
                     sucht und markiert ein \(b\); dann ein \(c\). Sobald sie das \(c\) markiert hat,
@@ -72,7 +72,7 @@ const Article = () => {
                     <b>
                       Formellere Beschreibung.
                     </b>
-                    Als Bandalphabet verwenden wir
+                    {" "}Als Bandalphabet verwenden wir
                     $$\begin&#123;align*&#125;
                     \Gamma := \&#123;a,b,c, X, \square\&#125; \ .
                     \end&#123;align*&#125;$$
@@ -100,7 +100,7 @@ const Article = () => {
                       <tt>
                         noA
                       </tt>
-                      und gehe ein Feld nach rechts.
+                      &ensp;und gehe ein Feld nach rechts.
                     </li>
                     <li>
                       <tt>
@@ -161,7 +161,7 @@ const Article = () => {
                     <tt>
                       reject
                     </tt>
-                    wechselt. Andere Zellen bestehen nur aus einem
+                    &ensp;wechselt. Andere Zellen bestehen nur aus einem
                     Buchstaben; so steht in der Zelle von \(\delta(\texttt&#123;findA&#125;, b)\) nur
                     ein \(\texttt&#123;R&#125;\). Dies bedeutet, dass die Turingmaschine ihren Zustand nicht
                     wechselt und einfach das gelesene Zeichen in die Zelle wieder reinschreibt. Dies
@@ -184,14 +184,14 @@ const Article = () => {
                     \end&#123;align*&#125;$$
                     auf turingmachinesimulator.com als
                     <pre>
-                      q, a 
+                      q, a
                       r, b, D{" "}
                     </pre>
                     angeben, wobei die Richtung \(D\) mit den Symbolen{" "}
                     <tt>
                       &lt;, -,&gt;
                     </tt>
-                    codiert wird.
+                    &ensp;codiert wird.
                   </Paragraph>
                 </div>
                 <div
@@ -245,13 +245,13 @@ const Article = () => {
                       <tt>
                         readA
                       </tt>
-                      und gehen
+                      &ensp;und gehen
                       einen Schritt nach rechts; ist es
                       \(b\), wechseln wir nach{" "}
                       <tt>
                         readB
                       </tt>
-                      und gehen nach rechts.
+                      &ensp;und gehen nach rechts.
                     </li>
                     <li>
                       <tt>
@@ -262,11 +262,11 @@ const Article = () => {
                       <tt>
                         killA
                       </tt>
-                      bzw.
+                      &ensp;bzw.
                       <tt>
                         killB
                       </tt>
-                      und gehen einen Schritt nach links.
+                      &ensp;und gehen einen Schritt nach links.
                     </li>
                     <li>
                       <tt>
@@ -354,7 +354,7 @@ const Article = () => {
                   <b>
                     Tip:
                   </b>
-                  gehen Sie durch das Band und ersetzen jede zweite
+                  {" "}gehen Sie durch das Band und ersetzen jede zweite
                   \(1\), die Sie sehen, durch ein \(X\). Wenn Sie rechts ankommen und eine
                   ungerade Anzahl von Einsen gelesen haben, lehnen Sie ab. Wenn
                   die Anzahl gerade ist, gehen Sie wieder nach ganz links; sie haben nun

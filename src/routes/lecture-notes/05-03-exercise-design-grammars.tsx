@@ -115,12 +115,20 @@ const Article = () => {
                     Labels
                   </i>
                   , die
-                  durch `.`separiert sind. Sie können den "Regelvorschlag"
+                  durch{" "}
+                  <code>
+                    .
+                  </code>
+                  {" "}separiert sind. Sie können den "Regelvorschlag"
                   ganz links unten in der App reinkopieren, um automatisch Regeln für alphanumerische
                   Zeichen zu bekommen (allerdings verschlechtert das die Laufzeit; ich habe erstmal
                   gar nicht auf Effizienz geachtet).
                   <Paragraph>
-                    Geben Sie das Eingabewort `a.aaaaa.aaaa.aaaa.aaaa.aaaa`ein. Wie
+                    Geben Sie das Eingabewort{" "}
+                    <code>
+                      a.aaaaa.aaaa.aaaa.aaaa.aaaa
+                    </code>
+                    {" "}ein. Wie
                     sieht Ihr Backtrack-Baum aus? Hat er viele Sackgassen? Können Sie Ihre Grammatik
                     so abändern, dass sie zwar noch die gleiche Sprache erzeugt, aber keine / nur wenige
                     Sackgassen hat?
@@ -169,13 +177,13 @@ const Article = () => {
                     S -&gt; ;
                   </pre>
                   Überlegen Sie, was diese "bedeutet". Sie sehen, die Grammatik ist
-                  nicht eindeutig. Das Wort `[([()(`hat zwei
+                  nicht eindeutig. Das Wort `[([()(` hat zwei
                   verschiedene Ableitungsbäume. Können Sie eine äquivalente
                   {" "}
                   <i>
                     eindeutige
                   </i>
-                  Grammatik schreiben?
+                  {" "}Grammatik schreiben?
                 </div>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
@@ -206,7 +214,7 @@ const Article = () => {
                   <i>
                     eindeutige
                   </i>
-                  Grammatik angebene, die ähnlich
+                  {" "}Grammatik angebene, die ähnlich
                   exponentielles Verhalten zeigt? Exponentiell heißt: mit jedem
                   zusätlichen Zeichen des Eingabewortes kann die Größe des
                   Backtrack-Baumes um einen Faktor \(R \gt 1\) wachsen.
@@ -224,7 +232,7 @@ const Article = () => {
                   <i>
                     jede
                   </i>
-                  Grammatik,
+                  {" "}Grammatik,
                   die \(L\) erzeugt, unter exponentiell großen Backtrack-Bäumen leidet.
                 </div>
               </div>

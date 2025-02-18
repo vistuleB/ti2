@@ -42,7 +42,7 @@ const Article = () => {
               <i>
                 Gatter
               </i>
-              (englisch{" "}
+              {" "}(englisch{" "}
               <i>
                 gates
               </i>
@@ -75,7 +75,11 @@ const Article = () => {
                 not-gate
               </i>
               ). In C, C++ und Java kennen Sie diese Booleschen Operatoren als
-              `&&`, `||`und `!`. Was diese Operatoren
+              `&&`,{" "}
+              <code>
+                ||
+              </code>
+              {" "}und `!`. Was diese Operatoren
               {" "}
               <i>
                 tun
@@ -84,7 +88,7 @@ const Article = () => {
               <i>
                 Wahrheitstabelle
               </i>
-              darstellen.
+              {" "}darstellen.
               Wir listen alle Kombinationen für \(x,y\) auf und schreiben in jede Zeile
               auch den Wert, den der Operator ausgibt.
               $$
@@ -128,15 +132,15 @@ const Article = () => {
                   <code>
                     if
                   </code>
-                  \(x\){" "}
+                  {" "}\(x\){" "}
                   <code>
                     then
                   </code>
-                  \(y\){" "}
+                  {" "}\(y\){" "}
                   <code>
                     else
                   </code>
-                  \(z\)
+                  {" "}\(z\)
                 </figcaption>
               </figure>
               <Paragraph>
@@ -144,7 +148,7 @@ const Article = () => {
                 <i>
                   berechnet
                 </i>
-                eine Funktion (formale Definition weiter unten).
+                {" "}eine Funktion (formale Definition weiter unten).
                 Informell gesprochen, wenn wir Wahrheitswerte (0/1) in die Input-Gates reinstecken,
                 dann fließen diese durch den Schaltkreis und werden von den AND/OR/NOT-Gates entsprechend
                 ihrer Funktion kombiniert und werden schließlich an den Output-Gates ausgegeben:
@@ -182,13 +186,13 @@ const Article = () => {
                         style="height:5em"
                         src="../img/circuits/n-fold-xor.svg"
                         loading="lazy" />
-                      ,
+                      &ensp;,
                     </figure>
                     welches 1 ausgibt, wenn eine{" "}
                     <i>
                       ungerade
                     </i>
-                    Anzahl seiner Inputs
+                    {" "}Anzahl seiner Inputs
                     auf 1 stehen.
                   </li>
                   <li>
@@ -210,7 +214,7 @@ const Article = () => {
                 <i>
                   ein
                 </i>
-                Gate darzustellen:
+                {" "}Gate darzustellen:
                 <figure>
                   <img
                     style="height:10em"
@@ -221,7 +225,7 @@ const Article = () => {
                 <i>
                   Fan-in
                 </i>
-                von \(n\). Das "normale" AND-Gate
+                {" "}von \(n\). Das "normale" AND-Gate
                 hat einen Fan-in von 2.
                 Mit \(\vee\)- und \(\oplus\)-Gates geht das ganz analog. Für andere Gates (wie zum Beispiel
                 ein if-then-else-Gate) würde das keinen Sinn machen. Größerer Fan-in ist aber nicht wirklich etwas
@@ -247,7 +251,7 @@ const Article = () => {
                 <i>
                   keine
                 </i>
-                Schaltkreis in unserem Sinn
+                {" "}Schaltkreis in unserem Sinn
                 sind:
               </Paragraph>
               <figure>
@@ -276,7 +280,7 @@ const Article = () => {
                 <i>
                   keinen
                 </i>
-                inneren Zustand: die Werte der Ausgabe-Gates sind
+                {" "}inneren Zustand: die Werte der Ausgabe-Gates sind
                 vollständig durch die Werte der Input-Gates determiniert. Wir sind nun bereit
                 für eine formale Definition von Schaltkreisen.
               </Paragraph>
@@ -287,7 +291,7 @@ const Article = () => {
                     1.1
                   </span>
                 </span>
-                {" "}{" "}
+                &ensp;
                 <b>
                   (Boolesche Schaltkreise)
                 </b>
@@ -320,7 +324,7 @@ const Article = () => {
                   <i>
                     Output-Gate
                   </i>
-                  gekennzeichnet. Die Output-Gates sind ihrerseits
+                  {" "}gekennzeichnet. Die Output-Gates sind ihrerseits
                   mit Output-Variablen \(y_1,\dots,y_m\) beschriftet.
                 </Paragraph>
               </div>
@@ -342,7 +346,7 @@ const Article = () => {
                 <i>
                   Funktion
                 </i>
-                \(f_C : \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;^m\) berechnet.
+                {" "}\(f_C : \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;^m\) berechnet.
                 Oft schreiben wir einfach \(C : \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;^m\).
               </Paragraph>
               <div class="well container theorem">

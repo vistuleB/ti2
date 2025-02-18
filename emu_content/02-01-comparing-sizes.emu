@@ -86,7 +86,7 @@
                                 class numbered-title
 
                                 Beispiel
-                            Beginnen wir mit einem
+                            &ensp;Beginnen wir mit einem
                             einfachen Beispiel und betrachten die zwei Mengen $\N =
                             \{0,1,2,3,4,\dots\}$ und $\N^+ = \{1,2,3,4,\dots\}$. Beide sind
                             unendlich, und $\N^+ \subsetneq \N$. Dennoch sind sie in gewisser
@@ -108,7 +108,7 @@
                     |> p
 
                         Diese anfangs etwas überraschende Tatsache, dass $\N$ und $\N^+$
-                        "gleich groß" sind, ist als _Hilberts Hotel_bekannt. Das Hotel
+                        "gleich groß" sind, ist als _Hilberts Hotel_ bekannt. Das Hotel
                         hat unendlich viele Zimmer, für jede Zahl $n \in \N^+$ eins. Dann
                         kommt ein neuer Gast (die $0$) und braucht ein Zimmer. Er kriegt das
                         Zimmer $1$. Da dies aber schon belegt ist, wird die Person, die bisher
@@ -122,7 +122,7 @@
                                 class numbered-title
 
                                 Beispiel
-                            Ermutigt von unserem
+                            &ensp;Ermutigt von unserem
                             Erfolg gerade eben betrachten wir zwei unendliche Mengen, die sich
                             stärker unterscheiden: $\N$ und $\Z = \{\dots, -2, -1, 0, 1, 2,
                             \dots\}$. Wir können diese beiden nicht so schön nebeneinander legen
@@ -160,7 +160,7 @@
                             Fallunterscheidung schreiben können.
                         |> p
 
-                            *Anmerkung:*es ist überhaupt nicht schlimm, eine
+                            *Anmerkung:* es ist überhaupt nicht schlimm, eine
                             Funktion mit einer Fallunterscheidung zu definieren. Sie ist dadurch
                             nicht etwa eine "Funktion zweiter Klasse".
                     |> div
@@ -183,7 +183,7 @@
                                 class numbered-title
 
                                 Definition
-                            Zwei Mengen $A$ und
+                            &ensp;Zwei Mengen $A$ und
                             $B$ heißen _gleichmächtig_, wenn es eine Bijektion $f : A
                             \rightarrow B$ gibt. Wir schreiben in diesem Falle $A \approx B$.
                     |> p
@@ -203,15 +203,15 @@
                                 class numbered-title
 
                                 Definition
-                            Eine Menge $A$ mit $A
+                            &ensp;Eine Menge $A$ mit $A
                             \approx \N$, die also gleichmächtig zu den natürlichen Zahlen ist,
                             nennt man _abzählbar unendlich_, auf Englisch
-                            _countably infinite_oder einfach _countable_.
+                            _countably infinite_ oder einfach _countable_.
                     |> p
 
                         Wie wir sehen werden, gibt es tatsächlich unendliche Mengen, die
-                        _nicht_gleichmächtig mit $\N$ sind, weil sie "viel viel
-                        größer" sind. Wir nennen sie _überabzählbare_Mengen, auf
+                        _nicht_ gleichmächtig mit $\N$ sind, weil sie "viel viel
+                        größer" sind. Wir nennen sie _überabzählbare_ Mengen, auf
                         Englisch _uncountably infinite_.
                     |> h2
 
@@ -227,7 +227,7 @@
                                 class numbered-title
 
                                 Definition
-                            Eine Menge $A$ heißt
+                            &ensp;Eine Menge $A$ heißt
                             _unendlich_, wenn es eine echte Teilmenge $A' \subsetneq A$
                             gibt, zu der sie gleichmächtig ist, also $A' \approx A$.
                     |> p
@@ -246,7 +246,7 @@
                             \approx \N$.
                         |> p
 
-                            *Hinweis:*Tappen Sie nicht in die "Das ist doch
+                            *Hinweis:* Tappen Sie nicht in die "Das ist doch
                             offensichtlich"-Falle: die Menge $A$ könnte ja viel größer sein als
                             $\N$ und keine für Sie "greifbare" Struktur haben. Ihre Aufgabe ist
                             es, dennoch eine abzählbar unendliche Teilmenge $X \subseteq A$ zu

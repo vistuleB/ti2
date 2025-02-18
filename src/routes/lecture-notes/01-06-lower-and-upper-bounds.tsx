@@ -56,11 +56,11 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    {" "}{" "}
+                    &ensp;
                     <b>
                       (Shannon).
                     </b>
-                    Es gibt
+                    {" "}Es gibt
                     Boolesche Funktionen $f$, die keine Schaltkreise kleiner
                     als $\Omega(2^n / n)$ haben.
                   </Paragraph>
@@ -100,7 +100,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Behauptung
                       </span>
-                      Sei $s \geq n \geq 1$. Dann gibt es
+                      &ensp;Sei $s \geq n \geq 1$. Dann gibt es
                       höchstens
                       $s^&#123;2s+1&#125;$ Schaltkreise mit $n$ Input-Variablen, Fan-in 2 und $s$ Gates.{" "}
                     </Paragraph>
@@ -125,16 +125,16 @@ const Article = () => {
                             mit einer der $n$ Input-Variablen beschriften.
                           </li>
                           <li>
-                            Ein Not-Gate? Dann müssen wir eines der anderen Gates
+                            &ensp;Ein Not-Gate? Dann müssen wir eines der anderen Gates
                             als Vorgänger-Gate wählen. Wir haben höchstens $s-1$ Möglichkeiten.
                           </li>
                           <li>
-                            Ein And-Gate? Dann müssen wir zwei der anderen Gates als
+                            &ensp;Ein And-Gate? Dann müssen wir zwei der anderen Gates als
                             Vorgänger-Gates wählen. Wir haben höchstesn $&#123;s-1 \choose 2&#125; =
                             \frac&#123;(s-1)(s-2)&#125;&#123;2&#125;$ Möglichkeiten.
                           </li>
                           <li>
-                            Ein Or-Gate? Dann haben wir auch höchstens $&#123;s-1 \choose 2&#125;$ Möglichkeiten.
+                            &ensp;Ein Or-Gate? Dann haben wir auch höchstens $&#123;s-1 \choose 2&#125;$ Möglichkeiten.
                           </li>
                         </ul>
                         <Paragraph>
@@ -204,7 +204,7 @@ const Article = () => {
                   <i>
                     alle
                   </i>
-                  Funktionen
+                  {" "}Funktionen
                   brauchen also riesige Schaltkreise. In einem Gewissen Sinne haben wir also einfach Glück:
                   die Funktionen, die uns interessieren, wie $n$-Bit-Addition, Majority, Parity und so weiter,
                   haben einfach niedrige Komplexität. Das liegt wohl in der Natur der Sache: wir addieren,
@@ -221,7 +221,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Forschungsprojekt.
                     </span>
-                    Finde eine konkret
+                    &ensp;Finde eine konkret
                     beschreibbare Funktion $f: \fcube$, die exponentiell viele (oder zumindest superpolynomiell
                     viele)
                     Gates benötigt.
@@ -237,7 +237,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Entscheidungsproblem 3-Färbbarkeit.
                     </span>
-                    Gegeben
+                    &ensp;Gegeben
                     ein Graph $G = (V,E)$, gibt es eine Funktion{" "}
                   </Paragraph>
                   $$\begin&#123;align*&#125;
@@ -280,7 +280,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    {" "}{" "}
+                    &ensp;
                     <b>
                       (Lupanov)
                     </b>
@@ -310,7 +310,7 @@ const Article = () => {
                   <Paragraph>
                     *$\F
                     <i>
-                      2$-Polynome.*Polynome in mehreren Variablen kennen Sie
+                      2$-Polynome.* Polynome in mehreren Variablen kennen Sie
                       sicherlich: zum Beispiel $xyz + xy + 1 + y$. Der Unterschied hier ist nur,
                       dass wir alle Werte modulo 2 auswerten, also in dem endlichen Körper
                       $\F
@@ -357,7 +357,7 @@ const Article = () => {
                       <b>
                         Tipp:
                       </b>
-                      beschränken Sie sich zuerst auf Funktionen $f$,
+                      {" "}beschränken Sie sich zuerst auf Funktionen $f$,
                       deren Wahrheitstabelle in genau einer Zeile eine 1 haben. Schreiben
                       Sie eine solche Funktion als $\F_2$-Polynom.
                     </Paragraph>
@@ -371,7 +371,7 @@ const Article = () => {
                     <i>
                       verschiedene
                     </i>
-                    Polynome.
+                    {" "}Polynome.
                     Da wir über $\F_2$ arbeiten, beschränken wir uns aber eh auf multilineare Polynome,
                     wo also alle Exponenten 1 sind.
                   </Paragraph>
@@ -447,7 +447,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Lemma
                       </span>
-                      Es gibt einen
+                      &ensp;Es gibt einen
                       Schaltkreis $C
                       <i>
                         n$ mit $n$ Input-Gates $x
@@ -487,7 +487,7 @@ const Article = () => {
                       <i>
                         alle
                       </i>
-                      Monome
+                      {" "}Monome
                       wollen. Wenn wir also einen Schaltkreis für $x
                       <i>
                         1 x
@@ -497,7 +497,7 @@ const Article = () => {
                       <i>
                         einem
                       </i>
-                      zusätzlichen AND-Gate
+                      {" "}zusätzlichen AND-Gate
                       $x
                       <i>
                         1x
@@ -586,7 +586,7 @@ const Article = () => {
                     <i>
                       alle
                     </i>
-                    Funktionen in $z
+                    {" "}Funktionen in $z
                     <i>
                       1,\dots,z
                     </i>
@@ -597,7 +597,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Lemma.
                       </span>
-                      Es gibt einen
+                      &ensp;Es gibt einen
                       Schaltkreis mit Input-Gates $z
                       <i>
                         1,\dots,z
@@ -630,7 +630,7 @@ const Article = () => {
                       <b>
                         Tip.
                       </b>
-                      Jedes Gate muss also gleichzeitig
+                      {" "}Jedes Gate muss also gleichzeitig
                       ein Output-Gate sein.
                     </Paragraph>
                   </div>

@@ -72,7 +72,7 @@ const Article = () => {
                   <i>
                     eine
                   </i>
-                  Maschine bauen und sie für die jeweilige
+                  {" "}Maschine bauen und sie für die jeweilige
                   Aufgabe{" "}
                   <i>
                     programmieren
@@ -104,7 +104,7 @@ const Article = () => {
                   <a href="https://turingmachinesimulator.com">
                     turingmachinesimulator.com
                   </a>
-                  haben wir das
+                  &ensp;haben wir das
                   bereits getan:
                   eine Turingmaschine mit Alphabet \(\Sigma\) können wir dort als String über dem Alphabet
                   $$\begin&#123;align*&#125;
@@ -123,7 +123,7 @@ const Article = () => {
                   <a href="https://turingmachinesimulator.com">
                     turingmachinesimulator.com
                   </a>
-                  haben dies
+                  &ensp;haben dies
                   offensichtlich geschafft:
                   sie haben eine Maschine "gebaut" (also wohl einen Server gemietet und eine Webseite mit viel
                   Javascript programmiert), der
@@ -158,7 +158,7 @@ const Article = () => {
                           <b>
                             akzeptiert
                           </b>
-                          falls \(M(x)\) akzeptiert;
+                          {" "}falls \(M(x)\) akzeptiert;
                         </li>
                         <li>
                           {" "}{" "}
@@ -201,7 +201,7 @@ const Article = () => {
                   <b>
                     Erster, zum scheitern verurteilter Versuch.
                   </b>
-                  Sei \(M\) eine Turingmaschine
+                  {" "}Sei \(M\) eine Turingmaschine
                   mit Eingabealphabet \(\Sigma\), Arbeitsalphabet \(\Gamma\), Zustandsmenge \(Q\), Startzustand
                   \(\qstart\), akzeptierendem Zustand
                   \(\qaccept\) und Übergangsfunktion \(\delta\).
@@ -226,7 +226,7 @@ const Article = () => {
                   <i>
                     alle
                   </i>
-                  Turingmaschinen
+                  {" "}Turingmaschinen
                   mit Eingabealphabet \(\Sigma\) funktioniert.
                 </Paragraph>
                 <Paragraph>
@@ -257,7 +257,7 @@ const Article = () => {
                   <i>
                     ein
                   </i>
-                  Wort in obigen Schema schreiben, können wir für eine
+                  {" "}Wort in obigen Schema schreiben, können wir für eine
                   Tabellenzelle
                   \(\delta(q,x) = (r,y,R)\) nicht einfach \(qxryR\) schreiben, auch nicht einfach die Codierungen
                   zusammenschreiben:
@@ -280,7 +280,7 @@ const Article = () => {
                   <tt>
                     01,1,R
                   </tt>
-                  steht,
+                  &ensp;steht,
                   dann ist das eine Abkürzung für
                   $$\begin&#123;align*&#125;
                   \delta(01,1) = (01,1,\texttt&#123;R&#125;),
@@ -295,7 +295,7 @@ const Article = () => {
                   <i>
                     jede
                   </i>
-                  Turingmaschine
+                  {" "}Turingmaschine
                   über dem Alphabet
                   \(\Sigma\) codieren als Wort über dem Alphabet
                   $$\begin&#123;align*&#125;
@@ -307,7 +307,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition/Beobachtung.
                     </span>
-                    Zu einem Eingabealphabet
+                    &ensp;Zu einem Eingabealphabet
                     $\Sigma$ definieren wir das{" "}
                     <i>
                       Codierungsalphabet
@@ -326,11 +326,11 @@ const Article = () => {
                     Anmerkungen:
                   </b>
                   {" "}
-                  das Wort{" "}
+                  &ensp;das Wort{" "}
                   <i>
                     Codierung
                   </i>
-                  suggeriert, dass wir, gegeben
+                  {" "}suggeriert, dass wir, gegeben
                   den String $c = \enc(M)$ die
                   ursprüngliche Turingmaschine $M$ rekonstruieren können. Das gilt natürlich nur
                   beschränkt: eventuell decodieren wir $c$ zu einer Maschine $M'$, die sich

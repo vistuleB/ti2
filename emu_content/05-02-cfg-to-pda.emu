@@ -65,9 +65,9 @@
                         \(X \rightarrow \beta\), löscht \(X\) vom Stack und pusht \(\beta\). Der Stack ist
                         nun \(\beta \alpha\), und \(\beta \alpha \Rightarrow^* w\). Entscheidend ist der
                         Nichtdeterminismus:
-                        es _gibt_eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
+                        es _gibt_ eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
                         führt;
-                        der Automat _kann_also diese Transition anwenden.
+                        der Automat _kann_ also diese Transition anwenden.
                         |> br
                         Formaler: Die Zustände des Automaten
                         sind \(Q = \{\qstart, q_1, \qend\}\), das Stackalphabet ist
@@ -80,7 +80,7 @@
                         (q_1, \$)&amp;\step{\epsilon} (\qend, \epsilon)
                         \end{align*}
                         Auf einen formalen Beweis, dass \(L(M) = L(G)\) ist, verzichte ich an dieser Stelle.
-                        Besser als Sipser in seinem Lehrbuch _Introduction to the Theory of Computing_könnte
+                        Besser als Sipser in seinem Lehrbuch _Introduction to the Theory of Computing_ könnte
                         ich das eh nicht.
                         |> span
                             class qed
@@ -111,7 +111,7 @@
                             |> tt
 
                                 [
-                            oben auf dem Stack bedeutet dann _ich will jetzt sofort ein 
+                            &ensp;oben auf dem Stack bedeutet dann _ich will jetzt sofort ein 
                             |> tt
 
                                 [
@@ -119,15 +119,15 @@
                             ein Nichtterminal wie \(A\) oben auf dem Stack bedeutet, dass
                             wir als nächstes ein von \(A\) ableitbares Wort, also ein \(A \rightarrow w \in
                             \Sigma^*\) lesen wollen.
-                            Um ein \(w\) mit \(A \rightarrow w\) lesen zu können, müssen wir _sofort_ein
+                            Um ein \(w\) mit \(A \rightarrow w\) lesen zu können, müssen wir _sofort_ ein
                             |> tt
 
                                 {
-                            lesen, dann ein Wort \(v\) mit \(B \rightarrow v\), dann ein 
+                            &ensp;lesen, dann ein Wort \(v\) mit \(B \rightarrow v\), dann ein 
                             |> tt
 
                                 }
-                            und
+                            &ensp;und
                             so weiter.
                             Wir können das also im Automaten implementieren, indem wir
                             \(A\) vom Stack löschen und durch \(\texttt{\{} B \texttt{\}} S\) auf den Stack legen,
@@ -177,7 +177,7 @@
                         dass es von \(\qend\) aus keine ausgehenden Transitionen gibt;
                         sollte es also nach Erreichen von \(\qend\) noch weitere Zeichen
                         im Eingabewort geben, so kann der Automat keine weiteren Schritte durchführen,
-                        was einem _reject_entspricht. Erreichen des Zustandes \(\qend\) führt also
+                        was einem _reject_ entspricht. Erreichen des Zustandes \(\qend\) führt also
                         nur dann zu einem _accept_, wenn dies am Ende des Wortes geschieht.
                         |> figure
                             class centered-figure well
@@ -615,7 +615,7 @@
                         \begin{align*}
                         a^m b (a|b)^* b a^m
                         \end{align*}
-                        Diese ist _nicht_regulär, da der Präfix und der Suffix aus \(a\) die gleiche
+                        Diese ist _nicht_ regulär, da der Präfix und der Suffix aus \(a\) die gleiche
                         Länge \(m\) haben müssen.
                         Wir bauen zuerst einen Kellerautomaten und übersetzen den dann entsprechend dem Schema
                         aus dem letzten Theorem in eine Grammatik. Dann vergleichen wir die entstandene

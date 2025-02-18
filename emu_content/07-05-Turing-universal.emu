@@ -78,10 +78,10 @@
                         sicherzustellen, dass wir
                         die Konfigurationen von $M$ darstellen können in dem Alphabet $\Lambda$,
                         das
-                        _unabhängig_von $M$ ist. Dass wir also _jede_
+                        _unabhängig_ von $M$ ist. Dass wir also _jede_
                         Turingmaschine
-                        $M$ mit Eingabealphabet $\Sigma$ und _jede_ihrer Konfigurationen
-                        als Strings über _einem_festen Alphabet $\Lambda$ darstellen
+                        $M$ mit Eingabealphabet $\Sigma$ und _jede_ ihrer Konfigurationen
+                        als Strings über _einem_ festen Alphabet $\Lambda$ darstellen
                         können.
                     |> p
 
@@ -99,8 +99,8 @@
                                 class numbered-title
 
                                 Theorem
-                            *(Universelle
-                            Turingmaschine).*Zu
+                            &ensp;*(Universelle
+                            Turingmaschine).* Zu
                             jedem
                             endlichen Eingabealphabet $\Sigma$ sei
                             $\Lambda := \writelambda$ das Codierungsalphabet. Es gibt es
@@ -151,7 +151,9 @@
                         |> p
 
                             *Ein technischer aber letztendlich irrelevanter Punkt:
-                            *die Mengen
+                            *                                                        
+
+                            &ensp;die Mengen
                             $Q$ und $\Gamma$ der Turingmaschine $M$ können ja beliebige
                             (endliche) Mengen sein,
                             und weder $\Lambda$ noch die Turingmaschine $U$ haben "Kenntnis"

@@ -59,7 +59,7 @@
                                 Theorem
                             Die Mengen $\N$ und $\N^2$ sind gleichmächtig. Mit $\N^2$ (oder auch
                             $\N \times \N$) bezeichnen wir hier das cartesische Produkt von $\N$
-                            mit sich selbst: die Menge aller _Paare_$(a,b)$ von
+                            mit sich selbst: die Menge aller _Paare_ $(a,b)$ von
                             natürlichen Zahlen.
                         |> figure
                             |> img
@@ -168,7 +168,7 @@
                                 class numbered-title
 
                                 Beobachtung.
-                            Es gibt eine
+                            &ensp;Es gibt eine
                             injektive Funktion $f : \Q \rightarrow \N$.
                     |> div
                         class well container
@@ -220,19 +220,19 @@
                                 class numbered-title
 
                                 Beobachtung:
-                            Es gibt eine
+                            &ensp;Es gibt eine
                             injektive Funktion $g: \N \rightarrow \Q$.
                     |> div
                         class well container
                         |> p
 
-                            *Beweis.*Dies ist ganz einach: da $\N \subseteq \Q$
+                            *Beweis.* Dies ist ganz einach: da $\N \subseteq \Q$
                             gilt, können wir jedes $n$ einfach bei sich belassen. Die Funktion
                         \begin{align*} g : \N&amp;\rightarrow \Q \\ n&amp;\mapsto n \end{align*}
                         |> p
 
                             ist die gewünschte Injektion. Man nennt so eine Funktion auch die
-                            _Einbettung_von $\N$ in $\Q$.
+                            _Einbettung_ von $\N$ in $\Q$.
                             |> span
                                 class qed
 
@@ -241,7 +241,7 @@
 
                         Wir sind nun also in der sonderbaren Situation, dass wir eine
                         injektive Funktion $f : \Q \rightarrow \N$ haben, die aber nicht alle
-                        $\N$ ausfüllt, also nicht _surjektiv_ist. Gleichzeitig haben
+                        $\N$ ausfüllt, also nicht _surjektiv_ ist. Gleichzeitig haben
                         wir $g : \N \rightarrow \Q$, die injektiv ist aber auch nicht
                         surjektiv. Bei $f$ bleiben also manche natürlichen Zahlen ungenutzt,
                         bei $g$ bleiben rationale Zahlen ungenutzt. Können wir $f$ und $g$
@@ -257,7 +257,7 @@
                             href ...
 
                             ...
-                        beweisen.
+                        &ensp;beweisen.
                         Vorerst behelfen wir uns mit ad-hoc-Methoden.
                     |> div
                         class well container theorem
@@ -266,7 +266,7 @@
                                 class numbered-title
 
                                 Theorem
-                            Es gilt $\Q \approx \N$.
+                            &ensp;Es gilt $\Q \approx \N$.
                     |> div
                         class well container
                         |> p
@@ -318,7 +318,7 @@
                         Endliche Strings
                     Erinnern wir uns an $\{0,1\}^*$, die Menge aller endlichen Bitstrings.
                     Die Menge ist ganz klar unendlich, weil sie zum Beispiel $1, 11, 111,
-                    1111, \dots$ enthält. Ist sie _abzählbar_unendlich?
+                    1111, \dots$ enthält. Ist sie _abzählbar_ unendlich?
                     |> div
                         class well container theorem
                         |> p
@@ -326,13 +326,13 @@
                                 class numbered-title
 
                                 Theorem
-                            Es gilt $\{0,1\}^*
+                            &ensp;Es gilt $\{0,1\}^*
                             \approx \N$.
                     |> div
                         class well container
                         |> p
 
-                            *Beweis.*Hier ist eine Idee: wir interpretieren den
+                            *Beweis.* Hier ist eine Idee: wir interpretieren den
                             Bitstring $a_1 a_2 \dots a_n$ als $n$-stellige Binärzahl, also
                         \begin{align*} f(a_1 a_2 \dots a_n) := \sum_{i=1}^n a_i 2^{n-i} \ .
                         \end{align*}
