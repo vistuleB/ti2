@@ -224,7 +224,6 @@ fn our_source_parser(lines: List(bl.BlamedLine)) -> Result(VXML, vp.XMLMParseErr
 }
 
 pub fn html_to_writerly(path: String, amendments: vr.CommandLineAmendments(Bool)) {
-  
   use #(dir, files) <- infrastructure.on_error_on_ok(
     directory_files_else_file(path),
     fn(e) { io.print("Failed to load files " <> ins(e)) },
