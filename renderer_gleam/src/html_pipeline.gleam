@@ -6,8 +6,7 @@ import desugarers/extract_starting_and_ending_spaces.{extract_starting_and_endin
 import desugarers/fold_tags_into_text.{fold_tags_into_text}
 import desugarers/surround_elements_by.{surround_elements_by}
 import desugarers/trim_spaces_around_newlines.{trim_spaces_around_newlines}
-
-
+import desugarers/replace_multiple_spaces_by_one.{replace_multiple_spaces_by_one}
 
 import infrastructure.{type Pipe}
 
@@ -16,6 +15,7 @@ pub fn html_pipeline() -> List(Pipe) {
     identity.identity(),
     remove_empty_lines(),
     trim_spaces_around_newlines(),
+    replace_multiple_spaces_by_one(),
     extract_starting_and_ending_spaces(["i", "b", "strong", "em", "code"]),
     insert_bookend_text_if_no_attributes([
       #("i", "_", "_"),
