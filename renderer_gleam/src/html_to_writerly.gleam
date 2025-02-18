@@ -217,55 +217,57 @@ fn directory_files_else_file(path: String) -> Result(#(String, List(String)), si
   }
 }
 
-fn renderer(file, prev, next) {
-
+fn our_source_parser(lines: List(bl.BlamedLine)) -> Result(VXML, vp.XMLMParseError) { 
+  let path = bl.first_blame_filename(lines) |> result.unwrap("")
+  bl.blamed_lines_to_string(lines)
+    |> vp.xmlm_based_html_parser(path)
 }
 
 pub fn html_to_writerly(path: String, amendments: vr.CommandLineAmendments(Bool)) {
   
-  use #(path, files) <- infrastructure.on_error_on_ok(
+  use #(dir, files) <- infrastructure.on_error_on_ok(
     directory_files_else_file(path),
     fn(e) { io.print("Failed to load files " <> ins(e)) },
   )
 
   let files = list.sort(files, string.compare)
-  each_prev_next(files, option.None, fn(file, prev, next) {
-    let path = path <> "/" <> file
-    let renderer =
-      vr.Renderer(
-        assembler: wp.assemble_blamed_lines,
-        source_parser: fn(lines){ 
-          let path = bl.first_blame_filename(lines) |> result.unwrap("")
-          bl.blamed_lines_to_string(lines)
-            |> vp.xmlm_based_html_parser(path)
-        },
-        parsed_source_converter: fn(vxml) { 
-        [vxml]
-        },
-        pipeline: html_pipeline.html_pipeline(),
-        splitter: fn(vxml) { splitter(vxml, file) },
-        emitter: fn(pair) { emitter(pair, prev, next) },
-        prettifier: prettifier,
-      )
 
-    let parameters =
-      vr.RendererParameters(
-        input_dir: path,
-        output_dir: option.Some("../emu_content"),
-        prettifying_option: False,
-      )
-      |> vr.amend_renderer_paramaters_by_command_line_amendment(amendments)
+  each_prev_next(
+    files, 
+    option.None, 
+    fn(file, prev, next) {
+      let path = dir <> "/" <> file
 
-    let debug_options =
-      vr.empty_renderer_debug_options("../renderer_artifacts")
-      |> vr.amend_renderer_debug_options_by_command_line_amendment(io.debug(
-        amendments), html_pipeline.html_pipeline())
+      let parameters =
+        vr.RendererParameters(
+          input_dir: path,
+          output_dir: option.Some("../emu_content"),
+          prettifying_option: False,
+        )
+        |> vr.amend_renderer_paramaters_by_command_line_amendment(amendments)
 
-    case vr.run_renderer(renderer, parameters, debug_options) {
-      Ok(Nil) -> {
-        io.println("\nprinted: " <> ins(file) <> " as html\n")
+      let renderer =
+        vr.Renderer(
+          assembler: wp.assemble_blamed_lines,
+          source_parser: our_source_parser,
+          parsed_source_converter: fn(vxml) { [vxml] },
+          pipeline: html_pipeline.html_pipeline(),
+          splitter: fn(vxml) { splitter(vxml, file) },
+          emitter: fn(pair) { emitter(pair, prev, next) },
+          prettifier: prettifier,
+        )
+
+      let debug_options =
+        vr.empty_renderer_debug_options("../renderer_artifacts")
+        |> vr.amend_renderer_debug_options_by_command_line_amendment(io.debug(
+          amendments), html_pipeline.html_pipeline())
+
+      case vr.run_renderer(renderer, parameters, debug_options) {
+        Ok(Nil) -> {
+          io.println("\nprinted: " <> ins(file) <> " as html\n")
+        }
+        Error(error) -> io.println("\nrenderer error: " <> ins(error) <> "\n")
       }
-      Error(error) -> io.println("\nrenderer error: " <> ins(error) <> "\n")
     }
-  })
+  )
 }
