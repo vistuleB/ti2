@@ -35,33 +35,33 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    2.6 Der Trichotomiesatz
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;2.6 Der Trichotomiesatz
                   </span>
                 </h1>
                 <Paragraph>
-                  Rekapitulieren wir: für zwei Mengen $A$ und $B$ schreiben $A \leq B$,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rekapitulieren wir: für zwei Mengen $A$ und $B$ schreiben $A \leq B$,
                   wenn es eine injektive Funktion $f : A \rightarrow B$ gibt. Das $\leq$
                   schaut wie eine Partialordnung aus.
                 </Paragraph>
                 <ol>
                   <li>
-                    Es ist reflexiv, weil $A \leq A$ gilt: Die Identität $&#123;\rm id&#125;_A: A
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es ist reflexiv, weil $A \leq A$ gilt: Die Identität $&#123;\rm id&#125;_A: A
                     \rightarrow A$ ist injektiv.
                   </li>
                   <li>
-                    Es ist transitiv, weil aus $A \leq B$ und $B \leq C$ folgt, dass $A
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es ist transitiv, weil aus $A \leq B$ und $B \leq C$ folgt, dass $A
                     \leq C$: Wenn $f: A \rightarrow B$ und $g: B \rightarrow C$ injektiv
                     sind, dann ist $g \circ f: A \rightarrow C, a \mapsto g(f(a))$ auch
                     injektiv.
                   </li>
                   <li>
-                    Es ist (so gut wie) antisymmetrisch, weil aus $A \leq B$ und $B \leq
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es ist (so gut wie) antisymmetrisch, weil aus $A \leq B$ und $B \leq
                     A$ zwar nicht $A = B$ folgt, aber laut Schröder-Bernstein-Theorem
                     immerhin $A \approx B$.
                   </li>
                 </ol>
                 <Paragraph>
-                  Wenn wir also equipotente Mengen als identifisch betrachten, dann ist
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir also equipotente Mengen als identifisch betrachten, dann ist
                   $\leq$ tatsächlich eine Partialordnung. Ist es eine totale Ordnung?
                   Gilt also immer $A \leq B$ oder $B \leq A$? Dies klingt
                   offensichtlich, ist es aber nicht. Aber wahr ist es, wenn auch nicht
@@ -72,7 +72,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       (Trichotomiesatz der Mengenlehre).
                     </b>
@@ -95,18 +95,17 @@ const Article = () => {
                 </div>
                 <div class="well container">
                   <Paragraph>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       (Unvollständiger) Beweis.
                     </b>
-                    {" "}
-                    Will man ein Objekt mit gewissen Eigenschaften (hier: Funktion,
+                    {" "}Will man ein Objekt mit gewissen Eigenschaften (hier: Funktion,
                     injektiv) konstruieren, so lohnt es sich oft, die gestellten
                     Bedingungen zu relaxieren und sich langsam zu einer "richtigen"
                     Lösung hinzutasten.
                   </Paragraph>
                   <Paragraph>
-                    Wir müssen zuerst uns in Erinnerung rufen, was eine
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir müssen zuerst uns in Erinnerung rufen, was eine
                     {" "}
                     <i>
                       Funktion
@@ -134,7 +133,7 @@ const Article = () => {
                     </Paragraph>
                     <ul>
                       <li>
-                        {" "}{" "}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                         <i>
                           Funktion
                         </i>
@@ -143,7 +142,7 @@ const Article = () => {
                         statt $R$ und schreiben $f(a)$, um dieses $b$ zu benennen.
                       </li>
                       <li>
-                        {" "}{" "}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                         <i>
                           Matching
                         </i>
@@ -157,7 +156,7 @@ const Article = () => {
                         \in R$.
                       </li>
                       <li>
-                        Wenn $R$ ein Matching ist, dann{" "}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn $R$ ein Matching ist, dann{" "}
                         <i>
                           sättigt
                         </i>
@@ -181,16 +180,16 @@ const Article = () => {
                     </ul>
                   </div>
                   <Paragraph>
-                    Wir beobachten: wenn $R$ ein Matching ist und die Menge $A$ sättigt,
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir beobachten: wenn $R$ ein Matching ist und die Menge $A$ sättigt,
                     dann ist $R$ eine injektive Funktion, und umgekehrt. Wenn $R$ ein
                     Matching ist und sowohl $A$ als auch $B$ sättigt, dann ist $R$ eine
                     bijektive Funktion.
                   </Paragraph>
                   <Paragraph>
-                    Wir betrachten nun die Menge $\mathcal&#123;M&#125;$ aller Matchings in $A
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir betrachten nun die Menge $\mathcal&#123;M&#125;$ aller Matchings in $A
                     \times B$:
                   </Paragraph>
-                  $$\begin&#123;align*&#125; \mathcal&#123;M&#125; := \&#123; R \subseteq A \times B \ | \ R
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; \mathcal&#123;M&#125; := \&#123; R \subseteq A \times B \ | \ R
                   \textnormal&#123; ist ein Matching&#125;\&#125; \ . \end&#123;align*&#125;$$
                   <Paragraph>
                     $(\mathcal&#123;M&#125;, \subseteq)$ ist eine Partialordnung.
@@ -211,12 +210,11 @@ const Article = () => {
                   </div>
                   <div class="well container">
                     <Paragraph>
-                      {" "}{" "}
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                       <b>
                         Beweis.
                       </b>
-                      {" "}
-                      Nehmen wir an, dass es weder $A$ noch $B$ sättigt. Dann gibt es
+                      {" "}Nehmen wir an, dass es weder $A$ noch $B$ sättigt. Dann gibt es
                       also ein $a \in A$, das mit keinem $b' \in B$ "gepaart" ist, und
                       auch ein $b \in B$, das mit keinem $a' \in A$ gepaart ist. Also
                       ist $R \cup \&#123;(a,b)\&#125;$ auch ein Matching, und $R$ ist nicht
@@ -227,7 +225,7 @@ const Article = () => {
                     </span>
                   </div>
                   <Paragraph>
-                    Wir bekommen also unsere gewünschte injektive Funktion, solange wir
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir bekommen also unsere gewünschte injektive Funktion, solange wir
                     ein maximales Element in der Partialordnung $(\mathcal&#123;M&#125;,
                     \subseteq)$ vorweisen können. Aber Vorsicht: nicht jede
                     Partialordnung hat ein maximales Element! Ein Gegenbeispiel ist
@@ -253,14 +251,14 @@ const Article = () => {
                       </i>
                       {" "}wenn
                     </Paragraph>
-                    $$\begin&#123;align*&#125; s \leq x \quad \forall s \in S \end&#123;align*&#125;$$
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; s \leq x \quad \forall s \in S \end&#123;align*&#125;$$
                     <Paragraph>
-                      gilt. Dabei ist unerheblich, ob die obere Schranke $x$ selbst in
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;gilt. Dabei ist unerheblich, ob die obere Schranke $x$ selbst in
                       $S$ ist oder nicht.
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    Die unendliche aufsteigende Folge $1,2,3,\dots$ hat
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die unendliche aufsteigende Folge $1,2,3,\dots$ hat
                     {" "}
                     <i>
                       keine obere Schranke
@@ -308,13 +306,13 @@ const Article = () => {
                       </i>
                       1$. Dann ist
                     </Paragraph>
-                    $$\begin&#123;align*&#125; \bigcup_&#123;M \in S&#125; M \end&#123;align*&#125;$$
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; \bigcup_&#123;M \in S&#125; M \end&#123;align*&#125;$$
                     <Paragraph>
                       selbst ein Matching.
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    Wir gehen nun wie folgt vor: wir starten mit einem beliebigen $M
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir gehen nun wie folgt vor: wir starten mit einem beliebigen $M
                     <i>
                       0
                       \in \mathcal&#123;M&#125;$; solange dies nicht maximal ist, finden wir ein
@@ -357,7 +355,7 @@ const Article = () => {
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    Wir sind nun fertig! Wir können das Zornsche Lemma auf
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir sind nun fertig! Wir können das Zornsche Lemma auf
                     $(\mathcal&#123;M&#125;, \subseteq)$ anwenden und erhalten ein maximales
                     Matching. Dies sättigt $A$ oder $B$ und gibt uns somit eine
                     injektive Funktion $A \rightarrow B$ oder $B \rightarrow A$.
@@ -370,7 +368,7 @@ const Article = () => {
                   Zornsches Lemma, Auswahlaxiom und die axiomatische Mengenlehre
                 </h3>
                 <Paragraph>
-                  Glauben Sie das, was das Zornsche Lemma besagt? Bei unendlichen Mengen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Glauben Sie das, was das Zornsche Lemma besagt? Bei unendlichen Mengen
                   verlässt und leider schnell die Intuition, oder schlimmer: sie wird
                   trügerisch. Gegen Ende des 19. Jahrhunderts tauchten in der
                   Mathematik, insbesondere in der Analysis und Geometrie, mehr und mehr
@@ -391,7 +389,7 @@ const Article = () => {
                   <a href="https://de.wikipedia.org/wiki/Hilbertprogramm">
                     Hilbertprogramm
                   </a>
-                  bekannt. Das Bestreben, mathematisches Beweisen und somit auch Rechnen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;bekannt. Das Bestreben, mathematisches Beweisen und somit auch Rechnen
                   zu mechanisieren, trug maßgeblich zur Entwicklung der Informatik und
                   des Computers bei.
                 </Paragraph>

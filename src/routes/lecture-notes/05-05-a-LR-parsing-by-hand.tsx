@@ -39,17 +39,17 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Betrachten wir die kontextfreie Grammatik $G$ für arithmetische Ausdrücke mit den
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die kontextfreie Grammatik $G$ für arithmetische Ausdrücke mit den
                   Variablen $x, y, z$ und strenger Klammerung über dem Alphabet
                   $\Sigma = \&#123;x, y, z, (, ), +, *\&#125;$:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 S&amp;\rightarrow x \ |\ y\ |\ z \\
                 S&amp;\rightarrow (S+S) \\
                 S&amp;\rightarrow (S*S)
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Sie kann also $(x + (y
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sie kann also $(x + (y
                   <b>
                     z))$ ableiten aber eben nicht $(x + y + z)$. Wie können wir nun einen
                     Parser für $G$ schreiben? Also einen Algorithmus, der ein Wort $w \in \Sigma^
@@ -59,22 +59,22 @@ const Article = () => {
                   Wenn wir uns an das LL-Paradigma halten und eine Linksableitung bauen wollen, dann stoßen wir
                   schon ganz am Anfang auf ein Problem: wenn zum Beispiel
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 w = ((((\dots
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  dann wissen wir nicht, ob wir als ersten Schritt $S \rightarrow (S+S)$ oder $S \rightarrow
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;dann wissen wir nicht, ob wir als ersten Schritt $S \rightarrow (S+S)$ oder $S \rightarrow
                   (S*S)$ tätigen sollen. Das geht auch nicht, wenn wir $k$ Zeichen vorauslesen dürfen, weil
                   der $(((\dots$-Präfix ja länger als $k$ sein kann. Nein, wir müssen anders vorgehen.
                   Wir könnten beispielsweise die Grammatik ändern:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 S&amp;\rightarrow x \ | \ y \ | \ z \\
                 S&amp;\rightarrow (SOS) \\
                 O&amp;\rightarrow + \ | \ *
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Das geht aber nicht immer:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das geht aber nicht immer:
                 </Paragraph>
                 <div
                   id="example-more-a-than-b"
@@ -85,29 +85,28 @@ const Article = () => {
                     </span>
                     &ensp;Betrachten wir die recht einfache Sprache{" "}
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   L_2 := \&#123;a^&#123;m+k&#125; b^m c \ | \ m \geq 1, k \geq 0 \&#125; \ ,
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    also{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;also{" "}
                     <i>
                       beliebig viele $a$'s, gefolgt von gleich vielen oder weniger $b$'s (aber mindestens
                       einem), abgeschlossen
                       mit einem $c$
                       {" "}
                     </i>
-                    {" "}
                     . Eine
                     Grammatik ist schnell geschrieben:
                   </Paragraph>
-                  \begin&#123;align&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin&#123;align&#125;
                   S&amp;\rightarrow aS \\
                   S&amp;\rightarrow Xc \\
                   X&amp;\rightarrow aXb \\
                   X&amp;\rightarrow ab
                   \end&#123;align&#125;
                   <Paragraph>
-                    Wenn wir jetzt die ersten $k$ Zeichen lesen: $aaaa \dots$, dann
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir jetzt die ersten $k$ Zeichen lesen: $aaaa \dots$, dann
                     gibt es keinen Weg, zu entscheiden, ob danach gleich viele oder weniger
                     $b$'s folgen werden, ob wir also $S \rightarrow sS$ oder $S \rightarrow Xc$ anwenden sollen.
                     Das lässt sich auch nicht durch Umschreiben der Grammatik lösen. Wir müssen
@@ -118,7 +117,7 @@ const Article = () => {
                   Das LR-Paradigma
                 </h2>
                 <Paragraph>
-                  Wir brauchen einen Paradigmenwechsel. Das LL-Paradigma war ja, mit $S$ zu starten und,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir brauchen einen Paradigmenwechsel. Das LL-Paradigma war ja, mit $S$ zu starten und,
                   geleitet von den nächsten $k$ Zeichen, zu entscheiden, welche Ableitungsregel als nächstes
                   anzuwenden ist. Hierbei haben wir immer versucht, für das am weitesten
                   links stehende Nichtterminal eine Regel zu finden. Wir beschreiben nun ein ganz anderes
@@ -355,7 +354,7 @@ const Article = () => {
                   </div>
                 </figure>
                 <Paragraph>
-                  Betrachten wir noch ein Beispiel, nun für die etwas nützlichere Grammatik
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir noch ein Beispiel, nun für die etwas nützlichere Grammatik
                   der streng geklammerten arithmetischen Ausdrücke.
                 </Paragraph>
                 <figure class="centered-figure well container">
@@ -566,9 +565,9 @@ const Article = () => {
                   </div>
                 </figure>
                 <Paragraph>
-                  Wenn wir uns nun die Ableitung ansehen, die wir gefunden haben:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir uns nun die Ableitung ansehen, die wir gefunden haben:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \texttt&#123;S&#125; \Step&#123;&#125;
                 \texttt&#123;(S+S)&#125; \Step&#123;&#125;
                 \texttt&#123;(S+(S*S))&#125; \Step&#123;&#125;
@@ -577,7 +576,7 @@ const Article = () => {
                 \texttt&#123;(x+(y*z))&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  dann sehen wir, dass es sich um eine Rechtsableitung handelt. Daher der Name LR-Parsing: wir
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;dann sehen wir, dass es sich um eine Rechtsableitung handelt. Daher der Name LR-Parsing: wir
                   beginnen links (daher das L) und suchen eine Rechtsableitung (daher das R), allerdings in
                   umgekehrter
                   Reihenfolge. Statt von $S$ ausgehend $w$ abzuleiten, also $S \Step&#123;&#125;^* w$, versuchen
@@ -589,19 +588,19 @@ const Article = () => {
                   Allerdings ist das nicht immer so einfach: manchmal ist nicht auf den ersten Blick erkennbar,
                   welche Produktionsregel wir (rückwärts) anwenden sollen. Hier ein etwas konstruiertes Beispiel:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 S&amp;\rightarrow XYz \\
                 X&amp;\rightarrow aXa \ | \ bXb \ | \ c \\
                 Y&amp;\rightarrow Ya \ | \ Yb \ | \ a \ | \ b
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Die erzeugte Sprache ist{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die erzeugte Sprache ist{" "}
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 L(G) = \&#123;vcv^Rwz \ | \ v, w \in \&#123;a,b\&#125;^* \&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Betrachten wir das Eingabewort $acaba$. Wir schreiben nun immer
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir das Eingabewort $acaba$. Wir schreiben nun immer
                   den bis jetzt gelesenen / geparsten Teil des Wortes, gefolgt von dem
                   ungelesen Teil in grau und dahinter
                   in Klammern ,
@@ -609,7 +608,7 @@ const Article = () => {
                   Regel anwenden.
                 </Paragraph>
                 <div class="container">
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   &amp;\textcolor&#123;darkgray&#125;&#123;acabaz&#125; \tag&#123;lesen&#125; \\
                   &amp;a\textcolor&#123;darkgray&#125;&#123;cabaz&#125; \tag&#123;lesen&#125; \\
                   &amp;ac\textcolor&#123;darkgray&#125;&#123;abaz&#125; \tag&#123;reduzieren per $X \rightarrow c$&#125; \\
@@ -625,7 +624,7 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                 </div>
                 <Paragraph>
-                  Es stellen sich einige Fragen: woher wissen wir zum Beispiel bei
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es stellen sich einige Fragen: woher wissen wir zum Beispiel bei
                   $XYa\textcolor&#123;darkgray&#125;&#123;z&#125;$, dass wir per $Y \rightarrow Ya$ reduzieren müssen
                   und nicht per $Y \rightarrow a$? Wir könnten ja auch auf
                   $XYa \Pets&#123;&#125; XYY$ reduzieren. Oder in Schritt 2, bei
@@ -641,15 +640,15 @@ const Article = () => {
                     $XYa \Pets&#123;&#125; XYY$ kann nicht richtig sein, weil $XYY$ nie als Präfix in einer
                     Rechtsableitung vorkommen kann. Genauer gesagt: es gibt kein $w \in \Sigma^*$, so dass
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   S \Step&#123;&#125;^* XYYw \Step&#123;&#125; XYaw
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    eine Rechtsableitung ist.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;eine Rechtsableitung ist.
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Wenn wir Glück haben, gibt es immer höchstens eine Reduktionsregel
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir Glück haben, gibt es immer höchstens eine Reduktionsregel
                   $\alpha \beta w \Pets&#123;&#125; \alpha X w$, so dass
                   $S \Step&#123;&#125;^* \alpha X w \Step&#123;&#125; \alpha \beta w$ in einer Rechtsableitung vorkommen kann.
                   Das hängt von der Grammatik ab. Aber selbst dann brauchen wir einen Algorithmus, der
@@ -661,19 +660,19 @@ const Article = () => {
                   !
                 </Paragraph>
                 <Paragraph>
-                  Ein zweites Problem ist, dass wir eben manchmal kein Glück haben und es mehrere
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein zweites Problem ist, dass wir eben manchmal kein Glück haben und es mehrere
                   plausible Reduktionsschritte geben kann. Ein Beispiel wäre die obere Grammatik, leicht
                   abgewandelt:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 S&amp;\rightarrow XY \tag&#123;beachten Sie: oben hatten wir $S \rightarrow XYz$&#125;\\
                 X&amp;\rightarrow aXa \ | \ bXb \ | \ c \\
                 Y&amp;\rightarrow Ya \ | \ Yb \ | \ a \ | \ b
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Wenn wir jetzt als einfaches Beispiel $cab$ ableiten wollen:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir jetzt als einfaches Beispiel $cab$ ableiten wollen:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \textcolor&#123;darkgray&#125;&#123;cab&#125; \tag&#123;lesen&#125; \\
                 c\textcolor&#123;darkgray&#125;&#123;ab&#125; \tag&#123;reduzieren per $X \rightarrow c$&#125; \\
                 X\textcolor&#123;darkgray&#125;&#123;ab&#125; \tag&#123;lesen&#125; \\
@@ -681,15 +680,15 @@ const Article = () => {
                 XY\textcolor&#123;darkgray&#125;&#123;b&#125; \tag&#123;reduzieren per $Y \rightarrow a$&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Jetzt liegt die Wortform $XY$ auf unserem Stack und wir haben zwei Möglichkeiten:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Jetzt liegt die Wortform $XY$ auf unserem Stack und wir haben zwei Möglichkeiten:
                   wir könnten reduzieren, also $XY \Pets&#123;&#125; S$, oder das nächste Zeichen lesen.
                   Ersteres wäre inkorrekt:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 XY\textcolor&#123;darkgray&#125;&#123;b&#125; \Pets&#123;&#125; S \textcolor&#123;darkgray&#125;&#123;b&#125; \ ,
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  wobei $Sb$ eben keine Wortform ist, die in einer Rechtsableitung vorkommen könnte.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;wobei $Sb$ eben keine Wortform ist, die in einer Rechtsableitung vorkommen könnte.
                   Das wissen wir aber erst, wenn wir $b$ gelesen haben. Wäre das Eingabewort nämlich nur $ca$,
                   dann
                   wäre $XY \Pets&#123;&#125; S$ tatsächlich die korrekte Reduktion. In der ersten Grammatik
@@ -697,7 +696,7 @@ const Article = () => {
                   Im Allgemeinen ist es aber leichter, dem Parser zu erlauben, das nächste Zeichen zu lesen.
                 </Paragraph>
                 <Paragraph>
-                  All diese Gedanken theoretisch rigoros zu formulieren ist einigermaßen herausvordernd.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;All diese Gedanken theoretisch rigoros zu formulieren ist einigermaßen herausvordernd.
                   Daher werden wir erst einmal für eine Grammatik arithmetischer Ausdrücke einen
                   Parser in Java implementieren.
                 </Paragraph>

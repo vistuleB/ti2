@@ -39,7 +39,7 @@
                             1.4 Monotone Funktionen und monotone Schaltkreise
                     |> p
 
-                        Für zwei Tupel \(\mathbf{x}, \mathbf{y} \in \{0,1\}^n\) schreiben wir
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für zwei Tupel \(\mathbf{x}, \mathbf{y} \in \{0,1\}^n\) schreiben wir
                         \( \mathbf{x} \leq \mathbf{y}\), falls \(x_1 \leq y_1, \dots, x_n \leq y_n\), also
                         \(\mathbf{x}\) _in jeder Koordinate_ kleiner gleich \(\mathbf{y}\) ist.
                         Beispielsweise gilt \( (0,0,1) \leq (1,0,1)\). Allerdings gilt weder
@@ -53,13 +53,13 @@
                             loading lazy
                     |> p
 
-                        Diese Darstellung einer Partialordnung als gerichteter Graph bezeichnet man auch als
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Diese Darstellung einer Partialordnung als gerichteter Graph bezeichnet man auch als
                         _Hasse-Diagramm_ (ich verzichte hier auf eine formale Definition).
                         Es gilt nun \(\mathbf{x} \leq \mathbf{y}\), wenn Sie im Hasse-Diagramm einen
                         Pfad von \(\mathbf{x}\) nach \(\mathbf{y}\) finden.
                     |> p
 
-                        *Vorsicht.* Im obigen Bild steht zwar \(001\) unterhalb von \(110\), allerdings
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Vorsicht.* Im obigen Bild steht zwar \(001\) unterhalb von \(110\), allerdings
                         werden Sie keinen Pfad von \(001\) nach \(110\) finden;
                         es gilt also \(001 \not \leq 110\); die beiden Elemente sind _unvergleichbar_.
                     |> div
@@ -68,7 +68,7 @@
                             class numbered-title
 
                             Definition
-                        Eine Boolesche Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\) heißt
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Boolesche Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\) heißt
                         _monoton_, wenn
                         $$
                         \forall \mathbf{x} \leq \mathbf{y} \in \{0,1\}^n \ : \
@@ -82,10 +82,10 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Welche der Booleschen Funktionen \(\wedge, \vee, \neg, \oplus, \maj\) sind monoton?
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Welche der Booleschen Funktionen \(\wedge, \vee, \neg, \oplus, \maj\) sind monoton?
                     |> p
 
-                        Funktionen auf wenigen Variablen können wir graphisch darstellen und somit
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Funktionen auf wenigen Variablen können wir graphisch darstellen und somit
                         erkennen, ob sie monoton sind oder nicht. Für eine Funktion
                         \( f: \{0,1\}^2 \rightarrow \{0,1\}\) markieren
                         wir im Hasse-Diagramm von \(\{0,1\}^2\) diejenigen Elemente blau,
@@ -117,7 +117,7 @@
                                 style height:10em
                                 src ../img/circuits/monotone-or-not.svg
                                 loading lazy
-                        ist nicht monoton (beachten Sie hinter der \(\bar{y}\)-Schreibweise versteckte NOT-Gate),
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ist nicht monoton (beachten Sie hinter der \(\bar{y}\)-Schreibweise versteckte NOT-Gate),
                         ist aber äquivalent zu der offensichtlich monotonen Funktion \(x\). Allerdings können wir
                         folgendes beweisen:
                     |> div
@@ -127,7 +127,7 @@
                             class numbered-title
 
                             Theorem
-                        Zu jeder monotonen Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\) gibt es einen monotonen
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zu jeder monotonen Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\) gibt es einen monotonen
                         Schaltkreis (also ohne NOT-Gates), der \(f\) berechnet.
                     |> div
                         class well well-lg numbered-exercise container
@@ -135,7 +135,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Beweisen Sie das Theorem. *Tip.* Gehen Sie meine oben skizzierten drei
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beweisen Sie das Theorem. *Tip.* Gehen Sie meine oben skizzierten drei
                         Konstruktionen durch (Rekursiv, DNF, CNF) und versuchen Sie, sie so zu modifizieren,
                         dass Sie alle NOT-Gates loswerden.
                     |> div
@@ -144,11 +144,11 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Finden Sie alle monotonen Funktionen in zwei Variablen.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Finden Sie alle monotonen Funktionen in zwei Variablen.
                         Wie sieht es mit allen monotonen Funktionen in _drei_ Variablen aus?
                         |> p
 
-                            Am Besten betrachten Sie das _Hasse-Diagramm_ der
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Am Besten betrachten Sie das _Hasse-Diagramm_ der
                             Partialordnungen auf Mengen \( \{0,1\}^2\) bzw. \( \{0,1\}^3\):
                         |> figure
                             |> img
@@ -157,7 +157,7 @@
                                 loading lazy
                         |> p
 
-                            und überlegen sich, wie Sie die vier bzw. acht Knoten auf monotone Weise in einen
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und überlegen sich, wie Sie die vier bzw. acht Knoten auf monotone Weise in einen
                             1-Bereich und einen 0-Bereich aufteilen können.
                     |> div
                         class well well-lg numbered-exercise container
@@ -165,8 +165,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;*(Challenge).*
-                        Bauen Sie einen Schaltkreis mit drei Input-Variablen \(x,y,z\), der drei
+                        &ensp;*(Challenge).*                        Bauen Sie einen Schaltkreis mit drei Input-Variablen \(x,y,z\), der drei
                         Output-Gates hat, die \(\bar{x}, \bar{y}, \bar{z}\) berechnen.
                         Ihr Schaltkreis darf _höchstens zwei NOT-Gates_ einhalten,
                         aber beliebig viele AND- und OR-Gates.
@@ -192,7 +191,7 @@
                             class numbered-title
 
                             Theorem
-                        Zu jeder monotonen Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\) gibt es einen monotonen
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zu jeder monotonen Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\) gibt es einen monotonen
                         Schaltkreis (also ohne NOT-Gates), der \(f\) berechnet.
                     |> p
 
@@ -213,7 +212,7 @@
                             |> li
 
                                 ...
-                        wie sie zum Beispiel auf
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;wie sie zum Beispiel auf
                         |> a
                             href https://de.wikipedia.org/wiki/Beweis_(Mathematik)#Beweismethoden
 
@@ -232,13 +231,13 @@
                             |> li
 
                                 local change: ein Objekt schrittweise in die gewünschte Richtung verändern;
-                        da bei den Beweistechniken Erfahrung, Intuition und Kreativität mit ins Spiel kommen,
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;da bei den Beweistechniken Erfahrung, Intuition und Kreativität mit ins Spiel kommen,
                         ist es unmöglich, eine vollständige Liste anzugeben; ich habe die drei obigen Punkte gewählt, weil
                         sie in der Tat das repräsentieren, was wir in den Beweisen jetzt verwenden werden.
                     |> div
                         class well container
 
-                        *Erster Beweis. Top-Down mit `if-then-else`.*
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Erster Beweis. Top-Down mit `if-then-else`.*                        
                         |> p
 
                             In diesem Beweis verwende ich die zweite oben erwähnte Technik: bereits bekanntes
@@ -256,7 +255,7 @@
                                 class numbered-title
 
                                 Theorem
-                            Zu jeder Booleschen Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\) gibt es
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zu jeder Booleschen Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\) gibt es
                             einen Schaltkreis \(C\), der \(f\) berechnet.
                         |> p
 
@@ -278,12 +277,11 @@
                             class well container-fluid
                             |> p
 
-                                *Beweis.*
-                                Als _Beweismethode_ verwenden wir Induktion über \(n\), die Anzahl der Variablen.
+                                *Beweis.*                                Als _Beweismethode_ verwenden wir Induktion über \(n\), die Anzahl der Variablen.
                             |> div
                                 class alert-info
 
-                                Zur Erinnerung: bei einem Beweis per Induktion wollen wir eine Aussage
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zur Erinnerung: bei einem Beweis per Induktion wollen wir eine Aussage
                                 der Form _Für alle natürlichen Zahlen \(n \in \N\) gilt \(P(n)\)_ beweisen,
                                 wobei \(P(n)\) wiederum eine Aussage ist, in der die Zahl \(n\) irgendwo vorkommt.
                                 Bei einem Beweis durch Induktion zeigen wir nun,
@@ -295,7 +293,7 @@
 
                                         dass, wenn \(P(n)\) für eine Zahl \(n \in \N \) gilt, dann sicherlich
                                         auch \(P(n+1)\) gilt (*Induktionsschritt*).
-                                Wenn wir beide Teile gezeigt haben, können wir uns nun "hochhangeln":
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir beide Teile gezeigt haben, können wir uns nun "hochhangeln":
                                 \(P(0)\) gilt, weil wir in Punkt 1 gezeigt haben;
                                 mit Hilfe von Punkt 2 können wir nun argumentieren, dass
                                 aus \(P(0)\) die Aussage \(P(1)\) folgt;
@@ -314,17 +312,17 @@
                                     class numbered-title
 
                                     Theorem 1.4.4, alternative Formulierung
-                                Für jede natürliche Zahl \(n\) gilt: zu jeder Booleschen Funktion
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für jede natürliche Zahl \(n\) gilt: zu jeder Booleschen Funktion
                                 \(f: \{0,1\}^n \rightarrow \{0,1\}\) gibt es einen Schaltkreis \(C\), der
                                 \(f\) berechnet.
                             |> p
 
-                                Wir haben also im Prinzip Theorem 1.4.4 umständlicher formuliert, um die
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben also im Prinzip Theorem 1.4.4 umständlicher formuliert, um die
                                 Abhängigkeit von \(n\) zu verdeutlichen. Wir müssen nun Induktionsbasis und
                                 Induktionsschritt durchführen.
                             |> p
 
-                                *Induktionsbasis.* Wenn \(n=0\) ist, dann gibt es nur zwei mögliche
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Induktionsbasis.* Wenn \(n=0\) ist, dann gibt es nur zwei mögliche
                                 Boolesche
                                 Funktionen,
                                 nämlich die konstanten Funktionen \(0\) und \(1\). Für beide Funktionen
@@ -341,13 +339,13 @@
                                     style margin:2ch
                                     class listing
 
-                                    public boolean constantFalse() {
+                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;public boolean constantFalse() {
                                     return false;
                                     }
                                     public boolean constantTrue() {
                                     return true;
                                     }
-                                und dies sind ja offensichtlich Boolesche Funktionen mit null Input-Variablen.
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und dies sind ja offensichtlich Boolesche Funktionen mit null Input-Variablen.
                                 Ich nehme Ihre Ängste aber ernst, und in der Tat gibt es Fälle, wo es
                                 sich nicht richtig anfühlt, den Induktionsbeweis bei \(0\) anzufangen.
                                 In diesem Fall dürfen Sie die Induktionsbasis gerne bei \(n=1\) ansetzen
@@ -356,7 +354,7 @@
                                 ist das unvermeidbar, weil manche Aussagen einfach z.B. erst ab \(n \geq 2\) gelten.
                                 |> p
 
-                                    Wenn wir die Induktionsbasis bei \(n=1\) ansetzen wollen, dann sehen wir, dass
+                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir die Induktionsbasis bei \(n=1\) ansetzen wollen, dann sehen wir, dass
                                     es _vier_ Funktionen gibt: \(0, 1, x, \neg x\); all diese haben natürlich
                                     einen
                                     (sehr einfachen) Schaltkreis. Nur bei \(\neg x\) braucht unser Schaltkreis überhaupt
@@ -364,7 +362,7 @@
                                     Gate.
                                 |> p
 
-                                    An diesem Punkt protestieren Sie vielleicht und sagen, dass \(0\) keine Funktion
+                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;An diesem Punkt protestieren Sie vielleicht und sagen, dass \(0\) keine Funktion
                                     in _einer_ Variable ist, sondern in _zwei_ Variablen.
                                     Und auch hier appelliere ich an Ihre Programmiererfahrung: weder Sie
                                     noch der Java-Compiler werden Probleme mit der Funktion
@@ -372,7 +370,7 @@
                                     style margin:2ch
                                     class listing
 
-                                    public boolean constantFalse(boolean x) {
+                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;public boolean constantFalse(boolean x) {
                                     return false;
                                     }
                                 |> p
@@ -381,7 +379,7 @@
                                     deklariert haben, einmal als Funktion mit 0 Input-Variablen, einmal als
                                     Funktion mit einer Input-Variablen. Um hundertprozentig korrekt zu sein, müssten wir
                                     Funktionen \(\textnormal{zero}_n\) definieren als
-                                \begin{align*}
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                                 \textnormal{zero}_n&amp;: \{0,1\}^n \rightarrow \{0,1\} \\
                                 (x_1,\dots,x_n)&amp;\mapsto 0 \ .
                                 \end{align*}
@@ -415,8 +413,7 @@
                             |> div
                                 class well subtheorem
 
-                                *Induktionshypothese.*
-                                Zu jeder Booleschen Funktion in \(n-1\) Variablen
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Induktionshypothese.*                                Zu jeder Booleschen Funktion in \(n-1\) Variablen
                                 gibt es einen äquivalenten Schaltkreis.
                             |> p
 
@@ -424,8 +421,7 @@
                             |> div
                                 class well subtheorem
 
-                                *Ziel des Induktionsschritts.*
-                                Zu jeder Booleschen Funktion in \(n\) Variablen
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Ziel des Induktionsschritts.*                                Zu jeder Booleschen Funktion in \(n\) Variablen
                                 gibt es einen äquivalenten Schaltkreis.
                             |> p
 
@@ -459,7 +455,7 @@
                                     loading lazy
                             |> p
 
-                                Ich behaupte, dass obiger Schaltkreis tatsächlich \(f\) berechnet. Falls dies noch nicht
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ich behaupte, dass obiger Schaltkreis tatsächlich \(f\) berechnet. Falls dies noch nicht
                                 klar sein sollte, können wir auch dies formal beweisen, und zwar
                                 durch die Methode _vollständige Fallunterscheidung._ Sei
                                 nun also ein konkreter Input \(x_1,\dots,x_n\) gegeben.
@@ -472,14 +468,14 @@
                                     Wert aus.
                                 |> li
 
-                                    Der Fall \(x_1 = 0\). Dann gibt der obige Schaltkreis
+                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Fall \(x_1 = 0\). Dann gibt der obige Schaltkreis
                                     den Wert \(f_0(x_2,\dots,x_n\) aus, was per Definition von \(f_0\)
                                     gleich \(f(0, x_2,\dots,x_n) = f(x_1,\dots,x_n)\) ist. Er gibt also auch hier den
                                     korrekten
                                     Wert aus.
                             |> p
 
-                                Wir haben also erfolgreich einen Schaltkreis für
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben also erfolgreich einen Schaltkreis für
                                 \(f: \{0,1\}^n \rightarrow \{0,1\}\) konstruiert. Unser Induktionsbeweis von Theorem 2
                                 ist nun
                                 abgeschlossen. 
@@ -502,13 +498,12 @@
                     |> div
                         class well container
 
-                        *Theorem 1.4.3, nochmals.*
-                        Zu jeder monotonen Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\) gibt es einen monotonen
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Theorem 1.4.3, nochmals.*                        Zu jeder monotonen Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\) gibt es einen monotonen
                         Schaltkreis (also ohne NOT-Gates), der \(f\) berechnet.
                     |> div
                         class well container
 
-                        *Erster Beweis. Top-Down mit `if-then-else`.*
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Erster Beweis. Top-Down mit `if-then-else`.*                        
                         |> p
 
                             Wir verfolgen die Beweistechnik "Bekanntes abwandeln und hoffen".
@@ -532,7 +527,7 @@
                                     style height:15em
                                     src ../img/circuits/top-down-if-then-else-2.svg
                                     loading lazy
-                            Die "durchgetrichenen" Kabel bedeuten, dass hier mehrere Kabel parallel laufen (also hier
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die "durchgetrichenen" Kabel bedeuten, dass hier mehrere Kabel parallel laufen (also hier
                             \(n-1\)
                             viele).
                             Erkennen Sie das Problem mit der Konstruktion? Klar: das `if-then-else`-Gate ist
@@ -543,7 +538,7 @@
                                     style height:18em
                                     src ../img/circuits/top-down-if-then-else-3.svg
                                     loading lazy
-                            und enthält ein NOT-Gate. Aber klar: wir können natürlich nicht die Konstruktion aus dem
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und enthält ein NOT-Gate. Aber klar: wir können natürlich nicht die Konstruktion aus dem
                             vorherigen Beweis wiederholen und hoffen, dass alles klappt. Die Beweistechnik heißt ja auch
                             _Bekanntes abwandeln_, nicht _Bekanntes kritiklos wiederholen_. Wie
                             können wir den obigen Schaltkreis abwandeln, dass er monoton wird, also das eine NOT-Gate
@@ -554,7 +549,7 @@
                                     style height:18em
                                     src ../img/circuits/top-down-if-then-else-4.svg
                                     loading lazy
-                            Der linke Schaltkreis gibt uns, als Formel geschrieben,
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der linke Schaltkreis gibt uns, als Formel geschrieben,
                             $$
                             (x \wedge f_1) \vee (x \wedge f_0) \equiv x \wedge (f_1 \vee f_0) \ .
                             $$
@@ -568,7 +563,7 @@
                             zu ersetzen ist im Allgemeinen nicht korrekt.
                         |> p
 
-                            Schauen wir uns also den Schaltkreis im zweiten Bild an. Das rechte \(\wedge\)-Gate hat nur
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schauen wir uns also den Schaltkreis im zweiten Bild an. Das rechte \(\wedge\)-Gate hat nur
                             einen Input, kann also weggelassen werden (d.h. durch ein Kabel ersetzt werden); wir
                             erhalten den
                             monotonen Schaltkreis
@@ -577,7 +572,7 @@
                                     style height:18em
                                     src ../img/circuits/top-down-if-then-else-monotone.svg
                                     loading lazy
-                            bzw. als Formel:
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;bzw. als Formel:
                             $$
                             (x_1 \wedge f_1) \vee f_0 \ .
                             $$
@@ -588,15 +583,14 @@
                                 class numbered-title
 
                                 Behauptung.
-                            Für alle \(x_1,\dots,x_n\) gilt
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für alle \(x_1,\dots,x_n\) gilt
                             $$
                             f(x_1,\dots,x_n) = (x_1 \wedge f_1(x_2,\dots,x_n)) \vee f_0(x_2,\dots,x_n) \ .
                             $$
                         |> div
                             class well subtheorem
 
-                            *Beweis.*
-                            Wir machen eine Fallunterscheidung nach dem Wert von \(x_1\).
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                            Wir machen eine Fallunterscheidung nach dem Wert von \(x_1\).
                             |> ul
                                 |> li
 
@@ -610,7 +604,7 @@
                                     und die behauptete Gleichung gilt.
                                 |> li
 
-                                    Der Fall \(x_1 = 1\). Dann gilt
+                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Fall \(x_1 = 1\). Dann gilt
                                     \begin{align*}
                                     f(x_1,\dots,x_n)&amp;= f_1(x_2,\dots,x_n) \ .
                                     \end{align*}
@@ -658,7 +652,7 @@
                                     style height:18em
                                     src ../img/circuits/top-down-if-then-else-monotone-finished.svg
                                     loading lazy
-                            ein monotoner Schaltkreis für \(f\).
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein monotoner Schaltkreis für \(f\).
                         |> span
                             class qed
 
@@ -666,17 +660,16 @@
                     |> div
                         class well container
 
-                        *Zweiter Beweis. Bottom-Up, Konstruktion einer DNF-Formel.*
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Zweiter Beweis. Bottom-Up, Konstruktion einer DNF-Formel.*
                         Als Beweisstrategie verwende ich wieder _Bekanntes abwandeln._
                         |> p
 
-                            *Das Bekannte.*
-                            Erinnern Sie sich an die Konstruktion einer DNF-Formel auf Basis der gegebenen
+                            *Das Bekannte.*                            Erinnern Sie sich an die Konstruktion einer DNF-Formel auf Basis der gegebenen
                             Wahrheitstabelle. Für jedes \(n\)-Tupel \(\mathbf{a} := a_1,\dots,a_n) \in \{0,1\}^n\),
                             für welches \(f\) den Wert 1 ausgibt, konstruieren wir einen DNF-Term \(T_{\mathbf{a}}\),
                             der auf \(\mathbf{a}\) eine 1 ausgibt und sonst überall eine 0.
                             Um den Term genau zu beschreiben, definieren wir
-                        \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         I_{\mathbf{a}}&amp;:= \{ i \in \{1,\dots, n\} \ | \ a_i = 1 \} \\
                         O_{\mathbf{a}}&amp;:= \{ i \in \{1,\dots, n\} \ | \ a_i = 0 \} \ .
                         \end{align*}
@@ -707,7 +700,7 @@
                         Rolle spielt, da \(\wedge\) kommutativ ist).
                         |> p
 
-                            Gegen eine Boolesche Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\),
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Gegen eine Boolesche Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\),
                             definieren wir
                             $$
                             \sat(f) := \{\mathbf{a} \in \{0,1\}^n \ | \ f(\mathbf{a}) = 1 \} \ .
@@ -715,7 +708,7 @@
                             Die Abkürzung \(\sat\) steht für _satisfying assignments_, also
                             diejenigen Belegungen der Variablen, die \(f\) "erfüllen", also 1 werden lassen.
                             Wir bauen uns einen Schaltkreis \(F\):
-                        \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         F := \bigvee_{\mathbf{a} \in \sat(f)} T_{\mathbf{a}}
                         \end{align*}
                         Dies ist eine DNF-Formel, also insbesondere ein Schaltkreis der Tiefe 2; wir sehen,
@@ -746,13 +739,12 @@
                                 class numbered-title
 
                                 Behauptung.
-                            Für alle \(x_1,\dots,x_n\) gilt
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für alle \(x_1,\dots,x_n\) gilt
                             \(T_{\mathbf{a}} \leq T'_{\mathbf{a}}\).
                         |> div
                             class well subtheorem
 
-                            *Beweis.*
-                            Definieren wir zusätzlich noch \(T''_{\mathbf{a}} := \bigwedge_{i \in O_{\mathbf{a}}}
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                            Definieren wir zusätzlich noch \(T''_{\mathbf{a}} := \bigwedge_{i \in O_{\mathbf{a}}}
                             \bar{x}_i\),
                             dann können wir \(T_{\mathbf{a}} = T'_{\mathbf{a}} \wedge T''_{\mathbf{a}}\) schreiben.
                             Und jetzt ist \(T'_{\mathbf{a}} \wedge T''_{\mathbf{a}} \leq T'_{\mathbf{a}}\)
@@ -777,12 +769,11 @@
                                 class numbered-title
 
                                 Behauptung
-                            \(F \equiv F'\), d.h. sie berechnen beide dieselbe Funktion, nämlich \(f\).
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(F \equiv F'\), d.h. sie berechnen beide dieselbe Funktion, nämlich \(f\).
                         |> div
                             class well subtheorem
 
-                            *Beweis.*
-                            Um zu zeigen, dass beide dieselbe Funktion berechnen, müssen
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                            Um zu zeigen, dass beide dieselbe Funktion berechnen, müssen
                             wir zeigen, dass
                             $$
                             F(\mathbf{x}) = F'(\mathbf{x}) \textnormal{ für alle $\mathbf{x} \in \{0,1\}^n$. }
@@ -796,7 +787,7 @@
                                 |> li
 
                                     \(F(\mathbf{x}) \geq F'(\mathbf{x})\).
-                            Punkt 1 ist einfach: wir haben bereits gesehen, dass
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Punkt 1 ist einfach: wir haben bereits gesehen, dass
                             \(T_{\mathbf{a}} \leq T'_{\mathbf{a}}\) gilt, und somit
                             auch
                             $$
@@ -819,8 +810,7 @@
                                 Nehmen wir also an, dass \(F'(\mathbf{x}) = 1\) ist.
                             |> p
 
-                                *Strategie: was haben wir?*
-                                Es ist immer gut, Dinge konkret "in der Hand zu haben". In diesem Falle?
+                                *Strategie: was haben wir?*                                Es ist immer gut, Dinge konkret "in der Hand zu haben". In diesem Falle?
                                 Wir wissen ja, dass
                                 \(F' = \bigvee_{\mathbf{a} \in \sat(f)} T'_{\mathbf{a}} \) ist. Wenn nun
                                 also die linke Seite, \(F'\), den Wert 1 annimmt, dann muss es auf der rechten
@@ -850,7 +840,7 @@
                                 aber nicht garantieren.
                             |> p
 
-                                Wie schaut denn ein Input \(\mathbf{y}\) aus, auf dem
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wie schaut denn ein Input \(\mathbf{y}\) aus, auf dem
                                 \( T_{\mathbf{a}^*}\) 1 ausgibt? So ein \(\mathbf{y}\) müsste
                                 \(y_i=1\) für alle \(i \in I(\mathbf{a}^*)\) und
                                 \(y_i=0\) für alle \(i \in O(\mathbf{a}^*)\) haben; also
@@ -877,7 +867,7 @@
                                     class qed
 
                                     \(\square\)
-                        Wir haben nun gezeigt, dass die DNF-Formeln \(F\) und \(F'\) dieselbe Boolesche Funktion
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben nun gezeigt, dass die DNF-Formeln \(F\) und \(F'\) dieselbe Boolesche Funktion
                         berechnen, nämlich \(f\). Die Formel \(F'\) enthält keine negativen Literale und ist somit
                         ein monotoner Schaltkreis von Tiefe 2.
                         |> span
@@ -886,7 +876,7 @@
                             \(\square\)
                     |> p
 
-                        Ich habe Ihnen zweieinhalb Beweise versprochen. Der zweieinhalbte Beweis
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ich habe Ihnen zweieinhalb Beweise versprochen. Der zweieinhalbte Beweis
                         geht nun genau so wie der zweite, nur dass er eine CNF-Formel \(G\) statt einer DNF-Formel \(F\)
                         konstruiert und aus dieser dann alle negativen Literale entfernt, womit wir
                         eine monotone CNF-Formel \(G'\) erhalten. Der Beweis, dass \(G'\) und \(G\) dieselbe Funktion

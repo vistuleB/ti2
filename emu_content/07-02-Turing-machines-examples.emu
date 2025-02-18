@@ -43,7 +43,7 @@
                             class numbered-title
 
                             Beispiel
-                        Betrachten wir die Sprache
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die Sprache
                         \begin{align*}
                         \{a^n b^n c^n \ | \ n \geq 0 \}
                         \end{align*}
@@ -56,7 +56,7 @@
                             (ersetzt es durch ein \(X\)). Dann geht sie nach rechts und
                             sucht und markiert ein \(b\); dann ein \(c\). Sobald sie das \(c\) markiert hat,
                             geht sie wieder nach links. Dies beendet die Phase.
-                        Wenn die Maschine kein \(a\) mehr findet und auch kein \(b\) oder \(c\) mehr da ist,
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn die Maschine kein \(a\) mehr findet und auch kein \(b\) oder \(c\) mehr da ist,
                         akzeptiert die Maschine.
                         Wenn unterwegs ein "Fehler" geschieht, beispielsweise die Maschine ein \(b\) sucht
                         aber keines findet, wechselt sie in den 
@@ -70,7 +70,7 @@
                             \begin{align*}
                             \Gamma := \{a,b,c, X, \square\} \ .
                             \end{align*}
-                        Das Symbol \(X\) heißt dann "hier stand mal \(a\), \(b\) oder \(c\), wir haben es aber bereits
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Symbol \(X\) heißt dann "hier stand mal \(a\), \(b\) oder \(c\), wir haben es aber bereits
                         gelesen". Als Zustandsmenge verwenden wir
                         \begin{align*}
                         Q := \{\texttt{findA},\texttt{findB},\texttt{findC},\texttt{noA},
@@ -135,7 +135,7 @@
                                 .
                         |> p
 
-                            Wir können die Beschreibung jetzt formal als Funktion
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können die Beschreibung jetzt formal als Funktion
                             \(\delta: Q \times \Gamma \rightarrow Q \times \Gamma \times \rls\) niederschreiben.
                         |> figure
                             |> img
@@ -144,7 +144,7 @@
                                 loading lazy
                         |> p
 
-                            Beachten Sie: manche Zellen sind leer. Damit meine ich, dass die Turingmaschine dort
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie: manche Zellen sind leer. Damit meine ich, dass die Turingmaschine dort
                             in den Zustand 
                             |> tt
 
@@ -156,12 +156,12 @@
                             ist reiner Syntaxzucker.
                         |> p
 
-                            Auf der Webseite
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Auf der Webseite
                             |> a
                                 href https://turingmachinesimulator.com
 
                                 turingmachinesimulator.com
-                            können Sie Ihre Turingmaschine eingeben und simulieren. Den Text für
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;können Sie Ihre Turingmaschine eingeben und simulieren. Den Text für
                             die gerade beschriebene finden in 
                             |> a
                                 href ../code/turing machines/aabbcc.txt
@@ -177,7 +177,7 @@
 
                                 q, a
                                 r, b, D 
-                            angeben, wobei die Richtung \(D\) mit den Symbolen 
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;angeben, wobei die Richtung \(D\) mit den Symbolen 
                             |> tt
 
                                 <, -,&gt;
@@ -189,14 +189,14 @@
                             class numbered-title
 
                             Beispiel
-                        Als zweites Beispiel nehmen wir die Palindromsprache
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als zweites Beispiel nehmen wir die Palindromsprache
                         \begin{align*}
                         L := \{ w \in \{a,b\}^* \ | \ w = w^R \} \ ,
                         \end{align*}
                         wobei \(w^R\) das Kehrwort bedeutet, also \(aabba^R = abbaa\).
                         |> p
 
-                            Unsere Maschine sucht das erste Zeichen, löscht es (ersetzt es durch \(\square\)
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unsere Maschine sucht das erste Zeichen, löscht es (ersetzt es durch \(\square\)
                             und "merkt" es sich in ihrem Zustand.
                             Dann geht sie zum rechten Rand und vergleicht es mit dem dortigen.
                             Falls es passt, löscht sie es und geht wieder nach links zurück. Falls es nicht
@@ -213,7 +213,7 @@
                             Länge gehandelt.
                         |> p
 
-                            Als Bandalphabet brauchen wir hier nur \(\Gamma = \{a,b,\square\}\). Als
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als Bandalphabet brauchen wir hier nur \(\Gamma = \{a,b,\square\}\). Als
                             Zustandsmenge nehmen wir
                             \begin{align*}
                             Q = \{\texttt{next}, \texttt{readA}, \texttt{readB}, \texttt{killA}, \texttt{killB},
@@ -297,7 +297,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Implementieren Sie die Turingmaschine für die Palindromsprache auf
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Implementieren Sie die Turingmaschine für die Palindromsprache auf
                         |> a
                             href https://turingmachinesimulator.com
 
@@ -305,7 +305,7 @@
                         .
                     |> p
 
-                        Jetzt sind Sie dran.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Jetzt sind Sie dran.
                     |> div
                         id exercise-wcw
                         class well well-lg numbered-exercise container
@@ -313,7 +313,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Schreiben Sie eine Turingmaschine (auf 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie eine Turingmaschine (auf 
                         |> a
                             href https://turingmachinesimulator.com
 
@@ -329,12 +329,12 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Schreiben Sie auf 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie auf 
                         |> a
                             href https://turingmachinesimulator.com
 
                             turingmachinesimulator.com
-                        eine Turingmaschine für die Sprache
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;eine Turingmaschine für die Sprache
                         \begin{align*}
                         L := \{1^n \ | \ n = 2^d, d \geq 0\} \ .
                         \end{align*}

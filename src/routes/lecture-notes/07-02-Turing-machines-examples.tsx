@@ -42,7 +42,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Betrachten wir die Sprache
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die Sprache
                   $$\begin&#123;align*&#125;
                   \&#123;a^n b^n c^n \ | \ n \geq 0 \&#125;
                   \end&#123;align*&#125;$$
@@ -59,7 +59,7 @@ const Article = () => {
                     sucht und markiert ein \(b\); dann ein \(c\). Sobald sie das \(c\) markiert hat,
                     geht sie wieder nach links. Dies beendet die Phase.
                   </Paragraph>
-                  Wenn die Maschine kein \(a\) mehr findet und auch kein \(b\) oder \(c\) mehr da ist,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn die Maschine kein \(a\) mehr findet und auch kein \(b\) oder \(c\) mehr da ist,
                   akzeptiert die Maschine.
                   Wenn unterwegs ein "Fehler" geschieht, beispielsweise die Maschine ein \(b\) sucht
                   aber keines findet, wechselt sie in den{" "}
@@ -77,7 +77,7 @@ const Article = () => {
                     \Gamma := \&#123;a,b,c, X, \square\&#125; \ .
                     \end&#123;align*&#125;$$
                   </Paragraph>
-                  Das Symbol \(X\) heißt dann "hier stand mal \(a\), \(b\) oder \(c\), wir haben es aber bereits
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Symbol \(X\) heißt dann "hier stand mal \(a\), \(b\) oder \(c\), wir haben es aber bereits
                   gelesen". Als Zustandsmenge verwenden wir
                   $$\begin&#123;align*&#125;
                   Q := \&#123;\texttt&#123;findA&#125;,\texttt&#123;findB&#125;,\texttt&#123;findC&#125;,\texttt&#123;noA&#125;,
@@ -146,7 +146,7 @@ const Article = () => {
                     </li>
                   </ul>
                   <Paragraph>
-                    Wir können die Beschreibung jetzt formal als Funktion
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können die Beschreibung jetzt formal als Funktion
                     \(\delta: Q \times \Gamma \rightarrow Q \times \Gamma \times \rls\) niederschreiben.
                   </Paragraph>
                   <figure>
@@ -156,7 +156,7 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    Beachten Sie: manche Zellen sind leer. Damit meine ich, dass die Turingmaschine dort
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie: manche Zellen sind leer. Damit meine ich, dass die Turingmaschine dort
                     in den Zustand{" "}
                     <tt>
                       reject
@@ -168,11 +168,11 @@ const Article = () => {
                     ist reiner Syntaxzucker.
                   </Paragraph>
                   <Paragraph>
-                    Auf der Webseite
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Auf der Webseite
                     <a href="https://turingmachinesimulator.com">
                       turingmachinesimulator.com
                     </a>
-                    können Sie Ihre Turingmaschine eingeben und simulieren. Den Text für
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;können Sie Ihre Turingmaschine eingeben und simulieren. Den Text für
                     die gerade beschriebene finden in{" "}
                     <a href="../code/turing machines/aabbcc.txt">
                       aabbcc.txt
@@ -187,7 +187,7 @@ const Article = () => {
                       q, a
                       r, b, D{" "}
                     </pre>
-                    angeben, wobei die Richtung \(D\) mit den Symbolen{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;angeben, wobei die Richtung \(D\) mit den Symbolen{" "}
                     <tt>
                       &lt;, -,&gt;
                     </tt>
@@ -200,13 +200,13 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Als zweites Beispiel nehmen wir die Palindromsprache
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als zweites Beispiel nehmen wir die Palindromsprache
                   $$\begin&#123;align*&#125;
                   L := \&#123; w \in \&#123;a,b\&#125;^* \ | \ w = w^R \&#125; \ ,
                   \end&#123;align*&#125;$$
                   wobei \(w^R\) das Kehrwort bedeutet, also \(aabba^R = abbaa\).
                   <Paragraph>
-                    Unsere Maschine sucht das erste Zeichen, löscht es (ersetzt es durch \(\square\)
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unsere Maschine sucht das erste Zeichen, löscht es (ersetzt es durch \(\square\)
                     und "merkt" es sich in ihrem Zustand.
                     Dann geht sie zum rechten Rand und vergleicht es mit dem dortigen.
                     Falls es passt, löscht sie es und geht wieder nach links zurück. Falls es nicht
@@ -223,7 +223,7 @@ const Article = () => {
                     Länge gehandelt.
                   </Paragraph>
                   <Paragraph>
-                    Als Bandalphabet brauchen wir hier nur \(\Gamma = \&#123;a,b,\square\&#125;\). Als
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als Bandalphabet brauchen wir hier nur \(\Gamma = \&#123;a,b,\square\&#125;\). Als
                     Zustandsmenge nehmen wir
                     $$\begin&#123;align*&#125;
                     Q = \&#123;\texttt&#123;next&#125;, \texttt&#123;readA&#125;, \texttt&#123;readB&#125;, \texttt&#123;killA&#125;, \texttt&#123;killB&#125;,
@@ -313,14 +313,14 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Implementieren Sie die Turingmaschine für die Palindromsprache auf
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Implementieren Sie die Turingmaschine für die Palindromsprache auf
                   <a href="https://turingmachinesimulator.com">
                     turingmachinesimulator.com
                   </a>
                   .
                 </div>
                 <Paragraph>
-                  Jetzt sind Sie dran.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Jetzt sind Sie dran.
                 </Paragraph>
                 <div
                   id="exercise-wcw"
@@ -328,7 +328,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Schreiben Sie eine Turingmaschine (auf{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie eine Turingmaschine (auf{" "}
                   <a href="https://turingmachinesimulator.com">
                     turingmachinesimulator.com
                   </a>
@@ -342,11 +342,11 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Schreiben Sie auf{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie auf{" "}
                   <a href="https://turingmachinesimulator.com">
                     turingmachinesimulator.com
                   </a>
-                  eine Turingmaschine für die Sprache
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;eine Turingmaschine für die Sprache
                   $$\begin&#123;align*&#125;
                   L := \&#123;1^n \ | \ n = 2^d, d \geq 0\&#125; \ .
                   \end&#123;align*&#125;$$

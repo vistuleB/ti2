@@ -39,7 +39,7 @@
                             4.2 Endliche Automaten
                     |> p
 
-                        Grammatiken erlauben es uns, gewisse Formate zu beschreiben. Das reicht uns aber nicht:
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Grammatiken erlauben es uns, gewisse Formate zu beschreiben. Das reicht uns aber nicht:
                         wir wollen Daten _parsen_, im engen Sinne also eine grammatische Ableitung rekonstruieren
                         und allgemein die Struktur eines gegebenen Wortes herausarbeiten. Ein bescheideneres Ziel
                         ist es, für ein gegebenes Wort zu _entscheiden_, ob es sich überhaupt aus einer Grammatik
@@ -55,8 +55,7 @@
                         Kreisen (den
                         _Zuständen_ des Automaten) zeigen an, in welchen neuen Zustand beim Lesen eines Zeichen
                         gewechselt werden
-                        muss. Der Pfeil "aus dem Nichts", hier der von links nach \(S\), zeigt den _Startzustand_
-                        an, in welchem
+                        muss. Der Pfeil "aus dem Nichts", hier der von links nach \(S\), zeigt den _Startzustand_                        an, in welchem
                         der Automat beginnt.
                     |> figure
                         |> img
@@ -65,7 +64,7 @@
                             loading lazy
                     |> p
 
-                        Um zu zeigen, wie der Automat ein Eingabewort verarbeitet, nehmen wir das Beispiel \(\alpha =
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um zu zeigen, wie der Automat ein Eingabewort verarbeitet, nehmen wir das Beispiel \(\alpha =
                         yxzxxyy\).
                     |> figure
                         class centered-figure well container
@@ -298,9 +297,8 @@
                                         src ../img/finite-state-automata/fsa-example-01-25.svg
                     |> p
 
-                        In diesem Beispiel endet der Automat im Zustand \(Y\). Sie sehen, dass der Zustand \(X\)
-                        mit einem doppelten Rand markiert ist: dies symbolisiert, dass \(X\) ein _akzeptierender_
-                        Endzustand ist. Wenn der Automat ein Wort \(\alpha\) abgearbeitet hat, _akzeptiert_ er
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem Beispiel endet der Automat im Zustand \(Y\). Sie sehen, dass der Zustand \(X\)
+                        mit einem doppelten Rand markiert ist: dies symbolisiert, dass \(X\) ein _akzeptierender_                        Endzustand ist. Wenn der Automat ein Wort \(\alpha\) abgearbeitet hat, _akzeptiert_ er
                         es,
                         wenn er in einem akzeptierenden Endzustand gelandet ist; ansonsten _lehnt er es ab_. In
                         unserem
@@ -313,8 +311,7 @@
                             class numbered-title
 
                             Definition
-                        *(Endlicher Automat, Finite State Machine).*
-                        Ein endlicher Automat besteht aus einem endlichen Eingabealphaet \(\Sigma\), einer endlichen
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Endlicher Automat, Finite State Machine).*                        Ein endlicher Automat besteht aus einem endlichen Eingabealphaet \(\Sigma\), einer endlichen
                         Menge \(Q\) von Zuständen,
                         einem Startzustand \(\qstart \in Q\), einer Menge \(F \subseteq Q\) von akzeptierenden
                         Endzuständen
@@ -326,7 +323,7 @@
                         Formal gesehen ist also ein Automat ein Quintupel \(M = (\Sigma, Q, \qstart, F, \delta)\).
                     |> p
 
-                        Die Idee ist, dass der Automat im Zustand \(\qstart\) startet und nun in jedem Schritt ein
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Idee ist, dass der Automat im Zustand \(\qstart\) startet und nun in jedem Schritt ein
                         weiteres
                         Zeichen des Eingabewortes liest. Wenn er im Zustand \(q\) ist und das Zeichen \(x\) liest,
                         so wechselt er in den Zustand \(\delta(q,x)\). Statt \(\delta(q,x) = q'\) verwenden wir die
@@ -334,25 +331,24 @@
                         $$
                         q \stackrel{x}{\rightarrow} q' \ .
                         $$
-                        Wenn das Wort zu Ende ist, dann _akzeptiert_
-                        der Automat, wenn er in einem akzeptierenden Zustand angekommen ist, also in \(F\).
+                        Wenn das Wort zu Ende ist, dann _akzeptiert_                        der Automat, wenn er in einem akzeptierenden Zustand angekommen ist, also in \(F\).
                     |> div
                         class well container theorem
                         |> span
                             class numbered-title
 
                             Beispiel
-                        Betrachten wir den endlichen Automaten
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir den endlichen Automaten
                         |> figure
                             |> img
                                 style height:10em
                                 src ../img/finite-state-automata/finite-state-machine-example-01.svg
                                 loading lazy
-                        und stellen ihn gemäß
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und stellen ihn gemäß
                         |> span
                             data-ref definition-finite-state-machine
                             class reference
-                        als Quintupel \(M = (\Sigma, Q, \qstart, F, \delta)\) dar mit
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;als Quintupel \(M = (\Sigma, Q, \qstart, F, \delta)\) dar mit
                         \begin{align*}
                         \Sigma&amp;= \{x,y,z\} \\
                         Q&amp;= \{S, X, Y\} \\
@@ -361,12 +357,12 @@
                         \end{align*}
                         |> p
 
-                            Um noch die Zustandsübergangsfunktion $\delta$ darzustellen, müssen wir uns überlegen,
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um noch die Zustandsübergangsfunktion $\delta$ darzustellen, müssen wir uns überlegen,
                             wie wir Funktionen überhaupt darstellen. Da $\delta$ eine endliche Funktion ist,
                             können wir einfach alle Eingabewert-Ausgabewert-Paare hinschreiben, am Besten
                             in einer Tabelle, so wie wir es bereits bei Booleschen Funktionen mit
                             Wahrheitstabellen getan haben. $\delta$ ist also
-                        \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         \begin{array}{cc|c}
                         q&amp;\sigma&amp;\delta(q,x) \\ \hline
                         S&amp;x&amp;X \\
@@ -382,10 +378,10 @@
                         \end{align*}
                         |> p
 
-                            Da die Funktion $\delta$ bei jedem endlichen Automaten genau zwei
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Da die Funktion $\delta$ bei jedem endlichen Automaten genau zwei
                             Eingabeparameter hat, können wir es eventuell übersichtlicher als
                             zweidimensionale Tabelle darstellen:
-                        \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         \begin{array}{c|c|c|c}
                         &amp;x&amp;y&amp;z \\ \hline
                         S&amp;X&amp;S&amp;S \\ \hline
@@ -408,7 +404,7 @@
                                 loading lazy
                         |> p
 
-                            Das ist eine völlig legitime Notation für eine Funktion $\delta: Q \times \Sigma \rightarrow
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das ist eine völlig legitime Notation für eine Funktion $\delta: Q \times \Sigma \rightarrow
                             Q$
                             und genau so formal wie die Tabellenschreibweise.
                     |> div
@@ -417,7 +413,7 @@
                             class numbered-title
 
                             Definition
-                        *(Erweiterte Zuständsübergangsfunktion)*.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Erweiterte Zuständsübergangsfunktion)*.
                         Für einen endlichen Automaten \((\Sigma, Q, \qstart, F, \delta)\) definieren wir
                         die _erweiterte Zustandsübergangsfunktion_ \(\hat{\delta}: Q \times \Sigma^* \rightarrow
                         Q\) rekursiv wie folgt:
@@ -438,11 +434,8 @@
                             class numbered-title
 
                             Definition
-                        *
-                        (Akzeptierte Sprache).
-                        *                        
-
-                        Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein endlicher Automat. Die von \(M\) akzeptierte
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Akzeptierte Sprache).
+                        *                        Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein endlicher Automat. Die von \(M\) akzeptierte
                         Sprache
                         ist
                         \begin{align*}
@@ -454,13 +447,13 @@
                             class numbered-title
 
                             Beispiel
-                        Der endliche Automat, den wir oben bereits eingeführt haben:
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der endliche Automat, den wir oben bereits eingeführt haben:
                         |> figure
                             |> img
                                 style height:10em
                                 src ../img/finite-state-automata/finite-state-machine-example-01.svg
                                 loading lazy
-                        akzeptiert die Sprache aller \(\alpha \in \{x,y,z\}\), die auf \(x\) enden und nicht die
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;akzeptiert die Sprache aller \(\alpha \in \{x,y,z\}\), die auf \(x\) enden und nicht die
                         Buchstabenfolge \(xy\) enthalten.
                     |> div
                         class well well-lg numbered-exercise container
@@ -468,7 +461,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Ändern Sie den Automaten aus dem letzten Beispiel so ab, dass die Bedingung _"die auf \(x\)
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ändern Sie den Automaten aus dem letzten Beispiel so ab, dass die Bedingung _"die auf \(x\)
                         enden"_ entfällt, er also
                         alle Wörter akzeptiert, die die Folge \(xy\) nicht enthalten.
                     |> div
@@ -477,7 +470,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Zeichnen Sie einen Automaten für die Sprache aller Wörter über \(\{a,b,c,d\}\), die
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeichnen Sie einen Automaten für die Sprache aller Wörter über \(\{a,b,c,d\}\), die
                         die Folge \(a,b,c,d\) enthalten.
                     |> div
                         class well well-lg numbered-exercise container
@@ -485,7 +478,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Zeichnen Sie einen Automaten für die Sprache aller Wörter über \(\{a,b,c,d\}\), die
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeichnen Sie einen Automaten für die Sprache aller Wörter über \(\{a,b,c,d\}\), die
                         genau vier \(a\) enthalten.
                     |> h2
 
@@ -498,7 +491,7 @@
                             style height:10em
                             src ../img/finite-state-automata/finite-state-machine-example-01.svg
                             loading lazy
-                    würde dies beispielsweise die folgenden Produktionen ergeben:
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;würde dies beispielsweise die folgenden Produktionen ergeben:
                     \begin{align*}
                     S&amp;\rightarrow y S \ | \ zS \ | \ x X \\
                     X&amp;\rightarrow x X \ | \ z S \ | \ y Y \\
@@ -516,17 +509,16 @@
                             class numbered-title
 
                             Theorem
-                        Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein endlicher Automat. Dann gibt es eine reguläre
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein endlicher Automat. Dann gibt es eine reguläre
                         Grammatik
                         \(G = (\Sigma, N, P, S)\) mit \(L(G) = L(M)\).
                     |> p
 
-                        Wir nehmen dies als Anlass, um mal wieder einen Induktionsbeweis im Detail durchzuführen.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir nehmen dies als Anlass, um mal wieder einen Induktionsbeweis im Detail durchzuführen.
                     |> div
                         class well container
 
-                        *Beweis.*
-                        Wir setzen \(N = Q\) und \(S = \qstart\) und führen für jeden Zustandsübergang, der von
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Wir setzen \(N = Q\) und \(S = \qstart\) und führen für jeden Zustandsübergang, der von
                         \(\delta\) beschrieben wird, eine Ableitungsregel ein:
                         \begin{align*}
                         q_1 \stackrel{x}{\rightarrow} q_2&amp;\quad \textnormal{ wird zur Produktion } \quad
@@ -545,12 +537,12 @@
                                 class numbered-title
 
                                 Behauptung
-                            Sei \(\alpha \in \Sigma^*\) und \(q, q' \in Q\). Dann gilt
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(\alpha \in \Sigma^*\) und \(q, q' \in Q\). Dann gilt
                             \(q \stackrel{\alpha}{\rightarrow} q'\) genau dann,
                             wenn \(q \Rightarrow^* \alpha q'\) in Grammatik \(G'\) gilt.
                         |> p
 
-                            Bevor wir diese Behauptung beweisen, achten Sie auf die Bedeutung der Symbole. Der
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bevor wir diese Behauptung beweisen, achten Sie auf die Bedeutung der Symbole. Der
                             einfache Pfeil in \(q \stackrel{\alpha}{\rightarrow} q'\) beschreibt die Arbeitsweise des
                             endlichen Automaten, dass nämlich
                             das Verarbeiten von \(\alpha\) den Automaten vom Zustand \(q\) in den Zustand \(q'\) führt.
@@ -565,8 +557,7 @@
                         |> div
                             class well subtheorem
 
-                            *Beweis.*
-                            Wir verwenden Induktion über die Länge des Wortes \(\alpha\).
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                            Wir verwenden Induktion über die Länge des Wortes \(\alpha\).
                             |> p
 
                                 *Induktionsbasis.* Wenn \(\alpha = \epsilon\) gilt, also \(\alpha\) die
@@ -575,8 +566,7 @@
                                 nun
                                 \(q \Rightarrow^* \epsilon q'\) in \(G'\) gelten? Beachten Sie, dass jede Produktion in
                                 \(G'\) ein Terminalsymbol
-                                erzeugt; \(q \Rightarrow^* \epsilon q'\) kann also nur gelten, wenn _keine_
-                                Produktion erfolgt ist und somit
+                                erzeugt; \(q \Rightarrow^* \epsilon q'\) kann also nur gelten, wenn _keine_                                Produktion erfolgt ist und somit
                                 \(q = q'\) gilt. Wir sehen: beide Aussagen sind äquivalent zu \(q = q'\) und somit auch
                                 äquivalent zueinander.
                             |> p
@@ -592,11 +582,11 @@
                                 |> ol
                                     |> li
 
-                                        \(q \stackrel{x \beta}{\rightarrow} q'\) im endlichen Automaten \(M\),
+                                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(q \stackrel{x \beta}{\rightarrow} q'\) im endlichen Automaten \(M\),
                                     |> li
 
-                                        \(q \Rightarrow^* x \beta q'\) in der Grammatik \(G'\).
-                                Wir müssen beide Richtungen zeigen, also zeigen, dass aus Aussage (1) die Aussage (2) folgt
+                                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(q \Rightarrow^* x \beta q'\) in der Grammatik \(G'\).
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir müssen beide Richtungen zeigen, also zeigen, dass aus Aussage (1) die Aussage (2) folgt
                                 und umgekehrt.
                             |> p
 
@@ -622,8 +612,7 @@
                                 Dies zeigt die erste Richtung.
                             |> p
 
-                                *Aus (2) folgt (1).*
-                                Nun nehmen wir an, dass \(q \Rightarrow^* x \beta q'\) gilt. Untersuchen wir die erste
+                                *Aus (2) folgt (1).*                                Nun nehmen wir an, dass \(q \Rightarrow^* x \beta q'\) gilt. Untersuchen wir die erste
                                 Produktion, die in dieser
                                 Ableitung verwendet worden ist. Alle Produktionen in \(G'\) erzeugen ein Terminalsymbol,
                                 also muss es eine
@@ -649,7 +638,7 @@
                                 $$
                                 gilt, also zusammengenommen \(q \stackrel{x\beta}{\rightarrow} q'\). Dies zeigt die
                                 zweite Richtung.
-                            Hiermit endet der Induktionsbeweis.
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Hiermit endet der Induktionsbeweis.
                             |> span
                                 class qed
 
@@ -664,10 +653,10 @@
                         |> ol
                             |> li
 
-                                \(\qstart \stackrel{\alpha}{\rightarrow} q'\) für einen Zustand \(q' \in F\),
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(\qstart \stackrel{\alpha}{\rightarrow} q'\) für einen Zustand \(q' \in F\),
                             |> li
 
-                                \(\qstart \Rightarrow^* \alpha\) in Grammatik \(G\).
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(\qstart \Rightarrow^* \alpha\) in Grammatik \(G\).
                         |> p
 
                             Wenn nun also \(\qstart \stackrel{\alpha}{\rightarrow} q'\) gilt und \(q' \in F\), dann
@@ -677,7 +666,7 @@
                             \(\qstart \Rightarrow^* \alpha q' \Rightarrow \alpha\) machen.
                         |> p
 
-                            In der anderen Richtung, wenn \(\qstart \Rightarrow^* \alpha\) in Grammatik \(G\) gilt, dann
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In der anderen Richtung, wenn \(\qstart \Rightarrow^* \alpha\) in Grammatik \(G\) gilt, dann
                             betrachten wir den letzten Ableitungsschritt. Da \(\alpha\) keine Nichtterminalsymbole
                             enthält, muss im letzten Ableitungsschritt ein Nichtterminalsymbol
                             verschwunden sein. Die einzigen Produktionen in \(G\) bei denen das Nichtterminal
@@ -707,7 +696,7 @@
                                 \(\square\)
                     |> p
 
-                        Beachten Sie, dass dieser Beweis eigentlich gar nicht so schwierig ist, wie er hier aussieht.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie, dass dieser Beweis eigentlich gar nicht so schwierig ist, wie er hier aussieht.
                         Ich habe
                         ihn absichtlich sehr formal und ausführlich geschrieben, um Ihnen das Prinzip des
                         Induktionsbeweises ins
@@ -718,20 +707,20 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Schreiben Sie zu folgendem Automaten über dem Alphabet \(\Sigma = \{0,1,2,3,4,5,6,7,8,9\}\) eine
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie zu folgendem Automaten über dem Alphabet \(\Sigma = \{0,1,2,3,4,5,6,7,8,9\}\) eine
                         äquivalente reguläre Grammatik:
                         |> figure
                             |> img
                                 style height:13em
                                 src ../img/finite-state-automata/finite-state-machine-example-02.svg
                                 loading lazy
-                        und beschreiben Sie die Sprache in eigenen Worten.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und beschreiben Sie die Sprache in eigenen Worten.
                     |> h2
 
                         Reguläre Grammatiken zu endlichen Automaten?
                     |> p
 
-                        Im letzten Abschnitt haben wir gesehen, wie wir zu einem gegebenen endlichen Automaten recht
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im letzten Abschnitt haben wir gesehen, wie wir zu einem gegebenen endlichen Automaten recht
                         einfach eine äquivalente
                         reguläre Grammatik schreibne können. Es drängt sich die Frage auf: geht das auch umgekehrt?
                         Versuchen wir es.
@@ -743,7 +732,7 @@
                             class numbered-title
 
                             Beispiel
-                        Betrachten wir die 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die 
                         |> a
                             href ./04-01-regular-grammars.html#example-aaabb
 
@@ -768,7 +757,7 @@
                                 loading lazy
                         |> p
 
-                            Wie Sie sehen, ist das nicht ganz korrekt. Als erstes fällt ins Auge, dass alle Zustände
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wie Sie sehen, ist das nicht ganz korrekt. Als erstes fällt ins Auge, dass alle Zustände
                             akzeptierende Endzustände sind.
                             Als zweites fällt uns auf, dass es bei \(T\) für das Eingabesymbol \(a\) keinen ausgehenden
                             Pfeil gibt. Der
@@ -785,14 +774,14 @@
                                     style height:12em
                                     src ../img/finite-state-automata/finite-state-machine-example-04.svg
                                     loading lazy
-                            Dies ist nun unser endlicher Automat \(M\) mit \(L(M) = L(G)\).
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dies ist nun unser endlicher Automat \(M\) mit \(L(M) = L(G)\).
                     |> div
                         class well container theorem
                         |> span
                             class numbered-title
 
                             Beispiel
-                        Betrachten wir die 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die 
                         |> a
                             href ./04-01-regular-grammars.html#example-xxx1yyy
 
@@ -815,7 +804,7 @@
                                 loading lazy
                         |> p
 
-                            Leider ist diese Lösung auch nicht korrekt: jetzt gibt es zu viele Pfeile! Aus dem Zustand
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Leider ist diese Lösung auch nicht korrekt: jetzt gibt es zu viele Pfeile! Aus dem Zustand
                             \(A\) gehen zwei
                             Pfeile mit \(1\) beschriftet hinaus. Wenn wir uns vor Augen halten, was die von \(G\)
                             erzeugte Sprache ist, so
@@ -828,6 +817,6 @@
                             zum Zustand \(B\) gehen soll.
                     |> p
 
-                        Um mit Fällen wie dem eben geschilderten umgehen zu können, erweitern wir die Definition des
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um mit Fällen wie dem eben geschilderten umgehen zu können, erweitern wir die Definition des
                         endlichen Automaten
                         in nächsten Kapitel zu einem _nichtdeterministischen_ endlichen Automaten.

@@ -38,7 +38,7 @@ const Article = () => {
                 </span>
               </h1>
               <Paragraph>
-                Mit den Booleschen Schaltkreisen haben wir ein Modell kennengelernt, dass
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Mit den Booleschen Schaltkreisen haben wir ein Modell kennengelernt, dass
                 die Berechnung von Booleschen Funkionen \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) beschreibt.
                 Wir haben mehrere Beweisen gesehen, dass es für jede Boolesche Funktion einen
                 Schaltkreis gibt. Unsere Zielsetzung war durchweg{" "}
@@ -61,7 +61,7 @@ const Article = () => {
                 {" "}beschäftigen.
               </Paragraph>
               <Paragraph>
-                Boolesche Funktionen sind immer{" "}
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Boolesche Funktionen sind immer{" "}
                 <i>
                   endliche
                 </i>
@@ -74,7 +74,7 @@ const Article = () => {
                 berechnen? Und was gilt denn überhaupt als zulässiges Modell für Berechenbarkeit?
               </Paragraph>
               <Paragraph>
-                Wenn wir nun also über Funktionen \(f: X \rightarrow Y\) auf unendlichen Mengen sprechen und uns
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir nun also über Funktionen \(f: X \rightarrow Y\) auf unendlichen Mengen sprechen und uns
                 fragen,
                 welche durch eine{" "}
                 <i>
@@ -97,8 +97,7 @@ const Article = () => {
                 <i>
                   bevor
                 </i>
-                {" "}
-                die ersten Rechner gebaut wurden. Daher beschäftigten sich die ersten Forscher auch mit einer
+                {" "}die ersten Rechner gebaut wurden. Daher beschäftigten sich die ersten Forscher auch mit einer
                 anderen, uns sehr vertrauten Menge:
                 $$\begin&#123;align*&#125;
                 \mathbb&#123;N&#125; \ ,
@@ -117,7 +116,7 @@ const Article = () => {
                 \(\N\) oder \(\&#123;0,1\&#125;^*\) arbeiten - sofern die obige Bijektion \(f\) selbst "berechenbar" ist.
               </Paragraph>
               <Paragraph>
-                Wir werden in diesem Kapitel mehrere Berechenbarkeitsmodelle für Funktionen
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir werden in diesem Kapitel mehrere Berechenbarkeitsmodelle für Funktionen
                 \(f: \N \rightarrow \N\) kennenlernen. Die beste Einstellung Ihrerseits ist, diese Modelle
                 als primitive, sehr reduzierte Programmiersprachen zu betrachten.
               </Paragraph>

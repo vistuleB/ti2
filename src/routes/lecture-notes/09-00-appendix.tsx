@@ -36,20 +36,20 @@ const Article = () => {
                   </span>
                 </h1>
                 <div class="alert-info">
-                  Dieses Kapitel sind ausschließlich persönliche Notizen für mich dazu,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dieses Kapitel sind ausschließlich persönliche Notizen für mich dazu,
                   wie man "korrekt" dieses Skript schreibt, insbesondere wie man die
                   automatische Numerierung verwendet. Es ist also natürlich nicht Stoff
                   der Vorlesung.
                 </div>
                 <Paragraph>
-                  Parts of these lecture notes are generated automatically with
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Parts of these lecture notes are generated automatically with
                   javascript. This includes chapter and subchapter numbering, links to
                   next and previous chapters, the table of content, and theorem
                   numbering.
                 </Paragraph>
                 <ol>
                   <li>
-                    If you want to add a new chapter, you have to do two things: add an
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;If you want to add a new chapter, you have to do two things: add an
                     entry to
                     <a href="../javascript/table-of-contents.js">
                       table-of-contents.js
@@ -74,7 +74,7 @@ const Article = () => {
                     .
                   </li>
                   <li>
-                    Theorem environments (theorems, lemmas, conjectures) can be created
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Theorem environments (theorems, lemmas, conjectures) can be created
                     as follows:
                     <div class="well container theorem">
                       <Paragraph>
@@ -83,15 +83,15 @@ const Article = () => {
                           class="numbered-title">
                           Sauer-Shelah lemma
                         </span>
-                        Let $A \subseteq \&#123;0,1\&#125;^n$. If $|A| \gt &#123;\rm vol&#125;(n,r-1)$ then
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Let $A \subseteq \&#123;0,1\&#125;^n$. If $|A| \gt &#123;\rm vol&#125;(n,r-1)$ then
                         there exists some set $I \subseteq [n]$ of indices with $|I|
                         \geq r$ such that
                       </Paragraph>
-                      $$\begin&#123;align*&#125; \&#123; \mathbf&#123;x&#125;_I \ | \ \mathbf&#123;x&#125; \in A\&#125; =
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; \&#123; \mathbf&#123;x&#125;_I \ | \ \mathbf&#123;x&#125; \in A\&#125; =
                       \&#123;0,1\&#125;^r \ , \end&#123;align*&#125;$$ in other words, the set $I$ of
                       coordinates is shattered.
                     </div>
-                    and here is the source code:
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;and here is the source code:
                     <pre>
                       &lt;div class='well container theorem'&gt;
                       &lt;p&gt;&lt;span class='numbered-title' id="sauer-shelah-lemma" data-label-title="Lemma"&gt;Lemma&lt;/span&gt;
@@ -103,7 +103,7 @@ const Article = () => {
                       in other words, the set $I$ of coordinates is shattered.
                       &lt;/div class='well container theorem'&gt;
                     </pre>
-                    You must give the environment{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;You must give the environment{" "}
                     <code>
                       div
                     </code>
@@ -120,7 +120,7 @@ const Article = () => {
                     `nunbered-title`, otherwise the automatic numbering will
                     not work.
                     <Paragraph>
-                      The attributes{" "}
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;The attributes{" "}
                       <code>
                         id="sauer-shelah-lemma"
                       </code>
@@ -133,7 +133,7 @@ const Article = () => {
                       automatic referencing. Here is how you create a reference:
                     </Paragraph>
                     <div class="well container">
-                      This follows easily from the
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;This follows easily from the
                       <span
                         data-ref="sauer-shelah-lemma"
                         class="reference" />
@@ -144,13 +144,13 @@ const Article = () => {
                         class="reference" />
                       .
                     </div>
-                    and here is the source code:
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;and here is the source code:
                     <pre>
                       Remember that&lt;span class="reference" data-ref="theorem-N-N^2"&gt;&lt;/span&gt; shows that $\N$ and $\N^2$ are equipotent.
                     </pre>
                   </li>
                   <Paragraph>
-                    To work, the{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;To work, the{" "}
                     <code>
                       id
                     </code>
@@ -177,11 +177,11 @@ const Article = () => {
                     This would take too much time, so we use a precompilation step:
                   </Paragraph>
                   <Paragraph>
-                    I wrote an html page
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;I wrote an html page
                     <a href="../javascript/put-all-in-one-page.html">
                       put-all-in-one-page.html
                     </a>
-                    that loads the table of content and all chapters (which takes quite
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;that loads the table of content and all chapters (which takes quite
                     a substantial amount of time, like 20 seconds or so) and extracts
                     all environments with class{" "}
                     <code>
@@ -203,7 +203,7 @@ const Article = () => {
                     web page will show this dictionary as a json object.
                   </Paragraph>
                   <Paragraph>
-                    You should then copy this table and paste it in the beginning of the
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;You should then copy this table and paste it in the beginning of the
                     file
                     <a href="../javascript/number-my-theorems.js">
                       nunmber-my-theorems.js
@@ -212,7 +212,7 @@ const Article = () => {
                     chapters) but using it is cheap.
                   </Paragraph>
                   <div class="alert-warning">
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Important:
                     </b>
@@ -221,13 +221,13 @@ const Article = () => {
                     <a href="../javascript/put-all-in-one-page.html">
                       put-all-in-one-page.html
                     </a>
-                    does not work if you just open it by double-clicking in your file
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;does not work if you just open it by double-clicking in your file
                     explorer. It has to be hosted by an http-server server with CORS
                     enabled, for example
                     <pre>
                       &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;http-server .  --cors
                     </pre>
-                    Once this server is running, go to
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Once this server is running, go to
                     {" "}
                     <code>
                       http://localhost:8080

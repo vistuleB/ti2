@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Für zwei Tupel \(\mathbf&#123;x&#125;, \mathbf&#123;y&#125; \in \&#123;0,1\&#125;^n\) schreiben wir
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für zwei Tupel \(\mathbf&#123;x&#125;, \mathbf&#123;y&#125; \in \&#123;0,1\&#125;^n\) schreiben wir
                   \( \mathbf&#123;x&#125; \leq \mathbf&#123;y&#125;\), falls \(x_1 \leq y_1, \dots, x_n \leq y_n\), also
                   \(\mathbf&#123;x&#125;\){" "}
                   <i>
@@ -66,7 +66,7 @@ const Article = () => {
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  Diese Darstellung einer Partialordnung als gerichteter Graph bezeichnet man auch als
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Diese Darstellung einer Partialordnung als gerichteter Graph bezeichnet man auch als
                   {" "}
                   <i>
                     Hasse-Diagramm
@@ -76,7 +76,7 @@ const Article = () => {
                   Pfad von \(\mathbf&#123;x&#125;\) nach \(\mathbf&#123;y&#125;\) finden.
                 </Paragraph>
                 <Paragraph>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Vorsicht.
                   </b>
@@ -92,7 +92,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  Eine Boolesche Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) heißt
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Boolesche Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) heißt
                   {" "}
                   <i>
                     monoton
@@ -109,10 +109,10 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Welche der Booleschen Funktionen \(\wedge, \vee, \neg, \oplus, \maj\) sind monoton?
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Welche der Booleschen Funktionen \(\wedge, \vee, \neg, \oplus, \maj\) sind monoton?
                 </div>
                 <Paragraph>
-                  Funktionen auf wenigen Variablen können wir graphisch darstellen und somit
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Funktionen auf wenigen Variablen können wir graphisch darstellen und somit
                   erkennen, ob sie monoton sind oder nicht. Für eine Funktion
                   \( f: \&#123;0,1\&#125;^2 \rightarrow \&#123;0,1\&#125;\) markieren
                   wir im Hasse-Diagramm von \(\&#123;0,1\&#125;^2\) diejenigen Elemente blau,
@@ -150,7 +150,7 @@ const Article = () => {
                       src="../img/circuits/monotone-or-not.svg"
                       loading="lazy" />
                   </figure>
-                  ist nicht monoton (beachten Sie hinter der \(\bar&#123;y&#125;\)-Schreibweise versteckte NOT-Gate),
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ist nicht monoton (beachten Sie hinter der \(\bar&#123;y&#125;\)-Schreibweise versteckte NOT-Gate),
                   ist aber äquivalent zu der offensichtlich monotonen Funktion \(x\). Allerdings können wir
                   folgendes beweisen:
                 </Paragraph>
@@ -160,14 +160,14 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  Zu jeder monotonen Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) gibt es einen monotonen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zu jeder monotonen Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) gibt es einen monotonen
                   Schaltkreis (also ohne NOT-Gates), der \(f\) berechnet.
                 </div>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Beweisen Sie das Theorem.{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beweisen Sie das Theorem.{" "}
                   <b>
                     Tip.
                   </b>
@@ -179,14 +179,14 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Finden Sie alle monotonen Funktionen in zwei Variablen.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Finden Sie alle monotonen Funktionen in zwei Variablen.
                   Wie sieht es mit allen monotonen Funktionen in{" "}
                   <i>
                     drei
                   </i>
                   {" "}Variablen aus?
                   <Paragraph>
-                    Am Besten betrachten Sie das{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Am Besten betrachten Sie das{" "}
                     <i>
                       Hasse-Diagramm
                     </i>
@@ -200,7 +200,7 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    und überlegen sich, wie Sie die vier bzw. acht Knoten auf monotone Weise in einen
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und überlegen sich, wie Sie die vier bzw. acht Knoten auf monotone Weise in einen
                     1-Bereich und einen 0-Bereich aufteilen können.
                   </Paragraph>
                 </div>
@@ -212,8 +212,7 @@ const Article = () => {
                   <b>
                     (Challenge).
                   </b>
-                  {" "}
-                  Bauen Sie einen Schaltkreis mit drei Input-Variablen \(x,y,z\), der drei
+                  {" "}Bauen Sie einen Schaltkreis mit drei Input-Variablen \(x,y,z\), der drei
                   Output-Gates hat, die \(\bar&#123;x&#125;, \bar&#123;y&#125;, \bar&#123;z&#125;\) berechnen.
                   Ihr Schaltkreis darf{" "}
                   <i>
@@ -248,7 +247,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  Zu jeder monotonen Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) gibt es einen monotonen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zu jeder monotonen Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) gibt es einen monotonen
                   Schaltkreis (also ohne NOT-Gates), der \(f\) berechnet.
                 </div>
                 <Paragraph>
@@ -278,7 +277,7 @@ const Article = () => {
                       ...
                     </li>
                   </ul>
-                  wie sie zum Beispiel auf
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;wie sie zum Beispiel auf
                   <a href="https://de.wikipedia.org/wiki/Beweis_(Mathematik)#Beweismethoden">
                     Wikipedia
                   </a>
@@ -297,12 +296,12 @@ const Article = () => {
                       local change: ein Objekt schrittweise in die gewünschte Richtung verändern;
                     </li>
                   </ul>
-                  da bei den Beweistechniken Erfahrung, Intuition und Kreativität mit ins Spiel kommen,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;da bei den Beweistechniken Erfahrung, Intuition und Kreativität mit ins Spiel kommen,
                   ist es unmöglich, eine vollständige Liste anzugeben; ich habe die drei obigen Punkte gewählt, weil
                   sie in der Tat das repräsentieren, was wir in den Beweisen jetzt verwenden werden.
                 </Paragraph>
                 <div class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Erster Beweis. Top-Down mit `if-then-else`.
                   </b>
@@ -321,7 +320,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    Zu jeder Booleschen Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) gibt es
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zu jeder Booleschen Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) gibt es
                     einen Schaltkreis \(C\), der \(f\) berechnet.
                   </div>
                   <Paragraph>
@@ -345,15 +344,14 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}
-                      Als{" "}
+                      {" "}Als{" "}
                       <i>
                         Beweismethode
                       </i>
                       {" "}verwenden wir Induktion über \(n\), die Anzahl der Variablen.
                     </Paragraph>
                     <div class="alert-info">
-                      Zur Erinnerung: bei einem Beweis per Induktion wollen wir eine Aussage
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zur Erinnerung: bei einem Beweis per Induktion wollen wir eine Aussage
                       der Form{" "}
                       <i>
                         Für alle natürlichen Zahlen \(n \in \N\) gilt \(P(n)\)
@@ -378,7 +376,7 @@ const Article = () => {
                           ).
                         </li>
                       </ol>
-                      Wenn wir beide Teile gezeigt haben, können wir uns nun "hochhangeln":
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir beide Teile gezeigt haben, können wir uns nun "hochhangeln":
                       \(P(0)\) gilt, weil wir in Punkt 1 gezeigt haben;
                       mit Hilfe von Punkt 2 können wir nun argumentieren, dass
                       aus \(P(0)\) die Aussage \(P(1)\) folgt;
@@ -400,17 +398,17 @@ const Article = () => {
                       <span class="numbered-title">
                         Theorem 1.4.4, alternative Formulierung
                       </span>
-                      Für jede natürliche Zahl \(n\) gilt: zu jeder Booleschen Funktion
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für jede natürliche Zahl \(n\) gilt: zu jeder Booleschen Funktion
                       \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) gibt es einen Schaltkreis \(C\), der
                       \(f\) berechnet.
                     </div>
                     <Paragraph>
-                      Wir haben also im Prinzip Theorem 1.4.4 umständlicher formuliert, um die
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben also im Prinzip Theorem 1.4.4 umständlicher formuliert, um die
                       Abhängigkeit von \(n\) zu verdeutlichen. Wir müssen nun Induktionsbasis und
                       Induktionsschritt durchführen.
                     </Paragraph>
                     <Paragraph>
-                      {" "}{" "}
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                       <b>
                         Induktionsbasis.
                       </b>
@@ -429,14 +427,14 @@ const Article = () => {
                       <pre
                         style="margin:2ch"
                         class="listing">
-                        public boolean constantFalse() &#123;
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;public boolean constantFalse() &#123;
                         return false;
                         &#125;
                         public boolean constantTrue() &#123;
                         return true;
                         &#125;
                       </pre>
-                      und dies sind ja offensichtlich Boolesche Funktionen mit null Input-Variablen.
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und dies sind ja offensichtlich Boolesche Funktionen mit null Input-Variablen.
                       Ich nehme Ihre Ängste aber ernst, und in der Tat gibt es Fälle, wo es
                       sich nicht richtig anfühlt, den Induktionsbeweis bei \(0\) anzufangen.
                       In diesem Fall dürfen Sie die Induktionsbasis gerne bei \(n=1\) ansetzen
@@ -444,7 +442,7 @@ const Article = () => {
                       behalten, dass Sie Ihre Aussage für \(n=0\) nicht bewiesen haben; machnmal
                       ist das unvermeidbar, weil manche Aussagen einfach z.B. erst ab \(n \geq 2\) gelten.
                       <Paragraph>
-                        Wenn wir die Induktionsbasis bei \(n=1\) ansetzen wollen, dann sehen wir, dass
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir die Induktionsbasis bei \(n=1\) ansetzen wollen, dann sehen wir, dass
                         es{" "}
                         <i>
                           vier
@@ -456,7 +454,7 @@ const Article = () => {
                         Gate.
                       </Paragraph>
                       <Paragraph>
-                        An diesem Punkt protestieren Sie vielleicht und sagen, dass \(0\) keine Funktion
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;An diesem Punkt protestieren Sie vielleicht und sagen, dass \(0\) keine Funktion
                         in{" "}
                         <i>
                           einer
@@ -472,7 +470,7 @@ const Article = () => {
                       <pre
                         style="margin:2ch"
                         class="listing">
-                        public boolean constantFalse(boolean x) &#123;
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;public boolean constantFalse(boolean x) &#123;
                         return false;
                         &#125;
                       </pre>
@@ -486,7 +484,7 @@ const Article = () => {
                         Funktion mit einer Input-Variablen. Um hundertprozentig korrekt zu sein, müssten wir
                         Funktionen \(\textnormal&#123;zero&#125;_n\) definieren als
                       </Paragraph>
-                      $$\begin&#123;align*&#125;
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                       \textnormal&#123;zero&#125;_n&amp;: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125; \\
                       (x_1,\dots,x_n)&amp;\mapsto 0 \ .
                       \end&#123;align*&#125;$$
@@ -526,24 +524,22 @@ const Article = () => {
                       {" "}\(P(n-1)\) als gegeben annehmen:
                     </Paragraph>
                     <div class="well subtheorem">
-                      {" "}{" "}
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                       <b>
                         Induktionshypothese.
                       </b>
-                      {" "}
-                      Zu jeder Booleschen Funktion in \(n-1\) Variablen
+                      {" "}Zu jeder Booleschen Funktion in \(n-1\) Variablen
                       gibt es einen äquivalenten Schaltkreis.
                     </div>
                     <Paragraph>
                       und wollen den Induktionsschritt vollziehen, also \(P(n)\) zeigen:
                     </Paragraph>
                     <div class="well subtheorem">
-                      {" "}{" "}
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                       <b>
                         Ziel des Induktionsschritts.
                       </b>
-                      {" "}
-                      Zu jeder Booleschen Funktion in \(n\) Variablen
+                      {" "}Zu jeder Booleschen Funktion in \(n\) Variablen
                       gibt es einen äquivalenten Schaltkreis.
                     </div>
                     <Paragraph>
@@ -594,7 +590,7 @@ const Article = () => {
                         loading="lazy" />
                     </figure>
                     <Paragraph>
-                      Ich behaupte, dass obiger Schaltkreis tatsächlich \(f\) berechnet. Falls dies noch nicht
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ich behaupte, dass obiger Schaltkreis tatsächlich \(f\) berechnet. Falls dies noch nicht
                       klar sein sollte, können wir auch dies formal beweisen, und zwar
                       durch die Methode{" "}
                       <i>
@@ -611,7 +607,7 @@ const Article = () => {
                         Wert aus.
                       </li>
                       <li>
-                        Der Fall \(x_1 = 0\). Dann gibt der obige Schaltkreis
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Fall \(x_1 = 0\). Dann gibt der obige Schaltkreis
                         den Wert \(f_0(x_2,\dots,x_n\) aus, was per Definition von \(f_0\)
                         gleich \(f(0, x_2,\dots,x_n) = f(x_1,\dots,x_n)\) ist. Er gibt also auch hier den
                         korrekten
@@ -619,7 +615,7 @@ const Article = () => {
                       </li>
                     </ul>
                     <Paragraph>
-                      Wir haben also erfolgreich einen Schaltkreis für
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben also erfolgreich einen Schaltkreis für
                       \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) konstruiert. Unser Induktionsbeweis von Theorem 2
                       ist nun
                       abgeschlossen.{" "}
@@ -640,16 +636,15 @@ const Article = () => {
                   &ensp;zu.{" "}
                 </Paragraph>
                 <div class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Theorem 1.4.3, nochmals.
                   </b>
-                  {" "}
-                  Zu jeder monotonen Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) gibt es einen monotonen
+                  {" "}Zu jeder monotonen Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) gibt es einen monotonen
                   Schaltkreis (also ohne NOT-Gates), der \(f\) berechnet.
                 </div>
                 <div class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Erster Beweis. Top-Down mit `if-then-else`.
                   </b>
@@ -677,7 +672,7 @@ const Article = () => {
                         src="../img/circuits/top-down-if-then-else-2.svg"
                         loading="lazy" />
                     </figure>
-                    Die "durchgetrichenen" Kabel bedeuten, dass hier mehrere Kabel parallel laufen (also hier
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die "durchgetrichenen" Kabel bedeuten, dass hier mehrere Kabel parallel laufen (also hier
                     \(n-1\)
                     viele).
                     Erkennen Sie das Problem mit der Konstruktion? Klar: das `if-then-else`-Gate ist
@@ -689,7 +684,7 @@ const Article = () => {
                         src="../img/circuits/top-down-if-then-else-3.svg"
                         loading="lazy" />
                     </figure>
-                    und enthält ein NOT-Gate. Aber klar: wir können natürlich nicht die Konstruktion aus dem
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und enthält ein NOT-Gate. Aber klar: wir können natürlich nicht die Konstruktion aus dem
                     vorherigen Beweis wiederholen und hoffen, dass alles klappt. Die Beweistechnik heißt ja auch
                     {" "}
                     <i>
@@ -709,7 +704,7 @@ const Article = () => {
                         src="../img/circuits/top-down-if-then-else-4.svg"
                         loading="lazy" />
                     </figure>
-                    Der linke Schaltkreis gibt uns, als Formel geschrieben,
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der linke Schaltkreis gibt uns, als Formel geschrieben,
                     $$
                     (x \wedge f_1) \vee (x \wedge f_0) \equiv x \wedge (f_1 \vee f_0) \ .
                     $$
@@ -727,7 +722,7 @@ const Article = () => {
                     zu ersetzen ist im Allgemeinen nicht korrekt.
                   </Paragraph>
                   <Paragraph>
-                    Schauen wir uns also den Schaltkreis im zweiten Bild an. Das rechte \(\wedge\)-Gate hat nur
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schauen wir uns also den Schaltkreis im zweiten Bild an. Das rechte \(\wedge\)-Gate hat nur
                     einen Input, kann also weggelassen werden (d.h. durch ein Kabel ersetzt werden); wir
                     erhalten den
                     monotonen Schaltkreis
@@ -737,7 +732,7 @@ const Article = () => {
                         src="../img/circuits/top-down-if-then-else-monotone.svg"
                         loading="lazy" />
                     </figure>
-                    bzw. als Formel:
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;bzw. als Formel:
                     $$
                     (x_1 \wedge f_1) \vee f_0 \ .
                     $$
@@ -747,18 +742,17 @@ const Article = () => {
                     <span class="numbered-title">
                       Behauptung.
                     </span>
-                    Für alle \(x_1,\dots,x_n\) gilt
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für alle \(x_1,\dots,x_n\) gilt
                     $$
                     f(x_1,\dots,x_n) = (x_1 \wedge f_1(x_2,\dots,x_n)) \vee f_0(x_2,\dots,x_n) \ .
                     $$
                   </div>
                   <div class="well subtheorem">
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Wir machen eine Fallunterscheidung nach dem Wert von \(x_1\).
+                    {" "}Wir machen eine Fallunterscheidung nach dem Wert von \(x_1\).
                     <ul>
                       <li>
                         Der Fall \(x_1 = 0\). Dann gilt
@@ -771,7 +765,7 @@ const Article = () => {
                         und die behauptete Gleichung gilt.
                       </li>
                       <li>
-                        Der Fall \(x_1 = 1\). Dann gilt
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Fall \(x_1 = 1\). Dann gilt
                         $$\begin&#123;align*&#125;
                         f(x_1,\dots,x_n)&amp;= f_1(x_2,\dots,x_n) \ .
                         \end&#123;align*&#125;$$
@@ -821,14 +815,14 @@ const Article = () => {
                         src="../img/circuits/top-down-if-then-else-monotone-finished.svg"
                         loading="lazy" />
                     </figure>
-                    ein monotoner Schaltkreis für \(f\).
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein monotoner Schaltkreis für \(f\).
                   </Paragraph>
                   <span class="qed">
                     \(\square\)
                   </span>
                 </div>
                 <div class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Zweiter Beweis. Bottom-Up, Konstruktion einer DNF-Formel.
                   </b>
@@ -843,14 +837,13 @@ const Article = () => {
                     <b>
                       Das Bekannte.
                     </b>
-                    {" "}
-                    Erinnern Sie sich an die Konstruktion einer DNF-Formel auf Basis der gegebenen
+                    {" "}Erinnern Sie sich an die Konstruktion einer DNF-Formel auf Basis der gegebenen
                     Wahrheitstabelle. Für jedes \(n\)-Tupel \(\mathbf&#123;a&#125; := a_1,\dots,a_n) \in \&#123;0,1\&#125;^n\),
                     für welches \(f\) den Wert 1 ausgibt, konstruieren wir einen DNF-Term \(T_&#123;\mathbf&#123;a&#125;&#125;\),
                     der auf \(\mathbf&#123;a&#125;\) eine 1 ausgibt und sonst überall eine 0.
                     Um den Term genau zu beschreiben, definieren wir
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   I_&#123;\mathbf&#123;a&#125;&#125;&amp;:= \&#123; i \in \&#123;1,\dots, n\&#125; \ | \ a_i = 1 \&#125; \\
                   O_&#123;\mathbf&#123;a&#125;&#125;&amp;:= \&#123; i \in \&#123;1,\dots, n\&#125; \ | \ a_i = 0 \&#125; \ .
                   \end&#123;align*&#125;$$
@@ -880,7 +873,7 @@ const Article = () => {
                   Term wie zuvor, nur mit den Literalen in anderer Reihenfolge aufgelistet (was keine
                   Rolle spielt, da \(\wedge\) kommutativ ist).
                   <Paragraph>
-                    Gegen eine Boolesche Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\),
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Gegen eine Boolesche Funktion \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\),
                     definieren wir
                     $$
                     \sat(f) := \&#123;\mathbf&#123;a&#125; \in \&#123;0,1\&#125;^n \ | \ f(\mathbf&#123;a&#125;) = 1 \&#125; \ .
@@ -893,7 +886,7 @@ const Article = () => {
                     diejenigen Belegungen der Variablen, die \(f\) "erfüllen", also 1 werden lassen.
                     Wir bauen uns einen Schaltkreis \(F\):
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   F := \bigvee_&#123;\mathbf&#123;a&#125; \in \sat(f)&#125; T_&#123;\mathbf&#123;a&#125;&#125;
                   \end&#123;align*&#125;$$
                   Dies ist eine DNF-Formel, also insbesondere ein Schaltkreis der Tiefe 2; wir sehen,
@@ -926,16 +919,15 @@ const Article = () => {
                     <span class="numbered-title">
                       Behauptung.
                     </span>
-                    Für alle \(x_1,\dots,x_n\) gilt
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für alle \(x_1,\dots,x_n\) gilt
                     \(T_&#123;\mathbf&#123;a&#125;&#125; \leq T'_&#123;\mathbf&#123;a&#125;&#125;\).
                   </div>
                   <div class="well subtheorem">
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Definieren wir zusätzlich noch \(T''_&#123;\mathbf&#123;a&#125;&#125; := \bigwedge_&#123;i \in O_&#123;\mathbf&#123;a&#125;&#125;&#125;
+                    {" "}Definieren wir zusätzlich noch \(T''_&#123;\mathbf&#123;a&#125;&#125; := \bigwedge_&#123;i \in O_&#123;\mathbf&#123;a&#125;&#125;&#125;
                     \bar&#123;x&#125;_i\),
                     dann können wir \(T_&#123;\mathbf&#123;a&#125;&#125; = T'_&#123;\mathbf&#123;a&#125;&#125; \wedge T''_&#123;\mathbf&#123;a&#125;&#125;\) schreiben.
                     Und jetzt ist \(T'_&#123;\mathbf&#123;a&#125;&#125; \wedge T''_&#123;\mathbf&#123;a&#125;&#125; \leq T'_&#123;\mathbf&#123;a&#125;&#125;\)
@@ -958,15 +950,14 @@ const Article = () => {
                     <span class="numbered-title">
                       Behauptung
                     </span>
-                    \(F \equiv F'\), d.h. sie berechnen beide dieselbe Funktion, nämlich \(f\).
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(F \equiv F'\), d.h. sie berechnen beide dieselbe Funktion, nämlich \(f\).
                   </div>
                   <div class="well subtheorem">
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Um zu zeigen, dass beide dieselbe Funktion berechnen, müssen
+                    {" "}Um zu zeigen, dass beide dieselbe Funktion berechnen, müssen
                     wir zeigen, dass
                     $$
                     F(\mathbf&#123;x&#125;) = F'(\mathbf&#123;x&#125;) \textnormal&#123; für alle $\mathbf&#123;x&#125; \in \&#123;0,1\&#125;^n$. &#125;
@@ -981,7 +972,7 @@ const Article = () => {
                         \(F(\mathbf&#123;x&#125;) \geq F'(\mathbf&#123;x&#125;)\).
                       </li>
                     </ol>
-                    Punkt 1 ist einfach: wir haben bereits gesehen, dass
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Punkt 1 ist einfach: wir haben bereits gesehen, dass
                     \(T_&#123;\mathbf&#123;a&#125;&#125; \leq T'_&#123;\mathbf&#123;a&#125;&#125;\) gilt, und somit
                     auch
                     $$
@@ -1007,8 +998,7 @@ const Article = () => {
                       <b>
                         Strategie: was haben wir?
                       </b>
-                      {" "}
-                      Es ist immer gut, Dinge konkret "in der Hand zu haben". In diesem Falle?
+                      {" "}Es ist immer gut, Dinge konkret "in der Hand zu haben". In diesem Falle?
                       Wir wissen ja, dass
                       \(F' = \bigvee_&#123;\mathbf&#123;a&#125; \in \sat(f)&#125; T'_&#123;\mathbf&#123;a&#125;&#125; \) ist. Wenn nun
                       also die linke Seite, \(F'\), den Wert 1 annimmt, dann muss es auf der rechten
@@ -1038,7 +1028,7 @@ const Article = () => {
                       aber nicht garantieren.
                     </Paragraph>
                     <Paragraph>
-                      Wie schaut denn ein Input \(\mathbf&#123;y&#125;\) aus, auf dem
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wie schaut denn ein Input \(\mathbf&#123;y&#125;\) aus, auf dem
                       \( T_&#123;\mathbf&#123;a&#125;^*&#125;\) 1 ausgibt? So ein \(\mathbf&#123;y&#125;\) müsste
                       \(y_i=1\) für alle \(i \in I(\mathbf&#123;a&#125;^*)\) und
                       \(y_i=0\) für alle \(i \in O(\mathbf&#123;a&#125;^*)\) haben; also
@@ -1070,7 +1060,7 @@ const Article = () => {
                       </span>
                     </Paragraph>
                   </div>
-                  Wir haben nun gezeigt, dass die DNF-Formeln \(F\) und \(F'\) dieselbe Boolesche Funktion
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben nun gezeigt, dass die DNF-Formeln \(F\) und \(F'\) dieselbe Boolesche Funktion
                   berechnen, nämlich \(f\). Die Formel \(F'\) enthält keine negativen Literale und ist somit
                   ein monotoner Schaltkreis von Tiefe 2.
                   <span class="qed">
@@ -1078,7 +1068,7 @@ const Article = () => {
                   </span>
                 </div>
                 <Paragraph>
-                  Ich habe Ihnen zweieinhalb Beweise versprochen. Der zweieinhalbte Beweis
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ich habe Ihnen zweieinhalb Beweise versprochen. Der zweieinhalbte Beweis
                   geht nun genau so wie der zweite, nur dass er eine CNF-Formel \(G\) statt einer DNF-Formel \(F\)
                   konstruiert und aus dieser dann alle negativen Literale entfernt, womit wir
                   eine monotone CNF-Formel \(G'\) erhalten. Der Beweis, dass \(G'\) und \(G\) dieselbe Funktion

@@ -38,7 +38,7 @@ const Article = () => {
                 </span>
               </h1>
               <Paragraph>
-                Mit den Boolesche Schaltkreise haben wir bereits ein Modell für Berechnung kennengelernt.
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Mit den Boolesche Schaltkreise haben wir bereits ein Modell für Berechnung kennengelernt.
                 Es ist abstrakt genug, um mathematisch rigorose Aussagen darüber zu treffen und über obere und
                 untere Schranken zu sprechen.
                 Gleichzeitig ist es sehr konkret und nah an seiner physikalischen Realisierung.
@@ -53,8 +53,7 @@ const Article = () => {
                 <i>
                   ein
                 </i>
-                {" "}
-                Computerprogramm, das beliebig große Eingaben verkraften kann. Ein Computerprogramm
+                {" "}Computerprogramm, das beliebig große Eingaben verkraften kann. Ein Computerprogramm
                 soll also{" "}
                 <i>
                   endlich
@@ -80,7 +79,7 @@ const Article = () => {
               <div class="well container theorem">
                 <Paragraph>
                   <span class="numbered-title" />
-                  Die Menge
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Menge
                   $$\begin&#123;align*&#125;
                   \&#123;0,1\&#125;^* := \&#123;\epsilon\&#125; \cup \&#123;0,1\&#125; \cup \&#123;00, 01, 10, 11\&#125; \cup \dots \cup \&#123;0,1\&#125;^n
                   \cup

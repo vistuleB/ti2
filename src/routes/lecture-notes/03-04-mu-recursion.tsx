@@ -47,7 +47,7 @@ const Article = () => {
                     wir dürfen nur eine lokale Variable mitführen (und den Iterationsindex).
                   </li>
                 </ol>
-                Der zweite Punkt ist keine echte Beschränkung, wie wir gesehen haben: wenn wir zwei lokale
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der zweite Punkt ist keine echte Beschränkung, wie wir gesehen haben: wenn wir zwei lokale
                 Variablen \(a,b\) führen wollen, können wir die via der Bijektion
                 \(&#123;\rm pair&#125; : \N^2 \rightarrow \N\) in{" "}
                 <i>
@@ -61,13 +61,13 @@ const Article = () => {
                   Die Collatz-Vermutung
                 </h2>
                 <Paragraph>
-                  Wir definieren eine Funktion $f: \N
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir definieren eine Funktion $f: \N
                   <i>
                     + \rightarrow \N
                   </i>
                   +$ wie folgt:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 f : \N_+&amp;\rightarrow \N_+ \\
                 n&amp;\mapsto
                 \begin&#123;cases&#125;
@@ -76,25 +76,25 @@ const Article = () => {
                 \end&#123;cases&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Für eine natürliche Zahl $n$ können wir dann die Collatz-Folge definieren:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für eine natürliche Zahl $n$ können wir dann die Collatz-Folge definieren:
                   $n, f(n), f(f(n)), ...$. Man sieht leicht, dass diese Folge in einer Schleife
                   landen kann:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 13 \mapsto 40 \mapsto 20 \mapsto 10 \mapsto 5 \mapsto 16 \mapsto 8 \mapsto 4 \mapsto 2 \mapsto 1
                 \mapsto 4 \mapsto 2 \mapsto 1 \dots
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Wir beenden die Sequenz daher üblicherweise, wenn wir bei 1 (und somit in dieser Dreierschleife)
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir beenden die Sequenz daher üblicherweise, wenn wir bei 1 (und somit in dieser Dreierschleife)
                   gelandet sind.
                   Es kann allerdings etwas länger dauern:{" "}
                 </Paragraph>
                 <figure>
-                  7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1.
                 </figure>
-                Oder noch länger. Wenn wir mit 27 beginnen, dann erhalten wir die Folge
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Oder noch länger. Wenn wir mit 27 beginnen, dann erhalten wir die Folge
                 <figure>
-                  27, 82, 41, 124, 62, 31, 94, 47, 142, 71, 214, 107, 322, 161, 484, 242, 121, 364, 182, 91, 274,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;27, 82, 41, 124, 62, 31, 94, 47, 142, 71, 214, 107, 322, 161, 484, 242, 121, 364, 182, 91, 274,
                   137, 412, 206, 103, 310, 155, 466, 233, 700, 350, 175, 526, 263, 790, 395, 1186, 593, 1780, 890,
                   445, 1336, 668, 334, 167, 502, 251, 754, 377, 1132, 566, 283, 850, 425, 1276, 638, 319, 958,
                   479, 1438, 719, 2158, 1079, 3238, 1619, 4858, 2429, 7288, 3644, 1822, 911, 2734, 1367, 4102,
@@ -122,7 +122,7 @@ const Article = () => {
                   While-Schleifen
                 </h3>
                 <Paragraph>
-                  Eine Einschränkung primitiv-rekursiver Funktionen ist also, dass wir immer vor der Schleife
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Einschränkung primitiv-rekursiver Funktionen ist also, dass wir immer vor der Schleife
                   angeben müssen, wie oft diese durchlaufen werden soll. Es gibt also keine
                   `while`-Schleifen. Führen wir diese nun ein.
                 </Paragraph>
@@ -131,12 +131,27 @@ const Article = () => {
                   <code>
                     def While (condition, step):
                   </code>
+                  {" "}{" "}
+                  <code>
+                    def f(x):
+                  </code>
+                  {" "}{" "}
+                  <code>
+                    temp = x
+                  </code>
+                  {" "}{" "}
+                  <code>
+                    while (condition(temp)):
+                  </code>
+                  {" "}{" "}
+                  <code>
+                    temp = step(temp)
+                  </code>
+                  {" "}{" "}
+                  <code>
+                    return temp
+                  </code>
                   {" "}
-                  &ensp;`def f(x):`
-                  &ensp;&ensp;`temp = x`
-                  &ensp;&ensp;`while (condition(temp)):`
-                  &ensp;&ensp;&ensp;`temp = step(temp)`
-                  &ensp;&ensp;`return temp` 
                   &ensp;`return f`{" "}
                 </pre>
                 <div class="well well-lg numbered-exercise container">
@@ -144,7 +159,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Schreiben Sie mit Hilfe von `While`,{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie mit Hilfe von `While`,{" "}
                     <code>
                       PrimRec
                     </code>
@@ -152,8 +167,7 @@ const Article = () => {
                     <code>
                       Comp
                     </code>
-                    {" "}
-                    eine Funktion `collatzList`, die aus einer Zahl
+                    {" "}eine Funktion `collatzList`, die aus einer Zahl
                     die Collatz-Folge baut, also
                   </Paragraph>
                   <pre>

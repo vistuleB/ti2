@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Das Zeithierarchietheorem besagt, dass es zu jeder "vernünftigen" Komplexitätsfunktion $t: \N
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Zeithierarchietheorem besagt, dass es zu jeder "vernünftigen" Komplexitätsfunktion $t: \N
                   \rightarrow \N$
                   ein Entscheidungsproblem $L \subseteq \Sigma^
                   <b>
@@ -106,18 +106,18 @@ const Article = () => {
                     \Sigma^*$.
                     Dann gilt
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   f_&#123;U&#125; (\enc(M)x) = f_M(x) \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Weiterhin gilt: wenn $M$ auf $x$ innerhalb von $s$ Schritten terminiert, dann
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Weiterhin gilt: wenn $M$ auf $x$ innerhalb von $s$ Schritten terminiert, dann
                     terminiert $U$ auf $\enc(M)x$ innerhalb von
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   C \cdot |\enc(M)| \cdot (|x| + s)
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Schritten. Das $C$ ist hier eine{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schritten. Das $C$ ist hier eine{" "}
                     <i>
                       absolute Konstante
                     </i>
@@ -126,7 +126,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Dass es so ein $U$ gibt, hatten wir ja schon gesehen. Gehen wir aber noch einmal die
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dass es so ein $U$ gibt, hatten wir ja schon gesehen. Gehen wir aber noch einmal die
                   Zeitschranke durch. In einer vorbereitenden Phase bestimmt $U$ die Länge $l$ des längsten
                   Bandzeichen von $M$. Dann schreibt es das Eingabewort $x
                   <i>
@@ -137,14 +137,14 @@ const Article = () => {
                   werden,
                   werden mit einem $\texttt&#123;-&#125;$ gefüllt. Hier ein Beispiel für den Fall $l=4$:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \texttt&#123;#&#125;x_1 \texttt&#123;-&#125; \texttt&#123;-&#125; \texttt&#123;-&#125; \texttt&#123;#&#125; x_2 \texttt&#123;-&#125; \texttt&#123;-&#125;
                 \texttt&#123;-&#125; \texttt&#123;#&#125; x_3 \texttt&#123;-&#125; \texttt&#123;-&#125; \texttt&#123;-&#125; \texttt&#123;#&#125; \cdots \texttt&#123;#&#125; x_n
                 \texttt&#123;-&#125; \texttt&#123;-&#125; \texttt&#123;-&#125;
                 \texttt&#123;#&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Diese Vorbereitungsphase benötigt maximal $C \cdot |\enc(M)| \cdot |x|$ Schritte. Um nun einen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Diese Vorbereitungsphase benötigt maximal $C \cdot |\enc(M)| \cdot |x|$ Schritte. Um nun einen
                   Schritt von $M$ zu simulieren, müssen wir das gerade gelesene $M$-Zeichen $z$ auf Band 2
                   schreiben, so dass dann
                   dort $\enc(q)\texttt&#123;,&#125;\enc(z)$ steht. Das braucht $l+1$ Schritte.
@@ -158,21 +158,21 @@ const Article = () => {
                   Untere Schranken für Zeitkomplexität
                 </h2>
                 <Paragraph>
-                  Wir wollen nun eine Sprache definieren, die wir in $t(n)$ Schritten entscheiden können aber
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir wollen nun eine Sprache definieren, die wir in $t(n)$ Schritten entscheiden können aber
                   nicht deutlich schneller. Wir erinnern uns an $\halt$, die von der universellen Turingmaschine
                   $U$ akzeptierte Sprache:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \halt := L(U) =\&#123; \enc(M) w \ | \ M \textnormal&#123; akzeptiert &#125; w\&#125; \ .
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  und davon abgeleitete "Diagonalisierungssprache"
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und davon abgeleitete "Diagonalisierungssprache"
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \negdiag := \&#123; \enc(M) \in \Sigma^* \ | \ \enc(M) \enc(M) \not \in \halt\&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Wir haben gesehen, dass $\negdiag$ nicht entscheidbar ist. Nun wollen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben gesehen, dass $\negdiag$ nicht entscheidbar ist. Nun wollen
                   wir eine Version von $\negdiag$, die in $t$ Schritten entscheidbar ist,
                   aber nicht in sehr viel weniger. Dafür definieren wir uns ein{" "}
                   <i>
@@ -191,8 +191,7 @@ const Article = () => {
                       (Zeitbudgetiertes
                       Halteproblem).
                     </b>
-                    {" "}
-                    Sei $\Sigma$ ein endliches Alphabet. Wir definieren die Sprache
+                    {" "}Sei $\Sigma$ ein endliches Alphabet. Wir definieren die Sprache
                     $$\begin&#123;align*&#125;
                     \bhalt := \&#123; \enc(M) 1^b 0 x \ | \
                     U \textnormal&#123; akzeptiert $\enc(M)x$ innerhalb von $b$ Schritten&#125;
@@ -207,7 +206,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Bitte erinnern Sie sich daran, dass unsere Codierung $\enc(M)$ immer mit dem Sonderzeichen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bitte erinnern Sie sich daran, dass unsere Codierung $\enc(M)$ immer mit dem Sonderzeichen
                   $\texttt&#123;;&#125;$ endet, oder besser gesagt: mit der Codierung von $\texttt&#123;;&#125; \in \Lambda$ über
                   dem Alphabet $\Sigma$ selbst. Eine Turingmaschine kann also, gegeben ein Eingabewort $\enc(M)1^b
                   0 x$, dieses
@@ -228,8 +227,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Wir nehmen die universelle Turingmaschine $U$, die $k$-Band-Turingmaschinen simulieren kann,
+                    {" "}Wir nehmen die universelle Turingmaschine $U$, die $k$-Band-Turingmaschinen simulieren kann,
                     und statten sie mit einem
                     Stoppuhrband aus. Sie hat nun also $k+3$ Bänder. Sei $n = |\enc(M)| + b + 1 + |x|$ die Länge
                     des Eingabewortes.
@@ -247,10 +245,10 @@ const Article = () => {
                   </span>
                 </div>
                 <Paragraph>
-                  Sei nun $t: \N \rightarrow \N$ eine monoton steigende Funktion mit $t(n) \geq n$.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei nun $t: \N \rightarrow \N$ eine monoton steigende Funktion mit $t(n) \geq n$.
                   Wir definieren eine Zeitbudgetierte Version der Diagonalisierungssprache:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \bnegdiag := \&#123; \enc(M)1^m \ | \ \enc(M)1^&#123;b&#125; 0 \enc(M) 1^n \not \in \bhalt, \ b = t(|\enc(M)|+m) \&#125;
                 \end&#123;align*&#125;$$
                 <div
@@ -269,7 +267,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Sei $n := |\enc(M) + m|$ die Länge des Inputwortes.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei $n := |\enc(M) + m|$ die Länge des Inputwortes.
                   Wir können $\bnegdiag$ entscheiden, indem wir aus $\enc(M)1^m$ den String
                   $\enc(M)1^b 0 \enc(M) 1^m$ berechnen und dann die Turingmaschine für $\bhalt$ laufen lassen,
                   welche $k+3$ Bänder hat und selbst $O(2|\enc(M)| + b + 1 + m) = O(|\enc(M)| + b) = O(b)$
@@ -333,18 +331,17 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Wir nehmen an, es gäbe eine Turingmaschine $M$, die $\bnegdiag$ in Zeit $s$ entscheidet und
+                    {" "}Wir nehmen an, es gäbe eine Turingmaschine $M$, die $\bnegdiag$ in Zeit $s$ entscheidet und
                     leiten einen Widerspruch her. Sei $x := \enc(M)$. Wir wählen eine natürliche Zahl $m$,
                     deren genauen Wert wir weiter unten diskutieren und setzen $b := t(|x| + m)$. Wir fragen uns
                     nun: ist $x1^m \in \bnegdiag$?
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   x1^m \in \bnegdiag&amp;\Longleftrightarrow \enc(M) 1^b 0 x1^m \not \in \bhalt \\
                   &\Longleftrightarrow U \textnormal&#123; lehnt $\enc(M)x1^m$ innerhalb von $b$ Schritten ab&#125;
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Langsam nun. Sei $n := |\enc(M)|+m$ die Länge des Wortes $x1^m$.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Langsam nun. Sei $n := |\enc(M)|+m$ die Länge des Wortes $x1^m$.
                     Nach Annahme terminiert $M$ auf dem Eingabewort $x1^m$ innerhalb von
                     $s(n)$ Schritten. Wenn $U$ die Maschine $M$ simuliert, braucht sie
                     nach{" "}
@@ -357,30 +354,30 @@ const Article = () => {
                     = 2C \cdot |\enc(M)| \cdot s(|x|+m)$ Schritte.
                     Da $\lim_&#123;n \rightarrow \infty&#125; \frac&#123;s(n)&#125;&#123;t(n)&#125; = 0$ ist, ist auch{" "}
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   \lim_&#123;m \rightarrow \infty &#125;\frac&#123;2C \cdot |\enc(M)| \cdot s(|x|+m)&#125;&#123;t(|x|+m)&#125; = 0 \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Wenn wir also $m$ hinreichend groß wählen, dann ist dieser Bruch kleiner als $1$,
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir also $m$ hinreichend groß wählen, dann ist dieser Bruch kleiner als $1$,
                     und die Simulation terminiert also innerhalb von
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   2C \cdot |\enc(M)| \cdot s(|x|+m) \leq t(|x|+m) = b
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Schritten.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schritten.
                     Das heißt, dass die universelle Turingmaschine $U$ das Wort $\enc(M)x1^m$ innerhalb von $b$
                     Schritten ablehnt,
                     wenn sie es überhaupt irgendwann ablehnt. Also schließen wir weiter:
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   x1^m \in \bnegdiag&amp;\Longleftrightarrow \enc(M) 1^b 0 x1^m \not \in \bhalt \\
                   &\Longleftrightarrow U \textnormal&#123; lehnt $\enc(M)x1^m$ innerhalb von $b$ Schritten ab&#125; \\
                   &\Longleftrightarrow U \textnormal&#123; lehnt $\enc(M)x1^m$ ab&#125; \\
                   &amp;\Longleftrightarrow M \textnormal&#123; lehnt $x1^m$ ab&#125; \\
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    und da ist er, der Widerspruch: $x1^m \in \bnegdiag \Longleftrightarrow f_M(x1^m) =
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und da ist er, der Widerspruch: $x1^m \in \bnegdiag \Longleftrightarrow f_M(x1^m) =
                     \texttt&#123;reject&#125;$, entgegen unserer Annahme, dass $M$ die Sprache $\bnegdiag$ entscheidet.
                     <span class="qed">
                       \(\square\)
@@ -388,7 +385,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Zusammenfassend erhalten wir die "Rohversion" des Zeithierarchiesatzes:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zusammenfassend erhalten wir die "Rohversion" des Zeithierarchiesatzes:
                 </Paragraph>
                 <div class="well container theorem">
                   <Paragraph>
@@ -399,13 +396,12 @@ const Article = () => {
                     <b>
                       (Zeithierarchiesatz, Rohversion).
                     </b>
-                    {" "}
-                    Seien $s, t: \N \rightarrow \N$
+                    {" "}Seien $s, t: \N \rightarrow \N$
                     zeitkonstruierbare Funktionen mit $s(n) \geq n$ und
                     $s \in o(t)$ (also $\lim_&#123;n \rightarrow \infty&#125; s(n)/t(n)
                     = 0$). Dann gilt{" "}
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   \TIME_k(s) \subsetneq \TIME_&#123;k+3&#125;(t)
                   \end&#123;align*&#125;$$
                   <Paragraph>
@@ -413,13 +409,13 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Zusammen mit der Simulation von $k$-Band-TMs durch $2$-Band-TMs folgt nun
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zusammen mit der Simulation von $k$-Band-TMs durch $2$-Band-TMs folgt nun
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \TIME(s) \subsetneq \TIME_2(s \log s) \subsetneq \TIME_5(t \log t)
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  oder, alternativ ausgedrückt:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;oder, alternativ ausgedrückt:
                 </Paragraph>
                 <div class="well container theorem">
                   <Paragraph>
@@ -430,13 +426,12 @@ const Article = () => {
                     <b>
                       (Zeithierarchiesatz).
                     </b>
-                    {" "}
-                    Seien $s, t: \N \rightarrow \N$ mit $s(n) \geq n$ und $s \log s \in o(t)$. Dann gilt
+                    {" "}Seien $s, t: \N \rightarrow \N$ mit $s(n) \geq n$ und $s \log s \in o(t)$. Dann gilt
                     $\TIME(s) \subsetneq \TIME(t)$.
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Bitte beachten Sie, dass wir diese Version nicht vollständig bewiesen habe, da ich
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bitte beachten Sie, dass wir diese Version nicht vollständig bewiesen habe, da ich
                   die effizientere Simulation einer $k$-Band-Turingmaschine durch eine $2$-Band-Turingmaschine,
                   also $\TIME
                   <i>
@@ -455,7 +450,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Zeigen Sie, dass $n \mapsto n^2$ und $n \mapsto 2^n$ zeitkonstruierbar sind.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass $n \mapsto n^2$ und $n \mapsto 2^n$ zeitkonstruierbar sind.
                   </Paragraph>
                 </div>
               </div>

@@ -52,7 +52,7 @@
                             class numbered-title
 
                             Beispiel
-                        Sei \(L\) die Sprache aller Wörter über dem Alphabet \(\Sigma = \{a,b\}\), die die Form
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L\) die Sprache aller Wörter über dem Alphabet \(\Sigma = \{a,b\}\), die die Form
                         \(a^n b^n\) haben; also eine beliebig lange Folge von \(a\)s, gefolgt von genau so vielen
                         \(b\)s.
                         Hier ist eine kontextfreie Grammatik für \(L\):
@@ -62,7 +62,7 @@
                         \end{align*}
                         |> p
 
-                            Können wir eine reguläre Grammatik für \(L\) schreiben? Irgendwie klingt das nicht
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Können wir eine reguläre Grammatik für \(L\) schreiben? Irgendwie klingt das nicht
                             plausibel.
                             Reguläre Grammatiken können ja immer nur ein Wort von links nach rechts erzeugen; für \(L\)
                             scheint
@@ -73,12 +73,12 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            Versuchen Sie ein paar Minuten, eine reguläre Grammatik für \(L\) zu schreiben oder
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Versuchen Sie ein paar Minuten, eine reguläre Grammatik für \(L\) zu schreiben oder
                             versuchen Sie,
                             zu argumentieren, dass das nicht möglich ist.
                         |> p
 
-                            Wir sind nun also recht überzeugt, dass \(L\) nicht regulär ist. Nur, wie können wir das
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir sind nun also recht überzeugt, dass \(L\) nicht regulär ist. Nur, wie können wir das
                             formal beweisen?
                             Vielleicht könnten wir annehmen, dass es eine reguläre Grammatik \(G = (\{a,b\}, N, P, S)\)
                             gibt und dann
@@ -87,7 +87,7 @@
                             Nichtterminale \(X\) und \(Y\) weiter betrachten.
                         |> p
 
-                            Zu Hilfe kommt uns die Tatsache, dass wir für reguläre Sprachen nun viele äquivalente
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zu Hilfe kommt uns die Tatsache, dass wir für reguläre Sprachen nun viele äquivalente
                             Modelle gefunden haben:
                         |> ol
                             |> li
@@ -119,7 +119,7 @@
                             Modelle. Also:
                         |> p
 
-                            Angenommen, \(L\) wäre regulär. Dann gäbe es auch einen endlichen Automaten \(M = (\{a,b\},
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Angenommen, \(L\) wäre regulär. Dann gäbe es auch einen endlichen Automaten \(M = (\{a,b\},
                             Q, q_0, F, \delta)\),
                             der \(L\) akzeptiert. Wir müssen zeigen, dass das nicht sein kann. Also dem Automaten \(M\)
                             einen Fehler nachweisen.
@@ -131,7 +131,7 @@
                             Unser Plan ist also, das Gedächtnis des Automaten zu überfordern.
                         |> p
 
-                            Setzen wir diesen Plan in die Tat um. Wir füttern dem Automaten eine Folge von
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Setzen wir diesen Plan in die Tat um. Wir füttern dem Automaten eine Folge von
                             \(aaaaaaa...\) und
                             beobachten die Zustandsfolge \(q_0, q_1, q_2, \dots\), die sich daraus ergibt. Formal:
                             \begin{align*}
@@ -146,7 +146,7 @@
                             \(i\) viele oder \(j\) viele \(a\)'s gelesen hat. Nun schlagen wir zu:
                         |> p
 
-                            Wir füttern den Automaten mit dem Wort \(a^i b^i\). Der Automat landet in einem Zustand
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir füttern den Automaten mit dem Wort \(a^i b^i\). Der Automat landet in einem Zustand
                             \(q^*\):
                             \begin{align*}
                             q_0 \step{a^i} q_i \step{b^i} q^*
@@ -171,25 +171,24 @@
                         |> div
                             style text-align:center
 
-                            Wenn \(M\) ein endlicher Automat ist, dann gilt \(L(M) \ne L\). Daher ist \(L\) keine
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn \(M\) ein endlicher Automat ist, dann gilt \(L(M) \ne L\). Daher ist \(L\) keine
                             reguläre Sprache.
                         |> p
 
-                            Zusammenfassend lautet unser Argument: wenn der Automat die Präfixe \(\alpha\) und
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zusammenfassend lautet unser Argument: wenn der Automat die Präfixe \(\alpha\) und
                             \(\alpha'\) nicht
                             unterscheiden kann, dann kann er die Wörter \(\alpha \beta\) und \(\alpha' \beta\) auch
                             nicht unterscheiden;
                             er muss also entweder beide akzeptieren oder beide ablehnen.
                     |> p
 
-                        Das Argument, dass die Sprache \(\{a^nb^n \ | \ n \geq 0\}\) nicht regulär ist, war nicht allzu
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Argument, dass die Sprache \(\{a^nb^n \ | \ n \geq 0\}\) nicht regulär ist, war nicht allzu
                         schwer, fühlt sich
                         aber etwas _ad hoc_ an, also für diesen Fall maßgeschneidert. Es stellt sich aber heraus,
                         dass man
                         bei _allen_ nicht-regulären Sprachen ein solches Argument anführen kann. Die Hauptarbeit
                         besteht nun darin, Konzepte wie _der Automat kann \(\alpha\) nicht von \(\alpha'\)
-                        unterscheiden_
-                        und _der Automat muss aber \(\gamma\) von \(\gamma'\) unterscheiden können_ zu
+                        unterscheiden_                        und _der Automat muss aber \(\gamma\) von \(\gamma'\) unterscheiden können_ zu
                         formalisieren.
                     |> div
                         class well container theorem
@@ -197,8 +196,7 @@
                             class numbered-title
 
                             Definition
-                        *\(M\)-Äquivalenz*
-                        Sei \(M= (\Sigma, Q, \qstart, F, \delta\) ein (deterministischer) endlicher Automat. Zwei Wörter
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*\(M\)-Äquivalenz*                        Sei \(M= (\Sigma, Q, \qstart, F, \delta\) ein (deterministischer) endlicher Automat. Zwei Wörter
                         \(\alpha, \beta \in \Sigma^* \) sind
                         _\(M\)-äquivalent_, geschrieben
                         \begin{align*}
@@ -208,14 +206,14 @@
                         den Automaten in den gleichen Zustand bringen.
                     |> p
 
-                        Wir können bereits ein bisschen über \(\equiv_M\) aussagen. Wenn beispielsweise \(M\) ein
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können bereits ein bisschen über \(\equiv_M\) aussagen. Wenn beispielsweise \(M\) ein
                         endlicher Automat für die Sprache \(L\) ist und
                         \(\alpha \equiv_M \beta\) gilt, dann sind entweder beide Wörter in \(L\) (nämlich
                         wenn \(\hat{\delta}(\qstart, \alpha)\) ein akzeptierender Zustand ist)
                         oder beide Wörter nicht in \(L\) (falls es kein akzeptierender Zustand ist).
                     |> p
 
-                        Auch sehen wir: wenn \(\alpha \equiv_M \beta\), dann gilt \(\alpha\gamma \equiv_M \beta\gamma\):
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Auch sehen wir: wenn \(\alpha \equiv_M \beta\), dann gilt \(\alpha\gamma \equiv_M \beta\gamma\):
                         \(\alpha\) und \(\beta\) brigen den Automaten in den gleichen Zustand, und danach liest er in
                         beiden
                         Fällen das Wort \(\gamma\), endet also in beiden Fällen im gleichen Zustand.
@@ -225,8 +223,7 @@
                             class numbered-title
 
                             Definition
-                        *\(L\)-Äquivalenz*
-                        Sei \(L \subseteq \Sigma^*\) eine Sprache. Zwei Wörter \(\alpha, \beta \in \Sigma^*\) sind
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*\(L\)-Äquivalenz*                        Sei \(L \subseteq \Sigma^*\) eine Sprache. Zwei Wörter \(\alpha, \beta \in \Sigma^*\) sind
                         _\(L\)-äquivalent_, geschrieben
                         \begin{align*}
                         \alpha \equiv_L \beta \ ,
@@ -240,13 +237,12 @@
                             class numbered-title
 
                             Beobachtung
-                        Sei \(L\) die vom endlichen Automaten \(M\) akzeptierte Sprache.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L\) die vom endlichen Automaten \(M\) akzeptierte Sprache.
                         Wenn \(\alpha \equiv_M \beta\) gilt, dann auch \(\alpha \equiv_L \beta\).
                     |> div
                         class well container
 
-                        *Beweis.*
-                        Nehmen wir an \(\alpha \equiv_M \beta\); es gibt also einen Zustand \(q\) mit
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Nehmen wir an \(\alpha \equiv_M \beta\); es gibt also einen Zustand \(q\) mit
                         \begin{align*}
                         \qstart \Step{\alpha} q \textnormal{ und } \qstart \Step{\beta} q
                         \end{align*}
@@ -283,7 +279,7 @@
                             class numbered-title
 
                             Definition
-                        Sei \(L \subseteq \Sigma^*\). Der _Index von \(L\)_ ist die Anzahl von Äquivalenzklassen
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L \subseteq \Sigma^*\). Der _Index von \(L\)_ ist die Anzahl von Äquivalenzklassen
                         der Relation
                         \(\equiv_L\), also die größtmögliche Anzahl gegenseitig nichtäquivalenter Wörter
                         \(\alpha_1, \alpha_2, \dots \in \Sigma^*\); dies ist möglicherweise unendlich.
@@ -293,15 +289,14 @@
                             class numbered-title
 
                             Beobachtung
-                        Sei \(M\) ein endlicher Automat von \(L\) die von ihm akzeptierte Sprache.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(M\) ein endlicher Automat von \(L\) die von ihm akzeptierte Sprache.
                         Dann ist der Index von \(L\) höchstens die Anzahl \(|Q|\) von Zuständen.
                         Im Umkehrschluss heißt das: wenn \(L\) unendlichen Index hat, dann gibt es keinen endlichen
                         Automaten, der \(L\) akzeptiert; \(L\) ist demnach nicht regulär.
                     |> div
                         class well container
 
-                        *Beweis.*
-                        Wenn der Index von \(L\) größer wäre als \(|Q|\), dann hieße das, dass wir
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Wenn der Index von \(L\) größer wäre als \(|Q|\), dann hieße das, dass wir
                         \(k := |Q|+1\) nicht \(L\)-äquivalente \(\alpha_1, \dots, \alpha_{|Q|+1}\) finden können.
                         Sei \(q_i := \hat{\delta}(\qstart, \alpha_i)\) der Zustand, in dem der Automat landet,
                         wenn er das Eingabewort \(\alpha_i\) abarbeitet. Die Zustände
@@ -328,10 +323,10 @@
                             class numbered-title
 
                             Beispiel
-                        Die Sprache \(L = \{a^n b^n \ | \ n \geq 0\}\) ist nicht regulär.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Sprache \(L = \{a^n b^n \ | \ n \geq 0\}\) ist nicht regulär.
                         |> p
 
-                            In der Tat hat diese Sprache unendlichen Index. Die Wörter \(a, aa, aaa, aaaa, ...\) sind
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In der Tat hat diese Sprache unendlichen Index. Die Wörter \(a, aa, aaa, aaaa, ...\) sind
                             alle
                             nicht \(L\)-äquivalent. Für \(a^i\) und \(a^j\) könnten wir zum Beispiel \(\gamma := b^i\)
                             wählen,
@@ -342,7 +337,7 @@
                             class numbered-title
 
                             Beispiel
-                        Sei \(L \subseteq \{a,b\}^*\) die Sprache aller Palindrome. Also der Wörter \(\alpha\) mit
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L \subseteq \{a,b\}^*\) die Sprache aller Palindrome. Also der Wörter \(\alpha\) mit
                         \(\alpha = \alpha^R\), wobei \(\alpha^R\) das Wort \(\alpha\) in umgekehrter Reihnfolge gelesen
                         ist.
                         Die Sprache \(L\) ist ein klassisches Beispiel einer kontextfreien Sprache:
@@ -357,7 +352,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Betrachten Sie die Sprache aller \(\alpha\in \{a,b\}^*\), die gleich viele \(a\)'s wie \(b\)'s
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten Sie die Sprache aller \(\alpha\in \{a,b\}^*\), die gleich viele \(a\)'s wie \(b\)'s
                         haben:
                         \begin{align*}
                         S \rightarrow \epsilon \ | \ aSbS \ | \ bSaS
@@ -373,16 +368,15 @@
                             class numbered-title
 
                             Theorem
-                        Eine Sprache \(L \subseteq \Sigma^*\) ist genau dann regulär, wenn sie endlichen Index hat.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Sprache \(L \subseteq \Sigma^*\) ist genau dann regulär, wenn sie endlichen Index hat.
                     |> div
                         class well container
 
-                        *Beweis.*
-                        Eine Richtung haben wir bereits weiter oben gezeigt: wenn es zu \(L\) einen endlichen Automaten
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Eine Richtung haben wir bereits weiter oben gezeigt: wenn es zu \(L\) einen endlichen Automaten
                         mit Zustandsmenge \(Q\) gibt, dann ist der Index von \(L\) höchstens \(|Q|\).
                         |> p
 
-                            Für die andere Richtung nehmen wir an, dass der Index von \(L\) endlich ist,
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für die andere Richtung nehmen wir an, dass der Index von \(L\) endlich ist,
                             sagen wir \(n \in \N\). Es gibt also
                             \(\alpha_1,\dots,\alpha_n\), die alle paarweise nicht \(L\)-äquivalent sind.
                             Allerdings ist \(n\) ist auch die größte solche Zahl; dies heißt, jedes weitere
@@ -402,7 +396,7 @@
                             Partitionierung von \(\Sigma^*\).
                         |> p
 
-                            Beachten Sie: wenn \(\alpha \equiv_L \beta\) und \(x \in \Sigma\), dann gilt auch
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie: wenn \(\alpha \equiv_L \beta\) und \(x \in \Sigma\), dann gilt auch
                             \(\alpha x \equiv \beta x\). (Überlegen Sie sich, warum!) Auch gilt für jedes \(1 \leq i
                             \leq n\):
                             entweder sind alle Wörter in \(A_i\) in der Sprache, also \(A_i \subseteq L\) oder
@@ -439,7 +433,7 @@
                             \(\square\)
                     |> p
 
-                        Wir können den Index nicht nur verwenden, um zu argumentieren, dass eine Sprache nicht regulär
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können den Index nicht nur verwenden, um zu argumentieren, dass eine Sprache nicht regulär
                         ist, sondern auch, um zu zeigen,
                         dass eine bestimmte Menge an Zuständen optimal ist.
                     |> div
@@ -448,13 +442,13 @@
                             class numbered-title
 
                             Beispiel
-                        Der nichtdeterministische endliche Automat
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der nichtdeterministische endliche Automat
                         |> figure
                             |> img
                                 style height:10em
                                 src ../img/finite-state-automata/nfsm-example-01.svg
                                 loading lazy
-                        akzeptiert die Sprache \(L\) aller \(\alpha \in \{0,1\}^n\), deren viertletzter Buchstabe eine 1
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;akzeptiert die Sprache \(L\) aller \(\alpha \in \{0,1\}^n\), deren viertletzter Buchstabe eine 1
                         ist.
                         Unsere Konstruktion, ihn deterministisch zu machen, würde 16 Zustände erzeugen. Ist dies
                         optimal? Ja, ist es:
@@ -464,12 +458,11 @@
                                 class numbered-title
 
                                 Behauptung
-                            Die Sprache \(L\) hat Index 16. Alle Wörter in \(\{0,1\}^4\) sind nicht \(L\)-äquivalent.
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Sprache \(L\) hat Index 16. Alle Wörter in \(\{0,1\}^4\) sind nicht \(L\)-äquivalent.
                         |> div
                             class well subtheorem
 
-                            *Beweis.*
-                            Seien \(\alpha:= a_1 a_2 a_3 a_4, \beta := b_1 b_2 b_3 b_4 \in \{0,1\}^4\) zwei verschiedene
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                            Seien \(\alpha:= a_1 a_2 a_3 a_4, \beta := b_1 b_2 b_3 b_4 \in \{0,1\}^4\) zwei verschiedene
                             Wörter. Dann gibt es ein
                             \(1 \leq i \leq 4\) mit \(a_i = 0\) und \(b_i = 1\) (oder umgekehrt).
                             Sei \(\gamma = 0^{5-i}\), also ein String bestehend aus \(5-i\) Nullen. Das viertletzte
@@ -485,7 +478,7 @@
                                 \(\square\)
                         |> p
 
-                            Allgemeiner: sei \(L\) die Sprache aller \(\alpha \in \{0,1\}^n\), deren
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Allgemeiner: sei \(L\) die Sprache aller \(\alpha \in \{0,1\}^n\), deren
                             \(n\)-letztes Zeichen eine 1 ist. Dann gibt es für \(L\) einen nichtdeterministischen
                             endlichen Automaten mit \(n+1\) Zuständen und einen determinisitschen mit
                             \(2^n\) Zuständen. Es gibt keinen determinisitschen Automaten mit weniger

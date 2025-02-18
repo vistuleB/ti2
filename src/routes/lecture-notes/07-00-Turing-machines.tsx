@@ -38,7 +38,7 @@ const Article = () => {
                 </span>
               </h1>
               <Paragraph>
-                Wir haben in den vorherigen Kapitel mit primitiver Rekursion und \(\lambda\)-Kalkül
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben in den vorherigen Kapitel mit primitiver Rekursion und \(\lambda\)-Kalkül
                 zwei Modelle kennengelernt, die den Begriff der{" "}
                 <i>
                   Berechnung

@@ -39,21 +39,21 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Im letzten Teilkapitel haben wir gesehen, wie wir jede Turingmaschine $M
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im letzten Teilkapitel haben wir gesehen, wie wir jede Turingmaschine $M
                   $mit
                   Eingabealphabet $\Sigma$ codieren können als
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \enc(M) \in \Lambda^* \ ,
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  also als String über dem Codierungsalphabet
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;also als String über dem Codierungsalphabet
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \Lambda := \writelambda
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Diese Codierungsschema enthält implizit Codierungsfunktionen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Diese Codierungsschema enthält implizit Codierungsfunktionen
                   $\enc
                   <i>
                     Q : Q \rightarrow \&#123;0,1\&#125;^+$ und $\enc
@@ -65,20 +65,20 @@ const Article = () => {
                   übersetzen.
                   Für eine Konfiguration
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 C = u_1 \dots u_m q v_1 \dots v_n
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  der Maschine $M$ definieren wir die Codierung von $C$ als
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;der Maschine $M$ definieren wir die Codierung von $C$ als
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \enc(C) := \enc_\Gamma(u_1) \texttt&#123;#&#125; \enc_\Gamma(u_2) \dots \texttt&#123;#&#125;
                 \enc_\Gamma(u_m)\texttt&#123;#&#125;
                 \enc_Q(q) \texttt&#123;#&#125; \enc_\Gamma(v_1)\texttt&#123;#&#125; \dots \texttt&#123;#&#125;
                 \enc_\Gamma(v_n) \in \Lambda^* \ .
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Das ist alles nicht besonders tiefgründig und dient allein dazu,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das ist alles nicht besonders tiefgründig und dient allein dazu,
                   sicherzustellen, dass wir
                   die Konfigurationen von $M$ darstellen können in dem Alphabet $\Lambda$,
                   das
@@ -90,8 +90,7 @@ const Article = () => {
                   <i>
                     jede
                   </i>
-                  {" "}
-                  Turingmaschine
+                  {" "}Turingmaschine
                   $M$ mit Eingabealphabet $\Sigma$ und{" "}
                   <i>
                     jede
@@ -105,7 +104,7 @@ const Article = () => {
                   können.
                 </Paragraph>
                 <Paragraph>
-                  Eine Turingmaschine simulieren heißt nun, einen String
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Turingmaschine simulieren heißt nun, einen String
                   $\enc(M)\texttt&#123;;&#125;w$ mit $w \in \Sigma^
                   <b>
                     $ zu lesen und
@@ -177,9 +176,9 @@ const Article = () => {
                     </li>
                   </ul>
                   <Paragraph>
-                    $U$ akzeptiert also die Sprache
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$U$ akzeptiert also die Sprache
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   \&#123; c w \ | \ w \in \Sigma^* \textnormal&#123; und &#125; c = \enc(M) \textnormal&#123;
                   und $M$ akzeptiert $w$&#125; \&#125; \ .
                   \end&#123;align*&#125;$$
@@ -188,17 +187,12 @@ const Article = () => {
                   style="margin-bottom:1em"
                   class="alert-info container">
                   <Paragraph>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Ein technischer aber letztendlich irrelevanter Punkt:
                       {" "}
                     </b>
-<<<<<<< HEAD
-                    {" "}
-                    &ensp;die Mengen
-=======
                     {" "}die Mengen
->>>>>>> 612feea53413697e7003d958d020c4dff50555cc
                     $Q$ und $\Gamma$ der Turingmaschine $M$ können ja beliebige
                     (endliche) Mengen sein,
                     und weder $\Lambda$ noch die Turingmaschine $U$ haben "Kenntnis"
@@ -215,7 +209,7 @@ const Article = () => {
                     Endkonfiguration von $U$.
                   </Paragraph>
                   <Paragraph>
-                    Des weiteren gehen wir davon aus, dass das Blank-Symbol $\Box$
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Des weiteren gehen wir davon aus, dass das Blank-Symbol $\Box$
                     für alle
                     Turingmaschinen $M$ mit Eingabealphabet $\Sigma$ das gleiche
                     ist. Auch
@@ -239,8 +233,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Den Beweis in allen Details zu führen hieße, die Maschine $U$
+                    {" "}Den Beweis in allen Details zu führen hieße, die Maschine $U$
                     konkret als Turingmaschine
                     zu implementieren. Wir tun dies nicht. Wir beschränken uns auf
                     eine High-Level-Beschreibung

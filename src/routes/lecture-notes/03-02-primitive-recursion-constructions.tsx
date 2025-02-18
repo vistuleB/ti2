@@ -57,8 +57,7 @@ const Article = () => {
                 <code>
                   mult
                 </code>
-                {" "}
-                in der Schleifenform, wie sie die primitive Rekursion zulässt, und schreiben in Orange
+                {" "}in der Schleifenform, wie sie die primitive Rekursion zulässt, und schreiben in Orange
                 auch gleich die Funktionen \(g\) und \(h\) dazu:
                 <pre class="container">
                   def mult(t,x):
@@ -66,14 +65,14 @@ const Article = () => {
                   <span class="comment">
                     = zero(x)
                   </span>
-                  for i in range(t):
+                  &ensp;&ensp;&ensp;&ensp;for i in range(t):
                   temp = add(temp,x){" "}
                   <span class="comment">
                     = Comp(add, p_0, p2) (temp,i,x)
                   </span>
-                  return temp
+                  &ensp;&ensp;&ensp;&ensp;return temp
                 </pre>
-                erinnern Sie sich daran: \(h\) muss immer eine Funktion in der lokalen Variable temp,
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;erinnern Sie sich daran: \(h\) muss immer eine Funktion in der lokalen Variable temp,
                 der Laufvariable \(i\) und \(\vec&#123;x&#125;\) sein. Daher:
                 $$\begin&#123;align*&#125;
                 &#123;\rm mult&#125; = \primrec(\zero, \comp(&#123;\rm add&#125;, \pi_0, \pi_2))
@@ -96,7 +95,7 @@ const Article = () => {
                   <span class="comment">
                     = one()
                   </span>
-                  for i in range(t):
+                  &ensp;&ensp;&ensp;&ensp;for i in range(t):
                   temp = mult(temp,i+1){" "}
                   <span class="comment">
                     = Comp(mult, p
@@ -105,13 +104,13 @@ const Article = () => {
                     </i>
                     1)) (temp,i)
                   </span>
-                  return temp
+                  &ensp;&ensp;&ensp;&ensp;return temp
                 </pre>
-                Wir können nicht einfach \(i+1\) schreiben! Wir müssen dies via \(\comp(\succ,\pi_1)\) konstruieren.
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können nicht einfach \(i+1\) schreiben! Wir müssen dies via \(\comp(\succ,\pi_1)\) konstruieren.
                 Denn: die Funktion \(h\) bekommt \(&#123;\rm temp&#125;, i, \vec&#123;x&#125;\) als Input; \(\pi_1\) gibt
                 uns davon das \(i\) zurück und \(\comp(\succ, \pi_1)\) gibt uns \(i+1\).
                 <Paragraph>
-                  Operationen wie \(\pred: t \mapsto t-1\) und \(&#123;\rm minus&#125;\)
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Operationen wie \(\pred: t \mapsto t-1\) und \(&#123;\rm minus&#125;\)
                   sind konzeptuell nur ein bisschen anders. Das liegt auch daran,
                   dass wir keine negativen Zahlen haben. Was ist
                   \(\pred(0)\)? Wir definieren das als 0. So können wir
@@ -123,14 +122,14 @@ const Article = () => {
                   <span class="comment">
                     = zero()
                   </span>
-                  for i in range(t):
+                  &ensp;&ensp;&ensp;&ensp;for i in range(t):
                   temp = i{" "}
                   <span class="comment">
                     = p1 (temp,i){" "}
                   </span>
-                  return temp
+                  &ensp;&ensp;&ensp;&ensp;return temp
                 </pre>
-                In Worten: wenn \(t=0\), dann geben wir einfach \(\zero()\)
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In Worten: wenn \(t=0\), dann geben wir einfach \(\zero()\)
                 zurück, also \(0\). Ansonsten durchlaufen wir die Schleife \(t\) mal;
                 der letzte Schleifenindex ist \(t-1\), und das ist dann auch der Wert
                 von temp, der zurückgegeben wird. Daher:
@@ -171,14 +170,14 @@ const Article = () => {
                   <span class="comment">
                     = zero()
                   </span>
-                  for i in range(t):
+                  &ensp;&ensp;&ensp;&ensp;for i in range(t):
                   temp = 1{" "}
                   <span class="comment">
                     = one{" "}
                   </span>
-                  return temp
+                  &ensp;&ensp;&ensp;&ensp;return temp
                 </pre>
-                und somit
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und somit
                 $$\begin&#123;align*&#125;
                 &#123;\rm isPositive&#125; = \primrec(\zero, &#123;\rm one&#125;)
                 \end&#123;align*&#125;$$
@@ -194,7 +193,7 @@ const Article = () => {
                 mit \(+, *, -\), auch keine schöne rekursive Formel zur Hand.
                 Es handelt sich um ein Suchproblem:
                 <div style="text-align:center">
-                  \(\floor&#123;\sqrt&#123;x&#125;&#125;\) ist die größte natürliche Zahl \(i\) mit
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(\floor&#123;\sqrt&#123;x&#125;&#125;\) ist die größte natürliche Zahl \(i\) mit
                   \(i^2 \leq x\).
                 </div>
                 <Paragraph>
@@ -202,11 +201,11 @@ const Article = () => {
                   gilt:{" "}
                 </Paragraph>
                 <div style="text-align:center">
-                  \(\floor&#123;\sqrt&#123;x&#125;&#125;\) ist die größte natürliche Zahl \(i \in \&#123;0,1,\dots,x\&#125;\) mit
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(\floor&#123;\sqrt&#123;x&#125;&#125;\) ist die größte natürliche Zahl \(i \in \&#123;0,1,\dots,x\&#125;\) mit
                   \(i^2 \leq x\).
                 </div>
                 <Paragraph>
-                  Das Prädikat
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Prädikat
                   $$\begin&#123;align*&#125;
                   &#123;\rm iSquareLessEqualX &#125; (i,x)&amp;= [ i^2 \leq x ]
                   \end&#123;align*&#125;$$
@@ -222,7 +221,7 @@ const Article = () => {
                   <span class="comment">
                     = zero(x)
                   </span>
-                  for i in range(t):
+                  &ensp;&ensp;&ensp;&ensp;for i in range(t):
                   temp = ifThenElse(iSquareLessEqualX(i,x), i, temp){" "}
                   <span class="comment">
                     = Comp(ifThenElse, Comp(iSquareLessEqual, p
@@ -235,7 +234,7 @@ const Article = () => {
                     </i>
                     0) (temp,i,x)
                   </span>
-                  return temp
+                  &ensp;&ensp;&ensp;&ensp;return temp
                 </pre>
                 <Paragraph>
                   Was geht hier vor? Wenn
@@ -243,7 +242,7 @@ const Article = () => {
                   Ansonsten belassen wir es beim alten Wert; der endgültige Wert von temp ist
                   also das letzte \(i\), für das das Prädikat True wahr.
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 &#123;\rm largestIbelowTwithISquareLessEqualX = \primrec(zero,
                 \comp(ifThenElse, \comp(iSquareLessEqual, \pi_1, \pi_2), \pi_1, \pi_0))&#125;
                 \end&#123;align*&#125;$$
@@ -278,7 +277,7 @@ const Article = () => {
                 <Paragraph>
                   und somit können wir sqrt schreiben als
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 &#123;\rm sqrt&#125; = &#123;\rm LargestLessThan&#125; (\pi_0, &#123;\rm iSquareLessEqual&#125;)
                 \end&#123;align*&#125;$$
                 <h2>
@@ -307,13 +306,13 @@ const Article = () => {
                   b = c
                   return a
                 </pre>
-                Wir führen hier zwei lokale Variable, \(a\) und \(b\). Das \(c\) könnten
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir führen hier zwei lokale Variable, \(a\) und \(b\). Das \(c\) könnten
                 wir mit diesem schönen Trick eliminieren:
                 <pre class="container">
                   b = a+b
                   a = b-a{" "}
                 </pre>
-                Doch selbst dann hätten wir immer noch zwei lokale Variable.
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Doch selbst dann hätten wir immer noch zwei lokale Variable.
                 Die Fibonacci-Zahlen rekursiv per
                 {" "}
                 <code>
@@ -333,7 +332,7 @@ const Article = () => {
                 {" "}als neue Datenstruktur
                 verwenden.
                 <Paragraph>
-                  Erinnern Sie sich: die primitive Rekursion stellt uns als Datentyp von Haus aus
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Erinnern Sie sich: die primitive Rekursion stellt uns als Datentyp von Haus aus
                   nur die natürlichen Zahlen zur Verfügung. Alles andere müssen wir nach einem
                   selbst gewählten Schema codieren. Bei Booleschen Werten war es einfach.
                   Wie steht es mit{" "}
@@ -348,7 +347,7 @@ const Article = () => {
                   &ensp;haben wir
                   die bijektive Funktion
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \pair : \N^2&amp;\rightarrow \N \\
                 (x,y)&amp;\mapsto &#123;x + y + 1 \choose 2&#125; + x
                 \end&#123;align*&#125;$$
@@ -360,19 +359,19 @@ const Article = () => {
                   <span class="comment">
                     = zero()
                   </span>
-                  for i in range(t):
+                  &ensp;&ensp;&ensp;&ensp;for i in range(t):
                   temp = add(temp,i){" "}
                   <span class="comment">
                     = Comp(add, p0, p1)
                   </span>
                 </pre>
-                und somit
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und somit
                 $$\begin&#123;align*&#125;
                 &#123;\rm choose2&#125;&amp;= \primrec(\zero, \comp(&#123;\rm add&#125;,\pi_0,\pi_1)) \\
                 \pair&amp;= \comp(&#123;\rm add&#125;, \comp(&#123;\rm choose2&#125;, \comp(&#123;\rm add&#125;, \pi_0, \comp(\succ, \pi_1)), \pi_0)
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Um die Umkehrfunktionen \(\first, \second\) zu implementieren, die uns aus
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um die Umkehrfunktionen \(\first, \second\) zu implementieren, die uns aus
                   \(\pair(x,y)\) wieder \(x\) und \(y\) berechnen, bestimmen wir erst
                   den Wert von \(x+y\). Wenn \(\pair(x,y) = n\) gilt und \(x+y=i)\) ist, dann ist
                   $$\begin&#123;align*&#125;
@@ -382,14 +381,14 @@ const Article = () => {
                   und somit ist \(x+y\) der größte Wert von \(i\), so dass \(n \geq \pair(0,i)\) ist.
                   Aus \(x+y\) und \(&#123;x+y+1 \choose 2&#125; + x\) können wir dann leicht \(x\) und \(y\) berechnen:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 &#123;\rm getXplusY&#125;&amp;= &#123;\rm LargestLessThan&#125;(\pi_0, \comp(&#123;\rm greaterEqual&#125;, \pi_1, \comp(\pair,
                 \zero, \pi_0)))\\
                 \first&amp;= \comp(&#123;\rm minus&#125;, \pi_0, \comp(\pair, \zero, &#123;\rm getXplusY&#125;))\\
                 \second&amp;= \comp(&#123;\rm minus&#125;, &#123;\rm getXplusY&#125;, \first)
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Listen können wir implementieren, indem wir Paare verschachtelt zusammenhängen,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Listen können wir implementieren, indem wir Paare verschachtelt zusammenhängen,
                   z.B. \([5,7,9]\) wird zu{" "}
                   <span style="color:red">
                     \(\pair(5, \pair(7, 9))\)
@@ -419,17 +418,17 @@ const Article = () => {
                   </code>
                 </pre>
                 <Paragraph>
-                  Das Problem ist, dass wir das Ende der Liste nicht kennen. Wir lösen das Problem, indem
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Problem ist, dass wir das Ende der Liste nicht kennen. Wir lösen das Problem, indem
                   wir die leere Liste mit \(0\) codieren und dann aber beim Davorhängen eines Elements
                   1 draufaddieren müssen, also
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 &#123;\rm push&#125; (x, &#123;\rm restlist&#125;)&amp;= 1 + \pair(x, &#123;\rm restlist&#125;) \\
                 &#123;\rm head&#125; (&#123;\rm list&#125;)&amp;= \first(&#123;\rm list&#125; - 1)\\
                 &#123;\rm second&#125; (&#123;\rm list&#125;)&amp;= \second(&#123;\rm list&#125; - 1)
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Jetzt klappt alles wunderbar:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Jetzt klappt alles wunderbar:
                 </Paragraph>
                 <pre class="container">
                   <code class="pythonPrompt">
@@ -483,7 +482,7 @@ const Article = () => {
                   <code style="counter-set: listing 63;">
                     def pair(x,y):
                   </code>
-                  &ensp;&ensp;`return int(((x+y+1) * (x+y)) / 2 + x )`
+                  &ensp;&ensp;`return int(((x+y+1) * (x+y)) / 2 + x )`{" "}
                 </pre>
               </div>
             </div>

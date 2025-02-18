@@ -43,7 +43,7 @@
                             style height:10em
                             src ../img/circuits/majority.svg
                             loading lazy
-                    Diese nimmt \(n\) Bits als Input und gibt 1 aus, wenn mehr als \(n/2\) davon 1 sind.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Diese nimmt \(n\) Bits als Input und gibt 1 aus, wenn mehr als \(n/2\) davon 1 sind.
                     Für \(n=3\) heißt dass, das mindestens zwei Input-Bits 1 sein müssen. Als Formel
                     kann man das so schreiben:
                     $$
@@ -67,12 +67,12 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Sei \(n\) eine ungerade Zahl. Zeigen Sie, dass \(\maj_n\) für genau
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(n\) eine ungerade Zahl. Zeigen Sie, dass \(\maj_n\) für genau
                         die Hälfte aller \(2^n\) möglichen Eingaben eine 1 ausgibt (und für die
                         andere Hälfte eine 0).
                     |> p
 
-                        Wir erhielten also eine DNF mit \(2^{n-1}\) vielen AND-Gates. Das ist
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir erhielten also eine DNF mit \(2^{n-1}\) vielen AND-Gates. Das ist
                         sehr groß, gemessen daran, dass Zählen und mit \(n/2\) vergleichen
                         ja nicht besonders schwierig klingt.
                         Hier ist eine kleine Verbesserung, demonstriert am Beispiel
@@ -103,14 +103,14 @@
                         aber eben schon mehr als nötig. Es reicht also, sich auf alle Terme mit genau 4 Variablen zu
                         beschränken.
                         Im allgemeinen sei \(k = \ceil{\frac{k+1}{2}}\). Dann gilt
-                    \begin{align}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align}
                     \maj_n (x_1,\dots,x_n) = \bigvee_{\substack{I \subseteq [n] \\ |I| = k}} \bigwedge_{i \in I} x_i
                     \ .
                     \label{johns-equation}
                     \end{align}
                     |> p
 
-                        Diese Konstruktion hat nun \({n \choose k}\) Terme, von denen jeder aus \(k\) Variablen
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Diese Konstruktion hat nun \({n \choose k}\) Terme, von denen jeder aus \(k\) Variablen
                         besteht.
                         Ist das nun gut oder schlecht?
                     |> div
@@ -121,15 +121,14 @@
                             data-label mid-level-lower-bound
 
                             Lemma.
-                        Es gilt
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gilt
                         $$
                         {n \choose {\ceil{n/2}}} \geq \frac{2^n}{n+1} \ .
                         $$
                     |> div
                         class well container
 
-                        *Beweis.*
-                        Sei \(k \in \{1,\dots,n\}\). Vergleichen wir \({n \choose k}\) mit \({n \choose k-1}\):
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Sei \(k \in \{1,\dots,n\}\). Vergleichen wir \({n \choose k}\) mit \({n \choose k-1}\):
                         \begin{align*}
                         \frac{{n \choose k}}{{n \choose k-1}}&amp;=
                         \frac{ \frac{n!}{k! (n-k)!}}{\frac{n!}{ (k-1)! (n-k+1)!}} = \frac{n-k+1}{k}
@@ -147,7 +146,7 @@
                         \({n \choose k} \leq {n \choose \ceil{\frac{n}{2}}}\) gilt.
                         |> p
 
-                            Als nächstes müssen wir uns die Definition von \({n \choose k}\) ins Gedächtnis rufen.
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als nächstes müssen wir uns die Definition von \({n \choose k}\) ins Gedächtnis rufen.
                             Nein, \(\frac{n!}{k!(n-k)!}\) ist nicht die Definition, sondern eine Formel dafür. Die
                             Definition ist:
                             \({n \choose k}\) ist die Menge der Teilmengen von \(\{1,\dots,n\}\), die Größe \(k\)
@@ -173,7 +172,7 @@
                             $$
                             {n \choose \ceil{\frac{n}{2}}} \geq \frac{2^n} {n+1} \ ,
                             $$
-                        wie behauptet.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;wie behauptet.
                         |> span
                             class qed
 
@@ -185,7 +184,7 @@
                         was bereits für moderate Werte wie \(n=30\) nicht vertretbar ist.
                     |> h3
 
-                        Majority Top-Down mit `if-then-else`-Gates
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Majority Top-Down mit `if-then-else`-Gates
                     Wenden wir nun statt Wahrheitstabelle die Top-Down-Methode an, modifiziert
                     für monotone Funktionen wie in den
                     |> a
@@ -216,7 +215,7 @@
                             style height:15em
                             src ../img/circuits/majority-theta-recursive.svg
                             loading lazy
-                    Die Konstruktion endet mit \(\theta^m_0\), was immer \(1\) ausgibt, und
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Konstruktion endet mit \(\theta^m_0\), was immer \(1\) ausgibt, und
                     mit \(\theta^m_{m}\), was \(x_1 \wedge \dots \wedge x_m\) ist. Die
                     Konstruktion ist leider auch nicht effizient; wenn man
                     mit \(C^n_k\) die Anzahl der \(\theta^m_m\) und \(\theta^m_0\) in diesem
@@ -243,27 +242,21 @@
                             loading lazy
                     |> p
 
-                        Um eine Analogie mit der Programmierpraxis zu bemühen: der Unterschied
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um eine Analogie mit der Programmierpraxis zu bemühen: der Unterschied
                         zwischen den beiden Konstruktionen für \(\theta^n_k\) per Baum versus
                         per Pyramidenschema entspricht dem Unterschied zwischen dem
                         rekursiven Code für \({n \choose k}\),
                     |> pre
                         class listing
 
-                        `def binomial(n,k):`
+                        `def binomial(n,k):`    `if k == 0 or k == n:`        `return 1` 
 
-                        &ensp;&ensp;&ensp;&ensp;`if k == 0 or k == n:`
-
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`return 1` 
-
-                        &ensp;&ensp;&ensp;&ensp;`else:`
-
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`return binomial(n-1,k-1) + binomial(n-1,k)`
-                    der exponentielle Laufzeit aufweist, und der effizienten Implementierung mittels
+                        &ensp;&ensp;&ensp;&ensp;`else:`        `return binomial(n-1,k-1) + binomial(n-1,k)`        
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;der exponentielle Laufzeit aufweist, und der effizienten Implementierung mittels
                     _Dynamic Programming_, bei welchem wir uns die Zwischenergebnisse merken.
                     |> p
 
-                        Um Größe und Tiefe des Schaltkreises zu analysieren, machen wir
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um Größe und Tiefe des Schaltkreises zu analysieren, machen wir
                         eine grobe Abschätzung. Für jedes \(\theta^m_l\), das in unserer
                         Pyramide vorkommt, brauchen wir 2 Gates; \(m\) kann die
                         Werte \(0, \dots, n\) annehmen und \(l\) die Werte \(0,\dots,k\),
@@ -278,12 +271,12 @@
                             class numbered-title
 
                             Theorem
-                        Die Funktion
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Funktion
                         \(\maj_n (x_1,\dots,x_n)\) kann mit einem Schaltkreis der Größe \(O(n^2)\),
                         Tiefe \(O(n)\) und Fan-in 2 berechnet werden.
                     |> h3
 
-                        Majority durch Zählen
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Majority durch Zählen
                     \(\maj_n(x_1,\dots,x_n)\) zu bestimmen sollte doch einfach sein: wir zählen die Anzahl der 1en
                     und
                     vergleichen sie mit \(\ceil{n}{2}\). Wie aber sollen wir zählen? Ganz einfach: mit einem
@@ -303,14 +296,14 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Bestimmen Sie asymptotisch die Größe und die Tiefe dieses Schaltkreises.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bestimmen Sie asymptotisch die Größe und die Tiefe dieses Schaltkreises.
                         Achten Sie besonders bei der Berechnung der Größe darauf, dass die untersten Add-Gadgets
                         ja 1-stellige oder dann 2-stellige Zahlen addieren müssen und erst die weniger obersten Gadgets
                         Zahlen mit $\Theta(\log n)$ Bits als Input bekommen.
                     |> h3
 
-                        \(O(\log n)\) Tiefe mit 2-for-3-Addierern.
-                    Die vorherige Konstruktion mit den Addierern war schon deutlich effizienter
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(O(\log n)\) Tiefe mit 2-for-3-Addierern.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die vorherige Konstruktion mit den Addierern war schon deutlich effizienter
                     als unsere pyramidenartige \(\theta^m_l\)-Konstruktion, allerdings wurde
                     das Ziel, eine Tiefe von \(O (\log n)\) zu erreichen, wieder verfehlt, wenn auch
                     knapp. Die Idee, die eine Tiefe von \(O (\log n)\) erreichen wird, ist ebenso
@@ -321,7 +314,7 @@
                             class numbered-title
 
                             Lemma (2-for-3 Adder)
-                        Es gibt einen Schaltkreis mit \(O(n)\) Gates,
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gibt einen Schaltkreis mit \(O(n)\) Gates,
                         Tiefe 2 und Fan-In 2, der als Input drei
                         \(n\)-stellige Binärzahlen \(x,y,z\) nimmt
                         und zwei \(n+1\)-stellige Binärzahlen \(u, v\) ausgibt, so dass
@@ -332,8 +325,7 @@
                     |> div
                         class well container
 
-                        *Beweis.*
-                        Ich demonstriere das Beweisprinzip erst einmal mit drei Zahlen in Basis 10:
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Ich demonstriere das Beweisprinzip erst einmal mit drei Zahlen in Basis 10:
                         |> figure
                             |> img
                                 style height:10em
@@ -351,13 +343,13 @@
                                     style height:15em
                                     src ../img/circuits/2-for-3-adder-binary.svg
                                     loading lazy
-                        Dieser Schaltkreis hat insgesamt \(O(n)\) Gates und Tiefe 2 (wobei wir
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dieser Schaltkreis hat insgesamt \(O(n)\) Gates und Tiefe 2 (wobei wir
                         die NOT-Gates im $\oplus$-Gate nicht mitzählen).
                         |> span
                             class qed
 
                             \(\square\)
-                    Wir interpretieren nun die \(n\) Inputs
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir interpretieren nun die \(n\) Inputs
                     \(x_1,\dots,x_n\) von Majoroty als einstellige Binärzahlen, sortieren sie in
                     Dreiergruppen und machen per 2-for-3-Addierer daraus
                     \( \ceil{\frac{2n}{3}}\) Zahlen. Dann machen wir (mit den mittlerweile
@@ -390,7 +382,7 @@
                             class numbered-title
 
                             Theorem.
-                        Die Konstruktion mit 2-for-3-Addierern gibt uns einen Schaltkreis
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Konstruktion mit 2-for-3-Addierern gibt uns einen Schaltkreis
                         für Majority mit Fan-in 2, Tiefe \(O(\log n)\) und
                         Größe \(O (n \log n)\)
                     |> div
@@ -400,7 +392,7 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            Führen Sie eine genauere Abschätzung der Größe durch. Untersuchen Sie insbesondere:
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Führen Sie eine genauere Abschätzung der Größe durch. Untersuchen Sie insbesondere:
                         |> ol
                             |> li
 
@@ -411,7 +403,7 @@
                                 der 2-for-3-Addierer sein?
                             |> li
 
-                                Was ergibt sich insgesamt in Summe?
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Was ergibt sich insgesamt in Summe?
                     |> p
 
                         Wir haben nun also fast alle unserer Ziele erreicht. Allerdings hat
@@ -460,7 +452,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        dass polynomiell viele (in diesem Falle: \(O(n^2)\) viele) Gates ausreichen.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;dass polynomiell viele (in diesem Falle: \(O(n^2)\) viele) Gates ausreichen.
                         Zeigen Sie, wie die gerade skizzierte Konstruktion so ausgeführt werden kann,
                     |> h3
 
@@ -471,13 +463,12 @@
                             class numbered-title
 
                             Theorem.
-                        Es gibt einen monotonen Schaltkreis mit Fan-in 2, Tiefe \(O(\log n)\) und Größe
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gibt einen monotonen Schaltkreis mit Fan-in 2, Tiefe \(O(\log n)\) und Größe
                         \(\poly(n)\), der \(\maj_n\) berechnet.
                     |> div
                         class well container
 
-                        *Beweis.*
-                        Die Beweismethode, die wir verwenden, ist womöglich neu für Sie. Wir verwenden
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Die Beweismethode, die wir verwenden, ist womöglich neu für Sie. Wir verwenden
                         bei der Konstruktion des Schaltkreises _Zufall_; am Ende werden
                         wir zeigen, dass dieser zufällige Schaltkreis mit hoher Wahrscheinlichkeit
                         \(\maj_n\) auf allen möglichen \(2^n\) Inputs korrekt berechnen, und folgern
@@ -489,7 +480,7 @@
                         resultierende Schaltkreis höchstwahrscheinlich korrekt ist.
                         |> p
 
-                            Während des ganzen Beweises müssen Sie sich vor Augen halten, dass wir
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Während des ganzen Beweises müssen Sie sich vor Augen halten, dass wir
                             bei der Konstruktion des Schaltkreises \(C\) Zufall verwenden;
                             wir nehmen nicht an, dass die Inputs \(x \in \{0,1\}^n \) in irgendeiner
                             Weise zufällig sind. Wir verwenden also
@@ -502,9 +493,8 @@
                                 class numbered-title
 
                                 Definition (Signalstärke)
-                            Sei \(\mathcal{C}\) eine Verteilung über Schaltkreise mit Input-Variablen
-                            \(x_1,\dots,x_n\). Wir sagen, dass \(\mathcal{C}\) _Signalstärke mindestens $\delta$_
-                            hat, wenn
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(\mathcal{C}\) eine Verteilung über Schaltkreise mit Input-Variablen
+                            \(x_1,\dots,x_n\). Wir sagen, dass \(\mathcal{C}\) _Signalstärke mindestens $\delta$_                            hat, wenn
                             $$
                             \forall x \in \{0,1\}: \quad \Pr_{C \in \mathcal{C}} [C(x) = \maj_n(x)]
                             \geq \frac{1 + \delta}{2}
@@ -512,7 +502,7 @@
                             gilt.
                         |> p
 
-                            In Worten, wenn der zufällig ausgewählte Schaltkreis \(C\) den Wert
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In Worten, wenn der zufällig ausgewählte Schaltkreis \(C\) den Wert
                             \(\maj_n(x)\) besser als ein Münzwurf vorhersagt, und zwar um \(\delta/2\) besser.
                             Wir können einen ganz einfachen (zufälligen Schaltkreis)
                             bauen, der ein schwache aber positive Signalstärke hat.
@@ -522,7 +512,7 @@
                                 class numbered-title
 
                                 Lemma.
-                            Es gibt eine Wahrscheinlichkeitsverteilung \(\mathcal{C}_0\) über monotone Schaltkreise der
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gibt eine Wahrscheinlichkeitsverteilung \(\mathcal{C}_0\) über monotone Schaltkreise der
                             Größe 1,
                             die Signalstärke \(\frac{1}{n}\) hat.
                             Genauer gesagt gilt für jeden Input \(x \in \{0,1\}^n\):
@@ -537,8 +527,7 @@
                         |> div
                             class well subtheorem
 
-                            *Beweis.*
-                            Der Schaltkreis bzw. die Wahrscheinlichkeitsverteilung ist extrem einfach.
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                            Der Schaltkreis bzw. die Wahrscheinlichkeitsverteilung ist extrem einfach.
                             Wir wählen zufällig einen Index \(I \in \{1,\dots,n\}\) und
                             geben \(x_I\) als unseren Schaltkreis \(C\) (bestehend aus einem einzigen Input-Gate,
                             das gleichzeitig das Output-Gate ist) aus. Dieser Schaltkreis
@@ -549,7 +538,7 @@
                                 nicht \(i\); das ist Konvention, weil \(I\) eine Zufallsvariable ist.
                                 Sei nun ein festes \(\x \in \{0,1\}\) gegeben. Mit welcher Wahrscheinlichkeit
                                 ist unser (recht primitiver) Schaltkreis korrekt?
-                            \begin{align*}
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                             C(\x)&amp;= \maj_n (\x) \quad \Longleftrightarrow \\
                             x_I&amp;= \maj_n (\x) \ .
                             \end{align*}
@@ -598,7 +587,7 @@
                                 class numbered-title
 
                                 Lemma
-                            Falls \(\mathcal{C}\) eine Verteilung über Schaltkreise der Tiefe
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls \(\mathcal{C}\) eine Verteilung über Schaltkreise der Tiefe
                             \(d\) und Größe \(s\) ist und \(\mathcal{C}\) Signalstärke \(\delta\) hat, dann gilt:
                             |> ol
                                 |> li
@@ -607,18 +596,17 @@
                                     \(d+2\);
                                 |> li
 
-                                    alle Schaltkreise in \(\mathcal{C}^{\otimes 3}\) haben Größe
+                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;alle Schaltkreise in \(\mathcal{C}^{\otimes 3}\) haben Größe
                                     \(3s+4\);
                                 |> li
 
-                                    die Signalstärke von $\mathcal{C}^{\otimes 3}$ ist
+                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;die Signalstärke von $\mathcal{C}^{\otimes 3}$ ist
                                     $\frac{3}{2} \delta - \frac{1}{2}\delta^3$.
                         |> div
                             class well container-fluid
                             |> p
 
-                                *Beweis.*
-                                Wir betrachten ein festes $\x \in \cube^n$ mit $\maj_n(\x) = 1$; der
+                                *Beweis.*                                Wir betrachten ein festes $\x \in \cube^n$ mit $\maj_n(\x) = 1$; der
                                 Fall $\maj_n(\x) = 0$ ist analog. Wir definieren
                                 nun $U := C_1(\x)$, $V := C_2(\x)$ und $W := C_3(\x)$. Da
                                 $C_1, C_2, C_3 \sim \mathcal{C}$ zufällige Schaltkreise sind, sind $U, V, W$
@@ -627,7 +615,7 @@
                                 gesampelt haben. Wir wissen: $\Pr[U=1] = \Pr[V=1] = \Pr[W=1] \geq \frac{1+\delta}{2} =:
                                 p$.
                                 Was ist nun $\Pr[\maj_3(U,V,W) = 1]$?
-                            \begin{align*}
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                             \Pr[\maj_3(U,V,W)=1]&amp;= \Pr[U=V=W=1] + \Pr[\textnormal{genau zwei von $\{U,V,W\}$ sind 1}]
                             \\
                             &amp;= p^3 + 3p^2 (1-p) = \pfrac{1 + \delta}{2}^3 + 3 \pfrac{1 + \delta}{2}^2 \frac{1 -
@@ -637,7 +625,7 @@
                             \end{align*}
                             |> p
 
-                                Die Signalstärke von $\mathcal{C}^{\otimes 3}$ ist also mindestens
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Signalstärke von $\mathcal{C}^{\otimes 3}$ ist also mindestens
                                 $\frac{3}{2} \delta - \frac{1}{2} \delta^3$.
                                 |> span
                                     class qed
@@ -645,14 +633,14 @@
                                     \(\square\)
                         |> p
 
-                            Wir beginnen nun mit der Verteilung $\mathcal{C}_0$ über Schaltkreise der
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir beginnen nun mit der Verteilung $\mathcal{C}_0$ über Schaltkreise der
                             Größe 1 und definieren 
-                        \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         \mathcal{C}_{i+1} := (\mathcal{C}_i)^{\oplus 3} \ .
                         \end{align*}
                         |> p
 
-                            Zur Wiederholung: um $C \sim \mathcal{C}_{i+1}$ zu sampeln, sampeln wir unabhängig
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zur Wiederholung: um $C \sim \mathcal{C}_{i+1}$ zu sampeln, sampeln wir unabhängig
                             drei Schaltkreise $\sim \mathcal{C}_i$ und verknüpfen deren Output-Gates mit einem
                             $\maj_3$-Gadget. Wenn $\mathcal{C}_i$ die Signalstärke $\delta_i$ hat, dann
                             hat $\mathcal{C}_{i+1}$ Signalstärke
@@ -663,7 +651,7 @@
                             $1/2$.
                         |> p
 
-                            Wenn wir jetzt die rekursive Konstruktion fortsetzen, steigt die Signalstärke weiter an und
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir jetzt die rekursive Konstruktion fortsetzen, steigt die Signalstärke weiter an und
                             konvergiert gegen $1$: $\lim_{i \rightarrow \infty} \delta_i = 1$. Die Frage ist nur,
                             wie schnell konvergiert es? Da wir nun nicht mehr an Wahrscheinlichkeiten interessiert sind,
                             die
@@ -671,12 +659,12 @@
                             führen wir einen Parameterwechsel durch: eine Verteilung $\mathcal{C}$ von Schaltkreisen
                             mit Inputs $x_1,\dots,x_n$
                             hat _Fehlerwahrscheinlichkeit $\epsilon$_, wenn
-                        \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         \forall \x \in \cube^n: \Pr_{C \sim \mathcal{C}}[ C(\x) = \maj_n(\x)] \geq 1 - \epsilon \ .
                         \end{align*}
                         |> p
 
-                            Eine Signalstärke von $\delta$ entspricht einer Fehlerwahrscheinlichkeit von
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Signalstärke von $\delta$ entspricht einer Fehlerwahrscheinlichkeit von
                             $\frac{1-\delta}{2}$.
                             Die Verteilung $\mathcal{C}_{i^*}$ hat also eine Fehlerwahrscheinlichkeit von
                             höchstens $\frac{1 - 1/2}{2} = 1/4$. Das obige Lemma, nun aus der Sicht der
@@ -699,20 +687,20 @@
 
                                 *Beweis.* Wie im Beweis vom Lemma setzen wir
                                 $p := \frac{1+p}{2} = 1-\epsilon$ und erhalten
-                            \begin{align*}
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                             \Pr[\maj_3(U,V,W) = 1]&amp;= p^3 + 3 p^2 (1-p) =
                             (1 - \epsilon^3) + 3 (1- \epsilon)^2 \epsilon = 1 - 3 \epsilon^2 \ .
                             \end{align*}
                             |> p
 
-                                Somit hat $\mathcal{C}^{\otimes 3}$ Fehlerwahrscheinlichkeit $3 \epsilon^2$.
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Somit hat $\mathcal{C}^{\otimes 3}$ Fehlerwahrscheinlichkeit $3 \epsilon^2$.
                                 |> span
                                     class qed
 
                                     \(\square\)
                         |> p
 
-                            Für $i^* := \log_{5/4} n$ hat $\mathcal{C}_{i^*}$ eine Fehlerwahrscheinlichkeit von
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für $i^* := \log_{5/4} n$ hat $\mathcal{C}_{i^*}$ eine Fehlerwahrscheinlichkeit von
                             höchstens $1/4$. Für $i^* + 1$ wird das zu $3 \pfrac{1}{4}^2 = \frac{3}{16}$ und
                             für $i^* + 2$ zu $3 \pfrac{3}{16}^2 = \frac{27}{256} \leq \frac{1}{9}$.
                             Wenn nun $\epsilon \leq \frac{1}{9}$ ist, dann gilt $3 \epsilon^2 \leq \epsilon^{3/2}$.
@@ -720,17 +708,17 @@
                             $\mathcal{C}_i$. Es gilt also $\epsilon_{i+1} \leq (\epsilon_i)^{3/2}$ für alle $i \geq
                             i^*+2$
                             und somit
-                        \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         \epsilon_{i^*+2 + j} \leq \left(\epsilon_{i^*}\right)^{\pfrac{3}{2}^j} \leq
                         \pfrac{1}{4}^{\pfrac{3}{2}^j} \ .
                         \end{align*}
                         |> p
 
-                            Qualitativ sehen wir: solange $\delta_i \leq 1/2$ gilt, wächst die Signalstärke exponentiell
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Qualitativ sehen wir: solange $\delta_i \leq 1/2$ gilt, wächst die Signalstärke exponentiell
                             an. Dieses exponentielle Wachstum kann natürlich nicht beliebig weitergehen. Jenseits
                             $\delta_i \leq 1/2$ hört das auf, dafür _fällt_ nun die Fehlerwahrscheinlichkeit
                             _doppelt exponentiell_. Für $j^* := \log_{3/2} n$ gilt dann
-                        \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         \epsilon_{i^* + 2 + j^*} \leq \pfrac{1}{4}^{n} \lt 2^{-n} \ .
                         \end{align*}
                         |> p
@@ -741,26 +729,26 @@
                                 style height:18em
                                 src ../img/circuits/majority-probability-labeled.svg
                             |> br
-                            Graph der Funktion $p \mapsto p^3 + 3 p^2 (1-p)$
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Graph der Funktion $p \mapsto p^3 + 3 p^2 (1-p)$
                             |> hr
                         |> figure
                             |> img
                                 style height:18em
                                 src ../img/circuits/majority-probability-close-to-half-labeled.svg
                             |> br
-                            Signalstärke $\delta$ wächst für $p \in [1/2, 3/4]$ exponentiell.
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Signalstärke $\delta$ wächst für $p \in [1/2, 3/4]$ exponentiell.
                             |> hr
                         |> figure
                             |> img
                                 style height:18em
                                 src ../img/circuits/majority-probability-close-to-one-labeled.svg
                             |> br
-                            Fehlerwahrscheinlichkeit $\epsilon$ fällt für $p \in [3/4, 1/2]$ doppelt
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Fehlerwahrscheinlichkeit $\epsilon$ fällt für $p \in [3/4, 1/2]$ doppelt
                             exponentiell.
                             |> hr
                         |> p
 
-                            Wir setzen nun $k := i^* + 2 + j^* = \log_{5/4} n + 2 + \log_{3/2} n = O(\log n)$ und
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir setzen nun $k := i^* + 2 + j^* = \log_{5/4} n + 2 + \log_{3/2} n = O(\log n)$ und
                             sehen, dass $\mathcal{C}_k$ eine Verteilung über Schaltkreise mit
                             Tiefe $O(\log n)$ und Fehlerwahrscheinlichkeit kleiner als $2^{-n}$ ist.
                             Was nun kommt, ist ein absolutes Standardargument in probabilitischen Beweisen:
@@ -771,33 +759,33 @@
                             $2^n \epsilon_k$. Formal: für jedes $\b \in \cube^n$ definieren wir
                             $E_{\b}$ als die Menge der Schaltkreise mit Input-Variablen
                             $x_1,\dots,x_n$, die sich auf $\b$ irren, also
-                        \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         E_{\b} := \{\textnormal{Schaltkreise } C \textnormal{ über } x_1, \dots, x_n \ | \ C(\b) \ne
                         \maj_n(\b) \} \ .
                         \end{align*}
                         |> p
 
-                            Die Verteilung $\mathcal{C}_k$ existiert ja im Wahrscheinlichkeitsraum aller
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Verteilung $\mathcal{C}_k$ existiert ja im Wahrscheinlichkeitsraum aller
                             Boolescher Schaltkreise mit Inputs $x_1,\dots, x_n$. Die Menge $E_{\b}$
                             ist somit ein _Ereignis_ in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
-                        \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         \forall \b \in \cube^n: \Pr_{C \sim \mathcal{C}_k} [ C \in E_{\b} ] = \epsilon_k \lt 2^{n-} \ .
                         \end{align*}
                         |> p
 
-                            Oder kompakt ausgedrückt: $\Pr_{\mathcal{C}_k} [E_{\b}] \lt 2^n$. Wir haben nun
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Oder kompakt ausgedrückt: $\Pr_{\mathcal{C}_k} [E_{\b}] \lt 2^n$. Wir haben nun
                             ein Ereignis $E_{\b}$ für jedes $\b \in \cube^n$ und definieren
-                        \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         E := \bigcup_{\b \in \cube^n} E_{\b} \ .
                         \end{align*}
                         |> p
 
-                            Was ist $E$? Es ist die Menge der Schaltkreise, die sich auf mindestens einem $\b \in
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Was ist $E$? Es ist die Menge der Schaltkreise, die sich auf mindestens einem $\b \in
                             \cube^n$
                             irren. Was ist das Komplement $\bar{E}$? Das ist die Menge der Schaltkreise, die sich
                             auf keinem $\b \in \cube^n$ irren, also die Menge der Schaltkreise, die $\maj_n$ korrekt
                             berechnen. Es gilt nun
-                        \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         \Pr_{\mathcal{C}_k}[E]&amp;= \Pr_{\mathcal{C}_k} \left[\bigcup_{\b \in \cube^n} E_{\b} \right] \\
                         &amp;\leq \sum_{\b \in \cube^n} \Pr_{\mathcal{C}_k} [E_{\b}] \\
                         &amp;= \sum_{b \in \cube^n} \epsilon_k\\
@@ -805,7 +793,7 @@
                         \end{align*}
                         |> p
 
-                            Also $\Pr_{\mathcal{C}_k}[E] \lt 1$ und somit $\Pr_{\mathcal{C}_k}[\bar{E}] \gt 0$. Das
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Also $\Pr_{\mathcal{C}_k}[E] \lt 1$ und somit $\Pr_{\mathcal{C}_k}[\bar{E}] \gt 0$. Das
                             bedeutet,
                             dass ein zufälliger Schaltkreis $C \sim \mathcal{C}_K$ mit positiver Wahrscheinlichkeit
                             die Funktion $\maj_n$ korrekt berechnet. Jeder Schaltkreis, der unter $\mathcal{C}_k$
@@ -815,10 +803,10 @@
                             berechnet.
                         |> p
 
-                            Es bleibt die Frage, wie groß dieser Schaltkreis $C$ ist. Seien wir hier bequem: ein
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es bleibt die Frage, wie groß dieser Schaltkreis $C$ ist. Seien wir hier bequem: ein
                             Schaltkreis mit Fan-in 2 und einem Output-Gate hat höchstens $2^i$ Gates, die Abstand
                             $i$ vom Output-Gate haben. Somit hat ein Schaltkreis mit Fan-in 2 und Tiefe $d$ höchstens
-                        \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         1 + 2 + 4 + \dots + 2^d = 2^{d+1}-1
                         \end{align*}
                         |> p
@@ -836,9 +824,9 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            Präzisieren Sie die Größe von Valiants Schaltkreis und bestimmen ein $c \in \R$, so dass
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Präzisieren Sie die Größe von Valiants Schaltkreis und bestimmen ein $c \in \R$, so dass
                             er die Größe $\Theta(n^c)$ hat.
                     |> p
 
-                        Wir könnten nun noch ehrgeiziger sein und einen monotonen Schaltkreis mit Fan-in 2,
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir könnten nun noch ehrgeiziger sein und einen monotonen Schaltkreis mit Fan-in 2,
                         Tiefe $O(\log n)$ und _linearer_ Größe $O(n)$ anstreben.

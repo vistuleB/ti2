@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Wir haben drei Methoden kennengelernt, kontextfreie Sprachen zu parsen:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben drei Methoden kennengelernt, kontextfreie Sprachen zu parsen:
                   rekursiver Abstieg (mit Demoseite{" "}
                   <a href="../../demos/drawManualGrammar.html">
                     drawManualGrammar.html
@@ -56,7 +56,7 @@ const Article = () => {
                   <a href="../../demos/drawLR0ParserPrefixArithmetic.html">
                     drawLR0ParserPrefixArithmetic
                   </a>
-                  für arithmetische Ausdrücke).
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;für arithmetische Ausdrücke).
                   Rekursiver Abstieg kann, wenn man nicht vorsichtig ist, in Endlosschleifen landen und
                   kann im Allgemeinen selbst bei einfachen Grammatiken exponentielle Laufzeit aufweisen.
                   LL-Parser und LR-Parser funktionieren schlicht nicht für allgemeine kontextfreie Grammatiken.
@@ -102,7 +102,7 @@ const Article = () => {
                   .
                 </Paragraph>
                 <Paragraph>
-                  Für nichtdeterministische oder gar mehrdeutige Grammatiken / Sprachen sind LL- und LR-Parser
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für nichtdeterministische oder gar mehrdeutige Grammatiken / Sprachen sind LL- und LR-Parser
                   unbrauchbar. Gibt es eine allgemeine Methode, die für alle Grammatiken funktioniert?
                   Ja, den sogenannten CYK-Algorithmus. Nur leider ist die nicht besonders schnell. Sie hat
                   kubische Laufzeit \(O(n^3)\), was zwar
@@ -137,7 +137,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  Zu jeder kontextfreien Grammatik gibt es eine äquivalente Grammatik in
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zu jeder kontextfreien Grammatik gibt es eine äquivalente Grammatik in
                   Chomsky-Normalform.
                 </div>
                 <Paragraph>
@@ -149,7 +149,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Finden Sie zu der folgenden kontextfreien Grammatik
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Finden Sie zu der folgenden kontextfreien Grammatik
                   $$\begin&#123;align*&#125;
                   S&amp;\rightarrow A \ | \ Bb \ | \ C \\
                   A&amp;\rightarrow xyB \ | \ B \ | \ BC \\
@@ -158,7 +158,7 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                   eine äquivalente in Chomsky-Normalform.
                   <Paragraph>
-                    Fragen, die Sie sich dabei stellen sollten:
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Fragen, die Sie sich dabei stellen sollten:
                   </Paragraph>
                   <ol>
                     <li>
@@ -177,7 +177,7 @@ const Article = () => {
                   </ol>
                 </div>
                 <Paragraph>
-                  Wenn nun \(G\) in Chomsky-Normalform vorliegt und wir für ein gegebenes Eingabewort \(w\)
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn nun \(G\) in Chomsky-Normalform vorliegt und wir für ein gegebenes Eingabewort \(w\)
                   eine Ableitung \(G: S \Step&#123;&#125;^* w\) finden wollen (oder feststellen, dass es keine gibt),
                   so ist die erste Beobachtung, dass eine Linksableitung die Form
                   $$\begin&#123;align*&#125;
@@ -201,7 +201,7 @@ const Article = () => {
                   Der CYK-Algorithmus
                 </h3>
                 <Paragraph>
-                  Die oben skizzierte Idee ist im CYK-Algorithmus konkretisiert (benannt nach John Cocke, Daniel
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die oben skizzierte Idee ist im CYK-Algorithmus konkretisiert (benannt nach John Cocke, Daniel
                   Younger und Tadao Kasami).
                   Für die praktische Anwendung ist dieser weniger relevant. Dafür ist er ein wunderbares Beispiel
                   für einen
@@ -231,7 +231,7 @@ const Article = () => {
                   ).
                 </Paragraph>
                 <Paragraph>
-                  Der Entwurf eines Dynamic-Programming-Algorithmus beginnt oft mit der folgenden Frage:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Entwurf eines Dynamic-Programming-Algorithmus beginnt oft mit der folgenden Frage:
                   {" "}
                   <i>
                     Was sind sinnvolle Zwischenergebnisse?
@@ -310,7 +310,7 @@ const Article = () => {
                       type="I"
                       class="">
                       <li>
-                        &ensp;`for i = 0 .. n-l`
+                        &ensp;`for i = 0 .. n-l`{" "}
                         <ol
                           type="i"
                           class="">
@@ -348,7 +348,7 @@ const Article = () => {
                                 {" "}\(X \rightarrow YZ\):
                                 <ol type="a">
                                   <li>
-                                    füge \(X\) zu \(N_&#123;i,k&#125;\) hinzu, falls \(Y \in N_&#123;i,j&#125;\) und
+                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;füge \(X\) zu \(N_&#123;i,k&#125;\) hinzu, falls \(Y \in N_&#123;i,j&#125;\) und
                                     \(Z
                                     \in N_&#123;j,k&#125;\) gilt.{" "}
                                   </li>
@@ -401,7 +401,7 @@ const Article = () => {
                   </li>
                 </ul>
                 <Paragraph>
-                  Was ist die Laufzeit des Algorithmus? Sei \(g\) die Anzahl der Produktionen in \(G\) der
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Was ist die Laufzeit des Algorithmus? Sei \(g\) die Anzahl der Produktionen in \(G\) der
                   Form \(X \rightarrow YZ\). Die innerste Schleife, also Punkt a, wird jedes Mal \(g\) mal
                   durchlaufen, und somit
                   wird Zeile a insgesamt
@@ -422,7 +422,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                   </span>
-                  Sei \(n = |w|\) die Länge des Eingabewortes und \(g\) die Anzahl der Produktionen der Form
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(n = |w|\) die Länge des Eingabewortes und \(g\) die Anzahl der Produktionen der Form
                   \(X \rightarrow YZ\). Dann ist die Laufzeit des CYK-Algorithmus proportional zu
                   \(g \cdot n^3\).
                 </div>
@@ -444,7 +444,7 @@ const Article = () => {
                   <Paragraph>
                     Betrachten wir die Grammatik
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   S&amp;\rightarrow AB \ | \ BC \ | \ AC \\
                   A&amp;\rightarrow AC \ | \ x \ | \ z \\
                   B&amp;\rightarrow AB \ | \ y \\
@@ -688,7 +688,7 @@ const Article = () => {
                     </div>
                   </figure>
                   <Paragraph>
-                    Wenn wir uns zusätzlich zu jedem \(X \in N_&#123;i,k&#125;\) noch merken, durch
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir uns zusätzlich zu jedem \(X \in N_&#123;i,k&#125;\) noch merken, durch
                     welche Regeln \(X \rightarrow YZ\) es aufgenommen wurde und
                     für welches \(j\) man \(Y \in N_&#123;i,j&#125;, Z \in N_&#123;j,k&#125;\) hat, dann können wir
                     den Ableitungsbaum leicht rekonstruieren.

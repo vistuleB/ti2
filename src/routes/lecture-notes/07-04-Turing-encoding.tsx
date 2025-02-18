@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Wir haben mit der Turingmaschine ein einfaches aber doch sehr mächtiges Modell einer
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben mit der Turingmaschine ein einfaches aber doch sehr mächtiges Modell einer
                   Rechenmaschine kennengelernt.
                   Sie haben vielleicht mittlerweile - auch durch Ihre Programmiererfahrung - das Gefühl, das man
                   im Prinzip alles, was
@@ -58,7 +58,7 @@ const Article = () => {
                   Neue Maschine bauen. Verschlüsselung brechen? Neue Maschine bauen. Und so weiter.
                 </Paragraph>
                 <Paragraph>
-                  Die Idee einer{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Idee einer{" "}
                   <a href="https://en.wikipedia.org/wiki/Mechanical_calculator#Programmable_mechanical_calculators">
                     programmierbaren
                     Maschine
@@ -91,12 +91,12 @@ const Article = () => {
                     Maschine übergeben können?
                   </li>
                   <li>
-                    Welche Maschine könnte so eine Rechenvorschrift lesen und sie an gegebenen Eingabedaten dann
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Welche Maschine könnte so eine Rechenvorschrift lesen und sie an gegebenen Eingabedaten dann
                     auch ausführen?
                   </li>
                 </ol>
                 <Paragraph>
-                  Es stellt sich heraus, dass wir beide Antworten (beinahe) schon kennen. Eine beliebige
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es stellt sich heraus, dass wir beide Antworten (beinahe) schon kennen. Eine beliebige
                   Rechenvorschrift können wir, da sind wir uns mittlerweile
                   recht sicher, als Turingmaschine \(M\) implementieren. Diese können wir über einem Alphabet
                   codieren und erhalten ein Wort
@@ -115,7 +115,7 @@ const Article = () => {
                   ansprechen.
                 </Paragraph>
                 <Paragraph>
-                  Punkt 2 ist schwieriger. Können wir eine Maschine bauen, die als eingabe (1) die Codierung
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Punkt 2 ist schwieriger. Können wir eine Maschine bauen, die als eingabe (1) die Codierung
                   \(\enc(M)\) einer Turingmaschine und (2) ein Eingabewort
                   \(w \in \Sigma^*\) entgegennimmt und dann die Berechnung \(M(x)\) simuliert bzw. zu dem Ergebnis
                   gelangt, zu dem auch \(M(x)\) gelangen würde?
@@ -131,7 +131,7 @@ const Article = () => {
                   simuliert.
                 </Paragraph>
                 <Paragraph>
-                  In diesem Teilkapitel werden wir sehen, wie wir eine Turingmaschine $M$ über einem
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem Teilkapitel werden wir sehen, wie wir eine Turingmaschine $M$ über einem
                   fixen, nicht von $M$ abhängigen Alphabet codieren können.
                   Im nächsten Teilkapitel werden wir uns überlegen, wie man einen Turingmaschinen-Simulator selbst
                   als
@@ -143,7 +143,7 @@ const Article = () => {
                   entgegennimmt und dann
                   <ol class="nested">
                     <li>
-                      {" "}{" "}
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                       <b>
                         ablehnt
                       </b>
@@ -177,7 +177,7 @@ const Article = () => {
                       </ol>
                     </li>
                   </ol>
-                  Falls wir bei \(M\) nicht nur an Akzeptieren / Ablehnen interessiert sind, sondern am Ergebnis der
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls wir bei \(M\) nicht nur an Akzeptieren / Ablehnen interessiert sind, sondern am Ergebnis der
                   Berechnung,
                   dann hätten wir gerne, dass \(U (\enc(M)\#x)\) am Ende den gleichen Bandinhalt hat wie \(M(x)\) am
                   Ende;
@@ -236,7 +236,7 @@ const Article = () => {
                   </b>
                   {" "}{" "}
                 </Paragraph>
-                Wir müssen also die Zustandsmenge \(Q\) und die Zeichen \(\Gamma \setminus \Sigma\) erst einmal
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir müssen also die Zustandsmenge \(Q\) und die Zeichen \(\Gamma \setminus \Sigma\) erst einmal
                 selbst codieren, beispielsweise
                 über dem Alphabet \(\&#123;0,1\&#125;\). Die \(\delta\)-Tabelle der Turingmaschine für \(\&#123;a^nb^nc^n\&#125;\)
                 <figure>
@@ -245,7 +245,7 @@ const Article = () => {
                     src="../img/turing-machines/exampe-2-aabbcc/delta-table.svg"
                     loading="lazy" />
                 </figure>
-                würde dann zu folgender Tabelle:
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;würde dann zu folgender Tabelle:
                 <figure>
                   <img
                     style="height:10em"
@@ -273,7 +273,7 @@ const Article = () => {
                   00#100#00,a,01,1,S#00,b,L#00,c,L#00,1,L#00,0,11,0,R#01,a,R#01,b,10,1,S#01,1,R#10,b,R#10,c,00,1,S#10,1,R#11,1,R#11,0,100#;
                 </pre>
                 <Paragraph>
-                  In dieser Codierung behalten wir zwei Konventionen bei: wenn eine Regel
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In dieser Codierung behalten wir zwei Konventionen bei: wenn eine Regel
                   "fehlt", also beispielsweise für \(\delta(10,a)\) die Zelle leer ist, dann
                   soll das in den Zustand $\qreject$ führen; wenn in der Zelle
                   nur ein Richtungszeichen, also beispielsweise{" "}
@@ -291,7 +291,7 @@ const Article = () => {
                   </tt>
                 </Paragraph>
                 <Paragraph>
-                  Wir können nun{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können nun{" "}
                   <i>
                     jede
                   </i>
@@ -312,8 +312,7 @@ const Article = () => {
                     <i>
                       Codierungsalphabet
                     </i>
-                    {" "}
-                    $\Lambda := \writelambda$,
+                    {" "}$\Lambda := \writelambda$,
                     wobei wir annehmen, dass $\texttt&#123;#&#125;, \texttt&#123;,&#125;, \texttt&#123;L&#125;, \texttt&#123;S&#125;, \texttt&#123;R&#125;,
                     \texttt&#123;;&#125;
                     \not \in \Sigma$. Wir können nun jede Turingmaschine $M$ mit Eingabealphabet
@@ -321,7 +320,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <div class="alert-info container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Anmerkungen:
                   </b>

@@ -39,7 +39,7 @@
                             8. Komplexitätstheorie
                     |> p
 
-                        Turingmaschinen erlauben uns, den Resourcenverbrauch einer Berechnung zu quantifizieren:
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Turingmaschinen erlauben uns, den Resourcenverbrauch einer Berechnung zu quantifizieren:
                         zum einen die _Zeit_, also die Anzahl der Schritte, die die Turingmaschine
                         durchführt, bis sie anhält; zum anderen der _Speicherplatz_, also die Anzahl
                         der Zellen auf dem Band (oder den Bändern), die im Verlauf der Berechnung beschrieben werden.
@@ -65,7 +65,7 @@
                             das die Daten ausgetauscht werden.
                     |> p
 
-                        Also: Turingmaschinen sind zwar universell in dem Sinne, dass sie wohl alle physikalisch
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Also: Turingmaschinen sind zwar universell in dem Sinne, dass sie wohl alle physikalisch
                         realisierbaren
                         Rechnermodelle simulieren können (ich sage _wohl_, weil wir nicht wissen, was alles
                         physikalisch realisierbar ist). Allerdings ist es möglich, dass Sie, abhängig von Ihrem
@@ -73,14 +73,14 @@
                         Resourcenverbrauch modellieren zu können.
                     |> p
 
-                        Dennoch: in diesem Kapitel beschränken wir uns auf die Resource _Zeit_, und daher
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dennoch: in diesem Kapitel beschränken wir uns auf die Resource _Zeit_, und daher
                         sind Turingmaschinen das Modell der Wahl.
                     |> h2
 
                         Zeitkomplexitätsklassen
                     |> p
 
-                        Wir beschränken uns der Einfachheit halber auf das Eingabealphabet $\Sigma = \{0,1\}$ und
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir beschränken uns der Einfachheit halber auf das Eingabealphabet $\Sigma = \{0,1\}$ und
                         auf Entscheidungsprobleme, wo uns also nur eine Ja/Nein-Antwort interessiert.
                     |> div
                         class well container theorem
@@ -99,23 +99,23 @@
                                 und
                             |> li
 
-                                für jede Eingabe $x$ in maximal $O(t(|x|))$ Schritten terminiert.
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;für jede Eingabe $x$ in maximal $O(t(|x|))$ Schritten terminiert.
                         |> p
 
-                            Wir definieren nun
-                        \begin{align*}
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir definieren nun
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         \TIME_k(t) := \{L \subseteq \Sigma^* \ | \
                         \textnormal{es gibt eine $k$-Band-TM $M$, die $L$ in Zeit $t$ entscheidet}\}
                         \end{align*}
                         |> p
 
-                            und schließlich
-                        \begin{align*}
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und schließlich
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         \TIME(t) := \bigcup_{k \geq 1} \TIME_k(t) \ .
                         \end{align*}
                     |> p
 
-                        Falls Sie sich nicht mehr genau an die $O$-Notation erinnern können: in diesem Zusammenhang
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls Sie sich nicht mehr genau an die $O$-Notation erinnern können: in diesem Zusammenhang
                         heißt das, dass es Konstanten $c$ und $d$ gibt, so dass $M$ in maximal
                         $c t(|x|) + d$ Schritten terminiert. Die Konstanten $c$ und $d$ dürfen von $M$ abhängen, aber
                         nicht von der Eingabe $x$ oder der Länge $|x|$.
@@ -137,12 +137,11 @@
                                 class numbered-title
 
                                 Theorem
-                            &ensp;*($k$-Band zu $1$-Band).*
-                            Sei $t: \N \rightarrow \N$. Dann gilt
+                            &ensp;*($k$-Band zu $1$-Band).*                            Sei $t: \N \rightarrow \N$. Dann gilt
                             $\TIME_k(t) \subseteq \TIME_1(t^2)$.
                     |> p
 
-                        Der quadratische Overhead wird tatsächlich störend, wenn man Zeit als Resource untersucht.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der quadratische Overhead wird tatsächlich störend, wenn man Zeit als Resource untersucht.
                         Daher gibt es eine bessere Simulation; die benötigt allerdings zwei Bänder (Oder drei? Weiß ich
                         gerade nicht
                         exakt) und die Konstruktion ist deutlich komplizierter. Daher vorerst ohne Beweis:

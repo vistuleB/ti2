@@ -39,22 +39,22 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  In diesem Teilkapitel werden wir sehen,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem Teilkapitel werden wir sehen,
                   wie wir für eine gültige Wortform $\gamma$
                   den korrekten Linksreduktionsschritt
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \gamma = \alpha \beta w \rstep&#123;&#125; \alpha X w
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  finden. Als erstes müssen wir uns überlegen,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;finden. Als erstes müssen wir uns überlegen,
                   wie die Front $\front(\gamma) = \alpha \beta$
                   überhaupt aussehen kann. Wenn wir
                   uns den Ableitungsbaum von $\gamma$ ansehen,
                   wird das einigermaßen offensichtlich sein.
                 </Paragraph>
                 <Paragraph>
-                  Zur Erinnerung:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zur Erinnerung:
                   Zu jeder Ableitung \(S \Step&#123;&#125;^* w \in \Sigma^*\) können wir
                   eindeutig einen{" "}
                   <i>
@@ -70,14 +70,14 @@ const Article = () => {
                   Ich zeige Ihnen jetzt ein Beispiel für eine Grammatik und
                   eine Handvoll Ableitungen samt Ableitungsbaum.
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 G&amp;: \\
                 S&amp;\rightarrow AB \\
                 A&amp;\rightarrow xBS \ | \ Bz \\
                 B&amp;\rightarrow yAS \ | \ Az \ | \ x \ | \ y \ | \ z
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Es ist zu diesem Zeitpunkt irrelevant, ob \(G\) eindeutig
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es ist zu diesem Zeitpunkt irrelevant, ob \(G\) eindeutig
                   oder sogar \(LR(0)\) ist. Ich interessiere mich
                   gerade nur für Ableitungsbäume von Wortformen.
                 </Paragraph>
@@ -137,7 +137,7 @@ const Article = () => {
                   </div>
                 </figure>
                 <Paragraph>
-                  Fällt Ihnen etwas auf? Schauen Sie sich bitte noch ein weiteres
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Fällt Ihnen etwas auf? Schauen Sie sich bitte noch ein weiteres
                   Beispiel an für den Ableitungsbaum einer in einer
                   gültigen Wortform, also von einer, die in einer
                   Rechtsableitung vorkommen kann:
@@ -148,18 +148,17 @@ const Article = () => {
                     src="../img/context-free/LR/G-tree-large.svg" />
                 </figure>
                 <div class="well container subtheorem">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Warten Sie!
                   </b>
-                  {" "}
-                  Scrollen Sie erst weiter, wenn Sie den Baum oben lang genug angeschaut haben!
+                  {" "}Scrollen Sie erst weiter, wenn Sie den Baum oben lang genug angeschaut haben!
                   Versuchen Sie selbst, die spezielle Form dieses Baumes möglichst
                   formal zu beschreiben!
                 </div>
                 <div style="height:40em" />
                 <div class="well container subtheorem">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Auflösung.
                   </b>
@@ -183,12 +182,11 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition / Beobachtung
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     (Stamm, linker Rand, Blüte, Front, rechter Rest)
                   </b>
-                  {" "}
-                  Sei \(S \Step&#123;&#125;^* \gamma\) eine Rechtsableitung, \(\gamma\) also
+                  {" "}Sei \(S \Step&#123;&#125;^* \gamma\) eine Rechtsableitung, \(\gamma\) also
                   eine gültige Wortform, und
                   \(\mathcal&#123;T&#125;\) der Ableitungsbaum von \(\gamma\).
                   Der{" "}
@@ -219,13 +217,13 @@ const Article = () => {
                   Im rechten Rest ist jedes Blatt ein
                   Terminalsymbol, ansonsten wäre es keine Rechtsableitung.
                   <Paragraph>
-                    Die Beschriftung der Knoten im linken Rand ergibt eine Wortform \(\alpha\);
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Beschriftung der Knoten im linken Rand ergibt eine Wortform \(\alpha\);
                     die Blüte ergibt \(\beta\).
                     Die Blätter im rechten Rand
                     sind ausschließlich mit Terminalen beschriftet und ergeben ein
                     Wort \(w \in \Sigma^*\). Der ganze Baum stellt also eine Rechtsableitung
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   S \Step&#123;R&#125;^* \alpha \beta w
                   \end&#123;align*&#125;$$
                   dar. Die Wortform $\alpha\beta$, also linker Rand plus Blüte, nennen wir
@@ -251,7 +249,7 @@ const Article = () => {
                   also nicht eindeutig ist. Für eindeutige Grammatiken ist
                   die Unterteilung aber eindeutig.
                   <Paragraph>
-                    Sei weiterhin \(A\) die Beschriftung des Elternknoten der Blüte
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei weiterhin \(A\) die Beschriftung des Elternknoten der Blüte
                     (notwenigerweise ein Nichtterminal; Terminale haben keine Kinder).
                     Dann ist \(A \rightarrow \beta\) eine Produktion in der Grammatik und
                     \(\alpha A w\) eine gültige Wortform; wir erhalten den Ableitungsbaum
@@ -391,7 +389,7 @@ const Article = () => {
                   was selbst wieder eine Parsing-Aufgabe ist???
                 </Paragraph>
                 <Paragraph>
-                  An dieser Stelle zeigt sich die Genialität des DK-Ansatzes:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;An dieser Stelle zeigt sich die Genialität des DK-Ansatzes:
                   der Ableitungsbaum von \(\gamma\) kann beliebig verschachtelt sein,
                   aber Stamm, linker Rand und Blüte haben zusammen eine einfache,
                   beinahe linear anmutende Struktur. Schematisch:
@@ -402,14 +400,14 @@ const Article = () => {
                     src="../img/context-free/LR/schema-linker-rand-bluete-stamm.svg" />
                 </figure>
                 <Paragraph>
-                  Die Aussage "Stamm, linker Rand und Blüte haben eine einfache Struktur"
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Aussage "Stamm, linker Rand und Blüte haben eine einfache Struktur"
                   können wir formalisieren.
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
                   </span>
-                  Für eine kontextfreie Grammatik \(G\) definieren wir
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für eine kontextfreie Grammatik \(G\) definieren wir
                   die Sprache \(\Front(G) \subseteq (\Sigma \cup N)^*\):
                   $$\begin&#123;align*&#125;
                   \Front(G) := \&#123;\front(\mathcal&#123;T&#125;) \ | \ \mathcal&#123;T&#125;
@@ -429,14 +427,14 @@ const Article = () => {
                     <span class="numbered-title">
                       Lemma
                     </span>
-                    Die Sprache $\Front(G)$ ist regulär.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Sprache $\Front(G)$ ist regulär.
                     Insbesondere gibt es eine erweitert reguläre Grammatik \(\hat&#123;G&#125;\) für
                     $\Front(G)$, so dass die Blüte genau die im letzen Ableitungsschritt
                     erzeugten Terminalsymbole sind.
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Hier ist etwas Mentalgymnastik vonnöten: aus Sicht der Sprache
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Hier ist etwas Mentalgymnastik vonnöten: aus Sicht der Sprache
                   $\Front(G)$ sind \(\Sigma \cup N\){" "}
                   <i>
                     Terminalsymbole
@@ -469,7 +467,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik. Die
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik. Die
                   Front-Grammatik oder DK-Grammatik von \(G\) ist
                   die{" "}
                   <i>
@@ -496,14 +494,14 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                   </span>
-                  \(\hat&#123;G&#125;\) erzeugt die Sprache
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(\hat&#123;G&#125;\) erzeugt die Sprache
                   \(\Front(G)\).
                 </div>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Für unsere Grammatik \(G\) oben ergeben sich folgende Produktionen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für unsere Grammatik \(G\) oben ergeben sich folgende Produktionen
                   \(\hat&#123;P&#125;\) in \(\hat&#123;G&#125;\):
                   $$\begin&#123;align*&#125;
                   \begin&#123;array&#125;&#123;l|l&#125;
@@ -535,7 +533,7 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                 </div>
                 <Paragraph>
-                  Nochmals: Produktionen wie
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nochmals: Produktionen wie
                   \(\dk&#123;B&#125; \rightarrow \dkt&#123;y A&#125; \dk&#123;S&#125;\) sind erweitert regulär
                   weil $\dkt&#123;y&#125;$ und $\dkt&#123;A&#125;$ aus Sicht von \(\hat&#123;G&#125;\) beides
                   Terminalsymbole sind. Wir können nun unseren \(LR(0)\)-Parser beschreiben:
@@ -546,12 +544,11 @@ const Article = () => {
                   <span class="numbered-title">
                     Algorithmus
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     - Der \(LR(0)\)-Parser.
                   </b>
-                  {" "}
-                  Starte mit einem leerem Stack. Sei
+                  {" "}Starte mit einem leerem Stack. Sei
                   \(\gamma\) der Inhalt des Stacks zu einem Zeitpunkt.
                   <ol>
                     <li>
@@ -566,11 +563,11 @@ const Article = () => {
                       Konkret: lösche \(\beta\) vom Stack und ersetze es durch \(A\).
                     </li>
                     <li>
-                      Falls \(\gamma \not \in \Front(G)\),
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls \(\gamma \not \in \Front(G)\),
                       lies das nächste Eingabezeichen und lege es auf den Stack.
                     </li>
                   </ol>
-                  Der Parser endet, wenn weder Schritt 1 noch Schritt 2 möglich sind;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Parser endet, wenn weder Schritt 1 noch Schritt 2 möglich sind;
                   wenn zu diesem Zeitpunkt nur noch \(S\) auf dem Stack liegt,
                   akzeptiert er, andernfalls lehnt er das Eingabewort ab.
                 </div>
@@ -578,11 +575,11 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  Wenn der \(LR(0)\)-Parser akzeptiert, dann hat er eine Linksreduktion
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn der \(LR(0)\)-Parser akzeptiert, dann hat er eine Linksreduktion
                   \(w \rstep&#123;&#125;^* S\) und somit eine Rechtsableitung konstruiert; es gilt
                   also \(w \in L(G)\).
                   <Paragraph>
-                    Wenn umgekehrt \(w \in L(G)\) gilt und
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn umgekehrt \(w \in L(G)\) gilt und
                     \(G\) die \(LR(0)\)-Bedingung erfüllt,
                     dann findet der
                     Parser die Rechtsableitung \(S \Step&#123;&#125;^* w\),
@@ -594,8 +591,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Der erste Teil der Bedeutung ist einfach zu sehen.
+                    {" "}Der erste Teil der Bedeutung ist einfach zu sehen.
                     Jeder Reduktionsschritt ist ein Linksreduktionsschritt, und
                     wenn man Ende $S$ steht, waren es auch alles
                     {" "}
@@ -623,8 +619,7 @@ const Article = () => {
                     <b>
                       Behauptung.
                     </b>
-                    {" "}
-                    (i) \(\gamma w\) ist eine gültige Wortform. (ii)
+                    {" "}(i) \(\gamma w\) ist eine gültige Wortform. (ii)
                     \(\gamma\) ist ein Präfix von \(\front(\gamma w)\).
                   </Paragraph>
                   <Paragraph>
@@ -632,8 +627,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Die Behauptung gilt offensichtlich am Anfang, da
+                    {" "}Die Behauptung gilt offensichtlich am Anfang, da
                     $\gamma = \epsilon$ und \(w\in L\) ist und
                     somit $\gamma w = w$ eine gültige Wortform ist. Des weiteren
                     ist der Stack leer, also \(\gamma = \epsilon\), und daher
@@ -676,7 +670,7 @@ const Article = () => {
                         \(\alpha A\) ein Präfix von $\front(\alpha A w)$ sein.
                       </li>
                       <li>
-                        Der Parser wendet Schritt 2 an, also \(w = cw'\), er liest
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Parser wendet Schritt 2 an, also \(w = cw'\), er liest
                         \(c\) und legt es auf den Stack. Im nächsten Schritt
                         ist der Stackinhalt \(\gamma' := \gamma c\) und das ungelesene Wort
                         ist \(w'\).
@@ -694,7 +688,7 @@ const Article = () => {
                         ist $\gamma c$ immer noch ein Präfix von $\front(\gamma w)$.
                       </li>
                     </ol>
-                    Wenn das Eingabewort gelesen ist, ist nun \(w = \epsilon\) und
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn das Eingabewort gelesen ist, ist nun \(w = \epsilon\) und
                     Stackinhalt \(\gamma\) ist selbst eine
                     gültige Wortform, die allerdings nicht weiter reduziert werden kann.
                     Also muss \(\gamma = S\) gelten und der Parser akzeptiert.

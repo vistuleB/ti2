@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Reguläre Grammatiken sind eine Untermenge der kontextfreien
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Reguläre Grammatiken sind eine Untermenge der kontextfreien
                   Grammatiken. Sie sind einerseits mächtig genug, um viele Dinge
                   modellieren zu können (zum Beispiel syntaktisch korrekte
                   Emailadressen), andererseits restriktiv genug, um algorithmisch gut
@@ -52,7 +52,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  Eine kontextfreie Sprache \(G = (\Sigma, N, P, S)\) heißt
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine kontextfreie Sprache \(G = (\Sigma, N, P, S)\) heißt
                   {" "}
                   <i>
                     regulär
@@ -71,7 +71,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Die folgende Grammatik über dem Alphabet \(\Sigma = \&#123;1\&#125;\), den
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die folgende Grammatik über dem Alphabet \(\Sigma = \&#123;1\&#125;\), den
                   nichtterminalen Symbolen \(\&#123;E,O\&#125;\) und den Regeln $$\begin&#123;align*&#125; E&
                   \rightarrow 1O \ | \ \epsilon \\ O&amp;\rightarrow 1E \end&#123;align*&#125;$$
                   erzeugt die Sprache \(\&#123;\epsilon, 11, 1111, 111111, \dots \&#125;= \&#123;1^n \
@@ -83,29 +83,29 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Die folgende Grammatik haben wir bereits im letzten Abschnitt
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die folgende Grammatik haben wir bereits im letzten Abschnitt
                   kennengelernt. Sie ist nicht regulär: $$\begin&#123;align*&#125; S&amp;\rightarrow A
                   B \\ A&amp;\rightarrow \epsilon \ | \ a A \\ B&amp;\rightarrow \epsilon \
                   | \ b B \ . \\ \end&#123;align*&#125;$$
                   <Paragraph>
-                    Sie ist nicht regulär, weil die erste Regel \(S \rightarrow AB\)
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sie ist nicht regulär, weil die erste Regel \(S \rightarrow AB\)
                     gegen die Definition regulärer Grammatiken verstößt. Allerdings
                     können wir leicht eine reguläre Grammatik \(G'\) angeben, die die
                     gleiche Sprache erzeugt:
                   </Paragraph>
-                  $$\begin&#123;align*&#125; S&amp;\rightarrow \epsilon \ |\ a S \ | \ b T \\ T&
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; S&amp;\rightarrow \epsilon \ |\ a S \ | \ b T \\ T&
                   \rightarrow \epsilon \ | \ b T \ . \end&#123;align*&#125;$$ Hier ist
                   beispielsweise eine Ableitung des Wortes \(aabbb\): $$\begin&#123;align*&#125; S
                   \Rightarrow aS \Rightarrow aaS \Rightarrow aabT \Rightarrow aabbT
                   \Rightarrow aabbbT \Rightarrow aabbb \end&#123;align*&#125;$$
                   <Paragraph>
-                    Wir sehen, dass wir eine Folge von \(a\)'s erzeugen können, bei der
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir sehen, dass wir eine Folge von \(a\)'s erzeugen können, bei der
                     ersten Produktion eines \(b\) auf das Nichtterminal \(B\) wechseln,
                     welches dann ausschließlich weitere \(b\)'s erzeugen kann.
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Wir sehen: jede Wortform in der Ableitung besteht aus einer Folge von
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir sehen: jede Wortform in der Ableitung besteht aus einer Folge von
                   Terminalen, eventuell ganz am Schluss gefolgt von einem Nichtterminal.
                   Halten wir diese erste Beobachtung formal fest.
                 </Paragraph>
@@ -113,13 +113,13 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                   </span>
-                  Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik und \(S
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik und \(S
                   \Rightarrow^* \alpha\) eine Ableitung einer Wortform \(\alpha \in
                   (\Sigma \cup N)^*\). Dann hat \(\alpha\) die Form \(y X\) für \(y \in
                   \Sigma^*\) und \(X \in N \cup \&#123;\epsilon\&#125;\).
                 </div>
                 <Paragraph>
-                  Sie sollen nun an einer Reihe von Übungsaufgaben arbeiten, um ein
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sie sollen nun an einer Reihe von Übungsaufgaben arbeiten, um ein
                   Gefühl dafür zu bekommen, was reguläre Grammatiken tun können und was
                   nicht.
                 </Paragraph>
@@ -127,7 +127,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Betrachten Sie die Gramatik über \(\Sigma = \&#123;0,1\&#125;\): $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten Sie die Gramatik über \(\Sigma = \&#123;0,1\&#125;\): $$\begin&#123;align*&#125;
                   S&amp;\rightarrow 1 S \ | \ 0 S \ | \ 0 \end&#123;align*&#125;$$ Leiten Sie das Wort
                   \(11010\) ab. Beschreiben Sie in eigenen Worten die erzeugte Sprache.
                 </div>
@@ -137,7 +137,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Betrachten Sie die Grammatik über \(\Sigma = \&#123;0,1\&#125;\): $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten Sie die Grammatik über \(\Sigma = \&#123;0,1\&#125;\): $$\begin&#123;align*&#125;
                   A&amp;\rightarrow 0 A \ | 1 A \ | 1 B \\ B&amp;\rightarrow 0 C \ | 1 C \\
                   C&amp;\rightarrow 0 D \ | 1 D \\ D&amp;\rightarrow 0 E \ | 1 E \\ E&
                   \rightarrow \epsilon \ \end&#123;align*&#125;$$ mit Startsymbol \(A\). Leiten Sie
@@ -148,7 +148,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Betrachten Sie das Alphabet \(\Sigma = \&#123;1\&#125;\) und die Sprache $$ L :=
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten Sie das Alphabet \(\Sigma = \&#123;1\&#125;\) und die Sprache $$ L :=
                   \&#123;1^n \ | \ \textnormal&#123; $n$ ist durch 3 teilbar&#125; \&#125; \ . $$ Schreiben
                   Sie eine reguläre Grammatik für \(L\).
                 </div>
@@ -156,7 +156,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Betrachten Sie die Sprache $$\begin&#123;align*&#125; L := \&#123;x \in \&#123;a,b\&#125;^* \ | \
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten Sie die Sprache $$\begin&#123;align*&#125; L := \&#123;x \in \&#123;a,b\&#125;^* \ | \
                   \textnormal&#123;in $x$ kommt $b$ mindestens 4 mal vor &#125;\&#125; \ \end&#123;align*&#125;$$
                   und entwerfen Sie eine reguläre Grammatik für \(L\).
                 </div>
@@ -164,7 +164,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Sei \(\Sigma = \&#123;a,b,.\&#125;\) und \(L \subseteq \Sigma^*\) die Sprache
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(\Sigma = \&#123;a,b,.\&#125;\) und \(L \subseteq \Sigma^*\) die Sprache
                   aller Strings der Form $$ x_1 . x_2 . x_3 . \cdots . x_n $$ wobei \(n
                   \geq 2\) und jedes \(x_i \in \&#123;a,b\&#125;^+\), also zum Beispiel
                   {" "}
@@ -180,25 +180,24 @@ const Article = () => {
                   <code>
                     a.b..a
                   </code>
-                  {" "}
-                  Entwerfen Sie eine reguläre Grammatik für diese Sprache.
+                  {" "}Entwerfen Sie eine reguläre Grammatik für diese Sprache.
                 </div>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Unsere
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unsere
                   <a href="./04-00-formal-languages.html#email-context-free-grammar">
                     Grammatik für korrekte Emailadressen
                   </a>
-                  im letzten Abschnitt war{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;im letzten Abschnitt war{" "}
                   <i>
                     nicht
                   </i>
                   {" "}regulär. Allerdings können wir
                   eine reguläre Grammatik angeben, die die gleiche Sprache erzeugt.
                   <Paragraph>
-                    Entwerfen Sie eine reguläre Grammatik für die Sprache aller
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Entwerfen Sie eine reguläre Grammatik für die Sprache aller
                     korrekter Emailadressen über dem Alphabet \(\Sigma =
                     \&#123;a,b,.,-,@\&#125;\). Sie dürfen natürlich noch weitere Buchstaben
                     zulassen, dann schreiben Sie sich aber schnell zu Tode.
@@ -208,13 +207,13 @@ const Article = () => {
                   Erweitert reguläre Grammatiken
                 </h2>
                 <Paragraph>
-                  In einer Übungsaufgabe oben wurden Sie aufgefordert, eine reguläre
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In einer Übungsaufgabe oben wurden Sie aufgefordert, eine reguläre
                   Grammatik zu schreiben für die Sprache aller \(1^n\) mit \(n\) durch 3
                   teilbar. Hier ist eine besonders einfache Lösung:
                 </Paragraph>
-                $$\begin&#123;align*&#125; S \rightarrow \epsilon \ | \ 111S \end&#123;align*&#125;$$
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; S \rightarrow \epsilon \ | \ 111S \end&#123;align*&#125;$$
                 <Paragraph>
-                  Sehen Sie, Sie können hier Einsen nur in Dreierblöcken erzeugen.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sehen Sie, Sie können hier Einsen nur in Dreierblöcken erzeugen.
                   Leider ist diese Grammatik nicht regulär nach unserer obigen
                   Definition. Was tun wir, wenn wir nicht zufrieden sind mit einer
                   Definition? Wir wandeln sie ab.
@@ -223,7 +222,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  Eine Grammatik \(G = (\Sigma, N, P, S)\) heißt
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Grammatik \(G = (\Sigma, N, P, S)\) heißt
                   {" "}
                   <i>
                     erweitert regulär
@@ -243,17 +242,16 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  Sei \(G = (\Sigma, N, P, S)\) eine erweitert reguläre Grammatik. Dann
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(G = (\Sigma, N, P, S)\) eine erweitert reguläre Grammatik. Dann
                   existiert eine reguläre Grammatik \(G' = (\Sigma, N', P', S)\), die
                   die gleiche Sprache erzeugt: \(L(G) = L(G')\).
                 </div>
                 <div class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Beweis.
                   </b>
-                  {" "}
-                  Wir ersetzen einfach jede Regel der Form $$ X \rightarrow a_1 a_2
+                  {" "}Wir ersetzen einfach jede Regel der Form $$ X \rightarrow a_1 a_2
                   \dots a_k Y $$ durch \(k\) reguläre Regeln: $$\begin&#123;align*&#125; X&
                   \rightarrow a_1 X_2 \\ X_2&amp;\rightarrow a_2 X_3 \\ \dots \\ X_k&
                   \rightarrow a_k Y \end&#123;align*&#125;$$ wobei wir darauf achten, dass \(X_2,
@@ -267,7 +265,7 @@ const Article = () => {
                 </div>
                 <div class="proof">
                   <Paragraph>
-                    Wir können nun, wenn wir reguläre Grammatik entwerfen wollen, die
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können nun, wenn wir reguläre Grammatik entwerfen wollen, die
                     bequemeren erweitert regulären Sprachen verwenden; wenn wir Dinge
                     über reguläre Grammatik beweisen wollen (oder deren Grenzen
                     studieren wollen), können wir uns auf die eigentlichen regulären
@@ -289,7 +287,7 @@ const Article = () => {
                   \quad X&amp;\rightarrow aY \\ 2. \quad X&amp;\rightarrow a \\ 3. \quad X&
                   \rightarrow Y \\ 4. \quad X&amp;\rightarrow \epsilon \end&#123;align*&#125;$$
                   <Paragraph>
-                    Wir zeigen nun, dass man auf Produktionen der Form 2 und 3
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir zeigen nun, dass man auf Produktionen der Form 2 und 3
                     verzichten kann.
                   </Paragraph>
                   <div
@@ -298,23 +296,22 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik. Dann gibt es
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik. Dann gibt es
                     eine äquivalente reguläre Grammatik \(G' = (\Sigma, N', P', S)\),
                     die nur Regeln vom Typ 1 und 4 enthält.
                   </div>
                   <div class="well container">
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Produktionen vom Typ 2, also von der Form \(X \rightarrow a\) können
+                    {" "}Produktionen vom Typ 2, also von der Form \(X \rightarrow a\) können
                     wir leicht eliminieren, indem wir ein neues Nichtterminalsymbol \(E
                     \not \in \Sigma \cup N\) einführen, jedes \(X \rightarrow a\) durch
                     \(X \rightarrow aE\) ersetzen und die Produktion \(E \rightarrow
                     \epsilon\) hinzufügen.
                     <Paragraph>
-                      Produktionen der Form \(X \rightarrow Y\) zu eliminieren ist etwas
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Produktionen der Form \(X \rightarrow Y\) zu eliminieren ist etwas
                       komplizierter. Die Idee ist, dass in einer von \(X\) ausgehende
                       Ableitung eines Wortes irgendwann zum ersten Mal eine Wortform
                       \(\alpha\) vorkommen muss, die nicht ein einzelnes
@@ -330,7 +327,7 @@ const Article = () => {
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    Im vorhergehenden Beweis haben wir nicht formal gezeigt, dass
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im vorhergehenden Beweis haben wir nicht formal gezeigt, dass
                     \(L(G')= L(G)\) gilt. Unser Kernargument war das etwas saloppe
                     "irgendwann muss ja mal eine Produktion kommen, die nicht von der
                     Form \(X \rightarrow Y\) ist". Anstatt den Beweis formal
@@ -358,8 +355,7 @@ const Article = () => {
                     <i>
                       alle
                     </i>
-                    {" "}
-                    \(X \in N\) zu berechnen, brauchen wir eine weitere
+                    {" "}\(X \in N\) zu berechnen, brauchen wir eine weitere
                     `for`-Schleife. Wir berechnen nun \(N_&#123;\geq k&#125;\) für
                     steigende \(k\), bis keine weitere Veränderung eintritt.
                   </Paragraph>
@@ -367,11 +363,11 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                     </span>
-                    Wenn \(N_&#123;k+1&#125;(X) = N_k(X)\), dann ist \(N_k(X) = N_&#123;k+1&#125;(X) =
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn \(N_&#123;k+1&#125;(X) = N_k(X)\), dann ist \(N_k(X) = N_&#123;k+1&#125;(X) =
                     N_&#123;k+2&#125;(X)= \dots\)
                   </div>
                   <Paragraph>
-                    Da die Menge \(N_k\) nur wachsen kann, gilt nach höchstens \(n =
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Da die Menge \(N_k\) nur wachsen kann, gilt nach höchstens \(n =
                     |N|\) Schritten \(N_n(X) = N_&#123;n+1&#125;(X)\) und somit $$ N_n(X) = \&#123;Y
                     \in N \ | \ X \Rightarrow^* Y\&#125; \ . $$ Das geht auch aus einer
                     anderen Überlegung hervor: wenn man überhaupt \(X \Rightarrow Y\)
@@ -385,7 +381,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Sei \(\Sigma = \&#123;a,b,c\&#125;\). Die Grammatik mit den Regeln \(A
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(\Sigma = \&#123;a,b,c\&#125;\). Die Grammatik mit den Regeln \(A
                     \rightarrow \epsilon \ | \ b A \ | \ c A\) erzeugt die Sprache aller
                     Wörter, die kein \(a\) enthalten. Die Grammatik \(B \rightarrow
                     \epsilon \ | \ a B \ | \ c B\) erzeugt die Wörter, die kein \(b\)
@@ -395,21 +391,21 @@ const Article = () => {
                     \ | \ a B \ | \ c B \end&#123;align*&#125;$$ erzeugt die Sprache aller Wörter,
                     die kein \(a\) oder kein \(b\) enthalten.
                     <Paragraph>
-                      Die Grammatik \(G\) ist regulär, enthält aber Produktionen vom Typ
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Grammatik \(G\) ist regulär, enthält aber Produktionen vom Typ
                       3, zum Beispiel \(S \rightarrow A\). Schreiben Sie eine
                       äquivalente Grammatik \(G'\), die nur Produktionen von der Form
                       \(X \rightarrow bY\) und \(X \rightarrow \epsilon\) enthält.
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    Wir können zwar auf Produktionen vom Typ 2 und 3 verzichten. Dies
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können zwar auf Produktionen vom Typ 2 und 3 verzichten. Dies
                     hat allerdings seinen Preis, wie die folgende Übungsaufgabe zeigt:
                   </Paragraph>
                   <div class="well well-lg numbered-exercise container">
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Betrachten Sie die folgende Grammatik über \(\Sigma =
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten Sie die folgende Grammatik über \(\Sigma =
                     \&#123;a_1,a_2,\dots,a_n\&#125;\) mit den Nichtterminalsymbolen \(\&#123;S, A_1,
                     A_2, \dots, A_n\&#125;\) und den insgesamt \(3n-1\) Produktionen
                     $$\begin&#123;align*&#125; S&amp;\rightarrow a_1 A_1 | a_2 A_2 | a_3 A_3 | \dots |
@@ -417,7 +413,7 @@ const Article = () => {
                     a_&#123;i&#125; | A_&#123;i+1&#125;\\ \dots \\ A_&#123;n-1&#125;&amp;\rightarrow a_&#123;n-1&#125; | A_n \\
                     A_n&amp;\rightarrow a_n \end&#123;align*&#125;$$
                     <Paragraph>
-                      Schreiben Sie eine äquivalente Grammatik ohne Produktionen der
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie eine äquivalente Grammatik ohne Produktionen der
                       Form \(X \rightarrow Y\). Wieviele Produktion hat Ihre neue
                       Grammatik?
                     </Paragraph>
@@ -431,7 +427,7 @@ const Article = () => {
                   beispielsweise Emailadressen sind oft aufgebaut nach Mustern wie
                   <ul>
                     <li>
-                      Ding 1, dann Ding 2, wie beispielsweise
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ding 1, dann Ding 2, wie beispielsweise
                       {" "}
                       <i>
                         Username, dann `@`, dann Domainname
@@ -439,7 +435,7 @@ const Article = () => {
                       {" "}{" "}
                     </li>
                     <li>
-                      Ding, bliebig oft wiederholt, wie beispielsweise
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ding, bliebig oft wiederholt, wie beispielsweise
                       {" "}
                       <i>
                         eine beliebig lange Folge von Labels, mit
@@ -452,7 +448,7 @@ const Article = () => {
                       {" "}{" "}
                     </li>
                     <li>
-                      Ding 1 oder Ding 2. Beispielsweise
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ding 1 oder Ding 2. Beispielsweise
                       {" "}
                       <i>
                         Bindestrich oder alphanumerisches Zeichen
@@ -464,22 +460,21 @@ const Article = () => {
                     <span class="numbered-title">
                       Lemma
                     </span>
-                    Seien \(L_1\) und \(L_2\) zwei reguläre Sprachen. Dann ist \(L_1
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Seien \(L_1\) und \(L_2\) zwei reguläre Sprachen. Dann ist \(L_1
                     \cup L_2\) auch regulär.
                   </div>
                   <div class="well container">
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Unsere Strategie ist, reguläre Grammatiken \(G_1\) für \(L_1\) und
+                    {" "}Unsere Strategie ist, reguläre Grammatiken \(G_1\) für \(L_1\) und
                     \(G_2\) für \(L_2\) zu betrachten und daraus eine neue reguläre
                     Grammatik \(G\) für \(L_1 \cup L_2\) zu bauen. Aus \(G\) sollen also
                     genau diejenigen Strings ableitbar sein, die in \(L_1\) oder \(L_2\)
                     enthalten sind.
                     <Paragraph>
-                      Seien nun \(G_1 = (\Sigma_1, N_1, P_1, S_1)\) und \(G_2 =
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Seien nun \(G_1 = (\Sigma_1, N_1, P_1, S_1)\) und \(G_2 =
                       (\Sigma_2, N_2, P_2, S_2)\) die beiden regulären Grammatiken. Wir
                       gehen davon aus, dass \(N_1 \cap N_2 = \emptyset\), dass es also
                       bei den nichtterminalen Symbolen keinen Zweifel gibt, zu welcher
@@ -500,7 +495,7 @@ const Article = () => {
                     </span>
                   </div>
                   <Paragraph>
-                    In einem nächsten Schritt werden wir zeigen, dass Konstrukte wie
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In einem nächsten Schritt werden wir zeigen, dass Konstrukte wie
                     {" "}
                     <i>
                       Ding 1, gefolgt von Ding 2
@@ -513,12 +508,11 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       (Kleenesche Hülle).
                     </b>
-                    {" "}
-                    Seien \(L_1, L_2 \in \Sigma^*\) zwei Sprachen. Die
+                    {" "}Seien \(L_1, L_2 \in \Sigma^*\) zwei Sprachen. Die
                     Verknüpfungssprache \(L_1 \circ L_2\) ist definiert als
                     $$\begin&#123;align*&#125; L_1 \circ L_2 := \&#123; \alpha \beta \ | \ \alpha \in
                     L_1, \beta \in L_2\&#125; \ . \end&#123;align*&#125;$$
@@ -527,16 +521,15 @@ const Article = () => {
                     <span class="numbered-title">
                       Lemma
                     </span>
-                    Seien \(L_1\) und \(L_2\) zwei reguläre Sprachen. Dann ist \(L_1
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Seien \(L_1\) und \(L_2\) zwei reguläre Sprachen. Dann ist \(L_1
                     \circ L_2\) auch regulär.
                   </div>
                   <div class="well container">
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Wir im letzten Beweis nehmen wir uns eine reguläre Grammatik \(G_1 =
+                    {" "}Wir im letzten Beweis nehmen wir uns eine reguläre Grammatik \(G_1 =
                     (\Sigma, N_1, P_1, S_1)\) für \(L_1\) und \(G_2 = (\Sigma, N_2, P_2,
                     S_2)\) für \(L_2\). Ob die beiden Alphabete die gleichen sind, also
                     beide \(\Sigma\), oder zwei verschiedene, also \(\Sigma_1,
@@ -544,7 +537,7 @@ const Article = () => {
                     und \(L_2\) als Sprachen über dem Alphabet \(\Sigma := \Sigma_1 \cup
                     \Sigma_2\) betrachten können.
                     <Paragraph>
-                      Wir führen nun wiederum ein neues Startsymbol \(S \not \in N_1
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir führen nun wiederum ein neues Startsymbol \(S \not \in N_1
                       \cup n_2\) ein und fügen die Regel $$ S \rightarrow S_1 S_2 $$
                       hinzu. Es sollte nun klar sein, dass wir aus \(S\) genau die
                       Wörter der Form \(\alpha \beta\) mit \(S_1 \Rightarrow^* \alpha\)
@@ -554,17 +547,17 @@ const Article = () => {
                       Symbole vorkommen.
                     </Paragraph>
                     <Paragraph>
-                      Wir müssen anders vorgehen. Wir ändern die Regeln von \(G_1\) so
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir müssen anders vorgehen. Wir ändern die Regeln von \(G_1\) so
                       ab, dass immer, wenn in einer \(G_1\)-Regle die Ableitung endet,
                       wir das Zeichen \(S_2\) anhängen:
                     </Paragraph>
-                    $$\begin&#123;align*&#125; \begin&#123;array&#125;&#123;l|l&#125; \textnormal&#123;Regel in $G_1$&#125;&
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; \begin&#123;array&#125;&#123;l|l&#125; \textnormal&#123;Regel in $G_1$&#125;&
                     \textnormal&#123;wird zu&#125; \\ \hline X \rightarrow aY&amp;X \rightarrow aY
                     \\ X \rightarrow a&amp;X \rightarrow aS_2 \\ X \rightarrow Y&amp;X
                     \rightarrow Y \\ X \rightarrow \epsilon&amp;Y \rightarrow S_2 \ .
                     \end&#123;array&#125; \end&#123;align*&#125;$$
                     <Paragraph>
-                      Die Menge an Produktionen der Grammatik \(G\) besteht dann aus den
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Menge an Produktionen der Grammatik \(G\) besteht dann aus den
                       nach dieser Tabelle modifizierten Produktionen \(P_1\) von
                       \(G_1\), zusammen mit den (unmodifizierten) Regeln von \(G_2\).
                       Das Startsymbol von \(G\) ist \(S_1\).
@@ -573,7 +566,7 @@ const Article = () => {
                       \(\square\)
                     </span>
                   </div>
-                  In einem dritten Lemma werden wir zeigen, dass die Konstruktion
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In einem dritten Lemma werden wir zeigen, dass die Konstruktion
                   {" "}
                   <i>
                     Ding, beliebig oft wiederholt
@@ -584,7 +577,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Sei \(L \subseteq \Sigma^*\). Die Sprache \(L^n\) ist die Menge
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L \subseteq \Sigma^*\). Die Sprache \(L^n\) ist die Menge
                     $$\begin&#123;align*&#125; L^n := \&#123; \alpha_1 \alpha_2 \dots \alpha_n \ | \
                     \alpha_i \in L \ \forall 1 \leq i \leq n \&#125; \ . \end&#123;align*&#125;$$
                     Insbesondere ist \(L^1 = L\) und \(L^0 = \&#123;\epsilon\&#125;\). Die Menge
@@ -597,15 +590,14 @@ const Article = () => {
                     <span class="numbered-title">
                       Lemma
                     </span>
-                    Sei \(L\) eine reguläre Sprache. Dann ist \(L^*\) auch regulär.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L\) eine reguläre Sprache. Dann ist \(L^*\) auch regulär.
                   </div>
                   <div class="well container">
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik für \(L\). Wir
+                    {" "}Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik für \(L\). Wir
                     könnten ein neues Startsymbol \(S'\) einführen und $$\begin&#123;align*&#125; S'
                     &amp;\rightarrow \epsilon \\ S'&amp;\rightarrow SS' \end&#123;align*&#125;$$ als zwei
                     neue Regeln einführen. Natürlich geht das nicht, denn \(S'
@@ -626,18 +618,14 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Hier sehen Sie einen URL mit Query-String:
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Hier sehen Sie einen URL mit Query-String:
                     <Paragraph>
-                      {" "}{" "}
-                      <code>
-                        https://web1.hszg.de/modulkatalog/index.php?activTopic=3&activNav=2&stid=566&frei=1&kennz=suche&activCont=1
-                      </code>
-                      {" "}{" "}
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`https://web1.hszg.de/modulkatalog/index.php?activTopic=3&activNav=2&stid=566&frei=1&kennz=suche&activCont=1`{" "}
                     </Paragraph>
-                    Der URL besteht aus mehreren Teilen:
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der URL besteht aus mehreren Teilen:
                     <ol>
                       <li>
-                        Dem Protokoll. Hier ist das `https`; es kann aber
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dem Protokoll. Hier ist das `https`; es kann aber
                         auch{" "}
                         <code>
                           http
@@ -659,11 +647,11 @@ const Article = () => {
                         Dem Domainnamen, hier `web1.hszg.de`.
                       </li>
                       <li>
-                        Optional nun einem Pfad, hier
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Optional nun einem Pfad, hier
                         `/modulkatalog/index.php`.
                       </li>
                       <li>
-                        Falls ein Pfad enthalten ist, dann optional ein `?`,
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls ein Pfad enthalten ist, dann optional ein `?`,
                         gefolgt von einem Query-String; dieser besteht aus beliebig
                         vielen, aber mindestens einem Paar der Form Key=Value, wobei die
                         Paare mit einem{" "}
@@ -674,14 +662,14 @@ const Article = () => {
                       </li>
                     </ol>
                     <Paragraph>
-                      Zeigen Sie, dass die Sprache der syntaktisch korrekten URLs (in
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass die Sprache der syntaktisch korrekten URLs (in
                       dem gerade beschriebenen Format) regulär ist. Sie können entweder
                       direkt eine reguläre Grammatik angeben oder mit dem
                       Baukastenprinzip und den drei letzten Lemmas argumentieren.
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    Wir führen ein weiteres Baukastenwerkzeug ein, weil es in der Praxis
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir führen ein weiteres Baukastenwerkzeug ein, weil es in der Praxis
                     recht häufig vorkommt.
                   </Paragraph>
                   <div
@@ -690,19 +678,18 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    Sei \(L \subseteq \Sigma^*\) eine reguläre Sprache und \(c \not \in
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L \subseteq \Sigma^*\) eine reguläre Sprache und \(c \not \in
                     \Sigma\) ein neues Terminalsymbol. Die Sprache aller nichtleeren
                     Folgen von \(L\)-Wörten, die durch \(c\) separiert sind, also formal
                     $$\begin&#123;align*&#125; L' := L \circ ( \&#123;c\&#125; \circ L)^* \end&#123;align*&#125;$$ ist
                     wiederum regulär.
                   </div>
                   <div class="well container">
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Dies folgt sofort aus den vorherigen Theorem, weil wir nur
+                    {" "}Dies folgt sofort aus den vorherigen Theorem, weil wir nur
                     Konkatenation \(\circ\) und Kleenesche Hülle \(^*\) verwenden.
                     Dennoch lohne es sich, explizit für \(L'\) eine Grammatik zu bauen.
                     Es ist auch recht einfach. Sei \(G = \(\Sigma, N, P, S)\) eine
@@ -713,14 +700,14 @@ const Article = () => {
                     weiterzumachen. Also: wir beginnen mit \(P' := P\), fügen aber noch
                     weitere Produktionen hinzu. Nämlich:
                     <Paragraph>
-                      Für jede \(G\)-Produktion der Form \(Y \rightarrow \epsilon\)
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für jede \(G\)-Produktion der Form \(Y \rightarrow \epsilon\)
                       fügen wir \(Y \rightarrow cS\) hinzu.
                     </Paragraph>
                     <Paragraph>
-                      Für jede \(G\)-Produktion der Form \(Y \rightarrow a\) fügen wir
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für jede \(G\)-Produktion der Form \(Y \rightarrow a\) fügen wir
                       \(Y \rightarrow acS\) hinzu.
                     </Paragraph>
-                    Die neue Grammatik \(G'\) ist eine
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die neue Grammatik \(G'\) ist eine
                     {" "}
                     <i>
                       erweitert reguläre Grammatik
@@ -735,20 +722,20 @@ const Article = () => {
                     </span>
                   </div>
                   <Paragraph>
-                    Wir können noch sehr viel mehr Operationen mit regulären Sprachen
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können noch sehr viel mehr Operationen mit regulären Sprachen
                     machen als Vereinigung, Konkatenation und Kleenesche Hülle.
                     Beispielsweise Umkehrung und Komplement, also beispielsweise
                   </Paragraph>
                   <ul>
                     <li>
-                      Alle Emailadressen, von rechts nach links gelesen (Umkehrung);
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Alle Emailadressen, von rechts nach links gelesen (Umkehrung);
                     </li>
                     <li>
-                      Die Menge aller syntaktisch inkorrekten Emailadressen
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Menge aller syntaktisch inkorrekten Emailadressen
                       (Komplement).
                     </li>
                   </ul>
-                  Mit den Werkzeugen, die wir uns bis jetzt erarbeitet haben, können wir
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Mit den Werkzeugen, die wir uns bis jetzt erarbeitet haben, können wir
                   eine Grammatik für das Komplement nicht konstruieren. Wir brauchen
                   etwas mehr Maschinerie.
                 </div>

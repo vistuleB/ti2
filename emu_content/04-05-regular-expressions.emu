@@ -39,7 +39,7 @@
                             4.5 Reguläre Ausdrücke
                     |> p
 
-                        Wir werden nun eine weitere Weise finden, reguläre Sprachen zu beschreiben: neben regulären
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir werden nun eine weitere Weise finden, reguläre Sprachen zu beschreiben: neben regulären
                         Grammatik (ob normal, erweitert, eingeschränkt),
                         endlichen Automaten und nichtdeterministischen endlichen Automaten
                         gibt es noch die _regulären Ausdrücke_. Dies wird wahrscheinlich von allen
@@ -72,22 +72,21 @@
                             regulär.
                     |> p
 
-                        Darüberhinaus haben wir Techniken kennengelernt, um aus den gegebenen regulären Grammatiken
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Darüberhinaus haben wir Techniken kennengelernt, um aus den gegebenen regulären Grammatiken
                         eine neue Grammatik für \(L_1 \cup L_2\), \(L_1 \circ L_2\) und \(L\) konstruieren zu können.
                         Sie sollten sich jetzt folgende Frage stellen:
                     |> div
                         style text-align:center
 
-                        *Frage:*
-                        Können _alle_ regulären Sprachen nach diesem Baukastenprinzip erstellt werden?
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Frage:*                        Können _alle_ regulären Sprachen nach diesem Baukastenprinzip erstellt werden?
                     |> p
 
-                        Damit diese Frage überhaupt die Chance hat, mit _ja_ beantwortet zu werden, müssen wir
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Damit diese Frage überhaupt die Chance hat, mit _ja_ beantwortet zu werden, müssen wir
                         "Atome" zur Verfügung stellen, mit denen wir beginnen können. Daher:
                     |> ul
                         |> li
 
-                            Die Sprachen \(\emptyset\), \(\{\epsilon\}\) und \(\{x\}\) für jedes \(x \in \Sigma\)
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Sprachen \(\emptyset\), \(\{\epsilon\}\) und \(\{x\}\) für jedes \(x \in \Sigma\)
                             sind regulär.
                     Aus diesen \(|\Sigma|+2\) "Grundbausteinen" und den drei Kombinatoren \(\cup\), \(\circ\) und \(^*\)
                     können
@@ -100,7 +99,7 @@
                             class numbered-title
 
                             Definition
-                        Sei \(\Sigma\) einendliches Alphabet. Die regulären Audrücke über \(\Sigma\) sind induktiv
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(\Sigma\) einendliches Alphabet. Die regulären Audrücke über \(\Sigma\) sind induktiv
                         definiert wie folgt und beschreiben folgende Sprachen:
                         |> ul
                             |> li
@@ -123,24 +122,24 @@
                                 &ensp;gesehen haben).
                             |> li
 
-                                *Konkatenation.* \((R_1R_2)\) ist ein regulärer Ausdruck, der
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Konkatenation.* \((R_1R_2)\) ist ein regulärer Ausdruck, der
                                 die Sprache \(L_1 \circ L_2\) beschreibt (die auch wiederum regulär ist).
                                 Der Deutlichkeit halber schreiben wir auch manchmal \(R_1 \circ R_2\).
                             |> li
 
-                                *Kleenesche Hülle.* Wenn \(R\) ein regulärer Ausdruck ist und die Sprache
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Kleenesche Hülle.* Wenn \(R\) ein regulärer Ausdruck ist und die Sprache
                                 \(L\) beschreibt,
                                 dann ist \((R^*)\) ein regulärer Ausdruck und beschreibt die Sprache \(L^*\).
                         |> p
 
-                            Weil in der Praxis neben \(L^*\), also beliebig langen, möglicherweise leeren Folgen von
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Weil in der Praxis neben \(L^*\), also beliebig langen, möglicherweise leeren Folgen von
                             \(L\)-Wörtern wir
                             oft _nichtleere_ Folgen wollen,
                             führen wir die Abkürzung \(R^+\) für \(R (R^*)\) ein und bezeichnen die beschriebene Sprache
                             \(L \circ L^*\) kurzerhand als \(L^+\).
                     |> p
 
-                        In konkreten fällen lassen gerne die Klammerung weg, wenn keine Verwechslungsgefahr besteht.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In konkreten fällen lassen gerne die Klammerung weg, wenn keine Verwechslungsgefahr besteht.
                         Auch
                         gehen wir davon aus, dass die Operatoren die Präzedenz \(^*\) vor \(\circ\) vor \(|\) haben (wie
                         _hoch_ vor _Punkt_ vor _Strich_ in der Arithmetik), sodass beispielsweise
@@ -148,14 +147,14 @@
                         in der Arithmetik \(a^2 b + c^3\) statt \( (((a^2)b) + c^3) \) schreiben.
                     |> p
 
-                        Die von den atomaren Ausdrücken beschriebenen Sprachen sind alle regulär, da sie alle
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die von den atomaren Ausdrücken beschriebenen Sprachen sind alle regulär, da sie alle
                         _endliche Sprachen_ sind.
                         Dank unserer Vorarbeit aus 
                         |> a
                             href ./04-01-regular-grammars.html#baukasten
 
                             Kapitel 4.1
-                        wissen wir,
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;wissen wir,
                         dass Alterantive, Konkatenation und Kleenesche Hülle wiederum reguläre Sprachen erzeugen.
                         Wir erhalten das folgende Ergebnis:
                     |> div
@@ -165,17 +164,17 @@
                             class numbered-title
 
                             Lemma
-                        Die von einem regulären Ausdruck \(R\) beschriebene Sprache \(L(R)\) ist regulär.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die von einem regulären Ausdruck \(R\) beschriebene Sprache \(L(R)\) ist regulär.
                     |> p
 
-                        Es ist Zeit für ein paar Beispiele.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es ist Zeit für ein paar Beispiele.
                     |> div
                         class well container theorem
                         |> span
                             class numbered-title
 
                             Beispiel
-                        Nehmen wir die Sprache der Wörter der Form `bla:bla:blu.xyz-12-ab.b:x` aus dem
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nehmen wir die Sprache der Wörter der Form `bla:bla:blu.xyz-12-ab.b:x` aus dem
                         letzten Kapitel. Sie erinnern sich:
                         eine endliche Folge von _Labels_, wo ein Label eine nichtleere Folge von Blöcken ist, die
                         entweder `:` oder durch `-` separiert sind, wobei innerhalb eines Labels
@@ -188,7 +187,7 @@
                         Stück vorgehen.
                         |> p
 
-                            Ein Block ist eine nichtleere Folge von \(a\)'s. Der entsprechende reguläre Ausdruck \(B\)
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein Block ist eine nichtleere Folge von \(a\)'s. Der entsprechende reguläre Ausdruck \(B\)
                             für Blöcke ist also
                             \begin{align*}
                             B : = a^+
@@ -226,7 +225,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Laden Sie sich 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Laden Sie sich 
                         |> a
                             href ../code/regular-expressions/TestRegex.java
 
@@ -247,7 +246,7 @@
                                 class terminalOutput
 
                                 Enter words to be matched, one per line
-                            `aaaaa:aa:aaaa:a`
+                            &ensp;`aaaaa:aa:aaaa:a`
                             |> code
                                 class terminalOutput
 
@@ -259,7 +258,7 @@
                                 false
                         |> p
 
-                            Schreiben Sie nun einen regulären Ausdruck \(R\) für die obige Sprache und testen Sie ihn
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie nun einen regulären Ausdruck \(R\) für die obige Sprache und testen Sie ihn
                             mit dem Java-Programm.
                     |> div
                         class well well-lg numbered-exercise container
@@ -267,7 +266,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        In der Praxis gibt es bei reguläre Ausdrücken viele Abkürzung, so beschreibt
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In der Praxis gibt es bei reguläre Ausdrücken viele Abkürzung, so beschreibt
                         `[a-z]` beispielsweise die Menge aller Kleinbuchstaben,
                         `[aoeiuy]` beschreibt die Menge \{a,o,e,i,u,y\} etc.
                         Der reguläre Ausdruck `[a-z]*[aeiuoy][a-z]*` beschreibt also die
@@ -279,7 +278,7 @@
                                 href https://www.w3schools.com/java/java_regex.asp
 
                                 W3Schools
-                        und
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und
                         |> div
                             style text-align:center
                             |> a
@@ -288,10 +287,10 @@
                                 Patternl.html
                                 auf der Java-API
                             ,
-                        lassen sich aber bitte nicht von der Menge an Details erschlagen.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;lassen sich aber bitte nicht von der Menge an Details erschlagen.
                         |> p
 
-                            Schreiben Sie nun in der Java-Regex-Syntax einen regulären Ausdruck für unsere obige Sprache
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie nun in der Java-Regex-Syntax einen regulären Ausdruck für unsere obige Sprache
                             \(L\), wo Sie aber
                             neben \(a\) alle alphanumerischen Zeichen zulassen.
                     |> h2
@@ -309,19 +308,18 @@
                             class numbered-title
 
                             Theorem
-                        Sei \(L\) eine reguläre Sprache. Dann gibt es einen regulären Ausdruck \(R\), der \(L\)
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L\) eine reguläre Sprache. Dann gibt es einen regulären Ausdruck \(R\), der \(L\)
                         beschreibt,
                         also
                         \(L(R) = R\).
                     |> p
 
-                        Wir paraphrasieren hier den Beweis aus Michael Sipsers _Introduction to the Theory of
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir paraphrasieren hier den Beweis aus Michael Sipsers _Introduction to the Theory of
                         Computation_.
                     |> div
                         class well container
 
-                        *Beweis.*
-                        Zunächst skizzieren wir die Beweisidee. Da \(L\) regulär ist, gibt es einen
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Zunächst skizzieren wir die Beweisidee. Da \(L\) regulär ist, gibt es einen
                         nichtdeterministischen endlichen
                         Automaten \(M\), die \(L\) akzeptiert. Wir werden nun \(M\) Schritt für Schritt in einen
                         regulären Ausdruck
@@ -368,8 +366,7 @@
                                 class numbered-title
 
                                 Definition
-                            *(Verallgemeinerter nichtdeterministischer endlicher Automat, VNEA).*
-                            Ein VNEA besteht aus einem Alphabet \(\Sigma\), einer Zustandsmenge \(Q\), einen
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Verallgemeinerter nichtdeterministischer endlicher Automat, VNEA).*                            Ein VNEA besteht aus einem Alphabet \(\Sigma\), einer Zustandsmenge \(Q\), einen
                             Startzustand \(\qstart \in Q\), einem
                             akzeptierenden Zustand \(q_{\rm end} \in Q \setminus \{\qstart\}\), einer
                             Menge von gerichteten Kanten
@@ -384,7 +381,7 @@
                             \(q_i \step{\beta \in R} q_j \).
                             |> p
 
-                                Für \(q, q' \in Q\) und \(\alpha \in \Sigma^*\) schreiben wir
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für \(q, q' \in Q\) und \(\alpha \in \Sigma^*\) schreiben wir
                                 \begin{align*}
                                 q \Step{\alpha} q'
                                 \end{align*}
@@ -402,7 +399,7 @@
                                 gilt.
                         |> p
 
-                            Einen gegebenen NEA können wir leicht in einen VNEA transformieren, indem wir, soweit nötig,
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Einen gegebenen NEA können wir leicht in einen VNEA transformieren, indem wir, soweit nötig,
                             (1) einen neuen Startzustand kreieren (damit dieser keine eingehenden Kanten hat),
                             (2) einen neuen Endzustand kreieren,
                             (3) "parallele" Übergänge wie \( (q_i, x, q_j), (q_i, y, q_j)\) zu einer Kante
@@ -410,7 +407,7 @@
                             der dann mit dem regulären Ausdruck \(x | y\) beschriftet ist.
                         |> p
 
-                            Wir haben den ganzen Aufwand betrieben, weil wir für einen VNEA sehr leicht
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben den ganzen Aufwand betrieben, weil wir für einen VNEA sehr leicht
                             Zustände eliminieren können. Wenn wir zum Beispiel
                             \begin{align*}
                             q_0 \step{R_1} q_1 \step{R_2} q_2
@@ -427,7 +424,7 @@
                                 loading lazy
                         |> p
 
-                            Falls die mit \(R_2\) beschriftete Selbstschleife an Zustand \(B\) nicht existieren sollte,
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls die mit \(R_2\) beschriftete Selbstschleife an Zustand \(B\) nicht existieren sollte,
                             dann
                             schreiben wir einfach \(R_1R_3\) anstatt \(R_1 R_2^* R_3\); falls der Übergang \(A
                             \step{R_4} B\) nicht
@@ -438,7 +435,7 @@
                             \(\emptyset\) beschriften.)
                         |> p
 
-                            Wir suchen uns also einen Zustand \(B \in Q \setminus \{\qstart, \qend\}\), den wir
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir suchen uns also einen Zustand \(B \in Q \setminus \{\qstart, \qend\}\), den wir
                             eliminieren wollen, und führen die oben beschriebene
                             \(B\)-Umfahrung parallel für alle Paare \(A,C\) aus, für die es \(A \step{} B \step{} C\)
                             gibt.
@@ -453,7 +450,7 @@
                                 loading lazy
                         |> p
 
-                            Dieser VNEA akzeptiert immer noch die gleiche Sprache \(L\) wie der ursprüngliche NEA, mit
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dieser VNEA akzeptiert immer noch die gleiche Sprache \(L\) wie der ursprüngliche NEA, mit
                             dem wir
                             begonnen haben. Welche Sprache ist das? Es ist die Sprache aller \(\alpha \in \Sigma\) mit
                             \begin{align*}
@@ -485,10 +482,10 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Wandeln Sie nach dem eben beschriebenen Schema den Automaten
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wandeln Sie nach dem eben beschriebenen Schema den Automaten
                         |> figure
                             |> img
                                 style height:10em
                                 src ../img/finite-state-automata/nfsm-example-02.svg
                                 loading lazy
-                        in einen regulären Ausdruck um.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;in einen regulären Ausdruck um.

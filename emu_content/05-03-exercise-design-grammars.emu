@@ -83,7 +83,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Geben Sie folgende Grammatik in die App ein:
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Geben Sie folgende Grammatik in die App ein:
                         |> pre
 
                             S -> ;
@@ -110,7 +110,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Schreiben Sie eine kontextfreie Grammatik für die Sprache aller
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie eine kontextfreie Grammatik für die Sprache aller
                         "korrekten" URLs; also Folgen von mindestens zwei _Labels_, die
                         durch `.` separiert sind. Sie können den "Regelvorschlag"
                         ganz links unten in der App reinkopieren, um automatisch Regeln für alphanumerische
@@ -118,7 +118,7 @@
                         gar nicht auf Effizienz geachtet).
                         |> p
 
-                            Geben Sie das Eingabewort `a.aaaaa.aaaa.aaaa.aaaa.aaaa` ein. Wie
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Geben Sie das Eingabewort `a.aaaaa.aaaa.aaaa.aaaa.aaaa` ein. Wie
                             sieht Ihr Backtrack-Baum aus? Hat er viele Sackgassen? Können Sie Ihre Grammatik
                             so abändern, dass sie zwar noch die gleiche Sprache erzeugt, aber keine / nur wenige
                             Sackgassen hat?
@@ -128,7 +128,7 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Entwerfen Sie eine Grammatik für arithmetische Ausdrücke im Racket-Stil, also
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Entwerfen Sie eine Grammatik für arithmetische Ausdrücke im Racket-Stil, also
                         |> pre
 
                             (* (+ 2 3) (- 4 (* 2 4) 5)
@@ -144,27 +144,26 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Wiederholen Sie die vorherige Übung für arithmetische Ausdrücke in der uns
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wiederholen Sie die vorherige Übung für arithmetische Ausdrücke in der uns
                         geläufigen Infix-Notation. Hierbei sollten die Konventionen Punkt-vor-Strich
                         beachtet werden. Im Ableitungsbaum von
                         |> pre
 
                             2+3*(5+4)
-                        sollte sich das wiederspiegeln.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;sollte sich das wiederspiegeln.
                     |> div
                         class well well-lg numbered-exercise container
                         |> span
                             class numbered-title
 
                             Übungsaufgabe
-                        *(Challenge)*
-                        Geben Sie die Grammatik hier ein:
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Challenge)*                        Geben Sie die Grammatik hier ein:
                         |> pre
 
                             S -> "("S")"S;
                             S -> "["S"("S;
                             S -> ;
-                        Überlegen Sie, was diese "bedeutet". Sie sehen, die Grammatik ist
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Überlegen Sie, was diese "bedeutet". Sie sehen, die Grammatik ist
                         nicht eindeutig. Das Wort `[([()(` hat zwei
                         verschiedene Ableitungsbäume. Können Sie eine äquivalente
                         _eindeutige_ Grammatik schreiben?
@@ -174,20 +173,18 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        *(Challenge)*
-                        Die folgende Grammatik hat User _babou_
-                        auf 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Challenge)*                        Die folgende Grammatik hat User _babou_                        auf 
                         |> a
                             href https://cstheory.stackexchange.com/questions/22520/example-of-context-free-grammar-that-triggers-exponential-behaviour-without-memo
 
                             StackExchange
-                        vorgeschlagen als Beispiel für eine eindeutige Grammatik,
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;vorgeschlagen als Beispiel für eine eindeutige Grammatik,
                         bei der Sie exponentiell große Backtrack-Bäume bekommen können:
                         |> pre
 
                             S ->  "a" X "b" | "a" X "c";
                             X -> "a" | "a" X | "a" X X;
-                        Das ist aber keine Kunst, da die Grammatik uneindeutig ist.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das ist aber keine Kunst, da die Grammatik uneindeutig ist.
                         Können Sie eine _eindeutige_ Grammatik angebene, die ähnlich
                         exponentielles Verhalten zeigt? Exponentiell heißt: mit jedem
                         zusätlichen Zeichen des Eingabewortes kann die Größe des
@@ -198,6 +195,6 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        *(Super-Challenge; ich hab selbst keine Lösung)*.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Super-Challenge; ich hab selbst keine Lösung)*.
                         Finden Sie eine kontextfreie Sprache \(L\), für die _jede_ Grammatik,
                         die \(L\) erzeugt, unter exponentiell großen Backtrack-Bäumen leidet.

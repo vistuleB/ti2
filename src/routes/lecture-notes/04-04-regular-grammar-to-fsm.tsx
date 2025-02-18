@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  In diesem Unterkapitel wollen wir das Gelernte an einem konkreten Beispiel anwenden.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem Unterkapitel wollen wir das Gelernte an einem konkreten Beispiel anwenden.
                   Wir beginnen (1) mit einer Beschreibung eines Formats in natürlicher Sprache; (2) basteln uns
                   daraus
                   mit Hilfe des "Baukastenprinzips" eine reguläre Sprache; (3) säubern diese, indem wir Regeln
@@ -51,7 +51,7 @@ const Article = () => {
                   1. Beschreibung des Formats in natürlicher Sprache
                 </h2>
                 <Paragraph>
-                  Unsere Sprache \(L\) soll so ähnlich sein wie die der erlaubten Domainnamen, allerdings mit ein
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unsere Sprache \(L\) soll so ähnlich sein wie die der erlaubten Domainnamen, allerdings mit ein
                   paar Abänderungen,
                   um die obigen Transformationen spannender zu machen. Ein Wort in unserer Sprache besteht aus
                   einer
@@ -78,21 +78,13 @@ const Article = () => {
                   Also:
                 </Paragraph>
                 <div style="text-align:center">
-                  {" "}{" "}
-                  <code>
-                    bla:bla:blue.xyz-12-zx.b:x:yyy:xxx:aaa
-                  </code>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`bla:bla:blue.xyz-12-zx.b:x:yyy:xxx:aaa`{" "}
                 </div>
-                ist ein Wort in \(L\), aber
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ist ein Wort in \(L\), aber
                 <div style="text-align:center">
-                  {" "}{" "}
-                  <code>
-                    a:b-c.hello
-                  </code>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`a:b-c.hello`{" "}
                 </div>
-                ist kein Wort in \(L\), da das erste Label die Separatoren{" "}
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ist kein Wort in \(L\), da das erste Label die Separatoren{" "}
                 <code>
                   :
                 </code>
@@ -121,7 +113,7 @@ const Article = () => {
                   2. Eine reguläre Grammatik
                 </h2>
                 <Paragraph>
-                  Beginnen wir mit dem Alphabet.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beginnen wir mit dem Alphabet.
                   Da es 62 alphanumerische Zeichen gibt:{" "}
                   <code>
                     a..zA..Z0..9
@@ -135,11 +127,11 @@ const Article = () => {
                   Wir beginnen ganz unten und schreiben eine Grammatik für
                   Blöcke, also nichtleere Strings aus alphanumerischen Zeichen.
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 B&amp;\rightarrow a \ | \ aB
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Als nächstes führen wir ein nichtterminales Symbole \(C\) für Labels mit{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als nächstes führen wir ein nichtterminales Symbole \(C\) für Labels mit{" "}
                   <code>
                     :
                   </code>
@@ -175,13 +167,13 @@ const Article = () => {
                   Verwechslungsgefahr mit
                   dem ursprünglichen \(B\) aufkommt. Das gleiche machen wir für \(D\).
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 C&amp;\rightarrow a \ | \ aC \ | \ a&#123;:&#125;C \\
                 D&amp;\rightarrow a \ | \ aD \ | \ a&#123;-&#125;D \\
                 T&amp;\rightarrow C \ | D
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Von \(L\) lassen sich nun also alle Labels ableiten. Wir brauchen nun zum Schluss wieder
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Von \(L\) lassen sich nun also alle Labels ableiten. Wir brauchen nun zum Schluss wieder
                   eine Folge von \(L\), mit{" "}
                   <code>
                     .
@@ -193,17 +185,17 @@ const Article = () => {
                   &ensp;anwenden, dieses
                   mal auf die von \(T\) erzeugte Sprache. Im Ergebnis benennen wir das Startsymbol in \(S\) um.
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 S&amp;\rightarrow C \ | \ D \\
                 C&amp;\rightarrow a \ | \ aC \ | \ a&#123;:&#125;C \ | a&#123;.&#125;S \ \\
                 D&amp;\rightarrow a \ | \ aD \ | \ a\text&#123;-&#125;D \ | \ a&#123;.&#125;S \\
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Um eine "richtig" reguläre Sprache zu erhalten, entzerren wir die erweitert regulären
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um eine "richtig" reguläre Sprache zu erhalten, entzerren wir die erweitert regulären
                   Produktionen
                   wie \(C \rightarrow a&#123;:&#125;C\). Dafür brauchen wir neue Symbole \(C', D', S'\):
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 S&amp;\rightarrow C \ | \ D \\
                 C&amp;\rightarrow a \ | \ aC \ | \ aC'\ | \ aS' \\
                 C'&amp;\rightarrow &#123;:&#125;C \\
@@ -215,7 +207,7 @@ const Article = () => {
                   3. Die reguläre Grammatik säubern
                 </h2>
                 <Paragraph>
-                  Wir wollen nun alle Produktionen der Form \(Y \rightarrow x\) eliminieren. Hierfür nehmen wir
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir wollen nun alle Produktionen der Form \(Y \rightarrow x\) eliminieren. Hierfür nehmen wir
                   uns
                   {" "}
                   <i>
@@ -225,7 +217,7 @@ const Article = () => {
                   xE\)
                   und fügen die Produktion \(E \rightarrow \epsilon\) hinzu.
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 S&amp;\rightarrow C \ | \ D \\
                 C&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \\
                 C'&amp;\rightarrow &#123;:&#125;C \\
@@ -257,7 +249,7 @@ const Article = () => {
                   zu; gleiches gilt
                   für \(D\). Wir erhalten:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 S&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \ | \ aD \ | \ a D' \\
                 C&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \ \\
                 C'&amp;\rightarrow &#123;:&#125;C \\
@@ -270,7 +262,7 @@ const Article = () => {
                   4. Einen nichtdeterministischen endlichen Automaten bauen
                 </h2>
                 <Paragraph>
-                  Dies sollte nun einfach sein. Wir erschaffen Zustände \(S, C, C', D, D', S', E\) und
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dies sollte nun einfach sein. Wir erschaffen Zustände \(S, C, C', D, D', S', E\) und
                   übersetzen jeden Grammatik-Pfeil in einen Automaten-Pfeil.
                 </Paragraph>
                 <figure>
@@ -291,7 +283,7 @@ const Article = () => {
                   5. Den nichtdeterministischen Automaten in einen deterministischen umwandeln
                 </h2>
                 <Paragraph>
-                  Unser nichtdeterministischer endlicher Automat hat Zustandsmenge \(Q = \&#123;S, S', C, C', D, D',
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unser nichtdeterministischer endlicher Automat hat Zustandsmenge \(Q = \&#123;S, S', C, C', D, D',
                   E\&#125;\), also insgesamt
                   sieben Zustände. Wenn wir genau nach Buch vorgingen, müssten wir den endlichen Automaten auf der
                   Zustandsmenge \(2^Q\)
@@ -572,7 +564,7 @@ const Article = () => {
                   </div>
                 </figure>
                 <Paragraph>
-                  Dieser Automat hat deutlich weniger also 128 Zustände, nämlich mit nur sieben genau so
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dieser Automat hat deutlich weniger also 128 Zustände, nämlich mit nur sieben genau so
                   viele wie der nichtdeterministische (es ist Zufall, dass beide gleich viele Zustände haben;
                   messen
                   Sie dieser Tatsache keine Bedeutung bei). Wir könnten nun von diesem Automaten ausgehend
@@ -580,14 +572,14 @@ const Article = () => {
                   wäre als die ursprüngliche. Wenn wir erweitert reguläre Grammatiken erlauben, so können
                   wir den deterministischen Automaten besonders konzise in eine Grammatik fassen:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 S&amp;\rightarrow aT \\
                 T&amp;\rightarrow &#123;.&#125;S \ | \ aT \ | \ &#123;:&#125;aC \ | \ \text&#123;-&#125;a D \\
                 C&amp;\rightarrow aC \ | \ &#123;:&#125;aC \ | \ &#123;.&#125;S \\
                 D&amp;\rightarrow aD \ | \ \text&#123;-&#125;aD \ | \ &#123;.&#125;S
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Die Zustände des deterministischen Automaten beschreiben im Prinzip das, was wir uns merken
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Zustände des deterministischen Automaten beschreiben im Prinzip das, was wir uns merken
                   müssen, wenn wir so einen String "parsen": Zustand \( \&#123;C',C,E,D,D',S'\&#125;\), der
                   in der Grammatik dann zum Nichtterminal \(T\) wird, bedeutet beispielsweise
                   {" "}
@@ -622,7 +614,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Erinnern Sie sich an{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Erinnern Sie sich an{" "}
                     <a href="./04-03-nfsm#exercise-divisibility">
                       Aufgabe 4.3.1
                     </a>
@@ -641,7 +633,7 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    Dieser Automat hat 11 Zustände. Sein Potenzmengenautomat hätte also \(2^&#123;11&#125; = 2048\)
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dieser Automat hat 11 Zustände. Sein Potenzmengenautomat hätte also \(2^&#123;11&#125; = 2048\)
                     Zustände.
                     Führen Sie die Konstruktion{" "}
                     <i>

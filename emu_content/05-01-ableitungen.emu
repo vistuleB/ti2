@@ -43,7 +43,7 @@
                             class numbered-title
 
                             Definition (Ableitung)
-                        Sei \(G\) eine Grammatik mit Startsymbol \(S\). Die Ableitung eines
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(G\) eine Grammatik mit Startsymbol \(S\). Die Ableitung eines
                         Wortes \(\alpha\) ist eine Sequenz von Wortformen \( w_0, w_1, \dots,
                         w_n\) mit \(w_0 = S, w_n = \alpha\) und \(w_{i-1} \Longrightarrow
                         w_i\).
@@ -70,7 +70,7 @@
                     werden.
                     |> p
 
-                        Betrachten wir im Folgenden ein weiteres Beispiel einer Ableitung, in
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir im Folgenden ein weiteres Beispiel einer Ableitung, in
                         diesem Falle eine _Rechtsableitung_, in der in jedem Schritt
                         das am weitesten rechts stehende Nichtterminal expandiert wird:
                     \begin{align*} E&amp;\stackrel{2}{\Longrightarrow} T
@@ -87,7 +87,7 @@
                     2351... sondern 64642641532.
                     |> p
 
-                        Beachten Sie, dass wir es hier mit einer eindeutigen Grammatik zu tun
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie, dass wir es hier mit einer eindeutigen Grammatik zu tun
                         haben, es also nur einen Syntaxbaum gibt:
                     |> figure
                         |> img
@@ -96,28 +96,18 @@
                             loading lazy
                     |> p
 
-                        Rechtsableitung und Linksableitung sowie deren Codierung als
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rechtsableitung und Linksableitung sowie deren Codierung als
                         Zahlenfolge spiegeln also nur zwei verschiedene Weisen wieder, den
                         Baum auszugeben.
                     |> pre
                         class listing container
 
-                        `def treeToLeftDerivation (tree):`
+                        `def treeToLeftDerivation (tree):`                        
 
-                        &ensp;&ensp;`print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
+                        &ensp;&ensp;`print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`  `for child in tree.children (from left ro right):`      `treeToLeftDerivation(child)````def treeToRightDerivation (tree):`                        
 
-                        &ensp;&ensp;`for child in tree.children (from left ro right):`
-
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`treeToLeftDerivation(child)`
-                        ``
-                        `def treeToRightDerivation (tree):`
-
-                        &ensp;&ensp;`for child in tree.children (from left ro right):`
-
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`treeToLeftDerivation(child)`
-
-                        &ensp;&ensp;`print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
+                        &ensp;&ensp;`for child in tree.children (from left ro right):`      `treeToLeftDerivation(child)`  `print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
                     |> p
 
-                        Beachten Sie, dass wir in beiden Fällen die Liste Kinder von links
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie, dass wir in beiden Fällen die Liste Kinder von links
                         nach rechts durchgehen.

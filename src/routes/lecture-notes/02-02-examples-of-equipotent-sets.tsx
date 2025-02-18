@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Noch bevor wir im letzten Teilkapitel den Begriff der
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Noch bevor wir im letzten Teilkapitel den Begriff der
                   Gleichmächtigkeit definiert haben, haben wir zwei Beispiele gesehen:
                   $\N^+ \approx \N \approx \Z$. Alle Mengen sind gleichmächtig. In
                   diesem Teilkapitel werden wir unintuitivere Beispiele sehen: $\N
@@ -57,7 +57,7 @@ const Article = () => {
                       class="numbered-title">
                       Theorem
                     </span>
-                    Die Mengen $\N$ und $\N^2$ sind gleichmächtig. Mit $\N^2$ (oder auch
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Mengen $\N$ und $\N^2$ sind gleichmächtig. Mit $\N^2$ (oder auch
                     $\N \times \N$) bezeichnen wir hier das cartesische Produkt von $\N$
                     mit sich selbst: die Menge aller{" "}
                     <i>
@@ -72,7 +72,7 @@ const Article = () => {
                       src="../img/infinite-sets/N.svg" />
                     <br />
                     <div>
-                      Die Menge $\N$ bzw. ein Teil davon.
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Menge $\N$ bzw. ein Teil davon.
                     </div>
                   </figure>
                   <br />
@@ -82,18 +82,17 @@ const Article = () => {
                       src="../img/infinite-sets/N-times-N.svg" />
                     <br />
                     <div>
-                      Die Menge $\N \times \N$ bzw. ein Teil davon.
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Menge $\N \times \N$ bzw. ein Teil davon.
                     </div>
                   </figure>
                 </div>
                 <div class="well container">
                   <Paragraph>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Wir skizzieren eine Bijektion $f : \N \times \N \rightarrow \N$,
+                    {" "}Wir skizzieren eine Bijektion $f : \N \times \N \rightarrow \N$,
                     indem wir für jeden Punkt $(x,y) \in \N \times \N$ angeben, auf
                     welche natürliche Zahl er abgebildet werden soll:
                   </Paragraph>
@@ -103,7 +102,7 @@ const Article = () => {
                       src="../img/infinite-sets/N-times-N-to-N.svg" />
                   </figure>
                   <Paragraph>
-                    Wir zerlegen $\N \times \N$ also in fallende Diagonale und gehen
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir zerlegen $\N \times \N$ also in fallende Diagonale und gehen
                     jede Diagonale von rechts unten nach links oben durch. Dadurch
                     können wir die zweidimensionale Gestalt von $\N \times \N$
                     "aufdröseln" und dem eindimensionalen $\N$ zuordnen.
@@ -117,7 +116,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Finden Sie eine explizite Formel für die Funktion $f : \N \times \N$
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Finden Sie eine explizite Formel für die Funktion $f : \N \times \N$
                     aus dem obigen Theorem. Achten Sie erst einmal auf die Werte von
                     $f(x,0)$: $f(3,0) = 6$ und $f(4,0) = 10$ beispielsweise. Erkennen
                     Sie die blauen Zahlen auf der $x$-Achse? Haben Sie eine Formel für
@@ -130,7 +129,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Zeigen Sie $\Z \times \Z \approx \Z$, indem Sie eine ähnliche
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie $\Z \times \Z \approx \Z$, indem Sie eine ähnliche
                     Aufdröselung finden, jetzt aber mit negativen Zahlen.
                   </Paragraph>
                 </div>
@@ -142,7 +141,7 @@ const Article = () => {
                       class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Zeigen Sie ganz allgemein: wenn $A \approx A'$ und $B \approx B'$,
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie ganz allgemein: wenn $A \approx A'$ und $B \approx B'$,
                     dann gilt auch $A \times B \approx A' \times B'$.
                   </Paragraph>
                 </div>
@@ -151,7 +150,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Zeigen Sie, dass $\N \times \N \times \N \approx \N$ gilt und ganz
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass $\N \times \N \times \N \approx \N$ gilt und ganz
                     allgemein: $\N^k \approx \N$.
                   </Paragraph>
                 </div>
@@ -160,9 +159,9 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Sei $\N^*$ die Menge aller endlichen Folgen natürlicher Zahlen, also
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei $\N^*$ die Menge aller endlichen Folgen natürlicher Zahlen, also
                   </Paragraph>
-                  $$\begin&#123;align*&#125; \N^* := \&#123;\epsilon\&#125; \cup \N \cup \N^2 \cup \N^3 \cup
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; \N^* := \&#123;\epsilon\&#125; \cup \N \cup \N^2 \cup \N^3 \cup
                   \dots \ , \end&#123;align*&#125;$$ wobei $\epsilon$ die leere Folge (mit 0
                   Gliedern) bezeichnet. Zeigen Sie $\N^* \approx \N$.
                 </div>
@@ -170,7 +169,7 @@ const Article = () => {
                   Rationale Zahlen
                 </h2>
                 <Paragraph>
-                  Ich will Sie nun davon überzeugen, dass $\Q \approx \N$ ist, dass es
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ich will Sie nun davon überzeugen, dass $\Q \approx \N$ ist, dass es
                   also "gleich viele rationale wie natürliche Zahlen" gibt. Ich beginne
                   mit etwas Einfacherem:
                 </Paragraph>
@@ -185,22 +184,21 @@ const Article = () => {
                 </div>
                 <div class="well container">
                   <Paragraph>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Falls Sie es vergessen haben: eine Funktion $f: A \rightarrow B$
+                    {" "}Falls Sie es vergessen haben: eine Funktion $f: A \rightarrow B$
                     heißt injektiv, wenn für alle verschiedenen $a, a' \in A$ auch $f(a)
                     \ne f(a')$ gilt. Wenn $f$ also "kollisionsfrei" ist.
                   </Paragraph>
                   <Paragraph>
-                    Sei $q \in \Q$ eine rationale Zahl. Wir können $q$ als gekürzten
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei $q \in \Q$ eine rationale Zahl. Wir können $q$ als gekürzten
                     Bruch schreiben, also
                   </Paragraph>
-                  $$\begin&#123;align*&#125; q = \frac&#123;a&#125;&#123;b&#125; \end&#123;align*&#125;$$
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; q = \frac&#123;a&#125;&#123;b&#125; \end&#123;align*&#125;$$
                   <Paragraph>
-                    mit $a \in \Z$ und $b \in \N^+$ und $\gcd(a,b) = 1$. Mit $\gcd(a,b)$
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;mit $a \in \Z$ und $b \in \N^+$ und $\gcd(a,b) = 1$. Mit $\gcd(a,b)$
                     bezeichnen wir den größten gemeinsamen Teiler (
                     <i>
                       greatest common divisor
@@ -215,18 +213,18 @@ const Article = () => {
                     1(q) \ne f_1(q')$.
                   </Paragraph>
                   <Paragraph>
-                    Wir haben nun also eine Injektion $f
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben nun also eine Injektion $f
                     <i>
                       1 : \Q \rightarrow \Z \times
                       \N$. Mit
                       <span
                         data-ref="exercise-cartesian-product"
                         class="reference" />
-                      und{" "}
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und{" "}
                       <span
                         data-ref="theorem-N-N^2"
                         class="reference" />
-                      gilt $\Z \times \N \approx \N \times \N \approx \N$, und somit gibt
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;gilt $\Z \times \N \approx \N \times \N \approx \N$, und somit gibt
                       es eine Bijektion $f
                     </i>
                     2 : \Z \times \N \rightarrow \N$. Die
@@ -242,7 +240,7 @@ const Article = () => {
                   </span>
                 </div>
                 <Paragraph>
-                  Dies ist leider keine Bijektion: das Paar $(6,9)$ beispielsweise wird
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dies ist leider keine Bijektion: das Paar $(6,9)$ beispielsweise wird
                   nie vorkommen, weil $\frac&#123;6&#125;&#123;9&#125;$ nicht gekürzt ist.
                 </Paragraph>
                 <div class="well container theorem">
@@ -256,16 +254,16 @@ const Article = () => {
                 </div>
                 <div class="well container">
                   <Paragraph>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
                     {" "}Dies ist ganz einach: da $\N \subseteq \Q$
                     gilt, können wir jedes $n$ einfach bei sich belassen. Die Funktion
                   </Paragraph>
-                  $$\begin&#123;align*&#125; g : \N&amp;\rightarrow \Q \\ n&amp;\mapsto n \end&#123;align*&#125;$$
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; g : \N&amp;\rightarrow \Q \\ n&amp;\mapsto n \end&#123;align*&#125;$$
                   <Paragraph>
-                    ist die gewünschte Injektion. Man nennt so eine Funktion auch die
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ist die gewünschte Injektion. Man nennt so eine Funktion auch die
                     {" "}
                     <i>
                       Einbettung
@@ -277,7 +275,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Wir sind nun also in der sonderbaren Situation, dass wir eine
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir sind nun also in der sonderbaren Situation, dass wir eine
                   injektive Funktion $f : \Q \rightarrow \N$ haben, die aber nicht alle
                   $\N$ ausfüllt, also nicht{" "}
                   <i>
@@ -314,17 +312,16 @@ const Article = () => {
                 </div>
                 <div class="well container">
                   <Paragraph>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Wir definieren eine Bijektion $f: \N \rightarrow \Q$, indem wir die
+                    {" "}Wir definieren eine Bijektion $f: \N \rightarrow \Q$, indem wir die
                     Beweisidee von
                     <span
                       data-ref="theorem-N-N^2"
                       class="reference" />
-                    wiederholen. Wir zeichnen $\Z \times \N^+$ schematisch, löschen aber
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;wiederholen. Wir zeichnen $\Z \times \N^+$ schematisch, löschen aber
                     die Paare $(a,b)$, die nicht einem gekürzten Bruch entsprechen.
                   </Paragraph>
                   <figure>
@@ -333,7 +330,7 @@ const Article = () => {
                       src="../img/infinite-sets/Z-times-N-removed.svg" />
                   </figure>
                   <Paragraph>
-                    Die Punkte sind die Elemente von $\Z \times \N^+$. Die schwarzen
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Punkte sind die Elemente von $\Z \times \N^+$. Die schwarzen
                     Punkte sind jene Punkte $(x,y)$ mit $\gcd(x,y)=1$. Diese stehen nun
                     in Bijektion mit den rationalen Zahlen. Die entsprechenden
                     rationalen Zahlen habe ich daneben geschrieben - die negativen habe
@@ -348,7 +345,7 @@ const Article = () => {
                       src="../img/infinite-sets/N-to-Q.svg" />
                   </figure>
                   <Paragraph>
-                    Das funktioniert natürlich: wir überspringen einfach die gelöschten
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das funktioniert natürlich: wir überspringen einfach die gelöschten
                     Punkte. Wir können allerdings nicht bequem eine geschlossene Formel
                     dafür angeben. Auf dem "fünften Hütchen", das von $\frac&#123;4&#125;&#123;1&#125;$ nach
                     $\frac&#123;-4&#125;&#123;1&#125;$ läuft, sind zum Beispiel alle Punkte bis auf $(0,5)$
@@ -384,7 +381,7 @@ const Article = () => {
                 </div>
                 <div class="well container">
                   <Paragraph>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
@@ -395,38 +392,38 @@ const Article = () => {
                     </i>
                     2 \dots a_n$ als $n$-stellige Binärzahl, also
                   </Paragraph>
-                  $$\begin&#123;align*&#125; f(a_1 a_2 \dots a_n) := \sum_&#123;i=1&#125;^n a_i 2^&#123;n-i&#125; \ .
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; f(a_1 a_2 \dots a_n) := \sum_&#123;i=1&#125;^n a_i 2^&#123;n-i&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Leider geht das schief, weil $0$, $00$, $000$ etc. alle auf $0$
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Leider geht das schief, weil $0$, $00$, $000$ etc. alle auf $0$
                     abgebildet werden. Ebenso $1$, $01$, $001$ und so weiter. Wir
                     könnten uns behelfen und dem String eine 1 voranstellen, also
                     beispielsweise
                   </Paragraph>
-                  $$\begin&#123;align*&#125; 0011 \mapsto 10011 \mapsto (10011)_2 = 16 + 2 + 1 = 19
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; 0011 \mapsto 10011 \mapsto (10011)_2 = 16 + 2 + 1 = 19
                   \ . \end&#123;align*&#125;$$
                   <Paragraph>
                     Formal also
                   </Paragraph>
-                  $$\begin&#123;align*&#125; f : \&#123;0,1\&#125;^*&amp;\rightarrow \N \\ a_1 a_2 \dots a_n&
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; f : \&#123;0,1\&#125;^*&amp;\rightarrow \N \\ a_1 a_2 \dots a_n&
                   \mapsto 2^n + \sum_&#123;i=1&#125;^n a_i 2^&#123;n-i&#125; \ . \end&#123;align*&#125;$$
                   <Paragraph>
-                    Eine äquivalente Interpretation: wir sortieren erst einmal die
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine äquivalente Interpretation: wir sortieren erst einmal die
                     Bitstrings nach ihrer Länge. Dann gehen wir $\&#123;0,1\&#125;^n$
                     lexicographisch durch, also von $00\dots0$ bis $11\dots$. Diese
                     Reihenfolge durchläuft ganz $\&#123;0,1\&#125;^*$ und ordnet jedem Bitstring
                     eine natürliche Zahl zu. Also:
                   </Paragraph>
-                  $$\begin&#123;align*&#125; \begin&#123;array&#125;&#123;c|c&#125; \epsilon&amp;0&amp;1&amp;00&amp;01&amp;10&amp;11
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; \begin&#123;array&#125;&#123;c|c&#125; \epsilon&amp;0&amp;1&amp;00&amp;01&amp;10&amp;11
                   &amp;000&amp;001&amp;010&amp;011&amp;100&amp;101&amp;110&amp;111 \\ \hline 1&amp;2&amp;3&
                   4&amp;5&amp;6&amp;7&amp;8&amp;9&amp;10&amp;11&amp;12&amp;13&amp;14&amp;15 \end&#123;array&#125;
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Das haut nicht ganz hin, weil die $0$ nie drankommt. In der Tat
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das haut nicht ganz hin, weil die $0$ nie drankommt. In der Tat
                     stellt die obige Tabelle eine Bijektion $\&#123;0,1\&#125;^* \rightarrow \N^+$
                     dar. Dies ist leicht korrigiert, indem wir 1 abziehen: die Funktion
                   </Paragraph>
-                  $$\begin&#123;align*&#125; g : \&#123;0,1\&#125;^*&amp;\rightarrow \N \\ a_1 a_2 \dots a_n&
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; g : \&#123;0,1\&#125;^*&amp;\rightarrow \N \\ a_1 a_2 \dots a_n&
                   \mapsto 2^n - 1 + \sum_&#123;i=1&#125;^n a_i 2^&#123;n-i&#125; \ . \end&#123;align*&#125;$$
                   <Paragraph>
                     ist eine Bijektion von $\&#123;0,1\&#125;^*$ nach $\N$.
@@ -443,10 +440,10 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Definieren Sie eine Bijektion von $\&#123;0,1,2,3\&#125;$^* nach $\N$.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Definieren Sie eine Bijektion von $\&#123;0,1,2,3\&#125;$^* nach $\N$.
                   </Paragraph>
                   <Paragraph>
-                    Weil das "Alphabet" $\&#123;0,1,2,3\&#125;$ die Größe $4 = 2^2$ hat, können
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Weil das "Alphabet" $\&#123;0,1,2,3\&#125;$ die Größe $4 = 2^2$ hat, können
                     Sie sich mit einem kleinen Taschenspielertrick behelfen. Schwieriger
                     wird es mit $\&#123;0,1,2\&#125;^
                     <b>
@@ -456,7 +453,7 @@ const Article = () => {
                     gilt.
                   </Paragraph>
                   <Paragraph>
-                    Zeigen Sie ganz allgemein: wenn $\Sigma$ eine endliche Menge ist,
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie ganz allgemein: wenn $\Sigma$ eine endliche Menge ist,
                     dann gilt $\Sigma^* \approx \N$.
                   </Paragraph>
                 </div>

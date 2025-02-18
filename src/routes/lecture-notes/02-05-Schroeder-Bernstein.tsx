@@ -35,11 +35,11 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    2.5 Das Schröder-Bernstein-Theorem
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;2.5 Das Schröder-Bernstein-Theorem
                   </span>
                 </h1>
                 <Paragraph>
-                  Betrachten wir noch einmal einen Beweis, dass $[0,1] \times [0,1]
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir noch einmal einen Beweis, dass $[0,1] \times [0,1]
                   \approx [0,1]$. Wir nehmen zwei Zahlen $(x,y) \in [0,1] \times [0,1]$
                   und schreiben sie in Binärdarstellung $0.x
                   <i>
@@ -88,7 +88,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Beispielsweise haben wir $\N \lt \R$. Obige injektive Funktion $f :
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beispielsweise haben wir $\N \lt \R$. Obige injektive Funktion $f :
                   [0,1]\times [0,1]\rightarrow [0,1]$ bezeugt, dass $[0,1] \times [0,1]
                   \leq [0,1]$. Gilt auch $[0,1] \leq [0,1] \times [0,1]$? Natürlich: die
                   Funktion $g : [0,1] \rightarrow [0,1] \times [0,1]$ mit $g(x) = (x,0)$
@@ -111,7 +111,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       (Schröder-Bernstein-Theorem).
                     </b>
@@ -124,12 +124,11 @@ const Article = () => {
                 </div>
                 <div class="well container">
                   <Paragraph>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Wir tun so, als ob $A \cap B = \emptyset$ gälte. Falls dies nicht
+                    {" "}Wir tun so, als ob $A \cap B = \emptyset$ gälte. Falls dies nicht
                     der Fall sein sollte, können wir $A$ durch $A \times \&#123;0\&#125; = \&#123;
                     (a,0) \ | \ a \in A\&#125;$ ersetzen und $B$ durch $A \times \&#123;1\&#125; = \&#123;
                     (b,1) \ | \ b \in B\&#125;$. Wir betrachten nun die Menge $A \cup B$ und
@@ -200,7 +199,7 @@ const Article = () => {
                     </div>
                   </figure>
                   <Paragraph>
-                    Wenn wir die Menge $A \cup B$ zusammen mit den $f$- und $g$-Pfeilen
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir die Menge $A \cup B$ zusammen mit den $f$- und $g$-Pfeilen
                     als Graphen auf einer unendlichen Menge betrachten, dann sehen wir,
                     dass es vier Arten von Komponenten: (1) unendliche Pfade, die mit
                     einem roten kreisförmigen Punkt $a \in A$ beginnen; (2) unendliche
@@ -267,7 +266,7 @@ const Article = () => {
                     </div>
                   </figure>
                   <Paragraph>
-                    Formalisieren wir das ein bisschen. Wir definieren eine Folge $X
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Formalisieren wir das ein bisschen. Wir definieren eine Folge $X
                     <i>
                       0,
                       X
@@ -279,11 +278,11 @@ const Article = () => {
                     &#123;2i+1&#125; \subseteq A$
                     für alle $i \geq 0$ gilt:
                   </Paragraph>
-                  $$\begin&#123;align*&#125; X_0&amp;:= B \setminus &#123;\rm img&#125; (f) \\ X_&#123;2i+1&#125;&amp;:=
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; X_0&amp;:= B \setminus &#123;\rm img&#125; (f) \\ X_&#123;2i+1&#125;&amp;:=
                   g(X_&#123;2i&#125;) \\ X_&#123;2i+2&#125;&amp;:= f(X_&#123;2i+1&#125;)\\ A'&amp;:= X_1 \cup X_ 3 \cup
                   X_5 \cup X_7 \cup \dots \ . \end&#123;align*&#125;$$
                   <Paragraph>
-                    In Worten: $X
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In Worten: $X
                     <i>
                       0$ sind die $B$-Punkte, die keine eingehende $f$-Kante
                       haben. $X
@@ -294,11 +293,11 @@ const Article = () => {
                     Typ-(2)-Komponente liegen. Wir können nun unsere Bijektion $h : A
                     \rightarrow B$ definieren:
                   </Paragraph>
-                  $$\begin&#123;align*&#125; h : A&amp;\rightarrow A\\ a&amp;\mapsto \begin&#123;cases&#125; f(a)
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; h : A&amp;\rightarrow A\\ a&amp;\mapsto \begin&#123;cases&#125; f(a)
                   &amp;\textnormal&#123; if $a \in A \setminus A'$&#125; \\ g^&#123;-1&#125;(a)&amp;\textnormal&#123;
                   if $a \in A'$.&#125; \end&#123;cases&#125; \end&#123;align*&#125;$$
                   <Paragraph>
-                    Wir müssen nun zeigen, dass $h$ bijektiv ist (falls das noch nicht
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir müssen nun zeigen, dass $h$ bijektiv ist (falls das noch nicht
                     klar sein sollte).
                   </Paragraph>
                   <div class="well container-fluid subtheorem">
@@ -312,12 +311,11 @@ const Article = () => {
                   </div>
                   <div class="well container-fluid">
                     <Paragraph>
-                      {" "}{" "}
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                       <b>
                         Beweis.
                       </b>
-                      {" "}
-                      Wenn $a \in A'$ gilt, dann gilt $a \in X
+                      {" "}Wenn $a \in A'$ gilt, dann gilt $a \in X
                       <i>
                         &#123;2i+1&#125;$, also für einen
                         ungeraden Index. Nach Konstruktion gilt $X
@@ -340,7 +338,7 @@ const Article = () => {
                     </span>
                   </div>
                   <Paragraph>
-                    Eindeutig ist $g^&#123;-1&#125;(a)$ sowieso, falls es existiert. Wir sehen
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eindeutig ist $g^&#123;-1&#125;(a)$ sowieso, falls es existiert. Wir sehen
                     nun: $h$ ist wohldefiniert. Ist es injektiv?
                   </Paragraph>
                   <div class="well container-fluid subtheorem">
@@ -354,12 +352,11 @@ const Article = () => {
                   </div>
                   <div class="well container-fluid">
                     <Paragraph>
-                      {" "}{" "}
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                       <b>
                         Beweis.
                       </b>
-                      {" "}
-                      Seien $a, a' \in A$ zwei verschiedene Elemente. Wir unterscheiden
+                      {" "}Seien $a, a' \in A$ zwei verschiedene Elemente. Wir unterscheiden
                       drei Fälle: (1) Wenn $a, a' \in A \setminus A'$, dann gilt $h(a) =
                       f(a) \ne f(a') = h(a')$, weil $f$ injektiv ist. (2) Wenn $a, a'
                       \in A$, dann gilt $h(a) = g^&#123;-1&#125;(a) =: b$ und $h(a') = g^&#123;-1&#125;(a')
@@ -403,12 +400,11 @@ const Article = () => {
                   </div>
                   <div class="well container-fluid">
                     <Paragraph>
-                      {" "}{" "}
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                       <b>
                         Beweis.
                       </b>
-                      {" "}
-                      Wir unterscheiden zwei Fälle. (1) Wenn $b \in X
+                      {" "}Wir unterscheiden zwei Fälle. (1) Wenn $b \in X
                       <i>
                         0 \cup X
                       </i>
@@ -422,7 +418,7 @@ const Article = () => {
                       Das Element $b$ hat also ein Urbild, nämlich $a$.
                     </Paragraph>
                     <Paragraph>
-                      (2) Wenn $b \not \in B'$, dann gilt insbesondere $b \not \in X
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;(2) Wenn $b \not \in B'$, dann gilt insbesondere $b \not \in X
                       <i>
                         0 =
                         B \setminus &#123;\rm img&#125;(f)$; also $b \in &#123;\rm img&#125; (f)$. Es gibt
@@ -439,7 +435,7 @@ const Article = () => {
                     </span>
                   </div>
                   <Paragraph>
-                    Wir haben nun gezeigt, dass $h$ definiert ist, injektiv und
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben nun gezeigt, dass $h$ definiert ist, injektiv und
                     surjektiv ist. Damit ist $h$ eine Bijektion.
                     <span class="qed">
                       \(\square\)
@@ -447,7 +443,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Wenn Sie der formale Beweis zu sehr verwirrt, dann halten Sie sich
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn Sie der formale Beweis zu sehr verwirrt, dann halten Sie sich
                   einfach an die Bilder mit den zwei Arten von Punkten und Pfeilen.
                 </Paragraph>
               </div>

@@ -39,12 +39,11 @@ const Article = () => {
               </h1>
               <div class="subChapter">
                 <Paragraph>
-                  Hier sehen Sie einige Beispiele für gültige und ungültige Email-Adressen. Mit{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Hier sehen Sie einige Beispiele für gültige und ungültige Email-Adressen. Mit{" "}
                   <i>
                     gültig
                   </i>
-                  {" "}
-                  meine ich, dass sie syntaktisch korrekt sind, ungeachtet, ob ein Konto mit dieser Email-Adresse
+                  {" "}meine ich, dass sie syntaktisch korrekt sind, ungeachtet, ob ein Konto mit dieser Email-Adresse
                   besteht.
                 </Paragraph>
                 <pre class="container">
@@ -70,12 +69,12 @@ const Article = () => {
                   </span>
                 </pre>
                 <Paragraph>
-                  Hier sehen Sie den Teil eines HTML-Dokuments. Beachten Sie die typische
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Hier sehen Sie den Teil eines HTML-Dokuments. Beachten Sie die typische
                   hierarchisch-geschachtelte
                   Struktur (sie müssen es nicht im Detail lesen):
                 </Paragraph>
                 <style>
-                  .StartTag,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;.StartTag,
                   .EndTag &#123;
                   color: blue;
                   &#125;
@@ -803,39 +802,49 @@ const Article = () => {
                 <pre class="listing container">
                   {" "}{" "}
                   <code>
-                    find : Bst -&gt; String -&gt; Maybe String
+                    find : Bst -&gt; String -&gt; Maybe String``find tree key =
                   </code>
-                  {" "}
-                  {" "}
+                  {" "}{" "}
                   <code>
-                    find tree key =
+                    case tree of
                   </code>
-                  {" "}
-                  &ensp;&ensp;&ensp;&ensp;`case tree of`
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`Empty _ -&gt;`
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`Nothing`
-                  {" "}
+                  {" "}{" "}
                   <code>
-                    {" "}{" "}
+                    Empty _ -&gt;
                   </code>
-                  {" "}
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`Node ( keyHere, valueHere ) leftChild rightChild -&gt;`
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`if key == keyHere then`
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`Just valueHere`
-                  {" "}
+                  {" "}{" "}
                   <code>
-                    {" "}{" "}
+                    Nothing``
                   </code>
-                  {" "}
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`else if key&lt; keyHere then`
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`find leftChild key`
-                  {" "}
+                  {" "}{" "}
                   <code>
-                    {" "}{" "}
+                    Node ( keyHere, valueHere ) leftChild rightChild -&gt;
                   </code>
-                  {" "}
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`else`
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`find rightChild key`
+                  {" "}{" "}
+                  <code>
+                    if key == keyHere then
+                  </code>
+                  {" "}{" "}
+                  <code>
+                    Just valueHere``
+                  </code>
+                  {" "}{" "}
+                  <code>
+                    else if key&lt; keyHere then
+                  </code>
+                  {" "}{" "}
+                  <code>
+                    find leftChild key``
+                  </code>
+                  {" "}{" "}
+                  <code>
+                    else
+                  </code>
+                  {" "}{" "}
+                  <code>
+                    find rightChild key
+                  </code>
+                  {" "}{" "}
                 </pre>
                 <Paragraph>
                   Als letztes Beispiel sehen Sie hier eine svg-Datei. Dies ist ein Dateiformat für Vektorgrafiken.
@@ -847,36 +856,12 @@ const Article = () => {
                     src="../img/svg-example.svg" />
                 </Paragraph>
                 <pre class="listing container">
-                  `
-                  <span class="RawText" />
-                  <span class="LessThanBracket">
-                    &lt;
+                  <span class="LineBreak" />
+                  <span class="GreaterThanBracket">
+                    &gt;
                   </span>
-                  <span class="StartTag">
-                    ?xml
-                  </span>
-                  <span class="WaitingForAttribute" />
                   <span class="AttributeName">
-                    version
-                  </span>
-                  <span class="WaitingForValue">
-                    =
-                  </span>
-                  <span class="DoubleQuote">
-                    "
-                  </span>
-                  <span class="AttributeValueDoubleQuote">
-                    1.0
-                  </span>
-                  <span class="DoubleQuote">
-                    "
-                  </span>
-                  <span class="WaitingForAttribute" />
-                  <span class="AttributeName">
-                    encoding
-                  </span>
-                  <span class="WaitingForValue">
-                    =
+                    ?
                   </span>
                   <span class="DoubleQuote">
                     "
@@ -887,13 +872,37 @@ const Article = () => {
                   <span class="DoubleQuote">
                     "
                   </span>
+                  <span class="WaitingForValue">
+                    =
+                  </span>
                   <span class="AttributeName">
-                    ?
+                    encoding
                   </span>
-                  <span class="GreaterThanBracket">
-                    &gt;
+                  <span class="WaitingForAttribute" />
+                  <span class="DoubleQuote">
+                    "
                   </span>
-                  <span class="LineBreak" />
+                  <span class="AttributeValueDoubleQuote">
+                    1.0
+                  </span>
+                  <span class="DoubleQuote">
+                    "
+                  </span>
+                  <span class="WaitingForValue">
+                    =
+                  </span>
+                  <span class="AttributeName">
+                    version
+                  </span>
+                  <span class="WaitingForAttribute" />
+                  <span class="StartTag">
+                    ?xml
+                  </span>
+                  <span class="LessThanBracket">
+                    &lt;
+                  </span>
+                  <span class="RawText" />
+                  `
                   `
                   <span class="LineBreak" />
                   <span class="WaitingForAttribute" />
@@ -1217,8 +1226,7 @@ const Article = () => {
                   <i>
                     Format
                   </i>
-                  {" "}
-                  dargelegt werden. Soll ein Rechner etwas sinnvolles damit anfangen (zum Beispiel das
+                  {" "}dargelegt werden. Soll ein Rechner etwas sinnvolles damit anfangen (zum Beispiel das
                   Elm-Programm
                   starten oder die HTML-Seite oder die Svg-Datei
                   auf dem Bildschirm darstellen), muss er dieses Format erst einmal "verstehen", also den bloßen
@@ -1239,7 +1247,7 @@ const Article = () => {
                   Email-Adresse auszusehen hat? Hier versuche ich es einmal:
                 </Paragraph>
                 <div class="well container">
-                  Eine Emailadresse besteht aus einem{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Emailadresse besteht aus einem{" "}
                   <i>
                     Benutzernamen
                   </i>
@@ -1280,7 +1288,7 @@ const Article = () => {
                   ).
                 </div>
                 <Paragraph>
-                  Die genauen Regeln mögen von Anbieter zu Anbieter variieren; ich habe mich mal an das gehalten,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die genauen Regeln mögen von Anbieter zu Anbieter variieren; ich habe mich mal an das gehalten,
                   was
                   ich experimentell bei{" "}
                   <code>
@@ -1332,8 +1340,7 @@ const Article = () => {
                   <code>
                     &lt;Domain&gt;
                   </code>
-                  {" "}
-                  erstellen? Eine{" "}
+                  {" "}erstellen? Eine{" "}
                   <code>
                     &lt;Domain&gt;
                   </code>
@@ -1347,8 +1354,7 @@ const Article = () => {
                   <code>
                     .
                   </code>
-                  {" "}
-                  separiert. Wir erreichen dies, indem wir einen an Rekursion
+                  {" "}separiert. Wir erreichen dies, indem wir einen an Rekursion
                   erinnernden Trick anwenden: entweder gibt es genau zwei Labels oder die Domain beginnt mit einem
                   Label,
                   gefolgt von einem Punkt und wiederum einer{" "}
@@ -1357,8 +1363,7 @@ const Article = () => {
                     <code>
                       .
                     </code>
-                    {" "}
-                    separierten Labels
+                    {" "}separierten Labels
                   </i>
                   ,
                   also wiederum etwas, das wie ein Domainname aussieht. Daher:
@@ -1376,7 +1381,7 @@ const Article = () => {
                   &lt;Label&gt; .&lt;Domain&gt;
                 </pre>
                 <Paragraph>
-                  Wir geben also{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir geben also{" "}
                   <i>
                     zwei
                   </i>
@@ -1435,7 +1440,7 @@ const Article = () => {
                   {" "}-{" "}
                 </pre>
                 <Paragraph>
-                  Nun müssen wir noch Regeln für{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nun müssen wir noch Regeln für{" "}
                   <code>
                     &lt;AlphaNum&gt;
                   </code>
@@ -1715,14 +1720,13 @@ const Article = () => {
                     </b>
                     {" "}z
                   </code>
-                  {" "}
-                  geschrieben, weil ich in diesem Beispiel wirklich alles ausschreiben wollte und mit der
+                  {" "}geschrieben, weil ich in diesem Beispiel wirklich alles ausschreiben wollte und mit der
                   ...-Notation
                   schon wieder etwas menschen- aber nicht maschinenlesbares
                   eingeführt hätte.
                 </Paragraph>
                 <Paragraph>
-                  Wir brauchen noch Regeln für `&lt;User&gt;`. Dies ist ein nichtleerer String aus
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir brauchen noch Regeln für `&lt;User&gt;`. Dies ist ein nichtleerer String aus
                   alphanumerischen Zeichen und dem Punkt `.`, wobei
                   der Punkt nicht am Anfang und nicht am Ende stehen darf. Also: eine nichtleere Folge von
                   {" "}
@@ -1770,12 +1774,7 @@ const Article = () => {
                     <b>
                       -&gt;
                     </b>
-                    {" "}&lt;User&gt; @&lt;Domain&gt;
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    &lt;Domain&gt;{" "}
+                    {" "}&lt;User&gt; @&lt;Domain&gt;``&lt;Domain&gt;{" "}
                     <b>
                       -&gt;
                     </b>
@@ -1783,12 +1782,7 @@ const Article = () => {
                     <b>
                       |
                     </b>
-                    &lt;Label&gt; .&lt;Domain&gt;
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    &lt;User&gt;{" "}
+                    &lt;Label&gt; .&lt;Domain&gt;``&lt;User&gt;{" "}
                     <b>
                       -&gt;
                     </b>
@@ -1796,12 +1790,7 @@ const Article = () => {
                     <b>
                       |
                     </b>
-                    &lt;NameBlock&gt; .&lt;User&gt;
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    &lt;NameBlock&gt;{" "}
+                    &lt;NameBlock&gt; .&lt;User&gt;``&lt;NameBlock&gt;{" "}
                     <b>
                       -&gt;
                     </b>
@@ -1809,12 +1798,7 @@ const Article = () => {
                     <b>
                       |
                     </b>
-                    &lt;AlphaNum&gt;&lt;NameBlock&gt;
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    &lt;Label&gt;{" "}
+                    &lt;AlphaNum&gt;&lt;NameBlock&gt;``&lt;Label&gt;{" "}
                     <b>
                       -&gt;
                     </b>
@@ -1822,12 +1806,7 @@ const Article = () => {
                     <b>
                       |
                     </b>
-                    &lt;AlphaNumOrDash&gt;&lt;Label&gt;
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    &lt;AlphaNumOrDash&gt;{" "}
+                    &lt;AlphaNumOrDash&gt;&lt;Label&gt;``&lt;AlphaNumOrDash&gt;{" "}
                     <b>
                       -&gt;
                     </b>
@@ -1837,8 +1816,7 @@ const Article = () => {
                     </b>
                     {" "}-
                   </code>
-                  {" "}
-                  {" "}
+                  {" "}{" "}
                   <code>
                     &lt;AlphaNum&gt;{" "}
                     <b>
@@ -1944,12 +1922,7 @@ const Article = () => {
                     <b>
                       |
                     </b>
-                    {" "}z
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    &lt;AlphaNum&gt;{" "}
+                    {" "}z``&lt;AlphaNum&gt;{" "}
                     <STRONG>
                       -&gt;
                     </STRONG>
@@ -2061,7 +2034,7 @@ const Article = () => {
                   Ein Beispiel einer formalen Grammatik und einer Ableitung
                 </h2>
                 <Paragraph>
-                  Was Sie hier sehen, nennt man eine{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Was Sie hier sehen, nennt man eine{" "}
                   <i>
                     formale Grammatik
                   </i>
@@ -2078,7 +2051,7 @@ const Article = () => {
                     .
                   </li>
                   <li>
-                    Eine Menge \(N\) abstrakter Symbole, hier
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Menge \(N\) abstrakter Symbole, hier
                     $$
                     N = \&#123;\texttt&#123;&lt;EmailAddress&gt;,&lt;Domain&gt;,
                     &lt;User&gt;,&lt;NameBlock&gt;,&lt;Label&gt;,&lt;AlphaNumOrDash&gt;,&lt;AlphaNum&gt;&#125;
@@ -2094,7 +2067,7 @@ const Article = () => {
                     nicht gleichzeitig Terminalsymbol und Nichtterminalsymbol sein.
                   </li>
                   <li>
-                    Eine Menge \(P\) von Regeln, auch{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Menge \(P\) von Regeln, auch{" "}
                     <i>
                       Produktionen
                     </i>
@@ -2104,7 +2077,7 @@ const Article = () => {
                     in \(\Sigma \cup N\) ist.
                   </li>
                   <li>
-                    Ein Startsymbol \(S \in N\), das angibt, wo wir mit unserer Ableitung beginnen sollen. Im
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein Startsymbol \(S \in N\), das angibt, wo wir mit unserer Ableitung beginnen sollen. Im
                     obigen
                     Beispiel
                     sind wir ja an Emailadressen interessiert, also ist{" "}
@@ -2116,7 +2089,7 @@ const Article = () => {
                   </li>
                 </ul>
                 <Paragraph>
-                  Wenn wir nun so eine Grammatik gegeben haben, können wir Wörter{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir nun so eine Grammatik gegeben haben, können wir Wörter{" "}
                   <i>
                     ableiten
                   </i>
@@ -2198,22 +2171,22 @@ const Article = () => {
                   <b>
                     -&gt;
                   </b>
-                  {" "}d.&lt;AlphaNum&gt;@&lt;AlphaNumOrDash&gt;.&lt;AlphaNumOrDash&gt;.&lt;AlphaNumOrDash&gt;e`
+                  {" "}d.&lt;AlphaNum&gt;@&lt;AlphaNumOrDash&gt;.&lt;AlphaNumOrDash&gt;.&lt;AlphaNumOrDash&gt;e` 
                   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`
                   <b>
                     -&gt;
                   </b>
-                  {" "}d.&lt;AlphaNum&gt;@&lt;AlphaNumOrDash&gt;.&lt;AlphaNumOrDash&gt;.de`
+                  {" "}d.&lt;AlphaNum&gt;@&lt;AlphaNumOrDash&gt;.&lt;AlphaNumOrDash&gt;.de` 
                   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`
                   <b>
                     -&gt;
                   </b>
-                  {" "}d.s@&lt;AlphaNumOrDash&gt;.&lt;AlphaNumOrDash&gt;.de`
+                  {" "}d.s@&lt;AlphaNumOrDash&gt;.&lt;AlphaNumOrDash&gt;.de` 
                   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`
                   <b>
                     -&gt;
                   </b>
-                  {" "}d.s@&lt;AlphaNumOrDash&gt;.b.de`
+                  {" "}d.s@&lt;AlphaNumOrDash&gt;.b.de` 
                   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`
                   <b>
                     -&gt;
@@ -2221,7 +2194,7 @@ const Article = () => {
                   {" "}d.s@a.b.de`{" "}
                 </pre>
                 <Paragraph>
-                  Nach dem gleichen Schema könnten wir{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nach dem gleichen Schema könnten wir{" "}
                   <code>
                     d.s.@-.-.--
                   </code>
@@ -2238,18 +2211,17 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Formulieren Sie weitere Regeln, um unsinnige Domainnamen wie{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Formulieren Sie weitere Regeln, um unsinnige Domainnamen wie{" "}
                   <code>
                     -.-.--
                   </code>
-                  {" "}
-                  zu verbieten. Wie müssen Sie die obige Grammatik ändern?
+                  {" "}zu verbieten. Wie müssen Sie die obige Grammatik ändern?
                 </div>
                 <h1>
                   Terminologie, formale Definitionen und Beispiele
                 </h1>
                 <Paragraph>
-                  Im letzten Abschnitt haben wir die Regeln für die Bildung syntaktisch korrekter
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im letzten Abschnitt haben wir die Regeln für die Bildung syntaktisch korrekter
                   Emailadressen formalisiert. Zwar unvollständig, doch hoffe ich, dass das allgemeine
                   Schema klar geworden ist. Wir werden nun alles formaler und abstrakter definieren.
                 </Paragraph>
@@ -2257,7 +2229,7 @@ const Article = () => {
                   Alphabet
                 </h2>
                 <Paragraph>
-                  Wenn wir über formale Sprachen reden, so liegt immer eine (endliche) Menge von
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir über formale Sprachen reden, so liegt immer eine (endliche) Menge von
                   Symbolen zugrunde, das Alphabet \(\Sigma\). Im Emailadressen-Beispiel war (\Sigma) recht groß:
                   die 52 Buchstaben; 10 Ziffern; die Zeichen{" "}
                   <code>
@@ -2301,7 +2273,7 @@ const Article = () => {
                   Sprachen
                 </h2>
                 <Paragraph>
-                  Eine Teilmenge \(L \subseteq \Sigma\) bezeichnen wir in diesem Kontext als{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Teilmenge \(L \subseteq \Sigma\) bezeichnen wir in diesem Kontext als{" "}
                   <i>
                     Sprache
                   </i>
@@ -2336,7 +2308,7 @@ const Article = () => {
                   </li>
                 </ol>
                 <Paragraph>
-                  Wir wollen herausfinden, welche Arten von Sprachen wir mit den im letzten Abschnitt eingeführen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir wollen herausfinden, welche Arten von Sprachen wir mit den im letzten Abschnitt eingeführen
                   Regelwerk
                   aus Ableitungen beschreiben können. Für die gerade aufgelisteten sechs Sprachen lautet die
                   Antwort
@@ -2368,12 +2340,11 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     (Kontextfreie Grammatik).
                   </b>
-                  {" "}
-                  Eine{" "}
+                  {" "}Eine{" "}
                   <i>
                     kontextfreie Grammatik
                   </i>
@@ -2407,7 +2378,7 @@ const Article = () => {
                       einem Startsymbol \(S \in N\).
                     </li>
                   </ol>
-                  Die Grammatik \(G\) ist also ein 4-Tupel \((\Sigma, N, P, S)\).
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Grammatik \(G\) ist also ein 4-Tupel \((\Sigma, N, P, S)\).
                 </div>
                 <Paragraph>
                   Woher der Name{" "}
@@ -2431,7 +2402,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Wir betrachten die Grammatik \(G = (\&#123;a,b\&#125;, \&#123;S, A, B\&#125;, P, S)\) mit den Produktionsregeln
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir betrachten die Grammatik \(G = (\&#123;a,b\&#125;, \&#123;S, A, B\&#125;, P, S)\) mit den Produktionsregeln
                   $$\begin&#123;align*&#125;
                   S&amp;\rightarrow A B \\
                   A&amp;\rightarrow \epsilon \ | \ a A \\
@@ -2465,7 +2436,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  Gegeben sei eine kontextfreie Grammatik \(G = (\Sigma, N, P, S)\).
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Gegeben sei eine kontextfreie Grammatik \(G = (\Sigma, N, P, S)\).
                   Ein String \(\alpha \in (\Sigma \cup N)^*\) heißt{" "}
                   <i>
                     Wortform
@@ -2483,7 +2454,7 @@ const Article = () => {
                   mit Wortformen \(\alpha_1, \alpha_2, \beta_1, \gamma, \beta_2\) und einem Nichtterminal
                   \(X\) schreiben können, so dass \(X \rightarrow \gamma \) eine Produktionsregel in \(P\) ist.
                   <Paragraph>
-                    Wenn wir \(\alpha = \beta\) "vorlesen", dann sagen wir{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir \(\alpha = \beta\) "vorlesen", dann sagen wir{" "}
                     <i>
                       \(\beta\) kann aus \(\alpha\) in
                       einem Schritt abgeleitet werden
@@ -2493,7 +2464,7 @@ const Article = () => {
                     abgeleitet werden kann, so schreiben wir \(\alpha \Rightarrow^* \beta\).
                   </Paragraph>
                   <Paragraph>
-                    Formal bedeutet \(\alpha \Rightarrow^* \beta\), dass es ein \(k \geq 0\) gibt
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Formal bedeutet \(\alpha \Rightarrow^* \beta\), dass es ein \(k \geq 0\) gibt
                     und "Zwischenwortformen" \(\alpha_0, \alpha_1, \dots, \alpha_k\) mit
                     \(\alpha = \alpha_0\) und \(\alpha_k = \beta\), sodass
                     \(\alpha_i \Rightarrow \alpha_&#123;i+1&#125;\) für alle \(i = 0, 1, \dots, k-1\) gilt.
@@ -2523,7 +2494,7 @@ const Article = () => {
                   sein muss, dass jedoch \(\Rightarrow\) im Allgemeinen unendlich ist. Bereits
                   für unsere einfache Grammatik mit den Produktionsregeln
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 S&amp;\rightarrow A B \\
                 A&amp;\rightarrow \epsilon \ | \ a A \\
                 B&amp;\rightarrow \epsilon \ | \ b B \ . \\
@@ -2540,12 +2511,11 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     (Die von einer Grammatik erzeugte Sprache).
                   </b>
-                  {" "}
-                  Sei \(G = (\Sigma, N, P, S) \) eine kontextfreie Grammatik. Die von \(G\) erzeugte Sprache
+                  {" "}Sei \(G = (\Sigma, N, P, S) \) eine kontextfreie Grammatik. Die von \(G\) erzeugte Sprache
                   \(L(G)\) ist die Menge aller Wörter, die vom Startsymbol \(S\) abgeleitet werden können, also
                   $$\begin&#123;align*&#125;
                   L(G) := \&#123;x \in \Sigma^* \ | \ S \Rightarrow^* x\&#125; \ .
@@ -2557,7 +2527,7 @@ const Article = () => {
                   </i>
                   .
                 </div>
-                Beachten Sie, dass in dem obigen Beispiel die Wortform
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie, dass in dem obigen Beispiel die Wortform
                 \(aaAB\) zwar aus \(S\) abgeleitet werden kann, allerdings kein{" "}
                 <i>
                   Wort
@@ -2570,7 +2540,7 @@ const Article = () => {
                 <span class="numbered-title">
                   Beispiel.
                 </span>
-                Sei \(G\) die zuletzt betrachtete Grammatik. Dann ist \(L(G)\) die
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(G\) die zuletzt betrachtete Grammatik. Dann ist \(L(G)\) die
                 Menge aller Wörter der Form \(a^* b^*\), also Wörter, in denen auf beliebig viele
                 \(a\)'s beliebig viele \(b\)'s folgen.
               </div>
@@ -2581,7 +2551,7 @@ const Article = () => {
                 <span class="numbered-title">
                   Beispiel
                 </span>
-                Wir betrachten die Grammatik \(G_2 = (\&#123;a,b\&#125;, \&#123;S\&#125;, P, S)\) mit den Produktionsregeln
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir betrachten die Grammatik \(G_2 = (\&#123;a,b\&#125;, \&#123;S\&#125;, P, S)\) mit den Produktionsregeln
                 \begin&#123;align&#125;
                 S&amp;\rightarrow aSbS \\
                 S&amp;\rightarrow bSaS \\
@@ -2603,7 +2573,7 @@ const Article = () => {
                 \stackrel&#123;(3)&#125;&#123;\Rightarrow&#125; abab \ .
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Wir sehen also: das gleiche Wort kann mehrere Ableitungen haben.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir sehen also: das gleiche Wort kann mehrere Ableitungen haben.
                   Da die Ersetzungsregeln{" "}
                   <i>
                     kontextfrei
@@ -2627,7 +2597,7 @@ const Article = () => {
                   angibt, ist eindeutig, wie wir von \(S\) zum abgeleiteten Wort gekommen sind.
                   Betrachten Sie nun eine weitere Linksableitung \(S \Rightarrow^* abab\):
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 S&amp;\stackrel&#123;(1)&#125;&#123;\Rightarrow&#125; aSbS
                 \stackrel&#123;(2)&#125;&#123;\Rightarrow&#125; abSaSbS
                 \stackrel&#123;(3)&#125;&#123;\Rightarrow&#125; abaSbS
@@ -2635,7 +2605,7 @@ const Article = () => {
                 \stackrel&#123;(3)&#125;&#123;\Rightarrow&#125; abab
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Sehen Sie, dass diese Ableitung{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sehen Sie, dass diese Ableitung{" "}
                   <i>
                     qualitativ
                   </i>
@@ -2650,7 +2620,7 @@ const Article = () => {
                 Ziele der Theorie der formalen Sprachen
               </h2>
               <Paragraph>
-                Ganz allgemein gesagt wollen wir lernen, wie wir Sprachen formal beschreiben können;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ganz allgemein gesagt wollen wir lernen, wie wir Sprachen formal beschreiben können;
                 wie wir, gegeben eine Grammatik \(G\) und ein Zielwort \(x\), eine Ableitung
                 \(G \Rightarrow^* x\) finden können. Anhand der Ableitungssequenz können wir
                 dann oft auf die logische Struktur von \(x\) schließen. Handelt es sich bei
@@ -2663,10 +2633,10 @@ const Article = () => {
                 <span class="numbered-title">
                   Algorithmisches Problem: Parsing
                 </span>
-                Gegeben eine (kontextfreie) Grammatik \(G\) und ein Zielwort \(x\),
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Gegeben eine (kontextfreie) Grammatik \(G\) und ein Zielwort \(x\),
                 finde eine Ableitung \(G \Rightarrow^* x\), falls es so eine gibt.
                 <Paragraph>
-                  Für einen String \(x\) eine Ableitung zu finden bezeichnen wir als{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für einen String \(x\) eine Ableitung zu finden bezeichnen wir als{" "}
                   <i>
                     parsen
                   </i>
@@ -2683,8 +2653,7 @@ const Article = () => {
                 <b>
                   Die gute Nachricht:
                 </b>
-                {" "}
-                Die gute Nachricht: wir kennen Algorithmen, die dieses
+                {" "}Die gute Nachricht: wir kennen Algorithmen, die dieses
                 Problem im effizient lösen, wenn wir den "theoretischen" Effizienzbegriff
                 zugrund legen.{" "}
               </Paragraph>

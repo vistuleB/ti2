@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Erinnerin Sie sich an kontextfreie Grammatiken? Das waren formale Grammatiken wie zum Beispiel
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Erinnerin Sie sich an kontextfreie Grammatiken? Das waren formale Grammatiken wie zum Beispiel
                   $$\begin&#123;align*&#125;
                   S&amp;\rightarrow Tc \\
                   T&amp;\rightarrow TaTb \\
@@ -72,7 +72,7 @@ const Article = () => {
                   also ein \(\gamma\), das von rechts nach links gelesen gleich ist, sprich
                   \(\gamma = \gamma^R\). Dieses Problem ist unentscheidbar.
                   <Paragraph>
-                    Formal gesehen müssten wir eine Codierung kontextfreier Grammatiken über einem festen
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Formal gesehen müssten wir eine Codierung kontextfreier Grammatiken über einem festen
                     Alphabet (zum Beispiel \(\&#123;0,1, \rightarrow, ;, \dots\&#125;\) angeben, um dann die{" "}
                     <i>
                       Sprache
@@ -80,24 +80,22 @@ const Article = () => {
                       Codierungen all jener
                       kontextfreien Grammatik, die ein Palindromwort ableiten können
                     </i>
-                    {" "}
-                    definieren zu können. Da wir aber mittlerweile verstanden haben, dass alle
+                    {" "}definieren zu können. Da wir aber mittlerweile verstanden haben, dass alle
                     "endlichen" Objekte irgendwie auf Turingmschinen-verträgliche Weise codiert werden können,
                     ersparen wir uns diese Formalitäten.
                   </Paragraph>
                 </div>
                 <div class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Beweis.
                   </b>
-                  {" "}
-                  Wir zeigen: wenn man zu einer gegebenen kontextfreien Grammatik entscheiden könnte,
+                  {" "}Wir zeigen: wenn man zu einer gegebenen kontextfreien Grammatik entscheiden könnte,
                   ob sie ein Palindromwort ableiten kann, dann könnten wir auch entscheiden, ob ein
                   gegebenes PCP-Puzzle eine Lösung hat. Da wir bereits Letzteres als unentscheidbar
                   erkannt haben, schließen wir, dass Ersteres auch unentscheidbar ist.
                   <Paragraph>
-                    Konkret sei uns nun also ein PCP-Puzzle \(P\) gegeben. Wir bauen daraus eine
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Konkret sei uns nun also ein PCP-Puzzle \(P\) gegeben. Wir bauen daraus eine
                     kontextfreie Grammatik \(G\), so dass
                     \(G\) genau dann ein Palindromwort ableiten kann, wenn \(P\) eine Lösung hat.
                     Die Konstruktion ist überraschend einfach. Wir erschaffen ein Startsymbol \(S\)
@@ -122,12 +120,11 @@ const Article = () => {
                     ableiten kann, dann hat das PCP-Puzzle \(P\) eine Lösung.
                   </div>
                   <div class="well subtheorem">
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Die letzte angewandte Regel muss \(S \rightarrow \$\) sein, und somit hat
+                    {" "}Die letzte angewandte Regel muss \(S \rightarrow \$\) sein, und somit hat
                     das abgeleitete Wort die Form
                     $$\begin&#123;align*&#125;
                     \alpha_1 \alpha_2 \dots \alpha_n \$ \beta_n^R \dots \beta_2^R \beta_1^R \ .
@@ -152,12 +149,11 @@ const Article = () => {
                     ableiten.
                   </div>
                   <div class="well subtheorem">
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Sei
+                    {" "}Sei
                     $$\begin&#123;align*&#125;
                     (\alpha_1 : \beta_1) (\alpha_2 : \beta_2)\dots (\alpha_n : \beta_n)
                     \end&#123;align*&#125;$$
@@ -180,7 +176,7 @@ const Article = () => {
                       \(\square\)
                     </span>
                   </div>
-                  Hätten wir nun also einen Algorithmus, der für eine gegebene kontextfreie Grammatik
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Hätten wir nun also einen Algorithmus, der für eine gegebene kontextfreie Grammatik
                   entscheiden könnte, ob sie ein Palindromwort ableiten kann, dann könnten wir
                   PCP-Puzzles wie folgt entscheiden: nimm das Puzzle \(P\), baue nach den obigen
                   Regeln daraus die Grammatik \(G\) und frage dann den Algorithmus, ob
@@ -194,7 +190,7 @@ const Article = () => {
                   Reduktionen
                 </h3>
                 <Paragraph>
-                  Es lohnt sich, an dieser Stelle zu pausieren. Was Sie gerade gesehen haben,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es lohnt sich, an dieser Stelle zu pausieren. Was Sie gerade gesehen haben,
                   ist eine{" "}
                   <i>
                     Reduktion
@@ -215,22 +211,22 @@ const Article = () => {
                       primitiv-rekursive Funktion schreibt.
                     </li>
                     <li>
-                      Wir wissen bereits, wie man eine allgemeine primitiv rekursive Funktion
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir wissen bereits, wie man eine allgemeine primitiv rekursive Funktion
                       im \(\lambda\)-Kalkül implementiert.
                     </li>
                     <li>
-                      Wir schließen nun, dass \(n \mapsto n!\) im \(\lambda\)-Kalkül implementierbar ist,
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir schließen nun, dass \(n \mapsto n!\) im \(\lambda\)-Kalkül implementierbar ist,
                       und ersparen uns die Details.
                     </li>
                   </ul>
-                  Im Kontext der Turing-Berechenbarkeit können wir dieses Prinzip wie folgt
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im Kontext der Turing-Berechenbarkeit können wir dieses Prinzip wie folgt
                   formalisieren:
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
                   </span>
-                  Seien \(L_1 \subseteq \Sigma_1\) und \(L_2 \subseteq \Sigma_2\) zwei Sprachen.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Seien \(L_1 \subseteq \Sigma_1\) und \(L_2 \subseteq \Sigma_2\) zwei Sprachen.
                   Eine{" "}
                   <i>
                     Reduktion von \(L_1\) nach \(L_2\)
@@ -245,7 +241,7 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                 </div>
                 <Paragraph>
-                  Erinnern Sie sich: dass \(f\) Turing-berechenbar ist, heißt, dass es eine Turingmaschine
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Erinnern Sie sich: dass \(f\) Turing-berechenbar ist, heißt, dass es eine Turingmaschine
                   \(_f\) gibt mit einem dezidierten Ausgabe-Band, so dass \(M_f(x)\) für jedes Eingabewort
                   terminiert und zum Zeitpunkt der Terminierung \(f(x)\) auf das Ausgabeband geschrieben hat.
                   Wenn wir eine Reduktion von \(L_1\) nach \(L_2\) haben, dann liefert uns jeder
@@ -260,12 +256,11 @@ const Article = () => {
                   \(L_2\) ist und \(L_2\) entscheidbar ist, dann ist auch \(L_1\) entscheidbar.
                 </div>
                 <div class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Beweis.
                   </b>
-                  {" "}
-                  Sei \(M_2\) eine Turingmaschine, die \(L_2\) entscheidet und sei \(M_f\) die Turingmaschine,
+                  {" "}Sei \(M_2\) eine Turingmaschine, die \(L_2\) entscheidet und sei \(M_f\) die Turingmaschine,
                   die \(f\) berechnet.
                   Wir bauen nun eine neue Turingmaschine \(M_1\).
                   Sie nimmt das Eingabewort \(x \in \Sigma_1^* \) und lässt die Turingmaschine
@@ -283,7 +278,7 @@ const Article = () => {
                     \(\square\)
                   </span>
                 </div>
-                Stellen Sie sich einfach vor, dass \(M_f\) der Code ist, den Sie selber schreiben müssen,
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Stellen Sie sich einfach vor, dass \(M_f\) der Code ist, den Sie selber schreiben müssen,
                 und \(M_2\) die "Bibliotheksfunktion" ist, die Sie ohne groß nachzudenken aufrufen,
                 weil sie ja bereist von anderen Leuten (hoffentlich korrekt) implementiert worden ist.
                 Behauptung 4.6.8 zeigt also, das etwas{" "}
@@ -306,19 +301,18 @@ const Article = () => {
                   \(L_2\) ist und \(L_1\) unentscheidbar ist, dann ist auch \(L_2\) unentscheidbar.
                 </div>
                 <div class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Beweis.
                   </b>
-                  {" "}
-                  Angenommen, \(L_2\) wäre entscheidbar. Dann wäre laut Behauptung 4.6.8 die Sprache
+                  {" "}Angenommen, \(L_2\) wäre entscheidbar. Dann wäre laut Behauptung 4.6.8 die Sprache
                   \(L_1\) ja auch entscheidbar, was sie aber nach Annahme nicht ist. Daher ist
                   \(L_2\) eben nicht entscheidbar.
                   <span class="qed">
                     \(\square\)
                   </span>
                 </div>
-                Beachten Sie nun, dass so etwas wie Behauptung 4.6.9 bereits oben angewandt haben: wir haben
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie nun, dass so etwas wie Behauptung 4.6.9 bereits oben angewandt haben: wir haben
                 das Haltproblem auf das MPCP-Problem reduziert; jenes dann auf das PCP; und schließlich PCP
                 auf das "Kann ein Palindrom abgeleitet werden"-Problem. Wir haben also eine ganze Kette
                 von Reduktionen bereits durchgeführt.
@@ -344,7 +338,7 @@ const Article = () => {
                     src="../img/pcp/reduction.svg"
                     loading="lazy" />
                 </figure>
-                Üben wir also Reduktionen:
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Üben wir also Reduktionen:
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
@@ -356,25 +350,23 @@ const Article = () => {
                     </b>
                     {" "}{" "}
                   </Paragraph>
-                  Gegeben zwei kontextfreie Grammatiken \(G_1, G_2\). Es ist
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Gegeben zwei kontextfreie Grammatiken \(G_1, G_2\). Es ist
                   unentscheidbar, ob \(L(G_1) \cap L(G_2)\) nichtleer ist, ob es
                   also ein Wort \(x\) mit \(x \in G_1\) und \(x \in G_2\) gibt.
                   <Paragraph>
-                    Dieses Problem ist als{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dieses Problem ist als{" "}
                     <i>
                       Schnittproblem kontextfreier Sprachen
                     </i>
-                    {" "}
-                    bekannt.
+                    {" "}bekannt.
                   </Paragraph>
                 </div>
                 <div class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Beweis.
                   </b>
-                  {" "}
-                  Wir reduzieren das Palindromwortproblem (bereits bekannt) auf das Schnittproblem (neues
+                  {" "}Wir reduzieren das Palindromwortproblem (bereits bekannt) auf das Schnittproblem (neues
                   Problem).
                   Sei \(G\) eine Grammatik und \(\Sigma\) die Menge der Terminalsymbole. Sei \(G'\) die
                   folgende Grammatik:
@@ -398,24 +390,22 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     (Mehrdeutigkeitsproblem kontextfreier Sprachen)
                   </b>
-                  {" "}
-                  Gegeben eine kontextfreie Grammatik \(G\). Es ist unentscheidbar,
+                  {" "}Gegeben eine kontextfreie Grammatik \(G\). Es ist unentscheidbar,
                   ob \(G\) mehrdeutig ist, d.h., ob es ein Wort \(x \in \Sigma^*\) gibt,
                   für das zwei verschiedene Ableitungsbäume existieren.
                 </div>
                 <div
                   style="background-color: rgba(255,0,0,0.1);"
                   class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Falscher Beweis.
                   </b>
-                  {" "}
-                  Wir reduzieren das uns bereits bekannte Schnittproblem auf das Mehrdeutigkeitsproblem.
+                  {" "}Wir reduzieren das uns bereits bekannte Schnittproblem auf das Mehrdeutigkeitsproblem.
                   Gegeben seien zwei kontextfreie Grammatiken \(G_1, G_2\) mit Startsymbolen \(S_1, S_2\) und
                   Nichtterminalmenge \(N_1, N_2\). Wir machen in einem ersten Schritt die Mengen \(N_1\) und
                   \(N_2\) disjunkt (wenn sie es nicht eh schon sind; wir können beispielsweise jedes \(X \in N_2\)
@@ -446,7 +436,7 @@ const Article = () => {
                   </span>
                 </div>
                 <Paragraph>
-                  Haben Sie den Fehler im Beweis erkannt? Das Problem ist, dass es sein könnte, dass
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Haben Sie den Fehler im Beweis erkannt? Das Problem ist, dass es sein könnte, dass
                   \(G_1\) und \(G_2\) leeren Schnitt haben, \(G_1\) aber bereits mehrdeutig ist.
                   Die Ausgabe-Grammatik \(G\) wäre dann auch mehrdeutig; also hätte die Reduktion \(f\)
                   einen Fehler gemacht.
@@ -468,12 +458,11 @@ const Article = () => {
                   , third edition.
                 </Paragraph>
                 <div class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Beweis.
                   </b>
-                  {" "}
-                  Sei ein PCP-Puzzle \(P = \&#123; (\alpha_1:\beta_1), \dots, (\alpha_n : \beta_n)\&#125;\) gegeben.
+                  {" "}Sei ein PCP-Puzzle \(P = \&#123; (\alpha_1:\beta_1), \dots, (\alpha_n : \beta_n)\&#125;\) gegeben.
                   Wir erstellen nun eine kontextfreie Gramatik, die es dem "User" erlaubt, zu entscheiden,
                   ob er das Wort via die oberen Teile \(\alpha_i\) oder via die unteren Teile ableiten will;
                   wenn es auf beide Weisen geht, dann ist die Grammatik mehrdeutig und das PCP hat eine Lösung.

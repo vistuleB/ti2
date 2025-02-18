@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Vielleicht war es überraschend zu sehen, dass $\N = \Q$ gilt, dass
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Vielleicht war es überraschend zu sehen, dass $\N = \Q$ gilt, dass
                   also das "diskrete" $\N$ und das "dichte" $\Q$ sicht hinsichtlich
                   ihrer Größe (Fachsprache: Kardinalität) nicht unterscheiden. Könnte es
                   denn sein, dass jede unendliche Menge $A$ abzählbar ist, also $A
@@ -54,7 +54,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       (Überabzählbarkeit der reellen Zahlen).
                     </b>
@@ -64,7 +64,7 @@ const Article = () => {
                 </div>
                 <div class="well container">
                   <Paragraph>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
@@ -97,7 +97,7 @@ const Article = () => {
                     unterscheidet, also an mindestens einer Stelle.
                   </Paragraph>
                   <Paragraph>
-                    Wie können wir die Funktion $f$ darstellen? Jedes $f(n)$ ist eine
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wie können wir die Funktion $f$ darstellen? Jedes $f(n)$ ist eine
                     unendliche $0/1$-Folge. Also können wir uns $f$ als nach rechts und
                     nach unten unendliche Tabelle vorstellen. Hierbei schreiben wir
                     $f
@@ -113,7 +113,7 @@ const Article = () => {
                       src="../img/infinite-sets/cantor-table.svg" />
                   </figure>
                   <Paragraph>
-                    Für ein Bit $b \in \&#123;0,1\&#125;$ bezeichnen wir mit $\bar&#123;b&#125;$ seine
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für ein Bit $b \in \&#123;0,1\&#125;$ bezeichnen wir mit $\bar&#123;b&#125;$ seine
                     Negation: $\bar&#123;b&#125; = 1 - b$. Wir betrachten jetzt die Diagonale der
                     Tabelle und negieren sie:
                   </Paragraph>
@@ -123,7 +123,7 @@ const Article = () => {
                       src="../img/infinite-sets/cantor-diagonal.svg" />
                   </figure>
                   <Paragraph>
-                    und erhalten eine Folge: $\mathbf&#123;d&#125; := \overline&#123;f
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und erhalten eine Folge: $\mathbf&#123;d&#125; := \overline&#123;f
                     <i>
                       &#123;0,0&#125;&#125;\
                       \overline&#123;f
@@ -160,7 +160,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Weil in dem Beweis die Diagonale der Tabelle eine entscheidende Rolle
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Weil in dem Beweis die Diagonale der Tabelle eine entscheidende Rolle
                   spielt, nennt man diese Beweistechnik auch das Cantorsche
                   Diagonalisierungsverfahren. Dies wird später, in Kapitel
                   <a href="07-00-Turing-machines.html">
@@ -176,7 +176,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Zeigen Sie, dass es zu der Funktion $f: \N \rightarrow \cuben$ eine
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass es zu der Funktion $f: \N \rightarrow \cuben$ eine
                     Folge $\mathbf&#123;d&#125;$ gibt, die nicht nur nicht in $&#123;\rm img&#125;(f)$ ist,
                     sondern noch mehr: jede Folge $f_n$ unterscheidet sich von
                     $\mathbf&#123;d&#125;$ in unendlich vielen Stellen.
@@ -187,12 +187,12 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Zeigen Sie ganz allgemein: für jede Menge $A$ gilt $A \not \approx
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie ganz allgemein: für jede Menge $A$ gilt $A \not \approx
                     2^A$. Erinnerin Sie sich: $2^A$ ist die Potenzmenge von $A$, also
                     die Menge aller Untermengen.
                   </Paragraph>
                   <Paragraph>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Tipp:
                     </b>
@@ -201,7 +201,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Die letzte Übung zeigt also: es gibt immer größere Mengen, ein oberes
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die letzte Übung zeigt also: es gibt immer größere Mengen, ein oberes
                   Ende wird nie erreicht.
                 </Paragraph>
                 <div class="well well-lg numbered-exercise container">
@@ -209,7 +209,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Erinnern Sie sich an die Partialordnung $(2^\N, \subseteq)$. Zeigen
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Erinnern Sie sich an die Partialordnung $(2^\N, \subseteq)$. Zeigen
                     Sie, dass es in dieser Ordnung eine Antikette $X$ mit $X \approx \R$
                     gibt.
                   </Paragraph>

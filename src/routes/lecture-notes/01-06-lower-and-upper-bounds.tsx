@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Wir haben zwei Methoden gesehen, zu einer beliebigen Booleschen Funktion
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben zwei Methoden gesehen, zu einer beliebigen Booleschen Funktion
                   $f : \fcube$ einen Booleschen Schaltkreis zu konstruieren: top-down,
                   indem wir $f$ in $f
                   <i>
@@ -71,8 +71,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Die Beweismethode ist vielleicht neu für Sie, aber in der Komplexitätstheorie und
+                    {" "}Die Beweismethode ist vielleicht neu für Sie, aber in der Komplexitätstheorie und
                     Kombinatorik
                     sehr wichtig. Wir stellen uns zwei{" "}
                     <i>
@@ -91,7 +90,7 @@ const Article = () => {
                     anwenden).
                   </Paragraph>
                   <Paragraph>
-                    Die Antwort auf (1) ist einfach: es gibt genau $2^&#123;2^n&#125;$ Boolesche Funktionen
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Antwort auf (1) ist einfach: es gibt genau $2^&#123;2^n&#125;$ Boolesche Funktionen
                     mit $n$ Variablen. Warum? Die Wahrheitstabelle hat $2^n$ Zeilen. Sie könnne sich
                     also $2^n$ mal für $0$ oder $1$ entscheiden.
                   </Paragraph>
@@ -111,8 +110,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}
-                      Wir bauen den Schaltkreis, indem wir erst einmal $s$ Gates unbeschriftet "hinmalen".
+                      {" "}Wir bauen den Schaltkreis, indem wir erst einmal $s$ Gates unbeschriftet "hinmalen".
                       Um nun zu entscheiden, was für ein Schaltkreis das sein soll, müssen wir Entscheidungen
                       treffen:
                     </Paragraph>
@@ -138,7 +136,7 @@ const Article = () => {
                           </li>
                         </ul>
                         <Paragraph>
-                          Insgesamt haben wir also
+                          &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Insgesamt haben wir also
                           $$
                           n + (s-1) + 2 &#123;s-1 \choose 2&#125; = n + s - 1 + (s-1)(s-2) =
                           n + s^2 - 2s + 1 \leq s^2
@@ -147,15 +145,15 @@ const Article = () => {
                         </Paragraph>
                       </li>
                       <li>
-                        Für den gesamten Schaltkreis: welches Gate Output-Gate sein soll. Da haben
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für den gesamten Schaltkreis: welches Gate Output-Gate sein soll. Da haben
                         wir $s$ Möglichkeiten.
                       </li>
                     </ol>
                     <Paragraph>
-                      Um die Gesamtzahl der Möglichkeiten abzuschätzen, müssen wir das alles multiplizieren.
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um die Gesamtzahl der Möglichkeiten abzuschätzen, müssen wir das alles multiplizieren.
                       Wir haben höchstens
                     </Paragraph>
-                    $$
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$
                     \underbrace&#123;s&#125;_&#123;\textnormal&#123;Output-Gate wählen&#125;&#125; \cdot \underbrace&#123;\prod_&#123;i=1&#125;^s
                     (s^2)&#125;_&#123;\textnormal&#123;jedes Gate beschriften&#125;&#125;
                     = s \cdot (s^2)^s = s^&#123;2s+1&#125;
@@ -167,16 +165,16 @@ const Article = () => {
                     </span>
                   </div>
                   <Paragraph>
-                    Wählen wir nun $s := 2^&#123;n&#125; / (2n)$. Wieviele Schaltkreise mit $n$ Variablen, Fan-in 2 und
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wählen wir nun $s := 2^&#123;n&#125; / (2n)$. Wieviele Schaltkreise mit $n$ Variablen, Fan-in 2 und
                     $s$ Gates gibt es? Die Schranke in der obigen Behauptung sagt, dies seien höchstens
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   \pfrac&#123;2^n&#125;&#123;2n&#125;^&#123;\frac&#123;2^&#123;n&#125;&#125;&#123;n&#125; + 1&#125;&amp;= \left(2^&#123;n - \log (2n)&#125;\right)^&#123;\frac&#123;2^n&#125;&#123;n&#125; + 1&#125; \\
                   &amp;= 2^&#123;2^&#123;n&#125; + n - \log(2n) \frac&#123;2^&#123;n&#125;&#125;&#123;n&#125; - \log (2n)&#125; \\
                   &amp;\lt 2^&#123;2^n&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Also: es gibt mehr Boolesche Funktionen in $n$ Variablen, als es Boolesche Schaltkreise
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Also: es gibt mehr Boolesche Funktionen in $n$ Variablen, als es Boolesche Schaltkreise
                     mit $\frac&#123;2^n&#125;&#123;2n&#125;$ Gates gibt. Somit benötigen manche Boolesche Funktionen
                     mehr als $\frac&#123;2^n&#125;&#123;2n&#125;$ Gates.
                     <span class="qed">
@@ -189,17 +187,17 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    In Theorem und Beweis sprechen wir die ganze Zeit nur von Schaltkreisen
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In Theorem und Beweis sprechen wir die ganze Zeit nur von Schaltkreisen
                     mit Fan-in 2. Was geschieht, wenn wir beliebigen Fan-in erlauben?
                     Wie ändern sich Aussage und Beweis?
                   </Paragraph>
                   <Paragraph>
-                    Was geschieht, wenn wir weitere Gates, z.B. $\oplus$ als atomare
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Was geschieht, wenn wir weitere Gates, z.B. $\oplus$ als atomare
                     Gates zulassen?
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Der obige Beweis sagt noch mehr: der Anteil Boolescher Funktionen, bei denen wir mit
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der obige Beweis sagt noch mehr: der Anteil Boolescher Funktionen, bei denen wir mit
                   $\frac&#123;2^n&#125;&#123;2n&#125;$ Gates auskommen, ist verschwindend klein. Fast{" "}
                   <i>
                     alle
@@ -228,7 +226,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Kandidaten für solche Funktionen gibt es viele. Im Prinzip gibt uns jedes
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Kandidaten für solche Funktionen gibt es viele. Im Prinzip gibt uns jedes
                   Entscheidungsproblem, dass für eine "schwierige" Komplexitätsklasse vollständig
                   ist, einen Kandidaten. Also zum Beispiel Graphenfärbbarkeit.
                 </Paragraph>
@@ -240,16 +238,16 @@ const Article = () => {
                     &ensp;Gegeben
                     ein Graph $G = (V,E)$, gibt es eine Funktion{" "}
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   c : V \rightarrow \&#123;\textnormal&#123;rot, grün, blau&#125;\&#125; \ ,
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    so dass $c(u) \ne c(v)$ für alle $\&#123;u,v\&#125; \in E$ gilt? Dass also benachbarte Knoten
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;so dass $c(u) \ne c(v)$ für alle $\&#123;u,v\&#125; \in E$ gilt? Dass also benachbarte Knoten
                     verschiedene Farben bekommen?
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  3-Färbbarkeit ist ein zentrales NP-vollständiges Problem. Wir vermuten also, dass es dafür
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;3-Färbbarkeit ist ein zentrales NP-vollständiges Problem. Wir vermuten also, dass es dafür
                   keinen polynomiellen Algorithmus gibt. Wir können es zur Zeit (April 2024) aber nicht beweisen.
                   Dies ist das berühmte Problem P vs NP, von dem Sie sicher schon gehört haben und das als
                   eines der großen offenen Probleme der Mathematik insgesamt gilt. Die
@@ -260,7 +258,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Formal gesehen ist Graphenfärbbarkeit eine Sprache
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Formal gesehen ist Graphenfärbbarkeit eine Sprache
                     $L \subseteq \Sigma^*$ über einem Alphabet $\Sigma$, dass uns
                     erlaubt, Graphen zu codieren. Wie können wir $L$ als Boolesche Funktion darstellen?
                   </Paragraph>
@@ -269,7 +267,7 @@ const Article = () => {
                   Obere Schranken: Die Lupanov-Schranke
                 </h3>
                 <Paragraph>
-                  Wir haben nun eine Konstruktion, die uns für jede beliebige
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben nun eine Konstruktion, die uns für jede beliebige
                   Funktion $f: \fcube$ Schaltkresie mit $O(2^n)$ Gates baut.
                   Wir haben eine untere Schranke, die besagt, dass es mit weniger
                   als $\frac&#123;2^&#123;n&#125;&#125;&#123;2n&#125;$ Gates nicht geht. Diese beiden Schranken lassen
@@ -294,15 +292,14 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Der Beweis fußt auf zwei Kernideen: erstens bauen wir den Schaltkreis nicht
+                    {" "}Der Beweis fußt auf zwei Kernideen: erstens bauen wir den Schaltkreis nicht
                     mit AND- und OR- und NOT-Gates, sondern mit AND- und XOR-Gates. Da wir
                     nach vollendeter Konstruktion jedes XOR-Gates durch einen kleinen Schaltkreis
                     aus vier AND/OR/NOT-Gates ersetzen können, spielt dies keine Rolle (der Faktor
                     4 verschwindet in der $O$-Notation).
                   </Paragraph>
                   <Paragraph>
-                    Die zweite Idee ist, dass wir anstreben, für
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die zweite Idee ist, dass wir anstreben, für
                     eine bliebige Menge $F$ an Booleschen Funktionen einen "überraschend guten"
                     Schaltkreis zu bauen, der jede Funktion $f \in F$ berechnet. Dieser Schaltkreis
                     wird $|F|$ Output-Gates haben, und seine Größe wird auch von $|F|$ abhängen.
@@ -321,8 +318,7 @@ const Article = () => {
                     <i>
                       multilineare
                     </i>
-                    {" "}
-                    Polynome beschränken. Führen wir Polynome formal ein:
+                    {" "}Polynome beschränken. Führen wir Polynome formal ein:
                     wir haben eine Menge $x
                     <i>
                       1, \dots, x
@@ -349,11 +345,11 @@ const Article = () => {
                       <span class="numbered-title">
                         Übungsaufgabe
                       </span>
-                      Zeigen Sie, dass sich jede Boolesche Funktion $f$
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass sich jede Boolesche Funktion $f$
                       als $\F_2$-Polynom schreiben lässt.
                     </Paragraph>
                     <Paragraph>
-                      {" "}{" "}
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                       <b>
                         Tipp:
                       </b>
@@ -380,18 +376,17 @@ const Article = () => {
                       <span class="numbered-title">
                         Übungsaufgabe
                       </span>
-                      Zeigen Sie, dass sich jede Funktion $f :\fcube${" "}
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass sich jede Funktion $f :\fcube${" "}
                       <i>
                         eindeutig
                       </i>
-                      {" "}
-                      als multilineares $\F_2$-Polynom schreiben lässt. In anderen Worten:
+                      {" "}als multilineares $\F_2$-Polynom schreiben lässt. In anderen Worten:
                       wenn $p$ und $q$ zwei verschiedene multilineare Polynome sind, dann
                       berechnen sie verschiedene Funktionen.
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    Ein $\F
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein $\F
                     <i>
                       2$-Polynom können wir natürlich ganz einfach als
                       Schaltkreis mit AND- und XOR-Gates schreiben. AND für die Multiplikation
@@ -402,7 +397,7 @@ const Article = () => {
                     brauchen wir dafür?
                   </Paragraph>
                   <Paragraph>
-                    Schreiben wir $f = \x^&#123;I
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben wir $f = \x^&#123;I
                     <i>
                       1&#125; + \x^&#123;I
                     </i>
@@ -411,34 +406,33 @@ const Article = () => {
                     Die Summe bilden wir mit $t-1$ weiteren XOR-Gates. Da
                     $t \leq 2^n$ und $|I| \leq n$ gilt, brauchen wir maximal
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   (n-1) 2^n + 2^n - 1 \leq n 2^n
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Gates. Allerdings ist das eine ungenaue Rechnung: Selbst wenn{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Gates. Allerdings ist das eine ungenaue Rechnung: Selbst wenn{" "}
                     <i>
                       alle
                     </i>
-                    {" "}
-                    $2^n$ Monome vertreten sind, bestehen nicht alle Monome aus $n$ Variablen.
+                    {" "}$2^n$ Monome vertreten sind, bestehen nicht alle Monome aus $n$ Variablen.
                   </Paragraph>
                   <div class="well well-lg numbered-exercise container">
                     <Paragraph>
                       <span class="numbered-title">
                         Übungsaufgabe
                       </span>
-                      Rechnen Sie genauer! Wenn Sie alle Monome berechnen wollen,
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rechnen Sie genauer! Wenn Sie alle Monome berechnen wollen,
                       brauchen Sie
                     </Paragraph>
-                    $$\begin&#123;align*&#125;
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                     \sum_&#123;I \subseteq [n]&#125; (|I| - 1)
                     \end&#123;align*&#125;$$
                     <Paragraph>
-                      viele AND-Gates. Finden Sie eine geschlossene Formel für diesen Ausdruck.
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;viele AND-Gates. Finden Sie eine geschlossene Formel für diesen Ausdruck.
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    Als nächstes wollen wir zeigen, wie man $f$ mit höchstens $2^n$
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als nächstes wollen wir zeigen, wie man $f$ mit höchstens $2^n$
                     AND-Gates und $2^n-1$ XOR-Gates berechnet. Wir zeigen in der Tat
                     etwas mehr:
                   </Paragraph>
@@ -468,8 +462,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}
-                      Die Idee ist: wenn wir $x
+                      {" "}Die Idee ist: wenn wir $x
                       <i>
                         1 x
                       </i>
@@ -509,7 +502,7 @@ const Article = () => {
                       4$ berechnen.
                     </Paragraph>
                     <Paragraph>
-                      Formal geht es mit Induktion über $n$. Für $n=0$ haben wir ein
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Formal geht es mit Induktion über $n$. Für $n=0$ haben wir ein
                       einziges Monom, nämlich $1$, und einen Schaltkreis mit einem
                       einzigen Gate: dem Konstant-1-Gate, das gleichzeitig ein Output-Gate ist.
                       Für $n \geq 1$ bauen wir zuerst per Induktion einen Schaltkreis $C
@@ -531,14 +524,14 @@ const Article = () => {
                           style="width:100%" />
                       </Carousel>
                     </figure>
-                    Insgesamt erhalten wir $2^n$ Gates, von denen jedes gleichzeitig ein
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Insgesamt erhalten wir $2^n$ Gates, von denen jedes gleichzeitig ein
                     Ouptut-Gate ist.
                     <span class="qed">
                       \(\square\)
                     </span>
                   </div>
                   <Paragraph>
-                    Die zweite Kernidee ist, dass Synergien auftreten, dass
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die zweite Kernidee ist, dass Synergien auftreten, dass
                     wir die Variablen $x
                     <i>
                       1, \dots, x
@@ -566,7 +559,7 @@ const Article = () => {
                     n$. Wir können $f$ also
                     wie folgt schreiben:
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   f(\x)&amp;= \sum_&#123;I \subseteq [n]&#125; c_I \x^I \tag&#123;mit Koeffizienten $c_I \in \&#123;0,1\&#125;$&#125; \\
                   &amp;= \sum_&#123;A \subseteq [n-k]&#125; \sum_&#123;B \subseteq [k]&#125; c_&#123;A,B&#125; \y^A \z^B \\
                   &amp;= \sum_&#123;A \subseteq [n-k]&#125; \y^A \left( \sum_&#123;B \subseteq [k]&#125; c_&#123;A,B&#125; \z^B\right)
@@ -574,7 +567,7 @@ const Article = () => {
                   &amp;=: \sum_&#123;A \subseteq [n-k]&#125; \y^A g_A(\z) \tag&#123;der inneren Summe einen Namen geben&#125;
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Die obige Summe beinhaltet also $2^&#123;n-k&#125;$ Terme von der Form
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die obige Summe beinhaltet also $2^&#123;n-k&#125;$ Terme von der Form
                     $\y^A g
                     <i>
                       A(\z)$. Es gibt insgesamt nur $2^&#123;2^k&#125;$ Polynome in den Variablen $\z$.
@@ -612,7 +605,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Übungsaufgabe
                       </span>
-                      Beweisen Sie das Lemma. Konstrukieren Sie zuerst wie
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beweisen Sie das Lemma. Konstrukieren Sie zuerst wie
                       im vorherigen Lemma einen Schaltkreis, der Ihnen alle
                       Monome berechnet.
                     </Paragraph>
@@ -622,7 +615,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Übungsaufgabe
                       </span>
-                      Zeigen Sie, dass die obige Konstruktion verbessert werden kann, indem
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass die obige Konstruktion verbessert werden kann, indem
                       Sie einen Schaltkreis mit nur $2^&#123;2^k&#125;$ Gates bauen.
                     </Paragraph>
                     <Paragraph>
@@ -635,16 +628,16 @@ const Article = () => {
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    Wenn wir nun einen Schaltkreis haben, der uns jedes
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir nun einen Schaltkreis haben, der uns jedes
                     $g : \&#123;0,1\&#125;^k \rightarrow \cube$ berechnet, schauen wir uns
                     wieder $f(\x)$ an.
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   f(\x)&amp;=
                   \sum_&#123;A \subseteq [n-k]&#125; \y^A g_A(\z)
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Für jedes $g
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für jedes $g
                     <i>
                       A$ haben wir ja bereits ein Gate, das es berechnet.
                       Mit einem weiteren Schaltkreis von $2^&#123;n-k&#125;$ Gates können wir alle
@@ -654,7 +647,7 @@ const Article = () => {
                     &#123;A \subseteq [n-k]&#125;$ bilden, wofür wir $2^&#123;n-k&#125;$ XOR-Gates brauchen.
                     Insgesamt brauchen wir also
                   </Paragraph>
-                  \begin&#123;align&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin&#123;align&#125;
                   &amp;\underbrace&#123;2^&#123;2^k&#125; + 2^k&#125;
                   <i>
                     &#123;\textnormal&#123;für alle $g: \cube^k \rightarrow \cube$&#125;&#125;
@@ -680,7 +673,7 @@ const Article = () => {
                   \label&#123;size-lupanov&#125;
                   \end&#123;align&#125;
                   <Paragraph>
-                    Wir müssen nun $k$ so wählen, dass der obige Ausdruck minimiert wird.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir müssen nun $k$ so wählen, dass der obige Ausdruck minimiert wird.
                     Anstatt nun abzuleiten und gleich 0 zu setzen, verwenden wir einen
                     Faulheitstrick, der funktioniert, wenn Sie das Minimum nur ungefähr haben wollen:
                     wir setzen $k$ so, dass die beiden großen Ausdrücke -
@@ -688,23 +681,23 @@ const Article = () => {
                     präzise Minimum, aber sicherlich eine gültige Konstruktion und somit eine
                     obere Schranke.
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   2^&#123;2^k&#125;&amp;= 2^&#123;n-k&#125; \qquad \Leftrightarrow \\
                   2^k&amp;= n-k \qquad \Leftrightarrow \\
                   2^k +k&amp;= n
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Ich habe keine explizite Formel, um das für $k$ aufzulösen, also
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ich habe keine explizite Formel, um das für $k$ aufzulösen, also
                     setze ich auf gut Glück $k = \log n$ und wir erhalten
                   </Paragraph>
                   <Paragraph style="color:red">
-                    $$\begin&#123;align*&#125;
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                     (\ref&#123;size-lupanov&#125;)&amp;= 2^&#123;2^k&#125; + 3 \cdot 2^&#123;n-k&#125; + 2^k - 1 \\
                     &amp;= 2^&#123;2^&#123;\log n&#125;&#125; + \dots
                     \end&#123;align*&#125;$$
                   </Paragraph>
                   <Paragraph>
-                    und wir können gleich aufhören, da der erste Term bereits $2^n$ ergibt.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und wir können gleich aufhören, da der erste Term bereits $2^n$ ergibt.
                     Das ist zu groß.
                     Wir müssen $k$ also kleiner wählen. Nächster Versuch: $k := \log n - 1$.
                   </Paragraph>
@@ -718,7 +711,7 @@ const Article = () => {
                   O\pfrac&#123;2^n&#125;&#123;n&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Das ist die behauptete Schranke.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das ist die behauptete Schranke.
                     <span class="qed">
                       \(\square\)
                     </span>

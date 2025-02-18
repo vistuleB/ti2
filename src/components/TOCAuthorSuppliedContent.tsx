@@ -6,18 +6,18 @@ const TOCAuthorSuppliedContent = () => {
       <div id="Chapters">
         <ul style="list-style: none">
           <TOCItem
-            label="Boolesche Schaltkreise"
-            on_mobile="Boolesche Schaltkreise"
+            label="Schaltkreise"
+            on_mobile="Schaltkreise"
             number={1.0}
             href="01-00-Boolean-circuits" />
           <TOCItem
-            label="Größe, Tiefe, Fan-In"
-            on_mobile="Größe, Tiefe, Fan-In"
+            label="Tiefe, Fan-In"
+            on_mobile="Tiefe, Fan-In"
             number={1.1}
             href="01-01-Fanin-Size-Depth" />
           <TOCItem
-            label="Wahrheitstabellen, CNF und DNF"
-            on_mobile="Wahrheitstabellen, CNF und DNF"
+            label="CNF und DNF"
+            on_mobile="CNF und DNF"
             number={1.2}
             href="01-02-truth-tables-cnf-dnf" />
           <TOCItem

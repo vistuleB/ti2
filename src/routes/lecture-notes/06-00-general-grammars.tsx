@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Wir haben nun ausführlich über kontextfreie Grammatiken gesprochen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben nun ausführlich über kontextfreie Grammatiken gesprochen
                   und auch Sprachen gesehen, die nicht mit kontextfreien Grammatiken
                   zu beschreiben (und somit auch nicht mit Parsern oder allgemein mit
                   Kellerautomaten) zu entscheiden sind. Da stellen sich die folgenden Fragen:
@@ -51,12 +51,12 @@ const Article = () => {
                     \(\&#123;a^n b^n c^n \ | \ n \geq 0\&#125;\) umfassen?
                   </li>
                   <li>
-                    Gibt es eine natürliche Barriere, jenseits derer es
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Gibt es eine natürliche Barriere, jenseits derer es
                     keinen vernünftigen Begriff des "Beschreiben könnens" gibt?
                     Oder kann man immer noch allgemeinere Regelwerke zulassen?
                   </li>
                   <li>
-                    Gibt es für die (noch zu definierende) allgemeinere Art von
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Gibt es für die (noch zu definierende) allgemeinere Art von
                     Grammatiken auch eine Art Automat, so wie die endlichen Automaten
                     für die regulären Grammatiken und die Kellerautomaten für die kontextfreien?
                   </li>
@@ -70,12 +70,11 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     (formale Grammatik)
                   </b>
-                  {" "}
-                  Eine formale Grammatik ist gegeben durch ein endliches Alphabet
+                  {" "}Eine formale Grammatik ist gegeben durch ein endliches Alphabet
                   \(\Sigma\) aus{" "}
                   <i>
                     Terminalsymbolen
@@ -96,7 +95,7 @@ const Article = () => {
                   Nichtterminal enthalten muss.
                 </div>
                 <Paragraph>
-                  Die Definition formaler Grammatik umschließt offensichtlich die der kontextfreien:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Definition formaler Grammatik umschließt offensichtlich die der kontextfreien:
                   sie verbietet nicht, dass alle linken Seiten \(\alpha\) aus genau einem
                   Nichtterminal bestehen; in diesem Falle hätten wir eine kontextfreie Grammatik.
                   Sie verbietet auch nicht, dass zusätzlich alle rechten Seiten
@@ -108,7 +107,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     (Ableitung und erzeugte Sprache)
                   </b>
@@ -126,7 +125,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Betrachten wir die allgemeine Grammatik mit
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die allgemeine Grammatik mit
                   Terminalalphabet \(\Sigma = \&#123;a,b,c\&#125;\), Nichtterminalsymbolen
                   \(N = \&#123;S, A, B, C\&#125;\), Startsymbol \(S\) und den Produktionen
                   $$\begin&#123;align*&#125;
@@ -144,14 +143,14 @@ const Article = () => {
                   <Paragraph>
                     Nun schauen wir uns eine Beispielableitung an:
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   S \Step&#123;1&#125; ABCS \Step&#123;1&#125; ABCABCS \Step&#123;2&#125;
                   ABCABC \Step&#123;5&#125; ABACBC \Step&#123;3&#125; AABCBC
                   \Step&#123;8,8,9,9,10,10&#125;^* aabcbc
                   \end&#123;align*&#125;$$
                 </div>
                 <Paragraph>
-                  Die obige Beispielableitung illustriert, dass allgemeine formale Grammatiken
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die obige Beispielableitung illustriert, dass allgemeine formale Grammatiken
                   etwas können, das kontextfreie Grammatiken nicht bieten konnten:
                   das Vertauschen von Symbolen. Das mag nicht als besonders viel erscheinen,
                   wird sich aber als{" "}
@@ -183,7 +182,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Versuchen wir nun, eine allgemeine formale Grammatik für die Sprache
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Versuchen wir nun, eine allgemeine formale Grammatik für die Sprache
                   $$\begin&#123;align*&#125;
                   L = \&#123;a^nb^nc^n \ | \ n \geq 0\&#125;
                   \end&#123;align*&#125;$$
@@ -211,7 +210,7 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                   wobei \(\#_b(v)\) die Anzahl der in \(v\) enthaltenen \(b\) ist.
                   <Paragraph>
-                    Nachdem also unser erster Versuch gescheitert ist, unternehmen wir einen
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nachdem also unser erster Versuch gescheitert ist, unternehmen wir einen
                     zweiten. Wir stellen uns die Ableitung als aus zwei Phasen
                     bestehend vor. In der ersten wird eine Wortform
                     \(w \in \&#123;A,B,C\&#125;\) erzeugt mit
@@ -257,7 +256,7 @@ const Article = () => {
                       \end&#123;align*&#125;$$
                     </li>
                     <li>
-                      \(Z\): will \(C\) in \(c\) umwandeln. Wir
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(Z\): will \(C\) in \(c\) umwandeln. Wir
                       können aber auch einfach aufhören, zum Beispiel
                       wenn wir den rechten Rand erreicht haben:
                       $$\begin&#123;align*&#125;
@@ -267,7 +266,7 @@ const Article = () => {
                     </li>
                   </ul>
                   <Paragraph>
-                    Nun müssen wir zeigen, dass die Grammatik die Sprache \(L\) erzeugt. Für
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nun müssen wir zeigen, dass die Grammatik die Sprache \(L\) erzeugt. Für
                     jedes Wort \(a^n b^n c^n \in L \) müssen wir zeigen, dass wir es ableiten können:
                     $$\begin&#123;align*&#125;
                     &amp;S \Step&#123;1&#125;^* S(ABC)^n \Step&#123;2&#125; X(ABC)^n
@@ -281,13 +280,13 @@ const Article = () => {
                     \end&#123;align*&#125;$$
                   </Paragraph>
                   <Paragraph>
-                    Als zweites müssen wir zeigen, dass jedes abgeleitete Wort
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als zweites müssen wir zeigen, dass jedes abgeleitete Wort
                     \(S \Step&#123;&#125;^* w \in \&#123;a,b,c\&#125;^*\) auch in \(L\) ist,
                     also die Form \(a^n b^n c^n\) haben. Wir machen das
                     nur zu 80% formal.
                   </Paragraph>
                   <Paragraph>
-                    Die erste Beobachtung ist: solange \(S\) in der Wortform \(\beta\)
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die erste Beobachtung ist: solange \(S\) in der Wortform \(\beta\)
                     vorkommt, hat diese die Form \(\beta = S \gamma\)
                     mit \(\gamma \in \&#123;A,B,C\&#125;^*\) enthält gleich viele
                     \(A\) wie \(B\) wie \(C\).
@@ -296,7 +295,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Behauptung
                     </span>
-                    Sei \(\#_&#123;A,a&#125;(\beta)\) die Anahl der \(A\) und \(a\) in der Wortform \(\beta\).
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(\#_&#123;A,a&#125;(\beta)\) die Anahl der \(A\) und \(a\) in der Wortform \(\beta\).
                     Wenn \(S \Step&#123;&#125; \beta\), dann gilt
                     <ol>
                       <li>
@@ -316,19 +315,19 @@ const Article = () => {
                         In allen drei Fällen enthält \(\gamma\) keine Terminalsymbole.
                       </li>
                       <li>
-                        Wenn es kein Symbol in \(S,X,Y,Z\) enthält, dann ist es von
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn es kein Symbol in \(S,X,Y,Z\) enthält, dann ist es von
                         der Form \(\beta = a^* b^* c^* \gamma\) und \(\gamma\) enthält
                         keine Terminalsymbole.
                       </li>
                     </ol>
                   </div>
-                  Wir behaupten also, dass das \(\gamma\) in Punkt 3 aus den Nichtterminalen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir behaupten also, dass das \(\gamma\) in Punkt 3 aus den Nichtterminalen
                   \(A,B,C\) besteht, die jedoch nicht in der korrekten Reihenfolge sein müssen.
                   Wir können auch gar nicht verbieten, dass in einer Ableitung
                   die Vertausch-Regeln 3,4,5 und die Kontroll-Regeln 6,7,8,9,10,11
                   vermischt angewandt werden.
                   <Paragraph>
-                    Die Behauptung kann man beispielsweise mit Induktion über die
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Behauptung kann man beispielsweise mit Induktion über die
                     Länge der Ableitung zeigen. Intuitiv gesprochen: Sie gilt unmittelbar,
                     nachdem \(S \rightarrow X\) angewandt wurde; danach
                     überträgt sich ihre Gültigkeit Schritt
@@ -336,7 +335,7 @@ const Article = () => {
                     erzeugt werden können).
                   </Paragraph>
                   <Paragraph>
-                    Wenn nun also \(S \rightarrow a^* b^* c^* \gamma\) und \(\gamma\) kein
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn nun also \(S \rightarrow a^* b^* c^* \gamma\) und \(\gamma\) kein
                     Nichtterminal \(S,X,Y,Z\) enthält, also \(\gamma \in \&#123;A,B,C\&#125;^*\), dann
                     können keine weiteren Produktionen angewandt werden und die
                     Ableitung endet. Wenn das also ein Wort sein soll, muss
@@ -349,7 +348,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Im{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im{" "}
                   <a href="./05-10-not-context-free.html">
                     Teilkapitel 5.10
                   </a>
@@ -368,7 +367,7 @@ const Article = () => {
                   prüft, ob es in \(L\) ist. Können wir also auch eine formale Grammatik
                   schreiben?
                   <Paragraph>
-                    Dies geht sogar nohc einfacher als die obigen Sprachen. Wir
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dies geht sogar nohc einfacher als die obigen Sprachen. Wir
                     schaffen eine Startregel:
                     $$\begin&#123;align*&#125;
                     S&amp;\step&#123;1&#125; L1R
@@ -412,7 +411,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Sei \(L\) die Sprache aller Wörter über
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L\) die Sprache aller Wörter über
                   \(\Sigma = \&#123;1\&#125;\), deren Länge eine Quadratzahl ist.
                   Wir werden als erstes eine{" "}
                   <i>
@@ -487,29 +486,29 @@ const Article = () => {
                       darf die Wortform also keine \(A\)-Symbole mehr enthalten.
                     </li>
                     <li>
-                      Wir können eine \(A\) nur verschwinden lassen
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können eine \(A\) nur verschwinden lassen
                       durch \(A \rightarrow \tilde&#123;A&#125; X\) und \(X\) nur
                       auf diese Weise entstehen lassen. Wir produzieren also,
                       wenn wir mit \(L A^m B^n R\) beginnen, im Laufe der Ableitung genau
                       \(m\) mal ein \(X\).
                     </li>
                     <li>
-                      Um ein \(X\) wieder verschwinden zu lassen, muss es den ganzen
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um ein \(X\) wieder verschwinden zu lassen, muss es den ganzen
                       \(B\)-Block durchlaufen und produziert damit insgesamt \(n\) viele
                       (\tilde&#123;C&#125;\).
                     </li>
                     <li>
-                      Da wir insgesamt \(m\) viele \(X\) produzieren und jedes
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Da wir insgesamt \(m\) viele \(X\) produzieren und jedes
                       \(X\) insgesamt \(n\) viele \(\tilde&#123;C&#125;\) produziert, werden
                       insgesamt \(mn\) viele \(\tilde&#123;C&#125;\) erzeugt.
                     </li>
                     <li>
-                      Jedes \(\tilde&#123;C&#125;\) kann nur in ein \(C\) umgewandelt werden.
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Jedes \(\tilde&#123;C&#125;\) kann nur in ein \(C\) umgewandelt werden.
                       Es entstehen also insgesamt \(mn\) viele \(C\).
                     </li>
                   </ul>
                   <Paragraph>
-                    Wenn wir also aus
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir also aus
                     \(L A^m B^n R\) ein Wort ableiten, so
                     muss zum Zeitpunkt der Produktion \(R \rightarrow K\)
                     die Wortform so aussehen:
@@ -526,7 +525,7 @@ const Article = () => {
                     mehr in Terminale umwandeln.
                   </Paragraph>
                   <Paragraph>
-                    In einer leichten Variation können wir auch die Sprache
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In einer leichten Variation können wir auch die Sprache
                     $$\begin&#123;align*&#125;
                     \&#123;a^m b^n c^&#123;mn&#125; \ | \ m,n \geq 0 \&#125;
                     \end&#123;align*&#125;$$
@@ -541,20 +540,20 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Geben Sie ein formale Grammatik für
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Geben Sie ein formale Grammatik für
                   $$\begin&#123;align*&#125;
                   L = \&#123;w\texttt&#123;:&#125;w \ | \ w \in \&#123;a,b\&#125;^* \&#125;
                   \end&#123;align*&#125;$$
                   an. Dies ist auch ein Paradebeispiel für eine Sprache, die nicht kontextfrei ist.
                 </div>
                 <Paragraph>
-                  Überlegen Sie, wie man "lineare Suche" implementieren könnte:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Überlegen Sie, wie man "lineare Suche" implementieren könnte:
                 </Paragraph>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Sei \(L\) die Sprache über \(\Sigma = \&#123;a,b,:,;\&#125;\)
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L\) die Sprache über \(\Sigma = \&#123;a,b,:,;\&#125;\)
                   mit
                   $$\begin&#123;align*&#125;
                   L := w:w_1;w_2; \dots; w_n
@@ -564,7 +563,7 @@ const Article = () => {
                   <pre>
                     List.member x list
                   </pre>
-                  die überprüft, ob \(x\) in der angegebenen Liste enthalten ist:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;die überprüft, ob \(x\) in der angegebenen Liste enthalten ist:
                   $$\begin&#123;align*&#125;
                   abba\text&#123;:&#125;aaaaaaa\text&#123;;&#125;abbbb\text&#123;;&#125;abba\text&#123;;&#125;bbbb \in L \\
                   abba\text&#123;:&#125;aaaaaaa\text&#123;;&#125;abbbb\text&#123;;&#125;abbba\text&#123;;&#125;bbbb \not \in L \\
@@ -578,7 +577,7 @@ const Article = () => {
                   \(wXwY\) und lassen dann aus \(X\) und \(Y\) den Rest der Liste entstehen.
                 </div>
                 <Paragraph>
-                  Sie haben sicherlich gemerkt, dass wir die Grammatikproduktionen nun nicht
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sie haben sicherlich gemerkt, dass wir die Grammatikproduktionen nun nicht
                   mehr nur zum{" "}
                   <i>
                     Erzeugen

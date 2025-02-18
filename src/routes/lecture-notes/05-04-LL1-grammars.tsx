@@ -46,8 +46,7 @@ const Article = () => {
                   <b>
                     Grenzform
                   </b>
-                  {" "}
-                  Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik.
+                  {" "}Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik.
                   Eine Wortform \(A \alpha\) - also eine Wortform, die mit einem Nichtterminal beginnt -
                   heißt{" "}
                   <i>
@@ -71,7 +70,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  Für ein Wort \(w \in \Sigma^*\) und eine natürliche Zahl \(k \in \N\)
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für ein Wort \(w \in \Sigma^*\) und eine natürliche Zahl \(k \in \N\)
                   sei \(\first_k(w)\) wie folgt definiert:
                   $$\begin&#123;align*&#125;
                   \first_k(w) := \begin&#123;cases&#125;
@@ -86,12 +85,11 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     LL(\(k\))-Grammatiken
                   </b>
-                  {" "}
-                  Eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) ist eine
+                  {" "}Eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) ist eine
                   LL(\(k\))-Grammatik, wenn für jede Grenzform \(A \alpha\) und für jedes Paar
                   $$\begin&#123;align*&#125;
                   A&amp;\step&#123;1&#125; \beta \\
@@ -114,7 +112,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Negieren Sie die Definition, d.h., schreiben Sie eine Aussage der Form
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Negieren Sie die Definition, d.h., schreiben Sie eine Aussage der Form
                   {" "}
                   <i>
                     Wenn \(G\) nicht LL(\(k\)) ist, dann gibt es...
@@ -125,19 +123,18 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Die Klammern-Grammatik
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Klammern-Grammatik
                   $$\begin&#123;align*&#125;
                   S&amp;\step&#123;1&#125; \epsilon \\
                   S&amp;\step&#123;2&#125; (S)S
                   \end&#123;align*&#125;$$
                   ist LL(1).
                   <div class="well subtheorem">
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Beweis.
                     </b>
-                    {" "}
-                    Folgen wir der Definition von LL(1): für jedes Paar verschiedener Regeln muss etwas
+                    {" "}Folgen wir der Definition von LL(1): für jedes Paar verschiedener Regeln muss etwas
                     gelten. Wir haben hier keine Auswahl, denn es gibt ja nur ein Paar. Also
                     müssen wir zeigen, dass, falls
                     $$\begin&#123;align*&#125;
@@ -167,7 +164,7 @@ const Article = () => {
                       </span>
                     </Paragraph>
                     <Paragraph>
-                      Wir folgern also, dass für das \(\alpha\) den beiden obigne
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir folgern also, dass für das \(\alpha\) den beiden obigne
                       Herleitungen \(\first_k(\alpha) \in \&#123;\epsilon, \texttt&#123;)&#125;\&#125;\) gilt.
                       Keines davon ist ein Nichtterminal, und so muss auch
                       \(\first_k(\alpha) = \first_k(x)\) gelten. Zusammenfassend gesagt:
@@ -224,7 +221,7 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                   Zeigen Sie, dass diese Grammatik LL(2) ist, aber nicht LL(1).
                   <Paragraph>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Tip.
                     </b>
@@ -239,7 +236,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Schreiben Sie eine äquivalente Grammatik zu der vorherigen Sprache, die LL(1) ist.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie eine äquivalente Grammatik zu der vorherigen Sprache, die LL(1) ist.
                   (Warnung: Ich weiß nicht, ob das überhaupt geht).
                 </div>
                 <div
@@ -248,7 +245,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Betrachten wir die Grammatik \(G\):
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die Grammatik \(G\):
                   $$\begin&#123;align*&#125;
                   S&amp;\step&#123;1&#125; a S b \\
                   S&amp;\step&#123;2&#125; a S \\
@@ -265,11 +262,11 @@ const Article = () => {
                   </i>
                   {" "}so vielen \(b\)'s folgt.
                   <Paragraph>
-                    Geben Sie diese Grammatik in den
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Geben Sie diese Grammatik in den
                     <a href="../../demos/drawManualGrammar.html">
                       Parser-Simulator
                     </a>
-                    ein und finden Wörter mit langen Sackgassen.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein und finden Wörter mit langen Sackgassen.
                   </Paragraph>
                   <Paragraph>
                     Zeigen Sie, dass diese Grammatik nicht LL\((k)\) ist, für kein
@@ -280,7 +277,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Sei \(t \in \N\) eine feste, im Voraus bekannte Zahl.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(t \in \N\) eine feste, im Voraus bekannte Zahl.
                   Betrachten wir die Sprache
                   $$\begin&#123;align*&#125;
                   L_t := \&#123;a^&#123;m + l&#125; b^m \ | \ m \geq 0, l \leq t\&#125; \ ,
@@ -288,7 +285,7 @@ const Article = () => {
                   also die Wörter der Form \(a^m b^n\) mit
                   \(n \leq m \leq n+t\).
                   <Paragraph>
-                    Schreiben Sie für \(L_3\) eine Grammatik,
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie für \(L_3\) eine Grammatik,
                     geben Sie diese im
                     <a href="../../demos/drawManualGrammar.html">
                       Parser-Simulator
@@ -297,7 +294,7 @@ const Article = () => {
                     und schauen, wie lang die Sackgassen werden können.
                   </Paragraph>
                   <Paragraph>
-                    Zeigen Sie, dass \(L_3\) eine LL\((k)\)-Grammatik ist. Für welchen
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass \(L_3\) eine LL\((k)\)-Grammatik ist. Für welchen
                     Wert von \(k\)? Ist
                     \(L_t\) (für im Voraus bekanntes \(t\)) eine
                     LL\((k)\)-Grammatik? Für welchen Wert von \(k\)?
@@ -320,19 +317,19 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  Sei eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) und eine
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) und eine
                   Wortform \(\alpha \in (\Sigma \cup N)^*\) gegeben.
                   Wir definieren
                   $$\begin&#123;align*&#125;
                   \First_k(\alpha) := \&#123; \first_k(w) \ | \ w \in \Sigma^*, \alpha \Step&#123;&#125;^* w\&#125;
                   \end&#123;align*&#125;$$
                 </div>
-                Wir können nun die LL\((k)\)-Bedingung äquivalent formulieren:
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können nun die LL\((k)\)-Bedingung äquivalent formulieren:
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition/Beobachtung
                   </span>
-                  Eine Grammatik \(G\) ist LL\((k)\) genau dann, wenn
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Grammatik \(G\) ist LL\((k)\) genau dann, wenn
                   für alle Grenzformen \(A \alpha\) und alle
                   Produktionen mit \(A\) auf der linken Seite, also
                   $$\begin&#123;align*&#125;
@@ -345,7 +342,7 @@ const Article = () => {
                   zwei dieser Mengen ein gemeinsames Element enthalten).
                 </div>
                 <Paragraph>
-                  Nehmen wir eine Momentaufnahme unseres Kellerautomaten. Er
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nehmen wir eine Momentaufnahme unseres Kellerautomaten. Er
                   hat den Präfix \(x\) des Eingabewortes \(xy\) gelesen und
                   eine Linksableitung
                   $$\begin&#123;align*&#125;
@@ -359,7 +356,7 @@ const Article = () => {
                   schwierige Fall ist, wenn \(\alpha\) mit einem Nichtterminal beginnt.
                 </Paragraph>
                 <Paragraph>
-                  Nochmal von vorn: im schwierigen Fall liegt auf dem Stack (oberhalb vom \(\$\))
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nochmal von vorn: im schwierigen Fall liegt auf dem Stack (oberhalb vom \(\$\))
                   eine Wortform, die mit einem Nichtterminal beginnt, also
                   \(A \alpha\). Das bedeutet, dass der Automat per Linksableitung
                   bis jetzt
@@ -425,7 +422,7 @@ const Article = () => {
                     </li>
                     <ol class="nested">
                       <li>
-                        Sei \(y\) das Resteingabewort.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(y\) das Resteingabewort.
                       </li>
                       <li>
                         Wenn das oberste Symbol auf dem Stack ein Terminalsymbol \(c\) ist:
@@ -458,7 +455,7 @@ const Article = () => {
                           </li>
                           <li>
                             <span style="color:red; font-weight: bold;">
-                              Berechne \(\First_k(\beta_i\alpha)\) für alle \(\beta_i\) und
+                              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Berechne \(\First_k(\beta_i\alpha)\) für alle \(\beta_i\) und
                               schaue, welches \(\first_k(y)\) enthält
                             </span>
                             <ul>
@@ -503,13 +500,13 @@ const Article = () => {
                   die Menge \(\First_k(\beta_i\alpha)\) zu berechnen.
                 </Paragraph>
                 <h2>
-                  \(\First_k(A)\) und \(\First_k(\alpha)\) berechnen.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(\First_k(A)\) und \(\First_k(\alpha)\) berechnen.
                 </h2>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
                   </span>
-                  Seien \(K, L \subseteq \Sigma^*\) zwei Mengen.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Seien \(K, L \subseteq \Sigma^*\) zwei Mengen.
                   Mit \(K \circ L\) bezeichnen wir die Menge
                   $$\begin&#123;align*&#125;
                   K \circ L := \&#123;xy \ | \ x \in K, y \in L\&#125; \ .
@@ -527,7 +524,7 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                 </div>
                 <Paragraph>
-                  Im Allgemeinen gilt
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im Allgemeinen gilt
                   \(\First_k(S_1 \circ \dots \circ S_l) = S_1 \circ_k S_2 \circ_k \dots \circ_k S_l\).
                   In Worten: der \(\circ_k\)-Operator bildet alle möglichen Kombinationen von Wörtern und nimmt
                   von jedem die ersten \(k\) Zeichen.
@@ -536,7 +533,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Sei
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei
                   $$\begin&#123;align*&#125;
                   K&amp;:= \&#123;\epsilon, a, ab, aba\&#125; \\
                   L&amp;:= \&#123;c, bb, b\&#125;
@@ -555,12 +552,11 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     - Wie man \(\First_k(\alpha)\) berechnet.
                   </b>
-                  {" "}
-                  Sei eine Wortform \(\alpha\) gegeben, also
+                  {" "}Sei eine Wortform \(\alpha\) gegeben, also
                   \(\alpha \in (\Sigma \cup N)^*\). Wir berechnen
                   \(\First_k(\alpha)\), indem wir als erstes
                   \(\alpha\) aussschreiben als
@@ -595,7 +591,7 @@ const Article = () => {
                   \label&#123;first-k-wortform&#125;
                   \end&#123;align&#125;
                   <Paragraph>
-                    Wir können dies schön der Reihe nach tun:
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können dies schön der Reihe nach tun:
                   </Paragraph>
                   <ol class="nested">
                     <li>
@@ -615,7 +611,7 @@ const Article = () => {
                       </tt>
                       <ul class="nested">
                         <li>
-                          \(K := \First_k(\sigma_i) \circ_k K \)
+                          &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(K := \First_k(\sigma_i) \circ_k K \)
                           <span class="comment">
                             // \(K\) ist jetzt
                             \(\First_k(\sigma_i) \circ_k \dots \circ_k \First_k(\sigma_n)\)
@@ -631,7 +627,7 @@ const Article = () => {
                     </li>
                   </ol>
                   <Paragraph>
-                    Wir müssen nur noch herausfinden, wie wir
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir müssen nur noch herausfinden, wie wir
                     \(\First_k(\sigma)\) für einzelne Zeichen \(\sigma\) berechnen.
                   </Paragraph>
                 </div>
@@ -643,7 +639,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                   </span>
-                  Sei \(X\) ein Nichtterminal und
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(X\) ein Nichtterminal und
                   $$\begin&#123;align*&#125;
                   X&amp;\rightarrow \alpha_1 \\
                   X&amp;\rightarrow \alpha_2 \\
@@ -670,7 +666,7 @@ const Article = () => {
                   gilt \(\first_k(w)\in \First_k(\alpha_i)\).
                 </div>
                 <Paragraph>
-                  Die Gleichungen \((\ref&#123;first-k-wortform&#125;)\) und \((\ref&#123;first-k-nonterminal&#125;)\) leuchten zwar
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Gleichungen \((\ref&#123;first-k-wortform&#125;)\) und \((\ref&#123;first-k-nonterminal&#125;)\) leuchten zwar
                   ein, scheinen aber erstmal
                   nicht hilfreich, diese Mengen auch tatsächlich zu berechnen. Denn eventuell taucht \(X\) selbst
                   wieder auf einer rechten
@@ -681,7 +677,7 @@ const Article = () => {
                   unter Anderem die Menge \(\First_k(X)\). Wo sollen wir also anfangen?
                 </Paragraph>
                 <Paragraph>
-                  In solchen Situationen, wo sich "die Katze in den Schwanz beißt", hilft es oft, die Definition
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In solchen Situationen, wo sich "die Katze in den Schwanz beißt", hilft es oft, die Definition
                   vorerst{" "}
                   <i>
                     komplexere
@@ -699,7 +695,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  Sei \(\sigma\) ein Symbol und \(d \in \N\). Dann ist
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(\sigma\) ein Symbol und \(d \in \N\). Dann ist
                   $$\begin&#123;align*&#125;
                   \First_k^&#123;(d)&#125;(\sigma) := \&#123;\first_k(w) \ | \ \textnormal&#123; es gibt einen Ableitungsbaum für
                   $\sigma \Step&#123;&#125;^* w$ der Höhe höchstens $d$&#125;\&#125;
@@ -709,7 +705,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Sei unsere Grammatik
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei unsere Grammatik
                   $$\begin&#123;align*&#125;
                   S&amp;\rightarrow Xa \\
                   X&amp;\rightarrow Sb \ | c
@@ -721,7 +717,7 @@ const Article = () => {
                       src="../img/context-free/LL/tree-depth-2.svg"
                       loading="lazy" />
                   </figure>
-                  ein Ableitungsbaum der Höhe 2 von \(S \Step&#123;&#125;^* ca\), und somit gilt
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein Ableitungsbaum der Höhe 2 von \(S \Step&#123;&#125;^* ca\), und somit gilt
                   $$\begin&#123;align*&#125;
                   c \in \First_1^&#123;(d)&#125; (S) \ .
                   \end&#123;align*&#125;$$
@@ -740,7 +736,7 @@ const Article = () => {
                   von \(n\) Ableitungsbäumen, von denen jeder Höhe maximal \(d\) hat.
                 </div>
                 <Paragraph>
-                  Mit dieser Definition können wir nun Gleichungen für \(\First_k^&#123;(d)&#125;(X)\) und
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Mit dieser Definition können wir nun Gleichungen für \(\First_k^&#123;(d)&#125;(X)\) und
                   \(\First_k^&#123;(d)&#125;(\alpha)\) angeben.
                   Seien \(X \rightarrow \alpha_1 \ | \ \dots \ | \ \alpha_k\) die Produktionen mit \(X\) auf der
                   linken Seite. Dann gilt
@@ -750,7 +746,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Lemma.
                   </span>
-                  Für \(d \geq 1\) gilt
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für \(d \geq 1\) gilt
                   $$\begin&#123;align*&#125;
                   \First_k^&#123;(d)&#125;(X)&amp;= \bigcup_&#123;i=1&#125;^k \First_k^&#123;(d-1)&#125; (\alpha_i) \\
                   \First_k^&#123;(d)&#125;(\alpha)&amp;= \First_k^&#123;(d)&#125;(\sigma_1) \circ_k \First_k^&#123;(d)&#125;(\sigma_2) \circ_k
@@ -766,7 +762,7 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                 </div>
                 <Paragraph>
-                  Die Gleichungen sagen, dass wir, falls wir \(\First_&#123;k&#125;^&#123;(d-1)&#125;(X)\) für alle Nichtterminale
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Gleichungen sagen, dass wir, falls wir \(\First_&#123;k&#125;^&#123;(d-1)&#125;(X)\) für alle Nichtterminale
                   kennen,
                   dann auch \(\First_&#123;k&#125;^&#123;(d)&#125;(X)\) berechnen können.
                   Daraus folgt auch: wenn
@@ -778,7 +774,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                   </span>
-                  Falls \(\First_&#123;k&#125;^&#123;(d-1)&#125;(X)=\First_&#123;k&#125;^&#123;(d)&#125;(X)\) für alle \(X \in N\), dann gilt
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls \(\First_&#123;k&#125;^&#123;(d-1)&#125;(X)=\First_&#123;k&#125;^&#123;(d)&#125;(X)\) für alle \(X \in N\), dann gilt
                   $$\begin&#123;align*&#125;
                   \First_k (X) = \First_k^&#123;(d)&#125;(X)
                   \end&#123;align*&#125;$$
@@ -788,12 +784,11 @@ const Article = () => {
                   <span class="numbered-title">
                     Demo.
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     - Berechnung der Menge \(\First_k(A)\) für die Nichtterminale einer Sprache.
                   </b>
-                  {" "}
-                  Wir betrachten die Grammatik
+                  {" "}Wir betrachten die Grammatik
                   $$\begin&#123;align*&#125;
                   S&amp;\rightarrow Xa \ | \ \epsilon \\
                   X&amp;\rightarrow b \ | \ Sc \ | \ SX

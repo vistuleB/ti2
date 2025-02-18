@@ -42,17 +42,16 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  Zu jeder kontextfreien Grammatik \(G = (\Sigma, N, S, P)\) gibt es
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zu jeder kontextfreien Grammatik \(G = (\Sigma, N, S, P)\) gibt es
                   einen Kellerautomaten \(M = (\Sigma, Q, \Gamma, \qstart, \delta)\), der
                   die gleiche Sprache akzeptiert, also \(L(G) = L(M)\).
                 </div>
                 <div class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Beweis.
                   </b>
-                  {" "}
-                  Der Beweis ist vergleichsweise einfach, weil wir die Grammatik eins zu eins in
+                  {" "}Der Beweis ist vergleichsweise einfach, weil wir die Grammatik eins zu eins in
                   Automatentransitionen übersetzen können.
                   Die Idee ist, dass die Symbole auf dem Stack, von unten nach oben gelesen, zu jedem Zeitpunkt
                   eine Wortform bilden, aus der der noch nicht gelesene Teil des Restwortes ableitbar ist.
@@ -79,7 +78,7 @@ const Article = () => {
                   </i>
                   {" "}also diese Transition anwenden.
                   <br />
-                  Formaler: Die Zustände des Automaten
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Formaler: Die Zustände des Automaten
                   sind \(Q = \&#123;\qstart, q_1, \qend\&#125;\), das Stackalphabet ist
                   \(\Gamma = \Sigma \cup N \cup \&#123;\$\&#125;\) und die Transitionsregeln sind
                   $$\begin&#123;align*&#125;
@@ -104,7 +103,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Betrachten wir die Grammatik
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die Grammatik
                   $$\begin&#123;align*&#125;
                   S&amp;\rightarrow A \ | \ B \ | \ C \ | \ \epsilon \\
                   A&amp;\rightarrow \texttt&#123;\&#123;&#125; B \texttt&#123;\&#125;&#125; S \\
@@ -116,7 +115,7 @@ const Article = () => {
                     &#123;[()()]()&#125;()
                   </tt>
                   <Paragraph>
-                    Schreiben wir nun einen Kellerautomaten, der diese Sprache akzeptiert. Die
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben wir nun einen Kellerautomaten, der diese Sprache akzeptiert. Die
                     Idee ist, dass wir Terminalsymbole und Nichtterminalsymbole auf den Stack legen.
                     Ein{" "}
                     <tt>
@@ -128,7 +127,7 @@ const Article = () => {
                       <tt>
                         [
                       </tt>
-                      lesen
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;lesen
                     </i>
                     ;
                     ein Nichtterminal wie \(A\) oben auf dem Stack bedeutet, dass
@@ -158,7 +157,7 @@ const Article = () => {
                     grundsätzlich immer durch die entsprechende rechte Seite ersetzen können, egal, was das
                     nächste Zeichen ist; es wird im Automaten also ein \(\step&#123;\epsilon&#125;\)-Übergang sein.
                   </Paragraph>
-                  Konkret also bauen wir für obige Grammatik die folgenden Automatentransitionen:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Konkret also bauen wir für obige Grammatik die folgenden Automatentransitionen:
                   $$\begin&#123;align*&#125;
                   (q_1, S)&amp;\step&#123;\epsilon&#125; (q_1, A) \\
                   (q_1, S)&amp;\step&#123;\epsilon&#125; (q_1, B) \\
@@ -512,15 +511,14 @@ const Article = () => {
                   mit \(L(M) = L(G)\).
                 </div>
                 <Paragraph>
-                  Ich folge hier im Wesentlichen dem Beweis aus Sipsers Kapitel 2.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ich folge hier im Wesentlichen dem Beweis aus Sipsers Kapitel 2.
                 </Paragraph>
                 <div class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Beweis.
                   </b>
-                  {" "}
-                  Sei \(M = (\Sigma, Q, \Gamma, \qstart, F, \delta)\) der Kellerautomat.
+                  {" "}Sei \(M = (\Sigma, Q, \Gamma, \qstart, F, \delta)\) der Kellerautomat.
                   Als erstes führen wir drei Schönheitsoperation durch:
                   <ol>
                     <li>
@@ -568,7 +566,7 @@ const Article = () => {
                     </li>
                   </ol>
                   <Paragraph>
-                    Wenn nun der Automat die eben beschriebene Form hat, so ist die
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn nun der Automat die eben beschriebene Form hat, so ist die
                     Idee, dass wir für
                     jedes Paar \(p,q\) von Zuständen ein Nichtterminalsymbol \(A_&#123;pq&#125;\) einführen, dass
                     genau die Wörter \(w\) ableiten kann, für die
@@ -624,12 +622,12 @@ const Article = () => {
                     </li>
                   </ol>
                   <Paragraph>
-                    Schlussendlich führen wir noch die offensichtlich korrekten
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schlussendlich führen wir noch die offensichtlich korrekten
                     Regeln \(A_pp \rightarrow \epsilon\) ein, da ja
                     \((p, \epsilon) \Step&#123;\epsilon&#125;^* (p, \epsilon)\) offensichtlich gilt (da ja
                     \(\Step&#123;&#125;^*\) auch die aus null Übergangen bestehende Konfigurationsfolge erlaubt).
                   </Paragraph>
-                  Zusammenfassend gesagt besteht unsere Grammatik \(G\) aus drei unterschiedlichen Typen von
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zusammenfassend gesagt besteht unsere Grammatik \(G\) aus drei unterschiedlichen Typen von
                   Regeln:
                   $$\begin&#123;align*&#125;
                   A_&#123;pp&#125;&amp;\rightarrow \epsilon \textnormal&#123; für jeden Zustand \(p \in Q\)&#125; \\
@@ -638,7 +636,7 @@ const Article = () => {
                   $(p,\epsilon) \step&#123;a&#125; (r,x)$, $(s,x) \step&#123;b&#125; (q,\epsilon)$ von Transitionen&#125;
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Das Startsymbol der Grammatik ist natürlich \(A_&#123;\qstart, \qend&#125;\).
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Startsymbol der Grammatik ist natürlich \(A_&#123;\qstart, \qend&#125;\).
                   </Paragraph>
                   Auch hier verzichte ich auf einen formalen Beweis, dass \(L(G)=L(M)\) gilt. Der Beweis
                   verwendet (wenig überraschend) Induktion über die Länge der Ableitung bzw. Induktion über die
@@ -651,7 +649,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Wir betrachten die Sprache
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir betrachten die Sprache
                   $$\begin&#123;align*&#125;
                   a^m b (a|b)^* b a^m
                   \end&#123;align*&#125;$$
@@ -665,14 +663,14 @@ const Article = () => {
                   aus dem letzten Theorem in eine Grammatik. Dann vergleichen wir die entstandene
                   Grammatik mit der, die wir per Hand aus der obigen Sprachbeschreibung bauen würden.
                   <Paragraph>
-                    Unser Automat hat einen Zustand \(q_1\), in welchem er führenden \(a\)'s auf den Stack
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unser Automat hat einen Zustand \(q_1\), in welchem er führenden \(a\)'s auf den Stack
                     legt und einen Zustand \(q_3\), in welchem er die \(a\)'s am Ende liest und
                     vom Stack poppt. Zwischen den beiden \(b\)'s in der Mitte ist er in einem
                     Zustand \(q_2\), in welchem er die Eingabesymbole mehr oder weniger ignoriert.
                     Der Automat muss nichtdeterministisch sein, da er "erraten" muss, welches
                     \(b\) das letzte ist, weil er dann mit dem Stack-Poppen beginnen muss.
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   (\qstart, \epsilon)&amp;\step&#123;\epsilon&#125; (q_1, \$) \\ \hline
                   (q_1, \epsilon)&amp;\step&#123;a&#125; (q_1, a) \\
                   (q_1, \epsilon)&\step&#123;b&#125; (q_2, b) \\
@@ -683,10 +681,10 @@ const Article = () => {
                   (q_3, \$)&amp;\step&#123;\epsilon&#125; (\qend, \epsilon)
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Die beiden rot gefärbten Transitionen benötigen eine Schönheitsoperation:
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die beiden rot gefärbten Transitionen benötigen eine Schönheitsoperation:
                   </Paragraph>
                   <span style="color:purple">
-                    $$\begin&#123;align*&#125;
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                     (q_2, \epsilon)&amp;\step&#123;a&#125; (q'_2, x) \\
                     (q_2, \epsilon)&amp;\step&#123;b&#125; (q'_2, x) \\
                     (q'_2, x)&amp;\step&#123;\epsilon&#125; (q_2, \epsilon) \\
@@ -701,7 +699,7 @@ const Article = () => {
                     ein wenig selbständigem Denken kombinieren.
                   </Paragraph>
                   <Paragraph>
-                    Die erste Beobachtung ist, dass wir gar nicht von jedem Zustand zu jedem
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die erste Beobachtung ist, dass wir gar nicht von jedem Zustand zu jedem
                     kommen können, sondern nur "vorwärts", also wie in diesem Diagramm:
                   </Paragraph>
                   <figure>
@@ -711,7 +709,7 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    Nichtterminale wie \(A_&#123;31&#125;\) führen wir also gar nicht erst ein. Auch schreiben
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nichtterminale wie \(A_&#123;31&#125;\) führen wir also gar nicht erst ein. Auch schreiben
                     wir \(A_&#123;13&#125;\) statt \(A_&#123;q_1q_3&#125;\) und verwenden die Indizes 0 für \(\qstart\) und
                     4 für \(\qend\). Als zweite Beobachtung sehen wir, dass man mit leerem
                     Stapel beispielsweise gar nicht von \(\qstart\) nach \(q_3\) kommt:
@@ -724,7 +722,7 @@ const Article = () => {
                         src="../img/context-free/pda-to-cfg-diagram-stack.svg"
                         loading="lazy" />
                     </figure>
-                    Die einzigen Nichtterminale sind also die "trivialen" der Form \(A_&#123;qq&#125;\) und darüberhinaus
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die einzigen Nichtterminale sind also die "trivialen" der Form \(A_&#123;qq&#125;\) und darüberhinaus
                     $$\begin&#123;align*&#125;
                     A_&#123;04&#125;, A_&#123;13&#125;
                     \end&#123;align*&#125;$$
@@ -808,7 +806,7 @@ const Article = () => {
                     \end&#123;align*&#125;$$
                   </Paragraph>
                   <Paragraph>
-                    Überlegen wir nun, ausgehend von dieser Grammatik, was wir aus dem Startsymbol \(A_&#123;13&#125;\)
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Überlegen wir nun, ausgehend von dieser Grammatik, was wir aus dem Startsymbol \(A_&#123;13&#125;\)
                     ableiten
                     können. Die einzigen zwei Produktionen mit \(A_&#123;13&#125;\) sind
                     \(A_&#123;13&#125; \rightarrow a A_&#123;13&#125; a\) und \(A_&#123;13&#125; \rightarrow b A_&#123;22&#125;\), also

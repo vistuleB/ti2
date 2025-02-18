@@ -39,34 +39,34 @@
                             7.5 Turing-Maschinen simulieren Turing-Maschinen: die universelle Turing-Maschine
                     |> p
 
-                        Im letzten Teilkapitel haben wir gesehen, wie wir jede Turingmaschine $M
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im letzten Teilkapitel haben wir gesehen, wie wir jede Turingmaschine $M
                         $mit
                         Eingabealphabet $\Sigma$ codieren können als
-                    \begin{align*}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                     \enc(M) \in \Lambda^* \ ,
                     \end{align*}
                     |> p
 
-                        also als String über dem Codierungsalphabet
-                    \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;also als String über dem Codierungsalphabet
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                     \Lambda := \writelambda
                     \end{align*}
                     |> p
 
-                        Diese Codierungsschema enthält implizit Codierungsfunktionen
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Diese Codierungsschema enthält implizit Codierungsfunktionen
                         $\enc_Q : Q \rightarrow \{0,1\}^+$ und $\enc_\Gamma: \Gamma \rightarrow
                         \Sigma \cup \{0,1\}^+$,
                         die wir verwenden, um die Zustände und Arbeitszeichen von $M$ in
                         $\Lambda$-Zeichen zu
                         übersetzen.
                         Für eine Konfiguration
-                    \begin{align*}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                     C = u_1 \dots u_m q v_1 \dots v_n
                     \end{align*}
                     |> p
 
-                        der Maschine $M$ definieren wir die Codierung von $C$ als
-                    \begin{align*}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;der Maschine $M$ definieren wir die Codierung von $C$ als
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                     \enc(C) := \enc_\Gamma(u_1) \texttt{#} \enc_\Gamma(u_2) \dots \texttt{#}
                     \enc_\Gamma(u_m)\texttt{#}
                     \enc_Q(q) \texttt{#} \enc_\Gamma(v_1)\texttt{#} \dots \texttt{#}
@@ -74,18 +74,17 @@
                     \end{align*}
                     |> p
 
-                        Das ist alles nicht besonders tiefgründig und dient allein dazu,
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das ist alles nicht besonders tiefgründig und dient allein dazu,
                         sicherzustellen, dass wir
                         die Konfigurationen von $M$ darstellen können in dem Alphabet $\Lambda$,
                         das
-                        _unabhängig_ von $M$ ist. Dass wir also _jede_
-                        Turingmaschine
+                        _unabhängig_ von $M$ ist. Dass wir also _jede_                                                Turingmaschine
                         $M$ mit Eingabealphabet $\Sigma$ und _jede_ ihrer Konfigurationen
                         als Strings über _einem_ festen Alphabet $\Lambda$ darstellen
                         können.
                     |> p
 
-                        Eine Turingmaschine simulieren heißt nun, einen String
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Turingmaschine simulieren heißt nun, einen String
                         $\enc(M)\texttt{;}w$ mit $w \in \Sigma^*$ zu lesen und
                         daraus den String $\enc(\hat{\delta}^*_M (w))$ zu berechnen, also
                         das Ergebnis $\hat{\delta}^*_M(w)$, passend codiert über dem Alphabet
@@ -140,8 +139,8 @@
                                         $M$ ablehnt.
                         |> p
 
-                            $U$ akzeptiert also die Sprache
-                        \begin{align*}
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$U$ akzeptiert also die Sprache
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                         \{ c w \ | \ w \in \Sigma^* \textnormal{ und } c = \enc(M) \textnormal{
                         und $M$ akzeptiert $w$} \} \ .
                         \end{align*}
@@ -150,14 +149,8 @@
                         class alert-info container
                         |> p
 
-                            *Ein technischer aber letztendlich irrelevanter Punkt:
-<<<<<<< HEAD
-                            *                                                        
-
-                            &ensp;die Mengen
-=======
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Ein technischer aber letztendlich irrelevanter Punkt:
                             * die Mengen
->>>>>>> 612feea53413697e7003d958d020c4dff50555cc
                             $Q$ und $\Gamma$ der Turingmaschine $M$ können ja beliebige
                             (endliche) Mengen sein,
                             und weder $\Lambda$ noch die Turingmaschine $U$ haben "Kenntnis"
@@ -174,7 +167,7 @@
                             Endkonfiguration von $U$.
                         |> p
 
-                            Des weiteren gehen wir davon aus, dass das Blank-Symbol $\Box$
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Des weiteren gehen wir davon aus, dass das Blank-Symbol $\Box$
                             für alle
                             Turingmaschinen $M$ mit Eingabealphabet $\Sigma$ das gleiche
                             ist. Auch
@@ -194,8 +187,7 @@
                         class well container
                         |> p
 
-                            *Beweis.*
-                            Den Beweis in allen Details zu führen hieße, die Maschine $U$
+                            *Beweis.*                                                        Den Beweis in allen Details zu führen hieße, die Maschine $U$
                             konkret als Turingmaschine
                             zu implementieren. Wir tun dies nicht. Wir beschränken uns auf
                             eine High-Level-Beschreibung

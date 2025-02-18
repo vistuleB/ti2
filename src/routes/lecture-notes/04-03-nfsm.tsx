@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Ein nichtdeterministischer Automat ist, informell ausgedrückt, wie ein
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein nichtdeterministischer Automat ist, informell ausgedrückt, wie ein
                   deterministischer Automat, nur dass es für eine
                   Zustand-Symbol-Kombination beliebig viele ausgehende Pfeile (eventuell
                   gar keinen) geben kann. Hier ist das Beispiel von vorhin, leicht
@@ -52,7 +52,7 @@ const Article = () => {
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  Ein Pfeil beschreibt also nicht unbedingt einen Zustandsübergang, der
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein Pfeil beschreibt also nicht unbedingt einen Zustandsübergang, der
                   {" "}
                   <i>
                     geschieht
@@ -73,12 +73,11 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     (Nichtdeterministischer endlicher Automat, non-deterministic finite state machine)
                   </b>
-                  {" "}
-                  Ein nichtdeterministischer endlicher Automat besteht aus
+                  {" "}Ein nichtdeterministischer endlicher Automat besteht aus
                   <ul>
                     <li>
                       einem endlichen Eingabealphaet \(\Sigma\),
@@ -90,17 +89,17 @@ const Article = () => {
                       einem Startzustand \(\qstart \in Q\),
                     </li>
                     <li>
-                      einer Menge \(F \subseteq Q\) von akzeptierenden Endzuständen,
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;einer Menge \(F \subseteq Q\) von akzeptierenden Endzuständen,
                     </li>
                     <li>
-                      einer Zustandsübergangsrelation \(\delta \subseteq Q \times \Sigma
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;einer Zustandsübergangsrelation \(\delta \subseteq Q \times \Sigma
                       \times Q\).
                     </li>
                   </ul>
-                  Formal gesehen ist also ein Automat ein Quintupel \(M = (\Sigma, Q,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Formal gesehen ist also ein Automat ein Quintupel \(M = (\Sigma, Q,
                   \qstart, F, \delta)\).
                 </div>
-                Von nun an bezeichnen wir endliche Automaten auch als
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Von nun an bezeichnen wir endliche Automaten auch als
                 {" "}
                 <i>
                   deterministische
@@ -125,20 +124,19 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     (Erweiterte Zuständsübergangsfunktion)
                   </b>
                   .
                   <Paragraph>
-                    Für einen nichtdeterministischen endlichen Automaten \((\Sigma, Q,
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für einen nichtdeterministischen endlichen Automaten \((\Sigma, Q,
                     \qstart, F, \delta)\) definieren wir die
                     {" "}
                     <i>
                       erweiterte Zustandsübergangsrelation
                     </i>
-                    {" "}
-                    \(\hat&#123;\delta&#125;\subseteq Q \times \Sigma^* \rightarrow Q\) als die
+                    {" "}\(\hat&#123;\delta&#125;\subseteq Q \times \Sigma^* \rightarrow Q\) als die
                     Menge aller Zustand-Wort-Zustand-Tripel \((q,x_1 x_2 \dots
                     x_n,q')\), für die wir Zwischenzustände \(q = \qstart, q_1, q_2,
                     \dots, q_n = q'\) finden können mit $$ (\qstart, x_1, q_1), (q_1,
@@ -148,7 +146,7 @@ const Article = () => {
                     \stackrel&#123;\alpha&#125;&#123;\rightarrow&#125; q'\).
                   </Paragraph>
                   <Paragraph>
-                    Die von \(M\) akzeptierte Sprache ist $$ L(M) := \&#123;\alpha \in
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die von \(M\) akzeptierte Sprache ist $$ L(M) := \&#123;\alpha \in
                     \Sigma^* \ | \ \textnormal&#123; es gibt ein &#125; q \in F \textnormal&#123; mit &#125;
                     \qstart \stackrel&#123;\alpha&#125;&#123;\rightarrow&#125; q \&#125; $$
                   </Paragraph>
@@ -157,12 +155,12 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                   </span>
-                  Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein nichtdeterministischer
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein nichtdeterministischer
                   endlicher Automat. Dann gibt es eine reguläre Grammatik \(G\) mit
                   \(L(G) = L(M)\).
                 </div>
                 <Paragraph>
-                  Wir führen hier den Beweis nicht noch einmal; er ist mehr oder weniger
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir führen hier den Beweis nicht noch einmal; er ist mehr oder weniger
                   identisch mit dem Beweis von
                   <a href="./04-02-finite-state-machines.html#theorem-fsm-regular">
                     Theorem 4.2.5
@@ -187,17 +185,16 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik. Dann gibt es
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik. Dann gibt es
                   einen nichtdeterministischen endlichen Automaten \(M\) mit \(L(G) =
                   L(M)\).
                 </div>
                 <div class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Beweis.
                   </b>
-                  {" "}
-                  Unser Automat hat als Zustandsmenge \(N\), die Menge der
+                  {" "}Unser Automat hat als Zustandsmenge \(N\), die Menge der
                   nichtterminalen Symbole und als Startzustand \(S\), das Startsymbol
                   der Grammatik \(G\). Wir definieren \(\delta\), indem wir jeden
                   \(G\)-Pfeil in einem \(M\)-Pfeil umwandeln: eine Produktion $$ X
@@ -206,7 +203,7 @@ const Article = () => {
                   Regel der Form \(X \rightarrow \epsilon\) machen wir \(X\) zu einem
                   Endzustand.
                   <Paragraph>
-                    Was aber mit Regeln der Form \(X \rightarrow Y\)? Hierfür könnte man
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Was aber mit Regeln der Form \(X \rightarrow Y\)? Hierfür könnte man
                     Nichtdeterministische Automaten mit \(\epsilon\)-Übergängen
                     definieren, die also vom Zustand \(X\) nach \(Y\) wechseln können,
                     ohne ein Eingabesymbol zu lesen; wir gehen hier einen anderen Weg
@@ -226,7 +223,7 @@ const Article = () => {
                     Beispiel
                   </span>
                   <Paragraph>
-                    Wir betrachten abermals die
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir betrachten abermals die
                     <a href="./04-01-regular-grammars.html#example-aaabb">
                       reguläre Grammatik aus dem vorherigen Kapitel 4.1
                     </a>
@@ -242,12 +239,12 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    Wir sehen nun, dass dies genau der nichtdeterministische Automat
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir sehen nun, dass dies genau der nichtdeterministische Automat
                     ist, den wir nach{" "}
                     <a href="#theorem-nfsm-regular">
                       Theorem 4.3.4
                     </a>
-                    bauen können. Die Zustandsübergangsrelation \(\delta\) ist $$ \delta
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;bauen können. Die Zustandsübergangsrelation \(\delta\) ist $$ \delta
                     = \&#123;(S,a,S), (S,b,S), (T,b,T) \&#125; \ . $$ Jeder Zustand ist ein
                     Endzustand, allerdings heißt das nicht, dass der Automat jedes Wort
                     akzeptiert. Für \(\alpha = ba\) beispielsweise gibt es keinen
@@ -261,22 +258,22 @@ const Article = () => {
                     Beispiel
                   </span>
                   <Paragraph>
-                    Wir betrachten die
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir betrachten die
                     <a href="./04-01-regular-grammars.html#exercise-no-a-or-no-b">
                       reguläre Grammatik aus Übungsaufgabe 4.1.7
                     </a>
                     :
                   </Paragraph>
-                  $$\begin&#123;align*&#125; S&amp;\rightarrow A \ | \ B \\ A&amp;\rightarrow \epsilon \
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; S&amp;\rightarrow A \ | \ B \\ A&amp;\rightarrow \epsilon \
                   | \ b A \ | \ c A \\ B&amp;\rightarrow \epsilon \ | \ a B \ | \ c B
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Bevor wir einen nichtdeterministischen Automaten bauen können,
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bevor wir einen nichtdeterministischen Automaten bauen können,
                     müssen wir erst die Produktionen der Form \(X \rightarrow Y\)
                     eliminieren bzw. ersetzen. Wenn Sie Aufgabe 4.1.7 gelöst haben,
                     haben Sie wahrscheinlich in etwa folgende Grammatik erhalten:
                   </Paragraph>
-                  $$\begin&#123;align*&#125; S&amp;\rightarrow \epsilon \ | \ bA \ | \ cA \ | \ aB \ |
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; S&amp;\rightarrow \epsilon \ | \ bA \ | \ cA \ | \ aB \ |
                   \ cB\\ A&amp;\rightarrow \epsilon \ | \ bA \ | \ cA \\ B&amp;\rightarrow
                   \epsilon \ | \ aB \ | \ cB \end&#123;align*&#125;$$ Also insgesamt 11 statt 8
                   Produktionen. Alle Nichtterminale erlauben auf ihrer rechten Seite ein
@@ -298,16 +295,16 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Sei \(\Sigma = \&#123;1\&#125;\) und \(L_k := \&#123;1^n \ | \textnormal&#123; $n$ ist
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(\Sigma = \&#123;1\&#125;\) und \(L_k := \&#123;1^n \ | \textnormal&#123; $n$ ist
                   durch $k$ teilbar&#125; \&#125;\). Schreiben Sie für \(L_k\) einen
                   deterministischen endlichen Automaten.
                   <Paragraph>
-                    Schreiben Sie eine reguläre Grammatik für die Sprache \(L_5 \cup
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie eine reguläre Grammatik für die Sprache \(L_5 \cup
                     L_7\), also die Strings aus 1, deren Länge durch 5 oder durch 7
                     teilbar ist.
                   </Paragraph>
                   <Paragraph>
-                    Zeichnen Sie nun einen nichtdeterministischen endlichen Automaten
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeichnen Sie nun einen nichtdeterministischen endlichen Automaten
                     für \(L_5 \cup L_7\).
                   </Paragraph>
                 </div>
@@ -315,7 +312,7 @@ const Article = () => {
                   Nichtdeterministische endliche Automaten deterministisch machen
                 </h2>
                 <Paragraph>
-                  Wir werden nun zeigen, dass man zu jedem nichtdeterministischen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir werden nun zeigen, dass man zu jedem nichtdeterministischen
                   Automaten \(M\) einen äquivalenten deterministischen Automaten \(M'\)
                   bauen kann. Bevor wir eine allgemeine Konstruktion zeigen, fragen wir
                   uns, wie wir beispielsweise für den nichtdeterministischen endlichen
@@ -328,7 +325,7 @@ const Article = () => {
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  und das Eingabewort \(\alpha = 1001100\) überprüfen können, ob
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und das Eingabewort \(\alpha = 1001100\) überprüfen können, ob
                   \(1001100 \in L(M)\) gilt. Einem determinischen endlichen Automaten
                   können wir ja das Eingabewort einfach füttern und schauen, was der
                   Automat tut; bei nichtdeterministischen Automaten müssen wir schauen,
@@ -544,7 +541,7 @@ const Article = () => {
                   </div>
                 </figure>
                 <Paragraph>
-                  Am Ende landet der grüne Punkt im Zustand \(E\). Das Wort ist also in
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Am Ende landet der grüne Punkt im Zustand \(E\). Das Wort ist also in
                   \(L(M)\). Das können wir auch ganz allgemein tun. Wenn Zustand \(q\)
                   einen "Punkt" hat und Zeichen \(x\) gelesen wird, dann teilt sich
                   dieser Punkt und plaziert einen Kind-Punkt in jedem Zustand \(q'\),
@@ -560,14 +557,13 @@ const Article = () => {
                   (dieser also am Ende einen "Punkt" hat), gilt \(\alpha \in L(M)\).
                 </Paragraph>
                 <Paragraph>
-                  Treten Sie einen Schritt zurück und betrachten, was wir mit \(\Delta\)
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Treten Sie einen Schritt zurück und betrachten, was wir mit \(\Delta\)
                   definiert haben: wir haben eine Zustandsübergangsfunktion definiert,
                   die nun aber nicht auf Zuständen sondern auf Zustands
                   <i>
                     mengen
                   </i>
-                  {" "}
-                  operiert. Das heißt, im Gegensatz zu \(\delta\), das eine Funktion
+                  {" "}operiert. Das heißt, im Gegensatz zu \(\delta\), das eine Funktion
                   \(\delta: Q \times \Sigma \rightarrow Q\) ist, ist $$\begin&#123;align*&#125;
                   \Delta: 2^Q \times \Sigma \rightarrow 2^Q \ . \end&#123;align*&#125;$$ Wenn Sie
                   die Schreibweise \(2^Q\) nicht kennen: dies ist die Potenzmenge von
@@ -581,13 +577,12 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     (Einen nichtdeterministischen endlichen Automaten deterministisch
                     machen).
                   </b>
-                  {" "}
-                  Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein nichtdeterministischer
+                  {" "}Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein nichtdeterministischer
                   Automat; dann heiße der deterministische Automat \(M' = (\Sigma, 2^Q,
                   \&#123;\qstart\&#125;, \mathcal&#123;F&#125;, \Delta)\) mit Endzustandsmenge
                   \(\mathcal&#123;F&#125;\) definiert als $$\begin&#123;align*&#125; \mathcal&#123;F&#125; := \&#123;X
@@ -611,14 +606,14 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  Zu jeder regulären Sprache \(L\) gibt es einen deterministischen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zu jeder regulären Sprache \(L\) gibt es einen deterministischen
                   endlichen Automaten \(M\) mit \(L(M) = L\).
                 </div>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Der obige nichtdeterminische Automaten \(M\), der die Sprache aller
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der obige nichtdeterminische Automaten \(M\), der die Sprache aller
                   Wörter, deren viertletztes Zeichen eine 1 ist, akzeptiert, hat fünf
                   Zustände. Sein Potenzmengenautomat \(M'\) hätte also \(2^5 = 32\).
                   Allerdings sehen wir, dass alle "relevanten" Zustände von \(M\) den
@@ -634,8 +629,7 @@ const Article = () => {
                   <i>
                     drittletztes Zeichen
                   </i>
-                  {" "}
-                  eine 1 ist. Der nichtdeterministische Automat hierfür ist
+                  {" "}eine 1 ist. Der nichtdeterministische Automat hierfür ist
                   <figure>
                     <img
                       style="height: 10em"
@@ -664,7 +658,7 @@ const Article = () => {
                     </a>
                   </figure>
                   <Paragraph>
-                    Wenn wir uns vorstellen, dass wir vor das Eingabewort \(\alpha\) die
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir uns vorstellen, dass wir vor das Eingabewort \(\alpha\) die
                     Zeichen 000 stellen, also \(\alpha\) durch \(000\alpha\) ersetzen,
                     dann codiert jeder Zustand genau die letzten drei Zeichen des
                     Eingabewortes, die der Automat gelesen hat. Der Zustand \(ACD\)
@@ -677,7 +671,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Im folgenden Unterkapitel werden wir alle Transformationen, die wir
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im folgenden Unterkapitel werden wir alle Transformationen, die wir
                   bisher gesehen haben, an einem konkreten Beispiel anwenden.
                 </Paragraph>
               </div>

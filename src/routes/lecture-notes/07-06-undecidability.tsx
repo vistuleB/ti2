@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Im vorherigen Teilkapitel haben wir die{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im vorherigen Teilkapitel haben wir die{" "}
                   <i>
                     universelle Turingmaschine
                   </i>
@@ -48,12 +48,12 @@ const Article = () => {
                   kann.
                   Technisch gesprochen: $U$ akzeptiert die Sprache
                 </Paragraph>
-                \begin&#123;align&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin&#123;align&#125;
                 \&#123; c w \ | \ c = \enc(M) \textnormal&#123; und $M$ akzeptiert $w$&#125; \&#125; \ .
                 \label&#123;halting-language-old-encoding&#125;
                 \end&#123;align&#125;
                 <Paragraph>
-                  Allerdings: wenn $M$ auf $x$ nicht terminiert, dann terminiert $U$ auf $\enc(M)x$ auch
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Allerdings: wenn $M$ auf $x$ nicht terminiert, dann terminiert $U$ auf $\enc(M)x$ auch
                   nicht. $U${" "}
                   <i>
                     akzeptiert
@@ -69,20 +69,18 @@ const Article = () => {
                   <i>
                     nicht
                   </i>
-                  {" "}
-                  möglich ist. In der Literatur ist dies als die{" "}
+                  {" "}möglich ist. In der Literatur ist dies als die{" "}
                   <i>
                     Unentscheidbarkeit des Halteproblems
                   </i>
-                  {" "}
-                  (englisch{" "}
+                  {" "}(englisch{" "}
                   <i>
                     undecidability of the Halting problem
                   </i>
                   {" "}bekannt).
                 </Paragraph>
                 <Paragraph>
-                  Als vorbereitenden Schritt schauen wir uns kurz die Codierungsfunktion nochmal genauer an. Wir
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als vorbereitenden Schritt schauen wir uns kurz die Codierungsfunktion nochmal genauer an. Wir
                   bezeichnen
                   mit $\tm
                   <i>
@@ -125,11 +123,11 @@ const Article = () => {
                   </b>
                   $:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \halt := \&#123; \enc(M) w \ | \ M \textnormal&#123; akzeptiert &#125; w\&#125; \ .
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Wir können die universelle Turingmaschine $U$ leicht abwandeln, dass sie $\halt$ akzeptiert;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können die universelle Turingmaschine $U$ leicht abwandeln, dass sie $\halt$ akzeptiert;
                   wir müssen nur einen Decodierungsschritt vorausschicken, der die neue Codierung $\enc(M) \in
                   \Sigma^
                   <b>
@@ -140,19 +138,18 @@ const Article = () => {
                   auch blockcodiert haben, uns hilft, die Grenze zwischen $\enc(M)$ und $w$ zu erkennen.
                 </Paragraph>
                 <Paragraph>
-                  Wir zeigen nun, dass $\halt$ unentscheidbar ist, dass es also keine Möglichkeit gibt,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir zeigen nun, dass $\halt$ unentscheidbar ist, dass es also keine Möglichkeit gibt,
                   das Nichtterminieren einer Maschine $M$ auf Eingabe $x$ vorauszusehen und abzufangen.
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     (Unentscheidbarkeit des Halteproblems).
                   </b>
-                  {" "}
-                  Die Sprache \(\halt\) ist unentscheidbar.
+                  {" "}Die Sprache \(\halt\) ist unentscheidbar.
                 </div>
                 <Paragraph>
                   Ich gebe erst einmal einen kurzen und knappen Widerspruchsbeweis. Falls das ihnen zu schnell
@@ -168,22 +165,22 @@ const Article = () => {
                     {" "}Nehmen wir an, es gäbe eine Maschine $H$,
                     die $\halt$ entscheidet. Dann wäre auch die Sprache
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   \diag := \&#123;\enc(M) \ | \ \textnormal&#123;$M$ akzeptiert $\enc(M)$&#125; \&#125;
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    entscheidbar. Warum? Wir können einfach schauen, ob das Eingabewort $c$ die Form $\enc(M)$
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;entscheidbar. Warum? Wir können einfach schauen, ob das Eingabewort $c$ die Form $\enc(M)$
                     hat
                     und in diesem Fall das Wort $\enc(M) \enc(M)$ der Maschine $H$ übergeben.
                     Die Sprache $\diag$ ist, salopp ausgedrückt, die Menge aller Turingmaschinen, die ihre
                     eigene
                     Codierung als Inputwort akzeptieren. Ebenso wäre auch
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   \negdiag := \&#123;\enc(M) \ | \ \textnormal&#123;$M$ akzeptiert $\enc(M)$ nicht&#125;\&#125;
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    entscheidbar; wir müssen ja nur $\diag$ entscheiden und dann das Ergebnis negieren.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;entscheidbar; wir müssen ja nur $\diag$ entscheiden und dann das Ergebnis negieren.
                     $\negdiag$
                     ist sozusagen die Menge aller Turingmaschinen, die{" "}
                     <i>
@@ -194,9 +191,9 @@ const Article = () => {
                     $D$, die $\negdiag$ entscheidet.
                   </Paragraph>
                   <Paragraph>
-                    Wir fragen uns jetzt: gehört $\enc(D)$ selbst zu $\negdiag$?
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir fragen uns jetzt: gehört $\enc(D)$ selbst zu $\negdiag$?
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   \enc(D) \in \negdiag&amp;\Longleftrightarrow \textnormal&#123;$D$ akzeptiert $\enc(D)$ nicht&#125;
                   \tag&#123;nach Definition von $\negdiag$&#125; \\
                   &amp;\Longleftrightarrow \textnormal&#123;$\enc(D) \not \in L(D)$&#125; \tag&#123;Bedeutung der Notation $L(D)$&#125;
@@ -204,7 +201,7 @@ const Article = () => {
                   &amp;\Longleftrightarrow \enc(D) \not \in \negdiag \tag&#123;nach Annahme $L(D) = \negdiag$&#125;
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Also $\enc(D) \in \negdiag \Longleftrightarrow \enc(M) \not \in \negdiag$, ein Widerspruch.
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Also $\enc(D) \in \negdiag \Longleftrightarrow \enc(M) \not \in \negdiag$, ein Widerspruch.
                     Unsere
                     Annahme, dass $\halt$ entscheidbar sei, ist also falsch.
                     <span class="qed">
@@ -213,7 +210,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <div class="well container">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Ausführlicher Beweis.
                   </b>
@@ -234,7 +231,7 @@ const Article = () => {
                       \(f_H(z) = \texttt&#123;undefined&#125;\), d.h. $H$ terminiert auf Eingabewort $z$ nicht.
                     </li>
                   </ol>
-                  Wir setzen nun $y := \enc(D)$ und $z := yy$, wobei \(D\) eine neue
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir setzen nun $y := \enc(D)$ und $z := yy$, wobei \(D\) eine neue
                   Turingmaschine ist, die wir auf Basis von \(H\)
                   konstruieren werden.
                   Also noch einmal. Für eine beliebige, uns gegebene
@@ -252,7 +249,7 @@ const Article = () => {
                       \(f_H(yy) = \texttt&#123;undefined&#125;\).
                     </li>
                   </ol>
-                  Wenn uns dies gelingt, so haben wir gezeigt, dass \(H\) nicht
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn uns dies gelingt, so haben wir gezeigt, dass \(H\) nicht
                   die Sprache \(\halt\) entscheidet: im Fall 3 terminiert
                   \(H\) ja nicht einmal; in Fall 1 und 2 liefert \(H\) zwar
                   eine Antwort, aber die falsche.
@@ -262,8 +259,11 @@ const Article = () => {
                     <code>
                       def D(x):
                     </code>
+                    {" "}{" "}
+                    <code>
+                      if H(xx) == accept then
+                    </code>
                     {" "}
-                    &ensp;&ensp;&ensp;&ensp;`if H(xx) == accept then` 
                     &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`reject` 
                     &ensp;&ensp;&ensp;&ensp;`else` 
                     &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`accept`
@@ -286,7 +286,7 @@ const Article = () => {
                         für \(\halt\) geliefert.
                       </li>
                       <li>
-                        \(H(yy) = \texttt&#123;accept&#125;\). Dann geht
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(H(yy) = \texttt&#123;accept&#125;\). Dann geht
                         der Aufruf von \(D(y)\) in Zeile 3,
                         und \(D(y) = \texttt&#123;reject&#125;\), somit \(yy = \enc(D) y \not \in \halt\).
                         Wir befinden uns in Fall 2: \(yy \not \in \halt\)
@@ -294,7 +294,7 @@ const Article = () => {
                         \(H\) hat abermals eine falsche Antwort geliefert.
                       </li>
                       <li>
-                        \(H(yy)\) terminiert nicht. Dann befinden
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(H(yy)\) terminiert nicht. Dann befinden
                         wir uns in Fall 3: \(H\) kann
                         \(\halt\) nicht entscheiden,
                         denn Mindestbedingung hierfür wäre ja,
@@ -302,7 +302,7 @@ const Article = () => {
                       </li>
                     </ul>
                   </Paragraph>
-                  In jedem Fall sehen wir, dass \(H\) auf dem Eingabewort
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In jedem Fall sehen wir, dass \(H\) auf dem Eingabewort
                   \(yy\) einen Fehler macht und somit \(\halt\) nicht
                   entscheidet. Da das für{" "}
                   <i>
@@ -316,13 +316,13 @@ const Article = () => {
                   </span>
                 </div>
                 <Paragraph>
-                  Ein Student hat am 26. Juni 2024 angemerkt, dass die Sprache
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein Student hat am 26. Juni 2024 angemerkt, dass die Sprache
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \negdiag = \&#123;\enc(M) \ | \ \textnormal&#123;$M$ akzeptiert $\enc(M)$ nicht&#125;\&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  ja eine extrem konstruierte, nicht wirklich relevante Sprache sei (da hatte er Recht). Insofern
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ja eine extrem konstruierte, nicht wirklich relevante Sprache sei (da hatte er Recht). Insofern
                   sei es auch nicht relevant, dass $\negdiag$ unentscheidbar ist. Das ist allerdings auch nicht,
                   was uns interessiert: unser Ziel war, zu zeigen, dass $\halt$ unentscheidbar ist, und
                   die Unentscheidbarkeit von $\negdiag$ war ein Schritt auf diesem Weg. Dass $\halt$

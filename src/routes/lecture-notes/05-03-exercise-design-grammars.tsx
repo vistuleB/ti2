@@ -83,7 +83,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Geben Sie folgende Grammatik in die App ein:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Geben Sie folgende Grammatik in die App ein:
                   <pre>
                     S -&gt; ;
                     S -&gt; "("S")"S ;
@@ -109,7 +109,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Schreiben Sie eine kontextfreie Grammatik für die Sprache aller
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie eine kontextfreie Grammatik für die Sprache aller
                   "korrekten" URLs; also Folgen von mindestens zwei{" "}
                   <i>
                     Labels
@@ -124,7 +124,7 @@ const Article = () => {
                   Zeichen zu bekommen (allerdings verschlechtert das die Laufzeit; ich habe erstmal
                   gar nicht auf Effizienz geachtet).
                   <Paragraph>
-                    Geben Sie das Eingabewort{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Geben Sie das Eingabewort{" "}
                     <code>
                       a.aaaaa.aaaa.aaaa.aaaa.aaaa
                     </code>
@@ -138,7 +138,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Entwerfen Sie eine Grammatik für arithmetische Ausdrücke im Racket-Stil, also
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Entwerfen Sie eine Grammatik für arithmetische Ausdrücke im Racket-Stil, also
                   <pre>
                     (* (+ 2 3) (- 4 (* 2 4) 5)
                     (+ 1 2 (* 2))
@@ -153,30 +153,29 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Wiederholen Sie die vorherige Übung für arithmetische Ausdrücke in der uns
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wiederholen Sie die vorherige Übung für arithmetische Ausdrücke in der uns
                   geläufigen Infix-Notation. Hierbei sollten die Konventionen Punkt-vor-Strich
                   beachtet werden. Im Ableitungsbaum von
                   <pre>
                     2+3*(5+4)
                   </pre>
-                  sollte sich das wiederspiegeln.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;sollte sich das wiederspiegeln.
                 </div>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     (Challenge)
                   </b>
-                  {" "}
-                  Geben Sie die Grammatik hier ein:
+                  {" "}Geben Sie die Grammatik hier ein:
                   <pre>
                     S -&gt; "("S")"S;
                     S -&gt; "["S"("S;
                     S -&gt; ;
                   </pre>
-                  Überlegen Sie, was diese "bedeutet". Sie sehen, die Grammatik ist
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Überlegen Sie, was diese "bedeutet". Sie sehen, die Grammatik ist
                   nicht eindeutig. Das Wort `[([()(` hat zwei
                   verschiedene Ableitungsbäume. Können Sie eine äquivalente
                   {" "}
@@ -189,27 +188,25 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     (Challenge)
                   </b>
-                  {" "}
-                  Die folgende Grammatik hat User{" "}
+                  {" "}Die folgende Grammatik hat User{" "}
                   <i>
                     babou
                   </i>
-                  {" "}
-                  auf{" "}
+                  {" "}auf{" "}
                   <a href="https://cstheory.stackexchange.com/questions/22520/example-of-context-free-grammar-that-triggers-exponential-behaviour-without-memo">
                     StackExchange
                   </a>
-                  vorgeschlagen als Beispiel für eine eindeutige Grammatik,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;vorgeschlagen als Beispiel für eine eindeutige Grammatik,
                   bei der Sie exponentiell große Backtrack-Bäume bekommen können:
                   <pre>
                     S -&gt;  "a" X "b" | "a" X "c";
                     X -&gt; "a" | "a" X | "a" X X;
                   </pre>
-                  Das ist aber keine Kunst, da die Grammatik uneindeutig ist.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das ist aber keine Kunst, da die Grammatik uneindeutig ist.
                   Können Sie eine{" "}
                   <i>
                     eindeutige
@@ -223,7 +220,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     (Super-Challenge; ich hab selbst keine Lösung)
                   </b>

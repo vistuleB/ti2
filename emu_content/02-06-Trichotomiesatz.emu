@@ -36,31 +36,31 @@
                         |> span
                             class subChapterTitle
 
-                            2.6 Der Trichotomiesatz
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;2.6 Der Trichotomiesatz
                     |> p
 
-                        Rekapitulieren wir: für zwei Mengen $A$ und $B$ schreiben $A \leq B$,
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rekapitulieren wir: für zwei Mengen $A$ und $B$ schreiben $A \leq B$,
                         wenn es eine injektive Funktion $f : A \rightarrow B$ gibt. Das $\leq$
                         schaut wie eine Partialordnung aus.
                     |> ol
                         |> li
 
-                            Es ist reflexiv, weil $A \leq A$ gilt: Die Identität ${\rm id}_A: A
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es ist reflexiv, weil $A \leq A$ gilt: Die Identität ${\rm id}_A: A
                             \rightarrow A$ ist injektiv.
                         |> li
 
-                            Es ist transitiv, weil aus $A \leq B$ und $B \leq C$ folgt, dass $A
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es ist transitiv, weil aus $A \leq B$ und $B \leq C$ folgt, dass $A
                             \leq C$: Wenn $f: A \rightarrow B$ und $g: B \rightarrow C$ injektiv
                             sind, dann ist $g \circ f: A \rightarrow C, a \mapsto g(f(a))$ auch
                             injektiv.
                         |> li
 
-                            Es ist (so gut wie) antisymmetrisch, weil aus $A \leq B$ und $B \leq
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es ist (so gut wie) antisymmetrisch, weil aus $A \leq B$ und $B \leq
                             A$ zwar nicht $A = B$ folgt, aber laut Schröder-Bernstein-Theorem
                             immerhin $A \approx B$.
                     |> p
 
-                        Wenn wir also equipotente Mengen als identifisch betrachten, dann ist
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir also equipotente Mengen als identifisch betrachten, dann ist
                         $\leq$ tatsächlich eine Partialordnung. Ist es eine totale Ordnung?
                         Gilt also immer $A \leq B$ oder $B \leq A$? Dies klingt
                         offensichtlich, ist es aber nicht. Aber wahr ist es, wenn auch nicht
@@ -72,7 +72,7 @@
                                 class numbered-title
 
                                 Theorem
-                            *(Trichotomiesatz der Mengenlehre).* Seien $A$ und
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Trichotomiesatz der Mengenlehre).* Seien $A$ und
                             $B$ zwei Mengen. Dann gibt es eine injektive Funktion $f : A
                             \rightarrow B$ oder eine injektive Funktion $g : A \rightarrow B$.
                             Es gilt also immer genau einer der drei folgenden Fälle:
@@ -90,14 +90,13 @@
                         class well container
                         |> p
 
-                            *(Unvollständiger) Beweis.*
-                            Will man ein Objekt mit gewissen Eigenschaften (hier: Funktion,
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Unvollständiger) Beweis.*            Will man ein Objekt mit gewissen Eigenschaften (hier: Funktion,
                             injektiv) konstruieren, so lohnt es sich oft, die gestellten
                             Bedingungen zu relaxieren und sich langsam zu einer "richtigen"
                             Lösung hinzutasten.
                         |> p
 
-                            Wir müssen zuerst uns in Erinnerung rufen, was eine
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir müssen zuerst uns in Erinnerung rufen, was eine
                             _Funktion_ formal ist. $A \times B := \{ (a,b) \ | \ a \in A,
                             b \in B\}$, die Menge aller Paare, heißt das
                             _cartesische Produkt_. Eine _Relation_ ist eine
@@ -114,32 +113,32 @@
                             |> ul
                                 |> li
 
-                                    _Funktion_, wenn es für jedes $a \in A$ genau ein $b \in
+                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;_Funktion_, wenn es für jedes $a \in A$ genau ein $b \in
                                     B$ mit $(a,b) \in R$ gibt; wir schreiben dann üblicherweise $f$
                                     statt $R$ und schreiben $f(a)$, um dieses $b$ zu benennen.
                                 |> li
 
-                                    _Matching_, wenn es für jedes $a \in A$
+                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;_Matching_, wenn es für jedes $a \in A$
                                     _höchstens_ ein $b \in B$ gibt mit $(a,b) \in R$ und
                                     umgekehrt für jedes $b \in B$ höchstens ein $a \in A$ mit $(a,b)
                                     \in R$.
                                 |> li
 
-                                    Wenn $R$ ein Matching ist, dann _sättigt_ $R$ die Menge
+                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn $R$ ein Matching ist, dann _sättigt_ $R$ die Menge
                                     $A$, wenn es für _jedes_ $a \in A$ ein $b \in B$ mit
                                     $(a,b) \in R$ gibt; es _sättigt_ $B$, wenn es für
                                     _jedes_ $b \in B$ ein $a \in A$ gibt mit $(a,b) \in R$.
                         |> p
 
-                            Wir beobachten: wenn $R$ ein Matching ist und die Menge $A$ sättigt,
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir beobachten: wenn $R$ ein Matching ist und die Menge $A$ sättigt,
                             dann ist $R$ eine injektive Funktion, und umgekehrt. Wenn $R$ ein
                             Matching ist und sowohl $A$ als auch $B$ sättigt, dann ist $R$ eine
                             bijektive Funktion.
                         |> p
 
-                            Wir betrachten nun die Menge $\mathcal{M}$ aller Matchings in $A
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir betrachten nun die Menge $\mathcal{M}$ aller Matchings in $A
                             \times B$:
-                        \begin{align*} \mathcal{M} := \{ R \subseteq A \times B \ | \ R
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*} \mathcal{M} := \{ R \subseteq A \times B \ | \ R
                         \textnormal{ ist ein Matching}\} \ . \end{align*}
                         |> p
 
@@ -162,8 +161,7 @@
                             class well container
                             |> p
 
-                                *Beweis.*
-                                Nehmen wir an, dass es weder $A$ noch $B$ sättigt. Dann gibt es
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*              Nehmen wir an, dass es weder $A$ noch $B$ sättigt. Dann gibt es
                                 also ein $a \in A$, das mit keinem $b' \in B$ "gepaart" ist, und
                                 auch ein $b \in B$, das mit keinem $a' \in A$ gepaart ist. Also
                                 ist $R \cup \{(a,b)\}$ auch ein Matching, und $R$ ist nicht
@@ -174,7 +172,7 @@
                                 \(\square\)
                         |> p
 
-                            Wir bekommen also unsere gewünschte injektive Funktion, solange wir
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir bekommen also unsere gewünschte injektive Funktion, solange wir
                             ein maximales Element in der Partialordnung $(\mathcal{M},
                             \subseteq)$ vorweisen können. Aber Vorsicht: nicht jede
                             Partialordnung hat ein maximales Element! Ein Gegenbeispiel ist
@@ -192,14 +190,14 @@
                                 &ensp;Sei $(X, \preceq)$
                                 eine Partialordnung und $S \subseteq X$ eine Menge. Ein Element $x
                                 \in X$ ist eine _obere Schranke für $S$_ wenn
-                            \begin{align*} s \leq x \quad \forall s \in S \end{align*}
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*} s \leq x \quad \forall s \in S \end{align*}
                             |> p
 
-                                gilt. Dabei ist unerheblich, ob die obere Schranke $x$ selbst in
+                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;gilt. Dabei ist unerheblich, ob die obere Schranke $x$ selbst in
                                 $S$ ist oder nicht.
                         |> p
 
-                            Die unendliche aufsteigende Folge $1,2,3,\dots$ hat
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die unendliche aufsteigende Folge $1,2,3,\dots$ hat
                             _keine obere Schranke_ in $\N$. Somit gibt es auch kein
                             maximales Element. Was nun mit $(\mathcal{M}, \subseteq)$? Wenn $M_1
                             \subseteq M_2 \subseteq M_3 \subseteq \dots$ eine unendliche Folge
@@ -219,13 +217,13 @@
                                 \mathcal{M}$ eine Kette in $(\mathcal{M}, \subseteq)$, also eine
                                 Menge von Matchings, so dass für alle $M_1, M_2 \in S$ gilt: $M_1
                                 \subseteq M_2$ oder $M_2 \subseteq M_1$. Dann ist
-                            \begin{align*} \bigcup_{M \in S} M \end{align*}
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*} \bigcup_{M \in S} M \end{align*}
                             |> p
 
                                 selbst ein Matching.
                         |> p
 
-                            Wir gehen nun wie folgt vor: wir starten mit einem beliebigen $M_0
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir gehen nun wie folgt vor: wir starten mit einem beliebigen $M_0
                             \in \mathcal{M}$; solange dies nicht maximal ist, finden wir ein
                             größeres: $M_1 \supsetneq M_0$; und wieder und wieder. Dies ergibt
                             im schlimmsten Fall eine unendliche Folge $M_0 \subsetneq M_1
@@ -248,7 +246,7 @@
                                 maximales Element.
                         |> p
 
-                            Wir sind nun fertig! Wir können das Zornsche Lemma auf
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir sind nun fertig! Wir können das Zornsche Lemma auf
                             $(\mathcal{M}, \subseteq)$ anwenden und erhalten ein maximales
                             Matching. Dies sättigt $A$ oder $B$ und gibt uns somit eine
                             injektive Funktion $A \rightarrow B$ oder $B \rightarrow A$.
@@ -261,7 +259,7 @@
                         Zornsches Lemma, Auswahlaxiom und die axiomatische Mengenlehre
                     |> p
 
-                        Glauben Sie das, was das Zornsche Lemma besagt? Bei unendlichen Mengen
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Glauben Sie das, was das Zornsche Lemma besagt? Bei unendlichen Mengen
                         verlässt und leider schnell die Intuition, oder schlimmer: sie wird
                         trügerisch. Gegen Ende des 19. Jahrhunderts tauchten in der
                         Mathematik, insbesondere in der Analysis und Geometrie, mehr und mehr
@@ -280,6 +278,6 @@
                             href https://de.wikipedia.org/wiki/Hilbertprogramm
 
                             Hilbertprogramm
-                        bekannt. Das Bestreben, mathematisches Beweisen und somit auch Rechnen
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;bekannt. Das Bestreben, mathematisches Beweisen und somit auch Rechnen
                         zu mechanisieren, trug maßgeblich zur Entwicklung der Informatik und
                         des Computers bei.

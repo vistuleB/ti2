@@ -42,7 +42,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition (Ableitung)
                   </span>
-                  Sei \(G\) eine Grammatik mit Startsymbol \(S\). Die Ableitung eines
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(G\) eine Grammatik mit Startsymbol \(S\). Die Ableitung eines
                   Wortes \(\alpha\) ist eine Sequenz von Wortformen \( w_0, w_1, \dots,
                   w_n\) mit \(w_0 = S, w_n = \alpha\) und \(w_&#123;i-1&#125; \Longrightarrow
                   w_i\).
@@ -73,7 +73,7 @@ const Article = () => {
                 kann also kompakt durch die Zahlenfolge 23465124646 repräsentiert
                 werden.
                 <Paragraph>
-                  Betrachten wir im Folgenden ein weiteres Beispiel einer Ableitung, in
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir im Folgenden ein weiteres Beispiel einer Ableitung, in
                   diesem Falle eine{" "}
                   <i>
                     Rechtsableitung
@@ -94,7 +94,7 @@ const Article = () => {
                 Reihenfolge an, also von hinten nach vorne, in diesem Falle also nicht
                 2351... sondern 64642641532.
                 <Paragraph>
-                  Beachten Sie, dass wir es hier mit einer eindeutigen Grammatik zu tun
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie, dass wir es hier mit einer eindeutigen Grammatik zu tun
                   haben, es also nur einen Syntaxbaum gibt:
                 </Paragraph>
                 <figure>
@@ -104,7 +104,7 @@ const Article = () => {
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  Rechtsableitung und Linksableitung sowie deren Codierung als
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rechtsableitung und Linksableitung sowie deren Codierung als
                   Zahlenfolge spiegeln also nur zwei verschiedene Weisen wieder, den
                   Baum auszugeben.
                 </Paragraph>
@@ -114,25 +114,27 @@ const Article = () => {
                     def treeToLeftDerivation (tree):
                   </code>
                   {" "}
-                  &ensp;&ensp;`print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
-                  &ensp;&ensp;`for child in tree.children (from left ro right):`
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`treeToLeftDerivation(child)`
-                  {" "}
+                  &ensp;&ensp;`print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`{" "}
                   <code>
-                    {" "}{" "}
+                    for child in tree.children (from left ro right):
+                  </code>
+                  {" "}{" "}
+                  <code>
+                    treeToLeftDerivation(child)````def treeToRightDerivation (tree):
                   </code>
                   {" "}
-                  {" "}
+                  &ensp;&ensp;`for child in tree.children (from left ro right):`{" "}
                   <code>
-                    def treeToRightDerivation (tree):
+                    treeToLeftDerivation(child)
                   </code>
-                  {" "}
-                  &ensp;&ensp;`for child in tree.children (from left ro right):`
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`treeToLeftDerivation(child)`
-                  &ensp;&ensp;`print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
+                  {" "}{" "}
+                  <code>
+                    print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
+                  </code>
+                  {" "}{" "}
                 </pre>
                 <Paragraph>
-                  Beachten Sie, dass wir in beiden Fällen die Liste Kinder von links
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie, dass wir in beiden Fällen die Liste Kinder von links
                   nach rechts durchgehen.
                 </Paragraph>
               </div>

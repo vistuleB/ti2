@@ -38,7 +38,7 @@ const Article = () => {
                 </span>
               </h1>
               <Paragraph>
-                Some introductory stuff about grammars.
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Some introductory stuff about grammars.
               </Paragraph>
             </div>
           </div>

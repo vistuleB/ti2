@@ -39,30 +39,29 @@
                             2.1 Wer ist größer?
                     |> p
 
-                        Für endliche Mengen haben den Begriff der _Größe_
-                        $\{0,1,2,3,4,5,6,7,8,9\}$ hat zehn Elemente und ist somit größer als
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für endliche Mengen haben den Begriff der _Größe_          $\{0,1,2,3,4,5,6,7,8,9\}$ hat zehn Elemente und ist somit größer als
                         $\{a,e,i,o,u\}$, die nur fünf Elemente hat. Können wir auch für
                         unendliche Mengen einen Größenbegriff einführen, oder sie zumindest
                         hinsichtlich ihrer Größe vergleichen?
                     |> p
 
-                        Bei den "üblichen" unendlichen Mengen $\N, \Z, \Q, \R$ scheint das zu
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bei den "üblichen" unendlichen Mengen $\N, \Z, \Q, \R$ scheint das zu
                         gehen. Es gilt nämlich $\N \subsetneq \Z \subsetneq \Q \subsetneq \R$,
                         und damit können wir doch mit Fug und Recht behaupten:
                         _Die Menge der ganzen Zahlen ist kleiner als die der rationalen
                         Zahlen_.
                     |> p
 
-                        Unser erster Versuch, unendliche Mengen ihrer Größe nach zu
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unser erster Versuch, unendliche Mengen ihrer Größe nach zu
                         vergleichen, verwendet Mengeninklusion: wenn $A \subseteq B$ gilt,
                         dann sagen wir, dass $A$ kleiner gleich $B$ gilt. Allerdings hat
                         dieser Größenbegriff einen großen Nachteil: welche der beiden Mengen
                         ist Ihrer Meinung denn größer:
-                    \begin{align*} \{\dots, -4, -2, 0, 2, 4, 6, \dots\} \quad
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*} \{\dots, -4, -2, 0, 2, 4, 6, \dots\} \quad
                     \textnormal{oder}\quad \{0,1,2,3, \dots\} ? \end{align*}
                     |> p
 
-                        Also die geraden ganzen Zahlen oder die natürlichen? Oder noch
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Also die geraden ganzen Zahlen oder die natürlichen? Oder noch
                         schlimmer: ist $\Q$ oder $\{a,b\}^*$ größer? Die zweite Menge hat ja
                         gar nichts mit Zahlen zu tun, sondern besteht aus Strings mit den
                         Symbolen $a$ und $b$. Und generell: auch zwischen den Mengen
@@ -71,13 +70,13 @@
                         letztere.
                     |> p
 
-                        Eine rigorose und belastbare Weise, unendliche Mengen hinsichtlich
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine rigorose und belastbare Weise, unendliche Mengen hinsichtlich
                         ihrer Größe zu vergleichen, hat
                         |> a
                             href https://en.wikipedia.org/wiki/Georg_Cantor
 
                             Georg Cantor
-                        Ende des 19. Jahrhunderts gefunden. Sie war anfangs nicht
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ende des 19. Jahrhunderts gefunden. Sie war anfangs nicht
                         unumstritten.
                     |> div
                         class well container theorem
@@ -98,16 +97,16 @@
                                 src ../img/infinite-sets/N-N-plus.svg
                         |> p
 
-                            Wir können diese Zuordnung auch mit einer einfachen Formel
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können diese Zuordnung auch mit einer einfachen Formel
                             beschreiben. Die Funktion
-                        \begin{align*} f : \N&amp;\rightarrow \N^+ \\ n&amp;\mapsto n+1
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*} f : \N&amp;\rightarrow \N^+ \\ n&amp;\mapsto n+1
                         \end{align*}
                         |> p
 
                             ist eine Bijektion.
                     |> p
 
-                        Diese anfangs etwas überraschende Tatsache, dass $\N$ und $\N^+$
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Diese anfangs etwas überraschende Tatsache, dass $\N$ und $\N^+$
                         "gleich groß" sind, ist als _Hilberts Hotel_ bekannt. Das Hotel
                         hat unendlich viele Zimmer, für jede Zahl $n \in \N^+$ eins. Dann
                         kommt ein neuer Gast (die $0$) und braucht ein Zimmer. Er kriegt das
@@ -134,7 +133,7 @@
                                 src ../img/infinite-sets/N-to-Z.svg
                         |> p
 
-                            Dies ist etwas unübersichtlich. Besser geht es, wenn wir $\Z$
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dies ist etwas unübersichtlich. Besser geht es, wenn wir $\Z$
                             umstellen:
                         |> figure
                             |> img
@@ -142,9 +141,9 @@
                                 src ../img/infinite-sets/N-to-Z-nicer.svg
                         |> p
 
-                            Wir können also unsere Bijektion $f : \N \rightarrow \Z$ wie folgt
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können also unsere Bijektion $f : \N \rightarrow \Z$ wie folgt
                             definieren:
-                        \begin{align*} f : \N&amp;\rightarrow \Z \\ n&amp;\mapsto \begin{cases}
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*} f : \N&amp;\rightarrow \Z \\ n&amp;\mapsto \begin{cases}
                         \frac{n}{2}&amp;\textnormal{ wenn $n$ gerade ist,} \\ - \frac{n+1}{2}&
                         \textnormal{ wenn $n$ ungerade ist.} \end{cases} \end{align*}
                     |> div
@@ -154,13 +153,13 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            Finden Sie eine "geschlossene" Form für die Bijektion $f : \N
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Finden Sie eine "geschlossene" Form für die Bijektion $f : \N
                             \rightarrow \Z$. Mit "geschlossen" meine ich, dass Sie sie mit den
                             üblichen Operatoren (mal, plus, hoch, minus, geteilt durch) ohne
                             Fallunterscheidung schreiben können.
                         |> p
 
-                            *Anmerkung:* es ist überhaupt nicht schlimm, eine
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Anmerkung:* es ist überhaupt nicht schlimm, eine
                             Funktion mit einer Fallunterscheidung zu definieren. Sie ist dadurch
                             nicht etwa eine "Funktion zweiter Klasse".
                     |> div
@@ -170,7 +169,7 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            Finden Sie die Umkehrfunktion $f^{-1} : \Z \rightarrow \N$. Gerne
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Finden Sie die Umkehrfunktion $f^{-1} : \Z \rightarrow \N$. Gerne
                             anfangs mit Fallunterscheidung, dann bitte als geschlossene Formel
                             ohne Fallunterscheidung.
                     |> p
@@ -188,7 +187,7 @@
                             \rightarrow B$ gibt. Wir schreiben in diesem Falle $A \approx B$.
                     |> p
 
-                        Es gilt trivialerweise immer $A \approx A$, da wir ja die
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gilt trivialerweise immer $A \approx A$, da wir ja die
                         Identitätsfunktion $x \mapsto x$ als Bijektion nehmen können. Wenn es
                         eine Bijektion $f : A \rightarrow B$ gibt, dann natürlich auch eine
                         Umkehrfunktion $f^{-1} : B \rightarrow A$. Wenn $f : A \rightarrow B$
@@ -209,7 +208,7 @@
                             _countably infinite_ oder einfach _countable_.
                     |> p
 
-                        Wie wir sehen werden, gibt es tatsächlich unendliche Mengen, die
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wie wir sehen werden, gibt es tatsächlich unendliche Mengen, die
                         _nicht_ gleichmächtig mit $\N$ sind, weil sie "viel viel
                         größer" sind. Wir nennen sie _überabzählbare_ Mengen, auf
                         Englisch _uncountably infinite_.
@@ -218,7 +217,7 @@
                         Was ist unendlich?
                     |> p
 
-                        Der Begriff der Gleichmächtigkeit liefert uns nun eine wunderbar
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Begriff der Gleichmächtigkeit liefert uns nun eine wunderbar
                         einfache und rigorose Definition von Unendlichkeit.
                     |> div
                         class well container theorem
@@ -232,7 +231,7 @@
                             gibt, zu der sie gleichmächtig ist, also $A' \approx A$.
                     |> p
 
-                        Als Beispiel haben wir $\N^+ \subsetneq \N$ mit $\N^+ \approx \N$
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als Beispiel haben wir $\N^+ \subsetneq \N$ mit $\N^+ \approx \N$
                         gesehen. Also ist $\N$ im obigen Sinne unendlich.
                     |> div
                         class well well-lg numbered-exercise container
@@ -241,18 +240,18 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            Zeigen Sie: wenn eine Menge $A$ unendlich ist (im Sinne der obigen
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie: wenn eine Menge $A$ unendlich ist (im Sinne der obigen
                             Definition), dann gibt es eine Teilmenge $X \subseteq A$ mit $X
                             \approx \N$.
                         |> p
 
-                            *Hinweis:* Tappen Sie nicht in die "Das ist doch
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Hinweis:* Tappen Sie nicht in die "Das ist doch
                             offensichtlich"-Falle: die Menge $A$ könnte ja viel größer sein als
                             $\N$ und keine für Sie "greifbare" Struktur haben. Ihre Aufgabe ist
                             es, dennoch eine abzählbar unendliche Teilmenge $X \subseteq A$ zu
                             finden.
                     |> p
 
-                        Angesichts der letzten Übungsaufgabe können wir also sagen, dass
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Angesichts der letzten Übungsaufgabe können wir also sagen, dass
                         abzählbare Unendlichkeit die kleinste Stufe der Unendlichkeit ist.
                         Unterhalb von abzählbar kommen nur noch die endlichen Mengen.

@@ -39,7 +39,7 @@
                             4.4 Von einer regulären Grammatik zu einem endlichen Automaten
                     |> p
 
-                        In diesem Unterkapitel wollen wir das Gelernte an einem konkreten Beispiel anwenden.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem Unterkapitel wollen wir das Gelernte an einem konkreten Beispiel anwenden.
                         Wir beginnen (1) mit einer Beschreibung eines Formats in natürlicher Sprache; (2) basteln uns
                         daraus
                         mit Hilfe des "Baukastenprinzips" eine reguläre Sprache; (3) säubern diese, indem wir Regeln
@@ -51,7 +51,7 @@
                         1. Beschreibung des Formats in natürlicher Sprache
                     |> p
 
-                        Unsere Sprache \(L\) soll so ähnlich sein wie die der erlaubten Domainnamen, allerdings mit ein
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unsere Sprache \(L\) soll so ähnlich sein wie die der erlaubten Domainnamen, allerdings mit ein
                         paar Abänderungen,
                         um die obigen Transformationen spannender zu machen. Ein Wort in unserer Sprache besteht aus
                         einer
@@ -63,13 +63,13 @@
                     |> div
                         style text-align:center
 
-                        `bla:bla:blue.xyz-12-zx.b:x:yyy:xxx:aaa`
-                    ist ein Wort in \(L\), aber
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`bla:bla:blue.xyz-12-zx.b:x:yyy:xxx:aaa`                    
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ist ein Wort in \(L\), aber
                     |> div
                         style text-align:center
 
-                        `a:b-c.hello`
-                    ist kein Wort in \(L\), da das erste Label die Separatoren `:` und `-` mischt.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`a:b-c.hello`                    
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ist kein Wort in \(L\), da das erste Label die Separatoren `:` und `-` mischt.
                     Habe ich
                     \(L\) genau genug beschrieben? Stellen wir eine Meta-Frage: Was zählt überhaupt als _genaue
                     Beschreibung_ einer
@@ -83,7 +83,7 @@
                         2. Eine reguläre Grammatik
                     |> p
 
-                        Beginnen wir mit dem Alphabet.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beginnen wir mit dem Alphabet.
                         Da es 62 alphanumerische Zeichen gibt: `a..zA..Z0..9` und wir uns keine unnötige
                         Arbeit machen wollen,
                         beschränken wir uns auf ein Zeichen: `a`. Dazu kommen die Separatoren
@@ -92,12 +92,12 @@
                         anpassen.
                         Wir beginnen ganz unten und schreiben eine Grammatik für
                         Blöcke, also nichtleere Strings aus alphanumerischen Zeichen.
-                    \begin{align*}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                     B&amp;\rightarrow a \ | \ aB
                     \end{align*}
                     |> p
 
-                        Als nächstes führen wir ein nichtterminales Symbole \(C\) für Labels mit `:` ein
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als nächstes führen wir ein nichtterminales Symbole \(C\) für Labels mit `:` ein
                         und ein Nichtterminal \(D\) für Labels mit `-`. Wir wählen die Buchstaben \(C,D\),
                         weil
                         `:` auf Englisch _colon_ und `-` _dash_ heißt.
@@ -113,14 +113,14 @@
                         tun das gleiche für \(B \rightarrow b\). Allerdings benennen wir \(B\) in \(C\) um, damit keine
                         Verwechslungsgefahr mit
                         dem ursprünglichen \(B\) aufkommt. Das gleiche machen wir für \(D\).
-                    \begin{align*}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                     C&amp;\rightarrow a \ | \ aC \ | \ a{:}C \\
                     D&amp;\rightarrow a \ | \ aD \ | \ a{-}D \\
                     T&amp;\rightarrow C \ | D
                     \end{align*}
                     |> p
 
-                        Von \(L\) lassen sich nun also alle Labels ableiten. Wir brauchen nun zum Schluss wieder
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Von \(L\) lassen sich nun also alle Labels ableiten. Wir brauchen nun zum Schluss wieder
                         eine Folge von \(L\), mit `.` separiert, müssen also wieder
                         |> a
                             href ./04-01-regular-grammars.html#operation-L(.L)*
@@ -128,17 +128,17 @@
                             Theorem 4.1.14
                         &ensp;anwenden, dieses
                         mal auf die von \(T\) erzeugte Sprache. Im Ergebnis benennen wir das Startsymbol in \(S\) um.
-                    \begin{align*}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                     S&amp;\rightarrow C \ | \ D \\
                     C&amp;\rightarrow a \ | \ aC \ | \ a{:}C \ | a{.}S \ \\
                     D&amp;\rightarrow a \ | \ aD \ | \ a\text{-}D \ | \ a{.}S \\
                     \end{align*}
                     |> p
 
-                        Um eine "richtig" reguläre Sprache zu erhalten, entzerren wir die erweitert regulären
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um eine "richtig" reguläre Sprache zu erhalten, entzerren wir die erweitert regulären
                         Produktionen
                         wie \(C \rightarrow a{:}C\). Dafür brauchen wir neue Symbole \(C', D', S'\):
-                    \begin{align*}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                     S&amp;\rightarrow C \ | \ D \\
                     C&amp;\rightarrow a \ | \ aC \ | \ aC'\ | \ aS' \\
                     C'&amp;\rightarrow {:}C \\
@@ -151,12 +151,12 @@
                         3. Die reguläre Grammatik säubern
                     |> p
 
-                        Wir wollen nun alle Produktionen der Form \(Y \rightarrow x\) eliminieren. Hierfür nehmen wir
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir wollen nun alle Produktionen der Form \(Y \rightarrow x\) eliminieren. Hierfür nehmen wir
                         uns
                         _ein_ neues Nichtterminal \(E\) und ersetzen \(Y \rightarrow x\) durch \(Y \rightarrow
                         xE\)
                         und fügen die Produktion \(E \rightarrow \epsilon\) hinzu.
-                    \begin{align*}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                     S&amp;\rightarrow C \ | \ D \\
                     C&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \\
                     C'&amp;\rightarrow {:}C \\
@@ -185,7 +185,7 @@
                         besteht; dies trifft glücklicherweise auf _alle_ rechten Seiten der \(C\)-Produktionen
                         zu; gleiches gilt
                         für \(D\). Wir erhalten:
-                    \begin{align*}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                     S&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \ | \ aD \ | \ a D' \\
                     C&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \ \\
                     C'&amp;\rightarrow {:}C \\
@@ -199,7 +199,7 @@
                         4. Einen nichtdeterministischen endlichen Automaten bauen
                     |> p
 
-                        Dies sollte nun einfach sein. Wir erschaffen Zustände \(S, C, C', D, D', S', E\) und
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dies sollte nun einfach sein. Wir erschaffen Zustände \(S, C, C', D, D', S', E\) und
                         übersetzen jeden Grammatik-Pfeil in einen Automaten-Pfeil.
                     |> figure
                         |> img
@@ -215,7 +215,7 @@
                         5. Den nichtdeterministischen Automaten in einen deterministischen umwandeln
                     |> p
 
-                        Unser nichtdeterministischer endlicher Automat hat Zustandsmenge \(Q = \{S, S', C, C', D, D',
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unser nichtdeterministischer endlicher Automat hat Zustandsmenge \(Q = \{S, S', C, C', D, D',
                         E\}\), also insgesamt
                         sieben Zustände. Wenn wir genau nach Buch vorgingen, müssten wir den endlichen Automaten auf der
                         Zustandsmenge \(2^Q\)
@@ -488,14 +488,14 @@
                                         src ../img/finite-state-automata/transformation/27.svg
                     |> p
 
-                        Dieser Automat hat deutlich weniger also 128 Zustände, nämlich mit nur sieben genau so
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dieser Automat hat deutlich weniger also 128 Zustände, nämlich mit nur sieben genau so
                         viele wie der nichtdeterministische (es ist Zufall, dass beide gleich viele Zustände haben;
                         messen
                         Sie dieser Tatsache keine Bedeutung bei). Wir könnten nun von diesem Automaten ausgehend
                         wiederum eine reguläre Grammtik bauen, die in diesem Falle sogar einfacher und klarer
                         wäre als die ursprüngliche. Wenn wir erweitert reguläre Grammatiken erlauben, so können
                         wir den deterministischen Automaten besonders konzise in eine Grammatik fassen:
-                    \begin{align*}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                     S&amp;\rightarrow aT \\
                     T&amp;\rightarrow {.}S \ | \ aT \ | \ {:}aC \ | \ \text{-}a D \\
                     C&amp;\rightarrow aC \ | \ {:}aC \ | \ {.}S \\
@@ -503,7 +503,7 @@
                     \end{align*}
                     |> p
 
-                        Die Zustände des deterministischen Automaten beschreiben im Prinzip das, was wir uns merken
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Zustände des deterministischen Automaten beschreiben im Prinzip das, was wir uns merken
                         müssen, wenn wir so einen String "parsen": Zustand \( \{C',C,E,D,D',S'\}\), der
                         in der Grammatik dann zum Nichtterminal \(T\) wird, bedeutet beispielsweise
                         _das Label hat schon begonnen, wir wissen aber noch nicht, ob es eines mit
@@ -512,7 +512,7 @@
                         `:`_wir sind innerhalb eines Labels mit 
 
                         _.
-                        _                        
+                        _                    
                     |> div
                         class well well-lg numbered-exercise container
                         |> p
@@ -520,7 +520,7 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            Erinnern Sie sich an 
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Erinnern Sie sich an 
                             |> a
                                 href ./04-03-nfsm#exercise-divisibility
 
@@ -539,7 +539,7 @@
                                 loading lazy
                         |> p
 
-                            Dieser Automat hat 11 Zustände. Sein Potenzmengenautomat hätte also \(2^{11} = 2048\)
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dieser Automat hat 11 Zustände. Sein Potenzmengenautomat hätte also \(2^{11} = 2048\)
                             Zustände.
                             Führen Sie die Konstruktion _lazy_ durch, indem Sie vom Startzustand \(\{S\}\)
                             ausgehend die Folgezustände konstruieren. Wieviele Zustände bekommen Sie?

@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Turingmaschinen erlauben uns, den Resourcenverbrauch einer Berechnung zu quantifizieren:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Turingmaschinen erlauben uns, den Resourcenverbrauch einer Berechnung zu quantifizieren:
                   zum einen die{" "}
                   <i>
                     Zeit
@@ -86,7 +86,7 @@ const Article = () => {
                   </li>
                 </ul>
                 <Paragraph>
-                  Also: Turingmaschinen sind zwar universell in dem Sinne, dass sie wohl alle physikalisch
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Also: Turingmaschinen sind zwar universell in dem Sinne, dass sie wohl alle physikalisch
                   realisierbaren
                   Rechnermodelle simulieren können (ich sage{" "}
                   <i>
@@ -98,7 +98,7 @@ const Article = () => {
                   Resourcenverbrauch modellieren zu können.
                 </Paragraph>
                 <Paragraph>
-                  Dennoch: in diesem Kapitel beschränken wir uns auf die Resource{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dennoch: in diesem Kapitel beschränken wir uns auf die Resource{" "}
                   <i>
                     Zeit
                   </i>
@@ -109,7 +109,7 @@ const Article = () => {
                   Zeitkomplexitätsklassen
                 </h2>
                 <Paragraph>
-                  Wir beschränken uns der Einfachheit halber auf das Eingabealphabet $\Sigma = \&#123;0,1\&#125;$ und
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir beschränken uns der Einfachheit halber auf das Eingabealphabet $\Sigma = \&#123;0,1\&#125;$ und
                   auf Entscheidungsprobleme, wo uns also nur eine Ja/Nein-Antwort interessiert.
                 </Paragraph>
                 <div class="well container theorem">
@@ -131,25 +131,25 @@ const Article = () => {
                       und
                     </li>
                     <li>
-                      für jede Eingabe $x$ in maximal $O(t(|x|))$ Schritten terminiert.
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;für jede Eingabe $x$ in maximal $O(t(|x|))$ Schritten terminiert.
                     </li>
                   </ul>
                   <Paragraph>
-                    Wir definieren nun
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir definieren nun
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   \TIME_k(t) := \&#123;L \subseteq \Sigma^* \ | \
                   \textnormal&#123;es gibt eine $k$-Band-TM $M$, die $L$ in Zeit $t$ entscheidet&#125;\&#125;
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    und schließlich
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und schließlich
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   \TIME(t) := \bigcup_&#123;k \geq 1&#125; \TIME_k(t) \ .
                   \end&#123;align*&#125;$$
                 </div>
                 <Paragraph>
-                  Falls Sie sich nicht mehr genau an die $O$-Notation erinnern können: in diesem Zusammenhang
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls Sie sich nicht mehr genau an die $O$-Notation erinnern können: in diesem Zusammenhang
                   heißt das, dass es Konstanten $c$ und $d$ gibt, so dass $M$ in maximal
                   $c t(|x|) + d$ Schritten terminiert. Die Konstanten $c$ und $d$ dürfen von $M$ abhängen, aber
                   nicht von der Eingabe $x$ oder der Länge $|x|$.
@@ -173,8 +173,7 @@ const Article = () => {
                     <b>
                       ($k$-Band zu $1$-Band).
                     </b>
-                    {" "}
-                    Sei $t: \N \rightarrow \N$. Dann gilt
+                    {" "}Sei $t: \N \rightarrow \N$. Dann gilt
                     $\TIME
                     <i>
                       k(t) \subseteq \TIME
@@ -183,7 +182,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Der quadratische Overhead wird tatsächlich störend, wenn man Zeit als Resource untersucht.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der quadratische Overhead wird tatsächlich störend, wenn man Zeit als Resource untersucht.
                   Daher gibt es eine bessere Simulation; die benötigt allerdings zwei Bänder (Oder drei? Weiß ich
                   gerade nicht
                   exakt) und die Konstruktion ist deutlich komplizierter. Daher vorerst ohne Beweis:

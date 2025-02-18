@@ -46,7 +46,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Sei $\Sigma = \&#123;\sigma
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei $\Sigma = \&#123;\sigma
                     <i>
                       1, \sigma
                     </i>
@@ -70,7 +70,7 @@ const Article = () => {
                     <a href="02-02-examples-of-equipotent-sets.html">
                       Kapitel 2.2
                     </a>
-                    als{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;als{" "}
                     <i>
                       eine
                     </i>
@@ -78,7 +78,7 @@ const Article = () => {
                     Mittels dieser Codierung wird eine Sprache $L \subseteq \Sigma^*$
                     zu einer Funktion
                   </Paragraph>
-                  $$\begin&#123;align*&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                   f_L : \N&amp;\rightarrow \&#123;0,1\&#125; \\
                   a&amp;\mapsto
                   \begin&#123;cases&#125;
@@ -87,14 +87,14 @@ const Article = () => {
                   \end&#123;cases&#125;
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Sei $L$ eine reguläre Sprache. Zeigen Sie, dass $f_L$ primitiv rekursiv ist!
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei $L$ eine reguläre Sprache. Zeigen Sie, dass $f_L$ primitiv rekursiv ist!
                   </Paragraph>
                 </div>
                 <h3>
                   Reguläre Sprachen und Schaltkreise
                 </h3>
                 <Paragraph>
-                  Wir können jedes Zeichen $\sigma \in \Sigma$ als
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können jedes Zeichen $\sigma \in \Sigma$ als
                   Bitstring $x
                   <i>
                     &#123;\sigma&#125; \in \cube^k$ codieren, mit $k = \ceil&#123;\log
@@ -120,7 +120,7 @@ const Article = () => {
                   </b>
                   {" "}\rightarrow \cube$ mittels
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 f_L : \cube^*&amp;\rightarrow \cube \\
                 y&amp;\mapsto
                 \begin&#123;cases&#125;
@@ -129,7 +129,7 @@ const Article = () => {
                 \end&#123;cases&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Für festes $n$ definieren wir $f
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für festes $n$ definieren wir $f
                   <i>
                     L^n : \cube^n \rightarrow \cube$ als die
                     Restriktion von $f
@@ -138,7 +138,7 @@ const Article = () => {
                   als Input akzeptiert.
                 </Paragraph>
                 <Paragraph>
-                  Zeigen Sie: wenn $L \subseteq \Sigma^*$ regulär ist, dann gibt es für
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie: wenn $L \subseteq \Sigma^*$ regulär ist, dann gibt es für
                   jedes $n$ einen Schaltkreis $C$ mit $O(n)$ Gates, der $f_L$ berechnet.
                 </Paragraph>
               </div>
@@ -147,7 +147,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Verbessern Sie die obige Konstruktion: Ihr Schaltkreis $C$ sollte nun
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Verbessern Sie die obige Konstruktion: Ihr Schaltkreis $C$ sollte nun
                   Tiefe $O(\log(n))$ haben und vorzugsweise immer noch $O(n)$ Gates.
                 </Paragraph>
               </div>
@@ -160,8 +160,7 @@ const Article = () => {
                   <b>
                     (Challenge).
                   </b>
-                  {" "}
-                  Betrachten wir eine Variante des endlichen Automaten, bei der
+                  {" "}Betrachten wir eine Variante des endlichen Automaten, bei der
                   der Automat{" "}
                   <i>
                     zurückspulen
@@ -172,11 +171,11 @@ const Article = () => {
                   wechseln. Es gibt zwei spezielle Zeichen, die markieren, wo das
                   Wort aufhört: $\lt$ und $\gt$. Die Zustandsübergangsfunktion ist also
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 \delta: Q \times (\Sigma \cup \&#123;\lt, \gt\&#125;) \rightarrow Q \times \&#123;L, R\&#125; \ .
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Wenn z.B. $\delta(q, x) = (r, L)$ ist, dann heißt das:{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn z.B. $\delta(q, x) = (r, L)$ ist, dann heißt das:{" "}
                   <i>
                     wenn Du im
                     Zustand $q$ bist und der Lesekopf ein $x$ liest, dann wechsle in den
@@ -186,7 +185,7 @@ const Article = () => {
                   {" "}{" "}
                 </Paragraph>
                 <Paragraph>
-                  Der Automat hat genau einen akzeptierenden und einen ablehnenden Zustand.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Automat hat genau einen akzeptierenden und einen ablehnenden Zustand.
                   Wenn ein solcher Zustand erreicht wird, hält der Automat an und gibt
                   1 bzw. 0 aus.
                   Die von so einem Automaten $M$ akzeptierte Sprache $L(M)$ ist dann definiert als
@@ -199,7 +198,7 @@ const Article = () => {
                   {" "}Wort in $L(M)$.
                 </Paragraph>
                 <Paragraph>
-                  Zeigen Sie, dass $L(M)$ eine reguläre Sprache ist. Dass man also aus $M$
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass $L(M)$ eine reguläre Sprache ist. Dass man also aus $M$
                   einen neuen Automaten $M'$ bauen kann, der nur nach rechts laufen kann.
                 </Paragraph>
               </div>
@@ -208,14 +207,14 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Sei $\Sigma = \&#123;1,2, \dots, k\&#125;$ und $L$ die Sprache aller
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei $\Sigma = \&#123;1,2, \dots, k\&#125;$ und $L$ die Sprache aller
                   Wörter, in denen mindestens ein Zeichen fehlt, also
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 L = \bigcup_&#123;i=1&#125;^k (\Sigma \setminus \&#123;i\&#125;)^*
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Zeigen Sie, dass ein endlicher Automat für $L$ mindestens $2^k$ Zustände braucht.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass ein endlicher Automat für $L$ mindestens $2^k$ Zustände braucht.
                 </Paragraph>
               </div>
               <div class="well well-lg numbered-exercise container">
@@ -223,7 +222,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Schreiben Sie eine reguläre Grammatik für $L$ mit höchstens $k+1$ Nichtterminalen.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie eine reguläre Grammatik für $L$ mit höchstens $k+1$ Nichtterminalen.
                 </Paragraph>
               </div>
               <div class="well well-lg numbered-exercise container">
@@ -235,14 +234,13 @@ const Article = () => {
                   <b>
                     (Challange.)
                   </b>
-                  {" "}
-                  Sei $L$ die Sprache aus der vorherigen Aufgabe und
+                  {" "}Sei $L$ die Sprache aus der vorherigen Aufgabe und
                   $\bar&#123;L&#125; = \Sigma^* \setminus L$ ihr Komplement. $\bar&#123;L&#125;$ ist also
                   die Sprache aller Wörter, in denen jedes Zeichen aus $\Sigma$ mindestens
                   einmal vorkommt.
                 </Paragraph>
                 <Paragraph>
-                  Zeigen Sie, dass jede reguläre Grammatik für $\bar&#123;L&#125;$ mindestens $2^k$
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass jede reguläre Grammatik für $\bar&#123;L&#125;$ mindestens $2^k$
                   Nichtterminale benötigt.
                 </Paragraph>
               </div>

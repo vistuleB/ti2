@@ -39,8 +39,7 @@
                     class subChapter
                     |> p
 
-                        Hier sehen Sie einige Beispiele für gültige und ungültige Email-Adressen. Mit _gültig_
-                        meine ich, dass sie syntaktisch korrekt sind, ungeachtet, ob ein Konto mit dieser Email-Adresse
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Hier sehen Sie einige Beispiele für gültige und ungültige Email-Adressen. Mit _gültig_                        meine ich, dass sie syntaktisch korrekt sind, ungeachtet, ob ein Konto mit dieser Email-Adresse
                         besteht.
                     |> pre
                         class container
@@ -72,12 +71,12 @@
                             Ungültig: Google will kein . an erster Stelle
                     |> p
 
-                        Hier sehen Sie den Teil eines HTML-Dokuments. Beachten Sie die typische
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Hier sehen Sie den Teil eines HTML-Dokuments. Beachten Sie die typische
                         hierarchisch-geschachtelte
                         Struktur (sie müssen es nicht im Detail lesen):
                     |> style
 
-                        .StartTag,
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;.StartTag,
                         .EndTag {
                         color: blue;
                         }
@@ -1046,31 +1045,7 @@
                     |> pre
                         class listing container
 
-                        `find : Bst -> String -> Maybe String`
-                        `find tree key =`
-
-                        &ensp;&ensp;&ensp;&ensp;`case tree of`
-
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`Empty _ ->`
-
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`Nothing`
-                        ``
-
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`Node ( keyHere, valueHere ) leftChild rightChild ->`
-
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`if key == keyHere then`
-
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`Just valueHere`
-                        ``
-
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`else if key&lt; keyHere then`
-
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`find leftChild key`
-                        ``
-
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`else`
-
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`find rightChild key`
+                        `find : Bst -> String -> Maybe String``find tree key =`    `case tree of`        `Empty _ ->`            `Nothing```        `Node ( keyHere, valueHere ) leftChild rightChild ->`            `if key == keyHere then`                `Just valueHere```            `else if key&lt; keyHere then`                `find leftChild key```            `else`                `find rightChild key`
                     |> p
 
                         Als letztes Beispiel sehen Sie hier eine svg-Datei. Dies ist ein Dateiformat für Vektorgrafiken.
@@ -1082,50 +1057,16 @@
                             src ../img/svg-example.svg
                     |> pre
                         class listing container
+                        |> span
+                            class LineBreak
+                        |> span
+                            class GreaterThanBracket
 
-                        `
-                        |> span
-                            class RawText
-                        |> span
-                            class LessThanBracket
-
-                            <
-                        |> span
-                            class StartTag
-
-                            ?xml
-                        |> span
-                            class WaitingForAttribute
+                            >
                         |> span
                             class AttributeName
 
-                            version
-                        |> span
-                            class WaitingForValue
-
-                            =
-                        |> span
-                            class DoubleQuote
-
-                            "
-                        |> span
-                            class AttributeValueDoubleQuote
-
-                            1.0
-                        |> span
-                            class DoubleQuote
-
-                            "
-                        |> span
-                            class WaitingForAttribute
-                        |> span
-                            class AttributeName
-
-                            encoding
-                        |> span
-                            class WaitingForValue
-
-                            =
+                            ?
                         |> span
                             class DoubleQuote
 
@@ -1139,15 +1080,49 @@
 
                             "
                         |> span
+                            class WaitingForValue
+
+                            =
+                        |> span
                             class AttributeName
 
-                            ?
+                            encoding
                         |> span
-                            class GreaterThanBracket
+                            class WaitingForAttribute
+                        |> span
+                            class DoubleQuote
 
-                            >
+                            "
                         |> span
-                            class LineBreak
+                            class AttributeValueDoubleQuote
+
+                            1.0
+                        |> span
+                            class DoubleQuote
+
+                            "
+                        |> span
+                            class WaitingForValue
+
+                            =
+                        |> span
+                            class AttributeName
+
+                            version
+                        |> span
+                            class WaitingForAttribute
+                        |> span
+                            class StartTag
+
+                            ?xml
+                        |> span
+                            class LessThanBracket
+
+                            <
+                        |> span
+                            class RawText
+                        `
+
                         `
                         |> span
                             class LineBreak
@@ -1591,8 +1566,7 @@
 
                         Was haben diese vier Beispiele gemeinsam? Es handelt sich in allen Fällen um _Daten_, die
                         in
-                        einem bestimmten festgelegten _Format_
-                        dargelegt werden. Soll ein Rechner etwas sinnvolles damit anfangen (zum Beispiel das
+                        einem bestimmten festgelegten _Format_                        dargelegt werden. Soll ein Rechner etwas sinnvolles damit anfangen (zum Beispiel das
                         Elm-Programm
                         starten oder die HTML-Seite oder die Svg-Datei
                         auf dem Bildschirm darstellen), muss er dieses Format erst einmal "verstehen", also den bloßen
@@ -1614,7 +1588,7 @@
                     |> div
                         class well container
 
-                        Eine Emailadresse besteht aus einem _Benutzernamen_ und einem _Domainnamen_, die
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Emailadresse besteht aus einem _Benutzernamen_ und einem _Domainnamen_, die
                         mit
                         einem `@` verbunden sind.
                         Der Benutzername ist ein nichtleerer String bestehend aus Groß- und Kleinbuchstaben, Zahlen, und
@@ -1627,7 +1601,7 @@
                         (`-`).
                     |> p
 
-                        Die genauen Regeln mögen von Anbieter zu Anbieter variieren; ich habe mich mal an das gehalten,
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die genauen Regeln mögen von Anbieter zu Anbieter variieren; ich habe mich mal an das gehalten,
                         was
                         ich experimentell bei `gmail.com` herausgefunden
                         habe. Die obige Beschreibung ist (hoffentlich) verständlich und präzise und unzweideutig.
@@ -1652,15 +1626,12 @@
                         &lt;EmailAdress> *->*&lt;User> @&lt;Domain>
                     |> p
 
-                        Wie können wir nun beispielsweise eine ähnliche Ableitungsregeln für `<Domain>`
-                        erstellen? Eine `<Domain>` soll
+                        Wie können wir nun beispielsweise eine ähnliche Ableitungsregeln für `<Domain>`                        erstellen? Eine `<Domain>` soll
                         eine Folge aus mindestens zwei `<Label>` sein, jeweils durch einen
-                        `.`
-                        separiert. Wir erreichen dies, indem wir einen an Rekursion
+                        `.`                        separiert. Wir erreichen dies, indem wir einen an Rekursion
                         erinnernden Trick anwenden: entweder gibt es genau zwei Labels oder die Domain beginnt mit einem
                         Label,
-                        gefolgt von einem Punkt und wiederum einer _Folge von mindestens zwei durch `.`
-                        separierten Labels_,
+                        gefolgt von einem Punkt und wiederum einer _Folge von mindestens zwei durch `.`                            separierten Labels_,
                         also wiederum etwas, das wie ein Domainname aussieht. Daher:
                     |> pre
                         class container
@@ -1669,7 +1640,7 @@
                         <Domain> *->*&lt;Label> .&lt;Domain>
                     |> p
 
-                        Wir geben also _zwei_ Möglichkeiten an, wie mit einem `<Domain>` zu
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir geben also _zwei_ Möglichkeiten an, wie mit einem `<Domain>` zu
                         verfahren ist.
                         Was ist nun `<Label>`? Dies ist eine nichtleere Folge von in Domainnamen
                         erlaubten
@@ -1698,7 +1669,7 @@
                         <AlphaNumOrDash> *->* - 
                     |> p
 
-                        Nun müssen wir noch Regeln für `<AlphaNum>` angeben. Hier führen wir eine
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nun müssen wir noch Regeln für `<AlphaNum>` angeben. Hier führen wir eine
                         weitere
                         Konvention ein: nämlich, dass wir
                         verschiedene Alternativen mit einem senkrechten Strich | separieren:
@@ -1815,14 +1786,13 @@
                     |> p
 
                         Beachten Sie: ich habe hier absichtlich nicht
-                        `<AlphaNum> *->* a *|*  ... *|* z`
-                        geschrieben, weil ich in diesem Beispiel wirklich alles ausschreiben wollte und mit der
+                        `<AlphaNum> *->* a *|*  ... *|* z`                        geschrieben, weil ich in diesem Beispiel wirklich alles ausschreiben wollte und mit der
                         ...-Notation
                         schon wieder etwas menschen- aber nicht maschinenlesbares
                         eingeführt hätte.
                     |> p
 
-                        Wir brauchen noch Regeln für `<User>`. Dies ist ein nichtleerer String aus
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir brauchen noch Regeln für `<User>`. Dies ist ein nichtleerer String aus
                         alphanumerischen Zeichen und dem Punkt `.`, wobei
                         der Punkt nicht am Anfang und nicht am Ende stehen darf. Also: eine nichtleere Folge von
                         _Namensblöcken_, die jeweils durch `.` separiert sind,
@@ -1841,15 +1811,7 @@
                         id email-context-free-grammar
                         class container listing
 
-                        `<EmailAddress>    *->*   &lt;User> @&lt;Domain>`
-                        `<Domain>          *->*   &lt;Label> .&lt;Label> *|*&lt;Label> .&lt;Domain>`
-                        `<User>            *->*   &lt;NameBlock> *|*&lt;NameBlock> .&lt;User>`
-                        `<NameBlock>       *->*   &lt;AlphaNum> *|*&lt;AlphaNum>&lt;NameBlock>`
-                        `<Label>           *->*   &lt;AlphaNumOrDash> *|*&lt;AlphaNumOrDash>&lt;Label>`
-                        `<AlphaNumOrDash>  *->*   &lt;AlphaNum> *|* -` 
-
-                        `<AlphaNum>        *->*    a *|* b *|* c *|* d *|* e *|* f *|* g *|* h *|* i *|* j *|* k *|* l *|* m *|* n *|* o *|* p *|* q *|* r *|* s *|* t *|* u *|* v *|* w *|* x *|* y *|* z`
-                        `<AlphaNum>        
+                        `<EmailAddress>    *->*   &lt;User> @&lt;Domain>``<Domain>          *->*   &lt;Label> .&lt;Label> *|*&lt;Label> .&lt;Domain>``<User>            *->*   &lt;NameBlock> *|*&lt;NameBlock> .&lt;User>``<NameBlock>       *->*   &lt;AlphaNum> *|*&lt;AlphaNum>&lt;NameBlock>``<Label>           *->*   &lt;AlphaNumOrDash> *|*&lt;AlphaNumOrDash>&lt;Label>``<AlphaNumOrDash>  *->*   &lt;AlphaNum> *|* -` `<AlphaNum>        *->*    a *|* b *|* c *|* d *|* e *|* f *|* g *|* h *|* i *|* j *|* k *|* l *|* m *|* n *|* o *|* p *|* q *|* r *|* s *|* t *|* u *|* v *|* w *|* x *|* y *|* z``<AlphaNum>        
                         |> STRONG
 
                             ->
@@ -1959,7 +1921,7 @@
                         Ein Beispiel einer formalen Grammatik und einer Ableitung
                     |> p
 
-                        Was Sie hier sehen, nennt man eine _formale Grammatik_. Ihre Bestandteile sind:
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Was Sie hier sehen, nennt man eine _formale Grammatik_. Ihre Bestandteile sind:
                     |> ul
                         |> li
 
@@ -1968,7 +1930,7 @@
                             der _terminalen Symbole_.
                         |> li
 
-                            Eine Menge \(N\) abstrakter Symbole, hier
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Menge \(N\) abstrakter Symbole, hier
                             $$
                             N = \{\texttt{<EmailAddress>,&lt;Domain>,
                             &lt;User>,<NameBlock>,<Label>,<AlphaNumOrDash>,<AlphaNum>}
@@ -1980,20 +1942,20 @@
                             nicht gleichzeitig Terminalsymbol und Nichtterminalsymbol sein.
                         |> li
 
-                            Eine Menge \(P\) von Regeln, auch _Produktionen_ genannt, wobei jede Regel die Form
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Menge \(P\) von Regeln, auch _Produktionen_ genannt, wobei jede Regel die Form
                             \(X \rightarrow \alpha\) hat, wobei \(\alpha\) eine beliebig lange endliche Folge von
                             Symbolen
                             in \(\Sigma \cup N\) ist.
                         |> li
 
-                            Ein Startsymbol \(S \in N\), das angibt, wo wir mit unserer Ableitung beginnen sollen. Im
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein Startsymbol \(S \in N\), das angibt, wo wir mit unserer Ableitung beginnen sollen. Im
                             obigen
                             Beispiel
                             sind wir ja an Emailadressen interessiert, also ist `<EmailAddress>` das
                             Startsymbol.
                     |> p
 
-                        Wenn wir nun so eine Grammatik gegeben haben, können wir Wörter _ableiten_; das heißt,
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir nun so eine Grammatik gegeben haben, können wir Wörter _ableiten_; das heißt,
                         wir beginnen mit dem
                         Startsymbol und ersetzen in jedem Schritt ein nichtterminales Symbol durch die rechte Seite
                         einer entsprechenden Regel.
@@ -2004,7 +1966,7 @@
                     |> pre
                         class container
 
-                        `<EmailAddress>  *->*&lt;User>@<Domain>`
+                        `<EmailAddress>  *->*&lt;User>@<Domain>`   
 
                         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->*&lt;NameBlock>.<User>@<Domain>` 
 
@@ -2028,18 +1990,18 @@
 
                         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash><AlphaNumOrDash>` 
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash>e`
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash>e` 
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.de`
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.de` 
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.s@<AlphaNumOrDash>.<AlphaNumOrDash>.de`
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.s@<AlphaNumOrDash>.<AlphaNumOrDash>.de` 
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.s@<AlphaNumOrDash>.b.de`
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.s@<AlphaNumOrDash>.b.de` 
 
                         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.s@a.b.de` 
                     |> p
 
-                        Nach dem gleichen Schema könnten wir `d.s.@-.-.--` ableiten, was
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nach dem gleichen Schema könnten wir `d.s.@-.-.--` ableiten, was
                         darauf schließen lässt, dass unsere Grammatik nicht wirklich das
                         tut, was wir beabsichtigen, dass sie nämlich _zu viele_ Emailadressen
                         herleitet, auch solche, die wir nicht als zulässige Adressen gelten lassen wollen.
@@ -2049,14 +2011,13 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        Formulieren Sie weitere Regeln, um unsinnige Domainnamen wie `-.-.--`
-                        zu verbieten. Wie müssen Sie die obige Grammatik ändern?
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Formulieren Sie weitere Regeln, um unsinnige Domainnamen wie `-.-.--`                        zu verbieten. Wie müssen Sie die obige Grammatik ändern?
                     |> h1
 
                         Terminologie, formale Definitionen und Beispiele
                     |> p
 
-                        Im letzten Abschnitt haben wir die Regeln für die Bildung syntaktisch korrekter
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im letzten Abschnitt haben wir die Regeln für die Bildung syntaktisch korrekter
                         Emailadressen formalisiert. Zwar unvollständig, doch hoffe ich, dass das allgemeine
                         Schema klar geworden ist. Wir werden nun alles formaler und abstrakter definieren.
                     |> h2
@@ -2064,7 +2025,7 @@
                         Alphabet
                     |> p
 
-                        Wenn wir über formale Sprachen reden, so liegt immer eine (endliche) Menge von
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir über formale Sprachen reden, so liegt immer eine (endliche) Menge von
                         Symbolen zugrunde, das Alphabet \(\Sigma\). Im Emailadressen-Beispiel war (\Sigma) recht groß:
                         die 52 Buchstaben; 10 Ziffern; die Zeichen `@ . -` 
 
@@ -2094,7 +2055,7 @@
                         Sprachen
                     |> p
 
-                        Eine Teilmenge \(L \subseteq \Sigma\) bezeichnen wir in diesem Kontext als _Sprache_ und
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Teilmenge \(L \subseteq \Sigma\) bezeichnen wir in diesem Kontext als _Sprache_ und
                         kürzen Sie oft mit \(L\) ab, was für _language_ steht. Beispiele für Sprachen wären
                     |> ol
                         |> li
@@ -2120,7 +2081,7 @@
                             gelesen gleich aussehen.
                     |> p
 
-                        Wir wollen herausfinden, welche Arten von Sprachen wir mit den im letzten Abschnitt eingeführen
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir wollen herausfinden, welche Arten von Sprachen wir mit den im letzten Abschnitt eingeführen
                         Regelwerk
                         aus Ableitungen beschreiben können. Für die gerade aufgelisteten sechs Sprachen lautet die
                         Antwort
@@ -2152,8 +2113,7 @@
                             class numbered-title
 
                             Definition
-                        *(Kontextfreie Grammatik).*
-                        Eine _kontextfreie Grammatik_ besteht aus
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Kontextfreie Grammatik).*                        Eine _kontextfreie Grammatik_ besteht aus
                         |> ol
                             |> li
 
@@ -2170,7 +2130,7 @@
                             |> li
 
                                 einem Startsymbol \(S \in N\).
-                        Die Grammatik \(G\) ist also ein 4-Tupel \((\Sigma, N, P, S)\).
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Grammatik \(G\) ist also ein 4-Tupel \((\Sigma, N, P, S)\).
                     |> p
 
                         Woher der Name _kontextfrei_ kommt, werden Sie hoffentlich verstehen, wenn wir
@@ -2187,7 +2147,7 @@
                             class numbered-title
 
                             Beispiel
-                        Wir betrachten die Grammatik \(G = (\{a,b\}, \{S, A, B\}, P, S)\) mit den Produktionsregeln
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir betrachten die Grammatik \(G = (\{a,b\}, \{S, A, B\}, P, S)\) mit den Produktionsregeln
                         \begin{align*}
                         S&amp;\rightarrow A B \\
                         A&amp;\rightarrow \epsilon \ | \ a A \\
@@ -2218,7 +2178,7 @@
                             class numbered-title
 
                             Definition
-                        Gegeben sei eine kontextfreie Grammatik \(G = (\Sigma, N, P, S)\).
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Gegeben sei eine kontextfreie Grammatik \(G = (\Sigma, N, P, S)\).
                         Ein String \(\alpha \in (\Sigma \cup N)^*\) heißt _Wortform_ (im Gegensatz
                         zu einem Wort \(x \in \Sigma^*)\).
                         Für zwei Wortformen \(\alpha , \beta\) schreiben wir
@@ -2233,13 +2193,13 @@
                         \(X\) schreiben können, so dass \(X \rightarrow \gamma \) eine Produktionsregel in \(P\) ist.
                         |> p
 
-                            Wenn wir \(\alpha = \beta\) "vorlesen", dann sagen wir _\(\beta\) kann aus \(\alpha\) in
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir \(\alpha = \beta\) "vorlesen", dann sagen wir _\(\beta\) kann aus \(\alpha\) in
                             einem Schritt abgeleitet werden_.
                             Wenn \(\beta\) aus \(\alpha\) in mehreren (im Extremfall null) Schritten
                             abgeleitet werden kann, so schreiben wir \(\alpha \Rightarrow^* \beta\).
                         |> p
 
-                            Formal bedeutet \(\alpha \Rightarrow^* \beta\), dass es ein \(k \geq 0\) gibt
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Formal bedeutet \(\alpha \Rightarrow^* \beta\), dass es ein \(k \geq 0\) gibt
                             und "Zwischenwortformen" \(\alpha_0, \alpha_1, \dots, \alpha_k\) mit
                             \(\alpha = \alpha_0\) und \(\alpha_k = \beta\), sodass
                             \(\alpha_i \Rightarrow \alpha_{i+1}\) für alle \(i = 0, 1, \dots, k-1\) gilt.
@@ -2255,7 +2215,7 @@
                         Beachten Sie, dass \(P\) per Definition eine _endliche Menge_ von Regeln
                         sein muss, dass jedoch \(\Rightarrow\) im Allgemeinen unendlich ist. Bereits
                         für unsere einfache Grammatik mit den Produktionsregeln
-                    \begin{align*}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                     S&amp;\rightarrow A B \\
                     A&amp;\rightarrow \epsilon \ | \ a A \\
                     B&amp;\rightarrow \epsilon \ | \ b B \ . \\
@@ -2274,15 +2234,14 @@
                             class numbered-title
 
                             Definition
-                        *(Die von einer Grammatik erzeugte Sprache).*
-                        Sei \(G = (\Sigma, N, P, S) \) eine kontextfreie Grammatik. Die von \(G\) erzeugte Sprache
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Die von einer Grammatik erzeugte Sprache).*                        Sei \(G = (\Sigma, N, P, S) \) eine kontextfreie Grammatik. Die von \(G\) erzeugte Sprache
                         \(L(G)\) ist die Menge aller Wörter, die vom Startsymbol \(S\) abgeleitet werden können, also
                         \begin{align*}
                         L(G) := \{x \in \Sigma^* \ | \ S \Rightarrow^* x\} \ .
                         \end{align*}
                         Wenn es zu einer Sprache \(L \subseteq \Sigma^*\) eine kontextfreie Grammatik \(G\) mit
                         \(L(G) = L\) gibt, so nennen wir \(L\) eine _kontextfreie Sprache_.
-                    Beachten Sie, dass in dem obigen Beispiel die Wortform
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie, dass in dem obigen Beispiel die Wortform
                     \(aaAB\) zwar aus \(S\) abgeleitet werden kann, allerdings kein _Wort_ ist,
                     da es noch nichtterminale Symbole enthält. Es gilt also \(aaAB \not \in L(G)\).
                     Oft können wir \(L(G)\) kompakt mit natürlicher Sprache beschreiben:
@@ -2292,7 +2251,7 @@
                         class numbered-title
 
                         Beispiel.
-                    Sei \(G\) die zuletzt betrachtete Grammatik. Dann ist \(L(G)\) die
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(G\) die zuletzt betrachtete Grammatik. Dann ist \(L(G)\) die
                     Menge aller Wörter der Form \(a^* b^*\), also Wörter, in denen auf beliebig viele
                     \(a\)'s beliebig viele \(b\)'s folgen.
                 |> p
@@ -2304,7 +2263,7 @@
                         class numbered-title
 
                         Beispiel
-                    Wir betrachten die Grammatik \(G_2 = (\{a,b\}, \{S\}, P, S)\) mit den Produktionsregeln
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir betrachten die Grammatik \(G_2 = (\{a,b\}, \{S\}, P, S)\) mit den Produktionsregeln
                     \begin{align}
                     S&amp;\rightarrow aSbS \\
                     S&amp;\rightarrow bSaS \\
@@ -2327,7 +2286,7 @@
                     \end{align*}
                     |> p
 
-                        Wir sehen also: das gleiche Wort kann mehrere Ableitungen haben.
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir sehen also: das gleiche Wort kann mehrere Ableitungen haben.
                         Da die Ersetzungsregeln _kontextfrei_ sind, spielt es keine Rolle, in welcher
                         Reihenfolge wir nichtterminale Symbole ersetzen. Wenn Sie scharf hinschauen,
                         werden Sie erkennen, dass die beiden Ableitungen "irgendwie gleich" sind, dass nur
@@ -2342,7 +2301,7 @@
                         \(\stackrel{(i)}{\Rightarrow}\), die die Nummer der angewendeten Regel
                         angibt, ist eindeutig, wie wir von \(S\) zum abgeleiteten Wort gekommen sind.
                         Betrachten Sie nun eine weitere Linksableitung \(S \Rightarrow^* abab\):
-                    \begin{align*}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
                     S&amp;\stackrel{(1)}{\Rightarrow} aSbS
                     \stackrel{(2)}{\Rightarrow} abSaSbS
                     \stackrel{(3)}{\Rightarrow} abaSbS
@@ -2351,7 +2310,7 @@
                     \end{align*}
                     |> p
 
-                        Sehen Sie, dass diese Ableitung _qualitativ_ anders ist, da
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sehen Sie, dass diese Ableitung _qualitativ_ anders ist, da
                         wir hier auch die Regel \(S \rightarrow bSaS\) angewendet haben? Um die
                         Struktur der Ableitung zu verdeutlichen, könnten wir
                         die ersten beiden Ableitungen mit
@@ -2361,7 +2320,7 @@
                     Ziele der Theorie der formalen Sprachen
                 |> p
 
-                    Ganz allgemein gesagt wollen wir lernen, wie wir Sprachen formal beschreiben können;
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ganz allgemein gesagt wollen wir lernen, wie wir Sprachen formal beschreiben können;
                     wie wir, gegeben eine Grammatik \(G\) und ein Zielwort \(x\), eine Ableitung
                     \(G \Rightarrow^* x\) finden können. Anhand der Ableitungssequenz können wir
                     dann oft auf die logische Struktur von \(x\) schließen. Handelt es sich bei
@@ -2375,16 +2334,15 @@
                         class numbered-title
 
                         Algorithmisches Problem: Parsing
-                    Gegeben eine (kontextfreie) Grammatik \(G\) und ein Zielwort \(x\),
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Gegeben eine (kontextfreie) Grammatik \(G\) und ein Zielwort \(x\),
                     finde eine Ableitung \(G \Rightarrow^* x\), falls es so eine gibt.
                     |> p
 
-                        Für einen String \(x\) eine Ableitung zu finden bezeichnen wir als _parsen_,
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für einen String \(x\) eine Ableitung zu finden bezeichnen wir als _parsen_,
                         das zugehörige Hauptwort als _Parsing_.
                 |> p
 
-                    *Die gute Nachricht:*
-                    Die gute Nachricht: wir kennen Algorithmen, die dieses
+                    *Die gute Nachricht:*                    Die gute Nachricht: wir kennen Algorithmen, die dieses
                     Problem im effizient lösen, wenn wir den "theoretischen" Effizienzbegriff
                     zugrund legen. 
                 |> p

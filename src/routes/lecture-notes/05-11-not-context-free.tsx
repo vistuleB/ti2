@@ -51,7 +51,7 @@ const Article = () => {
                   keinen gibt und somit \(\gamma \not \in L(G)\)).
                 </Paragraph>
                 <Paragraph>
-                  In diesem Teilkapitel werden wir sehen, dass viele Sprachen gar nicht kontextfrei sind, und
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem Teilkapitel werden wir sehen, dass viele Sprachen gar nicht kontextfrei sind, und
                   werden
                   hoffentlich ein Gefühl dafür entwickeln, welche Konstruktionen Kontextfreiheit verhindern,
                   ähnlich wie
@@ -61,12 +61,12 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  Betrachten wir die Sprache
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die Sprache
                   $$\begin&#123;align*&#125;
                   L := \&#123; a^n b^n c^n \ | \ \ n \geq 0\&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Ein Kellerautomat könnte nun alle \(a\) auf den Stack legen und dann, wenn die
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein Kellerautomat könnte nun alle \(a\) auf den Stack legen und dann, wenn die
                     \(b\) beginnen, den Stapel abarbeiten. Allerdings hätte er dann, wenn die \(c\) kommen,
                     vergessen, wieviele \(a\) es denn waren. Irgendwie scheinen Kellerautomaten nicht für \(L\)
                     geeignet. Dies ist natürlich nur eine Intuition. Vielleicht kennen wir einfach nicht alle
@@ -74,7 +74,7 @@ const Article = () => {
                     die man mit Kellerautomaten (und somit mit kontextfreien Grammatiken) anstellen kann.
                   </Paragraph>
                   <Paragraph>
-                    Wir werden nun beweisen, dass \(L\) nicht kontextfrei ist; dass es also für \(L\) keine
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir werden nun beweisen, dass \(L\) nicht kontextfrei ist; dass es also für \(L\) keine
                     kontextfreie Grammatik gibt. Wir gehen wie folgt vor: wir nehmen eine kontextfreie
                     Grammatik \(G\), die jedes Wort \(\gamma \in L\) ableiten kann. Dann sehen wir uns den
                     Ableitungsbaum
@@ -91,7 +91,7 @@ const Article = () => {
                       src="../img/context-free/pumping-lemma-01.svg"
                       loading="lazy" />
                   </figure>
-                  Nun betrachten wir in diesem Ableitungsbaum den längsten Pfad von \(S\) zu einem
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nun betrachten wir in diesem Ableitungsbaum den längsten Pfad von \(S\) zu einem
                   Nichtterminalknoten, der direkt über den Terminalen steht. Wenn dieser Länge \(d\) hat (also
                   \(d\) Kanten lang ist), dann hat der Baum höchstens \(2^d\) Blätter, also \(|\gamma| \leq 2^d\).
                   Wenn nun \(|\gamma| \geq 2^&#123;|N|&#125; =: p\) ist, dann gibt es einen Pfad der Länge \(|N|\)
@@ -103,7 +103,7 @@ const Article = () => {
                       src="../img/context-free/pumping-lemma-02.svg"
                       loading="lazy" />
                   </figure>
-                  Der Pfad vom oberen zum unteren \(Z\) hat höchstens Länge \(N\) (so haben wir diesen Pfad
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Pfad vom oberen zum unteren \(Z\) hat höchstens Länge \(N\) (so haben wir diesen Pfad
                   gewählt),
                   und somit hat das Unterwort \(vwx\) höchstens \(p = 2^&#123;|N|&#125;\) Zeichen.
                   Wenn wir nun das Wort \(a^nb^nc^n\) für ein sehr großes \(n\) betrachten, sagen wir
@@ -115,7 +115,7 @@ const Article = () => {
                   unten
                   behandelt werden).
                   <Paragraph>
-                    Nun holen wir zum entscheidenden Schlag aus: wir "pumpen" das Wort \(\gamma\) auf, indem
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nun holen wir zum entscheidenden Schlag aus: wir "pumpen" das Wort \(\gamma\) auf, indem
                     wir die Teilbäume mit \(Z\) an der Wurzel wiederholen. Konkret besagt ja oberer Baum,
                     dass \(\gamma\) wie folgt hergeleitet wurde:
                     $$\begin&#123;align*&#125;
@@ -129,7 +129,7 @@ const Article = () => {
                         src="../img/context-free/pumping-lemma-03.svg"
                         loading="lazy" />
                     </figure>
-                    und somit das Wort \(uvvwxxy\) und ganz allgemein jedes Wort
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und somit das Wort \(uvvwxxy\) und ganz allgemein jedes Wort
                     $$\begin&#123;align*&#125;
                     uv^i w x^i y
                     \end&#123;align*&#125;$$
@@ -141,7 +141,7 @@ const Article = () => {
                         loading="lazy" />
                     </figure>
                   </Paragraph>
-                  Betrachten wir nun das Wort \(uwy\). Wir haben ja gesehen, dass in
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir nun das Wort \(uwy\). Wir haben ja gesehen, dass in
                   \(uvwxy\) alle \(c\)-Symbole rechts von \(vwx\) liegen, also in \(y\).
                   Das Wort \(uwy\) hat also immer noch \(n\) viele \(c\)-Symbole. Allerdings hat
                   es die Symbole in \(v\) und \(x\) verloren! Wir wissen nicht, wieviele davon \(a\) und \(b\)
@@ -149,7 +149,7 @@ const Article = () => {
                   aber eines ist ganz klar: in \(uwy\) kommen die Symbole \(a,b,c\) nicht mehr gleich
                   häufig vor, und somit \(uwy\not \in L\).
                   <Paragraph>
-                    Wir haben also gezeigt, dass die kontextfreie Grammatik \(G\){" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben also gezeigt, dass die kontextfreie Grammatik \(G\){" "}
                     <i>
                       nicht
                     </i>
@@ -185,12 +185,11 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     (Pumping Lemma für kontextfreie Sprachen)
                   </b>
-                  {" "}
-                  Für jede kontextfreie Grammatik \(G\) gibt es eine Zahl \(p \in \N\), so dass jedes
+                  {" "}Für jede kontextfreie Grammatik \(G\) gibt es eine Zahl \(p \in \N\), so dass jedes
                   Wort \(\gamma \in L(G)\) der Länge \(|\gamma| \geq p\) zerlegt werden kann in
                   $$\begin&#123;align*&#125;
                   \gamma = uvwxy \ ,
@@ -208,7 +207,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Sei \(L \subseteq \&#123;a,b,c\&#125;^n\) die Sprache aller Wörter
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L \subseteq \&#123;a,b,c\&#125;^n\) die Sprache aller Wörter
                   $$\begin&#123;align*&#125;
                   \&#123;\alpha c \alpha \ | \ \alpha \in \&#123;a,b\&#125;^* \&#125; \ .
                   \end&#123;align*&#125;$$
@@ -221,7 +220,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Sie \(L \subseteq \&#123;1\&#125;^*\) die Sprache aller Wörter, deren Länge
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sie \(L \subseteq \&#123;1\&#125;^*\) die Sprache aller Wörter, deren Länge
                   eine Zweierpotenz ist:
                   $$\begin&#123;align*&#125;
                   L := \&#123; 1^n \ | \ n = 2^d \textnormal&#123; für ein \(d \in \N\)&#125; \&#125;
@@ -237,7 +236,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  Wenn \(L_1, L_2\) reguläre Sprachen sind, dann sind die folgenden
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn \(L_1, L_2\) reguläre Sprachen sind, dann sind die folgenden
                   Sprachen auch regulär:
                   <ol>
                     <li>
@@ -262,8 +261,7 @@ const Article = () => {
                       <i>
                         regulären Ausdruck
                       </i>
-                      {" "}
-                      gebaut
+                      {" "}gebaut
                       hat, wird es zur Trivialität: einfach den Ausdruck umdrehen.
                     </li>
                     <li>
@@ -308,7 +306,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Seien \(L_1, L_2\) kontextfrei. Zeigen Sie, dass die folgenden Sprachen auch kontextfrei
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Seien \(L_1, L_2\) kontextfrei. Zeigen Sie, dass die folgenden Sprachen auch kontextfrei
                     sind:
                     <ol>
                       <li>
@@ -347,7 +345,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                   </span>
-                  Der Schnitt \(L_1 \cap L_2\) zweier kontextfreier Sprachen
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Schnitt \(L_1 \cap L_2\) zweier kontextfreier Sprachen
                   ist im Allgemeinen{" "}
                   <i>
                     nicht
@@ -370,7 +368,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                   </span>
-                  Das Komplement \(L\) einer kontextfreien Sprache ist im Allgemeinen{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Komplement \(L\) einer kontextfreien Sprache ist im Allgemeinen{" "}
                   <i>
                     nicht
                   </i>
@@ -387,7 +385,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  Sei \(L := \&#123;a^n b^n c^n\&#125;\). Wir wissen bereits, dass \(L\) nicht kontextfrei ist.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L := \&#123;a^n b^n c^n\&#125;\). Wir wissen bereits, dass \(L\) nicht kontextfrei ist.
                   Zeigen Sie, dass \(\bar&#123;L&#125;\) kontextfrei ist.
                   Die Sprache \(\bar&#123;L&#125;\) ist somit ein Beispiel für eine kontextfreie Sprache,
                   deren Komplement, also \(L\), nicht kontextfrei ist.

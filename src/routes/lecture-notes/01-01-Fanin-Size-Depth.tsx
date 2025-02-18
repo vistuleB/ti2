@@ -7,7 +7,7 @@ const Article = () => {
     <Container>
       <Chapter
         count={2}
-        title_gr="Größe, Tiefe, Fan-In"
+        title_gr="Tiefe, Fan-In"
         title_en="Fanin Size Depth"
         number={1.1}
         path="/lecture-notes2.tsx">
@@ -29,15 +29,13 @@ const Article = () => {
             Kapitel 1.2 &gt;&gt;
           </a>
         </div>
-        <div
-          counter="DefCtr"
-          id="rightSideWrapper">
+        <div id="rightSideWrapper">
           <div class="content">
             <div class="chapter">
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    1.1 Größe, Tiefe, Fan-In
+                    Größe, Tiefe, Fan-In
                   </span>
                 </h1>
                 <Paragraph>
@@ -46,12 +44,9 @@ const Article = () => {
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
-                    Definition.
-                    <span style="color: blue;">
-                      1.1.1{" "}
-                    </span>
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Definition.
                   </span>
-                  Die{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die{" "}
                   <i>
                     Größe
                   </i>
@@ -71,7 +66,7 @@ const Article = () => {
                   der maximale Fan-in aller Gates.
                 </div>
                 <div class="alter-warning">
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                   <b>
                     Vorsicht.
                   </b>
@@ -96,30 +91,26 @@ const Article = () => {
                     style="height:10em"
                     src="../img/circuits/and-n-fold-linear-depth.svg"
                     loading="lazy" />
-                  oder alternativ:
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;oder alternativ:
                   <img
                     style="height:10em"
                     src="../img/circuits/and-n-fold-log-depth.svg"
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  In beiden Fällen ersetzen wir ein AND-Gate von Fan-in \(n\) durch
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In beiden Fällen ersetzen wir ein AND-Gate von Fan-in \(n\) durch
                   \(n-1\) AND-Gates von je Fan-in 2. Wenn wir allerdings die{" "}
                   <i>
                     Tiefe
                   </i>
-                  {" "}
-                  betrachten, so sehen wir, dass der linke Schaltkreis Tiefe \(n-1\) hat,
+                  {" "}betrachten, so sehen wir, dass der linke Schaltkreis Tiefe \(n-1\) hat,
                   der rechte jedoch nur \(\ceil&#123;\log_2(n)&#125;\). Ganz allgemein stellen wir fest:
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
-                    Theorem
-                    <span style="color: blue;">
-                      1.1.2{" "}
-                    </span>
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Theorem
                   </span>
-                  Sei \(C\) ein Schaltkreis Maximum-Fan-in \(k\), Größe \(s\) und Tiefe \(d\).
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(C\) ein Schaltkreis Maximum-Fan-in \(k\), Größe \(s\) und Tiefe \(d\).
                   Dann gibt es einen äquivalenten Schaltkreis \(C'\) mit Maximum-Fan-in \(2\),
                   Größe höchstens \(s (k-1)\) und Tiefe höchstens \(d \ceil &#123;\log_2 k&#125;\).
                 </div>

@@ -7,7 +7,7 @@ const Article = () => {
     <Container>
       <Chapter
         count={1}
-        title_gr="Boolesche Schaltkreise"
+        title_gr="Schaltkreise"
         title_en="Boolean circuits"
         number={1.0}
         path="/lecture-notes1.tsx">
@@ -34,10 +34,10 @@ const Article = () => {
             <div class="chapter">
               <h1 class="hidden-title">
                 <span class="chapterTitle">
-                  1.  Boolesche Schaltkreise
+                  Boolesche Schaltkreise
                 </span>
               </h1>
-              Boolesche Schaltkreise sind ein idealisiertes Modell echter elektronischer Schaltkreise.
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Boolesche Schaltkreise sind ein idealisiertes Modell echter elektronischer Schaltkreise.
               Als primitive Bausteine haben wir Boolesche Operatoren, auch{" "}
               <i>
                 Gatter
@@ -60,7 +60,7 @@ const Article = () => {
                   src="../img/circuits/and-or-not-gates.svg"
                   loading="lazy" />
               </figure>
-              Von links nach rechts sind dies: das Und-Gatter (
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Von links nach rechts sind dies: das Und-Gatter (
               <i>
                 and-gate
               </i>
@@ -117,7 +117,7 @@ const Article = () => {
               Die dritte Zeile der mittleren Tabelle sagt beispielsweise aus, dass
               \(1 \vee 0 = 1\) gilt.
               <Paragraph>
-                Vielleicht wünschen Sie sich noch mehr Gates, zum Beispiel
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Vielleicht wünschen Sie sich noch mehr Gates, zum Beispiel
                 ein if-then-else-Gate mit drei Inputs \(x,y,z\), welches
                 \(y\) ausgibt, wenn \(x\) wahr ist und ansonsten \(z\) ausgibt.
                 So ein Gate können Sie sich einfach aus And, Or, Not bauen:
@@ -144,7 +144,7 @@ const Article = () => {
                 </figcaption>
               </figure>
               <Paragraph>
-                Jeder Schaltkreis{" "}
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Jeder Schaltkreis{" "}
                 <i>
                   berechnet
                 </i>
@@ -164,12 +164,9 @@ const Article = () => {
               </figure>
               <div class="well well-lg numbered-exercise container">
                 <span class="numbered-title">
-                  Übungsaufgabe{" "}
-                  <span style="color: blue;">
-                    1.1{" "}
-                  </span>
+                  Übungsaufgabe
                 </span>
-                Bauen Sie folgende Gates aus And-, Or- und Not-Gates zusammen:
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bauen Sie folgende Gates aus And-, Or- und Not-Gates zusammen:
                 <ol>
                   <li>
                     Ein XOR-Gate \(x \oplus y\). Es gibt 1 aus, wenn einer der beiden
@@ -188,7 +185,7 @@ const Article = () => {
                         loading="lazy" />
                       &ensp;,
                     </figure>
-                    welches 1 ausgibt, wenn eine{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;welches 1 ausgibt, wenn eine{" "}
                     <i>
                       ungerade
                     </i>
@@ -196,7 +193,7 @@ const Article = () => {
                     auf 1 stehen.
                   </li>
                   <li>
-                    Ein \(n\)-faches Majority-Gate
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein \(n\)-faches Majority-Gate
                     \(&#123;\rm Maj&#125; (x_1,\dots,x_n)\), welches 1 ausgibt, wenn mehr als
                     \(n/2\) der Inputs auf 1 stehen. Sie können annehmen, dass \(n\) ungerade
                     ist, wenn es Ihnen hilft.
@@ -209,7 +206,7 @@ const Article = () => {
                 </ol>
               </div>
               <Paragraph>
-                Je nach Kontext kann es hilfreich sein, Gatter mit beliebig vielen Inputs zuzulassen, beispielsweise
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Je nach Kontext kann es hilfreich sein, Gatter mit beliebig vielen Inputs zuzulassen, beispielsweise
                 \(x_1 \wedge x_2 \wedge \dots \wedge x_n\) als{" "}
                 <i>
                   ein
@@ -221,7 +218,7 @@ const Article = () => {
                     src="../img/circuits/and-fan-in-n.svg"
                     loading="lazy" />
                 </figure>
-                Man bezeichnet dies als AND-Gate mit einem{" "}
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Man bezeichnet dies als AND-Gate mit einem{" "}
                 <i>
                   Fan-in
                 </i>
@@ -236,7 +233,7 @@ const Article = () => {
                     src="../img/circuits/and-n-fold-linear-depth.svg"
                     loading="lazy" />
                 </figure>
-                Also als geschachteltes AND, oder aber in Form eines Binärbaums:
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Also als geschachteltes AND, oder aber in Form eines Binärbaums:
                 <figure>
                   <img
                     style="height:10em"
@@ -245,7 +242,7 @@ const Article = () => {
                 </figure>
               </Paragraph>
               <Paragraph>
-                Schaltkreise, wie wir sie in diesem Kapitel betrachten, sind immer azyklisch. Das heißt
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schaltkreise, wie wir sie in diesem Kapitel betrachten, sind immer azyklisch. Das heißt
                 insbesondere,
                 das Dinge mit "Feedback-Schleifen" wie Flipflops eben{" "}
                 <i>
@@ -261,7 +258,7 @@ const Article = () => {
                   loading="lazy" />
               </figure>
               <Paragraph>
-                Das Flipflop zeigt ein interessantes Verhalten: wenn \(&#123;\rm Reset&#125; = 0, &#123;\rm Set&#125; = 1\) ist,
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Flipflop zeigt ein interessantes Verhalten: wenn \(&#123;\rm Reset&#125; = 0, &#123;\rm Set&#125; = 1\) ist,
                 so ist der Ausgabe-Wert des unteren OR-Gates auf jeden Fall 1, und somit
                 ist \(\bar&#123;Q&#125; = 0\); somit sind wiederum beide Input-Werte des oberen OR-Gates 0 und
                 \(Q=1\). Wenn \(&#123;\rm Reset&#125; = 1, &#123;\rm Set&#125; = 0\), dann ist
@@ -286,10 +283,7 @@ const Article = () => {
               </Paragraph>
               <div class="well container theorem">
                 <span class="numbered-title">
-                  Definition{" "}
-                  <span style="color: blue;">
-                    1.1
-                  </span>
+                  Definition
                 </span>
                 &ensp;
                 <b>
@@ -297,7 +291,7 @@ const Article = () => {
                 </b>
                 {" "}{" "}
                 <Paragraph>
-                  Ein Boolescher Schaltkreis ist ein gerichteter, azyklischer Graph (englisch
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein Boolescher Schaltkreis ist ein gerichteter, azyklischer Graph (englisch
                   {" "}
                   <i>
                     directed acyclic graph
@@ -318,7 +312,7 @@ const Article = () => {
                       mit AND-, OR- oder NOT beschriftet ist,{" "}
                     </li>
                   </ul>
-                  wobei die mit NOT beschrifteten Knoten genau eine eingehende Kante haben
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;wobei die mit NOT beschrifteten Knoten genau eine eingehende Kante haben
                   und die mit AND oder OR beschrifteten Knoten mindestens zwei eingehende Kanten haben. Mindestens
                   ein Knoten ist als{" "}
                   <i>
@@ -329,7 +323,7 @@ const Article = () => {
                 </Paragraph>
               </div>
               <Paragraph>
-                Oft haben wir es mit Schaltkreisen mit nur einem Output-Gate zu tun; in diesem
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Oft haben wir es mit Schaltkreisen mit nur einem Output-Gate zu tun; in diesem
                 Falle lassen wir die Beschriftung auch gerne weg, weil sie keine zusätzliche Information
                 bringt.
                 Wenn wir allen Input-Variablen eines Schaltkreises \(C\) einen Wahrheitswert zugewiesen bekommen
@@ -351,12 +345,9 @@ const Article = () => {
               </Paragraph>
               <div class="well container theorem">
                 <span class="numbered-title">
-                  Beobachtung{" "}
-                  <span style="color: blue;">
-                    1.2{" "}
-                  </span>
+                  Beobachtung
                 </span>
-                Ein Schaltkreis \(C\) mit \(n\) Input-Gates und \(m\) Output-Gates berechnet
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein Schaltkreis \(C\) mit \(n\) Input-Gates und \(m\) Output-Gates berechnet
                 eine Funktion \(f_C : \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;^m\).
               </div>
               <Paragraph>
@@ -368,12 +359,9 @@ const Article = () => {
               </Paragraph>
               <div class="well container theorem">
                 <span class="numbered-title">
-                  Definition{" "}
-                  <span style="color: blue;">
-                    1.3{" "}
-                  </span>
+                  Definition
                 </span>
-                Zwei Boolesche Schaltkreise \(C, C'\) heißen äquivalent, wenn
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zwei Boolesche Schaltkreise \(C, C'\) heißen äquivalent, wenn
                 \(f_C = f_&#123;C'&#125;\), wenn sie also die gleiche Funktion berechnen. Wir schreiben
                 \(C \equiv C'\).
               </div>

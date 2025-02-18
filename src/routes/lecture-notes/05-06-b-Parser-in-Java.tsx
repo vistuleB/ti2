@@ -39,7 +39,7 @@ const Article = () => {
                   </span>
                 </h1>
                 <div class="alert-info">
-                  Den vollständigen Quelltext, den wir in der Vorlesung geschrieben haben,
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Den vollständigen Quelltext, den wir in der Vorlesung geschrieben haben,
                   finden Sie in der Datei{" "}
                   <a href="../code/parsing/arithmetic-in-class/ArithmeticGrammar.java">
                     ArithmeticGrammar.java
@@ -47,7 +47,7 @@ const Article = () => {
                   .
                 </div>
                 <Paragraph>
-                  Ich möchte nun eine kontextfreie Grammatik für arithmetische Ausdrücke der
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ich möchte nun eine kontextfreie Grammatik für arithmetische Ausdrücke der
                   Form{" "}
                   <tt>
                     ((31+402)*83)
@@ -65,7 +65,7 @@ const Article = () => {
                   \texttt&#123;+&#125;,\texttt&#123;*&#125;,\texttt&#123;(&#125;,\texttt&#123;)&#125;\&#125;$.
                   Die Produktionsregeln sind:
                 </Paragraph>
-                $$\begin&#123;align*&#125;
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
                 E&amp;\rightarrow N \tag&#123;JustNumber&#125; \\
                 E&amp;\rightarrow \texttt&#123;(&#125;E \texttt&#123;+&#125; E\texttt&#123;)&#125; \tag&#123;Sum&#125; \\
                 E&amp;\rightarrow \texttt&#123;(&#125;E \texttt&#123;*&#125; E\texttt&#123;)&#125; \tag&#123;Product&#125;\\
@@ -75,7 +75,7 @@ const Article = () => {
                 \texttt&#123;5&#125;\ | \ \texttt&#123;6&#125;\ | \ \texttt&#123;7&#125;\ | \ \texttt&#123;8&#125;\ | \ \texttt&#123;9&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Die Nichtterminale sind also $E$ (Expression), $N$ (Number) und $D$ (Digit). Wir haben auch
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Nichtterminale sind also $E$ (Expression), $N$ (Number) und $D$ (Digit). Wir haben auch
                   den einzelnen Produktionen Namen gegeben, bis auf die der Form $D \rightarrow i$.
                   Was soll nun unser Parser tun? Er soll, gegeben ein Eingabewort $w \in L$, den
                   {" "}
@@ -94,7 +94,7 @@ const Article = () => {
                     src="../img/context-free/arithmetic-syntax-tree.svg" />
                 </figure>
                 <Paragraph>
-                  Wie wir diesen Baum in Java repräsentieren, darüber sprechen wir in einer Minute.
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wie wir diesen Baum in Java repräsentieren, darüber sprechen wir in einer Minute.
                   Zuerst aber: wir wollen mit diesem Baum etwas Sinnvolles tun. Zum Beispiel
                   {" "}
                   <i>
@@ -113,7 +113,7 @@ const Article = () => {
                   Eine Datenstruktur für Ableitungsbäume
                 </h2>
                 <Paragraph>
-                  Für meine Implementierung in Java erschaffe ich für jedes Nichtterminal $X$
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für meine Implementierung in Java erschaffe ich für jedes Nichtterminal $X$
                   ein Interface
                   und für jede Produktionsregel $X \rightarrow \alpha$ eine Klasse,
                   die das Interface $X$ implementiert und $\alpha$ als Klassenvariable enthält.
@@ -153,7 +153,7 @@ const Article = () => {
                         <tt>
                           Number number
                         </tt>
-                        enthält;
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;enthält;
                       </li>
                     </ul>
                   </li>
@@ -185,7 +185,7 @@ const Article = () => {
                         <tt>
                           Digit
                         </tt>
-                        enthält;
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;enthält;
                       </li>
                     </ul>
                   </li>
@@ -233,7 +233,7 @@ const Article = () => {
                   </li>
                 </ul>
                 <Paragraph>
-                  In unserem Anwendungsfall hat jedes Interface eine Methode
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In unserem Anwendungsfall hat jedes Interface eine Methode
                   <tt>
                     public int toInt()
                   </tt>

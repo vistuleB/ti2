@@ -39,18 +39,17 @@ const Article = () => {
                   </span>
                 </h1>
                 <Paragraph>
-                  Für endliche Mengen haben den Begriff der{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für endliche Mengen haben den Begriff der{" "}
                   <i>
                     Größe
                   </i>
-                  {" "}
-                  $\&#123;0,1,2,3,4,5,6,7,8,9\&#125;$ hat zehn Elemente und ist somit größer als
+                  {" "}$\&#123;0,1,2,3,4,5,6,7,8,9\&#125;$ hat zehn Elemente und ist somit größer als
                   $\&#123;a,e,i,o,u\&#125;$, die nur fünf Elemente hat. Können wir auch für
                   unendliche Mengen einen Größenbegriff einführen, oder sie zumindest
                   hinsichtlich ihrer Größe vergleichen?
                 </Paragraph>
                 <Paragraph>
-                  Bei den "üblichen" unendlichen Mengen $\N, \Z, \Q, \R$ scheint das zu
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bei den "üblichen" unendlichen Mengen $\N, \Z, \Q, \R$ scheint das zu
                   gehen. Es gilt nämlich $\N \subsetneq \Z \subsetneq \Q \subsetneq \R$,
                   und damit können wir doch mit Fug und Recht behaupten:
                   {" "}
@@ -61,16 +60,16 @@ const Article = () => {
                   .
                 </Paragraph>
                 <Paragraph>
-                  Unser erster Versuch, unendliche Mengen ihrer Größe nach zu
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unser erster Versuch, unendliche Mengen ihrer Größe nach zu
                   vergleichen, verwendet Mengeninklusion: wenn $A \subseteq B$ gilt,
                   dann sagen wir, dass $A$ kleiner gleich $B$ gilt. Allerdings hat
                   dieser Größenbegriff einen großen Nachteil: welche der beiden Mengen
                   ist Ihrer Meinung denn größer:
                 </Paragraph>
-                $$\begin&#123;align*&#125; \&#123;\dots, -4, -2, 0, 2, 4, 6, \dots\&#125; \quad
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; \&#123;\dots, -4, -2, 0, 2, 4, 6, \dots\&#125; \quad
                 \textnormal&#123;oder&#125;\quad \&#123;0,1,2,3, \dots\&#125; ? \end&#123;align*&#125;$$
                 <Paragraph>
-                  Also die geraden ganzen Zahlen oder die natürlichen? Oder noch
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Also die geraden ganzen Zahlen oder die natürlichen? Oder noch
                   schlimmer: ist $\Q$ oder $\&#123;a,b\&#125;^*$ größer? Die zweite Menge hat ja
                   gar nichts mit Zahlen zu tun, sondern besteht aus Strings mit den
                   Symbolen $a$ und $b$. Und generell: auch zwischen den Mengen
@@ -79,12 +78,12 @@ const Article = () => {
                   letztere.
                 </Paragraph>
                 <Paragraph>
-                  Eine rigorose und belastbare Weise, unendliche Mengen hinsichtlich
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine rigorose und belastbare Weise, unendliche Mengen hinsichtlich
                   ihrer Größe zu vergleichen, hat
                   <a href="https://en.wikipedia.org/wiki/Georg_Cantor">
                     Georg Cantor
                   </a>
-                  Ende des 19. Jahrhunderts gefunden. Sie war anfangs nicht
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ende des 19. Jahrhunderts gefunden. Sie war anfangs nicht
                   unumstritten.
                 </Paragraph>
                 <div class="well container theorem">
@@ -105,17 +104,17 @@ const Article = () => {
                       src="../img/infinite-sets/N-N-plus.svg" />
                   </figure>
                   <Paragraph>
-                    Wir können diese Zuordnung auch mit einer einfachen Formel
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können diese Zuordnung auch mit einer einfachen Formel
                     beschreiben. Die Funktion
                   </Paragraph>
-                  $$\begin&#123;align*&#125; f : \N&amp;\rightarrow \N^+ \\ n&amp;\mapsto n+1
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; f : \N&amp;\rightarrow \N^+ \\ n&amp;\mapsto n+1
                   \end&#123;align*&#125;$$
                   <Paragraph>
                     ist eine Bijektion.
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Diese anfangs etwas überraschende Tatsache, dass $\N$ und $\N^+$
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Diese anfangs etwas überraschende Tatsache, dass $\N$ und $\N^+$
                   "gleich groß" sind, ist als{" "}
                   <i>
                     Hilberts Hotel
@@ -146,7 +145,7 @@ const Article = () => {
                       src="../img/infinite-sets/N-to-Z.svg" />
                   </figure>
                   <Paragraph>
-                    Dies ist etwas unübersichtlich. Besser geht es, wenn wir $\Z$
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dies ist etwas unübersichtlich. Besser geht es, wenn wir $\Z$
                     umstellen:
                   </Paragraph>
                   <figure>
@@ -155,10 +154,10 @@ const Article = () => {
                       src="../img/infinite-sets/N-to-Z-nicer.svg" />
                   </figure>
                   <Paragraph>
-                    Wir können also unsere Bijektion $f : \N \rightarrow \Z$ wie folgt
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können also unsere Bijektion $f : \N \rightarrow \Z$ wie folgt
                     definieren:
                   </Paragraph>
-                  $$\begin&#123;align*&#125; f : \N&amp;\rightarrow \Z \\ n&amp;\mapsto \begin&#123;cases&#125;
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; f : \N&amp;\rightarrow \Z \\ n&amp;\mapsto \begin&#123;cases&#125;
                   \frac&#123;n&#125;&#123;2&#125;&amp;\textnormal&#123; wenn $n$ gerade ist,&#125; \\ - \frac&#123;n+1&#125;&#123;2&#125;&
                   \textnormal&#123; wenn $n$ ungerade ist.&#125; \end&#123;cases&#125; \end&#123;align*&#125;$$
                 </div>
@@ -167,13 +166,13 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Finden Sie eine "geschlossene" Form für die Bijektion $f : \N
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Finden Sie eine "geschlossene" Form für die Bijektion $f : \N
                     \rightarrow \Z$. Mit "geschlossen" meine ich, dass Sie sie mit den
                     üblichen Operatoren (mal, plus, hoch, minus, geteilt durch) ohne
                     Fallunterscheidung schreiben können.
                   </Paragraph>
                   <Paragraph>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Anmerkung:
                     </b>
@@ -187,7 +186,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Finden Sie die Umkehrfunktion $f^&#123;-1&#125; : \Z \rightarrow \N$. Gerne
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Finden Sie die Umkehrfunktion $f^&#123;-1&#125; : \Z \rightarrow \N$. Gerne
                     anfangs mit Fallunterscheidung, dann bitte als geschlossene Formel
                     ohne Fallunterscheidung.
                   </Paragraph>
@@ -210,7 +209,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Es gilt trivialerweise immer $A \approx A$, da wir ja die
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gilt trivialerweise immer $A \approx A$, da wir ja die
                   Identitätsfunktion $x \mapsto x$ als Bijektion nehmen können. Wenn es
                   eine Bijektion $f : A \rightarrow B$ gibt, dann natürlich auch eine
                   Umkehrfunktion $f^&#123;-1&#125; : B \rightarrow A$. Wenn $f : A \rightarrow B$
@@ -247,7 +246,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Wie wir sehen werden, gibt es tatsächlich unendliche Mengen, die
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wie wir sehen werden, gibt es tatsächlich unendliche Mengen, die
                   {" "}
                   <i>
                     nicht
@@ -268,7 +267,7 @@ const Article = () => {
                   Was ist unendlich?
                 </h2>
                 <Paragraph>
-                  Der Begriff der Gleichmächtigkeit liefert uns nun eine wunderbar
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Begriff der Gleichmächtigkeit liefert uns nun eine wunderbar
                   einfache und rigorose Definition von Unendlichkeit.
                 </Paragraph>
                 <div class="well container theorem">
@@ -286,7 +285,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Als Beispiel haben wir $\N^+ \subsetneq \N$ mit $\N^+ \approx \N$
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als Beispiel haben wir $\N^+ \subsetneq \N$ mit $\N^+ \approx \N$
                   gesehen. Also ist $\N$ im obigen Sinne unendlich.
                 </Paragraph>
                 <div class="well well-lg numbered-exercise container">
@@ -294,12 +293,12 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Zeigen Sie: wenn eine Menge $A$ unendlich ist (im Sinne der obigen
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie: wenn eine Menge $A$ unendlich ist (im Sinne der obigen
                     Definition), dann gibt es eine Teilmenge $X \subseteq A$ mit $X
                     \approx \N$.
                   </Paragraph>
                   <Paragraph>
-                    {" "}{" "}
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     <b>
                       Hinweis:
                     </b>
@@ -311,7 +310,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Angesichts der letzten Übungsaufgabe können wir also sagen, dass
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Angesichts der letzten Übungsaufgabe können wir also sagen, dass
                   abzählbare Unendlichkeit die kleinste Stufe der Unendlichkeit ist.
                   Unterhalb von abzählbar kommen nur noch die endlichen Mengen.
                 </Paragraph>
