@@ -59,7 +59,7 @@ const Article = () => {
                   <i>
                     Kacheln
                   </i>
-                  genannt) gegeben,
+                  {" "}genannt) gegeben,
                   die oben und unten jeweils ein Wort haben. Wir müssen
                   die Kärtchen so nebeneinander legen, dass oben und unten
                   das gleiche Wort entsteht; jedes Kärtchen kann beliebig
@@ -441,11 +441,11 @@ const Article = () => {
                       <i>
                         Kachel
                       </i>
-                      (auch{" "}
+                      {" "}(auch{" "}
                       <i>
                         Kärtchen
                       </i>
-                      genannt) ist ein
+                      {" "}genannt) ist ein
                       Paar \((\alpha : \beta) \in \Sigma^* \times \Sigma^*\).
                       Hier bezeichnet \(\alpha\) das Wort auf der oberen Hälfte der Kachel
                       und \(\beta\) das auf der unteren.
@@ -465,12 +465,12 @@ const Article = () => {
                       <i>
                         oberen Teil
                       </i>
-                      \(\top(s)\) und den
+                      {" "}\(\top(s)\) und den
                       {" "}
                       <i>
                         unteren Teil
                       </i>
-                      \(\bottom(s)\):
+                      {" "}\(\bottom(s)\):
                       $$\begin&#123;align*&#125;
                       \top(s)&amp;:= \alpha_1 \alpha_2 \dots \alpha_m \\
                       \bottom(s)&amp;:= \beta_1 \beta_2 \dots \beta_m \\
@@ -563,7 +563,7 @@ const Article = () => {
                       Korrespondenzproblem (MPCP)
                       {" "}
                     </i>
-                    ist genau das gleiche wie das PCP,
+                    {" "}ist genau das gleiche wie das PCP,
                     nur dass es in \(S\) eine markierte Startkachel gibt
                     und jede Lösung mit dieser Startkachel beginnen muss.
                     Es ist also ein "strengeres" Problem als das PCP.
@@ -662,7 +662,7 @@ const Article = () => {
                     <i>
                       Konfiguration
                     </i>
-                    einer
+                    {" "}einer
                     Turingmaschine ist eine Folge
                     $$\begin&#123;align*&#125;
                     w_1 w_2 \dots w_&#123;j-1&#125; q w_j \dots w_m
@@ -898,7 +898,7 @@ const Article = () => {
                     <i>
                       jedes
                     </i>
-                    Bandsymbol \(y\), da die Regel immer anzuwenden ist,
+                    {" "}Bandsymbol \(y\), da die Regel immer anzuwenden ist,
                     egal, welches Symbol \(y\) links vom Schreib-Lese-Kopf steht.
                   </Paragraph>
                   <Paragraph>

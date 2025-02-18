@@ -50,7 +50,7 @@ const Article = () => {
                   <a href="../../demos/drawFirstComputation.html">
                     drawFirstComputation.html
                   </a>
-                  demonstriert),
+                  &ensp;demonstriert),
                   und die LR-Parser (die die Teilbäume auf den Stack legen und nach Blüten suchen,
                   hier die Demoseite{" "}
                   <a href="../../demos/drawLR0ParserPrefixArithmetic.html">
@@ -93,7 +93,7 @@ const Article = () => {
                   <i>
                     jede
                   </i>
-                  äquivalente Grammatik \(G'\), die also
+                  {" "}äquivalente Grammatik \(G'\), die also
                   die gleiche Sprache \(L\) erzeugt, mehrdeutig sein muss; man sagt, die Sprache
                   \(L\) ist{" "}
                   <i>
@@ -110,7 +110,7 @@ const Article = () => {
                   <i>
                     effizient
                   </i>
-                  durchgeht, in der Praxis leider
+                  {" "}durchgeht, in der Praxis leider
                   meist unbrauchbar ist.
                 </Paragraph>
                 <h3>
@@ -190,7 +190,7 @@ const Article = () => {
                   <i>
                     nicht
                   </i>
-                  kennen, also konkret nicht wissen, wie lange \(u\) und \(v\) sind,
+                  {" "}kennen, also konkret nicht wissen, wie lange \(u\) und \(v\) sind,
                   können wir alle Möglichkeiten durchprobieren. Da \(G\) in Chomsky-Normalform vorliegt, wissen
                   wir, dass \(|u| \geq 1\) und \(|v| \geq 1\), also \(1 \leq |u| \leq |w|-1\). Wir probieren also
                   alle \(n-1\) möglichen Zerlegungen von \(w\) durch. Wenn wir das rekursiv täten, dann würden
@@ -209,12 +209,12 @@ const Article = () => {
                   <i>
                     Dynamic Programing
                   </i>
-                  fußt, welches Sie in der
+                  {" "}fußt, welches Sie in der
                   Vorlesung{" "}
                   <a href="../../AuK/index.html">
                     Algorithmen und Komplexität
                   </a>
-                  im dritten Semester
+                  &ensp;im dritten Semester
                   ausführlicher kennenlernen wollen. Wir beschränken uns bei dem folgenden Algorithmus
                   zunächst darauf, die Frage zu beantworten, ob den überhaupt \(S \Step&#123;&#125;^* w\) gilt,
                   und interessieren uns erst einmal nicht dafür eine solche Ableitung auch zu finden (in der
@@ -236,7 +236,7 @@ const Article = () => {
                   <i>
                     Was sind sinnvolle Zwischenergebnisse?
                   </i>
-                  In unserem Falle sind Ableitungen der Form
+                  {" "}In unserem Falle sind Ableitungen der Form
                   $$\begin&#123;align*&#125;
                   X&amp;\Step&#123;&#125;^* u
                   \end&#123;align*&#125;$$
@@ -310,11 +310,7 @@ const Article = () => {
                       type="I"
                       class="">
                       <li>
-                        {" "}{" "}
-                        <code>
-                          for i = 0 .. n-l
-                        </code>
-                        {" "}{" "}
+                        &ensp;`for i = 0 .. n-l`
                         <ol
                           type="i"
                           class="">
@@ -349,7 +345,7 @@ const Article = () => {
                                 <code>
                                   for all productions
                                 </code>
-                                \(X \rightarrow YZ\):
+                                {" "}\(X \rightarrow YZ\):
                                 <ol type="a">
                                   <li>
                                     füge \(X\) zu \(N_&#123;i,k&#125;\) hinzu, falls \(Y \in N_&#123;i,j&#125;\) und
@@ -397,7 +393,7 @@ const Article = () => {
                     <code>
                       return True if
                     </code>
-                    \(S \in N_&#123;0,n&#125;\){" "}
+                    {" "}\(S \in N_&#123;0,n&#125;\){" "}
                     <code>
                       else return False
                     </code>
@@ -435,7 +431,7 @@ const Article = () => {
                   <b>
                     Achtung:
                   </b>
-                  wir haben die Kosten für die allererste Zeile vernachlässigt.
+                  {" "}wir haben die Kosten für die allererste Zeile vernachlässigt.
                   Überlegen
                   Sie sich, wie viel Laufzeit diese verursachen kann und überzeugen Sie sich, dass dies in den
                   meisten

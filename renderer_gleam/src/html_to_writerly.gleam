@@ -5,7 +5,7 @@ import gleam/list
 import gleam/option.{type Option}
 import html_pipeline.{html_pipeline}
 import gleam/io
-import vxml_parser.{xmlm_based_html_parser, vxmls_to_string, type VXML} as vp
+import vxml_parser.{type VXML} as vp
 import vxml_renderer as vr
 import writerly_parser as wp
 import blamedlines as bl
@@ -211,7 +211,10 @@ fn directory_files_else_file(path: String) -> Result(#(String, List(String)), si
     Error(_) -> {
       case simplifile.is_file(path) {
         Error(e) -> Error(e)
-        _ -> Ok(#("", [path]))
+        _ -> {
+          let assert Ok(#(reversed_filename, reversed_path)) = path |> string.reverse |> string.split_once("/")
+          Ok(#(reversed_path |> string.reverse, [reversed_filename |> string.reverse]))
+        }
       }
     }
   }
@@ -226,7 +229,7 @@ fn our_source_parser(lines: List(bl.BlamedLine)) -> Result(VXML, vp.XMLMParseErr
 pub fn html_to_writerly(path: String, amendments: vr.CommandLineAmendments(Bool)) {
   use #(dir, files) <- infrastructure.on_error_on_ok(
     directory_files_else_file(path),
-    fn(e) { io.print("Failed to load files " <> ins(e)) },
+    fn(e) { io.print("failed to load files from " <> path <> ": " <> ins(e)) },
   )
 
   let files = list.sort(files, string.compare)
@@ -235,11 +238,11 @@ pub fn html_to_writerly(path: String, amendments: vr.CommandLineAmendments(Bool)
     files, 
     option.None, 
     fn(file, prev, next) {
-      let path = dir <> "/" <> file
+      let path = dir <> "/" <> io.debug(file)
 
       let parameters =
         vr.RendererParameters(
-          input_dir: path,
+          input_dir: io.debug(path),
           output_dir: option.Some("../emu_content"),
           prettifying_option: False,
         )

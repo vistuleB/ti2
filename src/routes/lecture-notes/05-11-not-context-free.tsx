@@ -153,7 +153,7 @@ const Article = () => {
                     <i>
                       nicht
                     </i>
-                    die Sprache
+                    {" "}die Sprache
                     \(L\) erzeugt: wenn wir alle \(\gamma \in L\) erzeugen kann, dann
                     kann sie auch Wörter wie \(uwy \not \in L\) erzeugen. Da unsere Argumentation keine
                     Annahmen über \(G\) getroffen hat, außer, dass sie kontextfrei ist, haben wir gezeigt:
@@ -164,7 +164,7 @@ const Article = () => {
                     <b>
                       Vorsicht!
                     </b>
-                    Wir haben angenommen, das \(uwy\) weniger Zeichen hat
+                    {" "}Wir haben angenommen, das \(uwy\) weniger Zeichen hat
                     als \(uvwxy\), weil ja \(v\) und \(x\) fehlen. Kann aber \(v = x = \epsilon\) eintreten?
                     Dies würde unsere Argumentation zerstören. Hier kommt wieder die
                     Chomsky-Normalform zur Hilfe: es gibt keine Produktionen \(X \rightarrow \epsilon\),
@@ -179,7 +179,7 @@ const Article = () => {
                   <i>
                     Pumping Lemma für kontextfreie Sprachen
                   </i>
-                  bekannt:
+                  {" "}bekannt:
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
@@ -274,13 +274,13 @@ const Article = () => {
                       <i>
                         einem
                       </i>
-                      Automaten simulieren kann: dieser hat als Zustandsmenge \(Q_1 \times
+                      {" "}Automaten simulieren kann: dieser hat als Zustandsmenge \(Q_1 \times
                       Q_2\),
                       merkt sich also in{" "}
                       <i>
                         einem
                       </i>
-                      Zustand, in welchen Zuständen \(M_1\) und \(M_2\)
+                      {" "}Zustand, in welchen Zuständen \(M_1\) und \(M_2\)
                       sind.
                       Oder man macht es sich einfach:
                       <ul>
@@ -302,7 +302,7 @@ const Article = () => {
                   <i>
                     kontextfreie
                   </i>
-                  Sprachen sind? Welche der
+                  {" "}Sprachen sind? Welche der
                   obigen Kombinationen sind dann ebenfalls kontextfrei?
                   <div class="well well-lg numbered-exercise container">
                     <span class="numbered-title">
@@ -336,7 +336,7 @@ const Article = () => {
                       <b>
                         Tip:
                       </b>
-                      dies ist viel einacher als für reguläre Grammatiken.
+                      {" "}dies ist viel einacher als für reguläre Grammatiken.
                     </Paragraph>
                   </div>
                 </div>
@@ -352,7 +352,7 @@ const Article = () => {
                   <i>
                     nicht
                   </i>
-                  kontextfrei.
+                  {" "}kontextfrei.
                   Ein Beispiel ist
                   $$\begin&#123;align*&#125;
                   L_1&amp;:= \&#123;a^n b^n c^* \ | \ n \geq 0 \&#125;\\
@@ -374,7 +374,7 @@ const Article = () => {
                   <i>
                     nicht
                   </i>
-                  kontextfrei.
+                  {" "}kontextfrei.
                   \\
                   Warum? Wenn er es wäre, dann wäre mit Hilfe von Punkt 1 auch
                   $$\begin&#123;align*&#125;
@@ -396,7 +396,7 @@ const Article = () => {
                     <b>
                       Tip.
                     </b>
-                    Listen Sie alle Möglichkeiten auf, wie ein Wort \(w\) nicht
+                    {" "}Listen Sie alle Möglichkeiten auf, wie ein Wort \(w\) nicht
                     in \(L\) sein kann: (1) es hat nicht die Form \(a^* b^* c^*\); (2) es hat die Form,
                     hat aber mehr \(a\) als es \(b\) hat; (2) es hat mehr \(a\) als es \(c\) hat...
                   </Paragraph>

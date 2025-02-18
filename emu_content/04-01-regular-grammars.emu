@@ -165,7 +165,7 @@
                         Sei \(\Sigma = \{a,b,.\}\) und \(L \subseteq \Sigma^*\) die Sprache
                         aller Strings der Form $$ x_1 . x_2 . x_3 . \cdots . x_n $$ wobei \(n
                         \geq 2\) und jedes \(x_i \in \{a,b\}^+\), also zum Beispiel
-                        `a.bba.aba`aber nicht `aba`und auch nicht
+                        `a.bba.aba` aber nicht `aba` und auch nicht
                         `a.b..a`
                         Entwerfen Sie eine reguläre Grammatik für diese Sprache.
                     |> div
@@ -179,7 +179,7 @@
                             href ./04-00-formal-languages.html#email-context-free-grammar
 
                             Grammatik für korrekte Emailadressen
-                        im letzten Abschnitt war _nicht_regulär. Allerdings können wir
+                        im letzten Abschnitt war _nicht_ regulär. Allerdings können wir
                         eine reguläre Grammatik angeben, die die gleiche Sprache erzeugt.
                         |> p
 
@@ -214,7 +214,7 @@
                         \alpha \\ \end{align*} hat, wobei \(X \in N\) und \(\alpha \in
                         \Sigma^*\) ist. Im Unterschied zu den eigentlich regulären Grammatiken
                         erlauben wir also mehrere terminale Symbole auf der rechten Seite,
-                        sofern Sie _vor_dem Nichtterminal vorkommen.
+                        sofern Sie _vor_ dem Nichtterminal vorkommen.
                     |> div
                         class well container theorem
                         |> span
@@ -261,7 +261,7 @@
                             href #def-regular
 
                             Definition 4.1
-                        hat jede Produktion in einer
+                        &ensp;hat jede Produktion in einer
                         regulären Grammatik eine der folgenden vier Formen: \begin{align*} 1.
                         \quad X&amp;\rightarrow aY \\ 2. \quad X&amp;\rightarrow a \\ 3. \quad X&
                         \rightarrow Y \\ 4. \quad X&amp;\rightarrow \epsilon \end{align*}
@@ -412,7 +412,7 @@
 
                                 Ding, bliebig oft wiederholt, wie beispielsweise
                                 _eine beliebig lange Folge von Labels, mit
-                                `.`separiert._
+                                `.` separiert._
                             |> li
 
                                 Ding 1 oder Ding 2. Beispielsweise
@@ -460,7 +460,7 @@
                             In einem nächsten Schritt werden wir zeigen, dass Konstrukte wie
                             _Ding 1, gefolgt von Ding 2_ 
 
-                            mit regulären Grammatiken
+                            &ensp;mit regulären Grammatiken
                             realisierbar sind.
                         |> div
                             class well container theorem
@@ -523,7 +523,7 @@
 
                                 \(\square\)
                         In einem dritten Lemma werden wir zeigen, dass die Konstruktion
-                        _Ding, beliebig oft wiederholt_mit regulären Sprachen möglich
+                        _Ding, beliebig oft wiederholt_ mit regulären Sprachen möglich
                         ist.
                         |> div
                             class well container theorem
@@ -582,10 +582,10 @@
                                 |> li
 
                                     Dem Protokoll. Hier ist das `https`; es kann aber
-                                    auch `http`oder `ftp`sein.
+                                    auch `http` oder `ftp` sein.
                                 |> li
 
-                                    Dem `://`nach dem Protokoll.
+                                    Dem `://` nach dem Protokoll.
                                 |> li
 
                                     Dem Domainnamen, hier `web1.hszg.de`.
@@ -598,7 +598,7 @@
                                     Falls ein Pfad enthalten ist, dann optional ein `?`,
                                     gefolgt von einem Query-String; dieser besteht aus beliebig
                                     vielen, aber mindestens einem Paar der Form Key=Value, wobei die
-                                    Paare mit einem `&`separiert sind.
+                                    Paare mit einem `&` separiert sind.
                             |> p
 
                                 Zeigen Sie, dass die Sprache der syntaktisch korrekten URLs (in

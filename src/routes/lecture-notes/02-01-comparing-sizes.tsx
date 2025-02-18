@@ -92,7 +92,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beispiel
                     </span>
-                    Beginnen wir mit einem
+                    &ensp;Beginnen wir mit einem
                     einfachen Beispiel und betrachten die zwei Mengen $\N =
                     \&#123;0,1,2,3,4,\dots\&#125;$ und $\N^+ = \&#123;1,2,3,4,\dots\&#125;$. Beide sind
                     unendlich, und $\N^+ \subsetneq \N$. Dennoch sind sie in gewisser
@@ -120,7 +120,7 @@ const Article = () => {
                   <i>
                     Hilberts Hotel
                   </i>
-                  bekannt. Das Hotel
+                  {" "}bekannt. Das Hotel
                   hat unendlich viele Zimmer, für jede Zahl $n \in \N^+$ eins. Dann
                   kommt ein neuer Gast (die $0$) und braucht ein Zimmer. Er kriegt das
                   Zimmer $1$. Da dies aber schon belegt ist, wird die Person, die bisher
@@ -133,7 +133,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beispiel
                     </span>
-                    Ermutigt von unserem
+                    &ensp;Ermutigt von unserem
                     Erfolg gerade eben betrachten wir zwei unendliche Mengen, die sich
                     stärker unterscheiden: $\N$ und $\Z = \&#123;\dots, -2, -1, 0, 1, 2,
                     \dots\&#125;$. Wir können diese beiden nicht so schön nebeneinander legen
@@ -177,7 +177,7 @@ const Article = () => {
                     <b>
                       Anmerkung:
                     </b>
-                    es ist überhaupt nicht schlimm, eine
+                    {" "}es ist überhaupt nicht schlimm, eine
                     Funktion mit einer Fallunterscheidung zu definieren. Sie ist dadurch
                     nicht etwa eine "Funktion zweiter Klasse".
                   </Paragraph>
@@ -200,7 +200,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Zwei Mengen $A$ und
+                    &ensp;Zwei Mengen $A$ und
                     $B$ heißen{" "}
                     <i>
                       gleichmächtig
@@ -228,7 +228,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Eine Menge $A$ mit $A
+                    &ensp;Eine Menge $A$ mit $A
                     \approx \N$, die also gleichmächtig zu den natürlichen Zahlen ist,
                     nennt man{" "}
                     <i>
@@ -239,7 +239,7 @@ const Article = () => {
                     <i>
                       countably infinite
                     </i>
-                    oder einfach{" "}
+                    {" "}oder einfach{" "}
                     <i>
                       countable
                     </i>
@@ -252,12 +252,12 @@ const Article = () => {
                   <i>
                     nicht
                   </i>
-                  gleichmächtig mit $\N$ sind, weil sie "viel viel
+                  {" "}gleichmächtig mit $\N$ sind, weil sie "viel viel
                   größer" sind. Wir nennen sie{" "}
                   <i>
                     überabzählbare
                   </i>
-                  Mengen, auf
+                  {" "}Mengen, auf
                   Englisch{" "}
                   <i>
                     uncountably infinite
@@ -276,7 +276,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Eine Menge $A$ heißt
+                    &ensp;Eine Menge $A$ heißt
                     {" "}
                     <i>
                       unendlich
@@ -303,7 +303,7 @@ const Article = () => {
                     <b>
                       Hinweis:
                     </b>
-                    Tappen Sie nicht in die "Das ist doch
+                    {" "}Tappen Sie nicht in die "Das ist doch
                     offensichtlich"-Falle: die Menge $A$ könnte ja viel größer sein als
                     $\N$ und keine für Sie "greifbare" Struktur haben. Ihre Aufgabe ist
                     es, dennoch eine abzählbar unendliche Teilmenge $X \subseteq A$ zu

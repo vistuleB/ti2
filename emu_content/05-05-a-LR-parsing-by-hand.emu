@@ -79,7 +79,7 @@
                                 class numbered-title
 
                                 Beispiel
-                            Betrachten wir die recht einfache Sprache 
+                            &ensp;Betrachten wir die recht einfache Sprache 
                         \begin{align*}
                         L_2 := \{a^{m+k} b^m c \ | \ m \geq 1, k \geq 0 \} \ ,
                         \end{align*}
@@ -617,7 +617,7 @@
                                 class numbered-title
 
                                 Beobachtung.
-                            Die Reduktion
+                            &ensp;Die Reduktion
                             $XYa \Pets{} XYY$ kann nicht richtig sein, weil $XYY$ nie als Präfix in einer
                             Rechtsableitung vorkommen kann. Genauer gesagt: es gibt kein $w \in \Sigma^*$, so dass
                         \begin{align*}

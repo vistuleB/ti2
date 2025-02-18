@@ -138,7 +138,7 @@ const Article = () => {
                   <b>
                     Beobachtung:
                   </b>
-                  Wenn wir
+                  {" "}Wenn wir
                   einen Linksreduktionsschritt \(\alpha \beta w \rstep&#123;&#125; \alpha X w\)
                   betrachten, also
                   $$\begin&#123;align*&#125;
@@ -186,7 +186,7 @@ const Article = () => {
                   <i>
                     korrekter
                   </i>
-                  Linksreduktionsschritt ist. Und dann
+                  {" "}Linksreduktionsschritt ist. Und dann
                   überlegen, wie wir herausfinden, ob ein Linksreduktionsschritt korrekt ist. Diese Fragen
                   werden uns für den Rest dieses und des nächsten Teilkapitels beschäftigen.
                 </Paragraph>
@@ -224,7 +224,7 @@ const Article = () => {
                     <i>
                       Front
                     </i>
-                    der gültigen Wortform $\alpha \beta w$.
+                    {" "}der gültigen Wortform $\alpha \beta w$.
                     Wenn die Grammatik eindeutig ist, dann hat
                     jede gültige Wortform $\gamma$ genau eine Front, die wir
                     mit $\front(\gamma)$ bezeichnen.
@@ -261,7 +261,7 @@ const Article = () => {
                   <i>
                     nicht
                   </i>
-                  möglich ist,
+                  {" "}möglich ist,
                   ohne Betrachten von $w$ zu eintscheiden, ob
                   $\alpha \beta w \rstep&#123;&#125; \alpha X w$ gültig ist.
                 </Paragraph>
@@ -293,7 +293,7 @@ const Article = () => {
                       <i>
                         nutzlosen
                       </i>
-                      Nichtterminale eliminieren).
+                      {" "}Nichtterminale eliminieren).
                       Das Wort \(w\) hat also zwei verschiedene Ableitungsbäume.
                       Die Grammatik ist somit mehrdeutig.
                       Mit uneindeutigen Grammatiken beschäftigen wir uns zunächst gar nicht;
@@ -324,7 +324,7 @@ const Article = () => {
                       <i>
                         nicht
                       </i>
-                      korrekt, obwohl \(\alpha\beta w'\) eine
+                      {" "}korrekt, obwohl \(\alpha\beta w'\) eine
                       gültige Wortform ist.
                       Dieser Fall ist schlecht, weil der Parser nur
                       $\alpha \beta$ gelesen hat und somit nicht
@@ -464,7 +464,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      Um Punkt 1 zu zeigen,
+                      {" "}Um Punkt 1 zu zeigen,
                       nehmen wir an, dass $\alpha \beta = \alpha' \beta'$ gilt.
                       Da $\alpha \beta w \rstep&#123;&#125; \alpha X w$ korrekt
                       ist, $\alpha' \beta' w'$ eine gültige Wortform ist und
@@ -691,14 +691,14 @@ const Article = () => {
                   <b>
                     Hinweis.
                   </b>
-                  Was nun folgt, ist mathematisch
+                  {" "}Was nun folgt, ist mathematisch
                   recht herausfordernd. Lesen Sie daher gerne auch
                   das Kapitel 2.4 (Deterministic context free languages) im Lehrbuch
                   {" "}
                   <i>
                     Introduction to the Theory of Computing
                   </i>
-                  von Michael Sipser.
+                  {" "}von Michael Sipser.
                   Meine Darstellung des doch recht schwierigen Materials fußt auf diesem
                   Kapitel, weicht aber doch stark genug von Sipser ab, so dass es
                   womöglich hilfreich ist, beides zu lesen: dieses Vorlesungsskript und

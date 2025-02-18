@@ -162,42 +162,18 @@ const Article = () => {
                       def PrimRec(g, h):
                     </code>
                     {" "}
-                    {" "}
-                    <code>
-                      def f(t,*x):
-                    </code>
-                    {" "}
-                    {" "}
-                    <code>
-                      temp = g(*x)
-                    </code>
-                    {" "}
-                    {" "}
-                    <code>
-                      for i in range(t):
-                    </code>
-                    {" "}
-                    {" "}
-                    <code>
-                      temp = h(temp, i, *x)
-                    </code>
-                    {" "}
-                    {" "}
-                    <code>
-                      return temp
-                    </code>
-                    {" "}
-                    {" "}
-                    <code>
-                      return f
-                    </code>
-                    {" "}{" "}
+                    &ensp;`def f(t,*x):`
+                    &ensp;&ensp;&ensp;&ensp;&ensp;`temp = g(*x)`
+                    &ensp;&ensp;&ensp;&ensp;&ensp;`for i in range(t):`
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`temp = h(temp, i, *x)`
+                    &ensp;&ensp;&ensp;&ensp;&ensp;`return temp`
+                    &ensp;`return f`{" "}
                   </pre>
                   Die Forderung, dass man nur{" "}
                   <i>
                     eine
                   </i>
-                  lokale Variable durch die Schleife führen darf, scheint
+                  {" "}lokale Variable durch die Schleife führen darf, scheint
                   sehr restriktiv; es ist aber wohl die einfachste Form einer Schleife, die wirklich etwas
                   "schleifenhaftes" tut.
                 </Paragraph>
@@ -209,7 +185,7 @@ const Article = () => {
                   <a href="../code/primitive-recursion/primrec.py">
                     primrec.py
                   </a>
-                  auf
+                  &ensp;auf
                   Ihrem Rechner.
                   Diese Datei stellt ein Framework für die Implementierung primitiv rekursiver Funktionen zur
                   Verfügung.
@@ -251,7 +227,11 @@ const Article = () => {
                   <Paragraph>
                     Wenn wir die primitive Rekursion als "Programmiersprache" betrachten, dann heißt das, dass
                     wir
-                    neue Funktionen bauen dürfen, indem wir `zero,succ,Proj,Comp,PrimRec`verwenden,
+                    neue Funktionen bauen dürfen, indem wir{" "}
+                    <code>
+                      zero,succ,Proj,Comp,PrimRec
+                    </code>
+                    {" "}verwenden,
                     aber nicht selbst Python-Funktionen schreiben. Wir dürfen also nie selbst Integers in die
                     Hand nehmen.
                   </Paragraph>
@@ -268,15 +248,15 @@ const Article = () => {
                       def add(x,y):
                     </code>
                     {" "}
-                    {" "}
-                    <code>
-                      return x + y
-                    </code>
-                    {" "}{" "}
+                    &ensp;&ensp;`return x + y`
                   </pre>
                   <Paragraph>
                     schreiben, denn unsere "Programmiersprache" ist Primitive Rekursion, nicht Python! Wir
-                    müssen uns `add`aus den Kombinatoren zusammenbasteln. Ich schreibe
+                    müssen uns{" "}
+                    <code>
+                      add
+                    </code>
+                    {" "}aus den Kombinatoren zusammenbasteln. Ich schreibe
                     nun \(&#123;\rm add&#125;(t,x)\) statt \(&#123;\rm add&#125;(x,y)\), um den Rekursionsparameter \(t\) deutlich
                     zu machen.
                   </Paragraph>
@@ -338,7 +318,7 @@ const Article = () => {
                     <b>
                       Tip:
                     </b>
-                    Für exp und minus ist es einfacher, die Argumente "umgedreht" zu
+                    {" "}Für exp und minus ist es einfacher, die Argumente "umgedreht" zu
                     betrachten,
                     also \((a,b) \mapsto b^a\) und \((x,y) \mapsto y-x\).
                   </Paragraph>
@@ -352,7 +332,7 @@ const Article = () => {
                   <a href="../code/primitive-recursion/stockpile.py">
                     stockpile.py
                   </a>
-                  an,
+                  &ensp;an,
                   in der ich diese Funktionen zum Großteil implementiert habe (basierend auf
                   den Übungen, die wir direkt in der Vorlesung gemacht haben).
                   <Paragraph>

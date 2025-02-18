@@ -1,3 +1,4 @@
+import desugarers/remove_empty_lines.{remove_empty_lines}
 import desugarers/identity
 import desugarers/unwrap_tags_if_no_attributes.{unwrap_tags_if_no_attributes}
 import desugarers/insert_bookend_text_if_no_attributes.{insert_bookend_text_if_no_attributes}
@@ -13,6 +14,8 @@ import infrastructure.{type Pipe}
 pub fn html_pipeline() -> List(Pipe) {
   [
     identity.identity(),
+    remove_empty_lines(),
+    trim_spaces_around_newlines(),
     extract_starting_and_ending_spaces(["i", "b", "strong", "em", "code"]),
     insert_bookend_text_if_no_attributes([
       #("i", "_", "_"),
@@ -24,7 +27,6 @@ pub fn html_pipeline() -> List(Pipe) {
     surround_elements_by(#(["i", "b", "strong", "em", "code"], "go23_xU", "go23_xU")),
     unwrap_tags_if_no_attributes(["i", "b", "strong", "em", "code"]),
     fold_tags_into_text([#("go23_xU", "")]),
-    trim_spaces_around_newlines(),
     // insert_string_at_end_of([#("em", " ")]),
   ]
 }

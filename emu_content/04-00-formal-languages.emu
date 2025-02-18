@@ -1048,19 +1048,29 @@
 
                         `find : Bst -> String -> Maybe String`
                         `find tree key =`
-                        `case tree of`
-                        `Empty _ ->`
-                        `Nothing`
+
+                        &ensp;&ensp;&ensp;&ensp;`case tree of`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`Empty _ ->`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`Nothing`
                         ``
-                        `Node ( keyHere, valueHere ) leftChild rightChild ->`
-                        `if key == keyHere then`
-                        `Just valueHere`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`Node ( keyHere, valueHere ) leftChild rightChild ->`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`if key == keyHere then`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`Just valueHere`
                         ``
-                        `else if key&lt; keyHere then`
-                        `find leftChild key`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`else if key&lt; keyHere then`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`find leftChild key`
                         ``
-                        `else`
-                        `find rightChild key`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`else`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`find rightChild key`
                     |> p
 
                         Als letztes Beispiel sehen Sie hier eine svg-Datei. Dies ist ein Dateiformat für Vektorgrafiken.
@@ -1604,22 +1614,22 @@
                     |> div
                         class well container
 
-                        Eine Emailadresse besteht aus einem _Benutzernamen_und einem _Domainnamen_, die
+                        Eine Emailadresse besteht aus einem _Benutzernamen_ und einem _Domainnamen_, die
                         mit
-                        einem `@`verbunden sind.
+                        einem `@` verbunden sind.
                         Der Benutzername ist ein nichtleerer String bestehend aus Groß- und Kleinbuchstaben, Zahlen, und
                         Punkten (`.`).
                         Erster und letzter Buchstaben dürfen keine Punkte sein, außerdem dürfen keine zwei Punkte
                         nebeneinander stehen.
                         Der Domainname ist eine Folge von mindestenes zwei _Labels_, die jeweils mit einem
-                        `.`separiert sind. Ein Label
+                        `.` separiert sind. Ein Label
                         ist ein nichtleerer String aus Groß- und Kleinbuchstaben, Zahlen und dem Bindestrich
                         (`-`).
                     |> p
 
                         Die genauen Regeln mögen von Anbieter zu Anbieter variieren; ich habe mich mal an das gehalten,
                         was
-                        ich experimentell bei `gmail.com`herausgefunden
+                        ich experimentell bei `gmail.com` herausgefunden
                         habe. Die obige Beschreibung ist (hoffentlich) verständlich und präzise und unzweideutig.
                         Allerdings
                         ist sie in natürlicher Sprache verfasst;
@@ -1635,7 +1645,7 @@
                     |> p
 
                         Eine Emailadresse ist von der Form _Benutzername_`@`_Domainnname_. Dies
-                        können wir als _Ableitungsregel_darstellen:
+                        können wir als _Ableitungsregel_ darstellen:
                     |> pre
                         class container
 
@@ -1643,8 +1653,8 @@
                     |> p
 
                         Wie können wir nun beispielsweise eine ähnliche Ableitungsregeln für `<Domain>`
-                        erstellen? Eine `<Domain>`soll
-                        eine Folge aus mindestens zwei `<Label>`sein, jeweils durch einen
+                        erstellen? Eine `<Domain>` soll
+                        eine Folge aus mindestens zwei `<Label>` sein, jeweils durch einen
                         `.`
                         separiert. Wir erreichen dies, indem wir einen an Rekursion
                         erinnernden Trick anwenden: entweder gibt es genau zwei Labels oder die Domain beginnt mit einem
@@ -1659,12 +1669,12 @@
                         <Domain> *->*&lt;Label> .&lt;Domain>
                     |> p
 
-                        Wir geben also _zwei_Möglichkeiten an, wie mit einem `<Domain>`zu
+                        Wir geben also _zwei_ Möglichkeiten an, wie mit einem `<Domain>` zu
                         verfahren ist.
                         Was ist nun `<Label>`? Dies ist eine nichtleere Folge von in Domainnamen
                         erlaubten
                         Zeichen.
-                        Diese sind alphanumerisch (Buchstaben und Zahlen) und der Strich `-`(in der Praxis
+                        Diese sind alphanumerisch (Buchstaben und Zahlen) und der Strich `-` (in der Praxis
                         sind
                         eventuell noch weitere Zeichen erlaubt;
                         im Ernstfall hängt dies davon ab, was die Domain Name Server des jeweiligen Landes / der
@@ -1677,135 +1687,135 @@
                             Wikipedia:
                             Internationalized Domain Name
                         ).
-                        Wie formulieren wir _nichtleere Folge von ..._mit unserer `-->`-Notation?
+                        Wie formulieren wir _nichtleere Folge von ..._ mit unserer `-->`-Notation?
                         Wieder mit dem Rekursionstrick:
                     |> pre
                         class container
 
-                        <Label> *->*&lt;AlphaNumOrDash> 
+                        <Label> *->*&lt;AlphaNumOrDash>
                         <Label> *->*&lt;AlphaNumOrDash>&lt;Label>
                         <AlphaNumOrDash> *->*&lt;AlphaNum>
-                        <AlphaNumOrDash> *->*- 
+                        <AlphaNumOrDash> *->* - 
                     |> p
 
-                        Nun müssen wir noch Regeln für `<AlphaNum>`angeben. Hier führen wir eine
+                        Nun müssen wir noch Regeln für `<AlphaNum>` angeben. Hier führen wir eine
                         weitere
                         Konvention ein: nämlich, dass wir
                         verschiedene Alternativen mit einem senkrechten Strich | separieren:
                     |> pre
                         class container
 
-                        <AlphaNum> *->*a *|*b *|*c *|*d *|*e *|*f *|*g *|*h *|*i *|*j *|*k *|*l *|*m *|*n *|*o *|*p *|*q *|*r *|*s *|*t *|*u *|*v *|*w *|*x *|*y *|*z
+                        <AlphaNum> *->* a *|* b *|* c *|* d *|* e *|* f *|* g *|* h *|* i *|* j *|* k *|* l *|* m *|* n *|* o *|* p *|* q *|* r *|* s *|* t *|* u *|* v *|* w *|* x *|* y *|* z
                         <AlphaNum> 
                         |> STRONG
 
                             ->
-                        A 
+                        &ensp;A 
                         |> STRONG
 
                             |
-                        B 
+                        &ensp;B 
                         |> STRONG
 
                             |
-                        C 
+                        &ensp;C 
                         |> STRONG
 
                             |
-                        D 
+                        &ensp;D 
                         |> STRONG
 
                             |
-                        E 
+                        &ensp;E 
                         |> STRONG
 
                             |
-                        F 
+                        &ensp;F 
                         |> STRONG
 
                             |
-                        G 
+                        &ensp;G 
                         |> STRONG
 
                             |
-                        H 
+                        &ensp;H 
                         |> STRONG
 
                             |
-                        I 
+                        &ensp;I 
                         |> STRONG
 
                             |
-                        J 
+                        &ensp;J 
                         |> STRONG
 
                             |
-                        K 
+                        &ensp;K 
                         |> STRONG
 
                             |
-                        L 
+                        &ensp;L 
                         |> STRONG
 
                             |
-                        M 
+                        &ensp;M 
                         |> STRONG
 
                             |
-                        N 
+                        &ensp;N 
                         |> STRONG
 
                             |
-                        O 
+                        &ensp;O 
                         |> STRONG
 
                             |
-                        P 
+                        &ensp;P 
                         |> STRONG
 
                             |
-                        Q 
+                        &ensp;Q 
                         |> STRONG
 
                             |
-                        R 
+                        &ensp;R 
                         |> STRONG
 
                             |
-                        S 
+                        &ensp;S 
                         |> STRONG
 
                             |
-                        T 
+                        &ensp;T 
                         |> STRONG
 
                             |
-                        U 
+                        &ensp;U 
                         |> STRONG
 
                             |
-                        V 
+                        &ensp;V 
                         |> STRONG
 
                             |
-                        W 
+                        &ensp;W 
                         |> STRONG
 
                             |
-                        X 
+                        &ensp;X 
                         |> STRONG
 
                             |
-                        Y 
+                        &ensp;Y 
                         |> STRONG
 
                             |
-                        Z
-                        <AlphaNum> *->*0 *|*1 *|*2 *|*3 *|*4 *|*5 *|*6 *|*7 *|*8 *|*9
+                        &ensp;Z
+                        <AlphaNum> *->* 0 *|* 1 *|* 2 *|* 3 *|* 4 *|* 5 *|* 6 *|* 7 *|* 8 *|* 9
                     |> p
 
                         Beachten Sie: ich habe hier absichtlich nicht
-                        `<AlphaNum> *->*a *|*... *|*z`
+                        `<AlphaNum> *->* a *|*  ... *|* z`
                         geschrieben, weil ich in diesem Beispiel wirklich alles ausschreiben wollte und mit der
                         ...-Notation
                         schon wieder etwas menschen- aber nicht maschinenlesbares
@@ -1815,7 +1825,7 @@
                         Wir brauchen noch Regeln für `<User>`. Dies ist ein nichtleerer String aus
                         alphanumerischen Zeichen und dem Punkt `.`, wobei
                         der Punkt nicht am Anfang und nicht am Ende stehen darf. Also: eine nichtleere Folge von
-                        _Namensblöcken_, die jeweils durch `.`separiert sind,
+                        _Namensblöcken_, die jeweils durch `.` separiert sind,
                         wobei ein Namensblock eine nichtleere Folge alphanumerischer Zeichen ist.
                     |> pre
                         class container
@@ -1831,119 +1841,119 @@
                         id email-context-free-grammar
                         class container listing
 
-                        `<EmailAddress>    *->*&lt;User> @&lt;Domain>`
-                        `<Domain>          *->*&lt;Label> .&lt;Label> *|*&lt;Label> .&lt;Domain>`
-                        `<User>            *->*&lt;NameBlock> *|*&lt;NameBlock> .&lt;User>`
-                        `<NameBlock>       *->*&lt;AlphaNum> *|*&lt;AlphaNum>&lt;NameBlock>`
-                        `<Label>           *->*&lt;AlphaNumOrDash> *|*&lt;AlphaNumOrDash>&lt;Label>`
-                        `<AlphaNumOrDash>  *->*&lt;AlphaNum> *|*-` 
+                        `<EmailAddress>    *->*   &lt;User> @&lt;Domain>`
+                        `<Domain>          *->*   &lt;Label> .&lt;Label> *|*&lt;Label> .&lt;Domain>`
+                        `<User>            *->*   &lt;NameBlock> *|*&lt;NameBlock> .&lt;User>`
+                        `<NameBlock>       *->*   &lt;AlphaNum> *|*&lt;AlphaNum>&lt;NameBlock>`
+                        `<Label>           *->*   &lt;AlphaNumOrDash> *|*&lt;AlphaNumOrDash>&lt;Label>`
+                        `<AlphaNumOrDash>  *->*   &lt;AlphaNum> *|* -` 
 
-                        `<AlphaNum>        *->*a *|*b *|*c *|*d *|*e *|*f *|*g *|*h *|*i *|*j *|*k *|*l *|*m *|*n *|*o *|*p *|*q *|*r *|*s *|*t *|*u *|*v *|*w *|*x *|*y *|*z`
+                        `<AlphaNum>        *->*    a *|* b *|* c *|* d *|* e *|* f *|* g *|* h *|* i *|* j *|* k *|* l *|* m *|* n *|* o *|* p *|* q *|* r *|* s *|* t *|* u *|* v *|* w *|* x *|* y *|* z`
                         `<AlphaNum>        
                         |> STRONG
 
                             ->
-                        A 
+                        &ensp;&ensp;&ensp;&ensp;A 
                         |> STRONG
 
                             |
-                        B 
+                        &ensp;B 
                         |> STRONG
 
                             |
-                        C 
+                        &ensp;C 
                         |> STRONG
 
                             |
-                        D 
+                        &ensp;D 
                         |> STRONG
 
                             |
-                        E 
+                        &ensp;E 
                         |> STRONG
 
                             |
-                        F 
+                        &ensp;F 
                         |> STRONG
 
                             |
-                        G 
+                        &ensp;G 
                         |> STRONG
 
                             |
-                        H 
+                        &ensp;H 
                         |> STRONG
 
                             |
-                        I 
+                        &ensp;I 
                         |> STRONG
 
                             |
-                        J 
+                        &ensp;J 
                         |> STRONG
 
                             |
-                        K 
+                        &ensp;K 
                         |> STRONG
 
                             |
-                        L 
+                        &ensp;L 
                         |> STRONG
 
                             |
-                        M 
+                        &ensp;M 
                         |> STRONG
 
                             |
-                        N 
+                        &ensp;N 
                         |> STRONG
 
                             |
-                        O 
+                        &ensp;O 
                         |> STRONG
 
                             |
-                        P 
+                        &ensp;P 
                         |> STRONG
 
                             |
-                        Q 
+                        &ensp;Q 
                         |> STRONG
 
                             |
-                        R 
+                        &ensp;R 
                         |> STRONG
 
                             |
-                        S 
+                        &ensp;S 
                         |> STRONG
 
                             |
-                        T 
+                        &ensp;T 
                         |> STRONG
 
                             |
-                        U 
+                        &ensp;U 
                         |> STRONG
 
                             |
-                        V 
+                        &ensp;V 
                         |> STRONG
 
                             |
-                        W 
+                        &ensp;W 
                         |> STRONG
 
                             |
-                        X 
+                        &ensp;X 
                         |> STRONG
 
                             |
-                        Y 
+                        &ensp;Y 
                         |> STRONG
 
                             |
-                        Z`
+                        &ensp;Z`
                     |> h2
 
                         Ein Beispiel einer formalen Grammatik und einer Ableitung
@@ -1970,7 +1980,7 @@
                             nicht gleichzeitig Terminalsymbol und Nichtterminalsymbol sein.
                         |> li
 
-                            Eine Menge \(P\) von Regeln, auch _Produktionen_genannt, wobei jede Regel die Form
+                            Eine Menge \(P\) von Regeln, auch _Produktionen_ genannt, wobei jede Regel die Form
                             \(X \rightarrow \alpha\) hat, wobei \(\alpha\) eine beliebig lange endliche Folge von
                             Symbolen
                             in \(\Sigma \cup N\) ist.
@@ -1979,7 +1989,7 @@
                             Ein Startsymbol \(S \in N\), das angibt, wo wir mit unserer Ableitung beginnen sollen. Im
                             obigen
                             Beispiel
-                            sind wir ja an Emailadressen interessiert, also ist `<EmailAddress>`das
+                            sind wir ja an Emailadressen interessiert, also ist `<EmailAddress>` das
                             Startsymbol.
                     |> p
 
@@ -1995,38 +2005,43 @@
                         class container
 
                         `<EmailAddress>  *->*&lt;User>@<Domain>`
-                        `*->*&lt;NameBlock>.<User>@<Domain>` 
 
-                        `*->*&lt;NameBlock>.<NameBlock>@<Domain>` 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->*&lt;NameBlock>.<User>@<Domain>` 
 
-                        `*->*&lt;NameBlock>.<NameBlock>@<Label>.<Domain>` 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->*&lt;NameBlock>.<NameBlock>@<Domain>` 
 
-                        `*->*&lt;NameBlock>.<NameBlock>@<Label>.<Label>.<Label>` 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->*&lt;NameBlock>.<NameBlock>@<Label>.<Domain>` 
 
-                        `*->*&lt;AlphaNum>.<NameBlock>@<Label>.<Label>.<Label>` 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->*&lt;NameBlock>.<NameBlock>@<Label>.<Label>.<Label>` 
 
-                        `*->*&lt;AlphaNum>.<AlphaNum>@<Label>.<Label>.<Label>` 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->*&lt;AlphaNum>.<NameBlock>@<Label>.<Label>.<Label>` 
 
-                        `*->*&lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<Label>.<Label>` 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->*&lt;AlphaNum>.<AlphaNum>@<Label>.<Label>.<Label>` 
 
-                        `*->*&lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<Label>` 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->*&lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<Label>.<Label>` 
 
-                        `*->*&lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash><Label>` 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->*&lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<Label>` 
 
-                        `*->*&lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash><AlphaNumOrDash>` 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->*&lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash><Label>` 
 
-                        `*->*d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash><AlphaNumOrDash>` 
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->*&lt;AlphaNum>.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash><AlphaNumOrDash>` 
 
-                        `*->*d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash>e`
-                        `*->*d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.de`
-                        `*->*d.s@<AlphaNumOrDash>.<AlphaNumOrDash>.de`
-                        `*->*d.s@<AlphaNumOrDash>.b.de`
-                        `*->*d.s@a.b.de`
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash><AlphaNumOrDash>` 
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.<AlphaNumOrDash>e`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.<AlphaNum>@<AlphaNumOrDash>.<AlphaNumOrDash>.de`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.s@<AlphaNumOrDash>.<AlphaNumOrDash>.de`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.s@<AlphaNumOrDash>.b.de`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`*->* d.s@a.b.de` 
                     |> p
 
-                        Nach dem gleichen Schema könnten wir `d.s.@-.-.--`ableiten, was
+                        Nach dem gleichen Schema könnten wir `d.s.@-.-.--` ableiten, was
                         darauf schließen lässt, dass unsere Grammatik nicht wirklich das
-                        tut, was wir beabsichtigen, dass sie nämlich _zu viele_Emailadressen
+                        tut, was wir beabsichtigen, dass sie nämlich _zu viele_ Emailadressen
                         herleitet, auch solche, die wir nicht als zulässige Adressen gelten lassen wollen.
                     |> div
                         class well well-lg numbered-exercise container
@@ -2057,7 +2072,7 @@
                         andere Programmiersprachen kämen
                         noch weitere Zeichen hinzu, zum Beispiel `+ - / \ { }` 
 
-                        und so weiter;
+                        &ensp;und so weiter;
                         wenn wir alle Unicode-Zeichen miteinschließen, landen wir im Millionenbereich.
                         In den theoretischen Beispielen, die in diesem Kurs folgen werden, ist das Alphabet fast immer
                         viel kleiner: typische Alphabete zum Beispiel sind \( \{0,1\}\) , \(\{a,b,c,d\}\) oder auch
@@ -2065,7 +2080,7 @@
                     |> p
 
                         Für ein Alphabet \(\Sigma\) bezeichnen wir mit \(\Sigma^*\) die Menge aller
-                        endlichen Strings über diesem Alphabet; das schließt den _leeren String_mit ein,
+                        endlichen Strings über diesem Alphabet; das schließt den _leeren String_ mit ein,
                         den wir mit \(\epsilon\) bezeichnen. So ist beispielsweise
                         $$
                         \{a,b\}^* = \{\epsilon, a, b, aa, ab, ba, bb, aaa, aab, aba, ...\}
@@ -2079,8 +2094,8 @@
                         Sprachen
                     |> p
 
-                        Eine Teilmenge \(L \subseteq \Sigma\) bezeichnen wir in diesem Kontext als _Sprache_und
-                        kürzen Sie oft mit \(L\) ab, was für _language_steht. Beispiele für Sprachen wären
+                        Eine Teilmenge \(L \subseteq \Sigma\) bezeichnen wir in diesem Kontext als _Sprache_ und
+                        kürzen Sie oft mit \(L\) ab, was für _language_ steht. Beispiele für Sprachen wären
                     |> ol
                         |> li
 
@@ -2138,7 +2153,7 @@
 
                             Definition
                         *(Kontextfreie Grammatik).*
-                        Eine _kontextfreie Grammatik_besteht aus
+                        Eine _kontextfreie Grammatik_ besteht aus
                         |> ol
                             |> li
 
@@ -2149,7 +2164,7 @@
                                 Symbole_; 
                             |> li
 
-                                einer endlichen Menge \(P\) von _Produktionsregeln_der Form
+                                einer endlichen Menge \(P\) von _Produktionsregeln_ der Form
                                 \(X \rightarrow \alpha\) mit \(X \in N\) und \(\alpha \in (\Sigma \cup \N)^*\);
                                 formal also \(P \subseteq N \times (\Sigma \cup \N)^*\).
                             |> li
@@ -2158,8 +2173,8 @@
                         Die Grammatik \(G\) ist also ein 4-Tupel \((\Sigma, N, P, S)\).
                     |> p
 
-                        Woher der Name _kontextfrei_kommt, werden Sie hoffentlich verstehen, wenn wir
-                        _Ableitungen_definiert haben.
+                        Woher der Name _kontextfrei_ kommt, werden Sie hoffentlich verstehen, wenn wir
+                        _Ableitungen_ definiert haben.
                         Die Tradition will es, dass wir für die terminalen Symbole
                         Zahlen oder lateinsiche Kleinbuchstaben und für die nichtterminalen Symbole
                         lateinische Großbuchstaben verwenden.
@@ -2185,7 +2200,7 @@
                         $$
                         Für konkrete Beispiele wie die gerade betrachtete Grammatik jedoch verwenden wir einfach die
                         Pfeilschreibweise \(S \rightarrow AB, \dots\). Hier ist
-                        eine _Ableitung_basierend auf der Grammatik:
+                        eine _Ableitung_ basierend auf der Grammatik:
                         \begin{align*}
                         S \Rightarrow AB \Rightarrow aAB \Rightarrow aAbB \Rightarrow aAbbB
                         \Rightarrow aAbb \Rightarrow abb \ .
@@ -2204,7 +2219,7 @@
 
                             Definition
                         Gegeben sei eine kontextfreie Grammatik \(G = (\Sigma, N, P, S)\).
-                        Ein String \(\alpha \in (\Sigma \cup N)^*\) heißt _Wortform_(im Gegensatz
+                        Ein String \(\alpha \in (\Sigma \cup N)^*\) heißt _Wortform_ (im Gegensatz
                         zu einem Wort \(x \in \Sigma^*)\).
                         Für zwei Wortformen \(\alpha , \beta\) schreiben wir
                         $$
@@ -2237,7 +2252,7 @@
                         der Wortform \(\alpha\) vorkommt. Daher rührt der Name _kontextfreie Grammatik_.
                     |> p
 
-                        Beachten Sie, dass \(P\) per Definition eine _endliche Menge_von Regeln
+                        Beachten Sie, dass \(P\) per Definition eine _endliche Menge_ von Regeln
                         sein muss, dass jedoch \(\Rightarrow\) im Allgemeinen unendlich ist. Bereits
                         für unsere einfache Grammatik mit den Produktionsregeln
                     \begin{align*}
@@ -2268,7 +2283,7 @@
                         Wenn es zu einer Sprache \(L \subseteq \Sigma^*\) eine kontextfreie Grammatik \(G\) mit
                         \(L(G) = L\) gibt, so nennen wir \(L\) eine _kontextfreie Sprache_.
                     Beachten Sie, dass in dem obigen Beispiel die Wortform
-                    \(aaAB\) zwar aus \(S\) abgeleitet werden kann, allerdings kein _Wort_ist,
+                    \(aaAB\) zwar aus \(S\) abgeleitet werden kann, allerdings kein _Wort_ ist,
                     da es noch nichtterminale Symbole enthält. Es gilt also \(aaAB \not \in L(G)\).
                     Oft können wir \(L(G)\) kompakt mit natürlicher Sprache beschreiben:
                 |> div
@@ -2313,7 +2328,7 @@
                     |> p
 
                         Wir sehen also: das gleiche Wort kann mehrere Ableitungen haben.
-                        Da die Ersetzungsregeln _kontextfrei_sind, spielt es keine Rolle, in welcher
+                        Da die Ersetzungsregeln _kontextfrei_ sind, spielt es keine Rolle, in welcher
                         Reihenfolge wir nichtterminale Symbole ersetzen. Wenn Sie scharf hinschauen,
                         werden Sie erkennen, dass die beiden Ableitungen "irgendwie gleich" sind, dass nur
                         die Ableitungen in anderer Reihenfolge durchgeführt worden sind. Ich werde
@@ -2336,7 +2351,7 @@
                     \end{align*}
                     |> p
 
-                        Sehen Sie, dass diese Ableitung _qualitativ_anders ist, da
+                        Sehen Sie, dass diese Ableitung _qualitativ_ anders ist, da
                         wir hier auch die Regel \(S \rightarrow bSaS\) angewendet haben? Um die
                         Struktur der Ableitung zu verdeutlichen, könnten wir
                         die ersten beiden Ableitungen mit
@@ -2374,13 +2389,13 @@
                     zugrund legen. 
                 |> p
 
-                    *Die schlechte Nachricht:*wir kennen keinen Algorithmus,
+                    *Die schlechte Nachricht:* wir kennen keinen Algorithmus,
                     der das Parsing kontextfreier Sprachen in seiner ganzen Allgemeinheit
-                    in _linearer Zeit_erledigt, dessen Laufzeit also proportional zur Länge des Zielwortes
+                    in _linearer Zeit_ erledigt, dessen Laufzeit also proportional zur Länge des Zielwortes
                     \(x\) ist. Dies ist aber, was wir in der Praxis, zum Beispiel bei Compilern, erwarten.
                 |> p
 
-                    *Die gute Nachricht:*in fast allen praktisch relevanten Fällen haben
+                    *Die gute Nachricht:* in fast allen praktisch relevanten Fällen haben
                     wir es mit Grammatiken zu tun, die Parsing in linearer Zeit ermöglichen.
                     Und wenn wir Programmiersprachen, Datenformate etc. entwerfen, haben wir es ja in der Hand,
                     Sprache und Grammatik so anzulegen, dass effizientes Parsen möglich ist. 
@@ -2388,4 +2403,4 @@
 
                     Im nächsten Kapitel lernen wir eine stark eingeschränkte, aber dennoch sehr wichtige Klasse
                     kontextfreier Grammatik kennen, die allesamt ein sehr effizientes Parsing
-                    erlauben: die sogenannten _regulären_Grammatiken. 
+                    erlauben: die sogenannten _regulären_ Grammatiken. 

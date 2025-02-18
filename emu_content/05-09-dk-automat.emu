@@ -49,7 +49,7 @@
 
                             Algorithmus 5.8.7
                         zu implementieren, müssen wir den Test \(\gamma \stackrel{?}\in
-                        \Front(G)\) durchführen und, falls die Antwort _ja_ist, die
+                        \Front(G)\) durchführen und, falls die Antwort _ja_ ist, die
                         Blüte finden. Dies gelingt uns, indem wir die Grammatik \(\hat{G}\) in
                         einen endlichen Automaten umwandeln.
                         |> a
@@ -87,8 +87,8 @@
                             src ../img/context-free/LR/hat-G-to-generalized-automaton-break-edges.svg
                     |> p
 
-                        Nochmal: jede Kante ist mit einem _Terminalsymbol_beschriftet.
-                        Die Symbole $B, D, V$ sind _Terminale_in der Grammatik
+                        Nochmal: jede Kante ist mit einem _Terminalsymbol_ beschriftet.
+                        Die Symbole $B, D, V$ sind _Terminale_ in der Grammatik
                         $\dk{G}$. Wenn wir $\epsilon$-Übergänge zulassen, können wir den
                         Automaten übersichtlicher gestalten und mehrere Zustände
                         zusammenfassen:
@@ -104,7 +104,7 @@
                         klare Bedeutung: der Zustand $4$ oben zum Beispiel bedeutet, dass der
                         Knoten $X$ im Stamm mit $a, B, c, D, e$ beschriftete Kinder hat und
                         wir uns bereits entschieden haben, dass $a$, $B$ und $c$
-                        _Blätter_sein sollen, also zum linken Rand gehören. Der
+                        _Blätter_ sein sollen, also zum linken Rand gehören. Der
                         Übergang $\boxed{4} \step{D} \boxed{5}$ entspricht dann der
                         Entscheidung, auch $D$ zu einem Blatt zu machen, während $\boxed{4}
                         \step{\epsilon} \dk{D}$ der Entscheidung entspricht, $D$ zu einem
@@ -286,7 +286,7 @@
                                 class numbered-title
 
                                 Definition
-                            Für eine kontextfreie
+                            &ensp;Für eine kontextfreie
                             Grammatik ist der nichtdeterministische DK-Automat (NDK-Automat) ein
                             nichtdeterministischer endlicher Automat mit $\epsilon$-Übergängen,
                             den wir wie folgt konstruieren:
@@ -339,7 +339,7 @@
                         . Hier können wir diese leider nicht direkt anwenden, da der obige
                         Automat \(\epsilon\)-Übergänge hat. Wie geht das also nun? Im
                         deterministischen Automaten ist wie bei der Potenzmengenkonstruktion
-                        jeder Zustand eine _Menge_\(R\) von Zuständen des
+                        jeder Zustand eine _Menge_ \(R\) von Zuständen des
                         nichtdeterministischen Automaten. Wenn wir nun in eine solche Menge
                         \(R\) einen Zustand \(q\) einfügen, dann fügen wir auch alle Zustände
                         \(q'\) hinzu, zu denen es einen \(\epsilon\)-Übergang \(q
@@ -444,7 +444,7 @@
                                 class numbered-title
 
                                 Theroem
-                            *(DK-Test).*Sei $G$ eine kontextfreie Grammatik ohne
+                            *(DK-Test).* Sei $G$ eine kontextfreie Grammatik ohne
                             nutzlose Nichtterminale und ei $M$ der DK-Automat für die Grammatik
                             $G$. Die Grammatik $G$ ist LR(0) genau dann, wenn folgende zwei
                             Bedingungen gelten:
@@ -503,7 +503,7 @@
 
                             Es ist nicht schwer zu sehen, dass (DK.1) äquivalent zu Punkt 1 des
                             Lemmas ist. Wenden wir uns (DK.2) und Punkt 2 zu. Wenn Punkt 2
-                            _nicht_gilt, dann gibt es korrekte Reduktionsschritte
+                            _nicht_ gilt, dann gibt es korrekte Reduktionsschritte
                         \begin{align*} \alpha \beta w \rstep{} \alpha X w \\ \alpha \beta
                         \sigma w' = \alpha' \beta' w' \rstep{} \alpha' X' w' \end{align*}
                         |> p

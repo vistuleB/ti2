@@ -64,7 +64,7 @@ const Article = () => {
                     <b>
                       I/O-Komplexität.
                     </b>
-                    In echten Rechnern haben wir eine Hierarchie von
+                    {" "}In echten Rechnern haben wir eine Hierarchie von
                     Speichermedien. Den extrem schnellen Prozessorcache; schnellen Cache; den vergleichsweise
                     langsamen
                     Hauptstpeicher (RAM); eventuell sogar einen externen Festplattenspeichern, der um
@@ -75,7 +75,7 @@ const Article = () => {
                     <b>
                       Kommunikationskomplexität.
                     </b>
-                    Bei verteilten Anwendungen (Cloud Computing) ist
+                    {" "}Bei verteilten Anwendungen (Cloud Computing) ist
                     die limitierende Resource eventuell gar nicht die Rechenkapazität sondern das
                     {" "}
                     <i>
@@ -117,13 +117,13 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Sei $t: \N \rightarrow \N$. Eine
+                    &ensp;Sei $t: \N \rightarrow \N$. Eine
                     Turingmaschinen $M$
                     {" "}
                     <i>
                       entscheidet
                     </i>
-                    eine Sprache $L \subseteq \Sigma^*$ in Zeit $t$ wenn
+                    {" "}eine Sprache $L \subseteq \Sigma^*$ in Zeit $t$ wenn
                   </Paragraph>
                   <ul>
                     <li>
@@ -157,7 +157,7 @@ const Article = () => {
                   <a href="07-02-Turing-variants.html">
                     Kapitel 7.3
                   </a>
-                  gezeigt, wie man eine
+                  &ensp;gezeigt, wie man eine
                   $k$-Band-Turingmaschine $M$ durch eine
                   Ein-Band-Turingmaschine $M'$. Der Aufwand war quadratisch: wenn $M$ innerhalb von $t$ Schritten
                   terminiert, so terminiert $M'$ innerhalb von $c t^2$ Schritten, wobei $c$ eine Konstante ist,
@@ -169,7 +169,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    {" "}{" "}
+                    &ensp;
                     <b>
                       ($k$-Band zu $1$-Band).
                     </b>
@@ -195,12 +195,12 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    {" "}{" "}
+                    &ensp;
                     <b>
                       ($k$-Band zu $2$-Band; ohne
                       Beweis).
                     </b>
-                    Sei
+                    {" "}Sei
                     $t: \N \rightarrow \N$. Dann gilt $\TIME
                     <i>
                       k(t) \subseteq \TIME

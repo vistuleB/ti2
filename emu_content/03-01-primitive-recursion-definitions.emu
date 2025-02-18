@@ -141,13 +141,19 @@
                             class listing
 
                             `def PrimRec(g, h):`
-                            `def f(t,*x):`
-                            `temp = g(*x)`
-                            `for i in range(t):`
-                            `temp = h(temp, i, *x)`
-                            `return temp`
-                            `return f`
-                        Die Forderung, dass man nur _eine_lokale Variable durch die Schleife führen darf, scheint
+
+                            &ensp;`def f(t,*x):`
+
+                            &ensp;&ensp;&ensp;&ensp;&ensp;`temp = g(*x)`
+
+                            &ensp;&ensp;&ensp;&ensp;&ensp;`for i in range(t):`
+
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`temp = h(temp, i, *x)`
+
+                            &ensp;&ensp;&ensp;&ensp;&ensp;`return temp`
+
+                            &ensp;`return f`       
+                        Die Forderung, dass man nur _eine_ lokale Variable durch die Schleife führen darf, scheint
                         sehr restriktiv; es ist aber wohl die einfachste Form einer Schleife, die wirklich etwas
                         "schleifenhaftes" tut.
                     |> div
@@ -161,7 +167,7 @@
                             href ../code/primitive-recursion/primrec.py
 
                             primrec.py
-                        auf
+                        &ensp;auf
                         Ihrem Rechner.
                         Diese Datei stellt ein Framework für die Implementierung primitiv rekursiver Funktionen zur
                         Verfügung.
@@ -203,7 +209,7 @@
 
                             Wenn wir die primitive Rekursion als "Programmiersprache" betrachten, dann heißt das, dass
                             wir
-                            neue Funktionen bauen dürfen, indem wir `zero,succ,Proj,Comp,PrimRec`verwenden,
+                            neue Funktionen bauen dürfen, indem wir `zero,succ,Proj,Comp,PrimRec` verwenden,
                             aber nicht selbst Python-Funktionen schreiben. Wir dürfen also nie selbst Integers in die
                             Hand nehmen.
                         |> p
@@ -216,11 +222,12 @@
                             class listing
 
                             `def add(x,y):`
-                            `return x + y`
+
+                            &ensp;&ensp;`return x + y`
                         |> p
 
                             schreiben, denn unsere "Programmiersprache" ist Primitive Rekursion, nicht Python! Wir
-                            müssen uns `add`aus den Kombinatoren zusammenbasteln. Ich schreibe
+                            müssen uns `add` aus den Kombinatoren zusammenbasteln. Ich schreibe
                             nun \({\rm add}(t,x)\) statt \({\rm add}(x,y)\), um den Rekursionsparameter \(t\) deutlich
                             zu machen.
                         \begin{align*}
@@ -267,7 +274,7 @@
                                 \({\rm minus}: (x,y) \mapsto x-y\)
                         |> p
 
-                            *Tip:*Für exp und minus ist es einfacher, die Argumente "umgedreht" zu
+                            *Tip:* Für exp und minus ist es einfacher, die Argumente "umgedreht" zu
                             betrachten,
                             also \((a,b) \mapsto b^a\) und \((x,y) \mapsto y-x\).
                     |> div
@@ -282,7 +289,7 @@
                             href ../code/primitive-recursion/stockpile.py
 
                             stockpile.py
-                        an,
+                        &ensp;an,
                         in der ich diese Funktionen zum Großteil implementiert habe (basierend auf
                         den Übungen, die wir direkt in der Vorlesung gemacht haben).
                         |> p

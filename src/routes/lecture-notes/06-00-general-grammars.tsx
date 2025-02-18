@@ -158,7 +158,7 @@ const Article = () => {
                   <i>
                     Game Changer
                   </i>
-                  herausstellen.
+                  {" "}herausstellen.
                 </Paragraph>
                 <Paragraph>
                   Sobald wir eine Wortform erreicht haben, die nur aus Terminalsymbolen
@@ -166,7 +166,7 @@ const Article = () => {
                   <i>
                     Wort
                   </i>
-                  geworden ist), muss unsere Ableitung
+                  {" "}geworden ist), muss unsere Ableitung
                   aufhören: wir können keine weitere Produktion anwenden, da jede
                   linke Seite mindestens ein Nichtterminal enthält. Diese Einschränkung
                   in der Definition allgemeiner formaler Grammatiken ist nicht wirklich
@@ -353,7 +353,7 @@ const Article = () => {
                   <a href="./05-10-not-context-free.html">
                     Teilkapitel 5.10
                   </a>
-                  gab
+                  &ensp;gab
                   es{" "}
                   <a href="./05-10-not-context-free.html#exericse-power-2">
                     Übungsaufgabe 5.10.2
@@ -404,7 +404,7 @@ const Article = () => {
                   <i>
                     Formate
                   </i>
-                  syntaktisch
+                  {" "}syntaktisch
                   beschreiben, sondern komplizierte Rechnungen durchführen können.
                   Sie stellen somit ein völlig andersartiges Biest dar.
                 </Paragraph>
@@ -418,7 +418,7 @@ const Article = () => {
                   <i>
                     Multiplikationsgrammatik
                   </i>
-                  erzeugen.
+                  {" "}erzeugen.
                   Dies soll eine Menge von Produktionen sein, die Ableitungen der Form
                   $$\begin&#123;align*&#125;
                   L A^m B^n R \Step&#123;&#125; L \tilde&#123;A&#125;^m B^n C^&#123;mn&#125; R
@@ -573,7 +573,7 @@ const Article = () => {
                   <b>
                     Tip:
                   </b>
-                  das ist einfach, wenn Sie bereits eine Grammatik
+                  {" "}das ist einfach, wenn Sie bereits eine Grammatik
                   für das vorherige Problem haben. Erzeugen Sie
                   \(wXwY\) und lassen dann aus \(X\) und \(Y\) den Rest der Liste entstehen.
                 </div>
@@ -583,7 +583,7 @@ const Article = () => {
                   <i>
                     Erzeugen
                   </i>
-                  verwenden wie bei kontextfreien Sprachen, sondern zum
+                  {" "}verwenden wie bei kontextfreien Sprachen, sondern zum
                   Umformen, Rumschieben, Kopieren etc. Es ist nun an der Zeit, die
                   Welt der Grammatiken zu verlassen und zu formalisieren, was man
                   mit Umformen, Rumschieben, Kopieren erreichen kann. In anderen Worten:

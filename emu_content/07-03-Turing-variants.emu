@@ -188,7 +188,7 @@
                         |> tt
 
                             1010+110
-                        auf dem ersten Band
+                        &ensp;auf dem ersten Band
                         (Eingabeband) steht, dann soll nach Abschluss der Berechnung das
                         Ergebnis auf dem Ausgabeband stehen, also 
                         |> tt
@@ -197,7 +197,7 @@
                         .
                         |> p
 
-                            *Tip.*Verwenden Sie drei Bänder. Sei der Bandinhalt
+                            *Tip.* Verwenden Sie drei Bänder. Sei der Bandinhalt
                             \(x+y\). In einer ersten Phase kopieren Sie \(x\) auf das zweite
                             Band. In der nächsten Phase gehen Sie ans Ende von \(y\). Dann
                             addieren Sie nach den Regeln der Binäraddition. Ob "1 gemerkt" gilt
@@ -205,10 +205,10 @@
                             Regel wäre also zum Beispiel:
                         |> pre
 
-                            carry1, 0, 0, _ 
-                            carry0, 0, 0, 1,&lt;,&lt;,&lt; 
-                            carry1, 0, 1, _ 
-                            carry1, 0, 1, 0,&lt;,&lt;,&lt; 
+                            carry1, 0, 0, _
+                            carry0, 0, 0, 1,&lt;,&lt;,&lt;
+                            carry1, 0, 1, _
+                            carry1, 0, 1, 0,&lt;,&lt;,&lt;
                         |> p
 
                             Ein lästiges Detail ist, dass \(y\) kürzer sein könnte als \(x\) und
@@ -216,7 +216,7 @@
                             |> tt
 
                                 +
-                            reinlaufen könnten; wenn \(x\) kürzer
+                            &ensp;reinlaufen könnten; wenn \(x\) kürzer
                             ist als \(y\), dann könnten Sie auf dem zweiten Band in ein
                             \(\square\) reinlaufen. Wie ist dieser Fall zu behandeln?
                     |> p
@@ -227,7 +227,7 @@
                         Konfiguration ersparen wir uns jedoch. Wenn unsere
                         Mehrband-Turingmaschine nicht nur akzeptieren / ablehnen, sondern
                         etwas
-                        _berechnen_soll, also eine Funktion \begin{align*} f :
+                        _berechnen_ soll, also eine Funktion \begin{align*} f :
                         \Sigma_1 \rightarrow \Sigma_2 \ , \end{align*} dann bauen wir sie per
                         Konvention so, dass sie ein designiertes Ausgabeband hat, auf dem nach
                         Abschluss der Berechnung das Ausgabewort \(f(x)\) steht.
@@ -296,7 +296,7 @@
                             Das neue Bandalphabet ist also nicht \(\Gamma^k\) sondern \((\Gamma
                             \times \{\texttt{head}, \texttt{nohead}\} )^k\). Wo steht nun aber
                             denn der Kopf von \(M'\)? Jetzt kommt der schwierige Teil: um
-                            _einen_Schritt von \(M\) zu simulieren, muss \(M'\) von ganz
+                            _einen_ Schritt von \(M\) zu simulieren, muss \(M'\) von ganz
                             links nach ganz rechts laufen und alle Informationen über die \(k\)
                             \(M\)-Köpfe sammeln. Dann von rechts nach links gehen und die
                             ausführen.
@@ -550,14 +550,14 @@
 
                         Ungleich schwieriger ist die Aufgabe, jedes \(b\) durch ein \(bc\) zu
                         ersetzen, weil wir hier etwas
-                        _einfügen_wollen. Auf einer Einband-Turingmaschine müssen wir
+                        _einfügen_ wollen. Auf einer Einband-Turingmaschine müssen wir
                         für jedes \(b\) alles, was rechts davon kommt, um eine Zelle nach
                         rechts verschieben. Meinen Quelltext finden sie in
                         |> a
                             href ../code/turing machines/replace-b-by-bc.txt
 
                             replace-b-by-bc.txt
-                        Können wir unserer Turingmaschine die Funktionalität geben, eine Zelle _einzufügen_und alles von Kopf bis zum linken Ende um
+                        Können wir unserer Turingmaschine die Funktionalität geben, eine Zelle _einzufügen_ und alles von Kopf bis zum linken Ende um
                         eins nach links zu verschieben bzw. das analoge, aber nach rechts? Wir
                         sind freie Menschen, wir können definieren, was wir wollen, müssen uns
                         aber zwei Fragen stellen:
@@ -574,7 +574,7 @@
 
                         In diesem Fall ahnen Sie es wohl bereits: es ist nur Syntaxzucker. Die
                         Funktionalität des
-                        _Einfügens/Verschiebens_können wir leicht mit zwei Bändern
+                        _Einfügens/Verschiebens_ können wir leicht mit zwei Bändern
                         simulieren. Wir halten uns einfach an die Konvention, dass auf Band 1
                         der Kopf immer auf dem linkesten Zeichen steht und auf Band 2 der Kopf
                         jenseits des rechtesten. \begin{align*} \delta(q,x) = (r,y,\texttt{R})
@@ -589,8 +589,8 @@
                     |> pre
                         class container
 
-                        q,  x, _ 
-                        r', x, _, -, - 
+                        q,  x, _
+                        r', x, _, -, -
                         r', _, c
                         r,  c, _   
                         |> span
@@ -618,9 +618,9 @@
                     |> pre
                         class container
 
-                        q,   x, _ 
-                        r'', _, z, >, > 
-                        r'', c, _ 
+                        q,   x, _
+                        r'', _, z, >, >
+                        r'', c, _
                         r,   c, y, -, > 
                         |> span
                             class comment
@@ -637,7 +637,7 @@
                         |> tt
 
                             xxyxyyxx
-                        als Eingabewort
+                        &ensp;als Eingabewort
                         ein.
                     |> p
 
@@ -698,7 +698,7 @@
                         Falle \(v_i\) auf das Ausgabeband schreibt.
                         |> p
 
-                            *Tip:*Kopieren Sie erst einmal den gesuchten
+                            *Tip:* Kopieren Sie erst einmal den gesuchten
                             Schlüssel \(k\) auf das zweite Band. Dann können Sie bequem den
                             Schlüssel \(k_i\) auf dem ersten Band mit dem auf dem zweiten Band
                             vergleichen. Wenn Sie es sich einfach machen wollen, nehmen Sie
@@ -757,11 +757,11 @@
 
                         Für ein Eingabewort \(x\) sie \(C_x := \texttt{start} x\) die
                         Startkonfiguration. Eine nichtdeterministische Turingmaschine
-                        _akzeptiert_\(x\), wenn es eine akzeptierende Endkonfiguration
+                        _akzeptiert_ \(x\), wenn es eine akzeptierende Endkonfiguration
                         \(C_{\rm accept}\) gibt mit \begin{align*} C_x \Step{}^* C_{\rm
                         accept} \end{align*} wenn es also (mindestens) eine akzeptierende
                         Konfiguration gibt, die von \(C_x\) aus erreichbar ist. Dabei kann es
-                        _mehrere_erreichbare akzeptierende Konfigurationen geben, Es
+                        _mehrere_ erreichbare akzeptierende Konfigurationen geben, Es
                         kann sogar eine ablehnende Konfiguration \(C_x \Step{}^* C_{\rm
                         reject}\) geben. Spielt keine Rolle: solange es einen Weg \(C_x
                         \Step{}^* C_{\rm accept}\) gibt, sagen wir, dass \(M\) das Eingabewort
@@ -779,7 +779,7 @@
                         keine akzeptierende Konfiguration \(C\) mit \(C_x \Rightarrow C\).
                         |> p
 
-                            Die Turingmaschine \(M\) _entscheidet_die Sprache \(L\),
+                            Die Turingmaschine \(M\) _entscheidet_ die Sprache \(L\),
                             wenn sie sie akzeptiert und es keine unendlich langen Ketten
                             \begin{align*} C_x \Step{} C_1 \Step{} C_2 \Step{} \dots
                             \end{align*} gibt.
@@ -789,11 +789,11 @@
                         Oft wird händeringend versucht, zu erklären, was denn eine
                         nichtdeterministische Turingmaschine
                         _tut_. Da lesen Sie dann beispielsweise, dass die
-                        _alle Möglichkeiten gleichzeitig ausprobiert_oder den
-                        richtigen Pfad von einem _Engel_gesagt bekommt oder
+                        _alle Möglichkeiten gleichzeitig ausprobiert_ oder den
+                        richtigen Pfad von einem _Engel_ gesagt bekommt oder
                         _errät_. Ich stelle mir lieber vor, dass eine
                         nichtdeterministische Turingmaschine gar nichts "tut" sondern
-                        _Spielregeln_definiert, wie man "ziehen" kann. Man gewinnt,
+                        _Spielregeln_ definiert, wie man "ziehen" kann. Man gewinnt,
                         wenn man in einer akzeptierenden Konfiguration landet.
                     |> p
                     |> div
@@ -874,15 +874,22 @@
                         ``
                         `subsetSum : List Int -> Int -> Bool`
                         `subsetSum prices amount =`
-                        `case ( prices, amount ) of`
-                        `( [], 0 ) ->`
-                        `True`
+
+                        &ensp;&ensp;&ensp;&ensp;`case ( prices, amount ) of`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`( [], 0 ) ->`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`True`
                         ``
-                        `( x :: rest, _ ) ->`
-                        `subsetSum rest amount || subsetSum rest (amount - x)`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`( x :: rest, _ ) ->`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`subsetSum rest amount || subsetSum rest (amount - x)`
                         ``
-                        `( [], _ ) ->`
-                        `False`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`( [], _ ) ->`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`False`
                     |> p
 
                         Auf einer deterministischen Turingmaschine wäre das deutlich
@@ -933,7 +940,7 @@
                             |> tt
 
                                 reject
-                            führen. Es sollte klar sein, dass diese Änderungen
+                            &ensp;führen. Es sollte klar sein, dass diese Änderungen
                             rein kosmetisch sind und nichts an der Funktionsweise von \(M\)
                             ändern.
                         |> p

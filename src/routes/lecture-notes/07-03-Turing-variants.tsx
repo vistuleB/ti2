@@ -193,7 +193,7 @@ const Article = () => {
                   <tt>
                     1010+110
                   </tt>
-                  auf dem ersten Band
+                  &ensp;auf dem ersten Band
                   (Eingabeband) steht, dann soll nach Abschluss der Berechnung das
                   Ergebnis auf dem Ausgabeband stehen, also{" "}
                   <tt>
@@ -205,7 +205,7 @@ const Article = () => {
                     <b>
                       Tip.
                     </b>
-                    Verwenden Sie drei Bänder. Sei der Bandinhalt
+                    {" "}Verwenden Sie drei Bänder. Sei der Bandinhalt
                     \(x+y\). In einer ersten Phase kopieren Sie \(x\) auf das zweite
                     Band. In der nächsten Phase gehen Sie ans Ende von \(y\). Dann
                     addieren Sie nach den Regeln der Binäraddition. Ob "1 gemerkt" gilt
@@ -213,10 +213,10 @@ const Article = () => {
                     Regel wäre also zum Beispiel:
                   </Paragraph>
                   <pre>
-                    carry1, 0, 0, _ 
-                    carry0, 0, 0, 1,&lt;,&lt;,&lt; 
-                    carry1, 0, 1, _ 
-                    carry1, 0, 1, 0,&lt;,&lt;,&lt;{" "}
+                    carry1, 0, 0, _
+                    carry0, 0, 0, 1,&lt;,&lt;,&lt;
+                    carry1, 0, 1, _
+                    carry1, 0, 1, 0,&lt;,&lt;,&lt;
                   </pre>
                   <Paragraph>
                     Ein lästiges Detail ist, dass \(y\) kürzer sein könnte als \(x\) und
@@ -224,7 +224,7 @@ const Article = () => {
                     <tt>
                       +
                     </tt>
-                    reinlaufen könnten; wenn \(x\) kürzer
+                    &ensp;reinlaufen könnten; wenn \(x\) kürzer
                     ist als \(y\), dann könnten Sie auf dem zweiten Band in ein
                     \(\square\) reinlaufen. Wie ist dieser Fall zu behandeln?
                   </Paragraph>
@@ -244,7 +244,7 @@ const Article = () => {
                   <i>
                     berechnen
                   </i>
-                  soll, also eine Funktion $$\begin&#123;align*&#125; f :
+                  {" "}soll, also eine Funktion $$\begin&#123;align*&#125; f :
                   \Sigma_1 \rightarrow \Sigma_2 \ , \end&#123;align*&#125;$$ dann bauen wir sie per
                   Konvention so, dass sie ein designiertes Ausgabeband hat, auf dem nach
                   Abschluss der Berechnung das Ausgabewort \(f(x)\) steht.
@@ -326,7 +326,7 @@ const Article = () => {
                     <i>
                       einen
                     </i>
-                    Schritt von \(M\) zu simulieren, muss \(M'\) von ganz
+                    {" "}Schritt von \(M\) zu simulieren, muss \(M'\) von ganz
                     links nach ganz rechts laufen und alle Informationen über die \(k\)
                     \(M\)-Köpfe sammeln. Dann von rechts nach links gehen und die
                     ausführen.
@@ -631,7 +631,7 @@ const Article = () => {
                   <i>
                     einfügen
                   </i>
-                  wollen. Auf einer Einband-Turingmaschine müssen wir
+                  {" "}wollen. Auf einer Einband-Turingmaschine müssen wir
                   für jedes \(b\) alles, was rechts davon kommt, um eine Zelle nach
                   rechts verschieben. Meinen Quelltext finden sie in
                   <a href="../code/turing machines/replace-b-by-bc.txt">
@@ -641,7 +641,7 @@ const Article = () => {
                   <i>
                     einzufügen
                   </i>
-                  und alles von Kopf bis zum linken Ende um
+                  {" "}und alles von Kopf bis zum linken Ende um
                   eins nach links zu verschieben bzw. das analoge, aber nach rechts? Wir
                   sind freie Menschen, wir können definieren, was wir wollen, müssen uns
                   aber zwei Fragen stellen:
@@ -663,7 +663,7 @@ const Article = () => {
                   <i>
                     Einfügens/Verschiebens
                   </i>
-                  können wir leicht mit zwei Bändern
+                  {" "}können wir leicht mit zwei Bändern
                   simulieren. Wir halten uns einfach an die Konvention, dass auf Band 1
                   der Kopf immer auf dem linkesten Zeichen steht und auf Band 2 der Kopf
                   jenseits des rechtesten. $$\begin&#123;align*&#125; \delta(q,x) = (r,y,\texttt&#123;R&#125;)
@@ -676,8 +676,8 @@ const Article = () => {
                 Eine Linksbewegung ist etwas schwieriger zu implementieren. Aus
                 \(\delta(q,x) = (r,y,\texttt&#123;L&#125;)\) wird
                 <pre class="container">
-                  q,  x, _ 
-                  r', x, _, -, - 
+                  q,  x, _
+                  r', x, _, -, -
                   r', _, c
                   r,  c, _{" "}
                   <span class="comment">
@@ -701,9 +701,9 @@ const Article = () => {
                   füge $z$ links vom Kopf ein&#125; \end&#123;align*&#125;$$ wird
                 </Paragraph>
                 <pre class="container">
-                  q,   x, _ 
-                  r'', _, z, &gt;, &gt; 
-                  r'', c, _ 
+                  q,   x, _
+                  r'', _, z, &gt;, &gt;
+                  r'', c, _
                   r,   c, y, -, &gt;{" "}
                   <span class="comment">
                     // für jedes Zeichen c{" "}
@@ -718,7 +718,7 @@ const Article = () => {
                   <tt>
                     xxyxyyxx
                   </tt>
-                  als Eingabewort
+                  &ensp;als Eingabewort
                   ein.
                 </Paragraph>
                 <Paragraph>
@@ -779,7 +779,7 @@ const Article = () => {
                     <b>
                       Tip:
                     </b>
-                    Kopieren Sie erst einmal den gesuchten
+                    {" "}Kopieren Sie erst einmal den gesuchten
                     Schlüssel \(k\) auf das zweite Band. Dann können Sie bequem den
                     Schlüssel \(k_i\) auf dem ersten Band mit dem auf dem zweiten Band
                     vergleichen. Wenn Sie es sich einfach machen wollen, nehmen Sie
@@ -848,7 +848,7 @@ const Article = () => {
                   <i>
                     akzeptiert
                   </i>
-                  \(x\), wenn es eine akzeptierende Endkonfiguration
+                  {" "}\(x\), wenn es eine akzeptierende Endkonfiguration
                   \(C_&#123;\rm accept&#125;\) gibt mit $$\begin&#123;align*&#125; C_x \Step&#123;&#125;^* C_&#123;\rm
                   accept&#125; \end&#123;align*&#125;$$ wenn es also (mindestens) eine akzeptierende
                   Konfiguration gibt, die von \(C_x\) aus erreichbar ist. Dabei kann es
@@ -856,7 +856,7 @@ const Article = () => {
                   <i>
                     mehrere
                   </i>
-                  erreichbare akzeptierende Konfigurationen geben, Es
+                  {" "}erreichbare akzeptierende Konfigurationen geben, Es
                   kann sogar eine ablehnende Konfiguration \(C_x \Step&#123;&#125;^* C_&#123;\rm
                   reject&#125;\) geben. Spielt keine Rolle: solange es einen Weg \(C_x
                   \Step&#123;&#125;^* C_&#123;\rm accept&#125;\) gibt, sagen wir, dass \(M\) das Eingabewort
@@ -880,7 +880,7 @@ const Article = () => {
                     <i>
                       entscheidet
                     </i>
-                    die Sprache \(L\),
+                    {" "}die Sprache \(L\),
                     wenn sie sie akzeptiert und es keine unendlich langen Ketten
                     $$\begin&#123;align*&#125; C_x \Step&#123;&#125; C_1 \Step&#123;&#125; C_2 \Step&#123;&#125; \dots
                     \end&#123;align*&#125;$$ gibt.
@@ -898,12 +898,12 @@ const Article = () => {
                   <i>
                     alle Möglichkeiten gleichzeitig ausprobiert
                   </i>
-                  oder den
+                  {" "}oder den
                   richtigen Pfad von einem{" "}
                   <i>
                     Engel
                   </i>
-                  gesagt bekommt oder
+                  {" "}gesagt bekommt oder
                   {" "}
                   <i>
                     errät
@@ -914,7 +914,7 @@ const Article = () => {
                   <i>
                     Spielregeln
                   </i>
-                  definiert, wie man "ziehen" kann. Man gewinnt,
+                  {" "}definiert, wie man "ziehen" kann. Man gewinnt,
                   wenn man in einer akzeptierenden Konfiguration landet.
                 </div>
                 <Paragraph />
@@ -1013,51 +1013,23 @@ const Article = () => {
                     subsetSum prices amount =
                   </code>
                   {" "}
-                  {" "}
-                  <code>
-                    case ( prices, amount ) of
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    ( [], 0 ) -&gt;
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    True
-                  </code>
-                  {" "}
+                  &ensp;&ensp;&ensp;&ensp;`case ( prices, amount ) of`
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`( [], 0 ) -&gt;`
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`True`
                   {" "}
                   <code>
                     {" "}{" "}
                   </code>
                   {" "}
-                  {" "}
-                  <code>
-                    ( x :: rest, _ ) -&gt;
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    subsetSum rest amount || subsetSum rest (amount - x)
-                  </code>
-                  {" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`( x :: rest, _ ) -&gt;`
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`subsetSum rest amount || subsetSum rest (amount - x)`
                   {" "}
                   <code>
                     {" "}{" "}
                   </code>
                   {" "}
-                  {" "}
-                  <code>
-                    ( [], _ ) -&gt;
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    False
-                  </code>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`( [], _ ) -&gt;`
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`False`
                 </pre>
                 <Paragraph>
                   Auf einer deterministischen Turingmaschine wäre das deutlich
@@ -1115,7 +1087,7 @@ const Article = () => {
                     <tt>
                       reject
                     </tt>
-                    führen. Es sollte klar sein, dass diese Änderungen
+                    &ensp;führen. Es sollte klar sein, dass diese Änderungen
                     rein kosmetisch sind und nichts an der Funktionsweise von \(M\)
                     ändern.
                   </Paragraph>

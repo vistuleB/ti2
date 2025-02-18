@@ -34,7 +34,7 @@
 
                         ::++ChapterCtr.  Boolesche Schaltkreise
                 Boolesche Schaltkreise sind ein idealisiertes Modell echter elektronischer Schaltkreise.
-                Als primitive Bausteine haben wir Boolesche Operatoren, auch _Gatter_(englisch _gates_)
+                Als primitive Bausteine haben wir Boolesche Operatoren, auch _Gatter_ (englisch _gates_)
                 genannt, die mehrere (typischerweise ein oder zwei)
                 Signale zu einem Ausgabe-Signal kombinieren. Die Signale können nur zwei Werte annehmen:
                 wahr/falsch bzw. 1/0 bzw. 
@@ -50,8 +50,8 @@
                 Von links nach rechts sind dies: das Und-Gatter (_and-gate_), Oder-Gatter (_or-gate_) und
                 das
                 Nicht-Gatter (_not-gate_). In C, C++ und Java kennen Sie diese Booleschen Operatoren als
-                `&&`, `||`und `!`. Was diese Operatoren
-                _tun_, können wir als _Wahrheitstabelle_darstellen.
+                `&&`, `||` und `!`. Was diese Operatoren
+                _tun_, können wir als _Wahrheitstabelle_ darstellen.
                 Wir listen alle Kombinationen für \(x,y\) auf und schreiben in jede Zeile
                 auch den Wert, den der Operator ausgibt.
                 $$
@@ -92,10 +92,10 @@
                         loading lazy
                     |> figcaption
 
-                        `if`\(x\) `then`\(y\) `else`\(z\)
+                        `if` \(x\) `then` \(y\) `else` \(z\)
                 |> p
 
-                    Jeder Schaltkreis _berechnet_eine Funktion (formale Definition weiter unten).
+                    Jeder Schaltkreis _berechnet_ eine Funktion (formale Definition weiter unten).
                     Informell gesprochen, wenn wir Wahrheitswerte (0/1) in die Input-Gates reinstecken,
                     dann fließen diese durch den Schaltkreis und werden von den AND/OR/NOT-Gates entsprechend
                     ihrer Funktion kombiniert und werden schließlich an den Output-Gates ausgegeben:
@@ -135,8 +135,8 @@
                                     style height:5em
                                     src ../img/circuits/n-fold-xor.svg
                                     loading lazy
-                                ,
-                            welches 1 ausgibt, wenn eine _ungerade_Anzahl seiner Inputs
+                                &ensp;,
+                            welches 1 ausgibt, wenn eine _ungerade_ Anzahl seiner Inputs
                             auf 1 stehen.
                         |> li
 
@@ -152,13 +152,13 @@
                 |> p
 
                     Je nach Kontext kann es hilfreich sein, Gatter mit beliebig vielen Inputs zuzulassen, beispielsweise
-                    \(x_1 \wedge x_2 \wedge \dots \wedge x_n\) als _ein_Gate darzustellen:
+                    \(x_1 \wedge x_2 \wedge \dots \wedge x_n\) als _ein_ Gate darzustellen:
                     |> figure
                         |> img
                             style height:10em
                             src ../img/circuits/and-fan-in-n.svg
                             loading lazy
-                    Man bezeichnet dies als AND-Gate mit einem _Fan-in_von \(n\). Das "normale" AND-Gate
+                    Man bezeichnet dies als AND-Gate mit einem _Fan-in_ von \(n\). Das "normale" AND-Gate
                     hat einen Fan-in von 2.
                     Mit \(\vee\)- und \(\oplus\)-Gates geht das ganz analog. Für andere Gates (wie zum Beispiel
                     ein if-then-else-Gate) würde das keinen Sinn machen. Größerer Fan-in ist aber nicht wirklich etwas
@@ -178,7 +178,7 @@
 
                     Schaltkreise, wie wir sie in diesem Kapitel betrachten, sind immer azyklisch. Das heißt
                     insbesondere,
-                    das Dinge mit "Feedback-Schleifen" wie Flipflops eben _keine_Schaltkreis in unserem Sinn
+                    das Dinge mit "Feedback-Schleifen" wie Flipflops eben _keine_ Schaltkreis in unserem Sinn
                     sind:
                 |> figure
                     |> img
@@ -198,7 +198,7 @@
                     implementiert somit einen 1-Bit-Speicher (die Kombination
                     \({\rm Set} = {\rm Reset} = 1\) würde \(Q = \bar{Q} = 0\) erzeugen und gilt als illegale
                     Eingabe). Ein Flipflop hat somit einen _inneren Zustand_. Die Schaltkreise
-                    in diesem Kapitel haben _keinen_inneren Zustand: die Werte der Ausgabe-Gates sind
+                    in diesem Kapitel haben _keinen_ inneren Zustand: die Werte der Ausgabe-Gates sind
                     vollständig durch die Werte der Input-Gates determiniert. Wir sind nun bereit
                     für eine formale Definition von Schaltkreisen.
                 |> div
@@ -211,7 +211,7 @@
                             style color: blue;
 
                             ::::ChapterCtr.::++DefCtr
-                    *(Boolesche Schaltkreise)*
+                    &ensp;*(Boolesche Schaltkreise)*
                     |> p
 
                         Ein Boolescher Schaltkreis ist ein gerichteter, azyklischer Graph (englisch
@@ -228,7 +228,7 @@
                                 mit AND-, OR- oder NOT beschriftet ist, 
                         wobei die mit NOT beschrifteten Knoten genau eine eingehende Kante haben
                         und die mit AND oder OR beschrifteten Knoten mindestens zwei eingehende Kanten haben. Mindestens
-                        ein Knoten ist als _Output-Gate_gekennzeichnet. Die Output-Gates sind ihrerseits
+                        ein Knoten ist als _Output-Gate_ gekennzeichnet. Die Output-Gates sind ihrerseits
                         mit Output-Variablen \(y_1,\dots,y_m\) beschriftet.
                 |> p
 
@@ -241,7 +241,7 @@
                     _auswerten_,
                     indem eben jeder mit OR/AND/NOT beschriftete
                     Knoten den ihm zugeordnete Booleschen Operator auswertet. Es ist klar, dass
-                    der Schaltkreis \(C\) eine _Funktion_\(f_C : \{0,1\}^n \rightarrow \{0,1\}^m\) berechnet.
+                    der Schaltkreis \(C\) eine _Funktion_ \(f_C : \{0,1\}^n \rightarrow \{0,1\}^m\) berechnet.
                     Oft schreiben wir einfach \(C : \{0,1\}^n \rightarrow \{0,1\}^m\).
                 |> div
                     class well container theorem

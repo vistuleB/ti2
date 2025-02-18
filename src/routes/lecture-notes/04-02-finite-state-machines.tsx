@@ -69,7 +69,7 @@ const Article = () => {
                   <i>
                     Zuständen
                   </i>
-                  des Automaten) zeigen an, in welchen neuen Zustand beim Lesen eines Zeichen
+                  {" "}des Automaten) zeigen an, in welchen neuen Zustand beim Lesen eines Zeichen
                   gewechselt werden
                   muss. Der Pfeil "aus dem Nichts", hier der von links nach \(S\), zeigt den{" "}
                   <i>
@@ -331,7 +331,7 @@ const Article = () => {
                   <i>
                     akzeptiert
                   </i>
-                  er
+                  {" "}er
                   es,
                   wenn er in einem akzeptierenden Endzustand gelandet ist; ansonsten{" "}
                   <i>
@@ -470,7 +470,7 @@ const Article = () => {
                   <i>
                     erweiterte Zustandsübergangsfunktion
                   </i>
-                  \(\hat&#123;\delta&#125;: Q \times \Sigma^* \rightarrow
+                  {" "}\(\hat&#123;\delta&#125;: Q \times \Sigma^* \rightarrow
                   Q\) rekursiv wie folgt:
                   $$\begin&#123;align*&#125;
                   \hat&#123;\delta&#125; (q, \epsilon)&amp;= q \\
@@ -525,7 +525,7 @@ const Article = () => {
                     "die auf \(x\)
                     enden"
                   </i>
-                  entfällt, er also
+                  {" "}entfällt, er also
                   alle Wörter akzeptiert, die die Folge \(xy\) nicht enthalten.
                 </div>
                 <div class="well well-lg numbered-exercise container">
@@ -631,7 +631,7 @@ const Article = () => {
                       <b>
                         Induktionsbasis.
                       </b>
-                      Wenn \(\alpha = \epsilon\) gilt, also \(\alpha\) die
+                      {" "}Wenn \(\alpha = \epsilon\) gilt, also \(\alpha\) die
                       Länge 0 hat, dann
                       gilt \(q \stackrel&#123;\epsilon&#125;&#123;\rightarrow&#125; q'\) genau dann, wenn \(q = q'\) ist. Wie kann
                       nun
@@ -675,7 +675,7 @@ const Article = () => {
                       <b>
                         Aus (1) folgt (2).
                       </b>
-                      Nehmen wir also an, dass
+                      {" "}Nehmen wir also an, dass
                       \(q \stackrel&#123;x \beta&#125;&#123;\rightarrow&#125; q'\) gilt und bezeichnen
                       \(q_1 := \delta(q,x)\). Es gilt also
                       $$
@@ -858,14 +858,14 @@ const Article = () => {
                     <i>
                       Fehlerzustand (Trap State)
                     </i>
-                    einführen,
+                    {" "}einführen,
                     der im Prinzip
                     den Zustand
                     {" "}
                     <i>
                       lehne das Wort ab, egal, was noch kommt
                     </i>
-                    versinnbildlicht:
+                    {" "}versinnbildlicht:
                     <figure>
                       <img
                         style="height:12em"
@@ -910,7 +910,7 @@ const Article = () => {
                     <i>
                       viertletztes
                     </i>
-                    Zeichen
+                    {" "}Zeichen
                     eine 1 ist. Die Herausforderung ist nun: wenn der Automat eine 1 liest, dann weiß er nicht,
                     ob das jetzt schon
                     das viertletzte Zeichen ist oder nicht; er weiß also nicht, ob er im Zustand \(A\) bleiben
@@ -925,7 +925,7 @@ const Article = () => {
                   <i>
                     nichtdeterministischen
                   </i>
-                  endlichen Automaten.
+                  {" "}endlichen Automaten.
                 </Paragraph>
               </div>
             </div>

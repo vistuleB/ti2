@@ -58,7 +58,7 @@ const Article = () => {
                     <b>
                       (Überabzählbarkeit der reellen Zahlen).
                     </b>
-                    $\N \not
+                    {" "}$\N \not
                     \approx \R$.
                   </Paragraph>
                 </div>
@@ -68,7 +68,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    Da wir bereits $\R \approx \&#123;0,1\&#125;^&#123;\N&#125;$
+                    {" "}Da wir bereits $\R \approx \&#123;0,1\&#125;^&#123;\N&#125;$
                     gesehen haben, reicht es, $\N \not \approx \&#123;0,1\&#125;^&#123;\N&#125;$ zu zeigen.
                     Wir müssen also zeigen, dass es keine Bijektion $f : \N \rightarrow
                     \&#123;0,1\&#125;^&#123;\N&#125;$ gibt. Wie gehen wir vor? Wir nehmen an, man hätte uns
@@ -166,7 +166,7 @@ const Article = () => {
                   <a href="07-00-Turing-machines.html">
                     7
                   </a>
-                  über Turingmaschinen und in
+                  &ensp;über Turingmaschinen und in
                   Kapitel ? über Komplexitätstheorie eine Rolle spielen, wenn wir z.B.
                   zeigen wollen, dass es Probleme gibt, an denen jedes Computerprogram
                   versagt.
@@ -196,7 +196,7 @@ const Article = () => {
                     <b>
                       Tipp:
                     </b>
-                    Sie müssen den obigen Beweis auf die richtige
+                    {" "}Sie müssen den obigen Beweis auf die richtige
                     Weise abstrahieren, dann geht es ganz einfach.
                   </Paragraph>
                 </div>
@@ -219,12 +219,12 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Zeigen Sie, dass
+                    &ensp;Zeigen Sie, dass
                     es in $(2^\N, \subseteq)$ eine{" "}
                     <i>
                       Kette
                     </i>
-                    $X$ mit $X \approx \R$
+                    {" "}$X$ mit $X \approx \R$
                     gibt.
                   </Paragraph>
                 </div>

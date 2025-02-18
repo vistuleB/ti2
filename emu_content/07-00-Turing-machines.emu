@@ -38,7 +38,7 @@
                 |> p
 
                     Wir haben in den vorherigen Kapitel mit primitiver Rekursion und \(\lambda\)-Kalkül
-                    zwei Modelle kennengelernt, die den Begriff der _Berechnung_formalisieren.
+                    zwei Modelle kennengelernt, die den Begriff der _Berechnung_ formalisieren.
                     Das \(\lambda\)-Kalkül ist im Prinzip eine reduktion funktionaler Programmiersprachen
                     auf das absolut essentielle. In diesem Kapitel lernen wir ein
                     weiteres Modell für Berechnung kennen, das im Allgemeinen als Standardmodell

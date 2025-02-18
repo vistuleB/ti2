@@ -59,10 +59,22 @@ const Article = () => {
                   <i>
                     Labels
                   </i>
-                  die jeweils durch einen `.`separiert sind.
+                  {" "}die jeweils durch einen{" "}
+                  <code>
+                    .
+                  </code>
+                  {" "}separiert sind.
                   Jedes Label ist eine nichtleere Folge von Blöcken (ein nichtleerer String aus Buchstaben und
                   Zahlen), separiert
-                  durch `:`oder `-`aber niemals durch beides innerhalb eines Blockes.
+                  durch{" "}
+                  <code>
+                    :
+                  </code>
+                  {" "}oder{" "}
+                  <code>
+                    -
+                  </code>
+                  {" "}aber niemals durch beides innerhalb eines Blockes.
                   Also:
                 </Paragraph>
                 <div style="text-align:center">
@@ -80,14 +92,22 @@ const Article = () => {
                   </code>
                   {" "}{" "}
                 </div>
-                ist kein Wort in \(L\), da das erste Label die Separatoren `:`und `-`mischt.
+                ist kein Wort in \(L\), da das erste Label die Separatoren{" "}
+                <code>
+                  :
+                </code>
+                {" "}und{" "}
+                <code>
+                  -
+                </code>
+                {" "}mischt.
                 Habe ich
                 \(L\) genau genug beschrieben? Stellen wir eine Meta-Frage: Was zählt überhaupt als{" "}
                 <i>
                   genaue
                   Beschreibung
                 </i>
-                einer
+                {" "}einer
                 Sprache? Wir können uns dem Mund fusselig reden und Beispiele und Nicht-Beispiele angeben, am Ende
                 aber werden
                 wir irgendwann beginnen, formale Regeln aufzustellen, die unsere Sprache beschreiben - wir werden
@@ -96,13 +116,17 @@ const Article = () => {
                 <i>
                   Grammatik
                 </i>
-                schreiben. Tun wir dies also.
+                {" "}schreiben. Tun wir dies also.
                 <h2>
                   2. Eine reguläre Grammatik
                 </h2>
                 <Paragraph>
                   Beginnen wir mit dem Alphabet.
-                  Da es 62 alphanumerische Zeichen gibt: `a..zA..Z0..9`und wir uns keine unnötige
+                  Da es 62 alphanumerische Zeichen gibt:{" "}
+                  <code>
+                    a..zA..Z0..9
+                  </code>
+                  {" "}und wir uns keine unnötige
                   Arbeit machen wollen,
                   beschränken wir uns auf ein Zeichen: `a`. Dazu kommen die Separatoren
                   `:-.`. Also: \(\Sigma = \&#123;a,.,:,-\&#125;\). Stellen Sie sich einfach vor, \(a\) stehe
@@ -115,14 +139,22 @@ const Article = () => {
                 B&amp;\rightarrow a \ | \ aB
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Als nächstes führen wir ein nichtterminales Symbole \(C\) für Labels mit `:`ein
+                  Als nächstes führen wir ein nichtterminales Symbole \(C\) für Labels mit{" "}
+                  <code>
+                    :
+                  </code>
+                  {" "}ein
                   und ein Nichtterminal \(D\) für Labels mit `-`. Wir wählen die Buchstaben \(C,D\),
                   weil
-                  `:`auf Englisch{" "}
+                  {" "}
+                  <code>
+                    :
+                  </code>
+                  {" "}auf Englisch{" "}
                   <i>
                     colon
                   </i>
-                  und{" "}
+                  {" "}und{" "}
                   <code>
                     -
                   </code>
@@ -130,13 +162,13 @@ const Article = () => {
                   <i>
                     dash
                   </i>
-                  heißt.
+                  {" "}heißt.
                   \(C\)-Labels können wir uns nach dem Baukastenprizip bauen, in dem
                   wir{" "}
                   <a href="./04-01-regular-grammars.html#operation-L(.L)*">
                     Theorem 4.1.14
                   </a>
-                  anwenden.
+                  &ensp;anwenden.
                   Wir fügen zur "End-Produktion" \(B \rightarrow a\) eine weiter Produktion \(B \rightarrow a:B\)
                   hinzu und
                   tun das gleiche für \(B \rightarrow b\). Allerdings benennen wir \(B\) in \(C\) um, damit keine
@@ -150,11 +182,15 @@ const Article = () => {
                 \end&#123;align*&#125;$$
                 <Paragraph>
                   Von \(L\) lassen sich nun also alle Labels ableiten. Wir brauchen nun zum Schluss wieder
-                  eine Folge von \(L\), mit `.`separiert, müssen also wieder
+                  eine Folge von \(L\), mit{" "}
+                  <code>
+                    .
+                  </code>
+                  {" "}separiert, müssen also wieder
                   <a href="./04-01-regular-grammars.html#operation-L(.L)*">
                     Theorem 4.1.14
                   </a>
-                  anwenden, dieses
+                  &ensp;anwenden, dieses
                   mal auf die von \(T\) erzeugte Sprache. Im Ergebnis benennen wir das Startsymbol in \(S\) um.
                 </Paragraph>
                 $$\begin&#123;align*&#125;
@@ -185,7 +221,7 @@ const Article = () => {
                   <i>
                     ein
                   </i>
-                  neues Nichtterminal \(E\) und ersetzen \(Y \rightarrow x\) durch \(Y \rightarrow
+                  {" "}neues Nichtterminal \(E\) und ersetzen \(Y \rightarrow x\) durch \(Y \rightarrow
                   xE\)
                   und fügen die Produktion \(E \rightarrow \epsilon\) hinzu.
                 </Paragraph>
@@ -208,7 +244,7 @@ const Article = () => {
                     Theorem
                     4.1.7
                   </a>
-                  beschrieben.
+                  &ensp;beschrieben.
                   Wir ersetzen \(S \rightarrow C\) also durch alle Produktionen der Form \(S \rightarrow \alpha\),
                   wobei
                   \(\alpha\) eine Wortform ist, die sich aus \(C\) ableiten lässt und nicht nur aus einem
@@ -217,7 +253,7 @@ const Article = () => {
                   <i>
                     alle
                   </i>
-                  rechten Seiten der \(C\)-Produktionen
+                  {" "}rechten Seiten der \(C\)-Produktionen
                   zu; gleiches gilt
                   für \(D\). Wir erhalten:
                 </Paragraph>
@@ -244,7 +280,11 @@ const Article = () => {
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  Ich habe die Zeichen `.:-`rot unterlegt, weil man sie sonst kaum erkennen würde in
+                  Ich habe die Zeichen{" "}
+                  <code>
+                    .:-
+                  </code>
+                  {" "}rot unterlegt, weil man sie sonst kaum erkennen würde in
                   dem Automaten.
                 </Paragraph>
                 <h2>
@@ -262,7 +302,7 @@ const Article = () => {
                   <i>
                     lazy
                   </i>
-                  vor, erschaffen Zustände in \(2^Q\) also nur dann, wenn wir sie
+                  {" "}vor, erschaffen Zustände in \(2^Q\) also nur dann, wenn wir sie
                   brauchen.
                   Wir beginnen mit dem Zustand \(\&#123;S\&#125;\) und legen dann an jeden Zustand Kanten an, jeweils mit
                   \(a, :, -, . \) beschriftet, und erschaffen, falls nötig, dabei neue Zustände. In der folgenden
@@ -553,7 +593,15 @@ const Article = () => {
                   {" "}
                   <i>
                     das Label hat schon begonnen, wir wissen aber noch nicht, ob es eines mit
-                    `:`oder eines mit `-`ist.
+                    {" "}
+                    <code>
+                      :
+                    </code>
+                    {" "}oder eines mit{" "}
+                    <code>
+                      -
+                    </code>
+                    {" "}ist.
                     Der Zustand \(\&#123;C',C,E,S'\&#125;\) bzw. das Nichtterminal \(C\) heißt dann
                     {" "}
                     <code>
@@ -599,7 +647,7 @@ const Article = () => {
                     <i>
                       lazy
                     </i>
-                    durch, indem Sie vom Startzustand \(\&#123;S\&#125;\)
+                    {" "}durch, indem Sie vom Startzustand \(\&#123;S\&#125;\)
                     ausgehend die Folgezustände konstruieren. Wieviele Zustände bekommen Sie?
                   </Paragraph>
                 </div>

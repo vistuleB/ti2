@@ -83,7 +83,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beispiel
                     </span>
-                    Betrachten wir die recht einfache Sprache{" "}
+                    &ensp;Betrachten wir die recht einfache Sprache{" "}
                   </Paragraph>
                   $$\begin&#123;align*&#125;
                   L_2 := \&#123;a^&#123;m+k&#125; b^m c \ | \ m \geq 1, k \geq 0 \&#125; \ ,
@@ -636,7 +636,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung.
                     </span>
-                    Die Reduktion
+                    &ensp;Die Reduktion
                     $XYa \Pets&#123;&#125; XYY$ kann nicht richtig sein, weil $XYY$ nie als Präfix in einer
                     Rechtsableitung vorkommen kann. Genauer gesagt: es gibt kein $w \in \Sigma^*$, so dass
                   </Paragraph>

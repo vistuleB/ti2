@@ -165,14 +165,14 @@ const Article = () => {
                   <i>
                     Eingabewort
                   </i>
-                  und der Kopf auf dem ersten Symbol dieses Wortes. Die Turingmaschine
+                  {" "}und der Kopf auf dem ersten Symbol dieses Wortes. Die Turingmaschine
                   wendet
                   nun ihre Regeln an, bis Sie einen
                   {" "}
                   <i>
                     Endzustand
                   </i>
-                  erreicht. Bei{" "}
+                  {" "}erreicht. Bei{" "}
                   <i>
                     Entscheidungsproblemen
                   </i>
@@ -193,7 +193,7 @@ const Article = () => {
                   <i>
                     Ausgabe der Turingmaschine
                   </i>
-                  den Inhalt des Bandes zu dem
+                  {" "}den Inhalt des Bandes zu dem
                   Zeitpunkt, da die Maschine den Zustand $\qaccept$ erreicht.
                   Was brauchen wir also, um so eine Turingmaschine
                   und ihre Arbeitsweise zu beschreiben?
@@ -207,7 +207,7 @@ const Article = () => {
                     <b>
                       (Turingmaschine).
                     </b>
-                    Eine
+                    {" "}Eine
                     Turingmaschine besteht aus folgenden Elementen:
                   </Paragraph>
                   <ol>
@@ -241,19 +241,19 @@ const Article = () => {
                       <tt>
                         L
                       </tt>
-                      für{" "}
+                      &ensp;für{" "}
                       <i>
                         gehe eine Zelle nach links
                       </i>
-                      steht,
+                      {" "}steht,
                       <tt>
                         R
                       </tt>
-                      für rechts und{" "}
+                      &ensp;für rechts und{" "}
                       <tt>
                         S
                       </tt>
-                      für{" "}
+                      &ensp;für{" "}
                       <i>
                         stay
                       </i>
@@ -280,7 +280,7 @@ const Article = () => {
                 <i>
                   Gesamtzustand
                 </i>
-                der
+                {" "}der
                 Turingmaschine zu beschreiben, also eine vollständige Momentaufnahme, reicht
                 nicht der aktuelle innere Zustand \(q\); wir brauchen auch den Bandinhalt und insbesondere
                 die Position, an der sich der Kopf befindet. Das alles zusammen nennt
@@ -304,7 +304,7 @@ const Article = () => {
                   <i>
                     Konfiguration
                   </i>
-                  einer Turingmaschine ist ein Element in
+                  {" "}einer Turingmaschine ist ein Element in
                   \(\Gamma^* \times Q \times \Gamma^*\), also
                   $$\begin&#123;align*&#125;
                   C = u q v
@@ -322,7 +322,7 @@ const Article = () => {
                   <i>
                     Zustand einer Konfiguration
                   </i>
-                  \(C = uqv\) ist \(q\), also der innere
+                  {" "}\(C = uqv\) ist \(q\), also der innere
                   Zustand, in dem sich die Maschine gerade befindet.
                   Wir bezeichnen mit $\state(C)$. Formal:
                   $$\begin&#123;align*&#125;
@@ -334,12 +334,12 @@ const Article = () => {
                   <i>
                     akzeptierende Endkonfiguration
                   </i>
-                  wenn $\state(C) = \qaccept$ ist;
+                  {" "}wenn $\state(C) = \qaccept$ ist;
                   eine{" "}
                   <i>
                     ablehnende Endkonfiguration
                   </i>
-                  , wenn $\state(C) = \qreject$ ist.
+                  {" "}, wenn $\state(C) = \qreject$ ist.
                   In beiden Fällen ist \(C\) eine{" "}
                   <i>
                     Endkonfiguration
@@ -469,7 +469,7 @@ const Article = () => {
                 <tt>
                   undefined
                 </tt>
-                sein:
+                &ensp;sein:
                 $$\begin&#123;align*&#125;
                 \hat&#123;\delta&#125;^* (C) := \begin&#123;cases&#125;
                 \hat&#123;\delta&#125;^&#123;(i)&#125; (C)&
@@ -486,7 +486,7 @@ const Article = () => {
                   <i>
                     wenn es ein $i$ gibt
                   </i>
-                  keine Rolle, welches solche $i$ wir wählen.
+                  {" "}keine Rolle, welches solche $i$ wir wählen.
                 </Paragraph>
                 Für ein Eingabewort \(x \in \Sigma^*\) können wir nun das Ergebnis der Berechnung
                 von Turingmaschine \(M\) auf \(x = x_1 \dots x_n\) definieren:
@@ -510,7 +510,7 @@ const Article = () => {
                   <i>
                     Entscheidungsproblem
                   </i>
-                  ist eine Funktion \(P : \Sigma^* \rightarrow
+                  {" "}ist eine Funktion \(P : \Sigma^* \rightarrow
                   \&#123;\texttt&#123;true&#125;, \texttt&#123;false&#125;\&#125;\), beispielsweise:{" "}
                   <i>
                     gegeben ein Wort,
@@ -522,12 +522,12 @@ const Article = () => {
                     gegeben eine Zahl in Dezimalschreibweise, ist dies
                     eine Primzahl?
                   </i>
-                  Eine äquivalente Sichtweise ist die
+                  {" "}Eine äquivalente Sichtweise ist die
                   eines Entscheidungsproblems als{" "}
                   <i>
                     Sprache
                   </i>
-                  \(L \subseteq \Sigma^*\).
+                  {" "}\(L \subseteq \Sigma^*\).
                   Wir identifizieren \(L\) hier mit der Menge aller Wörter \(x\) mit
                   \(P(x) = \texttt&#123;true&#125;\). Wenn wir es mit einem Entscheidungsproblem
                   zu tun haben und dieses mit einer Turingmaschine lösen wollen,
@@ -536,11 +536,11 @@ const Article = () => {
                   <tt>
                     accept
                   </tt>
-                  oder
+                  &ensp;oder
                   <tt>
                     reject
                   </tt>
-                  ist. Wir definieren daher
+                  &ensp;ist. Wir definieren daher
                   $$\begin&#123;align*&#125;
                   f_M(x) = \begin&#123;cases&#125;
                   \texttt&#123;accept&#125;&amp;\textnormal&#123; falls $\state(\hat&#123;M&#125;(x)) = \qaccept$, wenn also $\hat&#123;M&#125;(x)$
@@ -564,7 +564,7 @@ const Article = () => {
                   <i>
                     entscheidet
                   </i>
-                  die Sprache \(L \subseteq \Sigma^*\) wenn
+                  {" "}die Sprache \(L \subseteq \Sigma^*\) wenn
                   <ol>
                     <li>
                       \(f_M(x) = \texttt&#123;accept&#125;\) für alle \(x \in L\),
@@ -596,7 +596,7 @@ const Article = () => {
                   <i>
                     akzeptiert
                   </i>
-                  die Sprache
+                  {" "}die Sprache
                   \(L \subseteq \Sigma^*\) wenn
                   $$\begin&#123;align*&#125;
                   x \in L \Longleftrightarrow f_M(x) = \texttt&#123;accept&#125;
@@ -631,7 +631,7 @@ const Article = () => {
                     \(g(x)\) steht
                     auf dem Band
                   </i>
-                  bedeutet.
+                  {" "}bedeutet.
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
@@ -664,7 +664,7 @@ const Article = () => {
                       $M$ terminiert für jedes $x \in \Sigma^*$.
                     </li>
                     <li>
-                      In der Endkonfiguration $\hat&#123;M&#125;(x)$ steht auf dem Arbeitsband das
+                      &ensp;In der Endkonfiguration $\hat&#123;M&#125;(x)$ steht auf dem Arbeitsband das
                       Wort \(g(x) \in \Sigma_2^*\) und der Kopf steht ganz links, also
                       $\hat&#123;M&#125;(x) = \qaccept&#123;&#125; g(x)$.
                     </li>

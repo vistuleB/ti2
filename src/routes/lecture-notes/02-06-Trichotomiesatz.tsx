@@ -76,7 +76,7 @@ const Article = () => {
                     <b>
                       (Trichotomiesatz der Mengenlehre).
                     </b>
-                    Seien $A$ und
+                    {" "}Seien $A$ und
                     $B$ zwei Mengen. Dann gibt es eine injektive Funktion $f : A
                     \rightarrow B$ oder eine injektive Funktion $g : A \rightarrow B$.
                     Es gilt also immer genau einer der drei folgenden Fälle:
@@ -111,7 +111,7 @@ const Article = () => {
                     <i>
                       Funktion
                     </i>
-                    formal ist. $A \times B := \&#123; (a,b) \ | \ a \in A,
+                    {" "}formal ist. $A \times B := \&#123; (a,b) \ | \ a \in A,
                     b \in B\&#125;$, die Menge aller Paare, heißt das
                     {" "}
                     <i>
@@ -121,7 +121,7 @@ const Article = () => {
                     <i>
                       Relation
                     </i>
-                    ist eine
+                    {" "}ist eine
                     Teilmenge $R \subseteq A \times B$.
                   </Paragraph>
                   <div class="well container-fluid subtheorem">
@@ -129,7 +129,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Definition.
                       </span>
-                      Eine Relation $R
+                      &ensp;Eine Relation $R
                       \subseteq A \times B$ heißt
                     </Paragraph>
                     <ul>
@@ -152,7 +152,7 @@ const Article = () => {
                         <i>
                           höchstens
                         </i>
-                        ein $b \in B$ gibt mit $(a,b) \in R$ und
+                        {" "}ein $b \in B$ gibt mit $(a,b) \in R$ und
                         umgekehrt für jedes $b \in B$ höchstens ein $a \in A$ mit $(a,b)
                         \in R$.
                       </li>
@@ -161,22 +161,22 @@ const Article = () => {
                         <i>
                           sättigt
                         </i>
-                        $R$ die Menge
+                        {" "}$R$ die Menge
                         $A$, wenn es für{" "}
                         <i>
                           jedes
                         </i>
-                        $a \in A$ ein $b \in B$ mit
+                        {" "}$a \in A$ ein $b \in B$ mit
                         $(a,b) \in R$ gibt; es{" "}
                         <i>
                           sättigt
                         </i>
-                        $B$, wenn es für
+                        {" "}$B$, wenn es für
                         {" "}
                         <i>
                           jedes
                         </i>
-                        $b \in B$ ein $a \in A$ gibt mit $(a,b) \in R$.
+                        {" "}$b \in B$ ein $a \in A$ gibt mit $(a,b) \in R$.
                       </li>
                     </ul>
                   </div>
@@ -200,7 +200,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Beobachtung.
                       </span>
-                      Wenn $R \in
+                      &ensp;Wenn $R \in
                       \mathcal&#123;M&#125;$ ein maximales Element in der Partialordnung
                       $(\mathcal&#123;M&#125;, \subseteq)$ ist, dann sättigt es $A$ oder $B$ (oder
                       beide). Wenn es $A$ sättigt, dann ist es eine injektive Funktion
@@ -245,13 +245,13 @@ const Article = () => {
                       <span class="numbered-title">
                         Definition.
                       </span>
-                      Sei $(X, \preceq)$
+                      &ensp;Sei $(X, \preceq)$
                       eine Partialordnung und $S \subseteq X$ eine Menge. Ein Element $x
                       \in X$ ist eine{" "}
                       <i>
                         obere Schranke für $S$
                       </i>
-                      wenn
+                      {" "}wenn
                     </Paragraph>
                     $$\begin&#123;align*&#125; s \leq x \quad \forall s \in S \end&#123;align*&#125;$$
                     <Paragraph>
@@ -265,7 +265,7 @@ const Article = () => {
                     <i>
                       keine obere Schranke
                     </i>
-                    in $\N$. Somit gibt es auch kein
+                    {" "}in $\N$. Somit gibt es auch kein
                     maximales Element. Was nun mit $(\mathcal&#123;M&#125;, \subseteq)$? Wenn $M
                     <i>
                       1
@@ -291,7 +291,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Beobachtung.
                       </span>
-                      Sei $S \subseteq
+                      &ensp;Sei $S \subseteq
                       \mathcal&#123;M&#125;$ eine Kette in $(\mathcal&#123;M&#125;, \subseteq)$, also eine
                       Menge von Matchings, so dass für alle $M
                       <i>
@@ -350,7 +350,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Zornsches Lemma.
                       </span>
-                      Sei $(X,
+                      &ensp;Sei $(X,
                       \preceq)$ eine Partialordnung. Wenn jede Kette $S \subseteq X$
                       eine obere Schranke $x \in X$ hat, dann enthält $X$ mindestens ein
                       maximales Element.

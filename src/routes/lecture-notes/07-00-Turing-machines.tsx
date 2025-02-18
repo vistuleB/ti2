@@ -43,7 +43,7 @@ const Article = () => {
                 <i>
                   Berechnung
                 </i>
-                formalisieren.
+                {" "}formalisieren.
                 Das \(\lambda\)-Kalkül ist im Prinzip eine reduktion funktionaler Programmiersprachen
                 auf das absolut essentielle. In diesem Kapitel lernen wir ein
                 weiteres Modell für Berechnung kennen, das im Allgemeinen als Standardmodell

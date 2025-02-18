@@ -49,7 +49,7 @@ const Article = () => {
                     <a href="07-03-Turing-universal.html">
                       Kapitel 7.5.
                     </a>
-                    Unsere Implementierung hatte insgesamt
+                    &ensp;Unsere Implementierung hatte insgesamt
                     fünf Bänder verwendet: (1) ein Band, um die Regeln von $M$ zu speichern (also die Funktion
                     $\delta$);
                     (2) ein Band, um den Zustand von $M$ zu speichern; (3) um den akzeptierenden Zustand $\qaccept$
@@ -59,12 +59,12 @@ const Article = () => {
                     <i>
                       zwei
                     </i>
-                    Bänder
+                    {" "}Bänder
                     verwendet, weil das uns erlaubte, effizient Zeichen{" "}
                     <i>
                       einzufügen
                     </i>
-                    statt einfach zu
+                    {" "}statt einfach zu
                     überschreiben.
                     Wie wir aber gesehen hatten, können wir (4) und (5) mit einem Band bewältigen, indem wir zu
                     allererst
@@ -77,7 +77,7 @@ const Article = () => {
                     <i>
                       drei
                     </i>
-                    Bändern aus.
+                    {" "}Bändern aus.
                     Allerdings hatten wir uns nur überlegt, wie man
                     Einband-Turingmaschinen $M$ simuliert. Es ist aber ziemlich einfach zu sehen, dass man
                     Codierung und Simulation ganz analog für $k$-Band-Turingmaschinen durchführen kann.
@@ -86,7 +86,7 @@ const Article = () => {
                     <a href="07-05-undecidability.html">
                       Kapitel 7.7
                     </a>
-                    gesehen, dass wir als Codierungsalphabet
+                    &ensp;gesehen, dass wir als Codierungsalphabet
                     $\Sigma$ selbst nehmen können, also $\enc(M) \in \Sigma^
                   </b>
                   $, solange $\Sigma$ mindestens zwei
@@ -99,7 +99,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    Für jedes Alphabet $\Sigma$ mit mindestens zwei
+                    &ensp;Für jedes Alphabet $\Sigma$ mit mindestens zwei
                     Zeichen
                     und jedes $k \geq 1$ gibt es eine Turingmaschine $U$ mit $k+2$ Bändern, die folgendes kann:
                     sei $M$ eine beliebige $k$-Band-Turingmaschine mit Eingabealphabet $\Sigma$ und sei $x \in
@@ -186,7 +186,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    {" "}{" "}
+                    &ensp;
                     <b>
                       (Zeitbudgetiertes
                       Halteproblem).
@@ -219,7 +219,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                     </span>
-                    $\bhalt \in \TIME_&#123;k+3&#125;(n)$.{" "}
+                    &ensp;$\bhalt \in \TIME_&#123;k+3&#125;(n)$.{" "}
                   </Paragraph>
                 </div>
                 <div class="well container">
@@ -260,12 +260,12 @@ const Article = () => {
                     <span class="numbered-title">
                       Behauptung
                     </span>
-                    {" "}{" "}
+                    &ensp;
                     <b>
                       (nicht ganz
                       korrekt).
                     </b>
-                    $\bnegdiag \in \TIME_&#123;k+3&#125;(t)$.
+                    {" "}$\bnegdiag \in \TIME_&#123;k+3&#125;(t)$.
                   </Paragraph>
                 </div>
                 <Paragraph>
@@ -285,7 +285,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                     </span>
-                    Eine Funktion $t: \N \rightarrow \N$ heißt
+                    &ensp;Eine Funktion $t: \N \rightarrow \N$ heißt
                     {" "}
                     <i>
                       zeitkonstruierbar
@@ -299,11 +299,11 @@ const Article = () => {
                     <span class="numbered-title">
                       Behauptung
                     </span>
-                    {" "}{" "}
+                    &ensp;
                     <b>
                       (jetzt korrekt).
                     </b>
-                    Sei
+                    {" "}Sei
                     $t: \N \rightarrow \N$ zeitkonstruierbar, monoton steigend und $t(n) \geq n$. Dann gilt
                     $\bnegdiag \in \TIME_&#123;k+3&#125;(t)$.
                   </Paragraph>
@@ -317,7 +317,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Lemma
                     </span>
-                    Sei $s: \N \rightarrow \N$ eine Funktion mit
+                    &ensp;Sei $s: \N \rightarrow \N$ eine Funktion mit
                     $s(n) \geq n$ und
                     $s = o(t)$, also $\lim
                     <i>
@@ -351,7 +351,7 @@ const Article = () => {
                     <a href="#theorem-universal">
                       Theorem 8.1.1
                     </a>
-                    höchstens
+                    &ensp;höchstens
                     $C \cdot |\enc(M)| \cdot (n + s(n))$ Schritte.
                     Da $s(n) \geq n$ gilt, sind dies höchstens $2C \cdot |\enc(M)| \cdot s(n)
                     = 2C \cdot |\enc(M)| \cdot s(|x|+m)$ Schritte.
@@ -426,7 +426,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    {" "}{" "}
+                    &ensp;
                     <b>
                       (Zeithierarchiesatz).
                     </b>

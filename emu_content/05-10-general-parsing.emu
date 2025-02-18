@@ -52,7 +52,7 @@
                             href ../../demos/drawFirstComputation.html
 
                             drawFirstComputation.html
-                        demonstriert),
+                        &ensp;demonstriert),
                         und die LR-Parser (die die Teilbäume auf den Stack legen und nach Blüten suchen,
                         hier die Demoseite 
                         |> a
@@ -88,7 +88,7 @@
                         \end{align*}
                         Die Grammatik ist _mehrdeutig_, insbesondere kann jedes Wort der
                         Form \(a^i b^i c^i\) auf zwei Weisen abgeleitet werden: via \(AY\) und via \(XC\).
-                        Man kann sogar zeigen, dass _jede_äquivalente Grammatik \(G'\), die also
+                        Man kann sogar zeigen, dass _jede_ äquivalente Grammatik \(G'\), die also
                         die gleiche Sprache \(L\) erzeugt, mehrdeutig sein muss; man sagt, die Sprache
                         \(L\) ist _inhärent mehrdeutig_.
                     |> p
@@ -97,7 +97,7 @@
                         unbrauchbar. Gibt es eine allgemeine Methode, die für alle Grammatiken funktioniert?
                         Ja, den sogenannten CYK-Algorithmus. Nur leider ist die nicht besonders schnell. Sie hat
                         kubische Laufzeit \(O(n^3)\), was zwar
-                        in der theoretischen Informatik als _effizient_durchgeht, in der Praxis leider
+                        in der theoretischen Informatik als _effizient_ durchgeht, in der Praxis leider
                         meist unbrauchbar ist.
                     |> h3
 
@@ -170,7 +170,7 @@
                         haben muss, für \(w = uv\). Wenn wir die
                         Unterteilung von \(w\) in \(u\) und \(v\) kennen würden, so könnten wir rekursiv
                         fragen, wie man denn \(A \Step{}^* u\) und \(B \Step{}^* v\) ableitet. Da wir sie
-                        aber _nicht_kennen, also konkret nicht wissen, wie lange \(u\) und \(v\) sind,
+                        aber _nicht_ kennen, also konkret nicht wissen, wie lange \(u\) und \(v\) sind,
                         können wir alle Möglichkeiten durchprobieren. Da \(G\) in Chomsky-Normalform vorliegt, wissen
                         wir, dass \(|u| \geq 1\) und \(|v| \geq 1\), also \(1 \leq |u| \leq |w|-1\). Wir probieren also
                         alle \(n-1\) möglichen Zerlegungen von \(w\) durch. Wenn wir das rekursiv täten, dann würden
@@ -185,13 +185,13 @@
                         Younger und Tadao Kasami).
                         Für die praktische Anwendung ist dieser weniger relevant. Dafür ist er ein wunderbares Beispiel
                         für einen
-                        Algorithmus, der auf dem Prinzip des _Dynamic Programing_fußt, welches Sie in der
+                        Algorithmus, der auf dem Prinzip des _Dynamic Programing_ fußt, welches Sie in der
                         Vorlesung 
                         |> a
                             href ../../AuK/index.html
 
                             Algorithmen und Komplexität
-                        im dritten Semester
+                        &ensp;im dritten Semester
                         ausführlicher kennenlernen wollen. Wir beschränken uns bei dem folgenden Algorithmus
                         zunächst darauf, die Frage zu beantworten, ob den überhaupt \(S \Step{}^* w\) gilt,
                         und interessieren uns erst einmal nicht dafür eine solche Ableitung auch zu finden (in der
@@ -201,7 +201,7 @@
                     |> p
 
                         Der Entwurf eines Dynamic-Programming-Algorithmus beginnt oft mit der folgenden Frage:
-                        _Was sind sinnvolle Zwischenergebnisse?_In unserem Falle sind Ableitungen der Form
+                        _Was sind sinnvolle Zwischenergebnisse?_ In unserem Falle sind Ableitungen der Form
                         \begin{align*}
                         X&amp;\Step{}^* u
                         \end{align*}
@@ -261,13 +261,13 @@
                                 class 
                                 |> li
 
-                                    `for i = 0 .. n-l`
+                                    &ensp;`for i = 0 .. n-l`
                                     |> ol
                                         type i
                                         class 
                                         |> li
 
-                                            `k := i+l`
+                                            `k := i+l` 
                                             |> span
                                                 class comment
 
@@ -287,7 +287,7 @@
                                                 class 
                                                 |> li
 
-                                                    `for all productions`\(X \rightarrow YZ\):
+                                                    `for all productions` \(X \rightarrow YZ\):
                                                     |> ol
                                                         type a
                                                         |> li
@@ -309,7 +309,7 @@
                             `end for i` 
                         |> li
 
-                            `return True if`\(S \in N_{0,n}\) `else return False`
+                            `return True if` \(S \in N_{0,n}\) `else return False`
                     |> p
 
                         Was ist die Laufzeit des Algorithmus? Sei \(g\) die Anzahl der Produktionen in \(G\) der
@@ -339,7 +339,7 @@
                         \(g \cdot n^3\).
                     |> p
 
-                        *Achtung:*wir haben die Kosten für die allererste Zeile vernachlässigt.
+                        *Achtung:* wir haben die Kosten für die allererste Zeile vernachlässigt.
                         Überlegen
                         Sie sich, wie viel Laufzeit diese verursachen kann und überzeugen Sie sich, dass dies in den
                         meisten

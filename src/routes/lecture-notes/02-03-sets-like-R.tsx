@@ -52,17 +52,17 @@ const Article = () => {
                   <i>
                     Kardinalität
                   </i>
-                  steht hier für
+                  {" "}steht hier für
                   {" "}
                   <i>
                     Anzahl der Elemente
                   </i>
-                  (bzw. den Größenbegriff bei unendlichen
+                  {" "}(bzw. den Größenbegriff bei unendlichen
                   Mengen), und{" "}
                   <i>
                     Kontinuum
                   </i>
-                  steht für{" "}
+                  {" "}steht für{" "}
                   <i>
                     die reellen Zahlen
                   </i>
@@ -76,7 +76,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                     </span>
-                    Es gilt $\R \approx
+                    &ensp;Es gilt $\R \approx
                     (0,1)$, wobei $(0,1)$ das offene Einheitsintervall ist.
                   </Paragraph>
                 </div>
@@ -276,11 +276,11 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    Mithilfe von
+                    {" "}Mithilfe von
                     <span
                       data-ref="theorem-R-bitstrings"
                       class="reference" />
-                    geht
+                    &ensp;geht
                     das ganz einfach. Da $\R \approx \&#123;0,1\&#125;^\N$ gilt, reicht es
                     nämlich, eine Bijektion $\&#123;0,1\&#125;^\N \times \&#123;0,1\&#125;^\N \rightarrow
                     \&#123;0,1\&#125;^\N$ zu konstruieren. Ein Element von $\&#123;0,1\&#125;^\N \times
@@ -293,7 +293,7 @@ const Article = () => {
                     <i>
                       eine
                     </i>
-                    Folge codieren.
+                    {" "}Folge codieren.
                     Ganz klar:
                   </Paragraph>
                   $$\begin&#123;align*&#125; (a_1 a_2 a_3 \dots, b_1 b_2 b_3 \dots) \mapsto (a_1 b_1
@@ -360,7 +360,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                     </span>
-                    Die Funktion
+                    &ensp;Die Funktion
                     $f^&#123;-1&#125;$ bildet
                   </Paragraph>
                   <ul>
@@ -501,7 +501,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    $\R \approx \R^&#123;\N&#125;$.
+                    &ensp;$\R \approx \R^&#123;\N&#125;$.
                   </Paragraph>
                 </div>
                 <div class="well container">
@@ -601,7 +601,7 @@ const Article = () => {
                   <i>
                     Funktionen
                   </i>
-                  $\phi:
+                  {" "}$\phi:
                   B \rightarrow A$. Was ist das Analog zur Addition? Die Vereinigung $A
                   \cup B$ wäre zu kurz gegriffen, weil ja zum Beispiel $\&#123;1,2,3\&#125; \cup
                   \&#123;4,5\&#125;$ fünf Elemente hat, $\&#123;1,2,3\&#125; \cup \&#123;1,2\&#125;$ aber nur drei.
@@ -609,7 +609,7 @@ const Article = () => {
                   <i>
                     disjunkte Vereinigung
                   </i>
-                  $A \uplus
+                  {" "}$A \uplus
                   B$, die die Elemente von $B$ erst einmal "markiert", um sie von denen
                   von $A$ unterscheidbar zu machen. Somit wäre also $\&#123;1,2,3\&#125; \uplus
                   \&#123;1,2\&#125; = \&#123;1,2,3,1',2'\&#125;$ eine Menge der Kardinalität 5. Formal kann
@@ -687,7 +687,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                     </span>
-                    Beweisen Sie so
+                    &ensp;Beweisen Sie so
                     viele Punkte von
                     <span
                       data-ref="calculating-with-cardinals"
@@ -703,7 +703,7 @@ const Article = () => {
                     <b>
                       Hinweis.
                     </b>
-                    Die Beweise sind alle nicht wirklich
+                    {" "}Die Beweise sind alle nicht wirklich
                     schwierig. Sie müssen nur aufpassen, dass Sie sich nicht in der
                     Notation verlieren.
                   </Paragraph>
@@ -730,7 +730,7 @@ const Article = () => {
                   <i>
                     Kette
                   </i>
-                  in einer
+                  {" "}in einer
                   Partialordnung $(X, \preceq)$ ist eine Menge $Z$, in der alle Elemente
                   paarweise vergleichbar sind. In diesem konkreten Beispiel heißt das:
                   $Z \subseteq 2^&#123;\N&#125;$ und für alle $A, B \in Z$ gilt $A \subseteq B$
@@ -740,13 +740,13 @@ const Article = () => {
                   <i>
                     Antikette
                   </i>
-                  in einer Partialordnung $(X,\preceq)$
+                  {" "}in einer Partialordnung $(X,\preceq)$
                   ist eine Teilmenge $Z \subseteq X$, in der je zwei Elemente
                   {" "}
                   <i>
                     unvergleichbar
                   </i>
-                  sind. In diesem Beispiel heißt das: $Z
+                  {" "}sind. In diesem Beispiel heißt das: $Z
                   \subseteq 2^N$, und für alle $A, B \in Z$ mit $A \ne B$ gilt $A \not
                   \subseteq B$ und $B \not \subseteq A$. Hier ist ein Beispiel für eine
                   unendliche Kette:
@@ -792,7 +792,7 @@ const Article = () => {
                     <b>
                       (Dichte Partialordnung)
                     </b>
-                    Eine Partialordnung
+                    {" "}Eine Partialordnung
                     $(X,\preceq)$ heißt{" "}
                     <i>
                       dicht

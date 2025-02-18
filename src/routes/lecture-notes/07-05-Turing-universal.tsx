@@ -86,7 +86,7 @@ const Article = () => {
                   <i>
                     unabhängig
                   </i>
-                  von $M$ ist. Dass wir also{" "}
+                  {" "}von $M$ ist. Dass wir also{" "}
                   <i>
                     jede
                   </i>
@@ -96,12 +96,12 @@ const Article = () => {
                   <i>
                     jede
                   </i>
-                  ihrer Konfigurationen
+                  {" "}ihrer Konfigurationen
                   als Strings über{" "}
                   <i>
                     einem
                   </i>
-                  festen Alphabet $\Lambda$ darstellen
+                  {" "}festen Alphabet $\Lambda$ darstellen
                   können.
                 </Paragraph>
                 <Paragraph>
@@ -126,12 +126,12 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    {" "}{" "}
+                    &ensp;
                     <b>
                       (Universelle
                       Turingmaschine).
                     </b>
-                    Zu
+                    {" "}Zu
                     jedem
                     endlichen Eingabealphabet $\Sigma$ sei
                     $\Lambda := \writelambda$ das Codierungsalphabet. Es gibt es
@@ -193,7 +193,7 @@ const Article = () => {
                       Ein technischer aber letztendlich irrelevanter Punkt:
                       {" "}
                     </b>
-                    die Mengen
+                    {" "}die Mengen
                     $Q$ und $\Gamma$ der Turingmaschine $M$ können ja beliebige
                     (endliche) Mengen sein,
                     und weder $\Lambda$ noch die Turingmaschine $U$ haben "Kenntnis"

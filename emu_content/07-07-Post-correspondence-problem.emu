@@ -51,7 +51,7 @@
                     |> p
 
                         Im Postschen Korrespondenzproblem haben wir endlich
-                        viele Kärtchen (auch _Kacheln_genannt) gegeben,
+                        viele Kärtchen (auch _Kacheln_ genannt) gegeben,
                         die oben und unten jeweils ein Wort haben. Wir müssen
                         die Kärtchen so nebeneinander legen, dass oben und unten
                         das gleiche Wort entsteht; jedes Kärtchen kann beliebig
@@ -428,7 +428,7 @@
                             |> li
 
                                 Eine
-                                _Kachel_(auch _Kärtchen_genannt) ist ein
+                                _Kachel_ (auch _Kärtchen_ genannt) ist ein
                                 Paar \((\alpha : \beta) \in \Sigma^* \times \Sigma^*\).
                                 Hier bezeichnet \(\alpha\) das Wort auf der oberen Hälfte der Kachel
                                 und \(\beta\) das auf der unteren.
@@ -444,8 +444,8 @@
                                 (\alpha_{m} : \beta_{m})
                                 \end{align*}
                                 Für eine Kachelung \(s\) definieren wir den
-                                _oberen Teil_\(\top(s)\) und den
-                                _unteren Teil_\(\bottom(s)\):
+                                _oberen Teil_ \(\top(s)\) und den
+                                _unteren Teil_ \(\bottom(s)\):
                                 \begin{align*}
                                 \top(s)&amp;:= \alpha_1 \alpha_2 \dots \alpha_m \\
                                 \bottom(s)&amp;:= \beta_1 \beta_2 \dots \beta_m \\
@@ -518,7 +518,7 @@
                             Wie so oft in ähnlichen Beweisen machen wir einen
                             Zwischenschritt. Das _Modifizierte Postsche
                             Korrespondenzproblem (MPCP)
-                            _ist genau das gleiche wie das PCP,
+                            _ ist genau das gleiche wie das PCP,
                             nur dass es in \(S\) eine markierte Startkachel gibt
                             und jede Lösung mit dieser Startkachel beginnen muss.
                             Es ist also ein "strengeres" Problem als das PCP.
@@ -609,7 +609,7 @@
                             Lösung hat, wenn \(M(x) = \texttt{accept}\) gilt.
                         |> p
 
-                            Erinneren wir uns: eine _Konfiguration_einer
+                            Erinneren wir uns: eine _Konfiguration_ einer
                             Turingmaschine ist eine Folge
                             \begin{align*}
                             w_1 w_2 \dots w_{j-1} q w_j \dots w_m
@@ -832,7 +832,7 @@
                         |> p
 
                             Hier brauchen wir halt eine Kopfkachel \((q_2yz:yq_1x_2)\) für
-                            _jedes_Bandsymbol \(y\), da die Regel immer anzuwenden ist,
+                            _jedes_ Bandsymbol \(y\), da die Regel immer anzuwenden ist,
                             egal, welches Symbol \(y\) links vom Schreib-Lese-Kopf steht.
                         |> p
 

@@ -53,7 +53,7 @@
                                 class numbered-title
 
                                 Theorem
-                            *(Shannon).*Es gibt
+                            &ensp;*(Shannon).* Es gibt
                             Boolesche Funktionen $f$, die keine Schaltkreise kleiner
                             als $\Omega(2^n / n)$ haben.
                     |> div
@@ -86,7 +86,7 @@
                                     class numbered-title
 
                                     Behauptung
-                                Sei $s \geq n \geq 1$. Dann gibt es
+                                &ensp;Sei $s \geq n \geq 1$. Dann gibt es
                                 höchstens
                                 $s^{2s+1}$ Schaltkreise mit $n$ Input-Variablen, Fan-in 2 und $s$ Gates. 
                         |> div
@@ -108,16 +108,16 @@
                                             mit einer der $n$ Input-Variablen beschriften.
                                         |> li
 
-                                            Ein Not-Gate? Dann müssen wir eines der anderen Gates
+                                            &ensp;Ein Not-Gate? Dann müssen wir eines der anderen Gates
                                             als Vorgänger-Gate wählen. Wir haben höchstens $s-1$ Möglichkeiten.
                                         |> li
 
-                                            Ein And-Gate? Dann müssen wir zwei der anderen Gates als
+                                            &ensp;Ein And-Gate? Dann müssen wir zwei der anderen Gates als
                                             Vorgänger-Gates wählen. Wir haben höchstesn ${s-1 \choose 2} =
                                             \frac{(s-1)(s-2)}{2}$ Möglichkeiten.
                                         |> li
 
-                                            Ein Or-Gate? Dann haben wir auch höchstens ${s-1 \choose 2}$ Möglichkeiten.
+                                            &ensp;Ein Or-Gate? Dann haben wir auch höchstens ${s-1 \choose 2}$ Möglichkeiten.
                                     |> p
 
                                         Insgesamt haben wir also
@@ -180,7 +180,7 @@
                     |> p
 
                         Der obige Beweis sagt noch mehr: der Anteil Boolescher Funktionen, bei denen wir mit
-                        $\frac{2^n}{2n}$ Gates auskommen, ist verschwindend klein. Fast _alle_Funktionen
+                        $\frac{2^n}{2n}$ Gates auskommen, ist verschwindend klein. Fast _alle_ Funktionen
                         brauchen also riesige Schaltkreise. In einem Gewissen Sinne haben wir also einfach Glück:
                         die Funktionen, die uns interessieren, wie $n$-Bit-Addition, Majority, Parity und so weiter,
                         haben einfach niedrige Komplexität. Das liegt wohl in der Natur der Sache: wir addieren,
@@ -194,7 +194,7 @@
                                 class numbered-title
 
                                 Forschungsprojekt.
-                            Finde eine konkret
+                            &ensp;Finde eine konkret
                             beschreibbare Funktion $f: \fcube$, die exponentiell viele (oder zumindest superpolynomiell
                             viele)
                             Gates benötigt.
@@ -210,7 +210,7 @@
                                 class numbered-title
 
                                 Entscheidungsproblem 3-Färbbarkeit.
-                            Gegeben
+                            &ensp;Gegeben
                             ein Graph $G = (V,E)$, gibt es eine Funktion 
                         \begin{align*}
                         c : V \rightarrow \{\textnormal{rot, grün, blau}\} \ ,
@@ -253,7 +253,7 @@
                                 class numbered-title
 
                                 Theorem
-                            *(Lupanov)*. Für jede Boolesche
+                            &ensp;*(Lupanov)*. Für jede Boolesche
                             Funktion in $n$ Variablen gibt es einen Schaltkreis mit Fan-in 2 und $O(2^n / n)$ Gates.
                     |> div
                         class well container
@@ -273,7 +273,7 @@
                             wird $|F|$ Output-Gates haben, und seine Größe wird auch von $|F|$ abhängen.
                         |> p
 
-                            *$\F_2$-Polynome.*Polynome in mehreren Variablen kennen Sie
+                            *$\F_2$-Polynome.* Polynome in mehreren Variablen kennen Sie
                             sicherlich: zum Beispiel $xyz + xy + 1 + y$. Der Unterschied hier ist nur,
                             dass wir alle Werte modulo 2 auswerten, also in dem endlichen Körper
                             $\F_2$ arbeiten. Wir brauchen daher auch keine höheren Potenzen:
@@ -299,7 +299,7 @@
                                 als $\F_2$-Polynom schreiben lässt.
                             |> p
 
-                                *Tipp:*beschränken Sie sich zuerst auf Funktionen $f$,
+                                *Tipp:* beschränken Sie sich zuerst auf Funktionen $f$,
                                 deren Wahrheitstabelle in genau einer Zeile eine 1 haben. Schreiben
                                 Sie eine solche Funktion als $\F_2$-Polynom.
                         |> p
@@ -308,7 +308,7 @@
                             gleichen Koeffizienten, aber die spielen hier ja keine Rolle).
                             Wir würden also sagen, dass
                             $xyz + x$ und $x + yzx$ die gleichen Polynome sind.
-                            Dagegen wären $x^2yz + x$ und $xyz+x$ _verschiedene_Polynome.
+                            Dagegen wären $x^2yz + x$ und $xyz+x$ _verschiedene_ Polynome.
                             Da wir über $\F_2$ arbeiten, beschränken wir uns aber eh auf multilineare Polynome,
                             wo also alle Exponenten 1 sind.
                         |> div
@@ -369,7 +369,7 @@
                                     class numbered-title
 
                                     Lemma
-                                Es gibt einen
+                                &ensp;Es gibt einen
                                 Schaltkreis $C_n$ mit $n$ Input-Gates $x_1,\dots,x_n$ und
                                 $2^n$ Output-Gates, eines für jedes Monom $x^{I}$, der
                                 $2^n$ Gates hat.
@@ -384,9 +384,9 @@
                                 *Beweis.*
                                 Die Idee ist: wenn wir $x_1 x_2 x_3 x_4$ berechnen wollen,
                                 brauchen wir drei AND-Gates. Allerdings müssen wir
-                                $x_1 x_2 x_3$ eh berechnen, da wir ja _alle_Monome
+                                $x_1 x_2 x_3$ eh berechnen, da wir ja _alle_ Monome
                                 wollen. Wenn wir also einen Schaltkreis für $x_1 x_2 x_3$ haben,
-                                können wir daraus mit _einem_zusätzlichen AND-Gate
+                                können wir daraus mit _einem_ zusätzlichen AND-Gate
                                 $x_1x_2x_3x_4$ berechnen.
                             |> p
 
@@ -434,7 +434,7 @@
                             $\y^A g_A(\z)$. Es gibt insgesamt nur $2^{2^k}$ Polynome in den Variablen $\z$.
                             Wenn nun also $2^{n-k} \gg 2^{2^k}$ ist, werden gewisse Polynome $g_A$ mehrfach
                             auftreten, und wir können sparen. Dafür berechnen wir
-                            vorsorglich _alle_Funktionen in $z_1,\dots,z_k$.
+                            vorsorglich _alle_ Funktionen in $z_1,\dots,z_k$.
                         |> div
                             class well container-fluid subtheorem
                             |> p
@@ -442,7 +442,7 @@
                                     class numbered-title
 
                                     Lemma.
-                                Es gibt einen
+                                &ensp;Es gibt einen
                                 Schaltkreis mit Input-Gates $z_1,\dots,z_k$ und $2^{2^k}$ Output-Gates, einen
                                 für jede Funktion $g: \{0,1\}^k \rightarrow \{0,1\}$. Der Schaltkreis hat
                                 Fan-in 2 und insgesamt $2^k + 2^{2^k}$ Gates (AND-Gates und XOR-Gates).
@@ -467,7 +467,7 @@
                                 Sie einen Schaltkreis mit nur $2^{2^k}$ Gates bauen.
                             |> p
 
-                                *Tip.*Jedes Gate muss also gleichzeitig
+                                *Tip.* Jedes Gate muss also gleichzeitig
                                 ein Output-Gate sein.
                         |> p
 

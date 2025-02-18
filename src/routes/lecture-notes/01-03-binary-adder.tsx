@@ -35,7 +35,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    4 Binär-Addierer
+                    3 Binär-Addierer
                   </span>
                 </h1>
                 <h3>
@@ -72,7 +72,7 @@ const Article = () => {
                   <i>
                     drei
                   </i>
-                  Bits addieren
+                  {" "}Bits addieren
                   müssen:
                   das von \(x\), das von \(y\), und das eingehende Carry \(\cin\). Daraus berechnet
                   sich das Output-Bit \(s\) und das ausgehende Carry \(\cout\), das nach links weitergegeben
@@ -137,7 +137,7 @@ const Article = () => {
                   <tt>
                     oneBitAdder:
                   </tt>
-                  \( \&#123;0,1\&#125;^3 \rightarrow \&#123;0,1\&#125;^2\) für
+                  &ensp;\( \&#123;0,1\&#125;^3 \rightarrow \&#123;0,1\&#125;^2\) für
                   folgende Funktionalität:
                   <figure>
                     <img
@@ -250,7 +250,7 @@ const Article = () => {
                   <i>
                     Carry Generate \(g_i\)
                   </i>
-                  und{" "}
+                  {" "}und{" "}
                   <i>
                     Carry Propagate \(p_i\)
                   </i>
@@ -382,7 +382,7 @@ const Article = () => {
                   <i>
                     Sternchennotation
                   </i>
-                  mit [11**] notieren.
+                  {" "}mit [11**] notieren.
                 </Paragraph>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
@@ -514,7 +514,7 @@ const Article = () => {
                     <b>
                       1. Fall.
                     </b>
-                    Wenn \(k\) die Form \(k = 2^d-1\) hat, dann ist
+                    {" "}Wenn \(k\) die Form \(k = 2^d-1\) hat, dann ist
                     \([0,k]\) bereits ein Binärintervall; dies passiert, wenn
                     die Binärdarstellung von \(k\) die Form \(k = (1^b)_2 \) hat (wobei \(b=0\)
                     sein kann, in welchem Fall \(k=0\) ist).
@@ -523,7 +523,7 @@ const Article = () => {
                       <b>
                         2. Fall.
                       </b>
-                      Wenn \(k\) nicht die Form \(k = 2^d-1\) hat,
+                      {" "}Wenn \(k\) nicht die Form \(k = 2^d-1\) hat,
                       dann hat die Binärdarstellung von \(k\) nicht die Form \(1^b\); sie
                       enthält also auch nicht-führende Nullen (beachten Sie, dass \((0111)_2\) und \((111)_2\)
                       die
@@ -589,7 +589,7 @@ const Article = () => {
                       <b>
                         Tiefe.
                       </b>
-                      Jedes \(pg\)-Gate hat Tiefe 2,
+                      {" "}Jedes \(pg\)-Gate hat Tiefe 2,
                       und somit erreichen \(d-1\) solche Gates hintereinander
                       zusammen eine Tiefe von \(2 (d-1) = 2 \ceil&#123;\log_2 n&#125; - 2\).{" "}
                     </Paragraph>
@@ -598,7 +598,7 @@ const Article = () => {
                       <b>
                         Größe.
                       </b>
-                      Zählen wir die Anzahl von \(pg\)-Gates in unserem
+                      {" "}Zählen wir die Anzahl von \(pg\)-Gates in unserem
                       Schaltkreis. Wir haben bereits gesehen, dass die Berechnung von \(g_&#123;[0,k]&#125;\) höchstens
                       \(d-1\) viele \(pg\)-Gates braucht. Es scheint also, als bräuchten wir für alle \(n\)
                       Werte

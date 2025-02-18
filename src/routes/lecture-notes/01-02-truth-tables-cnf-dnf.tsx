@@ -35,7 +35,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    3 Wahrheitstabellen, CNF und DNF
+                    2 Wahrheitstabellen, CNF und DNF
                   </span>
                 </h1>
                 <Paragraph>
@@ -50,7 +50,7 @@ const Article = () => {
                   <i>
                     einem
                   </i>
-                  Ausgabewert, also \(f : \&#123;0,1\&#125;^n \rightarrow
+                  {" "}Ausgabewert, also \(f : \&#123;0,1\&#125;^n \rightarrow
                   \&#123;0,1\&#125;\).
                 </Paragraph>
                 Dies ist ein endliches Objekt, wir können es also codieren, indem wir
@@ -59,7 +59,7 @@ const Article = () => {
                 <i>
                   Wahrheitstabelle
                 </i>
-                (englisch
+                {" "}(englisch
                 {" "}
                 <i>
                   truth table
@@ -96,7 +96,7 @@ const Article = () => {
                 <span style="color: blue">
                   \(\bar&#123;y&#125; \vee z\)
                 </span>
-                ist (ich
+                &ensp;ist (ich
                 schreibe im Fließtext übrigens gerne \(\bar&#123;y&#125;\) statt \(\neg y\), weil
                 das mir lesbarer erscheint). Insgesamt also:
                 <figure>
@@ -104,16 +104,16 @@ const Article = () => {
                   <code>
                     if
                   </code>
-                  \(x\){" "}
+                  {" "}\(x\){" "}
                   <code>
                     then
                   </code>
-                  \(\bar&#123;y&#125; \vee z\)
+                  {" "}\(\bar&#123;y&#125; \vee z\)
                   {" "}
                   <code>
                     else
                   </code>
-                  \(y \vee z\).
+                  {" "}\(y \vee z\).
                 </figure>
                 <Paragraph>
                   Jetzt können wir das mit unserem if-then-else-Schaltkreis kombinieren.
@@ -143,22 +143,11 @@ const Article = () => {
                   </li>
                   <li>
                     Kombinieren Sie diese via
-                    {" "}
-                    <code>
-                      if
-                    </code>
-                    \(x_1\){" "}
-                    <code>
-                      then
-                    </code>
-                    {" "}
-                    \(C_1\)
-                    {" "}
-                    <code>
-                      else
-                    </code>
-                    {" "}
-                    \(C_0\) zu einem Schaltkreis für \(f\) mit
+                    &ensp;`if` \(x_1\) 
+                    &ensp;`then` 
+                    &ensp;\(C_1\)
+                    &ensp;`else` 
+                    &ensp;\(C_0\) zu einem Schaltkreis für \(f\) mit
                     insgesamt \(n\) Input-Variablen.
                   </li>
                 </ol>
@@ -241,12 +230,12 @@ const Article = () => {
                 <i>
                   eine
                 </i>
-                ausgehende Kante hat. Konkret bedeutet dies, dass
+                {" "}ausgehende Kante hat. Konkret bedeutet dies, dass
                 man diesen Schaltkreis als{" "}
                 <i>
                   logische Formel
                 </i>
-                hinschreiben kann:
+                {" "}hinschreiben kann:
                 $$ (\bar&#123;x&#125; \wedge \bar&#123;y&#125; \wedge z) \vee (\bar&#123;x&#125; \wedge y \wedge
                 \bar&#123;z&#125;) \vee (\bar&#123;x&#125; \wedge y \wedge z) \vee (x \wedge \bar&#123;y&#125; \wedge
                 \bar&#123;z&#125;) \vee (x \wedge \bar&#123;y&#125; \wedge z) \vee (x \wedge y \wedge z) $$
@@ -258,18 +247,18 @@ const Article = () => {
                   <i>
                     Literal
                   </i>
-                  ist eine Variable \(x\) oder deren Negation
+                  {" "}ist eine Variable \(x\) oder deren Negation
                   \(\bar&#123;x&#125;\). Ein{" "}
                   <i>
                     Term
                   </i>
-                  ist ein AND (auch: Konjunktion) von
+                  {" "}ist ein AND (auch: Konjunktion) von
                   Literalen (beispielsweise \(\bar&#123;x&#125; \wedge \bar&#123;y&#125; \wedge z)\). Eine
                   Formel in{" "}
                   <i>
                     disjunktiver Normalform
                   </i>
-                  (DNF) ist ein OR von
+                  {" "}(DNF) ist ein OR von
                   Termen.
                   <Paragraph>
                     Alternativ: eine DNF ist ein Schaltkreis der Tiefe 2 (wobei
@@ -286,7 +275,7 @@ const Article = () => {
                   <i>
                     keine
                   </i>
-                  DNF-Formel, nach der zweiten aber schon. Zeigen Sie,
+                  {" "}DNF-Formel, nach der zweiten aber schon. Zeigen Sie,
                   wie man OR-Gates auf Ebene 1 entfernen kann! Als konkretes Beispiel:
                   <figure>
                     <img
@@ -307,7 +296,7 @@ const Article = () => {
                   <i>
                     keine
                   </i>
-                  davon ein, muss wohl eine 1 herauskommen. Wir gehen
+                  {" "}davon ein, muss wohl eine 1 herauskommen. Wir gehen
                   also in der Wahrheitstabelle alle Zeilen mit Wert 0 durch und
                   schreiben einen Ausdruck, der genau diese Zeile verbietet. So kann man
                   den Ausdruck \( (\bar&#123;x&#125; \vee \bar&#123;y&#125; \vee z)\) verstehen als
@@ -340,7 +329,7 @@ const Article = () => {
                   <i>
                     konjunktiver Normalform
                   </i>
-                  (CNF) ist ein AND von
+                  {" "}(CNF) ist ein AND von
                   Klauseln.
                   <Paragraph>
                     Alternativ: eine CNF-Formel ist ein Schaltkreis der Tiefe 2 (wobei
@@ -392,7 +381,7 @@ const Article = () => {
                   <i>
                     Algorithmen
                   </i>
-                  in dem Sinne). Die genaue Komplexität dieser
+                  {" "}in dem Sinne). Die genaue Komplexität dieser
                   Optimierungsprobleme ist in der Tat Gegenstand aktiver Forschung,
                 </Paragraph>
                 <ol>
@@ -401,7 +390,7 @@ const Article = () => {
                     <i>
                       Boolesche Formel
                     </i>
-                    vorliegt
+                    {" "}vorliegt
                     (also Schaltkreise, in denen außer den Eingabe-Gates alle Gates nur
                     eine ausgehende Kante haben), so ist das Minimierungsproblem
                     \(Sigma_2^&#123;P&#125;\)-vollständig, siehe
@@ -411,7 +400,7 @@ const Article = () => {
                       <i>
                         The complexity of Boolean formula minimization
                       </i>
-                      (JCSS
+                      {" "}(JCSS
                       2011){" "}
                     </a>
                     .

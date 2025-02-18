@@ -103,14 +103,20 @@
                         class listing container
 
                         `def treeToLeftDerivation (tree):`
-                        `print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
-                        `for child in tree.children (from left ro right):`
-                        `treeToLeftDerivation(child)`
+
+                        &ensp;&ensp;`print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
+
+                        &ensp;&ensp;`for child in tree.children (from left ro right):`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`treeToLeftDerivation(child)`
                         ``
                         `def treeToRightDerivation (tree):`
-                        `for child in tree.children (from left ro right):`
-                        `treeToLeftDerivation(child)`
-                        `print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
+
+                        &ensp;&ensp;`for child in tree.children (from left ro right):`
+
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`treeToLeftDerivation(child)`
+
+                        &ensp;&ensp;`print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
                     |> p
 
                         Beachten Sie, dass wir in beiden Fällen die Liste Kinder von links

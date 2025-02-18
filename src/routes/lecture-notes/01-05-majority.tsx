@@ -207,7 +207,7 @@ const Article = () => {
                 <a href="../sub-pages/01-monotone.html">
                   Lösungen zu den Übungsaufgaben
                 </a>
-                dargestellt.
+                &ensp;dargestellt.
                 Insbesondere definieren wir Verallgemeinerungen von \(\maj_n\) wie folgt:
                 $$\begin&#123;align*&#125;
                 \theta^n_k (x_1,\dots,x_n)&amp;:=
@@ -270,26 +270,10 @@ const Article = () => {
                     def binomial(n,k):
                   </code>
                   {" "}
-                  {" "}
-                  <code>
-                    if k == 0 or k == n:
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    return 1
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    else:
-                  </code>
-                  {" "}
-                  {" "}
-                  <code>
-                    return binomial(n-1,k-1) + binomial(n-1,k)
-                  </code>
-                  {" "}{" "}
+                  &ensp;&ensp;&ensp;&ensp;`if k == 0 or k == n:`
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`return 1` 
+                  &ensp;&ensp;&ensp;&ensp;`else:`
+                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`return binomial(n-1,k-1) + binomial(n-1,k)`
                 </pre>
                 der exponentielle Laufzeit aufweist, und der effizienten Implementierung mittels
                 {" "}
@@ -548,7 +532,7 @@ const Article = () => {
                     <i>
                       Signalstärke
                     </i>
-                    von Verteilungen über Schaltkreise.
+                    {" "}von Verteilungen über Schaltkreise.
                   </Paragraph>
                   <div class="well subtheorem theorem">
                     <span class="numbered-title">
@@ -635,7 +619,7 @@ const Article = () => {
                     <i>
                       einen
                     </i>
-                    zufällig ausgewählten Bürger befragen, so
+                    {" "}zufällig ausgewählten Bürger befragen, so
                     ist das Ergebnis zwar nicht wirklich repräsentativ, aber immerhin leicht
                     besser, als wenn Sie einfach raten würden. Unser zufälliger
                     Schaltkreis sendet uns also ein schwaches aber positives Signal in die
@@ -652,7 +636,7 @@ const Article = () => {
                     <i>
                       drei
                     </i>
-                    Schaltkreise
+                    {" "}Schaltkreise
                     \(C_1, C_2, C_3 \sim \mathcal&#123;C&#125;\) unabhängig voneinander samplen und
                     einen neuen Schaltkreis bauen: \(C'(\x) := \maj_3 (C_1(\x), C_2(\x), C_3(\x))\). Dies gibt
                     uns wiederum eine Verteilung über Schaltkreise, die wir
@@ -816,7 +800,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Behauptung.
                       </span>
-                      Wenn $\mathcal&#123;C&#125;$
+                      &ensp;Wenn $\mathcal&#123;C&#125;$
                       Fehlerwahrscheinlichkeit
                       $\epsilon$ hat, dann hat $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ Fehlerwahrscheinlichkeit
                       $3 \epsilon^2$
@@ -828,7 +812,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      Wie im Beweis vom Lemma setzen wir
+                      {" "}Wie im Beweis vom Lemma setzen wir
                       $p := \frac&#123;1+p&#125;&#123;2&#125; = 1-\epsilon$ und erhalten
                     </Paragraph>
                     $$\begin&#123;align*&#125;
@@ -879,7 +863,7 @@ const Article = () => {
                     <i>
                       fällt
                     </i>
-                    nun die Fehlerwahrscheinlichkeit
+                    {" "}nun die Fehlerwahrscheinlichkeit
                     {" "}
                     <i>
                       doppelt exponentiell
@@ -965,7 +949,7 @@ const Article = () => {
                     <i>
                       Ereignis
                     </i>
-                    in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
+                    {" "}in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
                   </Paragraph>
                   $$\begin&#123;align*&#125;
                   \forall \b \in \cube^n: \Pr_&#123;C \sim \mathcal&#123;C&#125;_k&#125; [ C \in E_&#123;\b&#125; ] = \epsilon_k \lt 2^&#123;n-&#125; \ .
@@ -1055,7 +1039,7 @@ const Article = () => {
                   <i>
                     linearer
                   </i>
-                  Größe $O(n)$ anstreben.
+                  {" "}Größe $O(n)$ anstreben.
                 </Paragraph>
               </div>
             </div>

@@ -51,7 +51,7 @@ const Article = () => {
                   <i>
                     Produktionen
                   </i>
-                  genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
+                  {" "}genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
                   Alphabet
                   (hier: \(\&#123;a,b,c\&#125;\)) ableiten kann. Beispielsweise:
                   $$\begin&#123;align*&#125;
@@ -67,7 +67,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  Wir wollen bestimmen, ob
+                  &ensp;Wir wollen bestimmen, ob
                   aus einer gegebenen kontextfreien Grammatik \(G\) ein Palindromwort ableitbar ist,
                   also ein \(\gamma\), das von rechts nach links gelesen gleich ist, sprich
                   \(\gamma = \gamma^R\). Dieses Problem ist unentscheidbar.
@@ -118,7 +118,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Behauptung
                     </span>
-                    Wenn die Grammatik \(G\) ein Palindromwort
+                    &ensp;Wenn die Grammatik \(G\) ein Palindromwort
                     ableiten kann, dann hat das PCP-Puzzle \(P\) eine Lösung.
                   </div>
                   <div class="well subtheorem">
@@ -147,7 +147,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Behauptung
                     </span>
-                    Wenn
+                    &ensp;Wenn
                     das PCP-Puzzle \(P\) eine Lösung hat, dann kann die Grammatik \(G\) ein Palindromwort
                     ableiten.
                   </div>
@@ -207,7 +207,7 @@ const Article = () => {
                       <b>
                         Aufgabe:
                       </b>
-                      Zeigen Sie, dass die Funktion
+                      {" "}Zeigen Sie, dass die Funktion
                       \(n \mapsto n!\) im \(\lambda\)-Kalkül berechenbar ist.
                     </li>
                     <li>
@@ -235,7 +235,7 @@ const Article = () => {
                   <i>
                     Reduktion von \(L_1\) nach \(L_2\)
                   </i>
-                  ist eine Turing-berechenbare Funktion
+                  {" "}ist eine Turing-berechenbare Funktion
                   $$\begin&#123;align*&#125;
                   f : \Sigma_1^* \rightarrow \Sigma_2^*
                   \end&#123;align*&#125;$$
@@ -256,7 +256,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                   </span>
-                  Wenn \(f\) eine Reduktion von \(L_1\) nach
+                  &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                   \(L_2\) ist und \(L_2\) entscheidbar ist, dann ist auch \(L_1\) entscheidbar.
                 </div>
                 <div class="well container">
@@ -290,19 +290,19 @@ const Article = () => {
                 <i>
                   möglich
                 </i>
-                ist.
+                {" "}ist.
                 In der Berechenbarkeitstheorie und Komplexitätstheorie sind wir eher daran interessiert,
                 zu zeigen, was{" "}
                 <i>
                   nicht möglich
                 </i>
-                ist, und wenden daher häufiger das Kontrapositiv
+                {" "}ist, und wenden daher häufiger das Kontrapositiv
                 der Behauptung an:
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beobachtung
                   </span>
-                  Wenn \(f\) eine Reduktion von \(L_1\) nach
+                  &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                   \(L_2\) ist und \(L_1\) unentscheidbar ist, dann ist auch \(L_2\) unentscheidbar.
                 </div>
                 <div class="well container">
@@ -327,16 +327,16 @@ const Article = () => {
                 <i>
                   wäre / wäre
                 </i>
-                in Behauptung 4.6.9 wider.
+                {" "}in Behauptung 4.6.9 wider.
                 Auch ist es schlicht ungewohnt, ein{" "}
                 <i>
                   altes
                 </i>
-                Problem auf ein{" "}
+                {" "}Problem auf ein{" "}
                 <i>
                   neues
                 </i>
-                zu reduzieren
+                {" "}zu reduzieren
                 statt umgekehrt.
                 <figure>
                   <img

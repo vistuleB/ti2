@@ -107,7 +107,7 @@
                         sagen daher manchmal auch einfach nur Reduktionsschritt.
                     |> p
 
-                        *Beobachtung:*Wenn wir
+                        *Beobachtung:* Wenn wir
                         einen Linksreduktionsschritt \(\alpha \beta w \rstep{} \alpha X w\)
                         betrachten, also
                         \begin{align*}
@@ -151,7 +151,7 @@
 
                         ist inkorrekt. In unserer Java-Implementierung haben wir dieses Problem händisch gelöst, indem
                         wir der Regel $ND \rstep{} N$ den Vorzug vor $D \rstep{} N$ gegebene haben. Im allgemeinen
-                        müssen wir definieren, was ein _korrekter_Linksreduktionsschritt ist. Und dann
+                        müssen wir definieren, was ein _korrekter_ Linksreduktionsschritt ist. Und dann
                         überlegen, wie wir herausfinden, ob ein Linksreduktionsschritt korrekt ist. Diese Fragen
                         werden uns für den Rest dieses und des nächsten Teilkapitels beschäftigen.
                     |> div
@@ -175,7 +175,7 @@
                         |> p
 
                             Den Präfix $\alpha$ nennen wir eine
-                            _Front_der gültigen Wortform $\alpha \beta w$.
+                            _Front_ der gültigen Wortform $\alpha \beta w$.
                             Wenn die Grammatik eindeutig ist, dann hat
                             jede gültige Wortform $\gamma$ genau eine Front, die wir
                             mit $\front(\gamma)$ bezeichnen.
@@ -205,7 +205,7 @@
                         zum Beispiel
                         haben wir manchmal das erste Zeichen von $w$ betrachten müssen. Allerdings behalten wir erst
                         einmal obigen Wunsch als Idealziel.
-                        Um ihn zu formalisieren, fragen wir uns, wann es denn _nicht_möglich ist,
+                        Um ihn zu formalisieren, fragen wir uns, wann es denn _nicht_ möglich ist,
                         ohne Betrachten von $w$ zu eintscheiden, ob
                         $\alpha \beta w \rstep{} \alpha X w$ gültig ist.
                     |> ol
@@ -226,7 +226,7 @@
 
                                 (wir nehmen an, dass man aus jedem Nichtterminal
                                 mindestens ein Wort \(u \in \Sigma^*\) ableiten kann; andernfalls
-                                kann man solche _nutzlosen_Nichtterminale eliminieren).
+                                kann man solche _nutzlosen_ Nichtterminale eliminieren).
                                 Das Wort \(w\) hat also zwei verschiedene Ableitungsbäume.
                                 Die Grammatik ist somit mehrdeutig.
                                 Mit uneindeutigen Grammatiken beschäftigen wir uns zunächst gar nicht;
@@ -249,7 +249,7 @@
                             \end{align*}
                             |> p
 
-                                _nicht_korrekt, obwohl \(\alpha\beta w'\) eine
+                                _nicht_ korrekt, obwohl \(\alpha\beta w'\) eine
                                 gültige Wortform ist.
                                 Dieser Fall ist schlecht, weil der Parser nur
                                 $\alpha \beta$ gelesen hat und somit nicht
@@ -372,7 +372,7 @@
                             class well container-fluid subtheorem
                             |> p
 
-                                *Beweis.*Um Punkt 1 zu zeigen,
+                                *Beweis.* Um Punkt 1 zu zeigen,
                                 nehmen wir an, dass $\alpha \beta = \alpha' \beta'$ gilt.
                                 Da $\alpha \beta w \rstep{} \alpha X w$ korrekt
                                 ist, $\alpha' \beta' w'$ eine gültige Wortform ist und
@@ -587,10 +587,10 @@
                     |> div
                         class container alert alert-warning
 
-                        *Hinweis.*Was nun folgt, ist mathematisch
+                        *Hinweis.* Was nun folgt, ist mathematisch
                         recht herausfordernd. Lesen Sie daher gerne auch
                         das Kapitel 2.4 (Deterministic context free languages) im Lehrbuch
-                        _Introduction to the Theory of Computing_von Michael Sipser.
+                        _Introduction to the Theory of Computing_ von Michael Sipser.
                         Meine Darstellung des doch recht schwierigen Materials fußt auf diesem
                         Kapitel, weicht aber doch stark genug von Sipser ab, so dass es
                         womöglich hilfreich ist, beides zu lesen: dieses Vorlesungsskript und

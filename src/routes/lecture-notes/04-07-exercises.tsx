@@ -74,7 +74,7 @@ const Article = () => {
                     <i>
                       eine
                     </i>
-                    natürliche Zahl $\bar&#123;\alpha&#125;$ codieren können.
+                    {" "}natürliche Zahl $\bar&#123;\alpha&#125;$ codieren können.
                     Mittels dieser Codierung wird eine Sprache $L \subseteq \Sigma^*$
                     zu einer Funktion
                   </Paragraph>
@@ -156,7 +156,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  {" "}{" "}
+                  &ensp;
                   <b>
                     (Challenge).
                   </b>
@@ -166,7 +166,7 @@ const Article = () => {
                   <i>
                     zurückspulen
                   </i>
-                  kann. Der Automat hat also
+                  {" "}kann. Der Automat hat also
                   einen "Lesekopf", mit dem er auf einem Zeichen des Eingabewortes steht
                   (anfangs auf dem ersten). In jedem Schritt kann er nach rechts oder links
                   wechseln. Es gibt zwei spezielle Zeichen, die markieren, wo das
@@ -196,7 +196,7 @@ const Article = () => {
                   <i>
                     kein
                   </i>
-                  Wort in $L(M)$.
+                  {" "}Wort in $L(M)$.
                 </Paragraph>
                 <Paragraph>
                   Zeigen Sie, dass $L(M)$ eine reguläre Sprache ist. Dass man also aus $M$
@@ -231,7 +231,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                   </span>
-                  {" "}{" "}
+                  &ensp;
                   <b>
                     (Challange.)
                   </b>

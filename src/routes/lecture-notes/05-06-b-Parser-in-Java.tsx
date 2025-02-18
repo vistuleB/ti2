@@ -52,12 +52,12 @@ const Article = () => {
                   <tt>
                     ((31+402)*83)
                   </tt>
-                  entwerfen. Der Einfachheit halber bestehe ich
+                  &ensp;entwerfen. Der Einfachheit halber bestehe ich
                   auf strenger Klammerung, so wäre{" "}
                   <tt>
                     (2*(1+2+3))
                   </tt>
-                  zum Beispiel nicht erlaubt.
+                  &ensp;zum Beispiel nicht erlaubt.
                   Unsere Grammatik soll allgemeine Dezimalzahlen darstellen können.
                   Das Alphabet ist somit
                   $\Sigma = \&#123;\texttt&#123;0&#125;,\texttt&#123;1&#125;,\texttt&#123;2&#125;,\texttt&#123;3&#125;,\texttt&#123;4&#125;,
@@ -82,11 +82,11 @@ const Article = () => {
                   <i>
                     Ableitungsbaum
                   </i>
-                  konstruieren, für{" "}
+                  {" "}konstruieren, für{" "}
                   <tt>
                     ((31+402)*83)
                   </tt>
-                  also
+                  &ensp;also
                 </Paragraph>
                 <figure>
                   <img
@@ -123,7 +123,7 @@ const Article = () => {
                     <tt>
                       interface Expression
                     </tt>
-                    wird implementiert von
+                    &ensp;wird implementiert von
                     <ul>
                       <li>
                         <tt>
@@ -133,7 +133,7 @@ const Article = () => {
                         <tt>
                           Exrepssion e1, e2
                         </tt>
-                        enthält,
+                        &ensp;enthält,
                       </li>
                       <li>
                         <tt>
@@ -143,7 +143,7 @@ const Article = () => {
                         <tt>
                           Exrepssion e1, e2
                         </tt>
-                        enthält,
+                        &ensp;enthält,
                       </li>
                       <li>
                         <tt>
@@ -161,7 +161,7 @@ const Article = () => {
                     <tt>
                       interface Number
                     </tt>
-                    wird implementiert von
+                    &ensp;wird implementiert von
                     <ul>
                       <li>
                         <tt>
@@ -171,11 +171,11 @@ const Article = () => {
                         <tt>
                           Number
                         </tt>
-                        und eine{" "}
+                        &ensp;und eine{" "}
                         <tt>
                           Digit
                         </tt>
-                        erhält und
+                        &ensp;erhält und
                       </li>
                       <li>
                         <tt>
@@ -193,7 +193,7 @@ const Article = () => {
                     <tt>
                       interface Digit
                     </tt>
-                    wird implementiert von
+                    &ensp;wird implementiert von
                     <tt>
                       class DigitOne
                     </tt>
@@ -225,7 +225,7 @@ const Article = () => {
                     <tt>
                       class DigitEight
                     </tt>
-                    und
+                    &ensp;und
                     <tt>
                       class DigitNine
                     </tt>
@@ -241,7 +241,7 @@ const Article = () => {
                   <tt>
                     Expression
                   </tt>
-                  hat zusätzlich noch
+                  &ensp;hat zusätzlich noch
                   die Methode{" "}
                   <tt>
                     String toPrefixNotation()
