@@ -8,10 +8,6 @@
             href ../vorlesungsskript
 
             Inhaltsverzeichnis
-        |> a
-            href 01-00-Boolean-circuits
-
-            &lt;&lt; Kapitel 1.0
     |> div
         id link-to-overview
         style text-align: end
@@ -19,10 +15,6 @@
             href /
 
             zur Kursübersicht
-        |> a
-            href 01-02-truth-tables-cnf-dnf
-
-            Kapitel 1.2 &gt;&gt;
     |> div
         counter DefCtr
         id rightSideWrapper

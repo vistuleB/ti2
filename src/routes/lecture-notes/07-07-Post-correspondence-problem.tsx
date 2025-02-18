@@ -563,8 +563,12 @@ const Article = () => {
                       Korrespondenzproblem (MPCP)
                       {" "}
                     </i>
+<<<<<<< HEAD
                     {" "}
                     &ensp;ist genau das gleiche wie das PCP,
+=======
+                    {" "}ist genau das gleiche wie das PCP,
+>>>>>>> 612feea53413697e7003d958d020c4dff50555cc
                     nur dass es in \(S\) eine markierte Startkachel gibt
                     und jede Lösung mit dieser Startkachel beginnen muss.
                     Es ist also ein "strengeres" Problem als das PCP.

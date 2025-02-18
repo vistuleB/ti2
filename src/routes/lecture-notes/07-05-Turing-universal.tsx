@@ -193,8 +193,12 @@ const Article = () => {
                       Ein technischer aber letztendlich irrelevanter Punkt:
                       {" "}
                     </b>
+<<<<<<< HEAD
                     {" "}
                     &ensp;die Mengen
+=======
+                    {" "}die Mengen
+>>>>>>> 612feea53413697e7003d958d020c4dff50555cc
                     $Q$ und $\Gamma$ der Turingmaschine $M$ können ja beliebige
                     (endliche) Mengen sein,
                     und weder $\Lambda$ noch die Turingmaschine $U$ haben "Kenntnis"
