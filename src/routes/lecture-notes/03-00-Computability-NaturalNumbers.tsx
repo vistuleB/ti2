@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={15}
         title_gr="Berechenbarkeit und natürliche Zahlen"
         title_en="Computability NaturalNumbers"
-        number={3.0}
-        path="/lecture-notes15.tsx">
+        number={3.0}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -123,7 +122,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

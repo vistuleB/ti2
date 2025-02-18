@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={20}
         title_gr="Formale Sprachen - Einführung und Beispiele"
         title_en="formal languages"
-        number={4.0}
-        path="/lecture-notes20.tsx">
+        number={4.0}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -2693,7 +2692,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

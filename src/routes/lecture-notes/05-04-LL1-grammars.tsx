@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={32}
         title_gr="LL(\(k\))-Grammatiken"
         title_en="LL1 grammars"
-        number={5.4}
-        path="/lecture-notes32.tsx">
+        number={5.4}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -1087,7 +1086,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

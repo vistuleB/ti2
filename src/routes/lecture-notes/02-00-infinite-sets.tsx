@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={8}
         title_gr="Unendliche Mengen"
         title_en="infinite sets"
-        number={2.0}
-        path="/lecture-notes8.tsx">
+        number={2.0}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -95,7 +94,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

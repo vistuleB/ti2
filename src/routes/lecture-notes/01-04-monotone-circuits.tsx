@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={5}
         title_gr="Monotone Funktionen und monotone Schaltkreise"
         title_en="monotone circuits"
-        number={1.4}
-        path="/lecture-notes5.tsx">
+        number={1.4}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -1078,7 +1077,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

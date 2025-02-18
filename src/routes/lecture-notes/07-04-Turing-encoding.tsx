@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={45}
         title_gr="Die universelle Turingmaschine"
         title_en="Turing encoding"
-        number={7.4}
-        path="/lecture-notes45.tsx">
+        number={7.4}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -348,7 +347,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

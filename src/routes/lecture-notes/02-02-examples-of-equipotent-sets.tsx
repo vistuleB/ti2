@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={10}
         title_gr="Beispiele abzählbar unendlicher Mengen"
         title_en="examples of equipotent sets"
-        number={2.2}
-        path="/lecture-notes10.tsx">
+        number={2.2}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -461,7 +460,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

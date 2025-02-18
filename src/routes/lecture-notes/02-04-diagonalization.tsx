@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={12}
         title_gr="Die Cantorsche Diagonalisation: $\N \not \approx \R$"
         title_en="diagonalization"
-        number={2.4}
-        path="/lecture-notes12.tsx">
+        number={2.4}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -232,7 +231,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

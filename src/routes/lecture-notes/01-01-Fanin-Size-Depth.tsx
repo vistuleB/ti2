@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={2}
         title_gr="Tiefe, Fan-In"
         title_en="Fanin Size Depth"
-        number={1.1}
-        path="/lecture-notes2.tsx">
+        number={1.1}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -118,7 +117,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

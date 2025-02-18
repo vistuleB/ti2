@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={51}
         title_gr="Das Zeithierarchietheorem"
         title_en="Time hierarchy theorem"
-        number={8.1}
-        path="/lecture-notes51.tsx">
+        number={8.1}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -457,7 +456,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

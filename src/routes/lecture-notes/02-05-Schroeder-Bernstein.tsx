@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={13}
         title_gr="Das Schröder-Bernstein-Theorem"
         title_en="Schroeder Bernstein"
-        number={2.5}
-        path="/lecture-notes13.tsx">
+        number={2.5}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -450,7 +449,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

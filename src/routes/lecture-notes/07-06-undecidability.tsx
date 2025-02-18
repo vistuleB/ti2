@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={47}
         title_gr="Turingmaschinen, Haltproblem und Unentscheidbarkeit"
         title_en="undecidability"
-        number={7.6}
-        path="/lecture-notes47.tsx">
+        number={7.6}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -357,7 +356,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

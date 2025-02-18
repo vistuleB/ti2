@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={36}
         title_gr="Linker Rand, Blüten und die DK-Grammatik"
         title_en="d linker Rand und Bluete"
-        number={5.8}
-        path="/lecture-notes36.tsx">
+        number={5.8}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -701,7 +700,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

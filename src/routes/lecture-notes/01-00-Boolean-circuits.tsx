@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={1}
         title_gr="Schaltkreise"
         title_en="Boolean circuits"
-        number={1.0}
-        path="/lecture-notes1.tsx">
+        number={1.0}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -26,10 +25,7 @@ const Article = () => {
             Kapitel 1.1 &gt;&gt;
           </a>
         </div>
-        <div
-          counter="ExoCtr"
-          counter="DefCtr"
-          id="rightSideWrapper">
+        <div id="rightSideWrapper">
           <div class="content">
             <div class="chapter">
               <h1 class="hidden-title">
@@ -368,7 +364,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

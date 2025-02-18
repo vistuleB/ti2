@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={48}
         title_gr="über Unentscheidbarkeit: Das Postsche Korrespondenzproblem"
         title_en="Post correspondence problem"
-        number={7.7}
-        path="/lecture-notes48.tsx">
+        number={7.7}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -1013,7 +1012,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

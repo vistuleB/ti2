@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={29}
         title_gr="Ableitungen und Ableitungsbäume"
         title_en="ableitungen"
-        number={5.1}
-        path="/lecture-notes29.tsx">
+        number={5.1}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -141,7 +140,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

@@ -2,6 +2,8 @@ import infrastructure
 import simplifile
 import gleam/result
 import gleam/list
+import gleam/pair
+import gleam/int
 import gleam/option.{type Option}
 import html_pipeline.{html_pipeline}
 import gleam/io
@@ -165,26 +167,52 @@ fn get_title(vxmls: List(VXML)) -> String {
   }
 }
 
-fn emitter(pair: #(String, VXML, Nil), prev_file: Option(String), next_file: Option(String)) -> Result(#(String, List(bl.BlamedLine), Nil), String) {
-  let #(path, vxml, Nil) = pair
-  let title_en = path |> string.drop_end(4) |> string.split("-") |> list.drop(2) |> string.join(" ")
+fn emitter(
+  triple: #(String, VXML, Nil),
+  prev_file: Option(String),
+  next_file: Option(String)) -> Result(#(String, List(bl.BlamedLine), Nil),
+  String
+) {
+  let #(filename, vxml, Nil) = triple
+  let title_en = filename |> string.drop_end(4) |> string.split("-") |> list.drop(2) |> string.join(" ")
   let title_german = get_title_internal(vxml)
-  let number = path |> string.split("-") |> list.take(2) |> list.map(remove_0_at_start) |> string.join(".")
+  let chapter_number_as_string = filename |> string.split_once("-") |> result.unwrap(#("", "")) |> pair.first
+  let assert True = chapter_number_as_string != ""
+  let number = filename |> string.split("-") |> list.take(2) |> list.map(remove_0_at_start) |> string.join(".")
+  let assert [chapter_number, section_number] = filename |> string.split("-") |> list.take(2) |> list.map(remove_0_at_start) |> list.map(int.parse) |> list.map(result.unwrap(_, -1))
+  let assert True = chapter_number >= 1
+  let assert True = section_number >= 0
 
-  let root = vp.V(blame_us("Root"), "Chapter", [
-    vp.BlamedAttribute(blame_us("Chapter title"), "title_gr", title_german),
-    vp.BlamedAttribute(blame_us("Chapter title"), "title_en", title_en),
-    vp.BlamedAttribute(blame_us("Chapter number"), "number", number)
-  ], [
-    construct_left_nav(prev_file), 
-    construct_right_nav(next_file), 
-    vxml
-  ])
+  let chapter_directory = "../emu_content/" <> chapter_number_as_string
+
+  case section_number == 0 {
+    False -> Nil
+    True -> {
+      let _ = simplifile.create_directory(chapter_directory)
+      let assert Ok(_) = simplifile.write(
+        chapter_directory <> "/" <> "__parent.emu",
+        "|> Chapter\n    counter SectionCtr\n    title_gr " <> title_german <> "\n    title_en " <> title_en
+      )
+      Nil
+    }
+  }
+
+  let root = vp.V(
+    blame_us("Root"),
+    "Section",
+    [
+      vp.BlamedAttribute(blame_us("section title"), "title_gr", title_german),
+      vp.BlamedAttribute(blame_us("section title"), "title_en", title_en),
+      vp.BlamedAttribute(blame_us("section title"), "number", number),
+    ], [
+      construct_left_nav(prev_file), 
+      construct_right_nav(next_file), 
+      vxml
+    ]
+  )
   let writerlys = wp.vxmls_to_writerlys([root])
 
-  Ok(#(path, wp.writerlys_to_blamed_lines(writerlys), Nil))
-  // Ok(#(path, vp.vxml_to_blamed_lines(vxml), Nil))
-
+  Ok(#(chapter_directory <> "/" <> filename, wp.writerlys_to_blamed_lines(writerlys), Nil))
 }
 
 pub fn prettifier(

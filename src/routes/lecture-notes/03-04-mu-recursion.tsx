@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={19}
         title_gr="Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion"
         title_en="mu recursion"
-        number={3.4}
-        path="/lecture-notes19.tsx">
+        number={3.4}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -183,7 +182,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

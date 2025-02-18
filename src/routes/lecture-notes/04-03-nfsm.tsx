@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={23}
         title_gr="Nichtdeterministische Endliche Automaten"
         title_en="nfsm"
-        number={4.3}
-        path="/lecture-notes23.tsx">
+        number={4.3}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -678,7 +677,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

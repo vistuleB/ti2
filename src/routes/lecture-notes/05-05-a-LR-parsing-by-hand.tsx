@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={33}
         title_gr="LR-Parser per Hand entwerfen"
         title_en="a LR parsing by hand"
-        number={5.5}
-        path="/lecture-notes33.tsx">
+        number={5.5}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -704,7 +703,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

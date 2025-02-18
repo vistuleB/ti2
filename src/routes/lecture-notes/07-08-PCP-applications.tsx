@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={49}
         title_gr="des Postschen Korrespondenzproblems"
         title_en="PCP applications"
-        number={7.8}
-        path="/lecture-notes49.tsx">
+        number={7.8}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -486,7 +485,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

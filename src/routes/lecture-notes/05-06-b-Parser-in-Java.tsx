@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={34}
         title_gr="Einen Parser in Java implementieren"
         title_en="b Parser in Java"
-        number={5.6}
-        path="/lecture-notes34.tsx">
+        number={5.6}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -262,7 +261,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

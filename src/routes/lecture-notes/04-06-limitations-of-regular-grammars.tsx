@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={26}
         title_gr="Die Grenzen regulärer Sprachen"
         title_en="limitations of regular grammars"
-        number={4.6}
-        path="/lecture-notes26.tsx">
+        number={4.6}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -560,7 +559,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

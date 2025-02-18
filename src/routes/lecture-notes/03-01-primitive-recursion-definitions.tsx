@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={16}
         title_gr="Primitive Rekursion: Motivation und Definitionen"
         title_en="primitive recursion definitions"
-        number={3.1}
-        path="/lecture-notes16.tsx">
+        number={3.1}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -386,7 +385,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

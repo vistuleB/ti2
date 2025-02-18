@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={24}
         title_gr="Von einer regulären Grammatik zu einem endlichen Automaten"
         title_en="regular grammar to fsm"
-        number={4.4}
-        path="/lecture-notes24.tsx">
+        number={4.4}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -647,7 +646,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };

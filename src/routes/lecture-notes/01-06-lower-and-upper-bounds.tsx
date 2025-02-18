@@ -5,12 +5,11 @@ import Carousel from "~/components/Carousel";
 const Article = () => {
   return (
     <Container>
-      <Chapter
+      <Section
         count={7}
         title_gr="Untere und obere Schranken"
         title_en="lower and upper bounds"
-        number={1.6}
-        path="/lecture-notes7.tsx">
+        number={1.6}>
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -721,7 +720,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-      </Chapter>
+      </Section>
     </Container>
   );
 };
