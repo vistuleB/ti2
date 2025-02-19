@@ -1,7 +1,9 @@
 |> Section
-    title_gr Kontextfreie Sprachen
+    title_gr 5. Kontextfreie Sprachen
     title_en context free languages
     number 5.0
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -34,7 +36,8 @@
                     |> span
                         class chapterTitle
 
+                        ::++ChapterCtr. 
                         5. Kontextfreie Sprachen
                 |> p
 
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Some introductory stuff about grammars.
+                    Some introductory stuff about grammars.

@@ -1,7 +1,9 @@
 |> Section
-    title_gr LL(\(k\))-Grammatiken
+    title_gr 5.4 LL(\(k\))-Grammatiken
     title_en LL1 grammars
     number 5.4
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,6 +38,7 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             5.4 LL(\(k\))-Grammatiken
                     |> div
                         class well container theorem
@@ -43,7 +46,10 @@
                             class numbered-title
 
                             Definition
-                        *Grenzform*                        Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik.
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        *Grenzform*Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik.
                         Eine Wortform \(A \alpha\) - also eine Wortform, die mit einem Nichtterminal beginnt -
                         heißt _Grenzform_, wenn es ein \(w \in \Sigma^*\) gibt, so dass
                         es eine Linksableitung
@@ -64,7 +70,10 @@
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für ein Wort \(w \in \Sigma^*\) und eine natürliche Zahl \(k \in \N\)
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        Für ein Wort \(w \in \Sigma^*\) und eine natürliche Zahl \(k \in \N\)
                         sei \(\first_k(w)\) wie folgt definiert:
                         \begin{align*}
                         \first_k(w) := \begin{cases}
@@ -80,7 +89,10 @@
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*LL(\(k\))-Grammatiken*                        Eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) ist eine
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        *LL(\(k\))-Grammatiken*Eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) ist eine
                         LL(\(k\))-Grammatik, wenn für jede Grenzform \(A \alpha\) und für jedes Paar
                         \begin{align*}
                         A&amp;\step{1} \beta \\
@@ -104,15 +116,17 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Negieren Sie die Definition, d.h., schreiben Sie eine Aussage der Form
-                        _Wenn \(G\) nicht LL(\(k\)) ist, dann gibt es..._                    
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Negieren Sie die Definition, d.h., schreiben Sie eine Aussage der Form_Wenn \(G\) nicht LL(\(k\)) ist, dann gibt es..._
                     |> div
                         class well container theorem
                         |> span
                             class numbered-title
 
                             Beispiel
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Klammern-Grammatik
+                        Die Klammern-Grammatik
                         \begin{align*}
                         S&amp;\step{1} \epsilon \\
                         S&amp;\step{2} (S)S
@@ -121,7 +135,7 @@
                         |> div
                             class well subtheorem
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                            Folgen wir der Definition von LL(1): für jedes Paar verschiedener Regeln muss etwas
+                            *Beweis.*Folgen wir der Definition von LL(1): für jedes Paar verschiedener Regeln muss etwas
                             gelten. Wir haben hier keine Auswahl, denn es gibt ja nur ein Paar. Also
                             müssen wir zeigen, dass, falls
                             \begin{align*}
@@ -134,6 +148,7 @@
                             |> p
 
                                 *Behauptung.* Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
+                                &ensp;Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
                                 dann steht jedes \(S\) in \(\delta\) entweder am Ende von \(\delta\) oder
                                 unmittelbar vor einem "\(\texttt{)}\)".
                             |> p
@@ -149,7 +164,7 @@
                                     \(\square\)
                             |> p
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir folgern also, dass für das \(\alpha\) den beiden obigne
+                                Wir folgern also, dass für das \(\alpha\) den beiden obigne
                                 Herleitungen \(\first_k(\alpha) \in \{\epsilon, \texttt{)}\}\) gilt.
                                 Keines davon ist ein Nichtterminal, und so muss auch
                                 \(\first_k(\alpha) = \first_k(x)\) gelten. Zusammenfassend gesagt:
@@ -172,6 +187,7 @@
                     |> p
 
                         Wenn umgekehrt eine Grammatik _nicht_ LL(\(k\)) ist, dann muss der Backtrack-Baum
+                        &ensp;LL(\(k\)) ist, dann muss der Backtrack-Baum
                         beiden Ableitungen
                         \begin{align*}
                         w A \alpha&amp;\Rightarrow w \beta \alpha \\
@@ -186,7 +202,11 @@
                             class numbered-title
 
                             Übungsaufgabe
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
                         (Beispiel 5.3 aus _The Theory of Parsing, Translation, and Compiling_ von Alfred V. Aho
+                        &ensp;von Alfred V. Aho
                         und Jeffrey D. Ullman).
                         Betrachten wir die Grammatik
                         \begin{align*}
@@ -198,7 +218,8 @@
                         Zeigen Sie, dass diese Grammatik LL(2) ist, aber nicht LL(1).
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Tip.* Leiten Sie erst einmal
+                            *Tip.* Leiten Sie erst einmal
+                            &ensp;Leiten Sie erst einmal
                             ein Dutzend verschiedene Wörter ab und finden dann
                             eine "normalsprachliche" Beschreibung
                             dieser Sprache. Beschreiben Sie dann alle möglichen Wortformen
@@ -209,7 +230,10 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie eine äquivalente Grammatik zu der vorherigen Sprache, die LL(1) ist.
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Schreiben Sie eine äquivalente Grammatik zu der vorherigen Sprache, die LL(1) ist.
                         (Warnung: Ich weiß nicht, ob das überhaupt geht).
                     |> div
                         id grammar-aaaaabb
@@ -218,7 +242,10 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die Grammatik \(G\):
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Betrachten wir die Grammatik \(G\):
                         \begin{align*}
                         S&amp;\step{1} a S b \\
                         S&amp;\step{2} a S \\
@@ -228,16 +255,16 @@
                         \begin{align*}
                         L(G) := \{ a^{m+k} b^m \ | \ m, k \in \N \} \ ,
                         \end{align*}
-                        also Wörter, wo auf beliebig viele \(a\)'s eine Folge von
-                        _höchstens_ so vielen \(b\)'s folgt.
+                        also Wörter, wo auf beliebig viele \(a\)'s eine Folge von_höchstens_ so vielen \(b\)'s folgt.
+                        &ensp;so vielen \(b\)'s folgt.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Geben Sie diese Grammatik in den
+                            Geben Sie diese Grammatik in den
                             |> a
                                 href ../../demos/drawManualGrammar.html
 
                                 Parser-Simulator
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein und finden Wörter mit langen Sackgassen.
+                            ein und finden Wörter mit langen Sackgassen.
                         |> p
 
                             Zeigen Sie, dass diese Grammatik nicht LL\((k)\) ist, für kein
@@ -248,7 +275,10 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(t \in \N\) eine feste, im Voraus bekannte Zahl.
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Sei \(t \in \N\) eine feste, im Voraus bekannte Zahl.
                         Betrachten wir die Sprache
                         \begin{align*}
                         L_t := \{a^{m + l} b^m \ | \ m \geq 0, l \leq t\} \ ,
@@ -257,17 +287,18 @@
                         \(n \leq m \leq n+t\).
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie für \(L_3\) eine Grammatik,
+                            Schreiben Sie für \(L_3\) eine Grammatik,
                             geben Sie diese im
                             |> a
                                 href ../../demos/drawManualGrammar.html
 
                                 Parser-Simulator
                             &ensp;ein
+                            &ensp;ein
                             und schauen, wie lang die Sackgassen werden können.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass \(L_3\) eine LL\((k)\)-Grammatik ist. Für welchen
+                            Zeigen Sie, dass \(L_3\) eine LL\((k)\)-Grammatik ist. Für welchen
                             Wert von \(k\)? Ist
                             \(L_t\) (für im Voraus bekanntes \(t\)) eine
                             LL\((k)\)-Grammatik? Für welchen Wert von \(k\)?
@@ -278,28 +309,35 @@
                     einen Parser, also im Prinzip einen deterministischen Pushdown-Automaten
                     schreiben können.
                     Wir tasten uns langsam voran. Wir beginnen mit einer
-                    Verallgemeinerung von \(\first_k\) von Wörtern auf
-                    _Wortformen_ (die also Nichtterminale beinhalten können).
+                    Verallgemeinerung von \(\first_k\) von Wörtern auf_Wortformen_ (die also Nichtterminale beinhalten können).
+                    &ensp;(die also Nichtterminale beinhalten können).
                     |> div
                         class well container theorem
                         |> span
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) und eine
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        Sei eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) und eine
                         Wortform \(\alpha \in (\Sigma \cup N)^*\) gegeben.
                         Wir definieren
                         \begin{align*}
                         \First_k(\alpha) := \{ \first_k(w) \ | \ w \in \Sigma^*, \alpha \Step{}^* w\}
                         \end{align*}
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können nun die LL\((k)\)-Bedingung äquivalent formulieren:
+                    Wir können nun die LL\((k)\)-Bedingung äquivalent formulieren:
                     |> div
                         class well container theorem
                         |> span
                             class numbered-title
 
-                            Definition/Beobachtung
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Grammatik \(G\) ist LL\((k)\) genau dann, wenn
+                            Definition
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                            /Beobachtung
+                        Eine Grammatik \(G\) ist LL\((k)\) genau dann, wenn
                         für alle Grenzformen \(A \alpha\) und alle
                         Produktionen mit \(A\) auf der linken Seite, also
                         \begin{align*}
@@ -312,7 +350,7 @@
                         zwei dieser Mengen ein gemeinsames Element enthalten).
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nehmen wir eine Momentaufnahme unseres Kellerautomaten. Er
+                        Nehmen wir eine Momentaufnahme unseres Kellerautomaten. Er
                         hat den Präfix \(x\) des Eingabewortes \(xy\) gelesen und
                         eine Linksableitung
                         \begin{align*}
@@ -326,7 +364,7 @@
                         schwierige Fall ist, wenn \(\alpha\) mit einem Nichtterminal beginnt.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nochmal von vorn: im schwierigen Fall liegt auf dem Stack (oberhalb vom \(\$\))
+                        Nochmal von vorn: im schwierigen Fall liegt auf dem Stack (oberhalb vom \(\$\))
                         eine Wortform, die mit einem Nichtterminal beginnt, also
                         \(A \alpha\). Das bedeutet, dass der Automat per Linksableitung
                         bis jetzt
@@ -351,9 +389,11 @@
                         \end{align*}
                         da ja nach obiger Beobachtung diese Mengen disjunkt sind. Wenn
                         \(\first_k(y)\) in _keiner_ dieser Mengen enthalten ist, so
+                        &ensp;dieser Mengen enthalten ist, so
                         kann die Ableitung offensichtlich nicht vervollständigt werden, und wir schließen,
                         dass \(xy \not \in L(G)\) ist.
                         Wenn es _genau ein_ \(\beta_i\) gibt mit
+                        &ensp;\(\beta_i\) gibt mit
                         \(\first_k(y) \in \first_k(\beta_i \alpha)\), dann ist
                         \(A \rightarrow \beta_i\) die "richtige" Produktion.
                         Wir wenden sie an, ersetzen also \(A\) auf dem Stack durch \(\beta_i\).
@@ -378,11 +418,12 @@
 
                                     while
                                 &ensp;Stack nicht leer
+                                &ensp;Stack nicht leer
                             |> ol
                                 class nested
                                 |> li
 
-                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(y\) das Resteingabewort.
+                                    Sei \(y\) das Resteingabewort.
                                 |> li
 
                                     Wenn das oberste Symbol auf dem Stack ein Terminalsymbol \(c\) ist:
@@ -417,7 +458,7 @@
                                             |> span
                                                 style color:red; font-weight: bold;
 
-                                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Berechne \(\First_k(\beta_i\alpha)\) für alle \(\beta_i\) und
+                                                Berechne \(\First_k(\beta_i\alpha)\) für alle \(\beta_i\) und
                                                 schaue, welches \(\first_k(y)\) enthält
                                             |> ul
                                                 |> li
@@ -445,6 +486,7 @@
 
                                         Accept
                                     &ensp;ansonsten 
+                                    &ensp;ansonsten 
                                     |> tt
 
                                         Reject
@@ -455,14 +497,17 @@
                         die Menge \(\First_k(\beta_i\alpha)\) zu berechnen.
                     |> h2
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(\First_k(A)\) und \(\First_k(\alpha)\) berechnen.
+                        \(\First_k(A)\) und \(\First_k(\alpha)\) berechnen.
                     |> div
                         class well container theorem
                         |> span
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Seien \(K, L \subseteq \Sigma^*\) zwei Mengen.
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        Seien \(K, L \subseteq \Sigma^*\) zwei Mengen.
                         Mit \(K \circ L\) bezeichnen wir die Menge
                         \begin{align*}
                         K \circ L := \{xy \ | \ x \in K, y \in L\} \ .
@@ -480,7 +525,7 @@
                         \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im Allgemeinen gilt
+                        Im Allgemeinen gilt
                         \(\First_k(S_1 \circ \dots \circ S_l) = S_1 \circ_k S_2 \circ_k \dots \circ_k S_l\).
                         In Worten: der \(\circ_k\)-Operator bildet alle möglichen Kombinationen von Wörtern und nimmt
                         von jedem die ersten \(k\) Zeichen.
@@ -490,7 +535,7 @@
                             class numbered-title
 
                             Beispiel
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei
+                        Sei
                         \begin{align*}
                         K&amp;:= \{\epsilon, a, ab, aba\} \\
                         L&amp;:= \{c, bb, b\}
@@ -510,7 +555,10 @@
                             class numbered-title
 
                             Beobachtung
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*- Wie man \(\First_k(\alpha)\) berechnet.*                        Sei eine Wortform \(\alpha\) gegeben, also
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        *- Wie man \(\First_k(\alpha)\) berechnet.*Sei eine Wortform \(\alpha\) gegeben, also
                         \(\alpha \in (\Sigma \cup N)^*\). Wir berechnen
                         \(\First_k(\alpha)\), indem wir als erstes
                         \(\alpha\) aussschreiben als
@@ -526,7 +574,7 @@
                         \end{align}
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können dies schön der Reihe nach tun:
+                            Wir können dies schön der Reihe nach tun:
                         |> ol
                             class nested
                             |> li
@@ -537,9 +585,11 @@
 
                                     for
                                 &ensp;\(i=n\) 
+                                &ensp;\(i=n\) 
                                 |> tt
 
                                     down to
+                                &ensp;1 
                                 &ensp;1 
                                 |> tt
 
@@ -548,7 +598,7 @@
                                     class nested
                                     |> li
 
-                                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(K := \First_k(\sigma_i) \circ_k K \)
+                                        \(K := \First_k(\sigma_i) \circ_k K \)
                                         |> span
                                             class comment
 
@@ -559,9 +609,10 @@
 
                                     return
                                 &ensp;\(K\)
+                                &ensp;\(K\)
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir müssen nur noch herausfinden, wie wir
+                            Wir müssen nur noch herausfinden, wie wir
                             \(\First_k(\sigma)\) für einzelne Zeichen \(\sigma\) berechnen.
                     Für ein Terminalsymbol \(c\) ist es trivial, \(\First_k(c)\) zu berechnen:
                     es ist \(\{c\}\), da sich aus \(c\) natürlich nur das Wort \(c\) ableiten lässt.
@@ -573,7 +624,10 @@
                             class numbered-title
 
                             Beobachtung
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(X\) ein Nichtterminal und
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        Sei \(X\) ein Nichtterminal und
                         \begin{align*}
                         X&amp;\rightarrow \alpha_1 \\
                         X&amp;\rightarrow \alpha_2 \\
@@ -592,7 +646,7 @@
                         gilt \(\first_k(w)\in \First_k(\alpha_i)\).
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Gleichungen \((\ref{first-k-wortform})\) und \((\ref{first-k-nonterminal})\) leuchten zwar
+                        Die Gleichungen \((\ref{first-k-wortform})\) und \((\ref{first-k-nonterminal})\) leuchten zwar
                         ein, scheinen aber erstmal
                         nicht hilfreich, diese Mengen auch tatsächlich zu berechnen. Denn eventuell taucht \(X\) selbst
                         wieder auf einer rechten
@@ -603,9 +657,10 @@
                         unter Anderem die Menge \(\First_k(X)\). Wo sollen wir also anfangen?
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In solchen Situationen, wo sich "die Katze in den Schwanz beißt", hilft es oft, die Definition
+                        In solchen Situationen, wo sich "die Katze in den Schwanz beißt", hilft es oft, die Definition
                         vorerst _komplexere_ un
-                        _genauer_ zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
+                        &ensp;un_genauer_ zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
+                        &ensp;zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
                         \(\First_k(\alpha)\), noch eine feinere
                         Unterteilung an:
                     |> div
@@ -614,7 +669,10 @@
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(\sigma\) ein Symbol und \(d \in \N\). Dann ist
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        Sei \(\sigma\) ein Symbol und \(d \in \N\). Dann ist
                         \begin{align*}
                         \First_k^{(d)}(\sigma) := \{\first_k(w) \ | \ \textnormal{ es gibt einen Ableitungsbaum für
                         $\sigma \Step{}^* w$ der Höhe höchstens $d$}\}
@@ -625,7 +683,7 @@
                             class numbered-title
 
                             Beispiel
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei unsere Grammatik
+                        Sei unsere Grammatik
                         \begin{align*}
                         S&amp;\rightarrow Xa \\
                         X&amp;\rightarrow Sb \ | c
@@ -636,7 +694,7 @@
                                 style height:8em
                                 src ../img/context-free/LL/tree-depth-2.svg
                                 loading lazy
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein Ableitungsbaum der Höhe 2 von \(S \Step{}^* ca\), und somit gilt
+                        ein Ableitungsbaum der Höhe 2 von \(S \Step{}^* ca\), und somit gilt
                         \begin{align*}
                         c \in \First_1^{(d)} (S) \ .
                         \end{align*}
@@ -655,7 +713,7 @@
                         von \(n\) Ableitungsbäumen, von denen jeder Höhe maximal \(d\) hat.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Mit dieser Definition können wir nun Gleichungen für \(\First_k^{(d)}(X)\) und
+                        Mit dieser Definition können wir nun Gleichungen für \(\First_k^{(d)}(X)\) und
                         \(\First_k^{(d)}(\alpha)\) angeben.
                         Seien \(X \rightarrow \alpha_1 \ | \ \dots \ | \ \alpha_k\) die Produktionen mit \(X\) auf der
                         linken Seite. Dann gilt
@@ -666,7 +724,7 @@
                             class numbered-title
 
                             Lemma.
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für \(d \geq 1\) gilt
+                        Für \(d \geq 1\) gilt
                         \begin{align*}
                         \First_k^{(d)}(X)&amp;= \bigcup_{i=1}^k \First_k^{(d-1)} (\alpha_i) \\
                         \First_k^{(d)}(\alpha)&amp;= \First_k^{(d)}(\sigma_1) \circ_k \First_k^{(d)}(\sigma_2) \circ_k
@@ -682,7 +740,7 @@
                         \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Gleichungen sagen, dass wir, falls wir \(\First_{k}^{(d-1)}(X)\) für alle Nichtterminale
+                        Die Gleichungen sagen, dass wir, falls wir \(\First_{k}^{(d-1)}(X)\) für alle Nichtterminale
                         kennen,
                         dann auch \(\First_{k}^{(d)}(X)\) berechnen können.
                         Daraus folgt auch: wenn
@@ -695,7 +753,10 @@
                             class numbered-title
 
                             Beobachtung
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls \(\First_{k}^{(d-1)}(X)=\First_{k}^{(d)}(X)\) für alle \(X \in N\), dann gilt
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        Falls \(\First_{k}^{(d-1)}(X)=\First_{k}^{(d)}(X)\) für alle \(X \in N\), dann gilt
                         \begin{align*}
                         \First_k (X) = \First_k^{(d)}(X)
                         \end{align*}
@@ -706,7 +767,7 @@
                             class numbered-title
 
                             Demo.
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*- Berechnung der Menge \(\First_k(A)\) für die Nichtterminale einer Sprache.*                        Wir betrachten die Grammatik
+                        *- Berechnung der Menge \(\First_k(A)\) für die Nichtterminale einer Sprache.*Wir betrachten die Grammatik
                         \begin{align*}
                         S&amp;\rightarrow Xa \ | \ \epsilon \\
                         X&amp;\rightarrow b \ | \ Sc \ | \ SX

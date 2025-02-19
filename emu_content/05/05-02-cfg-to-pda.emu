@@ -1,7 +1,9 @@
 |> Section
-    title_gr Kontextfreie Grammatiken und Kellerautomaten
+    title_gr 5.2 Kontextfreie Grammatiken und Kellerautomaten
     title_en cfg to pda
     number 5.2
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,6 +38,7 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             5.2 Kontextfreie Grammatiken und Kellerautomaten
                     |> div
                         class well container theorem
@@ -43,13 +46,13 @@
                             class numbered-title
 
                             Theorem
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zu jeder kontextfreien Grammatik \(G = (\Sigma, N, S, P)\) gibt es
+                        Zu jeder kontextfreien Grammatik \(G = (\Sigma, N, S, P)\) gibt es
                         einen Kellerautomaten \(M = (\Sigma, Q, \Gamma, \qstart, \delta)\), der
                         die gleiche Sprache akzeptiert, also \(L(G) = L(M)\).
                     |> div
                         class well container
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Der Beweis ist vergleichsweise einfach, weil wir die Grammatik eins zu eins in
+                        *Beweis.*Der Beweis ist vergleichsweise einfach, weil wir die Grammatik eins zu eins in
                         Automatentransitionen übersetzen können.
                         Die Idee ist, dass die Symbole auf dem Stack, von unten nach oben gelesen, zu jedem Zeitpunkt
                         eine Wortform bilden, aus der der noch nicht gelesene Teil des Restwortes ableitbar ist.
@@ -65,10 +68,12 @@
                         nun \(\beta \alpha\), und \(\beta \alpha \Rightarrow^* w\). Entscheidend ist der
                         Nichtdeterminismus:
                         es _gibt_ eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
+                        &ensp;eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
                         führt;
                         der Automat _kann_ also diese Transition anwenden.
+                        &ensp;also diese Transition anwenden.
                         |> br
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Formaler: Die Zustände des Automaten
+                        Formaler: Die Zustände des Automaten
                         sind \(Q = \{\qstart, q_1, \qend\}\), das Stackalphabet ist
                         \(\Gamma = \Sigma \cup N \cup \{\$\}\) und die Transitionsregeln sind
                         \begin{align*}
@@ -80,6 +85,7 @@
                         \end{align*}
                         Auf einen formalen Beweis, dass \(L(M) = L(G)\) ist, verzichte ich an dieser Stelle.
                         Besser als Sipser in seinem Lehrbuch _Introduction to the Theory of Computing_ könnte
+                        &ensp;könnte
                         ich das eh nicht.
                         |> span
                             class qed
@@ -91,7 +97,7 @@
                             class numbered-title
 
                             Beispiel
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die Grammatik
+                        Betrachten wir die Grammatik
                         \begin{align*}
                         S&amp;\rightarrow A \ | \ B \ | \ C \ | \ \epsilon \\
                         A&amp;\rightarrow \texttt{\{} B \texttt{\}} S \\
@@ -104,28 +110,32 @@
                             {[()()]()}()
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben wir nun einen Kellerautomaten, der diese Sprache akzeptiert. Die
+                            Schreiben wir nun einen Kellerautomaten, der diese Sprache akzeptiert. Die
                             Idee ist, dass wir Terminalsymbole und Nichtterminalsymbole auf den Stack legen.
                             Ein 
                             |> tt
 
                                 [
+                            &ensp;oben auf dem Stack bedeutet dann 
                             &ensp;oben auf dem Stack bedeutet dann _ich will jetzt sofort ein 
                             |> tt
 
                                 [
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;lesen_;
+                            lesen_;
                             ein Nichtterminal wie \(A\) oben auf dem Stack bedeutet, dass
                             wir als nächstes ein von \(A\) ableitbares Wort, also ein \(A \rightarrow w \in
                             \Sigma^*\) lesen wollen.
                             Um ein \(w\) mit \(A \rightarrow w\) lesen zu können, müssen wir _sofort_ ein
+                            &ensp;ein
                             |> tt
 
                                 {
                             &ensp;lesen, dann ein Wort \(v\) mit \(B \rightarrow v\), dann ein 
+                            &ensp;lesen, dann ein Wort \(v\) mit \(B \rightarrow v\), dann ein 
                             |> tt
 
                                 }
+                            &ensp;und
                             &ensp;und
                             so weiter.
                             Wir können das also im Automaten implementieren, indem wir
@@ -137,7 +147,7 @@
                             Hierfür benötigen wir den Nichtdeterminismus. Beachten Sie, dass wir ein Nichtterminal
                             grundsätzlich immer durch die entsprechende rechte Seite ersetzen können, egal, was das
                             nächste Zeichen ist; es wird im Automaten also ein \(\step{\epsilon}\)-Übergang sein.
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Konkret also bauen wir für obige Grammatik die folgenden Automatentransitionen:
+                        Konkret also bauen wir für obige Grammatik die folgenden Automatentransitionen:
                         \begin{align*}
                         (q_1, S)&amp;\step{\epsilon} (q_1, A) \\
                         (q_1, S)&amp;\step{\epsilon} (q_1, B) \\
@@ -177,6 +187,7 @@
                         sollte es also nach Erreichen von \(\qend\) noch weitere Zeichen
                         im Eingabewort geben, so kann der Automat keine weiteren Schritte durchführen,
                         was einem _reject_ entspricht. Erreichen des Zustandes \(\qend\) führt also
+                        &ensp;entspricht. Erreichen des Zustandes \(\qend\) führt also
                         nur dann zu einem _accept_, wenn dies am Ende des Wortes geschieht.
                         |> figure
                             class centered-figure well
@@ -482,11 +493,11 @@
                         mit \(L(M) = L(G)\).
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ich folge hier im Wesentlichen dem Beweis aus Sipsers Kapitel 2.
+                        Ich folge hier im Wesentlichen dem Beweis aus Sipsers Kapitel 2.
                     |> div
                         class well container
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Sei \(M = (\Sigma, Q, \Gamma, \qstart, F, \delta)\) der Kellerautomat.
+                        *Beweis.*Sei \(M = (\Sigma, Q, \Gamma, \qstart, F, \delta)\) der Kellerautomat.
                         Als erstes führen wir drei Schönheitsoperation durch:
                         |> ol
                             |> li
@@ -526,7 +537,7 @@
                                 Stack, um es gleich darauf runterzupoppen.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn nun der Automat die eben beschriebene Form hat, so ist die
+                            Wenn nun der Automat die eben beschriebene Form hat, so ist die
                             Idee, dass wir für
                             jedes Paar \(p,q\) von Zuständen ein Nichtterminalsymbol \(A_{pq}\) einführen, dass
                             genau die Wörter \(w\) ableiten kann, für die
@@ -581,11 +592,11 @@
                                 eine gültige Regel.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schlussendlich führen wir noch die offensichtlich korrekten
+                            Schlussendlich führen wir noch die offensichtlich korrekten
                             Regeln \(A_pp \rightarrow \epsilon\) ein, da ja
                             \((p, \epsilon) \Step{\epsilon}^* (p, \epsilon)\) offensichtlich gilt (da ja
                             \(\Step{}^*\) auch die aus null Übergangen bestehende Konfigurationsfolge erlaubt).
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zusammenfassend gesagt besteht unsere Grammatik \(G\) aus drei unterschiedlichen Typen von
+                        Zusammenfassend gesagt besteht unsere Grammatik \(G\) aus drei unterschiedlichen Typen von
                         Regeln:
                         \begin{align*}
                         A_{pp}&amp;\rightarrow \epsilon \textnormal{ für jeden Zustand \(p \in Q\)} \\
@@ -595,7 +606,7 @@
                         \end{align*}
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Startsymbol der Grammatik ist natürlich \(A_{\qstart, \qend}\).
+                            Das Startsymbol der Grammatik ist natürlich \(A_{\qstart, \qend}\).
                         Auch hier verzichte ich auf einen formalen Beweis, dass \(L(G)=L(M)\) gilt. Der Beweis
                         verwendet (wenig überraschend) Induktion über die Länge der Ableitung bzw. Induktion über die
                         Länge der Konfigurationsfolge und ist in Sipsers Lehrbuch im Detail erklärt.
@@ -609,24 +620,25 @@
                             class numbered-title
 
                             Beispiel
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir betrachten die Sprache
+                        Wir betrachten die Sprache
                         \begin{align*}
                         a^m b (a|b)^* b a^m
                         \end{align*}
                         Diese ist _nicht_ regulär, da der Präfix und der Suffix aus \(a\) die gleiche
+                        &ensp;regulär, da der Präfix und der Suffix aus \(a\) die gleiche
                         Länge \(m\) haben müssen.
                         Wir bauen zuerst einen Kellerautomaten und übersetzen den dann entsprechend dem Schema
                         aus dem letzten Theorem in eine Grammatik. Dann vergleichen wir die entstandene
                         Grammatik mit der, die wir per Hand aus der obigen Sprachbeschreibung bauen würden.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unser Automat hat einen Zustand \(q_1\), in welchem er führenden \(a\)'s auf den Stack
+                            Unser Automat hat einen Zustand \(q_1\), in welchem er führenden \(a\)'s auf den Stack
                             legt und einen Zustand \(q_3\), in welchem er die \(a\)'s am Ende liest und
                             vom Stack poppt. Zwischen den beiden \(b\)'s in der Mitte ist er in einem
                             Zustand \(q_2\), in welchem er die Eingabesymbole mehr oder weniger ignoriert.
                             Der Automat muss nichtdeterministisch sein, da er "erraten" muss, welches
                             \(b\) das letzte ist, weil er dann mit dem Stack-Poppen beginnen muss.
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                        \begin{align*}
                         (\qstart, \epsilon)&amp;\step{\epsilon} (q_1, \$) \\ \hline
                         (q_1, \epsilon)&amp;\step{a} (q_1, a) \\
                         (q_1, \epsilon)&\step{b} (q_2, b) \\
@@ -638,11 +650,11 @@
                         \end{align*}
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die beiden rot gefärbten Transitionen benötigen eine Schönheitsoperation:
+                            Die beiden rot gefärbten Transitionen benötigen eine Schönheitsoperation:
                         |> span
                             style color:purple
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                            \begin{align*}
                             (q_2, \epsilon)&amp;\step{a} (q'_2, x) \\
                             (q_2, \epsilon)&amp;\step{b} (q'_2, x) \\
                             (q'_2, x)&amp;\step{\epsilon} (q_2, \epsilon) \\
@@ -657,7 +669,7 @@
                             ein wenig selbständigem Denken kombinieren.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die erste Beobachtung ist, dass wir gar nicht von jedem Zustand zu jedem
+                            Die erste Beobachtung ist, dass wir gar nicht von jedem Zustand zu jedem
                             kommen können, sondern nur "vorwärts", also wie in diesem Diagramm:
                         |> figure
                             |> img
@@ -666,7 +678,7 @@
                                 loading lazy
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nichtterminale wie \(A_{31}\) führen wir also gar nicht erst ein. Auch schreiben
+                            Nichtterminale wie \(A_{31}\) führen wir also gar nicht erst ein. Auch schreiben
                             wir \(A_{13}\) statt \(A_{q_1q_3}\) und verwenden die Indizes 0 für \(\qstart\) und
                             4 für \(\qend\). Als zweite Beobachtung sehen wir, dass man mit leerem
                             Stapel beispielsweise gar nicht von \(\qstart\) nach \(q_3\) kommt:
@@ -678,7 +690,7 @@
                                     style height:10em
                                     src ../img/context-free/pda-to-cfg-diagram-stack.svg
                                     loading lazy
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die einzigen Nichtterminale sind also die "trivialen" der Form \(A_{qq}\) und darüberhinaus
+                            Die einzigen Nichtterminale sind also die "trivialen" der Form \(A_{qq}\) und darüberhinaus
                             \begin{align*}
                             A_{04}, A_{13}
                             \end{align*}
@@ -762,7 +774,7 @@
                             \end{align*}
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Überlegen wir nun, ausgehend von dieser Grammatik, was wir aus dem Startsymbol \(A_{13}\)
+                            Überlegen wir nun, ausgehend von dieser Grammatik, was wir aus dem Startsymbol \(A_{13}\)
                             ableiten
                             können. Die einzigen zwei Produktionen mit \(A_{13}\) sind
                             \(A_{13} \rightarrow a A_{13} a\) und \(A_{13} \rightarrow b A_{22}\), also

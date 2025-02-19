@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={6}
-        title_gr="Majority"
+        title_gr="1.5 Majority"
         title_en="majority"
-        number={1.5}>
+        number={1.5}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes6.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,6 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    2.5 
                     1.5 Majority
                   </span>
                 </h1>
@@ -44,7 +49,7 @@ const Article = () => {
                     src="../img/circuits/majority.svg"
                     loading="lazy" />
                 </figure>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Diese nimmt \(n\) Bits als Input und gibt 1 aus, wenn mehr als \(n/2\) davon 1 sind.
+                Diese nimmt \(n\) Bits als Input und gibt 1 aus, wenn mehr als \(n/2\) davon 1 sind.
                 Für \(n=3\) heißt dass, das mindestens zwei Input-Bits 1 sein müssen. Als Formel
                 kann man das so schreiben:
                 $$
@@ -66,13 +71,16 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;2.5.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(n\) eine ungerade Zahl. Zeigen Sie, dass \(\maj_n\) für genau
+                  Sei \(n\) eine ungerade Zahl. Zeigen Sie, dass \(\maj_n\) für genau
                   die Hälfte aller \(2^n\) möglichen Eingaben eine 1 ausgibt (und für die
                   andere Hälfte eine 0).
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir erhielten also eine DNF mit \(2^&#123;n-1&#125;\) vielen AND-Gates. Das ist
+                  Wir erhielten also eine DNF mit \(2^&#123;n-1&#125;\) vielen AND-Gates. Das ist
                   sehr groß, gemessen daran, dass Zählen und mit \(n/2\) vergleichen
                   ja nicht besonders schwierig klingt.
                   Hier ist eine kleine Verbesserung, demonstriert am Beispiel
@@ -104,7 +112,7 @@ const Article = () => {
                   beschränken.
                   Im allgemeinen sei \(k = \ceil&#123;\frac&#123;k+1&#125;&#123;2&#125;&#125;\). Dann gilt
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin&#123;align&#125;
+                \begin&#123;align&#125;
                 \maj
                 <i>
                   n (x
@@ -122,7 +130,7 @@ const Article = () => {
                 \label&#123;johns-equation&#125;
                 \end&#123;align&#125;
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Diese Konstruktion hat nun \(&#123;n \choose k&#125;\) Terme, von denen jeder aus \(k\) Variablen
+                  Diese Konstruktion hat nun \(&#123;n \choose k&#125;\) Terme, von denen jeder aus \(k\) Variablen
                   besteht.
                   Ist das nun gut oder schlecht?
                 </Paragraph>
@@ -133,17 +141,17 @@ const Article = () => {
                     data-label="mid-level-lower-bound">
                     Lemma.
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gilt
+                  Es gilt
                   $$
                   &#123;n \choose &#123;\ceil&#123;n/2&#125;&#125;&#125; \geq \frac&#123;2^n&#125;&#123;n+1&#125; \ .
                   $$
                 </div>
                 <div class="well container">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Beweis.
                   </b>
-                  {" "}Sei \(k \in \&#123;1,\dots,n\&#125;\). Vergleichen wir \(&#123;n \choose k&#125;\) mit \(&#123;n \choose k-1&#125;\):
+                  Sei \(k \in \&#123;1,\dots,n\&#125;\). Vergleichen wir \(&#123;n \choose k&#125;\) mit \(&#123;n \choose k-1&#125;\):
                   $$\begin&#123;align*&#125;
                   \frac&#123;&#123;n \choose k&#125;&#125;&#123;&#123;n \choose k-1&#125;&#125;&amp;=
                   \frac&#123; \frac&#123;n!&#125;&#123;k! (n-k)!&#125;&#125;&#123;\frac&#123;n!&#125;&#123; (k-1)! (n-k+1)!&#125;&#125; = \frac&#123;n-k+1&#125;&#123;k&#125;
@@ -160,7 +168,7 @@ const Article = () => {
                   maximiert wird, also
                   \(&#123;n \choose k&#125; \leq &#123;n \choose \ceil&#123;\frac&#123;n&#125;&#123;2&#125;&#125;&#125;\) gilt.
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als nächstes müssen wir uns die Definition von \(&#123;n \choose k&#125;\) ins Gedächtnis rufen.
+                    Als nächstes müssen wir uns die Definition von \(&#123;n \choose k&#125;\) ins Gedächtnis rufen.
                     Nein, \(\frac&#123;n!&#125;&#123;k!(n-k)!&#125;\) ist nicht die Definition, sondern eine Formel dafür. Die
                     Definition ist:
                     \(&#123;n \choose k&#125;\) ist die Menge der Teilmengen von \(\&#123;1,\dots,n\&#125;\), die Größe \(k\)
@@ -187,7 +195,7 @@ const Article = () => {
                     &#123;n \choose \ceil&#123;\frac&#123;n&#125;&#123;2&#125;&#125;&#125; \geq \frac&#123;2^n&#125; &#123;n+1&#125; \ ,
                     $$
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;wie behauptet.
+                  wie behauptet.
                   <span class="qed">
                     \(\square\)
                   </span>
@@ -198,13 +206,14 @@ const Article = () => {
                   was bereits für moderate Werte wie \(n=30\) nicht vertretbar ist.
                 </Paragraph>
                 <h3>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Majority Top-Down mit `if-then-else`-Gates
+                  Majority Top-Down mit `if-then-else`-Gates
                 </h3>
                 Wenden wir nun statt Wahrheitstabelle die Top-Down-Methode an, modifiziert
                 für monotone Funktionen wie in den
                 <a href="../sub-pages/01-monotone.html">
                   Lösungen zu den Übungsaufgaben
                 </a>
+                &ensp;dargestellt.
                 &ensp;dargestellt.
                 Insbesondere definieren wir Verallgemeinerungen von \(\maj_n\) wie folgt:
                 $$\begin&#123;align*&#125;
@@ -230,7 +239,7 @@ const Article = () => {
                     src="../img/circuits/majority-theta-recursive.svg"
                     loading="lazy" />
                 </figure>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Konstruktion endet mit \(\theta^m_0\), was immer \(1\) ausgibt, und
+                Die Konstruktion endet mit \(\theta^m_0\), was immer \(1\) ausgibt, und
                 mit \(\theta^m_&#123;m&#125;\), was \(x_1 \wedge \dots \wedge x_m\) ist. Die
                 Konstruktion ist leider auch nicht effizient; wenn man
                 mit \(C^n_k\) die Anzahl der \(\theta^m_m\) und \(\theta^m_0\) in diesem
@@ -257,7 +266,7 @@ const Article = () => {
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um eine Analogie mit der Programmierpraxis zu bemühen: der Unterschied
+                  Um eine Analogie mit der Programmierpraxis zu bemühen: der Unterschied
                   zwischen den beiden Konstruktionen für \(\theta^n_k\) per Baum versus
                   per Pyramidenschema entspricht dem Unterschied zwischen dem
                   rekursiven Code für \(&#123;n \choose k&#125;\),
@@ -270,26 +279,29 @@ const Article = () => {
                   {" "}{" "}
                   <code>
                     if k == 0 or k == n:
+                    &ensp;&ensp;&ensp;&ensp;if k == 0 or k == n:
                   </code>
                   {" "}{" "}
                   <code>
-                    return 1
+                    return 1 
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;return 1
                   </code>
                   {" "}
-                  &ensp;&ensp;&ensp;&ensp;`else:`{" "}
+                  &ensp;`else:
+                  &ensp;&ensp;&ensp;&ensp;else:`{" "}
                   <code>
                     return binomial(n-1,k-1) + binomial(n-1,k)
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;return binomial(n-1,k-1) + binomial(n-1,k)
                   </code>
                   {" "}{" "}
                 </pre>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;der exponentielle Laufzeit aufweist, und der effizienten Implementierung mittels
-                {" "}
+                der exponentielle Laufzeit aufweist, und der effizienten Implementierung mittels
                 <i>
                   Dynamic Programming
                 </i>
                 , bei welchem wir uns die Zwischenergebnisse merken.
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um Größe und Tiefe des Schaltkreises zu analysieren, machen wir
+                  Um Größe und Tiefe des Schaltkreises zu analysieren, machen wir
                   eine grobe Abschätzung. Für jedes \(\theta^m_l\), das in unserer
                   Pyramide vorkommt, brauchen wir 2 Gates; \(m\) kann die
                   Werte \(0, \dots, n\) annehmen und \(l\) die Werte \(0,\dots,k\),
@@ -303,12 +315,12 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Funktion
+                  Die Funktion
                   \(\maj_n (x_1,\dots,x_n)\) kann mit einem Schaltkreis der Größe \(O(n^2)\),
                   Tiefe \(O(n)\) und Fan-in 2 berechnet werden.
                 </div>
                 <h3>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Majority durch Zählen
+                  Majority durch Zählen
                 </h3>
                 \(\maj_n(x_1,\dots,x_n)\) zu bestimmen sollte doch einfach sein: wir zählen die Anzahl der 1en
                 und
@@ -327,16 +339,19 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;2.5.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bestimmen Sie asymptotisch die Größe und die Tiefe dieses Schaltkreises.
+                  Bestimmen Sie asymptotisch die Größe und die Tiefe dieses Schaltkreises.
                   Achten Sie besonders bei der Berechnung der Größe darauf, dass die untersten Add-Gadgets
                   ja 1-stellige oder dann 2-stellige Zahlen addieren müssen und erst die weniger obersten Gadgets
                   Zahlen mit $\Theta(\log n)$ Bits als Input bekommen.
                 </div>
                 <h3>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(O(\log n)\) Tiefe mit 2-for-3-Addierern.
+                  \(O(\log n)\) Tiefe mit 2-for-3-Addierern.
                 </h3>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die vorherige Konstruktion mit den Addierern war schon deutlich effizienter
+                Die vorherige Konstruktion mit den Addierern war schon deutlich effizienter
                 als unsere pyramidenartige \(\theta^m_l\)-Konstruktion, allerdings wurde
                 das Ziel, eine Tiefe von \(O (\log n)\) zu erreichen, wieder verfehlt, wenn auch
                 knapp. Die Idee, die eine Tiefe von \(O (\log n)\) erreichen wird, ist ebenso
@@ -345,7 +360,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Lemma (2-for-3 Adder)
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gibt einen Schaltkreis mit \(O(n)\) Gates,
+                  Es gibt einen Schaltkreis mit \(O(n)\) Gates,
                   Tiefe 2 und Fan-In 2, der als Input drei
                   \(n\)-stellige Binärzahlen \(x,y,z\) nimmt
                   und zwei \(n+1\)-stellige Binärzahlen \(u, v\) ausgibt, so dass
@@ -355,11 +370,11 @@ const Article = () => {
                   gilt.
                 </div>
                 <div class="well container">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Beweis.
                   </b>
-                  {" "}Ich demonstriere das Beweisprinzip erst einmal mit drei Zahlen in Basis 10:
+                  Ich demonstriere das Beweisprinzip erst einmal mit drei Zahlen in Basis 10:
                   <figure>
                     <img
                       style="height:10em"
@@ -379,13 +394,13 @@ const Article = () => {
                         loading="lazy" />
                     </figure>
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dieser Schaltkreis hat insgesamt \(O(n)\) Gates und Tiefe 2 (wobei wir
+                  Dieser Schaltkreis hat insgesamt \(O(n)\) Gates und Tiefe 2 (wobei wir
                   die NOT-Gates im $\oplus$-Gate nicht mitzählen).
                   <span class="qed">
                     \(\square\)
                   </span>
                 </div>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir interpretieren nun die \(n\) Inputs
+                Wir interpretieren nun die \(n\) Inputs
                 \(x_1,\dots,x_n\) von Majoroty als einstellige Binärzahlen, sortieren sie in
                 Dreiergruppen und machen per 2-for-3-Addierer daraus
                 \( \ceil&#123;\frac&#123;2n&#125;&#123;3&#125;&#125;\) Zahlen. Dann machen wir (mit den mittlerweile
@@ -416,7 +431,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem.
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Konstruktion mit 2-for-3-Addierern gibt uns einen Schaltkreis
+                  Die Konstruktion mit 2-for-3-Addierern gibt uns einen Schaltkreis
                   für Majority mit Fan-in 2, Tiefe \(O(\log n)\) und
                   Größe \(O (n \log n)\)
                 </div>
@@ -424,8 +439,11 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Übungsaufgabe
+                      <NumberedTitle>
+                        &ensp;2.5.3{" "}
+                      </NumberedTitle>
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Führen Sie eine genauere Abschätzung der Größe durch. Untersuchen Sie insbesondere:
+                    Führen Sie eine genauere Abschätzung der Größe durch. Untersuchen Sie insbesondere:
                   </Paragraph>
                   <ol>
                     <li>
@@ -436,7 +454,7 @@ const Article = () => {
                       der 2-for-3-Addierer sein?
                     </li>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Was ergibt sich insgesamt in Summe?
+                      Was ergibt sich insgesamt in Summe?
                     </li>
                   </ol>
                 </div>
@@ -489,8 +507,11 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;2.5.4{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;dass polynomiell viele (in diesem Falle: \(O(n^2)\) viele) Gates ausreichen.
+                  dass polynomiell viele (in diesem Falle: \(O(n^2)\) viele) Gates ausreichen.
                   Zeigen Sie, wie die gerade skizzierte Konstruktion so ausgeführt werden kann,
                 </div>
                 <h3>
@@ -500,15 +521,15 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem.
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gibt einen monotonen Schaltkreis mit Fan-in 2, Tiefe \(O(\log n)\) und Größe
+                  Es gibt einen monotonen Schaltkreis mit Fan-in 2, Tiefe \(O(\log n)\) und Größe
                   \(\poly(n)\), der \(\maj_n\) berechnet.
                 </div>
                 <div class="well container">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Beweis.
                   </b>
-                  {" "}Die Beweismethode, die wir verwenden, ist womöglich neu für Sie. Wir verwenden
+                  Die Beweismethode, die wir verwenden, ist womöglich neu für Sie. Wir verwenden
                   bei der Konstruktion des Schaltkreises{" "}
                   <i>
                     Zufall
@@ -523,11 +544,10 @@ const Article = () => {
                   die randomisierte Konstruktion durchführen und Ihnen erklären, das der
                   resultierende Schaltkreis höchstwahrscheinlich korrekt ist.
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Während des ganzen Beweises müssen Sie sich vor Augen halten, dass wir
+                    Während des ganzen Beweises müssen Sie sich vor Augen halten, dass wir
                     bei der Konstruktion des Schaltkreises \(C\) Zufall verwenden;
                     wir nehmen nicht an, dass die Inputs \(x \in \&#123;0,1\&#125;^n \) in irgendeiner
                     Weise zufällig sind. Wir verwenden also
-                    {" "}
                     <i>
                       Wahrscheinlichkeitsverteilungen über Schaltkreisen
                     </i>
@@ -538,17 +558,22 @@ const Article = () => {
                       Signalstärke
                     </i>
                     {" "}von Verteilungen über Schaltkreise.
+                    &ensp;von Verteilungen über Schaltkreise.
                   </Paragraph>
                   <div class="well subtheorem theorem">
                     <span class="numbered-title">
-                      Definition (Signalstärke)
+                      Definition
+                      <NumberedTitle>
+                        &ensp;2.5.1{" "}
+                      </NumberedTitle>
+                      &ensp;(Signalstärke)
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(\mathcal&#123;C&#125;\) eine Verteilung über Schaltkreise mit Input-Variablen
+                    Sei \(\mathcal&#123;C&#125;\) eine Verteilung über Schaltkreise mit Input-Variablen
                     \(x_1,\dots,x_n\). Wir sagen, dass \(\mathcal&#123;C&#125;\){" "}
                     <i>
                       Signalstärke mindestens $\delta$
                     </i>
-                    {" "}hat, wenn
+                    hat, wenn
                     $$
                     \forall x \in \&#123;0,1\&#125;: \quad \Pr_&#123;C \in \mathcal&#123;C&#125;&#125; [C(x) = \maj_n(x)]
                     \geq \frac&#123;1 + \delta&#125;&#123;2&#125;
@@ -556,7 +581,7 @@ const Article = () => {
                     gilt.
                   </div>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In Worten, wenn der zufällig ausgewählte Schaltkreis \(C\) den Wert
+                    In Worten, wenn der zufällig ausgewählte Schaltkreis \(C\) den Wert
                     \(\maj_n(x)\) besser als ein Münzwurf vorhersagt, und zwar um \(\delta/2\) besser.
                     Wir können einen ganz einfachen (zufälligen Schaltkreis)
                     bauen, der ein schwache aber positive Signalstärke hat.
@@ -565,7 +590,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Lemma.
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gibt eine Wahrscheinlichkeitsverteilung \(\mathcal&#123;C&#125;_0\) über monotone Schaltkreise der
+                    Es gibt eine Wahrscheinlichkeitsverteilung \(\mathcal&#123;C&#125;_0\) über monotone Schaltkreise der
                     Größe 1,
                     die Signalstärke \(\frac&#123;1&#125;&#123;n&#125;\) hat.
                     Genauer gesagt gilt für jeden Input \(x \in \&#123;0,1\&#125;^n\):
@@ -579,11 +604,11 @@ const Article = () => {
                     $$
                   </div>
                   <div class="well subtheorem">
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    {" "}{" "}
                     <b>
                       Beweis.
                     </b>
-                    {" "}Der Schaltkreis bzw. die Wahrscheinlichkeitsverteilung ist extrem einfach.
+                    Der Schaltkreis bzw. die Wahrscheinlichkeitsverteilung ist extrem einfach.
                     Wir wählen zufällig einen Index \(I \in \&#123;1,\dots,n\&#125;\) und
                     geben \(x_I\) als unseren Schaltkreis \(C\) (bestehend aus einem einzigen Input-Gate,
                     das gleichzeitig das Output-Gate ist) aus. Dieser Schaltkreis
@@ -594,7 +619,7 @@ const Article = () => {
                       Sei nun ein festes \(\x \in \&#123;0,1\&#125;\) gegeben. Mit welcher Wahrscheinlichkeit
                       ist unser (recht primitiver) Schaltkreis korrekt?
                     </Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                    $$\begin&#123;align*&#125;
                     C(\x)&amp;= \maj_n (\x) \quad \Longleftrightarrow \\
                     x_I&amp;= \maj_n (\x) \ .
                     \end&#123;align*&#125;$$
@@ -623,6 +648,7 @@ const Article = () => {
                       einen
                     </i>
                     {" "}zufällig ausgewählten Bürger befragen, so
+                    &ensp;zufällig ausgewählten Bürger befragen, so
                     ist das Ergebnis zwar nicht wirklich repräsentativ, aber immerhin leicht
                     besser, als wenn Sie einfach raten würden. Unser zufälliger
                     Schaltkreis sendet uns also ein schwaches aber positives Signal in die
@@ -640,6 +666,7 @@ const Article = () => {
                       drei
                     </i>
                     {" "}Schaltkreise
+                    &ensp;Schaltkreise
                     \(C_1, C_2, C_3 \sim \mathcal&#123;C&#125;\) unabhängig voneinander samplen und
                     einen neuen Schaltkreis bauen: \(C'(\x) := \maj_3 (C_1(\x), C_2(\x), C_3(\x))\). Dies gibt
                     uns wiederum eine Verteilung über Schaltkreise, die wir
@@ -649,7 +676,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Lemma
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls \(\mathcal&#123;C&#125;\) eine Verteilung über Schaltkreise der Tiefe
+                    Falls \(\mathcal&#123;C&#125;\) eine Verteilung über Schaltkreise der Tiefe
                     \(d\) und Größe \(s\) ist und \(\mathcal&#123;C&#125;\) Signalstärke \(\delta\) hat, dann gilt:
                     <ol>
                       <li>
@@ -657,11 +684,11 @@ const Article = () => {
                         \(d+2\);
                       </li>
                       <li>
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;alle Schaltkreise in \(\mathcal&#123;C&#125;^&#123;\otimes 3&#125;\) haben Größe
+                        alle Schaltkreise in \(\mathcal&#123;C&#125;^&#123;\otimes 3&#125;\) haben Größe
                         \(3s+4\);
                       </li>
                       <li>
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;die Signalstärke von $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ ist
+                        die Signalstärke von $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ ist
                         $\frac&#123;3&#125;&#123;2&#125; \delta - \frac&#123;1&#125;&#123;2&#125;\delta^3$.
                       </li>
                     </ol>
@@ -672,7 +699,7 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}Wir betrachten ein festes $\x \in \cube^n$ mit $\maj
+                      Wir betrachten ein festes $\x \in \cube^n$ mit $\maj
                       <i>
                         n(\x) = 1$; der
                         Fall $\maj
@@ -706,7 +733,7 @@ const Article = () => {
                       p$.
                       Was ist nun $\Pr[\maj_3(U,V,W) = 1]$?
                     </Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                    $$\begin&#123;align*&#125;
                     \Pr[\maj_3(U,V,W)=1]&amp;= \Pr[U=V=W=1] + \Pr[\textnormal&#123;genau zwei von $\&#123;U,V,W\&#125;$ sind 1&#125;]
                     \\
                     &amp;= p^3 + 3p^2 (1-p) = \pfrac&#123;1 + \delta&#125;&#123;2&#125;^3 + 3 \pfrac&#123;1 + \delta&#125;&#123;2&#125;^2 \frac&#123;1 -
@@ -715,7 +742,7 @@ const Article = () => {
                     &amp;= \frac&#123;1&#125;&#123;2&#125; \left( 1 + \frac&#123;3&#125;&#123;2&#125; \delta - \frac&#123;1&#125;&#123;2&#125;\delta^3 \right) \ .
                     \end&#123;align*&#125;$$
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Signalstärke von $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ ist also mindestens
+                      Die Signalstärke von $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ ist also mindestens
                       $\frac&#123;3&#125;&#123;2&#125; \delta - \frac&#123;1&#125;&#123;2&#125; \delta^3$.
                       <span class="qed">
                         \(\square\)
@@ -723,14 +750,14 @@ const Article = () => {
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir beginnen nun mit der Verteilung $\mathcal&#123;C&#125;_0$ über Schaltkreise der
+                    Wir beginnen nun mit der Verteilung $\mathcal&#123;C&#125;_0$ über Schaltkreise der
                     Größe 1 und definieren{" "}
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                  $$\begin&#123;align*&#125;
                   \mathcal&#123;C&#125;_&#123;i+1&#125; := (\mathcal&#123;C&#125;_i)^&#123;\oplus 3&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zur Wiederholung: um $C \sim \mathcal&#123;C&#125;
+                    Zur Wiederholung: um $C \sim \mathcal&#123;C&#125;
                     <i>
                       &#123;i+1&#125;$ zu sampeln, sampeln wir unabhängig
                       drei Schaltkreise $\sim \mathcal&#123;C&#125;
@@ -765,7 +792,7 @@ const Article = () => {
                     $1/2$.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir jetzt die rekursive Konstruktion fortsetzen, steigt die Signalstärke weiter an und
+                    Wenn wir jetzt die rekursive Konstruktion fortsetzen, steigt die Signalstärke weiter an und
                     konvergiert gegen $1$: $\lim
                     <i>
                       &#123;i \rightarrow \infty&#125; \delta
@@ -786,11 +813,11 @@ const Article = () => {
                     </i>
                     , wenn
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                  $$\begin&#123;align*&#125;
                   \forall \x \in \cube^n: \Pr_&#123;C \sim \mathcal&#123;C&#125;&#125;[ C(\x) = \maj_n(\x)] \geq 1 - \epsilon \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Signalstärke von $\delta$ entspricht einer Fehlerwahrscheinlichkeit von
+                    Eine Signalstärke von $\delta$ entspricht einer Fehlerwahrscheinlichkeit von
                     $\frac&#123;1-\delta&#125;&#123;2&#125;$.
                     Die Verteilung $\mathcal&#123;C&#125;_&#123;i^*&#125;$ hat also eine Fehlerwahrscheinlichkeit von
                     höchstens $\frac&#123;1 - 1/2&#125;&#123;2&#125; = 1/4$. Das obige Lemma, nun aus der Sicht der
@@ -802,6 +829,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Behauptung.
                       </span>
+                      &ensp;Wenn $\mathcal&#123;C&#125;$
                       &ensp;Wenn $\mathcal&#123;C&#125;$
                       Fehlerwahrscheinlichkeit
                       $\epsilon$ hat, dann hat $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ Fehlerwahrscheinlichkeit
@@ -815,21 +843,22 @@ const Article = () => {
                         Beweis.
                       </b>
                       {" "}Wie im Beweis vom Lemma setzen wir
+                      &ensp;Wie im Beweis vom Lemma setzen wir
                       $p := \frac&#123;1+p&#125;&#123;2&#125; = 1-\epsilon$ und erhalten
                     </Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                    $$\begin&#123;align*&#125;
                     \Pr[\maj_3(U,V,W) = 1]&amp;= p^3 + 3 p^2 (1-p) =
                     (1 - \epsilon^3) + 3 (1- \epsilon)^2 \epsilon = 1 - 3 \epsilon^2 \ .
                     \end&#123;align*&#125;$$
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Somit hat $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ Fehlerwahrscheinlichkeit $3 \epsilon^2$.
+                      Somit hat $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ Fehlerwahrscheinlichkeit $3 \epsilon^2$.
                       <span class="qed">
                         \(\square\)
                       </span>
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für $i^* := \log
+                    Für $i^* := \log
                     <i>
                       &#123;5/4&#125; n$ hat $\mathcal&#123;C&#125;
                     </i>
@@ -850,12 +879,12 @@ const Article = () => {
                     i^*+2$
                     und somit
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                  $$\begin&#123;align*&#125;
                   \epsilon_&#123;i^*+2 + j&#125; \leq \left(\epsilon_&#123;i^*&#125;\right)^&#123;\pfrac&#123;3&#125;&#123;2&#125;^j&#125; \leq
                   \pfrac&#123;1&#125;&#123;4&#125;^&#123;\pfrac&#123;3&#125;&#123;2&#125;^j&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Qualitativ sehen wir: solange $\delta
+                    Qualitativ sehen wir: solange $\delta
                     <i>
                       i \leq 1/2$ gilt, wächst die Signalstärke exponentiell
                       an. Dieses exponentielle Wachstum kann natürlich nicht beliebig weitergehen. Jenseits
@@ -866,13 +895,13 @@ const Article = () => {
                       fällt
                     </i>
                     {" "}nun die Fehlerwahrscheinlichkeit
-                    {" "}
+                    &ensp;nun die Fehlerwahrscheinlichkeit
                     <i>
                       doppelt exponentiell
                     </i>
                     . Für $j^* := \log_&#123;3/2&#125; n$ gilt dann
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                  $$\begin&#123;align*&#125;
                   \epsilon_&#123;i^* + 2 + j^*&#125; \leq \pfrac&#123;1&#125;&#123;4&#125;^&#123;n&#125; \lt 2^&#123;-n&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
@@ -883,7 +912,7 @@ const Article = () => {
                       style="height:18em"
                       src="../img/circuits/majority-probability-labeled.svg" />
                     <br />
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Graph der Funktion $p \mapsto p^3 + 3 p^2 (1-p)$
+                    Graph der Funktion $p \mapsto p^3 + 3 p^2 (1-p)$
                     <hr />
                   </figure>
                   <figure>
@@ -891,7 +920,7 @@ const Article = () => {
                       style="height:18em"
                       src="../img/circuits/majority-probability-close-to-half-labeled.svg" />
                     <br />
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Signalstärke $\delta$ wächst für $p \in [1/2, 3/4]$ exponentiell.
+                    Signalstärke $\delta$ wächst für $p \in [1/2, 3/4]$ exponentiell.
                     <hr />
                   </figure>
                   <figure>
@@ -899,12 +928,12 @@ const Article = () => {
                       style="height:18em"
                       src="../img/circuits/majority-probability-close-to-one-labeled.svg" />
                     <br />
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Fehlerwahrscheinlichkeit $\epsilon$ fällt für $p \in [3/4, 1/2]$ doppelt
+                    Fehlerwahrscheinlichkeit $\epsilon$ fällt für $p \in [3/4, 1/2]$ doppelt
                     exponentiell.
                     <hr />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir setzen nun $k := i^* + 2 + j^* = \log
+                    Wir setzen nun $k := i^* + 2 + j^* = \log
                     <i>
                       &#123;5/4&#125; n + 2 + \log
                     </i>
@@ -932,12 +961,12 @@ const Article = () => {
                     </i>
                     1,\dots,x_n$, die sich auf $\b$ irren, also
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                  $$\begin&#123;align*&#125;
                   E_&#123;\b&#125; := \&#123;\textnormal&#123;Schaltkreise &#125; C \textnormal&#123; über &#125; x_1, \dots, x_n \ | \ C(\b) \ne
                   \maj_n(\b) \&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Verteilung $\mathcal&#123;C&#125;
+                    Die Verteilung $\mathcal&#123;C&#125;
                     <i>
                       k$ existiert ja im Wahrscheinlichkeitsraum aller
                       Boolescher Schaltkreise mit Inputs $x
@@ -952,12 +981,13 @@ const Article = () => {
                       Ereignis
                     </i>
                     {" "}in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
+                    &ensp;in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                  $$\begin&#123;align*&#125;
                   \forall \b \in \cube^n: \Pr_&#123;C \sim \mathcal&#123;C&#125;_k&#125; [ C \in E_&#123;\b&#125; ] = \epsilon_k \lt 2^&#123;n-&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Oder kompakt ausgedrückt: $\Pr
+                    Oder kompakt ausgedrückt: $\Pr
                     <i>
                       &#123;\mathcal&#123;C&#125;
                     </i>
@@ -968,24 +998,24 @@ const Article = () => {
                     </i>
                     &#123;\b&#125;$ für jedes $\b \in \cube^n$ und definieren
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                  $$\begin&#123;align*&#125;
                   E := \bigcup_&#123;\b \in \cube^n&#125; E_&#123;\b&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Was ist $E$? Es ist die Menge der Schaltkreise, die sich auf mindestens einem $\b \in
+                    Was ist $E$? Es ist die Menge der Schaltkreise, die sich auf mindestens einem $\b \in
                     \cube^n$
                     irren. Was ist das Komplement $\bar&#123;E&#125;$? Das ist die Menge der Schaltkreise, die sich
                     auf keinem $\b \in \cube^n$ irren, also die Menge der Schaltkreise, die $\maj_n$ korrekt
                     berechnen. Es gilt nun
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                  $$\begin&#123;align*&#125;
                   \Pr_&#123;\mathcal&#123;C&#125;_k&#125;[E]&amp;= \Pr_&#123;\mathcal&#123;C&#125;_k&#125; \left[\bigcup_&#123;\b \in \cube^n&#125; E_&#123;\b&#125; \right] \\
                   &amp;\leq \sum_&#123;\b \in \cube^n&#125; \Pr_&#123;\mathcal&#123;C&#125;_k&#125; [E_&#123;\b&#125;] \\
                   &amp;= \sum_&#123;b \in \cube^n&#125; \epsilon_k\\
                   &amp;\lt \sum_&#123;b \in \cube^n&#125; 2^&#123;-n&#125; = 2^n 2^&#123;-n&#125; = 1 \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Also $\Pr
+                    Also $\Pr
                     <i>
                       &#123;\mathcal&#123;C&#125;
                     </i>
@@ -1011,11 +1041,11 @@ const Article = () => {
                     berechnet.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es bleibt die Frage, wie groß dieser Schaltkreis $C$ ist. Seien wir hier bequem: ein
+                    Es bleibt die Frage, wie groß dieser Schaltkreis $C$ ist. Seien wir hier bequem: ein
                     Schaltkreis mit Fan-in 2 und einem Output-Gate hat höchstens $2^i$ Gates, die Abstand
                     $i$ vom Output-Gate haben. Somit hat ein Schaltkreis mit Fan-in 2 und Tiefe $d$ höchstens
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                  $$\begin&#123;align*&#125;
                   1 + 2 + 4 + \dots + 2^d = 2^&#123;d+1&#125;-1
                   \end&#123;align*&#125;$$
                   <Paragraph>
@@ -1030,18 +1060,22 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Übungsaufgabe
+                      <NumberedTitle>
+                        &ensp;2.5.5{" "}
+                      </NumberedTitle>
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Präzisieren Sie die Größe von Valiants Schaltkreis und bestimmen ein $c \in \R$, so dass
+                    Präzisieren Sie die Größe von Valiants Schaltkreis und bestimmen ein $c \in \R$, so dass
                     er die Größe $\Theta(n^c)$ hat.
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir könnten nun noch ehrgeiziger sein und einen monotonen Schaltkreis mit Fan-in 2,
+                  Wir könnten nun noch ehrgeiziger sein und einen monotonen Schaltkreis mit Fan-in 2,
                   Tiefe $O(\log n)$ und{" "}
                   <i>
                     linearer
                   </i>
                   {" "}Größe $O(n)$ anstreben.
+                  &ensp;Größe $O(n)$ anstreben.
                 </Paragraph>
               </div>
             </div>

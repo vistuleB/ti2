@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={28}
-        title_gr="Kontextfreie Sprachen"
+        title_gr="5. Kontextfreie Sprachen"
         title_en="context free languages"
-        number={5.0}>
+        number={5.0}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes28.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -33,11 +37,12 @@ const Article = () => {
             <div class="chapter">
               <h1 class="hidden-title">
                 <span class="chapterTitle">
+                  6. 
                   5. Kontextfreie Sprachen
                 </span>
               </h1>
               <Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Some introductory stuff about grammars.
+                Some introductory stuff about grammars.
               </Paragraph>
             </div>
           </div>

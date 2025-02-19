@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={35}
-        title_gr="LR-Grammatiken"
+        title_gr="5.5 LR-Grammatiken"
         title_en="c LR grammars"
-        number={5.7}>
+        number={5.7}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes35.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,6 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    6.7 
                     5.5 LR-Grammatiken
                   </span>
                 </h1>
@@ -41,7 +46,7 @@ const Article = () => {
                   Motivation und Intuition
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die LL-Parser, die wir in Kapitel 5.4 gesehen haben,
+                  Die LL-Parser, die wir in Kapitel 5.4 gesehen haben,
                   versuchen, eine Linksableitung \(S \Step&#123;&#125;^* w\) Schritt für
                   Schritt zu konstruieren. Eine Hauptschwäche ist, dass Sie von
                   einer Wortform
@@ -61,7 +66,7 @@ const Article = () => {
                   Diese versuchen, von $w$ ausgehend eine Rechtsableitung $S \Step&#123;&#125;^* w$ zu finden,
                   allerdings in zeitlich umgekehrter Reihenfolge, also{" "}
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 w \Pets&#123;&#125; \alpha_1 \Pets&#123;&#125; \alpha_2 \Pets&#123;&#125; \dots \Pets&#123;&#125; \alpha_&#123;t-1&#125; \Pets&#123;&#125; S
                 \end&#123;align*&#125;$$
                 <h2>
@@ -74,7 +79,7 @@ const Article = () => {
                   <i>
                     Fortschritt
                   </i>
-                  {" "}darstellt und zeitlich auch
+                  darstellt und zeitlich auch
                   nach vorne geht, verwende ich ab jetzt ein neues Pfeilsymbol, das
                   von links nach rechts geht und daher dem in Europa üblichen Gefühlt,
                   dass die Zeit von links nach rechts verläuft, mehr entgegen kommt:
@@ -83,12 +88,15 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;6.7.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     (Reduktion und Linksreduktion)
                   </b>
-                  {" "}Seien
+                  Seien
                   \(\alpha, \beta, \gamma \in (\Sigma \cup N)^*\) Wortformen und
                   \(X \rightarrow \beta\) eine Produktion. Dann schreiben wir
                   $$\begin&#123;align*&#125;
@@ -105,7 +113,7 @@ const Article = () => {
                   </i>
                   .
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir nennen den Schritt einen{" "}
+                    Wir nennen den Schritt einen{" "}
                     <i>
                       Linksreduktionsschritt
                     </i>
@@ -116,8 +124,7 @@ const Article = () => {
                     \alpha \beta w \rstep&#123;&#125; \alpha X w \ .
                     \end&#123;align*&#125;$$
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Folge von Linksreduktionsschritten nennen wir eine
-                  {" "}
+                  Eine Folge von Linksreduktionsschritten nennen wir eine
                   <i>
                     Linksreduktion
                   </i>
@@ -136,6 +143,7 @@ const Article = () => {
                     Beobachtung:
                   </b>
                   {" "}Wenn wir
+                  &ensp;Wenn wir
                   einen Linksreduktionsschritt \(\alpha \beta w \rstep&#123;&#125; \alpha X w\)
                   betrachten, also
                   $$\begin&#123;align*&#125;
@@ -146,56 +154,60 @@ const Article = () => {
                   entsprechen also einer Rechtsableitung.
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In den vorherigen Kapiteln, insbesondere beim Implementieren eines Parsers, haben wir gesehen,
+                  In den vorherigen Kapiteln, insbesondere beim Implementieren eines Parsers, haben wir gesehen,
                   dass nicht jeder Linksreduktionsschritt automatisch auch korrekt ist.
                   Ein einfaches Beispiel war die "Zahlengrammatik"
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 N&amp;\rightarrow D \\
                 N&amp;\rightarrow ND \\
                 D&amp;\rightarrow 0 \ | \ 1 \ | \ 2\ | \ 3\ | \ 4\ | \ 5\ | \ 6\ | \ 7\ | \ 8\ | \ 9
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;So ist folgende Linksreduktion korrekt:
+                  So ist folgende Linksreduktion korrekt:
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 14 \rstep&#123;&#125; D4\rstep&#123;&#125; N4 \rstep&#123;&#125; ND \rstep&#123;&#125; N
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;weil sie einer gültigen Rechtsableitung $N \Step&#123;R&#125;^* 14$ entspricht ($N$ ist das Startsymbol).
+                  weil sie einer gültigen Rechtsableitung $N \Step&#123;R&#125;^* 14$ entspricht ($N$ ist das Startsymbol).
                   Folgende Reduktionen sind
                   allerdings inkorrekt:
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 \textcolor&#123;red&#125;&#123;14 \rstep&#123;&#125; D4 \rstep&#123;&#125; DD&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;da zwar $DD \Step&#123;R&#125; D4$, allerdings es keine Rechtsableitung $N \Step&#123;R&#125;^* DD$ gibt.
+                  da zwar $DD \Step&#123;R&#125; D4$, allerdings es keine Rechtsableitung $N \Step&#123;R&#125;^* DD$ gibt.
                   Auch
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 \textcolor&#123;red&#125;&#123;14 \rstep&#123;&#125; D4 \rstep&#123;&#125; N4 \rstep&#123;&#125; ND \rstep&#123;&#125; NN&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ist inkorrekt. In unserer Java-Implementierung haben wir dieses Problem händisch gelöst, indem
+                  ist inkorrekt. In unserer Java-Implementierung haben wir dieses Problem händisch gelöst, indem
                   wir der Regel $ND \rstep&#123;&#125; N$ den Vorzug vor $D \rstep&#123;&#125; N$ gegebene haben. Im allgemeinen
                   müssen wir definieren, was ein{" "}
                   <i>
                     korrekter
                   </i>
                   {" "}Linksreduktionsschritt ist. Und dann
+                  &ensp;Linksreduktionsschritt ist. Und dann
                   überlegen, wie wir herausfinden, ob ein Linksreduktionsschritt korrekt ist. Diese Fragen
                   werden uns für den Rest dieses und des nächsten Teilkapitels beschäftigen.
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;6.7.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     (Gültige Wortform, korrekter Reduktionsschritt)
                   </b>
-                  {" "}Eine Wortform \(\gamma \in (\Sigma \cup N)^*\) heißt{" "}
+                  Eine Wortform \(\gamma \in (\Sigma \cup N)^*\) heißt{" "}
                   <i>
                     gültig
                   </i>
@@ -216,18 +228,18 @@ const Article = () => {
                   In diesem Fall ist natürlich $\alpha \beta w$ selbst gültig.
                   <Paragraph>
                     Den Präfix $\alpha$ nennen wir eine
-                    {" "}
                     <i>
                       Front
                     </i>
                     {" "}der gültigen Wortform $\alpha \beta w$.
+                    &ensp;der gültigen Wortform $\alpha \beta w$.
                     Wenn die Grammatik eindeutig ist, dann hat
                     jede gültige Wortform $\gamma$ genau eine Front, die wir
                     mit $\front(\gamma)$ bezeichnen.
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir uns erinnern, wie wir in den letzten zwei Teilkapiteln informell LR-Parser
+                  Wenn wir uns erinnern, wie wir in den letzten zwei Teilkapiteln informell LR-Parser
                   entworfen und implementiert haben, dann sehen wir, dass in einem
                   Linksreduktionsschritt $\alpha \beta w \rstep&#123;&#125; \alpha X w$ die
                   Front $\alpha \beta$
@@ -235,21 +247,21 @@ const Article = () => {
                   Wir wünschen wir uns folgendes:
                 </Paragraph>
                 <div class="well container theorem">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Wunsch.
                   </b>
-                  {" "}Ob $\alpha \beta w \rstep&#123;&#125; \alpha X w$ gültig ist oder nicht,
+                  Ob $\alpha \beta w \rstep&#123;&#125; \alpha X w$ gültig ist oder nicht,
                   wollen wir allein auf Grund der Front $\alpha \beta$ entscheiden können, das heißt,
                   ohne $w$ betrachten zu müssen.
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben allerdings bereits gesehen, dass das nicht immer möglich ist. Bei der Implementierung
+                  Wir haben allerdings bereits gesehen, dass das nicht immer möglich ist. Bei der Implementierung
                   von
                   <a href="../code/parsing/arithmetic-in-class/ArithmeticGrammar.java">
                     ArithmeticGrammar.java
                   </a>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;zum Beispiel
+                  zum Beispiel
                   haben wir manchmal das erste Zeichen von $w$ betrachten müssen. Allerdings behalten wir erst
                   einmal obigen Wunsch als Idealziel.
                   Um ihn zu formalisieren, fragen wir uns, wann es denn{" "}
@@ -257,6 +269,7 @@ const Article = () => {
                     nicht
                   </i>
                   {" "}möglich ist,
+                  &ensp;möglich ist,
                   ohne Betrachten von $w$ zu eintscheiden, ob
                   $\alpha \beta w \rstep&#123;&#125; \alpha X w$ gültig ist.
                 </Paragraph>
@@ -266,7 +279,7 @@ const Article = () => {
                     <b>
                       Schlechter Fall 1:
                     </b>
-                    {" "}Es gibt für eine Wortform \(\gamma\) zwei
+                    Es gibt für eine Wortform \(\gamma\) zwei
                     korrekte Linksreduktionsschritte:
                     \(\gamma \rstep&#123;&#125; \gamma'\) und
                     \(\gamma \rstep&#123;&#125; \gamma''\).
@@ -274,19 +287,20 @@ const Article = () => {
                     <i>
                       zwei verschiedene
                     </i>
-                    {" "}Rechtsableitungen
+                    Rechtsableitungen
                     $$\begin&#123;align*&#125;
                     S \Steps&#123;R&#125; \gamma' \Step&#123;R&#125; \gamma \Steps&#123;R&#125; w \in \Sigma^* \\
                     S \Steps&#123;R&#125; \gamma'' \Step&#123;R&#125; \gamma \Steps&#123;R&#125; w \in \Sigma^* \\
                     \end&#123;align*&#125;$$
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;(wir nehmen an, dass man aus jedem Nichtterminal
+                      (wir nehmen an, dass man aus jedem Nichtterminal
                       mindestens ein Wort \(u \in \Sigma^*\) ableiten kann; andernfalls
                       kann man solche{" "}
                       <i>
                         nutzlosen
                       </i>
                       {" "}Nichtterminale eliminieren).
+                      &ensp;Nichtterminale eliminieren).
                       Das Wort \(w\) hat also zwei verschiedene Ableitungsbäume.
                       Die Grammatik ist somit mehrdeutig.
                       Mit uneindeutigen Grammatiken beschäftigen wir uns zunächst gar nicht;
@@ -303,7 +317,7 @@ const Article = () => {
                     <b>
                       Schlechter Fall 2:
                     </b>
-                    {" "}Der Linksreduktionsschritt
+                    Der Linksreduktionsschritt
                     $$\begin&#123;align*&#125;
                     \alpha \beta w \rstep&#123;&#125; \alpha X w
                     \end&#123;align*&#125;$$
@@ -312,11 +326,12 @@ const Article = () => {
                     \alpha \beta w' \rstep&#123;&#125; \alpha X w'
                     \end&#123;align*&#125;$$
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                      {" "}{" "}
                       <i>
                         nicht
                       </i>
                       {" "}korrekt, obwohl \(\alpha\beta w'\) eine
+                      &ensp;korrekt, obwohl \(\alpha\beta w'\) eine
                       gültige Wortform ist.
                       Dieser Fall ist schlecht, weil der Parser nur
                       $\alpha \beta$ gelesen hat und somit nicht
@@ -354,7 +369,7 @@ const Article = () => {
                   getroffen werden.
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir definieren nun eine Klasse von Grammatiken, bei denen diese schlechten Fälle nicht
+                  Wir definieren nun eine Klasse von Grammatiken, bei denen diese schlechten Fälle nicht
                   auftreten.
                 </Paragraph>
                 <div
@@ -362,12 +377,15 @@ const Article = () => {
                   class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;6.7.3{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     (\(LR(0)\)-Grammatiken)
                   </b>
-                  {" "}Eine kontextfreie Grammatik heißt \(LR(0)\)-Grammatik,
+                  Eine kontextfreie Grammatik heißt \(LR(0)\)-Grammatik,
                   wenn keiner der obigen schlechten Fälle eintritt.
                   Formal, wenn (1) die Grammatik eindeutig ist und (2) wenn ein
                   korrekter Linksreduktionsschritt
@@ -381,7 +399,7 @@ const Article = () => {
                   korrekt sind, sofern $w' \in \Sigma^*$ ist und \(\alpha \beta w'\) selbst eine gültige
                   Wortform ist.
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In Worten/Graustufen: wenn wir
+                    In Worten/Graustufen: wenn wir
                     $$\begin&#123;align*&#125;
                     \alpha \beta \textcolor&#123;gray&#125;&#123;w&#125; \rstep&#123;&#125; \alpha X \textcolor&#123;gray&#125;&#123;w&#125;
                     \end&#123;align*&#125;$$
@@ -397,11 +415,11 @@ const Article = () => {
                     <span class="numbered-title">
                       Lemma
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    {" "}{" "}
                     <b>
                       (LR(0), äquivalente Formulierung).
                     </b>
-                    {" "}Eine Grammatik $G$ ist LR(0) genau dann, wenn für
+                    Eine Grammatik $G$ ist LR(0) genau dann, wenn für
                     alle korrekten Linksreduktionsschritte
                     $\alpha \beta w \rstep&#123;&#125; \alpha Xw$ und
                     $\alpha' \beta' w' \rstep&#123;&#125; \alpha' X'w'$ gilt:
@@ -414,7 +432,7 @@ const Article = () => {
                       Reduktionsschritte.
                     </li>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn $\alpha' \beta' = \alpha \beta \varphi$ und
+                      Wenn $\alpha' \beta' = \alpha \beta \varphi$ und
                       $|\varphi| \geq 1$, dann
                       $\varphi \not \in \Sigma^*$; in Worten: wenn
                       $\front(\gamma)$ ein echter Präfix von $\front(\gamma')$
@@ -430,7 +448,7 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}Der Beweis ist leider etwas mechanisch und
+                    Der Beweis ist leider etwas mechanisch und
                     repetitiv. Aber vielleicht ist es eine
                     gute Übung, ihn genau durchzugehen, um die
                     Definitionenen Linksreduktion, gültige Wortform etc.
@@ -443,7 +461,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Wenn-Dann-Richtung.
                       </span>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn $G$ eine LR(0)-Grammatik ist, dann gelten
+                      Wenn $G$ eine LR(0)-Grammatik ist, dann gelten
                       die Schlussfolgerungen des Lemmas.
                     </Paragraph>
                   </div>
@@ -454,16 +472,17 @@ const Article = () => {
                         Beweis.
                       </b>
                       {" "}Um Punkt 1 zu zeigen,
+                      &ensp;Um Punkt 1 zu zeigen,
                       nehmen wir an, dass $\alpha \beta = \alpha' \beta'$ gilt.
                       Da $\alpha \beta w \rstep&#123;&#125; \alpha X w$ korrekt
                       ist, $\alpha' \beta' w'$ eine gültige Wortform ist und
                       $G$ eine LR(0)-Grammatik ist, so ist auch
                     </Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                    $$\begin&#123;align*&#125;
                     \alpha' \beta' w' = \alpha \beta w' \rstep&#123;&#125; \alpha X w'
                     \end&#123;align*&#125;$$
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein korrekter Linksreduktionsschritt. Also sind
+                      ein korrekter Linksreduktionsschritt. Also sind
                       $\alpha' \beta' w' \rstep&#123;&#125; \alpha X w'$ und
                       $\alpha' \beta' w' \rstep&#123;&#125; \alpha' X' w'$ beides
                       korrekte Linksreduktionsschritte. Da $G$ eindeutig ist,
@@ -472,17 +491,17 @@ const Article = () => {
                       somit $\beta = \beta'$ impliziert.
                     </Paragraph>
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um Punkt 2 zu zeigen, nehmen wir an, dass
+                      Um Punkt 2 zu zeigen, nehmen wir an, dass
                       $\alpha' \beta' = \alpha \beta \varphi$ gilt.
                       Falls - entgegen der Schlussfolgerung - nun
                       $\varphi \in \Sigma^*$ gälte, wäre
                     </Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                    $$\begin&#123;align*&#125;
                     \alpha' \beta' w' = \alpha \beta \varphi w' \rstep&#123;&#125;
                     \alpha X \varphi w'
                     \end&#123;align*&#125;$$
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein korrekter Linksreduktionsschritt; nach Voraussetzung
+                      ein korrekter Linksreduktionsschritt; nach Voraussetzung
                       ist auch $\alpha' \beta' w' \rstep&#123;&#125; \alpha' X' w'$
                       korrekt. Es gäbe also zwei korrekte Linksreduktionsschritte
                       und $G$ wäre nicht eindeutig. Wir folgern,
@@ -513,19 +532,18 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      {" "}
                       Als erstes zeigen wir, dass $G$ eindeutig ist; dass es
                       also für jede gültige Wortform genau einen korrekten
                       Linksreduktionsschritt gibt.
                       Dafür nehmen wir dann, dass es von $\gamma$ aus
                       die Linksreduktionsschritte
                     </Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                    $$\begin&#123;align*&#125;
                     \gamma = \alpha \beta w&amp;\rstep&#123;&#125; \alpha X w \textnormal&#123; und&#125; \\
                     \gamma = \alpha' \beta' w'&amp;\rstep&#123;&#125; \alpha' X' w' \textnormal&#123; und&#125; \\
                     \end&#123;align*&#125;$$
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;gibt und müssen zeigen, dass es sich in der Tat um denselben
+                      gibt und müssen zeigen, dass es sich in der Tat um denselben
                       Schritt handelt. Ohne Beschränkung der Allgemeinheit
                       ist $|\alpha\beta| \leq |\alpha' \beta'|$ und
                       wir schreiben $\alpha' \beta' = \alpha \beta \varphi$.
@@ -543,25 +561,25 @@ const Article = () => {
                       Gramatik ist eindeutig.
                     </Paragraph>
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um den zweiten Punkt der LR(0)-Eigenschaft zu zeigen,
+                      Um den zweiten Punkt der LR(0)-Eigenschaft zu zeigen,
                       nehmen wir an, dass
                     </Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                    $$\begin&#123;align*&#125;
                     \alpha \beta w \rstep&#123;&#125; \alpha X w
                     \end&#123;align*&#125;$$
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein korrekter Linksreduktionsschritt ist und
+                      ein korrekter Linksreduktionsschritt ist und
                       $\gamma' := \alpha \beta w''$
                       eine gültige Wortform ist mit $w'' \in \Sigma^*$.
                       Wir müssen zeigen,
                       dass $ \alpha X w''$ auch gültig ist. Da $G$ eindeutig ist,
                       gibt es einen eindeutigen korrekten Linksreduktionsschritt
                     </Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                    $$\begin&#123;align*&#125;
                     \gamma' = \alpha' \beta' w' \rstep&#123;&#125; \alpha' X' w'
                     \end&#123;align*&#125;$$
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Da $\alpha \beta$ und $\alpha' \beta'$ beides
+                      Da $\alpha \beta$ und $\alpha' \beta'$ beides
                       Präfixe von $\gamma'$ sind, gibt es drei Fälle:
                       (1) $\alpha\beta = \alpha' \beta'$;
                       (2)
@@ -572,7 +590,7 @@ const Article = () => {
                       mit $\varphi \ne \epsilon$.
                     </Paragraph>
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;(1) Wenn nun $\alpha \beta = \alpha' \beta'$ gilt, dann
+                      (1) Wenn nun $\alpha \beta = \alpha' \beta'$ gilt, dann
                       sind nach Punkt 1 der Schlussfolgerung
                       $\alpha' = \alpha$ und $\beta' = \beta$ und
                       $X = X'$; also ist $\gamma = \alpha' \beta' w' = \alpha \beta w'$
@@ -581,7 +599,7 @@ const Article = () => {
                       eine gültige Wortform.
                     </Paragraph>
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;(2) Wir haben zwei korrekte Linksreduktionsschritte
+                      (2) Wir haben zwei korrekte Linksreduktionsschritte
                       $\alpha \beta w \rstep&#123;&#125; \alpha X w$ und
                       $\alpha' \beta' w' \rstep&#123;&#125; alpha' X' w'$. Nach Punkt 2
                       der Schlussfolgerung des Lemmas $\varphi$
@@ -604,8 +622,11 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;6.7.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass die folgende Grammatik \(LR(0)\) ist:
+                  Zeigen Sie, dass die folgende Grammatik \(LR(0)\) ist:
                   $$\begin&#123;align*&#125;
                   S&amp;\rightarrow aS \\
                   S&amp;\rightarrow Bc \\
@@ -618,8 +639,11 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;6.7.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir ändern die Grammatik etwas ab:
+                  Wir ändern die Grammatik etwas ab:
                   $$\begin&#123;align*&#125;
                   S&amp;\rightarrow aS \\
                   S&amp;\rightarrow B \\
@@ -632,8 +656,11 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;6.7.3{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass die folgende Grammatik \(LR(0)\) ist:
+                  Zeigen Sie, dass die folgende Grammatik \(LR(0)\) ist:
                   $$\begin&#123;align*&#125;
                   S&amp;\rightarrow aS \\
                   S&amp;\rightarrow BC \\
@@ -657,7 +684,7 @@ const Article = () => {
                     die \(LR(0)\)-Bedingung erfüllt?
                   </li>
                   <li>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls sie es tut, wie können wir für eine gegebene gültige Wortform
+                    Falls sie es tut, wie können wir für eine gegebene gültige Wortform
                     \(\gamma\) den korrekten Reduktionsschritt
                     $$\begin&#123;align*&#125;
                     \gamma = \alpha \beta w \rstep&#123;&#125; \alpha X w
@@ -667,7 +694,7 @@ const Article = () => {
                   </li>
                 </ol>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beide Aufgaben können mit Hilfe eines{" "}
+                  Beide Aufgaben können mit Hilfe eines{" "}
                   <i>
                     endlichen Automaten
                   </i>
@@ -676,18 +703,19 @@ const Article = () => {
                   der als erstes diese Idee hatte).
                 </Paragraph>
                 <div class="container alert alert-warning">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Hinweis.
                   </b>
                   {" "}Was nun folgt, ist mathematisch
+                  &ensp;Was nun folgt, ist mathematisch
                   recht herausfordernd. Lesen Sie daher gerne auch
                   das Kapitel 2.4 (Deterministic context free languages) im Lehrbuch
-                  {" "}
                   <i>
                     Introduction to the Theory of Computing
                   </i>
                   {" "}von Michael Sipser.
+                  &ensp;von Michael Sipser.
                   Meine Darstellung des doch recht schwierigen Materials fußt auf diesem
                   Kapitel, weicht aber doch stark genug von Sipser ab, so dass es
                   womöglich hilfreich ist, beides zu lesen: dieses Vorlesungsskript und

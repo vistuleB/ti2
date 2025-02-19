@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={41}
-        title_gr="Turing-Maschinen"
+        title_gr="7. Turing-Maschinen"
         title_en="Turing machines"
-        number={7.0}>
+        number={7.0}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes41.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -33,16 +37,18 @@ const Article = () => {
             <div class="chapter">
               <h1 class="hidden-title">
                 <span class="chapterTitle">
+                  7. 
                   7. Turing-Maschinen
                 </span>
               </h1>
               <Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben in den vorherigen Kapitel mit primitiver Rekursion und \(\lambda\)-Kalkül
+                Wir haben in den vorherigen Kapitel mit primitiver Rekursion und \(\lambda\)-Kalkül
                 zwei Modelle kennengelernt, die den Begriff der{" "}
                 <i>
                   Berechnung
                 </i>
                 {" "}formalisieren.
+                &ensp;formalisieren.
                 Das \(\lambda\)-Kalkül ist im Prinzip eine reduktion funktionaler Programmiersprachen
                 auf das absolut essentielle. In diesem Kapitel lernen wir ein
                 weiteres Modell für Berechnung kennen, das im Allgemeinen als Standardmodell

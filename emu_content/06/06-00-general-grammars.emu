@@ -1,7 +1,9 @@
 |> Section
-    title_gr Allgemeine Grammatiken
+    title_gr 6. Allgemeine Grammatiken
     title_en general grammars
     number 6.0
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,10 +38,11 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             6. Allgemeine Grammatiken
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben nun ausführlich über kontextfreie Grammatiken gesprochen
+                        Wir haben nun ausführlich über kontextfreie Grammatiken gesprochen
                         und auch Sprachen gesehen, die nicht mit kontextfreien Grammatiken
                         zu beschreiben (und somit auch nicht mit Parsern oder allgemein mit
                         Kellerautomaten) zu entscheiden sind. Da stellen sich die folgenden Fragen:
@@ -51,12 +54,12 @@
                             \(\{a^n b^n c^n \ | \ n \geq 0\}\) umfassen?
                         |> li
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Gibt es eine natürliche Barriere, jenseits derer es
+                            Gibt es eine natürliche Barriere, jenseits derer es
                             keinen vernünftigen Begriff des "Beschreiben könnens" gibt?
                             Oder kann man immer noch allgemeinere Regelwerke zulassen?
                         |> li
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Gibt es für die (noch zu definierende) allgemeinere Art von
+                            Gibt es für die (noch zu definierende) allgemeinere Art von
                             Grammatiken auch eine Art Automat, so wie die endlichen Automaten
                             für die regulären Grammatiken und die Kellerautomaten für die kontextfreien?
                     Punkt 1 werden wir in diesem Kapitel diskutieren. Punkt 2 und 3 werden Gegenstand
@@ -70,7 +73,10 @@
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(formale Grammatik)*                        Eine formale Grammatik ist gegeben durch ein endliches Alphabet
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        *(formale Grammatik)*Eine formale Grammatik ist gegeben durch ein endliches Alphabet
                         \(\Sigma\) aus _Terminalsymbolen_, einer endlichen Menge
                         \(\N\) von _Nichtterminalen_, einem Startsymbol
                         \(S \in N\) und einer endlichen Menge an Produktionen
@@ -83,7 +89,7 @@
                         Nichtterminal enthalten muss.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Definition formaler Grammatik umschließt offensichtlich die der kontextfreien:
+                        Die Definition formaler Grammatik umschließt offensichtlich die der kontextfreien:
                         sie verbietet nicht, dass alle linken Seiten \(\alpha\) aus genau einem
                         Nichtterminal bestehen; in diesem Falle hätten wir eine kontextfreie Grammatik.
                         Sie verbietet auch nicht, dass zusätzlich alle rechten Seiten
@@ -96,7 +102,10 @@
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Ableitung und erzeugte Sprache)*. Sei \(G\) eine formale
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        *(Ableitung und erzeugte Sprache)*. Sei \(G\) eine formale
                         Grammtik und \(\gamma_1, \gamma_2 \in (\Sigma\cup N)^* \) zwei Wortformen.
                         Wir schreiben \(\gamma_1 \Step{} \gamma_2\), wenn wir
                         \begin{align*}
@@ -111,7 +120,7 @@
                             class numbered-title
 
                             Beispiel
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die allgemeine Grammatik mit
+                        Betrachten wir die allgemeine Grammatik mit
                         Terminalalphabet \(\Sigma = \{a,b,c\}\), Nichtterminalsymbolen
                         \(N = \{S, A, B, C\}\), Startsymbol \(S\) und den Produktionen
                         \begin{align*}
@@ -129,21 +138,23 @@
                         |> p
 
                             Nun schauen wir uns eine Beispielableitung an:
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                        \begin{align*}
                         S \Step{1} ABCS \Step{1} ABCABCS \Step{2}
                         ABCABC \Step{5} ABACBC \Step{3} AABCBC
                         \Step{8,8,9,9,10,10}^* aabcbc
                         \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die obige Beispielableitung illustriert, dass allgemeine formale Grammatiken
+                        Die obige Beispielableitung illustriert, dass allgemeine formale Grammatiken
                         etwas können, das kontextfreie Grammatiken nicht bieten konnten:
                         das Vertauschen von Symbolen. Das mag nicht als besonders viel erscheinen,
                         wird sich aber als _Game Changer_ herausstellen.
+                        &ensp;herausstellen.
                     |> p
 
                         Sobald wir eine Wortform erreicht haben, die nur aus Terminalsymbolen
                         besteht (also ein _Wort_ geworden ist), muss unsere Ableitung
+                        &ensp;geworden ist), muss unsere Ableitung
                         aufhören: wir können keine weitere Produktion anwenden, da jede
                         linke Seite mindestens ein Nichtterminal enthält. Diese Einschränkung
                         in der Definition allgemeiner formaler Grammatiken ist nicht wirklich
@@ -161,7 +172,7 @@
                             class numbered-title
 
                             Beispiel
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Versuchen wir nun, eine allgemeine formale Grammatik für die Sprache
+                        Versuchen wir nun, eine allgemeine formale Grammatik für die Sprache
                         \begin{align*}
                         L = \{a^nb^nc^n \ | \ n \geq 0\}
                         \end{align*}
@@ -190,7 +201,7 @@
                         wobei \(\#_b(v)\) die Anzahl der in \(v\) enthaltenen \(b\) ist.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nachdem also unser erster Versuch gescheitert ist, unternehmen wir einen
+                            Nachdem also unser erster Versuch gescheitert ist, unternehmen wir einen
                             zweiten. Wir stellen uns die Ableitung als aus zwei Phasen
                             bestehend vor. In der ersten wird eine Wortform
                             \(w \in \{A,B,C\}\) erzeugt mit
@@ -236,7 +247,7 @@
                                 \end{align*}
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(Z\): will \(C\) in \(c\) umwandeln. Wir
+                                \(Z\): will \(C\) in \(c\) umwandeln. Wir
                                 können aber auch einfach aufhören, zum Beispiel
                                 wenn wir den rechten Rand erreicht haben:
                                 \begin{align*}
@@ -245,7 +256,7 @@
                                 \end{align*}
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nun müssen wir zeigen, dass die Grammatik die Sprache \(L\) erzeugt. Für
+                            Nun müssen wir zeigen, dass die Grammatik die Sprache \(L\) erzeugt. Für
                             jedes Wort \(a^n b^n c^n \in L \) müssen wir zeigen, dass wir es ableiten können:
                             \begin{align*}
                             &amp;S \Step{1}^* S(ABC)^n \Step{2} X(ABC)^n
@@ -259,13 +270,13 @@
                             \end{align*}
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als zweites müssen wir zeigen, dass jedes abgeleitete Wort
+                            Als zweites müssen wir zeigen, dass jedes abgeleitete Wort
                             \(S \Step{}^* w \in \{a,b,c\}^*\) auch in \(L\) ist,
                             also die Form \(a^n b^n c^n\) haben. Wir machen das
                             nur zu 80% formal.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die erste Beobachtung ist: solange \(S\) in der Wortform \(\beta\)
+                            Die erste Beobachtung ist: solange \(S\) in der Wortform \(\beta\)
                             vorkommt, hat diese die Form \(\beta = S \gamma\)
                             mit \(\gamma \in \{A,B,C\}^*\) enthält gleich viele
                             \(A\) wie \(B\) wie \(C\).
@@ -275,7 +286,7 @@
                                 class numbered-title
 
                                 Behauptung
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(\#_{A,a}(\beta)\) die Anahl der \(A\) und \(a\) in der Wortform \(\beta\).
+                            Sei \(\#_{A,a}(\beta)\) die Anahl der \(A\) und \(a\) in der Wortform \(\beta\).
                             Wenn \(S \Step{} \beta\), dann gilt
                             |> ol
                                 |> li
@@ -296,17 +307,17 @@
                                     In allen drei Fällen enthält \(\gamma\) keine Terminalsymbole.
                                 |> li
 
-                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn es kein Symbol in \(S,X,Y,Z\) enthält, dann ist es von
+                                    Wenn es kein Symbol in \(S,X,Y,Z\) enthält, dann ist es von
                                     der Form \(\beta = a^* b^* c^* \gamma\) und \(\gamma\) enthält
                                     keine Terminalsymbole.
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir behaupten also, dass das \(\gamma\) in Punkt 3 aus den Nichtterminalen
+                        Wir behaupten also, dass das \(\gamma\) in Punkt 3 aus den Nichtterminalen
                         \(A,B,C\) besteht, die jedoch nicht in der korrekten Reihenfolge sein müssen.
                         Wir können auch gar nicht verbieten, dass in einer Ableitung
                         die Vertausch-Regeln 3,4,5 und die Kontroll-Regeln 6,7,8,9,10,11
                         vermischt angewandt werden.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Behauptung kann man beispielsweise mit Induktion über die
+                            Die Behauptung kann man beispielsweise mit Induktion über die
                             Länge der Ableitung zeigen. Intuitiv gesprochen: Sie gilt unmittelbar,
                             nachdem \(S \rightarrow X\) angewandt wurde; danach
                             überträgt sich ihre Gültigkeit Schritt
@@ -314,7 +325,7 @@
                             erzeugt werden können).
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn nun also \(S \rightarrow a^* b^* c^* \gamma\) und \(\gamma\) kein
+                            Wenn nun also \(S \rightarrow a^* b^* c^* \gamma\) und \(\gamma\) kein
                             Nichtterminal \(S,X,Y,Z\) enthält, also \(\gamma \in \{A,B,C\}^*\), dann
                             können keine weiteren Produktionen angewandt werden und die
                             Ableitung endet. Wenn das also ein Wort sein soll, muss
@@ -327,11 +338,12 @@
                             class numbered-title
 
                             Beispiel
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im 
+                        Im 
                         |> a
                             href ./05-10-not-context-free.html
 
                             Teilkapitel 5.10
+                        &ensp;gab
                         &ensp;gab
                         es 
                         |> a
@@ -349,7 +361,7 @@
                         schreiben?
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dies geht sogar nohc einfacher als die obigen Sprachen. Wir
+                            Dies geht sogar nohc einfacher als die obigen Sprachen. Wir
                             schaffen eine Startregel:
                             \begin{align*}
                             S&amp;\step{1} L1R
@@ -381,6 +393,7 @@
                         deren Länge eine Quadratzahl ist. Spätestens dieses Beispiel sollte Sie
                         davon überzeugen, dass allgemeine formale Gramatiken, im Gegensatz zu
                         kontextfreien und regulären, nicht nur _Formate_ syntaktisch
+                        &ensp;syntaktisch
                         beschreiben, sondern komplizierte Rechnungen durchführen können.
                         Sie stellen somit ein völlig andersartiges Biest dar.
                     |> div
@@ -389,9 +402,10 @@
                             class numbered-title
 
                             Beispiel
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L\) die Sprache aller Wörter über
+                        Sei \(L\) die Sprache aller Wörter über
                         \(\Sigma = \{1\}\), deren Länge eine Quadratzahl ist.
                         Wir werden als erstes eine _Multiplikationsgrammatik_ erzeugen.
+                        &ensp;erzeugen.
                         Dies soll eine Menge von Produktionen sein, die Ableitungen der Form
                         \begin{align*}
                         L A^m B^n R \Step{} L \tilde{A}^m B^n C^{mn} R
@@ -461,28 +475,28 @@
                                 darf die Wortform also keine \(A\)-Symbole mehr enthalten.
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können eine \(A\) nur verschwinden lassen
+                                Wir können eine \(A\) nur verschwinden lassen
                                 durch \(A \rightarrow \tilde{A} X\) und \(X\) nur
                                 auf diese Weise entstehen lassen. Wir produzieren also,
                                 wenn wir mit \(L A^m B^n R\) beginnen, im Laufe der Ableitung genau
                                 \(m\) mal ein \(X\).
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um ein \(X\) wieder verschwinden zu lassen, muss es den ganzen
+                                Um ein \(X\) wieder verschwinden zu lassen, muss es den ganzen
                                 \(B\)-Block durchlaufen und produziert damit insgesamt \(n\) viele
                                 (\tilde{C}\).
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Da wir insgesamt \(m\) viele \(X\) produzieren und jedes
+                                Da wir insgesamt \(m\) viele \(X\) produzieren und jedes
                                 \(X\) insgesamt \(n\) viele \(\tilde{C}\) produziert, werden
                                 insgesamt \(mn\) viele \(\tilde{C}\) erzeugt.
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Jedes \(\tilde{C}\) kann nur in ein \(C\) umgewandelt werden.
+                                Jedes \(\tilde{C}\) kann nur in ein \(C\) umgewandelt werden.
                                 Es entstehen also insgesamt \(mn\) viele \(C\).
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir also aus
+                            Wenn wir also aus
                             \(L A^m B^n R\) ein Wort ableiten, so
                             muss zum Zeitpunkt der Produktion \(R \rightarrow K\)
                             die Wortform so aussehen:
@@ -495,7 +509,7 @@
                             mehr in Terminale umwandeln.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In einer leichten Variation können wir auch die Sprache
+                            In einer leichten Variation können wir auch die Sprache
                             \begin{align*}
                             \{a^m b^n c^{mn} \ | \ m,n \geq 0 \}
                             \end{align*}
@@ -510,21 +524,27 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Geben Sie ein formale Grammatik für
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Geben Sie ein formale Grammatik für
                         \begin{align*}
                         L = \{w\texttt{:}w \ | \ w \in \{a,b\}^* \}
                         \end{align*}
                         an. Dies ist auch ein Paradebeispiel für eine Sprache, die nicht kontextfrei ist.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Überlegen Sie, wie man "lineare Suche" implementieren könnte:
+                        Überlegen Sie, wie man "lineare Suche" implementieren könnte:
                     |> div
                         class well well-lg numbered-exercise container
                         |> span
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L\) die Sprache über \(\Sigma = \{a,b,:,;\}\)
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Sei \(L\) die Sprache über \(\Sigma = \{a,b,:,;\}\)
                         mit
                         \begin{align*}
                         L := w:w_1;w_2; \dots; w_n
@@ -534,18 +554,19 @@
                         |> pre
 
                             List.member x list
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;die überprüft, ob \(x\) in der angegebenen Liste enthalten ist:
+                        die überprüft, ob \(x\) in der angegebenen Liste enthalten ist:
                         \begin{align*}
                         abba\text{:}aaaaaaa\text{;}abbbb\text{;}abba\text{;}bbbb \in L \\
                         abba\text{:}aaaaaaa\text{;}abbbb\text{;}abbba\text{;}bbbb \not \in L \\
-                        \end{align*}
-                        *Tip:* das ist einfach, wenn Sie bereits eine Grammatik
+                        \end{align*}*Tip:* das ist einfach, wenn Sie bereits eine Grammatik
+                        &ensp;das ist einfach, wenn Sie bereits eine Grammatik
                         für das vorherige Problem haben. Erzeugen Sie
                         \(wXwY\) und lassen dann aus \(X\) und \(Y\) den Rest der Liste entstehen.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sie haben sicherlich gemerkt, dass wir die Grammatikproduktionen nun nicht
+                        Sie haben sicherlich gemerkt, dass wir die Grammatikproduktionen nun nicht
                         mehr nur zum _Erzeugen_ verwenden wie bei kontextfreien Sprachen, sondern zum
+                        &ensp;verwenden wie bei kontextfreien Sprachen, sondern zum
                         Umformen, Rumschieben, Kopieren etc. Es ist nun an der Zeit, die
                         Welt der Grammatiken zu verlassen und zu formalisieren, was man
                         mit Umformen, Rumschieben, Kopieren erreichen kann. In anderen Worten:

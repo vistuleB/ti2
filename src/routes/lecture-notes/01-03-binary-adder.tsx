@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={4}
-        title_gr="Binär-Addierer"
+        title_gr="::++ChapterCtr Binär-Addierer"
         title_en="binary adder"
-        number={1.3}>
+        number={1.3}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes4.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,7 +38,8 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    1 Binär-Addierer
+                    1.3 
+                    2 Binär-Addierer
                   </span>
                 </h1>
                 <h3>
@@ -56,7 +61,7 @@ const Article = () => {
                   stehenden Ziffern addiert werden. Binär ist alles viel einfacher, weil man sich nur 0 oder 1
                   merken muss.
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$
+                $$
                 \begin&#123;array&#125;&#123;cc|cc&#125;
                 x&amp;y&amp;&#123;\rm result&#125;&amp;&#123;\rm carry&#125; \\ \hline
                 0&amp;0&amp;0&amp;0 \\
@@ -72,13 +77,14 @@ const Article = () => {
                     drei
                   </i>
                   {" "}Bits addieren
+                  &ensp;Bits addieren
                   müssen:
                   das von \(x\), das von \(y\), und das eingehende Carry \(\cin\). Daraus berechnet
                   sich das Output-Bit \(s\) und das ausgehende Carry \(\cout\), das nach links weitergegeben
                   wird.
                   Unsere Tabelle ist also etwas größer:
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$
+                $$
                 \begin&#123;array&#125;&#123;ccc|cc&#125;
                 x&amp;y&amp;\cin&amp;s&amp;\cout \\ \hline
                 0&amp;0&amp;0&amp;0&amp;0 \\
@@ -92,7 +98,7 @@ const Article = () => {
                 \end&#123;array&#125;
                 $$
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Glücklicherweise muss man sich diese Tabelle nicht merken, es gilt nämlich
+                  Glücklicherweise muss man sich diese Tabelle nicht merken, es gilt nämlich
                   $$\begin&#123;align*&#125;
                   s&amp;= x \oplus y \oplus \cin \\
                   \cout&amp;= &#123;\rm Maj&#125; (x, y, \cin) \ .
@@ -108,7 +114,7 @@ const Article = () => {
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir numerieren unsere Variablen von \(0, \dots,n-1\), damit wir die
+                  Wir numerieren unsere Variablen von \(0, \dots,n-1\), damit wir die
                   repräsentierte natürliche Zahl bequem als
                   \(\sum_&#123;i=0&#125;^n x_i 2^i\) schreiben können. Beachten Sie auch die
                   unvermittelt rechts stehende 0. Streng genommen lässt unsere Definition
@@ -122,7 +128,7 @@ const Article = () => {
                   <i>
                     ein
                   </i>
-                  {" "}Gate
+                  Gate
                   zählen, so haben wir insgesamt \(2n\) innere Gates und \(2n\) Input-Gates.
                   Wenn wir darauf bestehen, \(\oplus\)- und \(M\)-Gates aus AND/OR/NOT zu basteln,
                   haben wir mehr, allerdings in jedem Fall \(O(n)\) viele.
@@ -130,11 +136,15 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;2.3.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bauen Sie einen Schaltkreis{" "}
+                  Bauen Sie einen Schaltkreis{" "}
                   <tt>
                     oneBitAdder:
                   </tt>
+                  &ensp;\( \&#123;0,1\&#125;^3 \rightarrow \&#123;0,1\&#125;^2\) für
                   &ensp;\( \&#123;0,1\&#125;^3 \rightarrow \&#123;0,1\&#125;^2\) für
                   folgende Funktionalität:
                   <figure>
@@ -143,11 +153,11 @@ const Article = () => {
                       src="../img/circuits/onebitadder.svg"
                       loading="lazy" />
                   </figure>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Versuchen Sie, so wenig Gates wie möglich zu verwenden. Entscheiden Sie sich
+                  Versuchen Sie, so wenig Gates wie möglich zu verwenden. Entscheiden Sie sich
                   im Voraus, ob Sie beliebigen Fan-in erlauben wollen oder auf Fan-in 2 bestehen.
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Größe von \(O(n)\) ist gut; besseres können wir nicht wirklich erwarten, schließlich
+                  Eine Größe von \(O(n)\) ist gut; besseres können wir nicht wirklich erwarten, schließlich
                   muss der Schaltkreis ja allein schon \(n\) Input-Gates haben. Wie steht es mit der Tiefe?
                   Wenn wir jedes \(\oplus\) und \(M\) als Gate
                   betrachten, dann hat der Pfad von \(x_0\) zu \(s_n\) die Länge \(n\) (beachten Sie:
@@ -165,7 +175,6 @@ const Article = () => {
                   Tiefenmässig hat uns der obige Addierer nicht befriedigt. Das Problem ist, dass das Carry
                   im schlimmsten Fall von ganz rechts nach ganz links durchrasseln muss,
                   zum Beispiel wenn man \(11111111 + 00000001\) berechnet. So einen Addierer nennt man
-                  {" "}
                   <i>
                     ripple-carry adder
                   </i>
@@ -181,7 +190,7 @@ const Article = () => {
                   \(i-1\) abzuwarten. Es lohnt, ein paar Dinge formaler zu definieren:
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(c_i\) ist das Carry, das von Position \(i-1\) an Position \(i\) übergeben wird;
+                  \(c_i\) ist das Carry, das von Position \(i-1\) an Position \(i\) übergeben wird;
                   \(s_i\) ist das \(i\)-te Bit der Summe (von rechts nach links zählend, bei 0 beginnend).
                   Es gilt also \(c_0 = 0\) und
                   $$\begin&#123;align*&#125;
@@ -200,14 +209,14 @@ const Article = () => {
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten Sie \((x_i,y_i)\). Wenn dies \((1,1)\) ist, so ist
+                  Betrachten Sie \((x_i,y_i)\). Wenn dies \((1,1)\) ist, so ist
                   \(c_&#123;i+1&#125;=1\);
                   wenn \((x_i,y_i) = (0,0)\), so ist \(c_&#123;i+1&#125;=0\). In beiden Fällen spielt
                   alles, was vor \(i\) kommt (rechts davon) spielt keine Rolle. Wenn nun
                   \(x_i \ne y_i\) ist, dann schaltet das \(M\)-Gate einfach \(c_i\) unverändert durch.
                   Dies motiviert die folgenden Definitionen:
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 g_i&amp;:= x_i \wedge y_i \tag&#123;carry-generate&#125; \\
                 p_i&amp;:= x_i \vee y_i \tag&#123;carry-propagate&#125;
                 \end&#123;align*&#125;$$
@@ -218,7 +227,7 @@ const Article = () => {
                   für alle \(j = \&#123;i+1,\dots,k\&#125;\) das Carry zumindest weitergereicht wird,
                   also \( x_j \vee y_j = 1\) gilt (carry propagate):
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$
+                $$
                 c_&#123;k+1&#125; := g_k \vee (g_&#123;k-1&#125; \wedge p_k) \vee (g_&#123;k-2&#125; \wedge p_&#123;k-1&#125; \wedge p_&#123;k&#125;) \vee \dots
                 \vee
                 (g_0 \wedge p_1 \wedge \dots \wedge p_k) \ .
@@ -243,16 +252,17 @@ const Article = () => {
                   Carry-Lookahead mit \(O(n)\) Gates und \(O(\log n)\) Tiefe
                 </h3>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Effizientere Lösungen beginnen oft mit einer guten Definition. In diesem Falle ist das die
+                  Effizientere Lösungen beginnen oft mit einer guten Definition. In diesem Falle ist das die
                   Verallgemeinerung von{" "}
                   <i>
                     Carry Generate \(g_i\)
                   </i>
-                  {" "}und{" "}
+                  {" "}und 
+                  &ensp;und{" "}
                   <i>
                     Carry Propagate \(p_i\)
                   </i>
-                  {" "}von Indizes auf Intervalle. Für ein Interval
+                  von Indizes auf Intervalle. Für ein Interval
                   \([a,b] := \&#123;a, a+1, \dots, b\&#125;\) definieren wir Funktionen
                   \(g_&#123;[a,b]&#125;\) und \(p_&#123;[a,b]&#125;\) in den Variablen \(x_&#123;a&#125;,\dots,x_&#123;b&#125;, y_a, \dots, y_b\)
                   wie folgt:
@@ -265,9 +275,13 @@ const Article = () => {
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
-                    Definition (Carry propagate / generate für Intervalle)
+                    Definition
+                    <NumberedTitle>
+                      &ensp;2.3.1{" "}
+                    </NumberedTitle>
+                    &ensp;(Carry propagate / generate für Intervalle)
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(I = \&#123;a,a+1, \dots, b\&#125;\) ein Intervall natürlicher Zahlen. Die Werte
+                  Sei \(I = \&#123;a,a+1, \dots, b\&#125;\) ein Intervall natürlicher Zahlen. Die Werte
                   \(p_I\) und \(g_I\) sind wie folgt definiert:
                   <ul>
                     <li>
@@ -293,9 +307,9 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Hier sind Boolesche Formeln (in DNF) für \(p_&#123;[a,b]&#125;\) und \(g_&#123;[a,b]&#125;\):
+                  Hier sind Boolesche Formeln (in DNF) für \(p_&#123;[a,b]&#125;\) und \(g_&#123;[a,b]&#125;\):
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 g_&#123;[a,b]&#125;&amp;:= g_b \vee (g_&#123;b-1&#125; \wedge p_b) \vee (g_&#123;b-2&#125; \wedge p_&#123;b-1&#125; \wedge p_b)
                 \vee \dots \vee (g_a \wedge p_&#123;a+1&#125; \wedge \dots \wedge p_b) \ , \\
                 p_&#123;[a,b]&#125;&amp;:= g_b \vee (g_&#123;b-1&#125; \wedge p_b) \vee (g_&#123;b-2&#125; \wedge p_&#123;b-1&#125; \wedge p_b)
@@ -317,7 +331,7 @@ const Article = () => {
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im Extremfall \(a=b\) gilt \(g_&#123;[a,a]&#125; = g_a, p_&#123;[a,a]&#125; = p_a\), also wie
+                  Im Extremfall \(a=b\) gilt \(g_&#123;[a,a]&#125; = g_a, p_&#123;[a,a]&#125; = p_a\), also wie
                   die "alten" individuellen \(p_a, g_a\).
                   Diese Definition \(g_&#123;[a,b]&#125;\) ist nützlich, da erstens
                   $$
@@ -329,15 +343,18 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beobachtung
+                    <NumberedTitle>
+                      &ensp;2.3.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir \([a,b] = [a,i] \cup [i+1,b] \) schreiben für \(a \lt i \lt b\), dann gilt
+                  Wenn wir \([a,b] = [a,i] \cup [i+1,b] \) schreiben für \(a \lt i \lt b\), dann gilt
                   $$\begin&#123;align*&#125;
                   p_&#123;[a,b]&#125;&amp;= g_&#123;[i+1,b]&#125; \vee (p_&#123;[a,i]&#125; \wedge p_&#123;[i+1,b]&#125;) \ , \\
                   g_&#123;[a,b]&#125;&amp;= g_&#123;[i+1,b]&#125; \vee (g_&#123;[a,i]&#125; \wedge p_&#123;[i+1,b]&#125;) \ . \\
                   \end&#123;align*&#125;$$
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Überzeugen Sie sich von der Richtigkeit entweder durch Nachdenken (z.B. "damit im Interval
+                  Überzeugen Sie sich von der Richtigkeit entweder durch Nachdenken (z.B. "damit im Interval
                   \([a,b]\) ein
                   Carry erzeugt wird, muss es entweder im höheren Interval erzeugt werden, oder im
                   niedrigeren,
@@ -352,7 +369,6 @@ const Article = () => {
                   Das Problem: es gibt zu viele Intervalle, nämlich \(1 + 2 + \dots + n = &#123;n+1 \choose 2&#125; =
                   \Theta(n^2)\) viele.
                   Der Trick: wir beschränken uns auf besonders schöne Intervalle, nämlich
-                  {" "}
                   <i>
                     Binärintervalle
                   </i>
@@ -361,8 +377,11 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;2.3.3{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein Binärintervall ist eine Menge natürlicher Zahlen der Form
+                  Ein Binärintervall ist eine Menge natürlicher Zahlen der Form
                   $$
                   \&#123; c \cdot 2^d, c \cdot 2^d + 1, \dots, c \cdot 2^&#123;d&#125; + 2^&#123;d&#125; - 1\&#125;
                   $$
@@ -380,29 +399,33 @@ const Article = () => {
                     Sternchennotation
                   </i>
                   {" "}mit [11**] notieren.
+                  &ensp;mit [11**] notieren.
                 </Paragraph>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;2.3.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Seit \(n = 2^d-1\). Wie viele Binärintervalle gibt es in
+                  Seit \(n = 2^d-1\). Wie viele Binärintervalle gibt es in
                   \(\&#123;0,\dots,n-1\&#125;\)?
                 </div>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Lemma
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gibt einen Schaltkreis mit Input-Gates \(x_0,\dots,x_&#123;n-1&#125;, y_0, \dots, y_&#123;n-1&#125;\) mit
+                  Es gibt einen Schaltkreis mit Input-Gates \(x_0,\dots,x_&#123;n-1&#125;, y_0, \dots, y_&#123;n-1&#125;\) mit
                   Größe \(6n - 4 \in O(n)\) und Tiefe \(2\, \ceil&#123;\log_2 n&#125; + 1 \ \in O(\log n)\) und
                   Output-Gates
                   \(p_&#123;I&#125;, g_I\) für jedes Binärinterval \(I\).
                 </div>
                 <div class="well container">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Beweis.
                   </b>
-                  {" "}Ein Binärintervall, zum Beispiel \([32,47]\) können wir
+                  Ein Binärintervall, zum Beispiel \([32,47]\) können wir
                   als Vereinigung von zwei kleineren Binärintervallen schreiben, hier
                   \([32,47] = [32,39] \cup [40,47]\). In unserer Sternchen-Notation:
                   $$
@@ -421,7 +444,7 @@ const Article = () => {
                       src="../img/circuits/pg-gate.svg"
                       loading="lazy" />
                   </figure>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Mit Hilfe dieses Gates können wir
+                  Mit Hilfe dieses Gates können wir
                   \(p_&#123;c0*^k&#125;, g_&#123;c0*^k&#125;\) und \(p_&#123;c1*^k&#125;, g_&#123;c1*^k&#125;\)
                   zu \(p_&#123;c*^&#123;k+1&#125;&#125;, g_&#123;c*^&#123;k+1&#125;&#125;\) kombinieren. Wir fangen
                   nun mit Binärintervallen der Größe \(1\) an und arbeiten uns hoch.
@@ -438,7 +461,7 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Jede Kante steht hier für zwei gebündelte Kanten, nämlich
+                    Jede Kante steht hier für zwei gebündelte Kanten, nämlich
                     \(p_I\) und \(g_I\).
                     Und dies ist unser Schaltkreis. Beachten Sie, dass
                     die untersten \(pg_&#123;i&#125;\) keine Input-Gates sind, sondern
@@ -475,7 +498,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine anschließende Bemerkung: der Schaltkreis
+                  Eine anschließende Bemerkung: der Schaltkreis
                   besteht ausschließlich aus AND- und OR-Gates; er enthält
                   keine NOT-Gates und ist somit ein{" "}
                   <i>
@@ -487,17 +510,17 @@ const Article = () => {
                   <span class="numbered-title">
                     Lemma
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gibt einen Schaltkreis der Größe \(2n\) und
+                  Es gibt einen Schaltkreis der Größe \(2n\) und
                   Tiefe \(2 \ceil&#123;\log_2 n&#125; - 2 = O(\log n)\), der die \(p_I, g_I\) für Binärintervalle
                   als Inputs nimmt und daraus \(g_&#123;[0,k]&#125;\) berechnet für jedes
                   \(k=0,\dots,n-1\), also insgesamt \(n\) Output-Gates.
                 </div>
                 <div class="well container">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Beweis.
                   </b>
-                  {" "}Die Idee ist, dass wir jedes \([0,k]\) als Vereinigung
+                  Die Idee ist, dass wir jedes \([0,k]\) als Vereinigung
                   von wenigen Binärintervallen schreiben können, zum Beispiel
                   $$\begin&#123;align*&#125;
                   [0,9]&amp;= [0,7] \cup [8,9] \ , \\
@@ -510,6 +533,7 @@ const Article = () => {
                       1. Fall.
                     </b>
                     {" "}Wenn \(k\) die Form \(k = 2^d-1\) hat, dann ist
+                    &ensp;Wenn \(k\) die Form \(k = 2^d-1\) hat, dann ist
                     \([0,k]\) bereits ein Binärintervall; dies passiert, wenn
                     die Binärdarstellung von \(k\) die Form \(k = (1^b)_2 \) hat (wobei \(b=0\)
                     sein kann, in welchem Fall \(k=0\) ist).
@@ -519,6 +543,7 @@ const Article = () => {
                         2. Fall.
                       </b>
                       {" "}Wenn \(k\) nicht die Form \(k = 2^d-1\) hat,
+                      &ensp;Wenn \(k\) nicht die Form \(k = 2^d-1\) hat,
                       dann hat die Binärdarstellung von \(k\) nicht die Form \(1^b\); sie
                       enthält also auch nicht-führende Nullen (beachten Sie, dass \((0111)_2\) und \((111)_2\)
                       die
@@ -545,7 +570,7 @@ const Article = () => {
                           src="../img/circuits/pg0k.svg"
                           loading="lazy" />
                       </figure>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Wert \(pg_&#123;[l+1,k]&#125;\) ist bereits ein Binärintervall, kann also
+                      Der Wert \(pg_&#123;[l+1,k]&#125;\) ist bereits ein Binärintervall, kann also
                       direkt aus dem vorherigen Schaltkreis abgelesen werden; der andere
                       Input, \(pg_&#123;[0,l]&#125;\), muss rekursiv berechnet werden. Beachten Sie,
                       dass \( l = (\alpha 0 1^a 1^b)_2) \) gilt, die Anzahl der schließenden 1en in der
@@ -585,6 +610,7 @@ const Article = () => {
                         Tiefe.
                       </b>
                       {" "}Jedes \(pg\)-Gate hat Tiefe 2,
+                      &ensp;Jedes \(pg\)-Gate hat Tiefe 2,
                       und somit erreichen \(d-1\) solche Gates hintereinander
                       zusammen eine Tiefe von \(2 (d-1) = 2 \ceil&#123;\log_2 n&#125; - 2\).{" "}
                     </Paragraph>
@@ -594,6 +620,7 @@ const Article = () => {
                         Größe.
                       </b>
                       {" "}Zählen wir die Anzahl von \(pg\)-Gates in unserem
+                      &ensp;Zählen wir die Anzahl von \(pg\)-Gates in unserem
                       Schaltkreis. Wir haben bereits gesehen, dass die Berechnung von \(g_&#123;[0,k]&#125;\) höchstens
                       \(d-1\) viele \(pg\)-Gates braucht. Es scheint also, als bräuchten wir für alle \(n\)
                       Werte
@@ -628,7 +655,7 @@ const Article = () => {
                     </figure>
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir benötigen also (weniger als) \(n\) viele \(pg\)-Gates; jedes davon
+                    Wir benötigen also (weniger als) \(n\) viele \(pg\)-Gates; jedes davon
                     besteht wiederum aus 4 Basis-Gates \(\wedge, \vee\), und somit
                     brauchen wir maximal \(4n\) Gates. Wenn wir ganz genau hinsehen,
                     können wir es mit \(2n\) Gates schaffen: da \(c_&#123;k+1&#125; = g_&#123;[0,k]&#125;\),
@@ -641,14 +668,14 @@ const Article = () => {
                         src="../img/circuits/pg-gadget-no-need-p.svg"
                         loading="lazy" />
                     </figure>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es reichen also in der Tat \(2n\) Basis-Gates aus.{" "}
+                    Es reichen also in der Tat \(2n\) Basis-Gates aus.{" "}
                     <span class="qed">
                       \(\square\)
                     </span>
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir kombinieren wir nun die beiden Lemmas und erhalten einen Schaltkreis der Tiefe \( 4
+                  Wir kombinieren wir nun die beiden Lemmas und erhalten einen Schaltkreis der Tiefe \( 4
                   \ceil &#123;
                   \log_2 n &#125; - 1\) und
                   Größe \(8n - 4\), mit \(x_0, y_0, \dots, x_&#123;n-1&#125;, y_&#123;n-1&#125; \) als Inputvariablen und Carrys
@@ -673,8 +700,11 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;2.3.3{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bauen Sie einen Schaltkreis für die Boolesche Funktion
+                  Bauen Sie einen Schaltkreis für die Boolesche Funktion
                   "less-than":
                   $$\begin&#123;align*&#125;
                   LT : \&#123;0,1\&#125;^&#123;n&#125; \times \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125; \\
@@ -688,7 +718,7 @@ const Article = () => {
                   Binärzahlen interpretiert und ausgibt, ob
                   die erste kleiner ist als die zweite.
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ihr Schaltkreis sollte im Idealfall Größe \(O(n)\) und
+                    Ihr Schaltkreis sollte im Idealfall Größe \(O(n)\) und
                     Tiefe \(O(\log_2 n)\) und Fan-in 2 haben.
                   </Paragraph>
                 </div>

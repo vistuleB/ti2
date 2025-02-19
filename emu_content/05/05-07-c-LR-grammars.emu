@@ -1,7 +1,9 @@
 |> Section
-    title_gr LR-Grammatiken
+    title_gr 5.5 LR-Grammatiken
     title_en c LR grammars
     number 5.7
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,13 +38,14 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             5.5 LR-Grammatiken
                     |> h2
 
                         Motivation und Intuition
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die LL-Parser, die wir in Kapitel 5.4 gesehen haben,
+                        Die LL-Parser, die wir in Kapitel 5.4 gesehen haben,
                         versuchen, eine Linksableitung \(S \Step{}^* w\) Schritt für
                         Schritt zu konstruieren. Eine Hauptschwäche ist, dass Sie von
                         einer Wortform
@@ -61,7 +64,7 @@
                         Dem entgegen haben wir in den letzten zwei Teilkapiteln LR-Parser gesehen.
                         Diese versuchen, von $w$ ausgehend eine Rechtsableitung $S \Step{}^* w$ zu finden,
                         allerdings in zeitlich umgekehrter Reihenfolge, also 
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                    \begin{align*}
                     w \Pets{} \alpha_1 \Pets{} \alpha_2 \Pets{} \dots \Pets{} \alpha_{t-1} \Pets{} S
                     \end{align*}
                     |> h2
@@ -71,7 +74,7 @@
 
                         Da aus der Sicht unseres neuen Parsers die Rückwärtsanwendung einer Produktion
                         \(X \rightarrow \beta\), also der Schritt \(\alpha X \gamma \Leftarrow \alpha \beta \gamma\)
-                        einen _Fortschritt_                        darstellt und zeitlich auch
+                        einen _Fortschritt_darstellt und zeitlich auch
                         nach vorne geht, verwende ich ab jetzt ein neues Pfeilsymbol, das
                         von links nach rechts geht und daher dem in Europa üblichen Gefühlt,
                         dass die Zeit von links nach rechts verläuft, mehr entgegen kommt:
@@ -82,7 +85,10 @@
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Reduktion und Linksreduktion)*                        Seien
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        *(Reduktion und Linksreduktion)*Seien
                         \(\alpha, \beta, \gamma \in (\Sigma \cup N)^*\) Wortformen und
                         \(X \rightarrow \beta\) eine Produktion. Dann schreiben wir
                         \begin{align*}
@@ -92,20 +98,20 @@
                         Man nennt einen solchen Schritt auch einen _Reduktionsschritt_.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir nennen den Schritt einen _Linksreduktionsschritt_, wenn
+                            Wir nennen den Schritt einen _Linksreduktionsschritt_, wenn
                             rechts von \(\beta\) nur Terminale stehen. Wenn also
                             \(\gamma = w \in \Sigma^*\) und somit
                             \begin{align*}
                             \alpha \beta w \rstep{} \alpha X w \ .
                             \end{align*}
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Folge von Linksreduktionsschritten nennen wir eine
-                        _Linksreduktion_. _Links_, weil wir uns
+                        Eine Folge von Linksreduktionsschritten nennen wir eine_Linksreduktion_. _Links_, weil wir uns
                         von links nach rechts in den terminalen Teil hineinarbeiten.
                         Wir werden im folgenden nur Linksreduktionsschritte betrachten und
                         sagen daher manchmal auch einfach nur Reduktionsschritt.
                     |> p
 
                         *Beobachtung:* Wenn wir
+                        &ensp;Wenn wir
                         einen Linksreduktionsschritt \(\alpha \beta w \rstep{} \alpha X w\)
                         betrachten, also
                         \begin{align*}
@@ -116,40 +122,41 @@
                         entsprechen also einer Rechtsableitung.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In den vorherigen Kapiteln, insbesondere beim Implementieren eines Parsers, haben wir gesehen,
+                        In den vorherigen Kapiteln, insbesondere beim Implementieren eines Parsers, haben wir gesehen,
                         dass nicht jeder Linksreduktionsschritt automatisch auch korrekt ist.
                         Ein einfaches Beispiel war die "Zahlengrammatik"
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                    \begin{align*}
                     N&amp;\rightarrow D \\
                     N&amp;\rightarrow ND \\
                     D&amp;\rightarrow 0 \ | \ 1 \ | \ 2\ | \ 3\ | \ 4\ | \ 5\ | \ 6\ | \ 7\ | \ 8\ | \ 9
                     \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;So ist folgende Linksreduktion korrekt:
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                        So ist folgende Linksreduktion korrekt:
+                    \begin{align*}
                     14 \rstep{} D4\rstep{} N4 \rstep{} ND \rstep{} N
                     \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;weil sie einer gültigen Rechtsableitung $N \Step{R}^* 14$ entspricht ($N$ ist das Startsymbol).
+                        weil sie einer gültigen Rechtsableitung $N \Step{R}^* 14$ entspricht ($N$ ist das Startsymbol).
                         Folgende Reduktionen sind
                         allerdings inkorrekt:
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                    \begin{align*}
                     \textcolor{red}{14 \rstep{} D4 \rstep{} DD}
                     \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;da zwar $DD \Step{R} D4$, allerdings es keine Rechtsableitung $N \Step{R}^* DD$ gibt.
+                        da zwar $DD \Step{R} D4$, allerdings es keine Rechtsableitung $N \Step{R}^* DD$ gibt.
                         Auch
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                    \begin{align*}
                     \textcolor{red}{14 \rstep{} D4 \rstep{} N4 \rstep{} ND \rstep{} NN}
                     \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ist inkorrekt. In unserer Java-Implementierung haben wir dieses Problem händisch gelöst, indem
+                        ist inkorrekt. In unserer Java-Implementierung haben wir dieses Problem händisch gelöst, indem
                         wir der Regel $ND \rstep{} N$ den Vorzug vor $D \rstep{} N$ gegebene haben. Im allgemeinen
                         müssen wir definieren, was ein _korrekter_ Linksreduktionsschritt ist. Und dann
+                        &ensp;Linksreduktionsschritt ist. Und dann
                         überlegen, wie wir herausfinden, ob ein Linksreduktionsschritt korrekt ist. Diese Fragen
                         werden uns für den Rest dieses und des nächsten Teilkapitels beschäftigen.
                     |> div
@@ -158,7 +165,10 @@
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Gültige Wortform, korrekter Reduktionsschritt)*                        Eine Wortform \(\gamma \in (\Sigma \cup N)^*\) heißt _gültig_,
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        *(Gültige Wortform, korrekter Reduktionsschritt)*Eine Wortform \(\gamma \in (\Sigma \cup N)^*\) heißt _gültig_,
                         wenn es eine Rechtsableitung
                         \begin{align*}
                         S \Step{R}^* \gamma
@@ -171,14 +181,14 @@
                         In diesem Fall ist natürlich $\alpha \beta w$ selbst gültig.
                         |> p
 
-                            Den Präfix $\alpha$ nennen wir eine
-                            _Front_ der gültigen Wortform $\alpha \beta w$.
+                            Den Präfix $\alpha$ nennen wir eine_Front_ der gültigen Wortform $\alpha \beta w$.
+                            &ensp;der gültigen Wortform $\alpha \beta w$.
                             Wenn die Grammatik eindeutig ist, dann hat
                             jede gültige Wortform $\gamma$ genau eine Front, die wir
                             mit $\front(\gamma)$ bezeichnen.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir uns erinnern, wie wir in den letzten zwei Teilkapiteln informell LR-Parser
+                        Wenn wir uns erinnern, wie wir in den letzten zwei Teilkapiteln informell LR-Parser
                         entworfen und implementiert haben, dann sehen wir, dass in einem
                         Linksreduktionsschritt $\alpha \beta w \rstep{} \alpha X w$ die
                         Front $\alpha \beta$
@@ -187,40 +197,42 @@
                     |> div
                         class well container theorem
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Wunsch.*                        Ob $\alpha \beta w \rstep{} \alpha X w$ gültig ist oder nicht,
+                        *Wunsch.*Ob $\alpha \beta w \rstep{} \alpha X w$ gültig ist oder nicht,
                         wollen wir allein auf Grund der Front $\alpha \beta$ entscheiden können, das heißt,
                         ohne $w$ betrachten zu müssen.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben allerdings bereits gesehen, dass das nicht immer möglich ist. Bei der Implementierung
+                        Wir haben allerdings bereits gesehen, dass das nicht immer möglich ist. Bei der Implementierung
                         von
                         |> a
                             href ../code/parsing/arithmetic-in-class/ArithmeticGrammar.java
 
                             ArithmeticGrammar.java
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;zum Beispiel
+                        zum Beispiel
                         haben wir manchmal das erste Zeichen von $w$ betrachten müssen. Allerdings behalten wir erst
                         einmal obigen Wunsch als Idealziel.
                         Um ihn zu formalisieren, fragen wir uns, wann es denn _nicht_ möglich ist,
+                        &ensp;möglich ist,
                         ohne Betrachten von $w$ zu eintscheiden, ob
                         $\alpha \beta w \rstep{} \alpha X w$ gültig ist.
                     |> ol
                         |> li
 
-                            *Schlechter Fall 1:*                        Es gibt für eine Wortform \(\gamma\) zwei
+                            *Schlechter Fall 1:*Es gibt für eine Wortform \(\gamma\) zwei
                             korrekte Linksreduktionsschritte:
                             \(\gamma \rstep{} \gamma'\) und
                             \(\gamma \rstep{} \gamma''\).
-                            In diesem Falle gäbe es _zwei verschiedene_                        Rechtsableitungen
+                            In diesem Falle gäbe es _zwei verschiedene_Rechtsableitungen
                             \begin{align*}
                             S \Steps{R} \gamma' \Step{R} \gamma \Steps{R} w \in \Sigma^* \\
                             S \Steps{R} \gamma'' \Step{R} \gamma \Steps{R} w \in \Sigma^* \\
                             \end{align*}
                             |> p
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;(wir nehmen an, dass man aus jedem Nichtterminal
+                                (wir nehmen an, dass man aus jedem Nichtterminal
                                 mindestens ein Wort \(u \in \Sigma^*\) ableiten kann; andernfalls
                                 kann man solche _nutzlosen_ Nichtterminale eliminieren).
+                                &ensp;Nichtterminale eliminieren).
                                 Das Wort \(w\) hat also zwei verschiedene Ableitungsbäume.
                                 Die Grammatik ist somit mehrdeutig.
                                 Mit uneindeutigen Grammatiken beschäftigen wir uns zunächst gar nicht;
@@ -232,7 +244,7 @@
                                 dieser Fall nicht eintreten kann.
                         |> li
 
-                            *Schlechter Fall 2:*                        Der Linksreduktionsschritt
+                            *Schlechter Fall 2:*Der Linksreduktionsschritt
                             \begin{align*}
                             \alpha \beta w \rstep{} \alpha X w
                             \end{align*}
@@ -242,7 +254,8 @@
                             \end{align*}
                             |> p
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;_nicht_ korrekt, obwohl \(\alpha\beta w'\) eine
+                                _nicht_ korrekt, obwohl \(\alpha\beta w'\) eine
+                                &ensp;korrekt, obwohl \(\alpha\beta w'\) eine
                                 gültige Wortform ist.
                                 Dieser Fall ist schlecht, weil der Parser nur
                                 $\alpha \beta$ gelesen hat und somit nicht
@@ -279,7 +292,7 @@
                         getroffen werden.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir definieren nun eine Klasse von Grammatiken, bei denen diese schlechten Fälle nicht
+                        Wir definieren nun eine Klasse von Grammatiken, bei denen diese schlechten Fälle nicht
                         auftreten.
                     |> div
                         id def-LR0
@@ -288,7 +301,10 @@
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(\(LR(0)\)-Grammatiken)*                        Eine kontextfreie Grammatik heißt \(LR(0)\)-Grammatik,
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        *(\(LR(0)\)-Grammatiken)*Eine kontextfreie Grammatik heißt \(LR(0)\)-Grammatik,
                         wenn keiner der obigen schlechten Fälle eintritt.
                         Formal, wenn (1) die Grammatik eindeutig ist und (2) wenn ein
                         korrekter Linksreduktionsschritt
@@ -303,7 +319,7 @@
                         Wortform ist.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In Worten/Graustufen: wenn wir
+                            In Worten/Graustufen: wenn wir
                             \begin{align*}
                             \alpha \beta \textcolor{gray}{w} \rstep{} \alpha X \textcolor{gray}{w}
                             \end{align*}
@@ -318,7 +334,7 @@
                                 class numbered-title
 
                                 Lemma
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(LR(0), äquivalente Formulierung).*                            Eine Grammatik $G$ ist LR(0) genau dann, wenn für
+                            *(LR(0), äquivalente Formulierung).*Eine Grammatik $G$ ist LR(0) genau dann, wenn für
                             alle korrekten Linksreduktionsschritte
                             $\alpha \beta w \rstep{} \alpha Xw$ und
                             $\alpha' \beta' w' \rstep{} \alpha' X'w'$ gilt:
@@ -331,7 +347,7 @@
                                 Reduktionsschritte.
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn $\alpha' \beta' = \alpha \beta \varphi$ und
+                                Wenn $\alpha' \beta' = \alpha \beta \varphi$ und
                                 $|\varphi| \geq 1$, dann
                                 $\varphi \not \in \Sigma^*$; in Worten: wenn
                                 $\front(\gamma)$ ein echter Präfix von $\front(\gamma')$
@@ -342,7 +358,7 @@
                         class well container
                         |> p
 
-                            *Beweis.*                            Der Beweis ist leider etwas mechanisch und
+                            *Beweis.*Der Beweis ist leider etwas mechanisch und
                             repetitiv. Aber vielleicht ist es eine
                             gute Übung, ihn genau durchzugehen, um die
                             Definitionenen Linksreduktion, gültige Wortform etc.
@@ -356,23 +372,24 @@
                                     class numbered-title
 
                                     Wenn-Dann-Richtung.
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn $G$ eine LR(0)-Grammatik ist, dann gelten
+                                Wenn $G$ eine LR(0)-Grammatik ist, dann gelten
                                 die Schlussfolgerungen des Lemmas.
                         |> div
                             class well container-fluid subtheorem
                             |> p
 
                                 *Beweis.* Um Punkt 1 zu zeigen,
+                                &ensp;Um Punkt 1 zu zeigen,
                                 nehmen wir an, dass $\alpha \beta = \alpha' \beta'$ gilt.
                                 Da $\alpha \beta w \rstep{} \alpha X w$ korrekt
                                 ist, $\alpha' \beta' w'$ eine gültige Wortform ist und
                                 $G$ eine LR(0)-Grammatik ist, so ist auch
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                            \begin{align*}
                             \alpha' \beta' w' = \alpha \beta w' \rstep{} \alpha X w'
                             \end{align*}
                             |> p
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein korrekter Linksreduktionsschritt. Also sind
+                                ein korrekter Linksreduktionsschritt. Also sind
                                 $\alpha' \beta' w' \rstep{} \alpha X w'$ und
                                 $\alpha' \beta' w' \rstep{} \alpha' X' w'$ beides
                                 korrekte Linksreduktionsschritte. Da $G$ eindeutig ist,
@@ -381,17 +398,17 @@
                                 somit $\beta = \beta'$ impliziert.
                             |> p
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um Punkt 2 zu zeigen, nehmen wir an, dass
+                                Um Punkt 2 zu zeigen, nehmen wir an, dass
                                 $\alpha' \beta' = \alpha \beta \varphi$ gilt.
                                 Falls - entgegen der Schlussfolgerung - nun
                                 $\varphi \in \Sigma^*$ gälte, wäre
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                            \begin{align*}
                             \alpha' \beta' w' = \alpha \beta \varphi w' \rstep{}
                             \alpha X \varphi w'
                             \end{align*}
                             |> p
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein korrekter Linksreduktionsschritt; nach Voraussetzung
+                                ein korrekter Linksreduktionsschritt; nach Voraussetzung
                                 ist auch $\alpha' \beta' w' \rstep{} \alpha' X' w'$
                                 korrekt. Es gäbe also zwei korrekte Linksreduktionsschritte
                                 und $G$ wäre nicht eindeutig. Wir folgern,
@@ -419,19 +436,18 @@
                             class well container-fluid subtheorem
                             |> p
 
-                                *Beweis.*
-                                Als erstes zeigen wir, dass $G$ eindeutig ist; dass es
+                                *Beweis.*Als erstes zeigen wir, dass $G$ eindeutig ist; dass es
                                 also für jede gültige Wortform genau einen korrekten
                                 Linksreduktionsschritt gibt.
                                 Dafür nehmen wir dann, dass es von $\gamma$ aus
                                 die Linksreduktionsschritte
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                            \begin{align*}
                             \gamma = \alpha \beta w&amp;\rstep{} \alpha X w \textnormal{ und} \\
                             \gamma = \alpha' \beta' w'&amp;\rstep{} \alpha' X' w' \textnormal{ und} \\
                             \end{align*}
                             |> p
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;gibt und müssen zeigen, dass es sich in der Tat um denselben
+                                gibt und müssen zeigen, dass es sich in der Tat um denselben
                                 Schritt handelt. Ohne Beschränkung der Allgemeinheit
                                 ist $|\alpha\beta| \leq |\alpha' \beta'|$ und
                                 wir schreiben $\alpha' \beta' = \alpha \beta \varphi$.
@@ -445,25 +461,25 @@
                                 Gramatik ist eindeutig.
                             |> p
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um den zweiten Punkt der LR(0)-Eigenschaft zu zeigen,
+                                Um den zweiten Punkt der LR(0)-Eigenschaft zu zeigen,
                                 nehmen wir an, dass
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                            \begin{align*}
                             \alpha \beta w \rstep{} \alpha X w
                             \end{align*}
                             |> p
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein korrekter Linksreduktionsschritt ist und
+                                ein korrekter Linksreduktionsschritt ist und
                                 $\gamma' := \alpha \beta w''$
                                 eine gültige Wortform ist mit $w'' \in \Sigma^*$.
                                 Wir müssen zeigen,
                                 dass $ \alpha X w''$ auch gültig ist. Da $G$ eindeutig ist,
                                 gibt es einen eindeutigen korrekten Linksreduktionsschritt
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                            \begin{align*}
                             \gamma' = \alpha' \beta' w' \rstep{} \alpha' X' w'
                             \end{align*}
                             |> p
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Da $\alpha \beta$ und $\alpha' \beta'$ beides
+                                Da $\alpha \beta$ und $\alpha' \beta'$ beides
                                 Präfixe von $\gamma'$ sind, gibt es drei Fälle:
                                 (1) $\alpha\beta = \alpha' \beta'$;
                                 (2)
@@ -474,7 +490,7 @@
                                 mit $\varphi \ne \epsilon$.
                             |> p
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;(1) Wenn nun $\alpha \beta = \alpha' \beta'$ gilt, dann
+                                (1) Wenn nun $\alpha \beta = \alpha' \beta'$ gilt, dann
                                 sind nach Punkt 1 der Schlussfolgerung
                                 $\alpha' = \alpha$ und $\beta' = \beta$ und
                                 $X = X'$; also ist $\gamma = \alpha' \beta' w' = \alpha \beta w'$
@@ -483,7 +499,7 @@
                                 eine gültige Wortform.
                             |> p
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;(2) Wir haben zwei korrekte Linksreduktionsschritte
+                                (2) Wir haben zwei korrekte Linksreduktionsschritte
                                 $\alpha \beta w \rstep{} \alpha X w$ und
                                 $\alpha' \beta' w' \rstep{} alpha' X' w'$. Nach Punkt 2
                                 der Schlussfolgerung des Lemmas $\varphi$
@@ -508,7 +524,10 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass die folgende Grammatik \(LR(0)\) ist:
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Zeigen Sie, dass die folgende Grammatik \(LR(0)\) ist:
                         \begin{align*}
                         S&amp;\rightarrow aS \\
                         S&amp;\rightarrow Bc \\
@@ -523,7 +542,10 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir ändern die Grammatik etwas ab:
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Wir ändern die Grammatik etwas ab:
                         \begin{align*}
                         S&amp;\rightarrow aS \\
                         S&amp;\rightarrow B \\
@@ -538,7 +560,10 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass die folgende Grammatik \(LR(0)\) ist:
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Zeigen Sie, dass die folgende Grammatik \(LR(0)\) ist:
                         \begin{align*}
                         S&amp;\rightarrow aS \\
                         S&amp;\rightarrow BC \\
@@ -562,7 +587,7 @@
                             die \(LR(0)\)-Bedingung erfüllt?
                         |> li
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls sie es tut, wie können wir für eine gegebene gültige Wortform
+                            Falls sie es tut, wie können wir für eine gegebene gültige Wortform
                             \(\gamma\) den korrekten Reduktionsschritt
                             \begin{align*}
                             \gamma = \alpha \beta w \rstep{} \alpha X w
@@ -571,16 +596,17 @@
                             \(\gamma = \alpha \beta w\)?
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beide Aufgaben können mit Hilfe eines _endlichen Automaten_,
+                        Beide Aufgaben können mit Hilfe eines _endlichen Automaten_,
                         des DK-Automaten erledigt werden (DK steht als Abkürzung für Donald Knuth,
                         der als erstes diese Idee hatte).
                     |> div
                         class container alert alert-warning
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Hinweis.* Was nun folgt, ist mathematisch
+                        *Hinweis.* Was nun folgt, ist mathematisch
+                        &ensp;Was nun folgt, ist mathematisch
                         recht herausfordernd. Lesen Sie daher gerne auch
-                        das Kapitel 2.4 (Deterministic context free languages) im Lehrbuch
-                        _Introduction to the Theory of Computing_ von Michael Sipser.
+                        das Kapitel 2.4 (Deterministic context free languages) im Lehrbuch_Introduction to the Theory of Computing_ von Michael Sipser.
+                        &ensp;von Michael Sipser.
                         Meine Darstellung des doch recht schwierigen Materials fußt auf diesem
                         Kapitel, weicht aber doch stark genug von Sipser ab, so dass es
                         womöglich hilfreich ist, beides zu lesen: dieses Vorlesungsskript und

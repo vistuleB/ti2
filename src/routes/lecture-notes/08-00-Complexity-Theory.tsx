@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={50}
-        title_gr="Komplexitätstheorie"
+        title_gr="8. Komplexitätstheorie"
         title_en="Complexity Theory"
-        number={8.0}>
+        number={8.0}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes50.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,11 +38,12 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    7.1 
                     8. Komplexitätstheorie
                   </span>
                 </h1>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Turingmaschinen erlauben uns, den Resourcenverbrauch einer Berechnung zu quantifizieren:
+                  Turingmaschinen erlauben uns, den Resourcenverbrauch einer Berechnung zu quantifizieren:
                   zum einen die{" "}
                   <i>
                     Zeit
@@ -64,6 +69,7 @@ const Article = () => {
                       I/O-Komplexität.
                     </b>
                     {" "}In echten Rechnern haben wir eine Hierarchie von
+                    &ensp;In echten Rechnern haben wir eine Hierarchie von
                     Speichermedien. Den extrem schnellen Prozessorcache; schnellen Cache; den vergleichsweise
                     langsamen
                     Hauptstpeicher (RAM); eventuell sogar einen externen Festplattenspeichern, der um
@@ -75,8 +81,8 @@ const Article = () => {
                       Kommunikationskomplexität.
                     </b>
                     {" "}Bei verteilten Anwendungen (Cloud Computing) ist
+                    &ensp;Bei verteilten Anwendungen (Cloud Computing) ist
                     die limitierende Resource eventuell gar nicht die Rechenkapazität sondern das
-                    {" "}
                     <i>
                       Netzwerk
                     </i>
@@ -85,7 +91,7 @@ const Article = () => {
                   </li>
                 </ul>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Also: Turingmaschinen sind zwar universell in dem Sinne, dass sie wohl alle physikalisch
+                  Also: Turingmaschinen sind zwar universell in dem Sinne, dass sie wohl alle physikalisch
                   realisierbaren
                   Rechnermodelle simulieren können (ich sage{" "}
                   <i>
@@ -97,7 +103,7 @@ const Article = () => {
                   Resourcenverbrauch modellieren zu können.
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dennoch: in diesem Kapitel beschränken wir uns auf die Resource{" "}
+                  Dennoch: in diesem Kapitel beschränken wir uns auf die Resource{" "}
                   <i>
                     Zeit
                   </i>
@@ -108,21 +114,29 @@ const Article = () => {
                   Zeitkomplexitätsklassen
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir beschränken uns der Einfachheit halber auf das Eingabealphabet $\Sigma = \&#123;0,1\&#125;$ und
+                  Wir beschränken uns der Einfachheit halber auf das Eingabealphabet $\Sigma = \&#123;0,1\&#125;$ und
                   auf Entscheidungsprobleme, wo uns also nur eine Ja/Nein-Antwort interessiert.
                 </Paragraph>
                 <div class="well container theorem">
                   <Paragraph>
                     <span class="numbered-title">
                       Definition
+                      <NumberedTitle>
+                        &ensp;7.1.1{" "}
+                      </NumberedTitle>
                     </span>
                     &ensp;Sei $t: \N \rightarrow \N$. Eine
+                    &ensp;Sei $t: \N \rightarrow \N$. Eine
                     Turingmaschinen $M$
-                    {" "}
                     <i>
                       entscheidet
                     </i>
-                    {" "}eine Sprache $L \subseteq \Sigma^*$ in Zeit $t$ wenn
+                    {" "}eine Sprache $L \subseteq \Sigma^
+                    <b>
+                      $ in Zeit $t$ wenn
+                      &ensp;eine Sprache $L \subseteq \Sigma^
+                    </b>
+                    $ in Zeit $t$ wenn
                   </Paragraph>
                   <ul>
                     <li>
@@ -130,25 +144,25 @@ const Article = () => {
                       und
                     </li>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;für jede Eingabe $x$ in maximal $O(t(|x|))$ Schritten terminiert.
+                      für jede Eingabe $x$ in maximal $O(t(|x|))$ Schritten terminiert.
                     </li>
                   </ul>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir definieren nun
+                    Wir definieren nun
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                  $$\begin&#123;align*&#125;
                   \TIME_k(t) := \&#123;L \subseteq \Sigma^* \ | \
                   \textnormal&#123;es gibt eine $k$-Band-TM $M$, die $L$ in Zeit $t$ entscheidet&#125;\&#125;
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und schließlich
+                    und schließlich
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                  $$\begin&#123;align*&#125;
                   \TIME(t) := \bigcup_&#123;k \geq 1&#125; \TIME_k(t) \ .
                   \end&#123;align*&#125;$$
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls Sie sich nicht mehr genau an die $O$-Notation erinnern können: in diesem Zusammenhang
+                  Falls Sie sich nicht mehr genau an die $O$-Notation erinnern können: in diesem Zusammenhang
                   heißt das, dass es Konstanten $c$ und $d$ gibt, so dass $M$ in maximal
                   $c t(|x|) + d$ Schritten terminiert. Die Konstanten $c$ und $d$ dürfen von $M$ abhängen, aber
                   nicht von der Eingabe $x$ oder der Länge $|x|$.
@@ -156,6 +170,7 @@ const Article = () => {
                   <a href="07-02-Turing-variants.html">
                     Kapitel 7.3
                   </a>
+                  &ensp;gezeigt, wie man eine
                   &ensp;gezeigt, wie man eine
                   $k$-Band-Turingmaschine $M$ durch eine
                   Ein-Band-Turingmaschine $M'$. Der Aufwand war quadratisch: wenn $M$ innerhalb von $t$ Schritten
@@ -172,7 +187,7 @@ const Article = () => {
                     <b>
                       ($k$-Band zu $1$-Band).
                     </b>
-                    {" "}Sei $t: \N \rightarrow \N$. Dann gilt
+                    Sei $t: \N \rightarrow \N$. Dann gilt
                     $\TIME
                     <i>
                       k(t) \subseteq \TIME
@@ -181,7 +196,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der quadratische Overhead wird tatsächlich störend, wenn man Zeit als Resource untersucht.
+                  Der quadratische Overhead wird tatsächlich störend, wenn man Zeit als Resource untersucht.
                   Daher gibt es eine bessere Simulation; die benötigt allerdings zwei Bänder (Oder drei? Weiß ich
                   gerade nicht
                   exakt) und die Konstruktion ist deutlich komplizierter. Daher vorerst ohne Beweis:
@@ -199,6 +214,7 @@ const Article = () => {
                       Beweis).
                     </b>
                     {" "}Sei
+                    &ensp;Sei
                     $t: \N \rightarrow \N$. Dann gilt $\TIME
                     <i>
                       k(t) \subseteq \TIME

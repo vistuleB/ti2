@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={22}
-        title_gr="Endliche Automaten"
+        title_gr="4.2 Endliche Automaten"
         title_en="finite state machines"
-        number={4.2}>
+        number={4.2}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes22.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,11 +38,12 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    5.2 
                     4.2 Endliche Automaten
                   </span>
                 </h1>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Grammatiken erlauben es uns, gewisse Formate zu beschreiben. Das reicht uns aber nicht:
+                  Grammatiken erlauben es uns, gewisse Formate zu beschreiben. Das reicht uns aber nicht:
                   wir wollen Daten{" "}
                   <i>
                     parsen
@@ -64,17 +69,17 @@ const Article = () => {
                   \&#123;x,y,z\&#125;\). Die Idee ist,
                   dass der Automat ein Wort \(\alpha\) Zeichen für Zeichen einliest. Die Pfeile zwischen den
                   Kreisen (den
-                  {" "}
                   <i>
                     Zuständen
                   </i>
                   {" "}des Automaten) zeigen an, in welchen neuen Zustand beim Lesen eines Zeichen
+                  &ensp;des Automaten) zeigen an, in welchen neuen Zustand beim Lesen eines Zeichen
                   gewechselt werden
                   muss. Der Pfeil "aus dem Nichts", hier der von links nach \(S\), zeigt den{" "}
                   <i>
                     Startzustand
                   </i>
-                  {" "}an, in welchem
+                  an, in welchem
                   der Automat beginnt.
                 </Paragraph>
                 <figure>
@@ -84,7 +89,7 @@ const Article = () => {
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um zu zeigen, wie der Automat ein Eingabewort verarbeitet, nehmen wir das Beispiel \(\alpha =
+                  Um zu zeigen, wie der Automat ein Eingabewort verarbeitet, nehmen wir das Beispiel \(\alpha =
                   yxzxxyy\).
                 </Paragraph>
                 <figure class="centered-figure well container">
@@ -319,16 +324,17 @@ const Article = () => {
                   </div>
                 </figure>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem Beispiel endet der Automat im Zustand \(Y\). Sie sehen, dass der Zustand \(X\)
+                  In diesem Beispiel endet der Automat im Zustand \(Y\). Sie sehen, dass der Zustand \(X\)
                   mit einem doppelten Rand markiert ist: dies symbolisiert, dass \(X\) ein{" "}
                   <i>
                     akzeptierender
                   </i>
-                  {" "}Endzustand ist. Wenn der Automat ein Wort \(\alpha\) abgearbeitet hat,{" "}
+                  Endzustand ist. Wenn der Automat ein Wort \(\alpha\) abgearbeitet hat,{" "}
                   <i>
                     akzeptiert
                   </i>
                   {" "}er
+                  &ensp;er
                   es,
                   wenn er in einem akzeptierenden Endzustand gelandet ist; ansonsten{" "}
                   <i>
@@ -344,12 +350,15 @@ const Article = () => {
                     id="definition-finite-state-machine"
                     class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;5.2.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     (Endlicher Automat, Finite State Machine).
                   </b>
-                  {" "}Ein endlicher Automat besteht aus einem endlichen Eingabealphaet \(\Sigma\), einer endlichen
+                  Ein endlicher Automat besteht aus einem endlichen Eingabealphaet \(\Sigma\), einer endlichen
                   Menge \(Q\) von Zuständen,
                   einem Startzustand \(\qstart \in Q\), einer Menge \(F \subseteq Q\) von akzeptierenden
                   Endzuständen
@@ -361,7 +370,7 @@ const Article = () => {
                   Formal gesehen ist also ein Automat ein Quintupel \(M = (\Sigma, Q, \qstart, F, \delta)\).
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Idee ist, dass der Automat im Zustand \(\qstart\) startet und nun in jedem Schritt ein
+                  Die Idee ist, dass der Automat im Zustand \(\qstart\) startet und nun in jedem Schritt ein
                   weiteres
                   Zeichen des Eingabewortes liest. Wenn er im Zustand \(q\) ist und das Zeichen \(x\) liest,
                   so wechselt er in den Zustand \(\delta(q,x)\). Statt \(\delta(q,x) = q'\) verwenden wir die
@@ -373,24 +382,24 @@ const Article = () => {
                   <i>
                     akzeptiert
                   </i>
-                  {" "}der Automat, wenn er in einem akzeptierenden Zustand angekommen ist, also in \(F\).
+                  der Automat, wenn er in einem akzeptierenden Zustand angekommen ist, also in \(F\).
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir den endlichen Automaten
+                  Betrachten wir den endlichen Automaten
                   <figure>
                     <img
                       style="height:10em"
                       src="../img/finite-state-automata/finite-state-machine-example-01.svg"
                       loading="lazy" />
                   </figure>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und stellen ihn gemäß
+                  und stellen ihn gemäß
                   <span
                     data-ref="definition-finite-state-machine"
                     class="reference" />
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;als Quintupel \(M = (\Sigma, Q, \qstart, F, \delta)\) dar mit
+                  als Quintupel \(M = (\Sigma, Q, \qstart, F, \delta)\) dar mit
                   $$\begin&#123;align*&#125;
                   \Sigma&amp;= \&#123;x,y,z\&#125; \\
                   Q&amp;= \&#123;S, X, Y\&#125; \\
@@ -398,13 +407,13 @@ const Article = () => {
                   F&amp;= \&#123;X\&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um noch die Zustandsübergangsfunktion $\delta$ darzustellen, müssen wir uns überlegen,
+                    Um noch die Zustandsübergangsfunktion $\delta$ darzustellen, müssen wir uns überlegen,
                     wie wir Funktionen überhaupt darstellen. Da $\delta$ eine endliche Funktion ist,
                     können wir einfach alle Eingabewert-Ausgabewert-Paare hinschreiben, am Besten
                     in einer Tabelle, so wie wir es bereits bei Booleschen Funktionen mit
                     Wahrheitstabellen getan haben. $\delta$ ist also
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                  $$\begin&#123;align*&#125;
                   \begin&#123;array&#125;&#123;cc|c&#125;
                   q&amp;\sigma&amp;\delta(q,x) \\ \hline
                   S&amp;x&amp;X \\
@@ -419,11 +428,11 @@ const Article = () => {
                   \end&#123;array&#125;
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Da die Funktion $\delta$ bei jedem endlichen Automaten genau zwei
+                    Da die Funktion $\delta$ bei jedem endlichen Automaten genau zwei
                     Eingabeparameter hat, können wir es eventuell übersichtlicher als
                     zweidimensionale Tabelle darstellen:
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                  $$\begin&#123;align*&#125;
                   \begin&#123;array&#125;&#123;c|c|c|c&#125;
                   &amp;x&amp;y&amp;z \\ \hline
                   S&amp;X&amp;S&amp;S \\ \hline
@@ -446,7 +455,7 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das ist eine völlig legitime Notation für eine Funktion $\delta: Q \times \Sigma \rightarrow
+                    Das ist eine völlig legitime Notation für eine Funktion $\delta: Q \times \Sigma \rightarrow
                     Q$
                     und genau so formal wie die Tabellenschreibweise.
                   </Paragraph>
@@ -454,8 +463,11 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;5.2.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     (Erweiterte Zuständsübergangsfunktion)
                   </b>
@@ -466,6 +478,7 @@ const Article = () => {
                     erweiterte Zustandsübergangsfunktion
                   </i>
                   {" "}\(\hat&#123;\delta&#125;: Q \times \Sigma^* \rightarrow
+                  &ensp;\(\hat&#123;\delta&#125;: Q \times \Sigma^* \rightarrow
                   Q\) rekursiv wie folgt:
                   $$\begin&#123;align*&#125;
                   \hat&#123;\delta&#125; (q, \epsilon)&amp;= q \\
@@ -482,13 +495,15 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;5.2.3{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     (Akzeptierte Sprache).
-                    {" "}
                   </b>
-                  {" "}Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein endlicher Automat. Die von \(M\) akzeptierte
+                  Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein endlicher Automat. Die von \(M\) akzeptierte
                   Sprache
                   ist
                   $$\begin&#123;align*&#125;
@@ -499,40 +514,50 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der endliche Automat, den wir oben bereits eingeführt haben:
+                  Der endliche Automat, den wir oben bereits eingeführt haben:
                   <figure>
                     <img
                       style="height:10em"
                       src="../img/finite-state-automata/finite-state-machine-example-01.svg"
                       loading="lazy" />
                   </figure>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;akzeptiert die Sprache aller \(\alpha \in \&#123;x,y,z\&#125;\), die auf \(x\) enden und nicht die
+                  akzeptiert die Sprache aller \(\alpha \in \&#123;x,y,z\&#125;\), die auf \(x\) enden und nicht die
                   Buchstabenfolge \(xy\) enthalten.
                 </div>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;5.2.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ändern Sie den Automaten aus dem letzten Beispiel so ab, dass die Bedingung{" "}
+                  Ändern Sie den Automaten aus dem letzten Beispiel so ab, dass die Bedingung{" "}
                   <i>
                     "die auf \(x\)
                     enden"
                   </i>
                   {" "}entfällt, er also
+                  &ensp;entfällt, er also
                   alle Wörter akzeptiert, die die Folge \(xy\) nicht enthalten.
                 </div>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;5.2.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeichnen Sie einen Automaten für die Sprache aller Wörter über \(\&#123;a,b,c,d\&#125;\), die
+                  Zeichnen Sie einen Automaten für die Sprache aller Wörter über \(\&#123;a,b,c,d\&#125;\), die
                   die Folge \(a,b,c,d\) enthalten.
                 </div>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;5.2.3{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeichnen Sie einen Automaten für die Sprache aller Wörter über \(\&#123;a,b,c,d\&#125;\), die
+                  Zeichnen Sie einen Automaten für die Sprache aller Wörter über \(\&#123;a,b,c,d\&#125;\), die
                   genau vier \(a\) enthalten.
                 </div>
                 <h2>
@@ -547,7 +572,7 @@ const Article = () => {
                     src="../img/finite-state-automata/finite-state-machine-example-01.svg"
                     loading="lazy" />
                 </figure>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;würde dies beispielsweise die folgenden Produktionen ergeben:
+                würde dies beispielsweise die folgenden Produktionen ergeben:
                 $$\begin&#123;align*&#125;
                 S&amp;\rightarrow y S \ | \ zS \ | \ x X \\
                 X&amp;\rightarrow x X \ | \ z S \ | \ y Y \\
@@ -564,19 +589,19 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein endlicher Automat. Dann gibt es eine reguläre
+                  Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein endlicher Automat. Dann gibt es eine reguläre
                   Grammatik
                   \(G = (\Sigma, N, P, S)\) mit \(L(G) = L(M)\).
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir nehmen dies als Anlass, um mal wieder einen Induktionsbeweis im Detail durchzuführen.
+                  Wir nehmen dies als Anlass, um mal wieder einen Induktionsbeweis im Detail durchzuführen.
                 </Paragraph>
                 <div class="well container">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Beweis.
                   </b>
-                  {" "}Wir setzen \(N = Q\) und \(S = \qstart\) und führen für jeden Zustandsübergang, der von
+                  Wir setzen \(N = Q\) und \(S = \qstart\) und führen für jeden Zustandsübergang, der von
                   \(\delta\) beschrieben wird, eine Ableitungsregel ein:
                   $$\begin&#123;align*&#125;
                   q_1 \stackrel&#123;x&#125;&#123;\rightarrow&#125; q_2&amp;\quad \textnormal&#123; wird zur Produktion &#125; \quad
@@ -593,12 +618,12 @@ const Article = () => {
                     <span class="numbered-title">
                       Behauptung
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(\alpha \in \Sigma^*\) und \(q, q' \in Q\). Dann gilt
+                    Sei \(\alpha \in \Sigma^*\) und \(q, q' \in Q\). Dann gilt
                     \(q \stackrel&#123;\alpha&#125;&#123;\rightarrow&#125; q'\) genau dann,
                     wenn \(q \Rightarrow^* \alpha q'\) in Grammatik \(G'\) gilt.
                   </div>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bevor wir diese Behauptung beweisen, achten Sie auf die Bedeutung der Symbole. Der
+                    Bevor wir diese Behauptung beweisen, achten Sie auf die Bedeutung der Symbole. Der
                     einfache Pfeil in \(q \stackrel&#123;\alpha&#125;&#123;\rightarrow&#125; q'\) beschreibt die Arbeitsweise des
                     endlichen Automaten, dass nämlich
                     das Verarbeiten von \(\alpha\) den Automaten vom Zustand \(q\) in den Zustand \(q'\) führt.
@@ -612,17 +637,18 @@ const Article = () => {
                     der Grammatik \(G'\).
                   </Paragraph>
                   <div class="well subtheorem">
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    {" "}{" "}
                     <b>
                       Beweis.
                     </b>
-                    {" "}Wir verwenden Induktion über die Länge des Wortes \(\alpha\).
+                    Wir verwenden Induktion über die Länge des Wortes \(\alpha\).
                     <Paragraph>
                       {" "}{" "}
                       <b>
                         Induktionsbasis.
                       </b>
                       {" "}Wenn \(\alpha = \epsilon\) gilt, also \(\alpha\) die
+                      &ensp;Wenn \(\alpha = \epsilon\) gilt, also \(\alpha\) die
                       Länge 0 hat, dann
                       gilt \(q \stackrel&#123;\epsilon&#125;&#123;\rightarrow&#125; q'\) genau dann, wenn \(q = q'\) ist. Wie kann
                       nun
@@ -632,7 +658,7 @@ const Article = () => {
                       <i>
                         keine
                       </i>
-                      {" "}Produktion erfolgt ist und somit
+                      Produktion erfolgt ist und somit
                       \(q = q'\) gilt. Wir sehen: beide Aussagen sind äquivalent zu \(q = q'\) und somit auch
                       äquivalent zueinander.
                     </Paragraph>
@@ -651,13 +677,13 @@ const Article = () => {
                       Unser Ziel ist es, zu zeigen, dass die beiden folgenden Aussagen äquivalent sind:
                       <ol>
                         <li>
-                          &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(q \stackrel&#123;x \beta&#125;&#123;\rightarrow&#125; q'\) im endlichen Automaten \(M\),
+                          \(q \stackrel&#123;x \beta&#125;&#123;\rightarrow&#125; q'\) im endlichen Automaten \(M\),
                         </li>
                         <li>
-                          &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(q \Rightarrow^* x \beta q'\) in der Grammatik \(G'\).
+                          \(q \Rightarrow^* x \beta q'\) in der Grammatik \(G'\).
                         </li>
                       </ol>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir müssen beide Richtungen zeigen, also zeigen, dass aus Aussage (1) die Aussage (2) folgt
+                      Wir müssen beide Richtungen zeigen, also zeigen, dass aus Aussage (1) die Aussage (2) folgt
                       und umgekehrt.
                     </Paragraph>
                     <Paragraph>
@@ -666,6 +692,7 @@ const Article = () => {
                         Aus (1) folgt (2).
                       </b>
                       {" "}Nehmen wir also an, dass
+                      &ensp;Nehmen wir also an, dass
                       \(q \stackrel&#123;x \beta&#125;&#123;\rightarrow&#125; q'\) gilt und bezeichnen
                       \(q_1 := \delta(q,x)\). Es gilt also
                       $$
@@ -691,7 +718,7 @@ const Article = () => {
                       <b>
                         Aus (2) folgt (1).
                       </b>
-                      {" "}Nun nehmen wir an, dass \(q \Rightarrow^* x \beta q'\) gilt. Untersuchen wir die erste
+                      Nun nehmen wir an, dass \(q \Rightarrow^* x \beta q'\) gilt. Untersuchen wir die erste
                       Produktion, die in dieser
                       Ableitung verwendet worden ist. Alle Produktionen in \(G'\) erzeugen ein Terminalsymbol,
                       also muss es eine
@@ -718,7 +745,7 @@ const Article = () => {
                       gilt, also zusammengenommen \(q \stackrel&#123;x\beta&#125;&#123;\rightarrow&#125; q'\). Dies zeigt die
                       zweite Richtung.
                     </Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Hiermit endet der Induktionsbeweis.
+                    Hiermit endet der Induktionsbeweis.
                     <span class="qed">
                       \(\square\)
                     </span>
@@ -732,10 +759,10 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(\qstart \stackrel&#123;\alpha&#125;&#123;\rightarrow&#125; q'\) für einen Zustand \(q' \in F\),
+                      \(\qstart \stackrel&#123;\alpha&#125;&#123;\rightarrow&#125; q'\) für einen Zustand \(q' \in F\),
                     </li>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(\qstart \Rightarrow^* \alpha\) in Grammatik \(G\).
+                      \(\qstart \Rightarrow^* \alpha\) in Grammatik \(G\).
                     </li>
                   </ol>
                   <Paragraph>
@@ -746,7 +773,7 @@ const Article = () => {
                     \(\qstart \Rightarrow^* \alpha q' \Rightarrow \alpha\) machen.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In der anderen Richtung, wenn \(\qstart \Rightarrow^* \alpha\) in Grammatik \(G\) gilt, dann
+                    In der anderen Richtung, wenn \(\qstart \Rightarrow^* \alpha\) in Grammatik \(G\) gilt, dann
                     betrachten wir den letzten Ableitungsschritt. Da \(\alpha\) keine Nichtterminalsymbole
                     enthält, muss im letzten Ableitungsschritt ein Nichtterminalsymbol
                     verschwunden sein. Die einzigen Produktionen in \(G\) bei denen das Nichtterminal
@@ -776,7 +803,7 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie, dass dieser Beweis eigentlich gar nicht so schwierig ist, wie er hier aussieht.
+                  Beachten Sie, dass dieser Beweis eigentlich gar nicht so schwierig ist, wie er hier aussieht.
                   Ich habe
                   ihn absichtlich sehr formal und ausführlich geschrieben, um Ihnen das Prinzip des
                   Induktionsbeweises ins
@@ -785,8 +812,11 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;5.2.4{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie zu folgendem Automaten über dem Alphabet \(\Sigma = \&#123;0,1,2,3,4,5,6,7,8,9\&#125;\) eine
+                  Schreiben Sie zu folgendem Automaten über dem Alphabet \(\Sigma = \&#123;0,1,2,3,4,5,6,7,8,9\&#125;\) eine
                   äquivalente reguläre Grammatik:
                   <figure>
                     <img
@@ -794,13 +824,13 @@ const Article = () => {
                       src="../img/finite-state-automata/finite-state-machine-example-02.svg"
                       loading="lazy" />
                   </figure>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und beschreiben Sie die Sprache in eigenen Worten.
+                  und beschreiben Sie die Sprache in eigenen Worten.
                 </div>
                 <h2>
                   Reguläre Grammatiken zu endlichen Automaten?
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im letzten Abschnitt haben wir gesehen, wie wir zu einem gegebenen endlichen Automaten recht
+                  Im letzten Abschnitt haben wir gesehen, wie wir zu einem gegebenen endlichen Automaten recht
                   einfach eine äquivalente
                   reguläre Grammatik schreibne können. Es drängt sich die Frage auf: geht das auch umgekehrt?
                   Versuchen wir es.
@@ -811,7 +841,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die{" "}
+                  Betrachten wir die{" "}
                   <a href="./04-01-regular-grammars.html#example-aaabb">
                     reguläre Grammatik aus
                     dem vorherigen Kapitel 4.1
@@ -835,7 +865,7 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wie Sie sehen, ist das nicht ganz korrekt. Als erstes fällt ins Auge, dass alle Zustände
+                    Wie Sie sehen, ist das nicht ganz korrekt. Als erstes fällt ins Auge, dass alle Zustände
                     akzeptierende Endzustände sind.
                     Als zweites fällt uns auf, dass es bei \(T\) für das Eingabesymbol \(a\) keinen ausgehenden
                     Pfeil gibt. Der
@@ -848,27 +878,28 @@ const Article = () => {
                       Fehlerzustand (Trap State)
                     </i>
                     {" "}einführen,
+                    &ensp;einführen,
                     der im Prinzip
                     den Zustand
-                    {" "}
                     <i>
                       lehne das Wort ab, egal, was noch kommt
                     </i>
                     {" "}versinnbildlicht:
+                    &ensp;versinnbildlicht:
                     <figure>
                       <img
                         style="height:12em"
                         src="../img/finite-state-automata/finite-state-machine-example-04.svg"
                         loading="lazy" />
                     </figure>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dies ist nun unser endlicher Automat \(M\) mit \(L(M) = L(G)\).
+                    Dies ist nun unser endlicher Automat \(M\) mit \(L(M) = L(G)\).
                   </Paragraph>
                 </div>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die{" "}
+                  Betrachten wir die{" "}
                   <a href="./04-01-regular-grammars.html#example-xxx1yyy">
                     reguläre Grammatik
                     aus
@@ -890,16 +921,16 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Leider ist diese Lösung auch nicht korrekt: jetzt gibt es zu viele Pfeile! Aus dem Zustand
+                    Leider ist diese Lösung auch nicht korrekt: jetzt gibt es zu viele Pfeile! Aus dem Zustand
                     \(A\) gehen zwei
                     Pfeile mit \(1\) beschriftet hinaus. Wenn wir uns vor Augen halten, was die von \(G\)
                     erzeugte Sprache ist, so
                     wird das Problem klarer: \(G\) erzeugt die Sprache aller Wörter über \(\&#123;0,1\&#125;\), deren
-                    {" "}
                     <i>
                       viertletztes
                     </i>
                     {" "}Zeichen
+                    &ensp;Zeichen
                     eine 1 ist. Die Herausforderung ist nun: wenn der Automat eine 1 liest, dann weiß er nicht,
                     ob das jetzt schon
                     das viertletzte Zeichen ist oder nicht; er weiß also nicht, ob er im Zustand \(A\) bleiben
@@ -908,13 +939,14 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um mit Fällen wie dem eben geschilderten umgehen zu können, erweitern wir die Definition des
+                  Um mit Fällen wie dem eben geschilderten umgehen zu können, erweitern wir die Definition des
                   endlichen Automaten
                   in nächsten Kapitel zu einem{" "}
                   <i>
                     nichtdeterministischen
                   </i>
                   {" "}endlichen Automaten.
+                  &ensp;endlichen Automaten.
                 </Paragraph>
               </div>
             </div>

@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={3}
-        title_gr="CNF und DNF"
+        title_gr="Wahrheitstabellen, CNF und DNF"
         title_en="truth tables cnf dnf"
-        number={1.2}>
+        number={1.2}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes3.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,32 +38,33 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    1.2 
                     Wahrheitstabellen, CNF und DNF
                   </span>
                 </h1>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben gesehen, dass jeder Schaltkreis eine Boolesche Funktion
+                  Wir haben gesehen, dass jeder Schaltkreis eine Boolesche Funktion
                   berechnet. In diesem Abschnitt wollen wir zeigen, dass es umgekehrt
                   auch gilt: zu jeder Booleschen Funktion gibt es einen Schaltkreis (ja:
                   viele Schaltkreise), die sie berechnen. Wir werden insgesamt drei
                   Konstruktionen sehen. Als erstes lassen Sie uns überlegen, wie man
                   eine Boolesche Funktion im Allgemeinen aufschreibt/codiert.
                   Beschränken wir uns erst einmal auf Boolesche Funktionen mit
-                  {" "}
                   <i>
                     einem
                   </i>
                   {" "}Ausgabewert, also \(f : \&#123;0,1\&#125;^n \rightarrow
+                  &ensp;Ausgabewert, also \(f : \&#123;0,1\&#125;^n \rightarrow
                   \&#123;0,1\&#125;\).
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dies ist ein endliches Objekt, wir können es also codieren, indem wir
+                Dies ist ein endliches Objekt, wir können es also codieren, indem wir
                 für jeden Eingabewert \( (x_1,\dots,x_n)\) den Ausgabewert angeben. Dies
                 nennt man eine{" "}
                 <i>
                   Wahrheitstabelle
                 </i>
                 {" "}(englisch
-                {" "}
+                &ensp;(englisch
                 <i>
                   truth table
                 </i>
@@ -73,10 +78,10 @@ const Article = () => {
                   Rekursiv, top-down
                 </h3>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir teilen die Tabelle in die obere Hälfte (wo \(x=0\) gilt) und die
+                  Wir teilen die Tabelle in die obere Hälfte (wo \(x=0\) gilt) und die
                   untere Hälfte:
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; \color&#123;red&#125;&#123; \begin&#123;array&#125;&#123;ccc|c&#125; x&amp;y&amp;z&amp;f \\\hline
+                $$\begin&#123;align*&#125; \color&#123;red&#125;&#123; \begin&#123;array&#125;&#123;ccc|c&#125; x&amp;y&amp;z&amp;f \\\hline
                 0&amp;0&amp;0&amp;0 \\ 0&amp;0&amp;1&amp;1 \\ 0&amp;1&amp;0&amp;1 \\ 0&amp;1&amp;1&amp;1
                 \end&#123;array&#125; &#125;\\ \color&#123;blue&#125;&#123; \begin&#123;array&#125;&#123;ccc|c&#125; 1&amp;0&amp;0&amp;1 \\ 1&
                 0&amp;1&amp;1 \\ 1&amp;1&amp;0&amp;0 \\ 1&amp;1&amp;1&amp;1\\ \end&#123;array&#125; &#125; \end&#123;align*&#125;$$
@@ -96,87 +101,105 @@ const Article = () => {
                   \(\bar&#123;y&#125; \vee z\)
                 </span>
                 &ensp;ist (ich
+                &ensp;ist (ich
                 schreibe im Fließtext übrigens gerne \(\bar&#123;y&#125;\) statt \(\neg y\), weil
                 das mir lesbarer erscheint). Insgesamt also:
                 <figure>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;f ={" "}
+                  f ={" "}
                   <code>
                     if
                   </code>
-                  {" "}\(x\){" "}
+                  {" "}\(x\) 
+                  &ensp;\(x\){" "}
                   <code>
                     then
                   </code>
                   {" "}\(\bar&#123;y&#125; \vee z\)
-                  {" "}
+                  &ensp;\(\bar&#123;y&#125; \vee z\)
                   <code>
                     else
                   </code>
                   {" "}\(y \vee z\).
+                  &ensp;\(y \vee z\).
                 </figure>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Jetzt können wir das mit unserem if-then-else-Schaltkreis kombinieren.
+                  Jetzt können wir das mit unserem if-then-else-Schaltkreis kombinieren.
                 </Paragraph>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;1.2.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Führen Sie die Konstruktion zu Ende, indem Sie \(\bar&#123;y&#125; \vee z\) und
+                  Führen Sie die Konstruktion zu Ende, indem Sie \(\bar&#123;y&#125; \vee z\) und
                   \(y \vee z\) mit dem if-then-else-Schaltkreis kombinieren.
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Können wir das mit beliebigen Funktionen machen? Ja klar! Wir gehen
+                  Können wir das mit beliebigen Funktionen machen? Ja klar! Wir gehen
                   wie folgt vor:
                 </Paragraph>
                 <ol>
                   <li>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Teile die Tabelle in die oberen \(2^&#123;n-1&#125;\) Zeilen (für die \(x_1 =
+                    Teile die Tabelle in die oberen \(2^&#123;n-1&#125;\) Zeilen (für die \(x_1 =
                     0\) gilt) und die unteren \(2^&#123;n-1&#125;\) Zeilen (für die \(x_1 = 1\)
                     gilt) auf.
                   </li>
                   <li>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Jede Hälfte kann als Boolesche Funktion mit \(n-1\) Variablen
+                    Jede Hälfte kann als Boolesche Funktion mit \(n-1\) Variablen
                     betrachtet werden. Bauen Sie rekursiv Schaltkreise \(C_0\) für die
                     obere und \(C_1\) für die untere Hälfte, beide mit Input-Variablen
                     \(x_2,\dots,x_n\).
                   </li>
                   <li>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Kombinieren Sie diese via
-                    &ensp;`if` \(x_1\) 
-                    &ensp;`then` 
+                    Kombinieren Sie diese via
+                    &ensp;`if
+                    &ensp;if` \(x_1\) 
+                    &ensp;\(x_1\) 
+                    &ensp;`then 
+                    &ensp;then` 
                     &ensp;\(C_1\)
-                    &ensp;`else` 
+                    &ensp;\(C_1\)
+                    &ensp;`else 
+                    &ensp;else` 
+                    &ensp;\(C_0\) zu einem Schaltkreis für \(f\) mit
                     &ensp;\(C_0\) zu einem Schaltkreis für \(f\) mit
                     insgesamt \(n\) Input-Variablen.
                   </li>
                 </ol>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;An dieser Stelle zahlt es sich aus, eine formale Notation einzuführen:
+                  An dieser Stelle zahlt es sich aus, eine formale Notation einzuführen:
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;1.2.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) eine Boolesche Funktion, \(i
+                  Sei \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) eine Boolesche Funktion, \(i
                   \in \&#123;1,\dots,n\&#125;\) ein Index und \(b \in \&#123;0,1\&#125;\) ein Wert. Dann ist
                   \(f|_&#123;x_i=b&#125;\) eine neue Funktion, und zwar $$\begin&#123;align*&#125; f|_&#123;x_i=b&#125;
                   &amp;: \&#123;0,1\&#125;^&#123;n-1&#125; \rightarrow \&#123;0,1\&#125; \\ (x_1,\dots,x_&#123;i-1&#125;, x_&#123;i+1&#125;,
                   \dots, x_n)&amp;\mapsto f(x_1,\dots,x_&#123;i-1&#125;, b, x_&#123;i+1&#125;, \dots, x_&#123;n&#125;) \
                   . \end&#123;align*&#125;$$
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In Worten: wir fixieren den \(i\)-ten Input auf den Wert \(b\) und
+                    In Worten: wir fixieren den \(i\)-ten Input auf den Wert \(b\) und
                     erhalten eine Funktion in den restlichen \(n-1\) Variablen.
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Ergebnis ist im Allgemeinen sehr groß, aber was erwarten Sie bei
+                  Das Ergebnis ist im Allgemeinen sehr groß, aber was erwarten Sie bei
                   einer Tabelle mit \(2^n\) Zeilen?
                 </Paragraph>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;1.2.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Führen Sie das rekursive Verfahren durch, um für die folgende Funktion
+                  Führen Sie das rekursive Verfahren durch, um für die folgende Funktion
                   auf 4 Variablen einen Schaltkreis zu bauen: $$ \begin&#123;array&#125;&#123;cccc|c&#125; u
                   &amp;x&amp;y&amp;z&amp;f \\\hline 0&amp;0&amp;0&amp;0&amp;1 \\ 0&amp;0&amp;0&amp;1&amp;1 \\ 0&
                   0&amp;1&amp;0&amp;1 \\ 0&amp;0&amp;1&amp;1&amp;0 \\ 0&amp;1&amp;0&amp;0&amp;1 \\ 0&amp;1&amp;0&
@@ -189,8 +212,7 @@ const Article = () => {
                   Bottom-Up, als DNF
                 </h3>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn Sie Rekursionshasser sind und generell lieber in
-                  `for`-Schleifen denken, dann wird die nächste Konstruktion
+                  Wenn Sie Rekursionshasser sind und generell lieber in`for`-Schleifen denken, dann wird die nächste Konstruktion
                   mehr nach Ihrem Geschmack sein. Im Prinzip werden wir alle
                   Kombinationen der Variablen auflisten, für die die Funktion 1 ausgibt.
                   Stellen Sie sich vor, wir haben drei Variable \(x,y,z\) und einen
@@ -201,13 +223,12 @@ const Article = () => {
                   unserer Wahrheitstabelle einen solchen Ausdruck hinschreiben und diese
                   dann in einem großen OR zusammenführen. Einen Ausdruck, der aus einem
                   AND von Variablen oder deren Negation besteht, nennt man auch einen
-                  {" "}
                   <i>
                     Term
                   </i>
                   .
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$ \begin&#123;array&#125;&#123;ccc|c|c&#125; x&amp;y&amp;z&amp;f&amp;&#123;\rm Term&#125;\\\hline 0&amp;0&amp;0&
+                $$ \begin&#123;array&#125;&#123;ccc|c|c&#125; x&amp;y&amp;z&amp;f&amp;&#123;\rm Term&#125;\\\hline 0&amp;0&amp;0&
                 0&amp;\\ 0&amp;0&amp;1&amp;1&amp;\bar&#123;x&#125; \wedge \bar&#123;y&#125; \wedge z \\ 0&amp;1&amp;0&amp;1
                 &amp;\bar&#123;x&#125; \wedge y \wedge \bar&#123;z&#125; \\ 0&amp;1&amp;1&amp;1&amp;\bar&#123;x&#125; \wedge y
                 \wedge z \\ 1&amp;0&amp;0&amp;1&amp;x \wedge \bar&#123;y&#125; \wedge \bar&#123;z&#125; \\ 1&amp;0&amp;1
@@ -222,7 +243,7 @@ const Article = () => {
                     src="../img/circuits/dnf-example.svg"
                     loading="lazy" />
                 </figure>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem Schaltkreis habe ich die Input-Knoten mehrfach aufgeführt und
+                In diesem Schaltkreis habe ich die Input-Knoten mehrfach aufgeführt und
                 die NOT-Gates nicht explizit aufgeführt, damit kein "Kabelsalat"
                 entsteht. Beachten Sie auch, das jedes Gate (außer den Input-Gates)
                 genau{" "}
@@ -230,51 +251,62 @@ const Article = () => {
                   eine
                 </i>
                 {" "}ausgehende Kante hat. Konkret bedeutet dies, dass
+                &ensp;ausgehende Kante hat. Konkret bedeutet dies, dass
                 man diesen Schaltkreis als{" "}
                 <i>
                   logische Formel
                 </i>
                 {" "}hinschreiben kann:
+                &ensp;hinschreiben kann:
                 $$ (\bar&#123;x&#125; \wedge \bar&#123;y&#125; \wedge z) \vee (\bar&#123;x&#125; \wedge y \wedge
                 \bar&#123;z&#125;) \vee (\bar&#123;x&#125; \wedge y \wedge z) \vee (x \wedge \bar&#123;y&#125; \wedge
                 \bar&#123;z&#125;) \vee (x \wedge \bar&#123;y&#125; \wedge z) \vee (x \wedge y \wedge z) $$
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;1.2.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein{" "}
+                  Ein{" "}
                   <i>
                     Literal
                   </i>
                   {" "}ist eine Variable \(x\) oder deren Negation
+                  &ensp;ist eine Variable \(x\) oder deren Negation
                   \(\bar&#123;x&#125;\). Ein{" "}
                   <i>
                     Term
                   </i>
                   {" "}ist ein AND (auch: Konjunktion) von
+                  &ensp;ist ein AND (auch: Konjunktion) von
                   Literalen (beispielsweise \(\bar&#123;x&#125; \wedge \bar&#123;y&#125; \wedge z)\). Eine
                   Formel in{" "}
                   <i>
                     disjunktiver Normalform
                   </i>
                   {" "}(DNF) ist ein OR von
+                  &ensp;(DNF) ist ein OR von
                   Termen.
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Alternativ: eine DNF ist ein Schaltkreis der Tiefe 2 (wobei
+                    Alternativ: eine DNF ist ein Schaltkreis der Tiefe 2 (wobei
                     NOT-Gates nicht mitzählen), dessen Output-Gate ein OR-Gate ist.
                   </Paragraph>
                 </div>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;1.2.3{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Was, wenn einige der "mittleren" Gates (auf Tiefe 1) keine AND-Gates
+                  Was, wenn einige der "mittleren" Gates (auf Tiefe 1) keine AND-Gates
                   sind, sondern auch OR-Gates? Dann wäre dies nach der ersten Definition
-                  {" "}
                   <i>
                     keine
                   </i>
                   {" "}DNF-Formel, nach der zweiten aber schon. Zeigen Sie,
+                  &ensp;DNF-Formel, nach der zweiten aber schon. Zeigen Sie,
                   wie man OR-Gates auf Ebene 1 entfernen kann! Als konkretes Beispiel:
                   <figure>
                     <img
@@ -287,22 +319,22 @@ const Article = () => {
                   Bottom-Up, als CNF
                 </h3>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zu der eben demonstrierten Konstruktion gibt es noch eine weitere,
+                  Zu der eben demonstrierten Konstruktion gibt es noch eine weitere,
                   dazu duale Konstruktion. Bildlich gesprochen listet DNF-Konstruktion
                   alle Möglichkeiten auf, wie man eine 1 erhalten kann. Dual dazu können
                   wir alle Möglichkeiten auflisten, wie man eine 0 erhalten kann; tritt
-                  {" "}
                   <i>
                     keine
                   </i>
                   {" "}davon ein, muss wohl eine 1 herauskommen. Wir gehen
+                  &ensp;davon ein, muss wohl eine 1 herauskommen. Wir gehen
                   also in der Wahrheitstabelle alle Zeilen mit Wert 0 durch und
                   schreiben einen Ausdruck, der genau diese Zeile verbietet. So kann man
                   den Ausdruck \( (\bar&#123;x&#125; \vee \bar&#123;y&#125; \vee z)\) verstehen als
                   "\((x,y,z)\) darf nicht \((1,1,0)\) sein." An dem obigen Beispiel
                   ergibt dies:
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$ \begin&#123;array&#125;&#123;ccc|c|c&#125; x&amp;y&amp;z&amp;f&amp;&#123;\rm Term&#125;\\\hline 0&amp;0&amp;0&
+                $$ \begin&#123;array&#125;&#123;ccc|c|c&#125; x&amp;y&amp;z&amp;f&amp;&#123;\rm Term&#125;\\\hline 0&amp;0&amp;0&
                 0&amp;x \vee y \vee z \\ 0&amp;0&amp;1&amp;1&amp;\\ 0&amp;1&amp;0&amp;1&amp;\\ 0&amp;1&amp;1&
                 1&amp;\\ 1&amp;0&amp;0&amp;1&amp;\\ 1&amp;0&amp;1&amp;1&amp;\\ 1&amp;1&amp;0&amp;0&amp;\bar&#123;x&#125;
                 \vee \bar&#123;y&#125; \vee z\\ 1&amp;1&amp;1&amp;1&amp;\\ \end&#123;array&#125; $$ Einen Ausdruck
@@ -323,52 +355,65 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;1.2.3{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Formel in{" "}
+                  Eine Formel in{" "}
                   <i>
                     konjunktiver Normalform
                   </i>
                   {" "}(CNF) ist ein AND von
+                  &ensp;(CNF) ist ein AND von
                   Klauseln.
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Alternativ: eine CNF-Formel ist ein Schaltkreis der Tiefe 2 (wobei
+                    Alternativ: eine CNF-Formel ist ein Schaltkreis der Tiefe 2 (wobei
                     NOT-Gates nicht mitzählen), dessen Output-Gate ein AND-Gate ist.
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem konkreten Beispiel ist die CNF viel kürzer als die DNF (das
+                  In diesem konkreten Beispiel ist die CNF viel kürzer als die DNF (das
                   ist Zufall; ich habe meine Tabelle mit Zufallswerten erzeugt).
                   Allerdings können wir, ausgehend von der "rohen" DNF (oder CNF), diese
                   noch nachträglich bearbeiten und kleiner machen. Zum Beispiel können
                   wir "nebeneinanderstehende" Terme zu einem einzigen zusammenziehen,
                   z.B. :
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$ (\bar&#123;x&#125; \wedge y \wedge \bar&#123;z&#125;) \vee (\bar&#123;x&#125; \wedge y \wedge z)
+                $$ (\bar&#123;x&#125; \wedge y \wedge \bar&#123;z&#125;) \vee (\bar&#123;x&#125; \wedge y \wedge z)
                 \equiv \bar&#123;x&#125; \wedge y \ . $$
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;1.2.4{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Minimieren Sie die obige DNF (die mit den 6 Termen), indem Sie gewisse
+                  Minimieren Sie die obige DNF (die mit den 6 Termen), indem Sie gewisse
                   Paare von Termen zu einem kürzeren zusammenfassen.
                 </div>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;1.2.5{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass es zu jeder Booleschen Funktion \(f: \&#123;0,1\&#125;^n
+                  Zeigen Sie, dass es zu jeder Booleschen Funktion \(f: \&#123;0,1\&#125;^n
                   \rightarrow \&#123;0,1\&#125;\) eine äquivalente DNF-Formel mit höchstens
                   \(2^&#123;n-1&#125;\) Termen gibt.
                 </div>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;1.2.6{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass jede DNF-Formel für die Boolesche Funktion \(x_1
+                  Zeigen Sie, dass jede DNF-Formel für die Boolesche Funktion \(x_1
                   \oplus \dots \oplus x_n\) genau \(2^&#123;n-1&#125;\) Terme besitzen muss.
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sie haben eventuell von Methoden zur Minimierung von DNFs bzw. CNFs
+                  Sie haben eventuell von Methoden zur Minimierung von DNFs bzw. CNFs
                   oder Schaltkreisen im Allgemeinen gehört, z.B. Karnaugh-Diagramme.
                   Dies sind{" "}
                   <i>
@@ -376,42 +421,42 @@ const Article = () => {
                   </i>
                   , die hilfreich sind, aber nicht
                   garantieren können, eine optimale Lösung zu finden (es sind also keine
-                  {" "}
                   <i>
                     Algorithmen
                   </i>
                   {" "}in dem Sinne). Die genaue Komplexität dieser
+                  &ensp;in dem Sinne). Die genaue Komplexität dieser
                   Optimierungsprobleme ist in der Tat Gegenstand aktiver Forschung,
                 </Paragraph>
                 <ol>
                   <li>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn die Funktion (1) bereits als{" "}
+                    Wenn die Funktion (1) bereits als{" "}
                     <i>
                       Boolesche Formel
                     </i>
                     {" "}vorliegt
+                    &ensp;vorliegt
                     (also Schaltkreise, in denen außer den Eingabe-Gates alle Gates nur
                     eine ausgehende Kante haben), so ist das Minimierungsproblem
                     \(Sigma_2^&#123;P&#125;\)-vollständig, siehe
                     <a href="http://users.cms.caltech.edu/~umans/papers/BU07.pdf">
                       Buchfuhrer, David; Umans, Christopher (January 2011),
-                      {" "}
                       <i>
                         The complexity of Boolean formula minimization
                       </i>
                       {" "}(JCSS
+                      &ensp;(JCSS
                       2011){" "}
                     </a>
                     .
                   </li>
                   <li>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn die Funktion (2) als Tabelle gegeben ist, dann ist die genaue
+                    Wenn die Funktion (2) als Tabelle gegeben ist, dann ist die genaue
                     Komplexität nicht genau bekannt. Es hat in den letzten Jahren
                     Fortschritte gegeben (die nahelegen, dass das Problem tatsächlich
                     schwierig ist), z.B.
                     <a href="https://drops.dagstuhl.de/opus/volltexte/2020/12574/pdf/LIPIcs-CCC-2020-22.pdf">
                       Ilango, Loff, and Oliveira.
-                      {" "}
                       <i>
                         NP-Hardness of Circuit Minimization for Multi-Output
                         Functions
@@ -421,7 +466,7 @@ const Article = () => {
                     .
                   </li>
                 </ol>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie, dass (2) algorithmisch einfacher ist: durch die
+                Beachten Sie, dass (2) algorithmisch einfacher ist: durch die
                 "verschwenderische" Darstellung der Funktion als Tabelle ist bereits der
                 Input sehr groß (\(2^n\) Bits), sodass ein Algorithmus, der hier
                 versucht, zu minimieren, bereits ein großes "Zeitbudget" hat. Dennoch

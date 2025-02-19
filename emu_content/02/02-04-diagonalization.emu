@@ -1,7 +1,9 @@
 |> Section
-    title_gr Die Cantorsche Diagonalisation: $\N \not \approx \R$
+    title_gr 2.4 Die Cantorsche Diagonalisation: $\N \not \approx \R$
     title_en diagonalization
     number 2.4
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,10 +38,11 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             2.4 Die Cantorsche Diagonalisation: $\N \not \approx \R$
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Vielleicht war es überraschend zu sehen, dass $\N = \Q$ gilt, dass
+                        Vielleicht war es überraschend zu sehen, dass $\N = \Q$ gilt, dass
                         also das "diskrete" $\N$ und das "dichte" $\Q$ sicht hinsichtlich
                         ihrer Größe (Fachsprache: Kardinalität) nicht unterscheiden. Könnte es
                         denn sein, dass jede unendliche Menge $A$ abzählbar ist, also $A
@@ -51,13 +54,15 @@
                                 class numbered-title
 
                                 Theorem
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Überabzählbarkeit der reellen Zahlen).* $\N \not
+                            *(Überabzählbarkeit der reellen Zahlen).* $\N \not
+                            &ensp;$\N \not
                             \approx \R$.
                     |> div
                         class well container
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.* Da wir bereits $\R \approx \{0,1\}^{\N}$
+                            *Beweis.* Da wir bereits $\R \approx \{0,1\}^{\N}$
+                            &ensp;Da wir bereits $\R \approx \{0,1\}^{\N}$
                             gesehen haben, reicht es, $\N \not \approx \{0,1\}^{\N}$ zu zeigen.
                             Wir müssen also zeigen, dass es keine Bijektion $f : \N \rightarrow
                             \{0,1\}^{\N}$ gibt. Wie gehen wir vor? Wir nehmen an, man hätte uns
@@ -74,7 +79,7 @@
                             unterscheidet, also an mindestens einer Stelle.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wie können wir die Funktion $f$ darstellen? Jedes $f(n)$ ist eine
+                            Wie können wir die Funktion $f$ darstellen? Jedes $f(n)$ ist eine
                             unendliche $0/1$-Folge. Also können wir uns $f$ als nach rechts und
                             nach unten unendliche Tabelle vorstellen. Hierbei schreiben wir
                             $f_i$ für $f(i)$ und $f_{i,j}$ für das $j$-te Glied der unendlichen
@@ -85,7 +90,7 @@
                                 src ../img/infinite-sets/cantor-table.svg
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für ein Bit $b \in \{0,1\}$ bezeichnen wir mit $\bar{b}$ seine
+                            Für ein Bit $b \in \{0,1\}$ bezeichnen wir mit $\bar{b}$ seine
                             Negation: $\bar{b} = 1 - b$. Wir betrachten jetzt die Diagonale der
                             Tabelle und negieren sie:
                         |> figure
@@ -94,7 +99,7 @@
                                 src ../img/infinite-sets/cantor-diagonal.svg
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und erhalten eine Folge: $\mathbf{d} := \overline{f_{0,0}}\
+                            und erhalten eine Folge: $\mathbf{d} := \overline{f_{0,0}}\
                             \overline{f_{1,1}}\ \overline{f_{2,2}} \ \overline{f_{3,3}}\dots$.
                             Vergleichen wir nun $\mathbf{d}$ mit einer Zeile $f_n$ der obigen
                             Tabelle. Insbesondere, die $n$-ten Stellen der beiden Folgen. Die
@@ -111,13 +116,14 @@
                                 \(\square\)
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Weil in dem Beweis die Diagonale der Tabelle eine entscheidende Rolle
+                        Weil in dem Beweis die Diagonale der Tabelle eine entscheidende Rolle
                         spielt, nennt man diese Beweistechnik auch das Cantorsche
                         Diagonalisierungsverfahren. Dies wird später, in Kapitel
                         |> a
                             href 07-00-Turing-machines.html
 
                             7
+                        &ensp;über Turingmaschinen und in
                         &ensp;über Turingmaschinen und in
                         Kapitel ? über Komplexitätstheorie eine Rolle spielen, wenn wir z.B.
                         zeigen wollen, dass es Probleme gibt, an denen jedes Computerprogram
@@ -129,7 +135,10 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass es zu der Funktion $f: \N \rightarrow \cuben$ eine
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                            Zeigen Sie, dass es zu der Funktion $f: \N \rightarrow \cuben$ eine
                             Folge $\mathbf{d}$ gibt, die nicht nur nicht in ${\rm img}(f)$ ist,
                             sondern noch mehr: jede Folge $f_n$ unterscheidet sich von
                             $\mathbf{d}$ in unendlich vielen Stellen.
@@ -140,16 +149,20 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie ganz allgemein: für jede Menge $A$ gilt $A \not \approx
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                            Zeigen Sie ganz allgemein: für jede Menge $A$ gilt $A \not \approx
                             2^A$. Erinnerin Sie sich: $2^A$ ist die Potenzmenge von $A$, also
                             die Menge aller Untermengen.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Tipp:* Sie müssen den obigen Beweis auf die richtige
+                            *Tipp:* Sie müssen den obigen Beweis auf die richtige
+                            &ensp;Sie müssen den obigen Beweis auf die richtige
                             Weise abstrahieren, dann geht es ganz einfach.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die letzte Übung zeigt also: es gibt immer größere Mengen, ein oberes
+                        Die letzte Übung zeigt also: es gibt immer größere Mengen, ein oberes
                         Ende wird nie erreicht.
                     |> div
                         class well well-lg numbered-exercise container
@@ -158,7 +171,10 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Erinnern Sie sich an die Partialordnung $(2^\N, \subseteq)$. Zeigen
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                            Erinnern Sie sich an die Partialordnung $(2^\N, \subseteq)$. Zeigen
                             Sie, dass es in dieser Ordnung eine Antikette $X$ mit $X \approx \R$
                             gibt.
                     |> div
@@ -168,6 +184,11 @@
                                 class numbered-title
 
                                 Übungsaufgabe
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                            &ensp;Zeigen Sie, dass
                             &ensp;Zeigen Sie, dass
                             es in $(2^\N, \subseteq)$ eine _Kette_ $X$ mit $X \approx \R$
+                            &ensp;$X$ mit $X \approx \R$
                             gibt.

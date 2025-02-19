@@ -1,7 +1,9 @@
 |> Section
-    title_gr Die universelle Turingmaschine
+    title_gr 4.4 Die universelle Turingmaschine
     title_en Turing encoding
     number 7.4
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,10 +38,11 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             4.4 Die universelle Turingmaschine
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben mit der Turingmaschine ein einfaches aber doch sehr mächtiges Modell einer
+                        Wir haben mit der Turingmaschine ein einfaches aber doch sehr mächtiges Modell einer
                         Rechenmaschine kennengelernt.
                         Sie haben vielleicht mittlerweile - auch durch Ihre Programmiererfahrung - das Gefühl, das man
                         im Prinzip alles, was
@@ -59,7 +62,7 @@
                         Neue Maschine bauen. Verschlüsselung brechen? Neue Maschine bauen. Und so weiter.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Idee einer 
+                        Die Idee einer 
                         |> a
                             href https://en.wikipedia.org/wiki/Mechanical_calculator#Programmable_mechanical_calculators
 
@@ -71,6 +74,7 @@
                         die Rechenvorschrift (das Programm) als Eingabe übergibt. Hätte man so eine Maschine, dann
                         müsste man nicht für jede neue Aufgabe
                         eine neue Maschine entwerfen; man könnte _eine_ Maschine bauen und sie für die jeweilige
+                        &ensp;Maschine bauen und sie für die jeweilige
                         Aufgabe _programmieren_, indem
                         ihr auf einem separaten Eingabeband die Rechenvorschrift überreicht. Von heute aus gesehen ist
                         diese Idee nicht mehr allzu überraschend, weil
@@ -85,11 +89,11 @@
                             Maschine übergeben können?
                         |> li
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Welche Maschine könnte so eine Rechenvorschrift lesen und sie an gegebenen Eingabedaten dann
+                            Welche Maschine könnte so eine Rechenvorschrift lesen und sie an gegebenen Eingabedaten dann
                             auch ausführen?
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es stellt sich heraus, dass wir beide Antworten (beinahe) schon kennen. Eine beliebige
+                        Es stellt sich heraus, dass wir beide Antworten (beinahe) schon kennen. Eine beliebige
                         Rechenvorschrift können wir, da sind wir uns mittlerweile
                         recht sicher, als Turingmaschine \(M\) implementieren. Diese können wir über einem Alphabet
                         codieren und erhalten ein Wort
@@ -98,6 +102,7 @@
                             href https://turingmachinesimulator.com
 
                             turingmachinesimulator.com
+                        &ensp;haben wir das
                         &ensp;haben wir das
                         bereits getan:
                         eine Turingmaschine mit Alphabet \(\Sigma\) können wir dort als String über dem Alphabet
@@ -109,7 +114,7 @@
                         ansprechen.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Punkt 2 ist schwieriger. Können wir eine Maschine bauen, die als eingabe (1) die Codierung
+                        Punkt 2 ist schwieriger. Können wir eine Maschine bauen, die als eingabe (1) die Codierung
                         \(\enc(M)\) einer Turingmaschine und (2) ein Eingabewort
                         \(w \in \Sigma^*\) entgegennimmt und dann die Berechnung \(M(x)\) simuliert bzw. zu dem Ergebnis
                         gelangt, zu dem auch \(M(x)\) gelangen würde?
@@ -119,6 +124,7 @@
 
                             turingmachinesimulator.com
                         &ensp;haben dies
+                        &ensp;haben dies
                         offensichtlich geschafft:
                         sie haben eine Maschine "gebaut" (also wohl einen Server gemietet und eine Webseite mit viel
                         Javascript programmiert), der
@@ -126,7 +132,7 @@
                         simuliert.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem Teilkapitel werden wir sehen, wie wir eine Turingmaschine $M$ über einem
+                        In diesem Teilkapitel werden wir sehen, wie wir eine Turingmaschine $M$ über einem
                         fixen, nicht von $M$ abhängigen Alphabet codieren können.
                         Im nächsten Teilkapitel werden wir uns überlegen, wie man einen Turingmaschinen-Simulator selbst
                         als
@@ -140,7 +146,7 @@
                             class nested
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*ablehnt*, falls \(c\) keine gültige Codierung einer Turingmaschine \(M\)
+                                *ablehnt*, falls \(c\) keine gültige Codierung einer Turingmaschine \(M\)
                                 ist,
                             |> li
 
@@ -150,13 +156,14 @@
                                     |> li
 
                                         *akzeptiert* falls \(M(x)\) akzeptiert;
+                                        &ensp;falls \(M(x)\) akzeptiert;
                                     |> li
 
                                         *ablehnt*, falls \(M(x)\) ablehnt
                                     |> li
 
                                         *nicht terminiert*, falls \(M(x)\) nicht terminiert.
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls wir bei \(M\) nicht nur an Akzeptieren / Ablehnen interessiert sind, sondern am Ergebnis der
+                        Falls wir bei \(M\) nicht nur an Akzeptieren / Ablehnen interessiert sind, sondern am Ergebnis der
                         Berechnung,
                         dann hätten wir gerne, dass \(U (\enc(M)\#x)\) am Ende den gleichen Bandinhalt hat wie \(M(x)\) am
                         Ende;
@@ -177,6 +184,7 @@
                     |> p
 
                         *Erster, zum scheitern verurteilter Versuch.* Sei \(M\) eine Turingmaschine
+                        &ensp;Sei \(M\) eine Turingmaschine
                         mit Eingabealphabet \(\Sigma\), Arbeitsalphabet \(\Gamma\), Zustandsmenge \(Q\), Startzustand
                         \(\qstart\), akzeptierendem Zustand
                         \(\qaccept\) und Übergangsfunktion \(\delta\).
@@ -196,13 +204,13 @@
                         \end{align*}
                         Sehen Sie das Problem? Das Codierungsalphabet ist nicht uniform: wir brauchen, abhängig von der
                         Zustandsmenge \(Q\) und
-                        dem Bandalphabet \(\Gamma\) jeweils neue Alphabete. Wir wollen aber ein \(\Lambda\), da für
-                        _alle_ Turingmaschinen
+                        dem Bandalphabet \(\Gamma\) jeweils neue Alphabete. Wir wollen aber ein \(\Lambda\), da für_alle_ Turingmaschinen
+                        &ensp;Turingmaschinen
                         mit Eingabealphabet \(\Sigma\) funktioniert.
                     |> p
 
                         *Zweiter, erfolgreicher Versuch.*
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir müssen also die Zustandsmenge \(Q\) und die Zeichen \(\Gamma \setminus \Sigma\) erst einmal
+                    Wir müssen also die Zustandsmenge \(Q\) und die Zeichen \(\Gamma \setminus \Sigma\) erst einmal
                     selbst codieren, beispielsweise
                     über dem Alphabet \(\{0,1\}\). Die \(\delta\)-Tabelle der Turingmaschine für \(\{a^nb^nc^n\}\)
                     |> figure
@@ -210,7 +218,7 @@
                             style height:10em
                             src ../img/turing-machines/exampe-2-aabbcc/delta-table.svg
                             loading lazy
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;würde dann zu folgender Tabelle:
+                    würde dann zu folgender Tabelle:
                     |> figure
                         |> img
                             style height:10em
@@ -219,6 +227,7 @@
                     |> p
 
                         Wenn wir dies nun als _ein_ Wort in obigen Schema schreiben, können wir für eine
+                        &ensp;Wort in obigen Schema schreiben, können wir für eine
                         Tabellenzelle
                         \(\delta(q,x) = (r,y,R)\) nicht einfach \(qxryR\) schreiben, auch nicht einfach die Codierungen
                         zusammenschreiben:
@@ -235,13 +244,14 @@
                         00#100#00,a,01,1,S#00,b,L#00,c,L#00,1,L#00,0,11,0,R#01,a,R#01,b,10,1,S#01,1,R#10,b,R#10,c,00,1,S#10,1,R#11,1,R#11,0,100#;
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In dieser Codierung behalten wir zwei Konventionen bei: wenn eine Regel
+                        In dieser Codierung behalten wir zwei Konventionen bei: wenn eine Regel
                         "fehlt", also beispielsweise für \(\delta(10,a)\) die Zelle leer ist, dann
                         soll das in den Zustand $\qreject$ führen; wenn in der Zelle
                         nur ein Richtungszeichen, also beispielsweise 
                         |> tt
 
                             01,1,R
+                        &ensp;steht,
                         &ensp;steht,
                         dann ist das eine Abkürzung für
                         \begin{align*}
@@ -253,7 +263,8 @@
                             #01,1,01,1,R#
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können nun _jede_ Turingmaschine
+                        Wir können nun _jede_ Turingmaschine
+                        &ensp;Turingmaschine
                         über dem Alphabet
                         \(\Sigma\) codieren als Wort über dem Alphabet
                         \begin{align*}
@@ -265,9 +276,14 @@
                             |> span
                                 class numbered-title
 
-                                Definition/Beobachtung.
+                                Definition
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                                /Beobachtung.
                             &ensp;Zu einem Eingabealphabet
-                            $\Sigma$ definieren wir das _Codierungsalphabet_                            $\Lambda := \writelambda$,
+                            &ensp;Zu einem Eingabealphabet
+                            $\Sigma$ definieren wir das _Codierungsalphabet_$\Lambda := \writelambda$,
                             wobei wir annehmen, dass $\texttt{#}, \texttt{,}, \texttt{L}, \texttt{S}, \texttt{R},
                             \texttt{;}
                             \not \in \Sigma$. Wir können nun jede Turingmaschine $M$ mit Eingabealphabet
@@ -275,9 +291,11 @@
                     |> div
                         class alert-info container
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Anmerkungen:* 
+                        *Anmerkungen:* 
 
+                        &ensp;das Wort 
                         &ensp;das Wort _Codierung_ suggeriert, dass wir, gegeben
+                        &ensp;suggeriert, dass wir, gegeben
                         den String $c = \enc(M)$ die
                         ursprüngliche Turingmaschine $M$ rekonstruieren können. Das gilt natürlich nur
                         beschränkt: eventuell decodieren wir $c$ zu einer Maschine $M'$, die sich

@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={34}
-        title_gr="Einen Parser in Java implementieren"
+        title_gr="5.6 Einen Parser in Java implementieren"
         title_en="b Parser in Java"
-        number={5.6}>
+        number={5.6}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes34.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,11 +38,12 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    6.6 
                     5.6 Einen Parser in Java implementieren
                   </span>
                 </h1>
                 <div class="alert-info">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Den vollständigen Quelltext, den wir in der Vorlesung geschrieben haben,
+                  Den vollständigen Quelltext, den wir in der Vorlesung geschrieben haben,
                   finden Sie in der Datei{" "}
                   <a href="../code/parsing/arithmetic-in-class/ArithmeticGrammar.java">
                     ArithmeticGrammar.java
@@ -46,16 +51,18 @@ const Article = () => {
                   .
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ich möchte nun eine kontextfreie Grammatik für arithmetische Ausdrücke der
+                  Ich möchte nun eine kontextfreie Grammatik für arithmetische Ausdrücke der
                   Form{" "}
                   <tt>
                     ((31+402)*83)
                   </tt>
                   &ensp;entwerfen. Der Einfachheit halber bestehe ich
+                  &ensp;entwerfen. Der Einfachheit halber bestehe ich
                   auf strenger Klammerung, so wäre{" "}
                   <tt>
                     (2*(1+2+3))
                   </tt>
+                  &ensp;zum Beispiel nicht erlaubt.
                   &ensp;zum Beispiel nicht erlaubt.
                   Unsere Grammatik soll allgemeine Dezimalzahlen darstellen können.
                   Das Alphabet ist somit
@@ -64,7 +71,7 @@ const Article = () => {
                   \texttt&#123;+&#125;,\texttt&#123;*&#125;,\texttt&#123;(&#125;,\texttt&#123;)&#125;\&#125;$.
                   Die Produktionsregeln sind:
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 E&amp;\rightarrow N \tag&#123;JustNumber&#125; \\
                 E&amp;\rightarrow \texttt&#123;(&#125;E \texttt&#123;+&#125; E\texttt&#123;)&#125; \tag&#123;Sum&#125; \\
                 E&amp;\rightarrow \texttt&#123;(&#125;E \texttt&#123;*&#125; E\texttt&#123;)&#125; \tag&#123;Product&#125;\\
@@ -74,17 +81,18 @@ const Article = () => {
                 \texttt&#123;5&#125;\ | \ \texttt&#123;6&#125;\ | \ \texttt&#123;7&#125;\ | \ \texttt&#123;8&#125;\ | \ \texttt&#123;9&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Nichtterminale sind also $E$ (Expression), $N$ (Number) und $D$ (Digit). Wir haben auch
+                  Die Nichtterminale sind also $E$ (Expression), $N$ (Number) und $D$ (Digit). Wir haben auch
                   den einzelnen Produktionen Namen gegeben, bis auf die der Form $D \rightarrow i$.
                   Was soll nun unser Parser tun? Er soll, gegeben ein Eingabewort $w \in L$, den
-                  {" "}
                   <i>
                     Ableitungsbaum
                   </i>
-                  {" "}konstruieren, für{" "}
+                  {" "}konstruieren, für 
+                  &ensp;konstruieren, für{" "}
                   <tt>
                     ((31+402)*83)
                   </tt>
+                  &ensp;also
                   &ensp;also
                 </Paragraph>
                 <figure>
@@ -93,9 +101,8 @@ const Article = () => {
                     src="../img/context-free/arithmetic-syntax-tree.svg" />
                 </figure>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wie wir diesen Baum in Java repräsentieren, darüber sprechen wir in einer Minute.
+                  Wie wir diesen Baum in Java repräsentieren, darüber sprechen wir in einer Minute.
                   Zuerst aber: wir wollen mit diesem Baum etwas Sinnvolles tun. Zum Beispiel
-                  {" "}
                   <i>
                     auswerten
                   </i>
@@ -112,7 +119,7 @@ const Article = () => {
                   Eine Datenstruktur für Ableitungsbäume
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für meine Implementierung in Java erschaffe ich für jedes Nichtterminal $X$
+                  Für meine Implementierung in Java erschaffe ich für jedes Nichtterminal $X$
                   ein Interface
                   und für jede Produktionsregel $X \rightarrow \alpha$ eine Klasse,
                   die das Interface $X$ implementiert und $\alpha$ als Klassenvariable enthält.
@@ -122,6 +129,7 @@ const Article = () => {
                     <tt>
                       interface Expression
                     </tt>
+                    &ensp;wird implementiert von
                     &ensp;wird implementiert von
                     <ul>
                       <li>
@@ -133,6 +141,7 @@ const Article = () => {
                           Exrepssion e1, e2
                         </tt>
                         &ensp;enthält,
+                        &ensp;enthält,
                       </li>
                       <li>
                         <tt>
@@ -143,6 +152,7 @@ const Article = () => {
                           Exrepssion e1, e2
                         </tt>
                         &ensp;enthält,
+                        &ensp;enthält,
                       </li>
                       <li>
                         <tt>
@@ -152,7 +162,7 @@ const Article = () => {
                         <tt>
                           Number number
                         </tt>
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;enthält;
+                        enthält;
                       </li>
                     </ul>
                   </li>
@@ -160,6 +170,7 @@ const Article = () => {
                     <tt>
                       interface Number
                     </tt>
+                    &ensp;wird implementiert von
                     &ensp;wird implementiert von
                     <ul>
                       <li>
@@ -170,10 +181,12 @@ const Article = () => {
                         <tt>
                           Number
                         </tt>
+                        &ensp;und eine 
                         &ensp;und eine{" "}
                         <tt>
                           Digit
                         </tt>
+                        &ensp;erhält und
                         &ensp;erhält und
                       </li>
                       <li>
@@ -184,7 +197,7 @@ const Article = () => {
                         <tt>
                           Digit
                         </tt>
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;enthält;
+                        enthält;
                       </li>
                     </ul>
                   </li>
@@ -192,6 +205,7 @@ const Article = () => {
                     <tt>
                       interface Digit
                     </tt>
+                    &ensp;wird implementiert von
                     &ensp;wird implementiert von
                     <tt>
                       class DigitOne
@@ -225,6 +239,7 @@ const Article = () => {
                       class DigitEight
                     </tt>
                     &ensp;und
+                    &ensp;und
                     <tt>
                       class DigitNine
                     </tt>
@@ -232,7 +247,7 @@ const Article = () => {
                   </li>
                 </ul>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In unserem Anwendungsfall hat jedes Interface eine Methode
+                  In unserem Anwendungsfall hat jedes Interface eine Methode
                   <tt>
                     public int toInt()
                   </tt>
@@ -240,6 +255,7 @@ const Article = () => {
                   <tt>
                     Expression
                   </tt>
+                  &ensp;hat zusätzlich noch
                   &ensp;hat zusätzlich noch
                   die Methode{" "}
                   <tt>

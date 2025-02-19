@@ -1,7 +1,9 @@
 |> Section
-    title_gr Turing-Maschinen
+    title_gr 7. Turing-Maschinen
     title_en Turing machines
     number 7.0
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -34,11 +36,13 @@
                     |> span
                         class chapterTitle
 
+                        ::++ChapterCtr. 
                         7. Turing-Maschinen
                 |> p
 
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben in den vorherigen Kapitel mit primitiver Rekursion und \(\lambda\)-Kalkül
+                    Wir haben in den vorherigen Kapitel mit primitiver Rekursion und \(\lambda\)-Kalkül
                     zwei Modelle kennengelernt, die den Begriff der _Berechnung_ formalisieren.
+                    &ensp;formalisieren.
                     Das \(\lambda\)-Kalkül ist im Prinzip eine reduktion funktionaler Programmiersprachen
                     auf das absolut essentielle. In diesem Kapitel lernen wir ein
                     weiteres Modell für Berechnung kennen, das im Allgemeinen als Standardmodell

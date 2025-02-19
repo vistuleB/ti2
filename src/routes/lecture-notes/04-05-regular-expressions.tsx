@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={25}
-        title_gr="Reguläre Ausdrücke"
+        title_gr="4.5 Reguläre Ausdrücke"
         title_en="regular expressions"
-        number={4.5}>
+        number={4.5}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes25.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,11 +38,12 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    5.5 
                     4.5 Reguläre Ausdrücke
                   </span>
                 </h1>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir werden nun eine weitere Weise finden, reguläre Sprachen zu beschreiben: neben regulären
+                  Wir werden nun eine weitere Weise finden, reguläre Sprachen zu beschreiben: neben regulären
                   Grammatik (ob normal, erweitert, eingeschränkt),
                   endlichen Automaten und nichtdeterministischen endlichen Automaten
                   gibt es noch die{" "}
@@ -52,6 +57,7 @@ const Article = () => {
                   <a href="./04-01-regular-grammars.html#baukasten">
                     Kapitel 4.1
                   </a>
+                  &ensp;das
                   &ensp;das
                   Baukastenprinzip kennengelernt:
                 </Paragraph>
@@ -75,32 +81,34 @@ const Article = () => {
                   </li>
                 </ol>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Darüberhinaus haben wir Techniken kennengelernt, um aus den gegebenen regulären Grammatiken
+                  Darüberhinaus haben wir Techniken kennengelernt, um aus den gegebenen regulären Grammatiken
                   eine neue Grammatik für \(L_1 \cup L_2\), \(L_1 \circ L_2\) und \(L\) konstruieren zu können.
                   Sie sollten sich jetzt folgende Frage stellen:
                 </Paragraph>
                 <div style="text-align:center">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Frage:
                   </b>
-                  {" "}Können{" "}
+                  Können{" "}
                   <i>
                     alle
                   </i>
                   {" "}regulären Sprachen nach diesem Baukastenprinzip erstellt werden?
+                  &ensp;regulären Sprachen nach diesem Baukastenprinzip erstellt werden?
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Damit diese Frage überhaupt die Chance hat, mit{" "}
+                  Damit diese Frage überhaupt die Chance hat, mit{" "}
                   <i>
                     ja
                   </i>
                   {" "}beantwortet zu werden, müssen wir
+                  &ensp;beantwortet zu werden, müssen wir
                   "Atome" zur Verfügung stellen, mit denen wir beginnen können. Daher:
                 </Paragraph>
                 <ul>
                   <li>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Sprachen \(\emptyset\), \(\&#123;\epsilon\&#125;\) und \(\&#123;x\&#125;\) für jedes \(x \in \Sigma\)
+                    Die Sprachen \(\emptyset\), \(\&#123;\epsilon\&#125;\) und \(\&#123;x\&#125;\) für jedes \(x \in \Sigma\)
                     sind regulär.
                   </li>
                 </ul>
@@ -112,8 +120,11 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;5.5.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(\Sigma\) einendliches Alphabet. Die regulären Audrücke über \(\Sigma\) sind induktiv
+                  Sei \(\Sigma\) einendliches Alphabet. Die regulären Audrücke über \(\Sigma\) sind induktiv
                   definiert wie folgt und beschreiben folgende Sprachen:
                   <ul>
                     <li>
@@ -122,6 +133,7 @@ const Article = () => {
                         Atome.
                       </b>
                       {" "}\(\emptyset\) ist ein regulärer Ausdruck und beschreibt die
+                      &ensp;\(\emptyset\) ist ein regulärer Ausdruck und beschreibt die
                       Sprache \(\emptyset\).
                       \(\epsilon\) ist ein regulärer Ausdruck und beschreibt die Sprache \(\&#123;\epsilon\&#125;\).
                       Jedes einzelne Zeichen \(x \in \Sigma\) ist ein regulärer Ausdruck und
@@ -133,6 +145,7 @@ const Article = () => {
                         Alternative.
                       </b>
                       {" "}Wenn \(R_1, R_2\) reguläre Ausdrücke über \(\Sigma\) sind
+                      &ensp;Wenn \(R_1, R_2\) reguläre Ausdrücke über \(\Sigma\) sind
                       und die Sprachen \(L_1\) und \(L_2\) beschreiben, so ist
                       \((R_1 | R_2)\) ein regulärer Ausdruck und beschreibt die Sprache
                       \(L_1 \cup L_2\) (die regulär ist, wie wir in{" "}
@@ -140,70 +153,76 @@ const Article = () => {
                         Kapitel 4.1
                       </a>
                       &ensp;gesehen haben).
+                      &ensp;gesehen haben).
                     </li>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                      {" "}{" "}
                       <b>
                         Konkatenation.
                       </b>
                       {" "}\((R_1R_2)\) ist ein regulärer Ausdruck, der
+                      &ensp;\((R_1R_2)\) ist ein regulärer Ausdruck, der
                       die Sprache \(L_1 \circ L_2\) beschreibt (die auch wiederum regulär ist).
                       Der Deutlichkeit halber schreiben wir auch manchmal \(R_1 \circ R_2\).
                     </li>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                      {" "}{" "}
                       <b>
                         Kleenesche Hülle.
                       </b>
                       {" "}Wenn \(R\) ein regulärer Ausdruck ist und die Sprache
+                      &ensp;Wenn \(R\) ein regulärer Ausdruck ist und die Sprache
                       \(L\) beschreibt,
                       dann ist \((R^*)\) ein regulärer Ausdruck und beschreibt die Sprache \(L^*\).
                     </li>
                   </ul>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Weil in der Praxis neben \(L^*\), also beliebig langen, möglicherweise leeren Folgen von
+                    Weil in der Praxis neben \(L^*\), also beliebig langen, möglicherweise leeren Folgen von
                     \(L\)-Wörtern wir
                     oft{" "}
                     <i>
                       nichtleere
                     </i>
                     {" "}Folgen wollen,
+                    &ensp;Folgen wollen,
                     führen wir die Abkürzung \(R^+\) für \(R (R^*)\) ein und bezeichnen die beschriebene Sprache
                     \(L \circ L^*\) kurzerhand als \(L^+\).
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In konkreten fällen lassen gerne die Klammerung weg, wenn keine Verwechslungsgefahr besteht.
+                  In konkreten fällen lassen gerne die Klammerung weg, wenn keine Verwechslungsgefahr besteht.
                   Auch
                   gehen wir davon aus, dass die Operatoren die Präzedenz \(^*\) vor \(\circ\) vor \(|\) haben (wie
-                  {" "}
                   <i>
                     hoch
                   </i>
-                  {" "}vor{" "}
+                  {" "}vor 
+                  &ensp;vor{" "}
                   <i>
                     Punkt
                   </i>
-                  {" "}vor{" "}
+                  {" "}vor 
+                  &ensp;vor{" "}
                   <i>
                     Strich
                   </i>
                   {" "}in der Arithmetik), sodass beispielsweise
+                  &ensp;in der Arithmetik), sodass beispielsweise
                   der Ausdruck \( a^*b|c^*\) die Bedeutung von \((((a^*)b)(c^*))\) hat, genauso wie wir
                   in der Arithmetik \(a^2 b + c^3\) statt \( (((a^2)b) + c^3) \) schreiben.
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die von den atomaren Ausdrücken beschriebenen Sprachen sind alle regulär, da sie alle
-                  {" "}
+                  Die von den atomaren Ausdrücken beschriebenen Sprachen sind alle regulär, da sie alle
                   <i>
                     endliche Sprachen
                   </i>
                   {" "}sind.
+                  &ensp;sind.
                   Dank unserer Vorarbeit aus{" "}
                   <a href="./04-01-regular-grammars.html#baukasten">
                     Kapitel 4.1
                   </a>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;wissen wir,
+                  wissen wir,
                   dass Alterantive, Konkatenation und Kleenesche Hülle wiederum reguläre Sprachen erzeugen.
                   Wir erhalten das folgende Ergebnis:
                 </Paragraph>
@@ -213,20 +232,21 @@ const Article = () => {
                   <span class="numbered-title">
                     Lemma
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die von einem regulären Ausdruck \(R\) beschriebene Sprache \(L(R)\) ist regulär.
+                  Die von einem regulären Ausdruck \(R\) beschriebene Sprache \(L(R)\) ist regulär.
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es ist Zeit für ein paar Beispiele.
+                  Es ist Zeit für ein paar Beispiele.
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nehmen wir die Sprache der Wörter der Form{" "}
+                  Nehmen wir die Sprache der Wörter der Form{" "}
                   <code>
                     bla:bla:blu.xyz-12-ab.b:x
                   </code>
                   {" "}aus dem
+                  &ensp;aus dem
                   letzten Kapitel. Sie erinnern sich:
                   eine endliche Folge von{" "}
                   <i>
@@ -237,11 +257,13 @@ const Article = () => {
                   <code>
                     :
                   </code>
-                  {" "}oder durch{" "}
+                  {" "}oder durch 
+                  &ensp;oder durch{" "}
                   <code>
                     -
                   </code>
                   {" "}separiert sind, wobei innerhalb eines Labels
+                  &ensp;separiert sind, wobei innerhalb eines Labels
                   immer nur ein
                   Separatortyp vorkommen darf, und wobei ein Block eine nichtleere Folge von alphanumerischen
                   Zeichen ist (wir haben uns dann auf den Buchstaben \(a\) beschränkt).
@@ -250,7 +272,7 @@ const Article = () => {
                   Wenn wir nun einen regulären Ausdruck für \(L\) erstellen wollen, so können wir bequem Stück für
                   Stück vorgehen.
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein Block ist eine nichtleere Folge von \(a\)'s. Der entsprechende reguläre Ausdruck \(B\)
+                    Ein Block ist eine nichtleere Folge von \(a\)'s. Der entsprechende reguläre Ausdruck \(B\)
                     für Blöcke ist also
                     $$\begin&#123;align*&#125;
                     B : = a^+
@@ -260,11 +282,8 @@ const Article = () => {
                       :
                     </code>
                     {" "}oder
-                    {" "}
-                    <code>
-                      -
-                    </code>
-                    {" "}separieren; wir
+                    &ensp;oder`-` separieren; wir
+                    &ensp;separieren; wir
                     erhalten den regulären Ausdruck \(T\) für Labels ist also
                     $$\begin&#123;align*&#125;
                     T := B (&#123;:&#125;B)^* | B (\text&#123;-&#125;B)^*
@@ -279,21 +298,19 @@ const Article = () => {
                     was wir in unserer Grammatik bzw. dem nichtdeterministischen Automaten für \(L\) getan
                     haben, während \(T'\) eher
                     die Arbeitsweise des determinisitschen Automaten reflektiert (wir lesen erst einmal einen
-                    Block und erst, wenn wir zum ersten mal auf
-                    {" "}
-                    <code>
-                      :
-                    </code>
-                    {" "}oder{" "}
+                    Block und erst, wenn wir zum ersten mal auf`:` oder 
+                    &ensp;oder{" "}
                     <code>
                       -
                     </code>
                     {" "}stoßen, entscheiden wir uns für den "Typ" des Labels).
+                    &ensp;stoßen, entscheiden wir uns für den "Typ" des Labels).
                     Schlussendlich ist ein Wort in der Sprache eine mit{" "}
                     <code>
                       .
                     </code>
                     {" "}separierte Folge von
+                    &ensp;separierte Folge von
                     Labels, also:
                     $$\begin&#123;align*&#125;
                     R := T (&#123;.&#125;T)^*
@@ -307,11 +324,15 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;5.5.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Laden Sie sich{" "}
+                  Laden Sie sich{" "}
                   <a href="../code/regular-expressions/TestRegex.java">
                     TestRegex.java
                   </a>
+                  &ensp;herunter,
                   &ensp;herunter,
                   kompilieren und starten Sie es.
                   <pre>
@@ -321,11 +342,20 @@ const Article = () => {
                     <code class="terminalOutput">
                       Please enter a regular expression:
                     </code>
-                    &ensp;(a+)(:a+)*
+                    &ensp;(a+)(:a+)
+                    <b>
+                      {" "}
+                      &ensp;(a+)(:a+)
+                    </b>
+                    {" "}{" "}
                     <code class="terminalOutput">
                       Enter words to be matched, one per line
                     </code>
-                    &ensp;`aaaaa:aa:aaaa:a`
+                    {" "}{" "}
+                    <code>
+                      aaaaa:aa:aaaa:a
+                    </code>
+                    {" "}{" "}
                     <code class="terminalOutput">
                       true
                     </code>
@@ -339,25 +369,20 @@ const Article = () => {
                     </code>
                   </pre>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie nun einen regulären Ausdruck \(R\) für die obige Sprache und testen Sie ihn
+                    Schreiben Sie nun einen regulären Ausdruck \(R\) für die obige Sprache und testen Sie ihn
                     mit dem Java-Programm.
                   </Paragraph>
                 </div>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;5.5.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In der Praxis gibt es bei reguläre Ausdrücken viele Abkürzung, so beschreibt
-                  {" "}
-                  <code>
-                    [a-z]
-                  </code>
-                  {" "}beispielsweise die Menge aller Kleinbuchstaben,
-                  {" "}
-                  <code>
-                    [aoeiuy]
-                  </code>
-                  {" "}beschreibt die Menge \&#123;a,o,e,i,u,y\&#125; etc.
+                  In der Praxis gibt es bei reguläre Ausdrücken viele Abkürzung, so beschreibt`[a-z]` beispielsweise die Menge aller Kleinbuchstaben,
+                  &ensp;beispielsweise die Menge aller Kleinbuchstaben,`[aoeiuy]` beschreibt die Menge \&#123;a,o,e,i,u,y\&#125; etc.
+                  &ensp;beschreibt die Menge \&#123;a,o,e,i,u,y\&#125; etc.
                   Der reguläre Ausdruck{" "}
                   <code>
                     [a-z]
@@ -367,6 +392,7 @@ const Article = () => {
                     {" "}{" "}
                   </code>
                   {" "}beschreibt also die
+                  &ensp;beschreibt also die
                   Menge aller Wörter, die mindesten einen Vokal enthalten.
                   Lesen Sie hierfür unter Anderem
                   <div style="text-align:center">
@@ -374,7 +400,7 @@ const Article = () => {
                       W3Schools
                     </a>
                   </div>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und
+                  und
                   <div style="text-align:center">
                     <a href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html">
                       Patternl.html
@@ -382,9 +408,9 @@ const Article = () => {
                     </a>
                     ,
                   </div>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;lassen sich aber bitte nicht von der Menge an Details erschlagen.
+                  lassen sich aber bitte nicht von der Menge an Details erschlagen.
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie nun in der Java-Regex-Syntax einen regulären Ausdruck für unsere obige Sprache
+                    Schreiben Sie nun in der Java-Regex-Syntax einen regulären Ausdruck für unsere obige Sprache
                     \(L\), wo Sie aber
                     neben \(a\) alle alphanumerischen Zeichen zulassen.
                   </Paragraph>
@@ -401,13 +427,13 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L\) eine reguläre Sprache. Dann gibt es einen regulären Ausdruck \(R\), der \(L\)
+                  Sei \(L\) eine reguläre Sprache. Dann gibt es einen regulären Ausdruck \(R\), der \(L\)
                   beschreibt,
                   also
                   \(L(R) = R\).
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir paraphrasieren hier den Beweis aus Michael Sipsers{" "}
+                  Wir paraphrasieren hier den Beweis aus Michael Sipsers{" "}
                   <i>
                     Introduction to the Theory of
                     Computation
@@ -415,11 +441,11 @@ const Article = () => {
                   .
                 </Paragraph>
                 <div class="well container">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Beweis.
                   </b>
-                  {" "}Zunächst skizzieren wir die Beweisidee. Da \(L\) regulär ist, gibt es einen
+                  Zunächst skizzieren wir die Beweisidee. Da \(L\) regulär ist, gibt es einen
                   nichtdeterministischen endlichen
                   Automaten \(M\), die \(L\) akzeptiert. Wir werden nun \(M\) Schritt für Schritt in einen
                   regulären Ausdruck
@@ -468,12 +494,15 @@ const Article = () => {
                   <div class="well subtheorem theorem">
                     <span class="numbered-title">
                       Definition
+                      <NumberedTitle>
+                        &ensp;5.5.2{" "}
+                      </NumberedTitle>
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    {" "}{" "}
                     <b>
                       (Verallgemeinerter nichtdeterministischer endlicher Automat, VNEA).
                     </b>
-                    {" "}Ein VNEA besteht aus einem Alphabet \(\Sigma\), einer Zustandsmenge \(Q\), einen
+                    Ein VNEA besteht aus einem Alphabet \(\Sigma\), einer Zustandsmenge \(Q\), einen
                     Startzustand \(\qstart \in Q\), einem
                     akzeptierenden Zustand \(q_&#123;\rm end&#125; \in Q \setminus \&#123;\qstart\&#125;\), einer
                     Menge von gerichteten Kanten
@@ -487,7 +516,7 @@ const Article = () => {
                     ist, dann schreiben wir auch
                     \(q_i \step&#123;\beta \in R&#125; q_j \).
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für \(q, q' \in Q\) und \(\alpha \in \Sigma^*\) schreiben wir
+                      Für \(q, q' \in Q\) und \(\alpha \in \Sigma^*\) schreiben wir
                       $$\begin&#123;align*&#125;
                       q \Step&#123;\alpha&#125; q'
                       \end&#123;align*&#125;$$
@@ -506,7 +535,7 @@ const Article = () => {
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Einen gegebenen NEA können wir leicht in einen VNEA transformieren, indem wir, soweit nötig,
+                    Einen gegebenen NEA können wir leicht in einen VNEA transformieren, indem wir, soweit nötig,
                     (1) einen neuen Startzustand kreieren (damit dieser keine eingehenden Kanten hat),
                     (2) einen neuen Endzustand kreieren,
                     (3) "parallele" Übergänge wie \( (q_i, x, q_j), (q_i, y, q_j)\) zu einer Kante
@@ -514,7 +543,7 @@ const Article = () => {
                     der dann mit dem regulären Ausdruck \(x | y\) beschriftet ist.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben den ganzen Aufwand betrieben, weil wir für einen VNEA sehr leicht
+                    Wir haben den ganzen Aufwand betrieben, weil wir für einen VNEA sehr leicht
                     Zustände eliminieren können. Wenn wir zum Beispiel
                     $$\begin&#123;align*&#125;
                     q_0 \step&#123;R_1&#125; q_1 \step&#123;R_2&#125; q_2
@@ -532,7 +561,7 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls die mit \(R_2\) beschriftete Selbstschleife an Zustand \(B\) nicht existieren sollte,
+                    Falls die mit \(R_2\) beschriftete Selbstschleife an Zustand \(B\) nicht existieren sollte,
                     dann
                     schreiben wir einfach \(R_1R_3\) anstatt \(R_1 R_2^* R_3\); falls der Übergang \(A
                     \step&#123;R_4&#125; B\) nicht
@@ -542,12 +571,13 @@ const Article = () => {
                       jedes
                     </i>
                     {" "}Paar
+                    &ensp;Paar
                     durch
                     eine Kante verbunden ist und würde fehlende Kanten einfach mit dem regulären Ausdruck
                     \(\emptyset\) beschriften.)
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir suchen uns also einen Zustand \(B \in Q \setminus \&#123;\qstart, \qend\&#125;\), den wir
+                    Wir suchen uns also einen Zustand \(B \in Q \setminus \&#123;\qstart, \qend\&#125;\), den wir
                     eliminieren wollen, und führen die oben beschriebene
                     \(B\)-Umfahrung parallel für alle Paare \(A,C\) aus, für die es \(A \step&#123;&#125; B \step&#123;&#125; C\)
                     gibt.
@@ -563,7 +593,7 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dieser VNEA akzeptiert immer noch die gleiche Sprache \(L\) wie der ursprüngliche NEA, mit
+                    Dieser VNEA akzeptiert immer noch die gleiche Sprache \(L\) wie der ursprüngliche NEA, mit
                     dem wir
                     begonnen haben. Welche Sprache ist das? Es ist die Sprache aller \(\alpha \in \Sigma\) mit
                     $$\begin&#123;align*&#125;
@@ -595,15 +625,18 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;5.5.3{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wandeln Sie nach dem eben beschriebenen Schema den Automaten
+                  Wandeln Sie nach dem eben beschriebenen Schema den Automaten
                   <figure>
                     <img
                       style="height:10em"
                       src="../img/finite-state-automata/nfsm-example-02.svg"
                       loading="lazy" />
                   </figure>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;in einen regulären Ausdruck um.
+                  in einen regulären Ausdruck um.
                 </div>
               </div>
             </div>

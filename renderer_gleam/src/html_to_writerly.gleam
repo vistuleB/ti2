@@ -52,18 +52,18 @@ fn construct_left_nav(prev_file: Option(String)) {
     ]
   )
 
-  let prev_chapter_link = case prev_file {
+  let prev_section_link = case prev_file {
     option.Some(prev_file) -> {
       let prev_file_name = string.drop_end(prev_file, 5)
       let assert [prev_number_first, prev_number_second, ..] = string.split(prev_file_name, "-")
       let prev_number = string.join([remove_0_at_start(prev_number_first), remove_0_at_start(prev_number_second)], ".")
 
       [vp.V(
-        blame_us("Prev chapter link"),
+        blame_us("Prev section link"),
         "a",
-        [vp.BlamedAttribute(blame_us("Prev chapter attribute"), "href", prev_file_name)], [vp.T(blame_us("Prev chapter text node"),
+        [vp.BlamedAttribute(blame_us("Prev section attribute"), "href", prev_file_name)], [vp.T(blame_us("Prev section text node"),
           [
-            vp.BlamedContent(blame_us("Prev chapter content"), "&lt;&lt; Kapitel " <> prev_number)
+            vp.BlamedContent(blame_us("Prev section content"), "&lt;&lt; Kapitel " <> prev_number)
           ]
           )
         ]
@@ -73,7 +73,7 @@ fn construct_left_nav(prev_file: Option(String)) {
   }
   
 
-  vp.V(blame_us("left nav div"), "div", [vp.BlamedAttribute(blame_us("left nav attribute"), "id", "link-to-toc")], list.flatten([[toc_link], prev_chapter_link]))
+  vp.V(blame_us("left nav div"), "div", [vp.BlamedAttribute(blame_us("left nav attribute"), "id", "link-to-toc")], list.flatten([[toc_link], prev_section_link]))
 }
 
 fn construct_right_nav(next_file: Option(String)) {
@@ -88,20 +88,20 @@ fn construct_right_nav(next_file: Option(String)) {
     ]
   )
 
-  let next_chapter_link = case next_file {
+  let next_section_link = case next_file {
     option.Some(next_file) -> {
      let next_file_name = string.drop_end(next_file, 5)
       let assert [next_number_first, next_number_second, ..] = string.split(next_file_name, "-")
       let next_number = string.join([remove_0_at_start(next_number_first), remove_0_at_start(next_number_second)], ".")
 
       [vp.V(
-        blame_us("next chapter link"),
+        blame_us("next section link"),
         "a",
         [
-          vp.BlamedAttribute(blame_us("next chapter attribute"), "href", next_file_name)
-        ], [vp.T(blame_us("next chapter text node"),
+          vp.BlamedAttribute(blame_us("next section attribute"), "href", next_file_name)
+        ], [vp.T(blame_us("next section text node"),
           [
-            vp.BlamedContent(blame_us("next chapter content"), "Kapitel " <> next_number <> " &gt;&gt;")
+            vp.BlamedContent(blame_us("next section content"), "Kapitel " <> next_number <> " &gt;&gt;")
           ]
           )
         ]
@@ -111,7 +111,7 @@ fn construct_right_nav(next_file: Option(String)) {
   }
 
  
-  vp.V(blame_us("right nav div"), "div", [vp.BlamedAttribute(blame_us("right nav attribute"), "id", "link-to-overview"), vp.BlamedAttribute(blame_us("right nav attribute"), "style", "text-align: end")], list.flatten([[overview_link], next_chapter_link]))
+  vp.V(blame_us("right nav div"), "div", [vp.BlamedAttribute(blame_us("right nav attribute"), "id", "link-to-overview"), vp.BlamedAttribute(blame_us("right nav attribute"), "style", "text-align: end")], list.flatten([[overview_link], next_section_link]))
 }
 
 fn splitter(vxml: VXML, file: String) -> Result(List(#(String, VXML, Nil)), a) {
@@ -119,14 +119,16 @@ fn splitter(vxml: VXML, file: String) -> Result(List(#(String, VXML, Nil)), a) {
   Ok([#(emu_file, vxml, Nil)])
 }
 
-fn get_second_from_tuple(tuple: #(a, b)) -> b {
-  let #(_, b) = tuple
-  b
-}
-
-fn remove_line_break(res: String) -> String {
+fn remove_line_break_from_end(res: String) -> String {
   case string.ends_with(res, "\n") {
     True -> string.drop_end(res, 2)
+    False -> res
+  }
+}
+
+fn remove_line_break_from_start(res: String) -> String {
+  case string.starts_with(res, "\n") {
+    True -> string.drop_start(res, 1)
     False -> res
   }
 }
@@ -137,8 +139,10 @@ fn title_from_vxml(vxml: VXML) -> String {
     |> wp.writerlys_to_string()
     |> string.split_once(" ")
     |> result.unwrap(#("", ""))
-    |> get_second_from_tuple()
-    |> remove_line_break()
+    |> pair.second()
+    |> remove_line_break_from_start
+    |> io.debug
+    |> remove_line_break_from_end
 }
 
 fn get_title_internal(vxml: VXML) -> String {
@@ -204,6 +208,10 @@ fn emitter(
       vp.BlamedAttribute(blame_us("section title"), "title_gr", title_german),
       vp.BlamedAttribute(blame_us("section title"), "title_en", title_en),
       vp.BlamedAttribute(blame_us("section title"), "number", number),
+      // Counter attributes
+      vp.BlamedAttribute(blame_us("section def counter"), "counter", "DefCtr"),
+      vp.BlamedAttribute(blame_us("section exo counter"), "counter", "ExoCtr"),
+
     ], [
       construct_left_nav(prev_file), 
       construct_right_nav(next_file), 

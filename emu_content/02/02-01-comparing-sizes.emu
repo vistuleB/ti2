@@ -1,7 +1,9 @@
 |> Section
-    title_gr Wer ist größer?
+    title_gr 2.1 Wer ist größer?
     title_en comparing sizes
     number 2.1
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,32 +38,32 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             2.1 Wer ist größer?
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für endliche Mengen haben den Begriff der _Größe_          $\{0,1,2,3,4,5,6,7,8,9\}$ hat zehn Elemente und ist somit größer als
+                        Für endliche Mengen haben den Begriff der _Größe_$\{0,1,2,3,4,5,6,7,8,9\}$ hat zehn Elemente und ist somit größer als
                         $\{a,e,i,o,u\}$, die nur fünf Elemente hat. Können wir auch für
                         unendliche Mengen einen Größenbegriff einführen, oder sie zumindest
                         hinsichtlich ihrer Größe vergleichen?
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bei den "üblichen" unendlichen Mengen $\N, \Z, \Q, \R$ scheint das zu
+                        Bei den "üblichen" unendlichen Mengen $\N, \Z, \Q, \R$ scheint das zu
                         gehen. Es gilt nämlich $\N \subsetneq \Z \subsetneq \Q \subsetneq \R$,
-                        und damit können wir doch mit Fug und Recht behaupten:
-                        _Die Menge der ganzen Zahlen ist kleiner als die der rationalen
+                        und damit können wir doch mit Fug und Recht behaupten:_Die Menge der ganzen Zahlen ist kleiner als die der rationalen
                         Zahlen_.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unser erster Versuch, unendliche Mengen ihrer Größe nach zu
+                        Unser erster Versuch, unendliche Mengen ihrer Größe nach zu
                         vergleichen, verwendet Mengeninklusion: wenn $A \subseteq B$ gilt,
                         dann sagen wir, dass $A$ kleiner gleich $B$ gilt. Allerdings hat
                         dieser Größenbegriff einen großen Nachteil: welche der beiden Mengen
                         ist Ihrer Meinung denn größer:
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*} \{\dots, -4, -2, 0, 2, 4, 6, \dots\} \quad
+                    \begin{align*} \{\dots, -4, -2, 0, 2, 4, 6, \dots\} \quad
                     \textnormal{oder}\quad \{0,1,2,3, \dots\} ? \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Also die geraden ganzen Zahlen oder die natürlichen? Oder noch
+                        Also die geraden ganzen Zahlen oder die natürlichen? Oder noch
                         schlimmer: ist $\Q$ oder $\{a,b\}^*$ größer? Die zweite Menge hat ja
                         gar nichts mit Zahlen zu tun, sondern besteht aus Strings mit den
                         Symbolen $a$ und $b$. Und generell: auch zwischen den Mengen
@@ -70,13 +72,13 @@
                         letztere.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine rigorose und belastbare Weise, unendliche Mengen hinsichtlich
+                        Eine rigorose und belastbare Weise, unendliche Mengen hinsichtlich
                         ihrer Größe zu vergleichen, hat
                         |> a
                             href https://en.wikipedia.org/wiki/Georg_Cantor
 
                             Georg Cantor
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ende des 19. Jahrhunderts gefunden. Sie war anfangs nicht
+                        Ende des 19. Jahrhunderts gefunden. Sie war anfangs nicht
                         unumstritten.
                     |> div
                         class well container theorem
@@ -85,6 +87,7 @@
                                 class numbered-title
 
                                 Beispiel
+                            &ensp;Beginnen wir mit einem
                             &ensp;Beginnen wir mit einem
                             einfachen Beispiel und betrachten die zwei Mengen $\N =
                             \{0,1,2,3,4,\dots\}$ und $\N^+ = \{1,2,3,4,\dots\}$. Beide sind
@@ -97,17 +100,18 @@
                                 src ../img/infinite-sets/N-N-plus.svg
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können diese Zuordnung auch mit einer einfachen Formel
+                            Wir können diese Zuordnung auch mit einer einfachen Formel
                             beschreiben. Die Funktion
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*} f : \N&amp;\rightarrow \N^+ \\ n&amp;\mapsto n+1
+                        \begin{align*} f : \N&amp;\rightarrow \N^+ \\ n&amp;\mapsto n+1
                         \end{align*}
                         |> p
 
                             ist eine Bijektion.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Diese anfangs etwas überraschende Tatsache, dass $\N$ und $\N^+$
+                        Diese anfangs etwas überraschende Tatsache, dass $\N$ und $\N^+$
                         "gleich groß" sind, ist als _Hilberts Hotel_ bekannt. Das Hotel
+                        &ensp;bekannt. Das Hotel
                         hat unendlich viele Zimmer, für jede Zahl $n \in \N^+$ eins. Dann
                         kommt ein neuer Gast (die $0$) und braucht ein Zimmer. Er kriegt das
                         Zimmer $1$. Da dies aber schon belegt ist, wird die Person, die bisher
@@ -122,6 +126,7 @@
 
                                 Beispiel
                             &ensp;Ermutigt von unserem
+                            &ensp;Ermutigt von unserem
                             Erfolg gerade eben betrachten wir zwei unendliche Mengen, die sich
                             stärker unterscheiden: $\N$ und $\Z = \{\dots, -2, -1, 0, 1, 2,
                             \dots\}$. Wir können diese beiden nicht so schön nebeneinander legen
@@ -133,7 +138,7 @@
                                 src ../img/infinite-sets/N-to-Z.svg
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dies ist etwas unübersichtlich. Besser geht es, wenn wir $\Z$
+                            Dies ist etwas unübersichtlich. Besser geht es, wenn wir $\Z$
                             umstellen:
                         |> figure
                             |> img
@@ -141,9 +146,9 @@
                                 src ../img/infinite-sets/N-to-Z-nicer.svg
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können also unsere Bijektion $f : \N \rightarrow \Z$ wie folgt
+                            Wir können also unsere Bijektion $f : \N \rightarrow \Z$ wie folgt
                             definieren:
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*} f : \N&amp;\rightarrow \Z \\ n&amp;\mapsto \begin{cases}
+                        \begin{align*} f : \N&amp;\rightarrow \Z \\ n&amp;\mapsto \begin{cases}
                         \frac{n}{2}&amp;\textnormal{ wenn $n$ gerade ist,} \\ - \frac{n+1}{2}&
                         \textnormal{ wenn $n$ ungerade ist.} \end{cases} \end{align*}
                     |> div
@@ -153,13 +158,17 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Finden Sie eine "geschlossene" Form für die Bijektion $f : \N
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                            Finden Sie eine "geschlossene" Form für die Bijektion $f : \N
                             \rightarrow \Z$. Mit "geschlossen" meine ich, dass Sie sie mit den
                             üblichen Operatoren (mal, plus, hoch, minus, geteilt durch) ohne
                             Fallunterscheidung schreiben können.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Anmerkung:* es ist überhaupt nicht schlimm, eine
+                            *Anmerkung:* es ist überhaupt nicht schlimm, eine
+                            &ensp;es ist überhaupt nicht schlimm, eine
                             Funktion mit einer Fallunterscheidung zu definieren. Sie ist dadurch
                             nicht etwa eine "Funktion zweiter Klasse".
                     |> div
@@ -169,7 +178,10 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Finden Sie die Umkehrfunktion $f^{-1} : \Z \rightarrow \N$. Gerne
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                            Finden Sie die Umkehrfunktion $f^{-1} : \Z \rightarrow \N$. Gerne
                             anfangs mit Fallunterscheidung, dann bitte als geschlossene Formel
                             ohne Fallunterscheidung.
                     |> p
@@ -182,19 +194,22 @@
                                 class numbered-title
 
                                 Definition
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                            &ensp;Zwei Mengen $A$ und
                             &ensp;Zwei Mengen $A$ und
                             $B$ heißen _gleichmächtig_, wenn es eine Bijektion $f : A
                             \rightarrow B$ gibt. Wir schreiben in diesem Falle $A \approx B$.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gilt trivialerweise immer $A \approx A$, da wir ja die
+                        Es gilt trivialerweise immer $A \approx A$, da wir ja die
                         Identitätsfunktion $x \mapsto x$ als Bijektion nehmen können. Wenn es
                         eine Bijektion $f : A \rightarrow B$ gibt, dann natürlich auch eine
                         Umkehrfunktion $f^{-1} : B \rightarrow A$. Wenn $f : A \rightarrow B$
                         und $g : B \rightarrow C$ Bijektionen sind, dann ist $g \circ f : A
                         \rightarrow C$ auch eine. Wir sehen: Die Relation $\approx$ ist
-                        reflexiv, symmetrisch und transitiv und ist somit eine
-                        _Äquivalenzrelation_.
+                        reflexiv, symmetrisch und transitiv und ist somit eine_Äquivalenzrelation_.
                     |> div
                         class well container theorem
                         |> p
@@ -202,22 +217,27 @@
                                 class numbered-title
 
                                 Definition
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                            &ensp;Eine Menge $A$ mit $A
                             &ensp;Eine Menge $A$ mit $A
                             \approx \N$, die also gleichmächtig zu den natürlichen Zahlen ist,
-                            nennt man _abzählbar unendlich_, auf Englisch
-                            _countably infinite_ oder einfach _countable_.
+                            nennt man _abzählbar unendlich_, auf Englisch_countably infinite_ oder einfach 
+                            &ensp;oder einfach _countable_.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wie wir sehen werden, gibt es tatsächlich unendliche Mengen, die
-                        _nicht_ gleichmächtig mit $\N$ sind, weil sie "viel viel
+                        Wie wir sehen werden, gibt es tatsächlich unendliche Mengen, die_nicht_ gleichmächtig mit $\N$ sind, weil sie "viel viel
+                        &ensp;gleichmächtig mit $\N$ sind, weil sie "viel viel
                         größer" sind. Wir nennen sie _überabzählbare_ Mengen, auf
+                        &ensp;Mengen, auf
                         Englisch _uncountably infinite_.
                     |> h2
 
                         Was ist unendlich?
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Begriff der Gleichmächtigkeit liefert uns nun eine wunderbar
+                        Der Begriff der Gleichmächtigkeit liefert uns nun eine wunderbar
                         einfache und rigorose Definition von Unendlichkeit.
                     |> div
                         class well container theorem
@@ -226,12 +246,15 @@
                                 class numbered-title
 
                                 Definition
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             &ensp;Eine Menge $A$ heißt
-                            _unendlich_, wenn es eine echte Teilmenge $A' \subsetneq A$
+                            &ensp;Eine Menge $A$ heißt_unendlich_, wenn es eine echte Teilmenge $A' \subsetneq A$
                             gibt, zu der sie gleichmächtig ist, also $A' \approx A$.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als Beispiel haben wir $\N^+ \subsetneq \N$ mit $\N^+ \approx \N$
+                        Als Beispiel haben wir $\N^+ \subsetneq \N$ mit $\N^+ \approx \N$
                         gesehen. Also ist $\N$ im obigen Sinne unendlich.
                     |> div
                         class well well-lg numbered-exercise container
@@ -240,18 +263,22 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie: wenn eine Menge $A$ unendlich ist (im Sinne der obigen
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                            Zeigen Sie: wenn eine Menge $A$ unendlich ist (im Sinne der obigen
                             Definition), dann gibt es eine Teilmenge $X \subseteq A$ mit $X
                             \approx \N$.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Hinweis:* Tappen Sie nicht in die "Das ist doch
+                            *Hinweis:* Tappen Sie nicht in die "Das ist doch
+                            &ensp;Tappen Sie nicht in die "Das ist doch
                             offensichtlich"-Falle: die Menge $A$ könnte ja viel größer sein als
                             $\N$ und keine für Sie "greifbare" Struktur haben. Ihre Aufgabe ist
                             es, dennoch eine abzählbar unendliche Teilmenge $X \subseteq A$ zu
                             finden.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Angesichts der letzten Übungsaufgabe können wir also sagen, dass
+                        Angesichts der letzten Übungsaufgabe können wir also sagen, dass
                         abzählbare Unendlichkeit die kleinste Stufe der Unendlichkeit ist.
                         Unterhalb von abzählbar kommen nur noch die endlichen Mengen.

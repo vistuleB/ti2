@@ -1,3 +1,5 @@
+import desugarers/add_attributes
+import desugarers/insert_ti2_counter_commands.{insert_ti2_counter_commands}
 import desugarers/remove_empty_lines.{remove_empty_lines}
 import desugarers/identity
 import desugarers/unwrap_tags_if_no_attributes.{unwrap_tags_if_no_attributes}
@@ -9,13 +11,14 @@ import desugarers/trim_spaces_around_newlines.{trim_spaces_around_newlines}
 import desugarers/replace_multiple_spaces_by_one.{replace_multiple_spaces_by_one}
 
 import infrastructure.{type Pipe}
+import gleam/option.{None, Some}
 
 pub fn html_pipeline() -> List(Pipe) {
   [
     identity.identity(),
-    remove_empty_lines(),
     trim_spaces_around_newlines(),
     replace_multiple_spaces_by_one(),
+    remove_empty_lines(),
     extract_starting_and_ending_spaces(["i", "b", "strong", "em", "code"]),
     insert_bookend_text_if_no_attributes([
       #("i", "_", "_"),
@@ -27,6 +30,11 @@ pub fn html_pipeline() -> List(Pipe) {
     surround_elements_by(#(["i", "b", "strong", "em", "code"], "go23_xU", "go23_xU")),
     unwrap_tags_if_no_attributes(["i", "b", "strong", "em", "code"]),
     fold_tags_into_text([#("go23_xU", "")]),
+    insert_ti2_counter_commands(#("::++ChapterCtr.", #("class", "chapterTitle"), [], None)),
+    insert_ti2_counter_commands(#("::::ChapterCtr.::++SectionCtr", #("class", "subChapterTitle"), [], None)),
+    insert_ti2_counter_commands(#("::::ChapterCtr.::::SectionCtr.::++ExoCtr", #("class", "numbered-title"), ["Übungsaufgabe"], Some("NumberedTitle"))),
+    insert_ti2_counter_commands(#("::::ChapterCtr.::::SectionCtr.::++DefCtr", #("class", "numbered-title"), ["Definition", "Beobachtung"], Some("NumberedTitle"))),
+
     // insert_string_at_end_of([#("em", " ")]),
   ]
 }

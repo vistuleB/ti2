@@ -1,7 +1,9 @@
 |> Section
-    title_gr Die Grenzen kontextfreier Sprachen
+    title_gr 5.10 Die Grenzen kontextfreier Sprachen
     title_en not context free
     number 5.11
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,6 +38,7 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             5.10 Die Grenzen kontextfreier Sprachen
                     |> p
 
@@ -47,7 +50,7 @@
                         keinen gibt und somit \(\gamma \not \in L(G)\)).
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem Teilkapitel werden wir sehen, dass viele Sprachen gar nicht kontextfrei sind, und
+                        In diesem Teilkapitel werden wir sehen, dass viele Sprachen gar nicht kontextfrei sind, und
                         werden
                         hoffentlich ein Gefühl dafür entwickeln, welche Konstruktionen Kontextfreiheit verhindern,
                         ähnlich wie
@@ -58,13 +61,13 @@
                             class numbered-title
 
                             Beispiel
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die Sprache
+                        Betrachten wir die Sprache
                         \begin{align*}
                         L := \{ a^n b^n c^n \ | \ \ n \geq 0\} \ .
                         \end{align*}
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein Kellerautomat könnte nun alle \(a\) auf den Stack legen und dann, wenn die
+                            Ein Kellerautomat könnte nun alle \(a\) auf den Stack legen und dann, wenn die
                             \(b\) beginnen, den Stapel abarbeiten. Allerdings hätte er dann, wenn die \(c\) kommen,
                             vergessen, wieviele \(a\) es denn waren. Irgendwie scheinen Kellerautomaten nicht für \(L\)
                             geeignet. Dies ist natürlich nur eine Intuition. Vielleicht kennen wir einfach nicht alle
@@ -72,7 +75,7 @@
                             die man mit Kellerautomaten (und somit mit kontextfreien Grammatiken) anstellen kann.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir werden nun beweisen, dass \(L\) nicht kontextfrei ist; dass es also für \(L\) keine
+                            Wir werden nun beweisen, dass \(L\) nicht kontextfrei ist; dass es also für \(L\) keine
                             kontextfreie Grammatik gibt. Wir gehen wie folgt vor: wir nehmen eine kontextfreie
                             Grammatik \(G\), die jedes Wort \(\gamma \in L\) ableiten kann. Dann sehen wir uns den
                             Ableitungsbaum
@@ -87,7 +90,7 @@
                                 style height:14em
                                 src ../img/context-free/pumping-lemma-01.svg
                                 loading lazy
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nun betrachten wir in diesem Ableitungsbaum den längsten Pfad von \(S\) zu einem
+                        Nun betrachten wir in diesem Ableitungsbaum den längsten Pfad von \(S\) zu einem
                         Nichtterminalknoten, der direkt über den Terminalen steht. Wenn dieser Länge \(d\) hat (also
                         \(d\) Kanten lang ist), dann hat der Baum höchstens \(2^d\) Blätter, also \(|\gamma| \leq 2^d\).
                         Wenn nun \(|\gamma| \geq 2^{|N|} =: p\) ist, dann gibt es einen Pfad der Länge \(|N|\)
@@ -98,7 +101,7 @@
                                 style height:14em
                                 src ../img/context-free/pumping-lemma-02.svg
                                 loading lazy
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Pfad vom oberen zum unteren \(Z\) hat höchstens Länge \(N\) (so haben wir diesen Pfad
+                        Der Pfad vom oberen zum unteren \(Z\) hat höchstens Länge \(N\) (so haben wir diesen Pfad
                         gewählt),
                         und somit hat das Unterwort \(vwx\) höchstens \(p = 2^{|N|}\) Zeichen.
                         Wenn wir nun das Wort \(a^nb^nc^n\) für ein sehr großes \(n\) betrachten, sagen wir
@@ -111,7 +114,7 @@
                         behandelt werden).
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nun holen wir zum entscheidenden Schlag aus: wir "pumpen" das Wort \(\gamma\) auf, indem
+                            Nun holen wir zum entscheidenden Schlag aus: wir "pumpen" das Wort \(\gamma\) auf, indem
                             wir die Teilbäume mit \(Z\) an der Wurzel wiederholen. Konkret besagt ja oberer Baum,
                             dass \(\gamma\) wie folgt hergeleitet wurde:
                             \begin{align*}
@@ -124,7 +127,7 @@
                                     style height:18em
                                     src ../img/context-free/pumping-lemma-03.svg
                                     loading lazy
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und somit das Wort \(uvvwxxy\) und ganz allgemein jedes Wort
+                            und somit das Wort \(uvvwxxy\) und ganz allgemein jedes Wort
                             \begin{align*}
                             uv^i w x^i y
                             \end{align*}
@@ -134,7 +137,7 @@
                                     style height:14em
                                     src ../img/context-free/pumping-lemma-04.svg
                                     loading lazy
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir nun das Wort \(uwy\). Wir haben ja gesehen, dass in
+                        Betrachten wir nun das Wort \(uwy\). Wir haben ja gesehen, dass in
                         \(uvwxy\) alle \(c\)-Symbole rechts von \(vwx\) liegen, also in \(y\).
                         Das Wort \(uwy\) hat also immer noch \(n\) viele \(c\)-Symbole. Allerdings hat
                         es die Symbole in \(v\) und \(x\) verloren! Wir wissen nicht, wieviele davon \(a\) und \(b\)
@@ -143,7 +146,8 @@
                         häufig vor, und somit \(uwy\not \in L\).
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben also gezeigt, dass die kontextfreie Grammatik \(G\) _nicht_ die Sprache
+                            Wir haben also gezeigt, dass die kontextfreie Grammatik \(G\) _nicht_ die Sprache
+                            &ensp;die Sprache
                             \(L\) erzeugt: wenn wir alle \(\gamma \in L\) erzeugen kann, dann
                             kann sie auch Wörter wie \(uwy \not \in L\) erzeugen. Da unsere Argumentation keine
                             Annahmen über \(G\) getroffen hat, außer, dass sie kontextfrei ist, haben wir gezeigt:
@@ -151,6 +155,7 @@
                         |> p
 
                             *Vorsicht!* Wir haben angenommen, das \(uwy\) weniger Zeichen hat
+                            &ensp;Wir haben angenommen, das \(uwy\) weniger Zeichen hat
                             als \(uvwxy\), weil ja \(v\) und \(x\) fehlen. Kann aber \(v = x = \epsilon\) eintreten?
                             Dies würde unsere Argumentation zerstören. Hier kommt wieder die
                             Chomsky-Normalform zur Hilfe: es gibt keine Produktionen \(X \rightarrow \epsilon\),
@@ -161,13 +166,14 @@
                     |> p
 
                         Die obige Argumentationslinie ist als _Pumping Lemma für kontextfreie Sprachen_ bekannt:
+                        &ensp;bekannt:
                     |> div
                         class well container theorem
                         |> span
                             class numbered-title
 
                             Theorem
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Pumping Lemma für kontextfreie Sprachen)*                        Für jede kontextfreie Grammatik \(G\) gibt es eine Zahl \(p \in \N\), so dass jedes
+                        *(Pumping Lemma für kontextfreie Sprachen)*Für jede kontextfreie Grammatik \(G\) gibt es eine Zahl \(p \in \N\), so dass jedes
                         Wort \(\gamma \in L(G)\) der Länge \(|\gamma| \geq p\) zerlegt werden kann in
                         \begin{align*}
                         \gamma = uvwxy \ ,
@@ -186,7 +192,10 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L \subseteq \{a,b,c\}^n\) die Sprache aller Wörter
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Sei \(L \subseteq \{a,b,c\}^n\) die Sprache aller Wörter
                         \begin{align*}
                         \{\alpha c \alpha \ | \ \alpha \in \{a,b\}^* \} \ .
                         \end{align*}
@@ -199,7 +208,10 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sie \(L \subseteq \{1\}^*\) die Sprache aller Wörter, deren Länge
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Sie \(L \subseteq \{1\}^*\) die Sprache aller Wörter, deren Länge
                         eine Zweierpotenz ist:
                         \begin{align*}
                         L := \{ 1^n \ | \ n = 2^d \textnormal{ für ein \(d \in \N\)} \}
@@ -216,7 +228,7 @@
                             class numbered-title
 
                             Theorem
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn \(L_1, L_2\) reguläre Sprachen sind, dann sind die folgenden
+                        Wenn \(L_1, L_2\) reguläre Sprachen sind, dann sind die folgenden
                         Sprachen auch regulär:
                         |> ol
                             |> li
@@ -238,7 +250,7 @@
 
                                 \(L_1^R\), die Sprache, die entsteht, wenn man jedes Wort in \(L_1\) von rechts nach
                                 links liest. Dies ist gar nicht so offensichtlich, wenn man reguläre Grammatiken oder
-                                endliche Automaten ansieht. Wenn man aber für \(L_1\) einen _regulären Ausdruck_                                gebaut
+                                endliche Automaten ansieht. Wenn man aber für \(L_1\) einen _regulären Ausdruck_gebaut
                                 hat, wird es zur Trivialität: einfach den Ausdruck umdrehen.
                             |> li
 
@@ -246,8 +258,10 @@
                                 \(M_1, M_2\) bauen und die dann "parallel" laufen lassen; man muss nun sehen, dass man
                                 dieses parallele Laufen
                                 mit _einem_ Automaten simulieren kann: dieser hat als Zustandsmenge \(Q_1 \times
+                                &ensp;Automaten simulieren kann: dieser hat als Zustandsmenge \(Q_1 \times
                                 Q_2\),
                                 merkt sich also in _einem_ Zustand, in welchen Zuständen \(M_1\) und \(M_2\)
+                                &ensp;Zustand, in welchen Zuständen \(M_1\) und \(M_2\)
                                 sind.
                                 Oder man macht es sich einfach:
                                 |> ul
@@ -263,6 +277,7 @@
                                         was
                                         nach den De-Morganschen Gesetzen die gleiche Menge ist wie \(L_1 \cap L_2\).
                         Wie sieht es nun aus, wenn \(L_1, L_2\) _kontextfreie_ Sprachen sind? Welche der
+                        &ensp;Sprachen sind? Welche der
                         obigen Kombinationen sind dann ebenfalls kontextfrei?
                         |> div
                             class well well-lg numbered-exercise container
@@ -270,7 +285,10 @@
                                 class numbered-title
 
                                 Übungsaufgabe
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Seien \(L_1, L_2\) kontextfrei. Zeigen Sie, dass die folgenden Sprachen auch kontextfrei
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                            Seien \(L_1, L_2\) kontextfrei. Zeigen Sie, dass die folgenden Sprachen auch kontextfrei
                             sind:
                             |> ol
                                 |> li
@@ -295,6 +313,7 @@
                             |> p
 
                                 *Tip:* dies ist viel einacher als für reguläre Grammatiken.
+                                &ensp;dies ist viel einacher als für reguläre Grammatiken.
                     Wie schon angedeutet, geben uns Komplement und Schnittmenge im Allgemeinen keine kontextfreie
                     Sprache.
                     Das Gegenbeispiel haben wir schon fast gesehen:
@@ -304,8 +323,12 @@
                             class numbered-title
 
                             Beobachtung
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Schnitt \(L_1 \cap L_2\) zweier kontextfreier Sprachen
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        Der Schnitt \(L_1 \cap L_2\) zweier kontextfreier Sprachen
                         ist im Allgemeinen _nicht_ kontextfrei.
+                        &ensp;kontextfrei.
                         Ein Beispiel ist
                         \begin{align*}
                         L_1&amp;:= \{a^n b^n c^* \ | \ n \geq 0 \}\\
@@ -324,7 +347,11 @@
                             class numbered-title
 
                             Beobachtung
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Komplement \(L\) einer kontextfreien Sprache ist im Allgemeinen _nicht_ kontextfrei.
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        Das Komplement \(L\) einer kontextfreien Sprache ist im Allgemeinen _nicht_ kontextfrei.
+                        &ensp;kontextfrei.
                         \\
                         Warum? Wenn er es wäre, dann wäre mit Hilfe von Punkt 1 auch
                         \begin{align*}
@@ -338,12 +365,16 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L := \{a^n b^n c^n\}\). Wir wissen bereits, dass \(L\) nicht kontextfrei ist.
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Sei \(L := \{a^n b^n c^n\}\). Wir wissen bereits, dass \(L\) nicht kontextfrei ist.
                         Zeigen Sie, dass \(\bar{L}\) kontextfrei ist.
                         Die Sprache \(\bar{L}\) ist somit ein Beispiel für eine kontextfreie Sprache,
                         deren Komplement, also \(L\), nicht kontextfrei ist.
                         |> p
 
                             *Tip.* Listen Sie alle Möglichkeiten auf, wie ein Wort \(w\) nicht
+                            &ensp;Listen Sie alle Möglichkeiten auf, wie ein Wort \(w\) nicht
                             in \(L\) sein kann: (1) es hat nicht die Form \(a^* b^* c^*\); (2) es hat die Form,
                             hat aber mehr \(a\) als es \(b\) hat; (2) es hat mehr \(a\) als es \(c\) hat...

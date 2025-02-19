@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={43}
-        title_gr="Beispiele von Turingmaschinen"
+        title_gr="4.2 Beispiele von Turingmaschinen"
         title_en="Turing machines examples"
-        number={7.2}>
+        number={7.2}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes43.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,6 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    7.2 
                     4.2 Beispiele von Turingmaschinen
                   </span>
                 </h1>
@@ -41,7 +46,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die Sprache
+                  Betrachten wir die Sprache
                   $$\begin&#123;align*&#125;
                   \&#123;a^n b^n c^n \ | \ n \geq 0 \&#125;
                   \end&#123;align*&#125;$$
@@ -53,12 +58,13 @@ const Article = () => {
                       Informelle Beschreibung.
                     </b>
                     {" "}Unsere Turingmaschine arbeitet
+                    &ensp;Unsere Turingmaschine arbeitet
                     in Phasen. In jeder Phase sucht die Maschine ein \(a\) und löscht es
                     (ersetzt es durch ein \(X\)). Dann geht sie nach rechts und
                     sucht und markiert ein \(b\); dann ein \(c\). Sobald sie das \(c\) markiert hat,
                     geht sie wieder nach links. Dies beendet die Phase.
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn die Maschine kein \(a\) mehr findet und auch kein \(b\) oder \(c\) mehr da ist,
+                  Wenn die Maschine kein \(a\) mehr findet und auch kein \(b\) oder \(c\) mehr da ist,
                   akzeptiert die Maschine.
                   Wenn unterwegs ein "Fehler" geschieht, beispielsweise die Maschine ein \(b\) sucht
                   aber keines findet, wechselt sie in den{" "}
@@ -72,11 +78,12 @@ const Article = () => {
                       Formellere Beschreibung.
                     </b>
                     {" "}Als Bandalphabet verwenden wir
+                    &ensp;Als Bandalphabet verwenden wir
                     $$\begin&#123;align*&#125;
                     \Gamma := \&#123;a,b,c, X, \square\&#125; \ .
                     \end&#123;align*&#125;$$
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Symbol \(X\) heißt dann "hier stand mal \(a\), \(b\) oder \(c\), wir haben es aber bereits
+                  Das Symbol \(X\) heißt dann "hier stand mal \(a\), \(b\) oder \(c\), wir haben es aber bereits
                   gelesen". Als Zustandsmenge verwenden wir
                   $$\begin&#123;align*&#125;
                   Q := \&#123;\texttt&#123;findA&#125;,\texttt&#123;findB&#125;,\texttt&#123;findC&#125;,\texttt&#123;noA&#125;,
@@ -99,6 +106,7 @@ const Article = () => {
                       <tt>
                         noA
                       </tt>
+                      &ensp;und gehe ein Feld nach rechts.
                       &ensp;und gehe ein Feld nach rechts.
                     </li>
                     <li>
@@ -145,7 +153,7 @@ const Article = () => {
                     </li>
                   </ul>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können die Beschreibung jetzt formal als Funktion
+                    Wir können die Beschreibung jetzt formal als Funktion
                     \(\delta: Q \times \Gamma \rightarrow Q \times \Gamma \times \rls\) niederschreiben.
                   </Paragraph>
                   <figure>
@@ -155,11 +163,12 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie: manche Zellen sind leer. Damit meine ich, dass die Turingmaschine dort
+                    Beachten Sie: manche Zellen sind leer. Damit meine ich, dass die Turingmaschine dort
                     in den Zustand{" "}
                     <tt>
                       reject
                     </tt>
+                    &ensp;wechselt. Andere Zellen bestehen nur aus einem
                     &ensp;wechselt. Andere Zellen bestehen nur aus einem
                     Buchstaben; so steht in der Zelle von \(\delta(\texttt&#123;findA&#125;, b)\) nur
                     ein \(\texttt&#123;R&#125;\). Dies bedeutet, dass die Turingmaschine ihren Zustand nicht
@@ -167,11 +176,11 @@ const Article = () => {
                     ist reiner Syntaxzucker.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Auf der Webseite
+                    Auf der Webseite
                     <a href="https://turingmachinesimulator.com">
                       turingmachinesimulator.com
                     </a>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;können Sie Ihre Turingmaschine eingeben und simulieren. Den Text für
+                    können Sie Ihre Turingmaschine eingeben und simulieren. Den Text für
                     die gerade beschriebene finden in{" "}
                     <a href="../code/turing machines/aabbcc.txt">
                       aabbcc.txt
@@ -186,10 +195,11 @@ const Article = () => {
                       q, a
                       r, b, D{" "}
                     </pre>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;angeben, wobei die Richtung \(D\) mit den Symbolen{" "}
+                    angeben, wobei die Richtung \(D\) mit den Symbolen{" "}
                     <tt>
                       &lt;, -,&gt;
                     </tt>
+                    &ensp;codiert wird.
                     &ensp;codiert wird.
                   </Paragraph>
                 </div>
@@ -199,13 +209,13 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als zweites Beispiel nehmen wir die Palindromsprache
+                  Als zweites Beispiel nehmen wir die Palindromsprache
                   $$\begin&#123;align*&#125;
                   L := \&#123; w \in \&#123;a,b\&#125;^* \ | \ w = w^R \&#125; \ ,
                   \end&#123;align*&#125;$$
                   wobei \(w^R\) das Kehrwort bedeutet, also \(aabba^R = abbaa\).
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unsere Maschine sucht das erste Zeichen, löscht es (ersetzt es durch \(\square\)
+                    Unsere Maschine sucht das erste Zeichen, löscht es (ersetzt es durch \(\square\)
                     und "merkt" es sich in ihrem Zustand.
                     Dann geht sie zum rechten Rand und vergleicht es mit dem dortigen.
                     Falls es passt, löscht sie es und geht wieder nach links zurück. Falls es nicht
@@ -222,7 +232,7 @@ const Article = () => {
                     Länge gehandelt.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als Bandalphabet brauchen wir hier nur \(\Gamma = \&#123;a,b,\square\&#125;\). Als
+                    Als Bandalphabet brauchen wir hier nur \(\Gamma = \&#123;a,b,\square\&#125;\). Als
                     Zustandsmenge nehmen wir
                     $$\begin&#123;align*&#125;
                     Q = \&#123;\texttt&#123;next&#125;, \texttt&#123;readA&#125;, \texttt&#123;readB&#125;, \texttt&#123;killA&#125;, \texttt&#123;killB&#125;,
@@ -245,11 +255,13 @@ const Article = () => {
                         readA
                       </tt>
                       &ensp;und gehen
+                      &ensp;und gehen
                       einen Schritt nach rechts; ist es
                       \(b\), wechseln wir nach{" "}
                       <tt>
                         readB
                       </tt>
+                      &ensp;und gehen nach rechts.
                       &ensp;und gehen nach rechts.
                     </li>
                     <li>
@@ -262,9 +274,11 @@ const Article = () => {
                         killA
                       </tt>
                       &ensp;bzw.
+                      &ensp;bzw.
                       <tt>
                         killB
                       </tt>
+                      &ensp;und gehen einen Schritt nach links.
                       &ensp;und gehen einen Schritt nach links.
                     </li>
                     <li>
@@ -311,23 +325,29 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;7.2.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Implementieren Sie die Turingmaschine für die Palindromsprache auf
+                  Implementieren Sie die Turingmaschine für die Palindromsprache auf
                   <a href="https://turingmachinesimulator.com">
                     turingmachinesimulator.com
                   </a>
                   .
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Jetzt sind Sie dran.
+                  Jetzt sind Sie dran.
                 </Paragraph>
                 <div
                   id="exercise-wcw"
                   class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;7.2.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie eine Turingmaschine (auf{" "}
+                  Schreiben Sie eine Turingmaschine (auf{" "}
                   <a href="https://turingmachinesimulator.com">
                     turingmachinesimulator.com
                   </a>
@@ -340,20 +360,23 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;7.2.3{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie auf{" "}
+                  Schreiben Sie auf{" "}
                   <a href="https://turingmachinesimulator.com">
                     turingmachinesimulator.com
                   </a>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;eine Turingmaschine für die Sprache
+                  eine Turingmaschine für die Sprache
                   $$\begin&#123;align*&#125;
                   L := \&#123;1^n \ | \ n = 2^d, d \geq 0\&#125; \ .
                   \end&#123;align*&#125;$$
-                  {" "}
                   <b>
                     Tip:
                   </b>
                   {" "}gehen Sie durch das Band und ersetzen jede zweite
+                  &ensp;gehen Sie durch das Band und ersetzen jede zweite
                   \(1\), die Sie sehen, durch ein \(X\). Wenn Sie rechts ankommen und eine
                   ungerade Anzahl von Einsen gelesen haben, lehnen Sie ab. Wenn
                   die Anzahl gerade ist, gehen Sie wieder nach ganz links; sie haben nun

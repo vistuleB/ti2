@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={45}
-        title_gr="Die universelle Turingmaschine"
+        title_gr="4.4 Die universelle Turingmaschine"
         title_en="Turing encoding"
-        number={7.4}>
+        number={7.4}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes45.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,11 +38,12 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    7.4 
                     4.4 Die universelle Turingmaschine
                   </span>
                 </h1>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben mit der Turingmaschine ein einfaches aber doch sehr mächtiges Modell einer
+                  Wir haben mit der Turingmaschine ein einfaches aber doch sehr mächtiges Modell einer
                   Rechenmaschine kennengelernt.
                   Sie haben vielleicht mittlerweile - auch durch Ihre Programmiererfahrung - das Gefühl, das man
                   im Prinzip alles, was
@@ -57,7 +62,7 @@ const Article = () => {
                   Neue Maschine bauen. Verschlüsselung brechen? Neue Maschine bauen. Und so weiter.
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Idee einer{" "}
+                  Die Idee einer{" "}
                   <a href="https://en.wikipedia.org/wiki/Mechanical_calculator#Programmable_mechanical_calculators">
                     programmierbaren
                     Maschine
@@ -72,6 +77,7 @@ const Article = () => {
                     eine
                   </i>
                   {" "}Maschine bauen und sie für die jeweilige
+                  &ensp;Maschine bauen und sie für die jeweilige
                   Aufgabe{" "}
                   <i>
                     programmieren
@@ -90,12 +96,12 @@ const Article = () => {
                     Maschine übergeben können?
                   </li>
                   <li>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Welche Maschine könnte so eine Rechenvorschrift lesen und sie an gegebenen Eingabedaten dann
+                    Welche Maschine könnte so eine Rechenvorschrift lesen und sie an gegebenen Eingabedaten dann
                     auch ausführen?
                   </li>
                 </ol>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es stellt sich heraus, dass wir beide Antworten (beinahe) schon kennen. Eine beliebige
+                  Es stellt sich heraus, dass wir beide Antworten (beinahe) schon kennen. Eine beliebige
                   Rechenvorschrift können wir, da sind wir uns mittlerweile
                   recht sicher, als Turingmaschine \(M\) implementieren. Diese können wir über einem Alphabet
                   codieren und erhalten ein Wort
@@ -103,6 +109,7 @@ const Article = () => {
                   <a href="https://turingmachinesimulator.com">
                     turingmachinesimulator.com
                   </a>
+                  &ensp;haben wir das
                   &ensp;haben wir das
                   bereits getan:
                   eine Turingmaschine mit Alphabet \(\Sigma\) können wir dort als String über dem Alphabet
@@ -114,7 +121,7 @@ const Article = () => {
                   ansprechen.
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Punkt 2 ist schwieriger. Können wir eine Maschine bauen, die als eingabe (1) die Codierung
+                  Punkt 2 ist schwieriger. Können wir eine Maschine bauen, die als eingabe (1) die Codierung
                   \(\enc(M)\) einer Turingmaschine und (2) ein Eingabewort
                   \(w \in \Sigma^*\) entgegennimmt und dann die Berechnung \(M(x)\) simuliert bzw. zu dem Ergebnis
                   gelangt, zu dem auch \(M(x)\) gelangen würde?
@@ -123,6 +130,7 @@ const Article = () => {
                     turingmachinesimulator.com
                   </a>
                   &ensp;haben dies
+                  &ensp;haben dies
                   offensichtlich geschafft:
                   sie haben eine Maschine "gebaut" (also wohl einen Server gemietet und eine Webseite mit viel
                   Javascript programmiert), der
@@ -130,7 +138,7 @@ const Article = () => {
                   simuliert.
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem Teilkapitel werden wir sehen, wie wir eine Turingmaschine $M$ über einem
+                  In diesem Teilkapitel werden wir sehen, wie wir eine Turingmaschine $M$ über einem
                   fixen, nicht von $M$ abhängigen Alphabet codieren können.
                   Im nächsten Teilkapitel werden wir uns überlegen, wie man einen Turingmaschinen-Simulator selbst
                   als
@@ -142,7 +150,7 @@ const Article = () => {
                   entgegennimmt und dann
                   <ol class="nested">
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                      {" "}{" "}
                       <b>
                         ablehnt
                       </b>
@@ -158,6 +166,7 @@ const Article = () => {
                             akzeptiert
                           </b>
                           {" "}falls \(M(x)\) akzeptiert;
+                          &ensp;falls \(M(x)\) akzeptiert;
                         </li>
                         <li>
                           {" "}{" "}
@@ -176,7 +185,7 @@ const Article = () => {
                       </ol>
                     </li>
                   </ol>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls wir bei \(M\) nicht nur an Akzeptieren / Ablehnen interessiert sind, sondern am Ergebnis der
+                  Falls wir bei \(M\) nicht nur an Akzeptieren / Ablehnen interessiert sind, sondern am Ergebnis der
                   Berechnung,
                   dann hätten wir gerne, dass \(U (\enc(M)\#x)\) am Ende den gleichen Bandinhalt hat wie \(M(x)\) am
                   Ende;
@@ -201,6 +210,7 @@ const Article = () => {
                     Erster, zum scheitern verurteilter Versuch.
                   </b>
                   {" "}Sei \(M\) eine Turingmaschine
+                  &ensp;Sei \(M\) eine Turingmaschine
                   mit Eingabealphabet \(\Sigma\), Arbeitsalphabet \(\Gamma\), Zustandsmenge \(Q\), Startzustand
                   \(\qstart\), akzeptierendem Zustand
                   \(\qaccept\) und Übergangsfunktion \(\delta\).
@@ -221,11 +231,11 @@ const Article = () => {
                   Sehen Sie das Problem? Das Codierungsalphabet ist nicht uniform: wir brauchen, abhängig von der
                   Zustandsmenge \(Q\) und
                   dem Bandalphabet \(\Gamma\) jeweils neue Alphabete. Wir wollen aber ein \(\Lambda\), da für
-                  {" "}
                   <i>
                     alle
                   </i>
                   {" "}Turingmaschinen
+                  &ensp;Turingmaschinen
                   mit Eingabealphabet \(\Sigma\) funktioniert.
                 </Paragraph>
                 <Paragraph>
@@ -235,7 +245,7 @@ const Article = () => {
                   </b>
                   {" "}{" "}
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir müssen also die Zustandsmenge \(Q\) und die Zeichen \(\Gamma \setminus \Sigma\) erst einmal
+                Wir müssen also die Zustandsmenge \(Q\) und die Zeichen \(\Gamma \setminus \Sigma\) erst einmal
                 selbst codieren, beispielsweise
                 über dem Alphabet \(\&#123;0,1\&#125;\). Die \(\delta\)-Tabelle der Turingmaschine für \(\&#123;a^nb^nc^n\&#125;\)
                 <figure>
@@ -244,7 +254,7 @@ const Article = () => {
                     src="../img/turing-machines/exampe-2-aabbcc/delta-table.svg"
                     loading="lazy" />
                 </figure>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;würde dann zu folgender Tabelle:
+                würde dann zu folgender Tabelle:
                 <figure>
                   <img
                     style="height:10em"
@@ -257,6 +267,7 @@ const Article = () => {
                     ein
                   </i>
                   {" "}Wort in obigen Schema schreiben, können wir für eine
+                  &ensp;Wort in obigen Schema schreiben, können wir für eine
                   Tabellenzelle
                   \(\delta(q,x) = (r,y,R)\) nicht einfach \(qxryR\) schreiben, auch nicht einfach die Codierungen
                   zusammenschreiben:
@@ -272,13 +283,14 @@ const Article = () => {
                   00#100#00,a,01,1,S#00,b,L#00,c,L#00,1,L#00,0,11,0,R#01,a,R#01,b,10,1,S#01,1,R#10,b,R#10,c,00,1,S#10,1,R#11,1,R#11,0,100#;
                 </pre>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In dieser Codierung behalten wir zwei Konventionen bei: wenn eine Regel
+                  In dieser Codierung behalten wir zwei Konventionen bei: wenn eine Regel
                   "fehlt", also beispielsweise für \(\delta(10,a)\) die Zelle leer ist, dann
                   soll das in den Zustand $\qreject$ führen; wenn in der Zelle
                   nur ein Richtungszeichen, also beispielsweise{" "}
                   <tt>
                     01,1,R
                   </tt>
+                  &ensp;steht,
                   &ensp;steht,
                   dann ist das eine Abkürzung für
                   $$\begin&#123;align*&#125;
@@ -290,11 +302,12 @@ const Article = () => {
                   </tt>
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können nun{" "}
+                  Wir können nun{" "}
                   <i>
                     jede
                   </i>
                   {" "}Turingmaschine
+                  &ensp;Turingmaschine
                   über dem Alphabet
                   \(\Sigma\) codieren als Wort über dem Alphabet
                   $$\begin&#123;align*&#125;
@@ -304,14 +317,19 @@ const Article = () => {
                 <div class="well container theorem">
                   <Paragraph>
                     <span class="numbered-title">
-                      Definition/Beobachtung.
+                      Definition
+                      <NumberedTitle>
+                        &ensp;7.4.1{" "}
+                      </NumberedTitle>
+                      /Beobachtung.
                     </span>
+                    &ensp;Zu einem Eingabealphabet
                     &ensp;Zu einem Eingabealphabet
                     $\Sigma$ definieren wir das{" "}
                     <i>
                       Codierungsalphabet
                     </i>
-                    {" "}$\Lambda := \writelambda$,
+                    $\Lambda := \writelambda$,
                     wobei wir annehmen, dass $\texttt&#123;#&#125;, \texttt&#123;,&#125;, \texttt&#123;L&#125;, \texttt&#123;S&#125;, \texttt&#123;R&#125;,
                     \texttt&#123;;&#125;
                     \not \in \Sigma$. Wir können nun jede Turingmaschine $M$ mit Eingabealphabet
@@ -319,16 +337,18 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <div class="alert-info container">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Anmerkungen:
                   </b>
                   {" "}
+                  &ensp;das Wort 
                   &ensp;das Wort{" "}
                   <i>
                     Codierung
                   </i>
                   {" "}suggeriert, dass wir, gegeben
+                  &ensp;suggeriert, dass wir, gegeben
                   den String $c = \enc(M)$ die
                   ursprüngliche Turingmaschine $M$ rekonstruieren können. Das gilt natürlich nur
                   beschränkt: eventuell decodieren wir $c$ zu einer Maschine $M'$, die sich

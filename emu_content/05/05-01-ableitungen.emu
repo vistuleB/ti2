@@ -1,7 +1,9 @@
 |> Section
-    title_gr Ableitungen und Ableitungsbäume
+    title_gr 5.1 Ableitungen und Ableitungsbäume
     title_en ableitungen
     number 5.1
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,14 +38,19 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             5.1 Ableitungen und Ableitungsbäume
                     |> div
                         class well container theorem
                         |> span
                             class numbered-title
 
-                            Definition (Ableitung)
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(G\) eine Grammatik mit Startsymbol \(S\). Die Ableitung eines
+                            Definition
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                            &ensp;(Ableitung)
+                        Sei \(G\) eine Grammatik mit Startsymbol \(S\). Die Ableitung eines
                         Wortes \(\alpha\) ist eine Sequenz von Wortformen \( w_0, w_1, \dots,
                         w_n\) mit \(w_0 = S, w_n = \alpha\) und \(w_{i-1} \Longrightarrow
                         w_i\).
@@ -70,7 +77,7 @@
                     werden.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir im Folgenden ein weiteres Beispiel einer Ableitung, in
+                        Betrachten wir im Folgenden ein weiteres Beispiel einer Ableitung, in
                         diesem Falle eine _Rechtsableitung_, in der in jedem Schritt
                         das am weitesten rechts stehende Nichtterminal expandiert wird:
                     \begin{align*} E&amp;\stackrel{2}{\Longrightarrow} T
@@ -87,7 +94,7 @@
                     2351... sondern 64642641532.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie, dass wir es hier mit einer eindeutigen Grammatik zu tun
+                        Beachten Sie, dass wir es hier mit einer eindeutigen Grammatik zu tun
                         haben, es also nur einen Syntaxbaum gibt:
                     |> figure
                         |> img
@@ -96,18 +103,20 @@
                             loading lazy
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rechtsableitung und Linksableitung sowie deren Codierung als
+                        Rechtsableitung und Linksableitung sowie deren Codierung als
                         Zahlenfolge spiegeln also nur zwei verschiedene Weisen wieder, den
                         Baum auszugeben.
                     |> pre
                         class listing container
 
-                        `def treeToLeftDerivation (tree):`                        
-
-                        &ensp;&ensp;`print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`  `for child in tree.children (from left ro right):`      `treeToLeftDerivation(child)````def treeToRightDerivation (tree):`                        
-
-                        &ensp;&ensp;`for child in tree.children (from left ro right):`      `treeToLeftDerivation(child)`  `print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
+                        `def treeToLeftDerivation (tree):` `print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
+                        &ensp;&ensp;print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)` `for child in tree.children (from left ro right):
+                        &ensp;&ensp;for child in tree.children (from left ro right):` `treeToLeftDerivation(child)
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;treeToLeftDerivation(child)````def treeToRightDerivation (tree):` `for child in tree.children (from left ro right):
+                        &ensp;&ensp;for child in tree.children (from left ro right):` `treeToLeftDerivation(child)
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;treeToLeftDerivation(child)` `print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
+                        &ensp;&ensp;print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie, dass wir in beiden Fällen die Liste Kinder von links
+                        Beachten Sie, dass wir in beiden Fällen die Liste Kinder von links
                         nach rechts durchgehen.

@@ -1,7 +1,9 @@
 |> Section
-    title_gr Binär-Addierer
+    title_gr ::++ChapterCtr Binär-Addierer
     title_en binary adder
     number 1.3
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,6 +38,7 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             ::++ChapterCtr Binär-Addierer
                     |> h3
 
@@ -52,7 +55,7 @@
                         "sechs plus acht plus sieben = eins, zwei gemerkt", und die 2 muss dann zu den links daneben
                         stehenden Ziffern addiert werden. Binär ist alles viel einfacher, weil man sich nur 0 oder 1
                         merken muss.
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$
+                    $$
                     \begin{array}{cc|cc}
                     x&amp;y&amp;{\rm result}&amp;{\rm carry} \\ \hline
                     0&amp;0&amp;0&amp;0 \\
@@ -65,12 +68,13 @@
 
                         Das Carry wird dann der eins weiter links stehenden Stelle zur Addition weitergegeben.
                         Aber halt! Das heißt doch, dass wir in der nächsten Stelle _drei_ Bits addieren
+                        &ensp;Bits addieren
                         müssen:
                         das von \(x\), das von \(y\), und das eingehende Carry \(\cin\). Daraus berechnet
                         sich das Output-Bit \(s\) und das ausgehende Carry \(\cout\), das nach links weitergegeben
                         wird.
                         Unsere Tabelle ist also etwas größer:
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$
+                    $$
                     \begin{array}{ccc|cc}
                     x&amp;y&amp;\cin&amp;s&amp;\cout \\ \hline
                     0&amp;0&amp;0&amp;0&amp;0 \\
@@ -85,7 +89,7 @@
                     $$
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Glücklicherweise muss man sich diese Tabelle nicht merken, es gilt nämlich
+                        Glücklicherweise muss man sich diese Tabelle nicht merken, es gilt nämlich
                         \begin{align*}
                         s&amp;= x \oplus y \oplus \cin \\
                         \cout&amp;= {\rm Maj} (x, y, \cin) \ .
@@ -100,7 +104,7 @@
                             loading lazy
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir numerieren unsere Variablen von \(0, \dots,n-1\), damit wir die
+                        Wir numerieren unsere Variablen von \(0, \dots,n-1\), damit wir die
                         repräsentierte natürliche Zahl bequem als
                         \(\sum_{i=0}^n x_i 2^i\) schreiben können. Beachten Sie auch die
                         unvermittelt rechts stehende 0. Streng genommen lässt unsere Definition
@@ -110,7 +114,7 @@
                         werden).
                     |> p
 
-                        Wie groß ist dieser Schaltkreis? Wenn wir jedes \(\oplus\)- und \(M\)-Gate als _ein_                        Gate
+                        Wie groß ist dieser Schaltkreis? Wenn wir jedes \(\oplus\)- und \(M\)-Gate als _ein_Gate
                         zählen, so haben wir insgesamt \(2n\) innere Gates und \(2n\) Input-Gates.
                         Wenn wir darauf bestehen, \(\oplus\)- und \(M\)-Gates aus AND/OR/NOT zu basteln,
                         haben wir mehr, allerdings in jedem Fall \(O(n)\) viele.
@@ -120,10 +124,14 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bauen Sie einen Schaltkreis 
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Bauen Sie einen Schaltkreis 
                         |> tt
 
                             oneBitAdder:
+                        &ensp;\( \{0,1\}^3 \rightarrow \{0,1\}^2\) für
                         &ensp;\( \{0,1\}^3 \rightarrow \{0,1\}^2\) für
                         folgende Funktionalität:
                         |> figure
@@ -131,11 +139,11 @@
                                 style height:10em
                                 src ../img/circuits/onebitadder.svg
                                 loading lazy
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Versuchen Sie, so wenig Gates wie möglich zu verwenden. Entscheiden Sie sich
+                        Versuchen Sie, so wenig Gates wie möglich zu verwenden. Entscheiden Sie sich
                         im Voraus, ob Sie beliebigen Fan-in erlauben wollen oder auf Fan-in 2 bestehen.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Größe von \(O(n)\) ist gut; besseres können wir nicht wirklich erwarten, schließlich
+                        Eine Größe von \(O(n)\) ist gut; besseres können wir nicht wirklich erwarten, schließlich
                         muss der Schaltkreis ja allein schon \(n\) Input-Gates haben. Wie steht es mit der Tiefe?
                         Wenn wir jedes \(\oplus\) und \(M\) als Gate
                         betrachten, dann hat der Pfad von \(x_0\) zu \(s_n\) die Länge \(n\) (beachten Sie:
@@ -152,8 +160,7 @@
 
                         Tiefenmässig hat uns der obige Addierer nicht befriedigt. Das Problem ist, dass das Carry
                         im schlimmsten Fall von ganz rechts nach ganz links durchrasseln muss,
-                        zum Beispiel wenn man \(11111111 + 00000001\) berechnet. So einen Addierer nennt man
-                        _ripple-carry adder_.
+                        zum Beispiel wenn man \(11111111 + 00000001\) berechnet. So einen Addierer nennt man_ripple-carry adder_.
                     |> p
 
                         Geringere Tiefe erreicht man mit _Carry Lookahead_. Hier versuchen wir,
@@ -161,7 +168,7 @@
                         \(i-1\) abzuwarten. Es lohnt, ein paar Dinge formaler zu definieren:
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(c_i\) ist das Carry, das von Position \(i-1\) an Position \(i\) übergeben wird;
+                        \(c_i\) ist das Carry, das von Position \(i-1\) an Position \(i\) übergeben wird;
                         \(s_i\) ist das \(i\)-te Bit der Summe (von rechts nach links zählend, bei 0 beginnend).
                         Es gilt also \(c_0 = 0\) und
                         \begin{align*}
@@ -179,13 +186,13 @@
                             loading lazy
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten Sie \((x_i,y_i)\). Wenn dies \((1,1)\) ist, so ist
+                        Betrachten Sie \((x_i,y_i)\). Wenn dies \((1,1)\) ist, so ist
                         \(c_{i+1}=1\);
                         wenn \((x_i,y_i) = (0,0)\), so ist \(c_{i+1}=0\). In beiden Fällen spielt
                         alles, was vor \(i\) kommt (rechts davon) spielt keine Rolle. Wenn nun
                         \(x_i \ne y_i\) ist, dann schaltet das \(M\)-Gate einfach \(c_i\) unverändert durch.
                         Dies motiviert die folgenden Definitionen:
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                    \begin{align*}
                     g_i&amp;:= x_i \wedge y_i \tag{carry-generate} \\
                     p_i&amp;:= x_i \vee y_i \tag{carry-propagate}
                     \end{align*}
@@ -196,7 +203,7 @@
                         Carry also erzeugt wird (carry generate), und dann
                         für alle \(j = \{i+1,\dots,k\}\) das Carry zumindest weitergereicht wird,
                         also \( x_j \vee y_j = 1\) gilt (carry propagate):
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$
+                    $$
                     c_{k+1} := g_k \vee (g_{k-1} \wedge p_k) \vee (g_{k-2} \wedge p_{k-1} \wedge p_{k}) \vee \dots
                     \vee
                     (g_0 \wedge p_1 \wedge \dots \wedge p_k) \ .
@@ -218,8 +225,9 @@
                         Carry-Lookahead mit \(O(n)\) Gates und \(O(\log n)\) Tiefe
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Effizientere Lösungen beginnen oft mit einer guten Definition. In diesem Falle ist das die
-                        Verallgemeinerung von _Carry Generate \(g_i\)_ und _Carry Propagate \(p_i\)_                        von Indizes auf Intervalle. Für ein Interval
+                        Effizientere Lösungen beginnen oft mit einer guten Definition. In diesem Falle ist das die
+                        Verallgemeinerung von _Carry Generate \(g_i\)_ und 
+                        &ensp;und _Carry Propagate \(p_i\)_von Indizes auf Intervalle. Für ein Interval
                         \([a,b] := \{a, a+1, \dots, b\}\) definieren wir Funktionen
                         \(g_{[a,b]}\) und \(p_{[a,b]}\) in den Variablen \(x_{a},\dots,x_{b}, y_a, \dots, y_b\)
                         wie folgt:
@@ -234,8 +242,12 @@
                         |> span
                             class numbered-title
 
-                            Definition (Carry propagate / generate für Intervalle)
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(I = \{a,a+1, \dots, b\}\) ein Intervall natürlicher Zahlen. Die Werte
+                            Definition
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                            &ensp;(Carry propagate / generate für Intervalle)
+                        Sei \(I = \{a,a+1, \dots, b\}\) ein Intervall natürlicher Zahlen. Die Werte
                         \(p_I\) und \(g_I\) sind wie folgt definiert:
                         |> ul
                             |> li
@@ -259,8 +271,8 @@
                             \(p_{[a]} = p_a = x_a \vee y_a\) und \(g_{[a]} = g_a = x_a \wedge y_a\).
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Hier sind Boolesche Formeln (in DNF) für \(p_{[a,b]}\) und \(g_{[a,b]}\):
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                        Hier sind Boolesche Formeln (in DNF) für \(p_{[a,b]}\) und \(g_{[a,b]}\):
+                    \begin{align*}
                     g_{[a,b]}&amp;:= g_b \vee (g_{b-1} \wedge p_b) \vee (g_{b-2} \wedge p_{b-1} \wedge p_b)
                     \vee \dots \vee (g_a \wedge p_{a+1} \wedge \dots \wedge p_b) \ , \\
                     p_{[a,b]}&amp;:= g_b \vee (g_{b-1} \wedge p_b) \vee (g_{b-2} \wedge p_{b-1} \wedge p_b)
@@ -282,7 +294,7 @@
                             loading lazy
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im Extremfall \(a=b\) gilt \(g_{[a,a]} = g_a, p_{[a,a]} = p_a\), also wie
+                        Im Extremfall \(a=b\) gilt \(g_{[a,a]} = g_a, p_{[a,a]} = p_a\), also wie
                         die "alten" individuellen \(p_a, g_a\).
                         Diese Definition \(g_{[a,b]}\) ist nützlich, da erstens
                         $$
@@ -296,14 +308,17 @@
                             class numbered-title
 
                             Beobachtung
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir \([a,b] = [a,i] \cup [i+1,b] \) schreiben für \(a \lt i \lt b\), dann gilt
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        Wenn wir \([a,b] = [a,i] \cup [i+1,b] \) schreiben für \(a \lt i \lt b\), dann gilt
                         \begin{align*}
                         p_{[a,b]}&amp;= g_{[i+1,b]} \vee (p_{[a,i]} \wedge p_{[i+1,b]}) \ , \\
                         g_{[a,b]}&amp;= g_{[i+1,b]} \vee (g_{[a,i]} \wedge p_{[i+1,b]}) \ . \\
                         \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Überzeugen Sie sich von der Richtigkeit entweder durch Nachdenken (z.B. "damit im Interval
+                        Überzeugen Sie sich von der Richtigkeit entweder durch Nachdenken (z.B. "damit im Interval
                         \([a,b]\) ein
                         Carry erzeugt wird, muss es entweder im höheren Interval erzeugt werden, oder im
                         niedrigeren,
@@ -317,15 +332,17 @@
                         können.
                         Das Problem: es gibt zu viele Intervalle, nämlich \(1 + 2 + \dots + n = {n+1 \choose 2} =
                         \Theta(n^2)\) viele.
-                        Der Trick: wir beschränken uns auf besonders schöne Intervalle, nämlich
-                        _Binärintervalle_.
+                        Der Trick: wir beschränken uns auf besonders schöne Intervalle, nämlich_Binärintervalle_.
                     |> div
                         class well container theorem
                         |> span
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein Binärintervall ist eine Menge natürlicher Zahlen der Form
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        Ein Binärintervall ist eine Menge natürlicher Zahlen der Form
                         $$
                         \{ c \cdot 2^d, c \cdot 2^d + 1, \dots, c \cdot 2^{d} + 2^{d} - 1\}
                         $$
@@ -339,13 +356,17 @@
                         Binärdarstellung
                         ist das \(1100, 1101, 1110, 1111\). Wir können es also auch mit
                         in _Sternchennotation_ mit [11**] notieren.
+                        &ensp;mit [11**] notieren.
                     |> div
                         class well well-lg numbered-exercise container
                         |> span
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Seit \(n = 2^d-1\). Wie viele Binärintervalle gibt es in
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Seit \(n = 2^d-1\). Wie viele Binärintervalle gibt es in
                         \(\{0,\dots,n-1\}\)?
                     |> div
                         class well container theorem
@@ -353,14 +374,14 @@
                             class numbered-title
 
                             Lemma
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gibt einen Schaltkreis mit Input-Gates \(x_0,\dots,x_{n-1}, y_0, \dots, y_{n-1}\) mit
+                        Es gibt einen Schaltkreis mit Input-Gates \(x_0,\dots,x_{n-1}, y_0, \dots, y_{n-1}\) mit
                         Größe \(6n - 4 \in O(n)\) und Tiefe \(2\, \ceil{\log_2 n} + 1 \ \in O(\log n)\) und
                         Output-Gates
                         \(p_{I}, g_I\) für jedes Binärinterval \(I\).
                     |> div
                         class well container
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Ein Binärintervall, zum Beispiel \([32,47]\) können wir
+                        *Beweis.*Ein Binärintervall, zum Beispiel \([32,47]\) können wir
                         als Vereinigung von zwei kleineren Binärintervallen schreiben, hier
                         \([32,47] = [32,39] \cup [40,47]\). In unserer Sternchen-Notation:
                         $$
@@ -378,7 +399,7 @@
                                 style height:10em
                                 src ../img/circuits/pg-gate.svg
                                 loading lazy
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Mit Hilfe dieses Gates können wir
+                        Mit Hilfe dieses Gates können wir
                         \(p_{c0*^k}, g_{c0*^k}\) und \(p_{c1*^k}, g_{c1*^k}\)
                         zu \(p_{c*^{k+1}}, g_{c*^{k+1}}\) kombinieren. Wir fangen
                         nun mit Binärintervallen der Größe \(1\) an und arbeiten uns hoch.
@@ -391,7 +412,7 @@
                                 loading lazy
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Jede Kante steht hier für zwei gebündelte Kanten, nämlich
+                            Jede Kante steht hier für zwei gebündelte Kanten, nämlich
                             \(p_I\) und \(g_I\).
                             Und dies ist unser Schaltkreis. Beachten Sie, dass
                             die untersten \(pg_{i}\) keine Input-Gates sind, sondern
@@ -428,23 +449,23 @@
                                 \(\square\)
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine anschließende Bemerkung: der Schaltkreis
+                        Eine anschließende Bemerkung: der Schaltkreis
                         besteht ausschließlich aus AND- und OR-Gates; er enthält
-                        keine NOT-Gates und ist somit ein _monotoner Schaltkreis._                    
+                        keine NOT-Gates und ist somit ein _monotoner Schaltkreis._
                     |> div
                         class well container theorem
                         |> span
                             class numbered-title
 
                             Lemma
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gibt einen Schaltkreis der Größe \(2n\) und
+                        Es gibt einen Schaltkreis der Größe \(2n\) und
                         Tiefe \(2 \ceil{\log_2 n} - 2 = O(\log n)\), der die \(p_I, g_I\) für Binärintervalle
                         als Inputs nimmt und daraus \(g_{[0,k]}\) berechnet für jedes
                         \(k=0,\dots,n-1\), also insgesamt \(n\) Output-Gates.
                     |> div
                         class well container
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Die Idee ist, dass wir jedes \([0,k]\) als Vereinigung
+                        *Beweis.*Die Idee ist, dass wir jedes \([0,k]\) als Vereinigung
                         von wenigen Binärintervallen schreiben können, zum Beispiel
                         \begin{align*}
                         [0,9]&amp;= [0,7] \cup [8,9] \ , \\
@@ -454,12 +475,14 @@
                         |> p
 
                             *1. Fall.* Wenn \(k\) die Form \(k = 2^d-1\) hat, dann ist
+                            &ensp;Wenn \(k\) die Form \(k = 2^d-1\) hat, dann ist
                             \([0,k]\) bereits ein Binärintervall; dies passiert, wenn
                             die Binärdarstellung von \(k\) die Form \(k = (1^b)_2 \) hat (wobei \(b=0\)
                             sein kann, in welchem Fall \(k=0\) ist).
                             |> p
 
                                 *2. Fall.* Wenn \(k\) nicht die Form \(k = 2^d-1\) hat,
+                                &ensp;Wenn \(k\) nicht die Form \(k = 2^d-1\) hat,
                                 dann hat die Binärdarstellung von \(k\) nicht die Form \(1^b\); sie
                                 enthält also auch nicht-führende Nullen (beachten Sie, dass \((0111)_2\) und \((111)_2\)
                                 die
@@ -485,7 +508,7 @@
                                         style height:5em
                                         src ../img/circuits/pg0k.svg
                                         loading lazy
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Wert \(pg_{[l+1,k]}\) ist bereits ein Binärintervall, kann also
+                                Der Wert \(pg_{[l+1,k]}\) ist bereits ein Binärintervall, kann also
                                 direkt aus dem vorherigen Schaltkreis abgelesen werden; der andere
                                 Input, \(pg_{[0,l]}\), muss rekursiv berechnet werden. Beachten Sie,
                                 dass \( l = (\alpha 0 1^a 1^b)_2) \) gilt, die Anzahl der schließenden 1en in der
@@ -516,11 +539,13 @@
                             |> p
 
                                 *Tiefe.* Jedes \(pg\)-Gate hat Tiefe 2,
+                                &ensp;Jedes \(pg\)-Gate hat Tiefe 2,
                                 und somit erreichen \(d-1\) solche Gates hintereinander
                                 zusammen eine Tiefe von \(2 (d-1) = 2 \ceil{\log_2 n} - 2\). 
                             |> p
 
                                 *Größe.* Zählen wir die Anzahl von \(pg\)-Gates in unserem
+                                &ensp;Zählen wir die Anzahl von \(pg\)-Gates in unserem
                                 Schaltkreis. Wir haben bereits gesehen, dass die Berechnung von \(g_{[0,k]}\) höchstens
                                 \(d-1\) viele \(pg\)-Gates braucht. Es scheint also, als bräuchten wir für alle \(n\)
                                 Werte
@@ -553,7 +578,7 @@
                                     loading lazy
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir benötigen also (weniger als) \(n\) viele \(pg\)-Gates; jedes davon
+                            Wir benötigen also (weniger als) \(n\) viele \(pg\)-Gates; jedes davon
                             besteht wiederum aus 4 Basis-Gates \(\wedge, \vee\), und somit
                             brauchen wir maximal \(4n\) Gates. Wenn wir ganz genau hinsehen,
                             können wir es mit \(2n\) Gates schaffen: da \(c_{k+1} = g_{[0,k]}\),
@@ -565,14 +590,14 @@
                                     style height:15em
                                     src ../img/circuits/pg-gadget-no-need-p.svg
                                     loading lazy
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es reichen also in der Tat \(2n\) Basis-Gates aus. 
+                            Es reichen also in der Tat \(2n\) Basis-Gates aus. 
                             |> span
                                 class qed
 
                                 \(\square\)
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir kombinieren wir nun die beiden Lemmas und erhalten einen Schaltkreis der Tiefe \( 4
+                        Wir kombinieren wir nun die beiden Lemmas und erhalten einen Schaltkreis der Tiefe \( 4
                         \ceil {
                         \log_2 n } - 1\) und
                         Größe \(8n - 4\), mit \(x_0, y_0, \dots, x_{n-1}, y_{n-1} \) als Inputvariablen und Carrys
@@ -599,7 +624,10 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bauen Sie einen Schaltkreis für die Boolesche Funktion
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Bauen Sie einen Schaltkreis für die Boolesche Funktion
                         "less-than":
                         \begin{align*}
                         LT : \{0,1\}^{n} \times \{0,1\}^n \rightarrow \{0,1\} \\
@@ -614,5 +642,5 @@
                         die erste kleiner ist als die zweite.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ihr Schaltkreis sollte im Idealfall Größe \(O(n)\) und
+                            Ihr Schaltkreis sollte im Idealfall Größe \(O(n)\) und
                             Tiefe \(O(\log_2 n)\) und Fan-in 2 haben.

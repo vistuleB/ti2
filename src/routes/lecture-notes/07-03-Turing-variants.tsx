@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={44}
-        title_gr="Variationen: Mehrband-Maschinen, nichtdeterministische Maschinen"
+        title_gr="4.3 Variationen: Mehrband-Maschinen, nichtdeterministische Maschinen"
         title_en="Turing variants"
-        number={7.3}>
+        number={7.3}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes44.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,6 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    7.3 
                     4.3 Variationen: Mehrband-Maschinen, nichtdeterministische Maschinen
                   </span>
                 </h1>
@@ -41,7 +46,7 @@ const Article = () => {
                   Turingmaschinen mit mehreren Bändern
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im letzten Teilkapitel ist Ihnen bestimmt aufgefallen, dass es
+                  Im letzten Teilkapitel ist Ihnen bestimmt aufgefallen, dass es
                   auffallend lästig ist, selbst für einfache Sprachen wie $$\begin&#123;align*&#125;
                   \&#123;a^n b^n c^n \ | \ n \geq 0 \&#125; \end&#123;align*&#125;$$ oder $$\begin&#123;align*&#125; \&#123;wcw
                   \ | \ w \in \&#123;a,b\&#125;^*\&#125; \end&#123;align*&#125;$$ Turingmaschinen zu programmieren.
@@ -50,14 +55,13 @@ const Article = () => {
                   verschiedenen Stellen hin- und herfahren muss. Es bietet sich daher
                   an, an etwas allgemeineres Modell einer Rechenmaschine zu definieren,
                   das dann auch leichter zu programmieren ist. Dies ist die
-                  {" "}
                   <i>
                     Mehrband-Turingmaschine
                   </i>
                   .
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Mehrband-Turingmaschine ist wie eine Turingmaschine, nur dass sie
+                  Eine Mehrband-Turingmaschine ist wie eine Turingmaschine, nur dass sie
                   statt einem \(k\) viele Bänder und somit auch \(k\) viele
                   Schreib-Lese-Köpfe hat. Die Zustandsübergangsfunktion \(\delta\) hat
                   somit auch die Signatur $$\begin&#123;align*&#125; \delta : Q \times \Gamma^k
@@ -138,17 +142,17 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Entwerfen wir nun eine Turingmaschine für die Palindromsprache
+                  Entwerfen wir nun eine Turingmaschine für die Palindromsprache
                   $$\begin&#123;align*&#125; L := \&#123; w \in \&#123;a,b\&#125;^* \ | \ w = w^R \&#125; \ ,
                   \end&#123;align*&#125;$$ In
                   <a href="./04-01-Turing-machines-examples.html#example-palindromes">
                     Beispiel 4.2.2
                   </a>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;haben wir dafür eine Einband-Turingmaschine geschrieben. Deren
+                  haben wir dafür eine Einband-Turingmaschine geschrieben. Deren
                   Nachteil war, dass sie ständig zwischen dem linken und rechten Rand
                   hin-und-herlaufen musste.
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bauen wir nun eine Mehrband-Turingmaschine. Diese arbeitet in drei
+                    Bauen wir nun eine Mehrband-Turingmaschine. Diese arbeitet in drei
                     einfachen und kurzen Phasen:
                   </Paragraph>
                   <ol>
@@ -173,11 +177,11 @@ const Article = () => {
                       Inhalt haben.
                     </li>
                   </ol>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Den "Quelltext" für
+                  Den "Quelltext" für
                   <a href="https://turingmachinesimulator.com">
                     turingmachinesimulator.com
                   </a>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;finden Sie in
+                  finden Sie in
                   <a href="../code/turing machines/palindrome-multiple-tapes.txt">
                     palindrome-multiple-tapes.txt
                   </a>
@@ -186,12 +190,16 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;7.3.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie eine Mehrband-Turingmaschine, die Binärzahlen addiert.
+                  Schreiben Sie eine Mehrband-Turingmaschine, die Binärzahlen addiert.
                   Wenn also beispielsweise{" "}
                   <tt>
                     1010+110
                   </tt>
+                  &ensp;auf dem ersten Band
                   &ensp;auf dem ersten Band
                   (Eingabeband) steht, dann soll nach Abschluss der Berechnung das
                   Ergebnis auf dem Ausgabeband stehen, also{" "}
@@ -200,11 +208,12 @@ const Article = () => {
                   </tt>
                   .
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    {" "}{" "}
                     <b>
                       Tip.
                     </b>
                     {" "}Verwenden Sie drei Bänder. Sei der Bandinhalt
+                    &ensp;Verwenden Sie drei Bänder. Sei der Bandinhalt
                     \(x+y\). In einer ersten Phase kopieren Sie \(x\) auf das zweite
                     Band. In der nächsten Phase gehen Sie ans Ende von \(y\). Dann
                     addieren Sie nach den Regeln der Binäraddition. Ob "1 gemerkt" gilt
@@ -218,32 +227,37 @@ const Article = () => {
                     carry1, 0, 1, 0,&lt;,&lt;,&lt;
                   </pre>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein lästiges Detail ist, dass \(y\) kürzer sein könnte als \(x\) und
+                    Ein lästiges Detail ist, dass \(y\) kürzer sein könnte als \(x\) und
                     Sie daher in das{" "}
                     <tt>
                       +
                     </tt>
+                    &ensp;reinlaufen könnten; wenn \(x\) kürzer
                     &ensp;reinlaufen könnten; wenn \(x\) kürzer
                     ist als \(y\), dann könnten Sie auf dem zweiten Band in ein
                     \(\square\) reinlaufen. Wie ist dieser Fall zu behandeln?
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Berechnete Sprache, berechnete Funktion.
                   </b>
-                  {" "}Die Begriffe des Akzpetierens und Ablehnens definieren wir genau wie
+                  Die Begriffe des Akzpetierens und Ablehnens definieren wir genau wie
                   für die Einband-Turingmaschinen. Eine formale Definition der
                   Konfiguration ersparen wir uns jedoch. Wenn unsere
                   Mehrband-Turingmaschine nicht nur akzeptieren / ablehnen, sondern
                   etwas
-                  {" "}
                   <i>
                     berechnen
                   </i>
                   {" "}soll, also eine Funktion $$\begin&#123;align*&#125; f :
-                  \Sigma_1 \rightarrow \Sigma_2 \ , \end&#123;align*&#125;$$ dann bauen wir sie per
+                  &ensp;soll, also eine Funktion $$\begin&#123;align*&#125; f :
+                  \Sigma
+                  <i>
+                    1 \rightarrow \Sigma
+                  </i>
+                  2 \ , \end&#123;align*&#125;$$ dann bauen wir sie per
                   Konvention so, dass sie ein designiertes Ausgabeband hat, auf dem nach
                   Abschluss der Berechnung das Ausgabewort \(f(x)\) steht.
                 </Paragraph>
@@ -251,7 +265,7 @@ const Article = () => {
                   Einband-Maschinen können Mehrband-Maschinen simulieren
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es stellt sich heraus, dass mehrere Bänder zwar ein praktisches
+                  Es stellt sich heraus, dass mehrere Bänder zwar ein praktisches
                   Feature sind, aber nicht wirklich mehr Ausdruckskraft verlangen; was
                   eine Mehrband-Turingmaschine schafft, schafft eine
                   Einband-Turingmaschine auch.
@@ -260,7 +274,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     (Einband-Turingmaschine simuliert Mehrband-Turingmaschine)
                   </b>
@@ -269,11 +283,11 @@ const Article = () => {
                   \(M'\) mit folgenden Eigenschaften:
                   <ol>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(M'(x)\) akzeptiert/lehnt ab/terminiert nicht genau dann, wenn
+                      \(M'(x)\) akzeptiert/lehnt ab/terminiert nicht genau dann, wenn
                       \(M(x)\) akzeptiert/ablehnt/nicht terminiert.
                     </li>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn \(M(x)\) akzeptiert und \(y\) der Bandinhalt des
+                      Wenn \(M(x)\) akzeptiert und \(y\) der Bandinhalt des
                       Ausgabebandes ist, dann akzeptiert \(M'(x)\) auch, und der
                       Bandinhalt (des einzigen Bandes, es gibt ja nur eins) ist \(y\).
                     </li>
@@ -283,11 +297,11 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <div class="well container">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Beweis.
                   </b>
-                  {" "}Der erste Trick ist, dass wir die \(k\) Bänder von \(M\)
+                  Der erste Trick ist, dass wir die \(k\) Bänder von \(M\)
                   "zusammenkleben" in ein neues Band, in welcher jede Zelle \(k\)
                   Symbole enthalten kann:
                   <figure>
@@ -296,7 +310,7 @@ const Article = () => {
                       src="../img/turing-machines/example-3-multitape/multitape-to-onetape.svg"
                       loading="lazy" />
                   </figure>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Problem sind nun die Köpfe. Wenn wir diese Idee naiv umsetzen
+                  Das Problem sind nun die Köpfe. Wenn wir diese Idee naiv umsetzen
                   würden, hätte unsere Maschine \(M'\) zwar ein Band, dafür drei Köpfe
                   auf diesem:
                   <figure>
@@ -306,7 +320,7 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir lösen dies, indem wir die Kopfpositionen in das Band selbst
+                    Wir lösen dies, indem wir die Kopfpositionen in das Band selbst
                     reinschreiben:
                   </Paragraph>
                   <figure>
@@ -316,14 +330,14 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das neue Bandalphabet ist also nicht \(\Gamma^k\) sondern \((\Gamma
+                    Das neue Bandalphabet ist also nicht \(\Gamma^k\) sondern \((\Gamma
                     \times \&#123;\texttt&#123;head&#125;, \texttt&#123;nohead&#125;\&#125; )^k\). Wo steht nun aber
                     denn der Kopf von \(M'\)? Jetzt kommt der schwierige Teil: um
-                    {" "}
                     <i>
                       einen
                     </i>
                     {" "}Schritt von \(M\) zu simulieren, muss \(M'\) von ganz
+                    &ensp;Schritt von \(M\) zu simulieren, muss \(M'\) von ganz
                     links nach ganz rechts laufen und alle Informationen über die \(k\)
                     \(M\)-Köpfe sammeln. Dann von rechts nach links gehen und die
                     ausführen.
@@ -518,7 +532,7 @@ const Article = () => {
                         </div>
                       </div>
                     </figure>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir müssen also die Zustandsmenge deutlich erweitern; so muss sie
+                    Wir müssen also die Zustandsmenge deutlich erweitern; so muss sie
                     speichern können, ob wir ein Symbol bereits gelesen haben; ob wir
                     ein Symbol bereits geschrieben haben und ob wir den Kopf bereits
                     entsprechend verschoben haben. Für eine Rechtsverschiebung müssen
@@ -527,12 +541,12 @@ const Article = () => {
                     können alles in einer endlichen Zustandsmenge \(Q'\) speichern.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn der \(M\)-Zustand (der natürlich auch im \(M'\)-Zustand
+                    Wenn der \(M\)-Zustand (der natürlich auch im \(M'\)-Zustand
                     gespeichert ist),
                     <tt>
                       accept
                     </tt>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;erreicht hat, dann macht \(M'\) noch eine Aufräumphase, in welcher
+                    erreicht hat, dann macht \(M'\) noch eine Aufräumphase, in welcher
                     sie alle Symbole, die nicht zum Ausgabeband gehören, durch
                     \(\square\) ersetzt. Dann wechselt sie in ihren eigenen
                     akzeptierenden Zustand{" "}
@@ -587,13 +601,13 @@ const Article = () => {
                   {" "}{" "}
                 </pre>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ungleich schwieriger ist die Aufgabe, jedes \(b\) durch ein \(bc\) zu
+                  Ungleich schwieriger ist die Aufgabe, jedes \(b\) durch ein \(bc\) zu
                   ersetzen, weil wir hier etwas
-                  {" "}
                   <i>
                     einfügen
                   </i>
                   {" "}wollen. Auf einer Einband-Turingmaschine müssen wir
+                  &ensp;wollen. Auf einer Einband-Turingmaschine müssen wir
                   für jedes \(b\) alles, was rechts davon kommt, um eine Zelle nach
                   rechts verschieben. Meinen Quelltext finden sie in
                   <a href="../code/turing machines/replace-b-by-bc.txt">
@@ -604,28 +618,29 @@ const Article = () => {
                     einzufügen
                   </i>
                   {" "}und alles von Kopf bis zum linken Ende um
+                  &ensp;und alles von Kopf bis zum linken Ende um
                   eins nach links zu verschieben bzw. das analoge, aber nach rechts? Wir
                   sind freie Menschen, wir können definieren, was wir wollen, müssen uns
                   aber zwei Fragen stellen:
                 </Paragraph>
                 <ol>
                   <li>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ist das immer noch ein plausibles Modell einer Rechenmaschine? Ist
+                    Ist das immer noch ein plausibles Modell einer Rechenmaschine? Ist
                     also unser neue Funktionalität physikalisch realisierbar?
                   </li>
                   <li>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Verleiht es wirklich neue Funktionalität, oder ist es nur
+                    Verleiht es wirklich neue Funktionalität, oder ist es nur
                     Syntaxzucker?
                   </li>
                 </ol>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem Fall ahnen Sie es wohl bereits: es ist nur Syntaxzucker. Die
+                  In diesem Fall ahnen Sie es wohl bereits: es ist nur Syntaxzucker. Die
                   Funktionalität des
-                  {" "}
                   <i>
                     Einfügens/Verschiebens
                   </i>
                   {" "}können wir leicht mit zwei Bändern
+                  &ensp;können wir leicht mit zwei Bändern
                   simulieren. Wir halten uns einfach an die Konvention, dass auf Band 1
                   der Kopf immer auf dem linkesten Zeichen steht und auf Band 2 der Kopf
                   jenseits des rechtesten. $$\begin&#123;align*&#125; \delta(q,x) = (r,y,\texttt&#123;R&#125;)
@@ -635,7 +650,7 @@ const Article = () => {
                   q, x, _
                   r, _, x, &gt;, &gt;{" "}
                 </pre>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Linksbewegung ist etwas schwieriger zu implementieren. Aus
+                Eine Linksbewegung ist etwas schwieriger zu implementieren. Aus
                 \(\delta(q,x) = (r,y,\texttt&#123;L&#125;)\) wird
                 <pre class="container">
                   q,  x, _
@@ -647,7 +662,7 @@ const Article = () => {
                   </span>
                 </pre>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nehmen Sie die Beispielmaschine
+                  Nehmen Sie die Beispielmaschine
                   <a href="../code/turing machines/go-left-go-right.txt">
                     go-left-go-right.txt
                   </a>
@@ -655,10 +670,10 @@ const Article = () => {
                   <a href="https://turingmachinesimulator.com">
                     turingmachinesimulator.com
                   </a>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein und starten Sie sie mit dem Eingabewort \(xxx\).
+                  ein und starten Sie sie mit dem Eingabewort \(xxx\).
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein neues Zeichen links vom Kopf einfügen ist nun einfach: aus
+                  Ein neues Zeichen links vom Kopf einfügen ist nun einfach: aus
                   $$\begin&#123;align*&#125; \delta(q,x) = \textnormal&#123;Zustand $r$, schreibe $y$ und
                   füge $z$ links vom Kopf ein&#125; \end&#123;align*&#125;$$ wird
                 </Paragraph>
@@ -672,19 +687,20 @@ const Article = () => {
                   </span>
                 </pre>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sie können sich meine Implementierung in
+                  Sie können sich meine Implementierung in
                   <a href="../code/turing machines/insert-z-before-y.txt">
                     insert-z-before-y.txt
                   </a>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ansehen. Geben Sie beispielsweise{" "}
+                  ansehen. Geben Sie beispielsweise{" "}
                   <tt>
                     xxyxyyxx
                   </tt>
                   &ensp;als Eingabewort
+                  &ensp;als Eingabewort
                   ein.
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können von nun an also so tun, als hätten unsere Turingmaschinen
+                  Wir können von nun an also so tun, als hätten unsere Turingmaschinen
                   die Möglichkeit, zusätzliche Zellen einzufügen. In einer konkreten
                   Implementierung müssten wir dafür allerdings jedes Band durch zwei
                   Bänder ersetzen. Alternativ können Sie sich eine Turingmaschine
@@ -694,8 +710,7 @@ const Article = () => {
                   Die Dictionary-Maschine
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ein fundamentale Datenstruktur beim Programmieren sind
-                  {" "}
+                  Ein fundamentale Datenstruktur beim Programmieren sind
                   <i>
                     Dictionaries
                   </i>
@@ -717,7 +732,7 @@ const Article = () => {
                   <code class="pythonPrompt" />
                 </pre>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im Zweifelsfall sind diese als Hashmaps oder Rot-Schwarz-Bäume oder
+                  Im Zweifelsfall sind diese als Hashmaps oder Rot-Schwarz-Bäume oder
                   B-Bäume implementiert. Hier interessiert uns nicht so sehr die
                   Laufzeit, sondern einfach die Funktionalität. Können wir für
                   Dictionaries eine Turingmaschine implementieren?
@@ -725,23 +740,27 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;7.3.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie auf
+                  Schreiben Sie auf
                   <a href="https://turingmachinesimulator.com">
                     turingmachinesimulator.com
                   </a>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;eine Mehrband-Turingmaschine, die Inputs der Form $$\begin&#123;align*&#125; k [
+                  eine Mehrband-Turingmaschine, die Inputs der Form $$\begin&#123;align*&#125; k [
                   k_1 : v_1; k_2 : v_2; \dots ; k_n : v_n ] \end&#123;align*&#125;$$ entgegennimmt,
                   für \(k, k_1, \dots, k_n, v_1, \dots, v_n \in \&#123;0,1\&#125;^n \), also
                   \(\Sigma = \&#123;0,1, \texttt&#123;:&#125;, \texttt&#123;;&#125;, \texttt&#123;[&#125;, \texttt&#123;]&#125;\&#125;\)
                   und akzeptiert, wenn es ein \(i\) gibt mit \(k = k_i\) und in diesem
                   Falle \(v_i\) auf das Ausgabeband schreibt.
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    {" "}{" "}
                     <b>
                       Tip:
                     </b>
                     {" "}Kopieren Sie erst einmal den gesuchten
+                    &ensp;Kopieren Sie erst einmal den gesuchten
                     Schlüssel \(k\) auf das zweite Band. Dann können Sie bequem den
                     Schlüssel \(k_i\) auf dem ersten Band mit dem auf dem zweiten Band
                     vergleichen. Wenn Sie es sich einfach machen wollen, nehmen Sie
@@ -753,7 +772,7 @@ const Article = () => {
                   Nichtdeterministische Turingmaschinen
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Bereits im Kapitel über reguläre Sprachen haben wir gesehen, dass
+                  Bereits im Kapitel über reguläre Sprachen haben wir gesehen, dass
                   Nichtdeterminismus hilfreich ist, wenn wir Dinge beschreiben wollen,
                   auch wenn es kein realistisches Modell für Rechenmaschinen darstellt.
                   Die Sprache aller Wörter über $\&#123;a,b\&#125;$, die das Teilwort \(aababaa\)
@@ -765,13 +784,13 @@ const Article = () => {
                       src="../img/turing-machines/nondeterminism/aababaa.svg"
                       loading="lazy" />
                   </figure>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es ist klar, was dieser Automat erlaubt. Einen deterministischen
+                  Es ist klar, was dieser Automat erlaubt. Einen deterministischen
                   Automaten für die gleiche Sprache zu entwerfen (ohne systematisch über
                   den nichtdeterministischen zu gehen) wird schnell chaotisch, und Sie
                   werden sich in den vielen Fallunterscheidungen verlieren.
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Andererseits haben wir für endliche Automaten gezeigt, dass die
+                  Andererseits haben wir für endliche Automaten gezeigt, dass die
                   deterministischen und nichtdeterministischen Varianten tatsächlich
                   gleichmächtig sind (Potenzmengenkonstruktion). Für die
                   Kellerautomaten, die für kontextfreie Sprachen relevant sind, galt das
@@ -779,7 +798,7 @@ const Article = () => {
                   durchgenommen). Wie sieht es nun für Turingmaschinen aus?
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um nichtdeterministische Turingmaschinen zu definieren, müssen wir die
+                  Um nichtdeterministische Turingmaschinen zu definieren, müssen wir die
                   Zustandsübergangsfunktion \(\delta\) zu einer
                   Zustandsübergangsrelation machen. Statt \(\delta: Q \times \Gamma
                   \rightarrow Q \times \Gamma \times \lsr\) also nun $$\begin&#123;align*&#125;
@@ -797,28 +816,27 @@ const Article = () => {
                   Folge von Schritten nach \(C'\) kommen können, also $$\begin&#123;align*&#125; C =
                   C_0 \Step&#123;&#125; C_1 \Step&#123;&#125; C_2 \Step&#123;&#125; \dots \Step&#123;&#125; C' \end&#123;align*&#125;$$ Wir
                   sagen auch:
-                  {" "}
                   <i>
                     Die Konfiguration \(C'\) ist von \(C\) aus erreichbar
                   </i>
                   .
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für ein Eingabewort \(x\) sie \(C_x := \texttt&#123;start&#125; x\) die
+                  Für ein Eingabewort \(x\) sie \(C_x := \texttt&#123;start&#125; x\) die
                   Startkonfiguration. Eine nichtdeterministische Turingmaschine
-                  {" "}
                   <i>
                     akzeptiert
                   </i>
                   {" "}\(x\), wenn es eine akzeptierende Endkonfiguration
+                  &ensp;\(x\), wenn es eine akzeptierende Endkonfiguration
                   \(C_&#123;\rm accept&#125;\) gibt mit $$\begin&#123;align*&#125; C_x \Step&#123;&#125;^* C_&#123;\rm
                   accept&#125; \end&#123;align*&#125;$$ wenn es also (mindestens) eine akzeptierende
                   Konfiguration gibt, die von \(C_x\) aus erreichbar ist. Dabei kann es
-                  {" "}
                   <i>
                     mehrere
                   </i>
                   {" "}erreichbare akzeptierende Konfigurationen geben, Es
+                  &ensp;erreichbare akzeptierende Konfigurationen geben, Es
                   kann sogar eine ablehnende Konfiguration \(C_x \Step&#123;&#125;^* C_&#123;\rm
                   reject&#125;\) geben. Spielt keine Rolle: solange es einen Weg \(C_x
                   \Step&#123;&#125;^* C_&#123;\rm accept&#125;\) gibt, sagen wir, dass \(M\) das Eingabewort
@@ -827,55 +845,58 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;7.3.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     (Akzeptieren und Entscheiden bei nichtdeterministischen Turingmaschinen).
                   </b>
-                  {" "}Eine nichtdeterministische Turingmaschine \(M\) akzeptiert die Sprache
+                  Eine nichtdeterministische Turingmaschine \(M\) akzeptiert die Sprache
                   \(L\) wenn $$\begin&#123;align*&#125; x \in L \Longleftrightarrow M \textnormal &#123;
                   akzeptiert &#125; x \end&#123;align*&#125;$$ Für jedes \(x \not \in L\) gibt es also
                   keine akzeptierende Konfiguration \(C\) mit \(C_x \Rightarrow C\).
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Turingmaschine \(M\){" "}
+                    Die Turingmaschine \(M\){" "}
                     <i>
                       entscheidet
                     </i>
                     {" "}die Sprache \(L\),
+                    &ensp;die Sprache \(L\),
                     wenn sie sie akzeptiert und es keine unendlich langen Ketten
                     $$\begin&#123;align*&#125; C_x \Step&#123;&#125; C_1 \Step&#123;&#125; C_2 \Step&#123;&#125; \dots
                     \end&#123;align*&#125;$$ gibt.
                   </Paragraph>
                 </div>
                 <div class="alert-warning">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Oft wird händeringend versucht, zu erklären, was denn eine
+                  Oft wird händeringend versucht, zu erklären, was denn eine
                   nichtdeterministische Turingmaschine
-                  {" "}
                   <i>
                     tut
                   </i>
                   . Da lesen Sie dann beispielsweise, dass die
-                  {" "}
                   <i>
                     alle Möglichkeiten gleichzeitig ausprobiert
                   </i>
                   {" "}oder den
+                  &ensp;oder den
                   richtigen Pfad von einem{" "}
                   <i>
                     Engel
                   </i>
                   {" "}gesagt bekommt oder
-                  {" "}
+                  &ensp;gesagt bekommt oder
                   <i>
                     errät
                   </i>
                   . Ich stelle mir lieber vor, dass eine
                   nichtdeterministische Turingmaschine gar nichts "tut" sondern
-                  {" "}
                   <i>
                     Spielregeln
                   </i>
                   {" "}definiert, wie man "ziehen" kann. Man gewinnt,
+                  &ensp;definiert, wie man "ziehen" kann. Man gewinnt,
                   wenn man in einer akzeptierenden Konfiguration landet.
                 </div>
                 <Paragraph />
@@ -883,7 +904,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beim Teilsummenproblem haben wir eine Liste von Waren (alles Unikate)
+                  Beim Teilsummenproblem haben wir eine Liste von Waren (alles Unikate)
                   mit Preisen \(p_1, p_2, \dots, p_n\) und ein Guthaben \(g\) gegeben
                   und wollen wissen, ob wir unser Guthaben exakt ausgeben können. Ob es
                   also eine Teilmenge \(I \subseteq [n]\) von Waren gibt, die genau
@@ -901,7 +922,7 @@ const Article = () => {
                   ist in unserer Sprache \(L\) enthalten, wenn es nun eben eine
                   Teilmenge gibt, die sich genau zu 194 aufsummiert.
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Entwerfen wir nun eine nichtdeterministische Turingmaschine \(M\)
+                    Entwerfen wir nun eine nichtdeterministische Turingmaschine \(M\)
                     für diese Sprache. \(M\) geht von links nach rechts alle Waren
                     durch. Jedes Mal, wenn ein Preis beginnt, haben wir die Möglichkeit,
                     diesen Preis auf das zweite Band zu kopieren (die Ware zu kaufen)
@@ -940,10 +961,10 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <h2>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Deterministische Turingmaschinen simulieren nichtdeterministische
+                  Deterministische Turingmaschinen simulieren nichtdeterministische
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sind nun nichtdeterministische Turingmaschinen inhärent mächtiger?
+                  Sind nun nichtdeterministische Turingmaschinen inhärent mächtiger?
                   Können Sie das Teilsummenproblem auch mit einer deterministischen
                   lösen? Klar! Hier ist mein Code in Elm, einer funktionalen
                   Programmiersprache: er probiert alle Möglichkeiten durch.
@@ -956,35 +977,42 @@ const Article = () => {
                   {" "}{" "}
                   <code>
                     case ( prices, amount ) of
+                    &ensp;&ensp;&ensp;&ensp;case ( prices, amount ) of
                   </code>
                   {" "}{" "}
                   <code>
                     ( [], 0 ) -&gt;
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;( [], 0 ) -&gt;
                   </code>
                   {" "}{" "}
                   <code>
-                    True``
+                    True
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;True``
                   </code>
                   {" "}{" "}
                   <code>
                     ( x :: rest, _ ) -&gt;
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;( x :: rest, _ ) -&gt;
                   </code>
                   {" "}{" "}
                   <code>
-                    subsetSum rest amount || subsetSum rest (amount - x)``
+                    subsetSum rest amount || subsetSum rest (amount - x)
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;subsetSum rest amount || subsetSum rest (amount - x)``
                   </code>
                   {" "}{" "}
                   <code>
                     ( [], _ ) -&gt;
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;( [], _ ) -&gt;
                   </code>
                   {" "}{" "}
                   <code>
                     False
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;False
                   </code>
                   {" "}{" "}
                 </pre>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Auf einer deterministischen Turingmaschine wäre das deutlich
+                  Auf einer deterministischen Turingmaschine wäre das deutlich
                   anstrengender, aber irgendwie auch möglich. Können wir jede
                   nichtdeterministische Turingmaschine deterministisch simulieren, indem
                   wir "alles ausprobieren"? Ja, in der Tat!
@@ -993,25 +1021,25 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     (Nichtdeterministische Turingmaschinen deterministischsimulieren)
                   </b>
-                  {" "}Sei \(M\) eine nichtdeterministische Turingmaschine. Dann gibt es eine
+                  Sei \(M\) eine nichtdeterministische Turingmaschine. Dann gibt es eine
                   deterministische Maschine \(M'\) mit \(L(M) = L(M')\), d.h. \(M'\)
                   akzeptiert \(x\) genau dann, wenn \(M\) es akzeptiert.
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zusätzlich gilt: wenn \(M\) die Sprache nicht nur akzpetiert,
+                    Zusätzlich gilt: wenn \(M\) die Sprache nicht nur akzpetiert,
                     sondern entscheidet, dann entscheidet auch \(M'\) die Sprache
                     (terminiert also auf jedem Eingabewort).
                   </Paragraph>
                 </div>
                 <div class="well container">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Beweis.
                   </b>
-                  {" "}Als erstes führen wir eine kosmetische Änderung unserer
+                  Als erstes führen wir eine kosmetische Änderung unserer
                   nichtdeterministischen Maschine durch: wir wollen, dass es für jedes
                   \((q,c)\) genau zwei Möglichkeiten gibt, also $$\begin&#123;align*&#125; (q,c)&
                   \rightarrow (q_1, c_1, D_1) \\ (q,c)&amp;\rightarrow (q_2, c_2, D_2) \ ,
@@ -1024,7 +1052,7 @@ const Article = () => {
                       src="../img/turing-machines/nondeterminism/three-to-two.svg"
                       loading="lazy" />
                   </figure>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Auf der Menge der Konfigurationen schaut das dann noch intuitiver aus:
+                  Auf der Menge der Konfigurationen schaut das dann noch intuitiver aus:
                   <figure>
                     <img
                       style="height: 10em"
@@ -1032,17 +1060,18 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sollte ein Paar \((q,c)\) weniger als zwei Folgemöglichkeiten geben,
+                    Sollte ein Paar \((q,c)\) weniger als zwei Folgemöglichkeiten geben,
                     so erfinden wir einfach neue, die jedoch direkt nach
                     <tt>
                       reject
                     </tt>
                     &ensp;führen. Es sollte klar sein, dass diese Änderungen
+                    &ensp;führen. Es sollte klar sein, dass diese Änderungen
                     rein kosmetisch sind und nichts an der Funktionsweise von \(M\)
                     ändern.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nun bauen wir \(M\) um und geben ihr ein zweites Band. Auf diesem
+                    Nun bauen wir \(M\) um und geben ihr ein zweites Band. Auf diesem
                     Band soll ein Wort in \(\&#123;0,1\&#125;^*\) stehen. Wir machen \(M\)
                     deterministisch mit der folgenden Regel: wenn Du im Zustand \(q\)
                     bist und auf dem ersten Band ein \(c\) hast und auf dem zweiten Band
@@ -1056,7 +1085,7 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls wir auf dem zweiten Band einem anderen Zeichen begegnen
+                    Falls wir auf dem zweiten Band einem anderen Zeichen begegnen
                     (\(\square\) oder sonst etwas, das weder 0 noch 1 ist), dann lehnen
                     wir sofort ab. Wir haben nun eine deterministische Turingmaschine
                     \(M''\), die jedoch nicht das gleiche tut wie \(M\). Aber: wenn \(x
@@ -1214,7 +1243,7 @@ const Article = () => {
                     </div>
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nun bauen wir schlussendlich eine Maschine \(M'\), die in einer
+                    Nun bauen wir schlussendlich eine Maschine \(M'\), die in einer
                     Endlosschleife alle möglichen \(z \in \&#123;0,1\&#125;^*\) aufzählt, auf das
                     zweite Band schreibt, und \(M''\) neustartet. Geht das? Wir können
                     zum Beispiel \(i = 1,2,3,4,\dots\) hochzählen, binär schreiben und

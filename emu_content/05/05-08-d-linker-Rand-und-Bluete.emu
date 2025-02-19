@@ -1,7 +1,9 @@
 |> Section
-    title_gr Linker Rand, Blüten und die DK-Grammatik
+    title_gr 5.8 Linker Rand, Blüten und die DK-Grammatik
     title_en d linker Rand und Bluete
     number 5.8
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,27 +38,29 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             5.8 Linker Rand, Blüten und die DK-Grammatik
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem Teilkapitel werden wir sehen,
+                        In diesem Teilkapitel werden wir sehen,
                         wie wir für eine gültige Wortform $\gamma$
                         den korrekten Linksreduktionsschritt
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                    \begin{align*}
                     \gamma = \alpha \beta w \rstep{} \alpha X w
                     \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;finden. Als erstes müssen wir uns überlegen,
+                        finden. Als erstes müssen wir uns überlegen,
                         wie die Front $\front(\gamma) = \alpha \beta$
                         überhaupt aussehen kann. Wenn wir
                         uns den Ableitungsbaum von $\gamma$ ansehen,
                         wird das einigermaßen offensichtlich sein.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zur Erinnerung:
+                        Zur Erinnerung:
                         Zu jeder Ableitung \(S \Step{}^* w \in \Sigma^*\) können wir
                         eindeutig einen _Ableitungsbaum_ zeichnen. Wenn die Grammatik
+                        &ensp;zeichnen. Wenn die Grammatik
                         eindeutig ist, so hängt auch der Baum nur vom Wort \(w \in L(G)\) ab und
                         nicht von der Ableitung \(S \Step{}^* w\).
                         Allerdings können wir für Zwischenformen
@@ -65,7 +69,7 @@
                         Rechtsableitung, Linksableitung oder sonst was ist.
                         Ich zeige Ihnen jetzt ein Beispiel für eine Grammatik und
                         eine Handvoll Ableitungen samt Ableitungsbaum.
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                    \begin{align*}
                     G&amp;: \\
                     S&amp;\rightarrow AB \\
                     A&amp;\rightarrow xBS \ | \ Bz \\
@@ -73,7 +77,7 @@
                     \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es ist zu diesem Zeitpunkt irrelevant, ob \(G\) eindeutig
+                        Es ist zu diesem Zeitpunkt irrelevant, ob \(G\) eindeutig
                         oder sogar \(LR(0)\) ist. Ich interessiere mich
                         gerade nur für Ableitungsbäume von Wortformen.
                     |> figure
@@ -131,7 +135,7 @@
                                         src ../img/context-free/LR/G-messy-derivation.svg
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Fällt Ihnen etwas auf? Schauen Sie sich bitte noch ein weiteres
+                        Fällt Ihnen etwas auf? Schauen Sie sich bitte noch ein weiteres
                         Beispiel an für den Ableitungsbaum einer in einer
                         gültigen Wortform, also von einer, die in einer
                         Rechtsableitung vorkommen kann:
@@ -142,7 +146,7 @@
                     |> div
                         class well container subtheorem
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Warten Sie!*                        Scrollen Sie erst weiter, wenn Sie den Baum oben lang genug angeschaut haben!
+                        *Warten Sie!*Scrollen Sie erst weiter, wenn Sie den Baum oben lang genug angeschaut haben!
                         Versuchen Sie selbst, die spezielle Form dieses Baumes möglichst
                         formal zu beschreiben!
                     |> div
@@ -150,7 +154,8 @@
                     |> div
                         class well container subtheorem
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Auflösung.* Hier sehen Sie noch einmal
+                        *Auflösung.* Hier sehen Sie noch einmal
+                        &ensp;Hier sehen Sie noch einmal
                         den gleichen Baum, nun aber gewisse Teile verschieden umrandet / eingefärbt.
                     |> figure
                         |> img
@@ -169,11 +174,16 @@
                         |> span
                             class numbered-title
 
-                            Definition / Beobachtung
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Stamm, linker Rand, Blüte, Front, rechter Rest)*                        Sei \(S \Step{}^* \gamma\) eine Rechtsableitung, \(\gamma\) also
+                            Definition
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                            &ensp;/ Beobachtung
+                        *(Stamm, linker Rand, Blüte, Front, rechter Rest)*Sei \(S \Step{}^* \gamma\) eine Rechtsableitung, \(\gamma\) also
                         eine gültige Wortform, und
                         \(\mathcal{T}\) der Ableitungsbaum von \(\gamma\).
                         Der _Stamm_ ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
+                        &ensp;ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
                         der von allen inneren Knoten, deren Kinder allesamt Blätter sind,
                         am weistesten links steht.
                         Die Kinder von \(u\), per Definition alles Blätter, sind die _Blüte_.
@@ -186,18 +196,21 @@
                         Terminalsymbol, ansonsten wäre es keine Rechtsableitung.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Beschriftung der Knoten im linken Rand ergibt eine Wortform \(\alpha\);
+                            Die Beschriftung der Knoten im linken Rand ergibt eine Wortform \(\alpha\);
                             die Blüte ergibt \(\beta\).
                             Die Blätter im rechten Rand
                             sind ausschließlich mit Terminalen beschriftet und ergeben ein
                             Wort \(w \in \Sigma^*\). Der ganze Baum stellt also eine Rechtsableitung
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                        \begin{align*}
                         S \Step{R}^* \alpha \beta w
                         \end{align*}
                         dar. Die Wortform $\alpha\beta$, also linker Rand plus Blüte, nennen wir
                         die _Front_ von $\mathcal{T}$ und schreiben sie als $\front(\mathcal{T})$.
+                        &ensp;von $\mathcal{T}$ und schreiben sie als $\front(\mathcal{T})$.
                         Wir sagen auch, dass \(\beta\) _eine Blüte von \(\gamma\)_ und
+                        &ensp;und
                         $\alpha\beta$ die _Front_ von $\gamma$ ist,
+                        &ensp;von $\gamma$ ist,
                         ohne über den Ableitungsbaum \(\mathcal{T}\) selbst zu reden.
                         Hierbei ist zu beachten, dass in einer mehrdeutigen Grammatik
                         eine gültige Wortform mehrere Ableitungsbäume und somit
@@ -206,7 +219,7 @@
                         die Unterteilung aber eindeutig.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei weiterhin \(A\) die Beschriftung des Elternknoten der Blüte
+                            Sei weiterhin \(A\) die Beschriftung des Elternknoten der Blüte
                             (notwenigerweise ein Nichtterminal; Terminale haben keine Kinder).
                             Dann ist \(A \rightarrow \beta\) eine Produktion in der Grammatik und
                             \(\alpha A w\) eine gültige Wortform; wir erhalten den Ableitungsbaum
@@ -343,7 +356,7 @@
                         was selbst wieder eine Parsing-Aufgabe ist???
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;An dieser Stelle zeigt sich die Genialität des DK-Ansatzes:
+                        An dieser Stelle zeigt sich die Genialität des DK-Ansatzes:
                         der Ableitungsbaum von \(\gamma\) kann beliebig verschachtelt sein,
                         aber Stamm, linker Rand und Blüte haben zusammen eine einfache,
                         beinahe linear anmutende Struktur. Schematisch:
@@ -353,7 +366,7 @@
                             src ../img/context-free/LR/schema-linker-rand-bluete-stamm.svg
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Aussage "Stamm, linker Rand und Blüte haben eine einfache Struktur"
+                        Die Aussage "Stamm, linker Rand und Blüte haben eine einfache Struktur"
                         können wir formalisieren.
                     |> div
                         class well container theorem
@@ -361,7 +374,10 @@
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für eine kontextfreie Grammatik \(G\) definieren wir
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        Für eine kontextfreie Grammatik \(G\) definieren wir
                         die Sprache \(\Front(G) \subseteq (\Sigma \cup N)^*\):
                         \begin{align*}
                         \Front(G) := \{\front(\mathcal{T}) \ | \ \mathcal{T}
@@ -382,13 +398,13 @@
                                 class numbered-title
 
                                 Lemma
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Sprache $\Front(G)$ ist regulär.
+                            Die Sprache $\Front(G)$ ist regulär.
                             Insbesondere gibt es eine erweitert reguläre Grammatik \(\hat{G}\) für
                             $\Front(G)$, so dass die Blüte genau die im letzen Ableitungsschritt
                             erzeugten Terminalsymbole sind.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Hier ist etwas Mentalgymnastik vonnöten: aus Sicht der Sprache
+                        Hier ist etwas Mentalgymnastik vonnöten: aus Sicht der Sprache
                         $\Front(G)$ sind \(\Sigma \cup N\) _Terminalsymbole_. Sie können
                         ja schließlich in den Wörtern der Sprache auftauchen.
                         Die Grammatik \(\hat{G}\) hat also die Terminalsymbole
@@ -417,9 +433,13 @@
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik. Die
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik. Die
                         Front-Grammatik oder DK-Grammatik von \(G\) ist
                         die _erweitert reguläre_ Grammatik \(\hat{G} = (\Sigma \cup N, \hat{N}, \hat{S},
+                        &ensp;Grammatik \(\hat{G} = (\Sigma \cup N, \hat{N}, \hat{S},
                         \hat{P})\)
                         mit \(\hat{N} := \{\hat{X} \ | \ X \in N\}\), wobei
                         \(\hat{P}\) für jede \(G\)-Produktion
@@ -441,7 +461,10 @@
                             class numbered-title
 
                             Beobachtung
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(\hat{G}\) erzeugt die Sprache
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        \(\hat{G}\) erzeugt die Sprache
                         \(\Front(G)\).
                     |> div
                         class well container theorem
@@ -449,7 +472,7 @@
                             class numbered-title
 
                             Beispiel
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für unsere Grammatik \(G\) oben ergeben sich folgende Produktionen
+                        Für unsere Grammatik \(G\) oben ergeben sich folgende Produktionen
                         \(\hat{P}\) in \(\hat{G}\):
                         \begin{align*}
                         \begin{array}{l|l}
@@ -481,7 +504,7 @@
                         \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nochmals: Produktionen wie
+                        Nochmals: Produktionen wie
                         \(\dk{B} \rightarrow \dkt{y A} \dk{S}\) sind erweitert regulär
                         weil $\dkt{y}$ und $\dkt{A}$ aus Sicht von \(\hat{G}\) beides
                         Terminalsymbole sind. Wir können nun unseren \(LR(0)\)-Parser beschreiben:
@@ -492,7 +515,7 @@
                             class numbered-title
 
                             Algorithmus
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*- Der \(LR(0)\)-Parser.*                        Starte mit einem leerem Stack. Sei
+                        *- Der \(LR(0)\)-Parser.*Starte mit einem leerem Stack. Sei
                         \(\gamma\) der Inhalt des Stacks zu einem Zeitpunkt.
                         |> ol
                             |> li
@@ -508,9 +531,9 @@
                                 Konkret: lösche \(\beta\) vom Stack und ersetze es durch \(A\).
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls \(\gamma \not \in \Front(G)\),
+                                Falls \(\gamma \not \in \Front(G)\),
                                 lies das nächste Eingabezeichen und lege es auf den Stack.
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Parser endet, wenn weder Schritt 1 noch Schritt 2 möglich sind;
+                        Der Parser endet, wenn weder Schritt 1 noch Schritt 2 möglich sind;
                         wenn zu diesem Zeitpunkt nur noch \(S\) auf dem Stack liegt,
                         akzeptiert er, andernfalls lehnt er das Eingabewort ab.
                     |> div
@@ -519,12 +542,12 @@
                             class numbered-title
 
                             Theorem
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn der \(LR(0)\)-Parser akzeptiert, dann hat er eine Linksreduktion
+                        Wenn der \(LR(0)\)-Parser akzeptiert, dann hat er eine Linksreduktion
                         \(w \rstep{}^* S\) und somit eine Rechtsableitung konstruiert; es gilt
                         also \(w \in L(G)\).
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn umgekehrt \(w \in L(G)\) gilt und
+                            Wenn umgekehrt \(w \in L(G)\) gilt und
                             \(G\) die \(LR(0)\)-Bedingung erfüllt,
                             dann findet der
                             Parser die Rechtsableitung \(S \Step{}^* w\),
@@ -532,10 +555,10 @@
                         class well container
                         |> p
 
-                            *Beweis.*                            Der erste Teil der Bedeutung ist einfach zu sehen.
+                            *Beweis.*Der erste Teil der Bedeutung ist einfach zu sehen.
                             Jeder Reduktionsschritt ist ein Linksreduktionsschritt, und
-                            wenn man Ende $S$ steht, waren es auch alles
-                            _korrekte_ Linksreduktionsschritte.
+                            wenn man Ende $S$ steht, waren es auch alles_korrekte_ Linksreduktionsschritte.
+                            &ensp;Linksreduktionsschritte.
                         |> p
 
                             Der zweite Teil ist schwieriger. Wir nehmen also
@@ -552,11 +575,11 @@
                             Invariante gilt:
                         |> p
 
-                            *Behauptung.*                            (i) \(\gamma w\) ist eine gültige Wortform. (ii)
+                            *Behauptung.*(i) \(\gamma w\) ist eine gültige Wortform. (ii)
                             \(\gamma\) ist ein Präfix von \(\front(\gamma w)\).
                         |> p
 
-                            *Beweis.*                            Die Behauptung gilt offensichtlich am Anfang, da
+                            *Beweis.*Die Behauptung gilt offensichtlich am Anfang, da
                             $\gamma = \epsilon$ und \(w\in L\) ist und
                             somit $\gamma w = w$ eine gültige Wortform ist. Des weiteren
                             ist der Stack leer, also \(\gamma = \epsilon\), und daher
@@ -600,7 +623,7 @@
                                     \(\alpha A\) ein Präfix von $\front(\alpha A w)$ sein.
                                 |> li
 
-                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Parser wendet Schritt 2 an, also \(w = cw'\), er liest
+                                    Der Parser wendet Schritt 2 an, also \(w = cw'\), er liest
                                     \(c\) und legt es auf den Stack. Im nächsten Schritt
                                     ist der Stackinhalt \(\gamma' := \gamma c\) und das ungelesene Wort
                                     ist \(w'\).
@@ -611,8 +634,9 @@
                                     von $\front(\gamma w)$ ist; zweitens, dass
                                     \(\gamma \not \in \Front(G)\) ist (sonst hätte der Parser Schritt 1 angewandt); somit
                                     ist $\gamma$ ein _echter_ Präfix von $\front(\gamma w)$ und somit
+                                    &ensp;Präfix von $\front(\gamma w)$ und somit
                                     ist $\gamma c$ immer noch ein Präfix von $\front(\gamma w)$.
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn das Eingabewort gelesen ist, ist nun \(w = \epsilon\) und
+                            Wenn das Eingabewort gelesen ist, ist nun \(w = \epsilon\) und
                             Stackinhalt \(\gamma\) ist selbst eine
                             gültige Wortform, die allerdings nicht weiter reduziert werden kann.
                             Also muss \(\gamma = S\) gelten und der Parser akzeptiert.

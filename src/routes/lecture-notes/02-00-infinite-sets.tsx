@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={8}
-        title_gr="Unendliche Mengen"
+        title_gr="2. Unendliche Mengen"
         title_en="infinite sets"
-        number={2.0}>
+        number={2.0}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes8.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -33,11 +37,12 @@ const Article = () => {
             <div class="chapter">
               <h1 class="hidden-title">
                 <span class="chapterTitle">
+                  3. 
                   2. Unendliche Mengen
                 </span>
               </h1>
               <Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Mit den Boolesche Schaltkreise haben wir bereits ein Modell für Berechnung kennengelernt.
+                Mit den Boolesche Schaltkreise haben wir bereits ein Modell für Berechnung kennengelernt.
                 Es ist abstrakt genug, um mathematisch rigorose Aussagen darüber zu treffen und über obere und
                 untere Schranken zu sprechen.
                 Gleichzeitig ist es sehr konkret und nah an seiner physikalischen Realisierung.
@@ -52,16 +57,18 @@ const Article = () => {
                 <i>
                   ein
                 </i>
-                {" "}Computerprogramm, das beliebig große Eingaben verkraften kann. Ein Computerprogramm
+                Computerprogramm, das beliebig große Eingaben verkraften kann. Ein Computerprogramm
                 soll also{" "}
                 <i>
                   endlich
                 </i>
-                {" "}sein, aber für eine{" "}
+                {" "}sein, aber für eine 
+                &ensp;sein, aber für eine{" "}
                 <i>
                   unendliche
                 </i>
                 {" "}Menge potentieller Eingaben
+                &ensp;Menge potentieller Eingaben
                 funktionieren.
                 In diesem Kapitel werden wir daher unendliche Mengen besser kennenlernen.
               </Paragraph>
@@ -71,6 +78,7 @@ const Article = () => {
                     Beispiel
                   </span>
                   &ensp;Die Mengen $\N, \Z, \Q, \R$ sind unendlich. Die
+                  &ensp;Die Mengen $\N, \Z, \Q, \R$ sind unendlich. Die
                   Mengen
                   $\&#123;a,e,i,o,u\&#125;$ und $\&#123;0,1,2,3,4,5,6,7,8,9\&#125;$ sind endlich.
                 </Paragraph>
@@ -78,7 +86,7 @@ const Article = () => {
               <div class="well container theorem">
                 <Paragraph>
                   <span class="numbered-title" />
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Menge
+                  Die Menge
                   $$\begin&#123;align*&#125;
                   \&#123;0,1\&#125;^* := \&#123;\epsilon\&#125; \cup \&#123;0,1\&#125; \cup \&#123;00, 01, 10, 11\&#125; \cup \dots \cup \&#123;0,1\&#125;^n
                   \cup

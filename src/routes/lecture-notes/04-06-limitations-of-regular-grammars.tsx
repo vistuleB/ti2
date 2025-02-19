@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={26}
-        title_gr="Die Grenzen regulärer Sprachen"
+        title_gr="4.6 Die Grenzen regulärer Sprachen"
         title_en="limitations of regular grammars"
-        number={4.6}>
+        number={4.6}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes26.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,6 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    5.6 
                     4.6 Die Grenzen regulärer Sprachen
                   </span>
                 </h1>
@@ -44,6 +49,7 @@ const Article = () => {
                     nicht möglich
                   </i>
                   {" "}ist. Also Grenzen aufzuzeigen.
+                  &ensp;ist. Also Grenzen aufzuzeigen.
                   Wir haben in den letzten vier Teilkapiteln gezeigt, was man mit regulären Sprachen und endlichen
                   Automaten
                   alles beschreiben kann.
@@ -54,7 +60,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L\) die Sprache aller Wörter über dem Alphabet \(\Sigma = \&#123;a,b\&#125;\), die die Form
+                  Sei \(L\) die Sprache aller Wörter über dem Alphabet \(\Sigma = \&#123;a,b\&#125;\), die die Form
                   \(a^n b^n\) haben; also eine beliebig lange Folge von \(a\)s, gefolgt von genau so vielen
                   \(b\)s.
                   Hier ist eine kontextfreie Grammatik für \(L\):
@@ -63,7 +69,7 @@ const Article = () => {
                   S&amp;\rightarrow aSb
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Können wir eine reguläre Grammatik für \(L\) schreiben? Irgendwie klingt das nicht
+                    Können wir eine reguläre Grammatik für \(L\) schreiben? Irgendwie klingt das nicht
                     plausibel.
                     Reguläre Grammatiken können ja immer nur ein Wort von links nach rechts erzeugen; für \(L\)
                     scheint
@@ -72,13 +78,16 @@ const Article = () => {
                   <div class="well well-lg numbered-exercise">
                     <span class="numbered-title">
                       Übungsaufgabe
+                      <NumberedTitle>
+                        &ensp;5.6.1{" "}
+                      </NumberedTitle>
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Versuchen Sie ein paar Minuten, eine reguläre Grammatik für \(L\) zu schreiben oder
+                    Versuchen Sie ein paar Minuten, eine reguläre Grammatik für \(L\) zu schreiben oder
                     versuchen Sie,
                     zu argumentieren, dass das nicht möglich ist.
                   </div>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir sind nun also recht überzeugt, dass \(L\) nicht regulär ist. Nur, wie können wir das
+                    Wir sind nun also recht überzeugt, dass \(L\) nicht regulär ist. Nur, wie können wir das
                     formal beweisen?
                     Vielleicht könnten wir annehmen, dass es eine reguläre Grammatik \(G = (\&#123;a,b\&#125;, N, P, S)\)
                     gibt und dann
@@ -87,7 +96,7 @@ const Article = () => {
                     Nichtterminale \(X\) und \(Y\) weiter betrachten.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zu Hilfe kommt uns die Tatsache, dass wir für reguläre Sprachen nun viele äquivalente
+                    Zu Hilfe kommt uns die Tatsache, dass wir für reguläre Sprachen nun viele äquivalente
                     Modelle gefunden haben:
                   </Paragraph>
                   <ol>
@@ -114,7 +123,6 @@ const Article = () => {
                     Formal sind all diese Modelle gleich mächtig: wir können ein Modell in ein anderes umwandeln,
                     ohne
                     das die erzeugte bzw. akzeptierte Sprache sich ändern. Wenn wir nun zeigen wollen:
-                    {" "}
                     <i>
                       \(L\) ist nicht regulär
                     </i>
@@ -123,12 +131,13 @@ const Article = () => {
                       einfachste
                     </i>
                     {" "}Modell nehmen und
+                    &ensp;Modell nehmen und
                     dagegen argumentieren. Nach meinem Darfürhalten sind endliche Automaten das einfachste der
                     fünf aufgeführten
                     Modelle. Also:
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Angenommen, \(L\) wäre regulär. Dann gäbe es auch einen endlichen Automaten \(M = (\&#123;a,b\&#125;,
+                    Angenommen, \(L\) wäre regulär. Dann gäbe es auch einen endlichen Automaten \(M = (\&#123;a,b\&#125;,
                     Q, q_0, F, \delta)\),
                     der \(L\) akzeptiert. Wir müssen zeigen, dass das nicht sein kann. Also dem Automaten \(M\)
                     einen Fehler nachweisen.
@@ -140,7 +149,7 @@ const Article = () => {
                     Unser Plan ist also, das Gedächtnis des Automaten zu überfordern.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Setzen wir diesen Plan in die Tat um. Wir füttern dem Automaten eine Folge von
+                    Setzen wir diesen Plan in die Tat um. Wir füttern dem Automaten eine Folge von
                     \(aaaaaaa...\) und
                     beobachten die Zustandsfolge \(q_0, q_1, q_2, \dots\), die sich daraus ergibt. Formal:
                     $$\begin&#123;align*&#125;
@@ -155,7 +164,7 @@ const Article = () => {
                     \(i\) viele oder \(j\) viele \(a\)'s gelesen hat. Nun schlagen wir zu:
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir füttern den Automaten mit dem Wort \(a^i b^i\). Der Automat landet in einem Zustand
+                    Wir füttern den Automaten mit dem Wort \(a^i b^i\). Der Automat landet in einem Zustand
                     \(q^*\):
                     $$\begin&#123;align*&#125;
                     q_0 \step&#123;a^i&#125; q_i \step&#123;b^i&#125; q^*
@@ -179,11 +188,11 @@ const Article = () => {
                     schließen wir:
                   </Paragraph>
                   <div style="text-align:center">
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn \(M\) ein endlicher Automat ist, dann gilt \(L(M) \ne L\). Daher ist \(L\) keine
+                    Wenn \(M\) ein endlicher Automat ist, dann gilt \(L(M) \ne L\). Daher ist \(L\) keine
                     reguläre Sprache.
                   </div>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zusammenfassend lautet unser Argument: wenn der Automat die Präfixe \(\alpha\) und
+                    Zusammenfassend lautet unser Argument: wenn der Automat die Präfixe \(\alpha\) und
                     \(\alpha'\) nicht
                     unterscheiden kann, dann kann er die Wörter \(\alpha \beta\) und \(\alpha' \beta\) auch
                     nicht unterscheiden;
@@ -191,42 +200,47 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das Argument, dass die Sprache \(\&#123;a^nb^n \ | \ n \geq 0\&#125;\) nicht regulär ist, war nicht allzu
+                  Das Argument, dass die Sprache \(\&#123;a^nb^n \ | \ n \geq 0\&#125;\) nicht regulär ist, war nicht allzu
                   schwer, fühlt sich
                   aber etwas{" "}
                   <i>
                     ad hoc
                   </i>
                   {" "}an, also für diesen Fall maßgeschneidert. Es stellt sich aber heraus,
+                  &ensp;an, also für diesen Fall maßgeschneidert. Es stellt sich aber heraus,
                   dass man
                   bei{" "}
                   <i>
                     allen
                   </i>
                   {" "}nicht-regulären Sprachen ein solches Argument anführen kann. Die Hauptarbeit
+                  &ensp;nicht-regulären Sprachen ein solches Argument anführen kann. Die Hauptarbeit
                   besteht nun darin, Konzepte wie{" "}
                   <i>
                     der Automat kann \(\alpha\) nicht von \(\alpha'\)
                     unterscheiden
                   </i>
-                  {" "}und{" "}
+                  und{" "}
                   <i>
                     der Automat muss aber \(\gamma\) von \(\gamma'\) unterscheiden können
                   </i>
                   {" "}zu
+                  &ensp;zu
                   formalisieren.
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;5.6.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     \(M\)-Äquivalenz
                   </b>
-                  {" "}Sei \(M= (\Sigma, Q, \qstart, F, \delta\) ein (deterministischer) endlicher Automat. Zwei Wörter
+                  Sei \(M= (\Sigma, Q, \qstart, F, \delta\) ein (deterministischer) endlicher Automat. Zwei Wörter
                   \(\alpha, \beta \in \Sigma^* \) sind
-                  {" "}
                   <i>
                     \(M\)-äquivalent
                   </i>
@@ -238,14 +252,14 @@ const Article = () => {
                   den Automaten in den gleichen Zustand bringen.
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können bereits ein bisschen über \(\equiv_M\) aussagen. Wenn beispielsweise \(M\) ein
+                  Wir können bereits ein bisschen über \(\equiv_M\) aussagen. Wenn beispielsweise \(M\) ein
                   endlicher Automat für die Sprache \(L\) ist und
                   \(\alpha \equiv_M \beta\) gilt, dann sind entweder beide Wörter in \(L\) (nämlich
                   wenn \(\hat&#123;\delta&#125;(\qstart, \alpha)\) ein akzeptierender Zustand ist)
                   oder beide Wörter nicht in \(L\) (falls es kein akzeptierender Zustand ist).
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Auch sehen wir: wenn \(\alpha \equiv_M \beta\), dann gilt \(\alpha\gamma \equiv_M \beta\gamma\):
+                  Auch sehen wir: wenn \(\alpha \equiv_M \beta\), dann gilt \(\alpha\gamma \equiv_M \beta\gamma\):
                   \(\alpha\) und \(\beta\) brigen den Automaten in den gleichen Zustand, und danach liest er in
                   beiden
                   Fällen das Wort \(\gamma\), endet also in beiden Fällen im gleichen Zustand.
@@ -253,13 +267,15 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;5.6.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     \(L\)-Äquivalenz
                   </b>
-                  {" "}Sei \(L \subseteq \Sigma^*\) eine Sprache. Zwei Wörter \(\alpha, \beta \in \Sigma^*\) sind
-                  {" "}
+                  Sei \(L \subseteq \Sigma^*\) eine Sprache. Zwei Wörter \(\alpha, \beta \in \Sigma^*\) sind
                   <i>
                     \(L\)-äquivalent
                   </i>
@@ -274,16 +290,19 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beobachtung
+                    <NumberedTitle>
+                      &ensp;5.6.3{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L\) die vom endlichen Automaten \(M\) akzeptierte Sprache.
+                  Sei \(L\) die vom endlichen Automaten \(M\) akzeptierte Sprache.
                   Wenn \(\alpha \equiv_M \beta\) gilt, dann auch \(\alpha \equiv_L \beta\).
                 </div>
                 <div class="well container">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Beweis.
                   </b>
-                  {" "}Nehmen wir an \(\alpha \equiv_M \beta\); es gibt also einen Zustand \(q\) mit
+                  Nehmen wir an \(\alpha \equiv_M \beta\); es gibt also einen Zustand \(q\) mit
                   $$\begin&#123;align*&#125;
                   \qstart \Step&#123;\alpha&#125; q \textnormal&#123; und &#125; \qstart \Step&#123;\beta&#125; q
                   \end&#123;align*&#125;$$
@@ -297,11 +316,11 @@ const Article = () => {
                   \qstart \Step&#123;\alpha\gamma&#125; q' \textnormal&#123; und &#125; \qstart \Step&#123;\beta\gamma&#125; q'
                   \end&#123;align*&#125;$$
                   Abhängig davon, ob \(q' \in F\) oder nicht, sind \(\alpha\gamma\) und \(\alpha\beta\) entweder
-                  {" "}
                   <i>
                     beide in \(L\)
                   </i>
-                  {" "}oder{" "}
+                  {" "}oder 
+                  &ensp;oder{" "}
                   <i>
                     beide nicht in \(L\)
                   </i>
@@ -325,12 +344,16 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;5.6.4{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L \subseteq \Sigma^*\). Der{" "}
+                  Sei \(L \subseteq \Sigma^*\). Der{" "}
                   <i>
                     Index von \(L\)
                   </i>
                   {" "}ist die Anzahl von Äquivalenzklassen
+                  &ensp;ist die Anzahl von Äquivalenzklassen
                   der Relation
                   \(\equiv_L\), also die größtmögliche Anzahl gegenseitig nichtäquivalenter Wörter
                   \(\alpha_1, \alpha_2, \dots \in \Sigma^*\); dies ist möglicherweise unendlich.
@@ -338,18 +361,21 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beobachtung
+                    <NumberedTitle>
+                      &ensp;5.6.5{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(M\) ein endlicher Automat von \(L\) die von ihm akzeptierte Sprache.
+                  Sei \(M\) ein endlicher Automat von \(L\) die von ihm akzeptierte Sprache.
                   Dann ist der Index von \(L\) höchstens die Anzahl \(|Q|\) von Zuständen.
                   Im Umkehrschluss heißt das: wenn \(L\) unendlichen Index hat, dann gibt es keinen endlichen
                   Automaten, der \(L\) akzeptiert; \(L\) ist demnach nicht regulär.
                 </div>
                 <div class="well container">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Beweis.
                   </b>
-                  {" "}Wenn der Index von \(L\) größer wäre als \(|Q|\), dann hieße das, dass wir
+                  Wenn der Index von \(L\) größer wäre als \(|Q|\), dann hieße das, dass wir
                   \(k := |Q|+1\) nicht \(L\)-äquivalente \(\alpha_1, \dots, \alpha_&#123;|Q|+1&#125;\) finden können.
                   Sei \(q_i := \hat&#123;\delta&#125;(\qstart, \alpha_i)\) der Zustand, in dem der Automat landet,
                   wenn er das Eingabewort \(\alpha_i\) abarbeitet. Die Zustände
@@ -374,9 +400,9 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Sprache \(L = \&#123;a^n b^n \ | \ n \geq 0\&#125;\) ist nicht regulär.
+                  Die Sprache \(L = \&#123;a^n b^n \ | \ n \geq 0\&#125;\) ist nicht regulär.
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In der Tat hat diese Sprache unendlichen Index. Die Wörter \(a, aa, aaa, aaaa, ...\) sind
+                    In der Tat hat diese Sprache unendlichen Index. Die Wörter \(a, aa, aaa, aaaa, ...\) sind
                     alle
                     nicht \(L\)-äquivalent. Für \(a^i\) und \(a^j\) könnten wir zum Beispiel \(\gamma := b^i\)
                     wählen,
@@ -387,7 +413,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(L \subseteq \&#123;a,b\&#125;^*\) die Sprache aller Palindrome. Also der Wörter \(\alpha\) mit
+                  Sei \(L \subseteq \&#123;a,b\&#125;^*\) die Sprache aller Palindrome. Also der Wörter \(\alpha\) mit
                   \(\alpha = \alpha^R\), wobei \(\alpha^R\) das Wort \(\alpha\) in umgekehrter Reihnfolge gelesen
                   ist.
                   Die Sprache \(L\) ist ein klassisches Beispiel einer kontextfreien Sprache:
@@ -400,8 +426,11 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;5.6.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten Sie die Sprache aller \(\alpha\in \&#123;a,b\&#125;^*\), die gleich viele \(a\)'s wie \(b\)'s
+                  Betrachten Sie die Sprache aller \(\alpha\in \&#123;a,b\&#125;^*\), die gleich viele \(a\)'s wie \(b\)'s
                   haben:
                   $$\begin&#123;align*&#125;
                   S \rightarrow \epsilon \ | \ aSbS \ | \ bSaS
@@ -414,23 +443,24 @@ const Article = () => {
                     vollständig
                   </i>
                   {" "}ist:
+                  &ensp;ist:
                   wenn eine Sprache \(L\) endlichen Index hat, dann ist sie auch regulär.
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Sprache \(L \subseteq \Sigma^*\) ist genau dann regulär, wenn sie endlichen Index hat.
+                  Eine Sprache \(L \subseteq \Sigma^*\) ist genau dann regulär, wenn sie endlichen Index hat.
                 </div>
                 <div class="well container">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Beweis.
                   </b>
-                  {" "}Eine Richtung haben wir bereits weiter oben gezeigt: wenn es zu \(L\) einen endlichen Automaten
+                  Eine Richtung haben wir bereits weiter oben gezeigt: wenn es zu \(L\) einen endlichen Automaten
                   mit Zustandsmenge \(Q\) gibt, dann ist der Index von \(L\) höchstens \(|Q|\).
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für die andere Richtung nehmen wir an, dass der Index von \(L\) endlich ist,
+                    Für die andere Richtung nehmen wir an, dass der Index von \(L\) endlich ist,
                     sagen wir \(n \in \N\). Es gibt also
                     \(\alpha_1,\dots,\alpha_n\), die alle paarweise nicht \(L\)-äquivalent sind.
                     Allerdings ist \(n\) ist auch die größte solche Zahl; dies heißt, jedes weitere
@@ -450,7 +480,7 @@ const Article = () => {
                     Partitionierung von \(\Sigma^*\).
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie: wenn \(\alpha \equiv_L \beta\) und \(x \in \Sigma\), dann gilt auch
+                    Beachten Sie: wenn \(\alpha \equiv_L \beta\) und \(x \in \Sigma\), dann gilt auch
                     \(\alpha x \equiv \beta x\). (Überlegen Sie sich, warum!) Auch gilt für jedes \(1 \leq i
                     \leq n\):
                     entweder sind alle Wörter in \(A_i\) in der Sprache, also \(A_i \subseteq L\) oder
@@ -472,12 +502,14 @@ const Article = () => {
                       eine
                     </i>
                     {" "}Produktion der Form \(i \step&#123;x&#125; ...\), d.h. die
+                    &ensp;Produktion der Form \(i \step&#123;x&#125; ...\), d.h. die
                     Produktionen
                     sind in der Tat ein{" "}
                     <i>
                       Funktion
                     </i>
-                    {" "}und der Automat ist{" "}
+                    {" "}und der Automat ist 
+                    &ensp;und der Automat ist{" "}
                     <i>
                       determinisitsch
                     </i>
@@ -499,7 +531,7 @@ const Article = () => {
                   </span>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können den Index nicht nur verwenden, um zu argumentieren, dass eine Sprache nicht regulär
+                  Wir können den Index nicht nur verwenden, um zu argumentieren, dass eine Sprache nicht regulär
                   ist, sondern auch, um zu zeigen,
                   dass eine bestimmte Menge an Zuständen optimal ist.
                 </Paragraph>
@@ -507,14 +539,14 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der nichtdeterministische endliche Automat
+                  Der nichtdeterministische endliche Automat
                   <figure>
                     <img
                       style="height:10em"
                       src="../img/finite-state-automata/nfsm-example-01.svg"
                       loading="lazy" />
                   </figure>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;akzeptiert die Sprache \(L\) aller \(\alpha \in \&#123;0,1\&#125;^n\), deren viertletzter Buchstabe eine 1
+                  akzeptiert die Sprache \(L\) aller \(\alpha \in \&#123;0,1\&#125;^n\), deren viertletzter Buchstabe eine 1
                   ist.
                   Unsere Konstruktion, ihn deterministisch zu machen, würde 16 Zustände erzeugen. Ist dies
                   optimal? Ja, ist es:
@@ -522,14 +554,14 @@ const Article = () => {
                     <span class="numbered-title">
                       Behauptung
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Sprache \(L\) hat Index 16. Alle Wörter in \(\&#123;0,1\&#125;^4\) sind nicht \(L\)-äquivalent.
+                    Die Sprache \(L\) hat Index 16. Alle Wörter in \(\&#123;0,1\&#125;^4\) sind nicht \(L\)-äquivalent.
                   </div>
                   <div class="well subtheorem">
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    {" "}{" "}
                     <b>
                       Beweis.
                     </b>
-                    {" "}Seien \(\alpha:= a_1 a_2 a_3 a_4, \beta := b_1 b_2 b_3 b_4 \in \&#123;0,1\&#125;^4\) zwei verschiedene
+                    Seien \(\alpha:= a_1 a_2 a_3 a_4, \beta := b_1 b_2 b_3 b_4 \in \&#123;0,1\&#125;^4\) zwei verschiedene
                     Wörter. Dann gibt es ein
                     \(1 \leq i \leq 4\) mit \(a_i = 0\) und \(b_i = 1\) (oder umgekehrt).
                     Sei \(\gamma = 0^&#123;5-i&#125;\), also ein String bestehend aus \(5-i\) Nullen. Das viertletzte
@@ -541,6 +573,7 @@ const Article = () => {
                       mindestens
                     </i>
                     {" "}16. Das er höchstens 16 ist, sehen wir, indem wir
+                    &ensp;16. Das er höchstens 16 ist, sehen wir, indem wir
                     einen
                     determinisitschen Automaten mit 16 Zuständen bauen.
                     <span class="qed">
@@ -548,7 +581,7 @@ const Article = () => {
                     </span>
                   </div>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Allgemeiner: sei \(L\) die Sprache aller \(\alpha \in \&#123;0,1\&#125;^n\), deren
+                    Allgemeiner: sei \(L\) die Sprache aller \(\alpha \in \&#123;0,1\&#125;^n\), deren
                     \(n\)-letztes Zeichen eine 1 ist. Dann gibt es für \(L\) einen nichtdeterministischen
                     endlichen Automaten mit \(n+1\) Zuständen und einen determinisitschen mit
                     \(2^n\) Zuständen. Es gibt keinen determinisitschen Automaten mit weniger

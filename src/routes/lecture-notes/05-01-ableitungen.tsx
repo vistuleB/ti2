@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={29}
-        title_gr="Ableitungen und Ableitungsbäume"
+        title_gr="5.1 Ableitungen und Ableitungsbäume"
         title_en="ableitungen"
-        number={5.1}>
+        number={5.1}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes29.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,14 +38,19 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    6.1 
                     5.1 Ableitungen und Ableitungsbäume
                   </span>
                 </h1>
                 <div class="well container theorem">
                   <span class="numbered-title">
-                    Definition (Ableitung)
+                    Definition
+                    <NumberedTitle>
+                      &ensp;6.1.1{" "}
+                    </NumberedTitle>
+                    &ensp;(Ableitung)
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(G\) eine Grammatik mit Startsymbol \(S\). Die Ableitung eines
+                  Sei \(G\) eine Grammatik mit Startsymbol \(S\). Die Ableitung eines
                   Wortes \(\alpha\) ist eine Sequenz von Wortformen \( w_0, w_1, \dots,
                   w_n\) mit \(w_0 = S, w_n = \alpha\) und \(w_&#123;i-1&#125; \Longrightarrow
                   w_i\).
@@ -72,7 +81,7 @@ const Article = () => {
                 kann also kompakt durch die Zahlenfolge 23465124646 repräsentiert
                 werden.
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir im Folgenden ein weiteres Beispiel einer Ableitung, in
+                  Betrachten wir im Folgenden ein weiteres Beispiel einer Ableitung, in
                   diesem Falle eine{" "}
                   <i>
                     Rechtsableitung
@@ -93,7 +102,7 @@ const Article = () => {
                 Reihenfolge an, also von hinten nach vorne, in diesem Falle also nicht
                 2351... sondern 64642641532.
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie, dass wir es hier mit einer eindeutigen Grammatik zu tun
+                  Beachten Sie, dass wir es hier mit einer eindeutigen Grammatik zu tun
                   haben, es also nur einen Syntaxbaum gibt:
                 </Paragraph>
                 <figure>
@@ -103,7 +112,7 @@ const Article = () => {
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Rechtsableitung und Linksableitung sowie deren Codierung als
+                  Rechtsableitung und Linksableitung sowie deren Codierung als
                   Zahlenfolge spiegeln also nur zwei verschiedene Weisen wieder, den
                   Baum auszugeben.
                 </Paragraph>
@@ -112,28 +121,40 @@ const Article = () => {
                   <code>
                     def treeToLeftDerivation (tree):
                   </code>
-                  {" "}
-                  &ensp;&ensp;`print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)`{" "}
+                  {" "}{" "}
                   <code>
-                    for child in tree.children (from left ro right):
+                    print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
+                    &ensp;&ensp;print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
                   </code>
                   {" "}{" "}
                   <code>
-                    treeToLeftDerivation(child)````def treeToRightDerivation (tree):
+                    for child in tree.children (from left ro right):
+                    &ensp;&ensp;for child in tree.children (from left ro right):
                   </code>
-                  {" "}
-                  &ensp;&ensp;`for child in tree.children (from left ro right):`{" "}
+                  {" "}{" "}
                   <code>
                     treeToLeftDerivation(child)
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;treeToLeftDerivation(child)````def treeToRightDerivation (tree):
+                  </code>
+                  {" "}{" "}
+                  <code>
+                    for child in tree.children (from left ro right):
+                    &ensp;&ensp;for child in tree.children (from left ro right):
+                  </code>
+                  {" "}{" "}
+                  <code>
+                    treeToLeftDerivation(child)
+                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;treeToLeftDerivation(child)
                   </code>
                   {" "}{" "}
                   <code>
                     print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
+                    &ensp;&ensp;print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
                   </code>
                   {" "}{" "}
                 </pre>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie, dass wir in beiden Fällen die Liste Kinder von links
+                  Beachten Sie, dass wir in beiden Fällen die Liste Kinder von links
                   nach rechts durchgehen.
                 </Paragraph>
               </div>

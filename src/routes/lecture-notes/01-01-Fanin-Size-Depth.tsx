@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={2}
-        title_gr="Tiefe, Fan-In"
+        title_gr="Größe, Tiefe, Fan-In"
         title_en="Fanin Size Depth"
-        number={1.1}>
+        number={1.1}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes2.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,6 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    1.1 
                     Größe, Tiefe, Fan-In
                   </span>
                 </h1>
@@ -43,33 +48,41 @@ const Article = () => {
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Definition.
+                    Definition
+                    <NumberedTitle>
+                      &ensp;1.1.1{" "}
+                    </NumberedTitle>
+                    .
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die{" "}
+                  Die{" "}
                   <i>
                     Größe
                   </i>
                   {" "}eines Schaltkreises ist die Anzahl seiner Gates, also die Anzahl
+                  &ensp;eines Schaltkreises ist die Anzahl seiner Gates, also die Anzahl
                   der Knoten im zugrundeliegenden DAG.
                   Die{" "}
                   <i>
                     Teife
                   </i>
                   {" "}ist die Länge des längsten gerichteten Pfades von einem Input- zu einem
+                  &ensp;ist die Länge des längsten gerichteten Pfades von einem Input- zu einem
                   Output-Gate.
                   Der{" "}
                   <i>
                     Maximum-Fan-in
                   </i>
                   {" "}ist der maximale Rein-Grad aller Knoten, also
+                  &ensp;ist der maximale Rein-Grad aller Knoten, also
                   der maximale Fan-in aller Gates.
                 </div>
                 <div class="alter-warning">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Vorsicht.
                   </b>
                   {" "}Manchmal werden zur Bestimmung der Tiefe die NOT-Gates
+                  &ensp;Manchmal werden zur Bestimmung der Tiefe die NOT-Gates
                   nicht mitgezählt. Entlang eines Pfades wird also gelegentlich nur die Anzahl
                   der AND- und OR-Gates bestimmt.
                 </div>
@@ -90,26 +103,26 @@ const Article = () => {
                     style="height:10em"
                     src="../img/circuits/and-n-fold-linear-depth.svg"
                     loading="lazy" />
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;oder alternativ:
+                  oder alternativ:
                   <img
                     style="height:10em"
                     src="../img/circuits/and-n-fold-log-depth.svg"
                     loading="lazy" />
                 </figure>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In beiden Fällen ersetzen wir ein AND-Gate von Fan-in \(n\) durch
+                  In beiden Fällen ersetzen wir ein AND-Gate von Fan-in \(n\) durch
                   \(n-1\) AND-Gates von je Fan-in 2. Wenn wir allerdings die{" "}
                   <i>
                     Tiefe
                   </i>
-                  {" "}betrachten, so sehen wir, dass der linke Schaltkreis Tiefe \(n-1\) hat,
+                  betrachten, so sehen wir, dass der linke Schaltkreis Tiefe \(n-1\) hat,
                   der rechte jedoch nur \(\ceil&#123;\log_2(n)&#125;\). Ganz allgemein stellen wir fest:
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Theorem
+                    Theorem
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(C\) ein Schaltkreis Maximum-Fan-in \(k\), Größe \(s\) und Tiefe \(d\).
+                  Sei \(C\) ein Schaltkreis Maximum-Fan-in \(k\), Größe \(s\) und Tiefe \(d\).
                   Dann gibt es einen äquivalenten Schaltkreis \(C'\) mit Maximum-Fan-in \(2\),
                   Größe höchstens \(s (k-1)\) und Tiefe höchstens \(d \ceil &#123;\log_2 k&#125;\).
                 </div>

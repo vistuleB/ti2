@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={37}
-        title_gr="Der DK-Automat"
+        title_gr="5.6 Der DK-Automat"
         title_en="dk automat"
-        number={5.9}>
+        number={5.9}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes37.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,30 +38,32 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    6.9 
                     5.6 Der DK-Automat
                   </span>
                 </h1>
                 <h2>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Von der Grammatik \(\hat&#123;G&#125;\) zu einem nichtdeterministischen
+                  Von der Grammatik \(\hat&#123;G&#125;\) zu einem nichtdeterministischen
                   endlichen Automaten
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um den \(LR(0)\)-Parser gemäß
+                  Um den \(LR(0)\)-Parser gemäß
                   <a href="./05-05-d-linker-Rand-und-Bluete.html#algorithm-LR-parser">
                     Algorithmus 5.8.7
                   </a>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;zu implementieren, müssen wir den Test \(\gamma \stackrel&#123;?&#125;\in
+                  zu implementieren, müssen wir den Test \(\gamma \stackrel&#123;?&#125;\in
                   \Front(G)\) durchführen und, falls die Antwort{" "}
                   <i>
                     ja
                   </i>
                   {" "}ist, die
+                  &ensp;ist, die
                   Blüte finden. Dies gelingt uns, indem wir die Grammatik \(\hat&#123;G&#125;\) in
                   einen endlichen Automaten umwandeln.
                   <a href="./04-03-nfsm.html#regular-grammar-to-fsm">
                     Theorem 4.3.8
                   </a>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und die ihm vorhergehende Konstruktion zeigen, wie man das macht.
+                  und die ihm vorhergehende Konstruktion zeigen, wie man das macht.
                   Anstatt allerdings das Theorem als "black box" zu verwenden, gehen wir
                   die Konstruktion anhand zweier fiktiver Produktion $X \rightarrow
                   aBcDe$ und $X \rightarrow uVw$ Schritt für Schritt durch. Wir erkennen
@@ -70,13 +76,13 @@ const Article = () => {
                   \\ \dk&#123;X&#125;&amp;\rightarrow u\dkt&#123;V&#125;w \end&#123;align*&#125;$$
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Diese übersetzen wir in einen verallgemeinert nichtdeterministischen
+                  Diese übersetzen wir in einen verallgemeinert nichtdeterministischen
                   Automaten, bei dem jede Kante mit einem Wort $\beta \in (\Sigma \cup
                   N)^*$, also aus{" "}
                   <i>
                     Terminalen
                   </i>
-                  {" "}der Grammatik $\dk&#123;G&#125;$ beschriftet ist:
+                  der Grammatik $\dk&#123;G&#125;$ beschriftet ist:
                 </Paragraph>
                 <figure>
                   <img
@@ -84,7 +90,7 @@ const Article = () => {
                     src="../img/context-free/LR/hat-G-to-generalized-automaton.svg" />
                 </figure>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir brechen die Kanten in Stücke, so dass jede mit genau einem Zeichen
+                  Wir brechen die Kanten in Stücke, so dass jede mit genau einem Zeichen
                   beschriftet ist:
                 </Paragraph>
                 <figure>
@@ -93,16 +99,18 @@ const Article = () => {
                     src="../img/context-free/LR/hat-G-to-generalized-automaton-break-edges.svg" />
                 </figure>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nochmal: jede Kante ist mit einem{" "}
+                  Nochmal: jede Kante ist mit einem{" "}
                   <i>
                     Terminalsymbol
                   </i>
                   {" "}beschriftet.
+                  &ensp;beschriftet.
                   Die Symbole $B, D, V$ sind{" "}
                   <i>
                     Terminale
                   </i>
                   {" "}in der Grammatik
+                  &ensp;in der Grammatik
                   $\dk&#123;G&#125;$. Wenn wir $\epsilon$-Übergänge zulassen, können wir den
                   Automaten übersichtlicher gestalten und mehrere Zustände
                   zusammenfassen:
@@ -113,17 +121,17 @@ const Article = () => {
                     src="../img/context-free/LR/hat-G-to-generalized-automaton-numbered-names.svg" />
                 </figure>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir werden uns noch bessere Namen für die Zwischenzustände ausdenken.
+                  Wir werden uns noch bessere Namen für die Zwischenzustände ausdenken.
                   Wenn wir uns an die Rechtsableitungsbäume mit Stamm, linkem Rand,
                   Blüte und rechtem Rest erinnern, dann haben die Zwischenzustände eine
                   klare Bedeutung: der Zustand $4$ oben zum Beispiel bedeutet, dass der
                   Knoten $X$ im Stamm mit $a, B, c, D, e$ beschriftete Kinder hat und
                   wir uns bereits entschieden haben, dass $a$, $B$ und $c$
-                  {" "}
                   <i>
                     Blätter
                   </i>
                   {" "}sein sollen, also zum linken Rand gehören. Der
+                  &ensp;sein sollen, also zum linken Rand gehören. Der
                   Übergang $\boxed&#123;4&#125; \step&#123;D&#125; \boxed&#123;5&#125;$ entspricht dann der
                   Entscheidung, auch $D$ zu einem Blatt zu machen, während $\boxed&#123;4&#125;
                   \step&#123;\epsilon&#125; \dk&#123;D&#125;$ der Entscheidung entspricht, $D$ zu einem
@@ -147,11 +155,11 @@ const Article = () => {
                   Wir illustrieren obige Vorgehensweise nun anhand der Grammatik
                 </Paragraph>
                 <Paragraph id="the-grammar">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; G&amp;: \\ S&amp;\rightarrow aS \\ S&amp;\rightarrow B \\ B&
+                  $$\begin&#123;align*&#125; G&amp;: \\ S&amp;\rightarrow aS \\ S&amp;\rightarrow B \\ B&
                   \rightarrow aBb \\ B&amp;\rightarrow ab \end&#123;align*&#125;$$
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Laut Gebrauchsanweisung aus dem letzten Teilkapitel hat die Grammatik
+                  Laut Gebrauchsanweisung aus dem letzten Teilkapitel hat die Grammatik
                   $\dk&#123;G&#125;$ die Terminalsymbole $\Sigma \cup N = \&#123;a, b, S, B\&#125;$ und die
                   Nichtterminale $\dk&#123;N&#125; = \&#123;\dk&#123;S&#125;, \dk&#123;B&#125;\&#125;$. Die Produktionen von
                   $\dk&#123;G&#125;$ ergeben sich wie folgt:
@@ -167,16 +175,16 @@ const Article = () => {
                 <Paragraph>
                   In dieser Grammatik betrachten wir die Rechtsableitung
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; S \Step&#123;&#125; aS \Step&#123;&#125; aaS \Step&#123;&#125; aaB \Step&#123;&#125; aaaBb
+                $$\begin&#123;align*&#125; S \Step&#123;&#125; aS \Step&#123;&#125; aaS \Step&#123;&#125; aaB \Step&#123;&#125; aaaBb
                 \Step&#123;&#125; aaaaBbb \Step&#123;&#125; aaaaaBbbb \end&#123;align*&#125;$$
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gilt $\front(aaaaaBbbb) = aaaaaBb$. In $\hat&#123;G&#125;$ entspricht die
+                  Es gilt $\front(aaaaaBbbb) = aaaaaBb$. In $\hat&#123;G&#125;$ entspricht die
                   obige Rechtsableitung der Ableitung
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; \hat&#123;S&#125; \Step&#123;&#125; a\hat&#123;S&#125; \Step&#123;&#125; aa\hat&#123;S&#125; \Step&#123;&#125;
+                $$\begin&#123;align*&#125; \hat&#123;S&#125; \Step&#123;&#125; a\hat&#123;S&#125; \Step&#123;&#125; aa\hat&#123;S&#125; \Step&#123;&#125;
                 aa\hat&#123;B&#125; \Step&#123;&#125; aaa\hat&#123;B&#125; \Step&#123;&#125; aaaaBb \end&#123;align*&#125;$$
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Den nichtdeterministischen DK-Automaten (mit $\epsilon$-Übergängen)
+                  Den nichtdeterministischen DK-Automaten (mit $\epsilon$-Übergängen)
                   können wir nun Schritt für Schritt zeichnen:
                 </Paragraph>
                 <figure class="centered-figure well container">
@@ -305,7 +313,11 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Definition
+                      <NumberedTitle>
+                        &ensp;6.9.1{" "}
+                      </NumberedTitle>
                     </span>
+                    &ensp;Für eine kontextfreie
                     &ensp;Für eine kontextfreie
                     Grammatik ist der nichtdeterministische DK-Automat (NDK-Automat) ein
                     nichtdeterministischer endlicher Automat mit $\epsilon$-Übergängen,
@@ -313,12 +325,12 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für jede Produktion $X \rightarrow \beta$ gibt es einen
+                      Für jede Produktion $X \rightarrow \beta$ gibt es einen
                       Zustandsübergang $\boxed&#123;X&#125; \step&#123;\epsilon&#125; \boxed&#123;X \step&#123;&#125; .
                       \beta&#125;$
                     </li>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für jede Zerlegung $\beta = \beta
+                      Für jede Zerlegung $\beta = \beta
                       <i>
                         1 \sigma \beta
                       </i>
@@ -335,7 +347,7 @@ const Article = () => {
                       2&#125;$
                     </li>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls $\sigma$ ein Nichtterminal $Y$ ist, also $\beta = \beta
+                      Falls $\sigma$ ein Nichtterminal $Y$ ist, also $\beta = \beta
                       <i>
                         1 Y
                         \beta
@@ -349,7 +361,7 @@ const Article = () => {
                     </li>
                   </ol>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Interpretation dieser Übergänge in
+                    Die Interpretation dieser Übergänge in
                     Rechtsableitungsbaum-Begriffen ist: (1) heißt, dass $\boxed&#123;X&#125;$ ein
                     Stammknoten ist und wir ihn anhand der Regel $X \rightarrow \beta$
                     expandieren; wir erschaffen also Kinder, die mit den Symbolen von
@@ -364,7 +376,7 @@ const Article = () => {
                     wollen.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Startzustand ist $\boxed&#123;S&#125;$. Jeder Zustand der Form $\boxed&#123;X
+                    Der Startzustand ist $\boxed&#123;S&#125;$. Jeder Zustand der Form $\boxed&#123;X
                     \step&#123;&#125; \beta .&#125;$ ist ein akzeptierender Zustand.
                   </Paragraph>
                 </div>
@@ -372,7 +384,7 @@ const Article = () => {
                   Den NDK-Automaten deterministisch machen
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir wissen ja bereits, wie man einen nichtdeterministischen Automaten
+                  Wir wissen ja bereits, wie man einen nichtdeterministischen Automaten
                   deterministisch macht: die
                   <a href="./04-03-nfsm.html#nfsm-to-fsm">
                     Potenzmengenkonstruktion aus Kapitel 4.3
@@ -385,6 +397,7 @@ const Article = () => {
                     Menge
                   </i>
                   {" "}\(R\) von Zuständen des
+                  &ensp;\(R\) von Zuständen des
                   nichtdeterministischen Automaten. Wenn wir nun in eine solche Menge
                   \(R\) einen Zustand \(q\) einfügen, dann fügen wir auch alle Zustände
                   \(q'\) hinzu, zu denen es einen \(\epsilon\)-Übergang \(q
@@ -489,40 +502,41 @@ const Article = () => {
                     <span class="numbered-title">
                       Theroem
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    {" "}{" "}
                     <b>
                       (DK-Test).
                     </b>
                     {" "}Sei $G$ eine kontextfreie Grammatik ohne
+                    &ensp;Sei $G$ eine kontextfreie Grammatik ohne
                     nutzlose Nichtterminale und ei $M$ der DK-Automat für die Grammatik
                     $G$. Die Grammatik $G$ ist LR(0) genau dann, wenn folgende zwei
                     Bedingungen gelten:
                   </Paragraph>
                   <ul>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;(DK.1) Ein akzeptierender Zustand von $M$ (der ja eine Menge von
+                      (DK.1) Ein akzeptierender Zustand von $M$ (der ja eine Menge von
                       Zuständen des NDK-Automaten ist) enthält genau einen
                       akzeptierenden NDK-Zustand, also genau ein $\boxed&#123;X \rightarrow
                       \beta .&#125;$
                     </li>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;(DK.2) Wenn $q$ ein akzeptierender Zustand von $M$ ist und $q
+                      (DK.2) Wenn $q$ ein akzeptierender Zustand von $M$ ist und $q
                       \step&#123;\sigma&#125; q'$, dann ist $\sigma$ ein Nichtterminal.
                     </li>
                   </ul>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn diese beiden Bedingungen gelten, sagen wir, dass $G$ den
+                    Wenn diese beiden Bedingungen gelten, sagen wir, dass $G$ den
                     DK-Test bestanden hat. Das Theorem sagt also: $G$ ist LR(0) genau
                     dann, wenn es den DK-Test besteht.
                   </Paragraph>
                 </div>
                 <div class="well container">
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    {" "}{" "}
                     <b>
                       Beweisskizze.
                     </b>
-                    {" "}Wir erinnern den Leser noch einmal an die alternative
+                    Wir erinnern den Leser noch einmal an die alternative
                     Charakterisierung von LR(0)-Sprachen, nämlich :
                   </Paragraph>
                   <div
@@ -535,24 +549,20 @@ const Article = () => {
                       {" "}{" "}
                       <b>
                         {" "}
-                        {" "}
+                        **(LR(0), äquivalente Formulierung).
                       </b>
-                      {" "}{" "}
-                      <b>
-                        (LR(0), äquivalente Formulierung).
-                      </b>
-                      {" "}Eine Grammatik $G$ ist LR(0) genau dann, wenn für alle korrekten
+                      Eine Grammatik $G$ ist LR(0) genau dann, wenn für alle korrekten
                       Linksreduktionsschritte $\alpha \beta w \rstep&#123;&#125; \alpha Xw$ und
                       $\alpha' \beta' w' \rstep&#123;&#125; \alpha' X'w'$ gilt:
                     </Paragraph>
                     <ol>
                       <li>
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls $\alpha \beta = \alpha' \beta'$ dann auch $\beta = \beta'$
+                        Falls $\alpha \beta = \alpha' \beta'$ dann auch $\beta = \beta'$
                         und $X= X'$; in Worten: wenn die Fronten identisch sind, dann
                         auch die Reduktionsschritte.
                       </li>
                       <li>
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn $\alpha' \beta' = \alpha \beta \varphi$ und $|\varphi| \geq
+                        Wenn $\alpha' \beta' = \alpha \beta \varphi$ und $|\varphi| \geq
                         1$, dann $\varphi \not \in \Sigma^*$; in Worten: wenn
                         $\front(\gamma)$ ein echter Präfix von $\front(\gamma')$ ist,
                         dann muss in dem überstehenden Teil von $\front(\gamma)$
@@ -561,18 +571,18 @@ const Article = () => {
                     </ol>
                   </div>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es ist nicht schwer zu sehen, dass (DK.1) äquivalent zu Punkt 1 des
+                    Es ist nicht schwer zu sehen, dass (DK.1) äquivalent zu Punkt 1 des
                     Lemmas ist. Wenden wir uns (DK.2) und Punkt 2 zu. Wenn Punkt 2
-                    {" "}
                     <i>
                       nicht
                     </i>
                     {" "}gilt, dann gibt es korrekte Reduktionsschritte
+                    &ensp;gilt, dann gibt es korrekte Reduktionsschritte
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125; \alpha \beta w \rstep&#123;&#125; \alpha X w \\ \alpha \beta
+                  $$\begin&#123;align*&#125; \alpha \beta w \rstep&#123;&#125; \alpha X w \\ \alpha \beta
                   \sigma w' = \alpha' \beta' w' \rstep&#123;&#125; \alpha' X' w' \end&#123;align*&#125;$$
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir dem Automaten den Präfix $\alpha \beta$ füttern, bringt er
+                    Wenn wir dem Automaten den Präfix $\alpha \beta$ füttern, bringt er
                     uns in einen Zustand, der die $\boxed&#123;X \rightarrow \beta.&#125;$
                     enthält, da $\alpha \beta$ ja eine Front ist. Dieser Zustand muss
                     allerdings einen Übergang haben, der mit $\sigma$ gelabelt ist, dem
@@ -580,7 +590,7 @@ const Article = () => {
                     der Front $\alpha' \beta'$ ist. Somit gilt (DK.2) nicht.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn umgekehrt (DK.2) nicht gilt, dann gibt es einen akzeptierenden
+                    Wenn umgekehrt (DK.2) nicht gilt, dann gibt es einen akzeptierenden
                     Zustand $q$ (der also $\boxed&#123;X\rightarrow \beta.&#125;$ enthält) und
                     eine ausgehende Kante $q \step&#123;\sigma&#125; q'$ mit einem Terminal
                     $\sigma$.
@@ -589,8 +599,11 @@ const Article = () => {
                     <Paragraph>
                       <span class="numbered-title">
                         Übungsaufgabe
+                        <NumberedTitle>
+                          &ensp;6.9.1{" "}
+                        </NumberedTitle>
                       </span>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie: wenn $G$ keine nutzlosen Nichtterminale hat, dann gibt
+                      Zeigen Sie: wenn $G$ keine nutzlosen Nichtterminale hat, dann gibt
                       es im NDK-Automaten für jeden Zustand $q$ eine Übergangsfolge $q
                       \steps&#123;v&#125; q'$ zu einem akzeptierenden Zustand $q'$, wobei $v$
                       ausschließlich aus $G$-Terminalen besteht, also $v \in \Sigma^*$.
@@ -600,7 +613,7 @@ const Article = () => {
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gibt also einen Weg $q \step&#123;\sigma&#125; q' \steps&#123;v&#125; q''$ für $v \in
+                    Es gibt also einen Weg $q \step&#123;\sigma&#125; q' \steps&#123;v&#125; q''$ für $v \in
                     \Sigma^*$ und einen akzeptierenden Zustand $q''$. Es sind also
                     sowohl $\alpha \beta$ als auch $\alpha \beta \sigma v$ Fronten von
                     $G$, und $\sigma v$ besteht nur aus Terminalen. Das heißt, dass

@@ -1,7 +1,9 @@
 |> Section
-    title_gr Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion
+    title_gr 3.3 Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion
     title_en ackermann
     number 3.3
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,20 +38,22 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             3.3 Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In den vorhergehenden Teilkapiteln haben wir gesehen, dass Sie allerhand
+                        In den vorhergehenden Teilkapiteln haben wir gesehen, dass Sie allerhand
                         mit primitiv rekursiven Funktionen implementieren können. Darunter Dinge,
                         die komplexere Rekursion oder Schleifen mit mehreren lokalen Variablen zu brauchen
                         scheinen (wie die Fibonacci-Zahlen), ja sogar Dinge, die über den
                         Bereich der natürlichen Zahlen hinausgehen, wie zum Beispiel das Sortieren
                         eines beliebig langen Arrays. Kernpunkt war die Erkenntnis, dass wir
-                        komplexere "Datenstrukturen" wie _Paare von natürlichen Zahlen_                        als _eine_ natürliche Zahl codieren können und somit
+                        komplexere "Datenstrukturen" wie _Paare von natürlichen Zahlen_als _eine_ natürliche Zahl codieren können und somit
+                        &ensp;natürliche Zahl codieren können und somit
                         der primitiven Rekursion zugänglich machen können.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es liegt also Nahe, zu vermuten, dass primitive Rekursion bereits
+                        Es liegt also Nahe, zu vermuten, dass primitive Rekursion bereits
                         den Berechenbarkeitsbegriff zufriedenstellend formalisiert: das also
                         alles "Berechenbare" auch primitiv rekursiv sei.
                         Der 
@@ -59,19 +63,21 @@
                             Wikipedia-Artikel
                             über die Ackermann-Funktion
                         &ensp;schreibt, dass der deutsche Mathematiker
+                        &ensp;schreibt, dass der deutsche Mathematiker
                         David Hilbert dies auch vermutete. Im Jahre 1926
                         jedoch definierte 
                         |> a
                             href https://de.wikipedia.org/wiki/Wilhelm_Ackermann_(Mathematiker)
 
                             Wilhelm Ackermann
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;eine Funktion, die "offensichtlich berechenbar", jedoch nicht primitiv rekursiv ist.
+                        eine Funktion, die "offensichtlich berechenbar", jedoch nicht primitiv rekursiv ist.
                         Die Funktion, die wir heute die Ackermann-Funktion nennen, ist allerdings
                         eine vereinfachte Version, die 1935 von der ungarischen Mathematikerin
                         |> a
                             href https://de.wikipedia.org/wiki/Rózsa_Péter
 
                             Rózsa Péter
+                        &ensp;gefunden wurde (obwohl
                         &ensp;gefunden wurde (obwohl
                         der letztere Artikel das Jahr 1955 nennt).
                     |> div
@@ -80,7 +86,10 @@
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Péter-Ackermann-Funktion).*                        \begin{align*}
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        *(Péter-Ackermann-Funktion).*\begin{align*}
                         A(m,n)&amp;:= \begin{cases}
                         n+1&amp;\textnormal{ if $m=0$,} \\
                         A(m-1,1)&amp;\textnormal{ if $m \geq 1, n=0$} \\
@@ -144,11 +153,11 @@
                             class numbered-title
 
                             Theorem
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(m \in \N\) gegeben. Die Funktion \(A_m\) ist primitiv rekursiv.
+                        Sei \(m \in \N\) gegeben. Die Funktion \(A_m\) ist primitiv rekursiv.
                     |> div
                         class well container
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Wir verwenden Induktion über \(m\). Für \(m=0\) gilt \(A_0(n)= n+1\) und somit
+                        *Beweis.*Wir verwenden Induktion über \(m\). Für \(m=0\) gilt \(A_0(n)= n+1\) und somit
                         \(A_0 = \succ\). Sei nun also \(m \geq 1\). Wir sehen, dass
                         \begin{align*}
                         A_m(t) = A_{m-1} (A(m,t-1)) \ .
@@ -181,12 +190,14 @@
                             \(\square\)
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir haben also gezeigt, dass jedes \(A_m\) primitiv rekursiv ist.
+                        Wir haben also gezeigt, dass jedes \(A_m\) primitiv rekursiv ist.
                         Heißt das auch, dass die zwei-parametrige Funktion \(A(m,n)\) _berechenbar_ ist?
+                        &ensp;ist?
                         In der primitiven Rekursion haben wir keine Möglichkeit, den Index \(m\) als
                         Eingabewert zu lesen und dann aus dem unendlichen Array primitiv rekursiver Funktionen
                         \([A_0, A_1, A_2, \dots]\) den Eintrag \(A_m\) auszulesen.
                         Aber _berechenbar_ in einem ganz allgemeinen Sinn? Diese Frage können wir
+                        &ensp;in einem ganz allgemeinen Sinn? Diese Frage können wir
                         zu diesem Zeitpunkt nicht formal beantworten, weil wir den Begriff
                         allgemeiner Berechenbarkeit noch gar nicht definiert haben. Es ist allerdings
                         an der Definition von \(A(m,n)\) nichts magisches, und intuitiv würden wir
@@ -201,7 +212,7 @@
                             class numbered-title
 
                             Theorem
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Ackermann-Péter-Funktion ist nicht primitiv rekursiv.
+                        Die Ackermann-Péter-Funktion ist nicht primitiv rekursiv.
                     Mein Beweis paraphrasiert im Wesentlichen den auf
                     |> a
                         href https://planetmath.org/ackermannfunctionisnotprimitiverecursive
@@ -213,18 +224,20 @@
                         Theorem 3.3.2 im Widerspruch steht. Theorem 3.3.3 besagt, dass \(A_m\) primitiv rekursiv ist,
                         für jedes \(m\). Die Zahl \(m\) ist hier also _Teil der Aussage_, nicht
                         Eingabeparameter der Funktion; die Funktion \(A_m\) hat nur _einen_ Eingabeparameter.
+                        &ensp;Eingabeparameter.
                         Theorem 3.3.3 hingegen macht eine Aussage über _eine_ Funktion \(A(m,n)\) mit
-                        _zwei_ Eingabeparametern, und \(m\) ist nun einer dieser beiden.
+                        &ensp;Funktion \(A(m,n)\) mit_zwei_ Eingabeparametern, und \(m\) ist nun einer dieser beiden.
+                        &ensp;Eingabeparametern, und \(m\) ist nun einer dieser beiden.
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Anders ausgedrückt: sie können zwar jedes einzelne \(A_m\) in der "Programmiersprache" der
+                        Anders ausgedrückt: sie können zwar jedes einzelne \(A_m\) in der "Programmiersprache" der
                         primitiven Rekursion implementieren, allerdings brauchen Sie für jedes \(m\) neuen Code.
                         Sie können keinen Code schreiben, der, gegeben \(m\), den Code für \(A_m\) irgendwie
                         implizit produziert und dann mit \(n\) aufruft. Jedenfalls nicht in der Programmiersprache
                         der primitiven Rekursion.
                     |> p
 
-                        *Beweisidee.*                        Für jedes feste \(m\) ist die ein-parametrige Funktion \(A_m := n \mapsto A(m,n)\)
+                        *Beweisidee.*Für jedes feste \(m\) ist die ein-parametrige Funktion \(A_m := n \mapsto A(m,n)\)
                         primitiv rekursiv und
                         kann als Funktion mit \(m\) verschachtelten `for`-Schleifen betrachtet werden.
                         Es wird sich herausstellen, dass \(A_m\) in gewisser Weise die am schnellsten wachsende
@@ -236,7 +249,7 @@
                         class well container
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                            Wir brauchen eine robuste Definition, was es heißt, dass eine Funktion \(f: \N \rightarrow \N \)
+                            *Beweis.*Wir brauchen eine robuste Definition, was es heißt, dass eine Funktion \(f: \N \rightarrow \N \)
                             schneller wächst als
                             \(g: \N^k \rightarrow \N\).
                         |> div
@@ -244,9 +257,14 @@
                             |> span
                                 class numbered-title
 
-                                Definition.
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(f: \N \rightarrow \N\) und \(g: \N^k \rightarrow \N\). Die Funktion
+                                Definition
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                                .
+                            Sei \(f: \N \rightarrow \N\) und \(g: \N^k \rightarrow \N\). Die Funktion
                             \(f\) _majorisiert_ \(g\), wenn
+                            &ensp;\(g\), wenn
                             \begin{align*}
                             f (\max(x_1,\dots,x_k) \gt g(x_1, \dots, x_k) \ .
                             \end{align*}
@@ -268,11 +286,11 @@
                                 class numbered-title
 
                                 Lemma
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für jede primitiv rekursive Funktion \(f: \N^k \rightarrow \N\) gibt
+                            Für jede primitiv rekursive Funktion \(f: \N^k \rightarrow \N\) gibt
                             es ein \(r \in \N\), so dass \(f\) von \(A_r\) majorisiert wird.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Aus diesem Lemma folgt dann, dass \(A(m,n)\) selbst nicht
+                            Aus diesem Lemma folgt dann, dass \(A(m,n)\) selbst nicht
                             primitiv rekursiv sein kann. Wäre es dies, dann gäbe es ja ein
                             \(r\), so dass das ein-parametrige \(A_r\) die zwei-parametrige Funktion
                             \(A(m,n)\) majorisieren würde:
@@ -286,7 +304,7 @@
                             was offensichtlich ein Widerspruch ist, da beide Seiten gleich sind.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir werden nun das Lemma beweisen. Wir verwenden Induktion über die
+                            Wir werden nun das Lemma beweisen. Wir verwenden Induktion über die
                             Weise, in der die Funktion \(f\) konstruiert worden ist, also über die
                             Anzahl der Comp- und PrimRec-Kombinatoren, die wir zum Bau von \(f\) gebraucht haben.
                             Im folgenden schreiben wir, wenn wir einen Vektor \(\vec{x} = (x_1,\dots,x_n)\) aus
@@ -295,6 +313,7 @@
 
                             *Induktionsbasis.* 
 
+                            &ensp;Wir betrachten wir die Basisfunktionen
                             &ensp;Wir betrachten wir die Basisfunktionen
                             \(\zero, \succ, \pi^n_k\).
                             Wir wissen bereits, dass \(A_0(n) = n+1\) ist, also \(A_0 = \succ\).
@@ -309,14 +328,16 @@
                             Wir schlussfolgern: \(A_2\) majorisiert jede Basisfunktion.
                         |> p
 
-                            *Induktionsschritt.*                            Wenn \(f\) keine Basisfunktion ist, dann wurde \(f\) mittels Komposition oder
+                            *Induktionsschritt.*Wenn \(f\) keine Basisfunktion ist, dann wurde \(f\) mittels Komposition oder
                             primitiver Rekursion konstruiert. Für jeden Fall führen wir eine getrennte Rechnung
                             durch.
                         |> p
 
                             *Komposition:* \(f(\vec{x}) = g(h_1(\vec{x}), \dots, h_k(\vec{x}))\),
+                            &ensp;\(f(\vec{x}) = g(h_1(\vec{x}), \dots, h_k(\vec{x}))\),
                             für primitiv rekursive Funktionen \(g, h_1, \dots, h_k\). Jede dieser Funktionen
                             wurde mit _weniger_ Kombinatoren konstruiert; somit wird jede dieser Funktionen
+                            &ensp;Kombinatoren konstruiert; somit wird jede dieser Funktionen
                             von einem \(A_r\) majorisiert:
                             \(A_r \gt g, A_{s_1} \gt h_1, \dots, A_{s_k} \gt h_k\). Für einen Eingabevektor \(\vec{x}\)
                             schreiben wir \(x := \max(x_1,\dots,x_n)\) und rechnen:
@@ -339,6 +360,7 @@
                         |> p
 
                             *Primitive Rekursion:* \(f = \primrec (g,h)\), also
+                            &ensp;\(f = \primrec (g,h)\), also
                             \begin{align*}
                             f(t, \vec{x})&amp;=
                             \begin{cases}
@@ -354,12 +376,12 @@
                                 class numbered-title
 
                                 Behauptung
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(f(t, \vec{x}) \leq A_{q+1} (t+x)\), wobei
+                            \(f(t, \vec{x}) \leq A_{q+1} (t+x)\), wobei
                             \(x = \max(\vec{x}) = \max(x_1,\dots,x_n)\).
                         |> div
                             class well subtheorem
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                            Wir verwenden Induktion über \(t\). Wenn \(t=0\) ist,
+                            *Beweis.*Wir verwenden Induktion über \(t\). Wenn \(t=0\) ist,
                             dann gilt
                             \begin{align*}
                             f(0,\vec{x})&amp;= g(\vec{x}) \lt A_q (x) \leq A_{q+1} (x) \ .
@@ -390,7 +412,7 @@
                             Parametern ist: \(t\) und \(x\), wir aber für das zu beweisende Lemma aber
                             eine Funktion in einem Parameter brauchen, nämlich \(\max(t, \vec{x})\).
                             Sei also \(z := \max(t,x) = \max(t, x_1,\dots,x_n)\). Dann gilt
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                        \begin{align*}
                         A_{q+1} (x+t)&amp;\leq A_{q+1} (2z) \leq A_{q+1} (2(z-1) + 3) \\
                         &amp;= A_{q+1} (A_2(z-1)) \tag{da $A_2(n) = 2n+3$}\\
                         &amp;\leq A_{q+1} (A_{q+2}(z-1)) \\
@@ -403,7 +425,8 @@
                             \(\square\)
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In der Vorlesung am 7. Mai 2024 hatte ich den _Grad_ einer primitiv-rekursiven Funktion
+                        In der Vorlesung am 7. Mai 2024 hatte ich den _Grad_ einer primitiv-rekursiven Funktion
+                        &ensp;einer primitiv-rekursiven Funktion
                         definiert. Das ist in etwa die "Verschachtelungstiefe" von $f$. Betrachten wir beispielsweise
                         die Funktion $\pair(x,y) = {x + y + 1 \choose 2} + x$ und dröseln auf, wie wir diese
                         als primitiv-rekursive Funktion konstruiert haben:
@@ -414,7 +437,7 @@
                         add = PrimRec (p0, Comp(succ, p0))
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;dann können wir das auf Baum darstellen:
+                        dann können wir das auf Baum darstellen:
                     |> figure
                         |> img
                             style height:25em

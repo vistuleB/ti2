@@ -1,7 +1,9 @@
 |> Section
-    title_gr Rechnerübung: Gute kontextfreie Grammatiken entwerfen
+    title_gr 5.3 Rechnerübung: Gute kontextfreie Grammatiken entwerfen
     title_en exercise design grammars
     number 5.3
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,6 +38,7 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             5.3 Rechnerübung: Gute kontextfreie Grammatiken entwerfen
                     |> p
 
@@ -83,7 +86,10 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Geben Sie folgende Grammatik in die App ein:
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Geben Sie folgende Grammatik in die App ein:
                         |> pre
 
                             S -> ;
@@ -110,15 +116,20 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie eine kontextfreie Grammatik für die Sprache aller
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Schreiben Sie eine kontextfreie Grammatik für die Sprache aller
                         "korrekten" URLs; also Folgen von mindestens zwei _Labels_, die
                         durch `.` separiert sind. Sie können den "Regelvorschlag"
+                        &ensp;separiert sind. Sie können den "Regelvorschlag"
                         ganz links unten in der App reinkopieren, um automatisch Regeln für alphanumerische
                         Zeichen zu bekommen (allerdings verschlechtert das die Laufzeit; ich habe erstmal
                         gar nicht auf Effizienz geachtet).
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Geben Sie das Eingabewort `a.aaaaa.aaaa.aaaa.aaaa.aaaa` ein. Wie
+                            Geben Sie das Eingabewort `a.aaaaa.aaaa.aaaa.aaaa.aaaa` ein. Wie
+                            &ensp;ein. Wie
                             sieht Ihr Backtrack-Baum aus? Hat er viele Sackgassen? Können Sie Ihre Grammatik
                             so abändern, dass sie zwar noch die gleiche Sprache erzeugt, aber keine / nur wenige
                             Sackgassen hat?
@@ -128,7 +139,10 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Entwerfen Sie eine Grammatik für arithmetische Ausdrücke im Racket-Stil, also
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Entwerfen Sie eine Grammatik für arithmetische Ausdrücke im Racket-Stil, also
                         |> pre
 
                             (* (+ 2 3) (- 4 (* 2 4) 5)
@@ -144,48 +158,59 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wiederholen Sie die vorherige Übung für arithmetische Ausdrücke in der uns
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        Wiederholen Sie die vorherige Übung für arithmetische Ausdrücke in der uns
                         geläufigen Infix-Notation. Hierbei sollten die Konventionen Punkt-vor-Strich
                         beachtet werden. Im Ableitungsbaum von
                         |> pre
 
                             2+3*(5+4)
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;sollte sich das wiederspiegeln.
+                        sollte sich das wiederspiegeln.
                     |> div
                         class well well-lg numbered-exercise container
                         |> span
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Challenge)*                        Geben Sie die Grammatik hier ein:
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        *(Challenge)*Geben Sie die Grammatik hier ein:
                         |> pre
 
                             S -> "("S")"S;
                             S -> "["S"("S;
                             S -> ;
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Überlegen Sie, was diese "bedeutet". Sie sehen, die Grammatik ist
+                        Überlegen Sie, was diese "bedeutet". Sie sehen, die Grammatik ist
                         nicht eindeutig. Das Wort `[([()(` hat zwei
-                        verschiedene Ableitungsbäume. Können Sie eine äquivalente
-                        _eindeutige_ Grammatik schreiben?
+                        &ensp;hat zwei
+                        verschiedene Ableitungsbäume. Können Sie eine äquivalente_eindeutige_ Grammatik schreiben?
+                        &ensp;Grammatik schreiben?
                     |> div
                         class well well-lg numbered-exercise container
                         |> span
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Challenge)*                        Die folgende Grammatik hat User _babou_                        auf 
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        *(Challenge)*Die folgende Grammatik hat User _babou_auf 
                         |> a
                             href https://cstheory.stackexchange.com/questions/22520/example-of-context-free-grammar-that-triggers-exponential-behaviour-without-memo
 
                             StackExchange
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;vorgeschlagen als Beispiel für eine eindeutige Grammatik,
+                        vorgeschlagen als Beispiel für eine eindeutige Grammatik,
                         bei der Sie exponentiell große Backtrack-Bäume bekommen können:
                         |> pre
 
                             S ->  "a" X "b" | "a" X "c";
                             X -> "a" | "a" X | "a" X X;
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Das ist aber keine Kunst, da die Grammatik uneindeutig ist.
+                        Das ist aber keine Kunst, da die Grammatik uneindeutig ist.
                         Können Sie eine _eindeutige_ Grammatik angebene, die ähnlich
+                        &ensp;Grammatik angebene, die ähnlich
                         exponentielles Verhalten zeigt? Exponentiell heißt: mit jedem
                         zusätlichen Zeichen des Eingabewortes kann die Größe des
                         Backtrack-Baumes um einen Faktor \(R \gt 1\) wachsen.
@@ -195,6 +220,10 @@
                             class numbered-title
 
                             Übungsaufgabe
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Super-Challenge; ich hab selbst keine Lösung)*.
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                        *(Super-Challenge; ich hab selbst keine Lösung)*.
                         Finden Sie eine kontextfreie Sprache \(L\), für die _jede_ Grammatik,
+                        &ensp;Grammatik,
                         die \(L\) erzeugt, unter exponentiell großen Backtrack-Bäumen leidet.

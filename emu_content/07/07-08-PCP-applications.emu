@@ -1,7 +1,9 @@
 |> Section
-    title_gr des Postschen Korrespondenzproblems
+    title_gr Anwendungen des Postschen Korrespondenzproblems
     title_en PCP applications
     number 7.8
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,18 +38,19 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             Anwendungen des Postschen Korrespondenzproblems
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Erinnerin Sie sich an kontextfreie Grammatiken? Das waren formale Grammatiken wie zum Beispiel
+                        Erinnerin Sie sich an kontextfreie Grammatiken? Das waren formale Grammatiken wie zum Beispiel
                         \begin{align*}
                         S&amp;\rightarrow Tc \\
                         T&amp;\rightarrow TaTb \\
                         T&amp;\rightarrow \epsilon
                         \end{align*}
                         Diese Grammatiken erlauben uns, gewisse Sprachen zu beschreiben, indem Sie Regeln festlegen -
-                        hier
-                        _Produktionen_ genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
+                        hier_Produktionen_ genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
+                        &ensp;genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
                         Alphabet
                         (hier: \(\{a,b,c\}\)) ableiten kann. Beispielsweise:
                         \begin{align*}
@@ -65,28 +68,29 @@
 
                             Theorem
                         &ensp;Wir wollen bestimmen, ob
+                        &ensp;Wir wollen bestimmen, ob
                         aus einer gegebenen kontextfreien Grammatik \(G\) ein Palindromwort ableitbar ist,
                         also ein \(\gamma\), das von rechts nach links gelesen gleich ist, sprich
                         \(\gamma = \gamma^R\). Dieses Problem ist unentscheidbar.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Formal gesehen müssten wir eine Codierung kontextfreier Grammatiken über einem festen
+                            Formal gesehen müssten wir eine Codierung kontextfreier Grammatiken über einem festen
                             Alphabet (zum Beispiel \(\{0,1, \rightarrow, ;, \dots\}\) angeben, um dann die _Sprache
                             der
                             Codierungen all jener
-                            kontextfreien Grammatik, die ein Palindromwort ableiten können_                            definieren zu können. Da wir aber mittlerweile verstanden haben, dass alle
+                            kontextfreien Grammatik, die ein Palindromwort ableiten können_definieren zu können. Da wir aber mittlerweile verstanden haben, dass alle
                             "endlichen" Objekte irgendwie auf Turingmschinen-verträgliche Weise codiert werden können,
                             ersparen wir uns diese Formalitäten.
                     |> div
                         class well container
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Wir zeigen: wenn man zu einer gegebenen kontextfreien Grammatik entscheiden könnte,
+                        *Beweis.*Wir zeigen: wenn man zu einer gegebenen kontextfreien Grammatik entscheiden könnte,
                         ob sie ein Palindromwort ableiten kann, dann könnten wir auch entscheiden, ob ein
                         gegebenes PCP-Puzzle eine Lösung hat. Da wir bereits Letzteres als unentscheidbar
                         erkannt haben, schließen wir, dass Ersteres auch unentscheidbar ist.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Konkret sei uns nun also ein PCP-Puzzle \(P\) gegeben. Wir bauen daraus eine
+                            Konkret sei uns nun also ein PCP-Puzzle \(P\) gegeben. Wir bauen daraus eine
                             kontextfreie Grammatik \(G\), so dass
                             \(G\) genau dann ein Palindromwort ableiten kann, wenn \(P\) eine Lösung hat.
                             Die Konstruktion ist überraschend einfach. Wir erschaffen ein Startsymbol \(S\)
@@ -109,11 +113,12 @@
 
                                 Behauptung
                             &ensp;Wenn die Grammatik \(G\) ein Palindromwort
+                            &ensp;Wenn die Grammatik \(G\) ein Palindromwort
                             ableiten kann, dann hat das PCP-Puzzle \(P\) eine Lösung.
                         |> div
                             class well subtheorem
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                            Die letzte angewandte Regel muss \(S \rightarrow \$\) sein, und somit hat
+                            *Beweis.*Die letzte angewandte Regel muss \(S \rightarrow \$\) sein, und somit hat
                             das abgeleitete Wort die Form
                             \begin{align*}
                             \alpha_1 \alpha_2 \dots \alpha_n \$ \beta_n^R \dots \beta_2^R \beta_1^R \ .
@@ -136,12 +141,13 @@
 
                                 Behauptung
                             &ensp;Wenn
+                            &ensp;Wenn
                             das PCP-Puzzle \(P\) eine Lösung hat, dann kann die Grammatik \(G\) ein Palindromwort
                             ableiten.
                         |> div
                             class well subtheorem
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                            Sei
+                            *Beweis.*Sei
                             \begin{align*}
                             (\alpha_1 : \beta_1) (\alpha_2 : \beta_2)\dots (\alpha_n : \beta_n)
                             \end{align*}
@@ -164,7 +170,7 @@
                                 class qed
 
                                 \(\square\)
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Hätten wir nun also einen Algorithmus, der für eine gegebene kontextfreie Grammatik
+                        Hätten wir nun also einen Algorithmus, der für eine gegebene kontextfreie Grammatik
                         entscheiden könnte, ob sie ein Palindromwort ableiten kann, dann könnten wir
                         PCP-Puzzles wie folgt entscheiden: nimm das Puzzle \(P\), baue nach den obigen
                         Regeln daraus die Grammatik \(G\) und frage dann den Algorithmus, ob
@@ -179,13 +185,14 @@
                         Reduktionen
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es lohnt sich, an dieser Stelle zu pausieren. Was Sie gerade gesehen haben,
+                        Es lohnt sich, an dieser Stelle zu pausieren. Was Sie gerade gesehen haben,
                         ist eine _Reduktion_. Im "echten" Leben verwenden wir Reduktionen,
                         um bereits gefundene Lösungen zu "recyceln". Beispielsweise:
                         |> ul
                             |> li
 
                                 *Aufgabe:* Zeigen Sie, dass die Funktion
+                                &ensp;Zeigen Sie, dass die Funktion
                                 \(n \mapsto n!\) im \(\lambda\)-Kalkül berechenbar ist.
                             |> li
 
@@ -193,13 +200,13 @@
                                 primitiv-rekursive Funktion schreibt.
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir wissen bereits, wie man eine allgemeine primitiv rekursive Funktion
+                                Wir wissen bereits, wie man eine allgemeine primitiv rekursive Funktion
                                 im \(\lambda\)-Kalkül implementiert.
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir schließen nun, dass \(n \mapsto n!\) im \(\lambda\)-Kalkül implementierbar ist,
+                                Wir schließen nun, dass \(n \mapsto n!\) im \(\lambda\)-Kalkül implementierbar ist,
                                 und ersparen uns die Details.
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im Kontext der Turing-Berechenbarkeit können wir dieses Prinzip wie folgt
+                        Im Kontext der Turing-Berechenbarkeit können wir dieses Prinzip wie folgt
                         formalisieren:
                     |> div
                         class well container theorem
@@ -207,8 +214,12 @@
                             class numbered-title
 
                             Definition
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Seien \(L_1 \subseteq \Sigma_1\) und \(L_2 \subseteq \Sigma_2\) zwei Sprachen.
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        Seien \(L_1 \subseteq \Sigma_1\) und \(L_2 \subseteq \Sigma_2\) zwei Sprachen.
                         Eine _Reduktion von \(L_1\) nach \(L_2\)_ ist eine Turing-berechenbare Funktion
+                        &ensp;ist eine Turing-berechenbare Funktion
                         \begin{align*}
                         f : \Sigma_1^* \rightarrow \Sigma_2^*
                         \end{align*}
@@ -218,7 +229,7 @@
                         \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Erinnern Sie sich: dass \(f\) Turing-berechenbar ist, heißt, dass es eine Turingmaschine
+                        Erinnern Sie sich: dass \(f\) Turing-berechenbar ist, heißt, dass es eine Turingmaschine
                         \(_f\) gibt mit einem dezidierten Ausgabe-Band, so dass \(M_f(x)\) für jedes Eingabewort
                         terminiert und zum Zeitpunkt der Terminierung \(f(x)\) auf das Ausgabeband geschrieben hat.
                         Wenn wir eine Reduktion von \(L_1\) nach \(L_2\) haben, dann liefert uns jeder
@@ -230,12 +241,16 @@
                             class numbered-title
 
                             Beobachtung
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                         &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                         \(L_2\) ist und \(L_2\) entscheidbar ist, dann ist auch \(L_1\) entscheidbar.
                     |> div
                         class well container
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Sei \(M_2\) eine Turingmaschine, die \(L_2\) entscheidet und sei \(M_f\) die Turingmaschine,
+                        *Beweis.*Sei \(M_2\) eine Turingmaschine, die \(L_2\) entscheidet und sei \(M_f\) die Turingmaschine,
                         die \(f\) berechnet.
                         Wir bauen nun eine neue Turingmaschine \(M_1\).
                         Sie nimmt das Eingabewort \(x \in \Sigma_1^* \) und lässt die Turingmaschine
@@ -253,12 +268,14 @@
                             class qed
 
                             \(\square\)
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Stellen Sie sich einfach vor, dass \(M_f\) der Code ist, den Sie selber schreiben müssen,
+                    Stellen Sie sich einfach vor, dass \(M_f\) der Code ist, den Sie selber schreiben müssen,
                     und \(M_2\) die "Bibliotheksfunktion" ist, die Sie ohne groß nachzudenken aufrufen,
                     weil sie ja bereist von anderen Leuten (hoffentlich korrekt) implementiert worden ist.
                     Behauptung 4.6.8 zeigt also, das etwas _möglich_ ist.
+                    &ensp;ist.
                     In der Berechenbarkeitstheorie und Komplexitätstheorie sind wir eher daran interessiert,
                     zu zeigen, was _nicht möglich_ ist, und wenden daher häufiger das Kontrapositiv
+                    &ensp;ist, und wenden daher häufiger das Kontrapositiv
                     der Behauptung an:
                     |> div
                         class well container theorem
@@ -266,32 +283,39 @@
                             class numbered-title
 
                             Beobachtung
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                         &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                         \(L_2\) ist und \(L_1\) unentscheidbar ist, dann ist auch \(L_2\) unentscheidbar.
                     |> div
                         class well container
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Angenommen, \(L_2\) wäre entscheidbar. Dann wäre laut Behauptung 4.6.8 die Sprache
+                        *Beweis.*Angenommen, \(L_2\) wäre entscheidbar. Dann wäre laut Behauptung 4.6.8 die Sprache
                         \(L_1\) ja auch entscheidbar, was sie aber nach Annahme nicht ist. Daher ist
                         \(L_2\) eben nicht entscheidbar.
                         |> span
                             class qed
 
                             \(\square\)
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beachten Sie nun, dass so etwas wie Behauptung 4.6.9 bereits oben angewandt haben: wir haben
+                    Beachten Sie nun, dass so etwas wie Behauptung 4.6.9 bereits oben angewandt haben: wir haben
                     das Haltproblem auf das MPCP-Problem reduziert; jenes dann auf das PCP; und schließlich PCP
                     auf das "Kann ein Palindrom abgeleitet werden"-Problem. Wir haben also eine ganze Kette
                     von Reduktionen bereits durchgeführt.
                     Für Neulinge ist diese Richtung oft inintuitiv und verwirrend. Dies spiegelt
                     sich in der Verwendung des Konjunktivs _wäre / wäre_ in Behauptung 4.6.9 wider.
-                    Auch ist es schlicht ungewohnt, ein _altes_ Problem auf ein _neues_ zu reduzieren
+                    &ensp;in Behauptung 4.6.9 wider.
+                    Auch ist es schlicht ungewohnt, ein _altes_ Problem auf ein 
+                    &ensp;Problem auf ein _neues_ zu reduzieren
+                    &ensp;zu reduzieren
                     statt umgekehrt.
                     |> figure
                         |> img
                             style height:15em
                             src ../img/pcp/reduction.svg
                             loading lazy
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Üben wir also Reduktionen:
+                    Üben wir also Reduktionen:
                     |> div
                         class well container theorem
                         |> span
@@ -301,16 +325,16 @@
                         |> p
 
                             *(Schnittproblem kontextfreier Sprachen)*
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Gegeben zwei kontextfreie Grammatiken \(G_1, G_2\). Es ist
+                        Gegeben zwei kontextfreie Grammatiken \(G_1, G_2\). Es ist
                         unentscheidbar, ob \(L(G_1) \cap L(G_2)\) nichtleer ist, ob es
                         also ein Wort \(x\) mit \(x \in G_1\) und \(x \in G_2\) gibt.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dieses Problem ist als _Schnittproblem kontextfreier Sprachen_                            bekannt.
+                            Dieses Problem ist als _Schnittproblem kontextfreier Sprachen_bekannt.
                     |> div
                         class well container
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Wir reduzieren das Palindromwortproblem (bereits bekannt) auf das Schnittproblem (neues
+                        *Beweis.*Wir reduzieren das Palindromwortproblem (bereits bekannt) auf das Schnittproblem (neues
                         Problem).
                         Sei \(G\) eine Grammatik und \(\Sigma\) die Menge der Terminalsymbole. Sei \(G'\) die
                         folgende Grammatik:
@@ -336,14 +360,14 @@
                             class numbered-title
 
                             Theorem
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(Mehrdeutigkeitsproblem kontextfreier Sprachen)*                        Gegeben eine kontextfreie Grammatik \(G\). Es ist unentscheidbar,
+                        *(Mehrdeutigkeitsproblem kontextfreier Sprachen)*Gegeben eine kontextfreie Grammatik \(G\). Es ist unentscheidbar,
                         ob \(G\) mehrdeutig ist, d.h., ob es ein Wort \(x \in \Sigma^*\) gibt,
                         für das zwei verschiedene Ableitungsbäume existieren.
                     |> div
                         style background-color: rgba(255,0,0,0.1);
                         class well container
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Falscher Beweis.*                        Wir reduzieren das uns bereits bekannte Schnittproblem auf das Mehrdeutigkeitsproblem.
+                        *Falscher Beweis.*Wir reduzieren das uns bereits bekannte Schnittproblem auf das Mehrdeutigkeitsproblem.
                         Gegeben seien zwei kontextfreie Grammatiken \(G_1, G_2\) mit Startsymbolen \(S_1, S_2\) und
                         Nichtterminalmenge \(N_1, N_2\). Wir machen in einem ersten Schritt die Mengen \(N_1\) und
                         \(N_2\) disjunkt (wenn sie es nicht eh schon sind; wir können beispielsweise jedes \(X \in N_2\)
@@ -375,7 +399,7 @@
                             \(\square\)
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Haben Sie den Fehler im Beweis erkannt? Das Problem ist, dass es sein könnte, dass
+                        Haben Sie den Fehler im Beweis erkannt? Das Problem ist, dass es sein könnte, dass
                         \(G_1\) und \(G_2\) leeren Schnitt haben, \(G_1\) aber bereits mehrdeutig ist.
                         Die Ausgabe-Grammatik \(G\) wäre dann auch mehrdeutig; also hätte die Reduktion \(f\)
                         einen Fehler gemacht.
@@ -394,7 +418,7 @@
                     |> div
                         class well container
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweis.*                        Sei ein PCP-Puzzle \(P = \{ (\alpha_1:\beta_1), \dots, (\alpha_n : \beta_n)\}\) gegeben.
+                        *Beweis.*Sei ein PCP-Puzzle \(P = \{ (\alpha_1:\beta_1), \dots, (\alpha_n : \beta_n)\}\) gegeben.
                         Wir erstellen nun eine kontextfreie Gramatik, die es dem "User" erlaubt, zu entscheiden,
                         ob er das Wort via die oberen Teile \(\alpha_i\) oder via die unteren Teile ableiten will;
                         wenn es auf beide Weisen geht, dann ist die Grammatik mehrdeutig und das PCP hat eine Lösung.

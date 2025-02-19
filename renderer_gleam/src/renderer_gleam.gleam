@@ -4,11 +4,9 @@ import blamedlines.{type Blame, type BlamedLine, Blame, BlamedLine}
 import gleam/io
 import gleam/list
 import gleam/option.{Some}
-import gleam/result
 import gleam/string
 import infrastructure as infra
 import pipeline
-import simplifile
 import vxml_parser.{type VXML, BlamedAttribute}
 import vxml_renderer as vr
 import writerly_parser as wp
@@ -23,7 +21,6 @@ type FragmentType {
 type Ti2SplitterError {
   NoTOCAuthorSuppliedContent
   MoreThanOneTOCAuthorSuppliedContent
-  Message(String)
 }
 
 type Ti2EmitterError {
@@ -76,13 +73,13 @@ fn ti2_splitter(
         // )
         let assert Some(title_attr) = infra.get_attribute_by_name(vxml, "title_en")
         let assert Some(number_attribute) = infra.get_attribute_by_name(vxml, "number")
-        let chapter_name = 
+        let section_name = 
             number_attribute.value |> string.split(".") |> list.map(prepand_0) |> string.join("-") 
             <> "-" 
             <> title_attr.value |> string.replace(" ", "-")
 
         #(
-          "routes/lecture-notes/" <> chapter_name <> ".tsx",
+          "routes/lecture-notes/" <> section_name <> ".tsx",
           vxml,
           Chapter(index + 1),
         )
@@ -91,7 +88,7 @@ fn ti2_splitter(
   )
 }
 
-fn ti2_chapter_bootcamp_common_emitter(
+fn ti2_section_emitter(
   path: String,
   fragment: VXML,
   fragment_type: FragmentType,
@@ -112,7 +109,7 @@ fn ti2_chapter_bootcamp_common_emitter(
             BlamedLine(
               blame_us("ti2_fragment_emitter"),
               0,
-              "import Chapter from \"~/components/Chapter\";",
+              "import Section from \"~/components/Section\";",
             )
           _ -> panic as "bad fragment_type"
         },
@@ -121,6 +118,8 @@ fn ti2_chapter_bootcamp_common_emitter(
         BlamedLine(blame_us("ti2_fragment_emitter"), 0, "import Paragraph from \"~/components/Paragraph\";"),
         BlamedLine(blame_us("ti2_fragment_emitter"), 0, "import Container from \"~/components/Container\";"),
         BlamedLine(blame_us("ti2_fragment_emitter"), 0, "import Carousel from \"~/components/Carousel\";"),
+        BlamedLine(blame_us("ti2_fragment_emitter"), 0, "import NumberedTitle from \"~/components/NumberedTitle\";"),
+
         BlamedLine(blame_us("ti2_fragment_emitter"), 0, "const Article = () => {"),
         BlamedLine(blame_us("ti2_fragment_emitter"), 2, "return ("),
         BlamedLine(blame_us("ti2_fragment_emitter"), 4, "<Container>"),
@@ -199,7 +198,7 @@ fn ti2_emitter(
   let #(path, vxml, fragment_type) = pair
   case fragment_type {
     Chapter(n) ->
-      ti2_chapter_bootcamp_common_emitter(path, vxml, fragment_type, n)
+      ti2_section_emitter(path, vxml, fragment_type, n)
     TOCAuthorSuppliedContent -> toc_emitter(path, vxml, fragment_type)
   }
 }

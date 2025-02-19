@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={32}
-        title_gr="LL(\(k\))-Grammatiken"
+        title_gr="5.4 LL(\(k\))-Grammatiken"
         title_en="LL1 grammars"
-        number={5.4}>
+        number={5.4}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes32.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,18 +38,22 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    6.4 
                     5.4 LL(\(k\))-Grammatiken
                   </span>
                 </h1>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;6.4.1{" "}
+                    </NumberedTitle>
                   </span>
                   {" "}{" "}
                   <b>
                     Grenzform
                   </b>
-                  {" "}Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik.
+                  Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik.
                   Eine Wortform \(A \alpha\) - also eine Wortform, die mit einem Nichtterminal beginnt -
                   heißt{" "}
                   <i>
@@ -68,8 +76,11 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;6.4.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für ein Wort \(w \in \Sigma^*\) und eine natürliche Zahl \(k \in \N\)
+                  Für ein Wort \(w \in \Sigma^*\) und eine natürliche Zahl \(k \in \N\)
                   sei \(\first_k(w)\) wie folgt definiert:
                   $$\begin&#123;align*&#125;
                   \first_k(w) := \begin&#123;cases&#125;
@@ -83,12 +94,15 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;6.4.3{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     LL(\(k\))-Grammatiken
                   </b>
-                  {" "}Eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) ist eine
+                  Eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) ist eine
                   LL(\(k\))-Grammatik, wenn für jede Grenzform \(A \alpha\) und für jedes Paar
                   $$\begin&#123;align*&#125;
                   A&amp;\step&#123;1&#125; \beta \\
@@ -110,9 +124,11 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;6.4.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Negieren Sie die Definition, d.h., schreiben Sie eine Aussage der Form
-                  {" "}
+                  Negieren Sie die Definition, d.h., schreiben Sie eine Aussage der Form
                   <i>
                     Wenn \(G\) nicht LL(\(k\)) ist, dann gibt es...
                   </i>
@@ -122,18 +138,18 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Klammern-Grammatik
+                  Die Klammern-Grammatik
                   $$\begin&#123;align*&#125;
                   S&amp;\step&#123;1&#125; \epsilon \\
                   S&amp;\step&#123;2&#125; (S)S
                   \end&#123;align*&#125;$$
                   ist LL(1).
                   <div class="well subtheorem">
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    {" "}{" "}
                     <b>
                       Beweis.
                     </b>
-                    {" "}Folgen wir der Definition von LL(1): für jedes Paar verschiedener Regeln muss etwas
+                    Folgen wir der Definition von LL(1): für jedes Paar verschiedener Regeln muss etwas
                     gelten. Wir haben hier keine Auswahl, denn es gibt ja nur ein Paar. Also
                     müssen wir zeigen, dass, falls
                     $$\begin&#123;align*&#125;
@@ -149,6 +165,7 @@ const Article = () => {
                         Behauptung.
                       </b>
                       {" "}Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
+                      &ensp;Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
                       dann steht jedes \(S\) in \(\delta\) entweder am Ende von \(\delta\) oder
                       unmittelbar vor einem "\(\texttt&#123;)&#125;\)".
                     </Paragraph>
@@ -163,7 +180,7 @@ const Article = () => {
                       </span>
                     </Paragraph>
                     <Paragraph>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir folgern also, dass für das \(\alpha\) den beiden obigne
+                      Wir folgern also, dass für das \(\alpha\) den beiden obigne
                       Herleitungen \(\first_k(\alpha) \in \&#123;\epsilon, \texttt&#123;)&#125;\&#125;\) gilt.
                       Keines davon ist ein Nichtterminal, und so muss auch
                       \(\first_k(\alpha) = \first_k(x)\) gelten. Zusammenfassend gesagt:
@@ -192,6 +209,7 @@ const Article = () => {
                     nicht
                   </i>
                   {" "}LL(\(k\)) ist, dann muss der Backtrack-Baum
+                  &ensp;LL(\(k\)) ist, dann muss der Backtrack-Baum
                   beiden Ableitungen
                   $$\begin&#123;align*&#125;
                   w A \alpha&amp;\Rightarrow w \beta \alpha \\
@@ -204,12 +222,16 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;6.4.2{" "}
+                    </NumberedTitle>
                   </span>
                   (Beispiel 5.3 aus{" "}
                   <i>
                     The Theory of Parsing, Translation, and Compiling
                   </i>
                   {" "}von Alfred V. Aho
+                  &ensp;von Alfred V. Aho
                   und Jeffrey D. Ullman).
                   Betrachten wir die Grammatik
                   $$\begin&#123;align*&#125;
@@ -220,11 +242,12 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                   Zeigen Sie, dass diese Grammatik LL(2) ist, aber nicht LL(1).
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    {" "}{" "}
                     <b>
                       Tip.
                     </b>
                     {" "}Leiten Sie erst einmal
+                    &ensp;Leiten Sie erst einmal
                     ein Dutzend verschiedene Wörter ab und finden dann
                     eine "normalsprachliche" Beschreibung
                     dieser Sprache. Beschreiben Sie dann alle möglichen Wortformen
@@ -234,8 +257,11 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;6.4.3{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie eine äquivalente Grammatik zu der vorherigen Sprache, die LL(1) ist.
+                  Schreiben Sie eine äquivalente Grammatik zu der vorherigen Sprache, die LL(1) ist.
                   (Warnung: Ich weiß nicht, ob das überhaupt geht).
                 </div>
                 <div
@@ -243,8 +269,11 @@ const Article = () => {
                   class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;6.4.4{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Betrachten wir die Grammatik \(G\):
+                  Betrachten wir die Grammatik \(G\):
                   $$\begin&#123;align*&#125;
                   S&amp;\step&#123;1&#125; a S b \\
                   S&amp;\step&#123;2&#125; a S \\
@@ -255,17 +284,17 @@ const Article = () => {
                   L(G) := \&#123; a^&#123;m+k&#125; b^m \ | \ m, k \in \N \&#125; \ ,
                   \end&#123;align*&#125;$$
                   also Wörter, wo auf beliebig viele \(a\)'s eine Folge von
-                  {" "}
                   <i>
                     höchstens
                   </i>
                   {" "}so vielen \(b\)'s folgt.
+                  &ensp;so vielen \(b\)'s folgt.
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Geben Sie diese Grammatik in den
+                    Geben Sie diese Grammatik in den
                     <a href="../../demos/drawManualGrammar.html">
                       Parser-Simulator
                     </a>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein und finden Wörter mit langen Sackgassen.
+                    ein und finden Wörter mit langen Sackgassen.
                   </Paragraph>
                   <Paragraph>
                     Zeigen Sie, dass diese Grammatik nicht LL\((k)\) ist, für kein
@@ -275,8 +304,11 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;6.4.5{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(t \in \N\) eine feste, im Voraus bekannte Zahl.
+                  Sei \(t \in \N\) eine feste, im Voraus bekannte Zahl.
                   Betrachten wir die Sprache
                   $$\begin&#123;align*&#125;
                   L_t := \&#123;a^&#123;m + l&#125; b^m \ | \ m \geq 0, l \leq t\&#125; \ ,
@@ -284,16 +316,17 @@ const Article = () => {
                   also die Wörter der Form \(a^m b^n\) mit
                   \(n \leq m \leq n+t\).
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Schreiben Sie für \(L_3\) eine Grammatik,
+                    Schreiben Sie für \(L_3\) eine Grammatik,
                     geben Sie diese im
                     <a href="../../demos/drawManualGrammar.html">
                       Parser-Simulator
                     </a>
                     &ensp;ein
+                    &ensp;ein
                     und schauen, wie lang die Sackgassen werden können.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass \(L_3\) eine LL\((k)\)-Grammatik ist. Für welchen
+                    Zeigen Sie, dass \(L_3\) eine LL\((k)\)-Grammatik ist. Für welchen
                     Wert von \(k\)? Ist
                     \(L_t\) (für im Voraus bekanntes \(t\)) eine
                     LL\((k)\)-Grammatik? Für welchen Wert von \(k\)?
@@ -307,28 +340,35 @@ const Article = () => {
                 schreiben können.
                 Wir tasten uns langsam voran. Wir beginnen mit einer
                 Verallgemeinerung von \(\first_k\) von Wörtern auf
-                {" "}
                 <i>
                   Wortformen
                 </i>
                 {" "}(die also Nichtterminale beinhalten können).
+                &ensp;(die also Nichtterminale beinhalten können).
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;6.4.4{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) und eine
+                  Sei eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) und eine
                   Wortform \(\alpha \in (\Sigma \cup N)^*\) gegeben.
                   Wir definieren
                   $$\begin&#123;align*&#125;
                   \First_k(\alpha) := \&#123; \first_k(w) \ | \ w \in \Sigma^*, \alpha \Step&#123;&#125;^* w\&#125;
                   \end&#123;align*&#125;$$
                 </div>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können nun die LL\((k)\)-Bedingung äquivalent formulieren:
+                Wir können nun die LL\((k)\)-Bedingung äquivalent formulieren:
                 <div class="well container theorem">
                   <span class="numbered-title">
-                    Definition/Beobachtung
+                    Definition
+                    <NumberedTitle>
+                      &ensp;6.4.5{" "}
+                    </NumberedTitle>
+                    /Beobachtung
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine Grammatik \(G\) ist LL\((k)\) genau dann, wenn
+                  Eine Grammatik \(G\) ist LL\((k)\) genau dann, wenn
                   für alle Grenzformen \(A \alpha\) und alle
                   Produktionen mit \(A\) auf der linken Seite, also
                   $$\begin&#123;align*&#125;
@@ -341,7 +381,7 @@ const Article = () => {
                   zwei dieser Mengen ein gemeinsames Element enthalten).
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nehmen wir eine Momentaufnahme unseres Kellerautomaten. Er
+                  Nehmen wir eine Momentaufnahme unseres Kellerautomaten. Er
                   hat den Präfix \(x\) des Eingabewortes \(xy\) gelesen und
                   eine Linksableitung
                   $$\begin&#123;align*&#125;
@@ -355,7 +395,7 @@ const Article = () => {
                   schwierige Fall ist, wenn \(\alpha\) mit einem Nichtterminal beginnt.
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nochmal von vorn: im schwierigen Fall liegt auf dem Stack (oberhalb vom \(\$\))
+                  Nochmal von vorn: im schwierigen Fall liegt auf dem Stack (oberhalb vom \(\$\))
                   eine Wortform, die mit einem Nichtterminal beginnt, also
                   \(A \alpha\). Das bedeutet, dass der Automat per Linksableitung
                   bis jetzt
@@ -384,6 +424,7 @@ const Article = () => {
                     keiner
                   </i>
                   {" "}dieser Mengen enthalten ist, so
+                  &ensp;dieser Mengen enthalten ist, so
                   kann die Ableitung offensichtlich nicht vervollständigt werden, und wir schließen,
                   dass \(xy \not \in L(G)\) ist.
                   Wenn es{" "}
@@ -391,6 +432,7 @@ const Article = () => {
                     genau ein
                   </i>
                   {" "}\(\beta_i\) gibt mit
+                  &ensp;\(\beta_i\) gibt mit
                   \(\first_k(y) \in \first_k(\beta_i \alpha)\), dann ist
                   \(A \rightarrow \beta_i\) die "richtige" Produktion.
                   Wir wenden sie an, ersetzen also \(A\) auf dem Stack durch \(\beta_i\).
@@ -418,10 +460,11 @@ const Article = () => {
                         while
                       </tt>
                       &ensp;Stack nicht leer
+                      &ensp;Stack nicht leer
                     </li>
                     <ol class="nested">
                       <li>
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(y\) das Resteingabewort.
+                        Sei \(y\) das Resteingabewort.
                       </li>
                       <li>
                         Wenn das oberste Symbol auf dem Stack ein Terminalsymbol \(c\) ist:
@@ -454,7 +497,7 @@ const Article = () => {
                           </li>
                           <li>
                             <span style="color:red; font-weight: bold;">
-                              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Berechne \(\First_k(\beta_i\alpha)\) für alle \(\beta_i\) und
+                              Berechne \(\First_k(\beta_i\alpha)\) für alle \(\beta_i\) und
                               schaue, welches \(\first_k(y)\) enthält
                             </span>
                             <ul>
@@ -485,6 +528,7 @@ const Article = () => {
                         <tt>
                           Accept
                         </tt>
+                        &ensp;ansonsten 
                         &ensp;ansonsten{" "}
                         <tt>
                           Reject
@@ -499,13 +543,16 @@ const Article = () => {
                   die Menge \(\First_k(\beta_i\alpha)\) zu berechnen.
                 </Paragraph>
                 <h2>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(\First_k(A)\) und \(\First_k(\alpha)\) berechnen.
+                  \(\First_k(A)\) und \(\First_k(\alpha)\) berechnen.
                 </h2>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;6.4.6{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Seien \(K, L \subseteq \Sigma^*\) zwei Mengen.
+                  Seien \(K, L \subseteq \Sigma^*\) zwei Mengen.
                   Mit \(K \circ L\) bezeichnen wir die Menge
                   $$\begin&#123;align*&#125;
                   K \circ L := \&#123;xy \ | \ x \in K, y \in L\&#125; \ .
@@ -523,7 +570,7 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Im Allgemeinen gilt
+                  Im Allgemeinen gilt
                   \(\First_k(S_1 \circ \dots \circ S_l) = S_1 \circ_k S_2 \circ_k \dots \circ_k S_l\).
                   In Worten: der \(\circ_k\)-Operator bildet alle möglichen Kombinationen von Wörtern und nimmt
                   von jedem die ersten \(k\) Zeichen.
@@ -532,7 +579,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei
+                  Sei
                   $$\begin&#123;align*&#125;
                   K&amp;:= \&#123;\epsilon, a, ab, aba\&#125; \\
                   L&amp;:= \&#123;c, bb, b\&#125;
@@ -550,12 +597,15 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beobachtung
+                    <NumberedTitle>
+                      &ensp;6.4.7{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     - Wie man \(\First_k(\alpha)\) berechnet.
                   </b>
-                  {" "}Sei eine Wortform \(\alpha\) gegeben, also
+                  Sei eine Wortform \(\alpha\) gegeben, also
                   \(\alpha \in (\Sigma \cup N)^*\). Wir berechnen
                   \(\First_k(\alpha)\), indem wir als erstes
                   \(\alpha\) aussschreiben als
@@ -590,7 +640,7 @@ const Article = () => {
                   \label&#123;first-k-wortform&#125;
                   \end&#123;align&#125;
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir können dies schön der Reihe nach tun:
+                    Wir können dies schön der Reihe nach tun:
                   </Paragraph>
                   <ol class="nested">
                     <li>
@@ -600,17 +650,19 @@ const Article = () => {
                       <tt>
                         for
                       </tt>
+                      &ensp;\(i=n\) 
                       &ensp;\(i=n\){" "}
                       <tt>
                         down to
                       </tt>
+                      &ensp;1 
                       &ensp;1{" "}
                       <tt>
                         do:
                       </tt>
                       <ul class="nested">
                         <li>
-                          &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\(K := \First_k(\sigma_i) \circ_k K \)
+                          \(K := \First_k(\sigma_i) \circ_k K \)
                           <span class="comment">
                             // \(K\) ist jetzt
                             \(\First_k(\sigma_i) \circ_k \dots \circ_k \First_k(\sigma_n)\)
@@ -623,10 +675,11 @@ const Article = () => {
                         return
                       </tt>
                       &ensp;\(K\)
+                      &ensp;\(K\)
                     </li>
                   </ol>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir müssen nur noch herausfinden, wie wir
+                    Wir müssen nur noch herausfinden, wie wir
                     \(\First_k(\sigma)\) für einzelne Zeichen \(\sigma\) berechnen.
                   </Paragraph>
                 </div>
@@ -637,8 +690,11 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beobachtung
+                    <NumberedTitle>
+                      &ensp;6.4.8{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(X\) ein Nichtterminal und
+                  Sei \(X\) ein Nichtterminal und
                   $$\begin&#123;align*&#125;
                   X&amp;\rightarrow \alpha_1 \\
                   X&amp;\rightarrow \alpha_2 \\
@@ -665,7 +721,7 @@ const Article = () => {
                   gilt \(\first_k(w)\in \First_k(\alpha_i)\).
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Gleichungen \((\ref&#123;first-k-wortform&#125;)\) und \((\ref&#123;first-k-nonterminal&#125;)\) leuchten zwar
+                  Die Gleichungen \((\ref&#123;first-k-wortform&#125;)\) und \((\ref&#123;first-k-nonterminal&#125;)\) leuchten zwar
                   ein, scheinen aber erstmal
                   nicht hilfreich, diese Mengen auch tatsächlich zu berechnen. Denn eventuell taucht \(X\) selbst
                   wieder auf einer rechten
@@ -676,25 +732,29 @@ const Article = () => {
                   unter Anderem die Menge \(\First_k(X)\). Wo sollen wir also anfangen?
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In solchen Situationen, wo sich "die Katze in den Schwanz beißt", hilft es oft, die Definition
+                  In solchen Situationen, wo sich "die Katze in den Schwanz beißt", hilft es oft, die Definition
                   vorerst{" "}
                   <i>
                     komplexere
                   </i>
                   {" "}un
-                  {" "}
+                  &ensp;un
                   <i>
                     genauer
                   </i>
                   {" "}zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
+                  &ensp;zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
                   \(\First_k(\alpha)\), noch eine feinere
                   Unterteilung an:
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;6.4.9{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei \(\sigma\) ein Symbol und \(d \in \N\). Dann ist
+                  Sei \(\sigma\) ein Symbol und \(d \in \N\). Dann ist
                   $$\begin&#123;align*&#125;
                   \First_k^&#123;(d)&#125;(\sigma) := \&#123;\first_k(w) \ | \ \textnormal&#123; es gibt einen Ableitungsbaum für
                   $\sigma \Step&#123;&#125;^* w$ der Höhe höchstens $d$&#125;\&#125;
@@ -704,7 +764,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sei unsere Grammatik
+                  Sei unsere Grammatik
                   $$\begin&#123;align*&#125;
                   S&amp;\rightarrow Xa \\
                   X&amp;\rightarrow Sb \ | c
@@ -716,7 +776,7 @@ const Article = () => {
                       src="../img/context-free/LL/tree-depth-2.svg"
                       loading="lazy" />
                   </figure>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ein Ableitungsbaum der Höhe 2 von \(S \Step&#123;&#125;^* ca\), und somit gilt
+                  ein Ableitungsbaum der Höhe 2 von \(S \Step&#123;&#125;^* ca\), und somit gilt
                   $$\begin&#123;align*&#125;
                   c \in \First_1^&#123;(d)&#125; (S) \ .
                   \end&#123;align*&#125;$$
@@ -735,7 +795,7 @@ const Article = () => {
                   von \(n\) Ableitungsbäumen, von denen jeder Höhe maximal \(d\) hat.
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Mit dieser Definition können wir nun Gleichungen für \(\First_k^&#123;(d)&#125;(X)\) und
+                  Mit dieser Definition können wir nun Gleichungen für \(\First_k^&#123;(d)&#125;(X)\) und
                   \(\First_k^&#123;(d)&#125;(\alpha)\) angeben.
                   Seien \(X \rightarrow \alpha_1 \ | \ \dots \ | \ \alpha_k\) die Produktionen mit \(X\) auf der
                   linken Seite. Dann gilt
@@ -745,7 +805,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Lemma.
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für \(d \geq 1\) gilt
+                  Für \(d \geq 1\) gilt
                   $$\begin&#123;align*&#125;
                   \First_k^&#123;(d)&#125;(X)&amp;= \bigcup_&#123;i=1&#125;^k \First_k^&#123;(d-1)&#125; (\alpha_i) \\
                   \First_k^&#123;(d)&#125;(\alpha)&amp;= \First_k^&#123;(d)&#125;(\sigma_1) \circ_k \First_k^&#123;(d)&#125;(\sigma_2) \circ_k
@@ -761,7 +821,7 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Gleichungen sagen, dass wir, falls wir \(\First_&#123;k&#125;^&#123;(d-1)&#125;(X)\) für alle Nichtterminale
+                  Die Gleichungen sagen, dass wir, falls wir \(\First_&#123;k&#125;^&#123;(d-1)&#125;(X)\) für alle Nichtterminale
                   kennen,
                   dann auch \(\First_&#123;k&#125;^&#123;(d)&#125;(X)\) berechnen können.
                   Daraus folgt auch: wenn
@@ -772,8 +832,11 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beobachtung
+                    <NumberedTitle>
+                      &ensp;6.4.10{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls \(\First_&#123;k&#125;^&#123;(d-1)&#125;(X)=\First_&#123;k&#125;^&#123;(d)&#125;(X)\) für alle \(X \in N\), dann gilt
+                  Falls \(\First_&#123;k&#125;^&#123;(d-1)&#125;(X)=\First_&#123;k&#125;^&#123;(d)&#125;(X)\) für alle \(X \in N\), dann gilt
                   $$\begin&#123;align*&#125;
                   \First_k (X) = \First_k^&#123;(d)&#125;(X)
                   \end&#123;align*&#125;$$
@@ -783,11 +846,11 @@ const Article = () => {
                   <span class="numbered-title">
                     Demo.
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     - Berechnung der Menge \(\First_k(A)\) für die Nichtterminale einer Sprache.
                   </b>
-                  {" "}Wir betrachten die Grammatik
+                  Wir betrachten die Grammatik
                   $$\begin&#123;align*&#125;
                   S&amp;\rightarrow Xa \ | \ \epsilon \\
                   X&amp;\rightarrow b \ | \ Sc \ | \ SX

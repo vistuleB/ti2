@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={24}
-        title_gr="Von einer regulären Grammatik zu einem endlichen Automaten"
+        title_gr="4.4 Von einer regulären Grammatik zu einem endlichen Automaten"
         title_en="regular grammar to fsm"
-        number={4.4}>
+        number={4.4}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes24.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,11 +38,12 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    5.4 
                     4.4 Von einer regulären Grammatik zu einem endlichen Automaten
                   </span>
                 </h1>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In diesem Unterkapitel wollen wir das Gelernte an einem konkreten Beispiel anwenden.
+                  In diesem Unterkapitel wollen wir das Gelernte an einem konkreten Beispiel anwenden.
                   Wir beginnen (1) mit einer Beschreibung eines Formats in natürlicher Sprache; (2) basteln uns
                   daraus
                   mit Hilfe des "Baukastenprinzips" eine reguläre Sprache; (3) säubern diese, indem wir Regeln
@@ -50,7 +55,7 @@ const Article = () => {
                   1. Beschreibung des Formats in natürlicher Sprache
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unsere Sprache \(L\) soll so ähnlich sein wie die der erlaubten Domainnamen, allerdings mit ein
+                  Unsere Sprache \(L\) soll so ähnlich sein wie die der erlaubten Domainnamen, allerdings mit ein
                   paar Abänderungen,
                   um die obigen Transformationen spannender zu machen. Ein Wort in unserer Sprache besteht aus
                   einer
@@ -58,40 +63,54 @@ const Article = () => {
                   <i>
                     Labels
                   </i>
-                  {" "}die jeweils durch einen{" "}
+                  {" "}die jeweils durch einen 
+                  &ensp;die jeweils durch einen{" "}
                   <code>
                     .
                   </code>
                   {" "}separiert sind.
+                  &ensp;separiert sind.
                   Jedes Label ist eine nichtleere Folge von Blöcken (ein nichtleerer String aus Buchstaben und
                   Zahlen), separiert
                   durch{" "}
                   <code>
                     :
                   </code>
-                  {" "}oder{" "}
+                  {" "}oder 
+                  &ensp;oder{" "}
                   <code>
                     -
                   </code>
                   {" "}aber niemals durch beides innerhalb eines Blockes.
+                  &ensp;aber niemals durch beides innerhalb eines Blockes.
                   Also:
                 </Paragraph>
                 <div style="text-align:center">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`bla:bla:blue.xyz-12-zx.b:x:yyy:xxx:aaa`{" "}
+                  {" "}{" "}
+                  <code>
+                    bla:bla:blue.xyz-12-zx.b:x:yyy:xxx:aaa
+                  </code>
+                  {" "}{" "}
                 </div>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ist ein Wort in \(L\), aber
+                ist ein Wort in \(L\), aber
                 <div style="text-align:center">
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`a:b-c.hello`{" "}
+                  {" "}{" "}
+                  <code>
+                    a:b-c.hello
+                  </code>
+                  {" "}{" "}
                 </div>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ist kein Wort in \(L\), da das erste Label die Separatoren{" "}
+                ist kein Wort in \(L\), da das erste Label die Separatoren{" "}
                 <code>
                   :
                 </code>
-                {" "}und{" "}
+                {" "}und 
+                &ensp;und{" "}
                 <code>
                   -
                 </code>
                 {" "}mischt.
+                &ensp;mischt.
                 Habe ich
                 \(L\) genau genug beschrieben? Stellen wir eine Meta-Frage: Was zählt überhaupt als{" "}
                 <i>
@@ -99,6 +118,7 @@ const Article = () => {
                   Beschreibung
                 </i>
                 {" "}einer
+                &ensp;einer
                 Sprache? Wir können uns dem Mund fusselig reden und Beispiele und Nicht-Beispiele angeben, am Ende
                 aber werden
                 wir irgendwann beginnen, formale Regeln aufzustellen, die unsere Sprache beschreiben - wir werden
@@ -108,57 +128,63 @@ const Article = () => {
                   Grammatik
                 </i>
                 {" "}schreiben. Tun wir dies also.
+                &ensp;schreiben. Tun wir dies also.
                 <h2>
                   2. Eine reguläre Grammatik
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Beginnen wir mit dem Alphabet.
+                  Beginnen wir mit dem Alphabet.
                   Da es 62 alphanumerische Zeichen gibt:{" "}
                   <code>
                     a..zA..Z0..9
                   </code>
                   {" "}und wir uns keine unnötige
+                  &ensp;und wir uns keine unnötige
                   Arbeit machen wollen,
-                  beschränken wir uns auf ein Zeichen: `a`. Dazu kommen die Separatoren
-                  `:-.`. Also: \(\Sigma = \&#123;a,.,:,-\&#125;\). Stellen Sie sich einfach vor, \(a\) stehe
+                  beschränken wir uns auf ein Zeichen: `a`. Dazu kommen die Separatoren`:-.`. Also: \(\Sigma = \&#123;a,.,:,-\&#125;\). Stellen Sie sich einfach vor, \(a\) stehe
                   für beliebige alphanumerische Zeichen. Sowohl Grammatik als auch Automaten lassen sich einfach
                   anpassen.
                   Wir beginnen ganz unten und schreiben eine Grammatik für
                   Blöcke, also nichtleere Strings aus alphanumerischen Zeichen.
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 B&amp;\rightarrow a \ | \ aB
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Als nächstes führen wir ein nichtterminales Symbole \(C\) für Labels mit{" "}
+                  Als nächstes führen wir ein nichtterminales Symbole \(C\) für Labels mit{" "}
                   <code>
                     :
                   </code>
                   {" "}ein
-                  und ein Nichtterminal \(D\) für Labels mit `-`. Wir wählen die Buchstaben \(C,D\),
-                  weil
-                  {" "}
+                  &ensp;ein
+                  und ein Nichtterminal \(D\) für Labels mit{" "}
                   <code>
-                    :
+                    -`. Wir wählen die Buchstaben \(C,D\),
+                    weil`:
                   </code>
-                  {" "}auf Englisch{" "}
+                  {" "}auf Englisch 
+                  &ensp;auf Englisch{" "}
                   <i>
                     colon
                   </i>
-                  {" "}und{" "}
+                  {" "}und 
+                  &ensp;und{" "}
                   <code>
                     -
                   </code>
-                  {" "}{" "}
+                  {" "}
+                  &ensp;
                   <i>
                     dash
                   </i>
                   {" "}heißt.
+                  &ensp;heißt.
                   \(C\)-Labels können wir uns nach dem Baukastenprizip bauen, in dem
                   wir{" "}
                   <a href="./04-01-regular-grammars.html#operation-L(.L)*">
                     Theorem 4.1.14
                   </a>
+                  &ensp;anwenden.
                   &ensp;anwenden.
                   Wir fügen zur "End-Produktion" \(B \rightarrow a\) eine weiter Produktion \(B \rightarrow a:B\)
                   hinzu und
@@ -166,35 +192,37 @@ const Article = () => {
                   Verwechslungsgefahr mit
                   dem ursprünglichen \(B\) aufkommt. Das gleiche machen wir für \(D\).
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 C&amp;\rightarrow a \ | \ aC \ | \ a&#123;:&#125;C \\
                 D&amp;\rightarrow a \ | \ aD \ | \ a&#123;-&#125;D \\
                 T&amp;\rightarrow C \ | D
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Von \(L\) lassen sich nun also alle Labels ableiten. Wir brauchen nun zum Schluss wieder
+                  Von \(L\) lassen sich nun also alle Labels ableiten. Wir brauchen nun zum Schluss wieder
                   eine Folge von \(L\), mit{" "}
                   <code>
                     .
                   </code>
                   {" "}separiert, müssen also wieder
+                  &ensp;separiert, müssen also wieder
                   <a href="./04-01-regular-grammars.html#operation-L(.L)*">
                     Theorem 4.1.14
                   </a>
                   &ensp;anwenden, dieses
+                  &ensp;anwenden, dieses
                   mal auf die von \(T\) erzeugte Sprache. Im Ergebnis benennen wir das Startsymbol in \(S\) um.
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 S&amp;\rightarrow C \ | \ D \\
                 C&amp;\rightarrow a \ | \ aC \ | \ a&#123;:&#125;C \ | a&#123;.&#125;S \ \\
                 D&amp;\rightarrow a \ | \ aD \ | \ a\text&#123;-&#125;D \ | \ a&#123;.&#125;S \\
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um eine "richtig" reguläre Sprache zu erhalten, entzerren wir die erweitert regulären
+                  Um eine "richtig" reguläre Sprache zu erhalten, entzerren wir die erweitert regulären
                   Produktionen
                   wie \(C \rightarrow a&#123;:&#125;C\). Dafür brauchen wir neue Symbole \(C', D', S'\):
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 S&amp;\rightarrow C \ | \ D \\
                 C&amp;\rightarrow a \ | \ aC \ | \ aC'\ | \ aS' \\
                 C'&amp;\rightarrow &#123;:&#125;C \\
@@ -206,17 +234,17 @@ const Article = () => {
                   3. Die reguläre Grammatik säubern
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir wollen nun alle Produktionen der Form \(Y \rightarrow x\) eliminieren. Hierfür nehmen wir
+                  Wir wollen nun alle Produktionen der Form \(Y \rightarrow x\) eliminieren. Hierfür nehmen wir
                   uns
-                  {" "}
                   <i>
                     ein
                   </i>
                   {" "}neues Nichtterminal \(E\) und ersetzen \(Y \rightarrow x\) durch \(Y \rightarrow
+                  &ensp;neues Nichtterminal \(E\) und ersetzen \(Y \rightarrow x\) durch \(Y \rightarrow
                   xE\)
                   und fügen die Produktion \(E \rightarrow \epsilon\) hinzu.
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 S&amp;\rightarrow C \ | \ D \\
                 C&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \\
                 C'&amp;\rightarrow &#123;:&#125;C \\
@@ -236,6 +264,7 @@ const Article = () => {
                     4.1.7
                   </a>
                   &ensp;beschrieben.
+                  &ensp;beschrieben.
                   Wir ersetzen \(S \rightarrow C\) also durch alle Produktionen der Form \(S \rightarrow \alpha\),
                   wobei
                   \(\alpha\) eine Wortform ist, die sich aus \(C\) ableiten lässt und nicht nur aus einem
@@ -245,10 +274,11 @@ const Article = () => {
                     alle
                   </i>
                   {" "}rechten Seiten der \(C\)-Produktionen
+                  &ensp;rechten Seiten der \(C\)-Produktionen
                   zu; gleiches gilt
                   für \(D\). Wir erhalten:
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 S&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \ | \ aD \ | \ a D' \\
                 C&amp;\rightarrow aE \ | \ aC \ | \ aC'\ | \ aS' \ \\
                 C'&amp;\rightarrow &#123;:&#125;C \\
@@ -261,7 +291,7 @@ const Article = () => {
                   4. Einen nichtdeterministischen endlichen Automaten bauen
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dies sollte nun einfach sein. Wir erschaffen Zustände \(S, C, C', D, D', S', E\) und
+                  Dies sollte nun einfach sein. Wir erschaffen Zustände \(S, C, C', D, D', S', E\) und
                   übersetzen jeden Grammatik-Pfeil in einen Automaten-Pfeil.
                 </Paragraph>
                 <figure>
@@ -276,13 +306,14 @@ const Article = () => {
                     .:-
                   </code>
                   {" "}rot unterlegt, weil man sie sonst kaum erkennen würde in
+                  &ensp;rot unterlegt, weil man sie sonst kaum erkennen würde in
                   dem Automaten.
                 </Paragraph>
                 <h2>
                   5. Den nichtdeterministischen Automaten in einen deterministischen umwandeln
                 </h2>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Unser nichtdeterministischer endlicher Automat hat Zustandsmenge \(Q = \&#123;S, S', C, C', D, D',
+                  Unser nichtdeterministischer endlicher Automat hat Zustandsmenge \(Q = \&#123;S, S', C, C', D, D',
                   E\&#125;\), also insgesamt
                   sieben Zustände. Wenn wir genau nach Buch vorgingen, müssten wir den endlichen Automaten auf der
                   Zustandsmenge \(2^Q\)
@@ -294,6 +325,7 @@ const Article = () => {
                     lazy
                   </i>
                   {" "}vor, erschaffen Zustände in \(2^Q\) also nur dann, wenn wir sie
+                  &ensp;vor, erschaffen Zustände in \(2^Q\) also nur dann, wenn wir sie
                   brauchen.
                   Wir beginnen mit dem Zustand \(\&#123;S\&#125;\) und legen dann an jeden Zustand Kanten an, jeweils mit
                   \(a, :, -, . \) beschriftet, und erschaffen, falls nötig, dabei neue Zustände. In der folgenden
@@ -563,7 +595,7 @@ const Article = () => {
                   </div>
                 </figure>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dieser Automat hat deutlich weniger also 128 Zustände, nämlich mit nur sieben genau so
+                  Dieser Automat hat deutlich weniger also 128 Zustände, nämlich mit nur sieben genau so
                   viele wie der nichtdeterministische (es ist Zufall, dass beide gleich viele Zustände haben;
                   messen
                   Sie dieser Tatsache keine Bedeutung bei). Wir könnten nun von diesem Automaten ausgehend
@@ -571,40 +603,30 @@ const Article = () => {
                   wäre als die ursprüngliche. Wenn wir erweitert reguläre Grammatiken erlauben, so können
                   wir den deterministischen Automaten besonders konzise in eine Grammatik fassen:
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 S&amp;\rightarrow aT \\
                 T&amp;\rightarrow &#123;.&#125;S \ | \ aT \ | \ &#123;:&#125;aC \ | \ \text&#123;-&#125;a D \\
                 C&amp;\rightarrow aC \ | \ &#123;:&#125;aC \ | \ &#123;.&#125;S \\
                 D&amp;\rightarrow aD \ | \ \text&#123;-&#125;aD \ | \ &#123;.&#125;S
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Zustände des deterministischen Automaten beschreiben im Prinzip das, was wir uns merken
+                  Die Zustände des deterministischen Automaten beschreiben im Prinzip das, was wir uns merken
                   müssen, wenn wir so einen String "parsen": Zustand \( \&#123;C',C,E,D,D',S'\&#125;\), der
                   in der Grammatik dann zum Nichtterminal \(T\) wird, bedeutet beispielsweise
-                  {" "}
                   <i>
-                    das Label hat schon begonnen, wir wissen aber noch nicht, ob es eines mit
-                    {" "}
-                    <code>
-                      :
-                    </code>
-                    {" "}oder eines mit{" "}
+                    das Label hat schon begonnen, wir wissen aber noch nicht, ob es eines mit`:` oder eines mit 
+                    &ensp;oder eines mit{" "}
                     <code>
                       -
                     </code>
                     {" "}ist.
-                    Der Zustand \(\&#123;C',C,E,S'\&#125;\) bzw. das Nichtterminal \(C\) heißt dann
-                    {" "}
-                    <code>
-                      :
-                    </code>
-                    {" "}{" "}
+                    &ensp;ist.
+                    Der Zustand \(\&#123;C',C,E,S'\&#125;\) bzw. das Nichtterminal \(C\) heißt dann`:`
                   </i>
                   wir sind innerhalb eines Labels mit 
                   {" "}
                   <i>
                     .
-                    {" "}
                   </i>
                   {" "}{" "}
                 </Paragraph>
@@ -612,8 +634,11 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Übungsaufgabe
+                      <NumberedTitle>
+                        &ensp;5.4.1{" "}
+                      </NumberedTitle>
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Erinnern Sie sich an{" "}
+                    Erinnern Sie sich an{" "}
                     <a href="./04-03-nfsm#exercise-divisibility">
                       Aufgabe 4.3.1
                     </a>
@@ -632,13 +657,14 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Dieser Automat hat 11 Zustände. Sein Potenzmengenautomat hätte also \(2^&#123;11&#125; = 2048\)
+                    Dieser Automat hat 11 Zustände. Sein Potenzmengenautomat hätte also \(2^&#123;11&#125; = 2048\)
                     Zustände.
                     Führen Sie die Konstruktion{" "}
                     <i>
                       lazy
                     </i>
                     {" "}durch, indem Sie vom Startzustand \(\&#123;S\&#125;\)
+                    &ensp;durch, indem Sie vom Startzustand \(\&#123;S\&#125;\)
                     ausgehend die Folgezustände konstruieren. Wieviele Zustände bekommen Sie?
                   </Paragraph>
                 </div>

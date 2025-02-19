@@ -1,7 +1,9 @@
 |> Section
-    title_gr Der DK-Automat
+    title_gr 5.6 Der DK-Automat
     title_en dk automat
     number 5.9
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,27 +38,29 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             5.6 Der DK-Automat
                     |> h2
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Von der Grammatik \(\hat{G}\) zu einem nichtdeterministischen
+                        Von der Grammatik \(\hat{G}\) zu einem nichtdeterministischen
                         endlichen Automaten
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um den \(LR(0)\)-Parser gemäß
+                        Um den \(LR(0)\)-Parser gemäß
                         |> a
                             href ./05-05-d-linker-Rand-und-Bluete.html#algorithm-LR-parser
 
                             Algorithmus 5.8.7
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;zu implementieren, müssen wir den Test \(\gamma \stackrel{?}\in
+                        zu implementieren, müssen wir den Test \(\gamma \stackrel{?}\in
                         \Front(G)\) durchführen und, falls die Antwort _ja_ ist, die
+                        &ensp;ist, die
                         Blüte finden. Dies gelingt uns, indem wir die Grammatik \(\hat{G}\) in
                         einen endlichen Automaten umwandeln.
                         |> a
                             href ./04-03-nfsm.html#regular-grammar-to-fsm
 
                             Theorem 4.3.8
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und die ihm vorhergehende Konstruktion zeigen, wie man das macht.
+                        und die ihm vorhergehende Konstruktion zeigen, wie man das macht.
                         Anstatt allerdings das Theorem als "black box" zu verwenden, gehen wir
                         die Konstruktion anhand zweier fiktiver Produktion $X \rightarrow
                         aBcDe$ und $X \rightarrow uVw$ Schritt für Schritt durch. Wir erkennen
@@ -69,16 +73,16 @@
                         \\ \dk{X}&amp;\rightarrow u\dkt{V}w \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Diese übersetzen wir in einen verallgemeinert nichtdeterministischen
+                        Diese übersetzen wir in einen verallgemeinert nichtdeterministischen
                         Automaten, bei dem jede Kante mit einem Wort $\beta \in (\Sigma \cup
-                        N)^*$, also aus _Terminalen_          der Grammatik $\dk{G}$ beschriftet ist:
+                        N)^*$, also aus _Terminalen_der Grammatik $\dk{G}$ beschriftet ist:
                     |> figure
                         |> img
                             style height: 9em
                             src ../img/context-free/LR/hat-G-to-generalized-automaton.svg
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir brechen die Kanten in Stücke, so dass jede mit genau einem Zeichen
+                        Wir brechen die Kanten in Stücke, so dass jede mit genau einem Zeichen
                         beschriftet ist:
                     |> figure
                         |> img
@@ -86,8 +90,10 @@
                             src ../img/context-free/LR/hat-G-to-generalized-automaton-break-edges.svg
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Nochmal: jede Kante ist mit einem _Terminalsymbol_ beschriftet.
+                        Nochmal: jede Kante ist mit einem _Terminalsymbol_ beschriftet.
+                        &ensp;beschriftet.
                         Die Symbole $B, D, V$ sind _Terminale_ in der Grammatik
+                        &ensp;in der Grammatik
                         $\dk{G}$. Wenn wir $\epsilon$-Übergänge zulassen, können wir den
                         Automaten übersichtlicher gestalten und mehrere Zustände
                         zusammenfassen:
@@ -97,13 +103,13 @@
                             src ../img/context-free/LR/hat-G-to-generalized-automaton-numbered-names.svg
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir werden uns noch bessere Namen für die Zwischenzustände ausdenken.
+                        Wir werden uns noch bessere Namen für die Zwischenzustände ausdenken.
                         Wenn wir uns an die Rechtsableitungsbäume mit Stamm, linkem Rand,
                         Blüte und rechtem Rest erinnern, dann haben die Zwischenzustände eine
                         klare Bedeutung: der Zustand $4$ oben zum Beispiel bedeutet, dass der
                         Knoten $X$ im Stamm mit $a, B, c, D, e$ beschriftete Kinder hat und
-                        wir uns bereits entschieden haben, dass $a$, $B$ und $c$
-                        _Blätter_ sein sollen, also zum linken Rand gehören. Der
+                        wir uns bereits entschieden haben, dass $a$, $B$ und $c$_Blätter_ sein sollen, also zum linken Rand gehören. Der
+                        &ensp;sein sollen, also zum linken Rand gehören. Der
                         Übergang $\boxed{4} \step{D} \boxed{5}$ entspricht dann der
                         Entscheidung, auch $D$ zu einem Blatt zu machen, während $\boxed{4}
                         \step{\epsilon} \dk{D}$ der Entscheidung entspricht, $D$ zu einem
@@ -127,11 +133,11 @@
                     |> p
                         id the-grammar
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*} G&amp;: \\ S&amp;\rightarrow aS \\ S&amp;\rightarrow B \\ B&
+                        \begin{align*} G&amp;: \\ S&amp;\rightarrow aS \\ S&amp;\rightarrow B \\ B&
                         \rightarrow aBb \\ B&amp;\rightarrow ab \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Laut Gebrauchsanweisung aus dem letzten Teilkapitel hat die Grammatik
+                        Laut Gebrauchsanweisung aus dem letzten Teilkapitel hat die Grammatik
                         $\dk{G}$ die Terminalsymbole $\Sigma \cup N = \{a, b, S, B\}$ und die
                         Nichtterminale $\dk{N} = \{\dk{S}, \dk{B}\}$. Die Produktionen von
                         $\dk{G}$ ergeben sich wie folgt:
@@ -146,17 +152,17 @@
                     |> p
 
                         In dieser Grammatik betrachten wir die Rechtsableitung
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*} S \Step{} aS \Step{} aaS \Step{} aaB \Step{} aaaBb
+                    \begin{align*} S \Step{} aS \Step{} aaS \Step{} aaB \Step{} aaaBb
                     \Step{} aaaaBbb \Step{} aaaaaBbbb \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gilt $\front(aaaaaBbbb) = aaaaaBb$. In $\hat{G}$ entspricht die
+                        Es gilt $\front(aaaaaBbbb) = aaaaaBb$. In $\hat{G}$ entspricht die
                         obige Rechtsableitung der Ableitung
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*} \hat{S} \Step{} a\hat{S} \Step{} aa\hat{S} \Step{}
+                    \begin{align*} \hat{S} \Step{} a\hat{S} \Step{} aa\hat{S} \Step{}
                     aa\hat{B} \Step{} aaa\hat{B} \Step{} aaaaBb \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Den nichtdeterministischen DK-Automaten (mit $\epsilon$-Übergängen)
+                        Den nichtdeterministischen DK-Automaten (mit $\epsilon$-Übergängen)
                         können wir nun Schritt für Schritt zeichnen:
                     |> figure
                         class centered-figure well container
@@ -285,6 +291,10 @@
                                 class numbered-title
 
                                 Definition
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                            &ensp;Für eine kontextfreie
                             &ensp;Für eine kontextfreie
                             Grammatik ist der nichtdeterministische DK-Automat (NDK-Automat) ein
                             nichtdeterministischer endlicher Automat mit $\epsilon$-Übergängen,
@@ -292,22 +302,22 @@
                         |> ol
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für jede Produktion $X \rightarrow \beta$ gibt es einen
+                                Für jede Produktion $X \rightarrow \beta$ gibt es einen
                                 Zustandsübergang $\boxed{X} \step{\epsilon} \boxed{X \step{} .
                                 \beta}$
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für jede Zerlegung $\beta = \beta_1 \sigma \beta_2$ gibt es den
+                                Für jede Zerlegung $\beta = \beta_1 \sigma \beta_2$ gibt es den
                                 Zustandsübergang $\boxed{X \step{} \beta_1 . \sigma \beta_2}
                                 \step{\sigma} \boxed{X \step{} \beta_1 \sigma . \beta_2}$
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls $\sigma$ ein Nichtterminal $Y$ ist, also $\beta = \beta_1 Y
+                                Falls $\sigma$ ein Nichtterminal $Y$ ist, also $\beta = \beta_1 Y
                                 \beta_2$, gibt es zusätzlich noch den Übergang $\boxed{X \step{}
                                 \beta_1 . Y \beta_2} \step{\epsilon} \boxed{Y}$
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Interpretation dieser Übergänge in
+                            Die Interpretation dieser Übergänge in
                             Rechtsableitungsbaum-Begriffen ist: (1) heißt, dass $\boxed{X}$ ein
                             Stammknoten ist und wir ihn anhand der Regel $X \rightarrow \beta$
                             expandieren; wir erschaffen also Kinder, die mit den Symbolen von
@@ -322,14 +332,14 @@
                             wollen.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Der Startzustand ist $\boxed{S}$. Jeder Zustand der Form $\boxed{X
+                            Der Startzustand ist $\boxed{S}$. Jeder Zustand der Form $\boxed{X
                             \step{} \beta .}$ ist ein akzeptierender Zustand.
                     |> h2
 
                         Den NDK-Automaten deterministisch machen
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir wissen ja bereits, wie man einen nichtdeterministischen Automaten
+                        Wir wissen ja bereits, wie man einen nichtdeterministischen Automaten
                         deterministisch macht: die
                         |> a
                             href ./04-03-nfsm.html#nfsm-to-fsm
@@ -339,6 +349,7 @@
                         Automat \(\epsilon\)-Übergänge hat. Wie geht das also nun? Im
                         deterministischen Automaten ist wie bei der Potenzmengenkonstruktion
                         jeder Zustand eine _Menge_ \(R\) von Zuständen des
+                        &ensp;\(R\) von Zuständen des
                         nichtdeterministischen Automaten. Wenn wir nun in eine solche Menge
                         \(R\) einen Zustand \(q\) einfügen, dann fügen wir auch alle Zustände
                         \(q'\) hinzu, zu denen es einen \(\epsilon\)-Übergang \(q
@@ -443,31 +454,32 @@
                                 class numbered-title
 
                                 Theroem
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*(DK-Test).* Sei $G$ eine kontextfreie Grammatik ohne
+                            *(DK-Test).* Sei $G$ eine kontextfreie Grammatik ohne
+                            &ensp;Sei $G$ eine kontextfreie Grammatik ohne
                             nutzlose Nichtterminale und ei $M$ der DK-Automat für die Grammatik
                             $G$. Die Grammatik $G$ ist LR(0) genau dann, wenn folgende zwei
                             Bedingungen gelten:
                         |> ul
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;(DK.1) Ein akzeptierender Zustand von $M$ (der ja eine Menge von
+                                (DK.1) Ein akzeptierender Zustand von $M$ (der ja eine Menge von
                                 Zuständen des NDK-Automaten ist) enthält genau einen
                                 akzeptierenden NDK-Zustand, also genau ein $\boxed{X \rightarrow
                                 \beta .}$
                             |> li
 
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;(DK.2) Wenn $q$ ein akzeptierender Zustand von $M$ ist und $q
+                                (DK.2) Wenn $q$ ein akzeptierender Zustand von $M$ ist und $q
                                 \step{\sigma} q'$, dann ist $\sigma$ ein Nichtterminal.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn diese beiden Bedingungen gelten, sagen wir, dass $G$ den
+                            Wenn diese beiden Bedingungen gelten, sagen wir, dass $G$ den
                             DK-Test bestanden hat. Das Theorem sagt also: $G$ ist LR(0) genau
                             dann, wenn es den DK-Test besteht.
                     |> div
                         class well container
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Beweisskizze.*            Wir erinnern den Leser noch einmal an die alternative
+                            *Beweisskizze.*Wir erinnern den Leser noch einmal an die alternative
                             Charakterisierung von LR(0)-Sprachen, nämlich :
                         |> div
                             id lemma-characterization-LR0
@@ -479,32 +491,32 @@
                                     Lemma 5.7.5, noch einmal
                                 *
 
-                                *              *(LR(0), äquivalente Formulierung).*              Eine Grammatik $G$ ist LR(0) genau dann, wenn für alle korrekten
+                                **(LR(0), äquivalente Formulierung).*Eine Grammatik $G$ ist LR(0) genau dann, wenn für alle korrekten
                                 Linksreduktionsschritte $\alpha \beta w \rstep{} \alpha Xw$ und
                                 $\alpha' \beta' w' \rstep{} \alpha' X'w'$ gilt:
                             |> ol
                                 |> li
 
-                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Falls $\alpha \beta = \alpha' \beta'$ dann auch $\beta = \beta'$
+                                    Falls $\alpha \beta = \alpha' \beta'$ dann auch $\beta = \beta'$
                                     und $X= X'$; in Worten: wenn die Fronten identisch sind, dann
                                     auch die Reduktionsschritte.
                                 |> li
 
-                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn $\alpha' \beta' = \alpha \beta \varphi$ und $|\varphi| \geq
+                                    Wenn $\alpha' \beta' = \alpha \beta \varphi$ und $|\varphi| \geq
                                     1$, dann $\varphi \not \in \Sigma^*$; in Worten: wenn
                                     $\front(\gamma)$ ein echter Präfix von $\front(\gamma')$ ist,
                                     dann muss in dem überstehenden Teil von $\front(\gamma)$
                                     mindestens ein Nichtterminal vorkommen.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es ist nicht schwer zu sehen, dass (DK.1) äquivalent zu Punkt 1 des
-                            Lemmas ist. Wenden wir uns (DK.2) und Punkt 2 zu. Wenn Punkt 2
-                            _nicht_ gilt, dann gibt es korrekte Reduktionsschritte
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*} \alpha \beta w \rstep{} \alpha X w \\ \alpha \beta
+                            Es ist nicht schwer zu sehen, dass (DK.1) äquivalent zu Punkt 1 des
+                            Lemmas ist. Wenden wir uns (DK.2) und Punkt 2 zu. Wenn Punkt 2_nicht_ gilt, dann gibt es korrekte Reduktionsschritte
+                            &ensp;gilt, dann gibt es korrekte Reduktionsschritte
+                        \begin{align*} \alpha \beta w \rstep{} \alpha X w \\ \alpha \beta
                         \sigma w' = \alpha' \beta' w' \rstep{} \alpha' X' w' \end{align*}
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir dem Automaten den Präfix $\alpha \beta$ füttern, bringt er
+                            Wenn wir dem Automaten den Präfix $\alpha \beta$ füttern, bringt er
                             uns in einen Zustand, der die $\boxed{X \rightarrow \beta.}$
                             enthält, da $\alpha \beta$ ja eine Front ist. Dieser Zustand muss
                             allerdings einen Übergang haben, der mit $\sigma$ gelabelt ist, dem
@@ -512,7 +524,7 @@
                             der Front $\alpha' \beta'$ ist. Somit gilt (DK.2) nicht.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn umgekehrt (DK.2) nicht gilt, dann gibt es einen akzeptierenden
+                            Wenn umgekehrt (DK.2) nicht gilt, dann gibt es einen akzeptierenden
                             Zustand $q$ (der also $\boxed{X\rightarrow \beta.}$ enthält) und
                             eine ausgehende Kante $q \step{\sigma} q'$ mit einem Terminal
                             $\sigma$.
@@ -523,7 +535,10 @@
                                     class numbered-title
 
                                     Übungsaufgabe
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie: wenn $G$ keine nutzlosen Nichtterminale hat, dann gibt
+                                    |> NumberedTitle
+
+                                        &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
+                                Zeigen Sie: wenn $G$ keine nutzlosen Nichtterminale hat, dann gibt
                                 es im NDK-Automaten für jeden Zustand $q$ eine Übergangsfolge $q
                                 \steps{v} q'$ zu einem akzeptierenden Zustand $q'$, wobei $v$
                                 ausschließlich aus $G$-Terminalen besteht, also $v \in \Sigma^*$.
@@ -532,7 +547,7 @@
                                 Zeigen Sie das selbe für den DK-Automaten.
                         |> p
 
-                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Es gibt also einen Weg $q \step{\sigma} q' \steps{v} q''$ für $v \in
+                            Es gibt also einen Weg $q \step{\sigma} q' \steps{v} q''$ für $v \in
                             \Sigma^*$ und einen akzeptierenden Zustand $q''$. Es sind also
                             sowohl $\alpha \beta$ als auch $\alpha \beta \sigma v$ Fronten von
                             $G$, und $\sigma v$ besteht nur aus Terminalen. Das heißt, dass

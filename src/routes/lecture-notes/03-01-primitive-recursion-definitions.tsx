@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={16}
-        title_gr="Primitive Rekursion: Motivation und Definitionen"
+        title_gr="3.1 Primitive Rekursion: Motivation und Definitionen"
         title_en="primitive recursion definitions"
-        number={3.1}>
+        number={3.1}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes16.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,11 +38,12 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    4.1 
                     3.1 Primitive Rekursion: Motivation und Definitionen
                   </span>
                 </h1>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Primitive Rekursion ist ein Versuch, Berechbarkeit von Funktionen \(f: \N^k \rightarrow \N\)
+                  Primitive Rekursion ist ein Versuch, Berechbarkeit von Funktionen \(f: \N^k \rightarrow \N\)
                   anhand
                   eines "Baukastenprinzips" zu modellieren. Man stellt gewisse Basisfunktionen als "offensichtlich
                   berechenbar" zur Verfügung und beschreibt{" "}
@@ -50,7 +55,7 @@ const Article = () => {
                   mittels der Kombinatoren von den Basisfunktionen ausgehend konstruiert werden können.
                   Die Basisfunktionen sind:
                 </Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                $$\begin&#123;align*&#125;
                 \zero:&\N^* \rightarrow \N \\
                 \vec&#123;x&#125;&amp;\mapsto 0
                 \end&#123;align*&#125;$$
@@ -70,13 +75,13 @@ const Article = () => {
                   <i>
                     unärer Schreibweise
                   </i>
-                  {" "}(auhc Steinzeitnotation genannt)
+                  (auhc Steinzeitnotation genannt)
                   darstellen, also vier \( = 1111\), sieben = \(= 1111111\). Jezt
                   brauchen wir für succ kein if-then-else und keine Schleifen, denn
                   \(\succ(x) = 1x\).
                 </Paragraph>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Eine weitere Klasse von "offensichtlich" berechenbaren Funktionen sind die sogenannten
+                  Eine weitere Klasse von "offensichtlich" berechenbaren Funktionen sind die sogenannten
                   Projektionen
                   \(\pi^n_k\), definiert als
                   $$\begin&#123;align*&#125;
@@ -97,17 +102,20 @@ const Article = () => {
                 <b>
                   Kombinatoren.
                 </b>
-                {" "}Die primitive Rekursion stellt zwei Kombinatoren zur Verfügung: Komposition (Verknüpfung) und
+                Die primitive Rekursion stellt zwei Kombinatoren zur Verfügung: Komposition (Verknüpfung) und
                 primitive Rekursion.
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;4.1.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     (Komposition)
                   </b>
-                  {" "}Sei \(f: \N^k \rightarrow \N\) und
+                  Sei \(f: \N^k \rightarrow \N\) und
                   \(g_1, \dots, g_k: \N^l \rightarrow \N\). Dann ist
                   \(\comp(f, g_1, \dots, g_k)\) die Funktion
                   $$\begin&#123;align*&#125;
@@ -123,19 +131,22 @@ const Article = () => {
                   </figure>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Um aber komplexere Operationen implementieren zu können, brauchen wir eine Art von Schleife.
+                  Um aber komplexere Operationen implementieren zu können, brauchen wir eine Art von Schleife.
                   Was ist die einfachste Art von Schleife oder Rekursion. Wir dürfen nur eine sehr beschränkte
                   Form der Rekursion verwenden:
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
+                    <NumberedTitle>
+                      &ensp;4.1.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                  {" "}{" "}
                   <b>
                     Primitive Rekursion
                   </b>
-                  {" "}Seien \(g: \N^k \rightarrow \N\) und \(h: \N^&#123;k+2&#125; \rightarrow \N\). Wir
+                  Seien \(g: \N^k \rightarrow \N\) und \(h: \N^&#123;k+2&#125; \rightarrow \N\). Wir
                   definieren eine neue Funktion $f: \N^&#123;k+1&#125; \rightarrow \N$ wie folgt:
                   $$\begin&#123;align*&#125;
                   f : \N^&#123;k+1&#125;&amp;\rightarrow \N \\
@@ -148,8 +159,7 @@ const Article = () => {
                   \(f := \primrec(g,h)\).
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn Sie Rekursionshasser sind, dann können Sie sich es als Funktion mit einer
-                  `for`-Schleife
+                  Wenn Sie Rekursionshasser sind, dann können Sie sich es als Funktion mit einer`for`-Schleife
                   vorstellen, in der nur eine lokale Variable erlaubt ist:
                   <pre class="listing">
                     {" "}{" "}
@@ -171,6 +181,7 @@ const Article = () => {
                     {" "}{" "}
                     <code>
                       temp = h(temp, i, *x)
+                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;temp = h(temp, i, *x)
                     </code>
                     {" "}{" "}
                     <code>
@@ -182,11 +193,12 @@ const Article = () => {
                     </code>
                     {" "}{" "}
                   </pre>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Forderung, dass man nur{" "}
+                  Die Forderung, dass man nur{" "}
                   <i>
                     eine
                   </i>
                   {" "}lokale Variable durch die Schleife führen darf, scheint
+                  &ensp;lokale Variable durch die Schleife führen darf, scheint
                   sehr restriktiv; es ist aber wohl die einfachste Form einer Schleife, die wirklich etwas
                   "schleifenhaftes" tut.
                 </Paragraph>
@@ -194,10 +206,11 @@ const Article = () => {
                   <span class="numbered-title">
                     Demo.
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Speichern Sie die Datei{" "}
+                  Speichern Sie die Datei{" "}
                   <a href="../code/primitive-recursion/primrec.py">
                     primrec.py
                   </a>
+                  &ensp;auf
                   &ensp;auf
                   Ihrem Rechner.
                   Diese Datei stellt ein Framework für die Implementierung primitiv rekursiver Funktionen zur
@@ -228,7 +241,7 @@ const Article = () => {
                       übereinstimmt.
                     </li>
                     <li>
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;`PrimRec(g,h)`: erzeugt die Funktion
+                      `PrimRec(g,h)`: erzeugt die Funktion
                       $$\begin&#123;align*&#125;
                       (t, \vec&#123;x&#125;) \mapsto \begin&#123;cases&#125;
                       g(\vec&#123;x&#125;)&amp;\textnormal&#123; if $t=0$,&#125; \\
@@ -238,18 +251,19 @@ const Article = () => {
                     </li>
                   </ul>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir die primitive Rekursion als "Programmiersprache" betrachten, dann heißt das, dass
+                    Wenn wir die primitive Rekursion als "Programmiersprache" betrachten, dann heißt das, dass
                     wir
                     neue Funktionen bauen dürfen, indem wir{" "}
                     <code>
                       zero,succ,Proj,Comp,PrimRec
                     </code>
                     {" "}verwenden,
+                    &ensp;verwenden,
                     aber nicht selbst Python-Funktionen schreiben. Wir dürfen also nie selbst Integers in die
                     Hand nehmen.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Lassen Sie mich das am Beispiel der Addition erklären. Ich will eine Funktion
+                    Lassen Sie mich das am Beispiel der Addition erklären. Ich will eine Funktion
                     \(&#123;\rm add&#125;: \N^2 \rightarrow \N\) schreiben, die ihre beiden Argumente addiert.
                     Ich darf also nicht einfach python programmieren und
                   </Paragraph>
@@ -260,8 +274,12 @@ const Article = () => {
                     <code>
                       def add(x,y):
                     </code>
-                    {" "}
-                    &ensp;&ensp;`return x + y`
+                    {" "}{" "}
+                    <code>
+                      return x + y
+                      &ensp;&ensp;return x + y
+                    </code>
+                    {" "}{" "}
                   </pre>
                   <Paragraph>
                     schreiben, denn unsere "Programmiersprache" ist Primitive Rekursion, nicht Python! Wir
@@ -270,10 +288,11 @@ const Article = () => {
                       add
                     </code>
                     {" "}aus den Kombinatoren zusammenbasteln. Ich schreibe
+                    &ensp;aus den Kombinatoren zusammenbasteln. Ich schreibe
                     nun \(&#123;\rm add&#125;(t,x)\) statt \(&#123;\rm add&#125;(x,y)\), um den Rekursionsparameter \(t\) deutlich
                     zu machen.
                   </Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;$$\begin&#123;align*&#125;
+                  $$\begin&#123;align*&#125;
                   &#123;\rm add&#125;(t,x)&amp;= \begin&#123;cases&#125;
                   x&amp;\textnormal&#123; if $t=0$&#125; \\
                   &#123;\rm succ&#125;(&#123;\rm add&#125;(t-1,x))&amp;\textnormal&#123; if $t \geq 1$.&#125;
@@ -284,17 +303,13 @@ const Article = () => {
                   \end&#123;cases&#125; \\
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir sehen also, dass dies eine Anwendung der primitiven Rekursion ist mit
+                    Wir sehen also, dass dies eine Anwendung der primitiven Rekursion ist mit
                     \(g = \pi_0\) und \(h = &#123;\comp&#125;(\succ, \pi_0)\), also
                   </Paragraph>
                   <pre class="listing">
                     {" "}{" "}
                     <code>
-                      p0 = Proj(0)
-                    </code>
-                    {" "}{" "}
-                    <code>
-                      add = PrimRec (p0, Comp(succ,p0))
+                      p0 = Proj(0)``add = PrimRec (p0, Comp(succ,p0))
                     </code>
                     {" "}{" "}
                   </pre>
@@ -302,14 +317,12 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;4.1.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass die folgenden Funktionen primitiv-rekursiv sind, und implementieren Sie sie
-                  in meinem Python-Framework, so wie ich Addition mit
-                  {" "}
-                  <code>
-                    add = PrimRec (p0, Comp(succ,p0))
-                  </code>
-                  {" "}implementiert habe:
+                  Zeigen Sie, dass die folgenden Funktionen primitiv-rekursiv sind, und implementieren Sie sie
+                  in meinem Python-Framework, so wie ich Addition mit`add = PrimRec (p0, Comp(succ,p0))`implementiert habe:
                   <ol>
                     <li>
                       \(&#123;\rm mult&#125;: (x,y) \mapsto x*y\)
@@ -330,6 +343,7 @@ const Article = () => {
                       Tip:
                     </b>
                     {" "}Für exp und minus ist es einfacher, die Argumente "umgedreht" zu
+                    &ensp;Für exp und minus ist es einfacher, die Argumente "umgedreht" zu
                     betrachten,
                     also \((a,b) \mapsto b^a\) und \((x,y) \mapsto y-x\).
                   </Paragraph>
@@ -337,17 +351,21 @@ const Article = () => {
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
+                    <NumberedTitle>
+                      &ensp;4.1.2{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn Sie die vorherige Übungsaufgabe gelöst (oder darüber aufgegeben) haben,
+                  Wenn Sie die vorherige Übungsaufgabe gelöst (oder darüber aufgegeben) haben,
                   sehen Sie sich die Datei
                   <a href="../code/primitive-recursion/stockpile.py">
                     stockpile.py
                   </a>
                   &ensp;an,
+                  &ensp;an,
                   in der ich diese Funktionen zum Großteil implementiert habe (basierend auf
                   den Übungen, die wir direkt in der Vorlesung gemacht haben).
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Experimentieren Sie weiter und implementieren Sie "Boolesche" Prädikate und Funktionen wie
+                    Experimentieren Sie weiter und implementieren Sie "Boolesche" Prädikate und Funktionen wie
                   </Paragraph>
                   <ul>
                     <li>

@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={15}
-        title_gr="Berechenbarkeit und natürliche Zahlen"
+        title_gr="3. Berechenbarkeit und natürliche Zahlen"
         title_en="Computability NaturalNumbers"
-        number={3.0}>
+        number={3.0}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes15.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -33,11 +37,12 @@ const Article = () => {
             <div class="chapter">
               <h1 class="hidden-title">
                 <span class="chapterTitle">
+                  4. 
                   3. Berechenbarkeit und natürliche Zahlen
                 </span>
               </h1>
               <Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Mit den Booleschen Schaltkreisen haben wir ein Modell kennengelernt, dass
+                Mit den Booleschen Schaltkreisen haben wir ein Modell kennengelernt, dass
                 die Berechnung von Booleschen Funkionen \(f: \&#123;0,1\&#125;^n \rightarrow \&#123;0,1\&#125;\) beschreibt.
                 Wir haben mehrere Beweisen gesehen, dass es für jede Boolesche Funktion einen
                 Schaltkreis gibt. Unsere Zielsetzung war durchweg{" "}
@@ -52,34 +57,39 @@ const Article = () => {
                   negativen
                 </i>
                 {" "}Zielen beschäftigen: zu zeigen, dass es zu bestimmten
+                &ensp;Zielen beschäftigen: zu zeigen, dass es zu bestimmten
                 Funktionen eben nicht Schaltkreise mit \(S\) Gates und in Tiefe \(d\) gibt; wir
                 würden uns zum Großteil mit{" "}
                 <i>
                   unteren Schranken
                 </i>
                 {" "}beschäftigen.
+                &ensp;beschäftigen.
               </Paragraph>
               <Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Boolesche Funktionen sind immer{" "}
+                Boolesche Funktionen sind immer{" "}
                 <i>
                   endliche
                 </i>
                 {" "}Objekte. In der Berechenbarkeitstheorie
+                &ensp;Objekte. In der Berechenbarkeitstheorie
                 geht es im Grunde um die Frage: welche{" "}
                 <i>
                   unendlichen
                 </i>
                 {" "}Funktionen können wir überhaupt
+                &ensp;Funktionen können wir überhaupt
                 berechnen? Und was gilt denn überhaupt als zulässiges Modell für Berechenbarkeit?
               </Paragraph>
               <Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wenn wir nun also über Funktionen \(f: X \rightarrow Y\) auf unendlichen Mengen sprechen und uns
+                Wenn wir nun also über Funktionen \(f: X \rightarrow Y\) auf unendlichen Mengen sprechen und uns
                 fragen,
                 welche durch eine{" "}
                 <i>
                   endliche Rechenvorschrift
                 </i>
                 {" "}beschrieben werden können, dann
+                &ensp;beschrieben werden können, dann
                 müssen wir erst einmal entscheiden, mit welcher unendlichen Menge wir uns beschäftigen.
                 Eine Bedingung sollte zum Beispiel sein, dass wir Input und Output vollständig hinschreiben können.
                 (Denn wenn der Input bereits unendlich groß wäre, wie sollten wir überhaupt über Berechenbarkeit
@@ -92,11 +102,10 @@ const Article = () => {
                 (Wörter, Programme, Dateien, natürliche Zahlen, rationale Zahlen) als solche Bit-Strings codieren.
                 Die ersten Wissenschaftler, die sich mit Berechenbarkeit beschäftigten, kamen allerdings
                 aus der Mathematik und Logik, und ganz allgemeinen entstand die Berechenbarkeitstheorie
-                {" "}
                 <i>
                   bevor
                 </i>
-                {" "}die ersten Rechner gebaut wurden. Daher beschäftigten sich die ersten Forscher auch mit einer
+                die ersten Rechner gebaut wurden. Daher beschäftigten sich die ersten Forscher auch mit einer
                 anderen, uns sehr vertrauten Menge:
                 $$\begin&#123;align*&#125;
                 \mathbb&#123;N&#125; \ ,
@@ -115,7 +124,7 @@ const Article = () => {
                 \(\N\) oder \(\&#123;0,1\&#125;^*\) arbeiten - sofern die obige Bijektion \(f\) selbst "berechenbar" ist.
               </Paragraph>
               <Paragraph>
-                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wir werden in diesem Kapitel mehrere Berechenbarkeitsmodelle für Funktionen
+                Wir werden in diesem Kapitel mehrere Berechenbarkeitsmodelle für Funktionen
                 \(f: \N \rightarrow \N\) kennenlernen. Die beste Einstellung Ihrerseits ist, diese Modelle
                 als primitive, sehr reduzierte Programmiersprachen zu betrachten.
               </Paragraph>

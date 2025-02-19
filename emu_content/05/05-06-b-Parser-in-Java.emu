@@ -1,7 +1,9 @@
 |> Section
-    title_gr Einen Parser in Java implementieren
+    title_gr 5.6 Einen Parser in Java implementieren
     title_en b Parser in Java
     number 5.6
+    counter DefCtr
+    counter ExoCtr
     |> div
         id link-to-toc
         |> a
@@ -36,11 +38,12 @@
                         |> span
                             class subChapterTitle
 
+                            ::::ChapterCtr.::++SectionCtr 
                             5.6 Einen Parser in Java implementieren
                     |> div
                         class alert-info
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Den vollständigen Quelltext, den wir in der Vorlesung geschrieben haben,
+                        Den vollständigen Quelltext, den wir in der Vorlesung geschrieben haben,
                         finden Sie in der Datei 
                         |> a
                             href ../code/parsing/arithmetic-in-class/ArithmeticGrammar.java
@@ -49,16 +52,18 @@
                         .
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Ich möchte nun eine kontextfreie Grammatik für arithmetische Ausdrücke der
+                        Ich möchte nun eine kontextfreie Grammatik für arithmetische Ausdrücke der
                         Form 
                         |> tt
 
                             ((31+402)*83)
                         &ensp;entwerfen. Der Einfachheit halber bestehe ich
+                        &ensp;entwerfen. Der Einfachheit halber bestehe ich
                         auf strenger Klammerung, so wäre 
                         |> tt
 
                             (2*(1+2+3))
+                        &ensp;zum Beispiel nicht erlaubt.
                         &ensp;zum Beispiel nicht erlaubt.
                         Unsere Grammatik soll allgemeine Dezimalzahlen darstellen können.
                         Das Alphabet ist somit
@@ -66,7 +71,7 @@
                         \texttt{5},\texttt{6},\texttt{7},\texttt{8},\texttt{9},
                         \texttt{+},\texttt{*},\texttt{(},\texttt{)}\}$.
                         Die Produktionsregeln sind:
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;\begin{align*}
+                    \begin{align*}
                     E&amp;\rightarrow N \tag{JustNumber} \\
                     E&amp;\rightarrow \texttt{(}E \texttt{+} E\texttt{)} \tag{Sum} \\
                     E&amp;\rightarrow \texttt{(}E \texttt{*} E\texttt{)} \tag{Product}\\
@@ -77,13 +82,14 @@
                     \end{align*}
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die Nichtterminale sind also $E$ (Expression), $N$ (Number) und $D$ (Digit). Wir haben auch
+                        Die Nichtterminale sind also $E$ (Expression), $N$ (Number) und $D$ (Digit). Wir haben auch
                         den einzelnen Produktionen Namen gegeben, bis auf die der Form $D \rightarrow i$.
-                        Was soll nun unser Parser tun? Er soll, gegeben ein Eingabewort $w \in L$, den
-                        _Ableitungsbaum_ konstruieren, für 
+                        Was soll nun unser Parser tun? Er soll, gegeben ein Eingabewort $w \in L$, den_Ableitungsbaum_ konstruieren, für 
+                        &ensp;konstruieren, für 
                         |> tt
 
                             ((31+402)*83)
+                        &ensp;also
                         &ensp;also
                     |> figure
                         |> img
@@ -91,9 +97,8 @@
                             src ../img/context-free/arithmetic-syntax-tree.svg
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wie wir diesen Baum in Java repräsentieren, darüber sprechen wir in einer Minute.
-                        Zuerst aber: wir wollen mit diesem Baum etwas Sinnvolles tun. Zum Beispiel
-                        _auswerten_, so dass am Ende eine Zahl rauskommt, im obigen Beispiel
+                        Wie wir diesen Baum in Java repräsentieren, darüber sprechen wir in einer Minute.
+                        Zuerst aber: wir wollen mit diesem Baum etwas Sinnvolles tun. Zum Beispiel_auswerten_, so dass am Ende eine Zahl rauskommt, im obigen Beispiel
                         also $(31 + 402) \cdot 83 = 35939$. Oder den Ausdruck umformen von
                         Infix-Notation zu Präfixnotation, also
                         |> tt
@@ -106,7 +111,7 @@
                         Eine Datenstruktur für Ableitungsbäume
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für meine Implementierung in Java erschaffe ich für jedes Nichtterminal $X$
+                        Für meine Implementierung in Java erschaffe ich für jedes Nichtterminal $X$
                         ein Interface
                         und für jede Produktionsregel $X \rightarrow \alpha$ eine Klasse,
                         die das Interface $X$ implementiert und $\alpha$ als Klassenvariable enthält.
@@ -115,6 +120,7 @@
                             |> tt
 
                                 interface Expression
+                            &ensp;wird implementiert von
                             &ensp;wird implementiert von
                             |> ul
                                 |> li
@@ -126,6 +132,7 @@
 
                                         Exrepssion e1, e2
                                     &ensp;enthält,
+                                    &ensp;enthält,
                                 |> li
                                     |> tt
 
@@ -135,6 +142,7 @@
 
                                         Exrepssion e1, e2
                                     &ensp;enthält,
+                                    &ensp;enthält,
                                 |> li
                                     |> tt
 
@@ -143,11 +151,12 @@
                                     |> tt
 
                                         Number number
-                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;enthält;
+                                    enthält;
                         |> li
                             |> tt
 
                                 interface Number
+                            &ensp;wird implementiert von
                             &ensp;wird implementiert von
                             |> ul
                                 |> li
@@ -159,9 +168,11 @@
 
                                         Number
                                     &ensp;und eine 
+                                    &ensp;und eine 
                                     |> tt
 
                                         Digit
+                                    &ensp;erhält und
                                     &ensp;erhält und
                                 |> li
                                     |> tt
@@ -171,11 +182,12 @@
                                     |> tt
 
                                         Digit
-                                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;enthält;
+                                    enthält;
                         |> li
                             |> tt
 
                                 interface Digit
+                            &ensp;wird implementiert von
                             &ensp;wird implementiert von
                             |> tt
 
@@ -209,13 +221,14 @@
 
                                 class DigitEight
                             &ensp;und
+                            &ensp;und
                             |> tt
 
                                 class DigitNine
                             .
                     |> p
 
-                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;In unserem Anwendungsfall hat jedes Interface eine Methode
+                        In unserem Anwendungsfall hat jedes Interface eine Methode
                         |> tt
 
                             public int toInt()
@@ -223,6 +236,7 @@
                         |> tt
 
                             Expression
+                        &ensp;hat zusätzlich noch
                         &ensp;hat zusätzlich noch
                         die Methode 
                         |> tt

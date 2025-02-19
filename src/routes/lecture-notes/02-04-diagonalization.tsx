@@ -1,15 +1,19 @@
-import Chapter from "~/components/Chapter";
+import Section from "~/components/Section";
 import Paragraph from "~/components/Paragraph";
 import Container from "~/components/Container";
 import Carousel from "~/components/Carousel";
+import NumberedTitle from "~/components/NumberedTitle";
 const Article = () => {
   return (
     <Container>
       <Section
         count={12}
-        title_gr="Die Cantorsche Diagonalisation: $\N \not \approx \R$"
+        title_gr="2.4 Die Cantorsche Diagonalisation: $\N \not \approx \R$"
         title_en="diagonalization"
-        number={2.4}>
+        number={2.4}
+        counter="DefCtr"
+        counter="ExoCtr"
+        path="/lecture-notes12.tsx">
         <div id="link-to-toc">
           <a href="../vorlesungsskript">
             Inhaltsverzeichnis
@@ -34,11 +38,12 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
+                    3.4 
                     2.4 Die Cantorsche Diagonalisation: $\N \not \approx \R$
                   </span>
                 </h1>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Vielleicht war es überraschend zu sehen, dass $\N = \Q$ gilt, dass
+                  Vielleicht war es überraschend zu sehen, dass $\N = \Q$ gilt, dass
                   also das "diskrete" $\N$ und das "dichte" $\Q$ sicht hinsichtlich
                   ihrer Größe (Fachsprache: Kardinalität) nicht unterscheiden. Könnte es
                   denn sein, dass jede unendliche Menge $A$ abzählbar ist, also $A
@@ -53,21 +58,23 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    {" "}{" "}
                     <b>
                       (Überabzählbarkeit der reellen Zahlen).
                     </b>
                     {" "}$\N \not
+                    &ensp;$\N \not
                     \approx \R$.
                   </Paragraph>
                 </div>
                 <div class="well container">
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    {" "}{" "}
                     <b>
                       Beweis.
                     </b>
                     {" "}Da wir bereits $\R \approx \&#123;0,1\&#125;^&#123;\N&#125;$
+                    &ensp;Da wir bereits $\R \approx \&#123;0,1\&#125;^&#123;\N&#125;$
                     gesehen haben, reicht es, $\N \not \approx \&#123;0,1\&#125;^&#123;\N&#125;$ zu zeigen.
                     Wir müssen also zeigen, dass es keine Bijektion $f : \N \rightarrow
                     \&#123;0,1\&#125;^&#123;\N&#125;$ gibt. Wie gehen wir vor? Wir nehmen an, man hätte uns
@@ -96,7 +103,7 @@ const Article = () => {
                     unterscheidet, also an mindestens einer Stelle.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Wie können wir die Funktion $f$ darstellen? Jedes $f(n)$ ist eine
+                    Wie können wir die Funktion $f$ darstellen? Jedes $f(n)$ ist eine
                     unendliche $0/1$-Folge. Also können wir uns $f$ als nach rechts und
                     nach unten unendliche Tabelle vorstellen. Hierbei schreiben wir
                     $f
@@ -112,7 +119,7 @@ const Article = () => {
                       src="../img/infinite-sets/cantor-table.svg" />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Für ein Bit $b \in \&#123;0,1\&#125;$ bezeichnen wir mit $\bar&#123;b&#125;$ seine
+                    Für ein Bit $b \in \&#123;0,1\&#125;$ bezeichnen wir mit $\bar&#123;b&#125;$ seine
                     Negation: $\bar&#123;b&#125; = 1 - b$. Wir betrachten jetzt die Diagonale der
                     Tabelle und negieren sie:
                   </Paragraph>
@@ -122,7 +129,7 @@ const Article = () => {
                       src="../img/infinite-sets/cantor-diagonal.svg" />
                   </figure>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;und erhalten eine Folge: $\mathbf&#123;d&#125; := \overline&#123;f
+                    und erhalten eine Folge: $\mathbf&#123;d&#125; := \overline&#123;f
                     <i>
                       &#123;0,0&#125;&#125;\
                       \overline&#123;f
@@ -159,12 +166,13 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Weil in dem Beweis die Diagonale der Tabelle eine entscheidende Rolle
+                  Weil in dem Beweis die Diagonale der Tabelle eine entscheidende Rolle
                   spielt, nennt man diese Beweistechnik auch das Cantorsche
                   Diagonalisierungsverfahren. Dies wird später, in Kapitel
                   <a href="07-00-Turing-machines.html">
                     7
                   </a>
+                  &ensp;über Turingmaschinen und in
                   &ensp;über Turingmaschinen und in
                   Kapitel ? über Komplexitätstheorie eine Rolle spielen, wenn wir z.B.
                   zeigen wollen, dass es Probleme gibt, an denen jedes Computerprogram
@@ -174,8 +182,11 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Übungsaufgabe
+                      <NumberedTitle>
+                        &ensp;3.4.1{" "}
+                      </NumberedTitle>
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie, dass es zu der Funktion $f: \N \rightarrow \cuben$ eine
+                    Zeigen Sie, dass es zu der Funktion $f: \N \rightarrow \cuben$ eine
                     Folge $\mathbf&#123;d&#125;$ gibt, die nicht nur nicht in $&#123;\rm img&#125;(f)$ ist,
                     sondern noch mehr: jede Folge $f_n$ unterscheidet sich von
                     $\mathbf&#123;d&#125;$ in unendlich vielen Stellen.
@@ -185,30 +196,37 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Übungsaufgabe
+                      <NumberedTitle>
+                        &ensp;3.4.2{" "}
+                      </NumberedTitle>
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Zeigen Sie ganz allgemein: für jede Menge $A$ gilt $A \not \approx
+                    Zeigen Sie ganz allgemein: für jede Menge $A$ gilt $A \not \approx
                     2^A$. Erinnerin Sie sich: $2^A$ ist die Potenzmenge von $A$, also
                     die Menge aller Untermengen.
                   </Paragraph>
                   <Paragraph>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    {" "}{" "}
                     <b>
                       Tipp:
                     </b>
                     {" "}Sie müssen den obigen Beweis auf die richtige
+                    &ensp;Sie müssen den obigen Beweis auf die richtige
                     Weise abstrahieren, dann geht es ganz einfach.
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Die letzte Übung zeigt also: es gibt immer größere Mengen, ein oberes
+                  Die letzte Übung zeigt also: es gibt immer größere Mengen, ein oberes
                   Ende wird nie erreicht.
                 </Paragraph>
                 <div class="well well-lg numbered-exercise container">
                   <Paragraph>
                     <span class="numbered-title">
                       Übungsaufgabe
+                      <NumberedTitle>
+                        &ensp;3.4.3{" "}
+                      </NumberedTitle>
                     </span>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Erinnern Sie sich an die Partialordnung $(2^\N, \subseteq)$. Zeigen
+                    Erinnern Sie sich an die Partialordnung $(2^\N, \subseteq)$. Zeigen
                     Sie, dass es in dieser Ordnung eine Antikette $X$ mit $X \approx \R$
                     gibt.
                   </Paragraph>
@@ -217,13 +235,18 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Übungsaufgabe
+                      <NumberedTitle>
+                        &ensp;3.4.4{" "}
+                      </NumberedTitle>
                     </span>
+                    &ensp;Zeigen Sie, dass
                     &ensp;Zeigen Sie, dass
                     es in $(2^\N, \subseteq)$ eine{" "}
                     <i>
                       Kette
                     </i>
                     {" "}$X$ mit $X \approx \R$
+                    &ensp;$X$ mit $X \approx \R$
                     gibt.
                   </Paragraph>
                 </div>

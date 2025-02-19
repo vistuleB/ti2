@@ -239,10 +239,10 @@ pub fn our_pipeline() -> List(Pipe) {
     handles_generate_ids.handles_generate_ids(),
     // 23
     define_article_output_path.define_article_output_path(
-      #("Chapter", "/lecture-notes", "tsx", "path"),
+      #("Section", "/lecture-notes", "tsx", "path"),
     ),
     // 24
-    handles_generate_dictionary.handles_generate_dictionary([#("Chapter", "path")]),
+    handles_generate_dictionary.handles_generate_dictionary([#("Section", "path")]),
     // 25
     handles_substitute.handles_substitute(),
     // more
