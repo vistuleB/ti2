@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    7.2 
+                    6.2 
                     8.1 Das Zeithierarchietheorem
                   </span>
                 </h1>
@@ -54,7 +54,6 @@ const Article = () => {
                       Kapitel 7.5.
                     </a>
                     &ensp;Unsere Implementierung hatte insgesamt
-                    &ensp;Unsere Implementierung hatte insgesamt
                     fünf Bänder verwendet: (1) ein Band, um die Regeln von $M$ zu speichern (also die Funktion
                     $\delta$);
                     (2) ein Band, um den Zustand von $M$ zu speichern; (3) um den akzeptierenden Zustand $\qaccept$
@@ -64,13 +63,11 @@ const Article = () => {
                       zwei
                     </i>
                     {" "}Bänder
-                    &ensp;Bänder
                     verwendet, weil das uns erlaubte, effizient Zeichen{" "}
                     <i>
                       einzufügen
                     </i>
                     {" "}statt einfach zu
-                    &ensp;statt einfach zu
                     überschreiben.
                     Wie wir aber gesehen hatten, können wir (4) und (5) mit einem Band bewältigen, indem wir zu
                     allererst
@@ -84,7 +81,6 @@ const Article = () => {
                       drei
                     </i>
                     {" "}Bändern aus.
-                    &ensp;Bändern aus.
                     Allerdings hatten wir uns nur überlegt, wie man
                     Einband-Turingmaschinen $M$ simuliert. Es ist aber ziemlich einfach zu sehen, dass man
                     Codierung und Simulation ganz analog für $k$-Band-Turingmaschinen durchführen kann.
@@ -93,7 +89,6 @@ const Article = () => {
                     <a href="07-05-undecidability.html">
                       Kapitel 7.7
                     </a>
-                    &ensp;gesehen, dass wir als Codierungsalphabet
                     &ensp;gesehen, dass wir als Codierungsalphabet
                     $\Sigma$ selbst nehmen können, also $\enc(M) \in \Sigma^
                   </b>
@@ -106,8 +101,10 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;6.2.1{" "}
+                      </NumberedTitle>
                     </span>
-                    &ensp;Für jedes Alphabet $\Sigma$ mit mindestens zwei
                     &ensp;Für jedes Alphabet $\Sigma$ mit mindestens zwei
                     Zeichen
                     und jedes $k \geq 1$ gibt es eine Turingmaschine $U$ mit $k+2$ Bändern, die folgendes kann:
@@ -195,7 +192,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;7.2.1{" "}
+                        &ensp;6.2.2{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;
@@ -230,15 +227,10 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                       <NumberedTitle>
-                        &ensp;7.2.2{" "}
+                        &ensp;6.2.3{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;$\bhalt \in \TIME
-                    <i>
-                      &#123;k+3&#125;(n)$. 
-                      &ensp;$\bhalt \in \TIME
-                    </i>
-                    &#123;k+3&#125;(n)$.{" "}
+                    &ensp;$\bhalt \in \TIME_&#123;k+3&#125;(n)$.{" "}
                   </Paragraph>
                 </div>
                 <div class="well container">
@@ -283,12 +275,7 @@ const Article = () => {
                       (nicht ganz
                       korrekt).
                     </b>
-                    {" "}$\bnegdiag \in \TIME
-                    <i>
-                      &#123;k+3&#125;(t)$.
-                      &ensp;$\bnegdiag \in \TIME
-                    </i>
-                    &#123;k+3&#125;(t)$.
+                    {" "}$\bnegdiag \in \TIME_&#123;k+3&#125;(t)$.
                   </Paragraph>
                 </div>
                 <Paragraph>
@@ -308,10 +295,9 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;7.2.3{" "}
+                        &ensp;6.2.4{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Eine Funktion $t: \N \rightarrow \N$ heißt
                     &ensp;Eine Funktion $t: \N \rightarrow \N$ heißt
                     <i>
                       zeitkonstruierbar
@@ -330,7 +316,6 @@ const Article = () => {
                       (jetzt korrekt).
                     </b>
                     {" "}Sei
-                    &ensp;Sei
                     $t: \N \rightarrow \N$ zeitkonstruierbar, monoton steigend und $t(n) \geq n$. Dann gilt
                     $\bnegdiag \in \TIME_&#123;k+3&#125;(t)$.
                   </Paragraph>
@@ -344,7 +329,6 @@ const Article = () => {
                     <span class="numbered-title">
                       Lemma
                     </span>
-                    &ensp;Sei $s: \N \rightarrow \N$ eine Funktion mit
                     &ensp;Sei $s: \N \rightarrow \N$ eine Funktion mit
                     $s(n) \geq n$ und
                     $s = o(t)$, also $\lim
@@ -378,7 +362,6 @@ const Article = () => {
                     <a href="#theorem-universal">
                       Theorem 8.1.1
                     </a>
-                    &ensp;höchstens
                     &ensp;höchstens
                     $C \cdot |\enc(M)| \cdot (n + s(n))$ Schritte.
                     Da $s(n) \geq n$ gilt, sind dies höchstens $2C \cdot |\enc(M)| \cdot s(n)
@@ -422,6 +405,9 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;6.2.5{" "}
+                      </NumberedTitle>
                     </span>
                     {" "}{" "}
                     <b>
@@ -452,6 +438,9 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;6.2.6{" "}
+                      </NumberedTitle>
                     </span>
                     &ensp;
                     <b>
@@ -481,7 +470,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;7.2.1{" "}
+                        &ensp;6.2.1{" "}
                       </NumberedTitle>
                     </span>
                     Zeigen Sie, dass $n \mapsto n^2$ und $n \mapsto 2^n$ zeitkonstruierbar sind.

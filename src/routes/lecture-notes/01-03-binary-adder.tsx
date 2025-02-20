@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={4}
-        title_gr="::++ChapterCtr Binär-Addierer"
+        title_gr="Binär-Addierer"
         title_en="binary adder"
         number={1.3}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     1.3 
-                    2 Binär-Addierer
+                    Binär-Addierer
                   </span>
                 </h1>
                 <h3>
@@ -77,7 +77,6 @@ const Article = () => {
                     drei
                   </i>
                   {" "}Bits addieren
-                  &ensp;Bits addieren
                   müssen:
                   das von \(x\), das von \(y\), und das eingehende Carry \(\cin\). Daraus berechnet
                   sich das Output-Bit \(s\) und das ausgehende Carry \(\cout\), das nach links weitergegeben
@@ -137,14 +136,13 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;2.3.1{" "}
+                      &ensp;1.3.1{" "}
                     </NumberedTitle>
                   </span>
                   Bauen Sie einen Schaltkreis{" "}
                   <tt>
                     oneBitAdder:
                   </tt>
-                  &ensp;\( \&#123;0,1\&#125;^3 \rightarrow \&#123;0,1\&#125;^2\) für
                   &ensp;\( \&#123;0,1\&#125;^3 \rightarrow \&#123;0,1\&#125;^2\) für
                   folgende Funktionalität:
                   <figure>
@@ -257,8 +255,7 @@ const Article = () => {
                   <i>
                     Carry Generate \(g_i\)
                   </i>
-                  {" "}und 
-                  &ensp;und{" "}
+                  {" "}und{" "}
                   <i>
                     Carry Propagate \(p_i\)
                   </i>
@@ -277,7 +274,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;2.3.1{" "}
+                      &ensp;1.3.1{" "}
                     </NumberedTitle>
                     &ensp;(Carry propagate / generate für Intervalle)
                   </span>
@@ -344,7 +341,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;2.3.2{" "}
+                      &ensp;1.3.2{" "}
                     </NumberedTitle>
                   </span>
                   Wenn wir \([a,b] = [a,i] \cup [i+1,b] \) schreiben für \(a \lt i \lt b\), dann gilt
@@ -378,7 +375,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;2.3.3{" "}
+                      &ensp;1.3.3{" "}
                     </NumberedTitle>
                   </span>
                   Ein Binärintervall ist eine Menge natürlicher Zahlen der Form
@@ -399,13 +396,12 @@ const Article = () => {
                     Sternchennotation
                   </i>
                   {" "}mit [11**] notieren.
-                  &ensp;mit [11**] notieren.
                 </Paragraph>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;2.3.2{" "}
+                      &ensp;1.3.2{" "}
                     </NumberedTitle>
                   </span>
                   Seit \(n = 2^d-1\). Wie viele Binärintervalle gibt es in
@@ -533,7 +529,6 @@ const Article = () => {
                       1. Fall.
                     </b>
                     {" "}Wenn \(k\) die Form \(k = 2^d-1\) hat, dann ist
-                    &ensp;Wenn \(k\) die Form \(k = 2^d-1\) hat, dann ist
                     \([0,k]\) bereits ein Binärintervall; dies passiert, wenn
                     die Binärdarstellung von \(k\) die Form \(k = (1^b)_2 \) hat (wobei \(b=0\)
                     sein kann, in welchem Fall \(k=0\) ist).
@@ -543,7 +538,6 @@ const Article = () => {
                         2. Fall.
                       </b>
                       {" "}Wenn \(k\) nicht die Form \(k = 2^d-1\) hat,
-                      &ensp;Wenn \(k\) nicht die Form \(k = 2^d-1\) hat,
                       dann hat die Binärdarstellung von \(k\) nicht die Form \(1^b\); sie
                       enthält also auch nicht-führende Nullen (beachten Sie, dass \((0111)_2\) und \((111)_2\)
                       die
@@ -610,7 +604,6 @@ const Article = () => {
                         Tiefe.
                       </b>
                       {" "}Jedes \(pg\)-Gate hat Tiefe 2,
-                      &ensp;Jedes \(pg\)-Gate hat Tiefe 2,
                       und somit erreichen \(d-1\) solche Gates hintereinander
                       zusammen eine Tiefe von \(2 (d-1) = 2 \ceil&#123;\log_2 n&#125; - 2\).{" "}
                     </Paragraph>
@@ -620,7 +613,6 @@ const Article = () => {
                         Größe.
                       </b>
                       {" "}Zählen wir die Anzahl von \(pg\)-Gates in unserem
-                      &ensp;Zählen wir die Anzahl von \(pg\)-Gates in unserem
                       Schaltkreis. Wir haben bereits gesehen, dass die Berechnung von \(g_&#123;[0,k]&#125;\) höchstens
                       \(d-1\) viele \(pg\)-Gates braucht. Es scheint also, als bräuchten wir für alle \(n\)
                       Werte
@@ -701,7 +693,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;2.3.3{" "}
+                      &ensp;1.3.3{" "}
                     </NumberedTitle>
                   </span>
                   Bauen Sie einen Schaltkreis für die Boolesche Funktion

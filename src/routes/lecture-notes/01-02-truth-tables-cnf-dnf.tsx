@@ -54,7 +54,6 @@ const Article = () => {
                     einem
                   </i>
                   {" "}Ausgabewert, also \(f : \&#123;0,1\&#125;^n \rightarrow
-                  &ensp;Ausgabewert, also \(f : \&#123;0,1\&#125;^n \rightarrow
                   \&#123;0,1\&#125;\).
                 </Paragraph>
                 Dies ist ein endliches Objekt, wir können es also codieren, indem wir
@@ -64,7 +63,6 @@ const Article = () => {
                   Wahrheitstabelle
                 </i>
                 {" "}(englisch
-                &ensp;(englisch
                 <i>
                   truth table
                 </i>
@@ -101,7 +99,6 @@ const Article = () => {
                   \(\bar&#123;y&#125; \vee z\)
                 </span>
                 &ensp;ist (ich
-                &ensp;ist (ich
                 schreibe im Fließtext übrigens gerne \(\bar&#123;y&#125;\) statt \(\neg y\), weil
                 das mir lesbarer erscheint). Insgesamt also:
                 <figure>
@@ -109,18 +106,15 @@ const Article = () => {
                   <code>
                     if
                   </code>
-                  {" "}\(x\) 
-                  &ensp;\(x\){" "}
+                  {" "}\(x\){" "}
                   <code>
                     then
                   </code>
                   {" "}\(\bar&#123;y&#125; \vee z\)
-                  &ensp;\(\bar&#123;y&#125; \vee z\)
                   <code>
                     else
                   </code>
                   {" "}\(y \vee z\).
-                  &ensp;\(y \vee z\).
                 </figure>
                 <Paragraph>
                   Jetzt können wir das mit unserem if-then-else-Schaltkreis kombinieren.
@@ -153,16 +147,10 @@ const Article = () => {
                   </li>
                   <li>
                     Kombinieren Sie diese via
-                    &ensp;`if
-                    &ensp;if` \(x_1\) 
-                    &ensp;\(x_1\) 
-                    &ensp;`then 
-                    &ensp;then` 
+                    &ensp;`if` \(x_1\) 
+                    &ensp;`then` 
                     &ensp;\(C_1\)
-                    &ensp;\(C_1\)
-                    &ensp;`else 
-                    &ensp;else` 
-                    &ensp;\(C_0\) zu einem Schaltkreis für \(f\) mit
+                    &ensp;`else` 
                     &ensp;\(C_0\) zu einem Schaltkreis für \(f\) mit
                     insgesamt \(n\) Input-Variablen.
                   </li>
@@ -251,13 +239,11 @@ const Article = () => {
                   eine
                 </i>
                 {" "}ausgehende Kante hat. Konkret bedeutet dies, dass
-                &ensp;ausgehende Kante hat. Konkret bedeutet dies, dass
                 man diesen Schaltkreis als{" "}
                 <i>
                   logische Formel
                 </i>
                 {" "}hinschreiben kann:
-                &ensp;hinschreiben kann:
                 $$ (\bar&#123;x&#125; \wedge \bar&#123;y&#125; \wedge z) \vee (\bar&#123;x&#125; \wedge y \wedge
                 \bar&#123;z&#125;) \vee (\bar&#123;x&#125; \wedge y \wedge z) \vee (x \wedge \bar&#123;y&#125; \wedge
                 \bar&#123;z&#125;) \vee (x \wedge \bar&#123;y&#125; \wedge z) \vee (x \wedge y \wedge z) $$
@@ -273,20 +259,17 @@ const Article = () => {
                     Literal
                   </i>
                   {" "}ist eine Variable \(x\) oder deren Negation
-                  &ensp;ist eine Variable \(x\) oder deren Negation
                   \(\bar&#123;x&#125;\). Ein{" "}
                   <i>
                     Term
                   </i>
                   {" "}ist ein AND (auch: Konjunktion) von
-                  &ensp;ist ein AND (auch: Konjunktion) von
                   Literalen (beispielsweise \(\bar&#123;x&#125; \wedge \bar&#123;y&#125; \wedge z)\). Eine
                   Formel in{" "}
                   <i>
                     disjunktiver Normalform
                   </i>
                   {" "}(DNF) ist ein OR von
-                  &ensp;(DNF) ist ein OR von
                   Termen.
                   <Paragraph>
                     Alternativ: eine DNF ist ein Schaltkreis der Tiefe 2 (wobei
@@ -306,7 +289,6 @@ const Article = () => {
                     keine
                   </i>
                   {" "}DNF-Formel, nach der zweiten aber schon. Zeigen Sie,
-                  &ensp;DNF-Formel, nach der zweiten aber schon. Zeigen Sie,
                   wie man OR-Gates auf Ebene 1 entfernen kann! Als konkretes Beispiel:
                   <figure>
                     <img
@@ -327,7 +309,6 @@ const Article = () => {
                     keine
                   </i>
                   {" "}davon ein, muss wohl eine 1 herauskommen. Wir gehen
-                  &ensp;davon ein, muss wohl eine 1 herauskommen. Wir gehen
                   also in der Wahrheitstabelle alle Zeilen mit Wert 0 durch und
                   schreiben einen Ausdruck, der genau diese Zeile verbietet. So kann man
                   den Ausdruck \( (\bar&#123;x&#125; \vee \bar&#123;y&#125; \vee z)\) verstehen als
@@ -364,7 +345,6 @@ const Article = () => {
                     konjunktiver Normalform
                   </i>
                   {" "}(CNF) ist ein AND von
-                  &ensp;(CNF) ist ein AND von
                   Klauseln.
                   <Paragraph>
                     Alternativ: eine CNF-Formel ist ein Schaltkreis der Tiefe 2 (wobei
@@ -425,7 +405,6 @@ const Article = () => {
                     Algorithmen
                   </i>
                   {" "}in dem Sinne). Die genaue Komplexität dieser
-                  &ensp;in dem Sinne). Die genaue Komplexität dieser
                   Optimierungsprobleme ist in der Tat Gegenstand aktiver Forschung,
                 </Paragraph>
                 <ol>
@@ -435,7 +414,6 @@ const Article = () => {
                       Boolesche Formel
                     </i>
                     {" "}vorliegt
-                    &ensp;vorliegt
                     (also Schaltkreise, in denen außer den Eingabe-Gates alle Gates nur
                     eine ausgehende Kante haben), so ist das Minimierungsproblem
                     \(Sigma_2^&#123;P&#125;\)-vollständig, siehe
@@ -445,7 +423,6 @@ const Article = () => {
                         The complexity of Boolean formula minimization
                       </i>
                       {" "}(JCSS
-                      &ensp;(JCSS
                       2011){" "}
                     </a>
                     .

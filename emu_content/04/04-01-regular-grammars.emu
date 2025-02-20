@@ -187,9 +187,7 @@
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
                         Sei \(\Sigma = \{a,b,.\}\) und \(L \subseteq \Sigma^*\) die Sprache
                         aller Strings der Form $$ x_1 . x_2 . x_3 . \cdots . x_n $$ wobei \(n
-                        \geq 2\) und jedes \(x_i \in \{a,b\}^+\), also zum Beispiel`a.bba.aba` aber nicht 
-                        &ensp;aber nicht `aba` und auch nicht
-                        &ensp;und auch nicht`a.b..a`Entwerfen Sie eine reguläre Grammatik für diese Sprache.
+                        \geq 2\) und jedes \(x_i \in \{a,b\}^+\), also zum Beispiel`a.bba.aba` aber nicht `aba` und auch nicht`a.b..a`Entwerfen Sie eine reguläre Grammatik für diese Sprache.
                     |> div
                         class well well-lg numbered-exercise container
                         |> span
@@ -205,7 +203,6 @@
 
                             Grammatik für korrekte Emailadressen
                         im letzten Abschnitt war _nicht_ regulär. Allerdings können wir
-                        &ensp;regulär. Allerdings können wir
                         eine reguläre Grammatik angeben, die die gleiche Sprache erzeugt.
                         |> p
 
@@ -243,13 +240,15 @@
                         \Sigma^*\) ist. Im Unterschied zu den eigentlich regulären Grammatiken
                         erlauben wir also mehrere terminale Symbole auf der rechten Seite,
                         sofern Sie _vor_ dem Nichtterminal vorkommen.
-                        &ensp;dem Nichtterminal vorkommen.
                     |> div
                         class well container theorem
                         |> span
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Sei \(G = (\Sigma, N, P, S)\) eine erweitert reguläre Grammatik. Dann
                         existiert eine reguläre Grammatik \(G' = (\Sigma, N', P', S)\), die
                         die gleiche Sprache erzeugt: \(L(G) = L(G')\).
@@ -290,7 +289,6 @@
 
                             Definition 4.1
                         &ensp;hat jede Produktion in einer
-                        &ensp;hat jede Produktion in einer
                         regulären Grammatik eine der folgenden vier Formen: \begin{align*} 1.
                         \quad X&amp;\rightarrow aY \\ 2. \quad X&amp;\rightarrow a \\ 3. \quad X&
                         \rightarrow Y \\ 4. \quad X&amp;\rightarrow \epsilon \end{align*}
@@ -305,6 +303,9 @@
                                 class numbered-title
 
                                 Theorem
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik. Dann gibt es
                             eine äquivalente reguläre Grammatik \(G' = (\Sigma, N', P', S)\),
                             die nur Regeln vom Typ 1 und 4 enthält.
@@ -442,8 +443,7 @@
                                 Ding 1, dann Ding 2, wie beispielsweise_Username, dann `@`, dann Domainname_
                             |> li
 
-                                Ding, bliebig oft wiederholt, wie beispielsweise_eine beliebig lange Folge von Labels, mit`.` separiert.
-                                &ensp;separiert._
+                                Ding, bliebig oft wiederholt, wie beispielsweise_eine beliebig lange Folge von Labels, mit`.` separiert._
                             |> li
 
                                 Ding 1 oder Ding 2. Beispielsweise_Bindestrich oder alphanumerisches Zeichen_.
@@ -488,7 +488,6 @@
 
                             In einem nächsten Schritt werden wir zeigen, dass Konstrukte wie_Ding 1, gefolgt von Ding 2_ 
 
-                            &ensp;mit regulären Grammatiken
                             &ensp;mit regulären Grammatiken
                             realisierbar sind.
                         |> div
@@ -553,7 +552,6 @@
 
                                 \(\square\)
                         In einem dritten Lemma werden wir zeigen, dass die Konstruktion_Ding, beliebig oft wiederholt_ mit regulären Sprachen möglich
-                        &ensp;mit regulären Sprachen möglich
                         ist.
                         |> div
                             class well container theorem
@@ -617,13 +615,10 @@
                                 |> li
 
                                     Dem Protokoll. Hier ist das `https`; es kann aber
-                                    auch `http` oder 
-                                    &ensp;oder `ftp` sein.
-                                    &ensp;sein.
+                                    auch `http` oder `ftp` sein.
                                 |> li
 
                                     Dem `://` nach dem Protokoll.
-                                    &ensp;nach dem Protokoll.
                                 |> li
 
                                     Dem Domainnamen, hier `web1.hszg.de`.
@@ -636,7 +631,6 @@
                                     gefolgt von einem Query-String; dieser besteht aus beliebig
                                     vielen, aber mindestens einem Paar der Form Key=Value, wobei die
                                     Paare mit einem `&` separiert sind.
-                                    &ensp;separiert sind.
                             |> p
 
                                 Zeigen Sie, dass die Sprache der syntaktisch korrekten URLs (in
@@ -654,6 +648,9 @@
                                 class numbered-title
 
                                 Theorem
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             Sei \(L \subseteq \Sigma^*\) eine reguläre Sprache und \(c \not \in
                             \Sigma\) ein neues Terminalsymbol. Die Sprache aller nichtleeren
                             Folgen von \(L\)-Wörten, die durch \(c\) separiert sind, also formal

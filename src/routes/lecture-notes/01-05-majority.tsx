@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    2.5 
+                    1.5 
                     1.5 Majority
                   </span>
                 </h1>
@@ -72,7 +72,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;2.5.1{" "}
+                      &ensp;1.5.1{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(n\) eine ungerade Zahl. Zeigen Sie, dass \(\maj_n\) für genau
@@ -214,7 +214,6 @@ const Article = () => {
                   Lösungen zu den Übungsaufgaben
                 </a>
                 &ensp;dargestellt.
-                &ensp;dargestellt.
                 Insbesondere definieren wir Verallgemeinerungen von \(\maj_n\) wie folgt:
                 $$\begin&#123;align*&#125;
                 \theta^n_k (x_1,\dots,x_n)&amp;:=
@@ -279,19 +278,15 @@ const Article = () => {
                   {" "}{" "}
                   <code>
                     if k == 0 or k == n:
-                    &ensp;&ensp;&ensp;&ensp;if k == 0 or k == n:
                   </code>
                   {" "}{" "}
                   <code>
-                    return 1 
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;return 1
+                    return 1
                   </code>
                   {" "}
-                  &ensp;`else:
-                  &ensp;&ensp;&ensp;&ensp;else:`{" "}
+                  &ensp;`else:`{" "}
                   <code>
                     return binomial(n-1,k-1) + binomial(n-1,k)
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;return binomial(n-1,k-1) + binomial(n-1,k)
                   </code>
                   {" "}{" "}
                 </pre>
@@ -314,6 +309,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;1.5.1{" "}
+                    </NumberedTitle>
                   </span>
                   Die Funktion
                   \(\maj_n (x_1,\dots,x_n)\) kann mit einem Schaltkreis der Größe \(O(n^2)\),
@@ -340,7 +338,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;2.5.2{" "}
+                      &ensp;1.5.2{" "}
                     </NumberedTitle>
                   </span>
                   Bestimmen Sie asymptotisch die Größe und die Tiefe dieses Schaltkreises.
@@ -429,7 +427,11 @@ const Article = () => {
                 wir haben insgesamt also \(O (n \log n)\) viele Gates.
                 <div class="well container theorem">
                   <span class="numbered-title">
-                    Theorem.
+                    Theorem
+                    <NumberedTitle>
+                      &ensp;1.5.2{" "}
+                    </NumberedTitle>
+                    .
                   </span>
                   Die Konstruktion mit 2-for-3-Addierern gibt uns einen Schaltkreis
                   für Majority mit Fan-in 2, Tiefe \(O(\log n)\) und
@@ -440,7 +442,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;2.5.3{" "}
+                        &ensp;1.5.3{" "}
                       </NumberedTitle>
                     </span>
                     Führen Sie eine genauere Abschätzung der Größe durch. Untersuchen Sie insbesondere:
@@ -508,7 +510,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;2.5.4{" "}
+                      &ensp;1.5.4{" "}
                     </NumberedTitle>
                   </span>
                   dass polynomiell viele (in diesem Falle: \(O(n^2)\) viele) Gates ausreichen.
@@ -519,7 +521,11 @@ const Article = () => {
                 </h3>
                 <div class="well container theorem">
                   <span class="numbered-title">
-                    Theorem.
+                    Theorem
+                    <NumberedTitle>
+                      &ensp;1.5.3{" "}
+                    </NumberedTitle>
+                    .
                   </span>
                   Es gibt einen monotonen Schaltkreis mit Fan-in 2, Tiefe \(O(\log n)\) und Größe
                   \(\poly(n)\), der \(\maj_n\) berechnet.
@@ -558,13 +564,12 @@ const Article = () => {
                       Signalstärke
                     </i>
                     {" "}von Verteilungen über Schaltkreise.
-                    &ensp;von Verteilungen über Schaltkreise.
                   </Paragraph>
                   <div class="well subtheorem theorem">
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;2.5.1{" "}
+                        &ensp;1.5.4{" "}
                       </NumberedTitle>
                       &ensp;(Signalstärke)
                     </span>
@@ -648,7 +653,6 @@ const Article = () => {
                       einen
                     </i>
                     {" "}zufällig ausgewählten Bürger befragen, so
-                    &ensp;zufällig ausgewählten Bürger befragen, so
                     ist das Ergebnis zwar nicht wirklich repräsentativ, aber immerhin leicht
                     besser, als wenn Sie einfach raten würden. Unser zufälliger
                     Schaltkreis sendet uns also ein schwaches aber positives Signal in die
@@ -666,7 +670,6 @@ const Article = () => {
                       drei
                     </i>
                     {" "}Schaltkreise
-                    &ensp;Schaltkreise
                     \(C_1, C_2, C_3 \sim \mathcal&#123;C&#125;\) unabhängig voneinander samplen und
                     einen neuen Schaltkreis bauen: \(C'(\x) := \maj_3 (C_1(\x), C_2(\x), C_3(\x))\). Dies gibt
                     uns wiederum eine Verteilung über Schaltkreise, die wir
@@ -830,7 +833,6 @@ const Article = () => {
                         Behauptung.
                       </span>
                       &ensp;Wenn $\mathcal&#123;C&#125;$
-                      &ensp;Wenn $\mathcal&#123;C&#125;$
                       Fehlerwahrscheinlichkeit
                       $\epsilon$ hat, dann hat $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ Fehlerwahrscheinlichkeit
                       $3 \epsilon^2$
@@ -843,7 +845,6 @@ const Article = () => {
                         Beweis.
                       </b>
                       {" "}Wie im Beweis vom Lemma setzen wir
-                      &ensp;Wie im Beweis vom Lemma setzen wir
                       $p := \frac&#123;1+p&#125;&#123;2&#125; = 1-\epsilon$ und erhalten
                     </Paragraph>
                     $$\begin&#123;align*&#125;
@@ -895,7 +896,6 @@ const Article = () => {
                       fällt
                     </i>
                     {" "}nun die Fehlerwahrscheinlichkeit
-                    &ensp;nun die Fehlerwahrscheinlichkeit
                     <i>
                       doppelt exponentiell
                     </i>
@@ -981,7 +981,6 @@ const Article = () => {
                       Ereignis
                     </i>
                     {" "}in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
-                    &ensp;in diesem Raum. Ein extrem unwahrscheinliches Ereignis:
                   </Paragraph>
                   $$\begin&#123;align*&#125;
                   \forall \b \in \cube^n: \Pr_&#123;C \sim \mathcal&#123;C&#125;_k&#125; [ C \in E_&#123;\b&#125; ] = \epsilon_k \lt 2^&#123;n-&#125; \ .
@@ -1061,7 +1060,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;2.5.5{" "}
+                        &ensp;1.5.5{" "}
                       </NumberedTitle>
                     </span>
                     Präzisieren Sie die Größe von Valiants Schaltkreis und bestimmen ein $c \in \R$, so dass
@@ -1075,7 +1074,6 @@ const Article = () => {
                     linearer
                   </i>
                   {" "}Größe $O(n)$ anstreben.
-                  &ensp;Größe $O(n)$ anstreben.
                 </Paragraph>
               </div>
             </div>

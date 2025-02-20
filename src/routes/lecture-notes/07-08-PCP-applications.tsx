@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    7.8 
+                    6.8 
                     Anwendungen des Postschen Korrespondenzproblems
                   </span>
                 </h1>
@@ -55,7 +55,6 @@ const Article = () => {
                     Produktionen
                   </i>
                   {" "}genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
-                  &ensp;genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
                   Alphabet
                   (hier: \(\&#123;a,b,c\&#125;\)) ableiten kann. Beispielsweise:
                   $$\begin&#123;align*&#125;
@@ -70,8 +69,10 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;6.8.1{" "}
+                    </NumberedTitle>
                   </span>
-                  &ensp;Wir wollen bestimmen, ob
                   &ensp;Wir wollen bestimmen, ob
                   aus einer gegebenen kontextfreien Grammatik \(G\) ein Palindromwort ableitbar ist,
                   also ein \(\gamma\), das von rechts nach links gelesen gleich ist, sprich
@@ -122,7 +123,6 @@ const Article = () => {
                       Behauptung
                     </span>
                     &ensp;Wenn die Grammatik \(G\) ein Palindromwort
-                    &ensp;Wenn die Grammatik \(G\) ein Palindromwort
                     ableiten kann, dann hat das PCP-Puzzle \(P\) eine Lösung.
                   </div>
                   <div class="well subtheorem">
@@ -150,7 +150,6 @@ const Article = () => {
                     <span class="numbered-title">
                       Behauptung
                     </span>
-                    &ensp;Wenn
                     &ensp;Wenn
                     das PCP-Puzzle \(P\) eine Lösung hat, dann kann die Grammatik \(G\) ein Palindromwort
                     ableiten.
@@ -211,7 +210,6 @@ const Article = () => {
                         Aufgabe:
                       </b>
                       {" "}Zeigen Sie, dass die Funktion
-                      &ensp;Zeigen Sie, dass die Funktion
                       \(n \mapsto n!\) im \(\lambda\)-Kalkül berechenbar ist.
                     </li>
                     <li>
@@ -234,7 +232,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;7.8.1{" "}
+                      &ensp;6.8.2{" "}
                     </NumberedTitle>
                   </span>
                   Seien \(L_1 \subseteq \Sigma_1\) und \(L_2 \subseteq \Sigma_2\) zwei Sprachen.
@@ -243,7 +241,6 @@ const Article = () => {
                     Reduktion von \(L_1\) nach \(L_2\)
                   </i>
                   {" "}ist eine Turing-berechenbare Funktion
-                  &ensp;ist eine Turing-berechenbare Funktion
                   $$\begin&#123;align*&#125;
                   f : \Sigma_1^* \rightarrow \Sigma_2^*
                   \end&#123;align*&#125;$$
@@ -264,10 +261,9 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;7.8.2{" "}
+                      &ensp;6.8.3{" "}
                     </NumberedTitle>
                   </span>
-                  &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                   &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                   \(L_2\) ist und \(L_2\) entscheidbar ist, dann ist auch \(L_1\) entscheidbar.
                 </div>
@@ -302,23 +298,20 @@ const Article = () => {
                   möglich
                 </i>
                 {" "}ist.
-                &ensp;ist.
                 In der Berechenbarkeitstheorie und Komplexitätstheorie sind wir eher daran interessiert,
                 zu zeigen, was{" "}
                 <i>
                   nicht möglich
                 </i>
                 {" "}ist, und wenden daher häufiger das Kontrapositiv
-                &ensp;ist, und wenden daher häufiger das Kontrapositiv
                 der Behauptung an:
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;7.8.3{" "}
+                      &ensp;6.8.4{" "}
                     </NumberedTitle>
                   </span>
-                  &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                   &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                   \(L_2\) ist und \(L_1\) unentscheidbar ist, dann ist auch \(L_2\) unentscheidbar.
                 </div>
@@ -344,18 +337,15 @@ const Article = () => {
                   wäre / wäre
                 </i>
                 {" "}in Behauptung 4.6.9 wider.
-                &ensp;in Behauptung 4.6.9 wider.
                 Auch ist es schlicht ungewohnt, ein{" "}
                 <i>
                   altes
                 </i>
-                {" "}Problem auf ein 
-                &ensp;Problem auf ein{" "}
+                {" "}Problem auf ein{" "}
                 <i>
                   neues
                 </i>
                 {" "}zu reduzieren
-                &ensp;zu reduzieren
                 statt umgekehrt.
                 <figure>
                   <img
@@ -367,6 +357,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;6.8.5{" "}
+                    </NumberedTitle>
                   </span>
                   <Paragraph>
                     {" "}{" "}
@@ -414,6 +407,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;6.8.6{" "}
+                    </NumberedTitle>
                   </span>
                   {" "}{" "}
                   <b>

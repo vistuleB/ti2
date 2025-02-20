@@ -33,7 +33,7 @@ pub fn html_pipeline() -> List(Pipe) {
     insert_ti2_counter_commands(#("::++ChapterCtr.", #("class", "chapterTitle"), [], None)),
     insert_ti2_counter_commands(#("::::ChapterCtr.::++SectionCtr", #("class", "subChapterTitle"), [], None)),
     insert_ti2_counter_commands(#("::::ChapterCtr.::::SectionCtr.::++ExoCtr", #("class", "numbered-title"), ["Übungsaufgabe"], Some("NumberedTitle"))),
-    insert_ti2_counter_commands(#("::::ChapterCtr.::::SectionCtr.::++DefCtr", #("class", "numbered-title"), ["Definition", "Beobachtung"], Some("NumberedTitle"))),
+    insert_ti2_counter_commands(#("::::ChapterCtr.::::SectionCtr.::++DefCtr", #("class", "numbered-title"), ["Definition", "Beobachtung", "Theorem"], Some("NumberedTitle"))),
 
     // insert_string_at_end_of([#("em", " ")]),
   ]

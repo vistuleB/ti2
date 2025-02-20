@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    3.4 
+                    2.4 
                     2.4 Die Cantorsche Diagonalisation: $\N \not \approx \R$
                   </span>
                 </h1>
@@ -57,13 +57,15 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;2.4.1{" "}
+                      </NumberedTitle>
                     </span>
                     {" "}{" "}
                     <b>
                       (Überabzählbarkeit der reellen Zahlen).
                     </b>
                     {" "}$\N \not
-                    &ensp;$\N \not
                     \approx \R$.
                   </Paragraph>
                 </div>
@@ -74,7 +76,6 @@ const Article = () => {
                       Beweis.
                     </b>
                     {" "}Da wir bereits $\R \approx \&#123;0,1\&#125;^&#123;\N&#125;$
-                    &ensp;Da wir bereits $\R \approx \&#123;0,1\&#125;^&#123;\N&#125;$
                     gesehen haben, reicht es, $\N \not \approx \&#123;0,1\&#125;^&#123;\N&#125;$ zu zeigen.
                     Wir müssen also zeigen, dass es keine Bijektion $f : \N \rightarrow
                     \&#123;0,1\&#125;^&#123;\N&#125;$ gibt. Wie gehen wir vor? Wir nehmen an, man hätte uns
@@ -173,7 +174,6 @@ const Article = () => {
                     7
                   </a>
                   &ensp;über Turingmaschinen und in
-                  &ensp;über Turingmaschinen und in
                   Kapitel ? über Komplexitätstheorie eine Rolle spielen, wenn wir z.B.
                   zeigen wollen, dass es Probleme gibt, an denen jedes Computerprogram
                   versagt.
@@ -183,7 +183,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.4.1{" "}
+                        &ensp;2.4.1{" "}
                       </NumberedTitle>
                     </span>
                     Zeigen Sie, dass es zu der Funktion $f: \N \rightarrow \cuben$ eine
@@ -197,7 +197,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.4.2{" "}
+                        &ensp;2.4.2{" "}
                       </NumberedTitle>
                     </span>
                     Zeigen Sie ganz allgemein: für jede Menge $A$ gilt $A \not \approx
@@ -210,7 +210,6 @@ const Article = () => {
                       Tipp:
                     </b>
                     {" "}Sie müssen den obigen Beweis auf die richtige
-                    &ensp;Sie müssen den obigen Beweis auf die richtige
                     Weise abstrahieren, dann geht es ganz einfach.
                   </Paragraph>
                 </div>
@@ -223,7 +222,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.4.3{" "}
+                        &ensp;2.4.3{" "}
                       </NumberedTitle>
                     </span>
                     Erinnern Sie sich an die Partialordnung $(2^\N, \subseteq)$. Zeigen
@@ -236,17 +235,15 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.4.4{" "}
+                        &ensp;2.4.4{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Zeigen Sie, dass
                     &ensp;Zeigen Sie, dass
                     es in $(2^\N, \subseteq)$ eine{" "}
                     <i>
                       Kette
                     </i>
                     {" "}$X$ mit $X \approx \R$
-                    &ensp;$X$ mit $X \approx \R$
                     gibt.
                   </Paragraph>
                 </div>

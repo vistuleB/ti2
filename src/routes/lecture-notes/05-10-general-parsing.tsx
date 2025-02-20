@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.10 
+                    5.10 
                     5.9 Allgemeine kontextfreie Sprachen parsen
                   </span>
                 </h1>
@@ -54,7 +54,6 @@ const Article = () => {
                   <a href="../../demos/drawFirstComputation.html">
                     drawFirstComputation.html
                   </a>
-                  &ensp;demonstriert),
                   &ensp;demonstriert),
                   und die LR-Parser (die die Teilbäume auf den Stack legen und nach Blüten suchen,
                   hier die Demoseite{" "}
@@ -99,7 +98,6 @@ const Article = () => {
                     jede
                   </i>
                   {" "}äquivalente Grammatik \(G'\), die also
-                  &ensp;äquivalente Grammatik \(G'\), die also
                   die gleiche Sprache \(L\) erzeugt, mehrdeutig sein muss; man sagt, die Sprache
                   \(L\) ist{" "}
                   <i>
@@ -117,7 +115,6 @@ const Article = () => {
                     effizient
                   </i>
                   {" "}durchgeht, in der Praxis leider
-                  &ensp;durchgeht, in der Praxis leider
                   meist unbrauchbar ist.
                 </Paragraph>
                 <h3>
@@ -143,6 +140,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;5.10.1{" "}
+                    </NumberedTitle>
                   </span>
                   Zu jeder kontextfreien Grammatik gibt es eine äquivalente Grammatik in
                   Chomsky-Normalform.
@@ -156,7 +156,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.10.1{" "}
+                      &ensp;5.10.1{" "}
                     </NumberedTitle>
                   </span>
                   Finden Sie zu der folgenden kontextfreien Grammatik
@@ -201,7 +201,6 @@ const Article = () => {
                     nicht
                   </i>
                   {" "}kennen, also konkret nicht wissen, wie lange \(u\) und \(v\) sind,
-                  &ensp;kennen, also konkret nicht wissen, wie lange \(u\) und \(v\) sind,
                   können wir alle Möglichkeiten durchprobieren. Da \(G\) in Chomsky-Normalform vorliegt, wissen
                   wir, dass \(|u| \geq 1\) und \(|v| \geq 1\), also \(1 \leq |u| \leq |w|-1\). Wir probieren also
                   alle \(n-1\) möglichen Zerlegungen von \(w\) durch. Wenn wir das rekursiv täten, dann würden
@@ -221,12 +220,10 @@ const Article = () => {
                     Dynamic Programing
                   </i>
                   {" "}fußt, welches Sie in der
-                  &ensp;fußt, welches Sie in der
                   Vorlesung{" "}
                   <a href="../../AuK/index.html">
                     Algorithmen und Komplexität
                   </a>
-                  &ensp;im dritten Semester
                   &ensp;im dritten Semester
                   ausführlicher kennenlernen wollen. Wir beschränken uns bei dem folgenden Algorithmus
                   zunächst darauf, die Frage zu beantworten, ob den überhaupt \(S \Step&#123;&#125;^* w\) gilt,
@@ -248,7 +245,6 @@ const Article = () => {
                     Was sind sinnvolle Zwischenergebnisse?
                   </i>
                   {" "}In unserem Falle sind Ableitungen der Form
-                  &ensp;In unserem Falle sind Ableitungen der Form
                   $$\begin&#123;align*&#125;
                   X&amp;\Step&#123;&#125;^* u
                   \end&#123;align*&#125;$$
@@ -358,7 +354,6 @@ const Article = () => {
                                   for all productions
                                 </code>
                                 {" "}\(X \rightarrow YZ\):
-                                &ensp;\(X \rightarrow YZ\):
                                 <ol type="a">
                                   <li>
                                     füge \(X\) zu \(N_&#123;i,k&#125;\) hinzu, falls \(Y \in N_&#123;i,j&#125;\) und
@@ -406,8 +401,7 @@ const Article = () => {
                     <code>
                       return True if
                     </code>
-                    {" "}\(S \in N_&#123;0,n&#125;\) 
-                    &ensp;\(S \in N_&#123;0,n&#125;\){" "}
+                    {" "}\(S \in N_&#123;0,n&#125;\){" "}
                     <code>
                       else return False
                     </code>
@@ -436,7 +430,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;6.10.1{" "}
+                      &ensp;5.10.2{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(n = |w|\) die Länge des Eingabewortes und \(g\) die Anzahl der Produktionen der Form
@@ -449,7 +443,6 @@ const Article = () => {
                     Achtung:
                   </b>
                   {" "}wir haben die Kosten für die allererste Zeile vernachlässigt.
-                  &ensp;wir haben die Kosten für die allererste Zeile vernachlässigt.
                   Überlegen
                   Sie sich, wie viel Laufzeit diese verursachen kann und überzeugen Sie sich, dass dies in den
                   meisten

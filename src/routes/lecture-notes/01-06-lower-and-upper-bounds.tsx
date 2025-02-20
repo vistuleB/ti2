@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    2.6 
+                    1.6 
                     1.6 Untere und obere Schranken
                   </span>
                 </h1>
@@ -59,13 +59,15 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;1.6.1{" "}
+                      </NumberedTitle>
                     </span>
                     &ensp;
                     <b>
                       (Shannon).
                     </b>
                     {" "}Es gibt
-                    &ensp;Es gibt
                     Boolesche Funktionen $f$, die keine Schaltkreise kleiner
                     als $\Omega(2^n / n)$ haben.
                   </Paragraph>
@@ -105,7 +107,6 @@ const Article = () => {
                         Behauptung
                       </span>
                       &ensp;Sei $s \geq n \geq 1$. Dann gibt es
-                      &ensp;Sei $s \geq n \geq 1$. Dann gibt es
                       höchstens
                       $s^&#123;2s+1&#125;$ Schaltkreise mit $n$ Input-Variablen, Fan-in 2 und $s$ Gates.{" "}
                     </Paragraph>
@@ -130,17 +131,14 @@ const Article = () => {
                           </li>
                           <li>
                             &ensp;Ein Not-Gate? Dann müssen wir eines der anderen Gates
-                            &ensp;Ein Not-Gate? Dann müssen wir eines der anderen Gates
                             als Vorgänger-Gate wählen. Wir haben höchstens $s-1$ Möglichkeiten.
                           </li>
                           <li>
-                            &ensp;Ein And-Gate? Dann müssen wir zwei der anderen Gates als
                             &ensp;Ein And-Gate? Dann müssen wir zwei der anderen Gates als
                             Vorgänger-Gates wählen. Wir haben höchstesn $&#123;s-1 \choose 2&#125; =
                             \frac&#123;(s-1)(s-2)&#125;&#123;2&#125;$ Möglichkeiten.
                           </li>
                           <li>
-                            &ensp;Ein Or-Gate? Dann haben wir auch höchstens $&#123;s-1 \choose 2&#125;$ Möglichkeiten.
                             &ensp;Ein Or-Gate? Dann haben wir auch höchstens $&#123;s-1 \choose 2&#125;$ Möglichkeiten.
                           </li>
                         </ul>
@@ -196,7 +194,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;2.6.1{" "}
+                        &ensp;1.6.1{" "}
                       </NumberedTitle>
                     </span>
                     In Theorem und Beweis sprechen wir die ganze Zeit nur von Schaltkreisen
@@ -215,7 +213,6 @@ const Article = () => {
                     alle
                   </i>
                   {" "}Funktionen
-                  &ensp;Funktionen
                   brauchen also riesige Schaltkreise. In einem Gewissen Sinne haben wir also einfach Glück:
                   die Funktionen, die uns interessieren, wie $n$-Bit-Addition, Majority, Parity und so weiter,
                   haben einfach niedrige Komplexität. Das liegt wohl in der Natur der Sache: wir addieren,
@@ -233,7 +230,6 @@ const Article = () => {
                       Forschungsprojekt.
                     </span>
                     &ensp;Finde eine konkret
-                    &ensp;Finde eine konkret
                     beschreibbare Funktion $f: \fcube$, die exponentiell viele (oder zumindest superpolynomiell
                     viele)
                     Gates benötigt.
@@ -249,7 +245,6 @@ const Article = () => {
                     <span class="numbered-title">
                       Entscheidungsproblem 3-Färbbarkeit.
                     </span>
-                    &ensp;Gegeben
                     &ensp;Gegeben
                     ein Graph $G = (V,E)$, gibt es eine Funktion{" "}
                   </Paragraph>
@@ -273,7 +268,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;2.6.2{" "}
+                        &ensp;1.6.2{" "}
                       </NumberedTitle>
                     </span>
                     Formal gesehen ist Graphenfärbbarkeit eine Sprache
@@ -295,6 +290,9 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;1.6.2{" "}
+                      </NumberedTitle>
                     </span>
                     &ensp;
                     <b>
@@ -326,7 +324,6 @@ const Article = () => {
                     *$\F
                     <i>
                       2$-Polynome.* Polynome in mehreren Variablen kennen Sie
-                      &ensp;Polynome in mehreren Variablen kennen Sie
                       sicherlich: zum Beispiel $xyz + xy + 1 + y$. Der Unterschied hier ist nur,
                       dass wir alle Werte modulo 2 auswerten, also in dem endlichen Körper
                       $\F
@@ -364,7 +361,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Übungsaufgabe
                         <NumberedTitle>
-                          &ensp;2.6.3{" "}
+                          &ensp;1.6.3{" "}
                         </NumberedTitle>
                       </span>
                       Zeigen Sie, dass sich jede Boolesche Funktion $f$
@@ -376,7 +373,6 @@ const Article = () => {
                         Tipp:
                       </b>
                       {" "}beschränken Sie sich zuerst auf Funktionen $f$,
-                      &ensp;beschränken Sie sich zuerst auf Funktionen $f$,
                       deren Wahrheitstabelle in genau einer Zeile eine 1 haben. Schreiben
                       Sie eine solche Funktion als $\F_2$-Polynom.
                     </Paragraph>
@@ -391,7 +387,6 @@ const Article = () => {
                       verschiedene
                     </i>
                     {" "}Polynome.
-                    &ensp;Polynome.
                     Da wir über $\F_2$ arbeiten, beschränken wir uns aber eh auf multilineare Polynome,
                     wo also alle Exponenten 1 sind.
                   </Paragraph>
@@ -400,7 +395,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Übungsaufgabe
                         <NumberedTitle>
-                          &ensp;2.6.4{" "}
+                          &ensp;1.6.4{" "}
                         </NumberedTitle>
                       </span>
                       Zeigen Sie, dass sich jede Funktion $f :\fcube${" "}
@@ -448,7 +443,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Übungsaufgabe
                         <NumberedTitle>
-                          &ensp;2.6.5{" "}
+                          &ensp;1.6.5{" "}
                         </NumberedTitle>
                       </span>
                       Rechnen Sie genauer! Wenn Sie alle Monome berechnen wollen,
@@ -471,7 +466,6 @@ const Article = () => {
                       <span class="numbered-title">
                         Lemma
                       </span>
-                      &ensp;Es gibt einen
                       &ensp;Es gibt einen
                       Schaltkreis $C
                       <i>
@@ -512,7 +506,6 @@ const Article = () => {
                         alle
                       </i>
                       {" "}Monome
-                      &ensp;Monome
                       wollen. Wenn wir also einen Schaltkreis für $x
                       <i>
                         1 x
@@ -523,7 +516,6 @@ const Article = () => {
                         einem
                       </i>
                       {" "}zusätzlichen AND-Gate
-                      &ensp;zusätzlichen AND-Gate
                       $x
                       <i>
                         1x
@@ -617,18 +609,12 @@ const Article = () => {
                       1,\dots,z
                     </i>
                     k$.
-                    &ensp;Funktionen in $z
-                    <i>
-                      1,\dots,z
-                    </i>
-                    k$.
                   </Paragraph>
                   <div class="well container-fluid subtheorem">
                     <Paragraph>
                       <span class="numbered-title">
                         Lemma.
                       </span>
-                      &ensp;Es gibt einen
                       &ensp;Es gibt einen
                       Schaltkreis mit Input-Gates $z
                       <i>
@@ -644,7 +630,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Übungsaufgabe
                         <NumberedTitle>
-                          &ensp;2.6.6{" "}
+                          &ensp;1.6.6{" "}
                         </NumberedTitle>
                       </span>
                       Beweisen Sie das Lemma. Konstrukieren Sie zuerst wie
@@ -657,7 +643,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Übungsaufgabe
                         <NumberedTitle>
-                          &ensp;2.6.7{" "}
+                          &ensp;1.6.7{" "}
                         </NumberedTitle>
                       </span>
                       Zeigen Sie, dass die obige Konstruktion verbessert werden kann, indem
@@ -669,7 +655,6 @@ const Article = () => {
                         Tip.
                       </b>
                       {" "}Jedes Gate muss also gleichzeitig
-                      &ensp;Jedes Gate muss also gleichzeitig
                       ein Output-Gate sein.
                     </Paragraph>
                   </div>

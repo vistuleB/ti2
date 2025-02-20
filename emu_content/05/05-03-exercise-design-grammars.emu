@@ -122,14 +122,12 @@
                         Schreiben Sie eine kontextfreie Grammatik für die Sprache aller
                         "korrekten" URLs; also Folgen von mindestens zwei _Labels_, die
                         durch `.` separiert sind. Sie können den "Regelvorschlag"
-                        &ensp;separiert sind. Sie können den "Regelvorschlag"
                         ganz links unten in der App reinkopieren, um automatisch Regeln für alphanumerische
                         Zeichen zu bekommen (allerdings verschlechtert das die Laufzeit; ich habe erstmal
                         gar nicht auf Effizienz geachtet).
                         |> p
 
                             Geben Sie das Eingabewort `a.aaaaa.aaaa.aaaa.aaaa.aaaa` ein. Wie
-                            &ensp;ein. Wie
                             sieht Ihr Backtrack-Baum aus? Hat er viele Sackgassen? Können Sie Ihre Grammatik
                             so abändern, dass sie zwar noch die gleiche Sprache erzeugt, aber keine / nur wenige
                             Sackgassen hat?
@@ -185,9 +183,7 @@
                             S -> ;
                         Überlegen Sie, was diese "bedeutet". Sie sehen, die Grammatik ist
                         nicht eindeutig. Das Wort `[([()(` hat zwei
-                        &ensp;hat zwei
                         verschiedene Ableitungsbäume. Können Sie eine äquivalente_eindeutige_ Grammatik schreiben?
-                        &ensp;Grammatik schreiben?
                     |> div
                         class well well-lg numbered-exercise container
                         |> span
@@ -210,7 +206,6 @@
                             X -> "a" | "a" X | "a" X X;
                         Das ist aber keine Kunst, da die Grammatik uneindeutig ist.
                         Können Sie eine _eindeutige_ Grammatik angebene, die ähnlich
-                        &ensp;Grammatik angebene, die ähnlich
                         exponentielles Verhalten zeigt? Exponentiell heißt: mit jedem
                         zusätlichen Zeichen des Eingabewortes kann die Größe des
                         Backtrack-Baumes um einen Faktor \(R \gt 1\) wachsen.
@@ -225,5 +220,4 @@
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
                         *(Super-Challenge; ich hab selbst keine Lösung)*.
                         Finden Sie eine kontextfreie Sprache \(L\), für die _jede_ Grammatik,
-                        &ensp;Grammatik,
                         die \(L\) erzeugt, unter exponentiell großen Backtrack-Bäumen leidet.

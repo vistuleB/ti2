@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    7.1 
+                    6.1 
                     4.1 Turingmaschinen: Formale Definition und Beispiele
                   </span>
                 </h1>
@@ -169,14 +169,12 @@ const Article = () => {
                     Eingabewort
                   </i>
                   {" "}und der Kopf auf dem ersten Symbol dieses Wortes. Die Turingmaschine
-                  &ensp;und der Kopf auf dem ersten Symbol dieses Wortes. Die Turingmaschine
                   wendet
                   nun ihre Regeln an, bis Sie einen
                   <i>
                     Endzustand
                   </i>
-                  {" "}erreicht. Bei 
-                  &ensp;erreicht. Bei{" "}
+                  {" "}erreicht. Bei{" "}
                   <i>
                     Entscheidungsproblemen
                   </i>
@@ -198,7 +196,6 @@ const Article = () => {
                     Ausgabe der Turingmaschine
                   </i>
                   {" "}den Inhalt des Bandes zu dem
-                  &ensp;den Inhalt des Bandes zu dem
                   Zeitpunkt, da die Maschine den Zustand $\qaccept$ erreicht.
                   Was brauchen wir also, um so eine Turingmaschine
                   und ihre Arbeitsweise zu beschreiben?
@@ -208,7 +205,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;7.1.1{" "}
+                        &ensp;6.1.1{" "}
                       </NumberedTitle>
                     </span>
                     {" "}{" "}
@@ -216,7 +213,6 @@ const Article = () => {
                       (Turingmaschine).
                     </b>
                     {" "}Eine
-                    &ensp;Eine
                     Turingmaschine besteht aus folgenden Elementen:
                   </Paragraph>
                   <ol>
@@ -250,22 +246,18 @@ const Article = () => {
                       <tt>
                         L
                       </tt>
-                      &ensp;für 
                       &ensp;für{" "}
                       <i>
                         gehe eine Zelle nach links
                       </i>
                       {" "}steht,
-                      &ensp;steht,
                       <tt>
                         R
                       </tt>
-                      &ensp;für rechts und 
                       &ensp;für rechts und{" "}
                       <tt>
                         S
                       </tt>
-                      &ensp;für 
                       &ensp;für{" "}
                       <i>
                         stay
@@ -294,7 +286,6 @@ const Article = () => {
                   Gesamtzustand
                 </i>
                 {" "}der
-                &ensp;der
                 Turingmaschine zu beschreiben, also eine vollständige Momentaufnahme, reicht
                 nicht der aktuelle innere Zustand \(q\); wir brauchen auch den Bandinhalt und insbesondere
                 die Position, an der sich der Kopf befindet. Das alles zusammen nennt
@@ -314,7 +305,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;7.1.2{" "}
+                      &ensp;6.1.2{" "}
                     </NumberedTitle>
                   </span>
                   Die{" "}
@@ -322,7 +313,6 @@ const Article = () => {
                     Konfiguration
                   </i>
                   {" "}einer Turingmaschine ist ein Element in
-                  &ensp;einer Turingmaschine ist ein Element in
                   \(\Gamma^* \times Q \times \Gamma^*\), also
                   $$\begin&#123;align*&#125;
                   C = u q v
@@ -341,7 +331,6 @@ const Article = () => {
                     Zustand einer Konfiguration
                   </i>
                   {" "}\(C = uqv\) ist \(q\), also der innere
-                  &ensp;\(C = uqv\) ist \(q\), also der innere
                   Zustand, in dem sich die Maschine gerade befindet.
                   Wir bezeichnen mit $\state(C)$. Formal:
                   $$\begin&#123;align*&#125;
@@ -354,13 +343,11 @@ const Article = () => {
                     akzeptierende Endkonfiguration
                   </i>
                   {" "}wenn $\state(C) = \qaccept$ ist;
-                  &ensp;wenn $\state(C) = \qaccept$ ist;
                   eine{" "}
                   <i>
                     ablehnende Endkonfiguration
                   </i>
                   {" "}, wenn $\state(C) = \qreject$ ist.
-                  &ensp;, wenn $\state(C) = \qreject$ ist.
                   In beiden Fällen ist \(C\) eine{" "}
                   <i>
                     Endkonfiguration
@@ -441,7 +428,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;7.1.3{" "}
+                      &ensp;6.1.3{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -493,7 +480,6 @@ const Article = () => {
                   undefined
                 </tt>
                 &ensp;sein:
-                &ensp;sein:
                 $$\begin&#123;align*&#125;
                 \hat&#123;\delta&#125;^* (C) := \begin&#123;cases&#125;
                 \hat&#123;\delta&#125;^&#123;(i)&#125; (C)&
@@ -510,7 +496,6 @@ const Article = () => {
                     wenn es ein $i$ gibt
                   </i>
                   {" "}keine Rolle, welches solche $i$ wir wählen.
-                  &ensp;keine Rolle, welches solche $i$ wir wählen.
                 </Paragraph>
                 Für ein Eingabewort \(x \in \Sigma^*\) können wir nun das Ergebnis der Berechnung
                 von Turingmaschine \(M\) auf \(x = x_1 \dots x_n\) definieren:
@@ -535,7 +520,6 @@ const Article = () => {
                     Entscheidungsproblem
                   </i>
                   {" "}ist eine Funktion \(P : \Sigma^* \rightarrow
-                  &ensp;ist eine Funktion \(P : \Sigma^* \rightarrow
                   \&#123;\texttt&#123;true&#125;, \texttt&#123;false&#125;\&#125;\), beispielsweise:{" "}
                   <i>
                     gegeben ein Wort,
@@ -547,13 +531,11 @@ const Article = () => {
                     eine Primzahl?
                   </i>
                   {" "}Eine äquivalente Sichtweise ist die
-                  &ensp;Eine äquivalente Sichtweise ist die
                   eines Entscheidungsproblems als{" "}
                   <i>
                     Sprache
                   </i>
                   {" "}\(L \subseteq \Sigma^*\).
-                  &ensp;\(L \subseteq \Sigma^*\).
                   Wir identifizieren \(L\) hier mit der Menge aller Wörter \(x\) mit
                   \(P(x) = \texttt&#123;true&#125;\). Wenn wir es mit einem Entscheidungsproblem
                   zu tun haben und dieses mit einer Turingmaschine lösen wollen,
@@ -563,11 +545,9 @@ const Article = () => {
                     accept
                   </tt>
                   &ensp;oder
-                  &ensp;oder
                   <tt>
                     reject
                   </tt>
-                  &ensp;ist. Wir definieren daher
                   &ensp;ist. Wir definieren daher
                   $$\begin&#123;align*&#125;
                   f_M(x) = \begin&#123;cases&#125;
@@ -582,7 +562,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;7.1.4{" "}
+                      &ensp;6.1.4{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -594,7 +574,6 @@ const Article = () => {
                     entscheidet
                   </i>
                   {" "}die Sprache \(L \subseteq \Sigma^*\) wenn
-                  &ensp;die Sprache \(L \subseteq \Sigma^*\) wenn
                   <ol>
                     <li>
                       \(f_M(x) = \texttt&#123;accept&#125;\) für alle \(x \in L\),
@@ -617,7 +596,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;7.1.5{" "}
+                      &ensp;6.1.5{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -629,7 +608,6 @@ const Article = () => {
                     akzeptiert
                   </i>
                   {" "}die Sprache
-                  &ensp;die Sprache
                   \(L \subseteq \Sigma^*\) wenn
                   $$\begin&#123;align*&#125;
                   x \in L \Longleftrightarrow f_M(x) = \texttt&#123;accept&#125;
@@ -665,13 +643,12 @@ const Article = () => {
                     auf dem Band
                   </i>
                   {" "}bedeutet.
-                  &ensp;bedeutet.
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;7.1.6{" "}
+                      &ensp;6.1.6{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -701,7 +678,6 @@ const Article = () => {
                     </li>
                     <li>
                       &ensp;In der Endkonfiguration $\hat&#123;M&#125;(x)$ steht auf dem Arbeitsband das
-                      &ensp;In der Endkonfiguration $\hat&#123;M&#125;(x)$ steht auf dem Arbeitsband das
                       Wort \(g(x) \in \Sigma_2^*\) und der Kopf steht ganz links, also
                       $\hat&#123;M&#125;(x) = \qaccept&#123;&#125; g(x)$.
                     </li>
@@ -726,6 +702,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;6.1.7{" "}
+                    </NumberedTitle>
                   </span>
                   Sei \(M\) eine Turingmaschine und \(L(M)\) die von ihr akzeptierte Sprache.
                   Dann gibt es eine formale Grammatik \(G\) mit \(L(G) = L(M)\). In anderen Worten:
@@ -777,7 +756,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                       <NumberedTitle>
-                        &ensp;7.1.7{" "}
+                        &ensp;6.1.8{" "}
                       </NumberedTitle>
                     </span>
                     Wenn \(\hat&#123;\delta&#125;^&#123;(i)&#125; (uqv) = u'q'v'\) gilt, die Turingmaschine also in

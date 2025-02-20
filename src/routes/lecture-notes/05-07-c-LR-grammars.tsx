@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.7 
+                    5.7 
                     5.5 LR-Grammatiken
                   </span>
                 </h1>
@@ -89,7 +89,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.7.1{" "}
+                      &ensp;5.7.1{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -143,7 +143,6 @@ const Article = () => {
                     Beobachtung:
                   </b>
                   {" "}Wenn wir
-                  &ensp;Wenn wir
                   einen Linksreduktionsschritt \(\alpha \beta w \rstep&#123;&#125; \alpha X w\)
                   betrachten, also
                   $$\begin&#123;align*&#125;
@@ -192,7 +191,6 @@ const Article = () => {
                     korrekter
                   </i>
                   {" "}Linksreduktionsschritt ist. Und dann
-                  &ensp;Linksreduktionsschritt ist. Und dann
                   überlegen, wie wir herausfinden, ob ein Linksreduktionsschritt korrekt ist. Diese Fragen
                   werden uns für den Rest dieses und des nächsten Teilkapitels beschäftigen.
                 </Paragraph>
@@ -200,7 +198,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.7.2{" "}
+                      &ensp;5.7.2{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -232,7 +230,6 @@ const Article = () => {
                       Front
                     </i>
                     {" "}der gültigen Wortform $\alpha \beta w$.
-                    &ensp;der gültigen Wortform $\alpha \beta w$.
                     Wenn die Grammatik eindeutig ist, dann hat
                     jede gültige Wortform $\gamma$ genau eine Front, die wir
                     mit $\front(\gamma)$ bezeichnen.
@@ -269,7 +266,6 @@ const Article = () => {
                     nicht
                   </i>
                   {" "}möglich ist,
-                  &ensp;möglich ist,
                   ohne Betrachten von $w$ zu eintscheiden, ob
                   $\alpha \beta w \rstep&#123;&#125; \alpha X w$ gültig ist.
                 </Paragraph>
@@ -300,7 +296,6 @@ const Article = () => {
                         nutzlosen
                       </i>
                       {" "}Nichtterminale eliminieren).
-                      &ensp;Nichtterminale eliminieren).
                       Das Wort \(w\) hat also zwei verschiedene Ableitungsbäume.
                       Die Grammatik ist somit mehrdeutig.
                       Mit uneindeutigen Grammatiken beschäftigen wir uns zunächst gar nicht;
@@ -331,7 +326,6 @@ const Article = () => {
                         nicht
                       </i>
                       {" "}korrekt, obwohl \(\alpha\beta w'\) eine
-                      &ensp;korrekt, obwohl \(\alpha\beta w'\) eine
                       gültige Wortform ist.
                       Dieser Fall ist schlecht, weil der Parser nur
                       $\alpha \beta$ gelesen hat und somit nicht
@@ -378,7 +372,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.7.3{" "}
+                      &ensp;5.7.3{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -472,7 +466,6 @@ const Article = () => {
                         Beweis.
                       </b>
                       {" "}Um Punkt 1 zu zeigen,
-                      &ensp;Um Punkt 1 zu zeigen,
                       nehmen wir an, dass $\alpha \beta = \alpha' \beta'$ gilt.
                       Da $\alpha \beta w \rstep&#123;&#125; \alpha X w$ korrekt
                       ist, $\alpha' \beta' w'$ eine gültige Wortform ist und
@@ -623,7 +616,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.7.1{" "}
+                      &ensp;5.7.1{" "}
                     </NumberedTitle>
                   </span>
                   Zeigen Sie, dass die folgende Grammatik \(LR(0)\) ist:
@@ -640,7 +633,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.7.2{" "}
+                      &ensp;5.7.2{" "}
                     </NumberedTitle>
                   </span>
                   Wir ändern die Grammatik etwas ab:
@@ -657,7 +650,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.7.3{" "}
+                      &ensp;5.7.3{" "}
                     </NumberedTitle>
                   </span>
                   Zeigen Sie, dass die folgende Grammatik \(LR(0)\) ist:
@@ -708,14 +701,12 @@ const Article = () => {
                     Hinweis.
                   </b>
                   {" "}Was nun folgt, ist mathematisch
-                  &ensp;Was nun folgt, ist mathematisch
                   recht herausfordernd. Lesen Sie daher gerne auch
                   das Kapitel 2.4 (Deterministic context free languages) im Lehrbuch
                   <i>
                     Introduction to the Theory of Computing
                   </i>
                   {" "}von Michael Sipser.
-                  &ensp;von Michael Sipser.
                   Meine Darstellung des doch recht schwierigen Materials fußt auf diesem
                   Kapitel, weicht aber doch stark genug von Sipser ab, so dass es
                   womöglich hilfreich ist, beides zu lesen: dieses Vorlesungsskript und

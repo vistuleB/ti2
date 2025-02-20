@@ -47,23 +47,18 @@
                     wollten möglichst kleine Schaltkreise von möglichst geringer Tiefe entwerfen.
                     Würden wir tiefer in die Schaltkreiskomplexität einsteigen, so würden wir uns fast
                     ausschließlich mit _negativen_ Zielen beschäftigen: zu zeigen, dass es zu bestimmten
-                    &ensp;Zielen beschäftigen: zu zeigen, dass es zu bestimmten
                     Funktionen eben nicht Schaltkreise mit \(S\) Gates und in Tiefe \(d\) gibt; wir
                     würden uns zum Großteil mit _unteren Schranken_ beschäftigen.
-                    &ensp;beschäftigen.
                 |> p
 
                     Boolesche Funktionen sind immer _endliche_ Objekte. In der Berechenbarkeitstheorie
-                    &ensp;Objekte. In der Berechenbarkeitstheorie
                     geht es im Grunde um die Frage: welche _unendlichen_ Funktionen können wir überhaupt
-                    &ensp;Funktionen können wir überhaupt
                     berechnen? Und was gilt denn überhaupt als zulässiges Modell für Berechenbarkeit?
                 |> p
 
                     Wenn wir nun also über Funktionen \(f: X \rightarrow Y\) auf unendlichen Mengen sprechen und uns
                     fragen,
                     welche durch eine _endliche Rechenvorschrift_ beschrieben werden können, dann
-                    &ensp;beschrieben werden können, dann
                     müssen wir erst einmal entscheiden, mit welcher unendlichen Menge wir uns beschäftigen.
                     Eine Bedingung sollte zum Beispiel sein, dass wir Input und Output vollständig hinschreiben können.
                     (Denn wenn der Input bereits unendlich groß wäre, wie sollten wir überhaupt über Berechenbarkeit

@@ -37,7 +37,7 @@ const Article = () => {
             <div class="chapter">
               <h1 class="hidden-title">
                 <span class="chapterTitle">
-                  3. 
+                  2. 
                   2. Unendliche Mengen
                 </span>
               </h1>
@@ -62,13 +62,11 @@ const Article = () => {
                 <i>
                   endlich
                 </i>
-                {" "}sein, aber für eine 
-                &ensp;sein, aber für eine{" "}
+                {" "}sein, aber für eine{" "}
                 <i>
                   unendliche
                 </i>
                 {" "}Menge potentieller Eingaben
-                &ensp;Menge potentieller Eingaben
                 funktionieren.
                 In diesem Kapitel werden wir daher unendliche Mengen besser kennenlernen.
               </Paragraph>
@@ -77,7 +75,6 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;Die Mengen $\N, \Z, \Q, \R$ sind unendlich. Die
                   &ensp;Die Mengen $\N, \Z, \Q, \R$ sind unendlich. Die
                   Mengen
                   $\&#123;a,e,i,o,u\&#125;$ und $\&#123;0,1,2,3,4,5,6,7,8,9\&#125;$ sind endlich.

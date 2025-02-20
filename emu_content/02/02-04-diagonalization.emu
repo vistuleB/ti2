@@ -54,15 +54,16 @@
                                 class numbered-title
 
                                 Theorem
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             *(Überabzählbarkeit der reellen Zahlen).* $\N \not
-                            &ensp;$\N \not
                             \approx \R$.
                     |> div
                         class well container
                         |> p
 
                             *Beweis.* Da wir bereits $\R \approx \{0,1\}^{\N}$
-                            &ensp;Da wir bereits $\R \approx \{0,1\}^{\N}$
                             gesehen haben, reicht es, $\N \not \approx \{0,1\}^{\N}$ zu zeigen.
                             Wir müssen also zeigen, dass es keine Bijektion $f : \N \rightarrow
                             \{0,1\}^{\N}$ gibt. Wie gehen wir vor? Wir nehmen an, man hätte uns
@@ -124,7 +125,6 @@
 
                             7
                         &ensp;über Turingmaschinen und in
-                        &ensp;über Turingmaschinen und in
                         Kapitel ? über Komplexitätstheorie eine Rolle spielen, wenn wir z.B.
                         zeigen wollen, dass es Probleme gibt, an denen jedes Computerprogram
                         versagt.
@@ -158,7 +158,6 @@
                         |> p
 
                             *Tipp:* Sie müssen den obigen Beweis auf die richtige
-                            &ensp;Sie müssen den obigen Beweis auf die richtige
                             Weise abstrahieren, dann geht es ganz einfach.
                     |> p
 
@@ -188,7 +187,5 @@
 
                                     &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
                             &ensp;Zeigen Sie, dass
-                            &ensp;Zeigen Sie, dass
                             es in $(2^\N, \subseteq)$ eine _Kette_ $X$ mit $X \approx \R$
-                            &ensp;$X$ mit $X \approx \R$
                             gibt.

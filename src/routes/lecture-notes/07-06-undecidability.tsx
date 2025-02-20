@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    7.6 
+                    6.6 
                     4.6 Turingmaschinen, Haltproblem und Unentscheidbarkeit
                   </span>
                 </h1>
@@ -48,7 +48,6 @@ const Article = () => {
                     universelle Turingmaschine
                   </i>
                   {" "}$U$ konstruiert, die
-                  &ensp;$U$ konstruiert, die
                   eine andere Turingmaschine, deren Codierung und Inputwort sie als Input gegeben hat, simulieren
                   kann.
                   Technisch gesprochen: $U$ akzeptiert die Sprache
@@ -63,13 +62,11 @@ const Article = () => {
                   <i>
                     akzeptiert
                   </i>
-                  {" "}die Sprache also, 
-                  &ensp;die Sprache also,{" "}
+                  {" "}die Sprache also,{" "}
                   <i>
                     entscheidet
                   </i>
                   {" "}sie aber nicht. Wäre es
-                  &ensp;sie aber nicht. Wäre es
                   nicht schön, eine Turingmaschine zu haben, die diese Sprache entscheidet? Dann könnten wir jede
                   Turingmaschine simulieren und gleichzeitig Endlosschleifen und eventuell ganz allgemein
                   "Programmierfehler" vorhersagen und abfangen. Wir werden zeigen, dass dies leider{" "}
@@ -85,7 +82,6 @@ const Article = () => {
                     undecidability of the Halting problem
                   </i>
                   {" "}bekannt).
-                  &ensp;bekannt).
                 </Paragraph>
                 <Paragraph>
                   Als vorbereitenden Schritt schauen wir uns kurz die Codierungsfunktion nochmal genauer an. Wir
@@ -111,7 +107,6 @@ const Article = () => {
                     präfixfrei
                   </i>
                   {" "}ist. Wenn wir zum Beispiel naiv
-                  &ensp;ist. Wenn wir zum Beispiel naiv
                   $1$ als $1$ und $0$ als $0$ und $\texttt&#123;#&#125;$ als $01$ codieren, dann wissen wir nicht mehr, was
                   mit dem Codewort $01$ gemeint ist. Am einfachsten geht das mit einem{" "}
                   <i>
@@ -153,6 +148,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;6.6.1{" "}
+                    </NumberedTitle>
                   </span>
                   {" "}{" "}
                   <b>
@@ -172,7 +170,6 @@ const Article = () => {
                       Kurzer Beweis per Wiederspruch.
                     </b>
                     {" "}Nehmen wir an, es gäbe eine Maschine $H$,
-                    &ensp;Nehmen wir an, es gäbe eine Maschine $H$,
                     die $\halt$ entscheidet. Dann wäre auch die Sprache
                   </Paragraph>
                   $$\begin&#123;align*&#125;
@@ -197,7 +194,6 @@ const Article = () => {
                       nicht
                     </i>
                     {" "}ihre eigene Codierung als
-                    &ensp;ihre eigene Codierung als
                     Inputwort akzeptieren. Da $\negdiag$ nach Annahme entscheidbar ist, gibt es eine Maschine
                     $D$, die $\negdiag$ entscheidet.
                   </Paragraph>
@@ -226,7 +222,6 @@ const Article = () => {
                     Ausführlicher Beweis.
                   </b>
                   {" "}Ich finde Beweise durch Widerspruch immer
-                  &ensp;Ich finde Beweise durch Widerspruch immer
                   etwas unintuitiv, weil man die ganze Zeit im Konjunktiv argumentieren muss.
                   Daher hier ein Beweis ohne Widerspruch. Wir zeigen, dass $\halt$ unentscheidbar ist,
                   indem wir für eine beliebige Turingmaschine $M$ zeigen, dass sie $\halt$ nicht entscheidet,
@@ -273,19 +268,14 @@ const Article = () => {
                     </code>
                     {" "}{" "}
                     <code>
-                      if H(xx) == accept then 
-                      &ensp;&ensp;&ensp;&ensp;if H(xx) == accept then
+                      if H(xx) == accept then
                     </code>
                     {" "}
-                    &ensp;`reject 
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;reject` 
-                    &ensp;`else 
-                    &ensp;&ensp;&ensp;&ensp;else` 
-                    &ensp;`accept
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;accept`
+                    &ensp;`reject` 
+                    &ensp;`else` 
+                    &ensp;`accept`
                   </pre>
                   <Paragraph>
-                    &ensp;Zur Erinnerung: $y := \enc(D)$. Wir unterscheiden drei Fälle.
                     &ensp;Zur Erinnerung: $y := \enc(D)$. Wir unterscheiden drei Fälle.
                     <ul>
                       <li>
@@ -326,7 +316,6 @@ const Article = () => {
                     jede
                   </i>
                   {" "}Turingmaschine
-                  &ensp;Turingmaschine
                   geht, schließen wir: keine Turingmaschine kann
                   die Sprache \(\halt\) entscheiden; sie ist unentscheidbar.
                   <span class="qed">
@@ -351,7 +340,6 @@ const Article = () => {
                     jede
                   </i>
                   {" "}nichttriviale Frage über das Verhalten eines Programmcodes unentscheidbar ist.
-                  &ensp;nichttriviale Frage über das Verhalten eines Programmcodes unentscheidbar ist.
                   Also sind
                   auch Fragen wie "Kann das Programm abstürzen?" oder "Kann ein unautorisierter Nutzer Zugang zu
                   XYZ erhalten?" unentscheidbar.
@@ -362,7 +350,6 @@ const Article = () => {
                     Unentscheidbarkeit
                   </i>
                   {" "}verwenden wir hier in seiner
-                  &ensp;verwenden wir hier in seiner
                   technischen Bedeutung,
                   die wir definiert haben: es gibt keine Turingmaschine, die das Problem entscheidet, also
                   auf jeder Eingabeinstanz terminiert und die richtige Antwort liefert. Es gibt also in der Tat

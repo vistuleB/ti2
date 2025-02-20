@@ -59,21 +59,18 @@ const Article = () => {
                     Größe
                   </i>
                   {" "}eines Schaltkreises ist die Anzahl seiner Gates, also die Anzahl
-                  &ensp;eines Schaltkreises ist die Anzahl seiner Gates, also die Anzahl
                   der Knoten im zugrundeliegenden DAG.
                   Die{" "}
                   <i>
                     Teife
                   </i>
                   {" "}ist die Länge des längsten gerichteten Pfades von einem Input- zu einem
-                  &ensp;ist die Länge des längsten gerichteten Pfades von einem Input- zu einem
                   Output-Gate.
                   Der{" "}
                   <i>
                     Maximum-Fan-in
                   </i>
                   {" "}ist der maximale Rein-Grad aller Knoten, also
-                  &ensp;ist der maximale Rein-Grad aller Knoten, also
                   der maximale Fan-in aller Gates.
                 </div>
                 <div class="alter-warning">
@@ -82,7 +79,6 @@ const Article = () => {
                     Vorsicht.
                   </b>
                   {" "}Manchmal werden zur Bestimmung der Tiefe die NOT-Gates
-                  &ensp;Manchmal werden zur Bestimmung der Tiefe die NOT-Gates
                   nicht mitgezählt. Entlang eines Pfades wird also gelegentlich nur die Anzahl
                   der AND- und OR-Gates bestimmt.
                 </div>
@@ -121,6 +117,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;1.1.2{" "}
+                    </NumberedTitle>
                   </span>
                   Sei \(C\) ein Schaltkreis Maximum-Fan-in \(k\), Größe \(s\) und Tiefe \(d\).
                   Dann gibt es einen äquivalenten Schaltkreis \(C'\) mit Maximum-Fan-in \(2\),

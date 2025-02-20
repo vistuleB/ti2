@@ -46,6 +46,9 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Zu jeder kontextfreien Grammatik \(G = (\Sigma, N, S, P)\) gibt es
                         einen Kellerautomaten \(M = (\Sigma, Q, \Gamma, \qstart, \delta)\), der
                         die gleiche Sprache akzeptiert, also \(L(G) = L(M)\).
@@ -68,10 +71,8 @@
                         nun \(\beta \alpha\), und \(\beta \alpha \Rightarrow^* w\). Entscheidend ist der
                         Nichtdeterminismus:
                         es _gibt_ eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
-                        &ensp;eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
                         führt;
                         der Automat _kann_ also diese Transition anwenden.
-                        &ensp;also diese Transition anwenden.
                         |> br
                         Formaler: Die Zustände des Automaten
                         sind \(Q = \{\qstart, q_1, \qend\}\), das Stackalphabet ist
@@ -85,7 +86,6 @@
                         \end{align*}
                         Auf einen formalen Beweis, dass \(L(M) = L(G)\) ist, verzichte ich an dieser Stelle.
                         Besser als Sipser in seinem Lehrbuch _Introduction to the Theory of Computing_ könnte
-                        &ensp;könnte
                         ich das eh nicht.
                         |> span
                             class qed
@@ -116,7 +116,6 @@
                             |> tt
 
                                 [
-                            &ensp;oben auf dem Stack bedeutet dann 
                             &ensp;oben auf dem Stack bedeutet dann _ich will jetzt sofort ein 
                             |> tt
 
@@ -126,16 +125,13 @@
                             wir als nächstes ein von \(A\) ableitbares Wort, also ein \(A \rightarrow w \in
                             \Sigma^*\) lesen wollen.
                             Um ein \(w\) mit \(A \rightarrow w\) lesen zu können, müssen wir _sofort_ ein
-                            &ensp;ein
                             |> tt
 
                                 {
                             &ensp;lesen, dann ein Wort \(v\) mit \(B \rightarrow v\), dann ein 
-                            &ensp;lesen, dann ein Wort \(v\) mit \(B \rightarrow v\), dann ein 
                             |> tt
 
                                 }
-                            &ensp;und
                             &ensp;und
                             so weiter.
                             Wir können das also im Automaten implementieren, indem wir
@@ -187,7 +183,6 @@
                         sollte es also nach Erreichen von \(\qend\) noch weitere Zeichen
                         im Eingabewort geben, so kann der Automat keine weiteren Schritte durchführen,
                         was einem _reject_ entspricht. Erreichen des Zustandes \(\qend\) führt also
-                        &ensp;entspricht. Erreichen des Zustandes \(\qend\) führt also
                         nur dann zu einem _accept_, wenn dies am Ende des Wortes geschieht.
                         |> figure
                             class centered-figure well
@@ -488,7 +483,11 @@
                         |> span
                             class numbered-title
 
-                            Theorem.
+                            Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                            .
                         Zu jedem Kellerautomaten \(M\) gibt es eine kontextfreie Grammatik \(G\)
                         mit \(L(M) = L(G)\).
                     |> p
@@ -625,7 +624,6 @@
                         a^m b (a|b)^* b a^m
                         \end{align*}
                         Diese ist _nicht_ regulär, da der Präfix und der Suffix aus \(a\) die gleiche
-                        &ensp;regulär, da der Präfix und der Suffix aus \(a\) die gleiche
                         Länge \(m\) haben müssen.
                         Wir bauen zuerst einen Kellerautomaten und übersetzen den dann entsprechend dem Schema
                         aus dem letzten Theorem in eine Grammatik. Dann vergleichen wir die entstandene

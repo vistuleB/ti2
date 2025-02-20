@@ -51,7 +51,6 @@
                     Der zweite Punkt ist keine echte Beschränkung, wie wir gesehen haben: wenn wir zwei lokale
                     Variablen \(a,b\) führen wollen, können wir die via der Bijektion
                     \({\rm pair} : \N^2 \rightarrow \N\) in _eine_ natürliche Zahl codieren.
-                    &ensp;natürliche Zahl codieren.
                     Der erste Punkt allerdings scheint eine echte Beschränkung zu sein: wir wissen schließlich nicht
                     immer, wie oft wir eine Tätigkeit wiederholen müssen, bis wir fertig sind,
                     und ob wir überhaupt jemals fertig werden. Sie kennen vielleicht die Collatz-Vermutung.
@@ -103,10 +102,8 @@
 
                             collatz.html
                         &ensp;erstellt.
-                        &ensp;erstellt.
                         Es scheint: egal, wo Sie anfangen, Sie enden immer bei 1. Allerdings wissen wir nicht
                         im Voraus, _wie oft_ wir die Funktion $f$ anwenden müssen. Und wir wissen nicht einmal,
-                        &ensp;wir die Funktion $f$ anwenden müssen. Und wir wissen nicht einmal,
                         ob man immer bei 1 ankommt, ob es andere Zyklen gibt oder ob es Startwerte gibt, für die die
                         Folge einfach nach Unendlich divergiert. Bis zum heutigen Tage (Stand 30. April 2024) hat sich
                         die Collatz-Vermutung zahlreichen Lösungsversuchung widersetzt und demonstriert eindrucksvoll,
@@ -134,8 +131,7 @@
                                 |> NumberedTitle
 
                                     &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
-                            Schreiben Sie mit Hilfe von `While`, `PrimRec` und 
-                            &ensp;und `Comp`eine Funktion `collatzList`, die aus einer Zahl
+                            Schreiben Sie mit Hilfe von `While`, `PrimRec` und `Comp`eine Funktion `collatzList`, die aus einer Zahl
                             die Collatz-Folge baut, also
                         |> pre
                             |> code

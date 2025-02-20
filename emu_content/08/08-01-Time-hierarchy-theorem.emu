@@ -52,15 +52,12 @@
 
                             Kapitel 7.5.
                         &ensp;Unsere Implementierung hatte insgesamt
-                        &ensp;Unsere Implementierung hatte insgesamt
                         fünf Bänder verwendet: (1) ein Band, um die Regeln von $M$ zu speichern (also die Funktion
                         $\delta$);
                         (2) ein Band, um den Zustand von $M$ zu speichern; (3) um den akzeptierenden Zustand $\qaccept$
                         von $M$
                         zu speichern; (4) und (5) um das Band von $M$ zu simulieren. Für letzteres hatten wir_zwei_ Bänder
-                        &ensp;Bänder
                         verwendet, weil das uns erlaubte, effizient Zeichen _einzufügen_ statt einfach zu
-                        &ensp;statt einfach zu
                         überschreiben.
                         Wie wir aber gesehen hatten, können wir (4) und (5) mit einem Band bewältigen, indem wir zu
                         allererst
@@ -70,7 +67,6 @@
                         Markierung $\texttt{#}$. Auch das Band (3) können wir uns sparen: den akzeptierenden Zustand
                         von $M$ können wir gleich am Anfang von (1) schreiben, ohne das die Simulation dadurch
                         nennenswert teurer würde. Wir kommen also mit _drei_ Bändern aus.
-                        &ensp;Bändern aus.
                         Allerdings hatten wir uns nur überlegt, wie man
                         Einband-Turingmaschinen $M$ simuliert. Es ist aber ziemlich einfach zu sehen, dass man
                         Codierung und Simulation ganz analog für $k$-Band-Turingmaschinen durchführen kann.
@@ -80,7 +76,6 @@
                             href 07-05-undecidability.html
 
                             Kapitel 7.7
-                        &ensp;gesehen, dass wir als Codierungsalphabet
                         &ensp;gesehen, dass wir als Codierungsalphabet
                         $\Sigma$ selbst nehmen können, also $\enc(M) \in \Sigma^*$, solange $\Sigma$ mindestens zwei
                         Zeichen enthält.
@@ -92,7 +87,9 @@
                                 class numbered-title
 
                                 Theorem
-                            &ensp;Für jedes Alphabet $\Sigma$ mit mindestens zwei
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             &ensp;Für jedes Alphabet $\Sigma$ mit mindestens zwei
                             Zeichen
                             und jedes $k \geq 1$ gibt es eine Turingmaschine $U$ mit $k+2$ Bändern, die folgendes kann:
@@ -203,7 +200,6 @@
 
                                     &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             &ensp;$\bhalt \in \TIME_{k+3}(n)$. 
-                            &ensp;$\bhalt \in \TIME_{k+3}(n)$. 
                     |> div
                         class well container
                         |> p
@@ -241,7 +237,6 @@
                                 Behauptung
                             &ensp;*(nicht ganz
                             korrekt).* $\bnegdiag \in \TIME_{k+3}(t)$.
-                            &ensp;$\bnegdiag \in \TIME_{k+3}(t)$.
                     |> p
 
                         Sei $n := |\enc(M) + m|$ die Länge des Inputwortes.
@@ -264,7 +259,6 @@
                                 |> NumberedTitle
 
                                     &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
-                            &ensp;Eine Funktion $t: \N \rightarrow \N$ heißt
                             &ensp;Eine Funktion $t: \N \rightarrow \N$ heißt_zeitkonstruierbar_, wenn es eine Turingmaschine gibt, die aus dem Eingabewort $1^n$
                             das Ausgabewort $1^{t(n)}$ berechnet und selbst maximal $O(t(n))$ Schritte läuft.
                     |> div
@@ -275,7 +269,6 @@
 
                                 Behauptung
                             &ensp;*(jetzt korrekt).* Sei
-                            &ensp;Sei
                             $t: \N \rightarrow \N$ zeitkonstruierbar, monoton steigend und $t(n) \geq n$. Dann gilt
                             $\bnegdiag \in \TIME_{k+3}(t)$.
                     |> P
@@ -289,7 +282,6 @@
                                 class numbered-title
 
                                 Lemma
-                            &ensp;Sei $s: \N \rightarrow \N$ eine Funktion mit
                             &ensp;Sei $s: \N \rightarrow \N$ eine Funktion mit
                             $s(n) \geq n$ und
                             $s = o(t)$, also $\lim_{n \rightarrow \infty} \frac{s(n)}{t(n)} = 0$. Dann
@@ -316,7 +308,6 @@
                                 href #theorem-universal
 
                                 Theorem 8.1.1
-                            &ensp;höchstens
                             &ensp;höchstens
                             $C \cdot |\enc(M)| \cdot (n + s(n))$ Schritte.
                             Da $s(n) \geq n$ gilt, sind dies höchstens $2C \cdot |\enc(M)| \cdot s(n)
@@ -362,6 +353,9 @@
                                 class numbered-title
 
                                 Theorem
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             *(Zeithierarchiesatz, Rohversion).*Seien $s, t: \N \rightarrow \N$
                             zeitkonstruierbare Funktionen mit $s(n) \geq n$ und
                             $s \in o(t)$ (also $\lim_{n \rightarrow \infty} s(n)/t(n)
@@ -388,6 +382,9 @@
                                 class numbered-title
 
                                 Theorem
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             &ensp;*(Zeithierarchiesatz).*Seien $s, t: \N \rightarrow \N$ mit $s(n) \geq n$ und $s \log s \in o(t)$. Dann gilt
                             $\TIME(s) \subsetneq \TIME(t)$.
                     |> p

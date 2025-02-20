@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.6 
+                    5.6 
                     5.6 Einen Parser in Java implementieren
                   </span>
                 </h1>
@@ -57,12 +57,10 @@ const Article = () => {
                     ((31+402)*83)
                   </tt>
                   &ensp;entwerfen. Der Einfachheit halber bestehe ich
-                  &ensp;entwerfen. Der Einfachheit halber bestehe ich
                   auf strenger Klammerung, so wäre{" "}
                   <tt>
                     (2*(1+2+3))
                   </tt>
-                  &ensp;zum Beispiel nicht erlaubt.
                   &ensp;zum Beispiel nicht erlaubt.
                   Unsere Grammatik soll allgemeine Dezimalzahlen darstellen können.
                   Das Alphabet ist somit
@@ -87,12 +85,10 @@ const Article = () => {
                   <i>
                     Ableitungsbaum
                   </i>
-                  {" "}konstruieren, für 
-                  &ensp;konstruieren, für{" "}
+                  {" "}konstruieren, für{" "}
                   <tt>
                     ((31+402)*83)
                   </tt>
-                  &ensp;also
                   &ensp;also
                 </Paragraph>
                 <figure>
@@ -130,7 +126,6 @@ const Article = () => {
                       interface Expression
                     </tt>
                     &ensp;wird implementiert von
-                    &ensp;wird implementiert von
                     <ul>
                       <li>
                         <tt>
@@ -141,7 +136,6 @@ const Article = () => {
                           Exrepssion e1, e2
                         </tt>
                         &ensp;enthält,
-                        &ensp;enthält,
                       </li>
                       <li>
                         <tt>
@@ -151,7 +145,6 @@ const Article = () => {
                         <tt>
                           Exrepssion e1, e2
                         </tt>
-                        &ensp;enthält,
                         &ensp;enthält,
                       </li>
                       <li>
@@ -171,7 +164,6 @@ const Article = () => {
                       interface Number
                     </tt>
                     &ensp;wird implementiert von
-                    &ensp;wird implementiert von
                     <ul>
                       <li>
                         <tt>
@@ -181,12 +173,10 @@ const Article = () => {
                         <tt>
                           Number
                         </tt>
-                        &ensp;und eine 
                         &ensp;und eine{" "}
                         <tt>
                           Digit
                         </tt>
-                        &ensp;erhält und
                         &ensp;erhält und
                       </li>
                       <li>
@@ -205,7 +195,6 @@ const Article = () => {
                     <tt>
                       interface Digit
                     </tt>
-                    &ensp;wird implementiert von
                     &ensp;wird implementiert von
                     <tt>
                       class DigitOne
@@ -239,7 +228,6 @@ const Article = () => {
                       class DigitEight
                     </tt>
                     &ensp;und
-                    &ensp;und
                     <tt>
                       class DigitNine
                     </tt>
@@ -255,7 +243,6 @@ const Article = () => {
                   <tt>
                     Expression
                   </tt>
-                  &ensp;hat zusätzlich noch
                   &ensp;hat zusätzlich noch
                   die Methode{" "}
                   <tt>

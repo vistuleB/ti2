@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.9 
+                    5.9 
                     5.6 Der DK-Automat
                   </span>
                 </h1>
@@ -57,7 +57,6 @@ const Article = () => {
                     ja
                   </i>
                   {" "}ist, die
-                  &ensp;ist, die
                   Blüte finden. Dies gelingt uns, indem wir die Grammatik \(\hat&#123;G&#125;\) in
                   einen endlichen Automaten umwandeln.
                   <a href="./04-03-nfsm.html#regular-grammar-to-fsm">
@@ -104,13 +103,11 @@ const Article = () => {
                     Terminalsymbol
                   </i>
                   {" "}beschriftet.
-                  &ensp;beschriftet.
                   Die Symbole $B, D, V$ sind{" "}
                   <i>
                     Terminale
                   </i>
                   {" "}in der Grammatik
-                  &ensp;in der Grammatik
                   $\dk&#123;G&#125;$. Wenn wir $\epsilon$-Übergänge zulassen, können wir den
                   Automaten übersichtlicher gestalten und mehrere Zustände
                   zusammenfassen:
@@ -131,7 +128,6 @@ const Article = () => {
                     Blätter
                   </i>
                   {" "}sein sollen, also zum linken Rand gehören. Der
-                  &ensp;sein sollen, also zum linken Rand gehören. Der
                   Übergang $\boxed&#123;4&#125; \step&#123;D&#125; \boxed&#123;5&#125;$ entspricht dann der
                   Entscheidung, auch $D$ zu einem Blatt zu machen, während $\boxed&#123;4&#125;
                   \step&#123;\epsilon&#125; \dk&#123;D&#125;$ der Entscheidung entspricht, $D$ zu einem
@@ -314,10 +310,9 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;6.9.1{" "}
+                        &ensp;5.9.1{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Für eine kontextfreie
                     &ensp;Für eine kontextfreie
                     Grammatik ist der nichtdeterministische DK-Automat (NDK-Automat) ein
                     nichtdeterministischer endlicher Automat mit $\epsilon$-Übergängen,
@@ -397,7 +392,6 @@ const Article = () => {
                     Menge
                   </i>
                   {" "}\(R\) von Zuständen des
-                  &ensp;\(R\) von Zuständen des
                   nichtdeterministischen Automaten. Wenn wir nun in eine solche Menge
                   \(R\) einen Zustand \(q\) einfügen, dann fügen wir auch alle Zustände
                   \(q'\) hinzu, zu denen es einen \(\epsilon\)-Übergang \(q
@@ -507,7 +501,6 @@ const Article = () => {
                       (DK-Test).
                     </b>
                     {" "}Sei $G$ eine kontextfreie Grammatik ohne
-                    &ensp;Sei $G$ eine kontextfreie Grammatik ohne
                     nutzlose Nichtterminale und ei $M$ der DK-Automat für die Grammatik
                     $G$. Die Grammatik $G$ ist LR(0) genau dann, wenn folgende zwei
                     Bedingungen gelten:
@@ -577,7 +570,6 @@ const Article = () => {
                       nicht
                     </i>
                     {" "}gilt, dann gibt es korrekte Reduktionsschritte
-                    &ensp;gilt, dann gibt es korrekte Reduktionsschritte
                   </Paragraph>
                   $$\begin&#123;align*&#125; \alpha \beta w \rstep&#123;&#125; \alpha X w \\ \alpha \beta
                   \sigma w' = \alpha' \beta' w' \rstep&#123;&#125; \alpha' X' w' \end&#123;align*&#125;$$
@@ -600,7 +592,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Übungsaufgabe
                         <NumberedTitle>
-                          &ensp;6.9.1{" "}
+                          &ensp;5.9.1{" "}
                         </NumberedTitle>
                       </span>
                       Zeigen Sie: wenn $G$ keine nutzlosen Nichtterminale hat, dann gibt

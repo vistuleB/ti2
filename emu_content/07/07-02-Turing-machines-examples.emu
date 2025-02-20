@@ -55,7 +55,6 @@
                         |> p
 
                             *Informelle Beschreibung.* Unsere Turingmaschine arbeitet
-                            &ensp;Unsere Turingmaschine arbeitet
                             in Phasen. In jeder Phase sucht die Maschine ein \(a\) und löscht es
                             (ersetzt es durch ein \(X\)). Dann geht sie nach rechts und
                             sucht und markiert ein \(b\); dann ein \(c\). Sobald sie das \(c\) markiert hat,
@@ -71,7 +70,6 @@
                         |> p
 
                             *Formellere Beschreibung.* Als Bandalphabet verwenden wir
-                            &ensp;Als Bandalphabet verwenden wir
                             \begin{align*}
                             \Gamma := \{a,b,c, X, \square\} \ .
                             \end{align*}
@@ -98,7 +96,6 @@
                                 |> tt
 
                                     noA
-                                &ensp;und gehe ein Feld nach rechts.
                                 &ensp;und gehe ein Feld nach rechts.
                             |> li
                                 |> tt
@@ -156,7 +153,6 @@
 
                                 reject
                             &ensp;wechselt. Andere Zellen bestehen nur aus einem
-                            &ensp;wechselt. Andere Zellen bestehen nur aus einem
                             Buchstaben; so steht in der Zelle von \(\delta(\texttt{findA}, b)\) nur
                             ein \(\texttt{R}\). Dies bedeutet, dass die Turingmaschine ihren Zustand nicht
                             wechselt und einfach das gelesene Zeichen in die Zelle wieder reinschreibt. Dies
@@ -188,7 +184,6 @@
                             |> tt
 
                                 <, -,&gt;
-                            &ensp;codiert wird.
                             &ensp;codiert wird.
                     |> div
                         id example-palindromes
@@ -243,13 +238,11 @@
 
                                     readA
                                 &ensp;und gehen
-                                &ensp;und gehen
                                 einen Schritt nach rechts; ist es
                                 \(b\), wechseln wir nach 
                                 |> tt
 
                                     readB
-                                &ensp;und gehen nach rechts.
                                 &ensp;und gehen nach rechts.
                             |> li
                                 |> tt
@@ -261,11 +254,9 @@
 
                                     killA
                                 &ensp;bzw.
-                                &ensp;bzw.
                                 |> tt
 
                                     killB
-                                &ensp;und gehen einen Schritt nach links.
                                 &ensp;und gehen einen Schritt nach links.
                             |> li
                                 |> tt
@@ -359,7 +350,6 @@
                         \begin{align*}
                         L := \{1^n \ | \ n = 2^d, d \geq 0\} \ .
                         \end{align*}*Tip:* gehen Sie durch das Band und ersetzen jede zweite
-                        &ensp;gehen Sie durch das Band und ersetzen jede zweite
                         \(1\), die Sie sehen, durch ein \(X\). Wenn Sie rechts ankommen und eine
                         ungerade Anzahl von Einsen gelesen haben, lehnen Sie ab. Wenn
                         die Anzahl gerade ist, gehen Sie wieder nach ganz links; sie haben nun

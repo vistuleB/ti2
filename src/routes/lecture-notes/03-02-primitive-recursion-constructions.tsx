@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    4.2 
+                    3.2 
                     3.2 Primitive Rekursion: Konstruktionen und Tricks
                   </span>
                 </h1>
@@ -47,7 +47,6 @@ const Article = () => {
                   <a href="../code/primitive-recursion/stockpile.py">
                     stockpile.py
                   </a>
-                  &ensp;zu erklären und
                   &ensp;zu erklären und
                   werde dann weitere, weniger offensichtliche Konstruktionen diskutieren.
                 </Paragraph>
@@ -157,13 +156,11 @@ const Article = () => {
                   <code>
                     True
                   </code>
-                  {" "}als 1 und 
-                  &ensp;als 1 und{" "}
+                  {" "}als 1 und{" "}
                   <code>
                     False
                   </code>
                   {" "}als 0.
-                  &ensp;als 0.
                   Unser erstes Prädikat, also Funktion mit Booleschem Ausgabewert, ist`isPositive`:
                 </Paragraph>
                 <pre class="container">
@@ -291,13 +288,11 @@ const Article = () => {
                   eine
                 </i>
                 {" "}lokale Variable
-                &ensp;lokale Variable
                 führen dürfen, hier meistens{" "}
                 <code>
                   temp
                 </code>
                 {" "}genannt.
-                &ensp;genannt.
                 Manche Funktionen scheinen inhärent mindestens zwei zu benötigen.
                 Betrachten wir den Fall der Fibonacci-Zahlen:
                 <pre class="container">
@@ -318,20 +313,17 @@ const Article = () => {
                 </pre>
                 Doch selbst dann hätten wir immer noch zwei lokale Variable.
                 Die Fibonacci-Zahlen rekursiv per`return F(n-1)+F(n-2)` scheint noch weiter weg zu sein
-                &ensp;scheint noch weiter weg zu sein
                 vom Paradigma der primitiven Rekursion; primitive Rekursion verzweigt sich nie.
                 Dennoch ist es möglich,{" "}
                 <code>
                   fib
                 </code>
                 {" "}primitiv rekursiv zu implementieren.
-                &ensp;primitiv rekursiv zu implementieren.
                 Hauptzutat hierbei ist es, dass wir{" "}
                 <i>
                   Paare
                 </i>
                 {" "}als neue Datenstruktur
-                &ensp;als neue Datenstruktur
                 verwenden.
                 <Paragraph>
                   Erinnern Sie sich: die primitive Rekursion stellt uns als Datentyp von Haus aus
@@ -342,12 +334,10 @@ const Article = () => {
                     Paaren
                   </i>
                   {" "}von natürlichen Zahlen?
-                  &ensp;von natürlichen Zahlen?
                   In{" "}
                   <a href="02-00-infinite-sets.html">
                     Kapitel 2: Unendliche Mengen
                   </a>
-                  &ensp;haben wir
                   &ensp;haben wir
                   die bijektive Funktion
                 </Paragraph>
@@ -466,7 +456,6 @@ const Article = () => {
                     Native Implementierung.
                   </b>
                   {" "}Die primitive Rekursion ist
-                  &ensp;Die primitive Rekursion ist
                   ein theoretischer Berechenbarkeitsbegriff für Funktionen
                   auf natürlichen Zahlen. Es ist definitiv keine ernstzunehmende Programmiersprache.
                   Ich finde allerdings, dass es hilfreich ist, sie als Programmiersprache zu begreifen
@@ -481,15 +470,13 @@ const Article = () => {
                     nativ
                   </i>
                   {" "}in Python zu implementieren, also beispielsweise in meiner
-                  &ensp;in Python zu implementieren, also beispielsweise in meiner
                   Datei `stockpile.py`:
                 </Paragraph>
                 <pre class="listing">
                   <code style="counter-set: listing 63;">
                     def pair(x,y):
                   </code>
-                  &ensp;`return int(((x+y+1) * (x+y)) / 2 + x )
-                  &ensp;&ensp;return int(((x+y+1) * (x+y)) / 2 + x )`
+                  &ensp;`return int(((x+y+1) * (x+y)) / 2 + x )`
                 </pre>
               </div>
             </div>

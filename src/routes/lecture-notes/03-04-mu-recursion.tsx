@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    4.4 
+                    3.4 
                     3.4 Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion
                   </span>
                 </h1>
@@ -58,7 +58,6 @@ const Article = () => {
                   eine
                 </i>
                 {" "}natürliche Zahl codieren.
-                &ensp;natürliche Zahl codieren.
                 Der erste Punkt allerdings scheint eine echte Beschränkung zu sein: wir wissen schließlich nicht
                 immer, wie oft wir eine Tätigkeit wiederholen müssen, bis wir fertig sind,
                 und ob wir überhaupt jemals fertig werden. Sie kennen vielleicht die Collatz-Vermutung.
@@ -112,14 +111,12 @@ const Article = () => {
                     collatz.html
                   </a>
                   &ensp;erstellt.
-                  &ensp;erstellt.
                   Es scheint: egal, wo Sie anfangen, Sie enden immer bei 1. Allerdings wissen wir nicht
                   im Voraus,{" "}
                   <i>
                     wie oft
                   </i>
                   {" "}wir die Funktion $f$ anwenden müssen. Und wir wissen nicht einmal,
-                  &ensp;wir die Funktion $f$ anwenden müssen. Und wir wissen nicht einmal,
                   ob man immer bei 1 ankommt, ob es andere Zyklen gibt oder ob es Startwerte gibt, für die die
                   Folge einfach nach Unendlich divergiert. Bis zum heutigen Tage (Stand 30. April 2024) hat sich
                   die Collatz-Vermutung zahlreichen Lösungsversuchung widersetzt und demonstriert eindrucksvoll,
@@ -165,15 +162,14 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;4.4.1{" "}
+                        &ensp;3.4.1{" "}
                       </NumberedTitle>
                     </span>
                     Schreiben Sie mit Hilfe von `While`,{" "}
                     <code>
                       PrimRec
                     </code>
-                    {" "}und 
-                    &ensp;und `Comp`eine Funktion `collatzList`, die aus einer Zahl
+                    {" "}und `Comp`eine Funktion `collatzList`, die aus einer Zahl
                     die Collatz-Folge baut, also
                   </Paragraph>
                   <pre>

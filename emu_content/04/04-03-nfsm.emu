@@ -55,7 +55,6 @@
                     |> p
 
                         Ein Pfeil beschreibt also nicht unbedingt einen Zustandsübergang, der_geschieht_, sondern einen, der _möglich_ ist. Formal
-                        &ensp;ist. Formal
                         gesprochen ist \(\delta\) nun keine Funktion mehr, sondern eine_Relation_:
                     |> div
                         class well container theorem
@@ -87,7 +86,6 @@
                         Formal gesehen ist also ein Automat ein Quintupel \(M = (\Sigma, Q,
                         \qstart, F, \delta)\).
                     Von nun an bezeichnen wir endliche Automaten auch als_deterministische_ endliche Automaten, um den Unterschied zu den
-                    &ensp;endliche Automaten, um den Unterschied zu den
                     nichtdeterministischen zu verdeutlichen. Wenn in einem deterministischen
                     endlichen Automaten \(\delta(q,x) = q'\) war, so hatte das die Bedeutung_wenn der Automat im Zustand \(q\) ist und \(x\) liest, so geht er in Zustand \(q'\) über_; wenn nun in einem nichtdeterministischen Automaten \((q,x,q') \in
                     \delta\) gilt, so bedeutet das,_wenn der Automat im Zustand \(q\) ist und \(x\) liest, so kann er in
@@ -141,9 +139,7 @@
                             Theorem 4.2.5
                         ; wir haben nämlich in jenem Beweis nirgends verwendet, dass
                         \(\delta\) eine _Funktion_ ist, und daher geht mit einem
-                        &ensp;ist, und daher geht mit einem
                         \(\delta\), das eine _Relation_ ist, alles ganz genau gleich.
-                        &ensp;ist, alles ganz genau gleich.
                         Allerdings gilt nun auch der Umkehrschluss: zu einer regulären
                         Grammatik gibt es einen nichtdeterministischen endlichen Automaten:
                     |> div
@@ -153,6 +149,9 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik. Dann gibt es
                         einen nichtdeterministischen endlichen Automaten \(M\) mit \(L(G) =
                         L(M)\).
@@ -543,6 +542,9 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         *(Einen nichtdeterministischen endlichen Automaten deterministisch
                         machen).*Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein nichtdeterministischer
                         Automat; dann heiße der deterministische Automat \(M' = (\Sigma, 2^Q,
@@ -564,6 +566,9 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Zu jeder regulären Sprache \(L\) gibt es einen deterministischen
                         endlichen Automaten \(M\) mit \(L(M) = L\).
                     |> div

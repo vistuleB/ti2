@@ -44,7 +44,6 @@
 
                         Noch spannender, als zu erkunden, was möglich ist, ist aus Sicht eines theoretischen
                         Informatikers, zu erkunden, was _nicht möglich_ ist. Also Grenzen aufzuzeigen.
-                        &ensp;ist. Also Grenzen aufzuzeigen.
                         Wir haben in den letzten vier Teilkapiteln gezeigt, was man mit regulären Sprachen und endlichen
                         Automaten
                         alles beschreiben kann.
@@ -120,7 +119,6 @@
                             Formal sind all diese Modelle gleich mächtig: wir können ein Modell in ein anderes umwandeln,
                             ohne
                             das die erzeugte bzw. akzeptierte Sprache sich ändern. Wenn wir nun zeigen wollen:_\(L\) ist nicht regulär_, dann können wir das _einfachste_ Modell nehmen und
-                            &ensp;Modell nehmen und
                             dagegen argumentieren. Nach meinem Darfürhalten sind endliche Automaten das einfachste der
                             fünf aufgeführten
                             Modelle. Also:
@@ -192,13 +190,10 @@
                         Das Argument, dass die Sprache \(\{a^nb^n \ | \ n \geq 0\}\) nicht regulär ist, war nicht allzu
                         schwer, fühlt sich
                         aber etwas _ad hoc_ an, also für diesen Fall maßgeschneidert. Es stellt sich aber heraus,
-                        &ensp;an, also für diesen Fall maßgeschneidert. Es stellt sich aber heraus,
                         dass man
                         bei _allen_ nicht-regulären Sprachen ein solches Argument anführen kann. Die Hauptarbeit
-                        &ensp;nicht-regulären Sprachen ein solches Argument anführen kann. Die Hauptarbeit
                         besteht nun darin, Konzepte wie _der Automat kann \(\alpha\) nicht von \(\alpha'\)
                         unterscheiden_und _der Automat muss aber \(\gamma\) von \(\gamma'\) unterscheiden können_ zu
-                        &ensp;zu
                         formalisieren.
                     |> div
                         class well container theorem
@@ -272,8 +267,7 @@
                         \begin{align*}
                         \qstart \Step{\alpha\gamma} q' \textnormal{ und } \qstart \Step{\beta\gamma} q'
                         \end{align*}
-                        Abhängig davon, ob \(q' \in F\) oder nicht, sind \(\alpha\gamma\) und \(\alpha\beta\) entweder_beide in \(L\)_ oder 
-                        &ensp;oder _beide nicht in \(L\)_. In anderen Worten: \(\alpha \equiv_L
+                        Abhängig davon, ob \(q' \in F\) oder nicht, sind \(\alpha\gamma\) und \(\alpha\beta\) entweder_beide in \(L\)_ oder _beide nicht in \(L\)_. In anderen Worten: \(\alpha \equiv_L
                         \beta\).
                         |> span
                             class qed
@@ -300,7 +294,6 @@
 
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Sei \(L \subseteq \Sigma^*\). Der _Index von \(L\)_ ist die Anzahl von Äquivalenzklassen
-                        &ensp;ist die Anzahl von Äquivalenzklassen
                         der Relation
                         \(\equiv_L\), also die größtmögliche Anzahl gegenseitig nichtäquivalenter Wörter
                         \(\alpha_1, \alpha_2, \dots \in \Sigma^*\); dies ist möglicherweise unendlich.
@@ -388,7 +381,6 @@
                     |> p
 
                         Wie mächtig ist diese "Index-Methode"? Es stellt sich heraus, dass sie _vollständig_ ist:
-                        &ensp;ist:
                         wenn eine Sprache \(L\) endlichen Index hat, dann ist sie auch regulär.
                     |> div
                         class well container theorem
@@ -396,6 +388,9 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Eine Sprache \(L \subseteq \Sigma^*\) ist genau dann regulär, wenn sie endlichen Index hat.
                     |> div
                         class well container
@@ -442,10 +437,8 @@
                             Sehen Sie nun: wenn wir ein anderes \(\alpha' \in A_i\) nehmen,
                             dann gilt \(\alpha' x \equiv_L \alpha x\), also ist auch \(\alpha' x \in A_j\). In anderen
                             Worten: es gibt nur _eine_ Produktion der Form \(i \step{x} ...\), d.h. die
-                            &ensp;Produktion der Form \(i \step{x} ...\), d.h. die
                             Produktionen
-                            sind in der Tat ein _Funktion_ und der Automat ist 
-                            &ensp;und der Automat ist _determinisitsch_.
+                            sind in der Tat ein _Funktion_ und der Automat ist _determinisitsch_.
                             Als Anfangszustand wählen wir dasjenige \(i\), für das \(\epsilon \in A_i\) gilt.
                             Akzeptierende Zustände sind diejenigen \(j\), für die \(A_j \subseteq L\) gilt. Also:
                             \begin{align*}
@@ -500,7 +493,6 @@
                             von \(\alpha\gamma\) ist 0, das viertletzte Zeichen von \(\beta\gamma\) ist 1; also
                             gilt \(\alpha\gamma \in L, \beta\gamma\not \in L\), und somit \(\alpha \not \equiv \beta\).
                             Der Index ist also _mindestens_ 16. Das er höchstens 16 ist, sehen wir, indem wir
-                            &ensp;16. Das er höchstens 16 ist, sehen wir, indem wir
                             einen
                             determinisitschen Automaten mit 16 Zuständen bauen.
                             |> span

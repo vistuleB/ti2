@@ -58,14 +58,10 @@
                         paar Abänderungen,
                         um die obigen Transformationen spannender zu machen. Ein Wort in unserer Sprache besteht aus
                         einer
-                        nichtleeren Folge von _Labels_ die jeweils durch einen 
-                        &ensp;die jeweils durch einen `.` separiert sind.
-                        &ensp;separiert sind.
+                        nichtleeren Folge von _Labels_ die jeweils durch einen `.` separiert sind.
                         Jedes Label ist eine nichtleere Folge von Blöcken (ein nichtleerer String aus Buchstaben und
                         Zahlen), separiert
-                        durch `:` oder 
-                        &ensp;oder `-` aber niemals durch beides innerhalb eines Blockes.
-                        &ensp;aber niemals durch beides innerhalb eines Blockes.
+                        durch `:` oder `-` aber niemals durch beides innerhalb eines Blockes.
                         Also:
                     |> div
                         style text-align:center
@@ -76,19 +72,15 @@
                         style text-align:center
 
                         `a:b-c.hello`
-                    ist kein Wort in \(L\), da das erste Label die Separatoren `:` und 
-                    &ensp;und `-` mischt.
-                    &ensp;mischt.
+                    ist kein Wort in \(L\), da das erste Label die Separatoren `:` und `-` mischt.
                     Habe ich
                     \(L\) genau genug beschrieben? Stellen wir eine Meta-Frage: Was zählt überhaupt als _genaue
                     Beschreibung_ einer
-                    &ensp;einer
                     Sprache? Wir können uns dem Mund fusselig reden und Beispiele und Nicht-Beispiele angeben, am Ende
                     aber werden
                     wir irgendwann beginnen, formale Regeln aufzustellen, die unsere Sprache beschreiben - wir werden
                     also im Prinzip
                     eine _Grammatik_ schreiben. Tun wir dies also.
-                    &ensp;schreiben. Tun wir dies also.
                     |> h2
 
                         2. Eine reguläre Grammatik
@@ -96,7 +88,6 @@
 
                         Beginnen wir mit dem Alphabet.
                         Da es 62 alphanumerische Zeichen gibt: `a..zA..Z0..9` und wir uns keine unnötige
-                        &ensp;und wir uns keine unnötige
                         Arbeit machen wollen,
                         beschränken wir uns auf ein Zeichen: `a`. Dazu kommen die Separatoren`:-.`. Also: \(\Sigma = \{a,.,:,-\}\). Stellen Sie sich einfach vor, \(a\) stehe
                         für beliebige alphanumerische Zeichen. Sowohl Grammatik als auch Automaten lassen sich einfach
@@ -109,20 +100,14 @@
                     |> p
 
                         Als nächstes führen wir ein nichtterminales Symbole \(C\) für Labels mit `:` ein
-                        &ensp;ein
                         und ein Nichtterminal \(D\) für Labels mit `-`. Wir wählen die Buchstaben \(C,D\),
-                        weil`:` auf Englisch 
-                        &ensp;auf Englisch _colon_ und 
-                        &ensp;und `-` 
-                        &ensp;_dash_ heißt.
-                        &ensp;heißt.
+                        weil`:` auf Englisch _colon_ und `-` _dash_ heißt.
                         \(C\)-Labels können wir uns nach dem Baukastenprizip bauen, in dem
                         wir 
                         |> a
                             href ./04-01-regular-grammars.html#operation-L(.L)*
 
                             Theorem 4.1.14
-                        &ensp;anwenden.
                         &ensp;anwenden.
                         Wir fügen zur "End-Produktion" \(B \rightarrow a\) eine weiter Produktion \(B \rightarrow a:B\)
                         hinzu und
@@ -138,12 +123,10 @@
 
                         Von \(L\) lassen sich nun also alle Labels ableiten. Wir brauchen nun zum Schluss wieder
                         eine Folge von \(L\), mit `.` separiert, müssen also wieder
-                        &ensp;separiert, müssen also wieder
                         |> a
                             href ./04-01-regular-grammars.html#operation-L(.L)*
 
                             Theorem 4.1.14
-                        &ensp;anwenden, dieses
                         &ensp;anwenden, dieses
                         mal auf die von \(T\) erzeugte Sprache. Im Ergebnis benennen wir das Startsymbol in \(S\) um.
                     \begin{align*}
@@ -171,7 +154,6 @@
 
                         Wir wollen nun alle Produktionen der Form \(Y \rightarrow x\) eliminieren. Hierfür nehmen wir
                         uns_ein_ neues Nichtterminal \(E\) und ersetzen \(Y \rightarrow x\) durch \(Y \rightarrow
-                        &ensp;neues Nichtterminal \(E\) und ersetzen \(Y \rightarrow x\) durch \(Y \rightarrow
                         xE\)
                         und fügen die Produktion \(E \rightarrow \epsilon\) hinzu.
                     \begin{align*}
@@ -196,13 +178,11 @@
                             Theorem
                             4.1.7
                         &ensp;beschrieben.
-                        &ensp;beschrieben.
                         Wir ersetzen \(S \rightarrow C\) also durch alle Produktionen der Form \(S \rightarrow \alpha\),
                         wobei
                         \(\alpha\) eine Wortform ist, die sich aus \(C\) ableiten lässt und nicht nur aus einem
                         einzelnen Nichtterminal
                         besteht; dies trifft glücklicherweise auf _alle_ rechten Seiten der \(C\)-Produktionen
-                        &ensp;rechten Seiten der \(C\)-Produktionen
                         zu; gleiches gilt
                         für \(D\). Wir erhalten:
                     \begin{align*}
@@ -229,7 +209,6 @@
                     |> p
 
                         Ich habe die Zeichen `.:-` rot unterlegt, weil man sie sonst kaum erkennen würde in
-                        &ensp;rot unterlegt, weil man sie sonst kaum erkennen würde in
                         dem Automaten.
                     |> h2
 
@@ -244,7 +223,6 @@
                         Problem, aber
                         in diesem vorlesungsskript doch etwas ungünstig.
                         Wir gehen _lazy_ vor, erschaffen Zustände in \(2^Q\) also nur dann, wenn wir sie
-                        &ensp;vor, erschaffen Zustände in \(2^Q\) also nur dann, wenn wir sie
                         brauchen.
                         Wir beginnen mit dem Zustand \(\{S\}\) und legen dann an jeden Zustand Kanten an, jeweils mit
                         \(a, :, -, . \) beschriftet, und erschaffen, falls nötig, dabei neue Zustände. In der folgenden
@@ -527,9 +505,7 @@
 
                         Die Zustände des deterministischen Automaten beschreiben im Prinzip das, was wir uns merken
                         müssen, wenn wir so einen String "parsen": Zustand \( \{C',C,E,D,D',S'\}\), der
-                        in der Grammatik dann zum Nichtterminal \(T\) wird, bedeutet beispielsweise_das Label hat schon begonnen, wir wissen aber noch nicht, ob es eines mit`:` oder eines mit 
-                        &ensp;oder eines mit `-` ist.
-                        &ensp;ist.
+                        in der Grammatik dann zum Nichtterminal \(T\) wird, bedeutet beispielsweise_das Label hat schon begonnen, wir wissen aber noch nicht, ob es eines mit`:` oder eines mit `-` ist.
                         Der Zustand \(\{C',C,E,S'\}\) bzw. das Nichtterminal \(C\) heißt dann`:`_wir sind innerhalb eines Labels mit 
 
                         _._
@@ -565,5 +541,4 @@
                             Dieser Automat hat 11 Zustände. Sein Potenzmengenautomat hätte also \(2^{11} = 2048\)
                             Zustände.
                             Führen Sie die Konstruktion _lazy_ durch, indem Sie vom Startzustand \(\{S\}\)
-                            &ensp;durch, indem Sie vom Startzustand \(\{S\}\)
                             ausgehend die Folgezustände konstruieren. Wieviele Zustände bekommen Sie?

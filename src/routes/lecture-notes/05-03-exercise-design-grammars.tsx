@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.3 
+                    5.3 
                     5.3 Rechnerübung: Gute kontextfreie Grammatiken entwerfen
                   </span>
                 </h1>
@@ -87,7 +87,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.3.1{" "}
+                      &ensp;5.3.1{" "}
                     </NumberedTitle>
                   </span>
                   Geben Sie folgende Grammatik in die App ein:
@@ -116,7 +116,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.3.2{" "}
+                      &ensp;5.3.2{" "}
                     </NumberedTitle>
                   </span>
                   Schreiben Sie eine kontextfreie Grammatik für die Sprache aller
@@ -130,7 +130,6 @@ const Article = () => {
                     .
                   </code>
                   {" "}separiert sind. Sie können den "Regelvorschlag"
-                  &ensp;separiert sind. Sie können den "Regelvorschlag"
                   ganz links unten in der App reinkopieren, um automatisch Regeln für alphanumerische
                   Zeichen zu bekommen (allerdings verschlechtert das die Laufzeit; ich habe erstmal
                   gar nicht auf Effizienz geachtet).
@@ -140,7 +139,6 @@ const Article = () => {
                       a.aaaaa.aaaa.aaaa.aaaa.aaaa
                     </code>
                     {" "}ein. Wie
-                    &ensp;ein. Wie
                     sieht Ihr Backtrack-Baum aus? Hat er viele Sackgassen? Können Sie Ihre Grammatik
                     so abändern, dass sie zwar noch die gleiche Sprache erzeugt, aber keine / nur wenige
                     Sackgassen hat?
@@ -150,7 +148,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.3.3{" "}
+                      &ensp;5.3.3{" "}
                     </NumberedTitle>
                   </span>
                   Entwerfen Sie eine Grammatik für arithmetische Ausdrücke im Racket-Stil, also
@@ -168,7 +166,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.3.4{" "}
+                      &ensp;5.3.4{" "}
                     </NumberedTitle>
                   </span>
                   Wiederholen Sie die vorherige Übung für arithmetische Ausdrücke in der uns
@@ -183,7 +181,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.3.5{" "}
+                      &ensp;5.3.5{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -198,19 +196,17 @@ const Article = () => {
                   </pre>
                   Überlegen Sie, was diese "bedeutet". Sie sehen, die Grammatik ist
                   nicht eindeutig. Das Wort `[([()(` hat zwei
-                  &ensp;hat zwei
                   verschiedene Ableitungsbäume. Können Sie eine äquivalente
                   <i>
                     eindeutige
                   </i>
                   {" "}Grammatik schreiben?
-                  &ensp;Grammatik schreiben?
                 </div>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.3.6{" "}
+                      &ensp;5.3.6{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -237,7 +233,6 @@ const Article = () => {
                     eindeutige
                   </i>
                   {" "}Grammatik angebene, die ähnlich
-                  &ensp;Grammatik angebene, die ähnlich
                   exponentielles Verhalten zeigt? Exponentiell heißt: mit jedem
                   zusätlichen Zeichen des Eingabewortes kann die Größe des
                   Backtrack-Baumes um einen Faktor \(R \gt 1\) wachsen.
@@ -246,7 +241,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.3.7{" "}
+                      &ensp;5.3.7{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -259,7 +254,6 @@ const Article = () => {
                     jede
                   </i>
                   {" "}Grammatik,
-                  &ensp;Grammatik,
                   die \(L\) erzeugt, unter exponentiell großen Backtrack-Bäumen leidet.
                 </div>
               </div>

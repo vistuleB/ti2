@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.8 
+                    5.8 
                     5.8 Linker Rand, Blüten und die DK-Grammatik
                   </span>
                 </h1>
@@ -65,7 +65,6 @@ const Article = () => {
                     Ableitungsbaum
                   </i>
                   {" "}zeichnen. Wenn die Grammatik
-                  &ensp;zeichnen. Wenn die Grammatik
                   eindeutig ist, so hängt auch der Baum nur vom Wort \(w \in L(G)\) ab und
                   nicht von der Ableitung \(S \Step&#123;&#125;^* w\).
                   Allerdings können wir für Zwischenformen
@@ -168,7 +167,6 @@ const Article = () => {
                     Auflösung.
                   </b>
                   {" "}Hier sehen Sie noch einmal
-                  &ensp;Hier sehen Sie noch einmal
                   den gleichen Baum, nun aber gewisse Teile verschieden umrandet / eingefärbt.
                 </div>
                 <figure>
@@ -188,7 +186,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.8.1{" "}
+                      &ensp;5.8.1{" "}
                     </NumberedTitle>
                     &ensp;/ Beobachtung
                   </span>
@@ -204,7 +202,6 @@ const Article = () => {
                     Stamm
                   </i>
                   {" "}ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
-                  &ensp;ist der Pfad von der Wurzel zu jenem inneren Knoten \(u\),
                   der von allen inneren Knoten, deren Kinder allesamt Blätter sind,
                   am weistesten links steht.
                   Die Kinder von \(u\), per Definition alles Blätter, sind die{" "}
@@ -243,19 +240,16 @@ const Article = () => {
                     Front
                   </i>
                   {" "}von $\mathcal&#123;T&#125;$ und schreiben sie als $\front(\mathcal&#123;T&#125;)$.
-                  &ensp;von $\mathcal&#123;T&#125;$ und schreiben sie als $\front(\mathcal&#123;T&#125;)$.
                   Wir sagen auch, dass \(\beta\){" "}
                   <i>
                     eine Blüte von \(\gamma\)
                   </i>
                   {" "}und
-                  &ensp;und
                   $\alpha\beta$ die{" "}
                   <i>
                     Front
                   </i>
                   {" "}von $\gamma$ ist,
-                  &ensp;von $\gamma$ ist,
                   ohne über den Ableitungsbaum \(\mathcal&#123;T&#125;\) selbst zu reden.
                   Hierbei ist zu beachten, dass in einer mehrdeutigen Grammatik
                   eine gültige Wortform mehrere Ableitungsbäume und somit
@@ -421,7 +415,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.8.2{" "}
+                      &ensp;5.8.2{" "}
                     </NumberedTitle>
                   </span>
                   Für eine kontextfreie Grammatik \(G\) definieren wir
@@ -484,7 +478,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.8.3{" "}
+                      &ensp;5.8.3{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(G = (\Sigma, N, S, P)\) eine kontextfreie Grammatik. Die
@@ -494,7 +488,6 @@ const Article = () => {
                     erweitert reguläre
                   </i>
                   {" "}Grammatik \(\hat&#123;G&#125; = (\Sigma \cup N, \hat&#123;N&#125;, \hat&#123;S&#125;,
-                  &ensp;Grammatik \(\hat&#123;G&#125; = (\Sigma \cup N, \hat&#123;N&#125;, \hat&#123;S&#125;,
                   \hat&#123;P&#125;)\)
                   mit \(\hat&#123;N&#125; := \&#123;\hat&#123;X&#125; \ | \ X \in N\&#125;\), wobei
                   \(\hat&#123;P&#125;\) für jede \(G\)-Produktion
@@ -515,7 +508,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;6.8.4{" "}
+                      &ensp;5.8.4{" "}
                     </NumberedTitle>
                   </span>
                   \(\hat&#123;G&#125;\) erzeugt die Sprache
@@ -598,6 +591,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;5.8.5{" "}
+                    </NumberedTitle>
                   </span>
                   Wenn der \(LR(0)\)-Parser akzeptiert, dann hat er eine Linksreduktion
                   \(w \rstep&#123;&#125;^* S\) und somit eine Rechtsableitung konstruiert; es gilt
@@ -622,7 +618,6 @@ const Article = () => {
                       korrekte
                     </i>
                     {" "}Linksreduktionsschritte.
-                    &ensp;Linksreduktionsschritte.
                   </Paragraph>
                   <Paragraph>
                     Der zweite Teil ist schwieriger. Wir nehmen also
@@ -709,7 +704,6 @@ const Article = () => {
                           echter
                         </i>
                         {" "}Präfix von $\front(\gamma w)$ und somit
-                        &ensp;Präfix von $\front(\gamma w)$ und somit
                         ist $\gamma c$ immer noch ein Präfix von $\front(\gamma w)$.
                       </li>
                     </ol>

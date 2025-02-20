@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    5.6 
+                    4.6 
                     4.6 Die Grenzen regulärer Sprachen
                   </span>
                 </h1>
@@ -49,7 +49,6 @@ const Article = () => {
                     nicht möglich
                   </i>
                   {" "}ist. Also Grenzen aufzuzeigen.
-                  &ensp;ist. Also Grenzen aufzuzeigen.
                   Wir haben in den letzten vier Teilkapiteln gezeigt, was man mit regulären Sprachen und endlichen
                   Automaten
                   alles beschreiben kann.
@@ -79,7 +78,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;5.6.1{" "}
+                        &ensp;4.6.1{" "}
                       </NumberedTitle>
                     </span>
                     Versuchen Sie ein paar Minuten, eine reguläre Grammatik für \(L\) zu schreiben oder
@@ -131,7 +130,6 @@ const Article = () => {
                       einfachste
                     </i>
                     {" "}Modell nehmen und
-                    &ensp;Modell nehmen und
                     dagegen argumentieren. Nach meinem Darfürhalten sind endliche Automaten das einfachste der
                     fünf aufgeführten
                     Modelle. Also:
@@ -207,14 +205,12 @@ const Article = () => {
                     ad hoc
                   </i>
                   {" "}an, also für diesen Fall maßgeschneidert. Es stellt sich aber heraus,
-                  &ensp;an, also für diesen Fall maßgeschneidert. Es stellt sich aber heraus,
                   dass man
                   bei{" "}
                   <i>
                     allen
                   </i>
                   {" "}nicht-regulären Sprachen ein solches Argument anführen kann. Die Hauptarbeit
-                  &ensp;nicht-regulären Sprachen ein solches Argument anführen kann. Die Hauptarbeit
                   besteht nun darin, Konzepte wie{" "}
                   <i>
                     der Automat kann \(\alpha\) nicht von \(\alpha'\)
@@ -225,14 +221,13 @@ const Article = () => {
                     der Automat muss aber \(\gamma\) von \(\gamma'\) unterscheiden können
                   </i>
                   {" "}zu
-                  &ensp;zu
                   formalisieren.
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.6.1{" "}
+                      &ensp;4.6.1{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -268,7 +263,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.6.2{" "}
+                      &ensp;4.6.2{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -291,7 +286,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;5.6.3{" "}
+                      &ensp;4.6.3{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(L\) die vom endlichen Automaten \(M\) akzeptierte Sprache.
@@ -319,8 +314,7 @@ const Article = () => {
                   <i>
                     beide in \(L\)
                   </i>
-                  {" "}oder 
-                  &ensp;oder{" "}
+                  {" "}oder{" "}
                   <i>
                     beide nicht in \(L\)
                   </i>
@@ -345,7 +339,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.6.4{" "}
+                      &ensp;4.6.4{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(L \subseteq \Sigma^*\). Der{" "}
@@ -353,7 +347,6 @@ const Article = () => {
                     Index von \(L\)
                   </i>
                   {" "}ist die Anzahl von Äquivalenzklassen
-                  &ensp;ist die Anzahl von Äquivalenzklassen
                   der Relation
                   \(\equiv_L\), also die größtmögliche Anzahl gegenseitig nichtäquivalenter Wörter
                   \(\alpha_1, \alpha_2, \dots \in \Sigma^*\); dies ist möglicherweise unendlich.
@@ -362,7 +355,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;5.6.5{" "}
+                      &ensp;4.6.5{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(M\) ein endlicher Automat von \(L\) die von ihm akzeptierte Sprache.
@@ -427,7 +420,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.6.2{" "}
+                      &ensp;4.6.2{" "}
                     </NumberedTitle>
                   </span>
                   Betrachten Sie die Sprache aller \(\alpha\in \&#123;a,b\&#125;^*\), die gleich viele \(a\)'s wie \(b\)'s
@@ -443,12 +436,14 @@ const Article = () => {
                     vollständig
                   </i>
                   {" "}ist:
-                  &ensp;ist:
                   wenn eine Sprache \(L\) endlichen Index hat, dann ist sie auch regulär.
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;4.6.6{" "}
+                    </NumberedTitle>
                   </span>
                   Eine Sprache \(L \subseteq \Sigma^*\) ist genau dann regulär, wenn sie endlichen Index hat.
                 </div>
@@ -502,14 +497,12 @@ const Article = () => {
                       eine
                     </i>
                     {" "}Produktion der Form \(i \step&#123;x&#125; ...\), d.h. die
-                    &ensp;Produktion der Form \(i \step&#123;x&#125; ...\), d.h. die
                     Produktionen
                     sind in der Tat ein{" "}
                     <i>
                       Funktion
                     </i>
-                    {" "}und der Automat ist 
-                    &ensp;und der Automat ist{" "}
+                    {" "}und der Automat ist{" "}
                     <i>
                       determinisitsch
                     </i>
@@ -573,7 +566,6 @@ const Article = () => {
                       mindestens
                     </i>
                     {" "}16. Das er höchstens 16 ist, sehen wir, indem wir
-                    &ensp;16. Das er höchstens 16 ist, sehen wir, indem wir
                     einen
                     determinisitschen Automaten mit 16 Zuständen bauen.
                     <span class="qed">

@@ -60,10 +60,12 @@
                                 class numbered-title
 
                                 Theorem
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             Die Mengen $\N$ und $\N^2$ sind gleichmächtig. Mit $\N^2$ (oder auch
                             $\N \times \N$) bezeichnen wir hier das cartesische Produkt von $\N$
                             mit sich selbst: die Menge aller _Paare_ $(a,b)$ von
-                            &ensp;$(a,b)$ von
                             natürlichen Zahlen.
                         |> figure
                             |> img
@@ -191,7 +193,6 @@
                                     &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                                 .
                             &ensp;Es gibt eine
-                            &ensp;Es gibt eine
                             injektive Funktion $f : \Q \rightarrow \N$.
                     |> div
                         class well container
@@ -247,20 +248,17 @@
                                     &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                                 :
                             &ensp;Es gibt eine
-                            &ensp;Es gibt eine
                             injektive Funktion $g: \N \rightarrow \Q$.
                     |> div
                         class well container
                         |> p
 
                             *Beweis.* Dies ist ganz einach: da $\N \subseteq \Q$
-                            &ensp;Dies ist ganz einach: da $\N \subseteq \Q$
                             gilt, können wir jedes $n$ einfach bei sich belassen. Die Funktion
                         \begin{align*} g : \N&amp;\rightarrow \Q \\ n&amp;\mapsto n \end{align*}
                         |> p
 
                             ist die gewünschte Injektion. Man nennt so eine Funktion auch die_Einbettung_ von $\N$ in $\Q$.
-                            &ensp;von $\N$ in $\Q$.
                             |> span
                                 class qed
 
@@ -270,7 +268,6 @@
                         Wir sind nun also in der sonderbaren Situation, dass wir eine
                         injektive Funktion $f : \Q \rightarrow \N$ haben, die aber nicht alle
                         $\N$ ausfüllt, also nicht _surjektiv_ ist. Gleichzeitig haben
-                        &ensp;ist. Gleichzeitig haben
                         wir $g : \N \rightarrow \Q$, die injektiv ist aber auch nicht
                         surjektiv. Bei $f$ bleiben also manche natürlichen Zahlen ungenutzt,
                         bei $g$ bleiben rationale Zahlen ungenutzt. Können wir $f$ und $g$
@@ -287,7 +284,6 @@
 
                             ...
                         &ensp;beweisen.
-                        &ensp;beweisen.
                         Vorerst behelfen wir uns mit ad-hoc-Methoden.
                     |> div
                         class well container theorem
@@ -296,7 +292,9 @@
                                 class numbered-title
 
                                 Theorem
-                            &ensp;Es gilt $\Q \approx \N$.
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             &ensp;Es gilt $\Q \approx \N$.
                     |> div
                         class well container
@@ -349,7 +347,6 @@
                     Erinnern wir uns an $\{0,1\}^*$, die Menge aller endlichen Bitstrings.
                     Die Menge ist ganz klar unendlich, weil sie zum Beispiel $1, 11, 111,
                     1111, \dots$ enthält. Ist sie _abzählbar_ unendlich?
-                    &ensp;unendlich?
                     |> div
                         class well container theorem
                         |> p
@@ -357,7 +354,9 @@
                                 class numbered-title
 
                                 Theorem
-                            &ensp;Es gilt $\{0,1\}^*
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             &ensp;Es gilt $\{0,1\}^*
                             \approx \N$.
                     |> div
@@ -365,7 +364,6 @@
                         |> p
 
                             *Beweis.* Hier ist eine Idee: wir interpretieren den
-                            &ensp;Hier ist eine Idee: wir interpretieren den
                             Bitstring $a_1 a_2 \dots a_n$ als $n$-stellige Binärzahl, also
                         \begin{align*} f(a_1 a_2 \dots a_n) := \sum_{i=1}^n a_i 2^{n-i} \ .
                         \end{align*}

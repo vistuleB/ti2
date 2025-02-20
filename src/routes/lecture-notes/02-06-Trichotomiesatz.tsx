@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    3.6 
+                    2.6 
                     2.6 Der Trichotomiesatz
                   </span>
                 </h1>
@@ -75,13 +75,15 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;2.6.1{" "}
+                      </NumberedTitle>
                     </span>
                     {" "}{" "}
                     <b>
                       (Trichotomiesatz der Mengenlehre).
                     </b>
                     {" "}Seien $A$ und
-                    &ensp;Seien $A$ und
                     $B$ zwei Mengen. Dann gibt es eine injektive Funktion $f : A
                     \rightarrow B$ oder eine injektive Funktion $g : A \rightarrow B$.
                     Es gilt also immer genau einer der drei folgenden Fälle:
@@ -115,7 +117,6 @@ const Article = () => {
                       Funktion
                     </i>
                     {" "}formal ist. $A \times B := \&#123; (a,b) \ | \ a \in A,
-                    &ensp;formal ist. $A \times B := \&#123; (a,b) \ | \ a \in A,
                     b \in B\&#125;$, die Menge aller Paare, heißt das
                     <i>
                       cartesische Produkt
@@ -125,7 +126,6 @@ const Article = () => {
                       Relation
                     </i>
                     {" "}ist eine
-                    &ensp;ist eine
                     Teilmenge $R \subseteq A \times B$.
                   </Paragraph>
                   <div class="well container-fluid subtheorem">
@@ -133,11 +133,10 @@ const Article = () => {
                       <span class="numbered-title">
                         Definition
                         <NumberedTitle>
-                          &ensp;3.6.1{" "}
+                          &ensp;2.6.2{" "}
                         </NumberedTitle>
                         .
                       </span>
-                      &ensp;Eine Relation $R
                       &ensp;Eine Relation $R
                       \subseteq A \times B$ heißt
                     </Paragraph>
@@ -161,7 +160,6 @@ const Article = () => {
                           höchstens
                         </i>
                         {" "}ein $b \in B$ gibt mit $(a,b) \in R$ und
-                        &ensp;ein $b \in B$ gibt mit $(a,b) \in R$ und
                         umgekehrt für jedes $b \in B$ höchstens ein $a \in A$ mit $(a,b)
                         \in R$.
                       </li>
@@ -171,24 +169,20 @@ const Article = () => {
                           sättigt
                         </i>
                         {" "}$R$ die Menge
-                        &ensp;$R$ die Menge
                         $A$, wenn es für{" "}
                         <i>
                           jedes
                         </i>
                         {" "}$a \in A$ ein $b \in B$ mit
-                        &ensp;$a \in A$ ein $b \in B$ mit
                         $(a,b) \in R$ gibt; es{" "}
                         <i>
                           sättigt
                         </i>
                         {" "}$B$, wenn es für
-                        &ensp;$B$, wenn es für
                         <i>
                           jedes
                         </i>
                         {" "}$b \in B$ ein $a \in A$ gibt mit $(a,b) \in R$.
-                        &ensp;$b \in B$ ein $a \in A$ gibt mit $(a,b) \in R$.
                       </li>
                     </ul>
                   </div>
@@ -212,11 +206,10 @@ const Article = () => {
                       <span class="numbered-title">
                         Beobachtung
                         <NumberedTitle>
-                          &ensp;3.6.2{" "}
+                          &ensp;2.6.3{" "}
                         </NumberedTitle>
                         .
                       </span>
-                      &ensp;Wenn $R \in
                       &ensp;Wenn $R \in
                       \mathcal&#123;M&#125;$ ein maximales Element in der Partialordnung
                       $(\mathcal&#123;M&#125;, \subseteq)$ ist, dann sättigt es $A$ oder $B$ (oder
@@ -261,11 +254,10 @@ const Article = () => {
                       <span class="numbered-title">
                         Definition
                         <NumberedTitle>
-                          &ensp;3.6.3{" "}
+                          &ensp;2.6.4{" "}
                         </NumberedTitle>
                         .
                       </span>
-                      &ensp;Sei $(X, \preceq)$
                       &ensp;Sei $(X, \preceq)$
                       eine Partialordnung und $S \subseteq X$ eine Menge. Ein Element $x
                       \in X$ ist eine{" "}
@@ -273,7 +265,6 @@ const Article = () => {
                         obere Schranke für $S$
                       </i>
                       {" "}wenn
-                      &ensp;wenn
                     </Paragraph>
                     $$\begin&#123;align*&#125; s \leq x \quad \forall s \in S \end&#123;align*&#125;$$
                     <Paragraph>
@@ -287,7 +278,6 @@ const Article = () => {
                       keine obere Schranke
                     </i>
                     {" "}in $\N$. Somit gibt es auch kein
-                    &ensp;in $\N$. Somit gibt es auch kein
                     maximales Element. Was nun mit $(\mathcal&#123;M&#125;, \subseteq)$? Wenn $M
                     <i>
                       1
@@ -313,11 +303,10 @@ const Article = () => {
                       <span class="numbered-title">
                         Beobachtung
                         <NumberedTitle>
-                          &ensp;3.6.4{" "}
+                          &ensp;2.6.5{" "}
                         </NumberedTitle>
                         .
                       </span>
-                      &ensp;Sei $S \subseteq
                       &ensp;Sei $S \subseteq
                       \mathcal&#123;M&#125;$ eine Kette in $(\mathcal&#123;M&#125;, \subseteq)$, also eine
                       Menge von Matchings, so dass für alle $M
@@ -377,7 +366,6 @@ const Article = () => {
                       <span class="numbered-title">
                         Zornsches Lemma.
                       </span>
-                      &ensp;Sei $(X,
                       &ensp;Sei $(X,
                       \preceq)$ eine Partialordnung. Wenn jede Kette $S \subseteq X$
                       eine obere Schranke $x \in X$ hat, dann enthält $X$ mindestens ein

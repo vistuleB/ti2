@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    5.3 
+                    4.3 
                     4.3 Nichtdeterministische Endliche Automaten
                   </span>
                 </h1>
@@ -65,7 +65,6 @@ const Article = () => {
                     möglich
                   </i>
                   {" "}ist. Formal
-                  &ensp;ist. Formal
                   gesprochen ist \(\delta\) nun keine Funktion mehr, sondern eine
                   <i>
                     Relation
@@ -76,7 +75,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.3.1{" "}
+                      &ensp;4.3.1{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -110,7 +109,6 @@ const Article = () => {
                   deterministische
                 </i>
                 {" "}endliche Automaten, um den Unterschied zu den
-                &ensp;endliche Automaten, um den Unterschied zu den
                 nichtdeterministischen zu verdeutlichen. Wenn in einem deterministischen
                 endlichen Automaten \(\delta(q,x) = q'\) war, so hatte das die Bedeutung
                 <i>
@@ -128,7 +126,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.3.2{" "}
+                      &ensp;4.3.2{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -161,7 +159,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;5.3.3{" "}
+                      &ensp;4.3.3{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein nichtdeterministischer
@@ -180,13 +178,11 @@ const Article = () => {
                     Funktion
                   </i>
                   {" "}ist, und daher geht mit einem
-                  &ensp;ist, und daher geht mit einem
                   \(\delta\), das eine{" "}
                   <i>
                     Relation
                   </i>
                   {" "}ist, alles ganz genau gleich.
-                  &ensp;ist, alles ganz genau gleich.
                   Allerdings gilt nun auch der Umkehrschluss: zu einer regulären
                   Grammatik gibt es einen nichtdeterministischen endlichen Automaten:
                 </Paragraph>
@@ -195,6 +191,9 @@ const Article = () => {
                   class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;4.3.4{" "}
+                    </NumberedTitle>
                   </span>
                   Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik. Dann gibt es
                   einen nichtdeterministischen endlichen Automaten \(M\) mit \(L(G) =
@@ -306,7 +305,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.3.1{" "}
+                      &ensp;4.3.1{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(\Sigma = \&#123;1\&#125;\) und \(L_k := \&#123;1^n \ | \textnormal&#123; $n$ ist
@@ -590,6 +589,9 @@ const Article = () => {
                   class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;4.3.5{" "}
+                    </NumberedTitle>
                   </span>
                   {" "}{" "}
                   <b>
@@ -619,6 +621,9 @@ const Article = () => {
                   class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;4.3.6{" "}
+                    </NumberedTitle>
                   </span>
                   Zu jeder regulären Sprache \(L\) gibt es einen deterministischen
                   endlichen Automaten \(M\) mit \(L(M) = L\).

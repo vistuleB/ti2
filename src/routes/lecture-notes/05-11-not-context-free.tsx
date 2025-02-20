@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.11 
+                    5.11 
                     5.10 Die Grenzen kontextfreier Sprachen
                   </span>
                 </h1>
@@ -158,7 +158,6 @@ const Article = () => {
                       nicht
                     </i>
                     {" "}die Sprache
-                    &ensp;die Sprache
                     \(L\) erzeugt: wenn wir alle \(\gamma \in L\) erzeugen kann, dann
                     kann sie auch Wörter wie \(uwy \not \in L\) erzeugen. Da unsere Argumentation keine
                     Annahmen über \(G\) getroffen hat, außer, dass sie kontextfrei ist, haben wir gezeigt:
@@ -170,7 +169,6 @@ const Article = () => {
                       Vorsicht!
                     </b>
                     {" "}Wir haben angenommen, das \(uwy\) weniger Zeichen hat
-                    &ensp;Wir haben angenommen, das \(uwy\) weniger Zeichen hat
                     als \(uvwxy\), weil ja \(v\) und \(x\) fehlen. Kann aber \(v = x = \epsilon\) eintreten?
                     Dies würde unsere Argumentation zerstören. Hier kommt wieder die
                     Chomsky-Normalform zur Hilfe: es gibt keine Produktionen \(X \rightarrow \epsilon\),
@@ -186,11 +184,13 @@ const Article = () => {
                     Pumping Lemma für kontextfreie Sprachen
                   </i>
                   {" "}bekannt:
-                  &ensp;bekannt:
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;5.11.1{" "}
+                    </NumberedTitle>
                   </span>
                   {" "}{" "}
                   <b>
@@ -214,7 +214,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.11.1{" "}
+                      &ensp;5.11.1{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(L \subseteq \&#123;a,b,c\&#125;^n\) die Sprache aller Wörter
@@ -230,7 +230,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.11.2{" "}
+                      &ensp;5.11.2{" "}
                     </NumberedTitle>
                   </span>
                   Sie \(L \subseteq \&#123;1\&#125;^*\) die Sprache aller Wörter, deren Länge
@@ -248,6 +248,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;5.11.2{" "}
+                    </NumberedTitle>
                   </span>
                   Wenn \(L_1, L_2\) reguläre Sprachen sind, dann sind die folgenden
                   Sprachen auch regulär:
@@ -286,14 +289,12 @@ const Article = () => {
                         einem
                       </i>
                       {" "}Automaten simulieren kann: dieser hat als Zustandsmenge \(Q_1 \times
-                      &ensp;Automaten simulieren kann: dieser hat als Zustandsmenge \(Q_1 \times
                       Q_2\),
                       merkt sich also in{" "}
                       <i>
                         einem
                       </i>
                       {" "}Zustand, in welchen Zuständen \(M_1\) und \(M_2\)
-                      &ensp;Zustand, in welchen Zuständen \(M_1\) und \(M_2\)
                       sind.
                       Oder man macht es sich einfach:
                       <ul>
@@ -316,13 +317,12 @@ const Article = () => {
                     kontextfreie
                   </i>
                   {" "}Sprachen sind? Welche der
-                  &ensp;Sprachen sind? Welche der
                   obigen Kombinationen sind dann ebenfalls kontextfrei?
                   <div class="well well-lg numbered-exercise container">
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;6.11.3{" "}
+                        &ensp;5.11.3{" "}
                       </NumberedTitle>
                     </span>
                     Seien \(L_1, L_2\) kontextfrei. Zeigen Sie, dass die folgenden Sprachen auch kontextfrei
@@ -354,7 +354,6 @@ const Article = () => {
                         Tip:
                       </b>
                       {" "}dies ist viel einacher als für reguläre Grammatiken.
-                      &ensp;dies ist viel einacher als für reguläre Grammatiken.
                     </Paragraph>
                   </div>
                 </div>
@@ -365,7 +364,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;6.11.1{" "}
+                      &ensp;5.11.3{" "}
                     </NumberedTitle>
                   </span>
                   Der Schnitt \(L_1 \cap L_2\) zweier kontextfreier Sprachen
@@ -374,7 +373,6 @@ const Article = () => {
                     nicht
                   </i>
                   {" "}kontextfrei.
-                  &ensp;kontextfrei.
                   Ein Beispiel ist
                   $$\begin&#123;align*&#125;
                   L_1&amp;:= \&#123;a^n b^n c^* \ | \ n \geq 0 \&#125;\\
@@ -392,7 +390,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;6.11.2{" "}
+                      &ensp;5.11.4{" "}
                     </NumberedTitle>
                   </span>
                   Das Komplement \(L\) einer kontextfreien Sprache ist im Allgemeinen{" "}
@@ -400,7 +398,6 @@ const Article = () => {
                     nicht
                   </i>
                   {" "}kontextfrei.
-                  &ensp;kontextfrei.
                   \\
                   Warum? Wenn er es wäre, dann wäre mit Hilfe von Punkt 1 auch
                   $$\begin&#123;align*&#125;
@@ -413,7 +410,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.11.4{" "}
+                      &ensp;5.11.4{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(L := \&#123;a^n b^n c^n\&#125;\). Wir wissen bereits, dass \(L\) nicht kontextfrei ist.
@@ -426,7 +423,6 @@ const Article = () => {
                       Tip.
                     </b>
                     {" "}Listen Sie alle Möglichkeiten auf, wie ein Wort \(w\) nicht
-                    &ensp;Listen Sie alle Möglichkeiten auf, wie ein Wort \(w\) nicht
                     in \(L\) sein kann: (1) es hat nicht die Form \(a^* b^* c^*\); (2) es hat die Form,
                     hat aber mehr \(a\) als es \(b\) hat; (2) es hat mehr \(a\) als es \(c\) hat...
                   </Paragraph>

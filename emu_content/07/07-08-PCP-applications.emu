@@ -50,7 +50,6 @@
                         \end{align*}
                         Diese Grammatiken erlauben uns, gewisse Sprachen zu beschreiben, indem Sie Regeln festlegen -
                         hier_Produktionen_ genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
-                        &ensp;genannt, nach welchen man aus dem Startsymbol \(S\) Wörter über dem
                         Alphabet
                         (hier: \(\{a,b,c\}\)) ableiten kann. Beispielsweise:
                         \begin{align*}
@@ -67,7 +66,9 @@
                             class numbered-title
 
                             Theorem
-                        &ensp;Wir wollen bestimmen, ob
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         &ensp;Wir wollen bestimmen, ob
                         aus einer gegebenen kontextfreien Grammatik \(G\) ein Palindromwort ableitbar ist,
                         also ein \(\gamma\), das von rechts nach links gelesen gleich ist, sprich
@@ -113,7 +114,6 @@
 
                                 Behauptung
                             &ensp;Wenn die Grammatik \(G\) ein Palindromwort
-                            &ensp;Wenn die Grammatik \(G\) ein Palindromwort
                             ableiten kann, dann hat das PCP-Puzzle \(P\) eine Lösung.
                         |> div
                             class well subtheorem
@@ -140,7 +140,6 @@
                                 class numbered-title
 
                                 Behauptung
-                            &ensp;Wenn
                             &ensp;Wenn
                             das PCP-Puzzle \(P\) eine Lösung hat, dann kann die Grammatik \(G\) ein Palindromwort
                             ableiten.
@@ -192,7 +191,6 @@
                             |> li
 
                                 *Aufgabe:* Zeigen Sie, dass die Funktion
-                                &ensp;Zeigen Sie, dass die Funktion
                                 \(n \mapsto n!\) im \(\lambda\)-Kalkül berechenbar ist.
                             |> li
 
@@ -219,7 +217,6 @@
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Seien \(L_1 \subseteq \Sigma_1\) und \(L_2 \subseteq \Sigma_2\) zwei Sprachen.
                         Eine _Reduktion von \(L_1\) nach \(L_2\)_ ist eine Turing-berechenbare Funktion
-                        &ensp;ist eine Turing-berechenbare Funktion
                         \begin{align*}
                         f : \Sigma_1^* \rightarrow \Sigma_2^*
                         \end{align*}
@@ -244,7 +241,6 @@
                             |> NumberedTitle
 
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
-                        &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                         &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                         \(L_2\) ist und \(L_2\) entscheidbar ist, dann ist auch \(L_1\) entscheidbar.
                     |> div
@@ -272,10 +268,8 @@
                     und \(M_2\) die "Bibliotheksfunktion" ist, die Sie ohne groß nachzudenken aufrufen,
                     weil sie ja bereist von anderen Leuten (hoffentlich korrekt) implementiert worden ist.
                     Behauptung 4.6.8 zeigt also, das etwas _möglich_ ist.
-                    &ensp;ist.
                     In der Berechenbarkeitstheorie und Komplexitätstheorie sind wir eher daran interessiert,
                     zu zeigen, was _nicht möglich_ ist, und wenden daher häufiger das Kontrapositiv
-                    &ensp;ist, und wenden daher häufiger das Kontrapositiv
                     der Behauptung an:
                     |> div
                         class well container theorem
@@ -286,7 +280,6 @@
                             |> NumberedTitle
 
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
-                        &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                         &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
                         \(L_2\) ist und \(L_1\) unentscheidbar ist, dann ist auch \(L_2\) unentscheidbar.
                     |> div
@@ -305,10 +298,7 @@
                     von Reduktionen bereits durchgeführt.
                     Für Neulinge ist diese Richtung oft inintuitiv und verwirrend. Dies spiegelt
                     sich in der Verwendung des Konjunktivs _wäre / wäre_ in Behauptung 4.6.9 wider.
-                    &ensp;in Behauptung 4.6.9 wider.
-                    Auch ist es schlicht ungewohnt, ein _altes_ Problem auf ein 
-                    &ensp;Problem auf ein _neues_ zu reduzieren
-                    &ensp;zu reduzieren
+                    Auch ist es schlicht ungewohnt, ein _altes_ Problem auf ein _neues_ zu reduzieren
                     statt umgekehrt.
                     |> figure
                         |> img
@@ -322,6 +312,9 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         |> p
 
                             *(Schnittproblem kontextfreier Sprachen)*
@@ -360,6 +353,9 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         *(Mehrdeutigkeitsproblem kontextfreier Sprachen)*Gegeben eine kontextfreie Grammatik \(G\). Es ist unentscheidbar,
                         ob \(G\) mehrdeutig ist, d.h., ob es ein Wort \(x \in \Sigma^*\) gibt,
                         für das zwei verschiedene Ableitungsbäume existieren.

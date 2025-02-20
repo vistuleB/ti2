@@ -56,7 +56,6 @@
                         \{x,y,z\}\). Die Idee ist,
                         dass der Automat ein Wort \(\alpha\) Zeichen für Zeichen einliest. Die Pfeile zwischen den
                         Kreisen (den_Zuständen_ des Automaten) zeigen an, in welchen neuen Zustand beim Lesen eines Zeichen
-                        &ensp;des Automaten) zeigen an, in welchen neuen Zustand beim Lesen eines Zeichen
                         gewechselt werden
                         muss. Der Pfeil "aus dem Nichts", hier der von links nach \(S\), zeigt den _Startzustand_an, in welchem
                         der Automat beginnt.
@@ -302,7 +301,6 @@
 
                         In diesem Beispiel endet der Automat im Zustand \(Y\). Sie sehen, dass der Zustand \(X\)
                         mit einem doppelten Rand markiert ist: dies symbolisiert, dass \(X\) ein _akzeptierender_Endzustand ist. Wenn der Automat ein Wort \(\alpha\) abgearbeitet hat, _akzeptiert_ er
-                        &ensp;er
                         es,
                         wenn er in einem akzeptierenden Endzustand gelandet ist; ansonsten _lehnt er es ab_. In
                         unserem
@@ -426,7 +424,6 @@
                         *(Erweiterte Zuständsübergangsfunktion)*.
                         Für einen endlichen Automaten \((\Sigma, Q, \qstart, F, \delta)\) definieren wir
                         die _erweiterte Zustandsübergangsfunktion_ \(\hat{\delta}: Q \times \Sigma^* \rightarrow
-                        &ensp;\(\hat{\delta}: Q \times \Sigma^* \rightarrow
                         Q\) rekursiv wie folgt:
                         \begin{align*}
                         \hat{\delta} (q, \epsilon)&amp;= q \\
@@ -479,7 +476,6 @@
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
                         Ändern Sie den Automaten aus dem letzten Beispiel so ab, dass die Bedingung _"die auf \(x\)
                         enden"_ entfällt, er also
-                        &ensp;entfällt, er also
                         alle Wörter akzeptiert, die die Folge \(xy\) nicht enthalten.
                     |> div
                         class well well-lg numbered-exercise container
@@ -532,6 +528,9 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein endlicher Automat. Dann gibt es eine reguläre
                         Grammatik
                         \(G = (\Sigma, N, P, S)\) mit \(L(G) = L(M)\).
@@ -584,7 +583,6 @@
                             |> p
 
                                 *Induktionsbasis.* Wenn \(\alpha = \epsilon\) gilt, also \(\alpha\) die
-                                &ensp;Wenn \(\alpha = \epsilon\) gilt, also \(\alpha\) die
                                 Länge 0 hat, dann
                                 gilt \(q \stackrel{\epsilon}{\rightarrow} q'\) genau dann, wenn \(q = q'\) ist. Wie kann
                                 nun
@@ -615,7 +613,6 @@
                             |> p
 
                                 *Aus (1) folgt (2).* Nehmen wir also an, dass
-                                &ensp;Nehmen wir also an, dass
                                 \(q \stackrel{x \beta}{\rightarrow} q'\) gilt und bezeichnen
                                 \(q_1 := \delta(q,x)\). Es gilt also
                                 $$
@@ -794,10 +791,8 @@
                             eben kein \(a\) mehr vorkommen darf. Die Definition eines endlichen Automaten
                             verlangt aber, dass \(\delta\) eine Funktion ist, also für alle Eingabewerte definiert ist.
                             Wir lösen das, indem wir einen sogenannten _Fehlerzustand (Trap State)_ einführen,
-                            &ensp;einführen,
                             der im Prinzip
                             den Zustand_lehne das Wort ab, egal, was noch kommt_ versinnbildlicht:
-                            &ensp;versinnbildlicht:
                             |> figure
                                 |> img
                                     style height:12em
@@ -838,7 +833,6 @@
                             Pfeile mit \(1\) beschriftet hinaus. Wenn wir uns vor Augen halten, was die von \(G\)
                             erzeugte Sprache ist, so
                             wird das Problem klarer: \(G\) erzeugt die Sprache aller Wörter über \(\{0,1\}\), deren_viertletztes_ Zeichen
-                            &ensp;Zeichen
                             eine 1 ist. Die Herausforderung ist nun: wenn der Automat eine 1 liest, dann weiß er nicht,
                             ob das jetzt schon
                             das viertletzte Zeichen ist oder nicht; er weiß also nicht, ob er im Zustand \(A\) bleiben
@@ -849,4 +843,3 @@
                         Um mit Fällen wie dem eben geschilderten umgehen zu können, erweitern wir die Definition des
                         endlichen Automaten
                         in nächsten Kapitel zu einem _nichtdeterministischen_ endlichen Automaten.
-                        &ensp;endlichen Automaten.

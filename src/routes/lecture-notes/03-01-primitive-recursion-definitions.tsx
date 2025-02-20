@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    4.1 
+                    3.1 
                     3.1 Primitive Rekursion: Motivation und Definitionen
                   </span>
                 </h1>
@@ -108,7 +108,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;4.1.1{" "}
+                      &ensp;3.1.1{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -139,7 +139,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;4.1.2{" "}
+                      &ensp;3.1.2{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -181,7 +181,6 @@ const Article = () => {
                     {" "}{" "}
                     <code>
                       temp = h(temp, i, *x)
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;temp = h(temp, i, *x)
                     </code>
                     {" "}{" "}
                     <code>
@@ -198,7 +197,6 @@ const Article = () => {
                     eine
                   </i>
                   {" "}lokale Variable durch die Schleife führen darf, scheint
-                  &ensp;lokale Variable durch die Schleife führen darf, scheint
                   sehr restriktiv; es ist aber wohl die einfachste Form einer Schleife, die wirklich etwas
                   "schleifenhaftes" tut.
                 </Paragraph>
@@ -210,7 +208,6 @@ const Article = () => {
                   <a href="../code/primitive-recursion/primrec.py">
                     primrec.py
                   </a>
-                  &ensp;auf
                   &ensp;auf
                   Ihrem Rechner.
                   Diese Datei stellt ein Framework für die Implementierung primitiv rekursiver Funktionen zur
@@ -258,7 +255,6 @@ const Article = () => {
                       zero,succ,Proj,Comp,PrimRec
                     </code>
                     {" "}verwenden,
-                    &ensp;verwenden,
                     aber nicht selbst Python-Funktionen schreiben. Wir dürfen also nie selbst Integers in die
                     Hand nehmen.
                   </Paragraph>
@@ -277,7 +273,6 @@ const Article = () => {
                     {" "}{" "}
                     <code>
                       return x + y
-                      &ensp;&ensp;return x + y
                     </code>
                     {" "}{" "}
                   </pre>
@@ -288,7 +283,6 @@ const Article = () => {
                       add
                     </code>
                     {" "}aus den Kombinatoren zusammenbasteln. Ich schreibe
-                    &ensp;aus den Kombinatoren zusammenbasteln. Ich schreibe
                     nun \(&#123;\rm add&#125;(t,x)\) statt \(&#123;\rm add&#125;(x,y)\), um den Rekursionsparameter \(t\) deutlich
                     zu machen.
                   </Paragraph>
@@ -318,7 +312,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;4.1.1{" "}
+                      &ensp;3.1.1{" "}
                     </NumberedTitle>
                   </span>
                   Zeigen Sie, dass die folgenden Funktionen primitiv-rekursiv sind, und implementieren Sie sie
@@ -343,7 +337,6 @@ const Article = () => {
                       Tip:
                     </b>
                     {" "}Für exp und minus ist es einfacher, die Argumente "umgedreht" zu
-                    &ensp;Für exp und minus ist es einfacher, die Argumente "umgedreht" zu
                     betrachten,
                     also \((a,b) \mapsto b^a\) und \((x,y) \mapsto y-x\).
                   </Paragraph>
@@ -352,7 +345,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;4.1.2{" "}
+                      &ensp;3.1.2{" "}
                     </NumberedTitle>
                   </span>
                   Wenn Sie die vorherige Übungsaufgabe gelöst (oder darüber aufgegeben) haben,
@@ -360,7 +353,6 @@ const Article = () => {
                   <a href="../code/primitive-recursion/stockpile.py">
                     stockpile.py
                   </a>
-                  &ensp;an,
                   &ensp;an,
                   in der ich diese Funktionen zum Großteil implementiert habe (basierend auf
                   den Übungen, die wir direkt in der Vorlesung gemacht haben).

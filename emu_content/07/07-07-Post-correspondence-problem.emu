@@ -55,7 +55,6 @@
 
                         Im Postschen Korrespondenzproblem haben wir endlich
                         viele Kärtchen (auch _Kacheln_ genannt) gegeben,
-                        &ensp;genannt) gegeben,
                         die oben und unten jeweils ein Wort haben. Wir müssen
                         die Kärtchen so nebeneinander legen, dass oben und unten
                         das gleiche Wort entsteht; jedes Kärtchen kann beliebig
@@ -435,9 +434,7 @@
                         |> ul
                             |> li
 
-                                Eine_Kachel_ (auch 
-                                &ensp;(auch _Kärtchen_ genannt) ist ein
-                                &ensp;genannt) ist ein
+                                Eine_Kachel_ (auch _Kärtchen_ genannt) ist ein
                                 Paar \((\alpha : \beta) \in \Sigma^* \times \Sigma^*\).
                                 Hier bezeichnet \(\alpha\) das Wort auf der oberen Hälfte der Kachel
                                 und \(\beta\) das auf der unteren.
@@ -452,9 +449,7 @@
                                 s = (\alpha_{1} : \beta_{1}) (\alpha_{2} : \beta_{2}) \dots
                                 (\alpha_{m} : \beta_{m})
                                 \end{align*}
-                                Für eine Kachelung \(s\) definieren wir den_oberen Teil_ \(\top(s)\) und den
-                                &ensp;\(\top(s)\) und den_unteren Teil_ \(\bottom(s)\):
-                                &ensp;\(\bottom(s)\):
+                                Für eine Kachelung \(s\) definieren wir den_oberen Teil_ \(\top(s)\) und den_unteren Teil_ \(\bottom(s)\):
                                 \begin{align*}
                                 \top(s)&amp;:= \alpha_1 \alpha_2 \dots \alpha_m \\
                                 \bottom(s)&amp;:= \beta_1 \beta_2 \dots \beta_m \\
@@ -505,6 +500,9 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         PCP ist unentscheidbar.
                     |> div
                         class well container
@@ -524,7 +522,6 @@
                             Wie so oft in ähnlichen Beweisen machen wir einen
                             Zwischenschritt. Das _Modifizierte Postsche
                             Korrespondenzproblem (MPCP)_ ist genau das gleiche wie das PCP,
-                            &ensp;ist genau das gleiche wie das PCP,
                             nur dass es in \(S\) eine markierte Startkachel gibt
                             und jede Lösung mit dieser Startkachel beginnen muss.
                             Es ist also ein "strengeres" Problem als das PCP.
@@ -615,7 +612,6 @@
                         |> p
 
                             Erinneren wir uns: eine _Konfiguration_ einer
-                            &ensp;einer
                             Turingmaschine ist eine Folge
                             \begin{align*}
                             w_1 w_2 \dots w_{j-1} q w_j \dots w_m
@@ -837,7 +833,6 @@
                         |> p
 
                             Hier brauchen wir halt eine Kopfkachel \((q_2yz:yq_1x_2)\) für_jedes_ Bandsymbol \(y\), da die Regel immer anzuwenden ist,
-                            &ensp;Bandsymbol \(y\), da die Regel immer anzuwenden ist,
                             egal, welches Symbol \(y\) links vom Schreib-Lese-Kopf steht.
                         |> p
 

@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    5.5 
+                    4.5 
                     4.5 Reguläre Ausdrücke
                   </span>
                 </h1>
@@ -57,7 +57,6 @@ const Article = () => {
                   <a href="./04-01-regular-grammars.html#baukasten">
                     Kapitel 4.1
                   </a>
-                  &ensp;das
                   &ensp;das
                   Baukastenprinzip kennengelernt:
                 </Paragraph>
@@ -95,7 +94,6 @@ const Article = () => {
                     alle
                   </i>
                   {" "}regulären Sprachen nach diesem Baukastenprinzip erstellt werden?
-                  &ensp;regulären Sprachen nach diesem Baukastenprinzip erstellt werden?
                 </div>
                 <Paragraph>
                   Damit diese Frage überhaupt die Chance hat, mit{" "}
@@ -103,7 +101,6 @@ const Article = () => {
                     ja
                   </i>
                   {" "}beantwortet zu werden, müssen wir
-                  &ensp;beantwortet zu werden, müssen wir
                   "Atome" zur Verfügung stellen, mit denen wir beginnen können. Daher:
                 </Paragraph>
                 <ul>
@@ -121,7 +118,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.5.1{" "}
+                      &ensp;4.5.1{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(\Sigma\) einendliches Alphabet. Die regulären Audrücke über \(\Sigma\) sind induktiv
@@ -133,7 +130,6 @@ const Article = () => {
                         Atome.
                       </b>
                       {" "}\(\emptyset\) ist ein regulärer Ausdruck und beschreibt die
-                      &ensp;\(\emptyset\) ist ein regulärer Ausdruck und beschreibt die
                       Sprache \(\emptyset\).
                       \(\epsilon\) ist ein regulärer Ausdruck und beschreibt die Sprache \(\&#123;\epsilon\&#125;\).
                       Jedes einzelne Zeichen \(x \in \Sigma\) ist ein regulärer Ausdruck und
@@ -145,14 +141,12 @@ const Article = () => {
                         Alternative.
                       </b>
                       {" "}Wenn \(R_1, R_2\) reguläre Ausdrücke über \(\Sigma\) sind
-                      &ensp;Wenn \(R_1, R_2\) reguläre Ausdrücke über \(\Sigma\) sind
                       und die Sprachen \(L_1\) und \(L_2\) beschreiben, so ist
                       \((R_1 | R_2)\) ein regulärer Ausdruck und beschreibt die Sprache
                       \(L_1 \cup L_2\) (die regulär ist, wie wir in{" "}
                       <a href="./04-01-regular-grammars.html#baukasten">
                         Kapitel 4.1
                       </a>
-                      &ensp;gesehen haben).
                       &ensp;gesehen haben).
                     </li>
                     <li>
@@ -161,7 +155,6 @@ const Article = () => {
                         Konkatenation.
                       </b>
                       {" "}\((R_1R_2)\) ist ein regulärer Ausdruck, der
-                      &ensp;\((R_1R_2)\) ist ein regulärer Ausdruck, der
                       die Sprache \(L_1 \circ L_2\) beschreibt (die auch wiederum regulär ist).
                       Der Deutlichkeit halber schreiben wir auch manchmal \(R_1 \circ R_2\).
                     </li>
@@ -171,7 +164,6 @@ const Article = () => {
                         Kleenesche Hülle.
                       </b>
                       {" "}Wenn \(R\) ein regulärer Ausdruck ist und die Sprache
-                      &ensp;Wenn \(R\) ein regulärer Ausdruck ist und die Sprache
                       \(L\) beschreibt,
                       dann ist \((R^*)\) ein regulärer Ausdruck und beschreibt die Sprache \(L^*\).
                     </li>
@@ -184,7 +176,6 @@ const Article = () => {
                       nichtleere
                     </i>
                     {" "}Folgen wollen,
-                    &ensp;Folgen wollen,
                     führen wir die Abkürzung \(R^+\) für \(R (R^*)\) ein und bezeichnen die beschriebene Sprache
                     \(L \circ L^*\) kurzerhand als \(L^+\).
                   </Paragraph>
@@ -196,18 +187,15 @@ const Article = () => {
                   <i>
                     hoch
                   </i>
-                  {" "}vor 
-                  &ensp;vor{" "}
+                  {" "}vor{" "}
                   <i>
                     Punkt
                   </i>
-                  {" "}vor 
-                  &ensp;vor{" "}
+                  {" "}vor{" "}
                   <i>
                     Strich
                   </i>
                   {" "}in der Arithmetik), sodass beispielsweise
-                  &ensp;in der Arithmetik), sodass beispielsweise
                   der Ausdruck \( a^*b|c^*\) die Bedeutung von \((((a^*)b)(c^*))\) hat, genauso wie wir
                   in der Arithmetik \(a^2 b + c^3\) statt \( (((a^2)b) + c^3) \) schreiben.
                 </Paragraph>
@@ -217,7 +205,6 @@ const Article = () => {
                     endliche Sprachen
                   </i>
                   {" "}sind.
-                  &ensp;sind.
                   Dank unserer Vorarbeit aus{" "}
                   <a href="./04-01-regular-grammars.html#baukasten">
                     Kapitel 4.1
@@ -246,7 +233,6 @@ const Article = () => {
                     bla:bla:blu.xyz-12-ab.b:x
                   </code>
                   {" "}aus dem
-                  &ensp;aus dem
                   letzten Kapitel. Sie erinnern sich:
                   eine endliche Folge von{" "}
                   <i>
@@ -257,13 +243,11 @@ const Article = () => {
                   <code>
                     :
                   </code>
-                  {" "}oder durch 
-                  &ensp;oder durch{" "}
+                  {" "}oder durch{" "}
                   <code>
                     -
                   </code>
                   {" "}separiert sind, wobei innerhalb eines Labels
-                  &ensp;separiert sind, wobei innerhalb eines Labels
                   immer nur ein
                   Separatortyp vorkommen darf, und wobei ein Block eine nichtleere Folge von alphanumerischen
                   Zeichen ist (wir haben uns dann auf den Buchstaben \(a\) beschränkt).
@@ -281,9 +265,7 @@ const Article = () => {
                     <code>
                       :
                     </code>
-                    {" "}oder
-                    &ensp;oder`-` separieren; wir
-                    &ensp;separieren; wir
+                    {" "}oder`-` separieren; wir
                     erhalten den regulären Ausdruck \(T\) für Labels ist also
                     $$\begin&#123;align*&#125;
                     T := B (&#123;:&#125;B)^* | B (\text&#123;-&#125;B)^*
@@ -298,19 +280,16 @@ const Article = () => {
                     was wir in unserer Grammatik bzw. dem nichtdeterministischen Automaten für \(L\) getan
                     haben, während \(T'\) eher
                     die Arbeitsweise des determinisitschen Automaten reflektiert (wir lesen erst einmal einen
-                    Block und erst, wenn wir zum ersten mal auf`:` oder 
-                    &ensp;oder{" "}
+                    Block und erst, wenn wir zum ersten mal auf`:` oder{" "}
                     <code>
                       -
                     </code>
                     {" "}stoßen, entscheiden wir uns für den "Typ" des Labels).
-                    &ensp;stoßen, entscheiden wir uns für den "Typ" des Labels).
                     Schlussendlich ist ein Wort in der Sprache eine mit{" "}
                     <code>
                       .
                     </code>
                     {" "}separierte Folge von
-                    &ensp;separierte Folge von
                     Labels, also:
                     $$\begin&#123;align*&#125;
                     R := T (&#123;.&#125;T)^*
@@ -325,14 +304,13 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.5.1{" "}
+                      &ensp;4.5.1{" "}
                     </NumberedTitle>
                   </span>
                   Laden Sie sich{" "}
                   <a href="../code/regular-expressions/TestRegex.java">
                     TestRegex.java
                   </a>
-                  &ensp;herunter,
                   &ensp;herunter,
                   kompilieren und starten Sie es.
                   <pre>
@@ -342,12 +320,7 @@ const Article = () => {
                     <code class="terminalOutput">
                       Please enter a regular expression:
                     </code>
-                    &ensp;(a+)(:a+)
-                    <b>
-                      {" "}
-                      &ensp;(a+)(:a+)
-                    </b>
-                    {" "}{" "}
+                    &ensp;(a+)(:a+)*
                     <code class="terminalOutput">
                       Enter words to be matched, one per line
                     </code>
@@ -377,12 +350,10 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.5.2{" "}
+                      &ensp;4.5.2{" "}
                     </NumberedTitle>
                   </span>
-                  In der Praxis gibt es bei reguläre Ausdrücken viele Abkürzung, so beschreibt`[a-z]` beispielsweise die Menge aller Kleinbuchstaben,
-                  &ensp;beispielsweise die Menge aller Kleinbuchstaben,`[aoeiuy]` beschreibt die Menge \&#123;a,o,e,i,u,y\&#125; etc.
-                  &ensp;beschreibt die Menge \&#123;a,o,e,i,u,y\&#125; etc.
+                  In der Praxis gibt es bei reguläre Ausdrücken viele Abkürzung, so beschreibt`[a-z]` beispielsweise die Menge aller Kleinbuchstaben,`[aoeiuy]` beschreibt die Menge \&#123;a,o,e,i,u,y\&#125; etc.
                   Der reguläre Ausdruck{" "}
                   <code>
                     [a-z]
@@ -392,7 +363,6 @@ const Article = () => {
                     {" "}{" "}
                   </code>
                   {" "}beschreibt also die
-                  &ensp;beschreibt also die
                   Menge aller Wörter, die mindesten einen Vokal enthalten.
                   Lesen Sie hierfür unter Anderem
                   <div style="text-align:center">
@@ -426,6 +396,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;4.5.2{" "}
+                    </NumberedTitle>
                   </span>
                   Sei \(L\) eine reguläre Sprache. Dann gibt es einen regulären Ausdruck \(R\), der \(L\)
                   beschreibt,
@@ -495,7 +468,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;5.5.2{" "}
+                        &ensp;4.5.3{" "}
                       </NumberedTitle>
                     </span>
                     {" "}{" "}
@@ -571,7 +544,6 @@ const Article = () => {
                       jedes
                     </i>
                     {" "}Paar
-                    &ensp;Paar
                     durch
                     eine Kante verbunden ist und würde fehlende Kanten einfach mit dem regulären Ausdruck
                     \(\emptyset\) beschriften.)
@@ -626,7 +598,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.5.3{" "}
+                      &ensp;4.5.3{" "}
                     </NumberedTitle>
                   </span>
                   Wandeln Sie nach dem eben beschriebenen Schema den Automaten

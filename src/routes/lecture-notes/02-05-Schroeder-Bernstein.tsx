@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    3.5 
+                    2.5 
                     2.5 Das Schröder-Bernstein-Theorem
                   </span>
                 </h1>
@@ -85,10 +85,9 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;3.5.1{" "}
+                        &ensp;2.5.1{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Seien $A$ und $B$
                     &ensp;Seien $A$ und $B$
                     zwei Mengen. Wir schreiben $A \leq B$, wenn es eine injektive
                     Funktion $f : A \rightarrow B$ gibt. Falls $A \leq B$ und $A \not
@@ -112,20 +111,21 @@ const Article = () => {
                     einer
                   </i>
                   {" "}bijektiven Funktion $h: A
-                  &ensp;bijektiven Funktion $h: A
                   \rightarrow B$ kombinieren. Geht das immer?
                 </Paragraph>
                 <div class="well container theorem">
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;2.5.2{" "}
+                      </NumberedTitle>
                     </span>
                     {" "}{" "}
                     <b>
                       (Schröder-Bernstein-Theorem).
                     </b>
                     {" "}Seien $A$ und $B$
-                    &ensp;Seien $A$ und $B$
                     zwei Mengen. Wenn $A \leq B$ und $B \leq A$ gilt, dann gilt $A
                     \approx B$. In Worten: wenn es injektive Funktionen $f: A
                     \rightarrow B$ und $g : B\rightarrow A$ gibt, dann gibt es auch eine
@@ -316,7 +316,6 @@ const Article = () => {
                         Behauptung 1.
                       </span>
                       &ensp;$g^&#123;-1&#125;(a)$ ist
-                      &ensp;$g^&#123;-1&#125;(a)$ ist
                       definiert für jedes $a \in A'$.
                     </Paragraph>
                   </div>
@@ -357,7 +356,6 @@ const Article = () => {
                       <span class="numbered-title">
                         Behauptung 2.
                       </span>
-                      &ensp;$h$ ist
                       &ensp;$h$ ist
                       injektiv.
                     </Paragraph>
@@ -406,7 +404,6 @@ const Article = () => {
                       <span class="numbered-title">
                         Behauptung 3.
                       </span>
-                      &ensp;$h$ ist
                       &ensp;$h$ ist
                       surjektiv.
                     </Paragraph>

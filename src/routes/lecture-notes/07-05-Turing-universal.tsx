@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    7.5 
+                    6.5 
                     7.5 Turing-Maschinen simulieren Turing-Maschinen: die universelle Turing-Maschine
                   </span>
                 </h1>
@@ -89,8 +89,7 @@ const Article = () => {
                   <i>
                     unabhängig
                   </i>
-                  {" "}von $M$ ist. Dass wir also 
-                  &ensp;von $M$ ist. Dass wir also{" "}
+                  {" "}von $M$ ist. Dass wir also{" "}
                   <i>
                     jede
                   </i>
@@ -100,13 +99,11 @@ const Article = () => {
                     jede
                   </i>
                   {" "}ihrer Konfigurationen
-                  &ensp;ihrer Konfigurationen
                   als Strings über{" "}
                   <i>
                     einem
                   </i>
                   {" "}festen Alphabet $\Lambda$ darstellen
-                  &ensp;festen Alphabet $\Lambda$ darstellen
                   können.
                 </Paragraph>
                 <Paragraph>
@@ -130,6 +127,9 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;6.5.1{" "}
+                      </NumberedTitle>
                     </span>
                     &ensp;
                     <b>
@@ -137,7 +137,6 @@ const Article = () => {
                       Turingmaschine).
                     </b>
                     {" "}Zu
-                    &ensp;Zu
                     jedem
                     endlichen Eingabealphabet $\Sigma$ sei
                     $\Lambda := \writelambda$ das Codierungsalphabet. Es gibt es
@@ -199,7 +198,6 @@ const Article = () => {
                       Ein technischer aber letztendlich irrelevanter Punkt:
                     </b>
                     {" "}die Mengen
-                    &ensp;die Mengen
                     $Q$ und $\Gamma$ der Turingmaschine $M$ können ja beliebige
                     (endliche) Mengen sein,
                     und weder $\Lambda$ noch die Turingmaschine $U$ haben "Kenntnis"

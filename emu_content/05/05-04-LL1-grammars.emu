@@ -148,7 +148,6 @@
                             |> p
 
                                 *Behauptung.* Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
-                                &ensp;Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
                                 dann steht jedes \(S\) in \(\delta\) entweder am Ende von \(\delta\) oder
                                 unmittelbar vor einem "\(\texttt{)}\)".
                             |> p
@@ -187,7 +186,6 @@
                     |> p
 
                         Wenn umgekehrt eine Grammatik _nicht_ LL(\(k\)) ist, dann muss der Backtrack-Baum
-                        &ensp;LL(\(k\)) ist, dann muss der Backtrack-Baum
                         beiden Ableitungen
                         \begin{align*}
                         w A \alpha&amp;\Rightarrow w \beta \alpha \\
@@ -206,7 +204,6 @@
 
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
                         (Beispiel 5.3 aus _The Theory of Parsing, Translation, and Compiling_ von Alfred V. Aho
-                        &ensp;von Alfred V. Aho
                         und Jeffrey D. Ullman).
                         Betrachten wir die Grammatik
                         \begin{align*}
@@ -219,7 +216,6 @@
                         |> p
 
                             *Tip.* Leiten Sie erst einmal
-                            &ensp;Leiten Sie erst einmal
                             ein Dutzend verschiedene Wörter ab und finden dann
                             eine "normalsprachliche" Beschreibung
                             dieser Sprache. Beschreiben Sie dann alle möglichen Wortformen
@@ -256,7 +252,6 @@
                         L(G) := \{ a^{m+k} b^m \ | \ m, k \in \N \} \ ,
                         \end{align*}
                         also Wörter, wo auf beliebig viele \(a\)'s eine Folge von_höchstens_ so vielen \(b\)'s folgt.
-                        &ensp;so vielen \(b\)'s folgt.
                         |> p
 
                             Geben Sie diese Grammatik in den
@@ -294,7 +289,6 @@
 
                                 Parser-Simulator
                             &ensp;ein
-                            &ensp;ein
                             und schauen, wie lang die Sackgassen werden können.
                         |> p
 
@@ -310,7 +304,6 @@
                     schreiben können.
                     Wir tasten uns langsam voran. Wir beginnen mit einer
                     Verallgemeinerung von \(\first_k\) von Wörtern auf_Wortformen_ (die also Nichtterminale beinhalten können).
-                    &ensp;(die also Nichtterminale beinhalten können).
                     |> div
                         class well container theorem
                         |> span
@@ -389,11 +382,9 @@
                         \end{align*}
                         da ja nach obiger Beobachtung diese Mengen disjunkt sind. Wenn
                         \(\first_k(y)\) in _keiner_ dieser Mengen enthalten ist, so
-                        &ensp;dieser Mengen enthalten ist, so
                         kann die Ableitung offensichtlich nicht vervollständigt werden, und wir schließen,
                         dass \(xy \not \in L(G)\) ist.
                         Wenn es _genau ein_ \(\beta_i\) gibt mit
-                        &ensp;\(\beta_i\) gibt mit
                         \(\first_k(y) \in \first_k(\beta_i \alpha)\), dann ist
                         \(A \rightarrow \beta_i\) die "richtige" Produktion.
                         Wir wenden sie an, ersetzen also \(A\) auf dem Stack durch \(\beta_i\).
@@ -417,7 +408,6 @@
                                 |> tt
 
                                     while
-                                &ensp;Stack nicht leer
                                 &ensp;Stack nicht leer
                             |> ol
                                 class nested
@@ -485,7 +475,6 @@
                                     |> tt
 
                                         Accept
-                                    &ensp;ansonsten 
                                     &ensp;ansonsten 
                                     |> tt
 
@@ -585,11 +574,9 @@
 
                                     for
                                 &ensp;\(i=n\) 
-                                &ensp;\(i=n\) 
                                 |> tt
 
                                     down to
-                                &ensp;1 
                                 &ensp;1 
                                 |> tt
 
@@ -608,7 +595,6 @@
                                 |> tt
 
                                     return
-                                &ensp;\(K\)
                                 &ensp;\(K\)
                         |> p
 
@@ -658,9 +644,7 @@
                     |> p
 
                         In solchen Situationen, wo sich "die Katze in den Schwanz beißt", hilft es oft, die Definition
-                        vorerst _komplexere_ un
-                        &ensp;un_genauer_ zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
-                        &ensp;zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
+                        vorerst _komplexere_ un_genauer_ zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
                         \(\First_k(\alpha)\), noch eine feinere
                         Unterteilung an:
                     |> div

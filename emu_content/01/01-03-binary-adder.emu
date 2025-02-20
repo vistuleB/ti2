@@ -1,5 +1,5 @@
 |> Section
-    title_gr ::++ChapterCtr Binär-Addierer
+    title_gr Binär-Addierer
     title_en binary adder
     number 1.3
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            ::++ChapterCtr Binär-Addierer
+                            Binär-Addierer
                     |> h3
 
                         Ein Schaltkreis für binäre Addition
@@ -68,7 +68,6 @@
 
                         Das Carry wird dann der eins weiter links stehenden Stelle zur Addition weitergegeben.
                         Aber halt! Das heißt doch, dass wir in der nächsten Stelle _drei_ Bits addieren
-                        &ensp;Bits addieren
                         müssen:
                         das von \(x\), das von \(y\), und das eingehende Carry \(\cin\). Daraus berechnet
                         sich das Output-Bit \(s\) und das ausgehende Carry \(\cout\), das nach links weitergegeben
@@ -131,7 +130,6 @@
                         |> tt
 
                             oneBitAdder:
-                        &ensp;\( \{0,1\}^3 \rightarrow \{0,1\}^2\) für
                         &ensp;\( \{0,1\}^3 \rightarrow \{0,1\}^2\) für
                         folgende Funktionalität:
                         |> figure
@@ -226,8 +224,7 @@
                     |> p
 
                         Effizientere Lösungen beginnen oft mit einer guten Definition. In diesem Falle ist das die
-                        Verallgemeinerung von _Carry Generate \(g_i\)_ und 
-                        &ensp;und _Carry Propagate \(p_i\)_von Indizes auf Intervalle. Für ein Interval
+                        Verallgemeinerung von _Carry Generate \(g_i\)_ und _Carry Propagate \(p_i\)_von Indizes auf Intervalle. Für ein Interval
                         \([a,b] := \{a, a+1, \dots, b\}\) definieren wir Funktionen
                         \(g_{[a,b]}\) und \(p_{[a,b]}\) in den Variablen \(x_{a},\dots,x_{b}, y_a, \dots, y_b\)
                         wie folgt:
@@ -356,7 +353,6 @@
                         Binärdarstellung
                         ist das \(1100, 1101, 1110, 1111\). Wir können es also auch mit
                         in _Sternchennotation_ mit [11**] notieren.
-                        &ensp;mit [11**] notieren.
                     |> div
                         class well well-lg numbered-exercise container
                         |> span
@@ -475,14 +471,12 @@
                         |> p
 
                             *1. Fall.* Wenn \(k\) die Form \(k = 2^d-1\) hat, dann ist
-                            &ensp;Wenn \(k\) die Form \(k = 2^d-1\) hat, dann ist
                             \([0,k]\) bereits ein Binärintervall; dies passiert, wenn
                             die Binärdarstellung von \(k\) die Form \(k = (1^b)_2 \) hat (wobei \(b=0\)
                             sein kann, in welchem Fall \(k=0\) ist).
                             |> p
 
                                 *2. Fall.* Wenn \(k\) nicht die Form \(k = 2^d-1\) hat,
-                                &ensp;Wenn \(k\) nicht die Form \(k = 2^d-1\) hat,
                                 dann hat die Binärdarstellung von \(k\) nicht die Form \(1^b\); sie
                                 enthält also auch nicht-führende Nullen (beachten Sie, dass \((0111)_2\) und \((111)_2\)
                                 die
@@ -539,13 +533,11 @@
                             |> p
 
                                 *Tiefe.* Jedes \(pg\)-Gate hat Tiefe 2,
-                                &ensp;Jedes \(pg\)-Gate hat Tiefe 2,
                                 und somit erreichen \(d-1\) solche Gates hintereinander
                                 zusammen eine Tiefe von \(2 (d-1) = 2 \ceil{\log_2 n} - 2\). 
                             |> p
 
                                 *Größe.* Zählen wir die Anzahl von \(pg\)-Gates in unserem
-                                &ensp;Zählen wir die Anzahl von \(pg\)-Gates in unserem
                                 Schaltkreis. Wir haben bereits gesehen, dass die Berechnung von \(g_{[0,k]}\) höchstens
                                 \(d-1\) viele \(pg\)-Gates braucht. Es scheint also, als bräuchten wir für alle \(n\)
                                 Werte

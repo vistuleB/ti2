@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    3.3 
+                    2.3 
                     2.3 Mengen, die so groß wie $\R$ sind
                   </span>
                 </h1>
@@ -55,18 +55,15 @@ const Article = () => {
                     Kardinalität
                   </i>
                   {" "}steht hier für
-                  &ensp;steht hier für
                   <i>
                     Anzahl der Elemente
                   </i>
                   {" "}(bzw. den Größenbegriff bei unendlichen
-                  &ensp;(bzw. den Größenbegriff bei unendlichen
                   Mengen), und{" "}
                   <i>
                     Kontinuum
                   </i>
-                  {" "}steht für 
-                  &ensp;steht für{" "}
+                  {" "}steht für{" "}
                   <i>
                     die reellen Zahlen
                   </i>
@@ -80,10 +77,9 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                       <NumberedTitle>
-                        &ensp;3.3.1{" "}
+                        &ensp;2.3.1{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Es gilt $\R \approx
                     &ensp;Es gilt $\R \approx
                     (0,1)$, wobei $(0,1)$ das offene Einheitsintervall ist.
                   </Paragraph>
@@ -130,7 +126,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.3.1{" "}
+                        &ensp;2.3.1{" "}
                       </NumberedTitle>
                     </span>
                     Zeigen Sie $\R \approx \R^+$.
@@ -141,7 +137,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.3.2{" "}
+                        &ensp;2.3.2{" "}
                       </NumberedTitle>
                     </span>
                     Zeigen Sie, dass $\R_0^+ \approx \R^+$ gilt. Sie müssen "die 0
@@ -155,7 +151,7 @@ const Article = () => {
                       class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.3.3{" "}
+                        &ensp;2.3.3{" "}
                       </NumberedTitle>
                     </span>
                     Zeigen Sie, dass $[0,1]$, $[0,1)$, $(0,1]$ und $(0,1)$ alle
@@ -179,6 +175,9 @@ const Article = () => {
                       id="theorem-R-bitstrings"
                       class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;2.3.2{" "}
+                      </NumberedTitle>
                     </span>
                     $\R \approx \&#123;0,1\&#125;^&#123;\N&#125;$.
                   </Paragraph>
@@ -234,7 +233,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Übungsaufgabe
                         <NumberedTitle>
-                          &ensp;3.3.4{" "}
+                          &ensp;2.3.4{" "}
                         </NumberedTitle>
                       </span>
                       Sei $Y := \&#123; a
@@ -259,7 +258,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Übungsaufgabe
                         <NumberedTitle>
-                          &ensp;3.3.5{" "}
+                          &ensp;2.3.5{" "}
                         </NumberedTitle>
                       </span>
                       Verwenden Sie die vorherige Übungsaufgabe, um $Y$ zu verdoppeln
@@ -287,6 +286,9 @@ const Article = () => {
                       id="theorem-square-interval"
                       class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;2.3.3{" "}
+                      </NumberedTitle>
                     </span>
                     Es gilt $\R^2 \approx \R$.
                   </Paragraph>
@@ -298,11 +300,9 @@ const Article = () => {
                       Beweis.
                     </b>
                     {" "}Mithilfe von
-                    &ensp;Mithilfe von
                     <span
                       data-ref="theorem-R-bitstrings"
                       class="reference" />
-                    &ensp;geht
                     &ensp;geht
                     das ganz einfach. Da $\R \approx \&#123;0,1\&#125;^\N$ gilt, reicht es
                     nämlich, eine Bijektion $\&#123;0,1\&#125;^\N \times \&#123;0,1\&#125;^\N \rightarrow
@@ -317,7 +317,6 @@ const Article = () => {
                       eine
                     </i>
                     {" "}Folge codieren.
-                    &ensp;Folge codieren.
                     Ganz klar:
                   </Paragraph>
                   $$\begin&#123;align*&#125; (a_1 a_2 a_3 \dots, b_1 b_2 b_3 \dots) \mapsto (a_1 b_1
@@ -384,10 +383,9 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                       <NumberedTitle>
-                        &ensp;3.3.2{" "}
+                        &ensp;2.3.4{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Die Funktion
                     &ensp;Die Funktion
                     $f^&#123;-1&#125;$ bildet
                   </Paragraph>
@@ -527,8 +525,10 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;2.3.5{" "}
+                      </NumberedTitle>
                     </span>
-                    &ensp;$\R \approx \R^&#123;\N&#125;$.
                     &ensp;$\R \approx \R^&#123;\N&#125;$.
                   </Paragraph>
                 </div>
@@ -628,7 +628,6 @@ const Article = () => {
                     Funktionen
                   </i>
                   {" "}$\phi:
-                  &ensp;$\phi:
                   B \rightarrow A$. Was ist das Analog zur Addition? Die Vereinigung $A
                   \cup B$ wäre zu kurz gegriffen, weil ja zum Beispiel $\&#123;1,2,3\&#125; \cup
                   \&#123;4,5\&#125;$ fünf Elemente hat, $\&#123;1,2,3\&#125; \cup \&#123;1,2\&#125;$ aber nur drei.
@@ -637,7 +636,6 @@ const Article = () => {
                     disjunkte Vereinigung
                   </i>
                   {" "}$A \uplus
-                  &ensp;$A \uplus
                   B$, die die Elemente von $B$ erst einmal "markiert", um sie von denen
                   von $A$ unterscheidbar zu machen. Somit wäre also $\&#123;1,2,3\&#125; \uplus
                   \&#123;1,2\&#125; = \&#123;1,2,3,1',2'\&#125;$ eine Menge der Kardinalität 5. Formal kann
@@ -651,6 +649,9 @@ const Article = () => {
                       id="calculating-with-cardinals"
                       class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;2.3.6{" "}
+                      </NumberedTitle>
                     </span>
                     {" "}{" "}
                     <b>
@@ -685,6 +686,9 @@ const Article = () => {
                       id="replacing-equipotent-cardinals"
                       class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;2.3.7{" "}
+                      </NumberedTitle>
                     </span>
                     Seien $A, A', B$ Mengen und $A \approx A'$. Dann gilt
                   </Paragraph>
@@ -715,10 +719,9 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.3.6{" "}
+                        &ensp;2.3.6{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Beweisen Sie so
                     &ensp;Beweisen Sie so
                     viele Punkte von
                     <span
@@ -736,7 +739,6 @@ const Article = () => {
                       Hinweis.
                     </b>
                     {" "}Die Beweise sind alle nicht wirklich
-                    &ensp;Die Beweise sind alle nicht wirklich
                     schwierig. Sie müssen nur aufpassen, dass Sie sich nicht in der
                     Notation verlieren.
                   </Paragraph>
@@ -753,7 +755,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.3.7{" "}
+                        &ensp;2.3.7{" "}
                       </NumberedTitle>
                     </span>
                     Zeigen Sie, dass $2^&#123;\N&#125; \approx \cuben$ gilt.
@@ -767,7 +769,6 @@ const Article = () => {
                     Kette
                   </i>
                   {" "}in einer
-                  &ensp;in einer
                   Partialordnung $(X, \preceq)$ ist eine Menge $Z$, in der alle Elemente
                   paarweise vergleichbar sind. In diesem konkreten Beispiel heißt das:
                   $Z \subseteq 2^&#123;\N&#125;$ und für alle $A, B \in Z$ gilt $A \subseteq B$
@@ -778,13 +779,11 @@ const Article = () => {
                     Antikette
                   </i>
                   {" "}in einer Partialordnung $(X,\preceq)$
-                  &ensp;in einer Partialordnung $(X,\preceq)$
                   ist eine Teilmenge $Z \subseteq X$, in der je zwei Elemente
                   <i>
                     unvergleichbar
                   </i>
                   {" "}sind. In diesem Beispiel heißt das: $Z
-                  &ensp;sind. In diesem Beispiel heißt das: $Z
                   \subseteq 2^N$, und für alle $A, B \in Z$ mit $A \ne B$ gilt $A \not
                   \subseteq B$ und $B \not \subseteq A$. Hier ist ein Beispiel für eine
                   unendliche Kette:
@@ -825,7 +824,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;3.3.3{" "}
+                        &ensp;2.3.8{" "}
                       </NumberedTitle>
                     </span>
                     {" "}{" "}
@@ -833,7 +832,6 @@ const Article = () => {
                       (Dichte Partialordnung)
                     </b>
                     {" "}Eine Partialordnung
-                    &ensp;Eine Partialordnung
                     $(X,\preceq)$ heißt{" "}
                     <i>
                       dicht
@@ -855,7 +853,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.3.8{" "}
+                        &ensp;2.3.8{" "}
                       </NumberedTitle>
                     </span>
                     Finden Sie in $(2^\N, \subseteq)$ eine Kette $X$, so dass $(X,

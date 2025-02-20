@@ -38,13 +38,16 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.2 
+                    5.2 
                     5.2 Kontextfreie Grammatiken und Kellerautomaten
                   </span>
                 </h1>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;5.2.1{" "}
+                    </NumberedTitle>
                   </span>
                   Zu jeder kontextfreien Grammatik \(G = (\Sigma, N, S, P)\) gibt es
                   einen Kellerautomaten \(M = (\Sigma, Q, \Gamma, \qstart, \delta)\), der
@@ -75,14 +78,12 @@ const Article = () => {
                     gibt
                   </i>
                   {" "}eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
-                  &ensp;eine korrekte Produktion \(X \rightarrow \beta\), die schlussendlich zu \(w\)
                   führt;
                   der Automat{" "}
                   <i>
                     kann
                   </i>
                   {" "}also diese Transition anwenden.
-                  &ensp;also diese Transition anwenden.
                   <br />
                   Formaler: Die Zustände des Automaten
                   sind \(Q = \&#123;\qstart, q_1, \qend\&#125;\), das Stackalphabet ist
@@ -100,7 +101,6 @@ const Article = () => {
                     Introduction to the Theory of Computing
                   </i>
                   {" "}könnte
-                  &ensp;könnte
                   ich das eh nicht.
                   <span class="qed">
                     \(\square\)
@@ -128,7 +128,6 @@ const Article = () => {
                     <tt>
                       [
                     </tt>
-                    &ensp;oben auf dem Stack bedeutet dann 
                     &ensp;oben auf dem Stack bedeutet dann{" "}
                     <i>
                       ich will jetzt sofort ein{" "}
@@ -146,16 +145,13 @@ const Article = () => {
                       sofort
                     </i>
                     {" "}ein
-                    &ensp;ein
                     <tt>
                       &#123;
                     </tt>
-                    &ensp;lesen, dann ein Wort \(v\) mit \(B \rightarrow v\), dann ein 
                     &ensp;lesen, dann ein Wort \(v\) mit \(B \rightarrow v\), dann ein{" "}
                     <tt>
                       &#125;
                     </tt>
-                    &ensp;und
                     &ensp;und
                     so weiter.
                     Wir können das also im Automaten implementieren, indem wir
@@ -212,7 +208,6 @@ const Article = () => {
                     reject
                   </i>
                   {" "}entspricht. Erreichen des Zustandes \(\qend\) führt also
-                  &ensp;entspricht. Erreichen des Zustandes \(\qend\) führt also
                   nur dann zu einem{" "}
                   <i>
                     accept
@@ -517,7 +512,11 @@ const Article = () => {
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
-                    Theorem.
+                    Theorem
+                    <NumberedTitle>
+                      &ensp;5.2.2{" "}
+                    </NumberedTitle>
+                    .
                   </span>
                   Zu jedem Kellerautomaten \(M\) gibt es eine kontextfreie Grammatik \(G\)
                   mit \(L(M) = L(G)\).
@@ -670,7 +669,6 @@ const Article = () => {
                     nicht
                   </i>
                   {" "}regulär, da der Präfix und der Suffix aus \(a\) die gleiche
-                  &ensp;regulär, da der Präfix und der Suffix aus \(a\) die gleiche
                   Länge \(m\) haben müssen.
                   Wir bauen zuerst einen Kellerautomaten und übersetzen den dann entsprechend dem Schema
                   aus dem letzten Theorem in eine Grammatik. Dann vergleichen wir die entstandene

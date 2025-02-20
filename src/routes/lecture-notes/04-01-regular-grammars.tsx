@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    5.1 
+                    4.1 
                     4.1 Reguläre Grammatiken
                   </span>
                 </h1>
@@ -56,7 +56,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.1.1{" "}
+                      &ensp;4.1.1{" "}
                     </NumberedTitle>
                   </span>
                   Eine kontextfreie Sprache \(G = (\Sigma, N, P, S)\) heißt
@@ -119,7 +119,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;5.1.2{" "}
+                      &ensp;4.1.2{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik und \(S
@@ -136,7 +136,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.1.1{" "}
+                      &ensp;4.1.1{" "}
                     </NumberedTitle>
                   </span>
                   Betrachten Sie die Gramatik über \(\Sigma = \&#123;0,1\&#125;\): $$\begin&#123;align*&#125;
@@ -149,7 +149,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.1.2{" "}
+                      &ensp;4.1.2{" "}
                     </NumberedTitle>
                   </span>
                   Betrachten Sie die Grammatik über \(\Sigma = \&#123;0,1\&#125;\): $$\begin&#123;align*&#125;
@@ -163,7 +163,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.1.3{" "}
+                      &ensp;4.1.3{" "}
                     </NumberedTitle>
                   </span>
                   Betrachten Sie das Alphabet \(\Sigma = \&#123;1\&#125;\) und die Sprache $$ L :=
@@ -174,7 +174,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.1.4{" "}
+                      &ensp;4.1.4{" "}
                     </NumberedTitle>
                   </span>
                   Betrachten Sie die Sprache $$\begin&#123;align*&#125; L := \&#123;x \in \&#123;a,b\&#125;^* \ | \
@@ -185,24 +185,22 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.1.5{" "}
+                      &ensp;4.1.5{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(\Sigma = \&#123;a,b,.\&#125;\) und \(L \subseteq \Sigma^*\) die Sprache
                   aller Strings der Form $$ x_1 . x_2 . x_3 . \cdots . x_n $$ wobei \(n
-                  \geq 2\) und jedes \(x_i \in \&#123;a,b\&#125;^+\), also zum Beispiel`a.bba.aba` aber nicht 
-                  &ensp;aber nicht{" "}
+                  \geq 2\) und jedes \(x_i \in \&#123;a,b\&#125;^+\), also zum Beispiel`a.bba.aba` aber nicht{" "}
                   <code>
                     aba
                   </code>
-                  {" "}und auch nicht
-                  &ensp;und auch nicht`a.b..a`Entwerfen Sie eine reguläre Grammatik für diese Sprache.
+                  {" "}und auch nicht`a.b..a`Entwerfen Sie eine reguläre Grammatik für diese Sprache.
                 </div>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.1.6{" "}
+                      &ensp;4.1.6{" "}
                     </NumberedTitle>
                   </span>
                   Unsere
@@ -214,7 +212,6 @@ const Article = () => {
                     nicht
                   </i>
                   {" "}regulär. Allerdings können wir
-                  &ensp;regulär. Allerdings können wir
                   eine reguläre Grammatik angeben, die die gleiche Sprache erzeugt.
                   <Paragraph>
                     Entwerfen Sie eine reguläre Grammatik für die Sprache aller
@@ -242,7 +239,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.1.3{" "}
+                      &ensp;4.1.3{" "}
                     </NumberedTitle>
                   </span>
                   Eine Grammatik \(G = (\Sigma, N, P, S)\) heißt
@@ -259,11 +256,13 @@ const Article = () => {
                     vor
                   </i>
                   {" "}dem Nichtterminal vorkommen.
-                  &ensp;dem Nichtterminal vorkommen.
                 </div>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;4.1.4{" "}
+                    </NumberedTitle>
                   </span>
                   Sei \(G = (\Sigma, N, P, S)\) eine erweitert reguläre Grammatik. Dann
                   existiert eine reguläre Grammatik \(G' = (\Sigma, N', P', S)\), die
@@ -306,7 +305,6 @@ const Article = () => {
                     Definition 4.1
                   </a>
                   &ensp;hat jede Produktion in einer
-                  &ensp;hat jede Produktion in einer
                   regulären Grammatik eine der folgenden vier Formen: $$\begin&#123;align*&#125; 1.
                   \quad X&amp;\rightarrow aY \\ 2. \quad X&amp;\rightarrow a \\ 3. \quad X&
                   \rightarrow Y \\ 4. \quad X&amp;\rightarrow \epsilon \end&#123;align*&#125;$$
@@ -319,6 +317,9 @@ const Article = () => {
                     class="well container theorem">
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;4.1.5{" "}
+                      </NumberedTitle>
                     </span>
                     Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik. Dann gibt es
                     eine äquivalente reguläre Grammatik \(G' = (\Sigma, N', P', S)\),
@@ -384,7 +385,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                       <NumberedTitle>
-                        &ensp;5.1.4{" "}
+                        &ensp;4.1.6{" "}
                       </NumberedTitle>
                     </span>
                     Wenn \(N_&#123;k+1&#125;(X) = N_k(X)\), dann ist \(N_k(X) = N_&#123;k+1&#125;(X) =
@@ -405,7 +406,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;5.1.7{" "}
+                        &ensp;4.1.7{" "}
                       </NumberedTitle>
                     </span>
                     Sei \(\Sigma = \&#123;a,b,c\&#125;\). Die Grammatik mit den Regeln \(A
@@ -432,7 +433,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;5.1.8{" "}
+                        &ensp;4.1.8{" "}
                       </NumberedTitle>
                     </span>
                     Betrachten Sie die folgende Grammatik über \(\Sigma =
@@ -467,7 +468,6 @@ const Article = () => {
                       Ding, bliebig oft wiederholt, wie beispielsweise
                       <i>
                         eine beliebig lange Folge von Labels, mit`.` separiert.
-                        &ensp;separiert.
                       </i>
                       {" "}{" "}
                     </li>
@@ -524,14 +524,13 @@ const Article = () => {
                     </i>
                     {" "}
                     &ensp;mit regulären Grammatiken
-                    &ensp;mit regulären Grammatiken
                     realisierbar sind.
                   </Paragraph>
                   <div class="well container theorem">
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;5.1.5{" "}
+                        &ensp;4.1.7{" "}
                       </NumberedTitle>
                     </span>
                     {" "}{" "}
@@ -597,13 +596,12 @@ const Article = () => {
                     Ding, beliebig oft wiederholt
                   </i>
                   {" "}mit regulären Sprachen möglich
-                  &ensp;mit regulären Sprachen möglich
                   ist.
                   <div class="well container theorem">
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;5.1.6{" "}
+                        &ensp;4.1.8{" "}
                       </NumberedTitle>
                     </span>
                     Sei \(L \subseteq \Sigma^*\). Die Sprache \(L^n\) ist die Menge
@@ -647,7 +645,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;5.1.9{" "}
+                        &ensp;4.1.9{" "}
                       </NumberedTitle>
                     </span>
                     Hier sehen Sie einen URL mit Query-String:
@@ -666,13 +664,11 @@ const Article = () => {
                         <code>
                           http
                         </code>
-                        {" "}oder 
-                        &ensp;oder{" "}
+                        {" "}oder{" "}
                         <code>
                           ftp
                         </code>
                         {" "}sein.
-                        &ensp;sein.
                       </li>
                       <li>
                         Dem{" "}
@@ -680,7 +676,6 @@ const Article = () => {
                           ://
                         </code>
                         {" "}nach dem Protokoll.
-                        &ensp;nach dem Protokoll.
                       </li>
                       <li>
                         Dem Domainnamen, hier `web1.hszg.de`.
@@ -697,7 +692,6 @@ const Article = () => {
                           &
                         </code>
                         {" "}separiert sind.
-                        &ensp;separiert sind.
                       </li>
                     </ol>
                     <Paragraph>
@@ -716,6 +710,9 @@ const Article = () => {
                     class="well container theorem">
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;4.1.9{" "}
+                      </NumberedTitle>
                     </span>
                     Sei \(L \subseteq \Sigma^*\) eine reguläre Sprache und \(c \not \in
                     \Sigma\) ein neues Terminalsymbol. Die Sprache aller nichtleeren

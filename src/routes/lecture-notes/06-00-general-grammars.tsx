@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.1 
+                    5.1 
                     6. Allgemeine Grammatiken
                   </span>
                 </h1>
@@ -74,7 +74,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.1.1{" "}
+                      &ensp;5.1.1{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -114,7 +114,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.1.2{" "}
+                      &ensp;5.1.2{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -168,7 +168,6 @@ const Article = () => {
                     Game Changer
                   </i>
                   {" "}herausstellen.
-                  &ensp;herausstellen.
                 </Paragraph>
                 <Paragraph>
                   Sobald wir eine Wortform erreicht haben, die nur aus Terminalsymbolen
@@ -177,7 +176,6 @@ const Article = () => {
                     Wort
                   </i>
                   {" "}geworden ist), muss unsere Ableitung
-                  &ensp;geworden ist), muss unsere Ableitung
                   aufhören: wir können keine weitere Produktion anwenden, da jede
                   linke Seite mindestens ein Nichtterminal enthält. Diese Einschränkung
                   in der Definition allgemeiner formaler Grammatiken ist nicht wirklich
@@ -365,7 +363,6 @@ const Article = () => {
                     Teilkapitel 5.10
                   </a>
                   &ensp;gab
-                  &ensp;gab
                   es{" "}
                   <a href="./05-10-not-context-free.html#exericse-power-2">
                     Übungsaufgabe 5.10.2
@@ -417,7 +414,6 @@ const Article = () => {
                     Formate
                   </i>
                   {" "}syntaktisch
-                  &ensp;syntaktisch
                   beschreiben, sondern komplizierte Rechnungen durchführen können.
                   Sie stellen somit ein völlig andersartiges Biest dar.
                 </Paragraph>
@@ -432,7 +428,6 @@ const Article = () => {
                     Multiplikationsgrammatik
                   </i>
                   {" "}erzeugen.
-                  &ensp;erzeugen.
                   Dies soll eine Menge von Produktionen sein, die Ableitungen der Form
                   $$\begin&#123;align*&#125;
                   L A^m B^n R \Step&#123;&#125; L \tilde&#123;A&#125;^m B^n C^&#123;mn&#125; R
@@ -555,7 +550,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.1.1{" "}
+                      &ensp;5.1.1{" "}
                     </NumberedTitle>
                   </span>
                   Geben Sie ein formale Grammatik für
@@ -571,7 +566,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.1.2{" "}
+                      &ensp;5.1.2{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(L\) die Sprache über \(\Sigma = \&#123;a,b,:,;\&#125;\)
@@ -593,7 +588,6 @@ const Article = () => {
                     Tip:
                   </b>
                   {" "}das ist einfach, wenn Sie bereits eine Grammatik
-                  &ensp;das ist einfach, wenn Sie bereits eine Grammatik
                   für das vorherige Problem haben. Erzeugen Sie
                   \(wXwY\) und lassen dann aus \(X\) und \(Y\) den Rest der Liste entstehen.
                 </div>
@@ -604,7 +598,6 @@ const Article = () => {
                     Erzeugen
                   </i>
                   {" "}verwenden wie bei kontextfreien Sprachen, sondern zum
-                  &ensp;verwenden wie bei kontextfreien Sprachen, sondern zum
                   Umformen, Rumschieben, Kopieren etc. Es ist nun an der Zeit, die
                   Welt der Grammatiken zu verlassen und zu formalisieren, was man
                   mit Umformen, Rumschieben, Kopieren erreichen kann. In anderen Worten:

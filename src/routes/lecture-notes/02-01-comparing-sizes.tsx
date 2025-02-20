@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    3.1 
+                    2.1 
                     2.1 Wer ist größer?
                   </span>
                 </h1>
@@ -95,7 +95,6 @@ const Article = () => {
                       Beispiel
                     </span>
                     &ensp;Beginnen wir mit einem
-                    &ensp;Beginnen wir mit einem
                     einfachen Beispiel und betrachten die zwei Mengen $\N =
                     \&#123;0,1,2,3,4,\dots\&#125;$ und $\N^+ = \&#123;1,2,3,4,\dots\&#125;$. Beide sind
                     unendlich, und $\N^+ \subsetneq \N$. Dennoch sind sie in gewisser
@@ -124,7 +123,6 @@ const Article = () => {
                     Hilberts Hotel
                   </i>
                   {" "}bekannt. Das Hotel
-                  &ensp;bekannt. Das Hotel
                   hat unendlich viele Zimmer, für jede Zahl $n \in \N^+$ eins. Dann
                   kommt ein neuer Gast (die $0$) und braucht ein Zimmer. Er kriegt das
                   Zimmer $1$. Da dies aber schon belegt ist, wird die Person, die bisher
@@ -137,7 +135,6 @@ const Article = () => {
                     <span class="numbered-title">
                       Beispiel
                     </span>
-                    &ensp;Ermutigt von unserem
                     &ensp;Ermutigt von unserem
                     Erfolg gerade eben betrachten wir zwei unendliche Mengen, die sich
                     stärker unterscheiden: $\N$ und $\Z = \&#123;\dots, -2, -1, 0, 1, 2,
@@ -172,7 +169,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.1.1{" "}
+                        &ensp;2.1.1{" "}
                       </NumberedTitle>
                     </span>
                     Finden Sie eine "geschlossene" Form für die Bijektion $f : \N
@@ -186,7 +183,6 @@ const Article = () => {
                       Anmerkung:
                     </b>
                     {" "}es ist überhaupt nicht schlimm, eine
-                    &ensp;es ist überhaupt nicht schlimm, eine
                     Funktion mit einer Fallunterscheidung zu definieren. Sie ist dadurch
                     nicht etwa eine "Funktion zweiter Klasse".
                   </Paragraph>
@@ -196,7 +192,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.1.2{" "}
+                        &ensp;2.1.2{" "}
                       </NumberedTitle>
                     </span>
                     Finden Sie die Umkehrfunktion $f^&#123;-1&#125; : \Z \rightarrow \N$. Gerne
@@ -212,10 +208,9 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;3.1.1{" "}
+                        &ensp;2.1.1{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Zwei Mengen $A$ und
                     &ensp;Zwei Mengen $A$ und
                     $B$ heißen{" "}
                     <i>
@@ -243,10 +238,9 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;3.1.2{" "}
+                        &ensp;2.1.2{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Eine Menge $A$ mit $A
                     &ensp;Eine Menge $A$ mit $A
                     \approx \N$, die also gleichmächtig zu den natürlichen Zahlen ist,
                     nennt man{" "}
@@ -257,8 +251,7 @@ const Article = () => {
                     <i>
                       countably infinite
                     </i>
-                    {" "}oder einfach 
-                    &ensp;oder einfach{" "}
+                    {" "}oder einfach{" "}
                     <i>
                       countable
                     </i>
@@ -271,13 +264,11 @@ const Article = () => {
                     nicht
                   </i>
                   {" "}gleichmächtig mit $\N$ sind, weil sie "viel viel
-                  &ensp;gleichmächtig mit $\N$ sind, weil sie "viel viel
                   größer" sind. Wir nennen sie{" "}
                   <i>
                     überabzählbare
                   </i>
                   {" "}Mengen, auf
-                  &ensp;Mengen, auf
                   Englisch{" "}
                   <i>
                     uncountably infinite
@@ -296,10 +287,9 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;3.1.3{" "}
+                        &ensp;2.1.3{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Eine Menge $A$ heißt
                     &ensp;Eine Menge $A$ heißt
                     <i>
                       unendlich
@@ -317,7 +307,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.1.3{" "}
+                        &ensp;2.1.3{" "}
                       </NumberedTitle>
                     </span>
                     Zeigen Sie: wenn eine Menge $A$ unendlich ist (im Sinne der obigen
@@ -330,7 +320,6 @@ const Article = () => {
                       Hinweis:
                     </b>
                     {" "}Tappen Sie nicht in die "Das ist doch
-                    &ensp;Tappen Sie nicht in die "Das ist doch
                     offensichtlich"-Falle: die Menge $A$ könnte ja viel größer sein als
                     $\N$ und keine für Sie "greifbare" Struktur haben. Ihre Aufgabe ist
                     es, dennoch eine abzählbar unendliche Teilmenge $X \subseteq A$ zu

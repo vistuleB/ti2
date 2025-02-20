@@ -37,7 +37,7 @@ const Article = () => {
             <div class="chapter">
               <h1 class="hidden-title">
                 <span class="chapterTitle">
-                  6. 
+                  5. 
                   5. Kontextfreie Sprachen
                 </span>
               </h1>

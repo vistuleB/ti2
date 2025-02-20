@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    3.2 
+                    2.2 
                     2.2 Beispiele abzählbar unendlicher Mengen
                   </span>
                 </h1>
@@ -60,6 +60,9 @@ const Article = () => {
                       id="theorem-N-N^2"
                       class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;2.2.1{" "}
+                      </NumberedTitle>
                     </span>
                     Die Mengen $\N$ und $\N^2$ sind gleichmächtig. Mit $\N^2$ (oder auch
                     $\N \times \N$) bezeichnen wir hier das cartesische Produkt von $\N$
@@ -68,7 +71,6 @@ const Article = () => {
                       Paare
                     </i>
                     {" "}$(a,b)$ von
-                    &ensp;$(a,b)$ von
                     natürlichen Zahlen.
                   </Paragraph>
                   <figure>
@@ -121,7 +123,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.2.1{" "}
+                        &ensp;2.2.1{" "}
                       </NumberedTitle>
                     </span>
                     Finden Sie eine explizite Formel für die Funktion $f : \N \times \N$
@@ -137,7 +139,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.2.2{" "}
+                        &ensp;2.2.2{" "}
                       </NumberedTitle>
                     </span>
                     Zeigen Sie $\Z \times \Z \approx \Z$, indem Sie eine ähnliche
@@ -152,7 +154,7 @@ const Article = () => {
                       class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.2.3{" "}
+                        &ensp;2.2.3{" "}
                       </NumberedTitle>
                     </span>
                     Zeigen Sie ganz allgemein: wenn $A \approx A'$ und $B \approx B'$,
@@ -164,7 +166,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.2.4{" "}
+                        &ensp;2.2.4{" "}
                       </NumberedTitle>
                     </span>
                     Zeigen Sie, dass $\N \times \N \times \N \approx \N$ gilt und ganz
@@ -176,7 +178,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.2.5{" "}
+                        &ensp;2.2.5{" "}
                       </NumberedTitle>
                     </span>
                     Sei $\N^*$ die Menge aller endlichen Folgen natürlicher Zahlen, also
@@ -198,11 +200,10 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                       <NumberedTitle>
-                        &ensp;3.2.1{" "}
+                        &ensp;2.2.2{" "}
                       </NumberedTitle>
                       .
                     </span>
-                    &ensp;Es gibt eine
                     &ensp;Es gibt eine
                     injektive Funktion $f : \Q \rightarrow \N$.
                   </Paragraph>
@@ -273,11 +274,10 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                       <NumberedTitle>
-                        &ensp;3.2.2{" "}
+                        &ensp;2.2.3{" "}
                       </NumberedTitle>
                       :
                     </span>
-                    &ensp;Es gibt eine
                     &ensp;Es gibt eine
                     injektive Funktion $g: \N \rightarrow \Q$.
                   </Paragraph>
@@ -289,7 +289,6 @@ const Article = () => {
                       Beweis.
                     </b>
                     {" "}Dies ist ganz einach: da $\N \subseteq \Q$
-                    &ensp;Dies ist ganz einach: da $\N \subseteq \Q$
                     gilt, können wir jedes $n$ einfach bei sich belassen. Die Funktion
                   </Paragraph>
                   $$\begin&#123;align*&#125; g : \N&amp;\rightarrow \Q \\ n&amp;\mapsto n \end&#123;align*&#125;$$
@@ -299,7 +298,6 @@ const Article = () => {
                       Einbettung
                     </i>
                     {" "}von $\N$ in $\Q$.
-                    &ensp;von $\N$ in $\Q$.
                     <span class="qed">
                       \(\square\)
                     </span>
@@ -313,7 +311,6 @@ const Article = () => {
                     surjektiv
                   </i>
                   {" "}ist. Gleichzeitig haben
-                  &ensp;ist. Gleichzeitig haben
                   wir $g : \N \rightarrow \Q$, die injektiv ist aber auch nicht
                   surjektiv. Bei $f$ bleiben also manche natürlichen Zahlen ungenutzt,
                   bei $g$ bleiben rationale Zahlen ungenutzt. Können wir $f$ und $g$
@@ -332,15 +329,16 @@ const Article = () => {
                     ...
                   </a>
                   &ensp;beweisen.
-                  &ensp;beweisen.
                   Vorerst behelfen wir uns mit ad-hoc-Methoden.
                 </Paragraph>
                 <div class="well container theorem">
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;2.2.4{" "}
+                      </NumberedTitle>
                     </span>
-                    &ensp;Es gilt $\Q \approx \N$.
                     &ensp;Es gilt $\Q \approx \N$.
                   </Paragraph>
                 </div>
@@ -404,18 +402,15 @@ const Article = () => {
                   abzählbar
                 </i>
                 {" "}unendlich?
-                &ensp;unendlich?
                 <div class="well container theorem">
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;2.2.5{" "}
+                      </NumberedTitle>
                     </span>
-                    &ensp;Es gilt $\&#123;0,1\&#125;^
-                    <b>
-                      {" "}
-                      &ensp;Es gilt $\&#123;0,1\&#125;^
-                    </b>
-                    {" "}
+                    &ensp;Es gilt $\&#123;0,1\&#125;^*
                     \approx \N$.
                   </Paragraph>
                 </div>
@@ -426,7 +421,6 @@ const Article = () => {
                       Beweis.
                     </b>
                     {" "}Hier ist eine Idee: wir interpretieren den
-                    &ensp;Hier ist eine Idee: wir interpretieren den
                     Bitstring $a
                     <i>
                       1 a
@@ -481,7 +475,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;3.2.6{" "}
+                        &ensp;2.2.6{" "}
                       </NumberedTitle>
                     </span>
                     Definieren Sie eine Bijektion von $\&#123;0,1,2,3\&#125;$^* nach $\N$.

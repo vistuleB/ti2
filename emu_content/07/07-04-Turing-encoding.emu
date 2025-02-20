@@ -74,7 +74,6 @@
                         die Rechenvorschrift (das Programm) als Eingabe übergibt. Hätte man so eine Maschine, dann
                         müsste man nicht für jede neue Aufgabe
                         eine neue Maschine entwerfen; man könnte _eine_ Maschine bauen und sie für die jeweilige
-                        &ensp;Maschine bauen und sie für die jeweilige
                         Aufgabe _programmieren_, indem
                         ihr auf einem separaten Eingabeband die Rechenvorschrift überreicht. Von heute aus gesehen ist
                         diese Idee nicht mehr allzu überraschend, weil
@@ -103,7 +102,6 @@
 
                             turingmachinesimulator.com
                         &ensp;haben wir das
-                        &ensp;haben wir das
                         bereits getan:
                         eine Turingmaschine mit Alphabet \(\Sigma\) können wir dort als String über dem Alphabet
                         \begin{align*}
@@ -123,7 +121,6 @@
                             href https://turingmachinesimulator.com
 
                             turingmachinesimulator.com
-                        &ensp;haben dies
                         &ensp;haben dies
                         offensichtlich geschafft:
                         sie haben eine Maschine "gebaut" (also wohl einen Server gemietet und eine Webseite mit viel
@@ -156,7 +153,6 @@
                                     |> li
 
                                         *akzeptiert* falls \(M(x)\) akzeptiert;
-                                        &ensp;falls \(M(x)\) akzeptiert;
                                     |> li
 
                                         *ablehnt*, falls \(M(x)\) ablehnt
@@ -184,7 +180,6 @@
                     |> p
 
                         *Erster, zum scheitern verurteilter Versuch.* Sei \(M\) eine Turingmaschine
-                        &ensp;Sei \(M\) eine Turingmaschine
                         mit Eingabealphabet \(\Sigma\), Arbeitsalphabet \(\Gamma\), Zustandsmenge \(Q\), Startzustand
                         \(\qstart\), akzeptierendem Zustand
                         \(\qaccept\) und Übergangsfunktion \(\delta\).
@@ -205,7 +200,6 @@
                         Sehen Sie das Problem? Das Codierungsalphabet ist nicht uniform: wir brauchen, abhängig von der
                         Zustandsmenge \(Q\) und
                         dem Bandalphabet \(\Gamma\) jeweils neue Alphabete. Wir wollen aber ein \(\Lambda\), da für_alle_ Turingmaschinen
-                        &ensp;Turingmaschinen
                         mit Eingabealphabet \(\Sigma\) funktioniert.
                     |> p
 
@@ -227,7 +221,6 @@
                     |> p
 
                         Wenn wir dies nun als _ein_ Wort in obigen Schema schreiben, können wir für eine
-                        &ensp;Wort in obigen Schema schreiben, können wir für eine
                         Tabellenzelle
                         \(\delta(q,x) = (r,y,R)\) nicht einfach \(qxryR\) schreiben, auch nicht einfach die Codierungen
                         zusammenschreiben:
@@ -252,7 +245,6 @@
 
                             01,1,R
                         &ensp;steht,
-                        &ensp;steht,
                         dann ist das eine Abkürzung für
                         \begin{align*}
                         \delta(01,1) = (01,1,\texttt{R}),
@@ -264,7 +256,6 @@
                     |> p
 
                         Wir können nun _jede_ Turingmaschine
-                        &ensp;Turingmaschine
                         über dem Alphabet
                         \(\Sigma\) codieren als Wort über dem Alphabet
                         \begin{align*}
@@ -282,7 +273,6 @@
                                     &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                                 /Beobachtung.
                             &ensp;Zu einem Eingabealphabet
-                            &ensp;Zu einem Eingabealphabet
                             $\Sigma$ definieren wir das _Codierungsalphabet_$\Lambda := \writelambda$,
                             wobei wir annehmen, dass $\texttt{#}, \texttt{,}, \texttt{L}, \texttt{S}, \texttt{R},
                             \texttt{;}
@@ -293,9 +283,7 @@
 
                         *Anmerkungen:* 
 
-                        &ensp;das Wort 
                         &ensp;das Wort _Codierung_ suggeriert, dass wir, gegeben
-                        &ensp;suggeriert, dass wir, gegeben
                         den String $c = \enc(M)$ die
                         ursprüngliche Turingmaschine $M$ rekonstruieren können. Das gilt natürlich nur
                         beschränkt: eventuell decodieren wir $c$ zu einer Maschine $M'$, die sich

@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.1 
+                    5.1 
                     5.1 Ableitungen und Ableitungsbäume
                   </span>
                 </h1>
@@ -46,7 +46,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.1.1{" "}
+                      &ensp;5.1.1{" "}
                     </NumberedTitle>
                     &ensp;(Ableitung)
                   </span>
@@ -124,32 +124,26 @@ const Article = () => {
                   {" "}{" "}
                   <code>
                     print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
-                    &ensp;&ensp;print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
                   </code>
                   {" "}{" "}
                   <code>
                     for child in tree.children (from left ro right):
-                    &ensp;&ensp;for child in tree.children (from left ro right):
                   </code>
                   {" "}{" "}
                   <code>
-                    treeToLeftDerivation(child)
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;treeToLeftDerivation(child)````def treeToRightDerivation (tree):
+                    treeToLeftDerivation(child)````def treeToRightDerivation (tree):
                   </code>
                   {" "}{" "}
                   <code>
                     for child in tree.children (from left ro right):
-                    &ensp;&ensp;for child in tree.children (from left ro right):
                   </code>
                   {" "}{" "}
                   <code>
                     treeToLeftDerivation(child)
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;treeToLeftDerivation(child)
                   </code>
                   {" "}{" "}
                   <code>
                     print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
-                    &ensp;&ensp;print tree.ruleAtRoot (bzw. drucke nur die Nummer der Regel)
                   </code>
                   {" "}{" "}
                 </pre>

@@ -58,12 +58,10 @@
 
                             ((31+402)*83)
                         &ensp;entwerfen. Der Einfachheit halber bestehe ich
-                        &ensp;entwerfen. Der Einfachheit halber bestehe ich
                         auf strenger Klammerung, so wäre 
                         |> tt
 
                             (2*(1+2+3))
-                        &ensp;zum Beispiel nicht erlaubt.
                         &ensp;zum Beispiel nicht erlaubt.
                         Unsere Grammatik soll allgemeine Dezimalzahlen darstellen können.
                         Das Alphabet ist somit
@@ -85,11 +83,9 @@
                         Die Nichtterminale sind also $E$ (Expression), $N$ (Number) und $D$ (Digit). Wir haben auch
                         den einzelnen Produktionen Namen gegeben, bis auf die der Form $D \rightarrow i$.
                         Was soll nun unser Parser tun? Er soll, gegeben ein Eingabewort $w \in L$, den_Ableitungsbaum_ konstruieren, für 
-                        &ensp;konstruieren, für 
                         |> tt
 
                             ((31+402)*83)
-                        &ensp;also
                         &ensp;also
                     |> figure
                         |> img
@@ -121,7 +117,6 @@
 
                                 interface Expression
                             &ensp;wird implementiert von
-                            &ensp;wird implementiert von
                             |> ul
                                 |> li
                                     |> tt
@@ -132,7 +127,6 @@
 
                                         Exrepssion e1, e2
                                     &ensp;enthält,
-                                    &ensp;enthält,
                                 |> li
                                     |> tt
 
@@ -141,7 +135,6 @@
                                     |> tt
 
                                         Exrepssion e1, e2
-                                    &ensp;enthält,
                                     &ensp;enthält,
                                 |> li
                                     |> tt
@@ -157,7 +150,6 @@
 
                                 interface Number
                             &ensp;wird implementiert von
-                            &ensp;wird implementiert von
                             |> ul
                                 |> li
                                     |> tt
@@ -168,11 +160,9 @@
 
                                         Number
                                     &ensp;und eine 
-                                    &ensp;und eine 
                                     |> tt
 
                                         Digit
-                                    &ensp;erhält und
                                     &ensp;erhält und
                                 |> li
                                     |> tt
@@ -187,7 +177,6 @@
                             |> tt
 
                                 interface Digit
-                            &ensp;wird implementiert von
                             &ensp;wird implementiert von
                             |> tt
 
@@ -221,7 +210,6 @@
 
                                 class DigitEight
                             &ensp;und
-                            &ensp;und
                             |> tt
 
                                 class DigitNine
@@ -236,7 +224,6 @@
                         |> tt
 
                             Expression
-                        &ensp;hat zusätzlich noch
                         &ensp;hat zusätzlich noch
                         die Methode 
                         |> tt

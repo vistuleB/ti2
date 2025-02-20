@@ -111,7 +111,6 @@
                     |> p
 
                         *Beobachtung:* Wenn wir
-                        &ensp;Wenn wir
                         einen Linksreduktionsschritt \(\alpha \beta w \rstep{} \alpha X w\)
                         betrachten, also
                         \begin{align*}
@@ -156,7 +155,6 @@
                         ist inkorrekt. In unserer Java-Implementierung haben wir dieses Problem händisch gelöst, indem
                         wir der Regel $ND \rstep{} N$ den Vorzug vor $D \rstep{} N$ gegebene haben. Im allgemeinen
                         müssen wir definieren, was ein _korrekter_ Linksreduktionsschritt ist. Und dann
-                        &ensp;Linksreduktionsschritt ist. Und dann
                         überlegen, wie wir herausfinden, ob ein Linksreduktionsschritt korrekt ist. Diese Fragen
                         werden uns für den Rest dieses und des nächsten Teilkapitels beschäftigen.
                     |> div
@@ -182,7 +180,6 @@
                         |> p
 
                             Den Präfix $\alpha$ nennen wir eine_Front_ der gültigen Wortform $\alpha \beta w$.
-                            &ensp;der gültigen Wortform $\alpha \beta w$.
                             Wenn die Grammatik eindeutig ist, dann hat
                             jede gültige Wortform $\gamma$ genau eine Front, die wir
                             mit $\front(\gamma)$ bezeichnen.
@@ -212,7 +209,6 @@
                         haben wir manchmal das erste Zeichen von $w$ betrachten müssen. Allerdings behalten wir erst
                         einmal obigen Wunsch als Idealziel.
                         Um ihn zu formalisieren, fragen wir uns, wann es denn _nicht_ möglich ist,
-                        &ensp;möglich ist,
                         ohne Betrachten von $w$ zu eintscheiden, ob
                         $\alpha \beta w \rstep{} \alpha X w$ gültig ist.
                     |> ol
@@ -232,7 +228,6 @@
                                 (wir nehmen an, dass man aus jedem Nichtterminal
                                 mindestens ein Wort \(u \in \Sigma^*\) ableiten kann; andernfalls
                                 kann man solche _nutzlosen_ Nichtterminale eliminieren).
-                                &ensp;Nichtterminale eliminieren).
                                 Das Wort \(w\) hat also zwei verschiedene Ableitungsbäume.
                                 Die Grammatik ist somit mehrdeutig.
                                 Mit uneindeutigen Grammatiken beschäftigen wir uns zunächst gar nicht;
@@ -255,7 +250,6 @@
                             |> p
 
                                 _nicht_ korrekt, obwohl \(\alpha\beta w'\) eine
-                                &ensp;korrekt, obwohl \(\alpha\beta w'\) eine
                                 gültige Wortform ist.
                                 Dieser Fall ist schlecht, weil der Parser nur
                                 $\alpha \beta$ gelesen hat und somit nicht
@@ -379,7 +373,6 @@
                             |> p
 
                                 *Beweis.* Um Punkt 1 zu zeigen,
-                                &ensp;Um Punkt 1 zu zeigen,
                                 nehmen wir an, dass $\alpha \beta = \alpha' \beta'$ gilt.
                                 Da $\alpha \beta w \rstep{} \alpha X w$ korrekt
                                 ist, $\alpha' \beta' w'$ eine gültige Wortform ist und
@@ -603,10 +596,8 @@
                         class container alert alert-warning
 
                         *Hinweis.* Was nun folgt, ist mathematisch
-                        &ensp;Was nun folgt, ist mathematisch
                         recht herausfordernd. Lesen Sie daher gerne auch
                         das Kapitel 2.4 (Deterministic context free languages) im Lehrbuch_Introduction to the Theory of Computing_ von Michael Sipser.
-                        &ensp;von Michael Sipser.
                         Meine Darstellung des doch recht schwierigen Materials fußt auf diesem
                         Kapitel, weicht aber doch stark genug von Sipser ab, so dass es
                         womöglich hilfreich ist, beides zu lesen: dieses Vorlesungsskript und

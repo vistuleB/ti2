@@ -45,7 +45,6 @@
                         Für zwei Tupel \(\mathbf{x}, \mathbf{y} \in \{0,1\}^n\) schreiben wir
                         \( \mathbf{x} \leq \mathbf{y}\), falls \(x_1 \leq y_1, \dots, x_n \leq y_n\), also
                         \(\mathbf{x}\) _in jeder Koordinate_ kleiner gleich \(\mathbf{y}\) ist.
-                        &ensp;kleiner gleich \(\mathbf{y}\) ist.
                         Beispielsweise gilt \( (0,0,1) \leq (1,0,1)\). Allerdings gilt weder
                         \( (0,1,0) \leq (1,0,1)\) noch umgekehrt; die beiden Tupel sind _unvergleichbar_;
                         es handelt sich bei \(\leq\) also um eine _Partialordnung_.
@@ -58,13 +57,11 @@
                     |> p
 
                         Diese Darstellung einer Partialordnung als gerichteter Graph bezeichnet man auch als_Hasse-Diagramm_ (ich verzichte hier auf eine formale Definition).
-                        &ensp;(ich verzichte hier auf eine formale Definition).
                         Es gilt nun \(\mathbf{x} \leq \mathbf{y}\), wenn Sie im Hasse-Diagramm einen
                         Pfad von \(\mathbf{x}\) nach \(\mathbf{y}\) finden.
                     |> p
 
                         *Vorsicht.* Im obigen Bild steht zwar \(001\) unterhalb von \(110\), allerdings
-                        &ensp;Im obigen Bild steht zwar \(001\) unterhalb von \(110\), allerdings
                         werden Sie keinen Pfad von \(001\) nach \(110\) finden;
                         es gilt also \(001 \not \leq 110\); die beiden Elemente sind _unvergleichbar_.
                     |> div
@@ -115,7 +112,6 @@
                         widerspricht. (Ich habe hier absichtlich die Präfixschreibweise \(\xor(0,1)\) verwendet,
                         um hervorzuheben, dass es sich hierbei um eine Funktion in zwei Variablen handelt.)
                         Beachten Sie, dass ich die Worte _"oberhalb"_ im Sinne der Partialordnung
-                        &ensp;im Sinne der Partialordnung
                         meine, nicht wirklich im geometrischen Sinne in der Abbildung.
                     |> p
 
@@ -138,6 +134,9 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Zu jeder monotonen Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\) gibt es einen monotonen
                         Schaltkreis (also ohne NOT-Gates), der \(f\) berechnet.
                     |> div
@@ -150,7 +149,6 @@
 
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
                         Beweisen Sie das Theorem. *Tip.* Gehen Sie meine oben skizzierten drei
-                        &ensp;Gehen Sie meine oben skizzierten drei
                         Konstruktionen durch (Rekursiv, DNF, CNF) und versuchen Sie, sie so zu modifizieren,
                         dass Sie alle NOT-Gates loswerden.
                     |> div
@@ -164,11 +162,9 @@
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
                         Finden Sie alle monotonen Funktionen in zwei Variablen.
                         Wie sieht es mit allen monotonen Funktionen in _drei_ Variablen aus?
-                        &ensp;Variablen aus?
                         |> p
 
                             Am Besten betrachten Sie das _Hasse-Diagramm_ der
-                            &ensp;der
                             Partialordnungen auf Mengen \( \{0,1\}^2\) bzw. \( \{0,1\}^3\):
                         |> figure
                             |> img
@@ -191,7 +187,6 @@
                         &ensp;*(Challenge).*Bauen Sie einen Schaltkreis mit drei Input-Variablen \(x,y,z\), der drei
                         Output-Gates hat, die \(\bar{x}, \bar{y}, \bar{z}\) berechnen.
                         Ihr Schaltkreis darf _höchstens zwei NOT-Gates_ einhalten,
-                        &ensp;einhalten,
                         aber beliebig viele AND- und OR-Gates.
                         |> figure
                             |> img
@@ -207,7 +202,6 @@
                         zu bearbeiten. Falls Sie dennoch die Geduld verlieren,
                         so habe ich hier Lösungen ausgearbeitet. Auch mit dem Zweck, an dieser
                         Stelle auf Beweismethoden wie _Induktion_ und verschiedene
-                        &ensp;und verschiedene
                         Beweisstrategien einzugehen.
                     |> div
                         id theorem-1
@@ -216,14 +210,15 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Zu jeder monotonen Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\) gibt es einen monotonen
                         Schaltkreis (also ohne NOT-Gates), der \(f\) berechnet.
                     |> p
 
                         Ich werde zweieinhalb Beweise für dieses Theorem vorstellen. Dies dient auch dazu,
-                        gängige _Beweistechniken_ und 
-                        &ensp;und _Beweismethoden_ zu illustrieren. Unter
-                        &ensp;zu illustrieren. Unter
+                        gängige _Beweistechniken_ und _Beweismethoden_ zu illustrieren. Unter
                         Beweismethoden
                         verstehe ich hier formale Methoden wie
                         |> ul
@@ -244,7 +239,6 @@
                             href https://de.wikipedia.org/wiki/Beweis_(Mathematik)#Beweismethoden
 
                             Wikipedia
-                        &ensp;aufgeführt
                         &ensp;aufgeführt
                         sind.
                         Diesen zur Seite stehen die nicht wirklich formalisierbaren Beweistechniken oder Beweisstrategien,
@@ -283,6 +277,9 @@
                                 class numbered-title
 
                                 Theorem
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             Zu jeder Booleschen Funktion \(f: \{0,1\}^n \rightarrow \{0,1\}\) gibt es
                             einen Schaltkreis \(C\), der \(f\) berechnet.
                         |> p
@@ -306,13 +303,11 @@
                             |> p
 
                                 *Beweis.*Als _Beweismethode_ verwenden wir Induktion über \(n\), die Anzahl der Variablen.
-                                &ensp;verwenden wir Induktion über \(n\), die Anzahl der Variablen.
                             |> div
                                 class alert-info
 
                                 Zur Erinnerung: bei einem Beweis per Induktion wollen wir eine Aussage
                                 der Form _Für alle natürlichen Zahlen \(n \in \N\) gilt \(P(n)\)_ beweisen,
-                                &ensp;beweisen,
                                 wobei \(P(n)\) wiederum eine Aussage ist, in der die Zahl \(n\) irgendwo vorkommt.
                                 Bei einem Beweis durch Induktion zeigen wir nun,
                                 |> ol
@@ -334,7 +329,6 @@
 
                                 Als erstes müssen wir nun unsere Aussage, die wir beweisen wollen (also die im Theorem)
                                 so formulieren, dass sie die Form _\(P(n)\) für alle \(n \in \N\)_ annimmt.
-                                &ensp;annimmt.
                                 Dies ist einfach, da die Zahl \(n\) bereits im Theorem vorkommt. Wir formulieren sie
                                 also nun so um:
                             |> div
@@ -342,7 +336,11 @@
                                 |> span
                                     class numbered-title
 
-                                    Theorem 1.4.4, alternative Formulierung
+                                    Theorem
+                                    |> NumberedTitle
+
+                                        &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                                    &ensp;1.4.4, alternative Formulierung
                                 Für jede natürliche Zahl \(n\) gilt: zu jeder Booleschen Funktion
                                 \(f: \{0,1\}^n \rightarrow \{0,1\}\) gibt es einen Schaltkreis \(C\), der
                                 \(f\) berechnet.
@@ -354,7 +352,6 @@
                             |> p
 
                                 *Induktionsbasis.* Wenn \(n=0\) ist, dann gibt es nur zwei mögliche
-                                &ensp;Wenn \(n=0\) ist, dann gibt es nur zwei mögliche
                                 Boolesche
                                 Funktionen,
                                 nämlich die konstanten Funktionen \(0\) und \(1\). Für beide Funktionen
@@ -388,7 +385,6 @@
 
                                     Wenn wir die Induktionsbasis bei \(n=1\) ansetzen wollen, dann sehen wir, dass
                                     es _vier_ Funktionen gibt: \(0, 1, x, \neg x\); all diese haben natürlich
-                                    &ensp;Funktionen gibt: \(0, 1, x, \neg x\); all diese haben natürlich
                                     einen
                                     (sehr einfachen) Schaltkreis. Nur bei \(\neg x\) braucht unser Schaltkreis überhaupt
                                     ein
@@ -396,9 +392,7 @@
                                 |> p
 
                                     An diesem Punkt protestieren Sie vielleicht und sagen, dass \(0\) keine Funktion
-                                    in _einer_ Variable ist, sondern in 
-                                    &ensp;Variable ist, sondern in _zwei_ Variablen.
-                                    &ensp;Variablen.
+                                    in _einer_ Variable ist, sondern in _zwei_ Variablen.
                                     Und auch hier appelliere ich an Ihre Programmiererfahrung: weder Sie
                                     noch der Java-Compiler werden Probleme mit der Funktion
                                 |> pre
@@ -411,7 +405,6 @@
                                 |> p
 
                                     haben. Ja in der Tat, Java toleriert es, dass Sie `constantFalse` zweimal
-                                    &ensp;zweimal
                                     deklariert haben, einmal als Funktion mit 0 Input-Variablen, einmal als
                                     Funktion mit einer Input-Variablen. Um hundertprozentig korrekt zu sein, müssten wir
                                     Funktionen \(\textnormal{zero}_n\) definieren als
@@ -446,7 +439,6 @@
                                 kommt aufs Gleiche raus und unterscheidet sich nur in der Notation; in diesem
                                 Falle ist es mir angenehmer, \(P(n-1) \Rightarrow P(n)\) zu zeigen. Wir dürfen
                                 also die _Induktionshypothese_ \(P(n-1)\) als gegeben annehmen:
-                                &ensp;\(P(n-1)\) als gegeben annehmen:
                             |> div
                                 class well subtheorem
 
@@ -481,9 +473,7 @@
                                 Da \(f_0\) und \(f_1\) jeweils nur \(n-1\) Input-Variablen haben,
                                 können wir die Induktionshypothese anwenden und folgern,
                                 dass es Boolesche Schaltkreise für sie gibt.
-                                Nach _Zerlegen in \(f_0, f_1\)_ und
-                                &ensp;und_Anwenden der Induktionshypothese_ müssen wir nun
-                                &ensp;müssen wir nun
+                                Nach _Zerlegen in \(f_0, f_1\)_ und_Anwenden der Induktionshypothese_ müssen wir nun
                                 die Teilergebnisse wieder _sinnvoll zusammenfügen_. Dies
                                 tun wir in diesem Falle mit einem `if-then-else`-Gate:
                             |> figure
@@ -496,7 +486,6 @@
                                 Ich behaupte, dass obiger Schaltkreis tatsächlich \(f\) berechnet. Falls dies noch nicht
                                 klar sein sollte, können wir auch dies formal beweisen, und zwar
                                 durch die Methode _vollständige Fallunterscheidung._ Sei
-                                &ensp;Sei
                                 nun also ein konkreter Input \(x_1,\dots,x_n\) gegeben.
                             |> ul
                                 |> li
@@ -533,7 +522,6 @@
                             href #theorem-1
 
                             Theorem 1.4.3
-                        &ensp;zu. 
                         &ensp;zu. 
                     |> div
                         class well container
@@ -757,7 +745,6 @@
                         |> p
 
                             *Das Bekannte abwandeln.* Der Ausdruck
-                            &ensp;Der Ausdruck
                             \(\bigvee_{\mathbf{a} \in \sat(f)} T_{\mathbf{a}}\) ist ja bereits
                             ein Schaltkreis (der Tiefe 2), allerdings im Allgemeinen kein
                             monotoner, da die Terme \(T_{\mathbf{a}}\) negative Literale (und somit NOT-Gates)

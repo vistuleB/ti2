@@ -37,7 +37,7 @@ const Article = () => {
             <div class="chapter">
               <h1 class="hidden-title">
                 <span class="chapterTitle">
-                  7. 
+                  6. 
                   7. Turing-Maschinen
                 </span>
               </h1>
@@ -48,7 +48,6 @@ const Article = () => {
                   Berechnung
                 </i>
                 {" "}formalisieren.
-                &ensp;formalisieren.
                 Das \(\lambda\)-Kalkül ist im Prinzip eine reduktion funktionaler Programmiersprachen
                 auf das absolut essentielle. In diesem Kapitel lernen wir ein
                 weiteres Modell für Berechnung kennen, das im Allgemeinen als Standardmodell

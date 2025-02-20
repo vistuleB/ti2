@@ -37,7 +37,7 @@ const Article = () => {
             <div class="chapter">
               <h1 class="hidden-title">
                 <span class="chapterTitle">
-                  4. 
+                  3. 
                   3. Berechenbarkeit und natürliche Zahlen
                 </span>
               </h1>
@@ -57,14 +57,12 @@ const Article = () => {
                   negativen
                 </i>
                 {" "}Zielen beschäftigen: zu zeigen, dass es zu bestimmten
-                &ensp;Zielen beschäftigen: zu zeigen, dass es zu bestimmten
                 Funktionen eben nicht Schaltkreise mit \(S\) Gates und in Tiefe \(d\) gibt; wir
                 würden uns zum Großteil mit{" "}
                 <i>
                   unteren Schranken
                 </i>
                 {" "}beschäftigen.
-                &ensp;beschäftigen.
               </Paragraph>
               <Paragraph>
                 Boolesche Funktionen sind immer{" "}
@@ -72,13 +70,11 @@ const Article = () => {
                   endliche
                 </i>
                 {" "}Objekte. In der Berechenbarkeitstheorie
-                &ensp;Objekte. In der Berechenbarkeitstheorie
                 geht es im Grunde um die Frage: welche{" "}
                 <i>
                   unendlichen
                 </i>
                 {" "}Funktionen können wir überhaupt
-                &ensp;Funktionen können wir überhaupt
                 berechnen? Und was gilt denn überhaupt als zulässiges Modell für Berechenbarkeit?
               </Paragraph>
               <Paragraph>
@@ -89,7 +85,6 @@ const Article = () => {
                   endliche Rechenvorschrift
                 </i>
                 {" "}beschrieben werden können, dann
-                &ensp;beschrieben werden können, dann
                 müssen wir erst einmal entscheiden, mit welcher unendlichen Menge wir uns beschäftigen.
                 Eine Bedingung sollte zum Beispiel sein, dass wir Input und Output vollständig hinschreiben können.
                 (Denn wenn der Input bereits unendlich groß wäre, wie sollten wir überhaupt über Berechenbarkeit

@@ -80,12 +80,9 @@
                         Das ist alles nicht besonders tiefgründig und dient allein dazu,
                         sicherzustellen, dass wir
                         die Konfigurationen von $M$ darstellen können in dem Alphabet $\Lambda$,
-                        das_unabhängig_ von $M$ ist. Dass wir also 
-                        &ensp;von $M$ ist. Dass wir also _jede_Turingmaschine
+                        das_unabhängig_ von $M$ ist. Dass wir also _jede_Turingmaschine
                         $M$ mit Eingabealphabet $\Sigma$ und _jede_ ihrer Konfigurationen
-                        &ensp;ihrer Konfigurationen
                         als Strings über _einem_ festen Alphabet $\Lambda$ darstellen
-                        &ensp;festen Alphabet $\Lambda$ darstellen
                         können.
                     |> p
 
@@ -103,9 +100,11 @@
                                 class numbered-title
 
                                 Theorem
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             &ensp;*(Universelle
                             Turingmaschine).* Zu
-                            &ensp;Zu
                             jedem
                             endlichen Eingabealphabet $\Sigma$ sei
                             $\Lambda := \writelambda$ das Codierungsalphabet. Es gibt es
@@ -156,7 +155,6 @@
                         |> p
 
                             *Ein technischer aber letztendlich irrelevanter Punkt:* die Mengen
-                            &ensp;die Mengen
                             $Q$ und $\Gamma$ der Turingmaschine $M$ können ja beliebige
                             (endliche) Mengen sein,
                             und weder $\Lambda$ noch die Turingmaschine $U$ haben "Kenntnis"

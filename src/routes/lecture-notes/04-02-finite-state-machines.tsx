@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    5.2 
+                    4.2 
                     4.2 Endliche Automaten
                   </span>
                 </h1>
@@ -73,7 +73,6 @@ const Article = () => {
                     Zuständen
                   </i>
                   {" "}des Automaten) zeigen an, in welchen neuen Zustand beim Lesen eines Zeichen
-                  &ensp;des Automaten) zeigen an, in welchen neuen Zustand beim Lesen eines Zeichen
                   gewechselt werden
                   muss. Der Pfeil "aus dem Nichts", hier der von links nach \(S\), zeigt den{" "}
                   <i>
@@ -334,7 +333,6 @@ const Article = () => {
                     akzeptiert
                   </i>
                   {" "}er
-                  &ensp;er
                   es,
                   wenn er in einem akzeptierenden Endzustand gelandet ist; ansonsten{" "}
                   <i>
@@ -351,7 +349,7 @@ const Article = () => {
                     class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.2.1{" "}
+                      &ensp;4.2.1{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -464,7 +462,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.2.2{" "}
+                      &ensp;4.2.2{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -478,7 +476,6 @@ const Article = () => {
                     erweiterte Zustandsübergangsfunktion
                   </i>
                   {" "}\(\hat&#123;\delta&#125;: Q \times \Sigma^* \rightarrow
-                  &ensp;\(\hat&#123;\delta&#125;: Q \times \Sigma^* \rightarrow
                   Q\) rekursiv wie folgt:
                   $$\begin&#123;align*&#125;
                   \hat&#123;\delta&#125; (q, \epsilon)&amp;= q \\
@@ -496,7 +493,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.2.3{" "}
+                      &ensp;4.2.3{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -528,7 +525,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.2.1{" "}
+                      &ensp;4.2.1{" "}
                     </NumberedTitle>
                   </span>
                   Ändern Sie den Automaten aus dem letzten Beispiel so ab, dass die Bedingung{" "}
@@ -537,14 +534,13 @@ const Article = () => {
                     enden"
                   </i>
                   {" "}entfällt, er also
-                  &ensp;entfällt, er also
                   alle Wörter akzeptiert, die die Folge \(xy\) nicht enthalten.
                 </div>
                 <div class="well well-lg numbered-exercise container">
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.2.2{" "}
+                      &ensp;4.2.2{" "}
                     </NumberedTitle>
                   </span>
                   Zeichnen Sie einen Automaten für die Sprache aller Wörter über \(\&#123;a,b,c,d\&#125;\), die
@@ -554,7 +550,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.2.3{" "}
+                      &ensp;4.2.3{" "}
                     </NumberedTitle>
                   </span>
                   Zeichnen Sie einen Automaten für die Sprache aller Wörter über \(\&#123;a,b,c,d\&#125;\), die
@@ -588,6 +584,9 @@ const Article = () => {
                   class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;4.2.4{" "}
+                    </NumberedTitle>
                   </span>
                   Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein endlicher Automat. Dann gibt es eine reguläre
                   Grammatik
@@ -648,7 +647,6 @@ const Article = () => {
                         Induktionsbasis.
                       </b>
                       {" "}Wenn \(\alpha = \epsilon\) gilt, also \(\alpha\) die
-                      &ensp;Wenn \(\alpha = \epsilon\) gilt, also \(\alpha\) die
                       Länge 0 hat, dann
                       gilt \(q \stackrel&#123;\epsilon&#125;&#123;\rightarrow&#125; q'\) genau dann, wenn \(q = q'\) ist. Wie kann
                       nun
@@ -692,7 +690,6 @@ const Article = () => {
                         Aus (1) folgt (2).
                       </b>
                       {" "}Nehmen wir also an, dass
-                      &ensp;Nehmen wir also an, dass
                       \(q \stackrel&#123;x \beta&#125;&#123;\rightarrow&#125; q'\) gilt und bezeichnen
                       \(q_1 := \delta(q,x)\). Es gilt also
                       $$
@@ -813,7 +810,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.2.4{" "}
+                      &ensp;4.2.4{" "}
                     </NumberedTitle>
                   </span>
                   Schreiben Sie zu folgendem Automaten über dem Alphabet \(\Sigma = \&#123;0,1,2,3,4,5,6,7,8,9\&#125;\) eine
@@ -878,14 +875,12 @@ const Article = () => {
                       Fehlerzustand (Trap State)
                     </i>
                     {" "}einführen,
-                    &ensp;einführen,
                     der im Prinzip
                     den Zustand
                     <i>
                       lehne das Wort ab, egal, was noch kommt
                     </i>
                     {" "}versinnbildlicht:
-                    &ensp;versinnbildlicht:
                     <figure>
                       <img
                         style="height:12em"
@@ -930,7 +925,6 @@ const Article = () => {
                       viertletztes
                     </i>
                     {" "}Zeichen
-                    &ensp;Zeichen
                     eine 1 ist. Die Herausforderung ist nun: wenn der Automat eine 1 liest, dann weiß er nicht,
                     ob das jetzt schon
                     das viertletzte Zeichen ist oder nicht; er weiß also nicht, ob er im Zustand \(A\) bleiben
@@ -946,7 +940,6 @@ const Article = () => {
                     nichtdeterministischen
                   </i>
                   {" "}endlichen Automaten.
-                  &ensp;endlichen Automaten.
                 </Paragraph>
               </div>
             </div>

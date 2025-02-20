@@ -150,16 +150,13 @@
 
                         Sie können sich das Band auch als Magnetband vorstellen, das nach vorn oder nach hinten gespult
                         wird, anstatt dass der Kopf sich bewegt. Am Anfang steht auf dem Band das_Eingabewort_ und der Kopf auf dem ersten Symbol dieses Wortes. Die Turingmaschine
-                        &ensp;und der Kopf auf dem ersten Symbol dieses Wortes. Die Turingmaschine
                         wendet
-                        nun ihre Regeln an, bis Sie einen_Endzustand_ erreicht. Bei 
-                        &ensp;erreicht. Bei _Entscheidungsproblemen_, wo uns nur
+                        nun ihre Regeln an, bis Sie einen_Endzustand_ erreicht. Bei _Entscheidungsproblemen_, wo uns nur
                         eine Ja/Nein-Antwort interessiert, wird die Antwort durch den Entzustand angegeben:
                         der Zustand $\qaccept$ entspricht einem _Ja_, der Zustand
                         $\qreject$ entspricht einem _Nein_. Diese zwei Endzustände reichen im Allgemeinen
                         aus. Wenn wir von der Maschine eine komplexere Ausgabe als Ja/Nein erwarten, so
                         betrachten wir als _Ausgabe der Turingmaschine_ den Inhalt des Bandes zu dem
-                        &ensp;den Inhalt des Bandes zu dem
                         Zeitpunkt, da die Maschine den Zustand $\qaccept$ erreicht.
                         Was brauchen wir also, um so eine Turingmaschine
                         und ihre Arbeitsweise zu beschreiben?
@@ -174,7 +171,6 @@
 
                                     &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             *(Turingmaschine).* Eine
-                            &ensp;Eine
                             Turingmaschine besteht aus folgenden Elementen:
                         |> ol
                             |> li
@@ -208,18 +204,14 @@
                                 |> tt
 
                                     L
-                                &ensp;für 
                                 &ensp;für _gehe eine Zelle nach links_ steht,
-                                &ensp;steht,
                                 |> tt
 
                                     R
                                 &ensp;für rechts und 
-                                &ensp;für rechts und 
                                 |> tt
 
                                     S
-                                &ensp;für 
                                 &ensp;für _stay_, also die Anweisung, den Kopf
                                 nicht zu bewegen.
                             |> li
@@ -237,7 +229,6 @@
                         Was macht eine Turingmaschine?
                     Sie haben nun wohl bereits eine vage Vorstellung, was eine Turingmaschine macht.
                     Versuchen wir, es noch weiter zu formalisieren. Um den _Gesamtzustand_ der
-                    &ensp;der
                     Turingmaschine zu beschreiben, also eine vollständige Momentaufnahme, reicht
                     nicht der aktuelle innere Zustand \(q\); wir brauchen auch den Bandinhalt und insbesondere
                     die Position, an der sich der Kopf befindet. Das alles zusammen nennt
@@ -258,7 +249,6 @@
 
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Die _Konfiguration_ einer Turingmaschine ist ein Element in
-                        &ensp;einer Turingmaschine ist ein Element in
                         \(\Gamma^* \times Q \times \Gamma^*\), also
                         \begin{align*}
                         C = u q v
@@ -273,7 +263,6 @@
                         \mathcal{C} := \Gamma^* \times Q \times \Gamma^*
                         \end{align*}
                         Der _Zustand einer Konfiguration_ \(C = uqv\) ist \(q\), also der innere
-                        &ensp;\(C = uqv\) ist \(q\), also der innere
                         Zustand, in dem sich die Maschine gerade befindet.
                         Wir bezeichnen mit $\state(C)$. Formal:
                         \begin{align*}
@@ -282,9 +271,7 @@
                         \end{align*}
                         Eine Konfiguration \(C\) ist
                         eine _akzeptierende Endkonfiguration_ wenn $\state(C) = \qaccept$ ist;
-                        &ensp;wenn $\state(C) = \qaccept$ ist;
                         eine _ablehnende Endkonfiguration_ , wenn $\state(C) = \qreject$ ist.
-                        &ensp;, wenn $\state(C) = \qreject$ ist.
                         In beiden Fällen ist \(C\) eine _Endkonfiguration_.
                     |> p
 
@@ -400,7 +387,6 @@
 
                         undefined
                     &ensp;sein:
-                    &ensp;sein:
                     \begin{align*}
                     \hat{\delta}^* (C) := \begin{cases}
                     \hat{\delta}^{(i)} (C)&
@@ -414,7 +400,6 @@
                         dann ist auch $\delta^{(j)}(C)$ eine, für jedes $j \geq i$, weil
                         wir $\hat{\delta}(C') = C'$ für jede Endkonfiguration $C'$ definiert haben.
                         Es spielt also in der obigen Formulierung_wenn es ein $i$ gibt_ keine Rolle, welches solche $i$ wir wählen.
-                        &ensp;keine Rolle, welches solche $i$ wir wählen.
                     Für ein Eingabewort \(x \in \Sigma^*\) können wir nun das Ergebnis der Berechnung
                     von Turingmaschine \(M\) auf \(x = x_1 \dots x_n\) definieren:
                     \begin{align*}
@@ -435,13 +420,10 @@
                     |> p
 
                         Ein _Entscheidungsproblem_ ist eine Funktion \(P : \Sigma^* \rightarrow
-                        &ensp;ist eine Funktion \(P : \Sigma^* \rightarrow
                         \{\texttt{true}, \texttt{false}\}\), beispielsweise: _gegeben ein Wort,
                         stellt dieses Wort ein korrektes Java-Programm dar?_oder _gegeben eine Zahl in Dezimalschreibweise, ist dies
                         eine Primzahl?_ Eine äquivalente Sichtweise ist die
-                        &ensp;Eine äquivalente Sichtweise ist die
                         eines Entscheidungsproblems als _Sprache_ \(L \subseteq \Sigma^*\).
-                        &ensp;\(L \subseteq \Sigma^*\).
                         Wir identifizieren \(L\) hier mit der Menge aller Wörter \(x\) mit
                         \(P(x) = \texttt{true}\). Wenn wir es mit einem Entscheidungsproblem
                         zu tun haben und dieses mit einer Turingmaschine lösen wollen,
@@ -451,11 +433,9 @@
 
                             accept
                         &ensp;oder
-                        &ensp;oder
                         |> tt
 
                             reject
-                        &ensp;ist. Wir definieren daher
                         &ensp;ist. Wir definieren daher
                         \begin{align*}
                         f_M(x) = \begin{cases}
@@ -475,7 +455,6 @@
 
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         *(Turingmaschine entscheidet eine Sprache)*Eine Turingmaschine \(M\)_entscheidet_ die Sprache \(L \subseteq \Sigma^*\) wenn
-                        &ensp;die Sprache \(L \subseteq \Sigma^*\) wenn
                         |> ol
                             |> li
 
@@ -498,7 +477,6 @@
 
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         *(Turingmaschine akzeptiert eine Sprache)*Eine Turingmaschine \(M\) _akzeptiert_ die Sprache
-                        &ensp;die Sprache
                         \(L \subseteq \Sigma^*\) wenn
                         \begin{align*}
                         x \in L \Longleftrightarrow f_M(x) = \texttt{accept}
@@ -526,7 +504,6 @@
                         akzeptierenden Endkonfiguration \(C\) landet, und in \(C\) steht
                         dann \(g(x)\) auf dem Band. Formal müssen wir noch klären, was _\(g(x)\) steht
                         auf dem Band_ bedeutet.
-                        &ensp;bedeutet.
                     |> div
                         class well container theorem
                         |> span
@@ -556,7 +533,6 @@
                             |> li
 
                                 &ensp;In der Endkonfiguration $\hat{M}(x)$ steht auf dem Arbeitsband das
-                                &ensp;In der Endkonfiguration $\hat{M}(x)$ steht auf dem Arbeitsband das
                                 Wort \(g(x) \in \Sigma_2^*\) und der Kopf steht ganz links, also
                                 $\hat{M}(x) = \qaccept{} g(x)$.
                     |> h2
@@ -583,6 +559,9 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Sei \(M\) eine Turingmaschine und \(L(M)\) die von ihr akzeptierte Sprache.
                         Dann gibt es eine formale Grammatik \(G\) mit \(L(G) = L(M)\). In anderen Worten:
                         formale Grammatiken sind mindestens so mächtig wie Turingmaschinen.

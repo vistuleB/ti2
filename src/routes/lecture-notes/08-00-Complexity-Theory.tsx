@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    7.1 
+                    6.1 
                     8. Komplexitätstheorie
                   </span>
                 </h1>
@@ -69,7 +69,6 @@ const Article = () => {
                       I/O-Komplexität.
                     </b>
                     {" "}In echten Rechnern haben wir eine Hierarchie von
-                    &ensp;In echten Rechnern haben wir eine Hierarchie von
                     Speichermedien. Den extrem schnellen Prozessorcache; schnellen Cache; den vergleichsweise
                     langsamen
                     Hauptstpeicher (RAM); eventuell sogar einen externen Festplattenspeichern, der um
@@ -81,7 +80,6 @@ const Article = () => {
                       Kommunikationskomplexität.
                     </b>
                     {" "}Bei verteilten Anwendungen (Cloud Computing) ist
-                    &ensp;Bei verteilten Anwendungen (Cloud Computing) ist
                     die limitierende Resource eventuell gar nicht die Rechenkapazität sondern das
                     <i>
                       Netzwerk
@@ -122,21 +120,15 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;7.1.1{" "}
+                        &ensp;6.1.1{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Sei $t: \N \rightarrow \N$. Eine
                     &ensp;Sei $t: \N \rightarrow \N$. Eine
                     Turingmaschinen $M$
                     <i>
                       entscheidet
                     </i>
-                    {" "}eine Sprache $L \subseteq \Sigma^
-                    <b>
-                      $ in Zeit $t$ wenn
-                      &ensp;eine Sprache $L \subseteq \Sigma^
-                    </b>
-                    $ in Zeit $t$ wenn
+                    {" "}eine Sprache $L \subseteq \Sigma^*$ in Zeit $t$ wenn
                   </Paragraph>
                   <ul>
                     <li>
@@ -171,7 +163,6 @@ const Article = () => {
                     Kapitel 7.3
                   </a>
                   &ensp;gezeigt, wie man eine
-                  &ensp;gezeigt, wie man eine
                   $k$-Band-Turingmaschine $M$ durch eine
                   Ein-Band-Turingmaschine $M'$. Der Aufwand war quadratisch: wenn $M$ innerhalb von $t$ Schritten
                   terminiert, so terminiert $M'$ innerhalb von $c t^2$ Schritten, wobei $c$ eine Konstante ist,
@@ -182,6 +173,9 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;6.1.2{" "}
+                      </NumberedTitle>
                     </span>
                     &ensp;
                     <b>
@@ -207,6 +201,9 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Theorem
+                      <NumberedTitle>
+                        &ensp;6.1.3{" "}
+                      </NumberedTitle>
                     </span>
                     &ensp;
                     <b>
@@ -214,7 +211,6 @@ const Article = () => {
                       Beweis).
                     </b>
                     {" "}Sei
-                    &ensp;Sei
                     $t: \N \rightarrow \N$. Dann gilt $\TIME
                     <i>
                       k(t) \subseteq \TIME

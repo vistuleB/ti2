@@ -45,11 +45,8 @@
                         Im letzten Kapitel haben wir viele Mengen kennengelernt, die abzählbar
                         unendlich sind, also gleichmächtig mit $\N$. Hier werden wir nun
                         erkunden, welche Mengen gleichmächtig mit $\R$ sind. In der
-                        mathematischen Fachsprache sagt man: sie haben die_Kardinalität des Kontinuums_. Das Wort_Kardinalität_ steht hier für
-                        &ensp;steht hier für_Anzahl der Elemente_ (bzw. den Größenbegriff bei unendlichen
-                        &ensp;(bzw. den Größenbegriff bei unendlichen
-                        Mengen), und _Kontinuum_ steht für 
-                        &ensp;steht für _die reellen Zahlen_.
+                        mathematischen Fachsprache sagt man: sie haben die_Kardinalität des Kontinuums_. Das Wort_Kardinalität_ steht hier für_Anzahl der Elemente_ (bzw. den Größenbegriff bei unendlichen
+                        Mengen), und _Kontinuum_ steht für _die reellen Zahlen_.
                         Im nächsten Kapitel werden wir zeigen, dass es "echt mehr" reelle
                         Zahlen gibt als natürliche; dass also $\R$ nicht abzählbar ist. Aber
                         eins nach dem anderen.
@@ -63,7 +60,6 @@
                                 |> NumberedTitle
 
                                     &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
-                            &ensp;Es gilt $\R \approx
                             &ensp;Es gilt $\R \approx
                             (0,1)$, wobei $(0,1)$ das offene Einheitsintervall ist.
                     |> div
@@ -150,6 +146,9 @@
                                 class numbered-title
 
                                 Theorem
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             $\R \approx \{0,1\}^{\N}$.
                     |> div
                         class well container
@@ -245,17 +244,18 @@
                                 class numbered-title
 
                                 Theorem
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             Es gilt $\R^2 \approx \R$.
                     |> div
                         class well container
                         |> p
 
                             *Beweis.* Mithilfe von
-                            &ensp;Mithilfe von
                             |> span
                                 data-ref theorem-R-bitstrings
                                 class reference
-                            &ensp;geht
                             &ensp;geht
                             das ganz einfach. Da $\R \approx \{0,1\}^\N$ gilt, reicht es
                             nämlich, eine Bijektion $\{0,1\}^\N \times \{0,1\}^\N \rightarrow
@@ -266,7 +266,6 @@
                         |> p
 
                             Wir müssen dieses Folgenpaar nun in _eine_ Folge codieren.
-                            &ensp;Folge codieren.
                             Ganz klar:
                         \begin{align*} (a_1 a_2 a_3 \dots, b_1 b_2 b_3 \dots) \mapsto (a_1 b_1
                         a_2 b_2 a_3 b_3 \dots) \end{align*} Dies ist die gewünschte Bijektion
@@ -336,7 +335,6 @@
                                 |> NumberedTitle
 
                                     &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
-                            &ensp;Die Funktion
                             &ensp;Die Funktion
                             $f^{-1}$ bildet
                         |> ul
@@ -462,7 +460,9 @@
                                 class numbered-title
 
                                 Theorem
-                            &ensp;$\R \approx \R^{\N}$.
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             &ensp;$\R \approx \R^{\N}$.
                     |> div
                         class well container
@@ -540,12 +540,10 @@
                         mengentheoretisches Analog das Cartesische Produkt $A \times B$, die
                         Menge aller Paare $(x,y)$ mit $x \in A, y \in B$. Die Exponentiation
                         $a^b$ hat als Analog $A^B$, die Menge aller _Funktionen_ $\phi:
-                        &ensp;$\phi:
                         B \rightarrow A$. Was ist das Analog zur Addition? Die Vereinigung $A
                         \cup B$ wäre zu kurz gegriffen, weil ja zum Beispiel $\{1,2,3\} \cup
                         \{4,5\}$ fünf Elemente hat, $\{1,2,3\} \cup \{1,2\}$ aber nur drei.
                         Das "richtige" Analog ist die _disjunkte Vereinigung_ $A \uplus
-                        &ensp;$A \uplus
                         B$, die die Elemente von $B$ erst einmal "markiert", um sie von denen
                         von $A$ unterscheidbar zu machen. Somit wäre also $\{1,2,3\} \uplus
                         \{1,2\} = \{1,2,3,1',2'\}$ eine Menge der Kardinalität 5. Formal kann
@@ -560,6 +558,9 @@
                                 class numbered-title
 
                                 Theorem
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             *(mit Kardinalzahlen rechnen)*. Es gelten die
                             üblichen Rechenregeln:
                         |> ol
@@ -588,6 +589,9 @@
                                 class numbered-title
 
                                 Theorem
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             Seien $A, A', B$ Mengen und $A \approx A'$. Dann gilt
                         |> ol
                             |> li
@@ -620,7 +624,6 @@
 
                                     &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
                             &ensp;Beweisen Sie so
-                            &ensp;Beweisen Sie so
                             viele Punkte von
                             |> span
                                 data-ref calculating-with-cardinals
@@ -633,7 +636,6 @@
                         |> p
 
                             *Hinweis.* Die Beweise sind alle nicht wirklich
-                            &ensp;Die Beweise sind alle nicht wirklich
                             schwierig. Sie müssen nur aufpassen, dass Sie sich nicht in der
                             Notation verlieren.
                     |> h3
@@ -659,16 +661,13 @@
                         Die Elemente von $2^\N$, also Teilmengen $A \subseteq \N$, sind nach
                         Inklusion geordnet: $A \subseteq B$. Somit ist $\left(2^{\N},
                         \subseteq\right)$ eine Partialordnung. Eine _Kette_ in einer
-                        &ensp;in einer
                         Partialordnung $(X, \preceq)$ ist eine Menge $Z$, in der alle Elemente
                         paarweise vergleichbar sind. In diesem konkreten Beispiel heißt das:
                         $Z \subseteq 2^{\N}$ und für alle $A, B \in Z$ gilt $A \subseteq B$
                         oder $B \subseteq A$. Erinnern Sie sich: $A$ und $B$ sind hier Mengen
                         natürlicher Zahlen, und $Z$ ist eine Menge von Mengen natürlicher
                         Zahlen. Eine _Antikette_ in einer Partialordnung $(X,\preceq)$
-                        &ensp;in einer Partialordnung $(X,\preceq)$
                         ist eine Teilmenge $Z \subseteq X$, in der je zwei Elemente_unvergleichbar_ sind. In diesem Beispiel heißt das: $Z
-                        &ensp;sind. In diesem Beispiel heißt das: $Z
                         \subseteq 2^N$, und für alle $A, B \in Z$ mit $A \ne B$ gilt $A \not
                         \subseteq B$ und $B \not \subseteq A$. Hier ist ein Beispiel für eine
                         unendliche Kette:
@@ -706,7 +705,6 @@
 
                                     &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             *(Dichte Partialordnung)* Eine Partialordnung
-                            &ensp;Eine Partialordnung
                             $(X,\preceq)$ heißt _dicht_, wenn es für alle $x,z \in X$ mit
                             $x \prec z$ ein $y \in X$ gibt mit $x \prec y \prec z$.
                     |> p

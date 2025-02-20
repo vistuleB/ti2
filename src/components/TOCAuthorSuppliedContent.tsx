@@ -21,8 +21,8 @@ const TOCAuthorSuppliedContent = () => {
             number={1.2}
             href="01-02-truth-tables-cnf-dnf" />
           <TOCItem
-            label="::++ChapterCtr Binär-Addierer"
-            on_mobile="::++ChapterCtr Binär-Addierer"
+            label="Binär-Addierer"
+            on_mobile="Binär-Addierer"
             number={1.3}
             href="01-03-binary-adder" />
           <TOCItem

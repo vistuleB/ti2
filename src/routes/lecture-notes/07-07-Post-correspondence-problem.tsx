@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    7.7 
+                    6.7 
                     Mehr über Unentscheidbarkeit: Das Postsche Korrespondenzproblem
                   </span>
                 </h1>
@@ -64,7 +64,6 @@ const Article = () => {
                     Kacheln
                   </i>
                   {" "}genannt) gegeben,
-                  &ensp;genannt) gegeben,
                   die oben und unten jeweils ein Wort haben. Wir müssen
                   die Kärtchen so nebeneinander legen, dass oben und unten
                   das gleiche Wort entsteht; jedes Kärtchen kann beliebig
@@ -438,7 +437,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;7.7.1{" "}
+                      &ensp;6.7.1{" "}
                     </NumberedTitle>
                     &ensp;(Postsches Korrespondenz-Problem, PCP)
                   </span>
@@ -449,13 +448,11 @@ const Article = () => {
                       <i>
                         Kachel
                       </i>
-                      {" "}(auch 
-                      &ensp;(auch{" "}
+                      {" "}(auch{" "}
                       <i>
                         Kärtchen
                       </i>
                       {" "}genannt) ist ein
-                      &ensp;genannt) ist ein
                       Paar \((\alpha : \beta) \in \Sigma^* \times \Sigma^*\).
                       Hier bezeichnet \(\alpha\) das Wort auf der oberen Hälfte der Kachel
                       und \(\beta\) das auf der unteren.
@@ -475,12 +472,10 @@ const Article = () => {
                         oberen Teil
                       </i>
                       {" "}\(\top(s)\) und den
-                      &ensp;\(\top(s)\) und den
                       <i>
                         unteren Teil
                       </i>
                       {" "}\(\bottom(s)\):
-                      &ensp;\(\bottom(s)\):
                       $$\begin&#123;align*&#125;
                       \top(s)&amp;:= \alpha_1 \alpha_2 \dots \alpha_m \\
                       \bottom(s)&amp;:= \beta_1 \beta_2 \dots \beta_m \\
@@ -536,6 +531,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;6.7.2{" "}
+                    </NumberedTitle>
                   </span>
                   PCP ist unentscheidbar.
                 </div>
@@ -570,7 +568,6 @@ const Article = () => {
                       Korrespondenzproblem (MPCP)
                     </i>
                     {" "}ist genau das gleiche wie das PCP,
-                    &ensp;ist genau das gleiche wie das PCP,
                     nur dass es in \(S\) eine markierte Startkachel gibt
                     und jede Lösung mit dieser Startkachel beginnen muss.
                     Es ist also ein "strengeres" Problem als das PCP.
@@ -669,7 +666,6 @@ const Article = () => {
                       Konfiguration
                     </i>
                     {" "}einer
-                    &ensp;einer
                     Turingmaschine ist eine Folge
                     $$\begin&#123;align*&#125;
                     w_1 w_2 \dots w_&#123;j-1&#125; q w_j \dots w_m
@@ -904,7 +900,6 @@ const Article = () => {
                       jedes
                     </i>
                     {" "}Bandsymbol \(y\), da die Regel immer anzuwenden ist,
-                    &ensp;Bandsymbol \(y\), da die Regel immer anzuwenden ist,
                     egal, welches Symbol \(y\) links vom Schreib-Lese-Kopf steht.
                   </Paragraph>
                   <Paragraph>

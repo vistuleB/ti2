@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    4.3 
+                    3.3 
                     3.3 Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion
                   </span>
                 </h1>
@@ -58,7 +58,6 @@ const Article = () => {
                     eine
                   </i>
                   {" "}natürliche Zahl codieren können und somit
-                  &ensp;natürliche Zahl codieren können und somit
                   der primitiven Rekursion zugänglich machen können.
                 </Paragraph>
                 <Paragraph>
@@ -70,7 +69,6 @@ const Article = () => {
                     Wikipedia-Artikel
                     über die Ackermann-Funktion
                   </a>
-                  &ensp;schreibt, dass der deutsche Mathematiker
                   &ensp;schreibt, dass der deutsche Mathematiker
                   David Hilbert dies auch vermutete. Im Jahre 1926
                   jedoch definierte{" "}
@@ -84,14 +82,13 @@ const Article = () => {
                     Rózsa Péter
                   </a>
                   &ensp;gefunden wurde (obwohl
-                  &ensp;gefunden wurde (obwohl
                   der letztere Artikel das Jahr 1955 nennt).
                 </Paragraph>
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;4.3.1{" "}
+                      &ensp;3.3.1{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -160,6 +157,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;3.3.2{" "}
+                    </NumberedTitle>
                   </span>
                   Sei \(m \in \N\) gegeben. Die Funktion \(A_m\) ist primitiv rekursiv.
                 </div>
@@ -210,7 +210,6 @@ const Article = () => {
                     berechenbar
                   </i>
                   {" "}ist?
-                  &ensp;ist?
                   In der primitiven Rekursion haben wir keine Möglichkeit, den Index \(m\) als
                   Eingabewert zu lesen und dann aus dem unendlichen Array primitiv rekursiver Funktionen
                   \([A_0, A_1, A_2, \dots]\) den Eintrag \(A_m\) auszulesen.
@@ -219,7 +218,6 @@ const Article = () => {
                     berechenbar
                   </i>
                   {" "}in einem ganz allgemeinen Sinn? Diese Frage können wir
-                  &ensp;in einem ganz allgemeinen Sinn? Diese Frage können wir
                   zu diesem Zeitpunkt nicht formal beantworten, weil wir den Begriff
                   allgemeiner Berechenbarkeit noch gar nicht definiert haben. Es ist allerdings
                   an der Definition von \(A(m,n)\) nichts magisches, und intuitiv würden wir
@@ -232,6 +230,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Theorem
+                    <NumberedTitle>
+                      &ensp;3.3.3{" "}
+                    </NumberedTitle>
                   </span>
                   Die Ackermann-Péter-Funktion ist nicht primitiv rekursiv.
                 </div>
@@ -256,18 +257,15 @@ const Article = () => {
                     einen
                   </i>
                   {" "}Eingabeparameter.
-                  &ensp;Eingabeparameter.
                   Theorem 3.3.3 hingegen macht eine Aussage über{" "}
                   <i>
                     eine
                   </i>
                   {" "}Funktion \(A(m,n)\) mit
-                  &ensp;Funktion \(A(m,n)\) mit
                   <i>
                     zwei
                   </i>
                   {" "}Eingabeparametern, und \(m\) ist nun einer dieser beiden.
-                  &ensp;Eingabeparametern, und \(m\) ist nun einer dieser beiden.
                 </Paragraph>
                 <Paragraph>
                   Anders ausgedrückt: sie können zwar jedes einzelne \(A_m\) in der "Programmiersprache" der
@@ -304,7 +302,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;4.3.2{" "}
+                        &ensp;3.3.4{" "}
                       </NumberedTitle>
                       .
                     </span>
@@ -314,7 +312,6 @@ const Article = () => {
                       majorisiert
                     </i>
                     {" "}\(g\), wenn
-                    &ensp;\(g\), wenn
                     $$\begin&#123;align*&#125;
                     f (\max(x_1,\dots,x_k) \gt g(x_1, \dots, x_k) \ .
                     \end&#123;align*&#125;$$
@@ -366,7 +363,6 @@ const Article = () => {
                     </b>
                     {" "}
                     &ensp;Wir betrachten wir die Basisfunktionen
-                    &ensp;Wir betrachten wir die Basisfunktionen
                     \(\zero, \succ, \pi^n_k\).
                     Wir wissen bereits, dass \(A_0(n) = n+1\) ist, also \(A_0 = \succ\).
                     Leider majorisiert \(A_0\) also \(\succ\) nicht. Wie steht es mit
@@ -394,14 +390,12 @@ const Article = () => {
                       Komposition:
                     </b>
                     {" "}\(f(\vec&#123;x&#125;) = g(h_1(\vec&#123;x&#125;), \dots, h_k(\vec&#123;x&#125;))\),
-                    &ensp;\(f(\vec&#123;x&#125;) = g(h_1(\vec&#123;x&#125;), \dots, h_k(\vec&#123;x&#125;))\),
                     für primitiv rekursive Funktionen \(g, h_1, \dots, h_k\). Jede dieser Funktionen
                     wurde mit{" "}
                     <i>
                       weniger
                     </i>
                     {" "}Kombinatoren konstruiert; somit wird jede dieser Funktionen
-                    &ensp;Kombinatoren konstruiert; somit wird jede dieser Funktionen
                     von einem \(A_r\) majorisiert:
                     \(A_r \gt g, A_&#123;s_1&#125; \gt h_1, \dots, A_&#123;s_k&#125; \gt h_k\). Für einen Eingabevektor \(\vec&#123;x&#125;\)
                     schreiben wir \(x := \max(x_1,\dots,x_n)\) und rechnen:
@@ -428,7 +422,6 @@ const Article = () => {
                       Primitive Rekursion:
                     </b>
                     {" "}\(f = \primrec (g,h)\), also
-                    &ensp;\(f = \primrec (g,h)\), also
                     $$\begin&#123;align*&#125;
                     f(t, \vec&#123;x&#125;)&amp;=
                     \begin&#123;cases&#125;
@@ -499,7 +492,6 @@ const Article = () => {
                     Grad
                   </i>
                   {" "}einer primitiv-rekursiven Funktion
-                  &ensp;einer primitiv-rekursiven Funktion
                   definiert. Das ist in etwa die "Verschachtelungstiefe" von $f$. Betrachten wir beispielsweise
                   die Funktion $\pair(x,y) = &#123;x + y + 1 \choose 2&#125; + x$ und dröseln auf, wie wir diese
                   als primitiv-rekursive Funktion konstruiert haben:

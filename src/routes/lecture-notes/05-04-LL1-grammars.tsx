@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.4 
+                    5.4 
                     5.4 LL(\(k\))-Grammatiken
                   </span>
                 </h1>
@@ -46,7 +46,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.4.1{" "}
+                      &ensp;5.4.1{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -77,7 +77,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.4.2{" "}
+                      &ensp;5.4.2{" "}
                     </NumberedTitle>
                   </span>
                   Für ein Wort \(w \in \Sigma^*\) und eine natürliche Zahl \(k \in \N\)
@@ -95,7 +95,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.4.3{" "}
+                      &ensp;5.4.3{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -125,7 +125,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.4.1{" "}
+                      &ensp;5.4.1{" "}
                     </NumberedTitle>
                   </span>
                   Negieren Sie die Definition, d.h., schreiben Sie eine Aussage der Form
@@ -165,7 +165,6 @@ const Article = () => {
                         Behauptung.
                       </b>
                       {" "}Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
-                      &ensp;Wenn \(S \rightarrow \delta \in (\Sigma \cup N)^*\),
                       dann steht jedes \(S\) in \(\delta\) entweder am Ende von \(\delta\) oder
                       unmittelbar vor einem "\(\texttt&#123;)&#125;\)".
                     </Paragraph>
@@ -209,7 +208,6 @@ const Article = () => {
                     nicht
                   </i>
                   {" "}LL(\(k\)) ist, dann muss der Backtrack-Baum
-                  &ensp;LL(\(k\)) ist, dann muss der Backtrack-Baum
                   beiden Ableitungen
                   $$\begin&#123;align*&#125;
                   w A \alpha&amp;\Rightarrow w \beta \alpha \\
@@ -223,7 +221,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.4.2{" "}
+                      &ensp;5.4.2{" "}
                     </NumberedTitle>
                   </span>
                   (Beispiel 5.3 aus{" "}
@@ -231,7 +229,6 @@ const Article = () => {
                     The Theory of Parsing, Translation, and Compiling
                   </i>
                   {" "}von Alfred V. Aho
-                  &ensp;von Alfred V. Aho
                   und Jeffrey D. Ullman).
                   Betrachten wir die Grammatik
                   $$\begin&#123;align*&#125;
@@ -247,7 +244,6 @@ const Article = () => {
                       Tip.
                     </b>
                     {" "}Leiten Sie erst einmal
-                    &ensp;Leiten Sie erst einmal
                     ein Dutzend verschiedene Wörter ab und finden dann
                     eine "normalsprachliche" Beschreibung
                     dieser Sprache. Beschreiben Sie dann alle möglichen Wortformen
@@ -258,7 +254,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.4.3{" "}
+                      &ensp;5.4.3{" "}
                     </NumberedTitle>
                   </span>
                   Schreiben Sie eine äquivalente Grammatik zu der vorherigen Sprache, die LL(1) ist.
@@ -270,7 +266,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.4.4{" "}
+                      &ensp;5.4.4{" "}
                     </NumberedTitle>
                   </span>
                   Betrachten wir die Grammatik \(G\):
@@ -288,7 +284,6 @@ const Article = () => {
                     höchstens
                   </i>
                   {" "}so vielen \(b\)'s folgt.
-                  &ensp;so vielen \(b\)'s folgt.
                   <Paragraph>
                     Geben Sie diese Grammatik in den
                     <a href="../../demos/drawManualGrammar.html">
@@ -305,7 +300,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.4.5{" "}
+                      &ensp;5.4.5{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(t \in \N\) eine feste, im Voraus bekannte Zahl.
@@ -321,7 +316,6 @@ const Article = () => {
                     <a href="../../demos/drawManualGrammar.html">
                       Parser-Simulator
                     </a>
-                    &ensp;ein
                     &ensp;ein
                     und schauen, wie lang die Sackgassen werden können.
                   </Paragraph>
@@ -344,12 +338,11 @@ const Article = () => {
                   Wortformen
                 </i>
                 {" "}(die also Nichtterminale beinhalten können).
-                &ensp;(die also Nichtterminale beinhalten können).
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.4.4{" "}
+                      &ensp;5.4.4{" "}
                     </NumberedTitle>
                   </span>
                   Sei eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) und eine
@@ -364,7 +357,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.4.5{" "}
+                      &ensp;5.4.5{" "}
                     </NumberedTitle>
                     /Beobachtung
                   </span>
@@ -424,7 +417,6 @@ const Article = () => {
                     keiner
                   </i>
                   {" "}dieser Mengen enthalten ist, so
-                  &ensp;dieser Mengen enthalten ist, so
                   kann die Ableitung offensichtlich nicht vervollständigt werden, und wir schließen,
                   dass \(xy \not \in L(G)\) ist.
                   Wenn es{" "}
@@ -432,7 +424,6 @@ const Article = () => {
                     genau ein
                   </i>
                   {" "}\(\beta_i\) gibt mit
-                  &ensp;\(\beta_i\) gibt mit
                   \(\first_k(y) \in \first_k(\beta_i \alpha)\), dann ist
                   \(A \rightarrow \beta_i\) die "richtige" Produktion.
                   Wir wenden sie an, ersetzen also \(A\) auf dem Stack durch \(\beta_i\).
@@ -459,7 +450,6 @@ const Article = () => {
                       <tt>
                         while
                       </tt>
-                      &ensp;Stack nicht leer
                       &ensp;Stack nicht leer
                     </li>
                     <ol class="nested">
@@ -528,7 +518,6 @@ const Article = () => {
                         <tt>
                           Accept
                         </tt>
-                        &ensp;ansonsten 
                         &ensp;ansonsten{" "}
                         <tt>
                           Reject
@@ -549,7 +538,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.4.6{" "}
+                      &ensp;5.4.6{" "}
                     </NumberedTitle>
                   </span>
                   Seien \(K, L \subseteq \Sigma^*\) zwei Mengen.
@@ -598,7 +587,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;6.4.7{" "}
+                      &ensp;5.4.7{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -650,12 +639,10 @@ const Article = () => {
                       <tt>
                         for
                       </tt>
-                      &ensp;\(i=n\) 
                       &ensp;\(i=n\){" "}
                       <tt>
                         down to
                       </tt>
-                      &ensp;1 
                       &ensp;1{" "}
                       <tt>
                         do:
@@ -675,7 +662,6 @@ const Article = () => {
                         return
                       </tt>
                       &ensp;\(K\)
-                      &ensp;\(K\)
                     </li>
                   </ol>
                   <Paragraph>
@@ -691,7 +677,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;6.4.8{" "}
+                      &ensp;5.4.8{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(X\) ein Nichtterminal und
@@ -738,12 +724,10 @@ const Article = () => {
                     komplexere
                   </i>
                   {" "}un
-                  &ensp;un
                   <i>
                     genauer
                   </i>
                   {" "}zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
-                  &ensp;zu machen. Wir führen nun, zusätzlich zu \(\First_k(X)\) und
                   \(\First_k(\alpha)\), noch eine feinere
                   Unterteilung an:
                 </Paragraph>
@@ -751,7 +735,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.4.9{" "}
+                      &ensp;5.4.9{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(\sigma\) ein Symbol und \(d \in \N\). Dann ist
@@ -833,7 +817,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;6.4.10{" "}
+                      &ensp;5.4.10{" "}
                     </NumberedTitle>
                   </span>
                   Falls \(\First_&#123;k&#125;^&#123;(d-1)&#125;(X)=\First_&#123;k&#125;^&#123;(d)&#125;(X)\) für alle \(X \in N\), dann gilt

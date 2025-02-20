@@ -54,7 +54,6 @@
 
                             Kapitel 4.1
                         &ensp;das
-                        &ensp;das
                         Baukastenprinzip kennengelernt:
                     |> ol
                         |> li
@@ -83,11 +82,9 @@
                         style text-align:center
 
                         *Frage:*Können _alle_ regulären Sprachen nach diesem Baukastenprinzip erstellt werden?
-                        &ensp;regulären Sprachen nach diesem Baukastenprinzip erstellt werden?
                     |> p
 
                         Damit diese Frage überhaupt die Chance hat, mit _ja_ beantwortet zu werden, müssen wir
-                        &ensp;beantwortet zu werden, müssen wir
                         "Atome" zur Verfügung stellen, mit denen wir beginnen können. Daher:
                     |> ul
                         |> li
@@ -114,7 +111,6 @@
                             |> li
 
                                 *Atome.* \(\emptyset\) ist ein regulärer Ausdruck und beschreibt die
-                                &ensp;\(\emptyset\) ist ein regulärer Ausdruck und beschreibt die
                                 Sprache \(\emptyset\).
                                 \(\epsilon\) ist ein regulärer Ausdruck und beschreibt die Sprache \(\{\epsilon\}\).
                                 Jedes einzelne Zeichen \(x \in \Sigma\) ist ein regulärer Ausdruck und
@@ -122,7 +118,6 @@
                             |> li
 
                                 *Alternative.* Wenn \(R_1, R_2\) reguläre Ausdrücke über \(\Sigma\) sind
-                                &ensp;Wenn \(R_1, R_2\) reguläre Ausdrücke über \(\Sigma\) sind
                                 und die Sprachen \(L_1\) und \(L_2\) beschreiben, so ist
                                 \((R_1 | R_2)\) ein regulärer Ausdruck und beschreibt die Sprache
                                 \(L_1 \cup L_2\) (die regulär ist, wie wir in 
@@ -131,17 +126,14 @@
 
                                     Kapitel 4.1
                                 &ensp;gesehen haben).
-                                &ensp;gesehen haben).
                             |> li
 
                                 *Konkatenation.* \((R_1R_2)\) ist ein regulärer Ausdruck, der
-                                &ensp;\((R_1R_2)\) ist ein regulärer Ausdruck, der
                                 die Sprache \(L_1 \circ L_2\) beschreibt (die auch wiederum regulär ist).
                                 Der Deutlichkeit halber schreiben wir auch manchmal \(R_1 \circ R_2\).
                             |> li
 
                                 *Kleenesche Hülle.* Wenn \(R\) ein regulärer Ausdruck ist und die Sprache
-                                &ensp;Wenn \(R\) ein regulärer Ausdruck ist und die Sprache
                                 \(L\) beschreibt,
                                 dann ist \((R^*)\) ein regulärer Ausdruck und beschreibt die Sprache \(L^*\).
                         |> p
@@ -149,23 +141,18 @@
                             Weil in der Praxis neben \(L^*\), also beliebig langen, möglicherweise leeren Folgen von
                             \(L\)-Wörtern wir
                             oft _nichtleere_ Folgen wollen,
-                            &ensp;Folgen wollen,
                             führen wir die Abkürzung \(R^+\) für \(R (R^*)\) ein und bezeichnen die beschriebene Sprache
                             \(L \circ L^*\) kurzerhand als \(L^+\).
                     |> p
 
                         In konkreten fällen lassen gerne die Klammerung weg, wenn keine Verwechslungsgefahr besteht.
                         Auch
-                        gehen wir davon aus, dass die Operatoren die Präzedenz \(^*\) vor \(\circ\) vor \(|\) haben (wie_hoch_ vor 
-                        &ensp;vor _Punkt_ vor 
-                        &ensp;vor _Strich_ in der Arithmetik), sodass beispielsweise
-                        &ensp;in der Arithmetik), sodass beispielsweise
+                        gehen wir davon aus, dass die Operatoren die Präzedenz \(^*\) vor \(\circ\) vor \(|\) haben (wie_hoch_ vor _Punkt_ vor _Strich_ in der Arithmetik), sodass beispielsweise
                         der Ausdruck \( a^*b|c^*\) die Bedeutung von \((((a^*)b)(c^*))\) hat, genauso wie wir
                         in der Arithmetik \(a^2 b + c^3\) statt \( (((a^2)b) + c^3) \) schreiben.
                     |> p
 
                         Die von den atomaren Ausdrücken beschriebenen Sprachen sind alle regulär, da sie alle_endliche Sprachen_ sind.
-                        &ensp;sind.
                         Dank unserer Vorarbeit aus 
                         |> a
                             href ./04-01-regular-grammars.html#baukasten
@@ -192,12 +179,9 @@
 
                             Beispiel
                         Nehmen wir die Sprache der Wörter der Form `bla:bla:blu.xyz-12-ab.b:x` aus dem
-                        &ensp;aus dem
                         letzten Kapitel. Sie erinnern sich:
                         eine endliche Folge von _Labels_, wo ein Label eine nichtleere Folge von Blöcken ist, die
-                        entweder `:` oder durch 
-                        &ensp;oder durch `-` separiert sind, wobei innerhalb eines Labels
-                        &ensp;separiert sind, wobei innerhalb eines Labels
+                        entweder `:` oder durch `-` separiert sind, wobei innerhalb eines Labels
                         immer nur ein
                         Separatortyp vorkommen darf, und wobei ein Block eine nichtleere Folge von alphanumerischen
                         Zeichen ist (wir haben uns dann auf den Buchstaben \(a\) beschränkt).
@@ -212,9 +196,7 @@
                             \begin{align*}
                             B : = a^+
                             \end{align*}
-                            Für ein Label müssen wir uns entscheiden, ob wir die Blöcke mit `:` oder
-                            &ensp;oder`-` separieren; wir
-                            &ensp;separieren; wir
+                            Für ein Label müssen wir uns entscheiden, ob wir die Blöcke mit `:` oder`-` separieren; wir
                             erhalten den regulären Ausdruck \(T\) für Labels ist also
                             \begin{align*}
                             T := B ({:}B)^* | B (\text{-}B)^*
@@ -229,11 +211,8 @@
                             was wir in unserer Grammatik bzw. dem nichtdeterministischen Automaten für \(L\) getan
                             haben, während \(T'\) eher
                             die Arbeitsweise des determinisitschen Automaten reflektiert (wir lesen erst einmal einen
-                            Block und erst, wenn wir zum ersten mal auf`:` oder 
-                            &ensp;oder `-` stoßen, entscheiden wir uns für den "Typ" des Labels).
-                            &ensp;stoßen, entscheiden wir uns für den "Typ" des Labels).
+                            Block und erst, wenn wir zum ersten mal auf`:` oder `-` stoßen, entscheiden wir uns für den "Typ" des Labels).
                             Schlussendlich ist ein Wort in der Sprache eine mit `.` separierte Folge von
-                            &ensp;separierte Folge von
                             Labels, also:
                             \begin{align*}
                             R := T ({.}T)^*
@@ -257,7 +236,6 @@
 
                             TestRegex.java
                         &ensp;herunter,
-                        &ensp;herunter,
                         kompilieren und starten Sie es.
                         |> pre
                             |> code
@@ -268,7 +246,6 @@
                                 class terminalOutput
 
                                 Please enter a regular expression:
-                            &ensp;(a+)(:a+)*
                             &ensp;(a+)(:a+)*
                             |> code
                                 class terminalOutput
@@ -297,11 +274,8 @@
                             |> NumberedTitle
 
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
-                        In der Praxis gibt es bei reguläre Ausdrücken viele Abkürzung, so beschreibt`[a-z]` beispielsweise die Menge aller Kleinbuchstaben,
-                        &ensp;beispielsweise die Menge aller Kleinbuchstaben,`[aoeiuy]` beschreibt die Menge \{a,o,e,i,u,y\} etc.
-                        &ensp;beschreibt die Menge \{a,o,e,i,u,y\} etc.
+                        In der Praxis gibt es bei reguläre Ausdrücken viele Abkürzung, so beschreibt`[a-z]` beispielsweise die Menge aller Kleinbuchstaben,`[aoeiuy]` beschreibt die Menge \{a,o,e,i,u,y\} etc.
                         Der reguläre Ausdruck `[a-z]*[aeiuoy][a-z]*` beschreibt also die
-                        &ensp;beschreibt also die
                         Menge aller Wörter, die mindesten einen Vokal enthalten.
                         Lesen Sie hierfür unter Anderem
                         |> div
@@ -340,6 +314,9 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Sei \(L\) eine reguläre Sprache. Dann gibt es einen regulären Ausdruck \(R\), der \(L\)
                         beschreibt,
                         also
@@ -465,7 +442,6 @@
                             \step{R_4} B\) nicht
                             existieren sollte , lassen wir das \(R_4 | \) im rechten Bild einfach weg.
                             (Sipser führt hier den eleganten Formalismus ein, zu verlangen, dass _jedes_ Paar
-                            &ensp;Paar
                             durch
                             eine Kante verbunden ist und würde fehlende Kanten einfach mit dem regulären Ausdruck
                             \(\emptyset\) beschriften.)

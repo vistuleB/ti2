@@ -35,7 +35,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    7.1 
+                    6.1 
                     9. Appendix - Manual für das Schreiben dieses Skripts
                   </span>
                 </h1>
@@ -66,13 +66,11 @@ const Article = () => {
                     <code>
                       next
                     </code>
-                    {" "}nad 
-                    &ensp;nad{" "}
+                    {" "}nad{" "}
                     <code>
                       prev
                     </code>
                     {" "}navigation links) is
-                    &ensp;navigation links) is
                     determined purely by the order in which they appear in
                     <a href="../javascript/table-of-contents.js">
                       table-of-contents.js
@@ -113,23 +111,18 @@ const Article = () => {
                     <code>
                       div
                     </code>
-                    {" "}the class
-                    &ensp;the class`theorem` and the title 
-                    &ensp;and the title{" "}
+                    {" "}the class`theorem` and the title{" "}
                     <code>
                       span
                     </code>
-                    {" "}the class
-                    &ensp;the class`nunbered-title`, otherwise the automatic numbering will
+                    {" "}the class`nunbered-title`, otherwise the automatic numbering will
                     not work.
                     <Paragraph>
                       The attributes{" "}
                       <code>
                         id="sauer-shelah-lemma"
                       </code>
-                      {" "}and
-                      &ensp;and`data-label-title="Lemma"` are necessarily for
-                      &ensp;are necessarily for
+                      {" "}and`data-label-title="Lemma"` are necessarily for
                       automatic referencing. Here is how you create a reference:
                     </Paragraph>
                     <div class="well container">
@@ -137,7 +130,6 @@ const Article = () => {
                       <span
                         data-ref="sauer-shelah-lemma"
                         class="reference" />
-                      &ensp;just
                       &ensp;just
                       above and
                       <span
@@ -156,7 +148,6 @@ const Article = () => {
                       id
                     </code>
                     {" "}of a theorem (or a general environment)
-                    &ensp;of a theorem (or a general environment)
                     has to be unique{" "}
                     <i>
                       across all files of the lecture notes
@@ -175,7 +166,6 @@ const Article = () => {
                       the entire lecture notes
                     </i>
                     {" "}each time a single file is loaded.
-                    &ensp;each time a single file is loaded.
                     This would take too much time, so we use a precompilation step:
                   </Paragraph>
                   <Paragraph>
@@ -189,10 +179,7 @@ const Article = () => {
                     <code>
                       theorem
                     </code>
-                    {" "}or
-                    &ensp;or`exercise` that have also class
-                    &ensp;that have also class`numbered-title` and numbers them. If the environment has
-                    &ensp;and numbers them. If the environment has
+                    {" "}or`exercise` that have also class`numbered-title` and numbers them. If the environment has
                     the attribute `data-label-title`, then it adds an entry
                     to a global dictionary. At the end, when all has been loaded, the
                     web page will show this dictionary as a json object.
@@ -213,7 +200,6 @@ const Article = () => {
                     </b>
                     {" "}
                     &ensp;The page
-                    &ensp;The page
                     <a href="../javascript/put-all-in-one-page.html">
                       put-all-in-one-page.html
                     </a>
@@ -222,10 +208,8 @@ const Article = () => {
                     enabled, for example
                     <pre>
                       &ensp;http-server .  --cors
-                      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;http-server .  --cors
                     </pre>
                     Once this server is running, go to`http://localhost:8080` in your browser.
-                    &ensp;in your browser.
                   </div>
                 </ol>
               </div>

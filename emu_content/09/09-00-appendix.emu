@@ -62,9 +62,7 @@
                             copy an existing file, a "chapter" or a "subchapter" file, depending
                             on the new file you want to create. The ordering in which they
                             appear (in the table of content and in the link structure given by
-                            the `next` nad 
-                            &ensp;nad `prev` navigation links) is
-                            &ensp;navigation links) is
+                            the `next` nad `prev` navigation links) is
                             determined purely by the order in which they appear in
                             |> a
                                 href ../javascript/table-of-contents.js
@@ -101,16 +99,11 @@
                                 \end{align*}
                                 in other words, the set $I$ of coordinates is shattered.
                                 </div class='well container theorem'>
-                            You must give the environment `div` the class
-                            &ensp;the class`theorem` and the title 
-                            &ensp;and the title `span` the class
-                            &ensp;the class`nunbered-title`, otherwise the automatic numbering will
+                            You must give the environment `div` the class`theorem` and the title `span` the class`nunbered-title`, otherwise the automatic numbering will
                             not work.
                             |> p
 
-                                The attributes `id="sauer-shelah-lemma"` and
-                                &ensp;and`data-label-title="Lemma"` are necessarily for
-                                &ensp;are necessarily for
+                                The attributes `id="sauer-shelah-lemma"` and`data-label-title="Lemma"` are necessarily for
                                 automatic referencing. Here is how you create a reference:
                             |> div
                                 class well container
@@ -119,7 +112,6 @@
                                 |> span
                                     data-ref sauer-shelah-lemma
                                     class reference
-                                &ensp;just
                                 &ensp;just
                                 above and
                                 |> span
@@ -133,7 +125,6 @@
                         |> p
 
                             To work, the `id` of a theorem (or a general environment)
-                            &ensp;of a theorem (or a general environment)
                             has to be unique _across all files of the lecture notes_.
                             Also, since we have to correctly compute the numbering of theorems
                             like 
@@ -144,7 +135,6 @@
                             would have to read the file containing it. So we'd have to write
                             code that, while loading Chapter 9, loads all chapters of referenced
                             environments. Potentially, this forces the browser to load_the entire lecture notes_ each time a single file is loaded.
-                            &ensp;each time a single file is loaded.
                             This would take too much time, so we use a precompilation step:
                         |> p
 
@@ -155,10 +145,7 @@
                                 put-all-in-one-page.html
                             that loads the table of content and all chapters (which takes quite
                             a substantial amount of time, like 20 seconds or so) and extracts
-                            all environments with class `theorem` or
-                            &ensp;or`exercise` that have also class
-                            &ensp;that have also class`numbered-title` and numbers them. If the environment has
-                            &ensp;and numbers them. If the environment has
+                            all environments with class `theorem` or`exercise` that have also class`numbered-title` and numbers them. If the environment has
                             the attribute `data-label-title`, then it adds an entry
                             to a global dictionary. At the end, when all has been loaded, the
                             web page will show this dictionary as a json object.
@@ -178,7 +165,6 @@
                             *Important:* 
 
                             &ensp;The page
-                            &ensp;The page
                             |> a
                                 href ../javascript/put-all-in-one-page.html
 
@@ -189,6 +175,4 @@
                             |> pre
 
                                 &ensp;http-server .  --cors
-                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;http-server .  --cors
                             Once this server is running, go to`http://localhost:8080` in your browser.
-                            &ensp;in your browser.

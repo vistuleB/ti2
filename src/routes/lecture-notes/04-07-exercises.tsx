@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    5.7 
+                    4.7 
                     4.7 Übungsaufgaben
                   </span>
                 </h1>
@@ -50,7 +50,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;5.7.1{" "}
+                        &ensp;4.7.1{" "}
                       </NumberedTitle>
                     </span>
                     Sei $\Sigma = \&#123;\sigma
@@ -82,7 +82,6 @@ const Article = () => {
                       eine
                     </i>
                     {" "}natürliche Zahl $\bar&#123;\alpha&#125;$ codieren können.
-                    &ensp;natürliche Zahl $\bar&#123;\alpha&#125;$ codieren können.
                     Mittels dieser Codierung wird eine Sprache $L \subseteq \Sigma^*$
                     zu einer Funktion
                   </Paragraph>
@@ -155,7 +154,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.7.2{" "}
+                      &ensp;4.7.2{" "}
                     </NumberedTitle>
                   </span>
                   Verbessern Sie die obige Konstruktion: Ihr Schaltkreis $C$ sollte nun
@@ -167,13 +166,12 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.7.3{" "}
+                      &ensp;4.7.3{" "}
                     </NumberedTitle>
                   </span>
                   &ensp;
                   <b>
                     (Challenge).
-                    &ensp;(Challenge).
                   </b>
                   Betrachten wir eine Variante des endlichen Automaten, bei der
                   der Automat{" "}
@@ -181,7 +179,6 @@ const Article = () => {
                     zurückspulen
                   </i>
                   {" "}kann. Der Automat hat also
-                  &ensp;kann. Der Automat hat also
                   einen "Lesekopf", mit dem er auf einem Zeichen des Eingabewortes steht
                   (anfangs auf dem ersten). In jedem Schritt kann er nach rechts oder links
                   wechseln. Es gibt zwei spezielle Zeichen, die markieren, wo das
@@ -211,7 +208,6 @@ const Article = () => {
                     kein
                   </i>
                   {" "}Wort in $L(M)$.
-                  &ensp;Wort in $L(M)$.
                 </Paragraph>
                 <Paragraph>
                   Zeigen Sie, dass $L(M)$ eine reguläre Sprache ist. Dass man also aus $M$
@@ -223,7 +219,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.7.4{" "}
+                      &ensp;4.7.4{" "}
                     </NumberedTitle>
                   </span>
                   Sei $\Sigma = \&#123;1,2, \dots, k\&#125;$ und $L$ die Sprache aller
@@ -241,7 +237,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.7.5{" "}
+                      &ensp;4.7.5{" "}
                     </NumberedTitle>
                   </span>
                   Schreiben Sie eine reguläre Grammatik für $L$ mit höchstens $k+1$ Nichtterminalen.
@@ -252,7 +248,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.7.6{" "}
+                      &ensp;4.7.6{" "}
                     </NumberedTitle>
                   </span>
                   &ensp;

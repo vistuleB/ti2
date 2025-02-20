@@ -49,7 +49,6 @@
                         Bereich der natürlichen Zahlen hinausgehen, wie zum Beispiel das Sortieren
                         eines beliebig langen Arrays. Kernpunkt war die Erkenntnis, dass wir
                         komplexere "Datenstrukturen" wie _Paare von natürlichen Zahlen_als _eine_ natürliche Zahl codieren können und somit
-                        &ensp;natürliche Zahl codieren können und somit
                         der primitiven Rekursion zugänglich machen können.
                     |> p
 
@@ -62,7 +61,6 @@
 
                             Wikipedia-Artikel
                             über die Ackermann-Funktion
-                        &ensp;schreibt, dass der deutsche Mathematiker
                         &ensp;schreibt, dass der deutsche Mathematiker
                         David Hilbert dies auch vermutete. Im Jahre 1926
                         jedoch definierte 
@@ -77,7 +75,6 @@
                             href https://de.wikipedia.org/wiki/Rózsa_Péter
 
                             Rózsa Péter
-                        &ensp;gefunden wurde (obwohl
                         &ensp;gefunden wurde (obwohl
                         der letztere Artikel das Jahr 1955 nennt).
                     |> div
@@ -153,6 +150,9 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Sei \(m \in \N\) gegeben. Die Funktion \(A_m\) ist primitiv rekursiv.
                     |> div
                         class well container
@@ -192,12 +192,10 @@
 
                         Wir haben also gezeigt, dass jedes \(A_m\) primitiv rekursiv ist.
                         Heißt das auch, dass die zwei-parametrige Funktion \(A(m,n)\) _berechenbar_ ist?
-                        &ensp;ist?
                         In der primitiven Rekursion haben wir keine Möglichkeit, den Index \(m\) als
                         Eingabewert zu lesen und dann aus dem unendlichen Array primitiv rekursiver Funktionen
                         \([A_0, A_1, A_2, \dots]\) den Eintrag \(A_m\) auszulesen.
                         Aber _berechenbar_ in einem ganz allgemeinen Sinn? Diese Frage können wir
-                        &ensp;in einem ganz allgemeinen Sinn? Diese Frage können wir
                         zu diesem Zeitpunkt nicht formal beantworten, weil wir den Begriff
                         allgemeiner Berechenbarkeit noch gar nicht definiert haben. Es ist allerdings
                         an der Definition von \(A(m,n)\) nichts magisches, und intuitiv würden wir
@@ -212,6 +210,9 @@
                             class numbered-title
 
                             Theorem
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Die Ackermann-Péter-Funktion ist nicht primitiv rekursiv.
                     Mein Beweis paraphrasiert im Wesentlichen den auf
                     |> a
@@ -224,10 +225,7 @@
                         Theorem 3.3.2 im Widerspruch steht. Theorem 3.3.3 besagt, dass \(A_m\) primitiv rekursiv ist,
                         für jedes \(m\). Die Zahl \(m\) ist hier also _Teil der Aussage_, nicht
                         Eingabeparameter der Funktion; die Funktion \(A_m\) hat nur _einen_ Eingabeparameter.
-                        &ensp;Eingabeparameter.
-                        Theorem 3.3.3 hingegen macht eine Aussage über _eine_ Funktion \(A(m,n)\) mit
-                        &ensp;Funktion \(A(m,n)\) mit_zwei_ Eingabeparametern, und \(m\) ist nun einer dieser beiden.
-                        &ensp;Eingabeparametern, und \(m\) ist nun einer dieser beiden.
+                        Theorem 3.3.3 hingegen macht eine Aussage über _eine_ Funktion \(A(m,n)\) mit_zwei_ Eingabeparametern, und \(m\) ist nun einer dieser beiden.
                     |> p
 
                         Anders ausgedrückt: sie können zwar jedes einzelne \(A_m\) in der "Programmiersprache" der
@@ -264,7 +262,6 @@
                                 .
                             Sei \(f: \N \rightarrow \N\) und \(g: \N^k \rightarrow \N\). Die Funktion
                             \(f\) _majorisiert_ \(g\), wenn
-                            &ensp;\(g\), wenn
                             \begin{align*}
                             f (\max(x_1,\dots,x_k) \gt g(x_1, \dots, x_k) \ .
                             \end{align*}
@@ -314,7 +311,6 @@
                             *Induktionsbasis.* 
 
                             &ensp;Wir betrachten wir die Basisfunktionen
-                            &ensp;Wir betrachten wir die Basisfunktionen
                             \(\zero, \succ, \pi^n_k\).
                             Wir wissen bereits, dass \(A_0(n) = n+1\) ist, also \(A_0 = \succ\).
                             Leider majorisiert \(A_0\) also \(\succ\) nicht. Wie steht es mit
@@ -334,10 +330,8 @@
                         |> p
 
                             *Komposition:* \(f(\vec{x}) = g(h_1(\vec{x}), \dots, h_k(\vec{x}))\),
-                            &ensp;\(f(\vec{x}) = g(h_1(\vec{x}), \dots, h_k(\vec{x}))\),
                             für primitiv rekursive Funktionen \(g, h_1, \dots, h_k\). Jede dieser Funktionen
                             wurde mit _weniger_ Kombinatoren konstruiert; somit wird jede dieser Funktionen
-                            &ensp;Kombinatoren konstruiert; somit wird jede dieser Funktionen
                             von einem \(A_r\) majorisiert:
                             \(A_r \gt g, A_{s_1} \gt h_1, \dots, A_{s_k} \gt h_k\). Für einen Eingabevektor \(\vec{x}\)
                             schreiben wir \(x := \max(x_1,\dots,x_n)\) und rechnen:
@@ -360,7 +354,6 @@
                         |> p
 
                             *Primitive Rekursion:* \(f = \primrec (g,h)\), also
-                            &ensp;\(f = \primrec (g,h)\), also
                             \begin{align*}
                             f(t, \vec{x})&amp;=
                             \begin{cases}
@@ -426,7 +419,6 @@
                     |> p
 
                         In der Vorlesung am 7. Mai 2024 hatte ich den _Grad_ einer primitiv-rekursiven Funktion
-                        &ensp;einer primitiv-rekursiven Funktion
                         definiert. Das ist in etwa die "Verschachtelungstiefe" von $f$. Betrachten wir beispielsweise
                         die Funktion $\pair(x,y) = {x + y + 1 \choose 2} + x$ und dröseln auf, wie wir diese
                         als primitiv-rekursive Funktion konstruiert haben:

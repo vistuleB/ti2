@@ -49,12 +49,10 @@
                         Konstruktionen sehen. Als erstes lassen Sie uns überlegen, wie man
                         eine Boolesche Funktion im Allgemeinen aufschreibt/codiert.
                         Beschränken wir uns erst einmal auf Boolesche Funktionen mit_einem_ Ausgabewert, also \(f : \{0,1\}^n \rightarrow
-                        &ensp;Ausgabewert, also \(f : \{0,1\}^n \rightarrow
                         \{0,1\}\).
                     Dies ist ein endliches Objekt, wir können es also codieren, indem wir
                     für jeden Eingabewert \( (x_1,\dots,x_n)\) den Ausgabewert angeben. Dies
-                    nennt man eine _Wahrheitstabelle_ (englisch
-                    &ensp;(englisch_truth table_). Hier sehen Sie ein Beispiel: $$
+                    nennt man eine _Wahrheitstabelle_ (englisch_truth table_). Hier sehen Sie ein Beispiel: $$
                     \begin{array}{ccc|c} x&amp;y&amp;z&amp;f \\\hline 0&amp;0&amp;0&amp;0 \\ 0&amp;0&amp;1&
                     1 \\ 0&amp;1&amp;0&amp;1 \\ 0&amp;1&amp;1&amp;1 \\ 1&amp;0&amp;0&amp;1 \\ 1&amp;0&amp;1&amp;1 \\
                     1&amp;1&amp;0&amp;0 \\ 1&amp;1&amp;1&amp;1\\ \end{array} $$ Wie können wir von so
@@ -90,15 +88,11 @@
 
                         \(\bar{y} \vee z\)
                     &ensp;ist (ich
-                    &ensp;ist (ich
                     schreibe im Fließtext übrigens gerne \(\bar{y}\) statt \(\neg y\), weil
                     das mir lesbarer erscheint). Insgesamt also:
                     |> figure
 
-                        f = `if` \(x\) 
-                        &ensp;\(x\) `then` \(\bar{y} \vee z\)
-                        &ensp;\(\bar{y} \vee z\)`else` \(y \vee z\).
-                        &ensp;\(y \vee z\).
+                        f = `if` \(x\) `then` \(\bar{y} \vee z\)`else` \(y \vee z\).
                     |> p
 
                         Jetzt können wir das mit unserem if-then-else-Schaltkreis kombinieren.
@@ -133,20 +127,14 @@
 
                             Kombinieren Sie diese via
 
-                            &ensp;`if
-                            &ensp;if` \(x_1\) 
-                            &ensp;\(x_1\) 
+                            &ensp;`if` \(x_1\) 
 
-                            &ensp;`then 
-                            &ensp;then` 
+                            &ensp;`then` 
 
                             &ensp;\(C_1\)
-                            &ensp;\(C_1\)
 
-                            &ensp;`else 
-                            &ensp;else` 
+                            &ensp;`else` 
 
-                            &ensp;\(C_0\) zu einem Schaltkreis für \(f\) mit
                             &ensp;\(C_0\) zu einem Schaltkreis für \(f\) mit
                             insgesamt \(n\) Input-Variablen.
                     |> p
@@ -226,9 +214,7 @@
                     die NOT-Gates nicht explizit aufgeführt, damit kein "Kabelsalat"
                     entsteht. Beachten Sie auch, das jedes Gate (außer den Input-Gates)
                     genau _eine_ ausgehende Kante hat. Konkret bedeutet dies, dass
-                    &ensp;ausgehende Kante hat. Konkret bedeutet dies, dass
                     man diesen Schaltkreis als _logische Formel_ hinschreiben kann:
-                    &ensp;hinschreiben kann:
                     $$ (\bar{x} \wedge \bar{y} \wedge z) \vee (\bar{x} \wedge y \wedge
                     \bar{z}) \vee (\bar{x} \wedge y \wedge z) \vee (x \wedge \bar{y} \wedge
                     \bar{z}) \vee (x \wedge \bar{y} \wedge z) \vee (x \wedge y \wedge z) $$
@@ -242,12 +228,9 @@
 
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Ein _Literal_ ist eine Variable \(x\) oder deren Negation
-                        &ensp;ist eine Variable \(x\) oder deren Negation
                         \(\bar{x}\). Ein _Term_ ist ein AND (auch: Konjunktion) von
-                        &ensp;ist ein AND (auch: Konjunktion) von
                         Literalen (beispielsweise \(\bar{x} \wedge \bar{y} \wedge z)\). Eine
                         Formel in _disjunktiver Normalform_ (DNF) ist ein OR von
-                        &ensp;(DNF) ist ein OR von
                         Termen.
                         |> p
 
@@ -264,7 +247,6 @@
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
                         Was, wenn einige der "mittleren" Gates (auf Tiefe 1) keine AND-Gates
                         sind, sondern auch OR-Gates? Dann wäre dies nach der ersten Definition_keine_ DNF-Formel, nach der zweiten aber schon. Zeigen Sie,
-                        &ensp;DNF-Formel, nach der zweiten aber schon. Zeigen Sie,
                         wie man OR-Gates auf Ebene 1 entfernen kann! Als konkretes Beispiel:
                         |> figure
                             |> img
@@ -280,7 +262,6 @@
                         dazu duale Konstruktion. Bildlich gesprochen listet DNF-Konstruktion
                         alle Möglichkeiten auf, wie man eine 1 erhalten kann. Dual dazu können
                         wir alle Möglichkeiten auflisten, wie man eine 0 erhalten kann; tritt_keine_ davon ein, muss wohl eine 1 herauskommen. Wir gehen
-                        &ensp;davon ein, muss wohl eine 1 herauskommen. Wir gehen
                         also in der Wahrheitstabelle alle Zeilen mit Wert 0 durch und
                         schreiben einen Ausdruck, der genau diese Zeile verbietet. So kann man
                         den Ausdruck \( (\bar{x} \vee \bar{y} \vee z)\) verstehen als
@@ -309,7 +290,6 @@
 
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Eine Formel in _konjunktiver Normalform_ (CNF) ist ein AND von
-                        &ensp;(CNF) ist ein AND von
                         Klauseln.
                         |> p
 
@@ -365,13 +345,11 @@
                         oder Schaltkreisen im Allgemeinen gehört, z.B. Karnaugh-Diagramme.
                         Dies sind _Heuristiken_, die hilfreich sind, aber nicht
                         garantieren können, eine optimale Lösung zu finden (es sind also keine_Algorithmen_ in dem Sinne). Die genaue Komplexität dieser
-                        &ensp;in dem Sinne). Die genaue Komplexität dieser
                         Optimierungsprobleme ist in der Tat Gegenstand aktiver Forschung,
                     |> ol
                         |> li
 
                             Wenn die Funktion (1) bereits als _Boolesche Formel_ vorliegt
-                            &ensp;vorliegt
                             (also Schaltkreise, in denen außer den Eingabe-Gates alle Gates nur
                             eine ausgehende Kante haben), so ist das Minimierungsproblem
                             \(Sigma_2^{P}\)-vollständig, siehe
@@ -379,7 +357,6 @@
                                 href http://users.cms.caltech.edu/~umans/papers/BU07.pdf
 
                                 Buchfuhrer, David; Umans, Christopher (January 2011),_The complexity of Boolean formula minimization_ (JCSS
-                                &ensp;(JCSS
                                 2011) 
                             .
                         |> li

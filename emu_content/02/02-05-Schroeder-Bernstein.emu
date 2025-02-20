@@ -65,7 +65,6 @@
 
                                     &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             &ensp;Seien $A$ und $B$
-                            &ensp;Seien $A$ und $B$
                             zwei Mengen. Wir schreiben $A \leq B$, wenn es eine injektive
                             Funktion $f : A \rightarrow B$ gibt. Falls $A \leq B$ und $A \not
                             \approx B$ gilt, so schreiben wir $A \lt B$.
@@ -83,7 +82,6 @@
                         heißen, dass es injektive Funktion $f : A \rightarrow B$ und $g : B
                         \rightarrow A$ gibt. Um daraus zu folgern, dass $A \approx B$ gilt,
                         müssen wir diese zu _einer_ bijektiven Funktion $h: A
-                        &ensp;bijektiven Funktion $h: A
                         \rightarrow B$ kombinieren. Geht das immer?
                     |> div
                         class well container theorem
@@ -92,8 +90,10 @@
                                 class numbered-title
 
                                 Theorem
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             *(Schröder-Bernstein-Theorem).* Seien $A$ und $B$
-                            &ensp;Seien $A$ und $B$
                             zwei Mengen. Wenn $A \leq B$ und $B \leq A$ gilt, dann gilt $A
                             \approx B$. In Worten: wenn es injektive Funktionen $f: A
                             \rightarrow B$ und $g : B\rightarrow A$ gibt, dann gibt es auch eine
@@ -265,7 +265,6 @@
 
                                     Behauptung 1.
                                 &ensp;$g^{-1}(a)$ ist
-                                &ensp;$g^{-1}(a)$ ist
                                 definiert für jedes $a \in A'$.
                         |> div
                             class well container-fluid
@@ -291,7 +290,6 @@
                                     class numbered-title
 
                                     Behauptung 2.
-                                &ensp;$h$ ist
                                 &ensp;$h$ ist
                                 injektiv.
                         |> div
@@ -325,7 +323,6 @@
                                     class numbered-title
 
                                     Behauptung 3.
-                                &ensp;$h$ ist
                                 &ensp;$h$ ist
                                 surjektiv.
                         |> div
