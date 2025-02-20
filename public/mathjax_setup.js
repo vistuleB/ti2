@@ -28,6 +28,27 @@ window.MathJax = {
   },
   tex: {
     tags: "ams",
+    inlineMath: [
+      ["$", "$"],
+      ["\\(", "\\)"],
+    ],
+    macros: {
+      floor: ["\\left\\lfloor #1 \\right\\rfloor", 1],
+      ceil: ["\\left\\lceil #1 \\right\\rceil", 1],
+      R: "\\mathbb{R}",
+      Z: "\\mathbb{Z}",
+      N: "\\mathbb{N}",
+      Q: "\\mathbb{Q}",
+      cin: "c_{\\rm in}",
+      cout: "c_{\\rm out}",
+      maj: "\\textnormal{Maj}",
+      xor: "\\oplus",
+      depth: "\\textnormal{depth}",
+      poly: "\\textnormal{poly}",
+      pfrac: ["\\left(\\frac{#1}{#2}\\right)", 2],
+      cube: "\\{0,1\\}",
+      cuben: "\\{0,1\\}^{\\N}",
+      sat: "\\textnormal{sat}",
+    },
   },
 };
-console.log("mathjax");
