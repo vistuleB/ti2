@@ -1,4 +1,3 @@
-import desugarers/add_attributes
 import desugarers/insert_ti2_counter_commands.{insert_ti2_counter_commands}
 import desugarers/remove_empty_lines.{remove_empty_lines}
 import desugarers/identity
@@ -9,6 +8,7 @@ import desugarers/fold_tags_into_text.{fold_tags_into_text}
 import desugarers/surround_elements_by.{surround_elements_by}
 import desugarers/trim_spaces_around_newlines.{trim_spaces_around_newlines}
 import desugarers/replace_multiple_spaces_by_one.{replace_multiple_spaces_by_one}
+import desugarers/ti2_carousel_component.{ti2_carousel_component}
 
 import infrastructure.{type Pipe}
 import gleam/option.{None, Some}
@@ -18,6 +18,7 @@ pub fn html_pipeline() -> List(Pipe) {
     identity.identity(),
     trim_spaces_around_newlines(),
     replace_multiple_spaces_by_one(),
+    ti2_carousel_component(),
     remove_empty_lines(),
     extract_starting_and_ending_spaces(["i", "b", "strong", "em", "code"]),
     insert_bookend_text_if_no_attributes([
