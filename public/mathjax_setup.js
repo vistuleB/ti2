@@ -49,6 +49,10 @@ window.MathJax = {
       cube: "\\{0,1\\}",
       cuben: "\\{0,1\\}^{\\N}",
       sat: "\\textnormal{sat}",
+      zero: "\\textnormal{zero}",
+      succ: "\\textnormal{succ}",
+      comp: "\\textnormal{Comp}",
+      primrec: "\\textnormal{PrimRec}",
     },
   },
 };

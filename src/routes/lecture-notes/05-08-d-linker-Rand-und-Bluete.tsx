@@ -86,59 +86,17 @@ const Article = () => {
                   gerade nur für Ableitungsbäume von Wortformen.
                 </Paragraph>
                 <figure class="centered-figure well container">
-                  <a
-                    data-slide="prev"
-                    href="#right-left-messy"
-                    class="left carousel-control-prev-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
-                    </div>
-                  </a>
-                  <a
-                    data-slide="next"
-                    href="#right-left-messy"
-                    class="right carousel-control-next-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-next-icon.svg" />
-                    </div>
-                  </a>
-                  <div
-                    style="display:inline-block"
-                    data-interval={false}
-                    class="carousel"
-                    id="right-left-messy">
-                    <ol class="carousel-indicators">
-                      <li
-                        class="active"
-                        data-slide-to={1}
-                        data-target="#right-left-messy" />
-                      <li
-                        data-slide-to={2}
-                        data-target="#right-left-messy" />
-                      <li
-                        data-slide-to={3}
-                        data-target="#right-left-messy" />
-                    </ol>
-                    <div
-                      style="display:inline-block"
-                      class="carousel-inner">
-                      <div class="item active">
-                        <img
-                          style="height:16em"
-                          src="../img/context-free/LR/G-right-derivation.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:16em"
-                          src="../img/context-free/LR/G-left-derivation.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:16em"
-                          src="../img/context-free/LR/G-messy-derivation.svg" />
-                      </div>
-                    </div>
-                  </div>
+                  <Carousel>
+                    <img
+                      style="height:16em"
+                      src="../img/context-free/LR/G-right-derivation.svg" />
+                    <img
+                      style="height:16em"
+                      src="../img/context-free/LR/G-left-derivation.svg" />
+                    <img
+                      style="height:16em"
+                      src="../img/context-free/LR/G-messy-derivation.svg" />
+                  </Carousel>
                 </figure>
                 <Paragraph>
                   Fällt Ihnen etwas auf? Schauen Sie sich bitte noch ein weiteres
@@ -276,115 +234,38 @@ const Article = () => {
                   immer wieder die Blüte abschneiden:
                 </Paragraph>
                 <figure class="centered-figure well container">
-                  <a
-                    data-slide="prev"
-                    href="#remove-flowers"
-                    class="left carousel-control-prev-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
-                    </div>
-                  </a>
-                  <a
-                    data-slide="next"
-                    href="#remove-flowers"
-                    class="right carousel-control-next-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-next-icon.svg" />
-                    </div>
-                  </a>
-                  <div
-                    style="display:inline-block"
-                    data-interval={false}
-                    class="carousel"
-                    id="remove-flowers">
-                    <ol class="carousel-indicators">
-                      <li
-                        class="active"
-                        data-slide-to={1}
-                        data-target="#remove-flowers" />
-                      <li
-                        data-slide-to={2}
-                        data-target="#remove-flowers" />
-                      <li
-                        data-slide-to={3}
-                        data-target="#remove-flowers" />
-                      <li
-                        data-slide-to={4}
-                        data-target="#remove-flowers" />
-                      <li
-                        data-slide-to={5}
-                        data-target="#remove-flowers" />
-                      <li
-                        data-slide-to={6}
-                        data-target="#remove-flowers" />
-                      <li
-                        data-slide-to={7}
-                        data-target="#remove-flowers" />
-                      <li
-                        data-slide-to={8}
-                        data-target="#remove-flowers" />
-                      <li
-                        data-slide-to={9}
-                        data-target="#remove-flowers" />
-                      <li
-                        data-slide-to={10}
-                        data-target="#remove-flowers" />
-                    </ol>
-                    <div
-                      style="display:inline-block"
-                      class="carousel-inner">
-                      <div class="item active">
-                        <img
-                          style="height:40em"
-                          src="../img/context-free/LR/tree-destruction/01.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:40em"
-                          src="../img/context-free/LR/tree-destruction/02.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:40em"
-                          src="../img/context-free/LR/tree-destruction/03.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:40em"
-                          src="../img/context-free/LR/tree-destruction/04.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:40em"
-                          src="../img/context-free/LR/tree-destruction/05.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:40em"
-                          src="../img/context-free/LR/tree-destruction/06.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:40em"
-                          src="../img/context-free/LR/tree-destruction/07.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:40em"
-                          src="../img/context-free/LR/tree-destruction/08.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:40em"
-                          src="../img/context-free/LR/tree-destruction/09.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:40em"
-                          src="../img/context-free/LR/tree-destruction/10.svg" />
-                      </div>
-                    </div>
-                  </div>
+                  <Carousel>
+                    <img
+                      style="height:40em"
+                      src="../img/context-free/LR/tree-destruction/01.svg" />
+                    <img
+                      style="height:40em"
+                      src="../img/context-free/LR/tree-destruction/02.svg" />
+                    <img
+                      style="height:40em"
+                      src="../img/context-free/LR/tree-destruction/03.svg" />
+                    <img
+                      style="height:40em"
+                      src="../img/context-free/LR/tree-destruction/04.svg" />
+                    <img
+                      style="height:40em"
+                      src="../img/context-free/LR/tree-destruction/05.svg" />
+                    <img
+                      style="height:40em"
+                      src="../img/context-free/LR/tree-destruction/06.svg" />
+                    <img
+                      style="height:40em"
+                      src="../img/context-free/LR/tree-destruction/07.svg" />
+                    <img
+                      style="height:40em"
+                      src="../img/context-free/LR/tree-destruction/08.svg" />
+                    <img
+                      style="height:40em"
+                      src="../img/context-free/LR/tree-destruction/09.svg" />
+                    <img
+                      style="height:40em"
+                      src="../img/context-free/LR/tree-destruction/10.svg" />
+                  </Carousel>
                 </figure>
                 <Paragraph>
                   Um für eine Wortform \(\gamma\) den korrekten Reduktionsschritt zu finden,

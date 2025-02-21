@@ -68,75 +68,23 @@ const Article = () => {
                   \rightarrow Q \times \Gamma^k \times \lsr^k \end&#123;align*&#125;$$
                 </Paragraph>
                 <figure class="centered-figure well container">
-                  <a
-                    data-slide="prev"
-                    href="#tm-multitape"
-                    class="left carousel-control-prev-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
-                    </div>
-                  </a>
-                  <a
-                    data-slide="next"
-                    href="#tm-multitape"
-                    class="right carousel-control-next-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-next-icon.svg" />
-                    </div>
-                  </a>
-                  <div
-                    style="display: inline-block"
-                    data-interval={false}
-                    class="carousel"
-                    id="tm-multitape">
-                    <ol class="carousel-indicators">
-                      <li
-                        class="active"
-                        data-slide-to={1}
-                        data-target="#tm-multitape" />
-                      <li
-                        data-slide-to={2}
-                        data-target="#tm-multitape" />
-                      <li
-                        data-slide-to={3}
-                        data-target="#tm-multitape" />
-                      <li
-                        data-slide-to={4}
-                        data-target="#tm-multitape" />
-                      <li
-                        data-slide-to={5}
-                        data-target="#tm-multitape" />
-                    </ol>
-                    <div
-                      style="display: inline-block"
-                      class="carousel-inner">
-                      <div class="item active">
-                        <img
-                          style="height: 21em"
-                          src="../img/turing-machines/example-3-multitape/01.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 21em"
-                          src="../img/turing-machines/example-3-multitape/02.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 21em"
-                          src="../img/turing-machines/example-3-multitape/03.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 21em"
-                          src="../img/turing-machines/example-3-multitape/04.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 21em"
-                          src="../img/turing-machines/example-3-multitape/05.svg" />
-                      </div>
-                    </div>
-                  </div>
+                  <Carousel>
+                    <img
+                      style="height: 21em"
+                      src="../img/turing-machines/example-3-multitape/01.svg" />
+                    <img
+                      style="height: 21em"
+                      src="../img/turing-machines/example-3-multitape/02.svg" />
+                    <img
+                      style="height: 21em"
+                      src="../img/turing-machines/example-3-multitape/03.svg" />
+                    <img
+                      style="height: 21em"
+                      src="../img/turing-machines/example-3-multitape/04.svg" />
+                    <img
+                      style="height: 21em"
+                      src="../img/turing-machines/example-3-multitape/05.svg" />
+                  </Carousel>
                 </figure>
                 <div class="well container theorem">
                   <span class="numbered-title">
@@ -336,195 +284,68 @@ const Article = () => {
                     \(M\)-Köpfe sammeln. Dann von rechts nach links gehen und die
                     ausführen.
                     <figure class="centered-figure well container">
-                      <a
-                        data-slide="prev"
-                        href="#one-simulates-multi"
-                        class="left carousel-control-prev-icon">
-                        <div class="carousel-nav-icon">
-                          <img src="../img/carousel-prev-icon.svg" />
-                        </div>
-                      </a>
-                      <a
-                        data-slide="next"
-                        href="#one-simulates-multi"
-                        class="right carousel-control-next-icon">
-                        <div class="carousel-nav-icon">
-                          <img src="../img/carousel-next-icon.svg" />
-                        </div>
-                      </a>
-                      <div
-                        style="display: inline-block"
-                        data-interval={false}
-                        class="carousel"
-                        id="one-simulates-multi">
-                        <ol class="carousel-indicators">
-                          <li
-                            class="active"
-                            data-slide-to={1}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={2}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={3}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={4}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={5}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={6}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={7}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={8}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={9}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={10}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={11}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={12}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={13}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={14}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={15}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={16}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={17}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={18}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={19}
-                            data-target="#one-simulates-multi" />
-                          <li
-                            data-slide-to={20}
-                            data-target="#one-simulates-multi" />
-                        </ol>
-                        <div
-                          style="display: inline-block"
-                          class="carousel-inner">
-                          <div class="item active">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/01-01.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/02-01.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/02-02.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/02-03.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/02-04.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/02-05.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/02-06.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/02-07.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/02-08.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/03-01.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/03-02.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/04-01.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/04-02.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/04-03.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/04-04.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/05-01.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/05-02.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/06-01.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/07-01.svg" />
-                          </div>
-                          <div class="item">
-                            <img
-                              style="height: 19em"
-                              src="../img/turing-machines/one-simulates-multi/08-01.svg" />
-                          </div>
-                        </div>
-                      </div>
+                      <Carousel>
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/01-01.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/02-01.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/02-02.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/02-03.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/02-04.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/02-05.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/02-06.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/02-07.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/02-08.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/03-01.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/03-02.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/04-01.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/04-02.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/04-03.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/04-04.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/05-01.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/05-02.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/06-01.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/07-01.svg" />
+                        <img
+                          style="height: 19em"
+                          src="../img/turing-machines/one-simulates-multi/08-01.svg" />
+                      </Carousel>
                     </figure>
                     Wir müssen also die Zustandsmenge deutlich erweitern; so muss sie
                     speichern können, ob wir ein Symbol bereits gelesen haben; ob wir
@@ -1078,147 +899,50 @@ const Article = () => {
                     \(M''\) wird immer ablehnen.
                   </Paragraph>
                   <figure class="centered-figure well container">
-                    <a
-                      data-slide="prev"
-                      href="#det-sim-nondet"
-                      class="left carousel-control-prev-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-prev-icon.svg" />
-                      </div>
-                    </a>
-                    <a
-                      data-slide="next"
-                      href="#det-sim-nondet"
-                      class="right carousel-control-next-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-next-icon.svg" />
-                      </div>
-                    </a>
-                    <div
-                      style="display: inline-block"
-                      data-interval={false}
-                      class="carousel"
-                      id="det-sim-nondet">
-                      <ol class="carousel-indicators">
-                        <li
-                          class="active"
-                          data-slide-to={1}
-                          data-target="#det-sim-nondet" />
-                        <li
-                          data-slide-to={2}
-                          data-target="#det-sim-nondet" />
-                        <li
-                          data-slide-to={3}
-                          data-target="#det-sim-nondet" />
-                        <li
-                          data-slide-to={4}
-                          data-target="#det-sim-nondet" />
-                        <li
-                          data-slide-to={5}
-                          data-target="#det-sim-nondet" />
-                        <li
-                          data-slide-to={6}
-                          data-target="#det-sim-nondet" />
-                        <li
-                          data-slide-to={7}
-                          data-target="#det-sim-nondet" />
-                        <li
-                          data-slide-to={8}
-                          data-target="#det-sim-nondet" />
-                        <li
-                          data-slide-to={9}
-                          data-target="#det-sim-nondet" />
-                        <li
-                          data-slide-to={10}
-                          data-target="#det-sim-nondet" />
-                        <li
-                          data-slide-to={11}
-                          data-target="#det-sim-nondet" />
-                        <li
-                          data-slide-to={12}
-                          data-target="#det-sim-nondet" />
-                        <li
-                          data-slide-to={13}
-                          data-target="#det-sim-nondet" />
-                        <li
-                          data-slide-to={14}
-                          data-target="#det-sim-nondet" />
-                      </ol>
-                      <div
-                        style="display: inline-block"
-                        class="carousel-inner">
-                        <div class="item active">
-                          <img
-                            style="height: 23rm"
-                            src="../img/turing-machines/det-simulates-nondet/01.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height: 23rm"
-                            src="../img/turing-machines/det-simulates-nondet/02.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height: 23rm"
-                            src="../img/turing-machines/det-simulates-nondet/03.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height: 23rm"
-                            src="../img/turing-machines/det-simulates-nondet/04.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height: 23rm"
-                            src="../img/turing-machines/det-simulates-nondet/05.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height: 23rm"
-                            src="../img/turing-machines/det-simulates-nondet/06.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height: 23rm"
-                            src="../img/turing-machines/det-simulates-nondet/07.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height: 23rm"
-                            src="../img/turing-machines/det-simulates-nondet/08.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height: 23rm"
-                            src="../img/turing-machines/det-simulates-nondet/09.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height: 23rm"
-                            src="../img/turing-machines/det-simulates-nondet/10.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height: 23rm"
-                            src="../img/turing-machines/det-simulates-nondet/11.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height: 23rm"
-                            src="../img/turing-machines/det-simulates-nondet/12.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height: 23rm"
-                            src="../img/turing-machines/det-simulates-nondet/13.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height: 23rm"
-                            src="../img/turing-machines/det-simulates-nondet/14.svg" />
-                        </div>
-                      </div>
-                    </div>
+                    <Carousel>
+                      <img
+                        style="height: 23rm"
+                        src="../img/turing-machines/det-simulates-nondet/01.svg" />
+                      <img
+                        style="height: 23rm"
+                        src="../img/turing-machines/det-simulates-nondet/02.svg" />
+                      <img
+                        style="height: 23rm"
+                        src="../img/turing-machines/det-simulates-nondet/03.svg" />
+                      <img
+                        style="height: 23rm"
+                        src="../img/turing-machines/det-simulates-nondet/04.svg" />
+                      <img
+                        style="height: 23rm"
+                        src="../img/turing-machines/det-simulates-nondet/05.svg" />
+                      <img
+                        style="height: 23rm"
+                        src="../img/turing-machines/det-simulates-nondet/06.svg" />
+                      <img
+                        style="height: 23rm"
+                        src="../img/turing-machines/det-simulates-nondet/07.svg" />
+                      <img
+                        style="height: 23rm"
+                        src="../img/turing-machines/det-simulates-nondet/08.svg" />
+                      <img
+                        style="height: 23rm"
+                        src="../img/turing-machines/det-simulates-nondet/09.svg" />
+                      <img
+                        style="height: 23rm"
+                        src="../img/turing-machines/det-simulates-nondet/10.svg" />
+                      <img
+                        style="height: 23rm"
+                        src="../img/turing-machines/det-simulates-nondet/11.svg" />
+                      <img
+                        style="height: 23rm"
+                        src="../img/turing-machines/det-simulates-nondet/12.svg" />
+                      <img
+                        style="height: 23rm"
+                        src="../img/turing-machines/det-simulates-nondet/13.svg" />
+                      <img
+                        style="height: 23rm"
+                        src="../img/turing-machines/det-simulates-nondet/14.svg" />
+                    </Carousel>
                   </figure>
                   <Paragraph>
                     Nun bauen wir schlussendlich eine Maschine \(M'\), die in einer

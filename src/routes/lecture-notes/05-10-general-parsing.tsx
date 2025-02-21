@@ -474,22 +474,6 @@ const Article = () => {
                       </div>
                     </a>
                     <a
-                      data-slide="prev"
-                      href="#cyk-demo"
-                      class="left carousel-control-prev-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-prev-icon.svg" />
-                      </div>
-                    </a>
-                    <a
-                      data-slide="next"
-                      href="#cyk-demo"
-                      class="right carousel-control-next-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-next-icon.svg" />
-                      </div>
-                    </a>
-                    <a
                       data-slide-to={37}
                       href="#cyk-demo"
                       class="right carousel-control-next-icon">
@@ -497,206 +481,122 @@ const Article = () => {
                         <img src="../img/carousel-jump-to-end.svg" />
                       </div>
                     </a>
-                    <div
-                      style="display:inline-block"
-                      data-interval={false}
-                      class="carousel"
-                      id="cyk-demo">
-                      <div
-                        style="display:inline-block"
-                        class="carousel-inner">
-                        <div class="item active">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/01-01.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/01-02.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/01-03.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-01.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-02.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-03.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-04.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-05.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-06.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-07.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-08.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-09.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-10.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-11.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-12.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-13.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-14.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-15.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-16.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-17.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-18.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-19.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-20.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-21.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-22.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-23.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-24.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-25.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-26.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-27.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-28.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-29.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-30.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-31.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-32.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-33.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-34.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:23em"
-                            src="../img/context-free/CYK/02-35.svg" />
-                        </div>
-                      </div>
-                    </div>
+                    <Carousel>
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/01-01.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/01-02.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/01-03.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-01.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-02.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-03.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-04.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-05.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-06.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-07.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-08.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-09.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-10.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-11.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-12.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-13.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-14.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-15.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-16.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-17.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-18.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-19.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-20.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-21.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-22.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-23.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-24.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-25.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-26.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-27.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-28.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-29.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-30.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-31.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-32.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-33.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-34.svg" />
+                      <img
+                        style="height:23em"
+                        src="../img/context-free/CYK/02-35.svg" />
+                    </Carousel>
                   </figure>
                   <Paragraph>
                     Wenn wir uns zusätzlich zu jedem \(X \in N_&#123;i,k&#125;\) noch merken, durch

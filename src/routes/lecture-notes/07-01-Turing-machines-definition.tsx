@@ -68,99 +68,32 @@ const Article = () => {
                   den Kopf um maximal eine Zelle, also nach link, rechts, oder gar nicht.
                 </Paragraph>
                 <figure class="centered-figure well container">
-                  <a
-                    data-slide="prev"
-                    href="#turing-machine-example-01"
-                    class="left carousel-control-prev-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
-                    </div>
-                  </a>
-                  <a
-                    data-slide="next"
-                    href="#turing-machine-example-01"
-                    class="right carousel-control-next-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-next-icon.svg" />
-                    </div>
-                  </a>
-                  <div
-                    style="display:inline-block"
-                    data-interval={false}
-                    class="carousel"
-                    id="turing-machine-example-01">
-                    <ol class="carousel-indicators">
-                      <li
-                        class="active"
-                        data-slide-to={1}
-                        data-target="#turing-machine-example-01" />
-                      <li
-                        data-slide-to={2}
-                        data-target="#turing-machine-example-01" />
-                      <li
-                        data-slide-to={3}
-                        data-target="#turing-machine-example-01" />
-                      <li
-                        data-slide-to={4}
-                        data-target="#turing-machine-example-01" />
-                      <li
-                        data-slide-to={5}
-                        data-target="#turing-machine-example-01" />
-                      <li
-                        data-slide-to={6}
-                        data-target="#turing-machine-example-01" />
-                      <li
-                        data-slide-to={7}
-                        data-target="#turing-machine-example-01" />
-                      <li
-                        data-slide-to={8}
-                        data-target="#turing-machine-example-01" />
-                    </ol>
-                    <div
-                      style="display:inline-block"
-                      class="carousel-inner">
-                      <div class="item active">
-                        <img
-                          style="height:15em"
-                          src="../img/turing-machines/exampe-1/01.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:15em"
-                          src="../img/turing-machines/exampe-1/02.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:15em"
-                          src="../img/turing-machines/exampe-1/03.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:15em"
-                          src="../img/turing-machines/exampe-1/04.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:15em"
-                          src="../img/turing-machines/exampe-1/05.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:15em"
-                          src="../img/turing-machines/exampe-1/06.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:15em"
-                          src="../img/turing-machines/exampe-1/07.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:15em"
-                          src="../img/turing-machines/exampe-1/08.svg" />
-                      </div>
-                    </div>
-                  </div>
+                  <Carousel>
+                    <img
+                      style="height:15em"
+                      src="../img/turing-machines/exampe-1/01.svg" />
+                    <img
+                      style="height:15em"
+                      src="../img/turing-machines/exampe-1/02.svg" />
+                    <img
+                      style="height:15em"
+                      src="../img/turing-machines/exampe-1/03.svg" />
+                    <img
+                      style="height:15em"
+                      src="../img/turing-machines/exampe-1/04.svg" />
+                    <img
+                      style="height:15em"
+                      src="../img/turing-machines/exampe-1/05.svg" />
+                    <img
+                      style="height:15em"
+                      src="../img/turing-machines/exampe-1/06.svg" />
+                    <img
+                      style="height:15em"
+                      src="../img/turing-machines/exampe-1/07.svg" />
+                    <img
+                      style="height:15em"
+                      src="../img/turing-machines/exampe-1/08.svg" />
+                  </Carousel>
                 </figure>
                 <Paragraph>
                   Sie können sich das Band auch als Magnetband vorstellen, das nach vorn oder nach hinten gespult

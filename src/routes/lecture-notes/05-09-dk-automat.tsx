@@ -184,123 +184,41 @@ const Article = () => {
                   können wir nun Schritt für Schritt zeichnen:
                 </Paragraph>
                 <figure class="centered-figure well container">
-                  <a
-                    data-slide="prev"
-                    href="#aaabb-dk-nea"
-                    class="left carousel-control-prev-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
-                    </div>
-                  </a>
-                  <a
-                    data-slide="next"
-                    href="#aaabb-dk-nea"
-                    class="right carousel-control-next-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-next-icon.svg" />
-                    </div>
-                  </a>
-                  <div
-                    style="display: inline-block"
-                    data-interval={false}
-                    class="carousel"
-                    id="aaabb-dk-nea">
-                    <ol class="carousel-indicators">
-                      <li
-                        class="active"
-                        data-slide-to={1}
-                        data-target="#aaabb-dk-nea" />
-                      <li
-                        data-slide-to={2}
-                        data-target="#aaabb-dk-nea" />
-                      <li
-                        data-slide-to={3}
-                        data-target="#aaabb-dk-nea" />
-                      <li
-                        data-slide-to={4}
-                        data-target="#aaabb-dk-nea" />
-                      <li
-                        data-slide-to={5}
-                        data-target="#aaabb-dk-nea" />
-                      <li
-                        data-slide-to={6}
-                        data-target="#aaabb-dk-nea" />
-                      <li
-                        data-slide-to={7}
-                        data-target="#aaabb-dk-nea" />
-                      <li
-                        data-slide-to={8}
-                        data-target="#aaabb-dk-nea" />
-                      <li
-                        data-slide-to={9}
-                        data-target="#aaabb-dk-nea" />
-                      <li
-                        data-slide-to={10}
-                        data-target="#aaabb-dk-nea" />
-                      <li
-                        data-slide-to={11}
-                        data-target="#aaabb-dk-nea" />
-                    </ol>
-                    <div
-                      style="display: inline-block"
-                      class="carousel-inner">
-                      <div class="item active">
-                        <img
-                          style="height: 18em"
-                          src="../img/context-free/LR/dk-automaton-5-nea-aaabb/01.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 18em"
-                          src="../img/context-free/LR/dk-automaton-5-nea-aaabb/02.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 18em"
-                          src="../img/context-free/LR/dk-automaton-5-nea-aaabb/03.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 18em"
-                          src="../img/context-free/LR/dk-automaton-5-nea-aaabb/04.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 18em"
-                          src="../img/context-free/LR/dk-automaton-5-nea-aaabb/05.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 18em"
-                          src="../img/context-free/LR/dk-automaton-5-nea-aaabb/06.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 18em"
-                          src="../img/context-free/LR/dk-automaton-5-nea-aaabb/07.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 18em"
-                          src="../img/context-free/LR/dk-automaton-5-nea-aaabb/08.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 18em"
-                          src="../img/context-free/LR/dk-automaton-5-nea-aaabb/09.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 18em"
-                          src="../img/context-free/LR/dk-automaton-5-nea-aaabb/10.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 18em"
-                          src="../img/context-free/LR/dk-automaton-5-nea-aaabb/11.svg" />
-                      </div>
-                    </div>
-                  </div>
+                  <Carousel>
+                    <img
+                      style="height: 18em"
+                      src="../img/context-free/LR/dk-automaton-5-nea-aaabb/01.svg" />
+                    <img
+                      style="height: 18em"
+                      src="../img/context-free/LR/dk-automaton-5-nea-aaabb/02.svg" />
+                    <img
+                      style="height: 18em"
+                      src="../img/context-free/LR/dk-automaton-5-nea-aaabb/03.svg" />
+                    <img
+                      style="height: 18em"
+                      src="../img/context-free/LR/dk-automaton-5-nea-aaabb/04.svg" />
+                    <img
+                      style="height: 18em"
+                      src="../img/context-free/LR/dk-automaton-5-nea-aaabb/05.svg" />
+                    <img
+                      style="height: 18em"
+                      src="../img/context-free/LR/dk-automaton-5-nea-aaabb/06.svg" />
+                    <img
+                      style="height: 18em"
+                      src="../img/context-free/LR/dk-automaton-5-nea-aaabb/07.svg" />
+                    <img
+                      style="height: 18em"
+                      src="../img/context-free/LR/dk-automaton-5-nea-aaabb/08.svg" />
+                    <img
+                      style="height: 18em"
+                      src="../img/context-free/LR/dk-automaton-5-nea-aaabb/09.svg" />
+                    <img
+                      style="height: 18em"
+                      src="../img/context-free/LR/dk-automaton-5-nea-aaabb/10.svg" />
+                    <img
+                      style="height: 18em"
+                      src="../img/context-free/LR/dk-automaton-5-nea-aaabb/11.svg" />
+                  </Carousel>
                 </figure>
                 <h2>
                   Der nichtdeterministische DK-Automat
@@ -399,94 +317,7 @@ const Article = () => {
                   Automaten sieht das dann so aus:
                 </Paragraph>
                 <figure class="centered-figure well container">
-                  <a
-                    data-slide="prev"
-                    href="#aaabb-dk-dea"
-                    class="left carousel-control-prev-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
-                    </div>
-                  </a>
-                  <a
-                    data-slide="next"
-                    href="#aaabb-dk-dea"
-                    class="right carousel-control-next-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-next-icon.svg" />
-                    </div>
-                  </a>
-                  <div
-                    style="display: inline-block"
-                    data-interval={false}
-                    class="carousel"
-                    id="aaabb-dk-dea">
-                    <ol class="carousel-indicators">
-                      <li
-                        class="active"
-                        data-slide-to={1}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={2}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={3}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={4}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={5}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={6}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={7}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={8}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={9}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={10}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={11}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={12}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={13}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={14}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={15}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={16}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={17}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={18}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={19}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={20}
-                        data-target="#aaabb-dk-dea" />
-                      <li
-                        data-slide-to={21}
-                        data-target="#aaabb-dk-dea" />
-                    </ol>
-                  </div>
+                  <Carousel />
                 </figure>
                 <h2>
                   Den DK-Automaten verwenden

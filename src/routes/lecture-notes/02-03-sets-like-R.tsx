@@ -448,67 +448,20 @@ const Article = () => {
                   sehen Sie die ersten paar Schritte dieser "Verfeinerung".
                 </Paragraph>
                 <figure class="centered-figure well container">
-                  <a
-                    data-slide="prev"
-                    href="#interval-to-square"
-                    class="left carousel-control-prev-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
-                    </div>
-                  </a>
-                  <a
-                    data-slide="next"
-                    href="#interval-to-square"
-                    class="right carousel-control-next-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-next-icon.svg" />
-                    </div>
-                  </a>
-                  <div
-                    style="display: inline-block"
-                    data-interval={false}
-                    class="carousel"
-                    id="interval-to-square">
-                    <ol class="carousel-indicators">
-                      <li
-                        class="active"
-                        data-slide-to={1}
-                        data-target="#interval-to-square" />
-                      <li
-                        data-slide-to={2}
-                        data-target="#interval-to-square" />
-                      <li
-                        data-slide-to={3}
-                        data-target="#interval-to-square" />
-                      <li
-                        data-slide-to={4}
-                        data-target="#interval-to-square" />
-                    </ol>
-                    <div
-                      style="display: inline-block"
-                      class="carousel-inner">
-                      <div class="item active">
-                        <img
-                          style="height: 15em"
-                          src="../img/infinite-sets/interval-to-square-animation/figures-01-01.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 15em"
-                          src="../img/infinite-sets/interval-to-square-animation/figures-01-02.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 15em"
-                          src="../img/infinite-sets/interval-to-square-animation/figures-01-03.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 15em"
-                          src="../img/infinite-sets/interval-to-square-animation/figures-01-04.svg" />
-                      </div>
-                    </div>
-                  </div>
+                  <Carousel>
+                    <img
+                      style="height: 15em"
+                      src="../img/infinite-sets/interval-to-square-animation/figures-01-01.svg" />
+                    <img
+                      style="height: 15em"
+                      src="../img/infinite-sets/interval-to-square-animation/figures-01-02.svg" />
+                    <img
+                      style="height: 15em"
+                      src="../img/infinite-sets/interval-to-square-animation/figures-01-03.svg" />
+                    <img
+                      style="height: 15em"
+                      src="../img/infinite-sets/interval-to-square-animation/figures-01-04.svg" />
+                  </Carousel>
                 </figure>
                 <Paragraph>
                   Wir wissen nun, dass $\R \approx \R^2$ gilt. Ebenso können wir $\R

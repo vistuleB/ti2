@@ -146,67 +146,20 @@ const Article = () => {
                     $g$-Pfeile von jedem $b$ zu $f(b)$:
                   </Paragraph>
                   <figure class="centered-figure well container-fluid">
-                    <a
-                      data-slide="prev"
-                      href="#schroeder-bernstein"
-                      class="left carousel-control-prev-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-prev-icon.svg" />
-                      </div>
-                    </a>
-                    <a
-                      data-slide="next"
-                      href="#schroeder-bernstein"
-                      class="right carousel-control-next-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-next-icon.svg" />
-                      </div>
-                    </a>
-                    <div
-                      style="display: inline-block"
-                      data-interval={false}
-                      class="carousel"
-                      id="schroeder-bernstein">
-                      <ol class="carousel-indicators">
-                        <li
-                          class="active"
-                          data-slide-to={1}
-                          data-target="#schroeder-bernstein" />
-                        <li
-                          data-slide-to={2}
-                          data-target="#schroeder-bernstein" />
-                        <li
-                          data-slide-to={3}
-                          data-target="#schroeder-bernstein" />
-                        <li
-                          data-slide-to={4}
-                          data-target="#schroeder-bernstein" />
-                      </ol>
-                      <div
-                        style="display: inline-block"
-                        class="carousel-inner">
-                        <div class="item active">
-                          <img
-                            style="width: 100%"
-                            src="../img/infinite-sets/schroeder-bernstein-digraph-1.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="width: 100%"
-                            src="../img/infinite-sets/schroeder-bernstein-digraph-2.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="width: 100%"
-                            src="../img/infinite-sets/schroeder-bernstein-digraph-3.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="width: 100%"
-                            src="../img/infinite-sets/schroeder-bernstein-digraph-4.svg" />
-                        </div>
-                      </div>
-                    </div>
+                    <Carousel>
+                      <img
+                        style="width: 100%"
+                        src="../img/infinite-sets/schroeder-bernstein-digraph-1.svg" />
+                      <img
+                        style="width: 100%"
+                        src="../img/infinite-sets/schroeder-bernstein-digraph-2.svg" />
+                      <img
+                        style="width: 100%"
+                        src="../img/infinite-sets/schroeder-bernstein-digraph-3.svg" />
+                      <img
+                        style="width: 100%"
+                        src="../img/infinite-sets/schroeder-bernstein-digraph-4.svg" />
+                    </Carousel>
                   </figure>
                   <Paragraph>
                     Wenn wir die Menge $A \cup B$ zusammen mit den $f$- und $g$-Pfeilen
@@ -221,59 +174,17 @@ const Article = () => {
                     den vom Typ (2) jedoch $g^&#123;-1&#125;$:
                   </Paragraph>
                   <figure class="centered-figure well container-fluid">
-                    <a
-                      data-slide="prev"
-                      href="#schroeder-bernstein-bijektion"
-                      class="left carousel-control-prev-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-prev-icon.svg" />
-                      </div>
-                    </a>
-                    <a
-                      data-slide="next"
-                      href="#schroeder-bernstein-bijektion"
-                      class="right carousel-control-next-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-next-icon.svg" />
-                      </div>
-                    </a>
-                    <div
-                      style="display: inline-block"
-                      data-interval={false}
-                      class="carousel"
-                      id="schroeder-bernstein-bijektion">
-                      <ol class="carousel-indicators">
-                        <li
-                          class="active"
-                          data-slide-to={1}
-                          data-target="#schroeder-bernstein-bijektion" />
-                        <li
-                          data-slide-to={2}
-                          data-target="#schroeder-bernstein-bijektion" />
-                        <li
-                          data-slide-to={3}
-                          data-target="#schroeder-bernstein-bijektion" />
-                      </ol>
-                      <div
-                        style="display: inline-block"
-                        class="carousel-inner">
-                        <div class="item active">
-                          <img
-                            style="width: 100%"
-                            src="../img/infinite-sets/schroeder-bernstein-bijektion-1.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="width: 100%"
-                            src="../img/infinite-sets/schroeder-bernstein-bijektion-2.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="width: 100%"
-                            src="../img/infinite-sets/schroeder-bernstein-bijektion-3.svg" />
-                        </div>
-                      </div>
-                    </div>
+                    <Carousel>
+                      <img
+                        style="width: 100%"
+                        src="../img/infinite-sets/schroeder-bernstein-bijektion-1.svg" />
+                      <img
+                        style="width: 100%"
+                        src="../img/infinite-sets/schroeder-bernstein-bijektion-2.svg" />
+                      <img
+                        style="width: 100%"
+                        src="../img/infinite-sets/schroeder-bernstein-bijektion-3.svg" />
+                    </Carousel>
                   </figure>
                   <Paragraph>
                     Formalisieren wir das ein bisschen. Wir definieren eine Folge $X

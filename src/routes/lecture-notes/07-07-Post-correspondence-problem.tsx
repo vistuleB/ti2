@@ -73,107 +73,35 @@ const Article = () => {
                   verwendet:
                 </Paragraph>
                 <figure class="centered-figure well container">
-                  <a
-                    data-slide="prev"
-                    href="#pcp-wikipedia"
-                    class="left carousel-control-prev-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
-                    </div>
-                  </a>
-                  <a
-                    data-slide="next"
-                    href="#pcp-wikipedia"
-                    class="right carousel-control-next-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-next-icon.svg" />
-                    </div>
-                  </a>
-                  <div
-                    style="display:inline-block"
-                    data-interval={false}
-                    class="carousel"
-                    id="pcp-wikipedia">
-                    <ol class="carousel-indicators">
-                      <li
-                        class="active"
-                        data-slide-to={1}
-                        data-target="#pcp-wikipedia" />
-                      <li
-                        data-slide-to={2}
-                        data-target="#pcp-wikipedia" />
-                      <li
-                        data-slide-to={3}
-                        data-target="#pcp-wikipedia" />
-                      <li
-                        data-slide-to={4}
-                        data-target="#pcp-wikipedia" />
-                      <li
-                        data-slide-to={5}
-                        data-target="#pcp-wikipedia" />
-                      <li
-                        data-slide-to={6}
-                        data-target="#pcp-wikipedia" />
-                      <li
-                        data-slide-to={7}
-                        data-target="#pcp-wikipedia" />
-                      <li
-                        data-slide-to={8}
-                        data-target="#pcp-wikipedia" />
-                      <li
-                        data-slide-to={9}
-                        data-target="#pcp-wikipedia" />
-                    </ol>
-                    <div
-                      style="display:inline-block"
-                      class="carousel-inner">
-                      <div class="item active">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-wikipedia/01.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-wikipedia/02.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-wikipedia/03.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-wikipedia/04.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-wikipedia/05.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-wikipedia/06.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-wikipedia/07.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-wikipedia/08.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-wikipedia/09.svg" />
-                      </div>
-                    </div>
-                  </div>
+                  <Carousel>
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-wikipedia/01.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-wikipedia/02.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-wikipedia/03.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-wikipedia/04.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-wikipedia/05.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-wikipedia/06.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-wikipedia/07.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-wikipedia/08.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-wikipedia/09.svg" />
+                  </Carousel>
                 </figure>
                 <Paragraph>
                   (Diese Beispielinstanz ist von
@@ -189,235 +117,83 @@ const Article = () => {
                   dass man mit der türkisen Kachel (der ersten) anfangen muss:
                 </Paragraph>
                 <figure class="centered-figure well container">
-                  <a
-                    data-slide="prev"
-                    href="#pcp-expo"
-                    class="left carousel-control-prev-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-prev-icon.svg" />
-                    </div>
-                  </a>
-                  <a
-                    data-slide="next"
-                    href="#pcp-expo"
-                    class="right carousel-control-next-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-next-icon.svg" />
-                    </div>
-                  </a>
-                  <div
-                    style="display:inline-block"
-                    data-interval={false}
-                    class="carousel"
-                    id="pcp-expo">
-                    <ol class="carousel-indicators">
-                      <li
-                        class="active"
-                        data-slide-to={1}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={2}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={3}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={4}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={5}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={6}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={7}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={8}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={9}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={10}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={11}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={12}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={13}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={14}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={15}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={16}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={17}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={18}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={19}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={20}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={21}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={22}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={23}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={24}
-                        data-target="#pcp-expo" />
-                      <li
-                        data-slide-to={25}
-                        data-target="#pcp-expo" />
-                    </ol>
-                    <div
-                      style="display:inline-block"
-                      class="carousel-inner">
-                      <div class="item active">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/01.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/02.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/03.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/04.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/05.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/06.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/07.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/08.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/09.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/10.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/11.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/12.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/13.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/14.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/15.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/16.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/17.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/18.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/19.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/20.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/21.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/22.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/23.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/24.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height:18em"
-                          src="../img/pcp/example-expo/25.svg" />
-                      </div>
-                    </div>
-                  </div>
+                  <Carousel>
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/01.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/02.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/03.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/04.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/05.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/06.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/07.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/08.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/09.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/10.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/11.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/12.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/13.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/14.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/15.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/16.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/17.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/18.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/19.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/20.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/21.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/22.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/23.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/24.svg" />
+                    <img
+                      style="height:18em"
+                      src="../img/pcp/example-expo/25.svg" />
+                  </Carousel>
                 </figure>
                 <Paragraph>
                   Können Sie das zweie PCP-Puzzle lösen und zu Ende führen?
@@ -716,99 +492,32 @@ const Article = () => {
                   ist, dann würden wir folgende Kachel erzeugen und wie folgt
                   einsetzen:
                   <figure class="centered-figure">
-                    <a
-                      data-slide="prev"
-                      href="#pcp-step-right"
-                      class="left carousel-control-prev-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-prev-icon.svg" />
-                      </div>
-                    </a>
-                    <a
-                      data-slide="next"
-                      href="#pcp-step-right"
-                      class="right carousel-control-next-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-next-icon.svg" />
-                      </div>
-                    </a>
-                    <div
-                      style="display:inline-block"
-                      data-interval={false}
-                      class="carousel"
-                      id="pcp-step-right">
-                      <ol class="carousel-indicators">
-                        <li
-                          class="active"
-                          data-slide-to={1}
-                          data-target="#pcp-step-right" />
-                        <li
-                          data-slide-to={2}
-                          data-target="#pcp-step-right" />
-                        <li
-                          data-slide-to={3}
-                          data-target="#pcp-step-right" />
-                        <li
-                          data-slide-to={4}
-                          data-target="#pcp-step-right" />
-                        <li
-                          data-slide-to={5}
-                          data-target="#pcp-step-right" />
-                        <li
-                          data-slide-to={6}
-                          data-target="#pcp-step-right" />
-                        <li
-                          data-slide-to={7}
-                          data-target="#pcp-step-right" />
-                        <li
-                          data-slide-to={8}
-                          data-target="#pcp-step-right" />
-                      </ol>
-                      <div
-                        style="display:inline-block"
-                        class="carousel-inner">
-                        <div class="item active">
-                          <img
-                            style="height:12em"
-                            src="../img/pcp/step-right/01.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:12em"
-                            src="../img/pcp/step-right/02.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:12em"
-                            src="../img/pcp/step-right/03.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:12em"
-                            src="../img/pcp/step-right/04.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:12em"
-                            src="../img/pcp/step-right/05.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:12em"
-                            src="../img/pcp/step-right/06.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:12em"
-                            src="../img/pcp/step-right/07.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:12em"
-                            src="../img/pcp/step-right/08.svg" />
-                        </div>
-                      </div>
-                    </div>
+                    <Carousel>
+                      <img
+                        style="height:12em"
+                        src="../img/pcp/step-right/01.svg" />
+                      <img
+                        style="height:12em"
+                        src="../img/pcp/step-right/02.svg" />
+                      <img
+                        style="height:12em"
+                        src="../img/pcp/step-right/03.svg" />
+                      <img
+                        style="height:12em"
+                        src="../img/pcp/step-right/04.svg" />
+                      <img
+                        style="height:12em"
+                        src="../img/pcp/step-right/05.svg" />
+                      <img
+                        style="height:12em"
+                        src="../img/pcp/step-right/06.svg" />
+                      <img
+                        style="height:12em"
+                        src="../img/pcp/step-right/07.svg" />
+                      <img
+                        style="height:12em"
+                        src="../img/pcp/step-right/08.svg" />
+                    </Carousel>
                   </figure>
                   <Paragraph>
                     Was geschieht nun? Für das Symbol \(q_1\), das ja einen Zustand
@@ -824,75 +533,23 @@ const Article = () => {
                     \(\delta(q_1, x_2) = (q_3, z, \texttt&#123;L&#125;)\) entsprechende Kopfkachel:
                   </Paragraph>
                   <figure class="centered-figure">
-                    <a
-                      data-slide="prev"
-                      href="#pcp-step-left"
-                      class="left carousel-control-prev-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-prev-icon.svg" />
-                      </div>
-                    </a>
-                    <a
-                      data-slide="next"
-                      href="#pcp-step-left"
-                      class="right carousel-control-next-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-next-icon.svg" />
-                      </div>
-                    </a>
-                    <div
-                      style="display:inline-block"
-                      data-interval={false}
-                      class="carousel"
-                      id="pcp-step-left">
-                      <ol class="carousel-indicators">
-                        <li
-                          class="active"
-                          data-slide-to={1}
-                          data-target="#pcp-step-left" />
-                        <li
-                          data-slide-to={2}
-                          data-target="#pcp-step-left" />
-                        <li
-                          data-slide-to={3}
-                          data-target="#pcp-step-left" />
-                        <li
-                          data-slide-to={4}
-                          data-target="#pcp-step-left" />
-                        <li
-                          data-slide-to={5}
-                          data-target="#pcp-step-left" />
-                      </ol>
-                      <div
-                        style="display:inline-block"
-                        class="carousel-inner">
-                        <div class="item active">
-                          <img
-                            style="height:12em"
-                            src="../img/pcp/step-left/01.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:12em"
-                            src="../img/pcp/step-left/02.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:12em"
-                            src="../img/pcp/step-left/03.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:12em"
-                            src="../img/pcp/step-left/04.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:12em"
-                            src="../img/pcp/step-left/05.svg" />
-                        </div>
-                      </div>
-                    </div>
+                    <Carousel>
+                      <img
+                        style="height:12em"
+                        src="../img/pcp/step-left/01.svg" />
+                      <img
+                        style="height:12em"
+                        src="../img/pcp/step-left/02.svg" />
+                      <img
+                        style="height:12em"
+                        src="../img/pcp/step-left/03.svg" />
+                      <img
+                        style="height:12em"
+                        src="../img/pcp/step-left/04.svg" />
+                      <img
+                        style="height:12em"
+                        src="../img/pcp/step-left/05.svg" />
+                    </Carousel>
                   </figure>
                   <Paragraph>
                     Hier brauchen wir halt eine Kopfkachel \((q_2yz:yq_1x_2)\) für
@@ -943,59 +600,17 @@ const Article = () => {
                     abzuschließen. Die letzten zwei Schritte sehen dann so aus:
                   </Paragraph>
                   <figure class="centered-figure">
-                    <a
-                      data-slide="prev"
-                      href="#pcp-finishing-tile"
-                      class="left carousel-control-prev-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-prev-icon.svg" />
-                      </div>
-                    </a>
-                    <a
-                      data-slide="next"
-                      href="#pcp-finishing-tile"
-                      class="right carousel-control-next-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-next-icon.svg" />
-                      </div>
-                    </a>
-                    <div
-                      style="display:inline-block"
-                      data-interval={false}
-                      class="carousel"
-                      id="pcp-finishing-tile">
-                      <ol class="carousel-indicators">
-                        <li
-                          class="active"
-                          data-slide-to={1}
-                          data-target="#pcp-finishing-tile" />
-                        <li
-                          data-slide-to={2}
-                          data-target="#pcp-finishing-tile" />
-                        <li
-                          data-slide-to={3}
-                          data-target="#pcp-finishing-tile" />
-                      </ol>
-                      <div
-                        style="display:inline-block"
-                        class="carousel-inner">
-                        <div class="item active">
-                          <img
-                            style="height:10em"
-                            src="../img/pcp/finish-00.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:10em"
-                            src="../img/pcp/finish-01.svg" />
-                        </div>
-                        <div class="item">
-                          <img
-                            style="height:10em"
-                            src="../img/pcp/finish-03.svg" />
-                        </div>
-                      </div>
-                    </div>
+                    <Carousel>
+                      <img
+                        style="height:10em"
+                        src="../img/pcp/finish-00.svg" />
+                      <img
+                        style="height:10em"
+                        src="../img/pcp/finish-01.svg" />
+                      <img
+                        style="height:10em"
+                        src="../img/pcp/finish-03.svg" />
+                    </Carousel>
                   </figure>
                   <Paragraph>
                     Strenggenommen müssten wir jetzt beweisen, dass das MPCP-Puzzle genau dann lösbar ist, wenn

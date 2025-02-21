@@ -347,211 +347,74 @@ const Article = () => {
                   der Startzustand \(A\) einen roten Punkt.
                 </Paragraph>
                 <figure class="centered-figure well container">
-                  <a
-                    data-slide="prev"
-                    href="#nfsm-balls"
-                    class="left carousel-control-prev-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../../img/carousel-prev-icon.svg" />
-                    </div>
-                  </a>
-                  <a
-                    data-slide="next"
-                    href="#nfsm-balls"
-                    class="right carousel-control-next-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../../img/carousel-next-icon.svg" />
-                    </div>
-                  </a>
-                  <div
-                    style="display: inline-block"
-                    data-interval={false}
-                    class="carousel"
-                    id="nfsm-balls">
-                    <ol class="carousel-indicators">
-                      <li
-                        class="active"
-                        data-slide-to={1}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={2}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={3}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={4}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={5}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={6}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={7}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={8}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={9}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={10}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={11}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={12}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={13}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={14}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={15}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={16}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={17}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={18}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={19}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={20}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={21}
-                        data-target="#nfsm-balls" />
-                      <li
-                        data-slide-to={22}
-                        data-target="#nfsm-balls" />
-                    </ol>
-                    <div
-                      style="display: inline-block"
-                      class="carousel-inner">
-                      <div class="item active">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-01.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-02.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-03.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-04.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-05.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-06.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-07.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-08.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-09.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-10.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-11.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-12.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-13.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-14.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-15.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-16.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-17.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-18.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-19.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-20.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-21.svg" />
-                      </div>
-                      <div class="item">
-                        <img
-                          style="height: 12em"
-                          src="../img/finite-state-automata/nfsm-colored-balls-22.svg" />
-                      </div>
-                    </div>
-                  </div>
+                  <Carousel>
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-01.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-02.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-03.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-04.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-05.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-06.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-07.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-08.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-09.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-10.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-11.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-12.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-13.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-14.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-15.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-16.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-17.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-18.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-19.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-20.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-21.svg" />
+                    <img
+                      style="height: 12em"
+                      src="../img/finite-state-automata/nfsm-colored-balls-22.svg" />
+                  </Carousel>
                 </figure>
                 <Paragraph>
                   Am Ende landet der grüne Punkt im Zustand \(E\). Das Wort ist also in
@@ -658,24 +521,7 @@ const Article = () => {
                   <Paragraph>
                     Der Potenzmengenautomat hat die Zustandsmenge
                   </Paragraph>
-                  <figure class="centered-figure well">
-                    <a
-                      data-slide="prev"
-                      href="#potenzmengenautomat"
-                      class="left carousel-control-prev-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-prev-icon.svg" />
-                      </div>
-                    </a>
-                    <a
-                      data-slide="next"
-                      href="#potenzmengenautomat"
-                      class="right carousel-control-next-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-next-icon.svg" />
-                      </div>
-                    </a>
-                  </figure>
+                  <figure class="centered-figure well" />
                   <Paragraph>
                     Wenn wir uns vorstellen, dass wir vor das Eingabewort \(\alpha\) die
                     Zeichen 000 stellen, also \(\alpha\) durch \(000\alpha\) ersetzen,
