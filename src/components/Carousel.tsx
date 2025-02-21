@@ -10,7 +10,10 @@ const Carousel = (props: ParentProps) => {
         class="left carousel-control-prev-icon"
         href="#all-monomials"
         onClick={() => {
-          setSelectedImage((selectedImage() + 1) % images.toArray().length);
+          setSelectedImage(
+            (selectedImage() - 1 + images.toArray().length) %
+              images.toArray().length
+          );
         }}>
         <div class="carousel-nav-icon">
           <img src="../img/carousel-prev-icon.svg" />
@@ -21,10 +24,7 @@ const Carousel = (props: ParentProps) => {
         class="right carousel-control-next-icon"
         href="#all-monomials"
         onClick={() => {
-          setSelectedImage(
-            (selectedImage() - 1 + images.toArray().length) %
-              images.toArray().length
-          );
+          setSelectedImage((selectedImage() + 1) % images.toArray().length);
         }}>
         <div class="carousel-nav-icon">
           <img src="../img/carousel-next-icon.svg" />
