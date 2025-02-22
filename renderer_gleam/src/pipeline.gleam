@@ -153,6 +153,10 @@ pub fn our_pipeline() -> List(Pipe) {
         ["MathBlock"],
       ),
     ),
+   
+    // ************************
+    // $ and \( \) for inline math ******************
+    // ************************
     // 12
     pair_bookends(#(["OpeningLatexPara"], ["ClosingLatexPara"], "Math")),
     // 13
@@ -160,6 +164,13 @@ pub fn our_pipeline() -> List(Pipe) {
       #("OpeningLatexPara", "\\("),
       #("ClosingLatexPara", "\\)"),
     ]),
+
+     split_by_indexed_regexes(
+      #([#(single_dollar_indexed_regex, "SingleDollar")], ["MathBlock"]),
+    ),
+    pair_bookends(#(["SingleDollar"], ["SingleDollar"], "Math")),
+    fold_tags_into_text([#("SingleDollar", "$")]),
+
     // ************************
     // _ & * & ` ******************
     // ************************
