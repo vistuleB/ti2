@@ -1,5 +1,5 @@
 |> Section
-    title_gr 8.1 Das Zeithierarchietheorem
+    title_gr Das Zeithierarchietheorem
     title_en Time hierarchy theorem
     number 8.1
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            8.1 Das Zeithierarchietheorem
+                            Das Zeithierarchietheorem
                     |> p
 
                         Das Zeithierarchietheorem besagt, dass es zu jeder "vernünftigen" Komplexitätsfunktion $t: \N

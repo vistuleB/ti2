@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={19}
-        title_gr="3.4 Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion"
+        title_gr="Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion"
         title_en="mu recursion"
         number={3.4}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     3.4 
-                    3.4 Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion
+                    Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion
                   </span>
                 </h1>
                 Primitive Rekursion erlaubt uns Schleifen, allerdings nur in einer sehr restriktiven Form:

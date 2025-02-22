@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={47}
-        title_gr="4.6 Turingmaschinen, Haltproblem und Unentscheidbarkeit"
+        title_gr="Turingmaschinen, Haltproblem und Unentscheidbarkeit"
         title_en="undecidability"
         number={7.6}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     6.6 
-                    4.6 Turingmaschinen, Haltproblem und Unentscheidbarkeit
+                    Turingmaschinen, Haltproblem und Unentscheidbarkeit
                   </span>
                 </h1>
                 <Paragraph>

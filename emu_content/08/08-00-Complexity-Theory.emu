@@ -1,5 +1,5 @@
 |> Section
-    title_gr 8. Komplexitätstheorie
+    title_gr Komplexitätstheorie
     title_en Complexity Theory
     number 8.0
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            8. Komplexitätstheorie
+                            Komplexitätstheorie
                     |> p
 
                         Turingmaschinen erlauben uns, den Resourcenverbrauch einer Berechnung zu quantifizieren:

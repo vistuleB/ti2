@@ -1,5 +1,5 @@
 |> Section
-    title_gr 4.6 Die Grenzen regulärer Sprachen
+    title_gr Die Grenzen regulärer Sprachen
     title_en limitations of regular grammars
     number 4.6
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            4.6 Die Grenzen regulärer Sprachen
+                            Die Grenzen regulärer Sprachen
                     |> p
 
                         Noch spannender, als zu erkunden, was möglich ist, ist aus Sicht eines theoretischen

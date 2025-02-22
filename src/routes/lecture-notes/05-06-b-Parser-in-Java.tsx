@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={34}
-        title_gr="5.6 Einen Parser in Java implementieren"
+        title_gr="Einen Parser in Java implementieren"
         title_en="b Parser in Java"
         number={5.6}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     5.6 
-                    5.6 Einen Parser in Java implementieren
+                    Einen Parser in Java implementieren
                   </span>
                 </h1>
                 <div class="alert-info">

@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={8}
-        title_gr="2. Unendliche Mengen"
+        title_gr="Unendliche Mengen"
         title_en="infinite sets"
         number={2.0}
         counter="DefCtr"
@@ -38,7 +38,7 @@ const Article = () => {
               <h1 class="hidden-title">
                 <span class="chapterTitle">
                   2. 
-                  2. Unendliche Mengen
+                  Unendliche Mengen
                 </span>
               </h1>
               <Paragraph>

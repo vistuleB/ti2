@@ -9,6 +9,7 @@ import desugarers/surround_elements_by.{surround_elements_by}
 import desugarers/trim_spaces_around_newlines.{trim_spaces_around_newlines}
 import desugarers/replace_multiple_spaces_by_one.{replace_multiple_spaces_by_one}
 import desugarers/ti2_carousel_component.{ti2_carousel_component}
+import desugarers/remove_chapter_number_from_title.{remove_chapter_number_from_title}
 
 import infrastructure.{type Pipe}
 import gleam/option.{None, Some}
@@ -16,6 +17,7 @@ import gleam/option.{None, Some}
 pub fn html_pipeline() -> List(Pipe) {
   [
     identity.identity(),
+    remove_chapter_number_from_title(),
     trim_spaces_around_newlines(),
     replace_multiple_spaces_by_one(),
     ti2_carousel_component(),

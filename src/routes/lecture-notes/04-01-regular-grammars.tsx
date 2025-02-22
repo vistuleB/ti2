@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={21}
-        title_gr="4.1 Reguläre Grammatiken"
+        title_gr="Reguläre Grammatiken"
         title_en="regular grammars"
         number={4.1}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     4.1 
-                    4.1 Reguläre Grammatiken
+                    Reguläre Grammatiken
                   </span>
                 </h1>
                 <Paragraph>

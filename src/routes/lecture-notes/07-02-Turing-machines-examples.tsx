@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={43}
-        title_gr="4.2 Beispiele von Turingmaschinen"
+        title_gr="Beispiele von Turingmaschinen"
         title_en="Turing machines examples"
         number={7.2}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     6.2 
-                    4.2 Beispiele von Turingmaschinen
+                    Beispiele von Turingmaschinen
                   </span>
                 </h1>
                 <div class="well container theorem">

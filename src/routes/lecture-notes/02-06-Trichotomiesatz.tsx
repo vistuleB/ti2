@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={14}
-        title_gr="2.6 Der Trichotomiesatz"
+        title_gr="Der Trichotomiesatz"
         title_en="Trichotomiesatz"
         number={2.6}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     2.6 
-                    2.6 Der Trichotomiesatz
+                    Der Trichotomiesatz
                   </span>
                 </h1>
                 <Paragraph>

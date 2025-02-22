@@ -1,5 +1,5 @@
 |> Section
-    title_gr 7.5 Turing-Maschinen simulieren Turing-Maschinen: die universelle Turing-Maschine
+    title_gr Turing-Maschinen simulieren Turing-Maschinen: die universelle Turing-Maschine
     title_en Turing universal
     number 7.5
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            7.5 Turing-Maschinen simulieren Turing-Maschinen: die universelle Turing-Maschine
+                            Turing-Maschinen simulieren Turing-Maschinen: die universelle Turing-Maschine
                     |> p
 
                         Im letzten Teilkapitel haben wir gesehen, wie wir jede Turingmaschine $M

@@ -1,5 +1,5 @@
 |> Section
-    title_gr 1.4 Monotone Funktionen und monotone Schaltkreise
+    title_gr Monotone Funktionen und monotone Schaltkreise
     title_en monotone circuits
     number 1.4
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            1.4 Monotone Funktionen und monotone Schaltkreise
+                            Monotone Funktionen und monotone Schaltkreise
                     |> p
 
                         Für zwei Tupel \(\mathbf{x}, \mathbf{y} \in \{0,1\}^n\) schreiben wir

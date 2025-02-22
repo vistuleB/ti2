@@ -1,5 +1,5 @@
 |> Section
-    title_gr 4.6 Turingmaschinen, Haltproblem und Unentscheidbarkeit
+    title_gr Turingmaschinen, Haltproblem und Unentscheidbarkeit
     title_en undecidability
     number 7.6
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            4.6 Turingmaschinen, Haltproblem und Unentscheidbarkeit
+                            Turingmaschinen, Haltproblem und Unentscheidbarkeit
                     |> p
 
                         Im vorherigen Teilkapitel haben wir die _universelle Turingmaschine_ $U$ konstruiert, die

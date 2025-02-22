@@ -1,5 +1,5 @@
 |> Section
-    title_gr 5.6 Der DK-Automat
+    title_gr Der DK-Automat
     title_en dk automat
     number 5.9
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            5.6 Der DK-Automat
+                            Der DK-Automat
                     |> h2
 
                         Von der Grammatik \(\hat{G}\) zu einem nichtdeterministischen

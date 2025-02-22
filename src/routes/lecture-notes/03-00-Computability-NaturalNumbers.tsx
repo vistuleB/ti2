@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={15}
-        title_gr="3. Berechenbarkeit und natürliche Zahlen"
+        title_gr="Berechenbarkeit und natürliche Zahlen"
         title_en="Computability NaturalNumbers"
         number={3.0}
         counter="DefCtr"
@@ -38,7 +38,7 @@ const Article = () => {
               <h1 class="hidden-title">
                 <span class="chapterTitle">
                   3. 
-                  3. Berechenbarkeit und natürliche Zahlen
+                  Berechenbarkeit und natürliche Zahlen
                 </span>
               </h1>
               <Paragraph>

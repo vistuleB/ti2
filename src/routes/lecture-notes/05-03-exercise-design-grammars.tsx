@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={31}
-        title_gr="5.3 Rechnerübung: Gute kontextfreie Grammatiken entwerfen"
+        title_gr="Rechnerübung: Gute kontextfreie Grammatiken entwerfen"
         title_en="exercise design grammars"
         number={5.3}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     5.3 
-                    5.3 Rechnerübung: Gute kontextfreie Grammatiken entwerfen
+                    Rechnerübung: Gute kontextfreie Grammatiken entwerfen
                   </span>
                 </h1>
                 <Paragraph>

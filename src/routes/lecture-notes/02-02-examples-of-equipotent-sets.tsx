@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={10}
-        title_gr="2.2 Beispiele abzählbar unendlicher Mengen"
+        title_gr="Beispiele abzählbar unendlicher Mengen"
         title_en="examples of equipotent sets"
         number={2.2}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     2.2 
-                    2.2 Beispiele abzählbar unendlicher Mengen
+                    Beispiele abzählbar unendlicher Mengen
                   </span>
                 </h1>
                 <Paragraph>

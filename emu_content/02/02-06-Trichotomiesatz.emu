@@ -1,5 +1,5 @@
 |> Section
-    title_gr 2.6 Der Trichotomiesatz
+    title_gr Der Trichotomiesatz
     title_en Trichotomiesatz
     number 2.6
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            2.6 Der Trichotomiesatz
+                            Der Trichotomiesatz
                     |> p
 
                         Rekapitulieren wir: für zwei Mengen $A$ und $B$ schreiben $A \leq B$,

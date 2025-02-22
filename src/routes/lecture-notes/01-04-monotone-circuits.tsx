@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={5}
-        title_gr="1.4 Monotone Funktionen und monotone Schaltkreise"
+        title_gr="Monotone Funktionen und monotone Schaltkreise"
         title_en="monotone circuits"
         number={1.4}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     1.4 
-                    1.4 Monotone Funktionen und monotone Schaltkreise
+                    Monotone Funktionen und monotone Schaltkreise
                   </span>
                 </h1>
                 <Paragraph>

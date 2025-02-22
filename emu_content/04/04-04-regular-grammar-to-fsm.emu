@@ -1,5 +1,5 @@
 |> Section
-    title_gr 4.4 Von einer regulären Grammatik zu einem endlichen Automaten
+    title_gr Von einer regulären Grammatik zu einem endlichen Automaten
     title_en regular grammar to fsm
     number 4.4
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            4.4 Von einer regulären Grammatik zu einem endlichen Automaten
+                            Von einer regulären Grammatik zu einem endlichen Automaten
                     |> p
 
                         In diesem Unterkapitel wollen wir das Gelernte an einem konkreten Beispiel anwenden.

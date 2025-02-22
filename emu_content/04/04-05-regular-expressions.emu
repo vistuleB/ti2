@@ -1,5 +1,5 @@
 |> Section
-    title_gr 4.5 Reguläre Ausdrücke
+    title_gr Reguläre Ausdrücke
     title_en regular expressions
     number 4.5
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            4.5 Reguläre Ausdrücke
+                            Reguläre Ausdrücke
                     |> p
 
                         Wir werden nun eine weitere Weise finden, reguläre Sprachen zu beschreiben: neben regulären

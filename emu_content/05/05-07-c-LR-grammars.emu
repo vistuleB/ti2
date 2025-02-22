@@ -1,5 +1,5 @@
 |> Section
-    title_gr 5.5 LR-Grammatiken
+    title_gr LR-Grammatiken
     title_en c LR grammars
     number 5.7
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            5.5 LR-Grammatiken
+                            LR-Grammatiken
                     |> h2
 
                         Motivation und Intuition

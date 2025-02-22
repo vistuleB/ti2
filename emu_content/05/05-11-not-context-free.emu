@@ -1,5 +1,5 @@
 |> Section
-    title_gr 5.10 Die Grenzen kontextfreier Sprachen
+    title_gr Die Grenzen kontextfreier Sprachen
     title_en not context free
     number 5.11
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            5.10 Die Grenzen kontextfreier Sprachen
+                            Die Grenzen kontextfreier Sprachen
                     |> p
 
                         Im letzten Teilkapitel haben wir den CYK-Algorithmus kennengelernt. Dieser verwendet

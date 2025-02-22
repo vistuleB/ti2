@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={18}
-        title_gr="3.3 Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion"
+        title_gr="Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion"
         title_en="ackermann"
         number={3.3}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     3.3 
-                    3.3 Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion
+                    Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion
                   </span>
                 </h1>
                 <Paragraph>

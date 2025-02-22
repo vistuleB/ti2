@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={16}
-        title_gr="3.1 Primitive Rekursion: Motivation und Definitionen"
+        title_gr="Primitive Rekursion: Motivation und Definitionen"
         title_en="primitive recursion definitions"
         number={3.1}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     3.1 
-                    3.1 Primitive Rekursion: Motivation und Definitionen
+                    Primitive Rekursion: Motivation und Definitionen
                   </span>
                 </h1>
                 <Paragraph>

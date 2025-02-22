@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={44}
-        title_gr="4.3 Variationen: Mehrband-Maschinen, nichtdeterministische Maschinen"
+        title_gr="Variationen: Mehrband-Maschinen, nichtdeterministische Maschinen"
         title_en="Turing variants"
         number={7.3}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     6.3 
-                    4.3 Variationen: Mehrband-Maschinen, nichtdeterministische Maschinen
+                    Variationen: Mehrband-Maschinen, nichtdeterministische Maschinen
                   </span>
                 </h1>
                 <h2>

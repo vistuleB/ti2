@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={9}
-        title_gr="2.1 Wer ist größer?"
+        title_gr="Wer ist größer?"
         title_en="comparing sizes"
         number={2.1}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     2.1 
-                    2.1 Wer ist größer?
+                    Wer ist größer?
                   </span>
                 </h1>
                 <Paragraph>

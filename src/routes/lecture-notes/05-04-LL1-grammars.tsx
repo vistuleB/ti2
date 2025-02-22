@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={32}
-        title_gr="5.4 LL(\(k\))-Grammatiken"
+        title_gr="LL(\(k\))-Grammatiken"
         title_en="LL1 grammars"
         number={5.4}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     5.4 
-                    5.4 LL(\(k\))-Grammatiken
+                    LL(\(k\))-Grammatiken
                   </span>
                 </h1>
                 <div class="well container theorem">

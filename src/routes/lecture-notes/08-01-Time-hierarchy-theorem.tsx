@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={51}
-        title_gr="8.1 Das Zeithierarchietheorem"
+        title_gr="Das Zeithierarchietheorem"
         title_en="Time hierarchy theorem"
         number={8.1}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     6.2 
-                    8.1 Das Zeithierarchietheorem
+                    Das Zeithierarchietheorem
                   </span>
                 </h1>
                 <Paragraph>

@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={23}
-        title_gr="4.3 Nichtdeterministische Endliche Automaten"
+        title_gr="Nichtdeterministische Endliche Automaten"
         title_en="nfsm"
         number={4.3}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     4.3 
-                    4.3 Nichtdeterministische Endliche Automaten
+                    Nichtdeterministische Endliche Automaten
                   </span>
                 </h1>
                 <Paragraph>

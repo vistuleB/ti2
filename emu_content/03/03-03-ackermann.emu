@@ -1,5 +1,5 @@
 |> Section
-    title_gr 3.3 Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion
+    title_gr Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion
     title_en ackermann
     number 3.3
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            3.3 Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion
+                            Primitive Rekursion kann nicht alles: die éter-Ackermann-Funktion
                     |> p
 
                         In den vorhergehenden Teilkapiteln haben wir gesehen, dass Sie allerhand

@@ -1,5 +1,5 @@
 |> Section
-    title_gr 1.5 Majority
+    title_gr Majority
     title_en majority
     number 1.5
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            1.5 Majority
+                            Majority
                     Unser Ziel in diesem Teilkapitel ist es, Schaltkreise für die Majority-Funktion zu bauen:
                     |> figure
                         |> img

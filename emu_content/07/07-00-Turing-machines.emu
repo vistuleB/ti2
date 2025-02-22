@@ -1,5 +1,5 @@
 |> Section
-    title_gr 7. Turing-Maschinen
+    title_gr Turing-Maschinen
     title_en Turing machines
     number 7.0
     counter DefCtr
@@ -37,7 +37,7 @@
                         class chapterTitle
 
                         ::++ChapterCtr. 
-                        7. Turing-Maschinen
+                        Turing-Maschinen
                 |> p
 
                     Wir haben in den vorherigen Kapitel mit primitiver Rekursion und \(\lambda\)-Kalkül

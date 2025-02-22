@@ -1,5 +1,5 @@
 |> Section
-    title_gr 5.1 Ableitungen und Ableitungsbäume
+    title_gr Ableitungen und Ableitungsbäume
     title_en ableitungen
     number 5.1
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            5.1 Ableitungen und Ableitungsbäume
+                            Ableitungen und Ableitungsbäume
                     |> div
                         class well container theorem
                         |> span

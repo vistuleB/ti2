@@ -1,5 +1,5 @@
 |> Section
-    title_gr 4.7 Übungsaufgaben
+    title_gr Übungsaufgaben
     title_en exercises
     number 4.7
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            4.7 Übungsaufgaben
+                            Übungsaufgaben
                     |> h3
 
                         Reguläre Sprachen und primitive Rekursion

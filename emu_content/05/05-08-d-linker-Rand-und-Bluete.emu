@@ -1,5 +1,5 @@
 |> Section
-    title_gr 5.8 Linker Rand, Blüten und die DK-Grammatik
+    title_gr Linker Rand, Blüten und die DK-Grammatik
     title_en d linker Rand und Bluete
     number 5.8
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            5.8 Linker Rand, Blüten und die DK-Grammatik
+                            Linker Rand, Blüten und die DK-Grammatik
                     |> p
 
                         In diesem Teilkapitel werden wir sehen,

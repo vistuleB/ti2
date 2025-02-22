@@ -1,5 +1,5 @@
 |> Section
-    title_gr 3.1 Primitive Rekursion: Motivation und Definitionen
+    title_gr Primitive Rekursion: Motivation und Definitionen
     title_en primitive recursion definitions
     number 3.1
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            3.1 Primitive Rekursion: Motivation und Definitionen
+                            Primitive Rekursion: Motivation und Definitionen
                     |> p
 
                         Primitive Rekursion ist ein Versuch, Berechbarkeit von Funktionen \(f: \N^k \rightarrow \N\)

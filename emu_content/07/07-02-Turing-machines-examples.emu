@@ -1,5 +1,5 @@
 |> Section
-    title_gr 4.2 Beispiele von Turingmaschinen
+    title_gr Beispiele von Turingmaschinen
     title_en Turing machines examples
     number 7.2
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            4.2 Beispiele von Turingmaschinen
+                            Beispiele von Turingmaschinen
                     |> div
                         class well container theorem
                         |> span

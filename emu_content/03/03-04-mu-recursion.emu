@@ -1,5 +1,5 @@
 |> Section
-    title_gr 3.4 Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion
+    title_gr Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion
     title_en mu recursion
     number 3.4
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            3.4 Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion
+                            Ein Schritt weiter:  while-Schleifen und \(\mu\)-Rekursion
                     Primitive Rekursion erlaubt uns Schleifen, allerdings nur in einer sehr restriktiven Form:
                     |> ol
                         |> li

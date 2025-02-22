@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={42}
-        title_gr="4.1 Turingmaschinen: Formale Definition und Beispiele"
+        title_gr="Turingmaschinen: Formale Definition und Beispiele"
         title_en="Turing machines definition"
         number={7.1}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     6.1 
-                    4.1 Turingmaschinen: Formale Definition und Beispiele
+                    Turingmaschinen: Formale Definition und Beispiele
                   </span>
                 </h1>
                 <Paragraph>

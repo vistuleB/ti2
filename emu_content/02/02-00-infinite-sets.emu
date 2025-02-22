@@ -1,5 +1,5 @@
 |> Section
-    title_gr 2. Unendliche Mengen
+    title_gr Unendliche Mengen
     title_en infinite sets
     number 2.0
     counter DefCtr
@@ -37,7 +37,7 @@
                         class chapterTitle
 
                         ::++ChapterCtr. 
-                        2. Unendliche Mengen
+                        Unendliche Mengen
                 |> p
 
                     Mit den Boolesche Schaltkreise haben wir bereits ein Modell für Berechnung kennengelernt.

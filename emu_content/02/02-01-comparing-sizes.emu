@@ -1,5 +1,5 @@
 |> Section
-    title_gr 2.1 Wer ist größer?
+    title_gr Wer ist größer?
     title_en comparing sizes
     number 2.1
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            2.1 Wer ist größer?
+                            Wer ist größer?
                     |> p
 
                         Für endliche Mengen haben den Begriff der _Größe_$\{0,1,2,3,4,5,6,7,8,9\}$ hat zehn Elemente und ist somit größer als

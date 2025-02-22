@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={38}
-        title_gr="5.9 Allgemeine kontextfreie Sprachen parsen"
+        title_gr="Allgemeine kontextfreie Sprachen parsen"
         title_en="general parsing"
         number={5.10}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     5.10 
-                    5.9 Allgemeine kontextfreie Sprachen parsen
+                    Allgemeine kontextfreie Sprachen parsen
                   </span>
                 </h1>
                 <Paragraph>

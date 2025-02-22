@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={6}
-        title_gr="1.5 Majority"
+        title_gr="Majority"
         title_en="majority"
         number={1.5}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     1.5 
-                    1.5 Majority
+                    Majority
                   </span>
                 </h1>
                 Unser Ziel in diesem Teilkapitel ist es, Schaltkreise für die Majority-Funktion zu bauen:

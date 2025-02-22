@@ -1,5 +1,5 @@
 |> Section
-    title_gr 2.5 Das Schröder-Bernstein-Theorem
+    title_gr Das Schröder-Bernstein-Theorem
     title_en Schroeder Bernstein
     number 2.5
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            2.5 Das Schröder-Bernstein-Theorem
+                            Das Schröder-Bernstein-Theorem
                     |> p
 
                         Betrachten wir noch einmal einen Beweis, dass $[0,1] \times [0,1]

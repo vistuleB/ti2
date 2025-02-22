@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={12}
-        title_gr="2.4 Die Cantorsche Diagonalisation: $\N \not \approx \R$"
+        title_gr="Die Cantorsche Diagonalisation: $\N \not \approx \R$"
         title_en="diagonalization"
         number={2.4}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     2.4 
-                    2.4 Die Cantorsche Diagonalisation: $\N \not \approx \R$
+                    Die Cantorsche Diagonalisation: $\N \not \approx \R$
                   </span>
                 </h1>
                 <Paragraph>

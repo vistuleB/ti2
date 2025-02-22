@@ -1,5 +1,5 @@
 |> Section
-    title_gr 2.2 Beispiele abzählbar unendlicher Mengen
+    title_gr Beispiele abzählbar unendlicher Mengen
     title_en examples of equipotent sets
     number 2.2
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            2.2 Beispiele abzählbar unendlicher Mengen
+                            Beispiele abzählbar unendlicher Mengen
                     |> p
 
                         Noch bevor wir im letzten Teilkapitel den Begriff der

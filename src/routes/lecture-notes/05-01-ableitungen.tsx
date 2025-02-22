@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={29}
-        title_gr="5.1 Ableitungen und Ableitungsbäume"
+        title_gr="Ableitungen und Ableitungsbäume"
         title_en="ableitungen"
         number={5.1}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     5.1 
-                    5.1 Ableitungen und Ableitungsbäume
+                    Ableitungen und Ableitungsbäume
                   </span>
                 </h1>
                 <div class="well container theorem">

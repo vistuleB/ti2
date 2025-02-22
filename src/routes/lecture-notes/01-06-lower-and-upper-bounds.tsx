@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={7}
-        title_gr="1.6 Untere und obere Schranken"
+        title_gr="Untere und obere Schranken"
         title_en="lower and upper bounds"
         number={1.6}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     1.6 
-                    1.6 Untere und obere Schranken
+                    Untere und obere Schranken
                   </span>
                 </h1>
                 <Paragraph>

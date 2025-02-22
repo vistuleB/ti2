@@ -1,5 +1,5 @@
 |> Section
-    title_gr 5.4 LL(\(k\))-Grammatiken
+    title_gr LL(\(k\))-Grammatiken
     title_en LL1 grammars
     number 5.4
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            5.4 LL(\(k\))-Grammatiken
+                            LL(\(k\))-Grammatiken
                     |> div
                         class well container theorem
                         |> span

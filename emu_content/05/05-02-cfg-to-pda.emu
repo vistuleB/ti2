@@ -1,5 +1,5 @@
 |> Section
-    title_gr 5.2 Kontextfreie Grammatiken und Kellerautomaten
+    title_gr Kontextfreie Grammatiken und Kellerautomaten
     title_en cfg to pda
     number 5.2
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            5.2 Kontextfreie Grammatiken und Kellerautomaten
+                            Kontextfreie Grammatiken und Kellerautomaten
                     |> div
                         class well container theorem
                         |> span

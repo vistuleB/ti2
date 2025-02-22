@@ -1,5 +1,5 @@
 |> Section
-    title_gr 3. Berechenbarkeit und natürliche Zahlen
+    title_gr Berechenbarkeit und natürliche Zahlen
     title_en Computability NaturalNumbers
     number 3.0
     counter DefCtr
@@ -37,7 +37,7 @@
                         class chapterTitle
 
                         ::++ChapterCtr. 
-                        3. Berechenbarkeit und natürliche Zahlen
+                        Berechenbarkeit und natürliche Zahlen
                 |> p
 
                     Mit den Booleschen Schaltkreisen haben wir ein Modell kennengelernt, dass

@@ -1,5 +1,5 @@
 |> Section
-    title_gr 4.4 Die universelle Turingmaschine
+    title_gr Die universelle Turingmaschine
     title_en Turing encoding
     number 7.4
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            4.4 Die universelle Turingmaschine
+                            Die universelle Turingmaschine
                     |> p
 
                         Wir haben mit der Turingmaschine ein einfaches aber doch sehr mächtiges Modell einer

@@ -1,5 +1,5 @@
 |> Section
-    title_gr 2.4 Die Cantorsche Diagonalisation: $\N \not \approx \R$
+    title_gr Die Cantorsche Diagonalisation: $\N \not \approx \R$
     title_en diagonalization
     number 2.4
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            2.4 Die Cantorsche Diagonalisation: $\N \not \approx \R$
+                            Die Cantorsche Diagonalisation: $\N \not \approx \R$
                     |> p
 
                         Vielleicht war es überraschend zu sehen, dass $\N = \Q$ gilt, dass

@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={30}
-        title_gr="5.2 Kontextfreie Grammatiken und Kellerautomaten"
+        title_gr="Kontextfreie Grammatiken und Kellerautomaten"
         title_en="cfg to pda"
         number={5.2}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     5.2 
-                    5.2 Kontextfreie Grammatiken und Kellerautomaten
+                    Kontextfreie Grammatiken und Kellerautomaten
                   </span>
                 </h1>
                 <div class="well container theorem">

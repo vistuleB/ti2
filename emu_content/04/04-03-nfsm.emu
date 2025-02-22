@@ -1,5 +1,5 @@
 |> Section
-    title_gr 4.3 Nichtdeterministische Endliche Automaten
+    title_gr Nichtdeterministische Endliche Automaten
     title_en nfsm
     number 4.3
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            4.3 Nichtdeterministische Endliche Automaten
+                            Nichtdeterministische Endliche Automaten
                     |> p
 
                         Ein nichtdeterministischer Automat ist, informell ausgedrückt, wie ein

@@ -1,5 +1,5 @@
 |> Section
-    title_gr 5.6 Einen Parser in Java implementieren
+    title_gr Einen Parser in Java implementieren
     title_en b Parser in Java
     number 5.6
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            5.6 Einen Parser in Java implementieren
+                            Einen Parser in Java implementieren
                     |> div
                         class alert-info
 

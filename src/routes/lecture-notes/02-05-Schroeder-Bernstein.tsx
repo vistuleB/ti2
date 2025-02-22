@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={13}
-        title_gr="2.5 Das Schröder-Bernstein-Theorem"
+        title_gr="Das Schröder-Bernstein-Theorem"
         title_en="Schroeder Bernstein"
         number={2.5}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     2.5 
-                    2.5 Das Schröder-Bernstein-Theorem
+                    Das Schröder-Bernstein-Theorem
                   </span>
                 </h1>
                 <Paragraph>

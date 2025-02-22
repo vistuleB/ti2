@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={20}
-        title_gr="4. Formale Sprachen - Einführung und Beispiele"
+        title_gr="Formale Sprachen - Einführung und Beispiele"
         title_en="formal languages"
         number={4.0}
         counter="DefCtr"
@@ -38,7 +38,7 @@ const Article = () => {
               <h1 class="hidden-title">
                 <span class="chapterTitle">
                   4. 
-                  4. Formale Sprachen - Einführung und Beispiele
+                  Formale Sprachen - Einführung und Beispiele
                 </span>
               </h1>
               <div class="subChapter">

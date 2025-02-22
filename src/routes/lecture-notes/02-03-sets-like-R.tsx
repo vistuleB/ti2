@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={11}
-        title_gr="2.3 Mengen, die so groß wie $\R$ sind"
+        title_gr="Mengen, die so groß wie $\R$ sind"
         title_en="sets like R"
         number={2.3}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     2.3 
-                    2.3 Mengen, die so groß wie $\R$ sind
+                    Mengen, die so groß wie $\R$ sind
                   </span>
                 </h1>
                 <Paragraph>

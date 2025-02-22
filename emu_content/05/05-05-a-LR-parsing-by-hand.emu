@@ -1,5 +1,5 @@
 |> Section
-    title_gr 5.5 LR-Parser per Hand entwerfen
+    title_gr LR-Parser per Hand entwerfen
     title_en a LR parsing by hand
     number 5.5
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            5.5 LR-Parser per Hand entwerfen
+                            LR-Parser per Hand entwerfen
                     |> p
 
                         Betrachten wir die kontextfreie Grammatik $G$ für arithmetische Ausdrücke mit den

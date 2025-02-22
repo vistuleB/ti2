@@ -8,7 +8,7 @@ const Article = () => {
     <Container>
       <Section
         count={24}
-        title_gr="4.4 Von einer regulären Grammatik zu einem endlichen Automaten"
+        title_gr="Von einer regulären Grammatik zu einem endlichen Automaten"
         title_en="regular grammar to fsm"
         number={4.4}
         counter="DefCtr"
@@ -39,7 +39,7 @@ const Article = () => {
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
                     4.4 
-                    4.4 Von einer regulären Grammatik zu einem endlichen Automaten
+                    Von einer regulären Grammatik zu einem endlichen Automaten
                   </span>
                 </h1>
                 <Paragraph>

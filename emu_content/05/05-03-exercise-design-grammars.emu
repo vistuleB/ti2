@@ -1,5 +1,5 @@
 |> Section
-    title_gr 5.3 Rechnerübung: Gute kontextfreie Grammatiken entwerfen
+    title_gr Rechnerübung: Gute kontextfreie Grammatiken entwerfen
     title_en exercise design grammars
     number 5.3
     counter DefCtr
@@ -39,7 +39,7 @@
                             class subChapterTitle
 
                             ::::ChapterCtr.::++SectionCtr 
-                            5.3 Rechnerübung: Gute kontextfreie Grammatiken entwerfen
+                            Rechnerübung: Gute kontextfreie Grammatiken entwerfen
                     |> p
 
                         Benutzen Sie die App 
