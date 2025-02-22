@@ -344,7 +344,7 @@ const Article = () => {
                   Bestimmen Sie asymptotisch die Größe und die Tiefe dieses Schaltkreises.
                   Achten Sie besonders bei der Berechnung der Größe darauf, dass die untersten Add-Gadgets
                   ja 1-stellige oder dann 2-stellige Zahlen addieren müssen und erst die weniger obersten Gadgets
-                  Zahlen mit $\Theta(\log n)$ Bits als Input bekommen.
+                  Zahlen mit \(\Theta(\log n)\) Bits als Input bekommen.
                 </div>
                 <h3>
                   \(O(\log n)\) Tiefe mit 2-for-3-Addierern.
@@ -393,7 +393,7 @@ const Article = () => {
                     </figure>
                   </Paragraph>
                   Dieser Schaltkreis hat insgesamt \(O(n)\) Gates und Tiefe 2 (wobei wir
-                  die NOT-Gates im $\oplus$-Gate nicht mitzählen).
+                  die NOT-Gates im \(\oplus\)-Gate nicht mitzählen).
                   <span class="qed">
                     \(\square\)
                   </span>
@@ -449,10 +449,10 @@ const Article = () => {
                   </Paragraph>
                   <ol>
                     <li>
-                      Wieviele 2-for-3-Addierer haben Sie in Ebene $i$ des Baumes?
+                      Wieviele 2-for-3-Addierer haben Sie in Ebene \(i\) des Baumes?
                     </li>
                     <li>
-                      Wieviel Bits haben die Zahlen auf Ebene $i$, und wie groß muss daher
+                      Wieviel Bits haben die Zahlen auf Ebene \(i\), und wie groß muss daher
                       der 2-for-3-Addierer sein?
                     </li>
                     <li>
@@ -576,7 +576,7 @@ const Article = () => {
                     Sei \(\mathcal&#123;C&#125;\) eine Verteilung über Schaltkreise mit Input-Variablen
                     \(x_1,\dots,x_n\). Wir sagen, dass \(\mathcal&#123;C&#125;\){" "}
                     <i>
-                      Signalstärke mindestens $\delta$
+                      Signalstärke mindestens \(\delta\)
                     </i>
                     hat, wenn
                     $$
@@ -691,8 +691,8 @@ const Article = () => {
                         \(3s+4\);
                       </li>
                       <li>
-                        die Signalstärke von $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ ist
-                        $\frac&#123;3&#125;&#123;2&#125; \delta - \frac&#123;1&#125;&#123;2&#125;\delta^3$.
+                        die Signalstärke von \(\mathcal&#123;C&#125;^&#123;\otimes 3&#125;\) ist
+                        \(\frac&#123;3&#125;&#123;2&#125; \delta - \frac&#123;1&#125;&#123;2&#125;\delta^3\).
                       </li>
                     </ol>
                   </div>
@@ -702,39 +702,19 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      Wir betrachten ein festes $\x \in \cube^n$ mit $\maj
-                      <i>
-                        n(\x) = 1$; der
-                        Fall $\maj
-                      </i>
-                      n(\x) = 0$ ist analog. Wir definieren
-                      nun $U := C
-                      <i>
-                        1(\x)$, $V := C
-                      </i>
-                      2(\x)$ und $W := C
-                      <i>
-                        3(\x)$. Da
-                        $C
-                      </i>
-                      1, C
-                      <i>
-                        2, C
-                      </i>
-                      3 \sim \mathcal&#123;C&#125;$ zufällige Schaltkreise sind, sind $U, V, W$
+                      Wir betrachten ein festes \(\x \in \cube^n\) mit \(\maj_n(\x) = 1\); der
+                      Fall \(\maj_n(\x) = 0\) ist analog. Wir definieren
+                      nun \(U := C_1(\x)\), \(V := C_2(\x)\) und \(W := C_3(\x)\). Da
+                      \(C_1, C_2, C_3 \sim \mathcal&#123;C&#125;\) zufällige Schaltkreise sind, sind \(U, V, W\)
                       Zufallsvariable
-                      über $\cube$, und zwar{" "}
+                      über \(\cube\), und zwar{" "}
                       <i>
                         unabhängig
                       </i>
-                      , weil wir $C
-                      <i>
-                        1, C
-                      </i>
-                      2, C-3$ auch unabhängig
-                      gesampelt haben. Wir wissen: $\Pr[U=1] = \Pr[V=1] = \Pr[W=1] \geq \frac&#123;1+\delta&#125;&#123;2&#125; =:
-                      p$.
-                      Was ist nun $\Pr[\maj_3(U,V,W) = 1]$?
+                      , weil wir \(C_1, C_2, C-3\) auch unabhängig
+                      gesampelt haben. Wir wissen: \(\Pr[U=1] = \Pr[V=1] = \Pr[W=1] \geq \frac&#123;1+\delta&#125;&#123;2&#125; =:
+                      p\).
+                      Was ist nun \(\Pr[\maj_3(U,V,W) = 1]\)?
                     </Paragraph>
                     $$\begin&#123;align*&#125;
                     \Pr[\maj_3(U,V,W)=1]&amp;= \Pr[U=V=W=1] + \Pr[\textnormal&#123;genau zwei von $\&#123;U,V,W\&#125;$ sind 1&#125;]
@@ -745,74 +725,42 @@ const Article = () => {
                     &amp;= \frac&#123;1&#125;&#123;2&#125; \left( 1 + \frac&#123;3&#125;&#123;2&#125; \delta - \frac&#123;1&#125;&#123;2&#125;\delta^3 \right) \ .
                     \end&#123;align*&#125;$$
                     <Paragraph>
-                      Die Signalstärke von $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ ist also mindestens
-                      $\frac&#123;3&#125;&#123;2&#125; \delta - \frac&#123;1&#125;&#123;2&#125; \delta^3$.
+                      Die Signalstärke von \(\mathcal&#123;C&#125;^&#123;\otimes 3&#125;\) ist also mindestens
+                      \(\frac&#123;3&#125;&#123;2&#125; \delta - \frac&#123;1&#125;&#123;2&#125; \delta^3\).
                       <span class="qed">
                         \(\square\)
                       </span>
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    Wir beginnen nun mit der Verteilung $\mathcal&#123;C&#125;_0$ über Schaltkreise der
+                    Wir beginnen nun mit der Verteilung \(\mathcal&#123;C&#125;_0\) über Schaltkreise der
                     Größe 1 und definieren{" "}
                   </Paragraph>
                   $$\begin&#123;align*&#125;
                   \mathcal&#123;C&#125;_&#123;i+1&#125; := (\mathcal&#123;C&#125;_i)^&#123;\oplus 3&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Zur Wiederholung: um $C \sim \mathcal&#123;C&#125;
-                    <i>
-                      &#123;i+1&#125;$ zu sampeln, sampeln wir unabhängig
-                      drei Schaltkreise $\sim \mathcal&#123;C&#125;
-                    </i>
-                    i$ und verknüpfen deren Output-Gates mit einem
-                    $\maj
-                    <i>
-                      3$-Gadget. Wenn $\mathcal&#123;C&#125;
-                    </i>
-                    i$ die Signalstärke $\delta
-                    <i>
-                      i$ hat, dann
-                      hat $\mathcal&#123;C&#125;
-                    </i>
-                    &#123;i+1&#125;$ Signalstärke
-                    $\frac&#123;3&#125;&#123;2&#125; \delta
-                    <i>
-                      i - \frac&#123;1&#125;&#123;2&#125; \delta
-                    </i>
-                    i^3$.
-                    Wenn $\delta
-                    <i>
-                      i \leq 1/2$ sein sollte, dann ist das mindestens $\frac&#123;5&#125;&#123;4&#125; \delta
-                    </i>
-                    i$.
-                    Daraus folgt, dass nach höchstens $i^* := \log
-                    <i>
-                      &#123;5/4&#125; n$ Rekursionsstufen eine Signalstärke
-                      von mindestens $1/2$ erreicht ist: $\mathcal&#123;C&#125;
-                    </i>
-                    &#123;i^*&#125;$ hat Signalstärke mindestens
-                    $1/2$.
+                    Zur Wiederholung: um \(C \sim \mathcal&#123;C&#125;_&#123;i+1&#125;\) zu sampeln, sampeln wir unabhängig
+                    drei Schaltkreise \(\sim \mathcal&#123;C&#125;_i\) und verknüpfen deren Output-Gates mit einem
+                    \(\maj_3\)-Gadget. Wenn \(\mathcal&#123;C&#125;_i\) die Signalstärke \(\delta_i\) hat, dann
+                    hat \(\mathcal&#123;C&#125;_&#123;i+1&#125;\) Signalstärke
+                    \(\frac&#123;3&#125;&#123;2&#125; \delta_i - \frac&#123;1&#125;&#123;2&#125; \delta_i^3\).
+                    Wenn \(\delta_i \leq 1/2\) sein sollte, dann ist das mindestens \(\frac&#123;5&#125;&#123;4&#125; \delta_i\).
+                    Daraus folgt, dass nach höchstens \(i^* := \log_&#123;5/4&#125; n\) Rekursionsstufen eine Signalstärke
+                    von mindestens \(1/2\) erreicht ist: \(\mathcal&#123;C&#125;_&#123;i^*&#125;\) hat Signalstärke mindestens
+                    \(1/2\).
                   </Paragraph>
                   <Paragraph>
                     Wenn wir jetzt die rekursive Konstruktion fortsetzen, steigt die Signalstärke weiter an und
-                    konvergiert gegen $1$: $\lim
-                    <i>
-                      &#123;i \rightarrow \infty&#125; \delta
-                    </i>
-                    i = 1$. Die Frage ist nur,
+                    konvergiert gegen \(1\): \(\lim_&#123;i \rightarrow \infty&#125; \delta_i = 1\). Die Frage ist nur,
                     wie schnell konvergiert es? Da wir nun nicht mehr an Wahrscheinlichkeiten interessiert sind,
                     die
-                    knapp über $1/2$ liegen, sondern an solchen, die knapp unter $1$ liegen,
-                    führen wir einen Parameterwechsel durch: eine Verteilung $\mathcal&#123;C&#125;$ von Schaltkreisen
-                    mit Inputs $x
-                    <i>
-                      1,\dots,x
-                    </i>
-                    n$
+                    knapp über \(1/2\) liegen, sondern an solchen, die knapp unter \(1\) liegen,
+                    führen wir einen Parameterwechsel durch: eine Verteilung \(\mathcal&#123;C&#125;\) von Schaltkreisen
+                    mit Inputs \(x_1,\dots,x_n\)
                     hat{" "}
                     <i>
-                      Fehlerwahrscheinlichkeit $\epsilon$
+                      Fehlerwahrscheinlichkeit \(\epsilon\)
                     </i>
                     , wenn
                   </Paragraph>
@@ -820,10 +768,10 @@ const Article = () => {
                   \forall \x \in \cube^n: \Pr_&#123;C \sim \mathcal&#123;C&#125;&#125;[ C(\x) = \maj_n(\x)] \geq 1 - \epsilon \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Eine Signalstärke von $\delta$ entspricht einer Fehlerwahrscheinlichkeit von
-                    $\frac&#123;1-\delta&#125;&#123;2&#125;$.
-                    Die Verteilung $\mathcal&#123;C&#125;_&#123;i^*&#125;$ hat also eine Fehlerwahrscheinlichkeit von
-                    höchstens $\frac&#123;1 - 1/2&#125;&#123;2&#125; = 1/4$. Das obige Lemma, nun aus der Sicht der
+                    Eine Signalstärke von \(\delta\) entspricht einer Fehlerwahrscheinlichkeit von
+                    \(\frac&#123;1-\delta&#125;&#123;2&#125;\).
+                    Die Verteilung \(\mathcal&#123;C&#125;_&#123;i^*&#125;\) hat also eine Fehlerwahrscheinlichkeit von
+                    höchstens \(\frac&#123;1 - 1/2&#125;&#123;2&#125; = 1/4\). Das obige Lemma, nun aus der Sicht der
                     Fehlerwahrscheinlichkeit,
                     liest sich so:
                   </Paragraph>
@@ -832,10 +780,10 @@ const Article = () => {
                       <span class="numbered-title">
                         Behauptung.
                       </span>
-                      &ensp;Wenn $\mathcal&#123;C&#125;$
+                      &ensp;Wenn \(\mathcal&#123;C&#125;\)
                       Fehlerwahrscheinlichkeit
-                      $\epsilon$ hat, dann hat $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ Fehlerwahrscheinlichkeit
-                      $3 \epsilon^2$
+                      \(\epsilon\) hat, dann hat \(\mathcal&#123;C&#125;^&#123;\otimes 3&#125;\) Fehlerwahrscheinlichkeit
+                      \(3 \epsilon^2\)
                     </Paragraph>
                   </div>
                   <div class="well container-fluid">
@@ -845,39 +793,27 @@ const Article = () => {
                         Beweis.
                       </b>
                       {" "}Wie im Beweis vom Lemma setzen wir
-                      $p := \frac&#123;1+p&#125;&#123;2&#125; = 1-\epsilon$ und erhalten
+                      \(p := \frac&#123;1+p&#125;&#123;2&#125; = 1-\epsilon\) und erhalten
                     </Paragraph>
                     $$\begin&#123;align*&#125;
                     \Pr[\maj_3(U,V,W) = 1]&amp;= p^3 + 3 p^2 (1-p) =
                     (1 - \epsilon^3) + 3 (1- \epsilon)^2 \epsilon = 1 - 3 \epsilon^2 \ .
                     \end&#123;align*&#125;$$
                     <Paragraph>
-                      Somit hat $\mathcal&#123;C&#125;^&#123;\otimes 3&#125;$ Fehlerwahrscheinlichkeit $3 \epsilon^2$.
+                      Somit hat \(\mathcal&#123;C&#125;^&#123;\otimes 3&#125;\) Fehlerwahrscheinlichkeit \(3 \epsilon^2\).
                       <span class="qed">
                         \(\square\)
                       </span>
                     </Paragraph>
                   </div>
                   <Paragraph>
-                    Für $i^* := \log
-                    <i>
-                      &#123;5/4&#125; n$ hat $\mathcal&#123;C&#125;
-                    </i>
-                    &#123;i^*&#125;$ eine Fehlerwahrscheinlichkeit von
-                    höchstens $1/4$. Für $i^* + 1$ wird das zu $3 \pfrac&#123;1&#125;&#123;4&#125;^2 = \frac&#123;3&#125;&#123;16&#125;$ und
-                    für $i^* + 2$ zu $3 \pfrac&#123;3&#125;&#123;16&#125;^2 = \frac&#123;27&#125;&#123;256&#125; \leq \frac&#123;1&#125;&#123;9&#125;$.
-                    Wenn nun $\epsilon \leq \frac&#123;1&#125;&#123;9&#125;$ ist, dann gilt $3 \epsilon^2 \leq \epsilon^&#123;3/2&#125;$.
-                    Wir definieren $\epsilon
-                    <i>
-                      i := \frac&#123;1 - \delta
-                    </i>
-                    i&#125;&#123;2&#125;$, also die Fehlerwahrscheinlichkeit von
-                    $\mathcal&#123;C&#125;
-                    <i>
-                      i$. Es gilt also $\epsilon
-                    </i>
-                    &#123;i+1&#125; \leq (\epsilon_i)^&#123;3/2&#125;$ für alle $i \geq
-                    i^*+2$
+                    Für \(i^* := \log_&#123;5/4&#125; n\) hat \(\mathcal&#123;C&#125;_&#123;i^*&#125;\) eine Fehlerwahrscheinlichkeit von
+                    höchstens \(1/4\). Für \(i^* + 1\) wird das zu \(3 \pfrac&#123;1&#125;&#123;4&#125;^2 = \frac&#123;3&#125;&#123;16&#125;\) und
+                    für \(i^* + 2\) zu \(3 \pfrac&#123;3&#125;&#123;16&#125;^2 = \frac&#123;27&#125;&#123;256&#125; \leq \frac&#123;1&#125;&#123;9&#125;\).
+                    Wenn nun \(\epsilon \leq \frac&#123;1&#125;&#123;9&#125;\) ist, dann gilt \(3 \epsilon^2 \leq \epsilon^&#123;3/2&#125;\).
+                    Wir definieren \(\epsilon_i := \frac&#123;1 - \delta_i&#125;&#123;2&#125;\), also die Fehlerwahrscheinlichkeit von
+                    \(\mathcal&#123;C&#125;_i\). Es gilt also \(\epsilon_&#123;i+1&#125; \leq (\epsilon_i)^&#123;3/2&#125;\) für alle \(i \geq
+                    i^*+2\)
                     und somit
                   </Paragraph>
                   $$\begin&#123;align*&#125;
@@ -885,13 +821,9 @@ const Article = () => {
                   \pfrac&#123;1&#125;&#123;4&#125;^&#123;\pfrac&#123;3&#125;&#123;2&#125;^j&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Qualitativ sehen wir: solange $\delta
-                    <i>
-                      i \leq 1/2$ gilt, wächst die Signalstärke exponentiell
-                      an. Dieses exponentielle Wachstum kann natürlich nicht beliebig weitergehen. Jenseits
-                      $\delta
-                    </i>
-                    i \leq 1/2$ hört das auf, dafür{" "}
+                    Qualitativ sehen wir: solange \(\delta_i \leq 1/2\) gilt, wächst die Signalstärke exponentiell
+                    an. Dieses exponentielle Wachstum kann natürlich nicht beliebig weitergehen. Jenseits
+                    \(\delta_i \leq 1/2\) hört das auf, dafür{" "}
                     <i>
                       fällt
                     </i>
@@ -899,7 +831,7 @@ const Article = () => {
                     <i>
                       doppelt exponentiell
                     </i>
-                    . Für $j^* := \log_&#123;3/2&#125; n$ gilt dann
+                    . Für \(j^* := \log_&#123;3/2&#125; n\) gilt dann
                   </Paragraph>
                   $$\begin&#123;align*&#125;
                   \epsilon_&#123;i^* + 2 + j^*&#125; \leq \pfrac&#123;1&#125;&#123;4&#125;^&#123;n&#125; \lt 2^&#123;-n&#125; \ .
@@ -912,7 +844,7 @@ const Article = () => {
                       style="height:18em"
                       src="../img/circuits/majority-probability-labeled.svg" />
                     <br />
-                    Graph der Funktion $p \mapsto p^3 + 3 p^2 (1-p)$
+                    Graph der Funktion \(p \mapsto p^3 + 3 p^2 (1-p)\)
                     <hr />
                   </figure>
                   <figure>
@@ -920,7 +852,7 @@ const Article = () => {
                       style="height:18em"
                       src="../img/circuits/majority-probability-close-to-half-labeled.svg" />
                     <br />
-                    Signalstärke $\delta$ wächst für $p \in [1/2, 3/4]$ exponentiell.
+                    Signalstärke \(\delta\) wächst für \(p \in [1/2, 3/4]\) exponentiell.
                     <hr />
                   </figure>
                   <figure>
@@ -928,54 +860,30 @@ const Article = () => {
                       style="height:18em"
                       src="../img/circuits/majority-probability-close-to-one-labeled.svg" />
                     <br />
-                    Fehlerwahrscheinlichkeit $\epsilon$ fällt für $p \in [3/4, 1/2]$ doppelt
+                    Fehlerwahrscheinlichkeit \(\epsilon\) fällt für \(p \in [3/4, 1/2]\) doppelt
                     exponentiell.
                     <hr />
                   </figure>
                   <Paragraph>
-                    Wir setzen nun $k := i^* + 2 + j^* = \log
-                    <i>
-                      &#123;5/4&#125; n + 2 + \log
-                    </i>
-                    &#123;3/2&#125; n = O(\log n)$ und
-                    sehen, dass $\mathcal&#123;C&#125;
-                    <i>
-                      k$ eine Verteilung über Schaltkreise mit
-                      Tiefe $O(\log n)$ und Fehlerwahrscheinlichkeit kleiner als $2^&#123;-n&#125;$ ist.
-                      Was nun kommt, ist ein absolutes Standardargument in probabilitischen Beweisen:
-                      ein Union Bound. Das geht ungefähr so: wenn für jedes feste $\b \in \cube^n$
-                      ein Schaltkreis $C \mathcal&#123;C&#125;
-                    </i>
-                    k$ mit Wahrscheinlichkeit $\epsilon
-                    <i>
-                      k$ irrt,
-                      dann ist die Wahrscheinlichkeit, dass $C$ sich für irgendein $\x \in \cube^n$ irrt,
-                      höchstens
-                      $2^n \epsilon
-                    </i>
-                    k$. Formal: für jedes $\b \in \cube^n$ definieren wir
-                    $E
-                    <i>
-                      &#123;\b&#125;$ als die Menge der Schaltkreise mit Input-Variablen
-                      $x
-                    </i>
-                    1,\dots,x_n$, die sich auf $\b$ irren, also
+                    Wir setzen nun \(k := i^* + 2 + j^* = \log_&#123;5/4&#125; n + 2 + \log_&#123;3/2&#125; n = O(\log n)\) und
+                    sehen, dass \(\mathcal&#123;C&#125;_k\) eine Verteilung über Schaltkreise mit
+                    Tiefe \(O(\log n)\) und Fehlerwahrscheinlichkeit kleiner als \(2^&#123;-n&#125;\) ist.
+                    Was nun kommt, ist ein absolutes Standardargument in probabilitischen Beweisen:
+                    ein Union Bound. Das geht ungefähr so: wenn für jedes feste \(\b \in \cube^n\)
+                    ein Schaltkreis \(C \mathcal&#123;C&#125;_k\) mit Wahrscheinlichkeit \(\epsilon_k\) irrt,
+                    dann ist die Wahrscheinlichkeit, dass \(C\) sich für irgendein \(\x \in \cube^n\) irrt,
+                    höchstens
+                    \(2^n \epsilon_k\). Formal: für jedes \(\b \in \cube^n\) definieren wir
+                    \(E_&#123;\b&#125;\) als die Menge der Schaltkreise mit Input-Variablen
+                    \(x_1,\dots,x_n\), die sich auf \(\b\) irren, also
                   </Paragraph>
                   $$\begin&#123;align*&#125;
                   E_&#123;\b&#125; := \&#123;\textnormal&#123;Schaltkreise &#125; C \textnormal&#123; über &#125; x_1, \dots, x_n \ | \ C(\b) \ne
                   \maj_n(\b) \&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Die Verteilung $\mathcal&#123;C&#125;
-                    <i>
-                      k$ existiert ja im Wahrscheinlichkeitsraum aller
-                      Boolescher Schaltkreise mit Inputs $x
-                    </i>
-                    1,\dots, x
-                    <i>
-                      n$. Die Menge $E
-                    </i>
-                    &#123;\b&#125;$
+                    Die Verteilung \(\mathcal&#123;C&#125;_k\) existiert ja im Wahrscheinlichkeitsraum aller
+                    Boolescher Schaltkreise mit Inputs \(x_1,\dots, x_n\). Die Menge \(E_&#123;\b&#125;\)
                     ist somit ein{" "}
                     <i>
                       Ereignis
@@ -986,25 +894,17 @@ const Article = () => {
                   \forall \b \in \cube^n: \Pr_&#123;C \sim \mathcal&#123;C&#125;_k&#125; [ C \in E_&#123;\b&#125; ] = \epsilon_k \lt 2^&#123;n-&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Oder kompakt ausgedrückt: $\Pr
-                    <i>
-                      &#123;\mathcal&#123;C&#125;
-                    </i>
-                    k&#125; [E
-                    <i>
-                      &#123;\b&#125;] \lt 2^n$. Wir haben nun
-                      ein Ereignis $E
-                    </i>
-                    &#123;\b&#125;$ für jedes $\b \in \cube^n$ und definieren
+                    Oder kompakt ausgedrückt: \(\Pr_&#123;\mathcal&#123;C&#125;_k&#125; [E_&#123;\b&#125;] \lt 2^n\). Wir haben nun
+                    ein Ereignis \(E_&#123;\b&#125;\) für jedes \(\b \in \cube^n\) und definieren
                   </Paragraph>
                   $$\begin&#123;align*&#125;
                   E := \bigcup_&#123;\b \in \cube^n&#125; E_&#123;\b&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Was ist $E$? Es ist die Menge der Schaltkreise, die sich auf mindestens einem $\b \in
-                    \cube^n$
-                    irren. Was ist das Komplement $\bar&#123;E&#125;$? Das ist die Menge der Schaltkreise, die sich
-                    auf keinem $\b \in \cube^n$ irren, also die Menge der Schaltkreise, die $\maj_n$ korrekt
+                    Was ist \(E\)? Es ist die Menge der Schaltkreise, die sich auf mindestens einem \(\b \in
+                    \cube^n\)
+                    irren. Was ist das Komplement \(\bar&#123;E&#125;\)? Das ist die Menge der Schaltkreise, die sich
+                    auf keinem \(\b \in \cube^n\) irren, also die Menge der Schaltkreise, die \(\maj_n\) korrekt
                     berechnen. Es gilt nun
                   </Paragraph>
                   $$\begin&#123;align*&#125;
@@ -1014,42 +914,26 @@ const Article = () => {
                   &amp;\lt \sum_&#123;b \in \cube^n&#125; 2^&#123;-n&#125; = 2^n 2^&#123;-n&#125; = 1 \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Also $\Pr
-                    <i>
-                      &#123;\mathcal&#123;C&#125;
-                    </i>
-                    k&#125;[E] \lt 1$ und somit $\Pr
-                    <i>
-                      &#123;\mathcal&#123;C&#125;
-                    </i>
-                    k&#125;[\bar&#123;E&#125;] \gt 0$. Das
+                    Also \(\Pr_&#123;\mathcal&#123;C&#125;_k&#125;[E] \lt 1\) und somit \(\Pr_&#123;\mathcal&#123;C&#125;_k&#125;[\bar&#123;E&#125;] \gt 0\). Das
                     bedeutet,
-                    dass ein zufälliger Schaltkreis $C \sim \mathcal&#123;C&#125;
-                    <i>
-                      K$ mit positiver Wahrscheinlichkeit
-                      die Funktion $\maj
-                    </i>
-                    n$ korrekt berechnet. Jeder Schaltkreis, der unter $\mathcal&#123;C&#125;
-                    <i>
-                      k$
-                      gesampelt werden kann, hat Tiefe $O(\log n)$, Fan-in 2 und ist monoton, und somit schließen
-                      wir:
-                      es gibt einen monotonen Schaltkreis $C$ mit Fan-in 2 und Tiefe $O(\log n)$, der $\maj
-                    </i>
-                    n$
+                    dass ein zufälliger Schaltkreis \(C \sim \mathcal&#123;C&#125;_K\) mit positiver Wahrscheinlichkeit
+                    die Funktion \(\maj_n\) korrekt berechnet. Jeder Schaltkreis, der unter \(\mathcal&#123;C&#125;_k\)
+                    gesampelt werden kann, hat Tiefe \(O(\log n)\), Fan-in 2 und ist monoton, und somit schließen
+                    wir:
+                    es gibt einen monotonen Schaltkreis \(C\) mit Fan-in 2 und Tiefe \(O(\log n)\), der \(\maj_n\)
                     berechnet.
                   </Paragraph>
                   <Paragraph>
-                    Es bleibt die Frage, wie groß dieser Schaltkreis $C$ ist. Seien wir hier bequem: ein
-                    Schaltkreis mit Fan-in 2 und einem Output-Gate hat höchstens $2^i$ Gates, die Abstand
-                    $i$ vom Output-Gate haben. Somit hat ein Schaltkreis mit Fan-in 2 und Tiefe $d$ höchstens
+                    Es bleibt die Frage, wie groß dieser Schaltkreis \(C\) ist. Seien wir hier bequem: ein
+                    Schaltkreis mit Fan-in 2 und einem Output-Gate hat höchstens \(2^i\) Gates, die Abstand
+                    \(i\) vom Output-Gate haben. Somit hat ein Schaltkreis mit Fan-in 2 und Tiefe \(d\) höchstens
                   </Paragraph>
                   $$\begin&#123;align*&#125;
                   1 + 2 + 4 + \dots + 2^d = 2^&#123;d+1&#125;-1
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Gates. Ein Schaltkreis mit Fan-in 2 und Tiefe $c \log_2 n$ hat also
-                    insgesamt höchstens $2^&#123;c \log n + 1 &#125; - 1 = O(n^c) = O(\poly(n))$ Gates.
+                    Gates. Ein Schaltkreis mit Fan-in 2 und Tiefe \(c \log_2 n\) hat also
+                    insgesamt höchstens \(2^&#123;c \log n + 1 &#125; - 1 = O(n^c) = O(\poly(n))\) Gates.
                     <span class="qed">
                       \(\square\)
                     </span>
@@ -1063,17 +947,17 @@ const Article = () => {
                         &ensp;1.5.5{" "}
                       </NumberedTitle>
                     </span>
-                    Präzisieren Sie die Größe von Valiants Schaltkreis und bestimmen ein $c \in \R$, so dass
-                    er die Größe $\Theta(n^c)$ hat.
+                    Präzisieren Sie die Größe von Valiants Schaltkreis und bestimmen ein \(c \in \R\), so dass
+                    er die Größe \(\Theta(n^c)\) hat.
                   </Paragraph>
                 </div>
                 <Paragraph>
                   Wir könnten nun noch ehrgeiziger sein und einen monotonen Schaltkreis mit Fan-in 2,
-                  Tiefe $O(\log n)$ und{" "}
+                  Tiefe \(O(\log n)\) und{" "}
                   <i>
                     linearer
                   </i>
-                  {" "}Größe $O(n)$ anstreben.
+                  {" "}Größe \(O(n)\) anstreben.
                 </Paragraph>
               </div>
             </div>

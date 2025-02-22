@@ -65,11 +65,7 @@ const Article = () => {
                   Die Collatz-Vermutung
                 </h2>
                 <Paragraph>
-                  Wir definieren eine Funktion $f: \N
-                  <i>
-                    + \rightarrow \N
-                  </i>
-                  +$ wie folgt:
+                  Wir definieren eine Funktion \(f: \N_+ \rightarrow \N_+\) wie folgt:
                 </Paragraph>
                 $$\begin&#123;align*&#125;
                 f : \N_+&amp;\rightarrow \N_+ \\
@@ -80,8 +76,8 @@ const Article = () => {
                 \end&#123;cases&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Für eine natürliche Zahl $n$ können wir dann die Collatz-Folge definieren:
-                  $n, f(n), f(f(n)), ...$. Man sieht leicht, dass diese Folge in einer Schleife
+                  Für eine natürliche Zahl \(n\) können wir dann die Collatz-Folge definieren:
+                  \(n, f(n), f(f(n)), ...\). Man sieht leicht, dass diese Folge in einer Schleife
                   landen kann:
                 </Paragraph>
                 $$\begin&#123;align*&#125;
@@ -116,7 +112,7 @@ const Article = () => {
                   <i>
                     wie oft
                   </i>
-                  {" "}wir die Funktion $f$ anwenden müssen. Und wir wissen nicht einmal,
+                  {" "}wir die Funktion \(f\) anwenden müssen. Und wir wissen nicht einmal,
                   ob man immer bei 1 ankommt, ob es andere Zyklen gibt oder ob es Startwerte gibt, für die die
                   Folge einfach nach Unendlich divergiert. Bis zum heutigen Tage (Stand 30. April 2024) hat sich
                   die Collatz-Vermutung zahlreichen Lösungsversuchung widersetzt und demonstriert eindrucksvoll,

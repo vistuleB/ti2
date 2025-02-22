@@ -147,7 +147,7 @@ const Article = () => {
                     Primitive Rekursion
                   </b>
                   Seien \(g: \N^k \rightarrow \N\) und \(h: \N^&#123;k+2&#125; \rightarrow \N\). Wir
-                  definieren eine neue Funktion $f: \N^&#123;k+1&#125; \rightarrow \N$ wie folgt:
+                  definieren eine neue Funktion \(f: \N^&#123;k+1&#125; \rightarrow \N\) wie folgt:
                   $$\begin&#123;align*&#125;
                   f : \N^&#123;k+1&#125;&amp;\rightarrow \N \\
                   (t, \vec&#123;x&#125;)&amp;\rightarrow \begin&#123;cases&#125;

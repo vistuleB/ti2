@@ -63,7 +63,7 @@ const Article = () => {
                   die richtige Entscheidung ist, obwohl sie von dem aus \(\beta\) abgeleiteten
                   Wort \(x\) nur die ersten \(k\) Buchstaben sehen.
                   Dem entgegen haben wir in den letzten zwei Teilkapiteln LR-Parser gesehen.
-                  Diese versuchen, von $w$ ausgehend eine Rechtsableitung $S \Step&#123;&#125;^* w$ zu finden,
+                  Diese versuchen, von \(w\) ausgehend eine Rechtsableitung \(S \Step&#123;&#125;^* w\) zu finden,
                   allerdings in zeitlich umgekehrter Reihenfolge, also{" "}
                 </Paragraph>
                 $$\begin&#123;align*&#125;
@@ -169,7 +169,7 @@ const Article = () => {
                 14 \rstep&#123;&#125; D4\rstep&#123;&#125; N4 \rstep&#123;&#125; ND \rstep&#123;&#125; N
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  weil sie einer gültigen Rechtsableitung $N \Step&#123;R&#125;^* 14$ entspricht ($N$ ist das Startsymbol).
+                  weil sie einer gültigen Rechtsableitung \(N \Step&#123;R&#125;^* 14\) entspricht (\(N\) ist das Startsymbol).
                   Folgende Reduktionen sind
                   allerdings inkorrekt:
                 </Paragraph>
@@ -177,7 +177,7 @@ const Article = () => {
                 \textcolor&#123;red&#125;&#123;14 \rstep&#123;&#125; D4 \rstep&#123;&#125; DD&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  da zwar $DD \Step&#123;R&#125; D4$, allerdings es keine Rechtsableitung $N \Step&#123;R&#125;^* DD$ gibt.
+                  da zwar \(DD \Step&#123;R&#125; D4\), allerdings es keine Rechtsableitung \(N \Step&#123;R&#125;^* DD\) gibt.
                   Auch
                 </Paragraph>
                 $$\begin&#123;align*&#125;
@@ -185,7 +185,7 @@ const Article = () => {
                 \end&#123;align*&#125;$$
                 <Paragraph>
                   ist inkorrekt. In unserer Java-Implementierung haben wir dieses Problem händisch gelöst, indem
-                  wir der Regel $ND \rstep&#123;&#125; N$ den Vorzug vor $D \rstep&#123;&#125; N$ gegebene haben. Im allgemeinen
+                  wir der Regel \(ND \rstep&#123;&#125; N\) den Vorzug vor \(D \rstep&#123;&#125; N\) gegebene haben. Im allgemeinen
                   müssen wir definieren, was ein{" "}
                   <i>
                     korrekter
@@ -223,24 +223,24 @@ const Article = () => {
                     korrekt
                   </i>
                   , wenn \(\alpha X w\) gültig ist.
-                  In diesem Fall ist natürlich $\alpha \beta w$ selbst gültig.
+                  In diesem Fall ist natürlich \(\alpha \beta w\) selbst gültig.
                   <Paragraph>
-                    Den Präfix $\alpha$ nennen wir eine
+                    Den Präfix \(\alpha\) nennen wir eine
                     <i>
                       Front
                     </i>
-                    {" "}der gültigen Wortform $\alpha \beta w$.
+                    {" "}der gültigen Wortform \(\alpha \beta w\).
                     Wenn die Grammatik eindeutig ist, dann hat
-                    jede gültige Wortform $\gamma$ genau eine Front, die wir
-                    mit $\front(\gamma)$ bezeichnen.
+                    jede gültige Wortform \(\gamma\) genau eine Front, die wir
+                    mit \(\front(\gamma)\) bezeichnen.
                   </Paragraph>
                 </div>
                 <Paragraph>
                   Wenn wir uns erinnern, wie wir in den letzten zwei Teilkapiteln informell LR-Parser
                   entworfen und implementiert haben, dann sehen wir, dass in einem
-                  Linksreduktionsschritt $\alpha \beta w \rstep&#123;&#125; \alpha X w$ die
-                  Front $\alpha \beta$
-                  der Stackinhalt ist und $w$ der bis jetzt ungelesene Teil des Eingabewortes.
+                  Linksreduktionsschritt \(\alpha \beta w \rstep&#123;&#125; \alpha X w\) die
+                  Front \(\alpha \beta\)
+                  der Stackinhalt ist und \(w\) der bis jetzt ungelesene Teil des Eingabewortes.
                   Wir wünschen wir uns folgendes:
                 </Paragraph>
                 <div class="well container theorem">
@@ -248,9 +248,9 @@ const Article = () => {
                   <b>
                     Wunsch.
                   </b>
-                  Ob $\alpha \beta w \rstep&#123;&#125; \alpha X w$ gültig ist oder nicht,
-                  wollen wir allein auf Grund der Front $\alpha \beta$ entscheiden können, das heißt,
-                  ohne $w$ betrachten zu müssen.
+                  Ob \(\alpha \beta w \rstep&#123;&#125; \alpha X w\) gültig ist oder nicht,
+                  wollen wir allein auf Grund der Front \(\alpha \beta\) entscheiden können, das heißt,
+                  ohne \(w\) betrachten zu müssen.
                 </div>
                 <Paragraph>
                   Wir haben allerdings bereits gesehen, dass das nicht immer möglich ist. Bei der Implementierung
@@ -259,15 +259,15 @@ const Article = () => {
                     ArithmeticGrammar.java
                   </a>
                   zum Beispiel
-                  haben wir manchmal das erste Zeichen von $w$ betrachten müssen. Allerdings behalten wir erst
+                  haben wir manchmal das erste Zeichen von \(w\) betrachten müssen. Allerdings behalten wir erst
                   einmal obigen Wunsch als Idealziel.
                   Um ihn zu formalisieren, fragen wir uns, wann es denn{" "}
                   <i>
                     nicht
                   </i>
                   {" "}möglich ist,
-                  ohne Betrachten von $w$ zu eintscheiden, ob
-                  $\alpha \beta w \rstep&#123;&#125; \alpha X w$ gültig ist.
+                  ohne Betrachten von \(w\) zu eintscheiden, ob
+                  \(\alpha \beta w \rstep&#123;&#125; \alpha X w\) gültig ist.
                 </Paragraph>
                 <ol>
                   <li>
@@ -316,7 +316,7 @@ const Article = () => {
                     $$\begin&#123;align*&#125;
                     \alpha \beta w \rstep&#123;&#125; \alpha X w
                     \end&#123;align*&#125;$$
-                    ist korrekt, aber für ein anderes $w' \in \Sigma^*$ ist
+                    ist korrekt, aber für ein anderes \(w' \in \Sigma^*\) ist
                     $$\begin&#123;align*&#125;
                     \alpha \beta w' \rstep&#123;&#125; \alpha X w'
                     \end&#123;align*&#125;$$
@@ -328,9 +328,9 @@ const Article = () => {
                       {" "}korrekt, obwohl \(\alpha\beta w'\) eine
                       gültige Wortform ist.
                       Dieser Fall ist schlecht, weil der Parser nur
-                      $\alpha \beta$ gelesen hat und somit nicht
+                      \(\alpha \beta\) gelesen hat und somit nicht
                       weiß, ob es sich bei der gesamten Wortform
-                      um $\alpha \beta w$ oder um $\alpha \beta w'$
+                      um \(\alpha \beta w\) oder um \(\alpha \beta w'\)
                       handelt. Da beide gültig sind, können ja auch
                       beide in einer Linksreduktion auftreten.
                       Korrektheit hängt also davon ab, was weiter rechtskommt.
@@ -390,7 +390,7 @@ const Article = () => {
                   $$\begin&#123;align*&#125;
                   \alpha \beta w' \rstep&#123;&#125; \alpha X w'
                   \end&#123;align*&#125;$$
-                  korrekt sind, sofern $w' \in \Sigma^*$ ist und \(\alpha \beta w'\) selbst eine gültige
+                  korrekt sind, sofern \(w' \in \Sigma^*\) ist und \(\alpha \beta w'\) selbst eine gültige
                   Wortform ist.
                   <Paragraph>
                     In Worten/Graustufen: wenn wir
@@ -398,8 +398,8 @@ const Article = () => {
                     \alpha \beta \textcolor&#123;gray&#125;&#123;w&#125; \rstep&#123;&#125; \alpha X \textcolor&#123;gray&#125;&#123;w&#125;
                     \end&#123;align*&#125;$$
                     guten Gewissens anwenden dürfen, ohne auch nur ein Zeichen von \(w\)
-                    gelesen zu haben, sofern wir sicher sind, dass es irgendein $w$ gibt, das
-                    $\alpha \beta w$ zu einer gültigen Wortform macht.
+                    gelesen zu haben, sofern wir sicher sind, dass es irgendein \(w\) gibt, das
+                    \(\alpha \beta w\) zu einer gültigen Wortform macht.
                   </Paragraph>
                 </div>
                 <div
@@ -413,25 +413,25 @@ const Article = () => {
                     <b>
                       (LR(0), äquivalente Formulierung).
                     </b>
-                    Eine Grammatik $G$ ist LR(0) genau dann, wenn für
+                    Eine Grammatik \(G\) ist LR(0) genau dann, wenn für
                     alle korrekten Linksreduktionsschritte
-                    $\alpha \beta w \rstep&#123;&#125; \alpha Xw$ und
-                    $\alpha' \beta' w' \rstep&#123;&#125; \alpha' X'w'$ gilt:
+                    \(\alpha \beta w \rstep&#123;&#125; \alpha Xw\) und
+                    \(\alpha' \beta' w' \rstep&#123;&#125; \alpha' X'w'\) gilt:
                   </Paragraph>
                   <ol>
                     <li>
-                      Falls $\alpha \beta = \alpha' \beta'$ dann
-                      auch $\beta = \beta'$ und $X= X'$; in Worten:
+                      Falls \(\alpha \beta = \alpha' \beta'\) dann
+                      auch \(\beta = \beta'\) und \(X= X'\); in Worten:
                       wenn die Fronten identisch sind, dann auch die
                       Reduktionsschritte.
                     </li>
                     <li>
-                      Wenn $\alpha' \beta' = \alpha \beta \varphi$ und
-                      $|\varphi| \geq 1$, dann
-                      $\varphi \not \in \Sigma^*$; in Worten: wenn
-                      $\front(\gamma)$ ein echter Präfix von $\front(\gamma')$
+                      Wenn \(\alpha' \beta' = \alpha \beta \varphi\) und
+                      \(|\varphi| \geq 1\), dann
+                      \(\varphi \not \in \Sigma^*\); in Worten: wenn
+                      \(\front(\gamma)\) ein echter Präfix von \(\front(\gamma')\)
                       ist, dann muss in dem überstehenden Teil von
-                      $\front(\gamma)$ mindestens ein
+                      \(\front(\gamma)\) mindestens ein
                       Nichtterminal vorkommen.
                     </li>
                   </ol>
@@ -455,7 +455,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Wenn-Dann-Richtung.
                       </span>
-                      Wenn $G$ eine LR(0)-Grammatik ist, dann gelten
+                      Wenn \(G\) eine LR(0)-Grammatik ist, dann gelten
                       die Schlussfolgerungen des Lemmas.
                     </Paragraph>
                   </div>
@@ -466,28 +466,28 @@ const Article = () => {
                         Beweis.
                       </b>
                       {" "}Um Punkt 1 zu zeigen,
-                      nehmen wir an, dass $\alpha \beta = \alpha' \beta'$ gilt.
-                      Da $\alpha \beta w \rstep&#123;&#125; \alpha X w$ korrekt
-                      ist, $\alpha' \beta' w'$ eine gültige Wortform ist und
-                      $G$ eine LR(0)-Grammatik ist, so ist auch
+                      nehmen wir an, dass \(\alpha \beta = \alpha' \beta'\) gilt.
+                      Da \(\alpha \beta w \rstep&#123;&#125; \alpha X w\) korrekt
+                      ist, \(\alpha' \beta' w'\) eine gültige Wortform ist und
+                      \(G\) eine LR(0)-Grammatik ist, so ist auch
                     </Paragraph>
                     $$\begin&#123;align*&#125;
                     \alpha' \beta' w' = \alpha \beta w' \rstep&#123;&#125; \alpha X w'
                     \end&#123;align*&#125;$$
                     <Paragraph>
                       ein korrekter Linksreduktionsschritt. Also sind
-                      $\alpha' \beta' w' \rstep&#123;&#125; \alpha X w'$ und
-                      $\alpha' \beta' w' \rstep&#123;&#125; \alpha' X' w'$ beides
-                      korrekte Linksreduktionsschritte. Da $G$ eindeutig ist,
+                      \(\alpha' \beta' w' \rstep&#123;&#125; \alpha X w'\) und
+                      \(\alpha' \beta' w' \rstep&#123;&#125; \alpha' X' w'\) beides
+                      korrekte Linksreduktionsschritte. Da \(G\) eindeutig ist,
                       kann es nur eine Rechtsableitung geben, d.h.
-                      $\alpha X w' = \alpha' X' w'$, was $X = X'$ und
-                      somit $\beta = \beta'$ impliziert.
+                      \(\alpha X w' = \alpha' X' w'\), was \(X = X'\) und
+                      somit \(\beta = \beta'\) impliziert.
                     </Paragraph>
                     <Paragraph>
                       Um Punkt 2 zu zeigen, nehmen wir an, dass
-                      $\alpha' \beta' = \alpha \beta \varphi$ gilt.
+                      \(\alpha' \beta' = \alpha \beta \varphi\) gilt.
                       Falls - entgegen der Schlussfolgerung - nun
-                      $\varphi \in \Sigma^*$ gälte, wäre
+                      \(\varphi \in \Sigma^*\) gälte, wäre
                     </Paragraph>
                     $$\begin&#123;align*&#125;
                     \alpha' \beta' w' = \alpha \beta \varphi w' \rstep&#123;&#125;
@@ -495,13 +495,13 @@ const Article = () => {
                     \end&#123;align*&#125;$$
                     <Paragraph>
                       ein korrekter Linksreduktionsschritt; nach Voraussetzung
-                      ist auch $\alpha' \beta' w' \rstep&#123;&#125; \alpha' X' w'$
+                      ist auch \(\alpha' \beta' w' \rstep&#123;&#125; \alpha' X' w'\)
                       korrekt. Es gäbe also zwei korrekte Linksreduktionsschritte
-                      und $G$ wäre nicht eindeutig. Wir folgern,
-                      dass $\varphi^* \not \in \Sigma^*$. Beachten Sie,
-                      dass es, wenn $\varphi$ Nichtterminale enthält, keinen
+                      und \(G\) wäre nicht eindeutig. Wir folgern,
+                      dass \(\varphi^* \not \in \Sigma^*\). Beachten Sie,
+                      dass es, wenn \(\varphi\) Nichtterminale enthält, keinen
                       Widerspruch gibt: dann ist nämlich
-                      $\alpha \beta \varphi w' \rstep&#123;&#125; \alpha X \varphi w'$
+                      \(\alpha \beta \varphi w' \rstep&#123;&#125; \alpha X \varphi w'\)
                       gar kein Linksreduktionsschritt, geschweige denn ein
                       korrekter.{" "}
                       <span class="qed">
@@ -514,7 +514,7 @@ const Article = () => {
                       <span class="numbered-title">
                         Nur-dann-Richtung.
                       </span>
-                      Wenn die Grammatik $G$ die
+                      Wenn die Grammatik \(G\) die
                       Schlussfolgerungen des Lemmas erfüllt und
                       müssen zeigen, dass sie auch LG(0).
                     </Paragraph>
@@ -525,10 +525,10 @@ const Article = () => {
                       <b>
                         Beweis.
                       </b>
-                      Als erstes zeigen wir, dass $G$ eindeutig ist; dass es
+                      Als erstes zeigen wir, dass \(G\) eindeutig ist; dass es
                       also für jede gültige Wortform genau einen korrekten
                       Linksreduktionsschritt gibt.
-                      Dafür nehmen wir dann, dass es von $\gamma$ aus
+                      Dafür nehmen wir dann, dass es von \(\gamma\) aus
                       die Linksreduktionsschritte
                     </Paragraph>
                     $$\begin&#123;align*&#125;
@@ -538,18 +538,14 @@ const Article = () => {
                     <Paragraph>
                       gibt und müssen zeigen, dass es sich in der Tat um denselben
                       Schritt handelt. Ohne Beschränkung der Allgemeinheit
-                      ist $|\alpha\beta| \leq |\alpha' \beta'|$ und
-                      wir schreiben $\alpha' \beta' = \alpha \beta \varphi$.
-                      Da $\varphi$ ein Präfix von $w$ ist und $w \in \Sigma^
-                      <b>
-                        $,
-                        so gilt auch $\varphi \in \Sigma^
-                      </b>
-                      $.
-                      Nach Punkt 2 der Schlussfolgerung muss also $\varphi = \epsilon$
-                      gelten. Es ist also $\alpha' \beta' = \alpha \beta$. Nach Punkt 1
-                      der Schlussfolgerung gelten nun also auch $\alpha = \alpha'$,
-                      $\beta = \beta'$ und $X = X'$ und somit auch $w = w'$. Es handelt
+                      ist \(|\alpha\beta| \leq |\alpha' \beta'|\) und
+                      wir schreiben \(\alpha' \beta' = \alpha \beta \varphi\).
+                      Da \(\varphi\) ein Präfix von \(w\) ist und \(w \in \Sigma^*\),
+                      so gilt auch \(\varphi \in \Sigma^*\).
+                      Nach Punkt 2 der Schlussfolgerung muss also \(\varphi = \epsilon\)
+                      gelten. Es ist also \(\alpha' \beta' = \alpha \beta\). Nach Punkt 1
+                      der Schlussfolgerung gelten nun also auch \(\alpha = \alpha'\),
+                      \(\beta = \beta'\) und \(X = X'\) und somit auch \(w = w'\). Es handelt
                       sich um ein und den selben Linksreduktionsschritt. Die
                       Gramatik ist eindeutig.
                     </Paragraph>
@@ -562,42 +558,42 @@ const Article = () => {
                     \end&#123;align*&#125;$$
                     <Paragraph>
                       ein korrekter Linksreduktionsschritt ist und
-                      $\gamma' := \alpha \beta w''$
-                      eine gültige Wortform ist mit $w'' \in \Sigma^*$.
+                      \(\gamma' := \alpha \beta w''\)
+                      eine gültige Wortform ist mit \(w'' \in \Sigma^*\).
                       Wir müssen zeigen,
-                      dass $ \alpha X w''$ auch gültig ist. Da $G$ eindeutig ist,
+                      dass \( \alpha X w''\) auch gültig ist. Da \(G\) eindeutig ist,
                       gibt es einen eindeutigen korrekten Linksreduktionsschritt
                     </Paragraph>
                     $$\begin&#123;align*&#125;
                     \gamma' = \alpha' \beta' w' \rstep&#123;&#125; \alpha' X' w'
                     \end&#123;align*&#125;$$
                     <Paragraph>
-                      Da $\alpha \beta$ und $\alpha' \beta'$ beides
-                      Präfixe von $\gamma'$ sind, gibt es drei Fälle:
-                      (1) $\alpha\beta = \alpha' \beta'$;
+                      Da \(\alpha \beta\) und \(\alpha' \beta'\) beides
+                      Präfixe von \(\gamma'\) sind, gibt es drei Fälle:
+                      (1) \(\alpha\beta = \alpha' \beta'\);
                       (2)
-                      $\alpha' \beta' = \alpha \beta \varphi$
-                      mit $\varphi \ne \epsilon$;
+                      \(\alpha' \beta' = \alpha \beta \varphi\)
+                      mit \(\varphi \ne \epsilon\);
                       (3)
-                      $\alpha \beta = \alpha' \beta' \varphi$
-                      mit $\varphi \ne \epsilon$.
+                      \(\alpha \beta = \alpha' \beta' \varphi\)
+                      mit \(\varphi \ne \epsilon\).
                     </Paragraph>
                     <Paragraph>
-                      (1) Wenn nun $\alpha \beta = \alpha' \beta'$ gilt, dann
+                      (1) Wenn nun \(\alpha \beta = \alpha' \beta'\) gilt, dann
                       sind nach Punkt 1 der Schlussfolgerung
-                      $\alpha' = \alpha$ und $\beta' = \beta$ und
-                      $X = X'$; also ist $\gamma = \alpha' \beta' w' = \alpha \beta w'$
-                      und auch $\gamma = \alpha \beta w''$ und somit $w'' = w'$.
-                      Somit ist $\alpha' X' w' = \alpha X w''$ und letztere ist
+                      \(\alpha' = \alpha\) und \(\beta' = \beta\) und
+                      \(X = X'\); also ist \(\gamma = \alpha' \beta' w' = \alpha \beta w'\)
+                      und auch \(\gamma = \alpha \beta w''\) und somit \(w'' = w'\).
+                      Somit ist \(\alpha' X' w' = \alpha X w''\) und letztere ist
                       eine gültige Wortform.
                     </Paragraph>
                     <Paragraph>
                       (2) Wir haben zwei korrekte Linksreduktionsschritte
-                      $\alpha \beta w \rstep&#123;&#125; \alpha X w$ und
-                      $\alpha' \beta' w' \rstep&#123;&#125; alpha' X' w'$. Nach Punkt 2
-                      der Schlussfolgerung des Lemmas $\varphi$
+                      \(\alpha \beta w \rstep&#123;&#125; \alpha X w\) und
+                      \(\alpha' \beta' w' \rstep&#123;&#125; alpha' X' w'\). Nach Punkt 2
+                      der Schlussfolgerung des Lemmas \(\varphi\)
                       mindestens ein Nichtterminal enthalten. Das
-                      kann aber nicht sein, da $\varphi$ ein Präfix von $w'$
+                      kann aber nicht sein, da \(\varphi\) ein Präfix von \(w'\)
                       ist. (3) kann aus dem gleichen Grund nicht gelten.
                       <span class="qed">
                         \(\square\)

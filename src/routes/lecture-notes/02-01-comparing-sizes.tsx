@@ -47,14 +47,14 @@ const Article = () => {
                   <i>
                     Größe
                   </i>
-                  $\&#123;0,1,2,3,4,5,6,7,8,9\&#125;$ hat zehn Elemente und ist somit größer als
-                  $\&#123;a,e,i,o,u\&#125;$, die nur fünf Elemente hat. Können wir auch für
+                  \(\&#123;0,1,2,3,4,5,6,7,8,9\&#125;\) hat zehn Elemente und ist somit größer als
+                  \(\&#123;a,e,i,o,u\&#125;\), die nur fünf Elemente hat. Können wir auch für
                   unendliche Mengen einen Größenbegriff einführen, oder sie zumindest
                   hinsichtlich ihrer Größe vergleichen?
                 </Paragraph>
                 <Paragraph>
-                  Bei den "üblichen" unendlichen Mengen $\N, \Z, \Q, \R$ scheint das zu
-                  gehen. Es gilt nämlich $\N \subsetneq \Z \subsetneq \Q \subsetneq \R$,
+                  Bei den "üblichen" unendlichen Mengen \(\N, \Z, \Q, \R\) scheint das zu
+                  gehen. Es gilt nämlich \(\N \subsetneq \Z \subsetneq \Q \subsetneq \R\),
                   und damit können wir doch mit Fug und Recht behaupten:
                   <i>
                     Die Menge der ganzen Zahlen ist kleiner als die der rationalen
@@ -64,8 +64,8 @@ const Article = () => {
                 </Paragraph>
                 <Paragraph>
                   Unser erster Versuch, unendliche Mengen ihrer Größe nach zu
-                  vergleichen, verwendet Mengeninklusion: wenn $A \subseteq B$ gilt,
-                  dann sagen wir, dass $A$ kleiner gleich $B$ gilt. Allerdings hat
+                  vergleichen, verwendet Mengeninklusion: wenn \(A \subseteq B\) gilt,
+                  dann sagen wir, dass \(A\) kleiner gleich \(B\) gilt. Allerdings hat
                   dieser Größenbegriff einen großen Nachteil: welche der beiden Mengen
                   ist Ihrer Meinung denn größer:
                 </Paragraph>
@@ -73,10 +73,10 @@ const Article = () => {
                 \textnormal&#123;oder&#125;\quad \&#123;0,1,2,3, \dots\&#125; ? \end&#123;align*&#125;$$
                 <Paragraph>
                   Also die geraden ganzen Zahlen oder die natürlichen? Oder noch
-                  schlimmer: ist $\Q$ oder $\&#123;a,b\&#125;^*$ größer? Die zweite Menge hat ja
+                  schlimmer: ist \(\Q\) oder \(\&#123;a,b\&#125;^*\) größer? Die zweite Menge hat ja
                   gar nichts mit Zahlen zu tun, sondern besteht aus Strings mit den
-                  Symbolen $a$ und $b$. Und generell: auch zwischen den Mengen
-                  $\&#123;0,1,2,3,4,5,6,7,8,9\&#125;$ und $\&#123;a,e,i,o,u\&#125;$ gibt es keine
+                  Symbolen \(a\) und \(b\). Und generell: auch zwischen den Mengen
+                  \(\&#123;0,1,2,3,4,5,6,7,8,9\&#125;\) und \(\&#123;a,e,i,o,u\&#125;\) gibt es keine
                   Inklusionsrelation, und dennoch ist erstere ganz klar größer als
                   letztere.
                 </Paragraph>
@@ -95,9 +95,9 @@ const Article = () => {
                       Beispiel
                     </span>
                     &ensp;Beginnen wir mit einem
-                    einfachen Beispiel und betrachten die zwei Mengen $\N =
-                    \&#123;0,1,2,3,4,\dots\&#125;$ und $\N^+ = \&#123;1,2,3,4,\dots\&#125;$. Beide sind
-                    unendlich, und $\N^+ \subsetneq \N$. Dennoch sind sie in gewisser
+                    einfachen Beispiel und betrachten die zwei Mengen \(\N =
+                    \&#123;0,1,2,3,4,\dots\&#125;\) und \(\N^+ = \&#123;1,2,3,4,\dots\&#125;\). Beide sind
+                    unendlich, und \(\N^+ \subsetneq \N\). Dennoch sind sie in gewisser
                     Weise gleich groß. Ihre Elemente lassen sich nämlich einander
                     paarweise zuordnen:
                   </Paragraph>
@@ -117,15 +117,15 @@ const Article = () => {
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Diese anfangs etwas überraschende Tatsache, dass $\N$ und $\N^+$
+                  Diese anfangs etwas überraschende Tatsache, dass \(\N\) und \(\N^+\)
                   "gleich groß" sind, ist als{" "}
                   <i>
                     Hilberts Hotel
                   </i>
                   {" "}bekannt. Das Hotel
-                  hat unendlich viele Zimmer, für jede Zahl $n \in \N^+$ eins. Dann
-                  kommt ein neuer Gast (die $0$) und braucht ein Zimmer. Er kriegt das
-                  Zimmer $1$. Da dies aber schon belegt ist, wird die Person, die bisher
+                  hat unendlich viele Zimmer, für jede Zahl \(n \in \N^+\) eins. Dann
+                  kommt ein neuer Gast (die \(0\)) und braucht ein Zimmer. Er kriegt das
+                  Zimmer \(1\). Da dies aber schon belegt ist, wird die Person, die bisher
                   in Zimmer 1 logiert hat, auf Zimmer 2 verlegt; die dortige auf Zimmer
                   3, und so weiter. Das Hotel ist also voll belegt, kann aber dennoch
                   weitere Gäste aufnehmen.
@@ -137,9 +137,9 @@ const Article = () => {
                     </span>
                     &ensp;Ermutigt von unserem
                     Erfolg gerade eben betrachten wir zwei unendliche Mengen, die sich
-                    stärker unterscheiden: $\N$ und $\Z = \&#123;\dots, -2, -1, 0, 1, 2,
-                    \dots\&#125;$. Wir können diese beiden nicht so schön nebeneinander legen
-                    wie $\N$ und $\N^+$ in der obigen Abbildung. Um die Elemente
+                    stärker unterscheiden: \(\N\) und \(\Z = \&#123;\dots, -2, -1, 0, 1, 2,
+                    \dots\&#125;\). Wir können diese beiden nicht so schön nebeneinander legen
+                    wie \(\N\) und \(\N^+\) in der obigen Abbildung. Um die Elemente
                     paarweise zuzuordnen, müssen wir hin- und herspringen:
                   </Paragraph>
                   <figure>
@@ -148,7 +148,7 @@ const Article = () => {
                       src="../img/infinite-sets/N-to-Z.svg" />
                   </figure>
                   <Paragraph>
-                    Dies ist etwas unübersichtlich. Besser geht es, wenn wir $\Z$
+                    Dies ist etwas unübersichtlich. Besser geht es, wenn wir \(\Z\)
                     umstellen:
                   </Paragraph>
                   <figure>
@@ -157,7 +157,7 @@ const Article = () => {
                       src="../img/infinite-sets/N-to-Z-nicer.svg" />
                   </figure>
                   <Paragraph>
-                    Wir können also unsere Bijektion $f : \N \rightarrow \Z$ wie folgt
+                    Wir können also unsere Bijektion \(f : \N \rightarrow \Z\) wie folgt
                     definieren:
                   </Paragraph>
                   $$\begin&#123;align*&#125; f : \N&amp;\rightarrow \Z \\ n&amp;\mapsto \begin&#123;cases&#125;
@@ -172,8 +172,8 @@ const Article = () => {
                         &ensp;2.1.1{" "}
                       </NumberedTitle>
                     </span>
-                    Finden Sie eine "geschlossene" Form für die Bijektion $f : \N
-                    \rightarrow \Z$. Mit "geschlossen" meine ich, dass Sie sie mit den
+                    Finden Sie eine "geschlossene" Form für die Bijektion \(f : \N
+                    \rightarrow \Z\). Mit "geschlossen" meine ich, dass Sie sie mit den
                     üblichen Operatoren (mal, plus, hoch, minus, geteilt durch) ohne
                     Fallunterscheidung schreiben können.
                   </Paragraph>
@@ -195,7 +195,7 @@ const Article = () => {
                         &ensp;2.1.2{" "}
                       </NumberedTitle>
                     </span>
-                    Finden Sie die Umkehrfunktion $f^&#123;-1&#125; : \Z \rightarrow \N$. Gerne
+                    Finden Sie die Umkehrfunktion \(f^&#123;-1&#125; : \Z \rightarrow \N\). Gerne
                     anfangs mit Fallunterscheidung, dann bitte als geschlossene Formel
                     ohne Fallunterscheidung.
                   </Paragraph>
@@ -211,22 +211,22 @@ const Article = () => {
                         &ensp;2.1.1{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Zwei Mengen $A$ und
-                    $B$ heißen{" "}
+                    &ensp;Zwei Mengen \(A\) und
+                    \(B\) heißen{" "}
                     <i>
                       gleichmächtig
                     </i>
-                    , wenn es eine Bijektion $f : A
-                    \rightarrow B$ gibt. Wir schreiben in diesem Falle $A \approx B$.
+                    , wenn es eine Bijektion \(f : A
+                    \rightarrow B\) gibt. Wir schreiben in diesem Falle \(A \approx B\).
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Es gilt trivialerweise immer $A \approx A$, da wir ja die
-                  Identitätsfunktion $x \mapsto x$ als Bijektion nehmen können. Wenn es
-                  eine Bijektion $f : A \rightarrow B$ gibt, dann natürlich auch eine
-                  Umkehrfunktion $f^&#123;-1&#125; : B \rightarrow A$. Wenn $f : A \rightarrow B$
-                  und $g : B \rightarrow C$ Bijektionen sind, dann ist $g \circ f : A
-                  \rightarrow C$ auch eine. Wir sehen: Die Relation $\approx$ ist
+                  Es gilt trivialerweise immer \(A \approx A\), da wir ja die
+                  Identitätsfunktion \(x \mapsto x\) als Bijektion nehmen können. Wenn es
+                  eine Bijektion \(f : A \rightarrow B\) gibt, dann natürlich auch eine
+                  Umkehrfunktion \(f^&#123;-1&#125; : B \rightarrow A\). Wenn \(f : A \rightarrow B\)
+                  und \(g : B \rightarrow C\) Bijektionen sind, dann ist \(g \circ f : A
+                  \rightarrow C\) auch eine. Wir sehen: Die Relation \(\approx\) ist
                   reflexiv, symmetrisch und transitiv und ist somit eine
                   <i>
                     Äquivalenzrelation
@@ -241,8 +241,8 @@ const Article = () => {
                         &ensp;2.1.2{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Eine Menge $A$ mit $A
-                    \approx \N$, die also gleichmächtig zu den natürlichen Zahlen ist,
+                    &ensp;Eine Menge \(A\) mit \(A
+                    \approx \N\), die also gleichmächtig zu den natürlichen Zahlen ist,
                     nennt man{" "}
                     <i>
                       abzählbar unendlich
@@ -263,7 +263,7 @@ const Article = () => {
                   <i>
                     nicht
                   </i>
-                  {" "}gleichmächtig mit $\N$ sind, weil sie "viel viel
+                  {" "}gleichmächtig mit \(\N\) sind, weil sie "viel viel
                   größer" sind. Wir nennen sie{" "}
                   <i>
                     überabzählbare
@@ -290,17 +290,17 @@ const Article = () => {
                         &ensp;2.1.3{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Eine Menge $A$ heißt
+                    &ensp;Eine Menge \(A\) heißt
                     <i>
                       unendlich
                     </i>
-                    , wenn es eine echte Teilmenge $A' \subsetneq A$
-                    gibt, zu der sie gleichmächtig ist, also $A' \approx A$.
+                    , wenn es eine echte Teilmenge \(A' \subsetneq A\)
+                    gibt, zu der sie gleichmächtig ist, also \(A' \approx A\).
                   </Paragraph>
                 </div>
                 <Paragraph>
-                  Als Beispiel haben wir $\N^+ \subsetneq \N$ mit $\N^+ \approx \N$
-                  gesehen. Also ist $\N$ im obigen Sinne unendlich.
+                  Als Beispiel haben wir \(\N^+ \subsetneq \N\) mit \(\N^+ \approx \N\)
+                  gesehen. Also ist \(\N\) im obigen Sinne unendlich.
                 </Paragraph>
                 <div class="well well-lg numbered-exercise container">
                   <Paragraph>
@@ -310,9 +310,9 @@ const Article = () => {
                         &ensp;2.1.3{" "}
                       </NumberedTitle>
                     </span>
-                    Zeigen Sie: wenn eine Menge $A$ unendlich ist (im Sinne der obigen
-                    Definition), dann gibt es eine Teilmenge $X \subseteq A$ mit $X
-                    \approx \N$.
+                    Zeigen Sie: wenn eine Menge \(A\) unendlich ist (im Sinne der obigen
+                    Definition), dann gibt es eine Teilmenge \(X \subseteq A\) mit \(X
+                    \approx \N\).
                   </Paragraph>
                   <Paragraph>
                     {" "}{" "}
@@ -320,9 +320,9 @@ const Article = () => {
                       Hinweis:
                     </b>
                     {" "}Tappen Sie nicht in die "Das ist doch
-                    offensichtlich"-Falle: die Menge $A$ könnte ja viel größer sein als
-                    $\N$ und keine für Sie "greifbare" Struktur haben. Ihre Aufgabe ist
-                    es, dennoch eine abzählbar unendliche Teilmenge $X \subseteq A$ zu
+                    offensichtlich"-Falle: die Menge \(A\) könnte ja viel größer sein als
+                    \(\N\) und keine für Sie "greifbare" Struktur haben. Ihre Aufgabe ist
+                    es, dennoch eine abzählbar unendliche Teilmenge \(X \subseteq A\) zu
                     finden.
                   </Paragraph>
                 </div>

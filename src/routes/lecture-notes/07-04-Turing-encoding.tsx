@@ -135,8 +135,8 @@ const Article = () => {
                   simuliert.
                 </Paragraph>
                 <Paragraph>
-                  In diesem Teilkapitel werden wir sehen, wie wir eine Turingmaschine $M$ über einem
-                  fixen, nicht von $M$ abhängigen Alphabet codieren können.
+                  In diesem Teilkapitel werden wir sehen, wie wir eine Turingmaschine \(M\) über einem
+                  fixen, nicht von \(M\) abhängigen Alphabet codieren können.
                   Im nächsten Teilkapitel werden wir uns überlegen, wie man einen Turingmaschinen-Simulator selbst
                   als
                   Turingmaschine implementieren kann. Also eine Turingmaschine \(U\), die als Input Wörter der
@@ -269,7 +269,7 @@ const Article = () => {
                   wo welches
                   Zeichen beginnt und aufhört. Wir brauchen ein Separatorzeichen, beispielsweise ein Komma.
                   Aus Gründen, die später klar werden werden, schließen wir die Codierung der Turingmaschine
-                  mit einem $\texttt&#123;;&#125;$ ab.
+                  mit einem \(\texttt&#123;;&#125;\) ab.
                   Die Codierung der obigen Maschine ist dann also
                 </Paragraph>
                 <pre class="container">
@@ -278,7 +278,7 @@ const Article = () => {
                 <Paragraph>
                   In dieser Codierung behalten wir zwei Konventionen bei: wenn eine Regel
                   "fehlt", also beispielsweise für \(\delta(10,a)\) die Zelle leer ist, dann
-                  soll das in den Zustand $\qreject$ führen; wenn in der Zelle
+                  soll das in den Zustand \(\qreject\) führen; wenn in der Zelle
                   nur ein Richtungszeichen, also beispielsweise{" "}
                   <tt>
                     01,1,R
@@ -315,15 +315,15 @@ const Article = () => {
                       /Beobachtung.
                     </span>
                     &ensp;Zu einem Eingabealphabet
-                    $\Sigma$ definieren wir das{" "}
+                    \(\Sigma\) definieren wir das{" "}
                     <i>
                       Codierungsalphabet
                     </i>
-                    $\Lambda := \writelambda$,
-                    wobei wir annehmen, dass $\texttt&#123;#&#125;, \texttt&#123;,&#125;, \texttt&#123;L&#125;, \texttt&#123;S&#125;, \texttt&#123;R&#125;,
+                    \(\Lambda := \writelambda\),
+                    wobei wir annehmen, dass \(\texttt&#123;#&#125;, \texttt&#123;,&#125;, \texttt&#123;L&#125;, \texttt&#123;S&#125;, \texttt&#123;R&#125;,
                     \texttt&#123;;&#125;
-                    \not \in \Sigma$. Wir können nun jede Turingmaschine $M$ mit Eingabealphabet
-                    $\Sigma$ als String $\enc(M) \in \Lambda^*$ codieren.
+                    \not \in \Sigma\). Wir können nun jede Turingmaschine \(M\) mit Eingabealphabet
+                    \(\Sigma\) als String \(\enc(M) \in \Lambda^*\) codieren.
                   </Paragraph>
                 </div>
                 <div class="alert-info container">
@@ -337,18 +337,14 @@ const Article = () => {
                     Codierung
                   </i>
                   {" "}suggeriert, dass wir, gegeben
-                  den String $c = \enc(M)$ die
-                  ursprüngliche Turingmaschine $M$ rekonstruieren können. Das gilt natürlich nur
-                  beschränkt: eventuell decodieren wir $c$ zu einer Maschine $M'$, die sich
-                  von $M$ in denen Namen der Zustände und der Bandalphabetsymbole unterscheidet. Allerdings
+                  den String \(c = \enc(M)\) die
+                  ursprüngliche Turingmaschine \(M\) rekonstruieren können. Das gilt natürlich nur
+                  beschränkt: eventuell decodieren wir \(c\) zu einer Maschine \(M'\), die sich
+                  von \(M\) in denen Namen der Zustände und der Bandalphabetsymbole unterscheidet. Allerdings
                   stimmen die Funktionen
-                  $f
-                  <i>
-                    M: \Sigma^* \rightarrow \&#123;\texttt&#123;accept&#125;, \texttt&#123;reject&#125;, \texttt&#123;undefined&#125;\&#125;$
-                    und
-                    $f
-                  </i>
-                  &#123;M'&#125;: \Sigma^* \rightarrow \&#123;\texttt&#123;accept&#125;, \texttt&#123;reject&#125;, \texttt&#123;undefined&#125;\&#125;$
+                  \(f_M: \Sigma^* \rightarrow \&#123;\texttt&#123;accept&#125;, \texttt&#123;reject&#125;, \texttt&#123;undefined&#125;\&#125;\)
+                  und
+                  \(f_&#123;M'&#125;: \Sigma^* \rightarrow \&#123;\texttt&#123;accept&#125;, \texttt&#123;reject&#125;, \texttt&#123;undefined&#125;\&#125;\)
                   überein.
                 </div>
               </div>

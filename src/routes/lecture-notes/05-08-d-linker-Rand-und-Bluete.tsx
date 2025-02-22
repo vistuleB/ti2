@@ -44,7 +44,7 @@ const Article = () => {
                 </h1>
                 <Paragraph>
                   In diesem Teilkapitel werden wir sehen,
-                  wie wir für eine gültige Wortform $\gamma$
+                  wie wir für eine gültige Wortform \(\gamma\)
                   den korrekten Linksreduktionsschritt
                 </Paragraph>
                 $$\begin&#123;align*&#125;
@@ -52,9 +52,9 @@ const Article = () => {
                 \end&#123;align*&#125;$$
                 <Paragraph>
                   finden. Als erstes müssen wir uns überlegen,
-                  wie die Front $\front(\gamma) = \alpha \beta$
+                  wie die Front \(\front(\gamma) = \alpha \beta\)
                   überhaupt aussehen kann. Wenn wir
-                  uns den Ableitungsbaum von $\gamma$ ansehen,
+                  uns den Ableitungsbaum von \(\gamma\) ansehen,
                   wird das einigermaßen offensichtlich sein.
                 </Paragraph>
                 <Paragraph>
@@ -192,22 +192,22 @@ const Article = () => {
                   $$\begin&#123;align*&#125;
                   S \Step&#123;R&#125;^* \alpha \beta w
                   \end&#123;align*&#125;$$
-                  dar. Die Wortform $\alpha\beta$, also linker Rand plus Blüte, nennen wir
+                  dar. Die Wortform \(\alpha\beta\), also linker Rand plus Blüte, nennen wir
                   die{" "}
                   <i>
                     Front
                   </i>
-                  {" "}von $\mathcal&#123;T&#125;$ und schreiben sie als $\front(\mathcal&#123;T&#125;)$.
+                  {" "}von \(\mathcal&#123;T&#125;\) und schreiben sie als \(\front(\mathcal&#123;T&#125;)\).
                   Wir sagen auch, dass \(\beta\){" "}
                   <i>
                     eine Blüte von \(\gamma\)
                   </i>
                   {" "}und
-                  $\alpha\beta$ die{" "}
+                  \(\alpha\beta\) die{" "}
                   <i>
                     Front
                   </i>
-                  {" "}von $\gamma$ ist,
+                  {" "}von \(\gamma\) ist,
                   ohne über den Ableitungsbaum \(\mathcal&#123;T&#125;\) selbst zu reden.
                   Hierbei ist zu beachten, dass in einer mehrdeutigen Grammatik
                   eine gültige Wortform mehrere Ableitungsbäume und somit
@@ -319,15 +319,15 @@ const Article = () => {
                     <span class="numbered-title">
                       Lemma
                     </span>
-                    Die Sprache $\Front(G)$ ist regulär.
+                    Die Sprache \(\Front(G)\) ist regulär.
                     Insbesondere gibt es eine erweitert reguläre Grammatik \(\hat&#123;G&#125;\) für
-                    $\Front(G)$, so dass die Blüte genau die im letzen Ableitungsschritt
+                    \(\Front(G)\), so dass die Blüte genau die im letzen Ableitungsschritt
                     erzeugten Terminalsymbole sind.
                   </Paragraph>
                 </div>
                 <Paragraph>
                   Hier ist etwas Mentalgymnastik vonnöten: aus Sicht der Sprache
-                  $\Front(G)$ sind \(\Sigma \cup N\){" "}
+                  \(\Front(G)\) sind \(\Sigma \cup N\){" "}
                   <i>
                     Terminalsymbole
                   </i>
@@ -346,7 +346,7 @@ const Article = () => {
                   ,
                   also wo \(W\) als innerer Knoten vorkommt. Bevor ich
                   \(\hat&#123;G&#125;\) formal definiere, zeige ich den obigen Ableitungsbaum
-                  (ohne rechten Rand, weil der ja bei $\front(G)$ eh fehlt)
+                  (ohne rechten Rand, weil der ja bei \(\front(G)\) eh fehlt)
                   und annotiere jeden Knoten auf dem Stamm mit der entsprechenden
                   \(\hat&#123;G&#125;\)-Produktion.
                 </Paragraph>
@@ -433,7 +433,7 @@ const Article = () => {
                 <Paragraph>
                   Nochmals: Produktionen wie
                   \(\dk&#123;B&#125; \rightarrow \dkt&#123;y A&#125; \dk&#123;S&#125;\) sind erweitert regulär
-                  weil $\dkt&#123;y&#125;$ und $\dkt&#123;A&#125;$ aus Sicht von \(\hat&#123;G&#125;\) beides
+                  weil \(\dkt&#123;y&#125;\) und \(\dkt&#123;A&#125;\) aus Sicht von \(\hat&#123;G&#125;\) beides
                   Terminalsymbole sind. Wir können nun unseren \(LR(0)\)-Parser beschreiben:
                 </Paragraph>
                 <div
@@ -494,7 +494,7 @@ const Article = () => {
                     </b>
                     Der erste Teil der Bedeutung ist einfach zu sehen.
                     Jeder Reduktionsschritt ist ein Linksreduktionsschritt, und
-                    wenn man Ende $S$ steht, waren es auch alles
+                    wenn man Ende \(S\) steht, waren es auch alles
                     <i>
                       korrekte
                     </i>
@@ -502,13 +502,13 @@ const Article = () => {
                   </Paragraph>
                   <Paragraph>
                     Der zweite Teil ist schwieriger. Wir nehmen also
-                    an, dass $G$ eine LR(0)-Grammatik ist.
+                    an, dass \(G\) eine LR(0)-Grammatik ist.
                     Da \(G\) eindeutig ist, hat jede gültige Wortform
                     \(\gamma\) eine eindeutige Rechtsableitung und einen
                     dazugehörigen Ableitungsbaum \(\mathcal&#123;T&#125;\); somit
-                    ist $\front(\gamma) := \front(\mathcal&#123;T&#125;)$ eindeutig bestimmt.
+                    ist \(\front(\gamma) := \front(\mathcal&#123;T&#125;)\) eindeutig bestimmt.
                     Beachten Sie, dass rechts
-                    von $\front(\gamma)$ nur Terminalsymbole folgen.
+                    von \(\front(\gamma)\) nur Terminalsymbole folgen.
                     Betrachten wir einen Zeitpunkt während des Parsing-Prozesses.
                     Sei \(\gamma\) der Stackinhalt und \(w\) der ungelesene
                     Teil des Eingabewortes. Wir werden beweisen, dass zu jedem Zeitpunkt folgende
@@ -528,8 +528,8 @@ const Article = () => {
                       Beweis.
                     </b>
                     Die Behauptung gilt offensichtlich am Anfang, da
-                    $\gamma = \epsilon$ und \(w\in L\) ist und
-                    somit $\gamma w = w$ eine gültige Wortform ist. Des weiteren
+                    \(\gamma = \epsilon\) und \(w\in L\) ist und
+                    somit \(\gamma w = w\) eine gültige Wortform ist. Des weiteren
                     ist der Stack leer, also \(\gamma = \epsilon\), und daher
                     sicherlich ein Präfix von \(\front(w)\).
                     Wir zeigen nun, dass, wenn die Invariante in Schritt \(t\) gilt,
@@ -538,36 +538,36 @@ const Article = () => {
                     <ol>
                       <li>
                         Der Parser wendet Schritt 1 an, also \(\gamma \in \Front(G)\).
-                        Das heißt nach Definition von $\Front(G)$, dass es ein \(w' \in \Sigma^*\) gibt,
+                        Das heißt nach Definition von \(\Front(G)\), dass es ein \(w' \in \Sigma^*\) gibt,
                         so dass \(\gamma w'\) eine gültige Wortform ist
-                        und $\gamma = \front(\gamma w')$. Also
+                        und \(\gamma = \front(\gamma w')\). Also
                         $$\begin&#123;align*&#125;
                         S \Step&#123;R&#125;^* \alpha A w' \Step&#123;R&#125;^* \alpha \beta w'
                         \end&#123;align*&#125;$$
-                        mit $\gamma = \alpha \beta$. Es sind $\alpha$ und $\beta$ also
-                        linker Rand und Blüte von $\gamma w'$. Somit ist
+                        mit \(\gamma = \alpha \beta\). Es sind \(\alpha\) und \(\beta\) also
+                        linker Rand und Blüte von \(\gamma w'\). Somit ist
                         \begin&#123;align&#125;
                         \alpha \beta w' \rstep&#123;&#125; \alpha' A w'
                         \label&#123;left-reduction-w'&#125;
                         \end&#123;align&#125;
                         ein korrekter Linksreduktionsschritt.
-                        Die letzte $\dk&#123;G&#125;$-Produktion
-                        in der Ableitung von $\dk&#123;S&#125; \Step&#123;&#125;^* \gamma$ war somit
-                        $\dk&#123;A&#125; \rightarrow \beta$; somit ersetzt der Parser
-                        das $\beta$ auf dem Stack durch $A$; führt also die Linksreduktion
+                        Die letzte \(\dk&#123;G&#125;\)-Produktion
+                        in der Ableitung von \(\dk&#123;S&#125; \Step&#123;&#125;^* \gamma\) war somit
+                        \(\dk&#123;A&#125; \rightarrow \beta\); somit ersetzt der Parser
+                        das \(\beta\) auf dem Stack durch \(A\); führt also die Linksreduktion
                         \begin&#123;align&#125;
                         \alpha \beta w \rstep&#123;&#125; \alpha A w
                         \label&#123;left-reduction-w&#125;
                         \end&#123;align&#125;
                         an. Da (\ref&#123;left-reduction-w'&#125;) korrekt ist und
-                        $\alpha \beta w$ nach Invariante eine gültige Wortform ist, ist
+                        \(\alpha \beta w\) nach Invariante eine gültige Wortform ist, ist
                         nach LR(0)-Bedingung auch (\ref&#123;left-reduction-w&#125;) ein korrekter
-                        Schritt; $\alpha Aw$ ist also auch eine gültige Wortform; somit
+                        Schritt; \(\alpha Aw\) ist also auch eine gültige Wortform; somit
                         gilt Teil (i) der Invariante.
                         Um zu sehen, dass (ii) gilt, beachten Sie, dass nun
                         auf dem Stack oben ein Nichtterminal liegt: \(A\);
                         da rechts vom aktiven Teil nur Terminale stehen, muss
-                        \(\alpha A\) ein Präfix von $\front(\alpha A w)$ sein.
+                        \(\alpha A\) ein Präfix von \(\front(\alpha A w)\) sein.
                       </li>
                       <li>
                         Der Parser wendet Schritt 2 an, also \(w = cw'\), er liest
@@ -577,15 +577,15 @@ const Article = () => {
                         Teil (i) der Behauptung gilt offensichtlich, da \(\gamma' w' = \gamma w\)
                         und somit immer noch eine gültige Wortform ist.
                         Um zu sehen, dass Teil (ii) gilt, beachten Sie erstens,
-                        dass Teil (ii) vor dem Schritt galt, also $\gamma$ ein Präfix
-                        von $\front(\gamma w)$ ist; zweitens, dass
+                        dass Teil (ii) vor dem Schritt galt, also \(\gamma\) ein Präfix
+                        von \(\front(\gamma w)\) ist; zweitens, dass
                         \(\gamma \not \in \Front(G)\) ist (sonst hätte der Parser Schritt 1 angewandt); somit
-                        ist $\gamma$ ein{" "}
+                        ist \(\gamma\) ein{" "}
                         <i>
                           echter
                         </i>
-                        {" "}Präfix von $\front(\gamma w)$ und somit
-                        ist $\gamma c$ immer noch ein Präfix von $\front(\gamma w)$.
+                        {" "}Präfix von \(\front(\gamma w)\) und somit
+                        ist \(\gamma c\) immer noch ein Präfix von \(\front(\gamma w)\).
                       </li>
                     </ol>
                     Wenn das Eingabewort gelesen ist, ist nun \(w = \epsilon\) und

@@ -112,7 +112,7 @@ const Article = () => {
                   Zeitkomplexitätsklassen
                 </h2>
                 <Paragraph>
-                  Wir beschränken uns der Einfachheit halber auf das Eingabealphabet $\Sigma = \&#123;0,1\&#125;$ und
+                  Wir beschränken uns der Einfachheit halber auf das Eingabealphabet \(\Sigma = \&#123;0,1\&#125;\) und
                   auf Entscheidungsprobleme, wo uns also nur eine Ja/Nein-Antwort interessiert.
                 </Paragraph>
                 <div class="well container theorem">
@@ -123,20 +123,20 @@ const Article = () => {
                         &ensp;6.1.1{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Sei $t: \N \rightarrow \N$. Eine
-                    Turingmaschinen $M$
+                    &ensp;Sei \(t: \N \rightarrow \N\). Eine
+                    Turingmaschinen \(M\)
                     <i>
                       entscheidet
                     </i>
-                    {" "}eine Sprache $L \subseteq \Sigma^*$ in Zeit $t$ wenn
+                    {" "}eine Sprache \(L \subseteq \Sigma^*\) in Zeit \(t\) wenn
                   </Paragraph>
                   <ul>
                     <li>
-                      sie die Sprache entscheidet, also $x \in L \Longleftrightarrow f_M(x) = \texttt&#123;accept&#125;$
+                      sie die Sprache entscheidet, also \(x \in L \Longleftrightarrow f_M(x) = \texttt&#123;accept&#125;\)
                       und
                     </li>
                     <li>
-                      für jede Eingabe $x$ in maximal $O(t(|x|))$ Schritten terminiert.
+                      für jede Eingabe \(x\) in maximal \(O(t(|x|))\) Schritten terminiert.
                     </li>
                   </ul>
                   <Paragraph>
@@ -154,20 +154,20 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                 </div>
                 <Paragraph>
-                  Falls Sie sich nicht mehr genau an die $O$-Notation erinnern können: in diesem Zusammenhang
-                  heißt das, dass es Konstanten $c$ und $d$ gibt, so dass $M$ in maximal
-                  $c t(|x|) + d$ Schritten terminiert. Die Konstanten $c$ und $d$ dürfen von $M$ abhängen, aber
-                  nicht von der Eingabe $x$ oder der Länge $|x|$.
+                  Falls Sie sich nicht mehr genau an die \(O\)-Notation erinnern können: in diesem Zusammenhang
+                  heißt das, dass es Konstanten \(c\) und \(d\) gibt, so dass \(M\) in maximal
+                  \(c t(|x|) + d\) Schritten terminiert. Die Konstanten \(c\) und \(d\) dürfen von \(M\) abhängen, aber
+                  nicht von der Eingabe \(x\) oder der Länge \(|x|\).
                   Wir haben in{" "}
                   <a href="07-02-Turing-variants.html">
                     Kapitel 7.3
                   </a>
                   &ensp;gezeigt, wie man eine
-                  $k$-Band-Turingmaschine $M$ durch eine
-                  Ein-Band-Turingmaschine $M'$. Der Aufwand war quadratisch: wenn $M$ innerhalb von $t$ Schritten
-                  terminiert, so terminiert $M'$ innerhalb von $c t^2$ Schritten, wobei $c$ eine Konstante ist,
+                  \(k\)-Band-Turingmaschine \(M\) durch eine
+                  Ein-Band-Turingmaschine \(M'\). Der Aufwand war quadratisch: wenn \(M\) innerhalb von \(t\) Schritten
+                  terminiert, so terminiert \(M'\) innerhalb von \(c t^2\) Schritten, wobei \(c\) eine Konstante ist,
                   die
-                  von $M$ abhängt. Mit unser neuen Notation können wir das sehr konzis schreiben:
+                  von \(M\) abhängt. Mit unser neuen Notation können wir das sehr konzis schreiben:
                 </Paragraph>
                 <div class="well container theorem">
                   <Paragraph>
@@ -179,14 +179,10 @@ const Article = () => {
                     </span>
                     &ensp;
                     <b>
-                      ($k$-Band zu $1$-Band).
+                      (\(k\)-Band zu \(1\)-Band).
                     </b>
-                    Sei $t: \N \rightarrow \N$. Dann gilt
-                    $\TIME
-                    <i>
-                      k(t) \subseteq \TIME
-                    </i>
-                    1(t^2)$.
+                    Sei \(t: \N \rightarrow \N\). Dann gilt
+                    \(\TIME_k(t) \subseteq \TIME_1(t^2)\).
                   </Paragraph>
                 </div>
                 <Paragraph>
@@ -207,15 +203,11 @@ const Article = () => {
                     </span>
                     &ensp;
                     <b>
-                      ($k$-Band zu $2$-Band; ohne
+                      (\(k\)-Band zu \(2\)-Band; ohne
                       Beweis).
                     </b>
                     {" "}Sei
-                    $t: \N \rightarrow \N$. Dann gilt $\TIME
-                    <i>
-                      k(t) \subseteq \TIME
-                    </i>
-                    2(t \log t)$.
+                    \(t: \N \rightarrow \N\). Dann gilt \(\TIME_k(t) \subseteq \TIME_2(t \log t)\).
                   </Paragraph>
                 </div>
               </div>

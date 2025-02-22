@@ -64,9 +64,9 @@ const Article = () => {
                   &ensp;zum Beispiel nicht erlaubt.
                   Unsere Grammatik soll allgemeine Dezimalzahlen darstellen können.
                   Das Alphabet ist somit
-                  $\Sigma = \&#123;\texttt&#123;0&#125;,\texttt&#123;1&#125;,\texttt&#123;2&#125;,\texttt&#123;3&#125;,\texttt&#123;4&#125;,
+                  \(\Sigma = \&#123;\texttt&#123;0&#125;,\texttt&#123;1&#125;,\texttt&#123;2&#125;,\texttt&#123;3&#125;,\texttt&#123;4&#125;,
                   \texttt&#123;5&#125;,\texttt&#123;6&#125;,\texttt&#123;7&#125;,\texttt&#123;8&#125;,\texttt&#123;9&#125;,
-                  \texttt&#123;+&#125;,\texttt&#123;*&#125;,\texttt&#123;(&#125;,\texttt&#123;)&#125;\&#125;$.
+                  \texttt&#123;+&#125;,\texttt&#123;*&#125;,\texttt&#123;(&#125;,\texttt&#123;)&#125;\&#125;\).
                   Die Produktionsregeln sind:
                 </Paragraph>
                 $$\begin&#123;align*&#125;
@@ -79,9 +79,9 @@ const Article = () => {
                 \texttt&#123;5&#125;\ | \ \texttt&#123;6&#125;\ | \ \texttt&#123;7&#125;\ | \ \texttt&#123;8&#125;\ | \ \texttt&#123;9&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Die Nichtterminale sind also $E$ (Expression), $N$ (Number) und $D$ (Digit). Wir haben auch
-                  den einzelnen Produktionen Namen gegeben, bis auf die der Form $D \rightarrow i$.
-                  Was soll nun unser Parser tun? Er soll, gegeben ein Eingabewort $w \in L$, den
+                  Die Nichtterminale sind also \(E\) (Expression), \(N\) (Number) und \(D\) (Digit). Wir haben auch
+                  den einzelnen Produktionen Namen gegeben, bis auf die der Form \(D \rightarrow i\).
+                  Was soll nun unser Parser tun? Er soll, gegeben ein Eingabewort \(w \in L\), den
                   <i>
                     Ableitungsbaum
                   </i>
@@ -103,7 +103,7 @@ const Article = () => {
                     auswerten
                   </i>
                   , so dass am Ende eine Zahl rauskommt, im obigen Beispiel
-                  also $(31 + 402) \cdot 83 = 35939$. Oder den Ausdruck umformen von
+                  also \((31 + 402) \cdot 83 = 35939\). Oder den Ausdruck umformen von
                   Infix-Notation zu Präfixnotation, also
                   <tt>
                     (* (+ 31 402) 83)
@@ -115,10 +115,10 @@ const Article = () => {
                   Eine Datenstruktur für Ableitungsbäume
                 </h2>
                 <Paragraph>
-                  Für meine Implementierung in Java erschaffe ich für jedes Nichtterminal $X$
+                  Für meine Implementierung in Java erschaffe ich für jedes Nichtterminal \(X\)
                   ein Interface
-                  und für jede Produktionsregel $X \rightarrow \alpha$ eine Klasse,
-                  die das Interface $X$ implementiert und $\alpha$ als Klassenvariable enthält.
+                  und für jede Produktionsregel \(X \rightarrow \alpha\) eine Klasse,
+                  die das Interface \(X\) implementiert und \(\alpha\) als Klassenvariable enthält.
                 </Paragraph>
                 <ul>
                   <li>

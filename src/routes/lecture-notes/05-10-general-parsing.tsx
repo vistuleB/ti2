@@ -268,7 +268,7 @@ const Article = () => {
                   <i>
                     &#123;i,i+1&#125; := \&#123;X \in N \ | \ X \step&#123;&#125; w
                   </i>
-                  i \textnormal&#123; ist eine Produktion in $G$&#125;\&#125; \ .
+                  i \textnormal&#123; ist eine Produktion in \(G\)&#125;\&#125; \ .
                   \label&#123;Nii&#125;
                   \end&#123;align&#125;
                   Das gilt nur, weil \(G\) in Chomsky-Normalform vorliegt und somit Ableitungen mit mehr als einem
@@ -290,12 +290,8 @@ const Article = () => {
                   <i>
                     &#123;i,k&#125; = \bigcup
                   </i>
-                  &#123;j=i+1&#125;^&#123;k-1&#125; \&#123;X \in N \ | \ \textnormal&#123; es gibt $X \rightarrow YZ$ mit $Y
-                  \in N
-                  <i>
-                    &#123;i,j&#125;$ und $Z \in N
-                  </i>
-                  &#123;j,k&#125;$&#125;\&#125; \ .
+                  &#123;j=i+1&#125;^&#123;k-1&#125; \&#123;X \in N \ | \ \textnormal&#123; es gibt \(X \rightarrow YZ\) mit \(Y
+                  \in N_&#123;i,j&#125;\) und \(Z \in N_&#123;j,k&#125;\)&#125;\&#125; \ .
                   \label&#123;equation-Nij&#125;
                   \end&#123;align&#125;
                   Dies können wir mit einer Schleife über \(j = i+1 \dots k-1\) und einer Schleife über alle
@@ -306,7 +302,7 @@ const Article = () => {
                 <ul class="nested">
                   <li>
                     Initialisiere für alle \(0 \leq i \lt n\) die Mengen \(N_&#123;i,i+1&#125; := \&#123;X \in N \ | \ X
-                    \step&#123;&#125; w_i \textnormal&#123; ist eine Produktion in $G$&#125;\&#125;\)
+                    \step&#123;&#125; w_i \textnormal&#123; ist eine Produktion in \)\(G\)\(&#125;\&#125;\)
                   </li>
                   <li>
                     {" "}{" "}

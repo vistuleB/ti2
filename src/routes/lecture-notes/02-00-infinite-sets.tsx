@@ -48,11 +48,7 @@ const Article = () => {
                 Gleichzeitig ist es sehr konkret und nah an seiner physikalischen Realisierung.
                 Ein entscheidender Nachteil Boolescher Schaltkreise jedoch: Sie müssen von Anfang an wissen, wie
                 groß
-                Ihr Input ist; also wie vielen Input-Variablen $x
-                <i>
-                  1, \dots, x
-                </i>
-                n$ Sie begegnen werden.
+                Ihr Input ist; also wie vielen Input-Variablen \(x_1, \dots, x_n\) Sie begegnen werden.
                 Für ein allgemeines Modell der Berechnung ist dies ungeeignet. Wir wollen ja{" "}
                 <i>
                   ein
@@ -75,9 +71,9 @@ const Article = () => {
                   <span class="numbered-title">
                     Beispiel
                   </span>
-                  &ensp;Die Mengen $\N, \Z, \Q, \R$ sind unendlich. Die
+                  &ensp;Die Mengen \(\N, \Z, \Q, \R\) sind unendlich. Die
                   Mengen
-                  $\&#123;a,e,i,o,u\&#125;$ und $\&#123;0,1,2,3,4,5,6,7,8,9\&#125;$ sind endlich.
+                  \(\&#123;a,e,i,o,u\&#125;\) und \(\&#123;0,1,2,3,4,5,6,7,8,9\&#125;\) sind endlich.
                 </Paragraph>
               </div>
               <div class="well container theorem">
@@ -89,11 +85,11 @@ const Article = () => {
                   \cup
                   \dots \ ,
                   \end&#123;align*&#125;$$
-                  also die Menge aller endlichen Bit-Strings ist unendlich. Mit $\epsilon$ bezeichnen wir hier den
+                  also die Menge aller endlichen Bit-Strings ist unendlich. Mit \(\epsilon\) bezeichnen wir hier den
                   leeren String.
-                  Ganz generell: wenn $\Sigma$ eine
+                  Ganz generell: wenn \(\Sigma\) eine
                   nichtleere
-                  Menge ist, dann ist $\Sigma^*$, die Menge aller endlichen Strings über $\Sigma$, unendlich.
+                  Menge ist, dann ist \(\Sigma^*\), die Menge aller endlichen Strings über \(\Sigma\), unendlich.
                 </Paragraph>
               </div>
             </div>

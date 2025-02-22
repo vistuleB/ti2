@@ -492,8 +492,8 @@ const Article = () => {
                     Grad
                   </i>
                   {" "}einer primitiv-rekursiven Funktion
-                  definiert. Das ist in etwa die "Verschachtelungstiefe" von $f$. Betrachten wir beispielsweise
-                  die Funktion $\pair(x,y) = &#123;x + y + 1 \choose 2&#125; + x$ und dröseln auf, wie wir diese
+                  definiert. Das ist in etwa die "Verschachtelungstiefe" von \(f\). Betrachten wir beispielsweise
+                  die Funktion \(\pair(x,y) = &#123;x + y + 1 \choose 2&#125; + x\) und dröseln auf, wie wir diese
                   als primitiv-rekursive Funktion konstruiert haben:
                 </Paragraph>
                 <pre>

@@ -230,11 +230,7 @@ const Article = () => {
                 \vee
                 (g_0 \wedge p_1 \wedge \dots \wedge p_k) \ .
                 $$
-                Und voilà: dies ist ein Schaltkreis für \(c_&#123;k+1&#125;\) und hat Tiefe 2 (wenn wir $g
-                <i>
-                  i$ und $p
-                </i>
-                i$ als
+                Und voilà: dies ist ein Schaltkreis für \(c_&#123;k+1&#125;\) und hat Tiefe 2 (wenn wir \(g_i\) und \(p_i\) als
                 Inputgates betrachten).
                 Wie groß ist er? Er hat \(k\) OR-gates und
                 \(1 + 2 + \dots + k\) AND-gates, insgesamt also \(\Theta(k^2)\) Gates.
@@ -383,8 +379,8 @@ const Article = () => {
                   \&#123; c \cdot 2^d, c \cdot 2^d + 1, \dots, c \cdot 2^&#123;d&#125; + 2^&#123;d&#125; - 1\&#125;
                   $$
                   Es wird eventuell klarer, wenn wir uns die Binärdarstellung anschauen: \([a,b]\) ist ein
-                  Binärintervall, wenn $a$ und $b$ folgende Binärdarstellung haben:
-                  \(a = (c00\dots 0)_2\) und \(b = (c 11 \dots 1)_2\), wobei $c$ selbst aus mehreren Bits bestehen
+                  Binärintervall, wenn \(a\) und \(b\) folgende Binärdarstellung haben:
+                  \(a = (c00\dots 0)_2\) und \(b = (c 11 \dots 1)_2\), wobei \(c\) selbst aus mehreren Bits bestehen
                   kann.
                 </div>
                 <Paragraph>
@@ -444,12 +440,8 @@ const Article = () => {
                   \(p_&#123;c0*^k&#125;, g_&#123;c0*^k&#125;\) und \(p_&#123;c1*^k&#125;, g_&#123;c1*^k&#125;\)
                   zu \(p_&#123;c*^&#123;k+1&#125;&#125;, g_&#123;c*^&#123;k+1&#125;&#125;\) kombinieren. Wir fangen
                   nun mit Binärintervallen der Größe \(1\) an und arbeiten uns hoch.
-                  Der Übersichtlichkeit halber schreiben wir $pg
-                  <i>
-                    I$ für das Paar
-                    $(p
-                  </i>
-                  I, g_I)$. Für \(n=16\) schaut das so aus:
+                  Der Übersichtlichkeit halber schreiben wir \(pg_I\) für das Paar
+                  \((p_I, g_I)\). Für \(n=16\) schaut das so aus:
                   <figure>
                     <img
                       style="height:18em"
@@ -552,11 +544,11 @@ const Article = () => {
                       [l+1, k] = [(\alpha 1 0^a 0^b)_2, (\alpha 1 0^a 1^b)_2] = [\alpha 1 0^a *^b] \ ,
                       \end&#123;align*&#125;$$
                       <Paragraph>
-                        es handelt sich bei $[l+1,k]$ also um ein Binärintervall.
+                        es handelt sich bei \([l+1,k]\) also um ein Binärintervall.
                         Eine äquivalente Definition von
                         \(l\) wäre: das kleinste \(l\), so dass \([l+1,k]\) ein Binärintervall ist.
                         Wir zerlegen nun
-                        $[0,k] = [0,l] \cup [k+1,l]$ und berechnen \(pg_&#123;[0,k]&#125;\) so:
+                        \([0,k] = [0,l] \cup [k+1,l]\) und berechnen \(pg_&#123;[0,k]&#125;\) so:
                       </Paragraph>
                       <figure>
                         <img

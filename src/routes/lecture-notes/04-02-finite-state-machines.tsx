@@ -253,11 +253,11 @@ const Article = () => {
                   F&amp;= \&#123;X\&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Um noch die Zustandsübergangsfunktion $\delta$ darzustellen, müssen wir uns überlegen,
-                    wie wir Funktionen überhaupt darstellen. Da $\delta$ eine endliche Funktion ist,
+                    Um noch die Zustandsübergangsfunktion \(\delta\) darzustellen, müssen wir uns überlegen,
+                    wie wir Funktionen überhaupt darstellen. Da \(\delta\) eine endliche Funktion ist,
                     können wir einfach alle Eingabewert-Ausgabewert-Paare hinschreiben, am Besten
                     in einer Tabelle, so wie wir es bereits bei Booleschen Funktionen mit
-                    Wahrheitstabellen getan haben. $\delta$ ist also
+                    Wahrheitstabellen getan haben. \(\delta\) ist also
                   </Paragraph>
                   $$\begin&#123;align*&#125;
                   \begin&#123;array&#125;&#123;cc|c&#125;
@@ -274,7 +274,7 @@ const Article = () => {
                   \end&#123;array&#125;
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Da die Funktion $\delta$ bei jedem endlichen Automaten genau zwei
+                    Da die Funktion \(\delta\) bei jedem endlichen Automaten genau zwei
                     Eingabeparameter hat, können wir es eventuell übersichtlicher als
                     zweidimensionale Tabelle darstellen:
                   </Paragraph>
@@ -289,9 +289,9 @@ const Article = () => {
                   <Paragraph>
                     Diese zwei Tabellen dienen in diesem Beispiel aber nur dazu, noch einmal
                     zu illustrieren, was ich damit meine, wenn ich sage, dass
-                    $\delta$ eine Funktion von $Q \times \Sigma$ nach $Q$ ist. Wenn Sie
+                    \(\delta\) eine Funktion von \(Q \times \Sigma\) nach \(Q\) ist. Wenn Sie
                     selbst an endlichen Automaten rumbasteln, empfehle ich Ihnen,
-                    die Funktion $\delta$ graphisch mit Kreisen und Pfeilen darzustellen,
+                    die Funktion \(\delta\) graphisch mit Kreisen und Pfeilen darzustellen,
                     so wie wir es oben getan haben:
                   </Paragraph>
                   <figure>
@@ -301,8 +301,8 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    Das ist eine völlig legitime Notation für eine Funktion $\delta: Q \times \Sigma \rightarrow
-                    Q$
+                    Das ist eine völlig legitime Notation für eine Funktion \(\delta: Q \times \Sigma \rightarrow
+                    Q\)
                     und genau so formal wie die Tabellenschreibweise.
                   </Paragraph>
                 </div>

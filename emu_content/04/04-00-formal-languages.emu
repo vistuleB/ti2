@@ -1679,107 +1679,107 @@
 
                         <AlphaNum> *->* a *|* b *|* c *|* d *|* e *|* f *|* g *|* h *|* i *|* j *|* k *|* l *|* m *|* n *|* o *|* p *|* q *|* r *|* s *|* t *|* u *|* v *|* w *|* x *|* y *|* z
                         <AlphaNum> 
-                        |> STRONG
+                        |> strong
 
                             ->
                         &ensp;A 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;B 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;C 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;D 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;E 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;F 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;G 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;H 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;I 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;J 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;K 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;L 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;M 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;N 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;O 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;P 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;Q 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;R 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;S 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;T 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;U 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;V 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;W 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;X 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;Y 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;Z
@@ -1811,107 +1811,107 @@
                         class container listing
 
                         `<EmailAddress>    *->* &lt;User> @&lt;Domain>``<Domain>          *->* &lt;Label> .&lt;Label> *|*&lt;Label> .&lt;Domain>``<User>            *->* &lt;NameBlock> *|*&lt;NameBlock> .&lt;User>``<NameBlock>       *->* &lt;AlphaNum> *|*&lt;AlphaNum>&lt;NameBlock>``<Label>           *->* &lt;AlphaNumOrDash> *|*&lt;AlphaNumOrDash>&lt;Label>``<AlphaNumOrDash>  *->* &lt;AlphaNum> *|* -` `<AlphaNum>        *->* a *|* b *|* c *|* d *|* e *|* f *|* g *|* h *|* i *|* j *|* k *|* l *|* m *|* n *|* o *|* p *|* q *|* r *|* s *|* t *|* u *|* v *|* w *|* x *|* y *|* z``<AlphaNum>        
-                        |> STRONG
+                        |> strong
 
                             ->
                         &ensp;A 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;B 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;C 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;D 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;E 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;F 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;G 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;H 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;I 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;J 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;K 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;L 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;M 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;N 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;O 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;P 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;Q 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;R 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;S 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;T 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;U 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;V 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;W 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;X 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;Y 
-                        |> STRONG
+                        |> strong
 
                             |
                         &ensp;Z`

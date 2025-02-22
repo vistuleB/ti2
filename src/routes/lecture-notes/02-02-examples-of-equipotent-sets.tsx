@@ -45,11 +45,11 @@ const Article = () => {
                 <Paragraph>
                   Noch bevor wir im letzten Teilkapitel den Begriff der
                   Gleichmächtigkeit definiert haben, haben wir zwei Beispiele gesehen:
-                  $\N^+ \approx \N \approx \Z$. Alle Mengen sind gleichmächtig. In
-                  diesem Teilkapitel werden wir unintuitivere Beispiele sehen: $\N
-                  \approx \Q$. Dies scheint absurd! $\N$ und $\Z$ liegen ja schön der
+                  \(\N^+ \approx \N \approx \Z\). Alle Mengen sind gleichmächtig. In
+                  diesem Teilkapitel werden wir unintuitivere Beispiele sehen: \(\N
+                  \approx \Q\). Dies scheint absurd! \(\N\) und \(\Z\) liegen ja schön der
                   Reihe nach sortiert, sodass sich eine Bijektion durch eine einfach
-                  Umordnung erreichen ließ. Die Elemente der Menge $\Q$ aber liegen ja
+                  Umordnung erreichen ließ. Die Elemente der Menge \(\Q\) aber liegen ja
                   nicht säuberlich getrennt, sondern ganz dicht nebeneinander. Aber eins
                   nach dem anderen.
                 </Paragraph>
@@ -64,13 +64,13 @@ const Article = () => {
                         &ensp;2.2.1{" "}
                       </NumberedTitle>
                     </span>
-                    Die Mengen $\N$ und $\N^2$ sind gleichmächtig. Mit $\N^2$ (oder auch
-                    $\N \times \N$) bezeichnen wir hier das cartesische Produkt von $\N$
+                    Die Mengen \(\N\) und \(\N^2\) sind gleichmächtig. Mit \(\N^2\) (oder auch
+                    \(\N \times \N\)) bezeichnen wir hier das cartesische Produkt von \(\N\)
                     mit sich selbst: die Menge aller{" "}
                     <i>
                       Paare
                     </i>
-                    {" "}$(a,b)$ von
+                    {" "}\((a,b)\) von
                     natürlichen Zahlen.
                   </Paragraph>
                   <figure>
@@ -79,7 +79,7 @@ const Article = () => {
                       src="../img/infinite-sets/N.svg" />
                     <br />
                     <div>
-                      Die Menge $\N$ bzw. ein Teil davon.
+                      Die Menge \(\N\) bzw. ein Teil davon.
                     </div>
                   </figure>
                   <br />
@@ -89,7 +89,7 @@ const Article = () => {
                       src="../img/infinite-sets/N-times-N.svg" />
                     <br />
                     <div>
-                      Die Menge $\N \times \N$ bzw. ein Teil davon.
+                      Die Menge \(\N \times \N\) bzw. ein Teil davon.
                     </div>
                   </figure>
                 </div>
@@ -99,8 +99,8 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    Wir skizzieren eine Bijektion $f : \N \times \N \rightarrow \N$,
-                    indem wir für jeden Punkt $(x,y) \in \N \times \N$ angeben, auf
+                    Wir skizzieren eine Bijektion \(f : \N \times \N \rightarrow \N\),
+                    indem wir für jeden Punkt \((x,y) \in \N \times \N\) angeben, auf
                     welche natürliche Zahl er abgebildet werden soll:
                   </Paragraph>
                   <figure>
@@ -109,10 +109,10 @@ const Article = () => {
                       src="../img/infinite-sets/N-times-N-to-N.svg" />
                   </figure>
                   <Paragraph>
-                    Wir zerlegen $\N \times \N$ also in fallende Diagonale und gehen
+                    Wir zerlegen \(\N \times \N\) also in fallende Diagonale und gehen
                     jede Diagonale von rechts unten nach links oben durch. Dadurch
-                    können wir die zweidimensionale Gestalt von $\N \times \N$
-                    "aufdröseln" und dem eindimensionalen $\N$ zuordnen.
+                    können wir die zweidimensionale Gestalt von \(\N \times \N\)
+                    "aufdröseln" und dem eindimensionalen \(\N\) zuordnen.
                     <span class="qed">
                       \(\square\)
                     </span>
@@ -126,12 +126,12 @@ const Article = () => {
                         &ensp;2.2.1{" "}
                       </NumberedTitle>
                     </span>
-                    Finden Sie eine explizite Formel für die Funktion $f : \N \times \N$
+                    Finden Sie eine explizite Formel für die Funktion \(f : \N \times \N\)
                     aus dem obigen Theorem. Achten Sie erst einmal auf die Werte von
-                    $f(x,0)$: $f(3,0) = 6$ und $f(4,0) = 10$ beispielsweise. Erkennen
-                    Sie die blauen Zahlen auf der $x$-Achse? Haben Sie eine Formel für
+                    \(f(x,0)\): \(f(3,0) = 6\) und \(f(4,0) = 10\) beispielsweise. Erkennen
+                    Sie die blauen Zahlen auf der \(x\)-Achse? Haben Sie eine Formel für
                     sie? Finden Sie eine. Dann erweitern Sie die Formel, so dass sie für
-                    alle Werte von $(x,y) \in \N \times \N$ funktioniert!
+                    alle Werte von \((x,y) \in \N \times \N\) funktioniert!
                   </Paragraph>
                 </div>
                 <div class="well well-lg numbered-exercise container">
@@ -142,7 +142,7 @@ const Article = () => {
                         &ensp;2.2.2{" "}
                       </NumberedTitle>
                     </span>
-                    Zeigen Sie $\Z \times \Z \approx \Z$, indem Sie eine ähnliche
+                    Zeigen Sie \(\Z \times \Z \approx \Z\), indem Sie eine ähnliche
                     Aufdröselung finden, jetzt aber mit negativen Zahlen.
                   </Paragraph>
                 </div>
@@ -157,8 +157,8 @@ const Article = () => {
                         &ensp;2.2.3{" "}
                       </NumberedTitle>
                     </span>
-                    Zeigen Sie ganz allgemein: wenn $A \approx A'$ und $B \approx B'$,
-                    dann gilt auch $A \times B \approx A' \times B'$.
+                    Zeigen Sie ganz allgemein: wenn \(A \approx A'\) und \(B \approx B'\),
+                    dann gilt auch \(A \times B \approx A' \times B'\).
                   </Paragraph>
                 </div>
                 <div class="well well-lg numbered-exercise container">
@@ -169,8 +169,8 @@ const Article = () => {
                         &ensp;2.2.4{" "}
                       </NumberedTitle>
                     </span>
-                    Zeigen Sie, dass $\N \times \N \times \N \approx \N$ gilt und ganz
-                    allgemein: $\N^k \approx \N$.
+                    Zeigen Sie, dass \(\N \times \N \times \N \approx \N\) gilt und ganz
+                    allgemein: \(\N^k \approx \N\).
                   </Paragraph>
                 </div>
                 <div class="well well-lg numbered-exercise container">
@@ -181,17 +181,17 @@ const Article = () => {
                         &ensp;2.2.5{" "}
                       </NumberedTitle>
                     </span>
-                    Sei $\N^*$ die Menge aller endlichen Folgen natürlicher Zahlen, also
+                    Sei \(\N^*\) die Menge aller endlichen Folgen natürlicher Zahlen, also
                   </Paragraph>
                   $$\begin&#123;align*&#125; \N^* := \&#123;\epsilon\&#125; \cup \N \cup \N^2 \cup \N^3 \cup
-                  \dots \ , \end&#123;align*&#125;$$ wobei $\epsilon$ die leere Folge (mit 0
-                  Gliedern) bezeichnet. Zeigen Sie $\N^* \approx \N$.
+                  \dots \ , \end&#123;align*&#125;$$ wobei \(\epsilon\) die leere Folge (mit 0
+                  Gliedern) bezeichnet. Zeigen Sie \(\N^* \approx \N\).
                 </div>
                 <h2>
                   Rationale Zahlen
                 </h2>
                 <Paragraph>
-                  Ich will Sie nun davon überzeugen, dass $\Q \approx \N$ ist, dass es
+                  Ich will Sie nun davon überzeugen, dass \(\Q \approx \N\) ist, dass es
                   also "gleich viele rationale wie natürliche Zahlen" gibt. Ich beginne
                   mit etwas Einfacherem:
                 </Paragraph>
@@ -205,7 +205,7 @@ const Article = () => {
                       .
                     </span>
                     &ensp;Es gibt eine
-                    injektive Funktion $f : \Q \rightarrow \N$.
+                    injektive Funktion \(f : \Q \rightarrow \N\).
                   </Paragraph>
                 </div>
                 <div class="well container">
@@ -214,60 +214,48 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    Falls Sie es vergessen haben: eine Funktion $f: A \rightarrow B$
-                    heißt injektiv, wenn für alle verschiedenen $a, a' \in A$ auch $f(a)
-                    \ne f(a')$ gilt. Wenn $f$ also "kollisionsfrei" ist.
+                    Falls Sie es vergessen haben: eine Funktion \(f: A \rightarrow B\)
+                    heißt injektiv, wenn für alle verschiedenen \(a, a' \in A\) auch \(f(a)
+                    \ne f(a')\) gilt. Wenn \(f\) also "kollisionsfrei" ist.
                   </Paragraph>
                   <Paragraph>
-                    Sei $q \in \Q$ eine rationale Zahl. Wir können $q$ als gekürzten
+                    Sei \(q \in \Q\) eine rationale Zahl. Wir können \(q\) als gekürzten
                     Bruch schreiben, also
                   </Paragraph>
                   $$\begin&#123;align*&#125; q = \frac&#123;a&#125;&#123;b&#125; \end&#123;align*&#125;$$
                   <Paragraph>
-                    mit $a \in \Z$ und $b \in \N^+$ und $\gcd(a,b) = 1$. Mit $\gcd(a,b)$
+                    mit \(a \in \Z\) und \(b \in \N^+\) und \(\gcd(a,b) = 1\). Mit \(\gcd(a,b)\)
                     bezeichnen wir den größten gemeinsamen Teiler (
                     <i>
                       greatest common divisor
                     </i>
-                    ) von $a$ und $b$. Wir definieren nun also $f
-                    <i>
-                      1(q) := (a,b) \in \Z
-                      \times \N$. Dies ist injektiv: zwei verschiedene rationale Zahlen
-                      $q$ und $q'$ haben verschiedene Darstellung als gekürzter Bruch, und
-                      somit gilt auch $f
-                    </i>
-                    1(q) \ne f_1(q')$.
+                    ) von \(a\) und \(b\). Wir definieren nun also \(f_1(q) := (a,b) \in \Z
+                    \times \N\). Dies ist injektiv: zwei verschiedene rationale Zahlen
+                    \(q\) und \(q'\) haben verschiedene Darstellung als gekürzter Bruch, und
+                    somit gilt auch \(f_1(q) \ne f_1(q')\).
                   </Paragraph>
                   <Paragraph>
-                    Wir haben nun also eine Injektion $f
-                    <i>
-                      1 : \Q \rightarrow \Z \times
-                      \N$. Mit
-                      <span
-                        data-ref="exercise-cartesian-product"
-                        class="reference" />
-                      und{" "}
-                      <span
-                        data-ref="theorem-N-N^2"
-                        class="reference" />
-                      gilt $\Z \times \N \approx \N \times \N \approx \N$, und somit gibt
-                      es eine Bijektion $f
-                    </i>
-                    2 : \Z \times \N \rightarrow \N$. Die
-                    Verknüpfung $f := f
-                    <i>
-                      2 \circ f
-                    </i>
-                    1 : \Q \rightarrow \N$ ist nun die
-                    gewünschte injektive Funktion $f$ von $\$Q$ nach $\N$.
+                    Wir haben nun also eine Injektion \(f_1 : \Q \rightarrow \Z \times
+                    \N\). Mit
+                    <span
+                      data-ref="exercise-cartesian-product"
+                      class="reference" />
+                    und{" "}
+                    <span
+                      data-ref="theorem-N-N^2"
+                      class="reference" />
+                    gilt \(\Z \times \N \approx \N \times \N \approx \N\), und somit gibt
+                    es eine Bijektion \(f_2 : \Z \times \N \rightarrow \N\). Die
+                    Verknüpfung \(f := f_2 \circ f_1 : \Q \rightarrow \N\) ist nun die
+                    gewünschte injektive Funktion \(f\) von \(\$Q\) nach \(\N\).
                   </Paragraph>
                   <span class="qed">
                     \(\square\)
                   </span>
                 </div>
                 <Paragraph>
-                  Dies ist leider keine Bijektion: das Paar $(6,9)$ beispielsweise wird
-                  nie vorkommen, weil $\frac&#123;6&#125;&#123;9&#125;$ nicht gekürzt ist.
+                  Dies ist leider keine Bijektion: das Paar \((6,9)\) beispielsweise wird
+                  nie vorkommen, weil \(\frac&#123;6&#125;&#123;9&#125;\) nicht gekürzt ist.
                 </Paragraph>
                 <div class="well container theorem">
                   <Paragraph>
@@ -279,7 +267,7 @@ const Article = () => {
                       :
                     </span>
                     &ensp;Es gibt eine
-                    injektive Funktion $g: \N \rightarrow \Q$.
+                    injektive Funktion \(g: \N \rightarrow \Q\).
                   </Paragraph>
                 </div>
                 <div class="well container">
@@ -288,8 +276,8 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    {" "}Dies ist ganz einach: da $\N \subseteq \Q$
-                    gilt, können wir jedes $n$ einfach bei sich belassen. Die Funktion
+                    {" "}Dies ist ganz einach: da \(\N \subseteq \Q\)
+                    gilt, können wir jedes \(n\) einfach bei sich belassen. Die Funktion
                   </Paragraph>
                   $$\begin&#123;align*&#125; g : \N&amp;\rightarrow \Q \\ n&amp;\mapsto n \end&#123;align*&#125;$$
                   <Paragraph>
@@ -297,7 +285,7 @@ const Article = () => {
                     <i>
                       Einbettung
                     </i>
-                    {" "}von $\N$ in $\Q$.
+                    {" "}von \(\N\) in \(\Q\).
                     <span class="qed">
                       \(\square\)
                     </span>
@@ -305,15 +293,15 @@ const Article = () => {
                 </div>
                 <Paragraph>
                   Wir sind nun also in der sonderbaren Situation, dass wir eine
-                  injektive Funktion $f : \Q \rightarrow \N$ haben, die aber nicht alle
-                  $\N$ ausfüllt, also nicht{" "}
+                  injektive Funktion \(f : \Q \rightarrow \N\) haben, die aber nicht alle
+                  \(\N\) ausfüllt, also nicht{" "}
                   <i>
                     surjektiv
                   </i>
                   {" "}ist. Gleichzeitig haben
-                  wir $g : \N \rightarrow \Q$, die injektiv ist aber auch nicht
-                  surjektiv. Bei $f$ bleiben also manche natürlichen Zahlen ungenutzt,
-                  bei $g$ bleiben rationale Zahlen ungenutzt. Können wir $f$ und $g$
+                  wir \(g : \N \rightarrow \Q\), die injektiv ist aber auch nicht
+                  surjektiv. Bei \(f\) bleiben also manche natürlichen Zahlen ungenutzt,
+                  bei \(g\) bleiben rationale Zahlen ungenutzt. Können wir \(f\) und \(g\)
                   irgendwie kombinieren, um eine bijektive Funktion zu erschaffen? Die
                   Antwort lautet{" "}
                   <i>
@@ -339,7 +327,7 @@ const Article = () => {
                         &ensp;2.2.4{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Es gilt $\Q \approx \N$.
+                    &ensp;Es gilt \(\Q \approx \N\).
                   </Paragraph>
                 </div>
                 <div class="well container">
@@ -348,13 +336,13 @@ const Article = () => {
                     <b>
                       Beweis.
                     </b>
-                    Wir definieren eine Bijektion $f: \N \rightarrow \Q$, indem wir die
+                    Wir definieren eine Bijektion \(f: \N \rightarrow \Q\), indem wir die
                     Beweisidee von
                     <span
                       data-ref="theorem-N-N^2"
                       class="reference" />
-                    wiederholen. Wir zeichnen $\Z \times \N^+$ schematisch, löschen aber
-                    die Paare $(a,b)$, die nicht einem gekürzten Bruch entsprechen.
+                    wiederholen. Wir zeichnen \(\Z \times \N^+\) schematisch, löschen aber
+                    die Paare \((a,b)\), die nicht einem gekürzten Bruch entsprechen.
                   </Paragraph>
                   <figure>
                     <img
@@ -362,13 +350,13 @@ const Article = () => {
                       src="../img/infinite-sets/Z-times-N-removed.svg" />
                   </figure>
                   <Paragraph>
-                    Die Punkte sind die Elemente von $\Z \times \N^+$. Die schwarzen
-                    Punkte sind jene Punkte $(x,y)$ mit $\gcd(x,y)=1$. Diese stehen nun
+                    Die Punkte sind die Elemente von \(\Z \times \N^+\). Die schwarzen
+                    Punkte sind jene Punkte \((x,y)\) mit \(\gcd(x,y)=1\). Diese stehen nun
                     in Bijektion mit den rationalen Zahlen. Die entsprechenden
                     rationalen Zahlen habe ich daneben geschrieben - die negativen habe
                     ich aus Gründen der Übersichtlichkeit weggelassen. Sie befinden sich
                     spiegelverkehrt auf der linken Seite. Wir müssen nun eine Aufzählung
-                    der schwarzen Punkte finden, also eine Bijektion von $\N$ in die
+                    der schwarzen Punkte finden, also eine Bijektion von \(\N\) in die
                     Menge der schwarzen Punkte:
                   </Paragraph>
                   <figure>
@@ -379,13 +367,13 @@ const Article = () => {
                   <Paragraph>
                     Das funktioniert natürlich: wir überspringen einfach die gelöschten
                     Punkte. Wir können allerdings nicht bequem eine geschlossene Formel
-                    dafür angeben. Auf dem "fünften Hütchen", das von $\frac&#123;4&#125;&#123;1&#125;$ nach
-                    $\frac&#123;-4&#125;&#123;1&#125;$ läuft, sind zum Beispiel alle Punkte bis auf $(0,5)$
-                    schwarz, was daran liegt, dass $5$ eine Primzahl ist und somit alle
-                    $(x,y)$ mit $x+y = 5$ und $x, y \geq 1$ teilerfremd sind. Streng
+                    dafür angeben. Auf dem "fünften Hütchen", das von \(\frac&#123;4&#125;&#123;1&#125;\) nach
+                    \(\frac&#123;-4&#125;&#123;1&#125;\) läuft, sind zum Beispiel alle Punkte bis auf \((0,5)\)
+                    schwarz, was daran liegt, dass \(5\) eine Primzahl ist und somit alle
+                    \((x,y)\) mit \(x+y = 5\) und \(x, y \geq 1\) teilerfremd sind. Streng
                     genommen müssten wir uns davon überzeugen, dass unendlich viele
                     schwarze Punkte übrigbleiben. Das ist aber einfach, weil alle Punkte
-                    der Form $(x,1)$ der Zahl $\frac&#123;x&#125;&#123;1&#125;$ entsprechen, und das ist ja
+                    der Form \((x,1)\) der Zahl \(\frac&#123;x&#125;&#123;1&#125;\) entsprechen, und das ist ja
                     ein gekürzter Bruch.
                     <span class="qed">
                       \(\square\)
@@ -395,9 +383,9 @@ const Article = () => {
                 <h2>
                   Endliche Strings
                 </h2>
-                Erinnern wir uns an $\&#123;0,1\&#125;^*$, die Menge aller endlichen Bitstrings.
-                Die Menge ist ganz klar unendlich, weil sie zum Beispiel $1, 11, 111,
-                1111, \dots$ enthält. Ist sie{" "}
+                Erinnern wir uns an \(\&#123;0,1\&#125;^*\), die Menge aller endlichen Bitstrings.
+                Die Menge ist ganz klar unendlich, weil sie zum Beispiel \(1, 11, 111,
+                1111, \dots\) enthält. Ist sie{" "}
                 <i>
                   abzählbar
                 </i>
@@ -410,8 +398,8 @@ const Article = () => {
                         &ensp;2.2.5{" "}
                       </NumberedTitle>
                     </span>
-                    &ensp;Es gilt $\&#123;0,1\&#125;^*
-                    \approx \N$.
+                    &ensp;Es gilt \(\&#123;0,1\&#125;^*
+                    \approx \N\).
                   </Paragraph>
                 </div>
                 <div class="well container">
@@ -421,17 +409,13 @@ const Article = () => {
                       Beweis.
                     </b>
                     {" "}Hier ist eine Idee: wir interpretieren den
-                    Bitstring $a
-                    <i>
-                      1 a
-                    </i>
-                    2 \dots a_n$ als $n$-stellige Binärzahl, also
+                    Bitstring \(a_1 a_2 \dots a_n\) als \(n\)-stellige Binärzahl, also
                   </Paragraph>
                   $$\begin&#123;align*&#125; f(a_1 a_2 \dots a_n) := \sum_&#123;i=1&#125;^n a_i 2^&#123;n-i&#125; \ .
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Leider geht das schief, weil $0$, $00$, $000$ etc. alle auf $0$
-                    abgebildet werden. Ebenso $1$, $01$, $001$ und so weiter. Wir
+                    Leider geht das schief, weil \(0\), \(00\), \(000\) etc. alle auf \(0\)
+                    abgebildet werden. Ebenso \(1\), \(01\), \(001\) und so weiter. Wir
                     könnten uns behelfen und dem String eine 1 voranstellen, also
                     beispielsweise
                   </Paragraph>
@@ -444,9 +428,9 @@ const Article = () => {
                   \mapsto 2^n + \sum_&#123;i=1&#125;^n a_i 2^&#123;n-i&#125; \ . \end&#123;align*&#125;$$
                   <Paragraph>
                     Eine äquivalente Interpretation: wir sortieren erst einmal die
-                    Bitstrings nach ihrer Länge. Dann gehen wir $\&#123;0,1\&#125;^n$
-                    lexicographisch durch, also von $00\dots0$ bis $11\dots$. Diese
-                    Reihenfolge durchläuft ganz $\&#123;0,1\&#125;^*$ und ordnet jedem Bitstring
+                    Bitstrings nach ihrer Länge. Dann gehen wir \(\&#123;0,1\&#125;^n\)
+                    lexicographisch durch, also von \(00\dots0\) bis \(11\dots\). Diese
+                    Reihenfolge durchläuft ganz \(\&#123;0,1\&#125;^*\) und ordnet jedem Bitstring
                     eine natürliche Zahl zu. Also:
                   </Paragraph>
                   $$\begin&#123;align*&#125; \begin&#123;array&#125;&#123;c|c&#125; \epsilon&amp;0&amp;1&amp;00&amp;01&amp;10&amp;11
@@ -454,14 +438,14 @@ const Article = () => {
                   4&amp;5&amp;6&amp;7&amp;8&amp;9&amp;10&amp;11&amp;12&amp;13&amp;14&amp;15 \end&#123;array&#125;
                   \end&#123;align*&#125;$$
                   <Paragraph>
-                    Das haut nicht ganz hin, weil die $0$ nie drankommt. In der Tat
-                    stellt die obige Tabelle eine Bijektion $\&#123;0,1\&#125;^* \rightarrow \N^+$
+                    Das haut nicht ganz hin, weil die \(0\) nie drankommt. In der Tat
+                    stellt die obige Tabelle eine Bijektion \(\&#123;0,1\&#125;^* \rightarrow \N^+\)
                     dar. Dies ist leicht korrigiert, indem wir 1 abziehen: die Funktion
                   </Paragraph>
                   $$\begin&#123;align*&#125; g : \&#123;0,1\&#125;^*&amp;\rightarrow \N \\ a_1 a_2 \dots a_n&
                   \mapsto 2^n - 1 + \sum_&#123;i=1&#125;^n a_i 2^&#123;n-i&#125; \ . \end&#123;align*&#125;$$
                   <Paragraph>
-                    ist eine Bijektion von $\&#123;0,1\&#125;^*$ nach $\N$.
+                    ist eine Bijektion von \(\&#123;0,1\&#125;^*\) nach \(\N\).
                   </Paragraph>
                   <span class="qed">
                     \(\square\)
@@ -478,21 +462,17 @@ const Article = () => {
                         &ensp;2.2.6{" "}
                       </NumberedTitle>
                     </span>
-                    Definieren Sie eine Bijektion von $\&#123;0,1,2,3\&#125;$^* nach $\N$.
+                    Definieren Sie eine Bijektion von \(\&#123;0,1,2,3\&#125;\)^* nach \(\N\).
                   </Paragraph>
                   <Paragraph>
-                    Weil das "Alphabet" $\&#123;0,1,2,3\&#125;$ die Größe $4 = 2^2$ hat, können
+                    Weil das "Alphabet" \(\&#123;0,1,2,3\&#125;\) die Größe \(4 = 2^2\) hat, können
                     Sie sich mit einem kleinen Taschenspielertrick behelfen. Schwieriger
-                    wird es mit $\&#123;0,1,2\&#125;^
-                    <b>
-                      $. Zeigen Sie, dass $\&#123;0,1,2\&#125;^
-                    </b>
-                    {" "}\approx \N$
+                    wird es mit \(\&#123;0,1,2\&#125;^*\). Zeigen Sie, dass \(\&#123;0,1,2\&#125;^* \approx \N\)
                     gilt.
                   </Paragraph>
                   <Paragraph>
-                    Zeigen Sie ganz allgemein: wenn $\Sigma$ eine endliche Menge ist,
-                    dann gilt $\Sigma^* \approx \N$.
+                    Zeigen Sie ganz allgemein: wenn \(\Sigma\) eine endliche Menge ist,
+                    dann gilt \(\Sigma^* \approx \N\).
                   </Paragraph>
                 </div>
               </div>

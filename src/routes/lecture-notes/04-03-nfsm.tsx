@@ -308,8 +308,8 @@ const Article = () => {
                       &ensp;4.3.1{" "}
                     </NumberedTitle>
                   </span>
-                  Sei \(\Sigma = \&#123;1\&#125;\) und \(L_k := \&#123;1^n \ | \textnormal&#123; $n$ ist
-                  durch $k$ teilbar&#125; \&#125;\). Schreiben Sie für \(L_k\) einen
+                  Sei \(\Sigma = \&#123;1\&#125;\) und \(L_k := \&#123;1^n \ | \textnormal&#123; \)\(n\)\( ist
+                  durch \)\(k\)\( teilbar&#125; \&#125;\). Schreiben Sie für \(L_k\) einen
                   deterministischen endlichen Automaten.
                   <Paragraph>
                     Schreiben Sie eine reguläre Grammatik für die Sprache \(L_5 \cup

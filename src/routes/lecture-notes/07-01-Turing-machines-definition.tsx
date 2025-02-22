@@ -113,12 +113,12 @@ const Article = () => {
                   </i>
                   , wo uns nur
                   eine Ja/Nein-Antwort interessiert, wird die Antwort durch den Entzustand angegeben:
-                  der Zustand $\qaccept$ entspricht einem{" "}
+                  der Zustand \(\qaccept\) entspricht einem{" "}
                   <i>
                     Ja
                   </i>
                   , der Zustand
-                  $\qreject$ entspricht einem{" "}
+                  \(\qreject\) entspricht einem{" "}
                   <i>
                     Nein
                   </i>
@@ -129,7 +129,7 @@ const Article = () => {
                     Ausgabe der Turingmaschine
                   </i>
                   {" "}den Inhalt des Bandes zu dem
-                  Zeitpunkt, da die Maschine den Zustand $\qaccept$ erreicht.
+                  Zeitpunkt, da die Maschine den Zustand \(\qaccept\) erreicht.
                   Was brauchen wir also, um so eine Turingmaschine
                   und ihre Arbeitsweise zu beschreiben?
                 </Paragraph>
@@ -199,7 +199,7 @@ const Article = () => {
                       nicht zu bewegen.
                     </li>
                     <li>
-                      Zwei besonderen Zuständen $\qaccept$ und $\qreject$.
+                      Zwei besonderen Zuständen \(\qaccept\) und \(\qreject\).
                     </li>
                   </ol>
                 </div>
@@ -265,7 +265,7 @@ const Article = () => {
                   </i>
                   {" "}\(C = uqv\) ist \(q\), also der innere
                   Zustand, in dem sich die Maschine gerade befindet.
-                  Wir bezeichnen mit $\state(C)$. Formal:
+                  Wir bezeichnen mit \(\state(C)\). Formal:
                   $$\begin&#123;align*&#125;
                   \state: \mathcal&#123;C&#125;&amp;\rightarrow Q \\
                   uqv&amp;\mapsto q \ .
@@ -275,12 +275,12 @@ const Article = () => {
                   <i>
                     akzeptierende Endkonfiguration
                   </i>
-                  {" "}wenn $\state(C) = \qaccept$ ist;
+                  {" "}wenn \(\state(C) = \qaccept\) ist;
                   eine{" "}
                   <i>
                     ablehnende Endkonfiguration
                   </i>
-                  {" "}, wenn $\state(C) = \qreject$ ist.
+                  {" "}, wenn \(\state(C) = \qreject\) ist.
                   In beiden Fällen ist \(C\) eine{" "}
                   <i>
                     Endkonfiguration
@@ -288,7 +288,7 @@ const Article = () => {
                   .
                 </div>
                 <Paragraph>
-                  Wenn also das Eingabewort \(w \in \Sigma^*\) und $\qstart$ der Startzustand ist, dann ist
+                  Wenn also das Eingabewort \(w \in \Sigma^*\) und \(\qstart\) der Startzustand ist, dann ist
                   $$\begin&#123;align*&#125;
                   C_&#123;\rm start&#125; = \qstart&#123;&#125; w
                   \end&#123;align*&#125;$$
@@ -344,12 +344,12 @@ const Article = () => {
                       loading="lazy" />
                   </figure>
                   <Paragraph>
-                    Alternativ können wir auch der Turingmaschine verbieten, das Blank-Symbol $\Box$ jemals
+                    Alternativ können wir auch der Turingmaschine verbieten, das Blank-Symbol \(\Box\) jemals
                     zu schreiben. Dann wäre also
-                    $\delta: Q \times \Gamma \rightarrow Q \times (\Gamma \setminus \&#123;\Box\&#125;) \times \lsr$.
+                    \(\delta: Q \times \Gamma \rightarrow Q \times (\Gamma \setminus \&#123;\Box\&#125;) \times \lsr\).
                     All diese Betrachtungsweisen unterscheiden sich nicht wesentlich. Wir bleiben
-                    bei unserem "alten" $\delta$, erlauben also, $\Box$ zu schreiben, und
-                    leben damit, dass $uqv$ und $\Box \Box u q v \Box$ formal zwei verschiedene Konfigurationen
+                    bei unserem "alten" \(\delta\), erlauben also, \(\Box\) zu schreiben, und
+                    leben damit, dass \(uqv\) und \(\Box \Box u q v \Box\) formal zwei verschiedene Konfigurationen
                     sind, auch wenn beide irgendwie das selbe beschreiben.
                   </Paragraph>
                 </div>
@@ -387,9 +387,9 @@ const Article = () => {
                 \hat&#123;\delta&#125;(abAq_2bba\#)&amp;= abAaq_3ba\# \\
                 \end&#123;align*&#125;$$
                 gelten. Sie sehen:
-                Die Definition von $\hat&#123;\delta&#125;$ ist nichts wirklich Tiefgründiges, sondern einfach
+                Die Definition von \(\hat&#123;\delta&#125;\) ist nichts wirklich Tiefgründiges, sondern einfach
                 eine Implementierung der Turingmaschinen-Momentaufnahme mit uns bereits
-                geläufigen mathematischen "Datenstrukturen" (hier: der Menge $\Gamma^* \times Q \times \Gamma^*$).
+                geläufigen mathematischen "Datenstrukturen" (hier: der Menge \(\Gamma^* \times Q \times \Gamma^*\)).
                 Stellen Sie sich einfach
                 vor, Sie müssten eine Turingmaschine in Java implementieren. Dann würden Sie es wahrscheilich
                 irgendwie so ähnlich machen.
@@ -405,7 +405,7 @@ const Article = () => {
                 also die Konfiguration, die die Turingmaschine nach \(i\) Rechenschritten erreicht hat.
                 Weiterhin definieren wir
                 \(\hat&#123;\delta&#125;^* (C)\) als die Endkonfiguration, die bei wiederholter
-                Anwendung von $\hat&#123;\delta&#125;$ schlussendlich erreicht wird.
+                Anwendung von \(\hat&#123;\delta&#125;\) schlussendlich erreicht wird.
                 Hier taucht ein Problem auf: es ist nicht gesagt, dass die Turingmaschine,
                 von Konfiguration \(C\) beginnend, überhaupt irgendwann in einer Endkonfiguration landen
                 wird. Daher kann \(\hat&#123;\delta&#125;^*\) auch{" "}
@@ -421,14 +421,14 @@ const Article = () => {
                 \end&#123;cases&#125;
                 \end&#123;align*&#125;$$
                 <Paragraph>
-                  Nochmal zur Verdeutlichung: wenn $\delta^&#123;(i)&#125;(C)$ eine Endkonfiguration ist,
-                  dann ist auch $\delta^&#123;(j)&#125;(C)$ eine, für jedes $j \geq i$, weil
-                  wir $\hat&#123;\delta&#125;(C') = C'$ für jede Endkonfiguration $C'$ definiert haben.
+                  Nochmal zur Verdeutlichung: wenn \(\delta^&#123;(i)&#125;(C)\) eine Endkonfiguration ist,
+                  dann ist auch \(\delta^&#123;(j)&#125;(C)\) eine, für jedes \(j \geq i\), weil
+                  wir \(\hat&#123;\delta&#125;(C') = C'\) für jede Endkonfiguration \(C'\) definiert haben.
                   Es spielt also in der obigen Formulierung
                   <i>
-                    wenn es ein $i$ gibt
+                    wenn es ein \(i\) gibt
                   </i>
-                  {" "}keine Rolle, welches solche $i$ wir wählen.
+                  {" "}keine Rolle, welches solche \(i\) wir wählen.
                 </Paragraph>
                 Für ein Eingabewort \(x \in \Sigma^*\) können wir nun das Ergebnis der Berechnung
                 von Turingmaschine \(M\) auf \(x = x_1 \dots x_n\) definieren:
@@ -546,7 +546,7 @@ const Article = () => {
                   x \in L \Longleftrightarrow f_M(x) = \texttt&#123;accept&#125;
                   \end&#123;align*&#125;$$
                   für alle \(x \in \Sigma^*\) gilt. Das heißt, dass \(M\) für \(x \not \in \Sigma^*\)
-                  entweder irgendwann den Endzustand $\qreject$ erreicht oder
+                  entweder irgendwann den Endzustand \(\qreject\) erreicht oder
                   nie einen Endzustand erreicht.
                   <Paragraph>
                     Eine Sprache \(L \subseteq \Sigma^*\) heißt{" "}
@@ -607,12 +607,12 @@ const Article = () => {
                       ist also weder Teil das Eingabealphabets noch des Ausgabealphabets.
                     </li>
                     <li>
-                      $M$ terminiert für jedes $x \in \Sigma^*$.
+                      \(M\) terminiert für jedes \(x \in \Sigma^*\).
                     </li>
                     <li>
-                      &ensp;In der Endkonfiguration $\hat&#123;M&#125;(x)$ steht auf dem Arbeitsband das
+                      &ensp;In der Endkonfiguration \(\hat&#123;M&#125;(x)\) steht auf dem Arbeitsband das
                       Wort \(g(x) \in \Sigma_2^*\) und der Kopf steht ganz links, also
-                      $\hat&#123;M&#125;(x) = \qaccept&#123;&#125; g(x)$.
+                      \(\hat&#123;M&#125;(x) = \qaccept&#123;&#125; g(x)\).
                     </li>
                   </ol>
                 </div>

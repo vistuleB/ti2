@@ -585,7 +585,7 @@ const Article = () => {
                   Bereits im Kapitel über reguläre Sprachen haben wir gesehen, dass
                   Nichtdeterminismus hilfreich ist, wenn wir Dinge beschreiben wollen,
                   auch wenn es kein realistisches Modell für Rechenmaschinen darstellt.
-                  Die Sprache aller Wörter über $\&#123;a,b\&#125;$, die das Teilwort \(aababaa\)
+                  Die Sprache aller Wörter über \(\&#123;a,b\&#125;\), die das Teilwort \(aababaa\)
                   enthalten, kann man beispielsweise leicht mit dem folgenden Automaten
                   beschreiben:
                   <figure>
@@ -749,7 +749,7 @@ const Article = () => {
                     erreichen, wo auf dem ersten Band der Kopf auf dem : steht und auf
                     dem zweiten Band $$\begin&#123;align*&#125; + 6 + 19 + 58 + 1 + 13 \end&#123;align*&#125;$$
                     aber eben auch jede beliebige andere Summe. Im Zustand
-                    $\texttt&#123;add&#125;$ aufgerufen, muss nun die Turingmaschine alle diese
+                    \(\texttt&#123;add&#125;\) aufgerufen, muss nun die Turingmaschine alle diese
                     Zahlen auf dem zweiten Band addieren (lästig, geht aber irgendwie)
                     und dann in einer dritten Phase mit der Zahl rechts vom :
                     vergleichen. Stimmen sie überein, akzeptiert die Turingmaschine,
