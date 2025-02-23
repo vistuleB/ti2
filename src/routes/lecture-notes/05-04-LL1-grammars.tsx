@@ -841,22 +841,6 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                 </div>
                 <figure class="centered-figure well container">
-                  <a
-                    data-slide-to={0}
-                    href="#compute-first-2"
-                    class="left carousel-control-prev-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-jump-to-start.svg" />
-                    </div>
-                  </a>
-                  <a
-                    data-slide-to={48}
-                    href="#compute-first-2"
-                    class="right carousel-control-next-icon">
-                    <div class="carousel-nav-icon">
-                      <img src="../img/carousel-jump-to-end.svg" />
-                    </div>
-                  </a>
                   <Carousel>
                     <img
                       style="height:24em"

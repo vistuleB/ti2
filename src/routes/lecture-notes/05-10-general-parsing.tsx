@@ -461,23 +461,7 @@ const Article = () => {
                     und das Eingabewort \(xyxxz\).
                   </Paragraph>
                   <figure class="centered-figure well container-fluid">
-                    <a
-                      data-slide-to={0}
-                      href="#cyk-demo"
-                      class="left carousel-control-prev-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-jump-to-start.svg" />
-                      </div>
-                    </a>
-                    <a
-                      data-slide-to={37}
-                      href="#cyk-demo"
-                      class="right carousel-control-next-icon">
-                      <div class="carousel-nav-icon">
-                        <img src="../img/carousel-jump-to-end.svg" />
-                      </div>
-                    </a>
-                    <Carousel>
+                    <Carousel jumpToLast={true}>
                       <img
                         style="height:23em"
                         src="../img/context-free/CYK/01-01.svg" />
