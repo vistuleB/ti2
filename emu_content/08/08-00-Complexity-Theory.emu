@@ -36,9 +36,9 @@
                     |> h1
                         class hidden-title
                         |> span
-                            class subChapterTitle
+                            class chapterTitle
 
-                            ::::ChapterCtr.::++SectionCtr 
+                            ::++ChapterCtr. 
                             Komplexitätstheorie
                     |> p
 

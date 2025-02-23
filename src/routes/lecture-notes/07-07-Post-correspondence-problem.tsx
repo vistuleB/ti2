@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.7 
+                    7.7 
                     Mehr über Unentscheidbarkeit: Das Postsche Korrespondenzproblem
                   </span>
                 </h1>
@@ -213,7 +213,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.7.1{" "}
+                      &ensp;7.7.1{" "}
                     </NumberedTitle>
                     &ensp;(Postsches Korrespondenz-Problem, PCP)
                   </span>
@@ -308,7 +308,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;6.7.2{" "}
+                      &ensp;7.7.2{" "}
                     </NumberedTitle>
                   </span>
                   PCP ist unentscheidbar.

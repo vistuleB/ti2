@@ -108,7 +108,7 @@
 
                                     findC
                                 ;jedes andere Zeichen erzeugt einen Fehler.
-                            |> Li
+                            |> li
                                 |> tt
 
                                     findC

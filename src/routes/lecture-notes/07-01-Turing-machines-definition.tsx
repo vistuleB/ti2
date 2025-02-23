@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.1 
+                    7.1 
                     Turingmaschinen: Formale Definition und Beispiele
                   </span>
                 </h1>
@@ -138,7 +138,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;6.1.1{" "}
+                        &ensp;7.1.1{" "}
                       </NumberedTitle>
                     </span>
                     {" "}{" "}
@@ -238,7 +238,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.1.2{" "}
+                      &ensp;7.1.2{" "}
                     </NumberedTitle>
                   </span>
                   Die{" "}
@@ -361,7 +361,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.1.3{" "}
+                      &ensp;7.1.3{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -495,7 +495,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.1.4{" "}
+                      &ensp;7.1.4{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -529,7 +529,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.1.5{" "}
+                      &ensp;7.1.5{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -581,7 +581,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.1.6{" "}
+                      &ensp;7.1.6{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -636,7 +636,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;6.1.7{" "}
+                      &ensp;7.1.7{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(M\) eine Turingmaschine und \(L(M)\) die von ihr akzeptierte Sprache.
@@ -689,7 +689,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                       <NumberedTitle>
-                        &ensp;6.1.8{" "}
+                        &ensp;7.1.8{" "}
                       </NumberedTitle>
                     </span>
                     Wenn \(\hat&#123;\delta&#125;^&#123;(i)&#125; (uqv) = u'q'v'\) gilt, die Turingmaschine also in

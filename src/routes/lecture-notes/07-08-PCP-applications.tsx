@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.8 
+                    7.8 
                     Anwendungen des Postschen Korrespondenzproblems
                   </span>
                 </h1>
@@ -70,7 +70,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;6.8.1{" "}
+                      &ensp;7.8.1{" "}
                     </NumberedTitle>
                   </span>
                   &ensp;Wir wollen bestimmen, ob
@@ -232,7 +232,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.8.2{" "}
+                      &ensp;7.8.2{" "}
                     </NumberedTitle>
                   </span>
                   Seien \(L_1 \subseteq \Sigma_1\) und \(L_2 \subseteq \Sigma_2\) zwei Sprachen.
@@ -261,7 +261,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;6.8.3{" "}
+                      &ensp;7.8.3{" "}
                     </NumberedTitle>
                   </span>
                   &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
@@ -309,7 +309,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;6.8.4{" "}
+                      &ensp;7.8.4{" "}
                     </NumberedTitle>
                   </span>
                   &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
@@ -358,7 +358,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;6.8.5{" "}
+                      &ensp;7.8.5{" "}
                     </NumberedTitle>
                   </span>
                   <Paragraph>
@@ -408,7 +408,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;6.8.6{" "}
+                      &ensp;7.8.6{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}

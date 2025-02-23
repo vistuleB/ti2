@@ -271,7 +271,7 @@
                             &ensp;*(jetzt korrekt).* Sei
                             $t: \N \rightarrow \N$ zeitkonstruierbar, monoton steigend und $t(n) \geq n$. Dann gilt
                             $\bnegdiag \in \TIME_{k+3}(t)$.
-                    |> P
+                    |> p
 
                         So weit, so gut. Wonach wir allerdings aus sind, ist ein Beweis, dass $\bnegdiag$ nicht
                         signifikant schneller zu berechnen ist.

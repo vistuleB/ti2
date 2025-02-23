@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.5 
+                    7.5 
                     Turing-Maschinen simulieren Turing-Maschinen: die universelle Turing-Maschine
                   </span>
                 </h1>
@@ -116,7 +116,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                       <NumberedTitle>
-                        &ensp;6.5.1{" "}
+                        &ensp;7.5.1{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;

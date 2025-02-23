@@ -34,8 +34,8 @@ const Article = () => {
             <div class="chapter">
               <div class="subChapter">
                 <h1 class="hidden-title">
-                  <span class="subChapterTitle">
-                    6.1 
+                  <span class="chapterTitle">
+                    9. 
                     Appendix - Manual für das Schreiben dieses Skripts
                   </span>
                 </h1>

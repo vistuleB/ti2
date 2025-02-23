@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.3 
+                    7.3 
                     Variationen: Mehrband-Maschinen, nichtdeterministische Maschinen
                   </span>
                 </h1>
@@ -139,7 +139,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.3.1{" "}
+                      &ensp;7.3.1{" "}
                     </NumberedTitle>
                   </span>
                   Schreiben Sie eine Mehrband-Turingmaschine, die Binärzahlen addiert.
@@ -214,7 +214,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;6.3.1{" "}
+                      &ensp;7.3.1{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -552,7 +552,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.3.2{" "}
+                      &ensp;7.3.2{" "}
                     </NumberedTitle>
                   </span>
                   Schreiben Sie auf
@@ -654,7 +654,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;6.3.2{" "}
+                      &ensp;7.3.2{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -818,7 +818,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;6.3.3{" "}
+                      &ensp;7.3.3{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}

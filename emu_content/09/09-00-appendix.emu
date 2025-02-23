@@ -32,9 +32,9 @@
                     |> h1
                         class hidden-title
                         |> span
-                            class subChapterTitle
+                            class chapterTitle
 
-                            ::::ChapterCtr.::++SectionCtr 
+                            ::++ChapterCtr. 
                             Appendix - Manual für das Schreiben dieses Skripts
                     |> div
                         class alert-info

@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.2 
+                    7.2 
                     Beispiele von Turingmaschinen
                   </span>
                 </h1>
@@ -118,7 +118,7 @@ const Article = () => {
                       </tt>
                       ;jedes andere Zeichen erzeugt einen Fehler.
                     </li>
-                    <Li>
+                    <li>
                       <tt>
                         findC
                       </tt>
@@ -129,7 +129,7 @@ const Article = () => {
                         findA
                       </tt>
                       .
-                    </Li>
+                    </li>
                     <li>
                       <tt>
                         noA
@@ -317,7 +317,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.2.1{" "}
+                      &ensp;7.2.1{" "}
                     </NumberedTitle>
                   </span>
                   Implementieren Sie die Turingmaschine für die Palindromsprache auf
@@ -335,7 +335,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.2.2{" "}
+                      &ensp;7.2.2{" "}
                     </NumberedTitle>
                   </span>
                   Schreiben Sie eine Turingmaschine (auf{" "}
@@ -352,7 +352,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;6.2.3{" "}
+                      &ensp;7.2.3{" "}
                     </NumberedTitle>
                   </span>
                   Schreiben Sie auf{" "}

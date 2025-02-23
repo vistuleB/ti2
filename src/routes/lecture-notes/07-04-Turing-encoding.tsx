@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.4 
+                    7.4 
                     Die universelle Turingmaschine
                   </span>
                 </h1>
@@ -310,7 +310,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;6.4.1{" "}
+                        &ensp;7.4.1{" "}
                       </NumberedTitle>
                       /Beobachtung.
                     </span>

@@ -37,8 +37,8 @@ const Article = () => {
             <div class="chapter">
               <div class="subChapter">
                 <h1 class="hidden-title">
-                  <span class="subChapterTitle">
-                    6.1 
+                  <span class="chapterTitle">
+                    8. 
                     Komplexitätstheorie
                   </span>
                 </h1>
@@ -120,7 +120,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;6.1.1{" "}
+                        &ensp;8.0.1{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;Sei \(t: \N \rightarrow \N\). Eine
@@ -174,7 +174,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                       <NumberedTitle>
-                        &ensp;6.1.2{" "}
+                        &ensp;8.0.2{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;
@@ -198,7 +198,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                       <NumberedTitle>
-                        &ensp;6.1.3{" "}
+                        &ensp;8.0.3{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;

@@ -37,8 +37,8 @@ const Article = () => {
             <div class="chapter">
               <div class="subChapter">
                 <h1 class="hidden-title">
-                  <span class="subChapterTitle">
-                    5.1 
+                  <span class="chapterTitle">
+                    6. 
                     Allgemeine Grammatiken
                   </span>
                 </h1>
@@ -74,7 +74,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.1.1{" "}
+                      &ensp;6.0.1{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -114,7 +114,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.1.2{" "}
+                      &ensp;6.0.2{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -550,7 +550,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.1.1{" "}
+                      &ensp;6.0.1{" "}
                     </NumberedTitle>
                   </span>
                   Geben Sie ein formale Grammatik für
@@ -566,7 +566,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Übungsaufgabe
                     <NumberedTitle>
-                      &ensp;5.1.2{" "}
+                      &ensp;6.0.2{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(L\) die Sprache über \(\Sigma = \&#123;a,b,:,;\&#125;\)

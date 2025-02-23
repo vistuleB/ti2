@@ -38,7 +38,7 @@ const Article = () => {
               <div class="subChapter">
                 <h1 class="hidden-title">
                   <span class="subChapterTitle">
-                    6.2 
+                    8.1 
                     Das Zeithierarchietheorem
                   </span>
                 </h1>
@@ -98,7 +98,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                       <NumberedTitle>
-                        &ensp;6.2.1{" "}
+                        &ensp;8.1.1{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;Für jedes Alphabet \(\Sigma\) mit mindestens zwei
@@ -184,7 +184,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;6.2.2{" "}
+                        &ensp;8.1.2{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;
@@ -219,7 +219,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                       <NumberedTitle>
-                        &ensp;6.2.3{" "}
+                        &ensp;8.1.3{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;\(\bhalt \in \TIME_&#123;k+3&#125;(n)\).{" "}
@@ -287,7 +287,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;6.2.4{" "}
+                        &ensp;8.1.4{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;Eine Funktion \(t: \N \rightarrow \N\) heißt
@@ -312,10 +312,10 @@ const Article = () => {
                     \(\bnegdiag \in \TIME_&#123;k+3&#125;(t)\).
                   </Paragraph>
                 </div>
-                <P>
+                <Paragraph>
                   So weit, so gut. Wonach wir allerdings aus sind, ist ein Beweis, dass \(\bnegdiag\) nicht
                   signifikant schneller zu berechnen ist.
-                </P>
+                </Paragraph>
                 <div class="well container theorem">
                   <Paragraph>
                     <span class="numbered-title">
@@ -394,7 +394,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                       <NumberedTitle>
-                        &ensp;6.2.5{" "}
+                        &ensp;8.1.5{" "}
                       </NumberedTitle>
                     </span>
                     {" "}{" "}
@@ -427,7 +427,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                       <NumberedTitle>
-                        &ensp;6.2.6{" "}
+                        &ensp;8.1.6{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;
@@ -450,7 +450,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Übungsaufgabe
                       <NumberedTitle>
-                        &ensp;6.2.1{" "}
+                        &ensp;8.1.1{" "}
                       </NumberedTitle>
                     </span>
                     Zeigen Sie, dass \(n \mapsto n^2\) und \(n \mapsto 2^n\) zeitkonstruierbar sind.
