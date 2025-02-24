@@ -85,11 +85,14 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Entwerfen wir nun eine Turingmaschine für die Palindromsprache
                         \begin{align*} L := \{ w \in \{a,b\}^* \ | \ w = w^R \} \ ,
                         \end{align*} In
                         |> a
-                            href ./04-01-Turing-machines-examples.html#example-palindromes
+                            href ./04-01-Turing-machines-examples#example-palindromes
 
                             &ensp;Beispiel 4.2.2 
                         haben wir dafür eine Einband-Turingmaschine geschrieben. Deren
@@ -608,6 +611,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Beim Teilsummenproblem haben wir eine Liste von Waren (alles Unikate)
                         mit Preisen \(p_1, p_2, \dots, p_n\) und ein Guthaben \(g\) gegeben
                         und wollen wissen, ob wir unser Guthaben exakt ausgeben können. Ob es

@@ -69,6 +69,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Die folgende Grammatik über dem Alphabet \(\Sigma = \{1\}\), den
                         nichtterminalen Symbolen \(\{E,O\}\) und den Regeln \begin{align*} E&
                         \rightarrow 1O \ | \ \epsilon \\ O&amp;\rightarrow 1E \end{align*}
@@ -81,6 +84,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Die folgende Grammatik haben wir bereits im letzten Abschnitt
                         kennengelernt. Sie ist nicht regulär: \begin{align*} S&amp;\rightarrow A
                         B \\ A&amp;\rightarrow \epsilon \ | \ a A \\ B&amp;\rightarrow \epsilon \
@@ -199,7 +205,7 @@
                                 &ensp;::::ChapterCtr.::::SectionCtr.::++ExoCtr 
                         Unsere
                         |> a
-                            href ./04-00-formal-languages.html#email-context-free-grammar
+                            href ./04-00-formal-languages#email-context-free-grammar
 
                             &ensp;Grammatik für korrekte Emailadressen 
                         im letzten Abschnitt war _nicht_ regulär. Allerdings können wir

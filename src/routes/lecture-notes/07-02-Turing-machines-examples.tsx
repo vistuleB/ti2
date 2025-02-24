@@ -45,6 +45,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;7.2.1{" "}
+                    </NumberedTitle>
                   </span>
                   Betrachten wir die Sprache
                   $$\begin&#123;align*&#125;
@@ -203,6 +206,9 @@ const Article = () => {
                   class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;7.2.2{" "}
+                    </NumberedTitle>
                   </span>
                   Als zweites Beispiel nehmen wir die Palindromsprache
                   $$\begin&#123;align*&#125;

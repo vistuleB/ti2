@@ -176,7 +176,11 @@
                                 |> span
                                     class numbered-title
 
-                                    Behauptung 1.
+                                    Behauptung
+                                    |> NumberedTitle
+
+                                        &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                                    &ensp;1.
                                 &ensp;$g^{-1}(a)$ ist
                                 definiert für jedes $a \in A'$.
                         |> div
@@ -202,7 +206,11 @@
                                 |> span
                                     class numbered-title
 
-                                    Behauptung 2.
+                                    Behauptung
+                                    |> NumberedTitle
+
+                                        &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                                    &ensp;2.
                                 &ensp;$h$ ist
                                 injektiv.
                         |> div
@@ -235,7 +243,11 @@
                                 |> span
                                     class numbered-title
 
-                                    Behauptung 3.
+                                    Behauptung
+                                    |> NumberedTitle
+
+                                        &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                                    &ensp;3.
                                 &ensp;$h$ ist
                                 surjektiv.
                         |> div

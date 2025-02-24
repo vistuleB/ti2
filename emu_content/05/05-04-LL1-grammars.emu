@@ -126,6 +126,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Die Klammern-Grammatik
                         \begin{align*}
                         S&amp;\step{1} \epsilon \\
@@ -524,6 +527,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Sei
                         \begin{align*}
                         K&amp;:= \{\epsilon, a, ab, aba\} \\
@@ -667,6 +673,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Sei unsere Grammatik
                         \begin{align*}
                         S&amp;\rightarrow Xa \\

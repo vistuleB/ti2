@@ -137,6 +137,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;5.4.4{" "}
+                    </NumberedTitle>
                   </span>
                   Die Klammern-Grammatik
                   $$\begin&#123;align*&#125;
@@ -342,7 +345,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.4.4{" "}
+                      &ensp;5.4.5{" "}
                     </NumberedTitle>
                   </span>
                   Sei eine kontextfreie Grammatik \(G = (\Sigma, N, S, P)\) und eine
@@ -357,7 +360,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.4.5{" "}
+                      &ensp;5.4.6{" "}
                     </NumberedTitle>
                     /Beobachtung
                   </span>
@@ -538,7 +541,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.4.6{" "}
+                      &ensp;5.4.7{" "}
                     </NumberedTitle>
                   </span>
                   Seien \(K, L \subseteq \Sigma^*\) zwei Mengen.
@@ -567,6 +570,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;5.4.8{" "}
+                    </NumberedTitle>
                   </span>
                   Sei
                   $$\begin&#123;align*&#125;
@@ -587,7 +593,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;5.4.7{" "}
+                      &ensp;5.4.9{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -677,7 +683,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;5.4.8{" "}
+                      &ensp;5.4.10{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(X\) ein Nichtterminal und
@@ -735,7 +741,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;5.4.9{" "}
+                      &ensp;5.4.11{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(\sigma\) ein Symbol und \(d \in \N\). Dann ist
@@ -747,6 +753,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;5.4.12{" "}
+                    </NumberedTitle>
                   </span>
                   Sei unsere Grammatik
                   $$\begin&#123;align*&#125;
@@ -817,7 +826,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;5.4.10{" "}
+                      &ensp;5.4.13{" "}
                     </NumberedTitle>
                   </span>
                   Falls \(\First_&#123;k&#125;^&#123;(d-1)&#125;(X)=\First_&#123;k&#125;^&#123;(d)&#125;(X)\) für alle \(X \in N\), dann gilt

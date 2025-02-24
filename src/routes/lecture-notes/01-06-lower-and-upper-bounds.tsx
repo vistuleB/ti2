@@ -101,6 +101,9 @@ const Article = () => {
                     <Paragraph>
                       <span class="numbered-title">
                         Behauptung
+                        <NumberedTitle>
+                          &ensp;1.6.2{" "}
+                        </NumberedTitle>
                       </span>
                       &ensp;Sei \(s \geq n \geq 1\). Dann gibt es
                       höchstens
@@ -287,7 +290,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                       <NumberedTitle>
-                        &ensp;1.6.2{" "}
+                        &ensp;1.6.3{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;

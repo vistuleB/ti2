@@ -54,7 +54,7 @@ const Article = () => {
                   Beschreibungsweise die sein, mit der Sie in der Praxis
                   am ehesten in Berührung kommen.
                   Wir haben bereits in{" "}
-                  <a href="./04-01-regular-grammars.html#baukasten">
+                  <a href="./04-01-regular-grammars#baukasten">
                     &ensp;Kapitel 4.1{" "}
                   </a>
                   &ensp;das
@@ -144,7 +144,7 @@ const Article = () => {
                       und die Sprachen \(L_1\) und \(L_2\) beschreiben, so ist
                       \((R_1 | R_2)\) ein regulärer Ausdruck und beschreibt die Sprache
                       \(L_1 \cup L_2\) (die regulär ist, wie wir in{" "}
-                      <a href="./04-01-regular-grammars.html#baukasten">
+                      <a href="./04-01-regular-grammars#baukasten">
                         &ensp;Kapitel 4.1{" "}
                       </a>
                       &ensp;gesehen haben).
@@ -206,7 +206,7 @@ const Article = () => {
                   </i>
                   {" "}sind.
                   Dank unserer Vorarbeit aus{" "}
-                  <a href="./04-01-regular-grammars.html#baukasten">
+                  <a href="./04-01-regular-grammars#baukasten">
                     &ensp;Kapitel 4.1{" "}
                   </a>
                   wissen wir,
@@ -227,6 +227,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.5.2{" "}
+                    </NumberedTitle>
                   </span>
                   Nehmen wir die Sprache der Wörter der Form{" "}
                   <code>
@@ -397,7 +400,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;4.5.2{" "}
+                      &ensp;4.5.3{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(L\) eine reguläre Sprache. Dann gibt es einen regulären Ausdruck \(R\), der \(L\)
@@ -468,7 +471,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;4.5.3{" "}
+                        &ensp;4.5.4{" "}
                       </NumberedTitle>
                     </span>
                     {" "}{" "}

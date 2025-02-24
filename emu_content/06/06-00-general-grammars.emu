@@ -120,6 +120,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Betrachten wir die allgemeine Grammatik mit
                         Terminalalphabet \(\Sigma = \{a,b,c\}\), Nichtterminalsymbolen
                         \(N = \{S, A, B, C\}\), Startsymbol \(S\) und den Produktionen
@@ -170,6 +173,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Versuchen wir nun, eine allgemeine formale Grammatik für die Sprache
                         \begin{align*}
                         L = \{a^nb^nc^n \ | \ n \geq 0\}
@@ -284,6 +290,9 @@
                                 class numbered-title
 
                                 Behauptung
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             Sei \(\#_{A,a}(\beta)\) die Anahl der \(A\) und \(a\) in der Wortform \(\beta\).
                             Wenn \(S \Step{} \beta\), dann gilt
                             |> ol
@@ -336,15 +345,18 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Im 
                         |> a
-                            href ./05-10-not-context-free.html
+                            href ./05-10-not-context-free
 
                             &ensp;Teilkapitel 5.10 
                         &ensp;gab
                         es 
                         |> a
-                            href ./05-10-not-context-free.html#exericse-power-2
+                            href ./05-10-not-context-free#exericse-power-2
 
                             &ensp;Übungsaufgabe 5.10.2 
                         ,
@@ -398,6 +410,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Sei \(L\) die Sprache aller Wörter über
                         \(\Sigma = \{1\}\), deren Länge eine Quadratzahl ist.
                         Wir werden als erstes eine _Multiplikationsgrammatik_ erzeugen.

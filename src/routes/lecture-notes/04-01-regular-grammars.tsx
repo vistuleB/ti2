@@ -76,6 +76,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.1.2{" "}
+                    </NumberedTitle>
                   </span>
                   Die folgende Grammatik über dem Alphabet \(\Sigma = \&#123;1\&#125;\), den
                   nichtterminalen Symbolen \(\&#123;E,O\&#125;\) und den Regeln $$\begin&#123;align*&#125; E&
@@ -88,6 +91,9 @@ const Article = () => {
                   class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.1.3{" "}
+                    </NumberedTitle>
                   </span>
                   Die folgende Grammatik haben wir bereits im letzten Abschnitt
                   kennengelernt. Sie ist nicht regulär: $$\begin&#123;align*&#125; S&amp;\rightarrow A
@@ -119,7 +125,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;4.1.2{" "}
+                      &ensp;4.1.4{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik und \(S
@@ -204,7 +210,7 @@ const Article = () => {
                     </NumberedTitle>
                   </span>
                   Unsere
-                  <a href="./04-00-formal-languages.html#email-context-free-grammar">
+                  <a href="./04-00-formal-languages#email-context-free-grammar">
                     &ensp;Grammatik für korrekte Emailadressen{" "}
                   </a>
                   im letzten Abschnitt war{" "}
@@ -239,7 +245,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;4.1.3{" "}
+                      &ensp;4.1.5{" "}
                     </NumberedTitle>
                   </span>
                   Eine Grammatik \(G = (\Sigma, N, P, S)\) heißt
@@ -261,7 +267,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;4.1.4{" "}
+                      &ensp;4.1.6{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(G = (\Sigma, N, P, S)\) eine erweitert reguläre Grammatik. Dann
@@ -318,7 +324,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                       <NumberedTitle>
-                        &ensp;4.1.5{" "}
+                        &ensp;4.1.7{" "}
                       </NumberedTitle>
                     </span>
                     Sei \(G = (\Sigma, N, P, S)\) eine reguläre Grammatik. Dann gibt es
@@ -385,7 +391,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                       <NumberedTitle>
-                        &ensp;4.1.6{" "}
+                        &ensp;4.1.8{" "}
                       </NumberedTitle>
                     </span>
                     Wenn \(N_&#123;k+1&#125;(X) = N_k(X)\), dann ist \(N_k(X) = N_&#123;k+1&#125;(X) =
@@ -530,7 +536,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;4.1.7{" "}
+                        &ensp;4.1.9{" "}
                       </NumberedTitle>
                     </span>
                     {" "}{" "}
@@ -601,7 +607,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;4.1.8{" "}
+                        &ensp;4.1.10{" "}
                       </NumberedTitle>
                     </span>
                     Sei \(L \subseteq \Sigma^*\). Die Sprache \(L^n\) ist die Menge
@@ -711,7 +717,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                       <NumberedTitle>
-                        &ensp;4.1.9{" "}
+                        &ensp;4.1.11{" "}
                       </NumberedTitle>
                     </span>
                     Sei \(L \subseteq \Sigma^*\) eine reguläre Sprache und \(c \not \in

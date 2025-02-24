@@ -235,6 +235,9 @@
                                 class numbered-title
 
                                 Behauptung
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             &ensp;*(nicht ganz
                             korrekt).* $\bnegdiag \in \TIME_{k+3}(t)$.
                     |> p
@@ -268,6 +271,9 @@
                                 class numbered-title
 
                                 Behauptung
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             &ensp;*(jetzt korrekt).* Sei
                             $t: \N \rightarrow \N$ zeitkonstruierbar, monoton steigend und $t(n) \geq n$. Dann gilt
                             $\bnegdiag \in \TIME_{k+3}(t)$.

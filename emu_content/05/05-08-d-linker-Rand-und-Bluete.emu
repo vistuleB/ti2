@@ -348,6 +348,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Für unsere Grammatik \(G\) oben ergeben sich folgende Produktionen
                         \(\hat{P}\) in \(\hat{G}\):
                         \begin{align*}

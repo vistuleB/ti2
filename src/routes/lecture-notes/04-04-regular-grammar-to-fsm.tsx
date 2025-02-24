@@ -167,7 +167,7 @@ const Article = () => {
                   {" "}heißt.
                   \(C\)-Labels können wir uns nach dem Baukastenprizip bauen, in dem
                   wir{" "}
-                  <a href="./04-01-regular-grammars.html#operation-L(.L)*">
+                  <a href="./04-01-regular-grammars#operation-L(.L)*">
                     &ensp;Theorem 4.1.14{" "}
                   </a>
                   &ensp;anwenden.
@@ -189,7 +189,7 @@ const Article = () => {
                     .
                   </code>
                   {" "}separiert, müssen also wieder
-                  <a href="./04-01-regular-grammars.html#operation-L(.L)*">
+                  <a href="./04-01-regular-grammars#operation-L(.L)*">
                     &ensp;Theorem 4.1.14{" "}
                   </a>
                   &ensp;anwenden, dieses
@@ -241,7 +241,7 @@ const Article = () => {
                   sodass wir nur noch Produktionen der From \(X \rightarrow aY\) und \(E \rightarrow \epsilon\)
                   haben.
                   Wir gehen vor wie in{" "}
-                  <a href="./04-01-regular-grammars.html#theorem-regular-simplified">
+                  <a href="./04-01-regular-grammars#theorem-regular-simplified">
                     &ensp;Theorem
                     4.1.7{" "}
                   </a>

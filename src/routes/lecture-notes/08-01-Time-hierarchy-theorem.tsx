@@ -261,6 +261,9 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Behauptung
+                      <NumberedTitle>
+                        &ensp;8.1.4{" "}
+                      </NumberedTitle>
                     </span>
                     &ensp;
                     <b>
@@ -287,7 +290,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;8.1.4{" "}
+                        &ensp;8.1.5{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;Eine Funktion \(t: \N \rightarrow \N\) heißt
@@ -302,6 +305,9 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Behauptung
+                      <NumberedTitle>
+                        &ensp;8.1.6{" "}
+                      </NumberedTitle>
                     </span>
                     &ensp;
                     <b>
@@ -394,7 +400,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                       <NumberedTitle>
-                        &ensp;8.1.5{" "}
+                        &ensp;8.1.7{" "}
                       </NumberedTitle>
                     </span>
                     {" "}{" "}
@@ -427,7 +433,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Theorem
                       <NumberedTitle>
-                        &ensp;8.1.6{" "}
+                        &ensp;8.1.8{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;

@@ -398,6 +398,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;5.8.5{" "}
+                    </NumberedTitle>
                   </span>
                   Für unsere Grammatik \(G\) oben ergeben sich folgende Produktionen
                   \(\hat&#123;P&#125;\) in \(\hat&#123;G&#125;\):
@@ -473,7 +476,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;5.8.5{" "}
+                      &ensp;5.8.6{" "}
                     </NumberedTitle>
                   </span>
                   Wenn der \(LR(0)\)-Parser akzeptiert, dann hat er eine Linksreduktion

@@ -55,6 +55,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Sei \(L\) die Sprache aller Wörter über dem Alphabet \(\Sigma = \{a,b\}\), die die Form
                         \(a^n b^n\) haben; also eine beliebig lange Folge von \(a\)s, gefolgt von genau so vielen
                         \(b\)s.
@@ -340,6 +343,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Die Sprache \(L = \{a^n b^n \ | \ n \geq 0\}\) ist nicht regulär.
                         |> p
 
@@ -354,6 +360,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Sei \(L \subseteq \{a,b\}^*\) die Sprache aller Palindrome. Also der Wörter \(\alpha\) mit
                         \(\alpha = \alpha^R\), wobei \(\alpha^R\) das Wort \(\alpha\) in umgekehrter Reihnfolge gelesen
                         ist.
@@ -465,6 +474,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Der nichtdeterministische endliche Automat
                         |> figure
                             |> img
@@ -481,6 +493,9 @@
                                 class numbered-title
 
                                 Behauptung
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             Die Sprache \(L\) hat Index 16. Alle Wörter in \(\{0,1\}^4\) sind nicht \(L\)-äquivalent.
                         |> div
                             class well subtheorem

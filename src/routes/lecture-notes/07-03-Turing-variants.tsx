@@ -89,11 +89,14 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;7.3.1{" "}
+                    </NumberedTitle>
                   </span>
                   Entwerfen wir nun eine Turingmaschine für die Palindromsprache
                   $$\begin&#123;align*&#125; L := \&#123; w \in \&#123;a,b\&#125;^* \ | \ w = w^R \&#125; \ ,
                   \end&#123;align*&#125;$$ In
-                  <a href="./04-01-Turing-machines-examples.html#example-palindromes">
+                  <a href="./04-01-Turing-machines-examples#example-palindromes">
                     &ensp;Beispiel 4.2.2{" "}
                   </a>
                   haben wir dafür eine Einband-Turingmaschine geschrieben. Deren
@@ -214,7 +217,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;7.3.1{" "}
+                      &ensp;7.3.2{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -654,7 +657,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;7.3.2{" "}
+                      &ensp;7.3.3{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -707,6 +710,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;7.3.4{" "}
+                    </NumberedTitle>
                   </span>
                   Beim Teilsummenproblem haben wir eine Liste von Waren (alles Unikate)
                   mit Preisen \(p_1, p_2, \dots, p_n\) und ein Guthaben \(g\) gegeben
@@ -818,7 +824,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;7.3.3{" "}
+                      &ensp;7.3.5{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}

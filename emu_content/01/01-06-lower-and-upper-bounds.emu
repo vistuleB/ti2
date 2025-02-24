@@ -91,6 +91,9 @@
                                     class numbered-title
 
                                     Behauptung
+                                    |> NumberedTitle
+
+                                        &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                                 &ensp;Sei $s \geq n \geq 1$. Dann gibt es
                                 höchstens
                                 $s^{2s+1}$ Schaltkreise mit $n$ Input-Variablen, Fan-in 2 und $s$ Gates. 

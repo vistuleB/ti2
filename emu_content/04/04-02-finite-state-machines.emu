@@ -192,6 +192,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Betrachten wir den endlichen Automaten
                         |> figure
                             |> img
@@ -306,6 +309,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Der endliche Automat, den wir oben bereits eingeführt haben:
                         |> figure
                             |> img
@@ -408,6 +414,9 @@
                                 class numbered-title
 
                                 Behauptung
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             Sei \(\alpha \in \Sigma^*\) und \(q, q' \in Q\). Dann gilt
                             \(q \stackrel{\alpha}{\rightarrow} q'\) genau dann,
                             wenn \(q \Rightarrow^* \alpha q'\) in Grammatik \(G'\) gilt.
@@ -606,9 +615,12 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Betrachten wir die 
                         |> a
-                            href ./04-01-regular-grammars.html#example-aaabb
+                            href ./04-01-regular-grammars#example-aaabb
 
                             &ensp;reguläre Grammatik aus
                             dem vorherigen Kapitel 4.1 
@@ -654,9 +666,12 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Betrachten wir die 
                         |> a
-                            href ./04-01-regular-grammars.html#example-xxx1yyy
+                            href ./04-01-regular-grammars#example-xxx1yyy
 
                             &ensp;reguläre Grammatik
                             aus

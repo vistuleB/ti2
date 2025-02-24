@@ -58,6 +58,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.6.1{" "}
+                    </NumberedTitle>
                   </span>
                   Sei \(L\) die Sprache aller Wörter über dem Alphabet \(\Sigma = \&#123;a,b\&#125;\), die die Form
                   \(a^n b^n\) haben; also eine beliebig lange Folge von \(a\)s, gefolgt von genau so vielen
@@ -227,7 +230,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;4.6.1{" "}
+                      &ensp;4.6.2{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -263,7 +266,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;4.6.2{" "}
+                      &ensp;4.6.3{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -286,7 +289,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;4.6.3{" "}
+                      &ensp;4.6.4{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(L\) die vom endlichen Automaten \(M\) akzeptierte Sprache.
@@ -339,7 +342,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;4.6.4{" "}
+                      &ensp;4.6.5{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(L \subseteq \Sigma^*\). Der{" "}
@@ -355,7 +358,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;4.6.5{" "}
+                      &ensp;4.6.6{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(M\) ein endlicher Automat von \(L\) die von ihm akzeptierte Sprache.
@@ -392,6 +395,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.6.7{" "}
+                    </NumberedTitle>
                   </span>
                   Die Sprache \(L = \&#123;a^n b^n \ | \ n \geq 0\&#125;\) ist nicht regulär.
                   <Paragraph>
@@ -405,6 +411,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.6.8{" "}
+                    </NumberedTitle>
                   </span>
                   Sei \(L \subseteq \&#123;a,b\&#125;^*\) die Sprache aller Palindrome. Also der Wörter \(\alpha\) mit
                   \(\alpha = \alpha^R\), wobei \(\alpha^R\) das Wort \(\alpha\) in umgekehrter Reihnfolge gelesen
@@ -442,7 +451,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;4.6.6{" "}
+                      &ensp;4.6.9{" "}
                     </NumberedTitle>
                   </span>
                   Eine Sprache \(L \subseteq \Sigma^*\) ist genau dann regulär, wenn sie endlichen Index hat.
@@ -531,6 +540,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.6.10{" "}
+                    </NumberedTitle>
                   </span>
                   Der nichtdeterministische endliche Automat
                   <figure>
@@ -546,6 +558,9 @@ const Article = () => {
                   <div class="well subtheorem theorem">
                     <span class="numbered-title">
                       Behauptung
+                      <NumberedTitle>
+                        &ensp;4.6.11{" "}
+                      </NumberedTitle>
                     </span>
                     Die Sprache \(L\) hat Index 16. Alle Wörter in \(\&#123;0,1\&#125;^4\) sind nicht \(L\)-äquivalent.
                   </div>

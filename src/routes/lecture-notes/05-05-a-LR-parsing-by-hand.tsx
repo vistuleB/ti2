@@ -82,6 +82,9 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Beispiel
+                      <NumberedTitle>
+                        &ensp;5.5.1{" "}
+                      </NumberedTitle>
                     </span>
                     &ensp;Betrachten wir die recht einfache Sprache{" "}
                   </Paragraph>
@@ -356,7 +359,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Beobachtung
                       <NumberedTitle>
-                        &ensp;5.5.1{" "}
+                        &ensp;5.5.2{" "}
                       </NumberedTitle>
                       .
                     </span>

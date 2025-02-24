@@ -82,6 +82,9 @@
                                 class numbered-title
 
                                 Beispiel
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             &ensp;Betrachten wir die recht einfache Sprache 
                         \begin{align*}
                         L_2 := \{a^{m+k} b^m c \ | \ m \geq 1, k \geq 0 \} \ ,

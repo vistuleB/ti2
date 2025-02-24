@@ -48,7 +48,7 @@ const Article = () => {
                 </h2>
                 <Paragraph>
                   Um den \(LR(0)\)-Parser gemäß
-                  <a href="./05-05-d-linker-Rand-und-Bluete.html#algorithm-LR-parser">
+                  <a href="./05-05-d-linker-Rand-und-Bluete#algorithm-LR-parser">
                     &ensp;Algorithmus 5.8.7{" "}
                   </a>
                   zu implementieren, müssen wir den Test \(\gamma \stackrel&#123;?&#125;\in
@@ -59,7 +59,7 @@ const Article = () => {
                   {" "}ist, die
                   Blüte finden. Dies gelingt uns, indem wir die Grammatik \(\hat&#123;G&#125;\) in
                   einen endlichen Automaten umwandeln.
-                  <a href="./04-03-nfsm.html#regular-grammar-to-fsm">
+                  <a href="./04-03-nfsm#regular-grammar-to-fsm">
                     &ensp;Theorem 4.3.8{" "}
                   </a>
                   und die ihm vorhergehende Konstruktion zeigen, wie man das macht.
@@ -279,7 +279,7 @@ const Article = () => {
                 <Paragraph>
                   Wir wissen ja bereits, wie man einen nichtdeterministischen Automaten
                   deterministisch macht: die
-                  <a href="./04-03-nfsm.html#nfsm-to-fsm">
+                  <a href="./04-03-nfsm#nfsm-to-fsm">
                     &ensp;Potenzmengenkonstruktion aus Kapitel 4.3{" "}
                   </a>
                   . Hier können wir diese leider nicht direkt anwenden, da der obige
@@ -347,7 +347,7 @@ const Article = () => {
                     id="lemma-characterization-LR0"
                     class="well container subtheorem">
                     <Paragraph>
-                      <a href="./05-05-c-LR-grammars.html#lemma-characterization-LR0">
+                      <a href="./05-05-c-LR-grammars#lemma-characterization-LR0">
                         &ensp;Lemma 5.7.5, noch einmal{" "}
                       </a>
                       {" "}{" "}

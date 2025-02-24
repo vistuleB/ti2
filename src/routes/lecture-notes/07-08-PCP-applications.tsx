@@ -121,6 +121,9 @@ const Article = () => {
                   <div class="well subtheorem theorem">
                     <span class="numbered-title">
                       Behauptung
+                      <NumberedTitle>
+                        &ensp;7.8.2{" "}
+                      </NumberedTitle>
                     </span>
                     &ensp;Wenn die Grammatik \(G\) ein Palindromwort
                     ableiten kann, dann hat das PCP-Puzzle \(P\) eine Lösung.
@@ -149,6 +152,9 @@ const Article = () => {
                   <div class="well subtheorem theorem">
                     <span class="numbered-title">
                       Behauptung
+                      <NumberedTitle>
+                        &ensp;7.8.3{" "}
+                      </NumberedTitle>
                     </span>
                     &ensp;Wenn
                     das PCP-Puzzle \(P\) eine Lösung hat, dann kann die Grammatik \(G\) ein Palindromwort
@@ -232,7 +238,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;7.8.2{" "}
+                      &ensp;7.8.4{" "}
                     </NumberedTitle>
                   </span>
                   Seien \(L_1 \subseteq \Sigma_1\) und \(L_2 \subseteq \Sigma_2\) zwei Sprachen.
@@ -261,7 +267,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;7.8.3{" "}
+                      &ensp;7.8.5{" "}
                     </NumberedTitle>
                   </span>
                   &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
@@ -309,7 +315,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;7.8.4{" "}
+                      &ensp;7.8.6{" "}
                     </NumberedTitle>
                   </span>
                   &ensp;Wenn \(f\) eine Reduktion von \(L_1\) nach
@@ -358,7 +364,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;7.8.5{" "}
+                      &ensp;7.8.7{" "}
                     </NumberedTitle>
                   </span>
                   <Paragraph>
@@ -408,7 +414,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;7.8.6{" "}
+                      &ensp;7.8.8{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}

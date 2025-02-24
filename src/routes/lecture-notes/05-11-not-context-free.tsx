@@ -64,6 +64,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;5.11.1{" "}
+                    </NumberedTitle>
                   </span>
                   Betrachten wir die Sprache
                   $$\begin&#123;align*&#125;
@@ -189,7 +192,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;5.11.1{" "}
+                      &ensp;5.11.2{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -249,7 +252,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;5.11.2{" "}
+                      &ensp;5.11.3{" "}
                     </NumberedTitle>
                   </span>
                   Wenn \(L_1, L_2\) reguläre Sprachen sind, dann sind die folgenden
@@ -364,7 +367,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;5.11.3{" "}
+                      &ensp;5.11.4{" "}
                     </NumberedTitle>
                   </span>
                   Der Schnitt \(L_1 \cap L_2\) zweier kontextfreier Sprachen
@@ -390,7 +393,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Beobachtung
                     <NumberedTitle>
-                      &ensp;5.11.4{" "}
+                      &ensp;5.11.5{" "}
                     </NumberedTitle>
                   </span>
                   Das Komplement \(L\) einer kontextfreien Sprache ist im Allgemeinen{" "}

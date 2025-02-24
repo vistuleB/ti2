@@ -704,7 +704,11 @@
                                 |> span
                                     class numbered-title
 
-                                    Behauptung.
+                                    Behauptung
+                                    |> NumberedTitle
+
+                                        &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                                    .
                                 &ensp;Wenn $\mathcal{C}$
                                 Fehlerwahrscheinlichkeit
                                 $\epsilon$ hat, dann hat $\mathcal{C}^{\otimes 3}$ Fehlerwahrscheinlichkeit

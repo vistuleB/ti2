@@ -46,6 +46,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Betrachten wir die Sprache
                         \begin{align*}
                         \{a^n b^n c^n \ | \ n \geq 0 \}
@@ -192,6 +195,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Als zweites Beispiel nehmen wir die Palindromsprache
                         \begin{align*}
                         L := \{ w \in \{a,b\}^* \ | \ w = w^R \} \ ,

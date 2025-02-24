@@ -48,7 +48,7 @@
 
                         Um den \(LR(0)\)-Parser gemäß
                         |> a
-                            href ./05-05-d-linker-Rand-und-Bluete.html#algorithm-LR-parser
+                            href ./05-05-d-linker-Rand-und-Bluete#algorithm-LR-parser
 
                             &ensp;Algorithmus 5.8.7 
                         zu implementieren, müssen wir den Test \(\gamma \stackrel{?}\in
@@ -56,7 +56,7 @@
                         Blüte finden. Dies gelingt uns, indem wir die Grammatik \(\hat{G}\) in
                         einen endlichen Automaten umwandeln.
                         |> a
-                            href ./04-03-nfsm.html#regular-grammar-to-fsm
+                            href ./04-03-nfsm#regular-grammar-to-fsm
 
                             &ensp;Theorem 4.3.8 
                         und die ihm vorhergehende Konstruktion zeigen, wie man das macht.
@@ -256,7 +256,7 @@
                         Wir wissen ja bereits, wie man einen nichtdeterministischen Automaten
                         deterministisch macht: die
                         |> a
-                            href ./04-03-nfsm.html#nfsm-to-fsm
+                            href ./04-03-nfsm#nfsm-to-fsm
 
                             &ensp;Potenzmengenkonstruktion aus Kapitel 4.3 
                         . Hier können wir diese leider nicht direkt anwenden, da der obige
@@ -312,7 +312,7 @@
                             class well container subtheorem
                             |> p
                                 |> a
-                                    href ./05-05-c-LR-grammars.html#lemma-characterization-LR0
+                                    href ./05-05-c-LR-grammars#lemma-characterization-LR0
 
                                     &ensp;Lemma 5.7.5, noch einmal 
                                 *

@@ -109,6 +109,9 @@ const Article = () => {
                 <div class="well subtheorem container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;5.2.2{" "}
+                    </NumberedTitle>
                   </span>
                   Betrachten wir die Grammatik
                   $$\begin&#123;align*&#125;
@@ -384,7 +387,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;5.2.2{" "}
+                      &ensp;5.2.3{" "}
                     </NumberedTitle>
                     .
                   </span>
@@ -529,6 +532,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;5.2.4{" "}
+                    </NumberedTitle>
                   </span>
                   Wir betrachten die Sprache
                   $$\begin&#123;align*&#125;

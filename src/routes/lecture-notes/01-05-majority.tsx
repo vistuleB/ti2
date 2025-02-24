@@ -778,7 +778,11 @@ const Article = () => {
                   <div class="well container-fluid subtheorem">
                     <Paragraph>
                       <span class="numbered-title">
-                        Behauptung.
+                        Behauptung
+                        <NumberedTitle>
+                          &ensp;1.5.5{" "}
+                        </NumberedTitle>
+                        .
                       </span>
                       &ensp;Wenn \(\mathcal&#123;C&#125;\)
                       Fehlerwahrscheinlichkeit

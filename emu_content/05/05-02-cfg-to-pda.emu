@@ -97,6 +97,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Betrachten wir die Grammatik
                         \begin{align*}
                         S&amp;\rightarrow A \ | \ B \ | \ C \ | \ \epsilon \\
@@ -490,6 +493,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Wir betrachten die Sprache
                         \begin{align*}
                         a^m b (a|b)^* b a^m

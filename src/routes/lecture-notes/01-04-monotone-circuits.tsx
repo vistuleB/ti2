@@ -768,7 +768,11 @@ const Article = () => {
                   </Paragraph>
                   <div class="well subtheorem theorem">
                     <span class="numbered-title">
-                      Behauptung.
+                      Behauptung
+                      <NumberedTitle>
+                        &ensp;1.4.6{" "}
+                      </NumberedTitle>
+                      .
                     </span>
                     Für alle \(x_1,\dots,x_n\) gilt
                     $$
@@ -944,7 +948,11 @@ const Article = () => {
                   </Paragraph>
                   <div class="well subtheorem theorem">
                     <span class="numbered-title">
-                      Behauptung.
+                      Behauptung
+                      <NumberedTitle>
+                        &ensp;1.4.7{" "}
+                      </NumberedTitle>
+                      .
                     </span>
                     Für alle \(x_1,\dots,x_n\) gilt
                     \(T_&#123;\mathbf&#123;a&#125;&#125; \leq T'_&#123;\mathbf&#123;a&#125;&#125;\).
@@ -976,6 +984,9 @@ const Article = () => {
                   <div class="well subtheorem theorem">
                     <span class="numbered-title">
                       Behauptung
+                      <NumberedTitle>
+                        &ensp;1.4.8{" "}
+                      </NumberedTitle>
                     </span>
                     \(F \equiv F'\), d.h. sie berechnen beide dieselbe Funktion, nämlich \(f\).
                   </div>

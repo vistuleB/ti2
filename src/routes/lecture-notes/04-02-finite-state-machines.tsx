@@ -233,6 +233,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.2.2{" "}
+                    </NumberedTitle>
                   </span>
                   Betrachten wir den endlichen Automaten
                   <figure>
@@ -310,7 +313,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;4.2.2{" "}
+                      &ensp;4.2.3{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -341,7 +344,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;4.2.3{" "}
+                      &ensp;4.2.4{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -358,6 +361,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.2.5{" "}
+                    </NumberedTitle>
                   </span>
                   Der endliche Automat, den wir oben bereits eingeführt haben:
                   <figure>
@@ -433,7 +439,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;4.2.4{" "}
+                      &ensp;4.2.6{" "}
                     </NumberedTitle>
                   </span>
                   Sei \(M = (\Sigma, Q, \qstart, F, \delta)\) ein endlicher Automat. Dann gibt es eine reguläre
@@ -464,6 +470,9 @@ const Article = () => {
                   <div class="well subtheorem theorem">
                     <span class="numbered-title">
                       Behauptung
+                      <NumberedTitle>
+                        &ensp;4.2.7{" "}
+                      </NumberedTitle>
                     </span>
                     Sei \(\alpha \in \Sigma^*\) und \(q, q' \in Q\). Dann gilt
                     \(q \stackrel&#123;\alpha&#125;&#123;\rightarrow&#125; q'\) genau dann,
@@ -685,9 +694,12 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.2.8{" "}
+                    </NumberedTitle>
                   </span>
                   Betrachten wir die{" "}
-                  <a href="./04-01-regular-grammars.html#example-aaabb">
+                  <a href="./04-01-regular-grammars#example-aaabb">
                     &ensp;reguläre Grammatik aus
                     dem vorherigen Kapitel 4.1{" "}
                   </a>
@@ -741,9 +753,12 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.2.9{" "}
+                    </NumberedTitle>
                   </span>
                   Betrachten wir die{" "}
-                  <a href="./04-01-regular-grammars.html#example-xxx1yyy">
+                  <a href="./04-01-regular-grammars#example-xxx1yyy">
                     &ensp;reguläre Grammatik
                     aus
                     dem vorherigen Kapitel 4.1{" "}

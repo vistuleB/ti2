@@ -369,6 +369,9 @@
                                 class numbered-title
 
                                 Behauptung
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             \(f(t, \vec{x}) \leq A_{q+1} (t+x)\), wobei
                             \(x = \max(\vec{x}) = \max(x_1,\dots,x_n)\).
                         |> div

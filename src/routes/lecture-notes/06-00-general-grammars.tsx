@@ -134,6 +134,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;6.0.3{" "}
+                    </NumberedTitle>
                   </span>
                   Betrachten wir die allgemeine Grammatik mit
                   Terminalalphabet \(\Sigma = \&#123;a,b,c\&#125;\), Nichtterminalsymbolen
@@ -191,6 +194,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;6.0.4{" "}
+                    </NumberedTitle>
                   </span>
                   Versuchen wir nun, eine allgemeine formale Grammatik für die Sprache
                   $$\begin&#123;align*&#125;
@@ -304,6 +310,9 @@ const Article = () => {
                   <div class="well subtheorem theorem">
                     <span class="numbered-title">
                       Behauptung
+                      <NumberedTitle>
+                        &ensp;6.0.5{" "}
+                      </NumberedTitle>
                     </span>
                     Sei \(\#_&#123;A,a&#125;(\beta)\) die Anahl der \(A\) und \(a\) in der Wortform \(\beta\).
                     Wenn \(S \Step&#123;&#125; \beta\), dann gilt
@@ -357,14 +366,17 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;6.0.6{" "}
+                    </NumberedTitle>
                   </span>
                   Im{" "}
-                  <a href="./05-10-not-context-free.html">
+                  <a href="./05-10-not-context-free">
                     &ensp;Teilkapitel 5.10{" "}
                   </a>
                   &ensp;gab
                   es{" "}
-                  <a href="./05-10-not-context-free.html#exericse-power-2">
+                  <a href="./05-10-not-context-free#exericse-power-2">
                     &ensp;Übungsaufgabe 5.10.2{" "}
                   </a>
                   ,
@@ -420,6 +432,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;6.0.7{" "}
+                    </NumberedTitle>
                   </span>
                   Sei \(L\) die Sprache aller Wörter über
                   \(\Sigma = \&#123;1\&#125;\), deren Länge eine Quadratzahl ist.

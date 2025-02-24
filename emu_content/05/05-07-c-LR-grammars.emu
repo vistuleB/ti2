@@ -264,6 +264,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Erinnern Sie sich: unsere obige Grammatik
                         \begin{align*}
                         S&amp;\step{1} aS \\

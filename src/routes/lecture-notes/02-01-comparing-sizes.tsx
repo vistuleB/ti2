@@ -93,6 +93,9 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Beispiel
+                      <NumberedTitle>
+                        &ensp;2.1.1{" "}
+                      </NumberedTitle>
                     </span>
                     &ensp;Beginnen wir mit einem
                     einfachen Beispiel und betrachten die zwei Mengen \(\N =
@@ -134,6 +137,9 @@ const Article = () => {
                   <Paragraph>
                     <span class="numbered-title">
                       Beispiel
+                      <NumberedTitle>
+                        &ensp;2.1.2{" "}
+                      </NumberedTitle>
                     </span>
                     &ensp;Ermutigt von unserem
                     Erfolg gerade eben betrachten wir zwei unendliche Mengen, die sich
@@ -208,7 +214,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;2.1.1{" "}
+                        &ensp;2.1.3{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;Zwei Mengen \(A\) und
@@ -238,7 +244,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;2.1.2{" "}
+                        &ensp;2.1.4{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;Eine Menge \(A\) mit \(A
@@ -287,7 +293,7 @@ const Article = () => {
                     <span class="numbered-title">
                       Definition
                       <NumberedTitle>
-                        &ensp;2.1.3{" "}
+                        &ensp;2.1.5{" "}
                       </NumberedTitle>
                     </span>
                     &ensp;Eine Menge \(A\) heißt

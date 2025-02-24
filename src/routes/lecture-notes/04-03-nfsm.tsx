@@ -169,7 +169,7 @@ const Article = () => {
                 <Paragraph>
                   Wir führen hier den Beweis nicht noch einmal; er ist mehr oder weniger
                   identisch mit dem Beweis von
-                  <a href="./04-02-finite-state-machines.html#theorem-fsm-regular">
+                  <a href="./04-02-finite-state-machines#theorem-fsm-regular">
                     &ensp;Theorem 4.2.5{" "}
                   </a>
                   ; wir haben nämlich in jenem Beweis nirgends verwendet, dass
@@ -218,7 +218,7 @@ const Article = () => {
                     definieren, die also vom Zustand \(X\) nach \(Y\) wechseln können,
                     ohne ein Eingabesymbol zu lesen; wir gehen hier einen anderen Weg
                     und verweisen auf
-                    <a href="./04-01-regular-grammars.html#theorem-regular-simplified">
+                    <a href="./04-01-regular-grammars#theorem-regular-simplified">
                       &ensp;Theorem 4.1.7{" "}
                     </a>
                     , welches uns erlaubt, Regeln der Form \(X \rightarrow Y\) und \(X
@@ -231,10 +231,13 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.3.5{" "}
+                    </NumberedTitle>
                   </span>
                   <Paragraph>
                     Wir betrachten abermals die
-                    <a href="./04-01-regular-grammars.html#example-aaabb">
+                    <a href="./04-01-regular-grammars#example-aaabb">
                       &ensp;reguläre Grammatik aus dem vorherigen Kapitel 4.1{" "}
                     </a>
                     : $$\begin&#123;align*&#125; S&amp;\rightarrow \epsilon \ |\ a S \ | \ b T \\ T&
@@ -266,10 +269,13 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.3.6{" "}
+                    </NumberedTitle>
                   </span>
                   <Paragraph>
                     Wir betrachten die
-                    <a href="./04-01-regular-grammars.html#exercise-no-a-or-no-b">
+                    <a href="./04-01-regular-grammars#exercise-no-a-or-no-b">
                       &ensp;reguläre Grammatik aus Übungsaufgabe 4.1.7{" "}
                     </a>
                     :
@@ -453,7 +459,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;4.3.5{" "}
+                      &ensp;4.3.7{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -485,7 +491,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Theorem
                     <NumberedTitle>
-                      &ensp;4.3.6{" "}
+                      &ensp;4.3.8{" "}
                     </NumberedTitle>
                   </span>
                   Zu jeder regulären Sprache \(L\) gibt es einen deterministischen
@@ -494,6 +500,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.3.9{" "}
+                    </NumberedTitle>
                   </span>
                   Der obige nichtdeterminische Automaten \(M\), der die Sprache aller
                   Wörter, deren viertletztes Zeichen eine 1 ist, akzeptiert, hat fünf

@@ -609,7 +609,11 @@
                             |> span
                                 class numbered-title
 
-                                Behauptung.
+                                Behauptung
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                                .
                             Für alle \(x_1,\dots,x_n\) gilt
                             $$
                             f(x_1,\dots,x_n) = (x_1 \wedge f_1(x_2,\dots,x_n)) \vee f_0(x_2,\dots,x_n) \ .
@@ -764,7 +768,11 @@
                             |> span
                                 class numbered-title
 
-                                Behauptung.
+                                Behauptung
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                                .
                             Für alle \(x_1,\dots,x_n\) gilt
                             \(T_{\mathbf{a}} \leq T'_{\mathbf{a}}\).
                         |> div
@@ -795,6 +803,9 @@
                                 class numbered-title
 
                                 Behauptung
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             \(F \equiv F'\), d.h. sie berechnen beide dieselbe Funktion, nämlich \(f\).
                         |> div
                             class well subtheorem

@@ -113,6 +113,9 @@
                                 class numbered-title
 
                                 Behauptung
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             &ensp;Wenn die Grammatik \(G\) ein Palindromwort
                             ableiten kann, dann hat das PCP-Puzzle \(P\) eine Lösung.
                         |> div
@@ -140,6 +143,9 @@
                                 class numbered-title
 
                                 Behauptung
+                                |> NumberedTitle
+
+                                    &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                             &ensp;Wenn
                             das PCP-Puzzle \(P\) eine Lösung hat, dann kann die Grammatik \(G\) ein Palindromwort
                             ableiten.

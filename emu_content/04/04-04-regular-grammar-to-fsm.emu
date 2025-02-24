@@ -105,7 +105,7 @@
                         \(C\)-Labels können wir uns nach dem Baukastenprizip bauen, in dem
                         wir 
                         |> a
-                            href ./04-01-regular-grammars.html#operation-L(.L)*
+                            href ./04-01-regular-grammars#operation-L(.L)*
 
                             &ensp;Theorem 4.1.14 
                         &ensp;anwenden.
@@ -124,7 +124,7 @@
                         Von \(L\) lassen sich nun also alle Labels ableiten. Wir brauchen nun zum Schluss wieder
                         eine Folge von \(L\), mit `.` separiert, müssen also wieder
                         |> a
-                            href ./04-01-regular-grammars.html#operation-L(.L)*
+                            href ./04-01-regular-grammars#operation-L(.L)*
 
                             &ensp;Theorem 4.1.14 
                         &ensp;anwenden, dieses
@@ -173,7 +173,7 @@
                         haben.
                         Wir gehen vor wie in 
                         |> a
-                            href ./04-01-regular-grammars.html#theorem-regular-simplified
+                            href ./04-01-regular-grammars#theorem-regular-simplified
 
                             &ensp;Theorem
                             4.1.7 

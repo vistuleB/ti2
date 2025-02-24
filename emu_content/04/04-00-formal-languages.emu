@@ -1933,6 +1933,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Wir betrachten die Grammatik \(G = (\{a,b\}, \{S, A, B\}, P, S)\) mit den Produktionsregeln
                         \begin{align*}
                         S&amp;\rightarrow A B \\
@@ -2042,7 +2045,11 @@
                     |> span
                         class numbered-title
 
-                        Beispiel.
+                        Beispiel
+                        |> NumberedTitle
+
+                            &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
+                        .
                     Sei \(G\) die zuletzt betrachtete Grammatik. Dann ist \(L(G)\) die
                     Menge aller Wörter der Form \(a^* b^*\), also Wörter, in denen auf beliebig viele
                     \(a\)'s beliebig viele \(b\)'s folgen.
@@ -2055,6 +2062,9 @@
                         class numbered-title
 
                         Beispiel
+                        |> NumberedTitle
+
+                            &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                     Wir betrachten die Grammatik \(G_2 = (\{a,b\}, \{S\}, P, S)\) mit den Produktionsregeln
                     \begin{align}
                     S&amp;\rightarrow aSbS \\

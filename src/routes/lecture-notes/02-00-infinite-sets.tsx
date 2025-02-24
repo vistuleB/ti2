@@ -70,6 +70,9 @@ const Article = () => {
                 <Paragraph>
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;2.0.1{" "}
+                    </NumberedTitle>
                   </span>
                   &ensp;Die Mengen \(\N, \Z, \Q, \R\) sind unendlich. Die
                   Mengen

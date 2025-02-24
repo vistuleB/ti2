@@ -188,7 +188,11 @@ const Article = () => {
                   <div class="well container-fluid subtheorem">
                     <Paragraph>
                       <span class="numbered-title">
-                        Behauptung 1.
+                        Behauptung
+                        <NumberedTitle>
+                          &ensp;2.5.3{" "}
+                        </NumberedTitle>
+                        &ensp;1.
                       </span>
                       &ensp;\(g^&#123;-1&#125;(a)\) ist
                       definiert für jedes \(a \in A'\).
@@ -217,7 +221,11 @@ const Article = () => {
                   <div class="well container-fluid subtheorem">
                     <Paragraph>
                       <span class="numbered-title">
-                        Behauptung 2.
+                        Behauptung
+                        <NumberedTitle>
+                          &ensp;2.5.4{" "}
+                        </NumberedTitle>
+                        &ensp;2.
                       </span>
                       &ensp;\(h\) ist
                       injektiv.
@@ -253,7 +261,11 @@ const Article = () => {
                   <div class="well container-fluid subtheorem">
                     <Paragraph>
                       <span class="numbered-title">
-                        Behauptung 3.
+                        Behauptung
+                        <NumberedTitle>
+                          &ensp;2.5.5{" "}
+                        </NumberedTitle>
+                        &ensp;3.
                       </span>
                       &ensp;\(h\) ist
                       surjektiv.

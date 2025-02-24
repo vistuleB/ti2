@@ -2397,6 +2397,9 @@ const Article = () => {
                 <div class="well container theorem">
                   <span class="numbered-title">
                     Beispiel
+                    <NumberedTitle>
+                      &ensp;4.0.2{" "}
+                    </NumberedTitle>
                   </span>
                   Wir betrachten die Grammatik \(G = (\&#123;a,b\&#125;, \&#123;S, A, B\&#125;, P, S)\) mit den Produktionsregeln
                   $$\begin&#123;align*&#125;
@@ -2432,7 +2435,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;4.0.2{" "}
+                      &ensp;4.0.3{" "}
                     </NumberedTitle>
                   </span>
                   Gegeben sei eine kontextfreie Grammatik \(G = (\Sigma, N, P, S)\).
@@ -2510,7 +2513,7 @@ const Article = () => {
                   <span class="numbered-title">
                     Definition
                     <NumberedTitle>
-                      &ensp;4.0.3{" "}
+                      &ensp;4.0.4{" "}
                     </NumberedTitle>
                   </span>
                   {" "}{" "}
@@ -2540,7 +2543,11 @@ const Article = () => {
               </div>
               <div class="well container theorem">
                 <span class="numbered-title">
-                  Beispiel.
+                  Beispiel
+                  <NumberedTitle>
+                    &ensp;4.0.5{" "}
+                  </NumberedTitle>
+                  .
                 </span>
                 Sei \(G\) die zuletzt betrachtete Grammatik. Dann ist \(L(G)\) die
                 Menge aller Wörter der Form \(a^* b^*\), also Wörter, in denen auf beliebig viele
@@ -2552,6 +2559,9 @@ const Article = () => {
               <div class="well container theorem">
                 <span class="numbered-title">
                   Beispiel
+                  <NumberedTitle>
+                    &ensp;4.0.6{" "}
+                  </NumberedTitle>
                 </span>
                 Wir betrachten die Grammatik \(G_2 = (\&#123;a,b\&#125;, \&#123;S\&#125;, P, S)\) mit den Produktionsregeln
                 \begin&#123;align&#125;

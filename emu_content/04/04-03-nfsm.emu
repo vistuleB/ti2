@@ -134,7 +134,7 @@
                         Wir führen hier den Beweis nicht noch einmal; er ist mehr oder weniger
                         identisch mit dem Beweis von
                         |> a
-                            href ./04-02-finite-state-machines.html#theorem-fsm-regular
+                            href ./04-02-finite-state-machines#theorem-fsm-regular
 
                             &ensp;Theorem 4.2.5 
                         ; wir haben nämlich in jenem Beweis nirgends verwendet, dass
@@ -174,7 +174,7 @@
                             ohne ein Eingabesymbol zu lesen; wir gehen hier einen anderen Weg
                             und verweisen auf
                             |> a
-                                href ./04-01-regular-grammars.html#theorem-regular-simplified
+                                href ./04-01-regular-grammars#theorem-regular-simplified
 
                                 &ensp;Theorem 4.1.7 
                             , welches uns erlaubt, Regeln der Form \(X \rightarrow Y\) und \(X
@@ -189,11 +189,14 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         |> p
 
                             Wir betrachten abermals die
                             |> a
-                                href ./04-01-regular-grammars.html#example-aaabb
+                                href ./04-01-regular-grammars#example-aaabb
 
                                 &ensp;reguläre Grammatik aus dem vorherigen Kapitel 4.1 
                             : \begin{align*} S&amp;\rightarrow \epsilon \ |\ a S \ | \ b T \\ T&
@@ -226,11 +229,14 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         |> p
 
                             Wir betrachten die
                             |> a
-                                href ./04-01-regular-grammars.html#exercise-no-a-or-no-b
+                                href ./04-01-regular-grammars#exercise-no-a-or-no-b
 
                                 &ensp;reguläre Grammatik aus Übungsaufgabe 4.1.7 
                             :
@@ -441,6 +447,9 @@
                             class numbered-title
 
                             Beispiel
+                            |> NumberedTitle
+
+                                &ensp;::::ChapterCtr.::::SectionCtr.::++DefCtr 
                         Der obige nichtdeterminische Automaten \(M\), der die Sprache aller
                         Wörter, deren viertletztes Zeichen eine 1 ist, akzeptiert, hat fünf
                         Zustände. Sein Potenzmengenautomat \(M'\) hätte also \(2^5 = 32\).
