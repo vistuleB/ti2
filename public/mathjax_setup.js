@@ -83,7 +83,6 @@ window.MathJax = {
       Pets: ["\\stackrel{#1}{\\Longleftarrow}", 1],
       Steps: ["\\stackrel{#1}{\\Longrightarrow^*}", 1],
       steps: ["\\stackrel{#1}{\\rightarrow^*}", 1],
-      qstart: "q_{\\rm start",
       front: "\\textnormal{front}",
       Front: "\\textnormal{Front}",
       qend: "{q_{\\rm end}",
