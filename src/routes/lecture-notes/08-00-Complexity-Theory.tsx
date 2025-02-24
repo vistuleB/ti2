@@ -160,7 +160,7 @@ const Article = () => {
                   nicht von der Eingabe \(x\) oder der Länge \(|x|\).
                   Wir haben in{" "}
                   <a href="07-02-Turing-variants.html">
-                    Kapitel 7.3
+                    &ensp;Kapitel 7.3{" "}
                   </a>
                   &ensp;gezeigt, wie man eine
                   \(k\)-Band-Turingmaschine \(M\) durch eine

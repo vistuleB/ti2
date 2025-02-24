@@ -53,8 +53,8 @@ const Article = () => {
                   Maschinen zum Addieren und sogar zum Multiplizieren gibt es schon seit
                   dem 17. Jahrhunder (
                   <a href="https://en.wikipedia.org/wiki/Mechanical_calculator">
-                    Wikipedia:
-                    Mechanical calculator
+                    &ensp;Wikipedia:
+                    Mechanical calculator{" "}
                   </a>
                   ).
                   Leider musste man für jede Aufgabe eine neue Maschine erfinden und auch bauen. Zahlen addieren?
@@ -64,8 +64,8 @@ const Article = () => {
                 <Paragraph>
                   Die Idee einer{" "}
                   <a href="https://en.wikipedia.org/wiki/Mechanical_calculator#Programmable_mechanical_calculators">
-                    programmierbaren
-                    Maschine
+                    &ensp;programmierbaren
+                    Maschine{" "}
                   </a>
                   ,
                   die erstmals circa 1834 mit Charles Babbage aufkam, ist, dass man neben den Eingabedaten (z.B.
@@ -106,7 +106,7 @@ const Article = () => {
                   codieren und erhalten ein Wort
                   \(\enc(M)\). Wie tun wir das? Nun ja, auf{" "}
                   <a href="https://turingmachinesimulator.com">
-                    turingmachinesimulator.com
+                    &ensp;turingmachinesimulator.com{" "}
                   </a>
                   &ensp;haben wir das
                   bereits getan:
@@ -125,7 +125,7 @@ const Article = () => {
                   gelangt, zu dem auch \(M(x)\) gelangen würde?
                   Die Programmierer von{" "}
                   <a href="https://turingmachinesimulator.com">
-                    turingmachinesimulator.com
+                    &ensp;turingmachinesimulator.com{" "}
                   </a>
                   &ensp;haben dies
                   offensichtlich geschafft:

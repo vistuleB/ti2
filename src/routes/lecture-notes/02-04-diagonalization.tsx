@@ -139,7 +139,7 @@ const Article = () => {
                   spielt, nennt man diese Beweistechnik auch das Cantorsche
                   Diagonalisierungsverfahren. Dies wird später, in Kapitel
                   <a href="07-00-Turing-machines.html">
-                    7
+                    &ensp;7{" "}
                   </a>
                   &ensp;über Turingmaschinen und in
                   Kapitel ? über Komplexitätstheorie eine Rolle spielen, wenn wir z.B.

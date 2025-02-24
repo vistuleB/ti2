@@ -59,7 +59,7 @@ const Article = () => {
                     wird somit zu einer Folge \((a_1, a_2, \dots, a_n) \in \N^*\), was
                     wir wiederum mit den Methoden aus
                     <a href="02-02-examples-of-equipotent-sets.html">
-                      Kapitel 2.2
+                      &ensp;Kapitel 2.2{" "}
                     </a>
                     als{" "}
                     <i>

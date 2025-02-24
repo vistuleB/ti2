@@ -211,7 +211,7 @@ const Article = () => {
                 Wenden wir nun statt Wahrheitstabelle die Top-Down-Methode an, modifiziert
                 für monotone Funktionen wie in den
                 <a href="../sub-pages/01-monotone.html">
-                  Lösungen zu den Übungsaufgaben
+                  &ensp;Lösungen zu den Übungsaufgaben{" "}
                 </a>
                 &ensp;dargestellt.
                 Insbesondere definieren wir Verallgemeinerungen von \(\maj_n\) wie folgt:

@@ -104,7 +104,7 @@ const Article = () => {
                 <Paragraph>
                   Experimentieren Sie! Ich habe dafür die Html-Seite{" "}
                   <a href="../code/primitive-recursion/collatz.html">
-                    collatz.html
+                    &ensp;collatz.html{" "}
                   </a>
                   &ensp;erstellt.
                   Es scheint: egal, wo Sie anfangen, Sie enden immer bei 1. Allerdings wissen wir nicht

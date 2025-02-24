@@ -77,7 +77,7 @@
                         |> a
                             href https://en.wikipedia.org/wiki/Georg_Cantor
 
-                            Georg Cantor
+                            &ensp;Georg Cantor 
                         Ende des 19. Jahrhunderts gefunden. Sie war anfangs nicht
                         unumstritten.
                     |> div

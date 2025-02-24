@@ -206,7 +206,7 @@ const Article = () => {
                   </span>
                   Speichern Sie die Datei{" "}
                   <a href="../code/primitive-recursion/primrec.py">
-                    primrec.py
+                    &ensp;primrec.py{" "}
                   </a>
                   &ensp;auf
                   Ihrem Rechner.
@@ -351,7 +351,7 @@ const Article = () => {
                   Wenn Sie die vorherige Übungsaufgabe gelöst (oder darüber aufgegeben) haben,
                   sehen Sie sich die Datei
                   <a href="../code/primitive-recursion/stockpile.py">
-                    stockpile.py
+                    &ensp;stockpile.py{" "}
                   </a>
                   &ensp;an,
                   in der ich diese Funktionen zum Großteil implementiert habe (basierend auf

@@ -174,12 +174,12 @@ const Article = () => {
                   <Paragraph>
                     Auf der Webseite
                     <a href="https://turingmachinesimulator.com">
-                      turingmachinesimulator.com
+                      &ensp;turingmachinesimulator.com{" "}
                     </a>
                     können Sie Ihre Turingmaschine eingeben und simulieren. Den Text für
                     die gerade beschriebene finden in{" "}
                     <a href="../code/turing machines/aabbcc.txt">
-                      aabbcc.txt
+                      &ensp;aabbcc.txt{" "}
                     </a>
                     .
                     Generell können Sie Regeln der Form
@@ -322,7 +322,7 @@ const Article = () => {
                   </span>
                   Implementieren Sie die Turingmaschine für die Palindromsprache auf
                   <a href="https://turingmachinesimulator.com">
-                    turingmachinesimulator.com
+                    &ensp;turingmachinesimulator.com{" "}
                   </a>
                   .
                 </div>
@@ -340,7 +340,7 @@ const Article = () => {
                   </span>
                   Schreiben Sie eine Turingmaschine (auf{" "}
                   <a href="https://turingmachinesimulator.com">
-                    turingmachinesimulator.com
+                    &ensp;turingmachinesimulator.com{" "}
                   </a>
                   ),
                   die die folgende Sprache \(L \subseteq \&#123;a,b,c\&#125;\) entscheidet:
@@ -357,7 +357,7 @@ const Article = () => {
                   </span>
                   Schreiben Sie auf{" "}
                   <a href="https://turingmachinesimulator.com">
-                    turingmachinesimulator.com
+                    &ensp;turingmachinesimulator.com{" "}
                   </a>
                   eine Turingmaschine für die Sprache
                   $$\begin&#123;align*&#125;

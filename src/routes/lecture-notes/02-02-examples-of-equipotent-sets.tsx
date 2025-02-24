@@ -310,11 +310,11 @@ const Article = () => {
                   , ist nicht ganz trivial zu
                   beweisen, heißt
                   <a href="https://en.wikipedia.org/wiki/Schröder–Bernstein_theorem">
-                    Schröder-Bernstein-Theorem
+                    &ensp;Schröder-Bernstein-Theorem{" "}
                   </a>
                   , und wir werden das im Teilkapitel{" "}
                   <a href="...">
-                    ...
+                    &ensp;...{" "}
                   </a>
                   &ensp;beweisen.
                   Vorerst behelfen wir uns mit ad-hoc-Methoden.

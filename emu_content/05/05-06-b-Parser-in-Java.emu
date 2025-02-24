@@ -48,7 +48,7 @@
                         |> a
                             href ../code/parsing/arithmetic-in-class/ArithmeticGrammar.java
 
-                            ArithmeticGrammar.java
+                            &ensp;ArithmeticGrammar.java 
                         .
                     |> p
 

@@ -287,7 +287,7 @@ const Article = () => {
                   <Paragraph>
                     Geben Sie diese Grammatik in den
                     <a href="../../demos/drawManualGrammar.html">
-                      Parser-Simulator
+                      &ensp;Parser-Simulator{" "}
                     </a>
                     ein und finden Wörter mit langen Sackgassen.
                   </Paragraph>
@@ -314,7 +314,7 @@ const Article = () => {
                     Schreiben Sie für \(L_3\) eine Grammatik,
                     geben Sie diese im
                     <a href="../../demos/drawManualGrammar.html">
-                      Parser-Simulator
+                      &ensp;Parser-Simulator{" "}
                     </a>
                     &ensp;ein
                     und schauen, wie lang die Sackgassen werden können.

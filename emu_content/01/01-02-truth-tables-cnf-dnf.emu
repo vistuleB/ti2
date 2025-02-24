@@ -356,7 +356,7 @@
                             |> a
                                 href http://users.cms.caltech.edu/~umans/papers/BU07.pdf
 
-                                Buchfuhrer, David; Umans, Christopher (January 2011),_The complexity of Boolean formula minimization_ (JCSS
+                                &ensp;Buchfuhrer, David; Umans, Christopher (January 2011),_The complexity of Boolean formula minimization_ (JCSS
                                 2011) 
                             .
                         |> li
@@ -368,8 +368,8 @@
                             |> a
                                 href https://drops.dagstuhl.de/opus/volltexte/2020/12574/pdf/LIPIcs-CCC-2020-22.pdf
 
-                                Ilango, Loff, and Oliveira._NP-Hardness of Circuit Minimization for Multi-Output
-                                Functions_, (CCC 2020)
+                                &ensp;Ilango, Loff, and Oliveira._NP-Hardness of Circuit Minimization for Multi-Output
+                                Functions_, (CCC 2020) 
                             .
                     Beachten Sie, dass (2) algorithmisch einfacher ist: durch die
                     "verschwenderische" Darstellung der Funktion als Tabelle ist bereits der

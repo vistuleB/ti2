@@ -163,13 +163,13 @@
                             |> a
                                 href https://turingmachinesimulator.com
 
-                                turingmachinesimulator.com
+                                &ensp;turingmachinesimulator.com 
                             können Sie Ihre Turingmaschine eingeben und simulieren. Den Text für
                             die gerade beschriebene finden in 
                             |> a
                                 href ../code/turing machines/aabbcc.txt
 
-                                aabbcc.txt
+                                &ensp;aabbcc.txt 
                             .
                             Generell können Sie Regeln der Form
                             \begin{align*}
@@ -307,7 +307,7 @@
                         |> a
                             href https://turingmachinesimulator.com
 
-                            turingmachinesimulator.com
+                            &ensp;turingmachinesimulator.com 
                         .
                     |> p
 
@@ -326,7 +326,7 @@
                         |> a
                             href https://turingmachinesimulator.com
 
-                            turingmachinesimulator.com
+                            &ensp;turingmachinesimulator.com 
                         ),
                         die die folgende Sprache \(L \subseteq \{a,b,c\}\) entscheidet:
                         \begin{align*}
@@ -345,7 +345,7 @@
                         |> a
                             href https://turingmachinesimulator.com
 
-                            turingmachinesimulator.com
+                            &ensp;turingmachinesimulator.com 
                         eine Turingmaschine für die Sprache
                         \begin{align*}
                         L := \{1^n \ | \ n = 2^d, d \geq 0\} \ .

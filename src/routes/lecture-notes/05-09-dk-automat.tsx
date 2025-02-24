@@ -49,7 +49,7 @@ const Article = () => {
                 <Paragraph>
                   Um den \(LR(0)\)-Parser gemäß
                   <a href="./05-05-d-linker-Rand-und-Bluete.html#algorithm-LR-parser">
-                    Algorithmus 5.8.7
+                    &ensp;Algorithmus 5.8.7{" "}
                   </a>
                   zu implementieren, müssen wir den Test \(\gamma \stackrel&#123;?&#125;\in
                   \Front(G)\) durchführen und, falls die Antwort{" "}
@@ -60,7 +60,7 @@ const Article = () => {
                   Blüte finden. Dies gelingt uns, indem wir die Grammatik \(\hat&#123;G&#125;\) in
                   einen endlichen Automaten umwandeln.
                   <a href="./04-03-nfsm.html#regular-grammar-to-fsm">
-                    Theorem 4.3.8
+                    &ensp;Theorem 4.3.8{" "}
                   </a>
                   und die ihm vorhergehende Konstruktion zeigen, wie man das macht.
                   Anstatt allerdings das Theorem als "black box" zu verwenden, gehen wir
@@ -280,7 +280,7 @@ const Article = () => {
                   Wir wissen ja bereits, wie man einen nichtdeterministischen Automaten
                   deterministisch macht: die
                   <a href="./04-03-nfsm.html#nfsm-to-fsm">
-                    Potenzmengenkonstruktion aus Kapitel 4.3
+                    &ensp;Potenzmengenkonstruktion aus Kapitel 4.3{" "}
                   </a>
                   . Hier können wir diese leider nicht direkt anwenden, da der obige
                   Automat \(\epsilon\)-Übergänge hat. Wie geht das also nun? Im
@@ -348,7 +348,7 @@ const Article = () => {
                     class="well container subtheorem">
                     <Paragraph>
                       <a href="./05-05-c-LR-grammars.html#lemma-characterization-LR0">
-                        Lemma 5.7.5, noch einmal
+                        &ensp;Lemma 5.7.5, noch einmal{" "}
                       </a>
                       {" "}{" "}
                       <b>

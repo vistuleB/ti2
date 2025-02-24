@@ -302,7 +302,7 @@ const Article = () => {
                   </ul>
                   wie sie zum Beispiel auf
                   <a href="https://de.wikipedia.org/wiki/Beweis_(Mathematik)#Beweismethoden">
-                    Wikipedia
+                    &ensp;Wikipedia{" "}
                   </a>
                   &ensp;aufgeführt
                   sind.
@@ -334,7 +334,7 @@ const Article = () => {
                     abwandeln. Was kennen wir denn bereits? Wir kennen
                     die{" "}
                     <a href="../vorlesungsskript.html#truth-table-top-down">
-                      Top-Down-Methode
+                      &ensp;Top-Down-Methode{" "}
                     </a>
                     , wie wir
                     aus einer Wahrheitstabelle einen Schaltkreis bauen:
@@ -361,7 +361,7 @@ const Article = () => {
                     erinnern können und eher an Theorem 1 als an allgemeinen Beweismethoden interessiert sind,
                     dürfen Sie gerne{" "}
                     <a href="#after-sub-proof">
-                      runterspringen.
+                      &ensp;runterspringen.{" "}
                     </a>
                   </Paragraph>
                   <div class="well container-fluid">
@@ -660,7 +660,7 @@ const Article = () => {
                   auf verschiedene formale Aspekte der Beweisführung einzugehen. Wenden wir uns
                   jetzt dem Beweis von{" "}
                   <a href="#theorem-1">
-                    Theorem 1.4.3
+                    &ensp;Theorem 1.4.3{" "}
                   </a>
                   &ensp;zu.{" "}
                 </Paragraph>

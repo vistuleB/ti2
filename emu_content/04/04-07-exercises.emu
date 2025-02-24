@@ -61,7 +61,7 @@
                             |> a
                                 href 02-02-examples-of-equipotent-sets.html
 
-                                Kapitel 2.2
+                                &ensp;Kapitel 2.2 
                             als _eine_ natürliche Zahl $\bar{\alpha}$ codieren können.
                             Mittels dieser Codierung wird eine Sprache $L \subseteq \Sigma^*$
                             zu einer Funktion

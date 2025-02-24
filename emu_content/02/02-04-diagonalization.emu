@@ -123,7 +123,7 @@
                         |> a
                             href 07-00-Turing-machines.html
 
-                            7
+                            &ensp;7 
                         &ensp;über Turingmaschinen und in
                         Kapitel ? über Komplexitätstheorie eine Rolle spielen, wenn wir z.B.
                         zeigen wollen, dass es Probleme gibt, an denen jedes Computerprogram

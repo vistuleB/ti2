@@ -168,7 +168,7 @@ const Article = () => {
                   \(C\)-Labels können wir uns nach dem Baukastenprizip bauen, in dem
                   wir{" "}
                   <a href="./04-01-regular-grammars.html#operation-L(.L)*">
-                    Theorem 4.1.14
+                    &ensp;Theorem 4.1.14{" "}
                   </a>
                   &ensp;anwenden.
                   Wir fügen zur "End-Produktion" \(B \rightarrow a\) eine weiter Produktion \(B \rightarrow a:B\)
@@ -190,7 +190,7 @@ const Article = () => {
                   </code>
                   {" "}separiert, müssen also wieder
                   <a href="./04-01-regular-grammars.html#operation-L(.L)*">
-                    Theorem 4.1.14
+                    &ensp;Theorem 4.1.14{" "}
                   </a>
                   &ensp;anwenden, dieses
                   mal auf die von \(T\) erzeugte Sprache. Im Ergebnis benennen wir das Startsymbol in \(S\) um.
@@ -242,8 +242,8 @@ const Article = () => {
                   haben.
                   Wir gehen vor wie in{" "}
                   <a href="./04-01-regular-grammars.html#theorem-regular-simplified">
-                    Theorem
-                    4.1.7
+                    &ensp;Theorem
+                    4.1.7{" "}
                   </a>
                   &ensp;beschrieben.
                   Wir ersetzen \(S \rightarrow C\) also durch alle Produktionen der Form \(S \rightarrow \alpha\),
@@ -451,7 +451,7 @@ const Article = () => {
                     </span>
                     Erinnern Sie sich an{" "}
                     <a href="./04-03-nfsm#exercise-divisibility">
-                      Aufgabe 4.3.1
+                      &ensp;Aufgabe 4.3.1{" "}
                     </a>
                     . Hier
                     sehen

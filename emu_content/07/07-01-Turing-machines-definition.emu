@@ -478,12 +478,12 @@
                         |> a
                             href ../../BerKrea/index.html
 
-                            Berechenbarkeit und Kreativität
+                            &ensp;Berechenbarkeit und Kreativität 
                         als auch
                         |> a
                             href ../../TI-2/index.html
 
-                            Theoretische Informatik
+                            &ensp;Theoretische Informatik 
                         vorkommen, teilen sich die beiden Kurse diese Seiten.
                         Für Berechenbarkeit und Kreativität ist der Rest dieses Teilkapitels
                         allerdings weniger relevant, da formale Grammatiken nicht Teil des Kurses waren.

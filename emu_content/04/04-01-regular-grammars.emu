@@ -201,7 +201,7 @@
                         |> a
                             href ./04-00-formal-languages.html#email-context-free-grammar
 
-                            Grammatik für korrekte Emailadressen
+                            &ensp;Grammatik für korrekte Emailadressen 
                         im letzten Abschnitt war _nicht_ regulär. Allerdings können wir
                         eine reguläre Grammatik angeben, die die gleiche Sprache erzeugt.
                         |> p
@@ -287,7 +287,7 @@
                         |> a
                             href #def-regular
 
-                            Definition 4.1
+                            &ensp;Definition 4.1 
                         &ensp;hat jede Produktion in einer
                         regulären Grammatik eine der folgenden vier Formen: \begin{align*} 1.
                         \quad X&amp;\rightarrow aY \\ 2. \quad X&amp;\rightarrow a \\ 3. \quad X&

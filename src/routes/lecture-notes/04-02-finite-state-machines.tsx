@@ -688,8 +688,8 @@ const Article = () => {
                   </span>
                   Betrachten wir die{" "}
                   <a href="./04-01-regular-grammars.html#example-aaabb">
-                    reguläre Grammatik aus
-                    dem vorherigen Kapitel 4.1
+                    &ensp;reguläre Grammatik aus
+                    dem vorherigen Kapitel 4.1{" "}
                   </a>
                   :
                   $$\begin&#123;align*&#125;
@@ -744,9 +744,9 @@ const Article = () => {
                   </span>
                   Betrachten wir die{" "}
                   <a href="./04-01-regular-grammars.html#example-xxx1yyy">
-                    reguläre Grammatik
+                    &ensp;reguläre Grammatik
                     aus
-                    dem vorherigen Kapitel 4.1
+                    dem vorherigen Kapitel 4.1{" "}
                   </a>
                   :
                   $$\begin&#123;align*&#125;

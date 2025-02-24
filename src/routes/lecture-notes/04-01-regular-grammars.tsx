@@ -205,7 +205,7 @@ const Article = () => {
                   </span>
                   Unsere
                   <a href="./04-00-formal-languages.html#email-context-free-grammar">
-                    Grammatik für korrekte Emailadressen
+                    &ensp;Grammatik für korrekte Emailadressen{" "}
                   </a>
                   im letzten Abschnitt war{" "}
                   <i>
@@ -302,7 +302,7 @@ const Article = () => {
                   wir, wie man die Form der Grammatiken noch stärker einschränken kann,
                   ohne dass Sie an Mächtigkeit einbüßen. Per
                   <a href="#def-regular">
-                    Definition 4.1
+                    &ensp;Definition 4.1{" "}
                   </a>
                   &ensp;hat jede Produktion in einer
                   regulären Grammatik eine der folgenden vier Formen: $$\begin&#123;align*&#125; 1.

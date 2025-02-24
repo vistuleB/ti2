@@ -418,7 +418,7 @@ const Article = () => {
                     eine ausgehende Kante haben), so ist das Minimierungsproblem
                     \(Sigma_2^&#123;P&#125;\)-vollständig, siehe
                     <a href="http://users.cms.caltech.edu/~umans/papers/BU07.pdf">
-                      Buchfuhrer, David; Umans, Christopher (January 2011),
+                      &ensp;Buchfuhrer, David; Umans, Christopher (January 2011),
                       <i>
                         The complexity of Boolean formula minimization
                       </i>
@@ -433,12 +433,12 @@ const Article = () => {
                     Fortschritte gegeben (die nahelegen, dass das Problem tatsächlich
                     schwierig ist), z.B.
                     <a href="https://drops.dagstuhl.de/opus/volltexte/2020/12574/pdf/LIPIcs-CCC-2020-22.pdf">
-                      Ilango, Loff, and Oliveira.
+                      &ensp;Ilango, Loff, and Oliveira.
                       <i>
                         NP-Hardness of Circuit Minimization for Multi-Output
                         Functions
                       </i>
-                      , (CCC 2020)
+                      , (CCC 2020){" "}
                     </a>
                     .
                   </li>

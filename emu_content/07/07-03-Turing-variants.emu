@@ -91,7 +91,7 @@
                         |> a
                             href ./04-01-Turing-machines-examples.html#example-palindromes
 
-                            Beispiel 4.2.2
+                            &ensp;Beispiel 4.2.2 
                         haben wir dafür eine Einband-Turingmaschine geschrieben. Deren
                         Nachteil war, dass sie ständig zwischen dem linken und rechten Rand
                         hin-und-herlaufen musste.
@@ -121,12 +121,12 @@
                         |> a
                             href https://turingmachinesimulator.com
 
-                            turingmachinesimulator.com
+                            &ensp;turingmachinesimulator.com 
                         finden Sie in
                         |> a
                             href ../code/turing machines/palindrome-multiple-tapes.txt
 
-                            palindrome-multiple-tapes.txt
+                            &ensp;palindrome-multiple-tapes.txt 
                         .
                     |> div
                         class well well-lg numbered-exercise container
@@ -351,7 +351,7 @@
                     |> a
                         href https://turingmachinesimulator.com
 
-                        turingmachinesimulator.com
+                        &ensp;turingmachinesimulator.com 
                     :
                     |> pre
                         class listing container
@@ -366,7 +366,7 @@
                         |> a
                             href ../code/turing machines/replace-b-by-bc.txt
 
-                            replace-b-by-bc.txt
+                            &ensp;replace-b-by-bc.txt 
                         Können wir unserer Turingmaschine die Funktionalität geben, eine Zelle _einzufügen_ und alles von Kopf bis zum linken Ende um
                         eins nach links zu verschieben bzw. das analoge, aber nach rechts? Wir
                         sind freie Menschen, wir können definieren, was wir wollen, müssen uns
@@ -412,12 +412,12 @@
                         |> a
                             href ../code/turing machines/go-left-go-right.txt
 
-                            go-left-go-right.txt
+                            &ensp;go-left-go-right.txt 
                         , geben Sie sie auf
                         |> a
                             href https://turingmachinesimulator.com
 
-                            turingmachinesimulator.com
+                            &ensp;turingmachinesimulator.com 
                         ein und starten Sie sie mit dem Eingabewort \(xxx\).
                     |> p
 
@@ -441,7 +441,7 @@
                         |> a
                             href ../code/turing machines/insert-z-before-y.txt
 
-                            insert-z-before-y.txt
+                            &ensp;insert-z-before-y.txt 
                         ansehen. Geben Sie beispielsweise 
                         |> tt
 
@@ -500,7 +500,7 @@
                         |> a
                             href https://turingmachinesimulator.com
 
-                            turingmachinesimulator.com
+                            &ensp;turingmachinesimulator.com 
                         eine Mehrband-Turingmaschine, die Inputs der Form \begin{align*} k [
                         k_1 : v_1; k_2 : v_2; \dots ; k_n : v_n ] \end{align*} entgegennimmt,
                         für \(k, k_1, \dots, k_n, v_1, \dots, v_n \in \{0,1\}^n \), also

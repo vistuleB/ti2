@@ -610,8 +610,8 @@
                         |> a
                             href ./04-01-regular-grammars.html#example-aaabb
 
-                            reguläre Grammatik aus
-                            dem vorherigen Kapitel 4.1
+                            &ensp;reguläre Grammatik aus
+                            dem vorherigen Kapitel 4.1 
                         :
                         \begin{align*}
                         S&amp;\rightarrow \epsilon \ |\ a S \ | \ b T \\
@@ -658,9 +658,9 @@
                         |> a
                             href ./04-01-regular-grammars.html#example-xxx1yyy
 
-                            reguläre Grammatik
+                            &ensp;reguläre Grammatik
                             aus
-                            dem vorherigen Kapitel 4.1
+                            dem vorherigen Kapitel 4.1 
                         :
                         \begin{align*}
                         A&amp;\rightarrow 0 A \ | 1 A \ | 1 B \\

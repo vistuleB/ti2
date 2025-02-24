@@ -170,7 +170,7 @@ const Article = () => {
                   Wir führen hier den Beweis nicht noch einmal; er ist mehr oder weniger
                   identisch mit dem Beweis von
                   <a href="./04-02-finite-state-machines.html#theorem-fsm-regular">
-                    Theorem 4.2.5
+                    &ensp;Theorem 4.2.5{" "}
                   </a>
                   ; wir haben nämlich in jenem Beweis nirgends verwendet, dass
                   \(\delta\) eine{" "}
@@ -219,7 +219,7 @@ const Article = () => {
                     ohne ein Eingabesymbol zu lesen; wir gehen hier einen anderen Weg
                     und verweisen auf
                     <a href="./04-01-regular-grammars.html#theorem-regular-simplified">
-                      Theorem 4.1.7
+                      &ensp;Theorem 4.1.7{" "}
                     </a>
                     , welches uns erlaubt, Regeln der Form \(X \rightarrow Y\) und \(X
                     \rightarrow a\) zu eliminieren.
@@ -235,7 +235,7 @@ const Article = () => {
                   <Paragraph>
                     Wir betrachten abermals die
                     <a href="./04-01-regular-grammars.html#example-aaabb">
-                      reguläre Grammatik aus dem vorherigen Kapitel 4.1
+                      &ensp;reguläre Grammatik aus dem vorherigen Kapitel 4.1{" "}
                     </a>
                     : $$\begin&#123;align*&#125; S&amp;\rightarrow \epsilon \ |\ a S \ | \ b T \\ T&
                     \rightarrow \epsilon \ | \ b T \ \end&#123;align*&#125;$$ und auch den
@@ -252,7 +252,7 @@ const Article = () => {
                     Wir sehen nun, dass dies genau der nichtdeterministische Automat
                     ist, den wir nach{" "}
                     <a href="#theorem-nfsm-regular">
-                      Theorem 4.3.4
+                      &ensp;Theorem 4.3.4{" "}
                     </a>
                     bauen können. Die Zustandsübergangsrelation \(\delta\) ist $$ \delta
                     = \&#123;(S,a,S), (S,b,S), (T,b,T) \&#125; \ . $$ Jeder Zustand ist ein
@@ -270,7 +270,7 @@ const Article = () => {
                   <Paragraph>
                     Wir betrachten die
                     <a href="./04-01-regular-grammars.html#exercise-no-a-or-no-b">
-                      reguläre Grammatik aus Übungsaufgabe 4.1.7
+                      &ensp;reguläre Grammatik aus Übungsaufgabe 4.1.7{" "}
                     </a>
                     :
                   </Paragraph>

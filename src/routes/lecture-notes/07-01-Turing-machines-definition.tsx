@@ -622,11 +622,11 @@ const Article = () => {
                 <Paragraph>
                   Da Turingmaschinen sowohl in dem Kurs
                   <a href="../../BerKrea/index.html">
-                    Berechenbarkeit und Kreativität
+                    &ensp;Berechenbarkeit und Kreativität{" "}
                   </a>
                   als auch
                   <a href="../../TI-2/index.html">
-                    Theoretische Informatik
+                    &ensp;Theoretische Informatik{" "}
                   </a>
                   vorkommen, teilen sich die beiden Kurse diese Seiten.
                   Für Berechenbarkeit und Kreativität ist der Rest dieses Teilkapitels

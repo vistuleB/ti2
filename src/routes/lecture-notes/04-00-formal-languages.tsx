@@ -1392,8 +1392,8 @@ const Article = () => {
                   Top-Level-Domain erlauben, siehe
                   zum Beispiel{" "}
                   <a href="https://en.wikipedia.org/wiki/Internationalized_domain_name">
-                    Wikipedia:
-                    Internationalized Domain Name
+                    &ensp;Wikipedia:
+                    Internationalized Domain Name{" "}
                   </a>
                   ).
                   Wie formulieren wir{" "}

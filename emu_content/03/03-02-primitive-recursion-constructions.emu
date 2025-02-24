@@ -46,7 +46,7 @@
                         |> a
                             href ../code/primitive-recursion/stockpile.py
 
-                            stockpile.py
+                            &ensp;stockpile.py 
                         &ensp;zu erklären und
                         werde dann weitere, weniger offensichtliche Konstruktionen diskutieren.
                     |> h2
@@ -310,7 +310,7 @@
                         |> a
                             href 02-00-infinite-sets.html
 
-                            Kapitel 2: Unendliche Mengen
+                            &ensp;Kapitel 2: Unendliche Mengen 
                         &ensp;haben wir
                         die bijektive Funktion
                     \begin{align*}

@@ -106,7 +106,7 @@ const Article = () => {
                 <Paragraph>
                   (Diese Beispielinstanz ist von
                   <a href="https://en.wikipedia.org/wiki/Post_correspondence_problem">
-                    Wikipedia
+                    &ensp;Wikipedia{" "}
                   </a>
                   ;
                   die graphische Darstellung stammt von mir.)

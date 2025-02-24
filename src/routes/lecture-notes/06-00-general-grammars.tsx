@@ -360,12 +360,12 @@ const Article = () => {
                   </span>
                   Im{" "}
                   <a href="./05-10-not-context-free.html">
-                    Teilkapitel 5.10
+                    &ensp;Teilkapitel 5.10{" "}
                   </a>
                   &ensp;gab
                   es{" "}
                   <a href="./05-10-not-context-free.html#exericse-power-2">
-                    Übungsaufgabe 5.10.2
+                    &ensp;Übungsaufgabe 5.10.2{" "}
                   </a>
                   ,
                   in der zu zeigen war, dass

@@ -277,12 +277,12 @@
                         |> a
                             href https://en.wikipedia.org/wiki/Schröder–Bernstein_theorem
 
-                            Schröder-Bernstein-Theorem
+                            &ensp;Schröder-Bernstein-Theorem 
                         , und wir werden das im Teilkapitel 
                         |> a
                             href ...
 
-                            ...
+                            &ensp;... 
                         &ensp;beweisen.
                         Vorerst behelfen wir uns mit ad-hoc-Methoden.
                     |> div

@@ -256,7 +256,7 @@ const Article = () => {
                   Wir haben allerdings bereits gesehen, dass das nicht immer möglich ist. Bei der Implementierung
                   von
                   <a href="../code/parsing/arithmetic-in-class/ArithmeticGrammar.java">
-                    ArithmeticGrammar.java
+                    &ensp;ArithmeticGrammar.java{" "}
                   </a>
                   zum Beispiel
                   haben wir manchmal das erste Zeichen von \(w\) betrachten müssen. Allerdings behalten wir erst

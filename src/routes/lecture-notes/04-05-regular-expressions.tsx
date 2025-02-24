@@ -55,7 +55,7 @@ const Article = () => {
                   am ehesten in Berührung kommen.
                   Wir haben bereits in{" "}
                   <a href="./04-01-regular-grammars.html#baukasten">
-                    Kapitel 4.1
+                    &ensp;Kapitel 4.1{" "}
                   </a>
                   &ensp;das
                   Baukastenprinzip kennengelernt:
@@ -145,7 +145,7 @@ const Article = () => {
                       \((R_1 | R_2)\) ein regulärer Ausdruck und beschreibt die Sprache
                       \(L_1 \cup L_2\) (die regulär ist, wie wir in{" "}
                       <a href="./04-01-regular-grammars.html#baukasten">
-                        Kapitel 4.1
+                        &ensp;Kapitel 4.1{" "}
                       </a>
                       &ensp;gesehen haben).
                     </li>
@@ -207,7 +207,7 @@ const Article = () => {
                   {" "}sind.
                   Dank unserer Vorarbeit aus{" "}
                   <a href="./04-01-regular-grammars.html#baukasten">
-                    Kapitel 4.1
+                    &ensp;Kapitel 4.1{" "}
                   </a>
                   wissen wir,
                   dass Alterantive, Konkatenation und Kleenesche Hülle wiederum reguläre Sprachen erzeugen.
@@ -309,7 +309,7 @@ const Article = () => {
                   </span>
                   Laden Sie sich{" "}
                   <a href="../code/regular-expressions/TestRegex.java">
-                    TestRegex.java
+                    &ensp;TestRegex.java{" "}
                   </a>
                   &ensp;herunter,
                   kompilieren und starten Sie es.
@@ -367,14 +367,14 @@ const Article = () => {
                   Lesen Sie hierfür unter Anderem
                   <div style="text-align:center">
                     <a href="https://www.w3schools.com/java/java_regex.asp">
-                      W3Schools
+                      &ensp;W3Schools{" "}
                     </a>
                   </div>
                   und
                   <div style="text-align:center">
                     <a href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html">
-                      Patternl.html
-                      auf der Java-API
+                      &ensp;Patternl.html
+                      auf der Java-API{" "}
                     </a>
                     ,
                   </div>
@@ -390,7 +390,7 @@ const Article = () => {
                 </h2>
                 Wir beweisen nun das Gegenstück zu{" "}
                 <a href="#regex-to-grammar">
-                  Lemma 4.5.2
+                  &ensp;Lemma 4.5.2{" "}
                 </a>
                 :
                 <div class="well container theorem">

@@ -340,13 +340,13 @@
                         |> a
                             href ./05-10-not-context-free.html
 
-                            Teilkapitel 5.10
+                            &ensp;Teilkapitel 5.10 
                         &ensp;gab
                         es 
                         |> a
                             href ./05-10-not-context-free.html#exericse-power-2
 
-                            Übungsaufgabe 5.10.2
+                            &ensp;Übungsaufgabe 5.10.2 
                         ,
                         in der zu zeigen war, dass
                         \begin{align*}

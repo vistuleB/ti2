@@ -258,7 +258,7 @@
                             |> a
                                 href ../../demos/drawManualGrammar.html
 
-                                Parser-Simulator
+                                &ensp;Parser-Simulator 
                             ein und finden Wörter mit langen Sackgassen.
                         |> p
 
@@ -287,7 +287,7 @@
                             |> a
                                 href ../../demos/drawManualGrammar.html
 
-                                Parser-Simulator
+                                &ensp;Parser-Simulator 
                             &ensp;ein
                             und schauen, wie lang die Sackgassen werden können.
                         |> p

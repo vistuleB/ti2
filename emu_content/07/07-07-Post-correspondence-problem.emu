@@ -98,7 +98,7 @@
                         |> a
                             href https://en.wikipedia.org/wiki/Post_correspondence_problem
 
-                            Wikipedia
+                            &ensp;Wikipedia 
                         ;
                         die graphische Darstellung stammt von mir.)
                     |> p

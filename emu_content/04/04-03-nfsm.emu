@@ -136,7 +136,7 @@
                         |> a
                             href ./04-02-finite-state-machines.html#theorem-fsm-regular
 
-                            Theorem 4.2.5
+                            &ensp;Theorem 4.2.5 
                         ; wir haben nämlich in jenem Beweis nirgends verwendet, dass
                         \(\delta\) eine _Funktion_ ist, und daher geht mit einem
                         \(\delta\), das eine _Relation_ ist, alles ganz genau gleich.
@@ -176,7 +176,7 @@
                             |> a
                                 href ./04-01-regular-grammars.html#theorem-regular-simplified
 
-                                Theorem 4.1.7
+                                &ensp;Theorem 4.1.7 
                             , welches uns erlaubt, Regeln der Form \(X \rightarrow Y\) und \(X
                             \rightarrow a\) zu eliminieren.
                             |> span
@@ -195,7 +195,7 @@
                             |> a
                                 href ./04-01-regular-grammars.html#example-aaabb
 
-                                reguläre Grammatik aus dem vorherigen Kapitel 4.1
+                                &ensp;reguläre Grammatik aus dem vorherigen Kapitel 4.1 
                             : \begin{align*} S&amp;\rightarrow \epsilon \ |\ a S \ | \ b T \\ T&
                             \rightarrow \epsilon \ | \ b T \ \end{align*} und auch den
                             (falschen) endlichen Automaten, den wir im letzten Kapitel dafür
@@ -212,7 +212,7 @@
                             |> a
                                 href #theorem-nfsm-regular
 
-                                Theorem 4.3.4
+                                &ensp;Theorem 4.3.4 
                             bauen können. Die Zustandsübergangsrelation \(\delta\) ist $$ \delta
                             = \{(S,a,S), (S,b,S), (T,b,T) \} \ . $$ Jeder Zustand ist ein
                             Endzustand, allerdings heißt das nicht, dass der Automat jedes Wort
@@ -232,7 +232,7 @@
                             |> a
                                 href ./04-01-regular-grammars.html#exercise-no-a-or-no-b
 
-                                reguläre Grammatik aus Übungsaufgabe 4.1.7
+                                &ensp;reguläre Grammatik aus Übungsaufgabe 4.1.7 
                             :
                         \begin{align*} S&amp;\rightarrow A \ | \ B \\ A&amp;\rightarrow \epsilon \
                         | \ b A \ | \ c A \\ B&amp;\rightarrow \epsilon \ | \ a B \ | \ c B

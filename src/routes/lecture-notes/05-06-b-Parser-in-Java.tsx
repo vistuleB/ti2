@@ -46,7 +46,7 @@ const Article = () => {
                   Den vollständigen Quelltext, den wir in der Vorlesung geschrieben haben,
                   finden Sie in der Datei{" "}
                   <a href="../code/parsing/arithmetic-in-class/ArithmeticGrammar.java">
-                    ArithmeticGrammar.java
+                    &ensp;ArithmeticGrammar.java{" "}
                   </a>
                   .
                 </div>

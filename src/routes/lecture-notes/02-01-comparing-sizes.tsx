@@ -84,7 +84,7 @@ const Article = () => {
                   Eine rigorose und belastbare Weise, unendliche Mengen hinsichtlich
                   ihrer Größe zu vergleichen, hat
                   <a href="https://en.wikipedia.org/wiki/Georg_Cantor">
-                    Georg Cantor
+                    &ensp;Georg Cantor{" "}
                   </a>
                   Ende des 19. Jahrhunderts gefunden. Sie war anfangs nicht
                   unumstritten.

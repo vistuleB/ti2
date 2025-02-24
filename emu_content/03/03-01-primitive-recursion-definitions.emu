@@ -158,7 +158,7 @@
                         |> a
                             href ../code/primitive-recursion/primrec.py
 
-                            primrec.py
+                            &ensp;primrec.py 
                         &ensp;auf
                         Ihrem Rechner.
                         Diese Datei stellt ein Framework für die Implementierung primitiv rekursiver Funktionen zur
@@ -281,7 +281,7 @@
                         |> a
                             href ../code/primitive-recursion/stockpile.py
 
-                            stockpile.py
+                            &ensp;stockpile.py 
                         &ensp;an,
                         in der ich diese Funktionen zum Großteil implementiert habe (basierend auf
                         den Übungen, die wir direkt in der Vorlesung gemacht haben).

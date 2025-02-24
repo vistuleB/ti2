@@ -238,7 +238,7 @@
                         |> a
                             href https://de.wikipedia.org/wiki/Beweis_(Mathematik)#Beweismethoden
 
-                            Wikipedia
+                            &ensp;Wikipedia 
                         &ensp;aufgeführt
                         sind.
                         Diesen zur Seite stehen die nicht wirklich formalisierbaren Beweistechniken oder Beweisstrategien,
@@ -268,7 +268,7 @@
                             |> a
                                 href ../vorlesungsskript.html#truth-table-top-down
 
-                                Top-Down-Methode
+                                &ensp;Top-Down-Methode 
                             , wie wir
                             aus einer Wahrheitstabelle einen Schaltkreis bauen:
                         |> div
@@ -297,7 +297,7 @@
                             |> a
                                 href #after-sub-proof
 
-                                runterspringen.
+                                &ensp;runterspringen. 
                         |> div
                             class well container-fluid
                             |> p
@@ -423,7 +423,7 @@
                                         href https://en.wikipedia.org/wiki/Abuse_of_notation
 
                                         _with abuse of
-                                        notation_
+                                        notation_ 
                                     ,
                                     womit die Autoren andeuten, dass sie ihre Notation nicht ganz korrekt anwenden, aber
                                     davon ausgehen, dass Leser oder Leserin (die ja Menschen sind und keine Compiler),
@@ -521,7 +521,7 @@
                         |> a
                             href #theorem-1
 
-                            Theorem 1.4.3
+                            &ensp;Theorem 1.4.3 
                         &ensp;zu. 
                     |> div
                         class well container

@@ -45,7 +45,7 @@ const Article = () => {
                 <Paragraph>
                   Benutzen Sie die App{" "}
                   <a href="../../demos/drawManualGrammar.html">
-                    drawManualGrammar.html
+                    &ensp;drawManualGrammar.html{" "}
                   </a>
                   ,
                   um mit kontextfreien Grammatik zu experimentieren:{" "}
@@ -219,7 +219,7 @@ const Article = () => {
                   </i>
                   auf{" "}
                   <a href="https://cstheory.stackexchange.com/questions/22520/example-of-context-free-grammar-that-triggers-exponential-behaviour-without-memo">
-                    StackExchange
+                    &ensp;StackExchange{" "}
                   </a>
                   vorgeschlagen als Beispiel für eine eindeutige Grammatik,
                   bei der Sie exponentiell große Backtrack-Bäume bekommen können:

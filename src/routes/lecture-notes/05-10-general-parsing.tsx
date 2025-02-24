@@ -46,19 +46,19 @@ const Article = () => {
                   Wir haben drei Methoden kennengelernt, kontextfreie Sprachen zu parsen:
                   rekursiver Abstieg (mit Demoseite{" "}
                   <a href="../../demos/drawManualGrammar.html">
-                    drawManualGrammar.html
+                    &ensp;drawManualGrammar.html{" "}
                   </a>
                   ),
                   die LL-Parser (die die Mengen \(\First_k(X)\) berechnen, wie
                   auf{" "}
                   <a href="../../demos/drawFirstComputation.html">
-                    drawFirstComputation.html
+                    &ensp;drawFirstComputation.html{" "}
                   </a>
                   &ensp;demonstriert),
                   und die LR-Parser (die die Teilbäume auf den Stack legen und nach Blüten suchen,
                   hier die Demoseite{" "}
                   <a href="../../demos/drawLR0ParserPrefixArithmetic.html">
-                    drawLR0ParserPrefixArithmetic
+                    &ensp;drawLR0ParserPrefixArithmetic{" "}
                   </a>
                   für arithmetische Ausdrücke).
                   Rekursiver Abstieg kann, wenn man nicht vorsichtig ist, in Endlosschleifen landen und
@@ -222,7 +222,7 @@ const Article = () => {
                   {" "}fußt, welches Sie in der
                   Vorlesung{" "}
                   <a href="../../AuK/index.html">
-                    Algorithmen und Komplexität
+                    &ensp;Algorithmen und Komplexität{" "}
                   </a>
                   &ensp;im dritten Semester
                   ausführlicher kennenlernen wollen. Wir beschränken uns bei dem folgenden Algorithmus

@@ -196,7 +196,7 @@
                     |> a
                         href ../sub-pages/01-monotone.html
 
-                        Lösungen zu den Übungsaufgaben
+                        &ensp;Lösungen zu den Übungsaufgaben 
                     &ensp;dargestellt.
                     Insbesondere definieren wir Verallgemeinerungen von \(\maj_n\) wie folgt:
                     \begin{align*}

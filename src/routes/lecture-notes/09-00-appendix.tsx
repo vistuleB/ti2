@@ -56,7 +56,7 @@ const Article = () => {
                     If you want to add a new chapter, you have to do two things: add an
                     entry to
                     <a href="../javascript/table-of-contents.js">
-                      table-of-contents.js
+                      &ensp;table-of-contents.js{" "}
                     </a>
                     . Just follow the format there. Then add the linked file. Best to
                     copy an existing file, a "chapter" or a "subchapter" file, depending
@@ -73,7 +73,7 @@ const Article = () => {
                     {" "}navigation links) is
                     determined purely by the order in which they appear in
                     <a href="../javascript/table-of-contents.js">
-                      table-of-contents.js
+                      &ensp;table-of-contents.js{" "}
                     </a>
                     .
                   </li>
@@ -171,7 +171,7 @@ const Article = () => {
                   <Paragraph>
                     I wrote an html page
                     <a href="../javascript/put-all-in-one-page.html">
-                      put-all-in-one-page.html
+                      &ensp;put-all-in-one-page.html{" "}
                     </a>
                     that loads the table of content and all chapters (which takes quite
                     a substantial amount of time, like 20 seconds or so) and extracts
@@ -188,7 +188,7 @@ const Article = () => {
                     You should then copy this table and paste it in the beginning of the
                     file
                     <a href="../javascript/number-my-theorems.js">
-                      nunmber-my-theorems.js
+                      &ensp;nunmber-my-theorems.js{" "}
                     </a>
                     . The point is that creating the table is expensive (must read all
                     chapters) but using it is cheap.
@@ -201,7 +201,7 @@ const Article = () => {
                     {" "}
                     &ensp;The page
                     <a href="../javascript/put-all-in-one-page.html">
-                      put-all-in-one-page.html
+                      &ensp;put-all-in-one-page.html{" "}
                     </a>
                     does not work if you just open it by double-clicking in your file
                     explorer. It has to be hosted by an http-server server with CORS

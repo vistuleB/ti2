@@ -100,7 +100,7 @@
                         |> a
                             href ../code/primitive-recursion/collatz.html
 
-                            collatz.html
+                            &ensp;collatz.html 
                         &ensp;erstellt.
                         Es scheint: egal, wo Sie anfangen, Sie enden immer bei 1. Allerdings wissen wir nicht
                         im Voraus, _wie oft_ wir die Funktion $f$ anwenden müssen. Und wir wissen nicht einmal,

@@ -353,11 +353,11 @@ const Article = () => {
                   . Treibende Kraft hinter diesem
                   Vorhaben war der deutsche Mathematiker
                   <a href="https://de.wikipedia.org/wiki/David_Hilbert">
-                    David Hilbert
+                    &ensp;David Hilbert{" "}
                   </a>
                   , und somit ist es auch als
                   <a href="https://de.wikipedia.org/wiki/Hilbertprogramm">
-                    Hilbertprogramm
+                    &ensp;Hilbertprogramm{" "}
                   </a>
                   bekannt. Das Bestreben, mathematisches Beweisen und somit auch Rechnen
                   zu mechanisieren, trug maßgeblich zur Entwicklung der Informatik und

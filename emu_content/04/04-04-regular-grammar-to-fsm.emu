@@ -107,7 +107,7 @@
                         |> a
                             href ./04-01-regular-grammars.html#operation-L(.L)*
 
-                            Theorem 4.1.14
+                            &ensp;Theorem 4.1.14 
                         &ensp;anwenden.
                         Wir fügen zur "End-Produktion" \(B \rightarrow a\) eine weiter Produktion \(B \rightarrow a:B\)
                         hinzu und
@@ -126,7 +126,7 @@
                         |> a
                             href ./04-01-regular-grammars.html#operation-L(.L)*
 
-                            Theorem 4.1.14
+                            &ensp;Theorem 4.1.14 
                         &ensp;anwenden, dieses
                         mal auf die von \(T\) erzeugte Sprache. Im Ergebnis benennen wir das Startsymbol in \(S\) um.
                     \begin{align*}
@@ -175,8 +175,8 @@
                         |> a
                             href ./04-01-regular-grammars.html#theorem-regular-simplified
 
-                            Theorem
-                            4.1.7
+                            &ensp;Theorem
+                            4.1.7 
                         &ensp;beschrieben.
                         Wir ersetzen \(S \rightarrow C\) also durch alle Produktionen der Form \(S \rightarrow \alpha\),
                         wobei
@@ -359,7 +359,7 @@
                             |> a
                                 href ./04-03-nfsm#exercise-divisibility
 
-                                Aufgabe 4.3.1
+                                &ensp;Aufgabe 4.3.1 
                             . Hier
                             sehen
                             Sie einen nichtdeterministischen endlichen Automaten für die Sprache \(L_4 \cup L_6\), also

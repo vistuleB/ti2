@@ -47,21 +47,21 @@
                         |> a
                             href ../../demos/drawManualGrammar.html
 
-                            drawManualGrammar.html
+                            &ensp;drawManualGrammar.html 
                         ),
                         die LL-Parser (die die Mengen \(\First_k(X)\) berechnen, wie
                         auf 
                         |> a
                             href ../../demos/drawFirstComputation.html
 
-                            drawFirstComputation.html
+                            &ensp;drawFirstComputation.html 
                         &ensp;demonstriert),
                         und die LR-Parser (die die Teilbäume auf den Stack legen und nach Blüten suchen,
                         hier die Demoseite 
                         |> a
                             href ../../demos/drawLR0ParserPrefixArithmetic.html
 
-                            drawLR0ParserPrefixArithmetic
+                            &ensp;drawLR0ParserPrefixArithmetic 
                         für arithmetische Ausdrücke).
                         Rekursiver Abstieg kann, wenn man nicht vorsichtig ist, in Endlosschleifen landen und
                         kann im Allgemeinen selbst bei einfachen Grammatiken exponentielle Laufzeit aufweisen.
@@ -199,7 +199,7 @@
                         |> a
                             href ../../AuK/index.html
 
-                            Algorithmen und Komplexität
+                            &ensp;Algorithmen und Komplexität 
                         &ensp;im dritten Semester
                         ausführlicher kennenlernen wollen. Wir beschränken uns bei dem folgenden Algorithmus
                         zunächst darauf, die Frage zu beantworten, ob den überhaupt \(S \Step{}^* w\) gilt,

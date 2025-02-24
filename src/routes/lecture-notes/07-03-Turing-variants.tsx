@@ -94,7 +94,7 @@ const Article = () => {
                   $$\begin&#123;align*&#125; L := \&#123; w \in \&#123;a,b\&#125;^* \ | \ w = w^R \&#125; \ ,
                   \end&#123;align*&#125;$$ In
                   <a href="./04-01-Turing-machines-examples.html#example-palindromes">
-                    Beispiel 4.2.2
+                    &ensp;Beispiel 4.2.2{" "}
                   </a>
                   haben wir dafür eine Einband-Turingmaschine geschrieben. Deren
                   Nachteil war, dass sie ständig zwischen dem linken und rechten Rand
@@ -127,11 +127,11 @@ const Article = () => {
                   </ol>
                   Den "Quelltext" für
                   <a href="https://turingmachinesimulator.com">
-                    turingmachinesimulator.com
+                    &ensp;turingmachinesimulator.com{" "}
                   </a>
                   finden Sie in
                   <a href="../code/turing machines/palindrome-multiple-tapes.txt">
-                    palindrome-multiple-tapes.txt
+                    &ensp;palindrome-multiple-tapes.txt{" "}
                   </a>
                   .
                 </div>
@@ -381,7 +381,7 @@ const Article = () => {
                 gegeben ein Eingabewort \(w \in \&#123;a,b\&#125;^*\), ersetze jedes \(b\) durch
                 ein \(c\). In der Syntax von
                 <a href="https://turingmachinesimulator.com">
-                  turingmachinesimulator.com
+                  &ensp;turingmachinesimulator.com{" "}
                 </a>
                 :
                 <pre class="listing container">
@@ -425,7 +425,7 @@ const Article = () => {
                   für jedes \(b\) alles, was rechts davon kommt, um eine Zelle nach
                   rechts verschieben. Meinen Quelltext finden sie in
                   <a href="../code/turing machines/replace-b-by-bc.txt">
-                    replace-b-by-bc.txt
+                    &ensp;replace-b-by-bc.txt{" "}
                   </a>
                   Können wir unserer Turingmaschine die Funktionalität geben, eine Zelle{" "}
                   <i>
@@ -476,11 +476,11 @@ const Article = () => {
                 <Paragraph>
                   Nehmen Sie die Beispielmaschine
                   <a href="../code/turing machines/go-left-go-right.txt">
-                    go-left-go-right.txt
+                    &ensp;go-left-go-right.txt{" "}
                   </a>
                   , geben Sie sie auf
                   <a href="https://turingmachinesimulator.com">
-                    turingmachinesimulator.com
+                    &ensp;turingmachinesimulator.com{" "}
                   </a>
                   ein und starten Sie sie mit dem Eingabewort \(xxx\).
                 </Paragraph>
@@ -501,7 +501,7 @@ const Article = () => {
                 <Paragraph>
                   Sie können sich meine Implementierung in
                   <a href="../code/turing machines/insert-z-before-y.txt">
-                    insert-z-before-y.txt
+                    &ensp;insert-z-before-y.txt{" "}
                   </a>
                   ansehen. Geben Sie beispielsweise{" "}
                   <tt>
@@ -557,7 +557,7 @@ const Article = () => {
                   </span>
                   Schreiben Sie auf
                   <a href="https://turingmachinesimulator.com">
-                    turingmachinesimulator.com
+                    &ensp;turingmachinesimulator.com{" "}
                   </a>
                   eine Mehrband-Turingmaschine, die Inputs der Form $$\begin&#123;align*&#125; k [
                   k_1 : v_1; k_2 : v_2; \dots ; k_n : v_n ] \end&#123;align*&#125;$$ entgegennimmt,

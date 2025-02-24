@@ -49,7 +49,7 @@ const Article = () => {
                   aber nicht deutlich schneller. Was "vernünftig" bedeutet, wird weiter unten klar werden.
                   Wir betrachten noch einmal genauer die universelle Turingmaschine aus
                   <a href="07-03-Turing-universal.html">
-                    Kapitel 7.5.
+                    &ensp;Kapitel 7.5.{" "}
                   </a>
                   &ensp;Unsere Implementierung hatte insgesamt
                   fünf Bänder verwendet: (1) ein Band, um die Regeln von \(M\) zu speichern (also die Funktion
@@ -85,7 +85,7 @@ const Article = () => {
                   Die entsprechende Turingmaschine hat dann allerdings \(k+2\) Bänder: \(k\) Arbeitsbänder,
                   eins für den Zustand von \(M\) und eins für \(\enc(M)\). Darüberhinaus hatten wir in
                   <a href="07-05-undecidability.html">
-                    Kapitel 7.7
+                    &ensp;Kapitel 7.7{" "}
                   </a>
                   &ensp;gesehen, dass wir als Codierungsalphabet
                   \(\Sigma\) selbst nehmen können, also \(\enc(M) \in \Sigma^*\), solange \(\Sigma\) mindestens zwei
@@ -348,7 +348,7 @@ const Article = () => {
                     \(s(n)\) Schritten. Wenn \(U\) die Maschine \(M\) simuliert, braucht sie
                     nach{" "}
                     <a href="#theorem-universal">
-                      Theorem 8.1.1
+                      &ensp;Theorem 8.1.1{" "}
                     </a>
                     &ensp;höchstens
                     \(C \cdot |\enc(M)| \cdot (n + s(n))\) Schritte.

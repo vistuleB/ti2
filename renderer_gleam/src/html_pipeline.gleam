@@ -1,3 +1,4 @@
+import desugarers/insert_bookend_text.{insert_bookend_text}
 import desugarers/insert_ti2_counter_commands.{insert_ti2_counter_commands}
 import desugarers/remove_empty_lines.{remove_empty_lines}
 import desugarers/identity
@@ -22,7 +23,8 @@ pub fn html_pipeline() -> List(Pipe) {
     replace_multiple_spaces_by_one(),
     ti2_carousel_component(),
     remove_empty_lines(),
-    extract_starting_and_ending_spaces(["i", "b", "strong", "em", "code"]),
+    extract_starting_and_ending_spaces(["i", "b", "strong", "em", "code", "a"]),
+    insert_bookend_text([#("a", " ", " ")]),
     insert_bookend_text_if_no_attributes([
       #("i", "_", "_"),
       #("em", "_", "_"),

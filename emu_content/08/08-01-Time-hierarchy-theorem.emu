@@ -50,7 +50,7 @@
                         |> a
                             href 07-03-Turing-universal.html
 
-                            Kapitel 7.5.
+                            &ensp;Kapitel 7.5. 
                         &ensp;Unsere Implementierung hatte insgesamt
                         fünf Bänder verwendet: (1) ein Band, um die Regeln von $M$ zu speichern (also die Funktion
                         $\delta$);
@@ -75,7 +75,7 @@
                         |> a
                             href 07-05-undecidability.html
 
-                            Kapitel 7.7
+                            &ensp;Kapitel 7.7 
                         &ensp;gesehen, dass wir als Codierungsalphabet
                         $\Sigma$ selbst nehmen können, also $\enc(M) \in \Sigma^*$, solange $\Sigma$ mindestens zwei
                         Zeichen enthält.
@@ -307,7 +307,7 @@
                             |> a
                                 href #theorem-universal
 
-                                Theorem 8.1.1
+                                &ensp;Theorem 8.1.1 
                             &ensp;höchstens
                             $C \cdot |\enc(M)| \cdot (n + s(n))$ Schritte.
                             Da $s(n) \geq n$ gilt, sind dies höchstens $2C \cdot |\enc(M)| \cdot s(n)

@@ -204,7 +204,7 @@
                         |> a
                             href ../code/parsing/arithmetic-in-class/ArithmeticGrammar.java
 
-                            ArithmeticGrammar.java
+                            &ensp;ArithmeticGrammar.java 
                         zum Beispiel
                         haben wir manchmal das erste Zeichen von $w$ betrachten müssen. Allerdings behalten wir erst
                         einmal obigen Wunsch als Idealziel.

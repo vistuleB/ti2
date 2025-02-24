@@ -45,7 +45,7 @@ const Article = () => {
                 <Paragraph>
                   Ich beginne dieses Teilkapitel, manche der primitiv-rekursive Implementierungen in
                   <a href="../code/primitive-recursion/stockpile.py">
-                    stockpile.py
+                    &ensp;stockpile.py{" "}
                   </a>
                   &ensp;zu erklären und
                   werde dann weitere, weniger offensichtliche Konstruktionen diskutieren.
@@ -336,7 +336,7 @@ const Article = () => {
                   {" "}von natürlichen Zahlen?
                   In{" "}
                   <a href="02-00-infinite-sets.html">
-                    Kapitel 2: Unendliche Mengen
+                    &ensp;Kapitel 2: Unendliche Mengen{" "}
                   </a>
                   &ensp;haben wir
                   die bijektive Funktion

@@ -1656,8 +1656,8 @@
                         |> a
                             href https://en.wikipedia.org/wiki/Internationalized_domain_name
 
-                            Wikipedia:
-                            Internationalized Domain Name
+                            &ensp;Wikipedia:
+                            Internationalized Domain Name 
                         ).
                         Wie formulieren wir _nichtleere Folge von ..._ mit unserer `-->`-Notation?
                         Wieder mit dem Rekursionstrick:
