@@ -101,12 +101,12 @@ const Article = () => {
                     . Eine
                     Grammatik ist schnell geschrieben:
                   </Paragraph>
-                  \begin&#123;align&#125;
+                  $$\begin&#123;align*&#125;
                   S&amp;\rightarrow aS \\
                   S&amp;\rightarrow Xc \\
                   X&amp;\rightarrow aXb \\
                   X&amp;\rightarrow ab
-                  \end&#123;align&#125;
+                  \end&#123;align*&#125;$$
                   <Paragraph>
                     Wenn wir jetzt die ersten \(k\) Zeichen lesen: \(aaaa \dots\), dann
                     gibt es keinen Weg, zu entscheiden, ob danach gleich viele oder weniger

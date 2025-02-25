@@ -29,9 +29,9 @@ pub fn our_pipeline() -> List(Pipe) {
   let single_dollar_indexed_regex = infra.unescaped_suffix_indexed_regex("\\$")
 
   let latex_opening_math_block_indexed_regex =
-    infra.unescaped_suffix_indexed_regex("\\\\begin\\{align\\*\\}")
+    infra.unescaped_suffix_indexed_regex("\\\\begin\\{align\\*?\\}")
   let latex_closing_math_block_indexed_regex =
-    infra.unescaped_suffix_indexed_regex("\\\\end\\{align\\*\\}")
+    infra.unescaped_suffix_indexed_regex("\\\\end\\{align\\*?\\}")
 
   let latex_opening_backslash_parenthesis_indexed_regex =
     infra.unescaped_suffix_indexed_regex("\\\\\\(")
@@ -101,6 +101,7 @@ pub fn our_pipeline() -> List(Pipe) {
       #("OpeningLatexBlock", "$$\\begin{align*}"),
       #("ClosingLatexBlock", "\\end{align*}$$"),
     ]),
+    
 
     // ************************
     // $$ *********************

@@ -525,9 +525,9 @@ const Article = () => {
                     </b>
                     Um zu zeigen, dass \(\R^\N \approx \R\) gilt, rechnen wir:
                   </Paragraph>
-                  \begin&#123;align&#125; \R^\N&amp;\approx \left(\cuben\right)^&#123;\N&#125; \\&amp;\approx
+                  $$\begin&#123;align*&#125; \R^\N&amp;\approx \left(\cuben\right)^&#123;\N&#125; \\&amp;\approx
                   \cube^&#123;\N \times \N&#125; \\&amp;\approx \cube^&#123;\N&#125; \\&amp;\approx \R \ .
-                  \end&#123;align&#125;
+                  \end&#123;align*&#125;$$
                   <span class="qed">
                     \(\square\)
                   </span>

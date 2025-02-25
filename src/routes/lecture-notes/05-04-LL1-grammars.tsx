@@ -609,31 +609,11 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                   wobei jedes \(\sigma_i\) ein Terminalsymbol oder ein Nichtterminalsymbol ist,
                   und berechnen dann \(\First_k(\alpha)\) wie folgt:
-                  \begin&#123;align&#125;
-                  \First
-                  <i>
-                    k(\alpha) = \First
-                  </i>
-                  k(\sigma
-                  <i>
-                    1) \circ
-                  </i>
-                  k \First
-                  <i>
-                    k(\sigma
-                  </i>
-                  2) \circ
-                  <i>
-                    k \dots \circ
-                  </i>
-                  k \First
-                  <i>
-                    k
-                    (\sigma
-                  </i>
-                  n) \ .
+                  $$\begin&#123;align*&#125;
+                  \First_k(\alpha) = \First_k(\sigma_1) \circ_k \First_k(\sigma_2) \circ_k \dots \circ_k \First_k
+                  (\sigma_n) \ .
                   \label&#123;first-k-wortform&#125;
-                  \end&#123;align&#125;
+                  \end&#123;align*&#125;$$
                   <Paragraph>
                     Wir können dies schön der Reihe nach tun:
                   </Paragraph>
@@ -694,18 +674,10 @@ const Article = () => {
                   X&amp;\rightarrow \alpha_k
                   \end&#123;align*&#125;$$
                   die Produktionen der Grammatik mit \(X\) auf der linken Seite. Dann gilt
-                  \begin&#123;align&#125;
-                  \First
-                  <i>
-                    k(X) = \bigcup
-                  </i>
-                  &#123;i=1&#125;^k \First
-                  <i>
-                    k(\alpha
-                  </i>
-                  i)
+                  $$\begin&#123;align*&#125;
+                  \First_k(X) = \bigcup_&#123;i=1&#125;^k \First_k(\alpha_i)
                   \label&#123;first-k-nonterminal&#125;
-                  \end&#123;align&#125;
+                  \end&#123;align*&#125;$$
                   Was ja eigentlich offensichtlich ist: wenn sich ein Wort \(X \Step&#123;&#125;^* w\) aus \(X\) ableiten
                   lässt, dann
                   muss dies mittels einer der obigen Produktionen geschehen: \(X \Step&#123;&#125; \alpha_i \Step&#123;&#125;^* w\),

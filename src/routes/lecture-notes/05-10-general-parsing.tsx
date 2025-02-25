@@ -263,14 +263,10 @@ const Article = () => {
                   für \(d = 1, \dots, n\), versucht also, alle Unterwörter der Länge \(d\) abzuleiten,
                   beginnend mit \(d = 1\), also \(N_&#123;i,i+1&#125;\). Diese Mengen sind leicht
                   zu bestimmen:
-                  \begin&#123;align&#125;
-                  N
-                  <i>
-                    &#123;i,i+1&#125; := \&#123;X \in N \ | \ X \step&#123;&#125; w
-                  </i>
-                  i \textnormal&#123; ist eine Produktion in \(G\)&#125;\&#125; \ .
-                  \label&#123;Nii&#125;
-                  \end&#123;align&#125;
+                  $$\begin&#123;align&#125;
+                  N_&#123;i,i+1&#125; := \&#123;X \in N \ | \ X \step&#123;&#125; w_i \textnormal&#123; ist eine Produktion in $G$&#125;\&#125; \ .
+                  \label&#123;sdsdasdNii&#125;
+                  \end&#123;align&#125;$$
                   Das gilt nur, weil \(G\) in Chomsky-Normalform vorliegt und somit Ableitungen mit mehr als einem
                   Schritt
                   notwendigerweise Wörter mit mehr als einem Zeichen produzieren würden.
@@ -285,15 +281,11 @@ const Article = () => {
                   \end&#123;align*&#125;$$
                   gilt. Das Problem ist, wie bereits oben skizziert, dass wir die "Grenze" \(j\) nicht kennen. Wir
                   probieren also alle Grenzen aus, und somit
-                  \begin&#123;align&#125;
-                  N
-                  <i>
-                    &#123;i,k&#125; = \bigcup
-                  </i>
-                  &#123;j=i+1&#125;^&#123;k-1&#125; \&#123;X \in N \ | \ \textnormal&#123; es gibt \(X \rightarrow YZ\) mit \(Y
-                  \in N_&#123;i,j&#125;\) und \(Z \in N_&#123;j,k&#125;\)&#125;\&#125; \ .
+                  $$\begin&#123;align*&#125;
+                  N_&#123;i,k&#125; = \bigcup_&#123;j=i+1&#125;^&#123;k-1&#125; \&#123;X \in N \ | \ \textnormal&#123; es gibt $X \rightarrow YZ$ mit $Y
+                  \in N_&#123;i,j&#125;$ und $Z \in N_&#123;j,k&#125;$&#125;\&#125; \ .
                   \label&#123;equation-Nij&#125;
-                  \end&#123;align&#125;
+                  \end&#123;align*&#125;$$
                   Dies können wir mit einer Schleife über \(j = i+1 \dots k-1\) und einer Schleife über alle
                   Produktionen
                   \(X \rightarrow YZ\) berechnen, da wir die Mengen \(N_&#123;i,j&#125;\) und \(N_&#123;j-k&#125;\) ja bereits kennen,

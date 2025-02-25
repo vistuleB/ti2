@@ -112,23 +112,11 @@ const Article = () => {
                   beschränken.
                   Im allgemeinen sei \(k = \ceil&#123;\frac&#123;k+1&#125;&#123;2&#125;&#125;\). Dann gilt
                 </Paragraph>
-                \begin&#123;align&#125;
-                \maj
-                <i>
-                  n (x
-                </i>
-                1,\dots,x
-                <i>
-                  n) = \bigvee
-                </i>
-                &#123;\substack&#123;I \subseteq [n] \\ |I| = k&#125;&#125; \bigwedge
-                <i>
-                  &#123;i \in I&#125; x
-                </i>
-                i
+                $$\begin&#123;align*&#125;
+                \maj_n (x_1,\dots,x_n) = \bigvee_&#123;\substack&#123;I \subseteq [n] \\ |I| = k&#125;&#125; \bigwedge_&#123;i \in I&#125; x_i
                 \ .
                 \label&#123;johns-equation&#125;
-                \end&#123;align&#125;
+                \end&#123;align*&#125;$$
                 <Paragraph>
                   Diese Konstruktion hat nun \(&#123;n \choose k&#125;\) Terme, von denen jeder aus \(k\) Variablen
                   besteht.

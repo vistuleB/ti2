@@ -2564,11 +2564,11 @@ const Article = () => {
                   </NumberedTitle>
                 </span>
                 Wir betrachten die Grammatik \(G_2 = (\&#123;a,b\&#125;, \&#123;S\&#125;, P, S)\) mit den Produktionsregeln
-                \begin&#123;align&#125;
+                $$\begin&#123;align*&#125;
                 S&amp;\rightarrow aSbS \\
                 S&amp;\rightarrow bSaS \\
                 S&amp;\rightarrow \epsilon \ .
-                \end&#123;align&#125;
+                \end&#123;align*&#125;$$
                 Hier sind mögliche Ableitungen des Wortes \(abab\). Zur Verdeutlichung
                 schreiben wir über den Pfeil \(\Rightarrow\) die Nummer der Regel, die
                 wir angewendet haben:

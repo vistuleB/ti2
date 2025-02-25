@@ -549,19 +549,19 @@ const Article = () => {
                         \end&#123;align*&#125;$$
                         mit \(\gamma = \alpha \beta\). Es sind \(\alpha\) und \(\beta\) also
                         linker Rand und Blüte von \(\gamma w'\). Somit ist
-                        \begin&#123;align&#125;
+                        $$\begin&#123;align*&#125;
                         \alpha \beta w' \rstep&#123;&#125; \alpha' A w'
                         \label&#123;left-reduction-w'&#125;
-                        \end&#123;align&#125;
+                        \end&#123;align*&#125;$$
                         ein korrekter Linksreduktionsschritt.
                         Die letzte \(\dk&#123;G&#125;\)-Produktion
                         in der Ableitung von \(\dk&#123;S&#125; \Step&#123;&#125;^* \gamma\) war somit
                         \(\dk&#123;A&#125; \rightarrow \beta\); somit ersetzt der Parser
                         das \(\beta\) auf dem Stack durch \(A\); führt also die Linksreduktion
-                        \begin&#123;align&#125;
+                        $$\begin&#123;align*&#125;
                         \alpha \beta w \rstep&#123;&#125; \alpha A w
                         \label&#123;left-reduction-w&#125;
-                        \end&#123;align&#125;
+                        \end&#123;align*&#125;$$
                         an. Da (\ref&#123;left-reduction-w'&#125;) korrekt ist und
                         \(\alpha \beta w\) nach Invariante eine gültige Wortform ist, ist
                         nach LR(0)-Bedingung auch (\ref&#123;left-reduction-w&#125;) ein korrekter

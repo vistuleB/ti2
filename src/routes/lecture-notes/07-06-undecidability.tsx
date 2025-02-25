@@ -52,10 +52,10 @@ const Article = () => {
                   kann.
                   Technisch gesprochen: \(U\) akzeptiert die Sprache
                 </Paragraph>
-                \begin&#123;align&#125;
-                \&#123; c w \ | \ c = \enc(M) \textnormal&#123; und \(M\) akzeptiert \(w\)&#125; \&#125; \ .
+                $$\begin&#123;align*&#125;
+                \&#123; c w \ | \ c = \enc(M) \textnormal&#123; und $M$ akzeptiert $w$&#125; \&#125; \ .
                 \label&#123;halting-language-old-encoding&#125;
-                \end&#123;align&#125;
+                \end&#123;align*&#125;$$
                 <Paragraph>
                   Allerdings: wenn \(M\) auf \(x\) nicht terminiert, dann terminiert \(U\) auf \(\enc(M)x\) auch
                   nicht. \(U\){" "}

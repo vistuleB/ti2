@@ -589,27 +589,19 @@ const Article = () => {
                     \(\sum_&#123;A \subseteq [n-k]&#125;\) bilden, wofür wir \(2^&#123;n-k&#125;\) XOR-Gates brauchen.
                     Insgesamt brauchen wir also
                   </Paragraph>
-                  \begin&#123;align&#125;
-                  &amp;\underbrace&#123;2^&#123;2^k&#125; + 2^k&#125;
-                  <i>
-                    &#123;\textnormal&#123;für alle \(g: \cube^k \rightarrow \cube\)&#125;&#125;
-                    +
-                    \underbrace&#123;2^&#123;n-k&#125;&#125;
-                  </i>
-                  &#123;\textnormal&#123;für alle Monome \(\y^A\)&#125;&#125;
+                  $$\begin&#123;align*&#125;
+                  &amp;\underbrace&#123;2^&#123;2^k&#125; + 2^k&#125;_&#123;\textnormal&#123;für alle $g: \cube^k \rightarrow \cube$&#125;&#125;
                   +
-                  \underbrace&#123;2^&#123;n-k&#125;&#125;
-                  <i>
-                    &#123;\textnormal&#123;um \(\y^A\) und \(g_A(\z)\) zu multiplizieren&#125;&#125;
-                    +
-                    \underbrace&#123;2^&#123;n-k&#125;-1&#125;
-                  </i>
-                  &#123;\textnormal&#123;für die Summe \(\sum_&#123;A \subseteq [n-k]&#125;\)&#125;&#125;
+                  \underbrace&#123;2^&#123;n-k&#125;&#125;_&#123;\textnormal&#123;für alle Monome $\y^A$&#125;&#125;
+                  +
+                  \underbrace&#123;2^&#123;n-k&#125;&#125;_&#123;\textnormal&#123;um $\y^A$ und $g_A(\z)$ zu multiplizieren&#125;&#125;
+                  +
+                  \underbrace&#123;2^&#123;n-k&#125;-1&#125;_&#123;\textnormal&#123;für die Summe $\sum_&#123;A \subseteq [n-k]&#125;$&#125;&#125;
                   \nonumber \\
                   =&
                   2^&#123;2^k&#125; + 3 \cdot 2^&#123;n-k&#125; + 2^k - 1 \ .
                   \label&#123;size-lupanov&#125;
-                  \end&#123;align&#125;
+                  \end&#123;align*&#125;$$
                   <Paragraph>
                     Wir müssen nun \(k\) so wählen, dass der obige Ausdruck minimiert wird.
                     Anstatt nun abzuleiten und gleich 0 zu setzen, verwenden wir einen
