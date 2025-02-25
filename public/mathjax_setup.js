@@ -105,6 +105,7 @@ window.MathJax = {
       bnegdiag: "\\textnormal{TimedNegDiag}",
       halt: "{\\rm H{\\small ALT}}",
       bhalt: "{\\rm T{\\small IMED}H{\\small ALT}}",
+      rls: "\\{\\texttt{L}, \\texttt{S}, \\texttt{R}\\}",
     },
   },
 };
