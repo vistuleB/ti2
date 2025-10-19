@@ -523,14 +523,13 @@ const toggleFigureImageZoom = (image) => {
   }
 };
 
-const constrainableImgClick = (e) => {
+const figureImgClick = (e) => {
   if (!isPageCentered) return;
   e.stopPropagation();
   e.preventDefault();
   const image = e.srcElement;
-  const carousel = image.closest(".carousel");
-  if (carousel) {
-    carousel.object.toggleZoom();
+  if (image.closest(".carousel")) {
+    console.error("Error");
     return;
   }
   toggleFigureImageZoom(image);
@@ -689,7 +688,6 @@ const setupCarouselImage = (image) => {
   allConstrainableImages.push(image);
   window.requestAnimationFrame(() => {
     image.classList.add("zoom-transition");
-    image.addEventListener("click", constrainableImgClick);
   });
 };
 
@@ -705,7 +703,7 @@ const setupFigureImage = (image) => {
   allConstrainableImages.push(image);
   window.requestAnimationFrame(() => {
     image.classList.add("zoom-transition");
-    image.addEventListener("click", constrainableImgClick);
+    image.addEventListener("click", figureImgClick);
   });
 };
 
@@ -723,32 +721,6 @@ const setupImagesV2 = () => {
   carouselImages.forEach(setupCarouselImage);
   figureImages.forEach(setupFigureImage);
 };
-
-// const setupImages = () => {
-//   let images = document.querySelectorAll("img");
-//   for (const image of images) {
-//     if (!image.closest(".carousel") && !image.closest("figure")) continue;
-//     let s = window.getComputedStyle(image);
-//     image.originalWidth = s.width;
-//     image.originalHeight = s.height;
-//     image.originalWidthInPx = parseFloat(image.originalWidth);
-//     image.originalHeightInPx = parseFloat(image.originalHeight);
-//     image.style.width = "";
-//     image.style.height = "";
-//     if (!image.closest(".carousel")) {
-//       image.classList.add("constrained");
-//       image.figure = image.closest("figure");
-//       image.constrainer = image.figure.parentNode;
-//       image.figcaption = image.figure.querySelector("figcaption");
-//       allFigureImages.push(image);
-//     }
-//     allConstrainableImages.push(image);
-//     window.requestAnimationFrame(() => {
-//       image.classList.add("zoom-transition");
-//       image.addEventListener("click", constrainableImgClick);
-//     });
-//   }
-// };
 
 let allCarouselObjects = new Array();
 
@@ -777,6 +749,10 @@ class Carousel {
     this.imgs = Array.from(this.carouselItems)
       .map((item) => item.querySelector("img"))
       .filter((img) => img);
+
+    this.imgs.forEach((img) =>
+      img.addEventListener("click", () => this.toggleZoom()),
+    );
 
     this.maxOriginalWidthInPx = 0;
     for (const img of this.imgs) {
