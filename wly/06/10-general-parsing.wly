@@ -336,8 +336,7 @@
     Term $g \cdot n^3$ wohl nicht ins Gewicht fallen
     wird.
 
-    |> Statement
-        title=*Demo*
+    |> Demo
         Betrachten wir die Grammatik
 
         \begin{align*}

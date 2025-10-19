@@ -650,8 +650,7 @@
 
         für alle $X \in N$.
 
-    |> Statement
-        title=*Demo*
+    |> Demo
         *- Berechnung der Menge $\First_k(A)$ für die
         Nichtterminale einer Sprache.* Wir betrachten die
         Grammatik

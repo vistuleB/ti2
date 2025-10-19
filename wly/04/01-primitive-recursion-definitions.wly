@@ -124,8 +124,7 @@
     restriktiv; es ist aber wohl die einfachste Form einer
     Schleife, die wirklich etwas "schleifenhaftes" tut.
 
-    |> Statement
-        title=*Demo*
+    |> Demo
         Speichern Sie die Datei
         [`primrec.py`{codelink}](./code/primitive-recursion/primrec.py)
         auf Ihrem Rechner. Diese Datei stellt ein Framework

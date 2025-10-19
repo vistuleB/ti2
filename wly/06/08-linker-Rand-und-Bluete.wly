@@ -318,20 +318,17 @@
                 letzte angewandte $\hat{G}$ -Produktion
                 $\hat{X} \rightarrow \beta$ und schreibe
                 $\gamma = \alpha\beta$. Wende die $G$-Produktion
-
                 $X \rightarrow \beta$ rückwärts an, reduziere also
 
                 \begin{align*}
                 \alpha \beta \rstep{} \alpha X
                 \end{align*}
-
                 Konkret: lösche $\beta$ vom Stack und ersetze es
                 durch $A$.
 
             |> li
                 Falls $\gamma \not \in \Front(G)$, lies das nächste
                 Eingabezeichen und lege es auf den Stack.
-
         Der Parser endet, wenn weder Schritt 1 noch Schritt 2
         möglich sind; wenn zu diesem Zeitpunkt nur noch $S$
         auf dem Stack liegt, akzeptiert er, andernfalls lehnt
