@@ -871,7 +871,14 @@ class Carousel {
         const indicator = document.createElement("button");
         indicator.className = "carousel__indicator_box";
         indicator.setAttribute("aria-label", `Go to slide ${i}`);
-        indicator.addEventListener("click", () => this.setItemNumber(i));
+        indicator.addEventListener("click",
+          (e) => {
+            if (!isPageCentered) return;
+            e.stopPropagation();
+            e.preventDefault();
+            this.setItemNumber(i)
+          }
+        );
         const circle = document.createElement("div");
         circle.className = "carousel__indicator_dot";
         indicator.appendChild(circle);
@@ -1233,7 +1240,6 @@ const onLoad = () => {
   console.log("onLoad");
   setupImages();
   setupCarousels();
-  setupGroups();
   screenWidth = -1; // force onResize though onDOMContentLoaded already called it
   onResize();
   let resizeObserver = new ResizeObserver((entries) => {
@@ -1261,6 +1267,7 @@ const onResize = () => {
 
   figureImagesOnResize();
   carouselImagesOnResize();
+  if (allGroups.length == 0) setupGroups();
   groupsOnResize();
 
   window.requestAnimationFrame(() => {

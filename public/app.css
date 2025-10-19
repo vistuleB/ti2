@@ -597,7 +597,6 @@ pre.listing.redyellow > span.listing-bol::before {
 
 .group_placeholder {
   width: 100%;
-  /* background-color: red; */
   opacity: 20%;
   height: 10px;
 }
@@ -607,12 +606,12 @@ pre.listing.redyellow > span.listing-bol::before {
   top: 0;
   left: 50%;
   display: flex;
-  gap: 0;
+  gap: 1.5em;
   justify-content: center;
   align-items: end;
   transform-origin: 50% 0%;
   transform: translate(-50%);
-  background-color: none;
+  background-color: inherit;
   box-sizing: content-box;
   border-top-width: 16px;
   border-bottom-width: 16px;
@@ -650,7 +649,8 @@ figure {
   flex-direction: column;
 }
 
-.group_scaler figure {
+.group_scaler figure,
+.group_scaler .carousel__container {
   margin: 0 auto;
 }
 
