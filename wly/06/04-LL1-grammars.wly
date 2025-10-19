@@ -651,7 +651,7 @@
         für alle $X \in N$.
 
     |> Statement
-        title=*Demo.*
+        title=*Demo*
         *- Berechnung der Menge $\First_k(A)$ für die
         Nichtterminale einer Sprache.* Wir betrachten die
         Grammatik

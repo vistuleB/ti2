@@ -165,7 +165,7 @@
     wir uns folgendes:
 
     |> Statement
-        title=*Wunsch.*
+        title=*Wunsch*
         Ob $\alpha \beta w \rstep{} \alpha X w$ gültig ist
         oder nicht, wollen wir allein auf Grund der Front
         $\alpha \beta$ entscheiden können, das heißt, ohne $w$
