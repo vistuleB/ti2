@@ -253,7 +253,8 @@ pub fn main_pipeline()  -> List(Pipe) {
       dl.handles_add_ids(),
       dl.handles_generate_dictionary_and_id_list("path"),
       dl.handles_substitute_and_fix_nonlocal_id_links(#("path", "a", "a", [], [])),
-      dl.rearrange_links__batch([
+      dl.tokenize_href_surroundings(),
+      dl.rearrange_links_4_pre_tokenized_src__batch([
         #("Theorem <a href=1>_1_</a>", "<a href=1>Theorem _1_</a>"),
         #("(Theorem <a href=1>_1_</a>", "(<a href=1>Theorem _1_</a>"),
         #("Übungsaufgabe <a href=1>_1_</a>", "<a href=1>Übungsaufgabe _1_</a>"),
@@ -265,6 +266,19 @@ pub fn main_pipeline()  -> List(Pipe) {
         #("Beispiel <a href=1>_1_</a>", "<a href=1>Beispiel _1_</a>"),
         #("Definition <a href=1>_1_</a>", "<a href=1>Definition _1_</a>"),
       ]),
+      dl.detokenize_href_surroundings(),
+      // dl.rearrange_links__batch([
+      //   #("Theorem <a href=1>_1_</a>", "<a href=1>Theorem _1_</a>"),
+      //   #("(Theorem <a href=1>_1_</a>", "(<a href=1>Theorem _1_</a>"),
+      //   #("Übungsaufgabe <a href=1>_1_</a>", "<a href=1>Übungsaufgabe _1_</a>"),
+      //   #("Aufgabe <a href=1>_1_</a>", "<a href=1>Aufgabe _1_</a>"),
+      //   #("Lemma <a href=1>_1_</a>", "<a href=1>Lemma _1_</a>"),
+      //   #("Algorithmus <a href=1>_1_</a>", "<a href=1>Algorithmus _1_</a>"),
+      //   #("Kapitel <a href=1>_1_</a>", "<a href=1>Kapitel _1_</a>"),
+      //   #("Teilkapitel <a href=1>_1_</a>", "<a href=1>Teilkapitel _1_</a>"),
+      //   #("Beispiel <a href=1>_1_</a>", "<a href=1>Beispiel _1_</a>"),
+      //   #("Definition <a href=1>_1_</a>", "<a href=1>Definition _1_</a>"),
+      // ]),
     ],
     [
       dl.fold_contents_into_text("Math"),
