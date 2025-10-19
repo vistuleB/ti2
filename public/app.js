@@ -1114,8 +1114,45 @@ class Carousel {
   }
 }
 
+const constrainGroup = (group) => {
+  group.classList.remove("unconstrained");
+  group.classList.add("constrained");
+  let w = group.constrainer.getBoundingClientRect().width;
+  let s = Math.min(1, w / group.originalWidthInPx);
+  console.log("print s", s);
+  let z = `translate(-50%) scale(${s})`;
+  console.log("z", z);
+  group.scaler.style.transform = z;
+};
+
+const unconstrainGroup = (group) => {
+  group.classList.remove("constrained");
+  group.classList.add("unconstrained");
+  group.placeholder.style.height = group.originalHeightInPx + "px";
+  group.scaler.style.transform = "translate(-50%)";
+};
+
+const toggleGroupConstrained = (group) => {
+  if (group.classList.contains("constrained")) {
+    unconstrainGroup(group);
+  } else {
+    constrainGroup(group);
+  }
+};
+
 const setupGroups = () => {
   const groups = document.querySelectorAll(".group");
+  groups.forEach((group) => {
+    group.placeholder = group.querySelector(".group_placeholder");
+    group.scaler = group.querySelector(".group_scaler");
+    let r = group.scaler.getBoundingClientRect();
+    group.originalWidthInPx = r.width;
+    group.originalHeightInPx = r.height;
+    group.placeholder.style.height = r.height + "px";
+    group.constrainer = group.parentNode;
+    constrainGroup(group);
+    group.scaler.addEventListener("click", () => toggleGroupConstrained(group));
+  });
 };
 
 const setupCarousels = () => {

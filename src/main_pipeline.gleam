@@ -149,6 +149,8 @@ pub fn main_pipeline()  -> List(Pipe) {
   let assert Ok(figure__container) = infra.expand_selector_shorthand("div.figure__container")
   let assert Ok(end_of_page_element) = infra.expand_selector_shorthand("EndOfPageElt#end-of-page-elt")
   let assert Ok(body_wrapper) = infra.expand_selector_shorthand("BodyWrapper#body-wrapper")
+  let assert Ok(group_scaler) = infra.expand_selector_shorthand("div.group_scaler")
+  let assert Ok(group_placeholder) = infra.expand_selector_shorthand("div.group_placeholder")
 
   // ****************************************************
   // * use 'dl.table_marker()' desugarer to mark a line *
@@ -308,6 +310,8 @@ pub fn main_pipeline()  -> List(Pipe) {
         #("Group", "group"),
         #("NoWrap", "nowrap"),
       ]),
+      dl.wrap_children_custom(#("Group", group_scaler, infra.GoBack)),
+      dl.prepend_custom(#("Group", group_placeholder)),
       dl.wrap_with_if_child_of(#("pre", "div", ["Sub", "Chapter"])),
       dl.wrap_with_if_child_of(#("ol", "div", ["Sub", "Chapter"])),
       dl.wrap_with_if_child_of(#("ul", "div", ["Sub", "Chapter"])),

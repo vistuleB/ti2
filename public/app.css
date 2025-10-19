@@ -584,9 +584,26 @@ pre.listing.redyellow > span.listing-bol::before {
 }
 
 .group {
+  position: relative;
+  margin: 0 auto;
+}
+
+.group_placeholder {
+  width: 100%;
+  background-color: red;
+  opacity: 20%;
+  height: 10px;
+}
+
+.group_scaler {
+  position: absolute;
+  top: 0;
+  left: 50%;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  transform-origin: 50% 0%;
+  transform: translate(-50%);
+  background-color: rgba(30,30,30,0.1);
 }
 
 .figure__container {
