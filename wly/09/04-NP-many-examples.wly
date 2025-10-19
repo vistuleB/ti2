@@ -25,6 +25,17 @@
         |> img
             style=width:840px
             src=img/test_img2.svg
+            
+    |> Theorem
+        |> figure
+            |> img
+                style=height:10em
+                src=img/finite-state-automata/finite-state-machine-example-01.svg
+        
+        |> figure
+            |> img
+                style=height:100px
+                src=img/test_img1.svg
     
     |> Group
         |> figure

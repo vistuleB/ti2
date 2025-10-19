@@ -503,9 +503,7 @@ const constrainFigureImage = (image) => {
   image.classList.remove("unconstrained");
   image.classList.add("constrained");
   let constrainerWidth = image.constrainer.getBoundingClientRect().width;
-  if (image.id === "aa" || image.id === "bb") {
-    console.log(image.id, "the image.originalWidth is:", image.originalWidth);
-  }
+  console.log(constrainerWidth);
   image.style.width = `min(${constrainerWidth + "px"}, ${image.originalWidth})`;
 };
 
@@ -707,7 +705,7 @@ const setupFigureImage = (image) => {
   });
 };
 
-const setupImagesV2 = () => {
+const setupImages = () => {
   let images = document.querySelectorAll("img");
   let [groupImages, images2] = partitionArray(images, (image) =>
     image.closest(".group"),
@@ -1116,6 +1114,10 @@ class Carousel {
   }
 }
 
+const setupGroups = () => {
+  const groups = document.querySelectorAll(".group");
+};
+
 const setupCarousels = () => {
   let carouselObserver = createCarouselObserver();
   const carousels = document.querySelectorAll(".carousel__container");
@@ -1166,8 +1168,9 @@ const onDOMContentLoaded = () => {
 
 const onLoad = () => {
   console.log("onLoad");
-  setupImagesV2();
+  setupImages();
   setupCarousels();
+  setupGroups();
   screenWidth = -1; // force onResize though onDOMContentLoaded already called it
   onResize();
   let resizeObserver = new ResizeObserver((entries) => {

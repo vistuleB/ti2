@@ -589,12 +589,12 @@ pre.listing.redyellow > span.listing-bol::before {
   margin: 0 auto;
 }
 
-/*.figure__container {
+.figure__container {
   display: flex;
   justify-content: center;
   background-color: inherit;
-  width: 100%;
-}*/
+  /*width: 100%;*/
+}
 
 figure {
   background-color: inherit;

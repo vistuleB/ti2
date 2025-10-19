@@ -315,7 +315,7 @@ pub fn main_pipeline()  -> List(Pipe) {
       dl.append_class_to_child_if_has_class(#("Sub", "out", "well")),
       dl.append_class_to_child_if_is_one_of(#("Chapter", "main-column", main_column_elements)),
       dl.append_class_to_child_if_is_one_of(#("Sub", "main-column", main_column_elements)),
-      // dl.wrap_with_custom_if_not_child_of(#("figure", figure__container, ["Sub", "Chapter"])),
+      dl.wrap_with_custom_if_not_child_of(#("figure", figure__container, ["Sub", "Chapter"])),
       dl.wrap_with_custom_if_child_of(#("figure", pseudowell, ["Sub", "Chapter"])),
       dl.wrap_with_custom_if_child_of(#("CarouselContainer", pseudowell, ["Sub", "Chapter"])),
       dl.replace_with_arbitrary(#("QED", qed)),
