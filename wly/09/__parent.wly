@@ -1,6 +1,7 @@
 |> Chapter
     handle=complexity-theory:page
     title=Complexity Theory
+
     Turingmaschinen erlauben uns, den Resourcenverbrauch
     einer Berechnung zu quantifizieren: zum einen die
     _Zeit_, also die Anzahl der Schritte, die die

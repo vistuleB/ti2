@@ -306,9 +306,8 @@
     $\hat{G}$ beides Terminalsymbole sind. Wir können nun
     unseren $LR(0)$-Parser beschreiben:
 
-    |> Statement
+    |> Algorithm
         handle=algorithm-LR-parser
-        title=*Algorithmus*
         *- Der $LR(0)$-Parser.* Starte mit einem leerem
         Stack. Sei $\gamma$ der Inhalt des Stacks zu einem
         Zeitpunkt.

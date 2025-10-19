@@ -1,7 +1,6 @@
 |> Sub
     title=Ableitungen und Ableitungsbäume
 
-
     |> Definition
         *(Ableitung)* Sei $G$ eine Grammatik mit Startsymbol
         $S$. Die Ableitung eines Wortes $\alpha$ ist eine

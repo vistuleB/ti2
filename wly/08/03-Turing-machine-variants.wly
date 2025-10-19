@@ -2,7 +2,6 @@
     handle=turing-variants
     title=Variationen: Mehrband-Maschinen, nichtdeterministische Maschinen
 
-
     |> TopicAnnouncement
         Turingmaschinen mit mehreren Bändern
 

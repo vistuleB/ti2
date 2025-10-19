@@ -1,7 +1,6 @@
 |> Sub
     title=Kontextfreie Grammatiken und Kellerautomaten
 
-
     |> Theorem
         Zu jeder kontextfreien Grammatik
         $G = (\Sigma, N, S, P)$ gibt es einen Kellerautomaten

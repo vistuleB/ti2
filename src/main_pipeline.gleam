@@ -84,6 +84,7 @@ pub fn main_pipeline()  -> List(Pipe) {
   ])
 
   let pre_transformation_document_tags = [
+    "Algorithm",
     "Carousel",
     "CarouselItem",
     "Chapter",
@@ -162,6 +163,7 @@ pub fn main_pipeline()  -> List(Pipe) {
       dl.rename_with_attributes(#("Lemma", "Statement", [#("title", "*Lemma*")])),
       dl.rename_with_attributes(#("Claim", "Statement", [#("title", "*Behauptung*")])),
       dl.rename_with_attributes(#("Problem", "Statement", [#("title", "*Problem*")])),
+      dl.rename_with_attributes(#("Algorithm", "Statement", [#("title", "*Algorithmus*")])),
       dl.rename_with_attributes(#("Proof", "Highlight", [#("title", "*Beweis.*")])),
       dl.ti2_add_should_be_numbers(),
       dl.ti2_backfill(),

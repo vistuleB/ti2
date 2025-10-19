@@ -1,7 +1,6 @@
 |> Sub
     title=Der DK-Automat
 
-
     |> TopicAnnouncement
         Von der Grammatik $\hat{G}$ zu einem
         nichtdeterministischen endlichen Automaten

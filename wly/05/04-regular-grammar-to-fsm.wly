@@ -1,7 +1,6 @@
 |> Sub
     title=Von einer regulären Grammatik zu einem endlichen Automaten an einem Beispiel
 
-
     |> Theorem
         Zu jeder kontextfreien Grammatik
         $G = (\Sigma, N, S, P)$ gibt es einen Kellerautomaten

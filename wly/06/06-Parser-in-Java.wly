@@ -1,7 +1,6 @@
 |> Sub
     title=Einen Parser in Java implementieren
 
-
     |> div
         class=well alert-info
         Den vollständigen Quelltext, den wir in der Vorlesung

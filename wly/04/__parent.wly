@@ -1,5 +1,6 @@
 |> Chapter
     title=Berechenbarkeit und natürliche Zahlen
+
     Mit den Booleschen Schaltkreisen haben wir ein Modell
     kennengelernt, dass die Berechnung von Booleschen
     Funkionen $f: \{0,1\}^n \rightarrow \{0,1\}$
