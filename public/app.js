@@ -1013,7 +1013,7 @@ class Carousel {
       2 * this.buttonWidthInPx +
       4 * this.unconstrainedButtonMarginInPx;
 
-    if (this.group == null && this.containerWidth >= unconstrainedUIWidth) {
+    if (this.containerWidth >= unconstrainedUIWidth) {
       this.bigEnoughContainerForUnconstrainedUI = true;
       this.removeConstrainedNav();
       this.attachUnconstrainedNav();

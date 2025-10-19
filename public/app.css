@@ -796,6 +796,10 @@ figcaption {
   margin: 1rem auto;
 }
 
+.group .carousel__indicators {
+  margin: 1rem auto 0;
+}
+
 .carousel__indicator_box {
   width: var(--carousel-indicator-box-size);
   height: var(--carousel-indicator-box-size);

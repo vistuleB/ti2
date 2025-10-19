@@ -197,17 +197,20 @@
     Fehlerzustand (trap state). Die akzeptierenden
     Zustände sind mit fettem Rand markiert.
 
-    |> Highlight
-        style=text-align:center
-        Der nichtdeterministische Automat
-        |> img
-            style=height:10em
-            src=./img/finite-state-automata/nfsm-example-03-big.svg
-        |> span
-            Der deterministische Automat, Schritt für Schritt
-            gebaut: 
+    
+    !! Der deterministische Automat, Schritt für Schritt
+    !! gebaut:
+    
+    |> Group
+        |> figure
+            |> img
+                style=height:10em
+                src=./img/finite-state-automata/nfsm-example-03-big.svg
+            |> figcaption
+                Der nichtdeterministische Automat
 
         |> Carousel
+            style=height:10em
             src=./img/finite-state-automata/transformation/01.svg
             src=./img/finite-state-automata/transformation/02.svg
             src=./img/finite-state-automata/transformation/03.svg
