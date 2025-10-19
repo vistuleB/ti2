@@ -204,13 +204,13 @@
     |> Group
         |> figure
             |> img
-                style=height:10em
+                style=height:12em
                 src=./img/finite-state-automata/nfsm-example-03-big.svg
             |> figcaption
                 Der nichtdeterministische Automat
 
         |> Carousel
-            style=height:10em
+            style=height:12em
             src=./img/finite-state-automata/transformation/01.svg
             src=./img/finite-state-automata/transformation/02.svg
             src=./img/finite-state-automata/transformation/03.svg
