@@ -25,20 +25,19 @@
         |> img
             style=width:840px
             src=img/test_img2.svg
-
-    |> figure
-        |> img
-            style=width:100%
-            src=img/09-complexity-theory/np-examples/peterson-3-colorable.svg
-        |> figcaption
-            Der Peterson-Graph ist 3-färbbar.
-
-    |> figure
-        |> img
-            style=width:100%
-            src=img/09-complexity-theory/np-examples/not-3-colorable.svg
-        |> figcaption
-            Dieser Graph ist nicht 3-färbbar
+    
+    |> Group
+        |> figure
+            |> img
+                src=img/09-complexity-theory/np-examples/peterson-3-colorable.svg
+            |> figcaption
+                Der Peterson-Graph ist 3-färbbar.
+        
+        |> figure
+            |> img
+                src=img/09-complexity-theory/np-examples/not-3-colorable.svg
+            |> figcaption
+                Dieser Graph ist nicht 3-färbbar
 
     |> Observation
         `3-Colorability`{sc} ist in NP.

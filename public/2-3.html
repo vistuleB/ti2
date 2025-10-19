@@ -160,14 +160,12 @@
         $\{0,1\}^3 \rightarrow \{0,1\}^2$ für folgende
         Funktionalität:
       </p>
-      <div class="figure__container">
-        <figure>
-          <img
-            style="height:10em"
-            src="img/circuits/onebitadder.svg"
-          >
-        </figure>
-      </div>
+      <figure>
+        <img
+          style="height:10em"
+          src="img/circuits/onebitadder.svg"
+        >
+      </figure>
       <p>
         Versuchen Sie, so wenig Gates wie möglich zu
         verwenden. Entscheiden Sie sich im Voraus, ob Sie
@@ -554,14 +552,12 @@
         mit
         vier Inputs und zwei Outputs:
       </p>
-      <div class="figure__container">
-        <figure>
-          <img
-            style="height:10em"
-            src="img/circuits/pg-gate.svg"
-          >
-        </figure>
-      </div>
+      <figure>
+        <img
+          style="height:10em"
+          src="img/circuits/pg-gate.svg"
+        >
+      </figure>
       <p>
         Mit Hilfe dieses Gates können wir
         $p_{c0*^k}, g_{c0*^k}$ und $p_{c1*^k}, g_{c1*^k}$ zu
@@ -573,14 +569,12 @@
         Für
         $n=16$ schaut das so aus:
       </p>
-      <div class="figure__container">
-        <figure>
-          <img
-            style="height:18em"
-            src="img/circuits/pg-all-gates.svg"
-          >
-        </figure>
-      </div>
+      <figure>
+        <img
+          style="height:18em"
+          src="img/circuits/pg-all-gates.svg"
+        >
+      </figure>
       <p>
         Jede Kante steht hier für zwei gebündelte Kanten,
         nämlich $p_I$ und
@@ -717,14 +711,12 @@
         $[0,k] = [0,l] \cup [k+1,l]$ und berechnen
         $pg_{[0,k]}$ so:
       </p>
-      <div class="figure__container">
-        <figure>
-          <img
-            style="height:5em"
-            src="img/circuits/pg0k.svg"
-          >
-        </figure>
-      </div>
+      <figure>
+        <img
+          style="height:5em"
+          src="img/circuits/pg0k.svg"
+        >
+      </figure>
       <p>
         Der Wert $pg_{[l+1,k]}$ ist bereits ein
         Binärintervall, kann also direkt aus dem vorherigen
@@ -779,14 +771,12 @@
         Das Maximum wird erreicht, wenn
         <span class="nowrap">$k = (1...10)_2$:</span>
       </p>
-      <div class="figure__container">
-        <figure>
-          <img
-            style="height:18em"
-            src="img/circuits/pg-0-30.svg"
-          >
-        </figure>
-      </div>
+      <figure>
+        <img
+          style="height:18em"
+          src="img/circuits/pg-0-30.svg"
+        >
+      </figure>
       <p>
         <b>Tiefe.</b>
         Jedes
@@ -832,14 +822,12 @@
         ist. Hier ist die Konstruktion für
         <span class="nowrap">$n=16$:</span>
       </p>
-      <div class="figure__container">
-        <figure>
-          <img
-            style="height:20em"
-            src="img/circuits/pg-prefices-16.svg"
-          >
-        </figure>
-      </div>
+      <figure>
+        <img
+          style="height:20em"
+          src="img/circuits/pg-prefices-16.svg"
+        >
+      </figure>
       <p>
         Wir benötigen also (weniger als) $n$ viele $pg$
         -Gates; jedes davon besteht wiederum aus 4 Basis-Gates
@@ -852,14 +840,12 @@
         $g_{[0,k]}$ aus $pg_{[0,l]}$ und $pg_{[l+1,k]}]$ zu
         berechnen, brauchen wir $p_{[0,l]}$ nicht:
       </p>
-      <div class="figure__container">
-        <figure>
-          <img
-            style="height:15em"
-            src="img/circuits/pg-gadget-no-need-p.svg"
-          >
-        </figure>
-      </div>
+      <figure>
+        <img
+          style="height:15em"
+          src="img/circuits/pg-gadget-no-need-p.svg"
+        >
+      </figure>
       <p>
         Es reichen also in der Tat $2n$ Basis-Gates aus.
         <span style="color:#0000;visibility:none;">A</span><span class="qed">\(\square\)</span>
