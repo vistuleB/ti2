@@ -12,6 +12,21 @@
         \end{align*}
 
     |> figure
+        |> img
+            style=height:100px
+            src=img/test_img1.svg
+
+    |> figure
+        |> img
+            style=height:100px
+            src=img/test_img2.svg
+
+    |> figure
+        |> img
+            style=height:100px
+            src=img/test_img3.svg
+
+    |> figure
         |> div
             style=display:inline-block;width:49%;justify-content:center;
             |> img

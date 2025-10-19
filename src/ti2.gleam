@@ -9,20 +9,34 @@ import desugaring as ds
 
 const ins = string.inspect
 
-fn cli_usage_supplementary() {
-  io.println("Format Writerly to Writerly")
-  io.println("Make sure there exists wly-edit directory where formatted source will be saved")
+fn local_cli_usage() {
+  let margin = "   "
+  io.println(margin <> "--fmt [<cols>] [<cols> <penalty>]")
+  io.println(margin <> "  -> (local option) run the formatter")
   io.println("")
-  io.println("gleam run -- --fmt <cols>")
+  io.println(margin <> "     optional arguments:")
+  io.println("")
+  io.println(margin <> "     • <cols>: preferred line length")
+  io.println(margin <> "     • <cols> <penalty>: preferred line")
+  io.println(margin <> "       length and indentation penalty (number")
+  io.println(margin <> "       of chars subtracted from line length at")
+  io.println(margin <> "       each added level of indentation in the file)")
+  io.println("")
 }
 
 pub fn main() {
   let args = argv.load().arguments
 
   case args {
-    ["--help"] | ["-h"] -> {
-      cli_usage_supplementary()
-      ds.basic_cli_usage()
+    ["--help"] | ["-help"] | ["-h"] -> {
+      ds.basic_cli_usage("\nCommand line options (basic):")
+      local_cli_usage()
+    }
+
+    ["--esoteric"] -> {
+      ds.basic_cli_usage("\nCommand line options (basic):")
+      local_cli_usage()
+      ds.advanced_cli_usage("Command line options (esoteric):")
     }
 
     _ -> {
@@ -31,8 +45,8 @@ pub fn main() {
         fn(error) {
           io.println("")
           io.println("cli error: " <> ins(error))
-          ds.basic_cli_usage()
-          cli_usage_supplementary()
+          ds.basic_cli_usage("\ncommand line options:")
+          local_cli_usage()
         }
       )
 
