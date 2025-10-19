@@ -147,6 +147,7 @@ pub fn main_pipeline()  -> List(Pipe) {
 
   let assert Ok(pseudowell) = infra.expand_selector_shorthand("div.pseudowell")
   let assert Ok(figure__container) = infra.expand_selector_shorthand("div.figure__container")
+  let assert Ok(group__container) = infra.expand_selector_shorthand("div.group__container")
   let assert Ok(end_of_page_element) = infra.expand_selector_shorthand("EndOfPageElt#end-of-page-elt")
   let assert Ok(body_wrapper) = infra.expand_selector_shorthand("BodyWrapper#body-wrapper")
   let assert Ok(group_scaler) = infra.expand_selector_shorthand("div.group_scaler")
@@ -322,6 +323,8 @@ pub fn main_pipeline()  -> List(Pipe) {
       dl.wrap_with_custom_if_not_child_of(#("figure", figure__container, ["Sub", "Chapter"])),
       dl.wrap_with_custom_if_child_of(#("figure", pseudowell, ["Sub", "Chapter"])),
       dl.wrap_with_custom_if_child_of(#("CarouselContainer", pseudowell, ["Sub", "Chapter"])),
+      dl.wrap_with_custom_if_not_child_of(#("Group", group__container, ["Sub", "Chapter"])),
+      dl.wrap_with_custom_if_child_of(#("Group", pseudowell, ["Sub", "Chapter"])),
       dl.replace_with_arbitrary(#("QED", qed)),
       dl.rename_with_class_and_attributes(#("CircleX", "img", "circle-X-img", [#("src", "img/context-free/LR/circle-X.svg")])),
       dl.append_class__batch([

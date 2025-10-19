@@ -583,14 +583,21 @@ pre.listing.redyellow > span.listing-bol::before {
   justify-content: center;
 }
 
+.group__container {
+  display: flex;
+  justify-content: center;
+  background-color: inherit;
+}
+
 .group {
   position: relative;
   margin: 0 auto;
+  background-color: inherit;
 }
 
 .group_placeholder {
   width: 100%;
-  background-color: red;
+  /* background-color: red; */
   opacity: 20%;
   height: 10px;
 }
@@ -600,17 +607,36 @@ pre.listing.redyellow > span.listing-bol::before {
   top: 0;
   left: 50%;
   display: flex;
+  gap: 1.5em;
   justify-content: center;
   transform-origin: 50% 0%;
   transform: translate(-50%);
-  background-color: rgba(30,30,30,0.1);
+  background-color: inherit;
+  box-sizing: content-box;
+  border-top-width: 16px;
+  border-bottom-width: 16px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.group_placeholder_transition {
+  will-change: height;
+  transition-property: height;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.group_scaler_transition {
+  will-change: transform;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
 }
 
 .figure__container {
   display: flex;
   justify-content: center;
   background-color: inherit;
-  /*width: 100%;*/
 }
 
 figure {
@@ -621,6 +647,10 @@ figure {
   justify-content: center;
   width: fit-content;
   flex-direction: column;
+}
+
+.group_scaler figure {
+  margin: 0 auto;
 }
 
 figure img,
@@ -635,19 +665,22 @@ figure img,
 }
 
 .pseudowell figure img,
-.pseudowell .carousel__item img {
+.pseudowell .carousel__item img,
+.pseudowell .group_scaler {
   border-left-width: 0;
   border-right-width: 0;
 }
 
 .well figure img.constrained,
-.well .carousel__item img.constrained {
+.well .carousel__item img.constrained,
+.well .group.constrained .group_scaler {
   border-left-width: min(var(--well-padding-x), 16px);
   border-right-width: min(var(--well-padding-x), 16px);
 }
 
 .well figure img.unconstrained,
-.well .carousel__item img {
+.well .carousel__item img,
+.well .group.unconstrained .group_scaler {
   border-left-width: 16px;
   border-right-width: 16px;
 }

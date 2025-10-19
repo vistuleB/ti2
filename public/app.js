@@ -225,7 +225,7 @@ const carouselMaxWidthInPx = () => {
   const adjustedScreenWidth = screenWidth * 0.9;
   const computeTabletMaxWidth = Math.min(
     adjustedScreenWidth,
-    DESKTOP_MAIN_COLUMN_WIDTH,
+    DESKTOP_MAIN_COLUMN_WIDTH
   );
   const computeDesktopMaxWidth =
     screenWidth < DESKTOP_MAIN_COLUMN_WIDTH
@@ -386,12 +386,12 @@ const resetScreenWidthDependentVars = () => {
   set(
     "--index-header-title-line-height",
     indexHeaderTitleLineHeightInRem,
-    "rem",
+    "rem"
   );
   set(
     "--index-header-subtitle-font-size",
     indexHeaderSubtitleFontSizeInRem,
-    "rem",
+    "rem"
   );
   set("--index-header-padding-top", indexHeaderPaddingTopInPx, "px");
   set("--index-header-padding-bottom", indexHeaderPaddingBottomInRem, "rem");
@@ -401,18 +401,18 @@ const resetScreenWidthDependentVars = () => {
   set(
     "--index-toc-subchapter-level-margin",
     indexTocSubchapterLevelMarginInEm,
-    "em",
+    "em"
   );
   set("--carousel-max-width", carouselMaxWidthInPx, "px");
   set(
     "--end-of-page-main-column-margin-bottom",
     endOfPageMainColumnMarginBottomInRem,
-    "rem",
+    "rem"
   );
   set(
     "--end-of-page-well-margin-bottom",
     endOfPageWellMarginBottomInRem,
-    "rem",
+    "rem"
   );
   set("--end-of-page-elt-margin-bottom", endOfPageEltMarginBottomInRem, "rem");
   set("--main-column-width", mainColumnWidthInPx, "px");
@@ -425,7 +425,7 @@ const resetScreenWidthDependentVars = () => {
   set(
     "--subtopic-announcement-font-size",
     subtopicAnnouncementFontSizeInRem,
-    "rem",
+    "rem"
   );
   set("--well-margin-y", wellMarginYInRem, "rem");
   set("--last-child-well-margin-bottom", lastChildWellMarginBottomInRem, "rem");
@@ -708,13 +708,13 @@ const setupFigureImage = (image) => {
 const setupImages = () => {
   let images = document.querySelectorAll("img");
   let [groupImages, images2] = partitionArray(images, (image) =>
-    image.closest(".group"),
+    image.closest(".group")
   );
   let [carouselImages, images3] = partitionArray(images2, (image) =>
-    image.closest(".carousel"),
+    image.closest(".carousel")
   );
   let [figureImages, _] = partitionArray(images3, (image) =>
-    image.closest("figure"),
+    image.closest("figure")
   );
   carouselImages.forEach(setupCarouselImage);
   figureImages.forEach(setupFigureImage);
@@ -726,7 +726,7 @@ class Carousel {
   constructor(container) {
     if (!container.classList.contains("carousel__container")) {
       console.error(
-        "'Carousel' constructor should be called on carousel__container!",
+        "'Carousel' constructor should be called on carousel__container!"
       );
       return;
     }
@@ -749,7 +749,7 @@ class Carousel {
       .filter((img) => img);
 
     this.imgs.forEach((img) =>
-      img.addEventListener("click", () => this.toggleZoom()),
+      img.addEventListener("click", () => this.toggleZoom())
     );
 
     this.maxOriginalWidthInPx = 0;
@@ -933,7 +933,7 @@ class Carousel {
     let lambda = clamp01(
       (this.containerWidth - CAROUSEL_ARROW_MIN_HEIGHT_CONTAINER_WIDTH) /
         (CAROUSEL_ARROW_MAX_HEIGHT_CONTAINER_WIDTH -
-          CAROUSEL_ARROW_MIN_HEIGHT_CONTAINER_WIDTH),
+          CAROUSEL_ARROW_MIN_HEIGHT_CONTAINER_WIDTH)
     );
 
     return (
@@ -1070,7 +1070,7 @@ class Carousel {
 
   nudgeCarouselItem(direction) {
     this.setItemNumber(
-      1 + ((this.numItems + this.itemNumber + direction - 1) % this.numItems),
+      1 + ((this.numItems + this.itemNumber + direction - 1) % this.numItems)
     );
   }
 
@@ -1118,11 +1118,10 @@ const constrainGroup = (group) => {
   group.classList.remove("unconstrained");
   group.classList.add("constrained");
   let w = group.constrainer.getBoundingClientRect().width;
+  console.log(window.getComputedStyle(group));
   let s = Math.min(1, w / group.originalWidthInPx);
-  console.log("print s", s);
-  let z = `translate(-50%) scale(${s})`;
-  console.log("z", z);
-  group.scaler.style.transform = z;
+  group.scaler.style.transform = `translate(-50%) scale(${s})`;
+  group.placeholder.style.height = group.originalHeightInPx * s + "px";
 };
 
 const unconstrainGroup = (group) => {
@@ -1140,6 +1139,8 @@ const toggleGroupConstrained = (group) => {
   }
 };
 
+const allGroups = [];
+
 const setupGroups = () => {
   const groups = document.querySelectorAll(".group");
   groups.forEach((group) => {
@@ -1148,10 +1149,30 @@ const setupGroups = () => {
     let r = group.scaler.getBoundingClientRect();
     group.originalWidthInPx = r.width;
     group.originalHeightInPx = r.height;
-    group.placeholder.style.height = r.height + "px";
     group.constrainer = group.parentNode;
     constrainGroup(group);
-    group.scaler.addEventListener("click", () => toggleGroupConstrained(group));
+    group.scaler.addEventListener("click", (e) => {
+      if (!isPageCentered) return;
+      e.stopPropagation();
+      e.preventDefault();
+      toggleGroupConstrained(group);
+    });
+    window.requestAnimationFrame(() => {
+      group.placeholder.classList.add("group_placeholder_transition");
+      group.scaler.classList.add("group_scaler_transition");
+    });
+    group.onResize = () => {
+      group.placeholder.classList.remove("group_placeholder_transition");
+      group.scaler.classList.remove("group_scaler_transition");
+      if (group.classList.contains("constrained")) {
+        constrainGroup(group);
+      }
+      window.requestAnimationFrame(() => {
+        group.placeholder.classList.add("group_placeholder_transition");
+        group.scaler.classList.add("group_scaler_transition");
+      });
+    };
+    allGroups.push(group);
   });
 };
 
@@ -1232,8 +1253,11 @@ const onResize = () => {
   for (const image of allConstrainableImages) {
     image.classList.remove("zoom-transition");
   }
+
   figureImagesOnResize();
   carouselImagesOnResize();
+  groupsOnResize();
+
   window.requestAnimationFrame(() => {
     for (const image of allConstrainableImages) {
       image.classList.add("zoom-transition");
@@ -1257,6 +1281,10 @@ const carouselImagesOnResize = () => {
   for (const carousel of allCarouselObjects) {
     carousel.onScreenWidthChangePhase2(avgButtonHeight);
   }
+};
+
+const groupsOnResize = () => {
+  allGroups.forEach((group) => group.onResize());
 };
 
 const onScrollEnd = (e) => {
