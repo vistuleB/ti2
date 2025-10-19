@@ -785,18 +785,24 @@ class Carousel {
       btn.innerHTML =
         '<img src="./img/carousel-jump-to-start.svg" alt="First">';
       btn.setAttribute("aria-label", "First slide");
-      btn.addEventListener("click", () => {
+      btn.addEventListener("click", (e) => {
+        if (!isPageCentered) return;
+        e.stopPropagation();
+        e.preventDefault();
         this.setItemNumber(1);
       });
       return btn;
     })();
-
+    
     this.constrainedUILstBtn = (() => {
       const btn = document.createElement("button");
       btn.className = "carousel__nav-button carousel__nav-item--last";
       btn.innerHTML = '<img src="./img/carousel-jump-to-end.svg" alt="Last">';
       btn.setAttribute("aria-label", "Last slide");
-      btn.addEventListener("click", () => {
+      btn.addEventListener("click", (e) => {
+        if (!isPageCentered) return;
+        e.stopPropagation();
+        e.preventDefault();
         this.setItemNumber(this.numItems);
       });
       return btn;
