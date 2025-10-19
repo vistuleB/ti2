@@ -593,10 +593,11 @@ pre.listing.redyellow > span.listing-bol::before {
   position: relative;
   margin: 0 auto;
   background-color: inherit;
+  padding-bottom: 0.5rem;
 }
 
 .group_placeholder {
-  width: 100%;
+  width: 10px;
   opacity: 20%;
   height: 10px;
 }
@@ -692,6 +693,10 @@ figcaption {
   margin-top: 0.5em;
   padding-bottom: 1rem;
   text-align: center;
+}
+
+.group figcaption {
+  padding-bottom: 0;
 }
 
 .zoom-transition {
