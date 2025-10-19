@@ -47,6 +47,36 @@
                     src=img/09-complexity-theory/np-examples/not-3-colorable.svg
                 |> figcaption
                     Dieser Graph ist nicht 3-färbbar
+        
+            |> Carousel
+                src=./img/finite-state-automata/transformation/01.svg
+                src=./img/finite-state-automata/transformation/02.svg
+                src=./img/finite-state-automata/transformation/03.svg
+                src=./img/finite-state-automata/transformation/04.svg
+                src=./img/finite-state-automata/transformation/05.svg
+                src=./img/finite-state-automata/transformation/06.svg
+                src=./img/finite-state-automata/transformation/07.svg
+                src=./img/finite-state-automata/transformation/08.svg
+                src=./img/finite-state-automata/transformation/09.svg
+                src=./img/finite-state-automata/transformation/10.svg
+                src=./img/finite-state-automata/transformation/11.svg
+                src=./img/finite-state-automata/transformation/12.svg
+                src=./img/finite-state-automata/transformation/13.svg
+                src=./img/finite-state-automata/transformation/14.svg
+                src=./img/finite-state-automata/transformation/15.svg
+                src=./img/finite-state-automata/transformation/16.svg
+                src=./img/finite-state-automata/transformation/17.svg
+                src=./img/finite-state-automata/transformation/18.svg
+                src=./img/finite-state-automata/transformation/19.svg
+                src=./img/finite-state-automata/transformation/20.svg
+                src=./img/finite-state-automata/transformation/21.svg
+                src=./img/finite-state-automata/transformation/22.svg
+                src=./img/finite-state-automata/transformation/23.svg
+                src=./img/finite-state-automata/transformation/24.svg
+                src=./img/finite-state-automata/transformation/25.svg
+                src=./img/finite-state-automata/transformation/26.svg
+                src=./img/finite-state-automata/transformation/27.svg
+    
 
         Wir müssen nun eine Zertifikatmaschine mit
         polynomieller Laufzeit angeben. Um uns nicht in
@@ -74,6 +104,35 @@
                 src=img/09-complexity-theory/np-examples/peterson-3-colorable.svg
             |> figcaption
                 Der Peterson-Graph ist 3-färbbar.
+        
+        |> Carousel
+            src=./img/finite-state-automata/transformation/01.svg
+            src=./img/finite-state-automata/transformation/02.svg
+            src=./img/finite-state-automata/transformation/03.svg
+            src=./img/finite-state-automata/transformation/04.svg
+            src=./img/finite-state-automata/transformation/05.svg
+            src=./img/finite-state-automata/transformation/06.svg
+            src=./img/finite-state-automata/transformation/07.svg
+            src=./img/finite-state-automata/transformation/08.svg
+            src=./img/finite-state-automata/transformation/09.svg
+            src=./img/finite-state-automata/transformation/10.svg
+            src=./img/finite-state-automata/transformation/11.svg
+            src=./img/finite-state-automata/transformation/12.svg
+            src=./img/finite-state-automata/transformation/13.svg
+            src=./img/finite-state-automata/transformation/14.svg
+            src=./img/finite-state-automata/transformation/15.svg
+            src=./img/finite-state-automata/transformation/16.svg
+            src=./img/finite-state-automata/transformation/17.svg
+            src=./img/finite-state-automata/transformation/18.svg
+            src=./img/finite-state-automata/transformation/19.svg
+            src=./img/finite-state-automata/transformation/20.svg
+            src=./img/finite-state-automata/transformation/21.svg
+            src=./img/finite-state-automata/transformation/22.svg
+            src=./img/finite-state-automata/transformation/23.svg
+            src=./img/finite-state-automata/transformation/24.svg
+            src=./img/finite-state-automata/transformation/25.svg
+            src=./img/finite-state-automata/transformation/26.svg
+            src=./img/finite-state-automata/transformation/27.svg
     
     Wir müssen nun eine Zertifikatmaschine mit
     polynomieller Laufzeit angeben. Um uns nicht in
