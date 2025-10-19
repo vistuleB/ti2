@@ -609,6 +609,7 @@ pre.listing.redyellow > span.listing-bol::before {
   display: flex;
   gap: 1.5em;
   justify-content: center;
+  align-items: end;
   transform-origin: 50% 0%;
   transform: translate(-50%);
   background-color: inherit;
