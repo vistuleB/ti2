@@ -70,7 +70,7 @@ const onClick = (e) => {
     return;
   }
 
-  let z = 0.5 * (screenWidth - mainColumnWidthInPx()) / 2;
+  let z = (0.5 * (screenWidth - mainColumnWidthInPx())) / 2;
 
   if (e.clientX < z) {
     navigateToChapter("prev-page");
@@ -225,7 +225,7 @@ const carouselMaxWidthInPx = () => {
   const adjustedScreenWidth = screenWidth * 0.9;
   const computeTabletMaxWidth = Math.min(
     adjustedScreenWidth,
-    DESKTOP_MAIN_COLUMN_WIDTH
+    DESKTOP_MAIN_COLUMN_WIDTH,
   );
   const computeDesktopMaxWidth =
     screenWidth < DESKTOP_MAIN_COLUMN_WIDTH
@@ -386,12 +386,12 @@ const resetScreenWidthDependentVars = () => {
   set(
     "--index-header-title-line-height",
     indexHeaderTitleLineHeightInRem,
-    "rem"
+    "rem",
   );
   set(
     "--index-header-subtitle-font-size",
     indexHeaderSubtitleFontSizeInRem,
-    "rem"
+    "rem",
   );
   set("--index-header-padding-top", indexHeaderPaddingTopInPx, "px");
   set("--index-header-padding-bottom", indexHeaderPaddingBottomInRem, "rem");
@@ -401,18 +401,18 @@ const resetScreenWidthDependentVars = () => {
   set(
     "--index-toc-subchapter-level-margin",
     indexTocSubchapterLevelMarginInEm,
-    "em"
+    "em",
   );
   set("--carousel-max-width", carouselMaxWidthInPx, "px");
   set(
     "--end-of-page-main-column-margin-bottom",
     endOfPageMainColumnMarginBottomInRem,
-    "rem"
+    "rem",
   );
   set(
     "--end-of-page-well-margin-bottom",
     endOfPageWellMarginBottomInRem,
-    "rem"
+    "rem",
   );
   set("--end-of-page-elt-margin-bottom", endOfPageEltMarginBottomInRem, "rem");
   set("--main-column-width", mainColumnWidthInPx, "px");
@@ -425,7 +425,7 @@ const resetScreenWidthDependentVars = () => {
   set(
     "--subtopic-announcement-font-size",
     subtopicAnnouncementFontSizeInRem,
-    "rem"
+    "rem",
   );
   set("--well-margin-y", wellMarginYInRem, "rem");
   set("--last-child-well-margin-bottom", lastChildWellMarginBottomInRem, "rem");
@@ -548,16 +548,14 @@ const setTopMenuVisible = (val) => {
 const onMouseMove = (e) => {
   const inZoneX = (x) => {
     let mX = (screenWidth - mainColumnWidthInPx()) / 2;
-    return (x < mX || x > screenWidth - mX);
+    return x < mX || x > screenWidth - mX;
   };
   let inZone =
     e.screenY < 250 && (screenWidth <= LAPTOP_MAX_WIDTH || inZoneX(e.screenX));
   if (inZone) {
-    if (!topMenuVisible && isPageCentered)
-        setTopMenuVisible(true);
+    if (!topMenuVisible && isPageCentered) setTopMenuVisible(true);
   } else {
-    if (topMenuVisible && lastScrollY > 10)
-      setTopMenuVisible(false);
+    if (topMenuVisible && lastScrollY > 10) setTopMenuVisible(false);
   }
 };
 
@@ -663,31 +661,94 @@ const setupNextPageTooltip = () => {
 let allFigureImages = new Array();
 let allConstrainableImages = new Array();
 
-const setupImages = () => {
-  let images = document.querySelectorAll("img");
-  for (const image of images) {
-    if (!image.closest(".carousel") && !image.closest("figure")) continue;
-    let s = window.getComputedStyle(image);
-    image.originalWidth = s.width;
-    image.originalHeight = s.height;
-    image.originalWidthInPx = parseFloat(image.originalWidth);
-    image.originalHeightInPx = parseFloat(image.originalHeight);
-    image.style.width = "";
-    image.style.height = "";
-    if (!image.closest(".carousel")) {
-      image.classList.add("constrained");
-      image.figure = image.closest("figure");
-      image.constrainer = image.figure.parentNode;
-      image.figcaption = image.figure.querySelector("figcaption");
-      allFigureImages.push(image);
+const partitionArray = (a, condition) => {
+  let a1 = [];
+  let a2 = [];
+  a.forEach((x) => {
+    if (condition(x)) {
+      a1.push(x);
+    } else {
+      a2.push(x);
     }
-    allConstrainableImages.push(image);
-    window.requestAnimationFrame(() => {
-      image.classList.add("zoom-transition");
-      image.addEventListener("click", constrainableImgClick);
-    });
-  }
+  });
+  return [a1, a2];
 };
+
+const measureImage = (image) => {
+  let s = window.getComputedStyle(image);
+  image.originalWidth = s.width;
+  image.originalHeight = s.height;
+  image.originalWidthInPx = parseFloat(image.originalWidth);
+  image.originalHeightInPx = parseFloat(image.originalHeight);
+};
+
+const setupCarouselImage = (image) => {
+  measureImage(image);
+  image.style.width = "";
+  image.style.height = "";
+  allConstrainableImages.push(image);
+  window.requestAnimationFrame(() => {
+    image.classList.add("zoom-transition");
+    image.addEventListener("click", constrainableImgClick);
+  });
+};
+
+const setupFigureImage = (image) => {
+  measureImage(image);
+  image.style.width = "";
+  image.style.height = "";
+  image.classList.add("constrained");
+  image.figure = image.closest("figure");
+  image.constrainer = image.figure.parentNode;
+  image.figcaption = image.figure.querySelector("figcaption");
+  allFigureImages.push(image);
+  allConstrainableImages.push(image);
+  window.requestAnimationFrame(() => {
+    image.classList.add("zoom-transition");
+    image.addEventListener("click", constrainableImgClick);
+  });
+};
+
+const setupImagesV2 = () => {
+  let images = document.querySelectorAll("img");
+  let [groupImages, images2] = partitionArray(images, (image) =>
+    image.closest(".group"),
+  );
+  let [carouselImages, images3] = partitionArray(images2, (image) =>
+    image.closest(".carousel"),
+  );
+  let [figureImages, _] = partitionArray(images3, (image) =>
+    image.closest("figure"),
+  );
+  carouselImages.forEach(setupCarouselImage);
+  figureImages.forEach(setupFigureImage);
+};
+
+// const setupImages = () => {
+//   let images = document.querySelectorAll("img");
+//   for (const image of images) {
+//     if (!image.closest(".carousel") && !image.closest("figure")) continue;
+//     let s = window.getComputedStyle(image);
+//     image.originalWidth = s.width;
+//     image.originalHeight = s.height;
+//     image.originalWidthInPx = parseFloat(image.originalWidth);
+//     image.originalHeightInPx = parseFloat(image.originalHeight);
+//     image.style.width = "";
+//     image.style.height = "";
+//     if (!image.closest(".carousel")) {
+//       image.classList.add("constrained");
+//       image.figure = image.closest("figure");
+//       image.constrainer = image.figure.parentNode;
+//       image.figcaption = image.figure.querySelector("figcaption");
+//       allFigureImages.push(image);
+//     }
+//     allConstrainableImages.push(image);
+//     window.requestAnimationFrame(() => {
+//       image.classList.add("zoom-transition");
+//       image.addEventListener("click", constrainableImgClick);
+//     });
+//   }
+// };
 
 let allCarouselObjects = new Array();
 
@@ -695,7 +756,7 @@ class Carousel {
   constructor(container) {
     if (!container.classList.contains("carousel__container")) {
       console.error(
-        "'Carousel' constructor should be called on carousel__container!"
+        "'Carousel' constructor should be called on carousel__container!",
       );
       return;
     }
@@ -898,7 +959,7 @@ class Carousel {
     let lambda = clamp01(
       (this.containerWidth - CAROUSEL_ARROW_MIN_HEIGHT_CONTAINER_WIDTH) /
         (CAROUSEL_ARROW_MAX_HEIGHT_CONTAINER_WIDTH -
-          CAROUSEL_ARROW_MIN_HEIGHT_CONTAINER_WIDTH)
+          CAROUSEL_ARROW_MIN_HEIGHT_CONTAINER_WIDTH),
     );
 
     return (
@@ -1035,7 +1096,7 @@ class Carousel {
 
   nudgeCarouselItem(direction) {
     this.setItemNumber(
-      1 + ((this.numItems + this.itemNumber + direction - 1) % this.numItems)
+      1 + ((this.numItems + this.itemNumber + direction - 1) % this.numItems),
     );
   }
 
@@ -1129,7 +1190,7 @@ const onDOMContentLoaded = () => {
 
 const onLoad = () => {
   console.log("onLoad");
-  setupImages();
+  setupImagesV2();
   setupCarousels();
   screenWidth = -1; // force onResize though onDOMContentLoaded already called it
   onResize();
