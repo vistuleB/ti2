@@ -68,6 +68,20 @@ const onClick = (e) => {
     return;
   }
 
+  if (screenWidth <= MOBILE_MAX_WIDTH) {
+    return;
+  }
+
+  let h = e.clientY / screenHeight;
+  
+  if (h < 0.25) {
+    window.scrollBy({ top: -screenHeight * 0.8 });
+  };
+
+  if (h > 0.75) {
+    window.scrollBy({ top: screenHeight * 0.8 });
+  }
+  
   if (screenWidth <= TABLET_MAX_WIDTH) {
     return;
   }
@@ -513,37 +527,44 @@ const adjustMathAlignment = () => {
   });
 };
 
-const constrainFigureImage = (image) => {
+const tryConstrainFigureImage = (image) => {
+  let constrainerWidth = image.constrainer.getBoundingClientRect().width;
+  if (constrainerWidth >= image.originalWidthInPx) {
+    image.style.width = image.originalWidth;
+    return false;
+  }
   image.classList.remove("unconstrained");
   image.classList.add("constrained");
-  let constrainerWidth = image.constrainer.getBoundingClientRect().width;
-  image.style.width = `min(${constrainerWidth + "px"}, ${image.originalWidth})`;
+  // image.style.width = `min(${constrainerWidth + "px"}, ${image.originalWidth})`;
+  image.style.width = constrainerWidth + "px";
+  return true;
 };
-
-const unconstrainFigureImage = (image) => {
+  
+const tryUnconstrainFigureImage = (image) => {
+  let constrainerWidth = image.constrainer.getBoundingClientRect().width;
+  if (constrainerWidth >= image.originalWidthInPx)
+      return false;
   image.classList.remove("constrained");
   image.classList.add("unconstrained");
   image.style.width = image.originalWidth;
+  return true;
 };
 
 const toggleFigureImageZoom = (image) => {
   if (image.classList.contains("constrained")) {
-    unconstrainFigureImage(image);
+    return tryUnconstrainFigureImage(image);
   } else {
-    constrainFigureImage(image);
+    return tryConstrainFigureImage(image);
   }
 };
 
 const figureImgClick = (e) => {
   if (!isPageCentered) return;
-  e.stopPropagation();
-  e.preventDefault();
   const image = e.srcElement;
-  if (image.closest(".carousel")) {
-    console.error("Error");
-    return;
+  if (toggleFigureImageZoom(image)) {
+    e.stopPropagation();
+    e.preventDefault();
   }
-  toggleFigureImageZoom(image);
 };
 
 const setTopMenuVisible = (val) => {
@@ -765,10 +786,16 @@ class Carousel {
     this.group = this.container.closest(".group");
 
     this.imgs.forEach((img) =>
-      img.addEventListener("click", () => {
-        if (this.group) return;
-        this.toggleZoom();
-      })
+      img.addEventListener(
+        "click", 
+        (e) => {
+          if (this.group) return;
+          if (this.toggleZoom(e)) {
+            e.stopPropagation();
+            e.preventDefault();
+          }
+        }
+      )
     );
 
     this.maxOriginalWidthInPx = 0;
@@ -1069,16 +1096,21 @@ class Carousel {
       console.warn("carousel.updateConstrained called before onResize (?)");
     }
 
-    if (!this.bigEnoughContainerForUnconstrainedUI && this.constrained) {
+    if (this.constrained) {
       this.imgs.forEach(this.ourConstrainImage);
     } else {
       this.imgs.forEach(this.ourUnconstrainImage);
     }
   }
 
-  toggleZoom() {
+  toggleZoom(e) {
+    if (this.containerWidth >= this.maxOriginalWidthInPx) {
+      imgs.forEach(this.ourUnconstrainImage);
+      return false;
+    }
     this.constrained = !this.constrained;
     this.updateConstrained();
+    return true;
   }
 
   updateIndicators() {
@@ -1285,7 +1317,8 @@ const onResize = () => {
 const figureImagesOnResize = () => {
   for (const image of allFigureImages) {
     image.classList.remove("zoom-transition");
-    if (image.classList.contains("constrained")) constrainFigureImage(image);
+    if (image.classList.contains("constrained"))
+      tryConstrainFigureImage(image);
   }
   window.requestAnimationFrame(() => {
     for (const image of allFigureImages) {
