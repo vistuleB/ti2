@@ -12,6 +12,7 @@
   /*********************************/
   /* resetScreenWidthDependentVars */
   /*********************************/
+  --top-menu-position: fixed;
   --rem-font-size: 16px;
   --inhalts-arrows-display: none;
   --top-menu-padding-x: 2rem;
@@ -44,7 +45,7 @@
   --main-column-to-well-margin: 1.8rem;
   --outer-well-width: 922px;
   --page-title-font-size: 2.25rem;
-  --page-title-margin-top: 3.6rem;
+  --page-title-padding-top: 3.6rem;
   --topic-announcement-font-size: 1.75rem;
   --subtopic-announcement-font-size: 1.5rem;
   --well-margin-y: 2rem;
@@ -160,7 +161,7 @@ body {
   text-align: center;
   gap: 2rem;
   font-size: var(--page-title-font-size);
-  margin-top: var(--page-title-margin-top);
+  padding-top: var(--page-title-padding-top);
   margin-bottom: 1em;
 }
 
@@ -182,7 +183,8 @@ body {
 
 .main-column {
   max-width: var(--main-column-width);
-  padding: 0 var(--main-column-padding-x);
+  padding-left: var(--main-column-padding-x);
+  padding-right: var(--main-column-padding-x);
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -397,9 +399,9 @@ p:has(> span.qed):not(:has(> *:not(span.qed))):last-child {
 
 #top-menu {
   display: flex;
-  position: fixed;
+  position: var(--top-menu-position);
   top: 0;
-  left: 0;
+  left: var(--top-menu-left);
   z-index: 2;
   width: 100vw;
   transition: top 0.5s ease-in-out;

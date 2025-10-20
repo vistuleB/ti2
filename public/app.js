@@ -27,6 +27,8 @@ const CAROUSEL_ARROW_MIN_HEIGHT = 33;
 const CAROUSEL_ARROW_MAX_HEIGHT_CONTAINER_WIDTH = 2200;
 const CAROUSEL_ARROW_MIN_HEIGHT_CONTAINER_WIDTH = 490;
 
+const USE_ABSOLUTE_TOP_MENU_IN_DESKTOP = true;
+
 const root = document.documentElement;
 
 window.history.scrollRestoration = "manual";
@@ -46,13 +48,13 @@ const clamp01 = (x) => {
   return Math.max(Math.min(x, 1), 0);
 };
 
-const marginWidth = () => {
+const offsideWidth = () => {
   return (document.body.scrollWidth - window.visualViewport.width) / 2;
 };
 
 const recenter = (behavior) => {
   window.scroll({
-    left: marginWidth(),
+    left: offsideWidth(),
     behavior: behavior,
   });
 
@@ -60,7 +62,7 @@ const recenter = (behavior) => {
 };
 
 const onClick = (e) => {
-  if (Math.abs(window.scrollX - marginWidth()) > 1) {
+  if (Math.abs(window.scrollX - offsideWidth()) > 1) {
     recenter("smooth");
     e.preventDefault();
     return;
@@ -83,6 +85,16 @@ const onClick = (e) => {
 
 const instantRecenter = () => {
   recenter("instant");
+};
+
+const topMenuPosition = () => {
+  if (screenWidth <= LAPTOP_MAX_WIDTH) return "fixed";
+  return USE_ABSOLUTE_TOP_MENU_IN_DESKTOP ? "absolute" : "fixed";
+};
+
+const topMenuLeftInPx = () => {
+  if (screenWidth <= LAPTOP_MAX_WIDTH) return 0;
+  return USE_ABSOLUTE_TOP_MENU_IN_DESKTOP ? offsideWidth() : 0;
 };
 
 const remInPx = () => {
@@ -159,7 +171,7 @@ const bottomMenuPaddingYInRem = () => {
 
 const bottomMenuLeft = () => {
   if (screenWidth <= LAPTOP_MAX_WIDTH) return "";
-  return marginWidth() + "px";
+  return offsideWidth() + "px";
 };
 
 const bottomMenuMargin = () => {
@@ -225,7 +237,7 @@ const carouselMaxWidthInPx = () => {
   const adjustedScreenWidth = screenWidth * 0.9;
   const computeTabletMaxWidth = Math.min(
     adjustedScreenWidth,
-    DESKTOP_MAIN_COLUMN_WIDTH,
+    DESKTOP_MAIN_COLUMN_WIDTH
   );
   const computeDesktopMaxWidth =
     screenWidth < DESKTOP_MAIN_COLUMN_WIDTH
@@ -283,7 +295,7 @@ const pageTitleFontSizeInRem = () => {
   return 2.25;
 };
 
-const pageTitleMarginTopInRem = () => {
+const pageTitlePaddingTopInRem = () => {
   if (screenWidth <= MOBILE_MAX_WIDTH) return 7;
   if (screenWidth <= TABLET_MAX_WIDTH) return 7;
   if (screenWidth <= LAPTOP_MAX_WIDTH) return 6;
@@ -367,6 +379,8 @@ const resetScreenWidthDependentVars = () => {
     root.style.setProperty(key, `${val()}` + unit);
   };
 
+  set("--top-menu-position", topMenuPosition, "");
+  set("--top-menu-left", topMenuLeftInPx, "px");
   set("--rem-font-size", remInPx, "px");
   set("--inhalts-arrows-display", inhaltsArrowsDisplay, "");
   set("--top-menu-padding-x", topMenuPaddingXInRem, "rem");
@@ -386,12 +400,12 @@ const resetScreenWidthDependentVars = () => {
   set(
     "--index-header-title-line-height",
     indexHeaderTitleLineHeightInRem,
-    "rem",
+    "rem"
   );
   set(
     "--index-header-subtitle-font-size",
     indexHeaderSubtitleFontSizeInRem,
-    "rem",
+    "rem"
   );
   set("--index-header-padding-top", indexHeaderPaddingTopInPx, "px");
   set("--index-header-padding-bottom", indexHeaderPaddingBottomInRem, "rem");
@@ -401,18 +415,18 @@ const resetScreenWidthDependentVars = () => {
   set(
     "--index-toc-subchapter-level-margin",
     indexTocSubchapterLevelMarginInEm,
-    "em",
+    "em"
   );
   set("--carousel-max-width", carouselMaxWidthInPx, "px");
   set(
     "--end-of-page-main-column-margin-bottom",
     endOfPageMainColumnMarginBottomInRem,
-    "rem",
+    "rem"
   );
   set(
     "--end-of-page-well-margin-bottom",
     endOfPageWellMarginBottomInRem,
-    "rem",
+    "rem"
   );
   set("--end-of-page-elt-margin-bottom", endOfPageEltMarginBottomInRem, "rem");
   set("--main-column-width", mainColumnWidthInPx, "px");
@@ -420,12 +434,12 @@ const resetScreenWidthDependentVars = () => {
   set("--main-column-to-well-margin", mainColumnToWellMarginInRem, "rem");
   set("--outer-well-width", outerWellWidthInPx, "px");
   set("--page-title-font-size", pageTitleFontSizeInRem, "rem");
-  set("--page-title-margin-top", pageTitleMarginTopInRem, "rem");
+  set("--page-title-padding-top", pageTitlePaddingTopInRem, "rem");
   set("--topic-announcement-font-size", topicAnnouncementFontSizeInRem, "rem");
   set(
     "--subtopic-announcement-font-size",
     subtopicAnnouncementFontSizeInRem,
-    "rem",
+    "rem"
   );
   set("--well-margin-y", wellMarginYInRem, "rem");
   set("--last-child-well-margin-bottom", lastChildWellMarginBottomInRem, "rem");
@@ -533,6 +547,8 @@ const figureImgClick = (e) => {
 };
 
 const setTopMenuVisible = (val) => {
+  if (USE_ABSOLUTE_TOP_MENU_IN_DESKTOP && screenWidth > LAPTOP_MAX_WIDTH)
+    val = true; // can't hide the absolutely positioned top menu
   if (val) {
     topMenu?.classList.remove("menu--hidden");
   } else {
@@ -582,8 +598,8 @@ const onScrollMenuDisplay = (e) => {
   lastScrollYMoment = currentScrollYMoment;
 };
 
-const smoothRecenterMaybe = (e) => {
-  let theoretical_left = marginWidth();
+const smoothRecenterMaybe = (_) => {
+  let theoretical_left = offsideWidth();
   if (
     window.scrollX > theoretical_left - 200 &&
     window.scrollX < theoretical_left + 200
@@ -706,13 +722,13 @@ const setupFigureImage = (image) => {
 const setupImages = () => {
   let images = document.querySelectorAll("img");
   let [_groupImages, images2] = partitionArray(images, (image) =>
-    image.closest(".group"),
+    image.closest(".group")
   );
   let [carouselImages, images3] = partitionArray(images2, (image) =>
-    image.closest(".carousel"),
+    image.closest(".carousel")
   );
   let [figureImages, _] = partitionArray(images3, (image) =>
-    image.closest("figure"),
+    image.closest("figure")
   );
   carouselImages.forEach(setupCarouselImage);
   figureImages.forEach(setupFigureImage);
@@ -724,7 +740,7 @@ class Carousel {
   constructor(container) {
     if (!container.classList.contains("carousel__container")) {
       console.error(
-        "'Carousel' constructor should be called on carousel__container!",
+        "'Carousel' constructor should be called on carousel__container!"
       );
       return;
     }
@@ -752,7 +768,7 @@ class Carousel {
       img.addEventListener("click", () => {
         if (this.group) return;
         this.toggleZoom();
-      }),
+      })
     );
 
     this.maxOriginalWidthInPx = 0;
@@ -791,7 +807,7 @@ class Carousel {
       });
       return btn;
     })();
-    
+
     this.constrainedUILstBtn = (() => {
       const btn = document.createElement("button");
       btn.className = "carousel__nav-button carousel__nav-item--last";
@@ -875,14 +891,12 @@ class Carousel {
         const indicator = document.createElement("button");
         indicator.className = "carousel__indicator_box";
         indicator.setAttribute("aria-label", `Go to slide ${i}`);
-        indicator.addEventListener("click",
-          (e) => {
-            if (!isPageCentered) return;
-            e.stopPropagation();
-            e.preventDefault();
-            this.setItemNumber(i)
-          }
-        );
+        indicator.addEventListener("click", (e) => {
+          if (!isPageCentered) return;
+          e.stopPropagation();
+          e.preventDefault();
+          this.setItemNumber(i);
+        });
         const circle = document.createElement("div");
         circle.className = "carousel__indicator_dot";
         indicator.appendChild(circle);
@@ -949,7 +963,7 @@ class Carousel {
     let lambda = clamp01(
       (this.containerWidth - CAROUSEL_ARROW_MIN_HEIGHT_CONTAINER_WIDTH) /
         (CAROUSEL_ARROW_MAX_HEIGHT_CONTAINER_WIDTH -
-          CAROUSEL_ARROW_MIN_HEIGHT_CONTAINER_WIDTH),
+          CAROUSEL_ARROW_MIN_HEIGHT_CONTAINER_WIDTH)
     );
 
     return (
@@ -1086,7 +1100,7 @@ class Carousel {
 
   nudgeCarouselItem(direction) {
     this.setItemNumber(
-      1 + ((this.numItems + this.itemNumber + direction - 1) % this.numItems),
+      1 + ((this.numItems + this.itemNumber + direction - 1) % this.numItems)
     );
   }
 
@@ -1245,7 +1259,7 @@ const onLoad = () => {
   setupCarousels();
   screenWidth = -1; // force onResize though onDOMContentLoaded already called it
   onResize();
-  setupGroups();    // groups need carousels to have chosen their layout in order to initialize, so this comes here
+  setupGroups(); // groups need carousels to have chosen their layout in order to initialize, so this comes here
   groupsOnResize();
   let resizeObserver = new ResizeObserver((entries) => {
     onBodyHeightChange();
@@ -1271,8 +1285,7 @@ const onResize = () => {
 const figureImagesOnResize = () => {
   for (const image of allFigureImages) {
     image.classList.remove("zoom-transition");
-    if (image.classList.contains("constrained"))
-      constrainFigureImage(image);
+    if (image.classList.contains("constrained")) constrainFigureImage(image);
   }
   window.requestAnimationFrame(() => {
     for (const image of allFigureImages) {
