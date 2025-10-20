@@ -503,7 +503,6 @@ const constrainFigureImage = (image) => {
   image.classList.remove("unconstrained");
   image.classList.add("constrained");
   let constrainerWidth = image.constrainer.getBoundingClientRect().width;
-  console.log(constrainerWidth);
   image.style.width = `min(${constrainerWidth + "px"}, ${image.originalWidth})`;
 };
 
@@ -656,7 +655,7 @@ const setupNextPageTooltip = () => {
 };
 
 let allFigureImages = new Array();
-let allConstrainableImages = new Array();
+let allCarouselImages = new Array();
 
 const partitionArray = (a, condition) => {
   let a1 = [];
@@ -683,7 +682,7 @@ const setupCarouselImage = (image) => {
   measureImage(image);
   image.style.width = "";
   image.style.height = "";
-  allConstrainableImages.push(image);
+  allCarouselImages.push(image);
   window.requestAnimationFrame(() => {
     image.classList.add("zoom-transition");
   });
@@ -698,7 +697,6 @@ const setupFigureImage = (image) => {
   image.constrainer = image.figure.parentNode;
   image.figcaption = image.figure.querySelector("figcaption");
   allFigureImages.push(image);
-  allConstrainableImages.push(image);
   window.requestAnimationFrame(() => {
     image.classList.add("zoom-transition");
     image.addEventListener("click", figureImgClick);
@@ -707,7 +705,7 @@ const setupFigureImage = (image) => {
 
 const setupImages = () => {
   let images = document.querySelectorAll("img");
-  let [groupImages, images2] = partitionArray(images, (image) =>
+  let [_groupImages, images2] = partitionArray(images, (image) =>
     image.closest(".group"),
   );
   let [carouselImages, images3] = partitionArray(images2, (image) =>
@@ -1136,7 +1134,6 @@ const constrainGroup = (group) => {
   group.classList.remove("unconstrained");
   group.classList.add("constrained");
   let w = group.constrainer.getBoundingClientRect().width;
-  console.log(window.getComputedStyle(group));
   let s = Math.min(1, w / group.originalWidthInPx);
   group.scaler.style.transform = `translate(-50%) scale(${s})`;
   group.placeholder.style.height = group.originalHeightInPx * s + "px";
@@ -1248,6 +1245,8 @@ const onLoad = () => {
   setupCarousels();
   screenWidth = -1; // force onResize though onDOMContentLoaded already called it
   onResize();
+  setupGroups();    // groups need carousels to have chosen their layout in order to initialize, so this comes here
+  groupsOnResize();
   let resizeObserver = new ResizeObserver((entries) => {
     onBodyHeightChange();
   });
@@ -1264,33 +1263,28 @@ const onResize = () => {
   resetScreenWidthDependentVars();
   updatePageTitleForScreenWidthChange();
   setTimeout(adjustMathAlignment, 60);
-
-  if (allConstrainableImages.length === 0) return;
-
-  for (const image of allConstrainableImages) {
-    image.classList.remove("zoom-transition");
-  }
-
   figureImagesOnResize();
   carouselImagesOnResize();
-  if (allGroups.length == 0) setupGroups();
   groupsOnResize();
+};
 
+const figureImagesOnResize = () => {
+  for (const image of allFigureImages) {
+    image.classList.remove("zoom-transition");
+    if (image.classList.contains("constrained"))
+      constrainFigureImage(image);
+  }
   window.requestAnimationFrame(() => {
-    for (const image of allConstrainableImages) {
+    for (const image of allFigureImages) {
       image.classList.add("zoom-transition");
     }
   });
 };
 
-const figureImagesOnResize = () => {
-  for (const image of allFigureImages) {
-    if (image.classList.contains("constrained")) constrainFigureImage(image);
-  }
-};
-
 const carouselImagesOnResize = () => {
-  if (allCarouselObjects.length === 0) return;
+  for (const image of allCarouselImages) {
+    image.classList.remove("zoom-transition");
+  }
   let totalButtonHeights = 0;
   for (const carousel of allCarouselObjects) {
     totalButtonHeights += carousel.onScreenWidthChangePhase1();
@@ -1299,6 +1293,11 @@ const carouselImagesOnResize = () => {
   for (const carousel of allCarouselObjects) {
     carousel.onScreenWidthChangePhase2(avgButtonHeight);
   }
+  window.requestAnimationFrame(() => {
+    for (const image of allCarouselImages) {
+      image.classList.add("zoom-transition");
+    }
+  });
 };
 
 const groupsOnResize = () => {

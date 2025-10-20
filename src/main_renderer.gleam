@@ -306,7 +306,7 @@ pub fn main_renderer(amendments: ds.CommandLineAmendments) -> Nil {
       output_dir: "./public",
       prettifier_behavior: ds.PrettifierOff,
       table: False,
-      verbose: True,
+      verbose: False,
       warnings: True,
     )
     |> ds.amend_renderer_paramaters_by_command_line_amendments(amendments)

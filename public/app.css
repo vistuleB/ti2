@@ -648,6 +648,11 @@ figure {
   justify-content: center;
   width: fit-content;
   flex-direction: column;
+  /* not trusting Chrome's user agent stylesheet: */
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 .group_scaler figure,
@@ -708,8 +713,8 @@ figcaption {
 
 /** begin of carousel **/ /* (see more 'carousel__item img' styles above) */
 .carousel__container {
-  width: 100%;
   background-color: inherit;
+  width: 100%;
   margin: 1rem auto 1.5rem;
 }
 

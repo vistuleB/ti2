@@ -1,6 +1,7 @@
 import argv
 import formatter_renderer
 import gleam/dict
+import gleam/list
 import gleam/io
 import gleam/string
 import main_renderer
@@ -25,7 +26,13 @@ fn local_cli_usage() {
 }
 
 pub fn main() {
-  let args = argv.load().arguments
+  let args =
+    argv.load().arguments
+    |> list.map(fn(x) { case x {
+      "only" -> "--only"
+      _ -> x
+    }})
+
 
   case args {
     ["--help"] | ["-help"] | ["-h"] -> {
