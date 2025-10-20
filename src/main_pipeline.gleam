@@ -114,6 +114,7 @@ pub fn main_pipeline()  -> List(Pipe) {
     "TopicAnnouncement",
     "WriterlyBlankLine",
     "WriterlyCodeBlock",
+    "WriterlyComment",
   ]
   let pre_transformation_html_tags = ["div", "a", "pre", "span", "br", "hr", "img", "figure", "figcaption", "ol", "ul", "li"]
   let pre_transformation_approved_tags = [pre_transformation_document_tags, pre_transformation_html_tags] |> list.flatten
@@ -161,6 +162,7 @@ pub fn main_pipeline()  -> List(Pipe) {
   [
     [
       dl.check_tags(#(pre_transformation_approved_tags, "pre-transformation")),
+      dl.delete("WriterlyComment"),
       dl.rename(#("WriterlyCodeBlock", "pre")),
       dl.rename_with_attributes(#("Theorem", "Statement", [#("title", "*Theorem*")])),
       dl.rename_with_attributes(#("Definition", "Statement", [#("title", "*Definition*")])),
