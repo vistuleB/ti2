@@ -7,11 +7,11 @@
     gültige 3-Färbung von $G$ darstellt; gegeben eine
     CNF-Formel $F$ und eine Belegung $\alpha$, so können
     wir effizient überprüfen, ob $F$ unter $\alpha$ zu
-    `True` auswertet. Können wir `3-Colorability`{sc}
-    und`CNF-Satisfiability`{sc} auch effizient
-    entscheiden? Sind sie in P? Das ist (Stand: 2025)
-    nicht bekannt. Was wir aber sagen können: entweder
-    sind beide effizient lösbar oder beide nicht. Sie sind
+    `True` auswertet. Können wir `3-Colorability`{sc} und
+    `CNF-Satisfiability`{sc} auch effizient entscheiden?
+    Sind sie in P? Das ist (Stand: 2025) nicht bekannt.
+    Was wir aber sagen können: entweder sind beide
+    effizient lösbar oder beide nicht. Sie sind
     gewissermaßen gleich schwer.
 
     |> Theorem
@@ -21,7 +21,7 @@
 
     |> Proof
         Wir nehmen an, wir hätten einen effizienten
-        Algorithmus `is_satisfiable( $F$)`. Wir verwenden
+        Algorithmus `is_satisfiable($F$)`. Wir verwenden
         diesen, um einen Algorithmus `is_3_colorable` zu
         entwerfen. Sei nun $G = (V,E)$ ein Graph und
         $v_1, \dots, v_n$ seine Knoten. Wir führen $3n$

@@ -75,6 +75,7 @@ const p_cannot_be_contained_in = [
   "QED",
   "SubtopicAnnouncement",
   "TopicAnnouncement",
+  "WriterlyComment",
 ]
 
 fn ends_with_dollar_starts_with_punctuation(s1: String,

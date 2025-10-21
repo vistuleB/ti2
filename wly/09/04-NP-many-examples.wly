@@ -12,15 +12,20 @@
         \end{align*}
 
     |> Group
-        |> img
-            src=img/09-complexity-theory/np-examples/peterson-3-colorable.svg
-        |> figcaption
-            Der Peterson-Graph ist 3-färbbar.
+        |> figure
+            |> img
+                src=img/09-complexity-theory/np-examples/peterson-3-colorable.svg
+            |> figcaption
+                Der Peterson-Graph ist 3-färbbar.
 
-        |> img
-            src=img/09-complexity-theory/np-examples/not-3-colorable.svg
-        |> figcaption
-            Dieser Graph ist nicht 3-färbbar
+        |> div
+            style=width:2rem
+
+        |> figure
+            |> img
+                src=img/09-complexity-theory/np-examples/not-3-colorable.svg
+            |> figcaption
+                Dieser Graph ist nicht 3-färbbar
 
     Wir müssen nun eine Zertifikatmaschine mit
     polynomieller Laufzeit angeben. Um uns nicht in

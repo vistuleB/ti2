@@ -196,8 +196,10 @@
     sehen Sie manchmal den mit einem Kreuz markierten
     Fehlerzustand (trap state). Die akzeptierenden
     Zustände sind mit fettem Rand markiert.
-    !!Der deterministische Automat, Schritt für Schritt
-    !!gebaut:
+
+    !! Der deterministische Automat, Schritt für Schritt
+    !! gebaut:
+
     |> Group
         |> figure
             |> img
