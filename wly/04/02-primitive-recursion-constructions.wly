@@ -22,7 +22,7 @@
     zulässt, und schreiben in Orange auch gleich die
     Funktionen $g$ und $h$ dazu:
 
-    ```orange-comments&class=blue
+    ```orange-comments
     def mult(t,x):
         temp = 0 //= zero(x)
         for i in range(t):
@@ -305,11 +305,9 @@
     \end{align*}
 
     Listen können wir implementieren, indem wir Paare
-    verschachtelt zusammenhängen, z.B. $[5,7,9]$ wird zu 
-    |> span
-        style=color:red
-        $\pair(5, \pair(7, 9))$
-    . Das ist natürlich inkorrekt:
+    verschachtelt zusammenhängen, z.B. $[5,7,9]$ wird zu
+    `$\pair(5, \pair(7, 9))$`{red}. Das ist natürlich
+    inkorrekt:
 
     ```python-prompt
     >>> pair(5,pair(7,9))
@@ -360,7 +358,7 @@
     rekursiv ist, sie _nativ_ in Python zu implementieren,
     also beispielsweise in meiner Datei `stockpile.py`:
 
-    ```class=listing
+    ```.listing
     def pair(x,y):
         return int(((x+y+1) * (x+y)) / 2 + x )
     ```

@@ -109,7 +109,7 @@
     es als Funktion mit einer `for`-Schleife vorstellen,
     in der nur eine lokale Variable erlaubt ist:
 
-    ```class=listing
+    ```.listing
     def PrimRec(g, h):
         def f(t,*x):
             temp = g(*x)
@@ -183,7 +183,7 @@
         schreiben, die ihre beiden Argumente addiert. Ich darf
         also nicht einfach python programmieren und
 
-        ```redyellow&class=listing
+        ```.redyellow.listing
         def add(x, y)
             return x + y
         ```
@@ -209,7 +209,7 @@
         primitiven Rekursion ist mit $g = \pi_0$ und
         $h = {\comp}(\succ, \pi_0)$, also
 
-        ```class=listing
+        ```.listing
         p0 = Proj(0)
         add = PrimRec (p0, Comp(succ,p0))
         ```

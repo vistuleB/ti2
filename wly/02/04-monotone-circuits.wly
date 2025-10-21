@@ -284,7 +284,7 @@
                 Allerdings: warum? In Java hätten Sie bestimmt kein
                 Problem mit
 
-                ```class=listing:63
+                ```.listing@63
                 public boolean constantFalse() {
                     return false;
                 }
@@ -315,7 +315,7 @@
                 noch der Java-Compiler werden Probleme mit der
                 Funktion
 
-                ```class=listing
+                ```.listing
                 public boolean constantFalse(boolean x) {
                     return false;
                 }

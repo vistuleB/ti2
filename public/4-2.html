@@ -65,7 +65,7 @@
       Funktionen $g$ und $h$ dazu:
     </p>
     <div class="main-column">
-<pre class="blue orange-comments">
+<pre class="orange-comments">
 def mult(t,x):
     temp = 0 <span class="actual-orange-comment">= zero(x)</span>
     for i in range(t):
@@ -471,7 +471,8 @@ def choose2(t):
     <p class="main-column">
       Listen können wir implementieren, indem wir Paare
       verschachtelt zusammenhängen, z.B. $[5,7,9]$ wird zu
-      <span style="color:red">$\pair(5, \pair(7, 9))$</span>. Das ist natürlich inkorrekt:
+      <span class="red">$\pair(5, \pair(7, 9))$</span>. Das ist natürlich
+      inkorrekt:
     </p>
     <div class="main-column">
 <pre class="python-prompt">
@@ -535,9 +536,9 @@ def choose2(t):
       <span class="nowrap"><code>stockpile.py</code>:</span>
     </p>
     <div class="main-column">
-<pre language="class=listing">
-def pair(x,y):
-    return int(((x+y+1) * (x+y)) / 2 + x )
+<pre class="listing">
+<span class="listing-bol"></span>def pair(x,y):
+<span class="listing-bol"></span>    return int(((x+y+1) * (x+y)) / 2 + x )
 </pre>
     </div>
     <div id="end-of-page-elt">

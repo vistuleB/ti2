@@ -540,10 +540,10 @@
       folgendem Code auch $L_1$ effizient entscheiden:
     </p>
     <div class="main-column">
-<pre language="class=listing">
-def is_in_L1(x):
-    y = convert_from_L1_instance_to_L2_instance(x)
-    return is_in_L2(y)
+<pre language="listing">
+!! def is_in_L1(x):
+!!     y = convert_from_L1_instance_to_L2_instance(x)
+!!     return is_in_L2(y)
 </pre>
     </div>
     <p class="main-column">
@@ -931,14 +931,14 @@ def is_in_L1(x):
         Kreis gibt, dann klappt es auch mit einem Nachbarn (in
         der Tat: sogar mit zweien).
       </p>
-<pre language="class=listing">
-def has_hamilton_cycle(G):
-    u = ein beliebiger Knoten
-    for v in neighbors[u]:
-    H = G - {u,v} + {s,u} + {t,v}
-    if has_hamilton_path(H):
-    return True
-    return False
+<pre class="listing">
+<span class="listing-bol"></span>def has_hamilton_cycle(G):
+<span class="listing-bol"></span>    u = ein beliebiger Knoten
+<span class="listing-bol"></span>    for v in neighbors[u]:
+<span class="listing-bol"></span>    H = G - {u,v} + {s,u} + {t,v}
+<span class="listing-bol"></span>    if has_hamilton_path(H):
+<span class="listing-bol"></span>        return True
+<span class="listing-bol"></span>    return False
 </pre>
       <p>
         Falls nun

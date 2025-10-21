@@ -201,14 +201,14 @@
       in der nur eine lokale Variable erlaubt ist:
     </p>
     <div class="main-column">
-<pre language="class=listing">
-def PrimRec(g, h):
-    def f(t,*x):
-        temp = g(*x)
-        for i in range(t):
-            temp = h(temp, i, *x)
-        return temp
-    return f
+<pre class="listing">
+<span class="listing-bol"></span>def PrimRec(g, h):
+<span class="listing-bol"></span>    def f(t,*x):
+<span class="listing-bol"></span>        temp = g(*x)
+<span class="listing-bol"></span>        for i in range(t):
+<span class="listing-bol"></span>            temp = h(temp, i, *x)
+<span class="listing-bol"></span>        return temp
+<span class="listing-bol"></span>    return f
 </pre>
     </div>
     <p class="main-column">
@@ -307,7 +307,7 @@ def PrimRec(g, h):
         schreiben, die ihre beiden Argumente addiert. Ich darf
         also nicht einfach python programmieren und
       </p>
-<pre class="listing redyellow">
+<pre class="redyellow listing">
 <span class="listing-bol"></span>def add(x, y)
 <span class="listing-bol"></span>    return x + y
 </pre>
@@ -340,9 +340,9 @@ def PrimRec(g, h):
         <span class="nowrap">$h = {\comp}(\succ, \pi_0)$,</span>
         also
       </p>
-<pre language="class=listing">
-p0 = Proj(0)
-add = PrimRec (p0, Comp(succ,p0))
+<pre class="listing">
+<span class="listing-bol"></span>p0 = Proj(0)
+<span class="listing-bol"></span>add = PrimRec (p0, Comp(succ,p0))
 </pre>
     </div>
     <div class="well exercise out">

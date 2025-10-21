@@ -97,7 +97,7 @@
     wie oft diese durchlaufen werden soll. Es gibt also
     keine `while`-Schleifen. Führen wir diese nun ein.
 
-    ```class=listing
+    ```.listing
     def While (condition, step):
         def f(x):
             temp = x

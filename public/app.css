@@ -558,6 +558,10 @@ pre.listing > span.listing-bol::before {
   text-align: right;
 }
 
+.red {
+  color:red;
+}
+
 pre.redyellow {
   color: red;
   background-color: yellow;

@@ -173,7 +173,7 @@
         liefert $H$ zwar eine Antwort, aber die falsche. Der
         Code für $D$ ist sehr einfach:
 
-        ```class=listing
+        ```.listing
         def D(x):
             if H(xx) == accept then
             reject

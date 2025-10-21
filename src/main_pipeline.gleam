@@ -1,6 +1,7 @@
+import gleam/list
+import gleam/string
 import desugarer_library as dl
 import infrastructure.{type Pipe} as infra
-import gleam/list
 import prefabricated_pipelines as pp
 import group_replacement_splitting as grs
 import blame as bl
@@ -163,6 +164,7 @@ pub fn main_pipeline()  -> List(Pipe) {
     [
       dl.check_tags(#(pre_transformation_approved_tags, "pre-transformation")),
       dl.delete("WriterlyComment"),
+      dl.delete_attribute_if(fn(key, _) { string.starts_with(key, "!!")}),
       dl.rename(#("WriterlyCodeBlock", "pre")),
       dl.rename_with_attributes(#("Theorem", "Statement", [#("title", "*Theorem*")])),
       dl.rename_with_attributes(#("Definition", "Statement", [#("title", "*Definition*")])),

@@ -69,7 +69,7 @@
         erfüllbar ist. Und hier ist nun unser Code für
         `is_3_colorable:`
 
-        ```orange-comments&class=listing
+        ```orange-comments.listing
         def is_3_colorable(graph):
             F = convert_to_CNF_formula(graph)
             //# F ist die oben beschriebene Formel mit 3n Variablen
@@ -147,7 +147,7 @@
         in eine erfüllende Belegung übersetzen und umgekehrt.
         Hier ist also der Code:
 
-        ```orange-comments&class=listing
+        ```orange-comments.listing
         def is_3CNF_satisfiable(the_3_cnf_formula):
             G = cOnvert_to_graph(the_3_cnf_formula)
             //# G ist der oben konstruierte Graph
@@ -266,10 +266,10 @@
     Algorithmus `is_in_L2` gibt, dann können wir mit
     folgendem Code auch $L_1$ effizient entscheiden:
 
-    ```class=listing
-    def is_in_L1(x):
-        y = convert_from_L1_instance_to_L2_instance(x)
-        return is_in_L2(y)
+    ```listing
+    !! def is_in_L1(x):
+    !!     y = convert_from_L1_instance_to_L2_instance(x)
+    !!     return is_in_L2(y)
     ```
 
     Dies ist eine _Reduktion_, wie wir sie schon in
@@ -480,13 +480,13 @@
         Kreis gibt, dann klappt es auch mit einem Nachbarn (in
         der Tat: sogar mit zweien).
 
-        ```class=listing
+        ```.listing
         def has_hamilton_cycle(G):
             u = ein beliebiger Knoten
             for v in neighbors[u]:
             H = G - {u,v} + {s,u} + {t,v}
             if has_hamilton_path(H):
-            return True
+                return True
             return False
         ```
 
