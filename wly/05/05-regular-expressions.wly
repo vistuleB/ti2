@@ -410,7 +410,7 @@
     `aaaa:a:aaa.aa-aa`-Sprache:
 
     |> figure
-        style=overflow-x:auto;margin:0 center;
+        style=overflow-x:auto;scroll-padding:0;
         |> img
             style=height:20em
             src=./img/finite-state-automata/to-regex/nfsm-to-regex-carpet.svg
