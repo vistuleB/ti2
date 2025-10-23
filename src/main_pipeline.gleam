@@ -248,6 +248,7 @@ pub fn main_pipeline()  -> List(Pipe) {
       dl.ti2_create_menu(),
       dl.delete__batch(["PrevChapterOrSubTitle", "NextChapterOrSubTitle"]),
       dl.ti2_expand_carousels(),
+      dl.ti2_cut_paste_width_height_to_descendant_img(["Group", "figure"]),
       dl.insert_attribute_value_at_first_child_start(#("ChapterTitle", "number-chiron", "&ensp;", infra.GoBack)),
       dl.insert_attribute_value_at_first_child_start(#("SubTitle", "number-chiron", "&ensp;", infra.GoBack)),
     ],

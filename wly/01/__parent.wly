@@ -90,7 +90,7 @@
 
     |> figure
         |> img
-            style=width:20em
+            style=width:400px;height:20px;
             src=img/game-of-life/game-of-life-01-01.svg
         |> figcaption
             Eine Population in Conways Game of Life. Bildquelle:

@@ -717,8 +717,9 @@ const measureImage = (image) => {
 
 const setupCarouselImage = (image) => {
   measureImage(image);
-  image.style.width = "";
-  image.style.height = "";
+  image.style.width = image.style.width ? image.style.width : "auto";
+  image.style.height = image.style.height ? image.style.height : "auto";
+
   allCarouselImages.push(image);
   window.requestAnimationFrame(() => {
     image.classList.add("zoom-transition");
@@ -727,8 +728,8 @@ const setupCarouselImage = (image) => {
 
 const setupFigureImage = (image) => {
   measureImage(image);
-  image.style.width = "";
-  image.style.height = "";
+  image.style.width = image.style.width ? image.style.width: "auto";
+  image.style.height = image.style.height ? image.style.height: "auto";
   image.classList.add("constrained");
   image.figure = image.closest("figure");
   image.constrainer = image.figure.parentNode;
