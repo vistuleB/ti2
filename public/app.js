@@ -717,8 +717,8 @@ const measureImage = (image) => {
 
 const setupCarouselImage = (image) => {
   measureImage(image);
-  image.style.width = image.style.width ? image.style.width : "auto";
-  image.style.height = image.style.height ? image.style.height : "auto";
+  image.style.width = "";
+  image.style.height = "";
 
   allCarouselImages.push(image);
   window.requestAnimationFrame(() => {
@@ -728,8 +728,8 @@ const setupCarouselImage = (image) => {
 
 const setupFigureImage = (image) => {
   measureImage(image);
-  image.style.width = image.style.width ? image.style.width: "auto";
-  image.style.height = image.style.height ? image.style.height: "auto";
+  image.style.width = "";
+  image.style.height = "";
   image.classList.add("constrained");
   image.figure = image.closest("figure");
   image.constrainer = image.figure.parentNode;
