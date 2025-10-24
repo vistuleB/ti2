@@ -68,7 +68,7 @@
     also nichtleere Strings aus alphanumerischen Zeichen.
 
     \begin{align*}
-    B&\rightarrow a \ | \ aB
+    B &\rightarrow a \ | \ aB
     \end{align*}
 
     Als nächstes führen wir ein nichtterminales Symbole
@@ -109,10 +109,10 @@
     Symbole $C', D', S'$:
 
     \begin{align*}
-    S&\rightarrow C \ | \ D \\
-    C&\rightarrow a \ | \ aC \ | \ aC'\ | \ aS' \\
+    S &\rightarrow C \ | \ D \\
+    C &\rightarrow a \ | \ aC \ | \ aC'\ | \ aS' \\
     C'&\rightarrow {:}C \\
-    D&\rightarrow a \ | \ aD \ | \ a D' \ | \ aS' \\
+    D &\rightarrow a \ | \ aD \ | \ a D' \ | \ aS' \\
     D'&\rightarrow \text{-}D \\
     S'&\rightarrow {.}S
     \end{align*}
@@ -197,16 +197,17 @@
     Fehlerzustand (trap state). Die akzeptierenden
     Zustände sind mit fettem Rand markiert.
 
-    !! Der deterministische Automat, Schritt für Schritt
-    !! gebaut:
-
     |> Group
         style=height:12em
+        class=top-align
         |> figure
             |> img
                 src=./img/finite-state-automata/nfsm-example-03-big.svg
             |> figcaption
-                Der nichtdeterministische Automat
+                class=topcaption
+                Der nichtdeterministische
+                |> br
+                Automat
 
         |> Carousel
             src=./img/finite-state-automata/transformation/01.svg
@@ -236,6 +237,12 @@
             src=./img/finite-state-automata/transformation/25.svg
             src=./img/finite-state-automata/transformation/26.svg
             src=./img/finite-state-automata/transformation/27.svg
+
+            |> figcaption
+                class=topcaption
+                Der deterministische Automat,
+                |> br
+                Schritt für Schritt gebaut:
 
     Dieser Automat hat deutlich weniger also 128
     Zustände, nämlich mit nur sieben genau so viele wie

@@ -1300,6 +1300,12 @@ const onLoad = () => {
   resizeObserver.observe(document.body);
   onBodyHeightChange();
   document.body.style.visibility = "visible";
+  // this forced call made a difference for
+  // 5-4.html |> Group.top-align Carousel indicator dots:
+  setTimeout(() => {
+    screenWidth = -1;
+    onResize();
+  }, 500);
 };
 
 const onResize = () => {

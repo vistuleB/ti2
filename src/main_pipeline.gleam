@@ -247,6 +247,7 @@ pub fn main_pipeline()  -> List(Pipe) {
       dl.append_custom(#("Index", end_of_page_element, infra.GoBack)),
       dl.ti2_create_menu(),
       dl.delete__batch(["PrevChapterOrSubTitle", "NextChapterOrSubTitle"]),
+      dl.wrap_and_custom_steal(#("Carousel", "CarouselContainer", infra.is_v_and_has_class(_, "topcaption"), infra.is_v_and_tag_equals(_, "figcaption"))),
       dl.ti2_expand_carousels(),
       dl.ti2_cut_paste_width_height_to_descendant_img(["Group", "figure"]),
       dl.insert_attribute_value_at_first_child_start(#("ChapterTitle", "number-chiron", "&ensp;", infra.GoBack)),
@@ -297,7 +298,6 @@ pub fn main_pipeline()  -> List(Pipe) {
     [
       dl.fold_contents_into_text("Math"),
       dl.wrap_children(#("Carousel", "CarouselItems", infra.Continue)),
-      dl.wrap(#("Carousel", "CarouselContainer")),
       dl.append_class__batch([
         #("Index", "index"),
         #("Chapter", "chapter"),

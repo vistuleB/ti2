@@ -626,6 +626,10 @@ pre.listing.redyellow > span.listing-bol::before {
   border-color: transparent;
 }
 
+.group.top-align .group_scaler {
+  align-items: start;
+}
+
 .group_placeholder_transition {
   will-change: height;
   transition-property: height;
@@ -659,6 +663,10 @@ figure {
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
+}
+
+figure:has(.topcaption) {
+  flex-direction: column-reverse;
 }
 
 .group_scaler figure,
@@ -708,6 +716,15 @@ figcaption {
 
 .group figcaption {
   padding-bottom: 0;
+}
+
+figcaption.topcaption {
+  padding-bottom: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.group figcaption.topcaption {
+  margin-top:  1rem;
 }
 
 .zoom-transition {
@@ -794,7 +811,7 @@ figcaption {
 .carousel__indicators {
   max-width: min(
     calc(
-      (var(--carousel-indicator-box-size) + var(--carousel-indicator-gap)) * 30
+      (var(--carousel-indicator-box-size) + var(--carousel-indicator-gap)) * var(--max-carousel-indicators-per-line)
     ),
     75%
   );
