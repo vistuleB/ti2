@@ -112,6 +112,7 @@ const topMenuLeftInPx = () => {
 };
 
 const remInPx = () => {
+  if (screenWidth <= 400) return 16;
   if (screenWidth <= MOBILE_MAX_WIDTH) return 17;
   return 16;
 };

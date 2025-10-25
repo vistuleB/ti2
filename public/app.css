@@ -407,10 +407,23 @@ p:has(> span.qed):not(:has(> *:not(span.qed))):last-child {
   width: 100vw;
   transition: top 0.5s ease-in-out;
   will-change: top;
-  justify-content: space-between;
   padding: var(--top-menu-padding-y) var(--top-menu-padding-x)
-    calc(var(--top-menu-padding-y) * 0.8);
+  calc(var(--top-menu-padding-y) * 0.8);
   background-color: var(--top-menu-background-color);
+  /* justify-content: space-between; */
+  flex-direction: column;
+  gap: var(--top-menu-element-gap);
+}
+
+.menu-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu-row-right {
+  text-align: right;
 }
 
 #bottom-menu a,
@@ -419,7 +432,7 @@ p:has(> span.qed):not(:has(> *:not(span.qed))):last-child {
   position: relative;
 }
 
-#top-menu-right,
+/* #top-menu-right,
 #top-menu-left {
   display: flex;
   flex-direction: column;
@@ -429,7 +442,7 @@ p:has(> span.qed):not(:has(> *:not(span.qed))):last-child {
 
 #top-menu-right {
   text-align: right;
-}
+} */
 
 #bottom-prev-page-tooltip,
 #bottom-next-page-tooltip,
