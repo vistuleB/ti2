@@ -1110,6 +1110,7 @@ class Carousel {
   }
 
   toggleZoom(e) {
+    if (!isPageCentered) return;
     if (this.containerWidth >= this.maxOriginalWidthInPx) {
       imgs.forEach(this.ourUnconstrainImage);
       return false;
