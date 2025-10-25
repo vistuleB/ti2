@@ -636,7 +636,7 @@ pre.listing.redyellow > span.listing-bol::before {
 .group_placeholder_transition_ahead {
   will-change: height;
   transition-property: height;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.0, 1);
   transition-duration: 450ms;
 }
 
