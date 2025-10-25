@@ -124,6 +124,7 @@
 }
 
 html {
+  font-family: 'Times New Roman', Times, serif;
   font-size: var(--rem-font-size);
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
