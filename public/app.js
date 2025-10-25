@@ -106,6 +106,11 @@ const topMenuPosition = () => {
   return USE_ABSOLUTE_TOP_MENU_IN_DESKTOP ? "absolute" : "fixed";
 };
 
+const topMenuLeftInPx = () => {
+  if (screenWidth <= LAPTOP_MAX_WIDTH) return 0;
+  return USE_ABSOLUTE_TOP_MENU_IN_DESKTOP ? offsideWidth() : 0;
+};
+
 const remInPx = () => {
   if (screenWidth <= MOBILE_MAX_WIDTH) return 17;
   return 16;
@@ -389,6 +394,7 @@ const resetScreenWidthDependentVars = () => {
   };
 
   set("--top-menu-position", topMenuPosition, "");
+  set("--top-menu-left", topMenuLeftInPx, "px");
   set("--rem-font-size", remInPx, "px");
   set("--inhalts-arrows-display", inhaltsArrowsDisplay, "");
   set("--top-menu-padding-x", topMenuPaddingXInRem, "rem");
