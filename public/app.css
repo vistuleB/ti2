@@ -63,7 +63,8 @@
   /********************************/
   /* light mode code block colors */
   /********************************/
-  --pre-background-color: #fdf6e3;
+  /* --pre-background-color: #fdf6e3; */
+  --pre-background-color: #fcfcfc;
   --pre-text: #506269;
   --terminal-prompt: #586e75;
   --terminal-prompt-content: #073642;
@@ -281,7 +282,7 @@ p:has(> mjx-container) {
 
 .statement,
 .remark {
-  background-color: rgb(216, 241, 226);
+  background-color: rgb(219, 234, 225);
 }
 
 .highlight {
