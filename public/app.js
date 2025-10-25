@@ -1197,13 +1197,17 @@ const constrainGroup = (group) => {
   group.classList.add("constrained");
   let w = group.constrainer.getBoundingClientRect().width;
   let s = Math.min(1, w / group.originalWidthInPx);
-  group.scaler.style.transform = `translate(-50%) scale(${s})`;
+  group.placeholder.classList.remove("group_placeholder_transition_ahead");
+  group.placeholder.classList.add("group_placeholder_transition_behind");
   group.placeholder.style.height = group.originalHeightInPx * s + "px";
+  group.scaler.style.transform = `translate(-50%) scale(${s})`;
 };
 
 const unconstrainGroup = (group) => {
   group.classList.remove("constrained");
   group.classList.add("unconstrained");
+  group.placeholder.classList.remove("group_placeholder_transition_behind");
+  group.placeholder.classList.add("group_placeholder_transition_ahead");
   group.placeholder.style.height = group.originalHeightInPx + "px";
   group.scaler.style.transform = "translate(-50%)";
 };
@@ -1235,17 +1239,17 @@ const setupGroups = () => {
       toggleGroupConstrained(group);
     });
     window.requestAnimationFrame(() => {
-      group.placeholder.classList.add("group_placeholder_transition");
+      // group.placeholder.classList.add("group_placeholder_transition");
       group.scaler.classList.add("group_scaler_transition");
     });
     group.onResize = () => {
-      group.placeholder.classList.remove("group_placeholder_transition");
+      // group.placeholder.classList.remove("group_placeholder_transition");
       group.scaler.classList.remove("group_scaler_transition");
       if (group.classList.contains("constrained")) {
         constrainGroup(group);
       }
       window.requestAnimationFrame(() => {
-        group.placeholder.classList.add("group_placeholder_transition");
+        // group.placeholder.classList.add("group_placeholder_transition");
         group.scaler.classList.add("group_scaler_transition");
       });
     };
