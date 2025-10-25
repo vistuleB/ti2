@@ -770,7 +770,7 @@ figcaption.topcaption {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  max-width: 530px;
+  max-width: min(530px, 85vw);
   margin: 0 auto;
 }
 

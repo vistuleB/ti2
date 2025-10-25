@@ -1053,7 +1053,12 @@ class Carousel {
       2 * this.buttonWidthInPx +
       4 * this.unconstrainedButtonMarginInPx;
 
-    if (this.containerWidth >= unconstrainedUIWidth) {
+    if (
+      this.containerWidth >= unconstrainedUIWidth &&
+      // we insist on constrained UI if the conjunction
+      // 'on mobile and inside a |> Group' occurs
+      !(screenWidth <= MOBILE_MAX_WIDTH && this.group != null)
+    ) {
       this.bigEnoughContainerForUnconstrainedUI = true;
       this.removeConstrainedNav();
       this.attachUnconstrainedNav();
