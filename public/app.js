@@ -15,6 +15,7 @@
  *   again; see const DESKTOP_MAIN_COLUMN_WIDTH   *
  **************************************************/
 
+const UNCOMFORTABLY_SMALL_MAX_WIDTH = 400;
 const MOBILE_MAX_WIDTH = 550;
 const TABLET_MAX_WIDTH = 900;
 const LAPTOP_MAX_WIDTH = 1400;
@@ -111,8 +112,13 @@ const topMenuLeftInPx = () => {
   return USE_ABSOLUTE_TOP_MENU_IN_DESKTOP ? offsideWidth() : 0;
 };
 
+const topMenuFontSizeInEm = () => {
+  if (screenWidth <= UNCOMFORTABLY_SMALL_MAX_WIDTH) return 0.9;
+  return 1;
+};
+
 const remInPx = () => {
-  if (screenWidth <= 400) return 16;
+  if (screenWidth <= UNCOMFORTABLY_SMALL_MAX_WIDTH) return 16;
   if (screenWidth <= MOBILE_MAX_WIDTH) return 17;
   return 16;
 };
@@ -142,7 +148,8 @@ const topMenuBackgroundColor = () => {
 };
 
 const topMenuElementGapInRem = () => {
-  if (screenWidth <= MOBILE_MAX_WIDTH) return 0.7;
+  if (screenWidth <= UNCOMFORTABLY_SMALL_MAX_WIDTH) return 0.9;
+  if (screenWidth <= MOBILE_MAX_WIDTH) return 0.8;
   if (screenWidth <= TABLET_MAX_WIDTH) return 0.7;
   return 0.55;
 };
@@ -396,6 +403,7 @@ const resetScreenWidthDependentVars = () => {
 
   set("--top-menu-position", topMenuPosition, "");
   set("--top-menu-left", topMenuLeftInPx, "px");
+  set("--top-menu-font-size", topMenuFontSizeInEm, "em");
   set("--rem-font-size", remInPx, "px");
   set("--inhalts-arrows-display", inhaltsArrowsDisplay, "");
   set("--top-menu-padding-x", topMenuPaddingXInRem, "rem");

@@ -12,6 +12,7 @@
   /*********************************/
   /* resetScreenWidthDependentVars */
   /*********************************/
+  --top-menu-font-size: 1em;
   --top-menu-position: fixed;
   --rem-font-size: 16px;
   --inhalts-arrows-display: none;
@@ -410,9 +411,9 @@ p:has(> span.qed):not(:has(> *:not(span.qed))):last-child {
   padding: var(--top-menu-padding-y) var(--top-menu-padding-x)
   calc(var(--top-menu-padding-y) * 0.8);
   background-color: var(--top-menu-background-color);
-  /* justify-content: space-between; */
   flex-direction: column;
   gap: var(--top-menu-element-gap);
+  font-size: var(--top-menu-font-size);
 }
 
 .menu-row {
@@ -431,18 +432,6 @@ p:has(> span.qed):not(:has(> *:not(span.qed))):last-child {
   color: #222;
   position: relative;
 }
-
-/* #top-menu-right,
-#top-menu-left {
-  display: flex;
-  flex-direction: column;
-  gap: var(--top-menu-element-gap);
-  overflow: visible;
-}
-
-#top-menu-right {
-  text-align: right;
-} */
 
 #bottom-prev-page-tooltip,
 #bottom-next-page-tooltip,
