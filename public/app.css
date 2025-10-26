@@ -64,8 +64,8 @@
   /* light mode code block colors */
   /********************************/
   /* --pre-background-color: #fdf6e3; */
-  --pre-border: solid 1.2px black;
-  --pre-background-color: #fcfcfc;
+  --pre-background-color: #fdfdfd;
+  --pre-border: 0.5px solid black;
   --pre-text: #506269;
   --terminal-prompt: #586e75;
   --terminal-prompt-content: #073642;
@@ -268,7 +268,6 @@ pre {
   width: 100%;
   margin: 2ch auto;
   padding: 1.3rem 1.5rem;
-  border: 0.5px var(--pre-background-color) solid;
   overflow: scroll;
   text-wrap: nowrap;
 }
@@ -284,7 +283,7 @@ p:has(> mjx-container) {
 
 .statement,
 .remark {
-  background-color: rgb(213, 236, 223);
+  background-color: rgb(216, 237, 225);
 }
 
 .highlight {
