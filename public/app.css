@@ -64,6 +64,7 @@
   /* light mode code block colors */
   /********************************/
   /* --pre-background-color: #fdf6e3; */
+  --pre-border: solid 1.2px black;
   --pre-background-color: #fcfcfc;
   --pre-text: #506269;
   --terminal-prompt: #586e75;
@@ -260,6 +261,7 @@ li > p:first-child {
 pre {
   line-height: 1.6;
   color: var(--pre-text);
+  border: var(--pre-border);
   background-color: var(--pre-background-color);
   font-size: 0.9rem;
   white-space: pre-wrap;
@@ -282,7 +284,7 @@ p:has(> mjx-container) {
 
 .statement,
 .remark {
-  background-color: rgb(219, 234, 225);
+  background-color: rgb(213, 236, 223);
 }
 
 .highlight {
