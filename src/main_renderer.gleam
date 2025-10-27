@@ -1,6 +1,7 @@
 import blame.{Ext}
 import gleam/io
 import gleam/list
+import gleam/dict
 import gleam/option.{Some}
 import gleam/result
 import gleam/string.{inspect as ins}
@@ -292,7 +293,7 @@ pub fn main_renderer(amendments: ds.CommandLineAmendments) -> Nil {
     ds.Renderer(
       assembler: ds.default_assembler(amendments.only_paths),
       parser: ds.default_writerly_parser(amendments.only_key_values),
-      pipeline: main_pipeline(),
+      pipeline: main_pipeline(dict.has_key(amendments.user_args, "--local")),
       splitter: our_splitter,
       emitter: our_emitter,
       writer: ds.default_writer,

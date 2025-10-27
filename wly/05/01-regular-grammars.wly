@@ -16,8 +16,10 @@
         folgenden vier Formen hat:
 
         \begin{align*}
-        X&\rightarrow aY \\ X&\rightarrow a \\ X&
-        \rightarrow Y \\ X&\rightarrow \epsilon
+        X & \rightarrow aY \\
+        X & \rightarrow a \\
+        X & \rightarrow Y \\
+        X & \rightarrow \epsilon
         \end{align*}
 
         Eine Sprache $L \subseteq \Sigma^*$ heißt _regulär_,

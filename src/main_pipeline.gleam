@@ -79,7 +79,7 @@ const p_cannot_be_contained_in = [
 
 const post_counter_space = " "
 
-pub fn main_pipeline()  -> List(Pipe) {
+pub fn main_pipeline(author_mode: Bool)  -> List(Pipe) {
   let escaped_dollar_to_span_rr_splitter = grs.rr_splitter_for_groups([
     #("\\\\", grs.Trash),
     #("\\$", grs.TagWithTextChild("span"))
@@ -117,6 +117,7 @@ pub fn main_pipeline()  -> List(Pipe) {
     "WriterlyCodeBlock",
     "WriterlyComment",
   ]
+
   let pre_transformation_html_tags = ["div", "a", "pre", "span", "br", "hr", "img", "figure", "figcaption", "ol", "ul", "li"]
   let pre_transformation_approved_tags = [pre_transformation_document_tags, pre_transformation_html_tags] |> list.flatten
   
@@ -296,7 +297,6 @@ pub fn main_pipeline()  -> List(Pipe) {
       // ]),
     ],
     [
-      dl.fold_contents_into_text("Math"),
       dl.wrap_children(#("Carousel", "CarouselItems", infra.Continue)),
       dl.append_class__batch([
         #("Index", "index"),
@@ -340,6 +340,16 @@ pub fn main_pipeline()  -> List(Pipe) {
       dl.wrap_children_up_to_custom(#("Chapter", "Sub", body_wrapper, infra.GoBack)),
       dl.wrap_children_custom(#("Sub", body_wrapper, infra.GoBack)),
       dl.wrap_children_custom(#("Index", body_wrapper, infra.GoBack)),
+    ],
+    case author_mode {
+      False -> []
+      True -> [
+        dl.ti2_turn_lines_into_3003_spans("./wly/", ["Math", "MathBlock", "TopMenu", "BottomMenu"]),
+        dl.ti2_adorn_img_with_3003_spans("./public/", []),
+      ]
+    },
+    [
+      dl.fold_contents_into_text("Math"),
       dl.rename__batch([
         #("MathBlock", "div"),
         #("Index", "div"),

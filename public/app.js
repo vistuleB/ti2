@@ -401,7 +401,7 @@ const resetScreenWidthDependentVars = () => {
   let set = (key, val, unit) => {
     root.style.setProperty(key, `${val()}` + unit);
   };
-
+  
   set("--top-menu-position", topMenuPosition, "");
   set("--top-menu-left", topMenuLeftInPx, "px");
   set("--top-menu-font-size", topMenuFontSizeInEm, "em");
@@ -1304,6 +1304,7 @@ const onDOMContentLoaded = () => {
   setTopMenuVisible(true);
   setupMenuTooltips();
   onResize();
+  authorModeTooltipInit();
 };
 
 const onLoad = () => {
@@ -1486,3 +1487,35 @@ document.addEventListener("mousemove", onMouseMove, { passive: true });
 document.addEventListener("scrollend", onScrollEnd);
 document.addEventListener("touchend", onTouchEnd, { passive: true });
 document.addEventListener("keydown", onKeyDown, { capture: true });
+
+const authorModeTooltipInit = () => {
+  let tooltips = document.getElementsByClassName("t-3003");
+  if (tooltips.length <= 0) return;
+  root.style.setProperty("--body-background-color", "#fff");
+  root.style.setProperty("--p-hasmathjax-overflow-x", "visible");
+  root.style.setProperty("--p-hasmathjax-overflow-y", "visible");
+  for (const t of tooltips) {
+    if (t.classList.contains("t-3003-i")) {
+      t.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        sendCmdTo3003("open " + t.innerHTML);
+      })
+    } else {
+      t.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        sendCmdTo3003("code --goto " + t.innerHTML);
+      })
+    }
+  }
+}
+
+const sendCmdTo3003 = command => {
+  const payload = { cmd: command };
+  fetch("http://localhost:3003/log-event", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  })
+}

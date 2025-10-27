@@ -12,7 +12,7 @@ const ins = string.inspect
 
 fn local_cli_usage() {
   let margin = "   "
-  io.println(margin <> "--fmt [<cols>] [<cols> <penalty>]")
+  io.println(margin <> "--fmt [<cols>] [<cols> <penalty>] [-file <name>]")
   io.println(margin <> "  -> (local option) run the formatter")
   io.println("")
   io.println(margin <> "     optional arguments:")
@@ -22,6 +22,10 @@ fn local_cli_usage() {
   io.println(margin <> "       length and indentation penalty (number")
   io.println(margin <> "       of chars subtracted from line length at")
   io.println(margin <> "       each added level of indentation in the file)")
+  io.println(margin <> "     • -file <name>: format only the given file")
+  io.println("")
+  io.println(margin <> "--local")
+  io.println(margin <> "  -> include source-linking tooltips for author work")
   io.println("")
 }
 
@@ -48,7 +52,7 @@ pub fn main() {
 
     _ -> {
       use amendments <-  on.error_ok(
-        ds.process_command_line_arguments(args, ["--fmt"]),
+        ds.process_command_line_arguments(args, ["--fmt", "--author-mode"]),
         fn(error) {
           io.println("")
           io.println("cli error: " <> ins(error))

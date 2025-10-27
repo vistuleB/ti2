@@ -8,7 +8,9 @@
   --body-background-color: rgba(248, 244, 253, 1);
   --page-title-border-min-width: 40px;
   --line-height: 1.8rem;
-  
+  --p-hasmathjax-overflow-x: scroll;
+  --p-hasmathjax-overflow-y: hidden;
+
   /*********************************/
   /* resetScreenWidthDependentVars */
   /*********************************/
@@ -63,7 +65,6 @@
   /********************************/
   /* light mode code block colors */
   /********************************/
-  /* --pre-background-color: #fdf6e3; */
   --pre-background-color: #fdfdfd;
   --pre-border: 0.5px solid black;
   --pre-text: #506269;
@@ -93,8 +94,8 @@
   /*******************************/
   /* dark mode code block colors */
   /*******************************/
-  /*
-  --pre-background-color: #000;
+  
+  /* --pre-background-color: #000;
   --pre-text: #fff;
   --terminal-prompt: rgb(219, 220, 218);
   --terminal-prompt-content: rgb(191, 241, 141);
@@ -270,15 +271,20 @@ pre {
   padding: 1.3rem 1.5rem;
   overflow: scroll;
   text-wrap: nowrap;
+  overflow: visible;
 }
 
 p {
   line-height: var(--line-height);
+  overflow: visible;
 }
 
 p:has(> mjx-container) {
-  overflow-x: scroll;
-  overflow-y: hidden;
+  /* these are variables because in 'author mode'
+     we override them to 'visible' in order for 
+     tooltips to show (see app.js) */
+  overflow-x: var(--p-hasmathjax-overflow-x);
+  overflow-y: var(--p-hasmathjax-overflow-y);
 }
 
 .statement,
@@ -670,6 +676,7 @@ figure {
   justify-content: center;
   width: fit-content;
   flex-direction: column;
+  position: relative;
   /* not trusting Chrome's user agent stylesheet: */
   margin-block-start: 0;
   margin-block-end: 0;
@@ -775,6 +782,7 @@ figcaption.topcaption {
   margin: 0 auto;
   justify-content: center;
   overflow: visible;
+  position: relative;
 }
 
 /* begin of constrained nav */
@@ -1041,8 +1049,91 @@ button img {
     var(--gradient) 0% 0% / var(--width) var(--height),
     var(--gradient) calc(var(--width) / 2 + 0%) calc(var(--height) / 2 + 0%) /
       var(--width) var(--height);
+  background-clip: content-box;
 }
 
 .inhalts_arrows {
   display: var(--inhalts-arrows-display);
+}
+
+/* author-mode source tooltips */
+
+.t-3003-c {
+  position: relative;
+  overflow: visible;
+}
+
+.t-3003-c:hover,
+.t-3003-c:has(.t-3003:hover) {
+  background-color: #bfb;
+  padding: 5px;
+  margin: -5px;
+  border-radius: 10px;
+}
+
+.t-3003 {
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1.6;
+  font-size: 12px;
+  visibility: hidden;
+  position: absolute;
+  top: -3.85em;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  width: auto;
+  white-space: nowrap;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: #4fc3f7;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.t-3003::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.t-3003::before {
+  content: "";
+  position: absolute;
+  bottom: -20px; /* Adjust based on distance to trigger text */
+  left: 0;
+  width: 100%;
+  height: 20px; /* Height of the bridge */
+  background-color: transparent; /* Invisible */
+}
+
+.t-3003:hover {
+  text-decoration: underline;
+}
+
+.t-3003-c:hover .t-3003 {
+  visibility: visible;
+  opacity: 1;
+}
+
+figure:hover>.t-3003,
+.carousel__item:hover>.t-3003 {
+  visibility: visible;
+  opacity: 1;
+}
+
+figure:hover:has(>.t-3003) img,
+.carousel__item:hover:has(>.t-3003) img {
+  background-color: #bfb;
 }
