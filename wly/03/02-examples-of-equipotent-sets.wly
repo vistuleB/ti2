@@ -22,14 +22,14 @@
 
         |> figure
             |> img
-                src=./img/infinite-sets/N.svg
+                src=img/infinite-sets/N.svg
             |> br
                 Die Menge $\N$ bzw. ein Teil davon.
         |> br
 
         |> figure
             |> img
-                src=./img/infinite-sets/N-times-N.svg
+                src=img/infinite-sets/N-times-N.svg
             Die Menge $\N \times \N$ bzw. ein Teil davon.
 
     |> Proof
@@ -40,7 +40,7 @@
 
         |> figure
             |> img
-                src=./img/infinite-sets/N-times-N-to-N.svg
+                src=img/infinite-sets/N-times-N-to-N.svg
 
         Wir zerlegen $\N \times \N$ also in fallende
         Diagonale und gehen jede Diagonale von rechts unten
@@ -181,7 +181,7 @@
 
         |> figure
             |> img
-                src=./img/infinite-sets/Z-times-N-removed.svg
+                src=img/infinite-sets/Z-times-N-removed.svg
 
         Die Punkte sind die Elemente von $\Z \times \N^+$.
         Die schwarzen Punkte sind jene Punkte $(x,y)$ mit
@@ -196,7 +196,7 @@
 
         |> figure
             |> img
-                src=./img/infinite-sets/N-to-Q.svg
+                src=img/infinite-sets/N-to-Q.svg
 
         Das funktioniert natürlich: wir überspringen einfach
         die gelöschten Punkte. Wir können allerdings nicht

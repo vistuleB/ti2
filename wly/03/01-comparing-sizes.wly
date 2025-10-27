@@ -49,7 +49,7 @@
 
         |> figure
             |> img
-                src=./img/infinite-sets/N-N-plus.svg
+                src=img/infinite-sets/N-N-plus.svg
 
         Wir können diese Zuordnung auch mit einer einfachen
         Formel beschreiben. Die Funktion
@@ -84,7 +84,7 @@
         |> figure
             |> img
                 style=width: 70%
-                src=./img/infinite-sets/N-to-Z.svg
+                src=img/infinite-sets/N-to-Z.svg
 
         Dies ist etwas unübersichtlich. Besser geht es, wenn
         wir $\Z$ umstellen:
@@ -92,7 +92,7 @@
         |> figure
             |> img
                 style=width: 70%
-                src=./img/infinite-sets/N-to-Z-nicer.svg
+                src=img/infinite-sets/N-to-Z-nicer.svg
 
         Wir können also unsere Bijektion
         $f : \N \rightarrow \Z$ wie folgt definieren:

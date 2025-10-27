@@ -69,7 +69,7 @@
     |> figure
         |> img
             style=height: 15em
-            src=./img/cfg/syntax-tree-a*(a+a).svg
+            src=img/cfg/syntax-tree-a*(a+a).svg
 
     Rechtsableitung und Linksableitung sowie deren
     Codierung als Zahlenfolge spiegeln also nur zwei

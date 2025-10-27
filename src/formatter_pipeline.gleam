@@ -95,7 +95,7 @@ pub fn formatter_pipeline(
   [
     [
       dl.identity(),
-      dl.find_replace__outside(#("&amp;", "&"), []),
+      dl.attribute_drop_prefixes(#("src", ["./", "/"])),
     ],
     pp.create_mathblock_elements([infra.DoubleDollar, infra.BackslashSquareBracket, infra.BeginEndAlign, infra.BeginEndAlignStar], infra.DoubleDollar),
     [
@@ -110,7 +110,6 @@ pub fn formatter_pipeline(
         infra.latex_strippable_display_delimiters(),
         infra.descendant_text_contains(_, "\\begin{align")
       )),
-      dl.table_marker(),
       dl.group_consecutive_children__outside(#("p", p_cannot_contain), p_cannot_be_contained_in),
       dl.concatenate_text_nodes(),
       dl.insert_text_start_end(#("tt", #("`", "`"))),

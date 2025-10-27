@@ -301,7 +301,7 @@
             |> figure
                 |> img
                     style=height:10em
-                    src=./img/circuits/all-monomials.svg
+                    src=img/circuits/all-monomials.svg
 
         |> Proof
             Die Idee ist: wenn wir $x_1 x_2 x_3 x_4$ berechnen
@@ -321,8 +321,8 @@
             ein AND-Gate, das $\x^{I} \wedge x_n$ berechnet.
 
             |> Carousel
-                src=./img/circuits/all-monomials-1.svg
-                src=./img/circuits/all-monomials-2.svg
+                src=img/circuits/all-monomials-1.svg
+                src=img/circuits/all-monomials-2.svg
 
             Insgesamt erhalten wir $2^n$ Gates, von denen jedes
             gleichzeitig ein Ouptut-Gate ist.

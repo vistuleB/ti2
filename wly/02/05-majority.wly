@@ -7,7 +7,7 @@
     |> figure
         |> img
             style=height:10em
-            src=./img/circuits/majority.svg
+            src=img/circuits/majority.svg
 
     Diese nimmt $n$ Bits als Input und gibt 1 aus, wenn
     mehr als $n/2$ davon 1 sind. Für $n=3$ heißt dass,
@@ -23,7 +23,7 @@
     |> figure
         |> img
             style=height:8em
-            src=./img/circuits/maj3.svg
+            src=img/circuits/maj3.svg
 
     Wie können wir das sinnvoll verallgemeinern für
     größere $n$? Was geschieht, wenn wir einfach die
@@ -196,7 +196,7 @@
     |> figure
         |> img
             style=height:15em
-            src=./img/circuits/majority-theta-recursive.svg
+            src=img/circuits/majority-theta-recursive.svg
 
     Die Konstruktion endet mit $\theta^m_0$, was immer $1$
     ausgibt, und mit $\theta^m_{m}$, was
@@ -226,7 +226,7 @@
     |> figure
         |> img
             style=height:18em
-            src=./img/circuits/majority-theta-dp.svg
+            src=img/circuits/majority-theta-dp.svg
 
     Um eine Analogie mit der Programmierpraxis zu
     bemühen: der Unterschied zwischen den beiden
@@ -278,7 +278,7 @@
     |> figure
         |> img
             style=height:12em
-            src=./img/circuits/majority-by-adding.svg
+            src=img/circuits/majority-by-adding.svg
 
     |> Exercise
         Bestimmen Sie asymptotisch die Größe und die Tiefe
@@ -318,7 +318,7 @@
         |> figure
             |> img
                 style=height:10em
-                src=./img/circuits/2-for-3-adder-example.svg
+                src=img/circuits/2-for-3-adder-example.svg
 
         Wir addieren also pro Stelle drei (einstellige)
         Zahlen, führen den Übertrag (das Carry) aber nicht der
@@ -330,7 +330,7 @@
         |> figure
             |> img
                 style=height:15em
-                src=./img/circuits/2-for-3-adder-binary.svg
+                src=img/circuits/2-for-3-adder-binary.svg
 
         Dieser Schaltkreis hat insgesamt $O(n)$ Gates und
         Tiefe 2 (wobei wir die NOT-Gates im $\oplus$-Gate
@@ -721,7 +721,7 @@
         |> figure
             |> img
                 style=height:18em
-                src=./img/circuits/majority-probability-labeled.svg
+                src=img/circuits/majority-probability-labeled.svg
             |> br
             Graph der Funktion $p \mapsto p^3 + 3 p^2 (1-p)$
         |> hr
@@ -729,7 +729,7 @@
         |> figure
             |> img
                 style=height:18em
-                src=./img/circuits/majority-probability-close-to-half-labeled.svg
+                src=img/circuits/majority-probability-close-to-half-labeled.svg
             |> br
             Signalstärke $\delta$ wächst für $p \in [1/2, 3/4]$
             exponentiell.
@@ -738,7 +738,7 @@
         |> figure
             |> img
                 style=height:18em
-                src=./img/circuits/majority-probability-close-to-one-labeled.svg
+                src=img/circuits/majority-probability-close-to-one-labeled.svg
             |> br
             Fehlerwahrscheinlichkeit $\epsilon$ fällt für
             $p \in [3/4, 1/2]$ doppelt exponentiell.

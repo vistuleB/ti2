@@ -62,9 +62,9 @@
         $g$-Pfeile von jedem $b$ zu $f(b)$:
 
         |> Carousel
-            src=./img/infinite-sets/schroeder-bernstein-digraph-1.svg
-            src=./img/infinite-sets/schroeder-bernstein-digraph-2.svg
-            src=./img/infinite-sets/schroeder-bernstein-digraph-3.svg
+            src=img/infinite-sets/schroeder-bernstein-digraph-1.svg
+            src=img/infinite-sets/schroeder-bernstein-digraph-2.svg
+            src=img/infinite-sets/schroeder-bernstein-digraph-3.svg
             src=img/infinite-sets/schroeder-bernstein-digraph-4.svg
 
         Wenn wir die Menge $A \cup B$ zusammen mit den $f$ -
@@ -82,9 +82,9 @@
         $g^{-1}$:
 
         |> Carousel
-            src=./img/infinite-sets/schroeder-bernstein-bijektion-1.svg
-            src=./img/infinite-sets/schroeder-bernstein-bijektion-2.svg
-            src=./img/infinite-sets/schroeder-bernstein-bijektion-3.svg
+            src=img/infinite-sets/schroeder-bernstein-bijektion-1.svg
+            src=img/infinite-sets/schroeder-bernstein-bijektion-2.svg
+            src=img/infinite-sets/schroeder-bernstein-bijektion-3.svg
 
         Formalisieren wir das ein bisschen. Wir definieren
         eine Folge $X_0, X_1, \dots$, sodass

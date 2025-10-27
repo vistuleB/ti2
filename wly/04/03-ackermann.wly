@@ -408,4 +408,4 @@
     |> figure
         |> img
             style=height:25em
-            src=./img/primitive-rekursion/primitive-recursive-tree.svg
+            src=img/primitive-rekursion/primitive-recursive-tree.svg

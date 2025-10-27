@@ -61,7 +61,7 @@
         |> img
             id=aa
             style=height:13em
-            src=./img/circuits/if-then-else-gate.svg
+            src=img/circuits/if-then-else-gate.svg
         |> figcaption
             `if` $x$ `then` $y$ `else` $z$
 
@@ -77,7 +77,7 @@
         |> img
             id=bb
             style=height:13em
-            src=./img/circuits/if-then-else-gate-with-values.svg
+            src=img/circuits/if-then-else-gate-with-values.svg
         |> figcaption
             Das if-then-else-Gate mit einer konkreten Belegung
             und einem Ausgabewert

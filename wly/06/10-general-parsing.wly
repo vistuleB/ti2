@@ -349,7 +349,7 @@
         und das Eingabewort $xyxxz$.
 
         |> Carousel
-            src=./img/context-free/CYK/01-01.svg
+            src=img/context-free/CYK/01-01.svg
             src=img/context-free/CYK/01-02.svg
             src=img/context-free/CYK/01-03.svg
             src=img/context-free/CYK/02-01.svg

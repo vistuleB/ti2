@@ -171,7 +171,7 @@
     |> figure
         |> img
             style=height:17em
-            src=./img/finite-state-automata/nfsm-example-03-big.svg
+            src=img/finite-state-automata/nfsm-example-03-big.svg
 
     Ich habe die Zeichen `.:-` rot unterlegt, weil man
     sie sonst kaum erkennen würde in dem Automaten.
@@ -202,7 +202,7 @@
         class=top-align
         |> figure
             |> img
-                src=./img/finite-state-automata/nfsm-example-03-big.svg
+                src=img/finite-state-automata/nfsm-example-03-big.svg
             |> figcaption
                 class=topcaption
                 Der nichtdeterministische
@@ -210,34 +210,33 @@
                 Automat
 
         |> Carousel
-            src=./img/finite-state-automata/transformation/01.svg
-            src=./img/finite-state-automata/transformation/02.svg
-            src=./img/finite-state-automata/transformation/03.svg
-            src=./img/finite-state-automata/transformation/04.svg
-            src=./img/finite-state-automata/transformation/05.svg
-            src=./img/finite-state-automata/transformation/06.svg
-            src=./img/finite-state-automata/transformation/07.svg
-            src=./img/finite-state-automata/transformation/08.svg
-            src=./img/finite-state-automata/transformation/09.svg
-            src=./img/finite-state-automata/transformation/10.svg
-            src=./img/finite-state-automata/transformation/11.svg
-            src=./img/finite-state-automata/transformation/12.svg
-            src=./img/finite-state-automata/transformation/13.svg
-            src=./img/finite-state-automata/transformation/14.svg
-            src=./img/finite-state-automata/transformation/15.svg
-            src=./img/finite-state-automata/transformation/16.svg
-            src=./img/finite-state-automata/transformation/17.svg
-            src=./img/finite-state-automata/transformation/18.svg
-            src=./img/finite-state-automata/transformation/19.svg
-            src=./img/finite-state-automata/transformation/20.svg
-            src=./img/finite-state-automata/transformation/21.svg
-            src=./img/finite-state-automata/transformation/22.svg
-            src=./img/finite-state-automata/transformation/23.svg
-            src=./img/finite-state-automata/transformation/24.svg
-            src=./img/finite-state-automata/transformation/25.svg
-            src=./img/finite-state-automata/transformation/26.svg
-            src=./img/finite-state-automata/transformation/27.svg
-
+            src=img/finite-state-automata/transformation/01.svg
+            src=img/finite-state-automata/transformation/02.svg
+            src=img/finite-state-automata/transformation/03.svg
+            src=img/finite-state-automata/transformation/04.svg
+            src=img/finite-state-automata/transformation/05.svg
+            src=img/finite-state-automata/transformation/06.svg
+            src=img/finite-state-automata/transformation/07.svg
+            src=img/finite-state-automata/transformation/08.svg
+            src=img/finite-state-automata/transformation/09.svg
+            src=img/finite-state-automata/transformation/10.svg
+            src=img/finite-state-automata/transformation/11.svg
+            src=img/finite-state-automata/transformation/12.svg
+            src=img/finite-state-automata/transformation/13.svg
+            src=img/finite-state-automata/transformation/14.svg
+            src=img/finite-state-automata/transformation/15.svg
+            src=img/finite-state-automata/transformation/16.svg
+            src=img/finite-state-automata/transformation/17.svg
+            src=img/finite-state-automata/transformation/18.svg
+            src=img/finite-state-automata/transformation/19.svg
+            src=img/finite-state-automata/transformation/20.svg
+            src=img/finite-state-automata/transformation/21.svg
+            src=img/finite-state-automata/transformation/22.svg
+            src=img/finite-state-automata/transformation/23.svg
+            src=img/finite-state-automata/transformation/24.svg
+            src=img/finite-state-automata/transformation/25.svg
+            src=img/finite-state-automata/transformation/26.svg
+            src=img/finite-state-automata/transformation/27.svg
             |> figcaption
                 class=topcaption
                 Der deterministische Automat,
@@ -286,7 +285,7 @@
         |> figure
             |> img
                 style=height:14em
-                src=./img/finite-state-automata/divisibility-automaton/divisibility.svg
+                src=img/finite-state-automata/divisibility-automaton/divisibility.svg
 
         Dieser Automat hat 11 Zustände. Sein
         Potenzmengenautomat hätte also $2^{11} = 2048$

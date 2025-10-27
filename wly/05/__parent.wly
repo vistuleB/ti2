@@ -68,7 +68,7 @@
         |> img
             class=checkered
             style=padding:0;margin-bottom:0.5rem;
-            src=./img/svg-example.svg
+            src=img/svg-example.svg
 
     ```xml.listing
     <?xml version="1.0" encoding="UTF-8"?>

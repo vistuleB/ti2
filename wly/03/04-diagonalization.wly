@@ -43,7 +43,7 @@
         |> figure
             |> img
                 style=height: 12em
-                src=./img/infinite-sets/cantor-table.svg
+                src=img/infinite-sets/cantor-table.svg
 
         Für ein Bit $b \in \{0,1\}$ bezeichnen wir mit
         $\bar{b}$ seine Negation: $\bar{b} = 1 - b$. Wir
@@ -53,7 +53,7 @@
         |> figure
             |> img
                 style=height: 12em
-                src=./img/infinite-sets/cantor-diagonal.svg
+                src=img/infinite-sets/cantor-diagonal.svg
 
         und erhalten eine Folge:
         $\mathbf{d} := \overline{f_{0,0}}\

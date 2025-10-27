@@ -137,7 +137,7 @@
 
             |> figure
                 |> img
-                    src=./img/infinite-sets/interval-sequences-fill-the-gaps.svg
+                    src=img/infinite-sets/interval-sequences-fill-the-gaps.svg
 
         |> QED
 
@@ -205,7 +205,7 @@
     |> figure
         |> img
             style=height: 20em
-            src=./img/infinite-sets/bijection-square-interval.png
+            src=img/infinite-sets/bijection-square-interval.png
         |> figcaption
             Plot der (Fast-) Bijektion
             $f : [0,1) \times [0,1) \rightarrow [0,1)$.
@@ -276,7 +276,7 @@
     |> figure
         |> img
             style=height: 10em
-            src=./img/infinite-sets/interval-to-square.svg
+            src=img/infinite-sets/interval-to-square.svg
 
     Beachten Sie, dass die Verbindungslinien zwischen den
     Kreisen Sprünge sind, also Unstetigkeitsstellen von
@@ -287,10 +287,10 @@
 
     |> Carousel
         height=15em
-        src=./img/infinite-sets/interval-to-square-animation/figures-01-01.svg
-        src=./img/infinite-sets/interval-to-square-animation/figures-01-02.svg
-        src=./img/infinite-sets/interval-to-square-animation/figures-01-03.svg
-        src=./img/infinite-sets/interval-to-square-animation/figures-01-04.svg
+        src=img/infinite-sets/interval-to-square-animation/figures-01-01.svg
+        src=img/infinite-sets/interval-to-square-animation/figures-01-02.svg
+        src=img/infinite-sets/interval-to-square-animation/figures-01-03.svg
+        src=img/infinite-sets/interval-to-square-animation/figures-01-04.svg
 
     Wir wissen nun, dass $\R \approx \R^2$ gilt. Ebenso
     können wir $\R \approx \R^{k}$ für jedes $k \in \N^+$
@@ -322,7 +322,7 @@
 
         |> figure
             |> img
-                src=./img/infinite-sets/table-infinite-sequences.svg
+                src=img/infinite-sets/table-infinite-sequences.svg
 
         Wir wollen jetzt eine Bijektion
         $f : \cuben \times \cuben \rightarrow \cuben$
@@ -333,14 +333,14 @@
 
         |> figure
             |> img
-                src=./img/infinite-sets/table-infinite-sequences-with-blue.svg
+                src=img/infinite-sets/table-infinite-sequences-with-blue.svg
 
         Schließlich definieren wir unsere Folge
         $s_1 s_2 s_3 \dots \in \cuben$:
 
         |> figure
             |> img
-                src=./img/infinite-sets/table-infinite-sequences-with-s.svg
+                src=img/infinite-sets/table-infinite-sequences-with-s.svg
 
         |> QED
 

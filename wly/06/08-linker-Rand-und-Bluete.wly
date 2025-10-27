@@ -39,9 +39,9 @@
     mich gerade nur für Ableitungsbäume von Wortformen.
 
     |> Carousel
-        src=./img/context-free/LR/G-right-derivation.svg
-        src=./img/context-free/LR/G-left-derivation.svg
-        src=./img/context-free/LR/G-messy-derivation.svg
+        src=img/context-free/LR/G-right-derivation.svg
+        src=img/context-free/LR/G-left-derivation.svg
+        src=img/context-free/LR/G-messy-derivation.svg
 
     Fällt Ihnen etwas auf? Schauen Sie sich bitte noch
     ein weiteres Beispiel an für den Ableitungsbaum einer
@@ -51,7 +51,7 @@
     |> figure
         |> img
             style=height:40em
-            src=./img/context-free/LR/G-tree-large.svg
+            src=img/context-free/LR/G-tree-large.svg
 
     |> Remark
         title=*Warten Sie!*
@@ -68,7 +68,7 @@
     |> figure
         |> img
             style=height:40em
-            src=./img/context-free/LR/G-tree-large-colored.svg
+            src=img/context-free/LR/G-tree-large-colored.svg
 
     Sie sehen: links vom Stamm gibt es nur Blätter.
     Rechts vom Stamm ist jedes Blatt ein Terminalsymbol.
@@ -139,16 +139,16 @@
     und immer wieder die Blüte abschneiden:
 
     |> Carousel
-        src=./img/context-free/LR/tree-destruction/01.svg
-        src=./img/context-free/LR/tree-destruction/02.svg
-        src=./img/context-free/LR/tree-destruction/03.svg
-        src=./img/context-free/LR/tree-destruction/04.svg
-        src=./img/context-free/LR/tree-destruction/05.svg
-        src=./img/context-free/LR/tree-destruction/06.svg
-        src=./img/context-free/LR/tree-destruction/07.svg
-        src=./img/context-free/LR/tree-destruction/08.svg
-        src=./img/context-free/LR/tree-destruction/09.svg
-        src=./img/context-free/LR/tree-destruction/10.svg
+        src=img/context-free/LR/tree-destruction/01.svg
+        src=img/context-free/LR/tree-destruction/02.svg
+        src=img/context-free/LR/tree-destruction/03.svg
+        src=img/context-free/LR/tree-destruction/04.svg
+        src=img/context-free/LR/tree-destruction/05.svg
+        src=img/context-free/LR/tree-destruction/06.svg
+        src=img/context-free/LR/tree-destruction/07.svg
+        src=img/context-free/LR/tree-destruction/08.svg
+        src=img/context-free/LR/tree-destruction/09.svg
+        src=img/context-free/LR/tree-destruction/10.svg
 
     Um für eine Wortform $\gamma$ den korrekten
     Reduktionsschritt zu finden, reicht es also aus,
@@ -170,7 +170,7 @@
     |> figure
         |> img
             style=height:20em
-            src=./img/context-free/LR/schema-linker-rand-bluete-stamm.svg
+            src=img/context-free/LR/schema-linker-rand-bluete-stamm.svg
 
     Die Aussage "Stamm, linker Rand und Blüte haben eine
     einfache Struktur" können wir formalisieren.
@@ -226,7 +226,7 @@
     |> figure
         |> img
             style=height:40em
-            src=./img/context-free/LR/hat-G-derivation.svg
+            src=img/context-free/LR/hat-G-derivation.svg
 
     Die oben gezeigten $\hat{G}$-Produktionen sind
     _verallgemeinert regulär_ und nicht im eigentlichen

@@ -41,7 +41,7 @@
     |> figure
         |> img
             style=height:20em
-            src=./img/context-free/arithmetic-syntax-tree.svg
+            src=img/context-free/arithmetic-syntax-tree.svg
 
     Wie wir diesen Baum in Java repräsentieren, darüber
     sprechen wir in einer Minute. Zuerst aber: wir wollen

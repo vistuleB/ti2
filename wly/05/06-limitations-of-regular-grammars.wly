@@ -419,7 +419,7 @@
         |> figure
             |> img
                 style=height:10em
-                src=./img/finite-state-automata/nfsm-example-01.svg
+                src=img/finite-state-automata/nfsm-example-01.svg
 
         akzeptiert die Sprache $L$ aller
         $\alpha \in \{0,1\}^n$, deren viertletzter Buchstabe
