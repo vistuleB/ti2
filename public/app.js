@@ -188,7 +188,8 @@ const bottomMenuPaddingXInRem = () => {
 };
 
 const bottomMenuPaddingYInRem = () => {
-  return 0;
+  if (screenWidth <= LAPTOP_MAX_WIDTH) return 0;
+  return endOfPageEltPaddingBottomInRem();
 };
 
 const bottomMenuLeft = () => {
@@ -279,7 +280,7 @@ const endOfPageWellMarginBottomInRem = () => {
   return 0.2;
 };
 
-const endOfPageEltMarginBottomInRem = () => {
+const endOfPageEltPaddingBottomInRem = () => {
   if (screenWidth <= LAPTOP_MAX_WIDTH) return 0;
   return 2.2;
 };
@@ -451,7 +452,7 @@ const resetScreenWidthDependentVars = () => {
     endOfPageWellMarginBottomInRem,
     "rem"
   );
-  set("--end-of-page-elt-margin-bottom", endOfPageEltMarginBottomInRem, "rem");
+  set("--end-of-page-elt-padding-bottom", endOfPageEltPaddingBottomInRem, "rem");
   set("--main-column-width", mainColumnWidthInPx, "px");
   set("--main-column-padding-x", mainColumnPaddingXInRem, "rem");
   set("--main-column-to-well-margin", mainColumnToWellMarginInRem, "rem");

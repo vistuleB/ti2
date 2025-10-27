@@ -40,7 +40,7 @@
   --index-toc-subchapter-level-margin: 0.15em;
   --end-of-page-main-column-margin-bottom: 2.4rem;
   --end-of-page-well-margin-bottom: 0.2rem;
-  --end-of-page-elt-margin-bottom: 0rem;
+  --end-of-page-elt-padding-bottom: 0rem;
   --main-column-width: 1050px;
   --main-column-padding-x: 2rem;
   --main-column-to-well-margin: 1.8rem;
@@ -231,7 +231,7 @@ body {
   height: 1px;
   width: 100%;
   margin-top: 0;
-  margin-bottom: var(--end-of-page-elt-margin-bottom);
+  padding-bottom: var(--end-of-page-elt-padding-bottom);
 }
 
 ul,

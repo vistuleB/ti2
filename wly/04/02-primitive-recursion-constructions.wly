@@ -200,7 +200,7 @@
             def new_function(*x):
                     temp = 0
                     for i in range(upperBound(*x)):
-                            if (predicate(i,*x)):
+                            if (predicate(i, *x)):
                                     temp = i
                     return temp
             return new_function
