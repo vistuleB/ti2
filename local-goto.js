@@ -16,7 +16,7 @@ app.post(
   (req, res) => {
     // Get the JSON payload from the request
     const body = req.body;
-    console.log(body.cmd);
+    console.log("received '" + body.cmd + "'");
     exec(body.cmd, { cwd: __dirname }, (error, stdout, stderr) => {
       if (error) {
         console.error(`Error: ${error.message}`);
@@ -28,5 +28,5 @@ app.post(
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}\n`);
+  console.log(`server is running at http://localhost:${port}`);
 });

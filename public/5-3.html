@@ -40,112 +40,149 @@
     </div>
     <div class="main-column page-title">
       <p>
-        5.3&ensp;Nichtdeterministische Endliche Automaten
+        <span class="t-3003-c">5.3&ensp;Nichtdeterministische Endliche Automaten<span class="t-3003">./wly/05/03-nfsm.wly:2:5</span></span>
       </p>
     </div>
     <p class="main-column">
-      Ein nichtdeterministischer Automat ist, informell
-      ausgedrückt, wie ein deterministischer Automat, nur
-      dass es für eine Zustand-Symbol-Kombination beliebig
-      viele ausgehende Pfeile (eventuell gar keinen) geben
-      kann. Hier ist das Beispiel von vorhin, leicht
-      abgewandelt:
+      <span class="t-3003-c">Ein nichtdeterministischer Automat ist, informell<span class="t-3003">./wly/05/03-nfsm.wly:4:5</span></span>
+      <span class="t-3003-c">ausgedrückt, wie ein deterministischer Automat, nur<span class="t-3003">./wly/05/03-nfsm.wly:5:5</span></span>
+      <span class="t-3003-c">dass es für eine Zustand-Symbol-Kombination beliebig<span class="t-3003">./wly/05/03-nfsm.wly:6:5</span></span>
+      <span class="t-3003-c">viele ausgehende Pfeile (eventuell gar keinen) geben<span class="t-3003">./wly/05/03-nfsm.wly:7:5</span></span>
+      <span class="t-3003-c">kann. Hier ist das Beispiel von vorhin, leicht<span class="t-3003">./wly/05/03-nfsm.wly:8:5</span></span>
+      <span class="t-3003-c">abgewandelt:<span class="t-3003">./wly/05/03-nfsm.wly:9:5</span></span>
     </p>
     <div class="pseudowell">
       <figure>
         <img
           style="height: 10em"
           src="img/finite-state-automata/nfsm-example-01.svg"
-        >
+        ><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-example-01.svg</span>
       </figure>
     </div>
     <p class="main-column">
-      Ein Pfeil beschreibt also nicht unbedingt einen
-      Zustandsübergang, der
-      <span class="nowrap"><i>geschieht</i>,</span>
-      sondern einen, der
-      <i>möglich</i>
-      ist. Formal gesprochen ist $\delta$ nun
-      keine Funktion mehr, sondern eine
-      <span class="nowrap"><i>Relation</i>:</span>
+      <span class="t-3003-c">Ein Pfeil beschreibt also nicht unbedingt einen<span class="t-3003">./wly/05/03-nfsm.wly:16:5</span></span>
+      <span class="t-3003-c">Zustandsübergang, der
+        <span class="t-3003">./wly/05/03-nfsm.wly:17:5</span></span><span class="nowrap"><i><span class="t-3003-c">geschieht<span class="t-3003">./wly/05/03-nfsm.wly:17:28</span></span></i><span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:17:38</span></span></span><span class="t-3003-c">
+        sondern einen, der<span class="t-3003">./wly/05/03-nfsm.wly:17:38</span></span>
+      <span class="t-3003-c">
+        <span class="t-3003">./wly/05/03-nfsm.wly:18:5</span></span><i><span class="t-3003-c">möglich<span class="t-3003">./wly/05/03-nfsm.wly:18:6</span></span></i><span class="t-3003-c">
+        ist. Formal gesprochen ist
+        <span class="t-3003">./wly/05/03-nfsm.wly:18:14</span></span>$\delta$<span class="t-3003-c">
+        nun<span class="t-3003">./wly/05/03-nfsm.wly:18:50</span></span>
+      <span class="t-3003-c">keine Funktion mehr, sondern eine
+        <span class="t-3003">./wly/05/03-nfsm.wly:19:5</span></span><span class="nowrap"><i><span class="t-3003-c">Relation<span class="t-3003">./wly/05/03-nfsm.wly:19:40</span></span></i><span class="t-3003-c">:<span class="t-3003">./wly/05/03-nfsm.wly:19:49</span></span></span>
     </p>
     <div class="well statement out">
       <p>
-        <b>Definition 5.3.1 (Nichtdeterministischer endlicher Automat,
-          non-deterministic finite state machine)</b>
-        Ein
-        nichtdeterministischer endlicher Automat besteht aus
+        <b><span class="t-3003-c">Definition 5.3.1 (Nichtdeterministischer endlicher Automat,<span class="t-3003">./wly/05/03-nfsm.wly:21:6</span></span>
+          <span class="t-3003-c">non-deterministic finite state machine)<span class="t-3003">./wly/05/03-nfsm.wly:23:9</span></span></b><span class="t-3003-c">
+          Ein<span class="t-3003">./wly/05/03-nfsm.wly:23:49</span></span>
+        <span class="t-3003-c">nichtdeterministischer endlicher Automat besteht aus<span class="t-3003">./wly/05/03-nfsm.wly:24:9</span></span>
       </p>
       <ul>
         <li>
           <p>
-            einem endlichen Eingabealphaet
-            <span class="nowrap">$\Sigma$,</span>
+            <span class="t-3003-c">einem endlichen Eingabealphaet
+              <span class="t-3003">./wly/05/03-nfsm.wly:28:17</span></span><span class="nowrap">$\Sigma$<span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:28:56</span></span></span>
           </p>
         </li>
         <li>
           <p>
-            einer endlichen Menge $Q$ von Zuständen,
+            <span class="t-3003-c">einer endlichen Menge
+              <span class="t-3003">./wly/05/03-nfsm.wly:31:17</span></span>$Q$<span class="t-3003-c">
+              von Zuständen,<span class="t-3003">./wly/05/03-nfsm.wly:31:42</span></span>
           </p>
         </li>
         <li>
           <p>
-            einem Startzustand
-            <span class="nowrap">$\qstart \in Q$,</span>
+            <span class="t-3003-c">einem Startzustand
+              <span class="t-3003">./wly/05/03-nfsm.wly:34:17</span></span><span class="nowrap">$\qstart \in Q$<span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:34:51</span></span></span>
           </p>
         </li>
         <li>
           <p>
-            einer Menge $F \subseteq Q$ von akzeptierenden
-            Endzuständen,
+            <span class="t-3003-c">einer Menge
+              <span class="t-3003">./wly/05/03-nfsm.wly:37:17</span></span>$F \subseteq Q$<span class="t-3003-c">
+              von akzeptierenden<span class="t-3003">./wly/05/03-nfsm.wly:37:44</span></span>
+            <span class="t-3003-c">Endzuständen,<span class="t-3003">./wly/05/03-nfsm.wly:38:17</span></span>
           </p>
         </li>
         <li>
           <p>
-            einer Zustandsübergangsrelation
-            $\delta \subseteq Q \times \Sigma \times Q$ .
+            <span class="t-3003-c">einer Zustandsübergangsrelation<span class="t-3003">./wly/05/03-nfsm.wly:41:17</span></span>
+            <span class="t-3003-c">
+              <span class="t-3003">./wly/05/03-nfsm.wly:42:17</span></span>$\delta \subseteq Q \times \Sigma \times Q$<span class="t-3003-c">
+              .<span class="t-3003">./wly/05/03-nfsm.wly:42:60</span></span>
           </p>
         </li>
       </ul>
       <p>
-        Formal gesehen ist also ein Automat ein Quintupel
-        <span class="nowrap">$M = (\Sigma, Q, \qstart, F, \delta)$.</span>
+        <span class="t-3003-c">Formal gesehen ist also ein Automat ein Quintupel<span class="t-3003">./wly/05/03-nfsm.wly:44:9</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:45:9</span></span><span class="nowrap">$M = (\Sigma, Q, \qstart, F, \delta)$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:45:46</span></span></span>
       </p>
     </div>
     <p class="main-column">
-      Von nun an bezeichnen wir endliche Automaten auch als
-      <i>deterministische</i>
-      endliche Automaten, um den
-      Unterschied zu den nichtdeterministischen zu
-      verdeutlichen. Wenn in einem deterministischen
-      endlichen Automaten $\delta(q,x) = q'$ war, so hatte
-      das die Bedeutung
-      <span class="nowrap"><i>wenn der Automat im Zustand $q$
-          ist und $x$ liest, so geht er in Zustand $q'$ über</i>;</span>
-      wenn nun in einem nichtdeterministischen Automaten
-      $(q,x,q') \in \delta$ gilt, so bedeutet das,
-      <span class="nowrap"><i>wenn
-          der Automat im Zustand $q$ ist und $x$ liest, so kann
-          er in Zustand $q'$ übergehen</i>.</span>
-      Analog zu den
-      deterministischen Automaten definieren wir eine
-      erweiterte Zustandsübergangsrelation.
+      <span class="t-3003-c">Von nun an bezeichnen wir endliche Automaten auch als<span class="t-3003">./wly/05/03-nfsm.wly:47:5</span></span>
+      <span class="t-3003-c">
+        <span class="t-3003">./wly/05/03-nfsm.wly:48:5</span></span><i><span class="t-3003-c">deterministische<span class="t-3003">./wly/05/03-nfsm.wly:48:6</span></span></i><span class="t-3003-c">
+        endliche Automaten, um den<span class="t-3003">./wly/05/03-nfsm.wly:48:23</span></span>
+      <span class="t-3003-c">Unterschied zu den nichtdeterministischen zu<span class="t-3003">./wly/05/03-nfsm.wly:49:5</span></span>
+      <span class="t-3003-c">verdeutlichen. Wenn in einem deterministischen<span class="t-3003">./wly/05/03-nfsm.wly:50:5</span></span>
+      <span class="t-3003-c">endlichen Automaten
+        <span class="t-3003">./wly/05/03-nfsm.wly:51:5</span></span>$\delta(q,x) = q'$<span class="t-3003-c">
+        war, so hatte<span class="t-3003">./wly/05/03-nfsm.wly:51:43</span></span>
+      <span class="t-3003-c">das die Bedeutung
+        <span class="t-3003">./wly/05/03-nfsm.wly:52:5</span></span><span class="nowrap"><i><span class="t-3003-c">wenn der Automat im Zustand
+            <span class="t-3003">./wly/05/03-nfsm.wly:52:24</span></span>$q$<span class="t-3003-c">
+            <span class="t-3003">./wly/05/03-nfsm.wly:52:55</span></span>
+          <span class="t-3003-c">ist und
+            <span class="t-3003">./wly/05/03-nfsm.wly:53:5</span></span>$x$<span class="t-3003-c">
+            liest, so geht er in Zustand
+            <span class="t-3003">./wly/05/03-nfsm.wly:53:16</span></span>$q'$<span class="t-3003-c">
+            über<span class="t-3003">./wly/05/03-nfsm.wly:53:50</span></span></i><span class="t-3003-c">;<span class="t-3003">./wly/05/03-nfsm.wly:53:56</span></span></span><span class="t-3003-c">
+        <span class="t-3003">./wly/05/03-nfsm.wly:53:56</span></span>
+      <span class="t-3003-c">wenn nun in einem nichtdeterministischen Automaten<span class="t-3003">./wly/05/03-nfsm.wly:54:5</span></span>
+      <span class="t-3003-c">
+        <span class="t-3003">./wly/05/03-nfsm.wly:55:5</span></span>$(q,x,q') \in \delta$<span class="t-3003-c">
+        gilt, so bedeutet das,
+        <span class="t-3003">./wly/05/03-nfsm.wly:55:26</span></span><span class="nowrap"><i><span class="t-3003-c">wenn<span class="t-3003">./wly/05/03-nfsm.wly:55:51</span></span>
+          <span class="t-3003-c">der Automat im Zustand
+            <span class="t-3003">./wly/05/03-nfsm.wly:56:5</span></span>$q$<span class="t-3003-c">
+            ist und
+            <span class="t-3003">./wly/05/03-nfsm.wly:56:31</span></span>$x$<span class="t-3003-c">
+            liest, so kann<span class="t-3003">./wly/05/03-nfsm.wly:56:43</span></span>
+          <span class="t-3003-c">er in Zustand
+            <span class="t-3003">./wly/05/03-nfsm.wly:57:5</span></span>$q'$<span class="t-3003-c">
+            übergehen<span class="t-3003">./wly/05/03-nfsm.wly:57:23</span></span></i><span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:57:34</span></span></span><span class="t-3003-c">
+        Analog zu den<span class="t-3003">./wly/05/03-nfsm.wly:57:34</span></span>
+      <span class="t-3003-c">deterministischen Automaten definieren wir eine<span class="t-3003">./wly/05/03-nfsm.wly:58:5</span></span>
+      <span class="t-3003-c">erweiterte Zustandsübergangsrelation.<span class="t-3003">./wly/05/03-nfsm.wly:59:5</span></span>
     </p>
     <div class="well statement out">
       <p>
-        <span class="nowrap"><b>Definition 5.3.2 (Erweiterte Zuständsübergangsfunktion)</b>.</span>
-        Für einen
-        nichtdeterministischen endlichen Automaten
-        $(\Sigma, Q, \qstart, F, \delta)$ definieren wir die
-        <i>erweiterte Zustandsübergangsrelation</i>
-        $\hat{\delta}\subseteq Q \times \Sigma^* \rightarrow
-        Q$
-        als die Menge aller Zustand-Wort-Zustand-Tripel
-        <span class="nowrap">$(q,x_1 x_2 \dots x_n,q')$,</span>
-        für die wir
-        Zwischenzustände
-        $q = \qstart, q_1, q_2, \dots, q_n = q'$ finden
-        können mit
+        <span class="nowrap"><b><span class="t-3003-c">Definition 5.3.2 (Erweiterte Zuständsübergangsfunktion)<span class="t-3003">./wly/05/03-nfsm.wly:61:6</span></span></b><span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:62:49</span></span></span><span class="t-3003-c">
+          Für einen<span class="t-3003">./wly/05/03-nfsm.wly:62:49</span></span>
+        <span class="t-3003-c">nichtdeterministischen endlichen Automaten<span class="t-3003">./wly/05/03-nfsm.wly:63:9</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:64:9</span></span>$(\Sigma, Q, \qstart, F, \delta)$<span class="t-3003-c">
+          definieren wir die<span class="t-3003">./wly/05/03-nfsm.wly:64:42</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:65:9</span></span><i><span class="t-3003-c">erweiterte Zustandsübergangsrelation<span class="t-3003">./wly/05/03-nfsm.wly:65:10</span></span></i><span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:65:47</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:66:9</span></span>$\hat{\delta}\subseteq Q \times \Sigma^* \rightarrow
+        Q$<span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:67:11</span></span>
+        <span class="t-3003-c">als die Menge aller Zustand-Wort-Zustand-Tripel<span class="t-3003">./wly/05/03-nfsm.wly:68:9</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:69:9</span></span><span class="nowrap">$(q,x_1 x_2 \dots x_n,q')$<span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:69:35</span></span></span><span class="t-3003-c">
+          für die wir<span class="t-3003">./wly/05/03-nfsm.wly:69:35</span></span>
+        <span class="t-3003-c">Zwischenzustände<span class="t-3003">./wly/05/03-nfsm.wly:70:9</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:71:9</span></span>$q = \qstart, q_1, q_2, \dots, q_n = q'$<span class="t-3003-c">
+          finden<span class="t-3003">./wly/05/03-nfsm.wly:71:49</span></span>
+        <span class="t-3003-c">können mit<span class="t-3003">./wly/05/03-nfsm.wly:72:9</span></span>
       </p>
       <div class="math-block">
         $$
@@ -154,12 +191,18 @@
         $$
       </div>
       <p>
-        Dies schließt den Fall $n = 0$ mit ein, also
-        <span class="nowrap">$(q, \epsilon, q) \in \hat{\delta}$.</span>
-        Wie zuvor
-        schreiben wir
-        <span class="nowrap">$q \stackrel{\alpha}{\rightarrow} q'$.</span>
-        Die von $M$ akzeptierte Sprache ist
+        <span class="t-3003-c">Dies schließt den Fall
+          <span class="t-3003">./wly/05/03-nfsm.wly:79:9</span></span>$n = 0$<span class="t-3003-c">
+          mit ein, also<span class="t-3003">./wly/05/03-nfsm.wly:79:39</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:80:9</span></span><span class="nowrap">$(q, \epsilon, q) \in \hat{\delta}$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:80:44</span></span></span><span class="t-3003-c">
+          Wie zuvor<span class="t-3003">./wly/05/03-nfsm.wly:80:44</span></span>
+        <span class="t-3003-c">schreiben wir
+          <span class="t-3003">./wly/05/03-nfsm.wly:81:9</span></span><span class="nowrap">$q \stackrel{\alpha}{\rightarrow} q'$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:81:60</span></span></span><span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:81:60</span></span>
+        <span class="t-3003-c">Die von
+          <span class="t-3003">./wly/05/03-nfsm.wly:82:9</span></span>$M$<span class="t-3003-c">
+          akzeptierte Sprache ist<span class="t-3003">./wly/05/03-nfsm.wly:82:20</span></span>
       </p>
       <div class="math-block">
         $$
@@ -171,55 +214,75 @@
     </div>
     <div class="well statement out">
       <p>
-        <b>Beobachtung 5.3.3</b>
-        Sei $M = (\Sigma, Q, \qstart, F, \delta)$ ein
-        nichtdeterministischer endlicher Automat. Dann gibt es
-        eine reguläre Grammatik $G$ mit
-        <span class="nowrap">$L(G) = L(M)$.</span>
+        <b><span class="t-3003-c">Beobachtung 5.3.3<span class="t-3003">./wly/05/03-nfsm.wly:90:6</span></span></b><span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:90:26</span></span>
+        <span class="t-3003-c">Sei
+          <span class="t-3003">./wly/05/03-nfsm.wly:91:9</span></span>$M = (\Sigma, Q, \qstart, F, \delta)$<span class="t-3003-c">
+          ein<span class="t-3003">./wly/05/03-nfsm.wly:91:50</span></span>
+        <span class="t-3003-c">nichtdeterministischer endlicher Automat. Dann gibt es<span class="t-3003">./wly/05/03-nfsm.wly:92:9</span></span>
+        <span class="t-3003-c">eine reguläre Grammatik
+          <span class="t-3003">./wly/05/03-nfsm.wly:93:9</span></span>$G$<span class="t-3003-c">
+          mit
+          <span class="t-3003">./wly/05/03-nfsm.wly:93:36</span></span><span class="nowrap">$L(G) = L(M)$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:93:54</span></span></span>
       </p>
     </div>
     <p class="main-column">
-      Wir führen hier den Beweis nicht noch einmal; er ist
-      mehr oder weniger identisch mit dem Beweis von
-      <a
+      <span class="t-3003-c">Wir führen hier den Beweis nicht noch einmal; er ist<span class="t-3003">./wly/05/03-nfsm.wly:95:5</span></span>
+      <span class="t-3003-c">mehr oder weniger identisch mit dem Beweis von
+        <span class="t-3003">./wly/05/03-nfsm.wly:96:5</span></span><a
         href="./5-2.html#_22_hgi_"
         class=""
-      >Theorem 5.2.6</a>; wir haben nämlich in jenem
-      Beweis nirgends verwendet, dass $\delta$ eine
-      <i>Funktion</i>
-      ist, und daher geht mit einem
-      <span class="nowrap">$\delta$,</span>
-      das eine
-      <i>Relation</i>
-      ist, alles ganz genau gleich.
-      Allerdings gilt nun auch der Umkehrschluss: zu einer
-      regulären Grammatik gibt es einen
-      nichtdeterministischen endlichen Automaten:
+      ><span class="t-3003-c">Theorem 5.2.6<span class="t-3003">./wly/</span></span></a><span class="t-3003-c">; wir haben nämlich in jenem<span class="t-3003">./wly/05/03-nfsm.wly:97:5</span></span>
+      <span class="t-3003-c">Beweis nirgends verwendet, dass
+        <span class="t-3003">./wly/05/03-nfsm.wly:98:5</span></span>$\delta$<span class="t-3003-c">
+        eine<span class="t-3003">./wly/05/03-nfsm.wly:98:45</span></span>
+      <span class="t-3003-c">
+        <span class="t-3003">./wly/05/03-nfsm.wly:99:5</span></span><i><span class="t-3003-c">Funktion<span class="t-3003">./wly/05/03-nfsm.wly:99:6</span></span></i><span class="t-3003-c">
+        ist, und daher geht mit einem
+        <span class="t-3003">./wly/05/03-nfsm.wly:99:15</span></span><span class="nowrap">$\delta$<span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:99:54</span></span></span><span class="t-3003-c">
+        <span class="t-3003">./wly/05/03-nfsm.wly:99:54</span></span>
+      <span class="t-3003-c">das eine
+        <span class="t-3003">./wly/05/03-nfsm.wly:100:5</span></span><i><span class="t-3003-c">Relation<span class="t-3003">./wly/05/03-nfsm.wly:100:15</span></span></i><span class="t-3003-c">
+        ist, alles ganz genau gleich.<span class="t-3003">./wly/05/03-nfsm.wly:100:24</span></span>
+      <span class="t-3003-c">Allerdings gilt nun auch der Umkehrschluss: zu einer<span class="t-3003">./wly/05/03-nfsm.wly:101:5</span></span>
+      <span class="t-3003-c">regulären Grammatik gibt es einen<span class="t-3003">./wly/05/03-nfsm.wly:102:5</span></span>
+      <span class="t-3003-c">nichtdeterministischen endlichen Automaten:<span class="t-3003">./wly/05/03-nfsm.wly:103:5</span></span>
     </p>
     <div class="well statement out">
       <p>
-        <b>Theorem 5.3.4</b>
-        Sei $G = (\Sigma, N, P, S)$ eine reguläre Grammatik.
-        Dann gibt es einen nichtdeterministischen endlichen
-        Automaten $M$ mit
-        <span class="nowrap">$L(G) = L(M)$.</span>
+        <b><span class="t-3003-c">Theorem 5.3.4<span class="t-3003">./wly/05/03-nfsm.wly:105:6</span></span></b><span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:105:22</span></span>
+        <span class="t-3003-c">Sei
+          <span class="t-3003">./wly/05/03-nfsm.wly:106:9</span></span>$G = (\Sigma, N, P, S)$<span class="t-3003-c">
+          eine reguläre Grammatik.<span class="t-3003">./wly/05/03-nfsm.wly:106:36</span></span>
+        <span class="t-3003-c">Dann gibt es einen nichtdeterministischen endlichen<span class="t-3003">./wly/05/03-nfsm.wly:107:9</span></span>
+        <span class="t-3003-c">Automaten
+          <span class="t-3003">./wly/05/03-nfsm.wly:108:9</span></span>$M$<span class="t-3003-c">
+          mit
+          <span class="t-3003">./wly/05/03-nfsm.wly:108:22</span></span><span class="nowrap">$L(G) = L(M)$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:108:40</span></span></span>
       </p>
     </div>
     <div class="well highlight out">
       <p>
-        <b>Beweis.</b>
-        Unser Automat hat als Zustandsmenge
-        <span class="nowrap">$N$,</span>
-        die Menge
-        der nichtterminalen Symbole und als Startzustand
-        <span class="nowrap">$S$,</span>
-        das Startsymbol der Grammatik
-        <span class="nowrap">$G$.</span>
-        Wir definieren
-        <span class="nowrap">$\delta$,</span>
-        indem wir jeden $G$ -Pfeil in einem
-        <span class="nowrap">$M$-Pfeil</span>
-        umwandeln: eine Produktion
+        <b><span class="t-3003-c">Beweis.<span class="t-3003">./wly/</span></span></b><span class="t-3003-c">
+          <span class="t-3003">./wly/</span></span>
+        <span class="t-3003-c">Unser Automat hat als Zustandsmenge
+          <span class="t-3003">./wly/05/03-nfsm.wly:111:9</span></span><span class="nowrap">$N$<span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:111:48</span></span></span><span class="t-3003-c">
+          die Menge<span class="t-3003">./wly/05/03-nfsm.wly:111:48</span></span>
+        <span class="t-3003-c">der nichtterminalen Symbole und als Startzustand
+          <span class="t-3003">./wly/05/03-nfsm.wly:112:9</span></span><span class="nowrap">$S$<span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:112:61</span></span></span><span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:112:61</span></span>
+        <span class="t-3003-c">das Startsymbol der Grammatik
+          <span class="t-3003">./wly/05/03-nfsm.wly:113:9</span></span><span class="nowrap">$G$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:113:42</span></span></span><span class="t-3003-c">
+          Wir definieren<span class="t-3003">./wly/05/03-nfsm.wly:113:42</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:114:9</span></span><span class="nowrap">$\delta$<span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:114:17</span></span></span><span class="t-3003-c">
+          indem wir jeden
+          <span class="t-3003">./wly/05/03-nfsm.wly:114:17</span></span>$G$<span class="t-3003-c">
+          -Pfeil in einem<span class="t-3003">./wly/05/03-nfsm.wly:114:38</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:115:9</span></span><span class="nowrap">$M$<span class="t-3003-c">-Pfeil<span class="t-3003">./wly/05/03-nfsm.wly:115:12</span></span></span><span class="t-3003-c">
+          umwandeln: eine Produktion<span class="t-3003">./wly/05/03-nfsm.wly:115:12</span></span>
       </p>
       <div class="math-block">
         $$
@@ -228,7 +291,9 @@
         $$
       </div>
       <p>
-        in $G$ wird dann zu
+        <span class="t-3003-c">in
+          <span class="t-3003">./wly/05/03-nfsm.wly:122:9</span></span>$G$<span class="t-3003-c">
+          wird dann zu<span class="t-3003">./wly/05/03-nfsm.wly:122:15</span></span>
       </p>
       <div class="math-block">
         $$
@@ -236,34 +301,53 @@
         $$
       </div>
       <p>
-        also einem Pfeil $X \stackrel{a}{\rightarrow} Y$ in
-        <span class="nowrap">$M$.</span>
-        Für jede Regel der Form $X \rightarrow \epsilon$
-        machen wir $X$ zu einem Endzustand. Was aber mit
-        Regeln der Form
-        <span class="nowrap">$X \rightarrow Y$?</span>
-        Hierfür könnte man
-        Nichtdeterministische Automaten mit $\epsilon$
-        -Übergängen definieren, die also vom Zustand $X$ nach
-        $Y$ wechseln können, ohne ein Eingabesymbol zu lesen;
-        wir gehen hier einen anderen Weg und verweisen auf
-        <a
+        <span class="t-3003-c">also einem Pfeil
+          <span class="t-3003">./wly/05/03-nfsm.wly:128:9</span></span>$X \stackrel{a}{\rightarrow} Y$<span class="t-3003-c">
+          in<span class="t-3003">./wly/05/03-nfsm.wly:128:57</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:129:9</span></span><span class="nowrap">$M$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:129:12</span></span></span><span class="t-3003-c">
+          Für jede Regel der Form
+          <span class="t-3003">./wly/05/03-nfsm.wly:129:12</span></span>$X \rightarrow \epsilon$<span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:129:62</span></span>
+        <span class="t-3003-c">machen wir
+          <span class="t-3003">./wly/05/03-nfsm.wly:130:9</span></span>$X$<span class="t-3003-c">
+          zu einem Endzustand. Was aber mit<span class="t-3003">./wly/05/03-nfsm.wly:130:23</span></span>
+        <span class="t-3003-c">Regeln der Form
+          <span class="t-3003">./wly/05/03-nfsm.wly:131:9</span></span><span class="nowrap">$X \rightarrow Y$<span class="t-3003-c">?<span class="t-3003">./wly/05/03-nfsm.wly:131:42</span></span></span><span class="t-3003-c">
+          Hierfür könnte man<span class="t-3003">./wly/05/03-nfsm.wly:131:42</span></span>
+        <span class="t-3003-c">Nichtdeterministische Automaten mit
+          <span class="t-3003">./wly/05/03-nfsm.wly:132:9</span></span>$\epsilon$<span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:132:55</span></span>
+        <span class="t-3003-c">-Übergängen definieren, die also vom Zustand
+          <span class="t-3003">./wly/05/03-nfsm.wly:133:9</span></span>$X$<span class="t-3003-c">
+          nach<span class="t-3003">./wly/05/03-nfsm.wly:133:57</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:134:9</span></span>$Y$<span class="t-3003-c">
+          wechseln können, ohne ein Eingabesymbol zu lesen;<span class="t-3003">./wly/05/03-nfsm.wly:134:12</span></span>
+        <span class="t-3003-c">wir gehen hier einen anderen Weg und verweisen auf<span class="t-3003">./wly/05/03-nfsm.wly:135:9</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:136:9</span></span><a
           href="./5-1.html#_17_hgi_"
           class=""
-        >Theorem 5.1.7</a>, welches uns
-        erlaubt, Regeln der Form $X \rightarrow Y$ und
-        $X \rightarrow a$ zu eliminieren.<span style="color:#0000;visibility:none;">A</span><span class="qed">\(\square\)</span>
+        ><span class="t-3003-c">Theorem 5.1.7<span class="t-3003">./wly/</span></span></a><span class="t-3003-c">, welches uns<span class="t-3003">./wly/05/03-nfsm.wly:136:9</span></span>
+        <span class="t-3003-c">erlaubt, Regeln der Form
+          <span class="t-3003">./wly/05/03-nfsm.wly:137:9</span></span>$X \rightarrow Y$<span class="t-3003-c">
+          und<span class="t-3003">./wly/05/03-nfsm.wly:137:51</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:138:9</span></span>$X \rightarrow a$<span class="t-3003-c">
+          zu eliminieren.<span class="t-3003">./wly/05/03-nfsm.wly:138:26</span></span><span style="color:#0000;visibility:none;"><span class="t-3003-c">A<span class="t-3003">./wly/</span></span></span><span class="qed"><span class="t-3003-c">\(\square\)<span class="t-3003">./wly/</span></span></span>
       </p>
     </div>
     <div class="well statement out">
       <p>
-        <b>Beispiel 5.3.5</b>
-        Wir betrachten abermals die reguläre Grammatik aus
-        dem vorherigen
-        <a
+        <b><span class="t-3003-c">Beispiel 5.3.5<span class="t-3003">./wly/05/03-nfsm.wly:141:6</span></span></b><span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:141:23</span></span>
+        <span class="t-3003-c">Wir betrachten abermals die reguläre Grammatik aus<span class="t-3003">./wly/05/03-nfsm.wly:142:9</span></span>
+        <span class="t-3003-c">dem vorherigen
+          <span class="t-3003">./wly/05/03-nfsm.wly:143:9</span></span><a
           href="./5-1.html#_15_hgi_"
           class=""
-        >Kapitel 5.1.3</a>:
+        ><span class="t-3003-c">Kapitel 5.1.3<span class="t-3003">./wly/</span></span></a><span class="t-3003-c">:<span class="t-3003">./wly/05/03-nfsm.wly:143:9</span></span>
       </p>
       <div class="math-block">
         $$
@@ -274,22 +358,24 @@
         $$
       </div>
       <p>
-        und auch den (falschen) endlichen Automaten, den wir
-        im letzten Kapitel dafür gebaut haben:
+        <span class="t-3003-c">und auch den (falschen) endlichen Automaten, den wir<span class="t-3003">./wly/05/03-nfsm.wly:150:9</span></span>
+        <span class="t-3003-c">im letzten Kapitel dafür gebaut haben:<span class="t-3003">./wly/05/03-nfsm.wly:151:9</span></span>
       </p>
       <div class="figure__container">
         <figure>
           <img
             style="height: 10em"
             src="img/finite-state-automata/finite-state-machine-example-03.svg"
-          >
+          ><span class="t-3003 t-3003-i">./public/img/finite-state-automata/finite-state-machine-example-03.svg</span>
         </figure>
       </div>
       <p>
-        Wir sehen nun, dass dies genau der
-        nichtdeterministische Automat ist, den wir nach
-        Theorem &gt;&gt;#theorem-nfsm-regular bauen können. Die
-        Zustandsübergangsrelation $\delta$ ist
+        <span class="t-3003-c">Wir sehen nun, dass dies genau der<span class="t-3003">./wly/05/03-nfsm.wly:158:9</span></span>
+        <span class="t-3003-c">nichtdeterministische Automat ist, den wir nach<span class="t-3003">./wly/05/03-nfsm.wly:159:9</span></span>
+        <span class="t-3003-c">Theorem &gt;&gt;#theorem-nfsm-regular bauen können. Die<span class="t-3003">./wly/05/03-nfsm.wly:160:9</span></span>
+        <span class="t-3003-c">Zustandsübergangsrelation
+          <span class="t-3003">./wly/05/03-nfsm.wly:161:9</span></span>$\delta$<span class="t-3003-c">
+          ist<span class="t-3003">./wly/05/03-nfsm.wly:161:43</span></span>
       </p>
       <div class="math-block">
         $$
@@ -298,24 +384,31 @@
         $$
       </div>
       <p>
-        Jeder Zustand ist ein Endzustand, allerdings heißt
-        das nicht, dass der Automat jedes Wort akzeptiert. Für
-        $\alpha = ba$ beispielsweise gibt es keinen Zustand
-        $q$ mit
-        <span class="nowrap">$S \stackrel{ba}{\rightarrow} q$,</span>
-        geschweige
-        denn einen akzeptierenden Endzustand. Daher gilt:
-        <span class="nowrap">$ba \not \in L(M)$.</span>
+        <span class="t-3003-c">Jeder Zustand ist ein Endzustand, allerdings heißt<span class="t-3003">./wly/05/03-nfsm.wly:168:9</span></span>
+        <span class="t-3003-c">das nicht, dass der Automat jedes Wort akzeptiert. Für<span class="t-3003">./wly/05/03-nfsm.wly:169:9</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:170:9</span></span>$\alpha = ba$<span class="t-3003-c">
+          beispielsweise gibt es keinen Zustand<span class="t-3003">./wly/05/03-nfsm.wly:170:22</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:171:9</span></span>$q$<span class="t-3003-c">
+          mit
+          <span class="t-3003">./wly/05/03-nfsm.wly:171:12</span></span><span class="nowrap">$S \stackrel{ba}{\rightarrow} q$<span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:171:49</span></span></span><span class="t-3003-c">
+          geschweige<span class="t-3003">./wly/05/03-nfsm.wly:171:49</span></span>
+        <span class="t-3003-c">denn einen akzeptierenden Endzustand. Daher gilt:<span class="t-3003">./wly/05/03-nfsm.wly:172:9</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:173:9</span></span><span class="nowrap">$ba \not \in L(M)$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:173:27</span></span></span>
       </p>
     </div>
     <div class="well statement out">
       <p>
-        <b>Beispiel 5.3.6</b>
-        Wir betrachten die reguläre Grammatik aus
-        <a
+        <b><span class="t-3003-c">Beispiel 5.3.6<span class="t-3003">./wly/05/03-nfsm.wly:175:6</span></span></b><span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:175:23</span></span>
+        <span class="t-3003-c">Wir betrachten die reguläre Grammatik aus<span class="t-3003">./wly/05/03-nfsm.wly:176:9</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:177:9</span></span><a
           href="./5-1.html#_18_hgi_"
           class=""
-        >Übungsaufgabe 5.1.7</a>:
+        ><span class="t-3003-c">Übungsaufgabe 5.1.7<span class="t-3003">./wly/</span></span></a><span class="t-3003-c">:<span class="t-3003">./wly/05/03-nfsm.wly:177:9</span></span>
       </p>
       <div class="math-block">
         $$
@@ -326,11 +419,13 @@
         $$
       </div>
       <p>
-        Bevor wir einen nichtdeterministischen Automaten
-        bauen können, müssen wir erst die Produktionen der
-        Form $X \rightarrow Y$ eliminieren bzw. ersetzen.
-        Wenn Sie Aufgabe 4.1.7 gelöst haben, haben Sie
-        wahrscheinlich in etwa folgende Grammatik erhalten:
+        <span class="t-3003-c">Bevor wir einen nichtdeterministischen Automaten<span class="t-3003">./wly/05/03-nfsm.wly:184:9</span></span>
+        <span class="t-3003-c">bauen können, müssen wir erst die Produktionen der<span class="t-3003">./wly/05/03-nfsm.wly:185:9</span></span>
+        <span class="t-3003-c">Form
+          <span class="t-3003">./wly/05/03-nfsm.wly:186:9</span></span>$X \rightarrow Y$<span class="t-3003-c">
+          eliminieren bzw. ersetzen.<span class="t-3003">./wly/05/03-nfsm.wly:186:31</span></span>
+        <span class="t-3003-c">Wenn Sie Aufgabe 4.1.7 gelöst haben, haben Sie<span class="t-3003">./wly/05/03-nfsm.wly:187:9</span></span>
+        <span class="t-3003-c">wahrscheinlich in etwa folgende Grammatik erhalten:<span class="t-3003">./wly/05/03-nfsm.wly:188:9</span></span>
       </p>
       <div class="math-block">
         $$
@@ -342,10 +437,14 @@
         $$
       </div>
       <p>
-        Also insgesamt 11 statt 8 Produktionen. Alle
-        Nichtterminale erlauben auf ihrer rechten Seite ein
-        $\epsilon$ und werden so zu akzeptierenden Zuständen.
-        Die Zustandsübergangsrelation $\delta$ ist also
+        <span class="t-3003-c">Also insgesamt 11 statt 8 Produktionen. Alle<span class="t-3003">./wly/05/03-nfsm.wly:196:9</span></span>
+        <span class="t-3003-c">Nichtterminale erlauben auf ihrer rechten Seite ein<span class="t-3003">./wly/05/03-nfsm.wly:197:9</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:198:9</span></span>$\epsilon$<span class="t-3003-c">
+          und werden so zu akzeptierenden Zuständen.<span class="t-3003">./wly/05/03-nfsm.wly:198:19</span></span>
+        <span class="t-3003-c">Die Zustandsübergangsrelation
+          <span class="t-3003">./wly/05/03-nfsm.wly:199:9</span></span>$\delta$<span class="t-3003-c">
+          ist also<span class="t-3003">./wly/05/03-nfsm.wly:199:47</span></span>
       </p>
       <div class="math-block">
         $$
@@ -357,14 +456,14 @@
         $$
       </div>
       <p>
-        Der nichtdeterminische Automat schaut also so aus:
+        <span class="t-3003-c">Der nichtdeterminische Automat schaut also so aus:<span class="t-3003">./wly/05/03-nfsm.wly:207:9</span></span>
       </p>
       <div class="figure__container">
         <figure>
           <img
             style="height: 10em"
             src="img/finite-state-automata/nfsm-example-02.svg"
-          >
+          ><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-example-02.svg</span>
         </figure>
       </div>
     </div>
@@ -373,142 +472,171 @@
       class="well exercise out"
     >
       <p>
-        <b>Übungsaufgabe 5.3.1</b>
-        Sei $\Sigma = \{1\}$ und
-        \(L_k := \{1^n \ | \textnormal{ $n$ ist durch $k$
-        teilbar}\}\)
-        . Schreiben Sie für $L_k$ einen deterministischen
-        endlichen Automaten. Schreiben Sie eine reguläre
-        Grammatik für die Sprache
-        <span class="nowrap">$L_5 \cup L_7$,</span>
-        also die
-        Strings aus 1, deren Länge durch 5 oder durch 7
-        teilbar ist. Zeichnen Sie nun einen
-        nichtdeterministischen endlichen Automaten für
-        <span class="nowrap">$L_5 \cup L_7$.</span>
+        <b><span class="t-3003-c">Übungsaufgabe 5.3.1<span class="t-3003">./wly/05/03-nfsm.wly:214:6</span></span></b><span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:214:26</span></span>
+        <span class="t-3003-c">Sei
+          <span class="t-3003">./wly/05/03-nfsm.wly:216:9</span></span>$\Sigma = \{1\}$<span class="t-3003-c">
+          und<span class="t-3003">./wly/05/03-nfsm.wly:216:29</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:217:9</span></span>\(L_k := \{1^n \ | \textnormal{ $n$ ist durch $k$
+        teilbar}\}\)<span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:218:21</span></span>
+        <span class="t-3003-c">. Schreiben Sie für
+          <span class="t-3003">./wly/05/03-nfsm.wly:219:9</span></span>$L_k$<span class="t-3003-c">
+          einen deterministischen<span class="t-3003">./wly/05/03-nfsm.wly:219:34</span></span>
+        <span class="t-3003-c">endlichen Automaten. Schreiben Sie eine reguläre<span class="t-3003">./wly/05/03-nfsm.wly:220:9</span></span>
+        <span class="t-3003-c">Grammatik für die Sprache
+          <span class="t-3003">./wly/05/03-nfsm.wly:221:9</span></span><span class="nowrap">$L_5 \cup L_7$<span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:221:49</span></span></span><span class="t-3003-c">
+          also die<span class="t-3003">./wly/05/03-nfsm.wly:221:49</span></span>
+        <span class="t-3003-c">Strings aus 1, deren Länge durch 5 oder durch 7<span class="t-3003">./wly/05/03-nfsm.wly:222:9</span></span>
+        <span class="t-3003-c">teilbar ist. Zeichnen Sie nun einen<span class="t-3003">./wly/05/03-nfsm.wly:223:9</span></span>
+        <span class="t-3003-c">nichtdeterministischen endlichen Automaten für<span class="t-3003">./wly/05/03-nfsm.wly:224:9</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:225:9</span></span><span class="nowrap">$L_5 \cup L_7$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:225:23</span></span></span>
       </p>
     </div>
     <h2 class="main-column topic-announcement">
-      Nichtdeterministische endliche Automaten
-      deterministisch machen
+      <span class="t-3003-c">Nichtdeterministische endliche Automaten<span class="t-3003">./wly/05/03-nfsm.wly:228:9</span></span>
+      <span class="t-3003-c">deterministisch machen<span class="t-3003">./wly/05/03-nfsm.wly:229:9</span></span>
     </h2>
     <p class="main-column">
-      Wir werden nun zeigen, dass man zu jedem
-      nichtdeterministischen Automaten $M$ einen
-      äquivalenten deterministischen Automaten $M'$ bauen
-      kann. Bevor wir eine allgemeine Konstruktion zeigen,
-      fragen wir uns, wie wir beispielsweise für den
-      nichtdeterministischen endlichen Automaten
-      <span class="nowrap">$M$:</span>
+      <span class="t-3003-c">Wir werden nun zeigen, dass man zu jedem<span class="t-3003">./wly/05/03-nfsm.wly:231:5</span></span>
+      <span class="t-3003-c">nichtdeterministischen Automaten
+        <span class="t-3003">./wly/05/03-nfsm.wly:232:5</span></span>$M$<span class="t-3003-c">
+        einen<span class="t-3003">./wly/05/03-nfsm.wly:232:41</span></span>
+      <span class="t-3003-c">äquivalenten deterministischen Automaten
+        <span class="t-3003">./wly/05/03-nfsm.wly:233:5</span></span>$M'$<span class="t-3003-c">
+        bauen<span class="t-3003">./wly/05/03-nfsm.wly:233:50</span></span>
+      <span class="t-3003-c">kann. Bevor wir eine allgemeine Konstruktion zeigen,<span class="t-3003">./wly/05/03-nfsm.wly:234:5</span></span>
+      <span class="t-3003-c">fragen wir uns, wie wir beispielsweise für den<span class="t-3003">./wly/05/03-nfsm.wly:235:5</span></span>
+      <span class="t-3003-c">nichtdeterministischen endlichen Automaten
+        <span class="t-3003">./wly/05/03-nfsm.wly:236:5</span></span><span class="nowrap">$M$<span class="t-3003-c">:<span class="t-3003">./wly/05/03-nfsm.wly:236:51</span></span></span>
     </p>
     <div class="pseudowell">
       <figure>
         <img
           style="height: 10em"
           src="img/finite-state-automata/nfsm-example-01.svg"
-        >
+        ><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-example-01.svg</span>
       </figure>
     </div>
     <p class="main-column">
-      und das Eingabewort $\alpha = 1001100$ überprüfen
-      können, ob $1001100 \in L(M)$ gilt. Einem
-      determinischen endlichen Automaten können wir ja das
-      Eingabewort einfach füttern und schauen, was der
-      Automat tut; bei nichtdeterministischen Automaten
-      müssen wir schauen, was er alles tun könnte. Wir
-      plazieren einen kleinen farbigen Punkt in jeden
-      Zustand, in dem sich der Automat befinden könnte; am
-      Anfang hat der Startzustand $A$ einen roten Punkt.
+      <span class="t-3003-c">und das Eingabewort
+        <span class="t-3003">./wly/05/03-nfsm.wly:243:5</span></span>$\alpha = 1001100$<span class="t-3003-c">
+        überprüfen<span class="t-3003">./wly/05/03-nfsm.wly:243:43</span></span>
+      <span class="t-3003-c">können, ob
+        <span class="t-3003">./wly/05/03-nfsm.wly:244:5</span></span>$1001100 \in L(M)$<span class="t-3003-c">
+        gilt. Einem<span class="t-3003">./wly/05/03-nfsm.wly:244:34</span></span>
+      <span class="t-3003-c">determinischen endlichen Automaten können wir ja das<span class="t-3003">./wly/05/03-nfsm.wly:245:5</span></span>
+      <span class="t-3003-c">Eingabewort einfach füttern und schauen, was der<span class="t-3003">./wly/05/03-nfsm.wly:246:5</span></span>
+      <span class="t-3003-c">Automat tut; bei nichtdeterministischen Automaten<span class="t-3003">./wly/05/03-nfsm.wly:247:5</span></span>
+      <span class="t-3003-c">müssen wir schauen, was er alles tun könnte. Wir<span class="t-3003">./wly/05/03-nfsm.wly:248:5</span></span>
+      <span class="t-3003-c">plazieren einen kleinen farbigen Punkt in jeden<span class="t-3003">./wly/05/03-nfsm.wly:249:5</span></span>
+      <span class="t-3003-c">Zustand, in dem sich der Automat befinden könnte; am<span class="t-3003">./wly/05/03-nfsm.wly:250:5</span></span>
+      <span class="t-3003-c">Anfang hat der Startzustand
+        <span class="t-3003">./wly/05/03-nfsm.wly:251:5</span></span>$A$<span class="t-3003-c">
+        einen roten Punkt.<span class="t-3003">./wly/05/03-nfsm.wly:251:36</span></span>
     </p>
     <div class="pseudowell">
       <div class="carousel__container">
         <div class="carousel">
           <div class="carousel__items">
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-01.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-01.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-01.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-02.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-02.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-02.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-03.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-03.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-03.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-04.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-04.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-04.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-05.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-05.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-05.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-06.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-06.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-06.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-07.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-07.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-07.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-08.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-08.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-08.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-09.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-09.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-09.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-10.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-10.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-10.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-11.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-11.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-11.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-12.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-12.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-12.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-13.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-13.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-13.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-14.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-14.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-14.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-15.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-15.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-15.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-16.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-16.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-16.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-17.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-17.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-17.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-18.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-18.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-18.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-19.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-19.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-19.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-20.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-20.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-20.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-21.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-21.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-21.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/nfsm-colored-balls-22.svg">
+              <img src="img/finite-state-automata/nfsm-colored-balls-22.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-colored-balls-22.svg</span>
             </div>
           </div>
         </div>
       </div>
     </div>
     <p class="main-column">
-      Am Ende landet der grüne Punkt im Zustand
-      <span class="nowrap">$E$.</span>
-      Das
-      Wort ist also in
-      <span class="nowrap">$L(M)$.</span>
-      Das können wir auch ganz
-      allgemein tun. Wenn Zustand $q$ einen "Punkt" hat und
-      Zeichen $x$ gelesen wird, dann teilt sich dieser
-      Punkt und plaziert einen Kind-Punkt in jedem Zustand
-      <span class="nowrap">$q'$,</span>
-      für den $q \stackrel{x}{\rightarrow} q'$ gilt.
-      Formal gesprochen: für eine Menge $R \subseteq Q$ von
-      Zuständen (die, die gerade einen "Punkt" haben) und
-      ein Eingabe-Symbol $x$ definieren wir
+      <span class="t-3003-c">Am Ende landet der grüne Punkt im Zustand
+        <span class="t-3003">./wly/05/03-nfsm.wly:277:5</span></span><span class="nowrap">$E$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:277:50</span></span></span><span class="t-3003-c">
+        Das<span class="t-3003">./wly/05/03-nfsm.wly:277:50</span></span>
+      <span class="t-3003-c">Wort ist also in
+        <span class="t-3003">./wly/05/03-nfsm.wly:278:5</span></span><span class="nowrap">$L(M)$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:278:28</span></span></span><span class="t-3003-c">
+        Das können wir auch ganz<span class="t-3003">./wly/05/03-nfsm.wly:278:28</span></span>
+      <span class="t-3003-c">allgemein tun. Wenn Zustand
+        <span class="t-3003">./wly/05/03-nfsm.wly:279:5</span></span>$q$<span class="t-3003-c">
+        einen "Punkt" hat und<span class="t-3003">./wly/05/03-nfsm.wly:279:36</span></span>
+      <span class="t-3003-c">Zeichen
+        <span class="t-3003">./wly/05/03-nfsm.wly:280:5</span></span>$x$<span class="t-3003-c">
+        gelesen wird, dann teilt sich dieser<span class="t-3003">./wly/05/03-nfsm.wly:280:16</span></span>
+      <span class="t-3003-c">Punkt und plaziert einen Kind-Punkt in jedem Zustand<span class="t-3003">./wly/05/03-nfsm.wly:281:5</span></span>
+      <span class="t-3003-c">
+        <span class="t-3003">./wly/05/03-nfsm.wly:282:5</span></span><span class="nowrap">$q'$<span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:282:9</span></span></span><span class="t-3003-c">
+        für den
+        <span class="t-3003">./wly/05/03-nfsm.wly:282:9</span></span>$q \stackrel{x}{\rightarrow} q'$<span class="t-3003-c">
+        gilt.<span class="t-3003">./wly/05/03-nfsm.wly:282:51</span></span>
+      <span class="t-3003-c">Formal gesprochen: für eine Menge
+        <span class="t-3003">./wly/05/03-nfsm.wly:283:5</span></span>$R \subseteq Q$<span class="t-3003-c">
+        von<span class="t-3003">./wly/05/03-nfsm.wly:283:54</span></span>
+      <span class="t-3003-c">Zuständen (die, die gerade einen "Punkt" haben) und<span class="t-3003">./wly/05/03-nfsm.wly:284:5</span></span>
+      <span class="t-3003-c">ein Eingabe-Symbol
+        <span class="t-3003">./wly/05/03-nfsm.wly:285:5</span></span>$x$<span class="t-3003-c">
+        definieren wir<span class="t-3003">./wly/05/03-nfsm.wly:285:27</span></span>
     </p>
     <div class="math-block main-column">
       $$
@@ -519,23 +647,37 @@
       $$
     </div>
     <p class="main-column">
-      Für ein Eingabewort $\alpha= x_1 \dots x_n$ fangen
-      wir nun mit $R_0 = \{\qstart\}$ an, das entspricht
-      dem einen roten Punkt auf dem Startzustand, und
-      berechnen dann jeweils
-      <span class="nowrap">$R_i = \Delta(R_{i-1}, x_i)$;</span>
-      wenn die Menge $R_n$ einen akzeptierenden Endzustand
-      enthält (dieser also am Ende einen "Punkt" hat), gilt
-      <span class="nowrap">$\alpha \in L(M)$.</span>
-      Treten Sie einen Schritt zurück
-      und betrachten, was wir mit $\Delta$ definiert haben:
-      wir haben eine Zustandsübergangsfunktion definiert,
-      die nun aber nicht auf Zuständen sondern auf
-      <span class="nowrap">Zustands<i>mengen</i></span>
-      operiert. Das heißt, im Gegensatz zu
-      <span class="nowrap">$\delta$,</span>
-      das eine Funktion
-      $\delta: Q \times \Sigma \rightarrow Q$ ist, ist
+      <span class="t-3003-c">Für ein Eingabewort
+        <span class="t-3003">./wly/05/03-nfsm.wly:292:5</span></span>$\alpha= x_1 \dots x_n$<span class="t-3003-c">
+        fangen<span class="t-3003">./wly/05/03-nfsm.wly:292:48</span></span>
+      <span class="t-3003-c">wir nun mit
+        <span class="t-3003">./wly/05/03-nfsm.wly:293:5</span></span>$R_0 = \{\qstart\}$<span class="t-3003-c">
+        an, das entspricht<span class="t-3003">./wly/05/03-nfsm.wly:293:36</span></span>
+      <span class="t-3003-c">dem einen roten Punkt auf dem Startzustand, und<span class="t-3003">./wly/05/03-nfsm.wly:294:5</span></span>
+      <span class="t-3003-c">berechnen dann jeweils
+        <span class="t-3003">./wly/05/03-nfsm.wly:295:5</span></span><span class="nowrap">$R_i = \Delta(R_{i-1}, x_i)$<span class="t-3003-c">;<span class="t-3003">./wly/05/03-nfsm.wly:295:56</span></span></span><span class="t-3003-c">
+        <span class="t-3003">./wly/05/03-nfsm.wly:295:56</span></span>
+      <span class="t-3003-c">wenn die Menge
+        <span class="t-3003">./wly/05/03-nfsm.wly:296:5</span></span>$R_n$<span class="t-3003-c">
+        einen akzeptierenden Endzustand<span class="t-3003">./wly/05/03-nfsm.wly:296:25</span></span>
+      <span class="t-3003-c">enthält (dieser also am Ende einen "Punkt" hat), gilt<span class="t-3003">./wly/05/03-nfsm.wly:297:5</span></span>
+      <span class="t-3003-c">
+        <span class="t-3003">./wly/05/03-nfsm.wly:298:5</span></span><span class="nowrap">$\alpha \in L(M)$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:298:22</span></span></span><span class="t-3003-c">
+        Treten Sie einen Schritt zurück<span class="t-3003">./wly/05/03-nfsm.wly:298:22</span></span>
+      <span class="t-3003-c">und betrachten, was wir mit
+        <span class="t-3003">./wly/05/03-nfsm.wly:299:5</span></span>$\Delta$<span class="t-3003-c">
+        definiert haben:<span class="t-3003">./wly/05/03-nfsm.wly:299:41</span></span>
+      <span class="t-3003-c">wir haben eine Zustandsübergangsfunktion definiert,<span class="t-3003">./wly/05/03-nfsm.wly:300:5</span></span>
+      <span class="t-3003-c">die nun aber nicht auf Zuständen sondern auf<span class="t-3003">./wly/05/03-nfsm.wly:301:5</span></span>
+      <span class="t-3003-c">
+        <span class="t-3003">./wly/05/03-nfsm.wly:302:5</span></span><span class="nowrap"><span class="t-3003-c">Zustands<span class="t-3003">./wly/05/03-nfsm.wly:302:5</span></span><i><span class="t-3003-c">mengen<span class="t-3003">./wly/05/03-nfsm.wly:302:14</span></span></i></span><span class="t-3003-c">
+        operiert. Das heißt, im Gegensatz zu<span class="t-3003">./wly/05/03-nfsm.wly:302:21</span></span>
+      <span class="t-3003-c">
+        <span class="t-3003">./wly/05/03-nfsm.wly:303:5</span></span><span class="nowrap">$\delta$<span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:303:13</span></span></span><span class="t-3003-c">
+        das eine Funktion<span class="t-3003">./wly/05/03-nfsm.wly:303:13</span></span>
+      <span class="t-3003-c">
+        <span class="t-3003">./wly/05/03-nfsm.wly:304:5</span></span>$\delta: Q \times \Sigma \rightarrow Q$<span class="t-3003-c">
+        ist, ist<span class="t-3003">./wly/05/03-nfsm.wly:304:44</span></span>
     </p>
     <div class="math-block main-column">
       $$
@@ -545,28 +687,40 @@
       $$
     </div>
     <p class="main-column">
-      Wenn Sie die Schreibweise $2^Q$ nicht kennen: dies
-      ist die Potenzmenge von
-      <span class="nowrap">$Q$,</span>
-      also die Menge aller
-      Untermengen, was die leere Menge $\emptyset$ und die
-      "volle Menge" $Q$ selbst miteinschließt. Wir haben
-      also folgendes Theorem:
+      <span class="t-3003-c">Wenn Sie die Schreibweise
+        <span class="t-3003">./wly/05/03-nfsm.wly:310:5</span></span>$2^Q$<span class="t-3003-c">
+        nicht kennen: dies<span class="t-3003">./wly/05/03-nfsm.wly:310:36</span></span>
+      <span class="t-3003-c">ist die Potenzmenge von
+        <span class="t-3003">./wly/05/03-nfsm.wly:311:5</span></span><span class="nowrap">$Q$<span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:311:32</span></span></span><span class="t-3003-c">
+        also die Menge aller<span class="t-3003">./wly/05/03-nfsm.wly:311:32</span></span>
+      <span class="t-3003-c">Untermengen, was die leere Menge
+        <span class="t-3003">./wly/05/03-nfsm.wly:312:5</span></span>$\emptyset$<span class="t-3003-c">
+        und die<span class="t-3003">./wly/05/03-nfsm.wly:312:49</span></span>
+      <span class="t-3003-c">"volle Menge"
+        <span class="t-3003">./wly/05/03-nfsm.wly:313:5</span></span>$Q$<span class="t-3003-c">
+        selbst miteinschließt. Wir haben<span class="t-3003">./wly/05/03-nfsm.wly:313:22</span></span>
+      <span class="t-3003-c">also folgendes Theorem:<span class="t-3003">./wly/05/03-nfsm.wly:314:5</span></span>
     </p>
     <div
       id="_24_hgi_"
       class="well statement out"
     >
       <p>
-        <b>Theorem 5.3.7 (Einen nichtdeterministischen endlichen Automaten
-          deterministisch machen).</b>
-        Sei
-        $M = (\Sigma, Q, \qstart, F, \delta)$ ein
-        nichtdeterministischer Automat; dann heiße der
-        deterministische Automat
-        $M' = (\Sigma, 2^Q, \{\qstart\}, \mathcal{F},
-        \Delta)$
-        mit Endzustandsmenge $\mathcal{F}$ definiert als
+        <b><span class="t-3003-c">Theorem 5.3.7 (Einen nichtdeterministischen endlichen Automaten<span class="t-3003">./wly/05/03-nfsm.wly:316:6</span></span>
+          <span class="t-3003-c">deterministisch machen).<span class="t-3003">./wly/05/03-nfsm.wly:319:9</span></span></b><span class="t-3003-c">
+          Sei<span class="t-3003">./wly/05/03-nfsm.wly:319:34</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:320:9</span></span>$M = (\Sigma, Q, \qstart, F, \delta)$<span class="t-3003-c">
+          ein<span class="t-3003">./wly/05/03-nfsm.wly:320:46</span></span>
+        <span class="t-3003-c">nichtdeterministischer Automat; dann heiße der<span class="t-3003">./wly/05/03-nfsm.wly:321:9</span></span>
+        <span class="t-3003-c">deterministische Automat<span class="t-3003">./wly/05/03-nfsm.wly:322:9</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:323:9</span></span>$M' = (\Sigma, 2^Q, \{\qstart\}, \mathcal{F},
+        \Delta)$<span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:324:17</span></span>
+        <span class="t-3003-c">mit Endzustandsmenge
+          <span class="t-3003">./wly/05/03-nfsm.wly:325:9</span></span>$\mathcal{F}$<span class="t-3003-c">
+          definiert als<span class="t-3003">./wly/05/03-nfsm.wly:325:43</span></span>
       </p>
       <div class="math-block">
         $$
@@ -577,7 +731,9 @@
         $$
       </div>
       <p>
-        und Zustandsübergangsfunktion $\Delta$ definiert als
+        <span class="t-3003-c">und Zustandsübergangsfunktion
+          <span class="t-3003">./wly/05/03-nfsm.wly:332:9</span></span>$\Delta$<span class="t-3003-c">
+          definiert als<span class="t-3003">./wly/05/03-nfsm.wly:332:47</span></span>
       </p>
       <div class="math-block">
         $$
@@ -589,60 +745,78 @@
         $$
       </div>
       <p>
-        der
-        <span class="nowrap"><i>Potenzmengenautomat</i>.</span>
-        Es gilt
-        <span class="nowrap">$L(M) = L(M')$.</span>
+        <span class="t-3003-c">der
+          <span class="t-3003">./wly/05/03-nfsm.wly:340:9</span></span><span class="nowrap"><i><span class="t-3003-c">Potenzmengenautomat<span class="t-3003">./wly/05/03-nfsm.wly:340:14</span></span></i><span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:340:34</span></span></span><span class="t-3003-c">
+          Es gilt
+          <span class="t-3003">./wly/05/03-nfsm.wly:340:34</span></span><span class="nowrap">$L(M) = L(M')$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:340:58</span></span></span>
       </p>
     </div>
     <p class="main-column">
-      Wir folgern also
+      <span class="t-3003-c">Wir folgern also<span class="t-3003">./wly/05/03-nfsm.wly:342:5</span></span>
     </p>
     <div
       id="_25_hgi_"
       class="well statement out"
     >
       <p>
-        <b>Theorem 5.3.8</b>
-        Zu jeder regulären Sprache $L$ gibt es einen
-        deterministischen endlichen Automaten $M$ mit
-        <span class="nowrap">$L(M) = L$.</span>
+        <b><span class="t-3003-c">Theorem 5.3.8<span class="t-3003">./wly/05/03-nfsm.wly:344:6</span></span></b><span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:344:22</span></span>
+        <span class="t-3003-c">Zu jeder regulären Sprache
+          <span class="t-3003">./wly/05/03-nfsm.wly:346:9</span></span>$L$<span class="t-3003-c">
+          gibt es einen<span class="t-3003">./wly/05/03-nfsm.wly:346:39</span></span>
+        <span class="t-3003-c">deterministischen endlichen Automaten
+          <span class="t-3003">./wly/05/03-nfsm.wly:347:9</span></span>$M$<span class="t-3003-c">
+          mit<span class="t-3003">./wly/05/03-nfsm.wly:347:50</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:348:9</span></span><span class="nowrap">$L(M) = L$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:348:19</span></span></span>
       </p>
     </div>
     <div class="well statement out">
       <p>
-        <b>Beispiel 5.3.9</b>
-        Der obige nichtdeterminische Automaten
-        <span class="nowrap">$M$,</span>
-        der die
-        Sprache aller Wörter, deren viertletztes Zeichen eine
-        1 ist, akzeptiert, hat fünf Zustände. Sein
-        Potenzmengenautomat $M'$ hätte also
-        <span class="nowrap">$2^5 = 32$.</span>
-        Allerdings sehen wir, dass alle "relevanten" Zustände
-        von $M$ den Zustand $A$ enthalten. Dieser wird nie
-        verschwinden. Also sehen wir, dass man $M'$ mit 16
-        Zuständen implementieren kann (die anderen, die, die
-        nicht $A$ enthalten, sind
-        <span class="nowrap"><i>unerreichbar</i>).</span>
-        Da 16
-        immer noch recht groß für eine Abbildung ist, nehmen
-        wir uns die Sprache aller Wörter, deren
-        <i>drittletztes
-          Zeichen</i>
-        eine 1 ist. Der nichtdeterministische Automat
-        hierfür ist
+        <b><span class="t-3003-c">Beispiel 5.3.9<span class="t-3003">./wly/05/03-nfsm.wly:350:6</span></span></b><span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:350:23</span></span>
+        <span class="t-3003-c">Der obige nichtdeterminische Automaten
+          <span class="t-3003">./wly/05/03-nfsm.wly:351:9</span></span><span class="nowrap">$M$<span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:351:51</span></span></span><span class="t-3003-c">
+          der die<span class="t-3003">./wly/05/03-nfsm.wly:351:51</span></span>
+        <span class="t-3003-c">Sprache aller Wörter, deren viertletztes Zeichen eine<span class="t-3003">./wly/05/03-nfsm.wly:352:9</span></span>
+        <span class="t-3003-c">1 ist, akzeptiert, hat fünf Zustände. Sein<span class="t-3003">./wly/05/03-nfsm.wly:353:9</span></span>
+        <span class="t-3003-c">Potenzmengenautomat
+          <span class="t-3003">./wly/05/03-nfsm.wly:354:9</span></span>$M'$<span class="t-3003-c">
+          hätte also
+          <span class="t-3003">./wly/05/03-nfsm.wly:354:33</span></span><span class="nowrap">$2^5 = 32$<span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:354:55</span></span></span><span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:354:55</span></span>
+        <span class="t-3003-c">Allerdings sehen wir, dass alle "relevanten" Zustände<span class="t-3003">./wly/05/03-nfsm.wly:355:9</span></span>
+        <span class="t-3003-c">von
+          <span class="t-3003">./wly/05/03-nfsm.wly:356:9</span></span>$M$<span class="t-3003-c">
+          den Zustand
+          <span class="t-3003">./wly/05/03-nfsm.wly:356:16</span></span>$A$<span class="t-3003-c">
+          enthalten. Dieser wird nie<span class="t-3003">./wly/05/03-nfsm.wly:356:32</span></span>
+        <span class="t-3003-c">verschwinden. Also sehen wir, dass man
+          <span class="t-3003">./wly/05/03-nfsm.wly:357:9</span></span>$M'$<span class="t-3003-c">
+          mit 16<span class="t-3003">./wly/05/03-nfsm.wly:357:52</span></span>
+        <span class="t-3003-c">Zuständen implementieren kann (die anderen, die, die<span class="t-3003">./wly/05/03-nfsm.wly:358:9</span></span>
+        <span class="t-3003-c">nicht
+          <span class="t-3003">./wly/05/03-nfsm.wly:359:9</span></span>$A$<span class="t-3003-c">
+          enthalten, sind
+          <span class="t-3003">./wly/05/03-nfsm.wly:359:18</span></span><span class="nowrap"><i><span class="t-3003-c">unerreichbar<span class="t-3003">./wly/05/03-nfsm.wly:359:36</span></span></i><span class="t-3003-c">).<span class="t-3003">./wly/05/03-nfsm.wly:359:49</span></span></span><span class="t-3003-c">
+          Da 16<span class="t-3003">./wly/05/03-nfsm.wly:359:49</span></span>
+        <span class="t-3003-c">immer noch recht groß für eine Abbildung ist, nehmen<span class="t-3003">./wly/05/03-nfsm.wly:360:9</span></span>
+        <span class="t-3003-c">wir uns die Sprache aller Wörter, deren
+          <span class="t-3003">./wly/05/03-nfsm.wly:361:9</span></span><i><span class="t-3003-c">drittletztes<span class="t-3003">./wly/05/03-nfsm.wly:361:50</span></span>
+          <span class="t-3003-c">Zeichen<span class="t-3003">./wly/05/03-nfsm.wly:362:9</span></span></i><span class="t-3003-c">
+          eine 1 ist. Der nichtdeterministische Automat<span class="t-3003">./wly/05/03-nfsm.wly:362:17</span></span>
+        <span class="t-3003-c">hierfür ist<span class="t-3003">./wly/05/03-nfsm.wly:363:9</span></span>
       </p>
       <div class="figure__container">
         <figure>
           <img
             style="height: 10em"
             src="img/finite-state-automata/nfsm-example-04-third-from-right.svg"
-          >
+          ><span class="t-3003 t-3003-i">./public/img/finite-state-automata/nfsm-example-04-third-from-right.svg</span>
         </figure>
       </div>
       <p>
-        Der Potenzmengenautomat hat die Zustandsmenge
+        <span class="t-3003-c">Der Potenzmengenautomat hat die Zustandsmenge<span class="t-3003">./wly/05/03-nfsm.wly:370:9</span></span>
       </p>
       <div class="math-block">
         $$
@@ -652,91 +826,102 @@
         $$
       </div>
       <p>
-        wobei wir der Lesbarkeit halber
-        <code>\{A,B\}</code>
-        etc.
-        schreiben. Um bei der Konstruktion des
-        Potenzmengenautomaten unnötige Zustände zu vermeiden,
-        bauen wir ihn Schritt für Schritt, angefangen mit dem
-        Startzustand \{A\} bzw.
-        <span class="nowrap">$A$,</span>
-        und hängen jedem Zustand
-        einen ausgehenden $0$ -Pfeil und
-        <span class="nowrap">$1$-Pfeil</span>
-        an, wobei
-        wir womöglich neue Zustände "entdecken".
+        <span class="t-3003-c">wobei wir der Lesbarkeit halber
+          <span class="t-3003">./wly/05/03-nfsm.wly:376:9</span></span><code><span class="t-3003-c">\{A,B\}<span class="t-3003">./wly/05/03-nfsm.wly:376:42</span></span></code><span class="t-3003-c">
+          etc.<span class="t-3003">./wly/05/03-nfsm.wly:376:50</span></span>
+        <span class="t-3003-c">schreiben. Um bei der Konstruktion des<span class="t-3003">./wly/05/03-nfsm.wly:377:9</span></span>
+        <span class="t-3003-c">Potenzmengenautomaten unnötige Zustände zu vermeiden,<span class="t-3003">./wly/05/03-nfsm.wly:378:9</span></span>
+        <span class="t-3003-c">bauen wir ihn Schritt für Schritt, angefangen mit dem<span class="t-3003">./wly/05/03-nfsm.wly:379:9</span></span>
+        <span class="t-3003-c">Startzustand \{A\} bzw.
+          <span class="t-3003">./wly/05/03-nfsm.wly:380:9</span></span><span class="nowrap">$A$<span class="t-3003-c">,<span class="t-3003">./wly/05/03-nfsm.wly:380:36</span></span></span><span class="t-3003-c">
+          und hängen jedem Zustand<span class="t-3003">./wly/05/03-nfsm.wly:380:36</span></span>
+        <span class="t-3003-c">einen ausgehenden
+          <span class="t-3003">./wly/05/03-nfsm.wly:381:9</span></span>$0$<span class="t-3003-c">
+          -Pfeil und
+          <span class="t-3003">./wly/05/03-nfsm.wly:381:30</span></span><span class="nowrap">$1$<span class="t-3003-c">-Pfeil<span class="t-3003">./wly/05/03-nfsm.wly:381:45</span></span></span><span class="t-3003-c">
+          an, wobei<span class="t-3003">./wly/05/03-nfsm.wly:381:45</span></span>
+        <span class="t-3003-c">wir womöglich neue Zustände "entdecken".<span class="t-3003">./wly/05/03-nfsm.wly:382:9</span></span>
       </p>
       <div class="carousel__container">
         <div class="carousel">
           <div class="carousel__items">
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/01.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/01.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/01.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/02.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/02.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/02.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/03.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/03.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/03.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/04.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/04.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/04.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/05.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/05.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/05.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/06.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/06.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/06.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/07.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/07.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/07.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/08.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/08.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/08.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/09.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/09.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/09.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/10.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/10.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/10.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/11.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/11.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/11.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/12.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/12.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/12.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/13.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/13.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/13.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/14.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/14.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/14.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/15.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/15.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/15.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/16.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/16.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/16.svg</span>
             </div>
             <div class="carousel__item">
-              <img src="img/finite-state-automata/potenzmengenautomat/17.svg">
+              <img src="img/finite-state-automata/potenzmengenautomat/17.svg"><span class="t-3003 t-3003-i">./public/img/finite-state-automata/potenzmengenautomat/17.svg</span>
             </div>
           </div>
         </div>
       </div>
       <p>
-        Wenn wir uns vorstellen, dass wir vor das Eingabewort
-        $\alpha$ die Zeichen 000 stellen, also $\alpha$ durch
-        $000\alpha$ ersetzen, dann codiert jeder Zustand
-        genau die letzten drei Zeichen des Eingabewortes, die
-        der Automat gelesen hat. Der Zustand $ACD$ bedeutet
-        zum Beispiel
-        <span class="nowrap"><i>die letzten drei Zeichen waren $110$</i>.</span>
+        <span class="t-3003-c">Wenn wir uns vorstellen, dass wir vor das Eingabewort<span class="t-3003">./wly/05/03-nfsm.wly:403:9</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:404:9</span></span>$\alpha$<span class="t-3003-c">
+          die Zeichen 000 stellen, also
+          <span class="t-3003">./wly/05/03-nfsm.wly:404:17</span></span>$\alpha$<span class="t-3003-c">
+          durch<span class="t-3003">./wly/05/03-nfsm.wly:404:56</span></span>
+        <span class="t-3003-c">
+          <span class="t-3003">./wly/05/03-nfsm.wly:405:9</span></span>$000\alpha$<span class="t-3003-c">
+          ersetzen, dann codiert jeder Zustand<span class="t-3003">./wly/05/03-nfsm.wly:405:20</span></span>
+        <span class="t-3003-c">genau die letzten drei Zeichen des Eingabewortes, die<span class="t-3003">./wly/05/03-nfsm.wly:406:9</span></span>
+        <span class="t-3003-c">der Automat gelesen hat. Der Zustand
+          <span class="t-3003">./wly/05/03-nfsm.wly:407:9</span></span>$ACD$<span class="t-3003-c">
+          bedeutet<span class="t-3003">./wly/05/03-nfsm.wly:407:51</span></span>
+        <span class="t-3003-c">zum Beispiel
+          <span class="t-3003">./wly/05/03-nfsm.wly:408:9</span></span><span class="nowrap"><i><span class="t-3003-c">die letzten drei Zeichen waren
+              <span class="t-3003">./wly/05/03-nfsm.wly:408:23</span></span>$110$</i><span class="t-3003-c">.<span class="t-3003">./wly/05/03-nfsm.wly:408:60</span></span></span>
       </p>
     </div>
     <p class="main-column">
-      Im folgenden Unterkapitel werden wir alle
-      Transformationen, die wir bisher gesehen haben, an
-      einem konkreten Beispiel anwenden.
+      <span class="t-3003-c">Im folgenden Unterkapitel werden wir alle<span class="t-3003">./wly/05/03-nfsm.wly:410:5</span></span>
+      <span class="t-3003-c">Transformationen, die wir bisher gesehen haben, an<span class="t-3003">./wly/05/03-nfsm.wly:411:5</span></span>
+      <span class="t-3003-c">einem konkreten Beispiel anwenden.<span class="t-3003">./wly/05/03-nfsm.wly:412:5</span></span>
     </p>
     <div id="end-of-page-elt">
     </div>

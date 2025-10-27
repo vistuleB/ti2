@@ -25,7 +25,8 @@ fn local_cli_usage() {
   io.println(margin <> "     • -file <name>: format only the given file")
   io.println("")
   io.println(margin <> "--local")
-  io.println(margin <> "  -> include source-linking tooltips for author work")
+  io.println(margin <> "  -> include source-linking tooltips (! to use with 'local-goto.js'")
+  io.println(margin <> "     server !)")
   io.println("")
 }
 
@@ -52,7 +53,7 @@ pub fn main() {
 
     _ -> {
       use amendments <-  on.error_ok(
-        ds.process_command_line_arguments(args, ["--fmt", "--author-mode"]),
+        ds.process_command_line_arguments(args, ["--fmt", "--local"]),
         fn(error) {
           io.println("")
           io.println("cli error: " <> ins(error))
