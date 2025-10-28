@@ -47,7 +47,6 @@
         nach links oben durch. Dadurch können wir die
         zweidimensionale Gestalt von $\N \times \N$
         "aufdröseln" und dem eindimensionalen $\N$ zuordnen.
-        |> QED
 
     |> Exercise
         Finden Sie eine explizite Formel für die Funktion
@@ -128,7 +127,6 @@
         $f := f_2 \circ f_1 : \Q \rightarrow \N$ ist nun die
         gewünschte injektive Funktion $f$ von \(\$Q\) nach
         $\N$.
-        |> QED
 
     Dies ist leider keine Bijektion: das Paar $(6,9)$
     beispielsweise wird nie vorkommen, weil $\frac{6}{9}$
@@ -149,7 +147,6 @@
 
         ist die gewünschte Injektion. Man nennt so eine
         Funktion auch die _Einbettung_ von $\N$ in $\Q$.
-        |> QED
 
     Wir sind nun also in der sonderbaren Situation, dass
     wir eine injektive Funktion $f : \Q \rightarrow \N$
@@ -211,7 +208,6 @@
         weil alle Punkte der Form $(x,1)$ der Zahl
         $\frac{x}{1}$ entsprechen, und das ist ja ein
         gekürzter Bruch.
-        |> QED
 
     |> TopicAnnouncement
         Endliche Strings
@@ -274,7 +270,6 @@
         \end{align*}
 
         ist eine Bijektion von $\{0,1\}^*$ nach $\N$.
-        |> QED
 
     Geht das auch mit mehr als zwei Symbolen?
 

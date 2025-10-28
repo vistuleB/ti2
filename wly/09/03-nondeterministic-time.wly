@@ -159,7 +159,6 @@
         $M$, wenn wir es mit $x$ auf dem ersten Band und $z$
         auf dem zweiten Band starten, auch `accept` aus, und
         somit gilt $x \in L(M)$.
-        |> QED
 
     |> Exercise
         Der obige Beweis enthält einige kleine Fehler. So
@@ -236,7 +235,6 @@
         zweites Band schreiben, dann wird sie genau die
         Konfigurationsfolge von $M$ reproduzieren und zu
         `accept` gelangen. Also $x \in L(M')$.
-        |> QED
 
     Im obigen Beweis nehmen wir stillschweigend ann, dass
     $\Sigma$ mindestens zwei Zeichen enthält (die wir als

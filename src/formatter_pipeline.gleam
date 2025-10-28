@@ -96,6 +96,7 @@ pub fn formatter_pipeline(
     [
       dl.identity(),
       dl.attribute_drop_prefixes(#("src", ["./", "/"])),
+      dl.delete("QED"),
     ],
     pp.create_mathblock_elements([infra.DoubleDollar, infra.BackslashSquareBracket, infra.BeginEndAlign, infra.BeginEndAlignStar], infra.DoubleDollar),
     [

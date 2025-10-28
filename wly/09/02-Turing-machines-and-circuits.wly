@@ -49,7 +49,6 @@
         weiteren einfachen Schaltkreis können wir nun den
         erreichten Endzustand auslesen und entsprechen 0 oder
         1 ausgeben.
-        |> QED
 
     |> Proof
         Wir zeigen den Beweis schematisch anhand von $1$
@@ -193,4 +192,3 @@
         Dieser endgültige Schaltkreis besteht im Wesentlichen
         aus $T$ Kopien von $\Delta^S$ und hat somit Größe
         $O(t(n)^2)$.
-        |> QED

@@ -50,7 +50,6 @@
         verzichte ich an dieser Stelle. Besser als Sipser in
         seinem Lehrbuch _Introduction to the Theory of
         Computing_ könnte ich das eh nicht.
-        |> QED
 
     |> Example
         Betrachten wir die Grammatik
@@ -345,7 +344,6 @@
         die Länge der Ableitung bzw. Induktion über die Länge
         der Konfigurationsfolge und ist in Sipsers Lehrbuch im
         Detail erklärt.
-        |> QED
 
     |> Example
         Wir betrachten die Sprache

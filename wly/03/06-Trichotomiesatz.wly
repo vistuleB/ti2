@@ -118,7 +118,6 @@
             mit keinem $a' \in A$ gepaart ist. Also ist
             $R \cup \{(a,b)\}$ auch ein Matching, und $R$ ist
             nicht maximal.
-            |> QED
 
         Wir bekommen also unsere gewünschte injektive
         Funktion, solange wir ein maximales Element in der
@@ -195,7 +194,6 @@
             erhalten ein maximales Matching. Dies sättigt $A$
             oder $B$ und gibt uns somit eine injektive Funktion
             $A \rightarrow B$ oder $B \rightarrow A$.
-            |> QED
 
     |> TopicAnnouncement
         Zornsches Lemma, Auswahlaxiom und die axiomatische

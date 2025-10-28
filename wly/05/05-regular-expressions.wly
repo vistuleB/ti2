@@ -404,7 +404,6 @@
         hat, muss $\alpha$ in der von $R$ beschriebenen
         Sprache liegen. $R$ ist der gesuchte reguläre
         Ausdruck: er beschreibt die Sprache $L$.
-        |> QED
 
     Hier sehen Sie den ganzen Ablauf an uNserer
     `aaaa:a:aaa.aa-aa`-Sprache:

@@ -42,7 +42,6 @@
 
         Und somit ist $f$ eine Bijektion von $\R$ auf den
         Wertebereich von $f$, also $(0,1)$.
-        |> QED
 
     |> Exercise
         Zeigen Sie $\R \approx \R^+$.
@@ -139,8 +138,6 @@
                 |> img
                     src=img/infinite-sets/interval-sequences-fill-the-gaps.svg
 
-        |> QED
-
     Als nächstes zeigen wir, dass $\R \approx \R^2$ gilt.
     Dies ist schon erstaunlich: der Zahlenstrahl und die
     zweidimensionale Ebene sollen also gleichviele
@@ -173,7 +170,6 @@
 
         Dies ist die gewünschte Bijektion
         $\{0,1\}^\N \times \{0,1\}^\N \rightarrow \{0,1\}^\N$.
-        |> QED
 
     Aus der Funktion
     $f: \{0,1\}^{\N} \times \{0,1\}^{\N} \mapsto
@@ -265,7 +261,6 @@
         sind die jeweils ersten Bits von $x$ und $y$ auch 0,
         was $x,y \lt 1/2$ bedeutet. Punkt 2 bis 4 folgen aus
         ähnlichen Überlegungen.
-        |> QED
 
     Wenn wir also $z$ von $0$ nach $1$ wandern lassen,
     dann bewegt sich $f^{-1}(z)$ von links unten nach
@@ -342,8 +337,6 @@
             |> img
                 src=img/infinite-sets/table-infinite-sequences-with-s.svg
 
-        |> QED
-
     Wir haben also die Beweisidee von
     $\N \times \N \approx \N$ recycelt. Diese Beobachtung
     motiviert den folgenden, etwas kurz angebundenen
@@ -359,8 +352,6 @@
         \     &\approx \cube^{\N \times \N} \\
         \     &\approx \cube^{\N} \\&\approx \R \vphantom{\cube^{\N}} \ .
         \end{align*}
-
-        |> QED
 
     Dürfen wir das? Dürfen wir Rechenregeln wie
     $\left(x^{b}\right)^c = x^{b \cdot c}$ so einfach

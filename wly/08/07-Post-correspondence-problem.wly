@@ -238,7 +238,6 @@
             Lösung haben, so erhalten wir eine Lösung des MPCP
             Puzzles $S$, indem wir alle Sterne herausstreichen
             und die rechte Endkachel entfernen.
-            |> QED
 
         Nun wissen wir also, dass wir den "Spieler" zwingen
         können, mit einer bestimmten Kachel zu beginnen, ohne
@@ -405,4 +404,3 @@
         die Teillösung $s$ des Puzzles getreu die Berechnung
         der Turingmaschine abbildet. Wir ersparen uns weitere
         Details.
-        |> QED

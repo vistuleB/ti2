@@ -98,7 +98,6 @@
             \end{align*}
 
             eine Lösung des PCP-Puzzles.
-            |> QED
 
         |> Claim
             Wenn das PCP-Puzzle $P$ eine Lösung hat, dann kann
@@ -132,7 +131,6 @@
 
             Somit ist gezeigt, dass $G$ ein Palindromwort
             ableiten kann.
-            |> QED
 
         Hätten wir nun also einen Algorithmus, der für eine
         gegebene kontextfreie Grammatik entscheiden könnte, ob
@@ -142,7 +140,6 @@
         $G$ und frage dann den Algorithmus, ob $G$ ein
         Palindromwort ableiten kann. Dies beantwortet auch die
         Frage nach der Lösbarkeit des gegebenen PCP-Puzzles.
-        |> QED
 
     |> SubtopicAnnouncement
         Reduktionen
@@ -225,7 +222,6 @@
         \end{align*}
 
         und somit entscheidet $M_1$ die Sprache $L_1$.
-        |> QED
 
     Stellen Sie sich einfach vor, dass $M_f$ der Code
     ist, den Sie selber schreiben müssen, und $M_2$ die
@@ -248,7 +244,6 @@
         Behauptung 4.6.8 die Sprache $L_1$ ja auch
         entscheidbar, was sie aber nach Annahme nicht ist.
         Daher ist $L_2$ eben nicht entscheidbar.
-        |> QED
 
     Beachten Sie nun, dass so etwas wie Behauptung 4.6.9
     bereits oben angewandt haben: wir haben das
@@ -301,7 +296,6 @@
         eine Reduktion vom Palindromwortproblem auf das
         Schnittproblem. Mit Behauptung 4.6.9 zusammen heißt
         das, dass das Schnittproblem unentscheidbar ist.
-        |> QED
 
     |> Theorem
         *(Mehrdeutigkeitsproblem kontextfreier Sprachen)*
@@ -350,7 +344,6 @@
         Eingabe das Paar $G_1, G_2$ (bzw. dessen Codierung),
         konstruiere $G$ und gib $G$ aus. Dieses $f$ reduziert
         das Schnittproblem auf das Mehrdeutigkeitsproblem.
-        |> QED
 
     Haben Sie den Fehler im Beweis erkannt? Das Problem
     ist, dass es sein könnte, dass $G_1$ und $G_2$ leeren
@@ -402,4 +395,3 @@
         und dies geschieht genau dann, wenn das PCP-Puzzle
         eine Lösung hat. Wir haben nun also unsere Reduktion
         von PCP auf das Mehrdeutigkeitsproblem.
-        |> QED

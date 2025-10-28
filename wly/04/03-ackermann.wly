@@ -153,7 +153,6 @@
 
         Wir sehen also: jedes $A_m$, betrachtet als Funktion
         mit einem Eingabeparameter, ist primitiv rekursiv.
-        |> QED
 
     Wir haben also gezeigt, dass jedes $A_m$ primitiv
     rekursiv ist. Heißt das auch, dass die
@@ -368,7 +367,6 @@
             \end{align*}
 
             Somit ist die Behauptung bewiesen.
-            |> QED
 
         Die Behauptung reicht aber noch nicht, da die rechte
         Seite der Ungleichung $f(t,\vec{x}) \lt A_{q+1}(t+x)$
@@ -387,7 +385,6 @@
 
         Es gilt also $A_{q+2} \gt f$ und das Lemma ist
         bewiesen.
-        |> QED
 
     In der Vorlesung am 7. Mai 2024 hatte ich den _Grad_
     einer primitiv-rekursiven Funktion definiert. Das ist

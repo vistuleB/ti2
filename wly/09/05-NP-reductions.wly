@@ -79,8 +79,7 @@
         Falls Ihnen eine Funktion `find_satisying_assignment`
         zur Verfügung steht, so können Sie natürlich die
         erfüllende Belegung direkt in eine gültige 3-Färbung
-        übersetzen. 
-        |> QED
+        übersetzen.
 
     Das ging recht schnell und direkt, weil die
     Aussagenlogik allgemein genug ist, um Aussagen über
@@ -153,8 +152,6 @@
             //# G ist der oben konstruierte Graph
             return is_3_colorable(G)
         ```
-
-        |> QED
 
     Wir haben also gezeigt, wie man eine $3$-CNF $F$ in
     einen Graphen $G$ umwandelt, so dass
@@ -232,7 +229,6 @@
         irgendwann mit einer Formel $F_t$, in der jede
         Klausel höchstens drei Literale hat. Dies ist unser
         $F'$.
-        |> QED
 
     Wir haben nun also eine Kette von Implikationen
     erschaffen:
@@ -378,7 +374,6 @@
         ist - sonst wäre $I$ ja nicht unabhängig. Somit muss
         $u \in I$ gelten und $\alpha(u) = 1$, und $\alpha$
         erfüllt $C$ .
-        |> QED
 
     |> Exercise
         Zeigen Sie `Independent Set $\leq_p$ SAT`{sc}. Also:
@@ -493,7 +488,6 @@
         Falls nun `has_hamilton_path` polynomielle Laufzeit
         $O(n^k)$ hat, so hat `has_hamilton_cycle` eine
         Laufzeit von $O(n^{k+1})$, auch polynomiell.
-        |> QED
 
     Was ist nun an diesem Beweis falsch? Nun, der Begriff
     der Reduktion, dem wir uns ja mit der Notation

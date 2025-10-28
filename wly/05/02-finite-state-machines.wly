@@ -414,7 +414,6 @@
             gilt, also zusammengenommen
             $q \stackrel{x\beta}{\rightarrow} q'$. Dies zeigt die
             zweite Richtung. Hiermit endet der Induktionsbeweis.
-            |> QED
 
         Wir haben nun die Behauptung bewiesen. Als nächstens
         betrachten wir die Grammatik $G$ und behaupten, dass
@@ -468,7 +467,6 @@
         $$
 
         gilt. Dies ist genau Punkt 1, den wir zeigen wollten.
-        |> QED
 
     Beachten Sie, dass dieser Beweis eigentlich gar nicht
     so schwierig ist, wie er hier aussieht. Ich habe ihn

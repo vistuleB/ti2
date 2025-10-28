@@ -126,7 +126,6 @@
             $X_{2i}$ unter $g$; daher gibt es zu $a \in X_{2i+1}$
             auch ein $b \in X_{2i}$ mit $g(b) = a$. In andere
             Worten: $g^{-1}(a)$ ist definiert.
-            |> QED
 
         Eindeutig ist $g^{-1}(a)$ sowieso, falls es
         existiert. Wir sehen nun: $h$ ist wohldefiniert. Ist
@@ -159,7 +158,6 @@
             $a'' \in X_{2i-1} \subseteq A'$ aber
             $a \in A \setminus A'$ , gilt $a'' \ne a$ und somit
             auch $b \ne b'$.
-            |> QED
 
         |> Remark
             *Behauptung 3.* $h$ ist surjektiv.
@@ -181,12 +179,10 @@
             $a \in X_{2i+1}$? Weil $f(a)=b$ wäre dann
             $b \in X_{2i+2} \subseteq B'$, wir befänden uns also
             in Fall (1).
-            |> QED
 
         Wir haben nun gezeigt, dass $h$ definiert ist,
         injektiv und surjektiv ist. Damit ist $h$ eine
         Bijektion.
-        |> QED
 
     Wenn Sie der formale Beweis zu sehr verwirrt, dann
     halten Sie sich einfach an die Bilder mit den zwei

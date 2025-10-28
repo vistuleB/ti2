@@ -71,7 +71,6 @@
         Zeile der Tabelle vor, und damit
         $\mathbf{d} \not \in {\rm img}(f)$. Die Funktion $f$
         ist nicht surjektiv.
-        |> QED
 
     Weil in dem Beweis die Diagonale der Tabelle eine
     entscheidende Rolle spielt, nennt man diese

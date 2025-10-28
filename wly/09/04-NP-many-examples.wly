@@ -82,7 +82,6 @@
         auch `True` ausgeben. Falls er für ein $c$ `True`
         ausgibt, dann ist $c$ tatsächlich eine gültige
         3-Färbung und $G$ ist $3$ -färbbar.
-        |> QED
 
     Das obige Beispiel verdeutlicht die Essenz der Klasse
     NP: es ist nicht klar, wie wir einen effizienten

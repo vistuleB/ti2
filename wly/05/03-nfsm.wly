@@ -136,7 +136,6 @@
         Theorem >>theorem-regular-simplified, welches uns
         erlaubt, Regeln der Form $X \rightarrow Y$ und
         $X \rightarrow a$ zu eliminieren.
-        |> QED
 
     |> Example
         Wir betrachten abermals die reguläre Grammatik aus

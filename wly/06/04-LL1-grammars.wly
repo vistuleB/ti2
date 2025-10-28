@@ -113,10 +113,8 @@
             erzeugten; wenn wir $S \rightarrow \epsilon$
             anwenden, dann verschwindet ein $S$, die Behauptung
             gilt aber nach wie vor für alle anderen $S$ in
-            $\delta$.
-            |> QED
-            Wir folgern also, dass für das $\alpha$ den beiden
-            obigne Herleitungen
+            $\delta$. Wir folgern also, dass für das $\alpha$ den
+            beiden obigne Herleitungen
             $\first_k(\alpha) \in \{\epsilon, \texttt{)}\}$ gilt.
             Keines davon ist ein Nichtterminal, und so muss auch
             $\first_k(\alpha) = \first_k(x)$ gelten.

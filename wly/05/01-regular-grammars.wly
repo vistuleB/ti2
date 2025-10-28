@@ -222,7 +222,6 @@
         $\alpha = \epsilon$ ist, so ist die Regel bereits in
         einer in regulären Grammatiken erlaubten Form:
         $X \rightarrow Y$ oder $X \rightarrow \epsilon$.
-        |> QED
 
     Wir können nun, wenn wir reguläre Grammatik entwerfen
     wollen, die bequemeren erweitert regulären Sprachen
@@ -285,7 +284,6 @@
         als neue Menge von Produktionen, die keine
         Produktionen von der Form $X \rightarrow Y$
         enthalten.
-        |> QED
 
     Im vorhergehenden Beweis haben wir nicht formal
     gezeigt, dass $L(G')= L(G)$ gilt. Unser Kernargument
@@ -457,7 +455,6 @@
         ersten Schritt entscheiden, ob wir nach $S_1$ oder
         nach $S_2$ gehen und somit ein Wort in $L_1$ oder
         eines in $L_2$ ableiten wollen.
-        |> QED
 
     In einem nächsten Schritt werden wir zeigen, dass
     Konstrukte wie _Ding 1, gefolgt von Ding 2_ mit
@@ -518,7 +515,6 @@
         Produktionen $P_1$ von $G_1$, zusammen mit den
         (unmodifizierten) Regeln von $G_2$. Das Startsymbol
         von $G$ ist $S_1$.
-        |> QED
 
     In einem dritten Lemma werden wir zeigen, dass die
     Konstruktion _Ding, beliebig oft wiederholt_ mit
@@ -574,7 +570,6 @@
 
         Um überhaupt eine Ableitung beenden zu können, fügen
         wir $S \rightarrow \epsilon$ noch als Regel hinzu.
-        |> QED
 
     |> Exercise
         Hier sehen Sie einen URL mit Query-String:
@@ -648,7 +643,6 @@
         umwandeln. In konkreten Anwendungne empfiehlt es dazu,
         die Nichtterminale von $G'$ umzubenennen, damit keien
         Verwechslungsgefahr droht.
-        |> QED
 
     Wir können noch sehr viel mehr Operationen mit
     regulären Sprachen machen als Vereinigung,

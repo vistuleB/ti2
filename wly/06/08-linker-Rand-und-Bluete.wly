@@ -442,4 +442,3 @@
         eine gültige Wortform, die allerdings nicht weiter
         reduziert werden kann. Also muss $\gamma = S$ gelten
         und der Parser akzeptiert.
-        |> QED

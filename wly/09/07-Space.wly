@@ -112,7 +112,6 @@
         $T := |Q| \cdot \left(|\Gamma|+1\right)^{kS}$
         Konfigurationen (warum?). Da $M$ terminiert, kann die
         Berechnung nicht mehr $T$ Schritte dauern.
-        |> QED
 
     |> Exercise
         Zeigen Sie, dass wir die Bedingung 1 aus Definition

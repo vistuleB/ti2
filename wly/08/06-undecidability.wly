@@ -118,7 +118,6 @@
         \not \in \negdiag$,
         ein Widerspruch. Unsere Annahme, dass $\halt$
         entscheidbar sei, ist also falsch.
-        |> QED
 
     |> Highlight
         *Ausführlicher Beweis.* Ich finde Beweise durch
@@ -215,7 +214,6 @@
         entscheidet. Da das für _jede_ Turingmaschine geht,
         schließen wir: keine Turingmaschine kann die Sprache
         $\halt$ entscheiden; sie ist unentscheidbar.
-        |> QED
 
     Ein Student hat am 26. Juni 2024 angemerkt, dass die
     Sprache

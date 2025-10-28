@@ -232,7 +232,6 @@
         zum Ausgabeband gehören, durch $\square$ ersetzt.
         Dann wechselt sie in ihren eigenen akzeptierenden
         Zustand `accept'`.
-        |> QED
 
     |> TopicAnnouncement
         Einfügen versus Überschreiben
@@ -733,4 +732,3 @@
         schreiben und die führende 1 löschen. Überzeugen Sie
         sich, dass in dieser Reihe wirklich alle
         $z \in \{0,1\}^*$ vorkommen.
-        |> QED

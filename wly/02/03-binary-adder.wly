@@ -413,7 +413,6 @@
         $$
 
         wie behauptet.
-        |> QED
 
     Eine anschließende Bemerkung: der Schaltkreis besteht
     ausschließlich aus AND- und OR-Gates; er enthält keine
@@ -556,8 +555,7 @@
                 style=height:15em
                 src=img/circuits/pg-gadget-no-need-p.svg
 
-        Es reichen also in der Tat $2n$ Basis-Gates aus. 
-        |> QED
+        Es reichen also in der Tat $2n$ Basis-Gates aus.
 
     Wir kombinieren wir nun die beiden Lemmas und
     erhalten einen Schaltkreis der Tiefe

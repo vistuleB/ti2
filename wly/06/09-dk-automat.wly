@@ -358,7 +358,6 @@
         $\alpha \beta \sigma v$ Fronten von $G$, und
         $\sigma v$ besteht nur aus Terminalen. Das heißt,
         dass Punkt 2 der Schlussfolgerung nicht gilt.
-        |> QED
 
     |> TopicAnnouncement
         LR(1)-Grammatiken

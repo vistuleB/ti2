@@ -235,7 +235,6 @@
         $\alpha\gamma$ und $\alpha\beta$ entweder _beide in
         $L$_ oder _beide nicht in $L$_. In anderen Worten:
         $\alpha \equiv_L \beta$.
-        |> QED
 
     Hier ist nun ein allgemeiner Angriffsplan, wie man
     zeigt, dass eine Sprache $L$ nicht regulär ist: wir
@@ -290,7 +289,6 @@
         $\alpha_i \equiv_M \alpha_j$ und daher auch
         $\alpha_i \gamma \equiv_M \alpha_j \gamma$, also
         $q = q'$ gelten würde.
-        |> QED
 
     |> Example
         Die Sprache $L = \{a^n b^n \ | \ n \geq 0\}$ ist
@@ -406,7 +404,6 @@
         Der Automat $(\Sigma, Q, \qstart, F, \delta)$ erkennt
         die Sprache $L$; die Anzahl seiner Zustände ist
         gleich dem Index der Sprache $L$.
-        |> QED
 
     Wir können den Index nicht nur verwenden, um zu
     argumentieren, dass eine Sprache nicht regulär ist,
@@ -446,7 +443,6 @@
             _mindestens_ 16. Das er höchstens 16 ist, sehen wir,
             indem wir einen determinisitschen Automaten mit 16
             Zuständen bauen.
-            |> QED
 
         Allgemeiner: sei $L$ die Sprache aller
         $\alpha \in \{0,1\}^n$, deren $n$-letztes Zeichen

@@ -154,7 +154,6 @@
         $$
 
         wie behauptet.
-        |> QED
 
     Unsere neue, bessere Konstruktion benötigt also immer
     noch mindestens $\frac{2^n}{n+1}$ Terme, was bereits
@@ -335,7 +334,6 @@
         Dieser Schaltkreis hat insgesamt $O(n)$ Gates und
         Tiefe 2 (wobei wir die NOT-Gates im $\oplus$-Gate
         nicht mitzählen).
-        |> QED
 
     Wir interpretieren nun die $n$ Inputs $x_1,\dots,x_n$
     von Majoroty als einstellige Binärzahlen, sortieren
@@ -552,7 +550,6 @@
             mindestens $k+1$ Stellen $i$ mit $x_i = 0$, und somit
             ist $C(\x)$ auch wieder mit Wahrscheinlichkeit
             mindestens $\frac{k+1}{n+1}$ korrekt.
-            |> QED
 
         Um eine Analogie aus dem Alltag zu bemühen: wenn Sie
         für eine Wahlprognose _einen_ zufällig ausgewählten
@@ -622,7 +619,6 @@
             Die Signalstärke von $\mathcal{C}^{\otimes 3}$ ist
             also mindestens
             $\frac{3}{2} \delta - \frac{1}{2} \delta^3$.
-            |> QED
 
         Wir beginnen nun mit der Verteilung $\mathcal{C}_0$
         über Schaltkreise der Größe 1 und definieren
@@ -684,7 +680,6 @@
 
             Somit hat $\mathcal{C}^{\otimes 3}$
             Fehlerwahrscheinlichkeit $3 \epsilon^2$.
-            |> QED
 
         Für $i^* := \log_{5/4} n$ hat $\mathcal{C}_{i^*}$
         eine Fehlerwahrscheinlichkeit von höchstens $1/4$.
@@ -822,7 +817,6 @@
         Gates. Ein Schaltkreis mit Fan-in 2 und Tiefe
         $c \log_2 n$ hat also insgesamt höchstens
         $2^{c \log n + 1 } - 1 = O(n^c) = O(\poly(n))$ Gates.
-        |> QED
 
     |> Exercise
         Präzisieren Sie die Größe von Valiants Schaltkreis

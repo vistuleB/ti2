@@ -369,8 +369,7 @@
             $\alpha \beta \varphi w' \rstep{} \alpha X \varphi
             w'$
             gar kein Linksreduktionsschritt, geschweige denn ein
-            korrekter. 
-            |> QED
+            korrekter.
 
         |> Remark
             title=*Nur-dann-Richtung.*
@@ -443,11 +442,9 @@
             mindestens ein Nichtterminal enthalten. Das kann aber
             nicht sein, da $\varphi$ ein Präfix von $w'$ ist. (3)
             kann aus dem gleichen Grund nicht gelten.
-            |> QED
 
         Wir haben nun beide Richtungen gezeigt und somit das
         Lemma bewiesen.
-        |> QED
 
     |> Exercise
         Zeigen Sie, dass die folgende Grammatik $LR(0)$ ist:
