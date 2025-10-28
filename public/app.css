@@ -497,6 +497,7 @@ p:has(> span.qed):not(:has(> *:not(span.qed))):last-child {
   width: 100vw;
   left: var(--bottom-menu-left);
   margin: var(--bottom-menu-margin);
+  pointer-events: none;
 }
 
 #bottom-menu a {
