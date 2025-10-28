@@ -173,6 +173,8 @@ body {
   font-size: var(--page-title-font-size);
   padding-top: var(--page-title-padding-top);
   margin-bottom: 1em;
+  overflow: visible;
+  z-index: 3;
 }
 
 .page-title p {
@@ -427,6 +429,7 @@ p:has(> span.qed):not(:has(> *:not(span.qed))):last-child {
   flex-direction: column;
   gap: var(--top-menu-element-gap);
   font-size: var(--top-menu-font-size);
+  pointer-events: none;
 }
 
 .menu-row {
@@ -444,6 +447,7 @@ p:has(> span.qed):not(:has(> *:not(span.qed))):last-child {
 #top-menu a {
   color: #222;
   position: relative;
+  pointer-events: auto;
 }
 
 #bottom-prev-page-tooltip,
@@ -1100,6 +1104,7 @@ button img {
   color: #4fc3f7;
   text-decoration: none;
   cursor: pointer;
+  z-index: 3;
 }
 
 .t-3003::after {

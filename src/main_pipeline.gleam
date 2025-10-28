@@ -206,8 +206,8 @@ pub fn main_pipeline(author_mode: Bool)  -> List(Pipe) {
         #(
           "Exercise",
           "Sub",
-          " *Übungsaufgabe ::øøChapterCounter.::øøSubCounter.::øøExerciseCounter*" <> post_counter_space,
-          " *Übungsaufgabe ::øøChapterCounter.::øøExerciseCounter*" <> post_counter_space,
+          "*Übungsaufgabe ::øøChapterCounter.::øøSubCounter.::øøExerciseCounter*" <> post_counter_space,
+          "*Übungsaufgabe ::øøChapterCounter.::øøExerciseCounter*" <> post_counter_space,
         ),
         #(
           "Statement",

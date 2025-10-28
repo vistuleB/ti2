@@ -32,7 +32,7 @@ fn fragment_bundler(
 ) -> FragmentOf(VXML) {
   let assert V(blame, _, _, _) = vxml
   let path = case blame {
-    Src(_, path, _, _) -> path
+    Src(_, path, _, _, _) -> path
     _ -> panic
   }
   let s = input_dir_2_drop_from_blame_path_if_single_file
