@@ -8,8 +8,6 @@
   --body-background-color: rgba(248, 244, 253, 1);
   --page-title-border-min-width: 40px;
   --line-height: 1.8rem;
-  --p-hasmathjax-overflow-x: scroll;
-  --p-hasmathjax-overflow-y: hidden;
 
   /*********************************/
   /* resetScreenWidthDependentVars */
@@ -61,6 +59,13 @@
   --nested-ul-ol-margin-right: 2rem;
   --textfigure-padding-x: 6rem;
   --math-block-max-width: 100vw;
+
+  /*****************************/
+  /* modified by 'author mode' */
+  /*****************************/
+  --p-hasmathjax-overflow-x: scroll;
+  --p-hasmathjax-overflow-y: hidden;
+  --pre-overflow-x: scroll;
 
   /********************************/
   /* light mode code block colors */
@@ -269,9 +274,9 @@ pre {
   width: 100%;
   margin: 2ch auto;
   padding: 1.3rem 1.5rem;
-  overflow: scroll;
+  overflow-x: var(--pre-overflow-x);
+  overflow-y: visible;
   text-wrap: nowrap;
-  overflow: visible;
 }
 
 p {
