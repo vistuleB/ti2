@@ -36,7 +36,7 @@ export default defineConfig({
     },
   ],
   server: {
-    port: 8080,
+    port: 3003,
     host: "0.0.0.0",
     cors: true,
   },
