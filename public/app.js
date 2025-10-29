@@ -74,15 +74,15 @@ const onClick = (e) => {
   }
 
   let h = e.clientY / screenHeight;
-  
+
   if (h < 0.25) {
     window.scrollBy({ top: -screenHeight * 0.8 });
-  };
+  }
 
   if (h > 0.75) {
     window.scrollBy({ top: screenHeight * 0.8 });
   }
-  
+
   if (screenWidth <= TABLET_MAX_WIDTH) {
     return;
   }
@@ -260,7 +260,7 @@ const carouselMaxWidthInPx = () => {
   const adjustedScreenWidth = screenWidth * 0.9;
   const computeTabletMaxWidth = Math.min(
     adjustedScreenWidth,
-    DESKTOP_MAIN_COLUMN_WIDTH
+    DESKTOP_MAIN_COLUMN_WIDTH,
   );
   const computeDesktopMaxWidth =
     screenWidth < DESKTOP_MAIN_COLUMN_WIDTH
@@ -401,7 +401,7 @@ const resetScreenWidthDependentVars = () => {
   let set = (key, val, unit) => {
     root.style.setProperty(key, `${val()}` + unit);
   };
-  
+
   set("--top-menu-position", topMenuPosition, "");
   set("--top-menu-left", topMenuLeftInPx, "px");
   set("--top-menu-font-size", topMenuFontSizeInEm, "em");
@@ -424,12 +424,12 @@ const resetScreenWidthDependentVars = () => {
   set(
     "--index-header-title-line-height",
     indexHeaderTitleLineHeightInRem,
-    "rem"
+    "rem",
   );
   set(
     "--index-header-subtitle-font-size",
     indexHeaderSubtitleFontSizeInRem,
-    "rem"
+    "rem",
   );
   set("--index-header-padding-top", indexHeaderPaddingTopInPx, "px");
   set("--index-header-padding-bottom", indexHeaderPaddingBottomInRem, "rem");
@@ -439,20 +439,24 @@ const resetScreenWidthDependentVars = () => {
   set(
     "--index-toc-subchapter-level-margin",
     indexTocSubchapterLevelMarginInEm,
-    "em"
+    "em",
   );
   set("--carousel-max-width", carouselMaxWidthInPx, "px");
   set(
     "--end-of-page-main-column-margin-bottom",
     endOfPageMainColumnMarginBottomInRem,
-    "rem"
+    "rem",
   );
   set(
     "--end-of-page-well-margin-bottom",
     endOfPageWellMarginBottomInRem,
-    "rem"
+    "rem",
   );
-  set("--end-of-page-elt-padding-bottom", endOfPageEltPaddingBottomInRem, "rem");
+  set(
+    "--end-of-page-elt-padding-bottom",
+    endOfPageEltPaddingBottomInRem,
+    "rem",
+  );
   set("--main-column-width", mainColumnWidthInPx, "px");
   set("--main-column-padding-x", mainColumnPaddingXInRem, "rem");
   set("--main-column-to-well-margin", mainColumnToWellMarginInRem, "rem");
@@ -463,7 +467,7 @@ const resetScreenWidthDependentVars = () => {
   set(
     "--subtopic-announcement-font-size",
     subtopicAnnouncementFontSizeInRem,
-    "rem"
+    "rem",
   );
   set("--well-margin-y", wellMarginYInRem, "rem");
   set("--last-child-well-margin-bottom", lastChildWellMarginBottomInRem, "rem");
@@ -549,11 +553,10 @@ const tryConstrainFigureImage = (image) => {
   image.style.width = constrainerWidth + "px";
   return true;
 };
-  
+
 const tryUnconstrainFigureImage = (image) => {
   let constrainerWidth = image.constrainer.getBoundingClientRect().width;
-  if (constrainerWidth >= image.originalWidthInPx)
-      return false;
+  if (constrainerWidth >= image.originalWidthInPx) return false;
   image.classList.remove("constrained");
   image.classList.add("unconstrained");
   image.style.width = image.originalWidth;
@@ -754,13 +757,13 @@ const setupFigureImage = (image) => {
 const setupImages = () => {
   let images = document.querySelectorAll("img");
   let [_groupImages, images2] = partitionArray(images, (image) =>
-    image.closest(".group")
+    image.closest(".group"),
   );
   let [carouselImages, images3] = partitionArray(images2, (image) =>
-    image.closest(".carousel")
+    image.closest(".carousel"),
   );
   let [figureImages, _] = partitionArray(images3, (image) =>
-    image.closest("figure")
+    image.closest("figure"),
   );
   carouselImages.forEach(setupCarouselImage);
   figureImages.forEach(setupFigureImage);
@@ -772,7 +775,7 @@ class Carousel {
   constructor(container) {
     if (!container.classList.contains("carousel__container")) {
       console.error(
-        "'Carousel' constructor should be called on carousel__container!"
+        "'Carousel' constructor should be called on carousel__container!",
       );
       return;
     }
@@ -797,16 +800,13 @@ class Carousel {
     this.group = this.container.closest(".group");
 
     this.imgs.forEach((img) =>
-      img.addEventListener(
-        "click", 
-        (e) => {
-          if (this.group) return;
-          if (this.toggleZoom(e)) {
-            e.stopPropagation();
-            e.preventDefault();
-          }
+      img.addEventListener("click", (e) => {
+        if (this.group) return;
+        if (this.toggleZoom(e)) {
+          e.stopPropagation();
+          e.preventDefault();
         }
-      )
+      }),
     );
 
     this.maxOriginalWidthInPx = 0;
@@ -1001,7 +1001,7 @@ class Carousel {
     let lambda = clamp01(
       (this.containerWidth - CAROUSEL_ARROW_MIN_HEIGHT_CONTAINER_WIDTH) /
         (CAROUSEL_ARROW_MAX_HEIGHT_CONTAINER_WIDTH -
-          CAROUSEL_ARROW_MIN_HEIGHT_CONTAINER_WIDTH)
+          CAROUSEL_ARROW_MIN_HEIGHT_CONTAINER_WIDTH),
     );
 
     return (
@@ -1149,7 +1149,7 @@ class Carousel {
 
   nudgeCarouselItem(direction) {
     this.setItemNumber(
-      1 + ((this.numItems + this.itemNumber + direction - 1) % this.numItems)
+      1 + ((this.numItems + this.itemNumber + direction - 1) % this.numItems),
     );
   }
 
@@ -1345,8 +1345,7 @@ const onResize = () => {
 const figureImagesOnResize = () => {
   for (const image of allFigureImages) {
     image.classList.remove("zoom-transition");
-    if (image.classList.contains("constrained"))
-      tryConstrainFigureImage(image);
+    if (image.classList.contains("constrained")) tryConstrainFigureImage(image);
   }
   window.requestAnimationFrame(() => {
     for (const image of allFigureImages) {
@@ -1503,22 +1502,22 @@ const authorModeInit = () => {
         e.preventDefault();
         e.stopPropagation();
         sendCmdTo3003("open " + t.innerHTML);
-      })
+      });
     } else {
       t.addEventListener("click", (e) => {
         e.preventDefault();
         e.stopPropagation();
         sendCmdTo3003("code --goto " + t.innerHTML);
-      })
+      });
     }
   }
-}
+};
 
-const sendCmdTo3003 = command => {
+const sendCmdTo3003 = (command) => {
   const payload = { cmd: command };
-  fetch("http://localhost:3003/log-event", {
+  fetch("/log-event", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
-  })
-}
+  });
+};
