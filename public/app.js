@@ -392,10 +392,10 @@ const textfigurePaddingXInRem = () => {
   return 6;
 };
 
-const mathBlockMaxWidthInPx = () => {
-  if (screenWidth > LAPTOP_MAX_WIDTH) return Infinity;
-  return mainColumnWidthInPx();
-};
+// const mathBlockMaxWidthInPx = () => {
+//   // if (screenWidth > LAPTOP_MAX_WIDTH) return Infinity;
+//   // return mainColumnWidthInPx();
+// };
 
 const resetScreenWidthDependentVars = () => {
   let set = (key, val, unit) => {
@@ -478,7 +478,7 @@ const resetScreenWidthDependentVars = () => {
   set("--nested-ul-ol-margin-left", nestedUlOlMarginLeftInRem, "rem");
   set("--nested-ul-ol-margin-right", nestedUlOlMarginRightInRem, "rem");
   set("--textfigure-padding-x", textfigurePaddingXInRem, "rem");
-  set("--math-block-max-width", mathBlockMaxWidthInPx, "px");
+  // set("--math-block-max-width", mathBlockMaxWidthInPx, "px");
 };
 
 function getClosestVisibleCarousel() {

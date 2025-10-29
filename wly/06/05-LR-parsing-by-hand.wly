@@ -34,9 +34,9 @@
     Grammatik ändern:
 
     \begin{align*}
-    S&\rightarrow x \ | \ y \ | \ z \\
-    S&\rightarrow (SOS) \\
-    O&\rightarrow + \ | \ *
+    S &\rightarrow x \ | \ y \ | \ z \\
+    S &\rightarrow (SOS) \\
+    O &\rightarrow + \ | \ *
     \end{align*}
 
     Das geht aber nicht immer:

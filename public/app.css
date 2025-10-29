@@ -58,7 +58,7 @@
   --nested-ul-ol-margin-left: 2rem;
   --nested-ul-ol-margin-right: 2rem;
   --textfigure-padding-x: 6rem;
-  --math-block-max-width: 100vw;
+  --math-block-max-width: 100%;
 
   /*****************************/
   /* modified by 'author mode' */
@@ -610,6 +610,10 @@ pre.listing.redyellow > span.listing-bol::before {
   justify-content: center;
 }
 
+.pseudowell:has(.math-block>.t-3003) {
+  width: var(--main-column-width);
+}
+
 .group__container {
   display: flex;
   justify-content: center;
@@ -947,7 +951,8 @@ button img {
   max-width: var(--math-block-max-width);
   position: relative;
   display: block;
-  width: 100%;
+  width: fit-content;
+  margin: 0 auto;
   overflow-x: scroll;
   overflow-y: hidden;
 }
@@ -1147,4 +1152,17 @@ figure:hover>.t-3003,
 figure:hover:has(>.t-3003) img,
 .carousel__item:hover:has(>.t-3003) img {
   background-color: #bfb;
+}
+
+.math-block:hover > .t-3003 {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  top: -3.5em;
+}
+
+.math-block:hover:has(>.t-3003) {
+  background-color: #bfb;
+  overflow: visible;
 }

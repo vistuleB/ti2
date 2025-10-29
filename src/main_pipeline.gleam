@@ -346,6 +346,8 @@ pub fn main_pipeline(author_mode: Bool)  -> List(Pipe) {
       True -> [
         dl.ti2_turn_lines_into_3003_spans("./wly/", ["Math", "MathBlock", "TopMenu", "BottomMenu"]),
         dl.ti2_adorn_img_with_3003_spans("./public/", []),
+        dl.ti2_adorn_with_3003_spans(#("./wly/", "", ["MathBlock"])),
+        dl.ti2_wrap_with_3003_spans(#("./wly/", "", ["Math"])),
       ]
     },
     [
