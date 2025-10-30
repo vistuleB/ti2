@@ -1515,7 +1515,11 @@ const authorModeInit = () => {
 
 const sendCmdTo3003 = (command) => {
   const payload = { cmd: command };
-  fetch("/log-event", {
+  const url =
+    window.location.protocol === "file:"
+      ? "http://localhost:3003/log-event"
+      : "/log-event";
+  fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
