@@ -1,8 +1,6 @@
 # TI2 (user instructions)
 
-## 1. Gleam Install
-
-[official site](https://gleam.run/getting-started/installing)
+## 1. [Gleam Install](https://gleam.run/getting-started/installing)
 
 ## 2. Clone repos
 
@@ -56,3 +54,13 @@ In VSCode, download the [Writerly](https://marketplace.visualstudio.com/items?it
 ## 6. Formatter
 
 Run `gleam run -- --fmt` in `ti2` repo for default 55 to reformat at char per line formatting or `gleam run -- --fmt <X>` to format line length to X chars per line.
+
+## 7. Go-to-source tooltips
+
+Run `npm install`, `npm run dev`, `gleam run -- --local`.
+
+Do not forget to an ordinary `gleam run` before publishing again—you don't want to publish the go-to-source tooltips!
+
+## 8. Help
+
+Run `gleam run -- --help` in `ti2` repo.
