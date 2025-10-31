@@ -90,7 +90,7 @@
     3-Färbung von $G$ ist, das ist einfach.
 
     |> Exercise
-        handle==problem-CNF-SAT
+        handle=problem-CNF-SAT
         (`CNF-Satisfiability`{sc}). Gegeben eine Formel $F$
         in konjunktiver Normalform. Gibt es eine Belegung der
         Variablen, so dass $F$ zu `True` wird?
