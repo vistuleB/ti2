@@ -122,7 +122,6 @@
     $\{u,v\} \in E$ gibt mit $u,v \in I$.
 
     |> Problem
-        handle=blabla
         Gegeben ein Graph $G=(V,E)$ und eine Zahl $k$ . Finde
         eine unabhängige Menge in $I$ in $G$ mit $|I| \geq k$,
         falls es eine solche gibt.

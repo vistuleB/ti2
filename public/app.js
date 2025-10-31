@@ -1193,31 +1193,37 @@ class Carousel {
   }
 }
 
-const constrainGroup = (group) => {
+const constrainGroup = (group, with_transition) => {
   group.classList.remove("unconstrained");
   group.classList.add("constrained");
   let w = group.constrainer.getBoundingClientRect().width;
   let s = Math.min(1, w / group.originalWidthInPx);
   group.placeholder.classList.remove("group_placeholder_transition_ahead");
-  group.placeholder.classList.add("group_placeholder_transition_behind");
+  if (with_transition)
+    group.placeholder.classList.add("group_placeholder_transition_behind");
+  else
+    group.placeholder.classList.remove("group_placeholder_transition_behind");
   group.placeholder.style.height = group.originalHeightInPx * s + "px";
   group.scaler.style.transform = `translate(-50%) scale(${s})`;
 };
 
-const unconstrainGroup = (group) => {
+const unconstrainGroup = (group, with_transition) => {
   group.classList.remove("constrained");
   group.classList.add("unconstrained");
   group.placeholder.classList.remove("group_placeholder_transition_behind");
-  group.placeholder.classList.add("group_placeholder_transition_ahead");
+  if (with_transition)
+    group.placeholder.classList.add("group_placeholder_transition_ahead");
+  else
+    group.placeholder.classList.remove("group_placeholder_transition_ahead");
   group.placeholder.style.height = group.originalHeightInPx + "px";
   group.scaler.style.transform = "translate(-50%)";
 };
 
 const toggleGroupConstrained = (group) => {
   if (group.classList.contains("constrained")) {
-    unconstrainGroup(group);
+    unconstrainGroup(group, true);
   } else {
-    constrainGroup(group);
+    constrainGroup(group, true);
   }
 };
 
@@ -1232,7 +1238,7 @@ const setupGroups = () => {
     group.originalWidthInPx = r.width;
     group.originalHeightInPx = r.height;
     group.constrainer = group.parentNode;
-    constrainGroup(group);
+    constrainGroup(group, false);
     group.scaler.addEventListener("click", (e) => {
       if (!isPageCentered) return;
       e.stopPropagation();
@@ -1240,17 +1246,14 @@ const setupGroups = () => {
       toggleGroupConstrained(group);
     });
     window.requestAnimationFrame(() => {
-      // group.placeholder.classList.add("group_placeholder_transition");
       group.scaler.classList.add("group_scaler_transition");
     });
     group.onResize = () => {
-      // group.placeholder.classList.remove("group_placeholder_transition");
       group.scaler.classList.remove("group_scaler_transition");
       if (group.classList.contains("constrained")) {
-        constrainGroup(group);
+        constrainGroup(group, false);
       }
       window.requestAnimationFrame(() => {
-        // group.placeholder.classList.add("group_placeholder_transition");
         group.scaler.classList.add("group_scaler_transition");
       });
     };
