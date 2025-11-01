@@ -226,13 +226,11 @@ pub fn main_pipeline(author_mode: Bool)  -> List(Pipe) {
     pp.create_math_elements([infra.BackslashParenthesis, infra.SingleDollar], infra.SingleDollar, infra.BackslashParenthesis),
     [
       dl.regex_split_and_replace__outside(escaped_dollar_to_span_rr_splitter, ["Math", "MathBlock"]),
-    ],
-    // pp.splitting_empty_lines_cleanup(),
-    [
       dl.group_consecutive_children__outside(#("p", p_cannot_contain), p_cannot_be_contained_in),
       dl.unwrap("WriterlyBlankLine"),
       dl.trim("p"),
       dl.delete_if_empty("p"),
+      dl.expand_info_attribute(["pre"]),
       dl.ti2_process_pre_listing_classname(),
       dl.ti2_parse_python_prompt_pre(),
       dl.ti2_parse_orange_comments_pre(),
@@ -283,18 +281,6 @@ pub fn main_pipeline(author_mode: Bool)  -> List(Pipe) {
         #("Definition <a href=1>_1_</a>", "<a href=1>Definition _1_</a>"),
       ]),
       dl.detokenize_href_surroundings(),
-      // dl.rearrange_links__batch([
-      //   #("Theorem <a href=1>_1_</a>", "<a href=1>Theorem _1_</a>"),
-      //   #("(Theorem <a href=1>_1_</a>", "(<a href=1>Theorem _1_</a>"),
-      //   #("Übungsaufgabe <a href=1>_1_</a>", "<a href=1>Übungsaufgabe _1_</a>"),
-      //   #("Aufgabe <a href=1>_1_</a>", "<a href=1>Aufgabe _1_</a>"),
-      //   #("Lemma <a href=1>_1_</a>", "<a href=1>Lemma _1_</a>"),
-      //   #("Algorithmus <a href=1>_1_</a>", "<a href=1>Algorithmus _1_</a>"),
-      //   #("Kapitel <a href=1>_1_</a>", "<a href=1>Kapitel _1_</a>"),
-      //   #("Teilkapitel <a href=1>_1_</a>", "<a href=1>Teilkapitel _1_</a>"),
-      //   #("Beispiel <a href=1>_1_</a>", "<a href=1>Beispiel _1_</a>"),
-      //   #("Definition <a href=1>_1_</a>", "<a href=1>Definition _1_</a>"),
-      // ]),
     ],
     [
       dl.wrap_children(#("Carousel", "CarouselItems", infra.Continue)),
