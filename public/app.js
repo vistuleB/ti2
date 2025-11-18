@@ -15,6 +15,8 @@
  *   again; see const DESKTOP_MAIN_COLUMN_WIDTH   *
  **************************************************/
 
+const RECENTERING_TOLERANCE = 150;
+
 const UNCOMFORTABLY_SMALL_MAX_WIDTH = 400;
 const MOBILE_MAX_WIDTH = 550;
 const TABLET_MAX_WIDTH = 900;
@@ -635,8 +637,8 @@ const onScrollMenuDisplay = (e) => {
 const smoothRecenterMaybe = (_) => {
   let theoretical_left = offsideWidth();
   if (
-    window.scrollX > theoretical_left - 200 &&
-    window.scrollX < theoretical_left + 200
+    window.scrollX > theoretical_left - RECENTERING_TOLERANCE &&
+    window.scrollX < theoretical_left + RECENTERING_TOLERANCE
   ) {
     recenter("smooth");
   } else {
