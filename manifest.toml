@@ -30,7 +30,7 @@ packages = [
 [requirements]
 argv = { version = ">= 1.0.2 and < 2.0.0" }
 colours = { version = ">= 0.3.0 and < 1.0.0" }
-desugaring = { path = "../../vistuleB/wly/desugaring" }
+desugaring = { path = "../wly/desugaring" }
 gleam_regexp = { version = ">= 1.1.1 and < 2.0.0" }
 gleam_stdlib = { version = ">= 0.34.0 and < 2.0.0" }
 gleam_time = { version = ">= 1.2.0 and < 2.0.0" }
@@ -39,5 +39,5 @@ input = { version = ">= 1.0.1 and < 2.0.0" }
 on = { version = ">= 1.1.0 and < 2.0.0" }
 simplifile = { version = ">= 2.3.0 and < 3.0.0" }
 splitter = { version = ">= 1.1.0 and < 2.0.0" }
-vxml = { path = "../../vistuleB/wly/vxml" }
-writerly = { path = "../../vistuleB/wly/writerly" }
+vxml = { path = "../wly/vxml" }
+writerly = { path = "../wly/writerly" }
