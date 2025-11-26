@@ -74,7 +74,7 @@
         *(Endlicher Automat, Finite State Machine).* Ein
         endlicher Automat besteht aus einem endlichen
         Eingabealphaet $\Sigma$, einer endlichen Menge $Q$
-        von Zuständen, einem Startzustand $\qstart \in Q$ ,
+        von Zuständen, einem Startzustand $\qstart \in Q$,
         einer Menge $F \subseteq Q$ von akzeptierenden
         Endzuständen und einer Zustandsübergangsfunktion
 

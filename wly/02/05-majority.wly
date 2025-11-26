@@ -717,27 +717,28 @@
             |> img
                 style=height:18em
                 src=img/circuits/majority-probability-labeled.svg
-            |> br
-            Graph der Funktion $p \mapsto p^3 + 3 p^2 (1-p)$
+            |> figcaption
+                Graph der Funktion $p \mapsto p^3 + 3 p^2 (1-p)$
         |> hr
 
         |> figure
             |> img
                 style=height:18em
                 src=img/circuits/majority-probability-close-to-half-labeled.svg
-            |> br
-            Signalstärke $\delta$ wächst für $p \in [1/2, 3/4]$
-            exponentiell.
+            |> figcaption
+                Signalstärke $\delta$ wächst für $p \in [1/2, 3/4]$
+                exponentiell.
         |> hr
 
         |> figure
+            style=margin-bottom:1em;
             |> img
-                style=height:18em
+                style=height:18em;
                 src=img/circuits/majority-probability-close-to-one-labeled.svg
-            |> br
-            Fehlerwahrscheinlichkeit $\epsilon$ fällt für
-            $p \in [3/4, 1/2]$ doppelt exponentiell.
-        |> hr
+            |> figcaption
+                Fehlerwahrscheinlichkeit $\epsilon$ fällt für
+                $p \in [3/4, 1/2]$ doppelt exponentiell.
+
         Wir setzen nun
         $k := i^* + 2 + j^* = \log_{5/4} n + 2 + \log_{3/2} n
         = O(\log n)$

@@ -130,6 +130,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scrollbar-width: 0px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 html {
@@ -937,7 +942,9 @@ a:hover {
 }
 
 hr {
-  color: #eeeeee40;
+  border: solid 0.5px black;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 button img {
