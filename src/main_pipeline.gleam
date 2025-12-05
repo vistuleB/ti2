@@ -334,6 +334,7 @@ pub fn main_pipeline(author_mode: Bool)  -> List(Pipe) {
         dl.ti2_adorn_img_with_3003_spans("./public/", []),
         dl.ti2_adorn_with_3003_spans(#("./wly/", "", ["MathBlock"])),
         dl.ti2_wrap_with_3003_spans(#("./wly/", "", ["Math"])),
+        dl.delete_attribute__batch(["original"]),
       ]
     },
     [

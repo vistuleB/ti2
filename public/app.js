@@ -1215,8 +1215,7 @@ const unconstrainGroup = (group, with_transition) => {
   group.placeholder.classList.remove("group_placeholder_transition_behind");
   if (with_transition)
     group.placeholder.classList.add("group_placeholder_transition_ahead");
-  else
-    group.placeholder.classList.remove("group_placeholder_transition_ahead");
+  else group.placeholder.classList.remove("group_placeholder_transition_ahead");
   group.placeholder.style.height = group.originalHeightInPx + "px";
   group.scaler.style.transform = "translate(-50%)";
 };
@@ -1503,11 +1502,14 @@ const authorModeInit = () => {
   root.style.setProperty("--p-hasmathjax-overflow-y", "visible");
   for (const t of tooltips) {
     if (t.classList.contains("t-3003-i")) {
-      t.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        sendCmdTo3003("open " + t.innerHTML);
-      });
+      let urls = t.getElementsByClassName("t-3003-i-url");
+      for (const u of urls) {
+        u.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          sendCmdTo3003("open " + u.innerHTML);
+        });
+      }
     } else {
       t.addEventListener("click", (e) => {
         e.preventDefault();

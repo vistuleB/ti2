@@ -1145,6 +1145,14 @@ button img {
   text-decoration: underline;
 }
 
+.t-3003:hover:has(.t-3003-i-url) {
+  text-decoration: none;
+}
+
+.t-3003-i-url:hover {
+    text-decoration: underline;
+}
+
 .t-3003-c:hover .t-3003 {
   visibility: visible;
   opacity: 1;
