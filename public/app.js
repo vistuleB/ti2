@@ -1493,13 +1493,16 @@ document.addEventListener("keydown", onKeyDown, { capture: true });
 
 const authorModeInit = () => {
   let tooltips = document.getElementsByClassName("t-3003");
+
   if (tooltips.length <= 0) return; // no tooltips == no author mode
+
   root.style.setProperty("--body-background-color", "#fcfcfc");
   root.style.setProperty("--pre-background-color", "#fff");
   root.style.setProperty("--pre-border", "1.5px solid black");
   root.style.setProperty("--pre-overflow-x", "visible");
   root.style.setProperty("--p-hasmathjax-overflow-x", "visible");
   root.style.setProperty("--p-hasmathjax-overflow-y", "visible");
+
   for (const t of tooltips) {
     if (t.classList.contains("t-3003-i")) {
       let urls = t.getElementsByClassName("t-3003-i-url");
@@ -1526,9 +1529,12 @@ const sendCmdTo3003 = (command) => {
     window.location.protocol === "file:"
       ? "http://localhost:3003/log-event"
       : "/log-event";
-  fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
-  });
+  fetch(
+    url,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    },
+  );
 };
