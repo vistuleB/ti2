@@ -394,11 +394,6 @@ const textfigurePaddingXInRem = () => {
   return 6;
 };
 
-// const mathBlockMaxWidthInPx = () => {
-//   // if (screenWidth > LAPTOP_MAX_WIDTH) return Infinity;
-//   // return mainColumnWidthInPx();
-// };
-
 const resetScreenWidthDependentVars = () => {
   let set = (key, val, unit) => {
     root.style.setProperty(key, `${val()}` + unit);
@@ -480,7 +475,6 @@ const resetScreenWidthDependentVars = () => {
   set("--nested-ul-ol-margin-left", nestedUlOlMarginLeftInRem, "rem");
   set("--nested-ul-ol-margin-right", nestedUlOlMarginRightInRem, "rem");
   set("--textfigure-padding-x", textfigurePaddingXInRem, "rem");
-  // set("--math-block-max-width", mathBlockMaxWidthInPx, "px");
 };
 
 function getClosestVisibleCarousel() {
@@ -549,7 +543,6 @@ const tryConstrainFigureImage = (image) => {
   }
   image.classList.remove("unconstrained");
   image.classList.add("constrained");
-  // image.style.width = `min(${constrainerWidth + "px"}, ${image.originalWidth})`;
   image.style.width = constrainerWidth + "px";
   return true;
 };
@@ -642,11 +635,6 @@ const smoothRecenterMaybe = (_) => {
   } else {
     isPageCentered = false;
   }
-};
-
-const onMobile = (callback) => {
-  if (window.innerWidth <= MOBILE_MAX_WIDTH) return callback();
-  return;
 };
 
 const onTouchscreenElse = (callback1, callback2) => {

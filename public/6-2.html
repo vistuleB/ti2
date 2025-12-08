@@ -639,12 +639,10 @@
           <div class="math-block">
             $$
             \begin{align*}
-            (p, x) \step{a} (q, y) \textnormal { wird ersetzt durch die zwei Transitionen }
+            &amp;(p, x) \step{a} (q, y) \textnormal { wird ersetzt durch die zwei Transitionen }
             (p, x) \step{a} (p', \epsilon) \textnormal { und }(p', \epsilon) \step{a} (q, y) \\
-            (p, \epsilon) \step{a} (q,\epsilon) \textnormal { wird ersetzt durch die zwei
-            Transitionen }
-            (p, \epsilon) \step{a} (p', \bigstar) \textnormal { und }(p', \bigstar) \step{a} (q,
-            \epsilon) \ .
+            &amp;(p, \epsilon) \step{a} (q,\epsilon) \textnormal { wird ersetzt durch die zwei Transitionen }
+            (p, \epsilon) \step{a} (p', \bigstar) \textnormal { und }(p', \bigstar) \step{a} (q, \epsilon) \ .
             \end{align*}
             $$
           </div>
@@ -1013,22 +1011,22 @@
       <div class="math-block">
         $$
         \begin{align*}
-        \textcolor{red}{A_{11}}&amp;\textcolor{red}{\rightarrow A_{11} A_{11}} \\
-        A_{13}&amp;\rightarrow \textcolor{red}{A_{11}} A_{13} \\
-        A_{13}&amp;\rightarrow A_{13} \textcolor{red}{A_{33}} \\
-        A_{22}&amp;\rightarrow A_{22} A_{22} \\
-        \textcolor{red}{A_{33}}&amp;\textcolor{red}{\rightarrow A_{33} A_{33}} \\ \hline
-        A_{13}&amp;\rightarrow a A_{13} a \\
-        A_{13}&amp;\rightarrow b A_{22} b \\
-        A_{22}&amp;\rightarrow a \textcolor{red}{A_{2'2'}} \\
-        A_{22}&amp;\rightarrow b \textcolor{red}{A_{2'2'}} \\
-        A_{04}&amp;\rightarrow A_{13}\\ \hline
-        \textcolor{red}{A_{00}}&amp;\textcolor{red}{\rightarrow \epsilon} \\
-        \textcolor{red}{A_{11}}&amp;\textcolor{red}{\rightarrow \epsilon} \\
-        A_{22}&amp;\rightarrow \epsilon \\
-        \textcolor{red}{A_{2'2'}}&amp;\textcolor{red}{\rightarrow \epsilon} \\
-        \textcolor{red}{A_{33}}&amp;\textcolor{red}{\rightarrow \epsilon} \\
-        \textcolor{red}{A_{44}}&amp;\textcolor{red}{\rightarrow \epsilon} \\
+        {\color{red} A_{11}}    \,\,&amp;{\rightarrow A_{11} A_{11}} \\
+        A_{13}                  \,\,&amp;{\rightarrow {\color{red} A_{11}} A_{13}} \\
+        A_{13}                  \,\,&amp;{\rightarrow A_{13} {\color{red} A_{33}}} \\
+        A_{22}                  \,\,&amp;{\rightarrow A_{22} A_{22}} \\
+        {\color{red} A_{33}}    \,\,&amp;{\color{red} \rightarrow A_{33} A_{33}} \\ \hline
+        A_{13}                  \,\,&amp;{\rightarrow a A_{13} a} \\
+        A_{13}                  \,\,&amp;{\rightarrow b A_{22} b} \\
+        A_{22}                  \,\,&amp;{\rightarrow a {\color{red} A_{2'2'}}} \\
+        A_{22}                  \,\,&amp;{\rightarrow b {\color{red} A_{2'2'}}} \\
+        A_{04}                  \,\,&amp;{\rightarrow A_{13}}\\ \hline
+        {\color{red} A_{00}}    \,\,&amp;{\color{red} \rightarrow \epsilon} \\
+        {\color{red} A_{11}}    \,\,&amp;{\color{red} \rightarrow \epsilon} \\
+        A_{22}                  \,\,&amp;{\rightarrow \epsilon} \\
+        {\color{red} A_{2'2'}}  \,\,&amp;{\color{red} \rightarrow \epsilon} \\
+        {\color{red} A_{33}}    \,\,&amp;{\color{red} \rightarrow \epsilon} \\
+        {\color{red} A_{44}}    \,\,&amp;{\color{red} \rightarrow \epsilon} \\
         \end{align*}
         $$
       </div>

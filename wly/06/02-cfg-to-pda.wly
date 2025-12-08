@@ -233,12 +233,10 @@
                 gebracht werden, indem wir Zwischenzustände einführen:
 
                 \begin{align*}
-                (p, x) \step{a} (q, y) \textnormal { wird ersetzt durch die zwei Transitionen }
+                &(p, x) \step{a} (q, y) \textnormal { wird ersetzt durch die zwei Transitionen }
                 (p, x) \step{a} (p', \epsilon) \textnormal { und }(p', \epsilon) \step{a} (q, y) \\
-                (p, \epsilon) \step{a} (q,\epsilon) \textnormal { wird ersetzt durch die zwei
-                Transitionen }
-                (p, \epsilon) \step{a} (p', \bigstar) \textnormal { und }(p', \bigstar) \step{a} (q,
-                \epsilon) \ .
+                &(p, \epsilon) \step{a} (q,\epsilon) \textnormal { wird ersetzt durch die zwei Transitionen }
+                (p, \epsilon) \step{a} (p', \bigstar) \textnormal { und }(p', \bigstar) \step{a} (q, \epsilon) \ .
                 \end{align*}
 
                 Im zweiten Falle pushen wir also pro Forma ein
@@ -495,22 +493,22 @@
         Sammeln wir nun alle Produktionen:
 
         \begin{align*}
-        \textcolor{red}{A_{11}}&\textcolor{red}{\rightarrow A_{11} A_{11}} \\
-        A_{13}&\rightarrow \textcolor{red}{A_{11}} A_{13} \\
-        A_{13}&\rightarrow A_{13} \textcolor{red}{A_{33}} \\
-        A_{22}&\rightarrow A_{22} A_{22} \\
-        \textcolor{red}{A_{33}}&\textcolor{red}{\rightarrow A_{33} A_{33}} \\ \hline
-        A_{13}&\rightarrow a A_{13} a \\
-        A_{13}&\rightarrow b A_{22} b \\
-        A_{22}&\rightarrow a \textcolor{red}{A_{2'2'}} \\
-        A_{22}&\rightarrow b \textcolor{red}{A_{2'2'}} \\
-        A_{04}&\rightarrow A_{13}\\ \hline
-        \textcolor{red}{A_{00}}&\textcolor{red}{\rightarrow \epsilon} \\
-        \textcolor{red}{A_{11}}&\textcolor{red}{\rightarrow \epsilon} \\
-        A_{22}&\rightarrow \epsilon \\
-        \textcolor{red}{A_{2'2'}}&\textcolor{red}{\rightarrow \epsilon} \\
-        \textcolor{red}{A_{33}}&\textcolor{red}{\rightarrow \epsilon} \\
-        \textcolor{red}{A_{44}}&\textcolor{red}{\rightarrow \epsilon} \\
+        {\color{red} A_{11}}    \,\,&{\rightarrow A_{11} A_{11}} \\
+        A_{13}                  \,\,&{\rightarrow {\color{red} A_{11}} A_{13}} \\
+        A_{13}                  \,\,&{\rightarrow A_{13} {\color{red} A_{33}}} \\
+        A_{22}                  \,\,&{\rightarrow A_{22} A_{22}} \\
+        {\color{red} A_{33}}    \,\,&{\color{red} \rightarrow A_{33} A_{33}} \\ \hline
+        A_{13}                  \,\,&{\rightarrow a A_{13} a} \\
+        A_{13}                  \,\,&{\rightarrow b A_{22} b} \\
+        A_{22}                  \,\,&{\rightarrow a {\color{red} A_{2'2'}}} \\
+        A_{22}                  \,\,&{\rightarrow b {\color{red} A_{2'2'}}} \\
+        A_{04}                  \,\,&{\rightarrow A_{13}}\\ \hline
+        {\color{red} A_{00}}    \,\,&{\color{red} \rightarrow \epsilon} \\
+        {\color{red} A_{11}}    \,\,&{\color{red} \rightarrow \epsilon} \\
+        A_{22}                  \,\,&{\rightarrow \epsilon} \\
+        {\color{red} A_{2'2'}}  \,\,&{\color{red} \rightarrow \epsilon} \\
+        {\color{red} A_{33}}    \,\,&{\color{red} \rightarrow \epsilon} \\
+        {\color{red} A_{44}}    \,\,&{\color{red} \rightarrow \epsilon} \\
         \end{align*}
 
         wobei $A_{04}$ das Startsymbol ist. Wir haben
