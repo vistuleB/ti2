@@ -545,13 +545,10 @@ def binomial(n,k):
     <div class="math-block main-column">
       $$
       \begin{align*}
-      &amp;\log_{3/2} n \times \depth(\textnormal{2-for-3 adder}) \\
-      +&amp;
-      \depth(\textnormal{Binäraddierer für ($\log n$)-stellige Zahlen}) \\
-      +&amp;
-      \depth(\textnormal{$\geq$-Schaltkreis für ($\log n$)-stellige Zahlen} \\
-      =&amp;
-      O(\log n) + O(\log \log n) + O(\log \log n) = O(\log n) \ .
+                    &amp; \log_{3/2} n \times \depth(\textnormal{2-for-3 adder}) \\
+       +\,\,\up{1.2}&amp; \depth(\textnormal{Binäraddierer für ($\log n$)-stellige Zahlen}) \\
+       +\,\,\up{1.2}&amp; \depth(\textnormal{$\geq$-Schaltkreis für ($\log n$)-stellige Zahlen} \\
+       =\,\,\up{1.2}&amp; O(\log n) + O(\log \log n) + O(\log \log n) = O(\log n) \ .
       \end{align*}
       $$
     </div>
@@ -560,8 +557,8 @@ def binomial(n,k):
       2-for-3-Addierern. Wir haben $O(n)$ viele davon,
       allerdings hat jeder bis zu $O(\log n)$ viele Gates,
       da wir ja
-      <span class="nowrap">($\log n$</span>
-      )-stellige Zahlen addieren
+      <span class="nowrap">($\log n$)-stellige</span>
+      Zahlen addieren
       müssen; wir haben insgesamt also $O (n \log n)$ viele
       Gates.
     </p>

@@ -350,19 +350,16 @@
     ist die Tiefe des Gesamtschaltkreises? Es ist
 
     \begin{align*}
-    &\log_{3/2} n \times \depth(\textnormal{2-for-3 adder}) \\
-    +&
-    \depth(\textnormal{Binäraddierer für ($\log n$)-stellige Zahlen}) \\
-    +&
-    \depth(\textnormal{$\geq$-Schaltkreis für ($\log n$)-stellige Zahlen} \\
-    =&
-    O(\log n) + O(\log \log n) + O(\log \log n) = O(\log n) \ .
+    \              & \log_{3/2} n \times \depth(\textnormal{2-for-3 adder}) \\
+    \ +\,\,\up{1.2}& \depth(\textnormal{Binäraddierer für ($\log n$)-stellige Zahlen}) \\
+    \ +\,\,\up{1.2}& \depth(\textnormal{$\geq$-Schaltkreis für ($\log n$)-stellige Zahlen} \\
+    \ =\,\,\up{1.2}& O(\log n) + O(\log \log n) + O(\log \log n) = O(\log n) \ .
     \end{align*}
 
     Die Größe des Schaltkreises wird dominiert von den
     2-for-3-Addierern. Wir haben $O(n)$ viele davon,
     allerdings hat jeder bis zu $O(\log n)$ viele Gates,
-    da wir ja ($\log n$ )-stellige Zahlen addieren
+    da wir ja ($\log n$)-stellige Zahlen addieren
     müssen; wir haben insgesamt also $O (n \log n)$ viele
     Gates.
 

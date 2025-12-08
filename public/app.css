@@ -64,7 +64,7 @@
   /* modified by 'author mode' */
   /*****************************/
   --p-hasmathjax-overflow-x: scroll;
-  --p-hasmathjax-overflow-y: hidden;
+  --p-hasmathjax-overflow-y: clip;
   --pre-overflow-x: scroll;
 
   /********************************/
@@ -294,9 +294,9 @@ p:has(> mjx-container) {
   overflow-y: var(--p-hasmathjax-overflow-y);
 }
 
-p:has(> mjx-container)::-webkit-scrollbar {
+/* p:has(> mjx-container)::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .statement,
 .remark {
@@ -960,12 +960,12 @@ button img {
   width: fit-content;
   margin: 0 auto;
   overflow-x: scroll;
-  overflow-y: hidden;
+  overflow-y: clip;
 }
 
-.math-block::-webkit-scrollbar {
+/* .math-block::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .circle-X-img {
   height: 1.4em;
