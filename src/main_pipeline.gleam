@@ -322,7 +322,6 @@ pub fn main_pipeline(author_mode: Bool)  -> List(Pipe) {
         #("TopicAnnouncement", "topic-announcement"),
         #("SubtopicAnnouncement", "subtopic-announcement"),
       ]),
-      dl.delete_attribute__batch(["_", "counter", "title", "number-chiron"]),
       dl.wrap_children_up_to_custom(#("Chapter", "Sub", body_wrapper, infra.GoBack)),
       dl.wrap_children_custom(#("Sub", body_wrapper, infra.GoBack)),
       dl.wrap_children_custom(#("Index", body_wrapper, infra.GoBack)),
@@ -334,7 +333,6 @@ pub fn main_pipeline(author_mode: Bool)  -> List(Pipe) {
         dl.ti2_adorn_img_with_3003_spans("./public/", []),
         dl.ti2_adorn_with_3003_spans(#("./wly/", "", ["MathBlock"])),
         dl.ti2_wrap_with_3003_spans(#("./wly/", "", ["Math"])),
-        dl.delete_attribute__batch(["original"]),
       ]
     },
     [
@@ -366,6 +364,7 @@ pub fn main_pipeline(author_mode: Bool)  -> List(Pipe) {
         #("BodyWrapper", "div"),
         #("EndOfPageElt", "div"),
       ]),
+      dl.delete_attribute__batch(["_", "counter", "title", "number-chiron", "original"]),
       dl.check_tags(#(post_transformation_approved_tags,"post-transformation")),
     ]
   ]
