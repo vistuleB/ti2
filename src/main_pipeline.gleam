@@ -220,7 +220,7 @@ pub fn main_pipeline(author_mode: Bool)  -> List(Pipe) {
       dl.insert_attribute_as_text(#("Statement", "title")),
       dl.prepend_attribute_as_text(#("Highlight", "title")),
       dl.prepend_attribute_as_text(#("Remark", "title")),
-      dl.counters_substitute_and_assign_handles(),
+      dl.substitute_counters(),
     ],
     pp.create_mathblock_elements([infra.DoubleDollar, infra.BeginEndAlign, infra.BeginEndAlignStar], infra.DoubleDollar),
     pp.create_math_elements([infra.BackslashParenthesis, infra.SingleDollar], infra.SingleDollar, infra.BackslashParenthesis),
