@@ -16,6 +16,7 @@ version = "1.0.0"
 vxml = { "path" = "../wly/vxml" }
 writerly = { "path" = "../wly/writerly" }
 desugaring = { "path" = "../wly/desugaring" }
+either_or = { "path" = "../either_or" }
 
 gleam_stdlib = ">= 0.34.0 and < 2.0.0"
 argv = ">= 1.0.2 and < 2.0.0"

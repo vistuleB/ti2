@@ -359,9 +359,8 @@
     Die Größe des Schaltkreises wird dominiert von den
     2-for-3-Addierern. Wir haben $O(n)$ viele davon,
     allerdings hat jeder bis zu $O(\log n)$ viele Gates,
-    da wir ja ($\log n$)-stellige Zahlen addieren
-    müssen; wir haben insgesamt also $O (n \log n)$ viele
-    Gates.
+    da wir ja ($\log n$)-stellige Zahlen addieren müssen;
+    wir haben insgesamt also $O (n \log n)$ viele Gates.
 
     |> Theorem
         Die Konstruktion mit 2-for-3-Addierern gibt uns einen
