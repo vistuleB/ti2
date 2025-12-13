@@ -169,7 +169,7 @@ pub fn formatter_renderer(amendments: ds.CommandLineAmendments) -> Nil {
 
   let renderer =
     ds.Renderer(
-      assembler: ds.default_assembler(amendments.only_paths),
+      assembler: ds.default_writerly_assembler(amendments.only_paths),
       parser: ds.default_writerly_parser(amendments.only_key_values),
       pipeline: pipeline,
       splitter: case files { [] -> whole_book_splitter _ -> single_file_splitter(_, input_dir_name_only) },
