@@ -306,15 +306,12 @@ pub fn main_renderer(amendments: ds.CommandLineAmendments) -> Nil {
       input_dir: "./wly",
       output_dir: "./public",
       prettifier_behavior: ds.PrettifierOff,
-      table: False,
-      verbose: False,
-      warnings: True,
     )
     |> ds.amend_renderer_paramaters_by_command_line_amendments(amendments)
 
   let debug_options =
-    ds.default_renderer_debug_options()
-    |> ds.amend_renderer_debug_options_by_command_line_amendments(amendments)
+    ds.vanilla_options()
+    |> ds.amend_renderer_options_by_command_line_amendments(amendments)
 
   // clean up HTML files before rendering
   case cleanup_html_files(parameters.output_dir) {

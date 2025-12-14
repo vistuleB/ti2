@@ -144,9 +144,6 @@ pub fn formatter_renderer(amendments: ds.CommandLineAmendments) -> Nil {
       input_dir: "./wly",
       output_dir: "./wly",
       prettifier_behavior: ds.PrettifierOff,
-      table: False,
-      verbose: True,
-      warnings: True,
     )
     |> ds.amend_renderer_paramaters_by_command_line_amendments(amendments)
 
@@ -180,8 +177,8 @@ pub fn formatter_renderer(amendments: ds.CommandLineAmendments) -> Nil {
     |> ds.amend_renderer_by_command_line_amendments(amendments)
   
   let debug_options =
-    ds.default_renderer_debug_options()
-    |> ds.amend_renderer_debug_options_by_command_line_amendments(amendments)
+    ds.RendererOptions(..ds.vanilla_options(), verbose: True)
+    |> ds.amend_renderer_options_by_command_line_amendments(amendments)
 
   let _ = simplifile.delete(parameters.output_dir <> "/*")
 
