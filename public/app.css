@@ -293,6 +293,10 @@ p:has(> mjx-container) {
   overflow-y: var(--p-hasmathjax-overflow-y);
 }
 
+p:has(> mjx-container)::-webkit-scrollbar {
+  display: none;
+}
+
 .statement,
 .remark {
   background-color: rgb(216, 237, 225);
@@ -956,6 +960,10 @@ button img {
   margin: 0 auto;
   overflow-x: scroll;
   overflow-y: clip;
+}
+
+.math-block::-webkit-scrollbar {
+  display: none;
 }
 
 mjx-container {
