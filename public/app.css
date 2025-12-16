@@ -1098,7 +1098,7 @@ mjx-container {
   font-weight: normal;
   line-height: 1.6;
   font-size: 12px;
-  visibility: hidden;
+  display: none;
   position: absolute;
   top: -3.85em;
   left: 50%;
@@ -1152,13 +1152,13 @@ mjx-container {
 }
 
 .t-3003-c:hover .t-3003 {
-  visibility: visible;
+  display: block;
   opacity: 1;
 }
 
 figure:hover>.t-3003,
 .carousel__item:hover>.t-3003 {
-  visibility: visible;
+  display: block;
   opacity: 1;
 }
 
@@ -1168,7 +1168,7 @@ figure:hover:has(>.t-3003) img,
 }
 
 .math-block:hover > .t-3003 {
-  visibility: visible;
+  display: block;
   opacity: 1;
   position: absolute;
   left: 50%;

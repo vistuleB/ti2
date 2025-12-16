@@ -1515,12 +1515,9 @@ const sendCmdTo3003 = (command) => {
     window.location.protocol === "file:"
       ? "http://localhost:3003/log-event"
       : "/log-event";
-  fetch(
-    url,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    },
-  );
+  fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
 };
