@@ -8,7 +8,7 @@ packages = [
   { name = "colours", version = "0.3.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "colours", source = "hex", outer_checksum = "217E1F62013276D9D29192F97F136B5BA830129F2FD5B5D51DCC183B64223F3B" },
   { name = "desugaring", version = "1.0.0", build_tools = ["gleam"], requirements = ["ansel", "argv", "colours", "dirtree", "either_or", "filepath", "gleam_crypto", "gleam_erlang", "gleam_json", "gleam_regexp", "gleam_stdlib", "gleam_time", "input", "on", "shellout", "simplifile", "splitter", "vxml", "writerly", "xmlm"], source = "local", path = "../wly/desugaring" },
   { name = "dirtree", version = "1.0.2", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "dirtree", source = "hex", outer_checksum = "0AAB90969DE7ED502BA85DB06A1FFA1DB409F79FA8D8BC24DE076DA11C45B508" },
-  { name = "either_or", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "either_or", source = "hex", outer_checksum = "9EB3EB69560AD66866863BF4171841351A082AA34E081DF8B723BE41AE368F77" },
+  { name = "either_or", version = "2.0.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "either_or", source = "hex", outer_checksum = "87722DAB49CA2FE94CB3035E6D1C0C6CEDE187A37A301B936526EA52B3F66E4B" },
   { name = "elixir_make", version = "0.9.0", build_tools = ["mix"], requirements = [], otp_app = "elixir_make", source = "hex", outer_checksum = "DB23D4FD8B757462AD02F8AA73431A426FE6671C80B200D9710CAF3D1DD0FFDB" },
   { name = "filepath", version = "1.1.2", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "filepath", source = "hex", outer_checksum = "B06A9AF0BF10E51401D64B98E4B627F1D2E48C154967DA7AF4D0914780A6D40A" },
   { name = "gleam_crypto", version = "1.5.1", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_crypto", source = "hex", outer_checksum = "50774BAFFF1144E7872814C566C5D653D83A3EBF23ACC3156B757A1B6819086E" },
@@ -19,7 +19,7 @@ packages = [
   { name = "gleam_time", version = "1.6.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_time", source = "hex", outer_checksum = "0DF3834D20193F0A38D0EB21F0A78D48F2EC276C285969131B86DF8D4EF9E762" },
   { name = "gleeunit", version = "1.9.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleeunit", source = "hex", outer_checksum = "DA9553CE58B67924B3C631F96FE3370C49EB6D6DC6B384EC4862CC4AAA718F3C" },
   { name = "input", version = "1.0.1", build_tools = ["gleam"], requirements = [], otp_app = "input", source = "hex", outer_checksum = "FE84CDADC78A1367E4AFD561A529825A8FEC88D165CBDF511FD3226CABCDEE6F" },
-  { name = "on", version = "1.1.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "on", source = "hex", outer_checksum = "2833F1A27740D8F829C6A8BA6781CB44D2BC057B284A9D4FA500301D52A7FEAC" },
+  { name = "on", version = "2.0.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "on", source = "hex", outer_checksum = "A25D059903CA1107F393FC17FEAB1C598E258323785388EC7B6019066A7F15C1" },
   { name = "shellout", version = "1.7.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "shellout", source = "hex", outer_checksum = "1BDC03438FEB97A6AF3E396F4ABEB32BECF20DF2452EC9A8C0ACEB7BDDF70B14" },
   { name = "simplifile", version = "2.3.1", build_tools = ["gleam"], requirements = ["filepath", "gleam_stdlib"], otp_app = "simplifile", source = "hex", outer_checksum = "957E0E5B75927659F1D2A1B7B75D7B9BA96FAA8D0C53EA71C4AD9CD0C6B848F6" },
   { name = "snag", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "snag", source = "hex", outer_checksum = "274F41D6C3ECF99F7686FDCE54183333E41D2C1CA5A3A673F9A8B2C7A4401077" },
@@ -35,14 +35,14 @@ argv = { version = ">= 1.0.2 and < 2.0.0" }
 colours = { version = ">= 0.3.0 and < 1.0.0" }
 desugaring = { path = "../wly/desugaring" }
 dirtree = { version = ">= 1.0.2 and < 2.0.0" }
-either_or = { version = ">= 1.0.0 and < 2.0.0" }
+either_or = { version = ">= 2.0.0 and < 3.0.0" }
 gleam_erlang = { version = ">= 1.3.0 and < 2.0.0" }
 gleam_regexp = { version = ">= 1.1.1 and < 2.0.0" }
 gleam_stdlib = { version = ">= 0.34.0 and < 2.0.0" }
 gleam_time = { version = ">= 1.2.0 and < 2.0.0" }
 gleeunit = { version = ">= 1.0.0 and < 2.0.0" }
 input = { version = ">= 1.0.1 and < 2.0.0" }
-on = { version = ">= 1.1.0 and < 2.0.0" }
+on = { version = ">= 2.0.0 and < 3.0.0" }
 simplifile = { version = ">= 2.3.0 and < 3.0.0" }
 splitter = { version = ">= 1.1.0 and < 2.0.0" }
 vxml = { path = "../wly/vxml" }
