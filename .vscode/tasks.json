@@ -1,0 +1,51 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "gleam run -- --only",
+      "type": "shell",
+      "command": "gleam run -- --only ${input:str1}",
+      "group": {
+        "kind": "build",
+        "isDefault": true,
+      },
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true },
+      "problemMatcher": [],
+      "runOptions": {
+        "reevaluateOnRerun": true,
+        "instanceLimit": 1,
+      },
+    },
+    {
+      "label": "gleam run",
+      "type": "shell",
+      "command": "gleam run",
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true },
+      "problemMatcher": [],
+      "runOptions": {
+        "reevaluateOnRerun": true,
+        "instanceLimit": 1,
+      },
+    },
+    {
+      "label": "gleam run --local",
+      "type": "shell",
+      "command": "gleam run -- --local",
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true },
+      "problemMatcher": [],
+      "runOptions": {
+        "reevaluateOnRerun": true,
+        "instanceLimit": 1,
+      },
+    },
+  ],
+  "inputs": [
+    {
+      "id": "str1",
+      "description": "Enter substring that should match on source",
+      "type": "promptString",
+    },
+  ],
+}
