@@ -2,12 +2,12 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "gleam run -- --only",
+      "label": "gleam run -m <file>",
       "type": "shell",
-      "command": "gleam run -- --only ${input:str1}",
+      "command": "gleam",
       "group": {
         "kind": "build",
-        "isDefault": true,
+        "glob": "**/*.gleam",
       },
       "presentation": { "reveal": "always", "panel": "shared", "clear": true },
       "problemMatcher": [],
@@ -15,37 +15,67 @@
         "reevaluateOnRerun": true,
         "instanceLimit": 1,
       },
+      "options": {
+        "cwd": "${workspaceFolder}",
+      },
+      "args": ["run", "-m", "${fileBasenameNoExtension}"],
+    },
+    {
+      "label": "gleam run today's special",
+      "type": "shell",
+      "command": "gleam",
+      "group": {
+        "kind": "build",
+        "glob": "**/*.wly",
+      },
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true },
+      "problemMatcher": [],
+      "runOptions": {
+        "reevaluateOnRerun": true,
+        "instanceLimit": 1,
+      },
+      "options": {
+        "cwd": "${workspaceFolder}",
+      },
+      "args": ["run", "--", "--only", "01"],
     },
     {
       "label": "gleam run",
       "type": "shell",
-      "command": "gleam run",
-      "group": { "kind": "build", "isDefault": true },
+      "command": "gleam",
+      "group": {
+        "kind": "build",
+        "glob": "**/*.wly",
+      },
       "presentation": { "reveal": "always", "panel": "shared", "clear": true },
       "problemMatcher": [],
       "runOptions": {
         "reevaluateOnRerun": true,
         "instanceLimit": 1,
       },
+      "options": {
+        "cwd": "${workspaceFolder}",
+      },
+      "args": ["run", "--"],
     },
     {
-      "label": "gleam run --local",
+      "label": "gleam run -- --local",
       "type": "shell",
-      "command": "gleam run -- --local",
-      "group": { "kind": "build", "isDefault": true },
+      "command": "gleam",
+      "group": {
+        "kind": "build",
+        "glob": "**/*.wly",
+      },
       "presentation": { "reveal": "always", "panel": "shared", "clear": true },
       "problemMatcher": [],
       "runOptions": {
         "reevaluateOnRerun": true,
         "instanceLimit": 1,
       },
-    },
-  ],
-  "inputs": [
-    {
-      "id": "str1",
-      "description": "Enter substring that should match on source",
-      "type": "promptString",
+      "options": {
+        "cwd": "${workspaceFolder}",
+      },
+      "args": ["run", "--", "--local"],
     },
   ],
 }
