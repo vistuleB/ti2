@@ -515,7 +515,10 @@ function createCarouselObserver() {
 
 const adjustMathAlignment = () => {
   document.querySelectorAll(".math-block").forEach((math_block) => {
-    math_block.scroll({ left: 1000 });
+    if (math_block.scrolled === undefined) {
+      math_block.scroll({ left: 1000 });
+      math_block.scrolled = true;
+    }
     // const svg = math_block.querySelector("svg");
     // if (!svg) {
     //   // this happens throughout---it seems the mjx_container

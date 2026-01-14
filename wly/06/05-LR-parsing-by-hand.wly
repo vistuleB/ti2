@@ -50,7 +50,7 @@
 
         also _beliebig viele $a$'s, gefolgt von gleich vielen
         oder weniger $b$'s (aber mindestens einem),
-        abgeschlossen mit einem $c$ _. Eine Grammatik ist
+        abgeschlossen mit einem $c$_. Eine Grammatik ist
         schnell geschrieben:
 
         \begin{align}
