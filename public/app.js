@@ -1374,7 +1374,6 @@ const onScrollEnd = (e) => {
 
 const onTouchEnd = (e) => {
   smoothRecenterMaybe();
-  setTimeout(adjustMathAlignment, 60);
 };
 
 // chapter navigation functions
